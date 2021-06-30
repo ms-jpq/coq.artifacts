@@ -14322,7 +14322,7 @@
         "content": "${1} {\n\t${2:${VISUAL}}\n}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"selector { }\"",
+        "label": "selector { }",
         "matches": {
           ".": true
         },
@@ -14332,7 +14332,7 @@
         "content": "!important",
         "doc": "",
         "grammar": "snu",
-        "label": "\"!important\"",
+        "label": "!important",
         "matches": {
           "!": true
         },
@@ -14462,7 +14462,7 @@
         "content": "@media ${1:print} {\n\t${2:${VISUAL}}\n}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"@media mediatype { }\"",
+        "label": "@media mediatype { }",
         "matches": {
           "@m": true
         },
@@ -21674,7 +21674,7 @@
         "content": "__global__ void ${1:kernel}(${2:void}) {\n\t${0:// TODO: Implement}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Kernel definition\"",
+        "label": "Kernel definition",
         "matches": {
           "kern": true
         },
@@ -21684,7 +21684,7 @@
         "content": "__device__ ${1:int} ${2:foo}(${3:void}) {\n\t${0:// TODO: Implement}\n\treturn 0;\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Device function definition\"",
+        "label": "Device function definition",
         "matches": {
           "dev": true
         },
@@ -21694,7 +21694,7 @@
         "content": "${1:kernel}<<<${2:args}>>>(${3});${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Kernel call\"",
+        "label": "Kernel call",
         "matches": {
           "call": true
         },
@@ -21704,7 +21704,7 @@
         "content": "__syncthreads();",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Synchonize threads\"",
+        "label": "Synchonize threads",
         "matches": {
           "sync": true
         },
@@ -21714,7 +21714,7 @@
         "content": "threadIdx.${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Thread Index\"",
+        "label": "Thread Index",
         "matches": {
           "tid": true
         },
@@ -21724,7 +21724,7 @@
         "content": "blockIdx.${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Block Index\"",
+        "label": "Block Index",
         "matches": {
           "bid": true
         },
@@ -21734,7 +21734,7 @@
         "content": "blockDim.${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Block Dimension\"",
+        "label": "Block Dimension",
         "matches": {
           "bdim": true
         },
@@ -21744,7 +21744,7 @@
         "content": "int ${1:index} = threadIdx.${2:x} + blockIdx.$2 * blockDim.$2;",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Get current index (1D)\"",
+        "label": "Get current index (1D)",
         "matches": {
           "ii": true
         },
@@ -21754,7 +21754,7 @@
         "content": "int ${1:x} = threadIdx.x + blockIdx.x * blockDim.x;",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Get current X index (1D)\"",
+        "label": "Get current X index (1D)",
         "matches": {
           "ix": true
         },
@@ -21764,7 +21764,7 @@
         "content": "int ${1:y} = threadIdx.y + blockIdx.y * blockDim.y;",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Get current Y index (1D)\"",
+        "label": "Get current Y index (1D)",
         "matches": {
           "iy": true
         },
@@ -21774,7 +21774,7 @@
         "content": "int ${1:z} = threadIdx.z + blockIdx.z * blockDim.z;",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Get current Z index (1D)\"",
+        "label": "Get current Z index (1D)",
         "matches": {
           "iz": true
         },
@@ -21784,7 +21784,7 @@
         "content": "int ${1:x} = threadIdx.x + blockIdx.x * blockDim.x;\nint ${2:y} = threadIdx.y + blockIdx.y * blockDim.y;",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Get current X,Y index (2D)\"",
+        "label": "Get current X,Y index (2D)",
         "matches": {
           "ixy": true
         },
@@ -21794,7 +21794,7 @@
         "content": "int ${1:x} = threadIdx.x + blockIdx.x * blockDim.x;\nint ${3:z} = threadIdx.z + blockIdx.z * blockDim.z;",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Get current X,Z index (2D)\"",
+        "label": "Get current X,Z index (2D)",
         "matches": {
           "ixz": true
         },
@@ -21804,7 +21804,7 @@
         "content": "int ${2:y} = threadIdx.y + blockIdx.y * blockDim.y;\nint ${3:z} = threadIdx.z + blockIdx.z * blockDim.z;",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Get current Y,Z index (2D)\"",
+        "label": "Get current Y,Z index (2D)",
         "matches": {
           "iyz": true
         },
@@ -21814,7 +21814,7 @@
         "content": "int ${1:x} = threadIdx.x + blockIdx.x * blockDim.x;\nint ${2:y} = threadIdx.y + blockIdx.y * blockDim.y;\nint ${3:z} = threadIdx.z + blockIdx.z * blockDim.z;",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Get current X,Y,Z index (3D)\"",
+        "label": "Get current X,Y,Z index (3D)",
         "matches": {
           "ixyz": true
         },
@@ -21824,7 +21824,7 @@
         "content": "__shared__ ${1:int} ${2:memo}[${3:SIZE}];${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Shared memory declaration\"",
+        "label": "Shared memory declaration",
         "matches": {
           "share": true
         },
@@ -27270,7 +27270,7 @@
         "content": "receive\n${1:\t${2:pattern}${3: when ${4:guard}} ->\n\t\t${5:body}}\n${6:after\n\t${7:expression} ->\n\t\t${8:body}}\nend",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Receive Expression\"",
+        "label": "Receive Expression",
         "matches": {
           "rcv": true
         },
@@ -29067,7 +29067,7 @@
         "content": "\\${.version}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"${.version}\"",
+        "label": "${.version}",
         "matches": {
           "ver": true
         },
@@ -29077,7 +29077,7 @@
         "content": "\\${${0:interpolation${VISUAL}}\\}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"${interpolation}\"",
+        "label": "${interpolation}",
         "matches": {
           "int": true
         },
@@ -29097,7 +29097,7 @@
         "content": "<#-- ${0:comment${VISUAL}} -->",
         "doc": "",
         "grammar": "snu",
-        "label": "\"<#-- comment -->\"",
+        "label": "<#-- comment -->",
         "matches": {
           "com": true
         },
@@ -29107,7 +29107,7 @@
         "content": "<#assign ${1:variable_name} = ${0:value${VISUAL}} />",
         "doc": "",
         "grammar": "snu",
-        "label": "\"<#assign variable_name = value />\"",
+        "label": "<#assign variable_name = value />",
         "matches": {
           "ass": true
         },
@@ -29117,7 +29117,7 @@
         "content": "<#assign\n\t${1:variable_name} = ${0:value${VISUAL}}\n/>",
         "doc": "",
         "grammar": "snu",
-        "label": "\"<#assign <#-- multiple lines --> />\"",
+        "label": "<#assign <#-- multiple lines --> />",
         "matches": {
           "assm": true
         },
@@ -29127,7 +29127,7 @@
         "content": "<#local ${1:variable_name} = ${0:value${VISUAL}} />",
         "doc": "",
         "grammar": "snu",
-        "label": "\"<#local variable_name = value />\"",
+        "label": "<#local variable_name = value />",
         "matches": {
           "loc": true
         },
@@ -29137,7 +29137,7 @@
         "content": "<#local\n\t${1:variable_name} = ${0:value${VISUAL}}\n/>",
         "doc": "",
         "grammar": "snu",
-        "label": "\"<#local <#-- multiple lines --> />\"",
+        "label": "<#local <#-- multiple lines --> />",
         "matches": {
           "locm": true
         },
@@ -29157,7 +29157,7 @@
         "content": "<#if ${1:true}>\n\t${0:${VISUAL}}\n</#if>",
         "doc": "",
         "grammar": "snu",
-        "label": "\"<#if condition>...</#if>\"",
+        "label": "<#if condition>...</#if>",
         "matches": {
           "if": true
         },
@@ -29167,7 +29167,7 @@
         "content": "<#if ${1:true}>\n\t${0:${VISUAL}}\n<#else>\n\t${2}\n</#if>",
         "doc": "",
         "grammar": "snu",
-        "label": "\"<#if condition>...<#else>...</#if>\"",
+        "label": "<#if condition>...<#else>...</#if>",
         "matches": {
           "ife": true
         },
@@ -29177,7 +29177,7 @@
         "content": "<#list ${1:sequence} as ${2:element}>\n\t${0:${VISUAL}}\n</#list>",
         "doc": "",
         "grammar": "snu",
-        "label": "\"<#list sequence as element>...</#list>\"",
+        "label": "<#list sequence as element>...</#list>",
         "matches": {
           "lis": true
         },
@@ -29187,7 +29187,7 @@
         "content": "<#list ${1:hashmap}?keys as ${2:key}>\n\t\\${$2\\}: \\${$1[$2]\\}${0:${VISUAL}}\n</#list>",
         "doc": "",
         "grammar": "snu",
-        "label": "\"<#list hashmap?keys as element>...</#list>\"",
+        "label": "<#list hashmap?keys as element>...</#list>",
         "matches": {
           "lish": true
         },
@@ -29197,7 +29197,7 @@
         "content": "<#macro ${1:macro_name} ${2:param1}>\n\t${0:${VISUAL}}\n</#macro>",
         "doc": "",
         "grammar": "snu",
-        "label": "\"<#macro macro_name param1>...</#macro>\"",
+        "label": "<#macro macro_name param1>...</#macro>",
         "matches": {
           "mac": true
         },
@@ -29207,7 +29207,7 @@
         "content": "<#function ${1:function_name} ${2:param1}>\n\t${0:${VISUAL}}\n</#function>",
         "doc": "",
         "grammar": "snu",
-        "label": "\"<#function function_name param1>...</#function>\"",
+        "label": "<#function function_name param1>...</#function>",
         "matches": {
           "fun": true
         },
@@ -29217,7 +29217,7 @@
         "content": "<#attempt>\n\t${0:${VISUAL}}\n<#recover>\n</#attempt>",
         "doc": "",
         "grammar": "snu",
-        "label": "\"<#attempt>...<#recover></#attempt>\"",
+        "label": "<#attempt>...<#recover></#attempt>",
         "matches": {
           "att": true
         },
@@ -29227,7 +29227,7 @@
         "content": "?then(${1:true}, ${0:false${VISUAL}})",
         "doc": "",
         "grammar": "snu",
-        "label": "\"?then(true, false)\"",
+        "label": "?then(true, false)",
         "matches": {
           "?th": true
         },
@@ -31030,7 +31030,7 @@
         "content": "${1} := ${2}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"shorthand variable declaration\"",
+        "label": "shorthand variable declaration",
         "matches": {
           "v": true
         },
@@ -31040,7 +31040,7 @@
         "content": "var ${1:t} ${0:string}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"variable initialization\"",
+        "label": "variable initialization",
         "matches": {
           "vr": true
         },
@@ -31050,7 +31050,7 @@
         "content": "var ${1} ${2} = ${3}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"variable declaration\"",
+        "label": "variable declaration",
         "matches": {
           "var": true
         },
@@ -31060,7 +31060,7 @@
         "content": "var (\n\t${1} ${2} = ${3}\n)",
         "doc": "",
         "grammar": "snu",
-        "label": "\"variables declaration\"",
+        "label": "variables declaration",
         "matches": {
           "vars": true
         },
@@ -31070,7 +31070,7 @@
         "content": "append(${1:slice}, ${0:value})",
         "doc": "",
         "grammar": "snu",
-        "label": "\"append\"",
+        "label": "append",
         "matches": {
           "ap": true
         },
@@ -31080,7 +31080,7 @@
         "content": "bool",
         "doc": "",
         "grammar": "snu",
-        "label": "\"bool\"",
+        "label": "bool",
         "matches": {
           "bl": true
         },
@@ -31090,7 +31090,7 @@
         "content": "byte",
         "doc": "",
         "grammar": "snu",
-        "label": "\"byte\"",
+        "label": "byte",
         "matches": {
           "bt": true
         },
@@ -31100,7 +31100,7 @@
         "content": "break",
         "doc": "",
         "grammar": "snu",
-        "label": "\"break\"",
+        "label": "break",
         "matches": {
           "br": true
         },
@@ -31110,7 +31110,7 @@
         "content": "chan ${0:int}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"channel\"",
+        "label": "channel",
         "matches": {
           "ch": true
         },
@@ -31120,7 +31120,7 @@
         "content": "case ${1:value}:\n\t${0:${VISUAL}}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"case\"",
+        "label": "case",
         "matches": {
           "cs": true
         },
@@ -31130,7 +31130,7 @@
         "content": "const (\n\t${1:NAME1} = iota\n\t${0:NAME2}\n)",
         "doc": "",
         "grammar": "snu",
-        "label": "\"constants with iota\"",
+        "label": "constants with iota",
         "matches": {
           "co": true
         },
@@ -31140,7 +31140,7 @@
         "content": "continue",
         "doc": "",
         "grammar": "snu",
-        "label": "\"continue\"",
+        "label": "continue",
         "matches": {
           "cn": true
         },
@@ -31150,7 +31150,7 @@
         "content": "defer ${0:func}()",
         "doc": "",
         "grammar": "snu",
-        "label": "\"defer\"",
+        "label": "defer",
         "matches": {
           "df": true
         },
@@ -31160,7 +31160,7 @@
         "content": "defer func() {\n\tif err := recover(); err != nil {\n\t\t${0:${VISUAL}}\n\t}\n}()",
         "doc": "",
         "grammar": "snu",
-        "label": "\"defer recover\"",
+        "label": "defer recover",
         "matches": {
           "dfr": true
         },
@@ -31170,7 +31170,7 @@
         "content": "import (\n\t\"${1:package}\"\n)",
         "doc": "",
         "grammar": "snu",
-        "label": "\"import\"",
+        "label": "import",
         "matches": {
           "im": true
         },
@@ -31180,7 +31180,7 @@
         "content": "interface{}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"interface\"",
+        "label": "interface",
         "matches": {
           "in": true
         },
@@ -31190,7 +31190,7 @@
         "content": "interface ${1:name} {\n\t${2:/* methods */}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"full interface \"",
+        "label": "full interface ",
         "matches": {
           "inf": true
         },
@@ -31200,7 +31200,7 @@
         "content": "if ${1:/* condition */} {\n\t${2:${VISUAL}}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"if condition\"",
+        "label": "if condition",
         "matches": {
           "if": true
         },
@@ -31210,7 +31210,7 @@
         "content": "if ${1:/* condition */} {\n\t${2:${VISUAL}}\n} else {\n\t${0}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"if else condition\"",
+        "label": "if else condition",
         "matches": {
           "ife": true
         },
@@ -31220,7 +31220,7 @@
         "content": "else {\n\t${0:${VISUAL}}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"else\"",
+        "label": "else",
         "matches": {
           "el": true
         },
@@ -31230,7 +31230,7 @@
         "content": "if err != nil {\n\treturn err\n}\n${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"if error not nil, return err\"",
+        "label": "if error not nil, return err",
         "matches": {
           "ir": true
         },
@@ -31240,7 +31240,7 @@
         "content": "false",
         "doc": "",
         "grammar": "snu",
-        "label": "\"false\"",
+        "label": "false",
         "matches": {
           "f": true
         },
@@ -31250,7 +31250,7 @@
         "content": "fallthrough",
         "doc": "",
         "grammar": "snu",
-        "label": "\"fallthrough\"",
+        "label": "fallthrough",
         "matches": {
           "ft": true
         },
@@ -31260,7 +31260,7 @@
         "content": "float32",
         "doc": "",
         "grammar": "snu",
-        "label": "\"float\"",
+        "label": "float",
         "matches": {
           "fl": true
         },
@@ -31270,7 +31270,7 @@
         "content": "float32",
         "doc": "",
         "grammar": "snu",
-        "label": "\"float32\"",
+        "label": "float32",
         "matches": {
           "f3": true
         },
@@ -31280,7 +31280,7 @@
         "content": "float64",
         "doc": "",
         "grammar": "snu",
-        "label": "\"float64\"",
+        "label": "float64",
         "matches": {
           "f6": true
         },
@@ -31290,7 +31290,7 @@
         "content": "for ${1}{\n\t${0:${VISUAL}}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"for loop\"",
+        "label": "for loop",
         "matches": {
           "for": true
         },
@@ -31300,7 +31300,7 @@
         "content": "for ${2:i} := 0; $2 < ${1:count}; $2${3:++} {\n\t${0:${VISUAL}}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"for int loop\"",
+        "label": "for int loop",
         "matches": {
           "fori": true
         },
@@ -31310,7 +31310,7 @@
         "content": "for ${1:e} := range ${2:collection} {\n\t${0:${VISUAL}}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"for range loop\"",
+        "label": "for range loop",
         "matches": {
           "forr": true
         },
@@ -31320,7 +31320,7 @@
         "content": "func ${1:funcName}(${2}) ${3:error} {\n\t${4}\n}\n${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"function\"",
+        "label": "function",
         "matches": {
           "fun": true
         },
@@ -31330,7 +31330,7 @@
         "content": "func (${1:receiver} ${2:type}) ${3:funcName}(${4}) ${5:error} {\n\t${6}\n}\n${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"method\"",
+        "label": "method",
         "matches": {
           "fum": true
         },
@@ -31340,7 +31340,7 @@
         "content": "func (${1:receiver} ${2:type}) ${3:funcName}(${4:w} http.ResponseWriter, ${5:r} *http.Request) {\n\t${0:${VISUAL}}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"http handler function on receiver\"",
+        "label": "http handler function on receiver",
         "matches": {
           "fumh": true
         },
@@ -31350,7 +31350,7 @@
         "content": "log.Printf(\"%${1:s}\", ${2:var})",
         "doc": "",
         "grammar": "snu",
-        "label": "\"log printf\"",
+        "label": "log printf",
         "matches": {
           "lf": true
         },
@@ -31360,7 +31360,7 @@
         "content": "log.Println(\"${1}\")",
         "doc": "",
         "grammar": "snu",
-        "label": "\"log println\"",
+        "label": "log println",
         "matches": {
           "lp": true
         },
@@ -31370,7 +31370,7 @@
         "content": "make(${1:[]string}, ${0:0})",
         "doc": "",
         "grammar": "snu",
-        "label": "\"make\"",
+        "label": "make",
         "matches": {
           "mk": true
         },
@@ -31380,7 +31380,7 @@
         "content": "map[${1:string}]${0:int}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"map\"",
+        "label": "map",
         "matches": {
           "mp": true
         },
@@ -31390,7 +31390,7 @@
         "content": "func main() {\n\t${1}\n}\n${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"func main()\"",
+        "label": "func main()",
         "matches": {
           "main": true
         },
@@ -31400,7 +31400,7 @@
         "content": "new(${0:type})",
         "doc": "",
         "grammar": "snu",
-        "label": "\"new\"",
+        "label": "new",
         "matches": {
           "nw": true
         },
@@ -31410,7 +31410,7 @@
         "content": "package ${1:main}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"package\"",
+        "label": "package",
         "matches": {
           "pa": true
         },
@@ -31420,7 +31420,7 @@
         "content": "panic(\"${0:msg}\")",
         "doc": "",
         "grammar": "snu",
-        "label": "\"panic\"",
+        "label": "panic",
         "matches": {
           "pn": true
         },
@@ -31430,7 +31430,7 @@
         "content": "fmt.Printf(\"%${1:s}\\n\", ${2:var})",
         "doc": "",
         "grammar": "snu",
-        "label": "\"fmt.Printf()\"",
+        "label": "fmt.Printf()",
         "matches": {
           "pf": true
         },
@@ -31440,7 +31440,7 @@
         "content": "fmt.Println(\"${1:s}\")",
         "doc": "",
         "grammar": "snu",
-        "label": "\"fmt.Println()\"",
+        "label": "fmt.Println()",
         "matches": {
           "pl": true
         },
@@ -31450,7 +31450,7 @@
         "content": "range ${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"range\"",
+        "label": "range",
         "matches": {
           "rn": true
         },
@@ -31460,7 +31460,7 @@
         "content": "return ${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"return\"",
+        "label": "return",
         "matches": {
           "rt": true
         },
@@ -31470,7 +31470,7 @@
         "content": "result",
         "doc": "",
         "grammar": "snu",
-        "label": "\"result\"",
+        "label": "result",
         "matches": {
           "rs": true
         },
@@ -31480,7 +31480,7 @@
         "content": "select {\ncase ${1:v1} := <-${2:chan1}\n\t${3}\ndefault:\n\t${0}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"select\"",
+        "label": "select",
         "matches": {
           "sl": true
         },
@@ -31490,7 +31490,7 @@
         "content": "string",
         "doc": "",
         "grammar": "snu",
-        "label": "\"string\"",
+        "label": "string",
         "matches": {
           "sr": true
         },
@@ -31500,7 +31500,7 @@
         "content": "struct ${1:name} {\n\t${2:/* data */}\n}\n${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"struct\"",
+        "label": "struct",
         "matches": {
           "st": true
         },
@@ -31510,7 +31510,7 @@
         "content": "switch ${1:var} {\ncase ${2:value1}:\n\t${3}\ncase ${4:value2}:\n\t${5}\ndefault:\n\t${0}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"switch\"",
+        "label": "switch",
         "matches": {
           "sw": true
         },
@@ -31520,7 +31520,7 @@
         "content": "fmt.Sprintf(\"%${1:s}\", ${2:var})",
         "doc": "",
         "grammar": "snu",
-        "label": "\"fmt.Sprintf\"",
+        "label": "fmt.Sprintf",
         "matches": {
           "ps": true
         },
@@ -31530,7 +31530,7 @@
         "content": "true",
         "doc": "",
         "grammar": "snu",
-        "label": "\"true\"",
+        "label": "true",
         "matches": {
           "t": true
         },
@@ -31540,7 +31540,7 @@
         "content": "go ${1:funcName}(${0})",
         "doc": "",
         "grammar": "snu",
-        "label": "\"goroutine named function\"",
+        "label": "goroutine named function",
         "matches": {
           "g": true
         },
@@ -31550,7 +31550,7 @@
         "content": "go func(${1} ${2:type}) {\n\t${3:/* code */}\n}(${0})",
         "doc": "",
         "grammar": "snu",
-        "label": "\"goroutine anonymous function\"",
+        "label": "goroutine anonymous function",
         "matches": {
           "ga": true
         },
@@ -31560,7 +31560,7 @@
         "content": "func Test${1:name}(t *testing.T) {\n\t${0:${VISUAL}}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"test function\"",
+        "label": "test function",
         "matches": {
           "test": true
         },
@@ -31570,7 +31570,7 @@
         "content": "func Test${1:name}(t *testing.T) {\n\ttests := []struct {\n\t\tname string\n\t}{\n\t\t{\n\t\t\tname: \"${2:test name}\",\n\t\t},\n\t}\n\tfor _, test := range tests {\n\t\tt.Run(test.name, func(t *testing.T) {\n\t\t\t${0:${VISUAL}}\n\t\t})\n\t}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"table test function\"",
+        "label": "table test function",
         "matches": {
           "testt": true
         },
@@ -31580,7 +31580,7 @@
         "content": "func Benchmark${1:name}(b *testing.B) {\n\tfor i := 0; i < b.N; i++ {\n\t\t${2}\n\t}\n}\n${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"benchmark function\"",
+        "label": "benchmark function",
         "matches": {
           "bench": true
         },
@@ -31590,7 +31590,7 @@
         "content": "type ${1:name} struct {\n\t${2:attrName} ${3:attrType}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"composite literals\"",
+        "label": "composite literals",
         "matches": {
           "cl": true
         },
@@ -31600,7 +31600,7 @@
         "content": "if ${1:value}, ok := ${2:map}[${3:key}]; ok == true {\n\t${4:/* code */}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"if key in a map\"",
+        "label": "if key in a map",
         "matches": {
           "om": true
         },
@@ -31610,7 +31610,7 @@
         "content": "var ${1:var} = struct{\n\t${2:name} ${3:type}\n}{\n\t$2: ${4:value},\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Grouped globals with anonymous struct\"",
+        "label": "Grouped globals with anonymous struct",
         "matches": {
           "gg": true
         },
@@ -31620,7 +31620,7 @@
         "content": "type ${1:parentType}Alias $1\nfunc (p *$1) MarshalJSON() ([]byte, error) {\n\treturn json.Marshal(&struct{ *$1Alias }{(*$1Alias)(p)})\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Marshalable json alias\"",
+        "label": "Marshalable json alias",
         "matches": {
           "ja": true
         },
@@ -31630,7 +31630,7 @@
         "content": "if ${1}err != nil {\n\treturn errors.Wrap(err, \"${2}\")\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Error handling with errors.Wrap\"",
+        "label": "Error handling with errors.Wrap",
         "matches": {
           "errwr": true
         },
@@ -33058,7 +33058,7 @@
         "content": "(${1:Class} ${2:a}) => $2",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Type constraint\"",
+        "label": "Type constraint",
         "matches": {
           "=>": true
         },
@@ -39458,7 +39458,7 @@
         "content": "(\\\\${1:_} => ${0})",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Lambda function (\\x => ...)\"",
+        "label": "Lambda function (\\x => ...)",
         "matches": {
           "\\": true
         },
@@ -41536,7 +41536,7 @@
         "content": "function ${1:function_name}(${2}) {\n\t${0:${VISUAL}}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"function\"",
+        "label": "function",
         "matches": {
           "fun": true
         },
@@ -41546,7 +41546,7 @@
         "content": "async function ${1:function_name}(${2}) {\n\t${0:${VISUAL}}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"async function\"",
+        "label": "async function",
         "matches": {
           "asf": true
         },
@@ -41556,11 +41556,13 @@
         "content": "function(${1}) {\n\t${0:${VISUAL}}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"\" w",
+        "label": "",
         "matches": {
           "anf": true
         },
-        "options": {}
+        "options": {
+          "w": true
+        }
       },
       {
         "content": "var ${1:function_name} = function(${2}) {\n\t${0:${VISUAL}}\n};",
@@ -41616,7 +41618,7 @@
         "content": "if (${1:true}) {\n\t${0:${VISUAL}}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"if (condition) { ... }\"",
+        "label": "if (condition) { ... }",
         "matches": {
           "if": true
         },
@@ -41626,7 +41628,7 @@
         "content": "if (${1:true}) {\n\t${0:${VISUAL}}\n} else {\n\t${2}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"if (condition) { ... } else { ... }\"",
+        "label": "if (condition) { ... } else { ... }",
         "matches": {
           "ife": true
         },
@@ -41656,7 +41658,7 @@
         "content": "case '${1:case}':\n\t${0:${VISUAL}}\n\tbreak;",
         "doc": "",
         "grammar": "snu",
-        "label": "\"case 'xyz': ... break\"",
+        "label": "case 'xyz': ... break",
         "matches": {
           "case": true
         },
@@ -41666,7 +41668,7 @@
         "content": "try {\n\t${0:${VISUAL}}\n} catch (${1:e}) {\n\t${2:/* handle error */}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"try { ... } catch(e) { ... }\"",
+        "label": "try { ... } catch(e) { ... }",
         "matches": {
           "try": true
         },
@@ -41676,7 +41678,7 @@
         "content": "try {\n\t${0:${VISUAL}}\n} catch (${1:e}) {\n\t${2:/* handle error */}\n} finally {\n\t${3:/* be executed regardless of the try / catch result*/}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"try { ... } catch(e) { ... } finally { ... }\"",
+        "label": "try { ... } catch(e) { ... } finally { ... }",
         "matches": {
           "tryf": true
         },
@@ -41706,7 +41708,7 @@
         "content": "for (let ${1:i} = 0, ${2:len} = ${3:Things.length}; $1 < $2; $1++) {\n\t${0:${VISUAL}}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"for (...) {...}\"",
+        "label": "for (...) {...}",
         "matches": {
           "for": true
         },
@@ -41716,7 +41718,7 @@
         "content": "for (let ${2:i} = ${1:Things.length} - 1; $2 >= 0; $2--) {\n\t${0:${VISUAL}}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"reversed for (...) {...}\"",
+        "label": "reversed for (...) {...}",
         "matches": {
           "forr": true
         },
@@ -41726,7 +41728,7 @@
         "content": "while (${1:/* condition */}) {\n\t${0:${VISUAL}}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"(condition) { ... }\"",
+        "label": "(condition) { ... }",
         "matches": {
           "wh": true
         },
@@ -41736,7 +41738,7 @@
         "content": "do {\n\t${0:${VISUAL}}\n} while (${1:/* condition */});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"do { ... } while (condition)\"",
+        "label": "do { ... } while (condition)",
         "matches": {
           "do": true
         },
@@ -41936,7 +41938,7 @@
         "content": "console.log(${0});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"console.log\"",
+        "label": "console.log",
         "matches": {
           "cl": true
         },
@@ -41946,7 +41948,7 @@
         "content": "console.debug(${0});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"console.debug\"",
+        "label": "console.debug",
         "matches": {
           "cd": true
         },
@@ -41956,7 +41958,7 @@
         "content": "console.error(${0});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"console.error\"",
+        "label": "console.error",
         "matches": {
           "ce": true
         },
@@ -41966,7 +41968,7 @@
         "content": "console.warn(${0});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"console.warn\"",
+        "label": "console.warn",
         "matches": {
           "cw": true
         },
@@ -41976,7 +41978,7 @@
         "content": "console.info(${0});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"console.info\"",
+        "label": "console.info",
         "matches": {
           "ci": true
         },
@@ -41986,7 +41988,7 @@
         "content": "console.trace(${0:label});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"console.trace\"",
+        "label": "console.trace",
         "matches": {
           "ct": true
         },
@@ -41996,7 +41998,7 @@
         "content": "console.time(\"${1:label}\");\n${0:${VISUAL}}\nconsole.timeEnd(\"$1\");",
         "doc": "",
         "grammar": "snu",
-        "label": "\"console.time ... console.timeEnd\"",
+        "label": "console.time ... console.timeEnd",
         "matches": {
           "ctime": true
         },
@@ -42006,7 +42008,7 @@
         "content": "console.timeStamp(\"${1:label}\");",
         "doc": "",
         "grammar": "snu",
-        "label": "\"console.timeStamp\"",
+        "label": "console.timeStamp",
         "matches": {
           "ctimestamp": true
         },
@@ -42016,7 +42018,7 @@
         "content": "console.assert(${1:expression}, ${0:obj});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"console.assert\"",
+        "label": "console.assert",
         "matches": {
           "ca": true
         },
@@ -42026,7 +42028,7 @@
         "content": "console.clear();",
         "doc": "",
         "grammar": "snu",
-        "label": "\"console.clear\"",
+        "label": "console.clear",
         "matches": {
           "cclear": true
         },
@@ -42036,7 +42038,7 @@
         "content": "console.dir(${0:obj});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"console.dir\"",
+        "label": "console.dir",
         "matches": {
           "cdir": true
         },
@@ -42046,7 +42048,7 @@
         "content": "console.dirxml(${1:object});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"console.dirxml\"",
+        "label": "console.dirxml",
         "matches": {
           "cdirx": true
         },
@@ -42056,7 +42058,7 @@
         "content": "console.group(\"${1:label}\");\n${0:${VISUAL}}\nconsole.groupEnd();",
         "doc": "",
         "grammar": "snu",
-        "label": "\"console.group\"",
+        "label": "console.group",
         "matches": {
           "cgroup": true
         },
@@ -42066,7 +42068,7 @@
         "content": "console.groupCollapsed(\"${1:label}\");\n${0:${VISUAL}}\nconsole.groupEnd();",
         "doc": "",
         "grammar": "snu",
-        "label": "\"console.groupCollapsed\"",
+        "label": "console.groupCollapsed",
         "matches": {
           "cgroupc": true
         },
@@ -42076,7 +42078,7 @@
         "content": "console.profile(\"${1:label}\");\n${0:${VISUAL}}\nconsole.profileEnd();",
         "doc": "",
         "grammar": "snu",
-        "label": "\"console.profile\"",
+        "label": "console.profile",
         "matches": {
           "cprof": true
         },
@@ -42086,7 +42088,7 @@
         "content": "console.table(${1:\"${2:value}\"});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"console.table\"",
+        "label": "console.table",
         "matches": {
           "ctable": true
         },
@@ -42096,7 +42098,7 @@
         "content": "console.log(JSON.stringify(${0}, null, 2));",
         "doc": "",
         "grammar": "snu",
-        "label": "\"console.log stringified\"",
+        "label": "console.log stringified",
         "matches": {
           "clstr": true
         },
@@ -42156,7 +42158,7 @@
         "content": "import ${1} from '${2:$1}';",
         "doc": "",
         "grammar": "snu",
-        "label": "\"import xyz from 'xyz'\"",
+        "label": "import xyz from 'xyz'",
         "matches": {
           "im": true
         },
@@ -42166,7 +42168,7 @@
         "content": "import * as ${1} from '${2:$1}';",
         "doc": "",
         "grammar": "snu",
-        "label": "\"import * as xyz from 'xyz'\"",
+        "label": "import * as xyz from 'xyz'",
         "matches": {
           "imas": true
         },
@@ -42176,7 +42178,7 @@
         "content": "import { ${1} } from '${2}';",
         "doc": "",
         "grammar": "snu",
-        "label": "\"import { member } from 'xyz'\"",
+        "label": "import { member } from 'xyz'",
         "matches": {
           "imm": true
         },
@@ -42216,7 +42218,7 @@
         "content": "for (const ${1:prop} of ${2:object}) {\n\t${0:$1}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"for (const prop of object}) { ... }\"",
+        "label": "for (const prop of object}) { ... }",
         "matches": {
           "foro": true
         },
@@ -42226,7 +42228,7 @@
         "content": "for (let ${1:prop} of ${2:object}) {\n\t${0:$1}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"for (let prop of object}) { ... }\"",
+        "label": "for (let prop of object}) { ... }",
         "matches": {
           "forl": true
         },
@@ -42296,7 +42298,7 @@
         "content": "(${1}) => ${0:${VISUAL}}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"() =>\"",
+        "label": "() =>",
         "matches": {
           "af": true
         },
@@ -42306,7 +42308,7 @@
         "content": "(${1}) => {\n\t${0:${VISUAL}}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"() => {}\"",
+        "label": "() => {}",
         "matches": {
           "afb": true
         },
@@ -42346,7 +42348,7 @@
         "content": "async ${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"async\"",
+        "label": "async",
         "matches": {
           "as": true
         },
@@ -42356,7 +42358,7 @@
         "content": "await ${0:${VISUAL}}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"await\"",
+        "label": "await",
         "matches": {
           "aw": true
         },
@@ -42692,7 +42694,7 @@
         "content": "describe('${1:description}', function() {\n\t$0\n});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Describe (js)\"",
+        "label": "Describe (js)",
         "matches": {
           "des": true
         },
@@ -42702,7 +42704,7 @@
         "content": "it('${1:description}', function() {\n\t$0\n});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"it (js)\"",
+        "label": "it (js)",
         "matches": {
           "it": true
         },
@@ -42712,7 +42714,7 @@
         "content": "beforeEach(function() {\n\t$0\n});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"before each (js)\"",
+        "label": "before each (js)",
         "matches": {
           "bef": true
         },
@@ -42722,7 +42724,7 @@
         "content": "afterEach(function() {\n\t$0\n});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"after each (js)\"",
+        "label": "after each (js)",
         "matches": {
           "aft": true
         },
@@ -42732,7 +42734,7 @@
         "content": "beforeAll(function() {\n\t$0\n});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"before all (js)\"",
+        "label": "before all (js)",
         "matches": {
           "befa": true
         },
@@ -42742,7 +42744,7 @@
         "content": "afterAll(function() {\n\t$0\n});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"after all (js)\"",
+        "label": "after all (js)",
         "matches": {
           "afta": true
         },
@@ -42752,7 +42754,7 @@
         "content": "jasmine.any($1)",
         "doc": "",
         "grammar": "snu",
-        "label": "\"any (js)\"",
+        "label": "any (js)",
         "matches": {
           "any": true
         },
@@ -42762,7 +42764,7 @@
         "content": "jasmine.anything()",
         "doc": "",
         "grammar": "snu",
-        "label": "\"anything (js)\"",
+        "label": "anything (js)",
         "matches": {
           "anyt": true
         },
@@ -42772,7 +42774,7 @@
         "content": "jasmine.objectContaining({\n\t${VISUAL}$0\n});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"object containing (js)\"",
+        "label": "object containing (js)",
         "matches": {
           "objc": true
         },
@@ -42782,7 +42784,7 @@
         "content": "jasmine.arrayContaining([${1:value1}]);",
         "doc": "",
         "grammar": "snu",
-        "label": "\"array containing (js)\"",
+        "label": "array containing (js)",
         "matches": {
           "arrc": true
         },
@@ -42792,7 +42794,7 @@
         "content": "jasmine.stringMatching(\"${1:matcher}\")",
         "doc": "",
         "grammar": "snu",
-        "label": "\"string matching (js)\"",
+        "label": "string matching (js)",
         "matches": {
           "strm": true
         },
@@ -42802,7 +42804,7 @@
         "content": "runs(function() {\n\t$0\n});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"runs (js)\"",
+        "label": "runs (js)",
         "matches": {
           "ru": true
         },
@@ -42812,7 +42814,7 @@
         "content": "waits($1);",
         "doc": "",
         "grammar": "snu",
-        "label": "\"waits (js)\"",
+        "label": "waits (js)",
         "matches": {
           "wa": true
         },
@@ -42822,7 +42824,7 @@
         "content": "expect(${1:target})$0;",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect (js)\"",
+        "label": "expect (js)",
         "matches": {
           "ex": true
         },
@@ -42832,7 +42834,7 @@
         "content": "expect(${1:target}).toEqual(${2:value});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect to equal (js)\"",
+        "label": "expect to equal (js)",
         "matches": {
           "ee": true
         },
@@ -42842,7 +42844,7 @@
         "content": "expect(${1:target}).toBeLessThan(${2:value});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect to be less than (js)\"",
+        "label": "expect to be less than (js)",
         "matches": {
           "el": true
         },
@@ -42852,7 +42854,7 @@
         "content": "expect(${1:target}).toBeGreaterThan(${2:value});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect to be greater than (js)\"",
+        "label": "expect to be greater than (js)",
         "matches": {
           "eg": true
         },
@@ -42862,7 +42864,7 @@
         "content": "expect(${1:target}).toBe(${2:value});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect to be (js)\"",
+        "label": "expect to be (js)",
         "matches": {
           "eb": true
         },
@@ -42872,7 +42874,7 @@
         "content": "expect(${1:target}).toMatch(${2:pattern});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect to match (js)\"",
+        "label": "expect to match (js)",
         "matches": {
           "em": true
         },
@@ -42882,7 +42884,7 @@
         "content": "expect(${1:target}).toHaveAttr('${2:attr}'${3:, '${4:value}'});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect to have attribute (js)\"",
+        "label": "expect to have attribute (js)",
         "matches": {
           "eha": true
         },
@@ -42892,7 +42894,7 @@
         "content": "expect(${1:target}).toBeTruthy();",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect to be truthy (js)\"",
+        "label": "expect to be truthy (js)",
         "matches": {
           "et": true
         },
@@ -42902,7 +42904,7 @@
         "content": "expect(${1:target}).toBeFalsy();",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect to be falsy (js)\"",
+        "label": "expect to be falsy (js)",
         "matches": {
           "ef": true
         },
@@ -42912,7 +42914,7 @@
         "content": "expect(${1:target}).toBeDefined();",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect to be defined (js)\"",
+        "label": "expect to be defined (js)",
         "matches": {
           "etbd": true
         },
@@ -42922,7 +42924,7 @@
         "content": "expect(${1:target}).toBeUndefined();",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect to be defined (js)\"",
+        "label": "expect to be defined (js)",
         "matches": {
           "eud": true
         },
@@ -42932,7 +42934,7 @@
         "content": "expect(${1:target}).toBeNull();",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect to be null (js)\"",
+        "label": "expect to be null (js)",
         "matches": {
           "en": true
         },
@@ -42942,7 +42944,7 @@
         "content": "expect(${1:target}).toContain(${2:value});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect to contain (js)\"",
+        "label": "expect to contain (js)",
         "matches": {
           "ec": true
         },
@@ -42952,7 +42954,7 @@
         "content": "expect(${1:target}).toBeVisible();",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect to be visible (js)\"",
+        "label": "expect to be visible (js)",
         "matches": {
           "ev": true
         },
@@ -42962,7 +42964,7 @@
         "content": "expect(${1:target}).toBeHidden();",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect to be hidden (js)\"",
+        "label": "expect to be hidden (js)",
         "matches": {
           "eh": true
         },
@@ -42972,7 +42974,7 @@
         "content": "expect(${1:target}).toThrow(${2:value});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect to throw (js)\"",
+        "label": "expect to throw (js)",
         "matches": {
           "eth": true
         },
@@ -42982,7 +42984,7 @@
         "content": "expect(${1:target}).toThrowError(${2:value});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect to throw error (js)\"",
+        "label": "expect to throw error (js)",
         "matches": {
           "ethe": true
         },
@@ -42992,7 +42994,7 @@
         "content": "expect(${1:target}).not$0;",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect not (js)\"",
+        "label": "expect not (js)",
         "matches": {
           "notx": true
         },
@@ -43002,7 +43004,7 @@
         "content": "expect(${1:target}).not.toEqual(${2:value});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect not to equal (js)\"",
+        "label": "expect not to equal (js)",
         "matches": {
           "note": true
         },
@@ -43012,7 +43014,7 @@
         "content": "expect(${1:target}).not.toBeLessThan(${2:value});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect to not be less than (js)\"",
+        "label": "expect to not be less than (js)",
         "matches": {
           "notl": true
         },
@@ -43022,7 +43024,7 @@
         "content": "expect(${1:target}).not.toBeGreaterThan(${2:value});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect to not be greater than (js)\"",
+        "label": "expect to not be greater than (js)",
         "matches": {
           "notg": true
         },
@@ -43032,7 +43034,7 @@
         "content": "expect(${1:target}).not.toMatch(${2:pattern});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect not to match (js)\"",
+        "label": "expect not to match (js)",
         "matches": {
           "notm": true
         },
@@ -43042,7 +43044,7 @@
         "content": "expect(${1:target}).not.toHaveAttr('${2:attr}'${3:, '${4:value}'});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect to not have attribute (js)\"",
+        "label": "expect to not have attribute (js)",
         "matches": {
           "notha": true
         },
@@ -43052,7 +43054,7 @@
         "content": "expect(${1:target}).not.toBeTruthy();",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect not to be truthy (js)\"",
+        "label": "expect not to be truthy (js)",
         "matches": {
           "nott": true
         },
@@ -43062,7 +43064,7 @@
         "content": "expect(${1:target}).not.toBeFalsy();",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect not to be falsy (js)\"",
+        "label": "expect not to be falsy (js)",
         "matches": {
           "notf": true
         },
@@ -43072,7 +43074,7 @@
         "content": "expect(${1:target}).not.toBeDefined();",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect not to be defined (js)\"",
+        "label": "expect not to be defined (js)",
         "matches": {
           "notd": true
         },
@@ -43082,7 +43084,7 @@
         "content": "expect(${1:target}).not.toBeNull();",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect not to be null (js)\"",
+        "label": "expect not to be null (js)",
         "matches": {
           "notn": true
         },
@@ -43092,7 +43094,7 @@
         "content": "expect(${1:target}).not.toContain(${2:value});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect not to contain (js)\"",
+        "label": "expect not to contain (js)",
         "matches": {
           "notc": true
         },
@@ -43102,7 +43104,7 @@
         "content": "expect(${1:target}).not.toBeVisible();",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect not to be visible (js)\"",
+        "label": "expect not to be visible (js)",
         "matches": {
           "notv": true
         },
@@ -43112,7 +43114,7 @@
         "content": "expect(${1:target}).not.toBeHidden();",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect not to be hidden (js)\"",
+        "label": "expect not to be hidden (js)",
         "matches": {
           "noth": true
         },
@@ -43122,7 +43124,7 @@
         "content": "expect(${1:target}).not.toThrow(${2:value});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect not to throw (js)\"",
+        "label": "expect not to throw (js)",
         "matches": {
           "notth": true
         },
@@ -43132,7 +43134,7 @@
         "content": "expect(${1:target}).not.toThrowError(${2:value});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect not to throw error (js)\"",
+        "label": "expect not to throw error (js)",
         "matches": {
           "notthe": true
         },
@@ -43142,7 +43144,7 @@
         "content": "spyOn(${1:object}, '${2:method}')$0;",
         "doc": "",
         "grammar": "snu",
-        "label": "\"spy on (js)\"",
+        "label": "spy on (js)",
         "matches": {
           "s": true
         },
@@ -43152,7 +43154,7 @@
         "content": "spyOn(${1:object}, '${2:method}').and.returnValue(${3:arguments});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"spy on and return (js)\"",
+        "label": "spy on and return (js)",
         "matches": {
           "sr": true
         },
@@ -43162,7 +43164,7 @@
         "content": "spyOn(${1:object}, '${2:method}').and.throwError(${3:exception});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"spy on and throw (js)\"",
+        "label": "spy on and throw (js)",
         "matches": {
           "st": true
         },
@@ -43172,7 +43174,7 @@
         "content": "spyOn(${1:object}, '${2:method}').and.callThrough();",
         "doc": "",
         "grammar": "snu",
-        "label": "\"spy on and call through (js)\"",
+        "label": "spy on and call through (js)",
         "matches": {
           "sct": true
         },
@@ -43182,7 +43184,7 @@
         "content": "spyOn(${1:object}, '${2:method}').and.callFake(${3:function});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"spy on and call fake (js)\"",
+        "label": "spy on and call fake (js)",
         "matches": {
           "scf": true
         },
@@ -43192,7 +43194,7 @@
         "content": "expect(${1:target}).toHaveBeenCalled();",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect to have been called (js)\"",
+        "label": "expect to have been called (js)",
         "matches": {
           "ethbc": true
         },
@@ -43202,7 +43204,7 @@
         "content": "expect(${1:target}).not.toHaveBeenCalled();",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect not to have been called (js)\"",
+        "label": "expect not to have been called (js)",
         "matches": {
           "nthbc": true
         },
@@ -43212,7 +43214,7 @@
         "content": "expect(${1:target}).toHaveBeenCalledWith(${2:arguments});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect to have been called with (js)\"",
+        "label": "expect to have been called with (js)",
         "matches": {
           "ethbcw": true
         },
@@ -45486,101 +45488,121 @@
         "content": "describe('${1:}', () => {\n\t${0:${VISUAL}}\n});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"describe('thing', () => { ... })\" b",
+        "label": "describe('thing', () => { ... })",
         "matches": {
           "des": true
         },
-        "options": {}
+        "options": {
+          "b": true
+        }
       },
       {
         "content": "it('${1:}', () => {\n\t${0:${VISUAL}}\n});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"it('should do', () => { ... })\" b",
+        "label": "it('should do', () => { ... })",
         "matches": {
           "it": true
         },
-        "options": {}
+        "options": {
+          "b": true
+        }
       },
       {
         "content": "xit('${1:}', () => {\n\t${0:${VISUAL}}\n});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"xit('should do', () => { ... })\" b",
+        "label": "xit('should do', () => { ... })",
         "matches": {
           "xit": true
         },
-        "options": {}
+        "options": {
+          "b": true
+        }
       },
       {
         "content": "before(() => {\n\t${0:${VISUAL}}\n});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"before(() => { ... })\" b",
+        "label": "before(() => { ... })",
         "matches": {
           "bef": true
         },
-        "options": {}
+        "options": {
+          "b": true
+        }
       },
       {
         "content": "beforeEach(() => {\n\t${0:${VISUAL}}\n});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"beforeEach(() => { ... })\" b",
+        "label": "beforeEach(() => { ... })",
         "matches": {
           "befe": true
         },
-        "options": {}
+        "options": {
+          "b": true
+        }
       },
       {
         "content": "after(() => {\n\t${0:${VISUAL}}\n});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"after(() => { ... })\" b",
+        "label": "after(() => { ... })",
         "matches": {
           "aft": true
         },
-        "options": {}
+        "options": {
+          "b": true
+        }
       },
       {
         "content": "afterEach(() => {\n\t${0:${VISUAL}}\n});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"afterEach(() => { ... })\" b",
+        "label": "afterEach(() => { ... })",
         "matches": {
           "afte": true
         },
-        "options": {}
+        "options": {
+          "b": true
+        }
       },
       {
         "content": "expect(${1:})${0};",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect(...)\" b",
+        "label": "expect(...)",
         "matches": {
           "exp": true
         },
-        "options": {}
+        "options": {
+          "b": true
+        }
       },
       {
         "content": "expect(${1:}).to.equal(${0});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect(...).to.equal(...)\" b",
+        "label": "expect(...).to.equal(...)",
         "matches": {
           "expe": true
         },
-        "options": {}
+        "options": {
+          "b": true
+        }
       },
       {
         "content": "expect(${1:}).to.deep.equal(${0});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"expect(...).to.deep.equal(...)\" b",
+        "label": "expect(...).to.deep.equal(...)",
         "matches": {
           "expd": true
         },
-        "options": {}
+        "options": {
+          "b": true
+        }
       }
     ],
     "javascript-node": [
@@ -62904,7 +62926,7 @@
         "content": "declare(strict_types=${1:1});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"declare(strict_types=1)\"",
+        "label": "declare(strict_types=1)",
         "matches": {
           "dst": true
         },
@@ -62991,7 +63013,7 @@
         "options": {}
       },
       {
-        "content": "$this->",
+        "content": "\\$this->",
         "doc": "",
         "grammar": "snu",
         "label": "",
@@ -63024,7 +63046,7 @@
         "content": "/**\n * Gets the value of ${1:foo}\n *\n * @return ${2:string}\n */\n${3:public} function get${4:$1}()\n{\n\treturn $this->${5:$1};\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"PHP Class Getter Setter\"",
+        "label": "PHP Class Getter Setter",
         "matches": {
           "gm": true
         },
@@ -63074,7 +63096,7 @@
         "content": "$${1:retVal} = (${2:condition}) ? ${3:a} : ${4:b};",
         "doc": "",
         "grammar": "snu",
-        "label": "\"$retVal = (condition) ? a : b\"",
+        "label": "$retVal = (condition) ? a : b",
         "matches": {
           "t": true
         },
@@ -63114,7 +63136,7 @@
         "content": "$_GET['${1:variable}']",
         "doc": "",
         "grammar": "snu",
-        "label": "\"_GET array\"",
+        "label": "_GET array",
         "matches": {
           "G": true
         },
@@ -63124,7 +63146,7 @@
         "content": "$_POST['${1:variable}']",
         "doc": "",
         "grammar": "snu",
-        "label": "\"_POST array\"",
+        "label": "_POST array",
         "matches": {
           "P": true
         },
@@ -63164,7 +63186,7 @@
         "content": "$_GET['${1}']",
         "doc": "",
         "grammar": "snu",
-        "label": "\"get\"",
+        "label": "get",
         "matches": {
           "get": true
         },
@@ -63174,7 +63196,7 @@
         "content": "$_POST['${1}']",
         "doc": "",
         "grammar": "snu",
-        "label": "\"post\"",
+        "label": "post",
         "matches": {
           "post": true
         },
@@ -63184,7 +63206,7 @@
         "content": "$_SESSION['${1}']",
         "doc": "",
         "grammar": "snu",
-        "label": "\"session\"",
+        "label": "session",
         "matches": {
           "session": true
         },
@@ -63294,7 +63316,7 @@
         "content": "/**\n * {@inheritdoc}\n */",
         "doc": "",
         "grammar": "snu",
-        "label": "\"@inheritdoc docblock\"",
+        "label": "@inheritdoc docblock",
         "matches": {
           "inheritdoc": true
         },
@@ -63304,7 +63326,7 @@
         "content": "define('${1:VARIABLE_NAME}', ${2:'definition'});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"define('VARIABLE_NAME', 'definition')\"",
+        "label": "define('VARIABLE_NAME', 'definition')",
         "matches": {
           "def": true
         },
@@ -63324,7 +63346,7 @@
         "content": "while (${1:/* condition */}) {\n\t${0:${VISUAL}}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"while (condition) { ... }\"",
+        "label": "while (condition) { ... }",
         "matches": {
           "wh": true
         },
@@ -63334,7 +63356,7 @@
         "content": "do {\n\t${0:${VISUAL}}\n} while (${1});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"do { ... } while (condition)\"",
+        "label": "do { ... } while (condition)",
         "matches": {
           "do": true
         },
@@ -63344,7 +63366,7 @@
         "content": "if (${1}) {\n\t${0:${VISUAL}}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"if (condition) { ... }\"",
+        "label": "if (condition) { ... }",
         "matches": {
           "if": true
         },
@@ -63354,7 +63376,7 @@
         "content": "if (!${1}) {\n\t${0:${VISUAL}}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"if (!condition) { ... }\"",
+        "label": "if (!condition) { ... }",
         "matches": {
           "ifn": true
         },
@@ -63364,7 +63386,7 @@
         "content": "<?php if (${1}): ?>\n\t${0:${VISUAL}}\n<?php endif; ?>",
         "doc": "",
         "grammar": "snu",
-        "label": "\"<?php if (condition): ?> ... <?php endif; ?>\"",
+        "label": "<?php if (condition): ?> ... <?php endif; ?>",
         "matches": {
           "ifil": true
         },
@@ -63374,7 +63396,7 @@
         "content": "if (${1}) {\n\t${0:${VISUAL}}\n} else {\n\t${2}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"if (cond) { ... } else { ... }\"",
+        "label": "if (cond) { ... } else { ... }",
         "matches": {
           "ife": true
         },
@@ -63384,7 +63406,7 @@
         "content": "<?php if (${1}): ?>\n\t${0:${VISUAL}}\n<?php else: ?>\n\t${2}\n<?php endif; ?>",
         "doc": "",
         "grammar": "snu",
-        "label": "\"<?php if (condition): ?> ... <?php else: ?> ... <?php endif; ?>\"",
+        "label": "<?php if (condition): ?> ... <?php else: ?> ... <?php endif; ?>",
         "matches": {
           "ifeil": true
         },
@@ -63394,7 +63416,7 @@
         "content": "else {\n\t${0:${VISUAL}}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"else { ... }\"",
+        "label": "else { ... }",
         "matches": {
           "el": true
         },
@@ -63404,7 +63426,7 @@
         "content": "elseif (${1}) {\n\t${0:${VISUAL}}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"elseif(condition) { ... }\"",
+        "label": "elseif(condition) { ... }",
         "matches": {
           "eif": true
         },
@@ -63414,7 +63436,7 @@
         "content": "switch ($${1:variable}) {\n\tcase '${2:value}':\n\t\t${3}\n\t\tbreak;\n\t${0}\n\tdefault:\n\t\t${4}\n\t\tbreak;\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"switch($var) { case 'xyz': ... default: .... }\"",
+        "label": "switch($var) { case 'xyz': ... default: .... }",
         "matches": {
           "switch": true
         },
@@ -63424,7 +63446,7 @@
         "content": "case '${1:value}':\n\t${0:${VISUAL}}\n\tbreak;",
         "doc": "",
         "grammar": "snu",
-        "label": "\"case 'value': ... break\"",
+        "label": "case 'value': ... break",
         "matches": {
           "case": true
         },
@@ -63434,7 +63456,7 @@
         "content": "for ($${2:i} = 0; $$2 < ${1:count}; $$2${3:++}) {\n\t${0:${VISUAL}}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"for ($i = 0; $i < $count; $i++) { ... }\"",
+        "label": "for ($i = 0; $i < $count; $i++) { ... }",
         "matches": {
           "for": true
         },
@@ -63444,7 +63466,7 @@
         "content": "foreach ($${1:variable} as $${2:value}) {\n\t${0:${VISUAL}}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"foreach ($var as $value) { .. }\"",
+        "label": "foreach ($var as $value) { .. }",
         "matches": {
           "foreach": true
         },
@@ -63454,7 +63476,7 @@
         "content": "<?php foreach ($${1:variable} as $${2:value}): ?>\n\t${0:${VISUAL}}\n<?php endforeach; ?>",
         "doc": "",
         "grammar": "snu",
-        "label": "\"<?php foreach ($var as $value): ?>  ... <?php endforeach; ?>\"",
+        "label": "<?php foreach ($var as $value): ?>  ... <?php endforeach; ?>",
         "matches": {
           "foreachil": true
         },
@@ -63464,7 +63486,7 @@
         "content": "foreach ($${1:variable} as $${2:key} => $${3:value}) {\n\t${0:${VISUAL}}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"foreach ($var as $key => $value) { .. }\"",
+        "label": "foreach ($var as $key => $value) { .. }",
         "matches": {
           "foreachk": true
         },
@@ -63474,7 +63496,7 @@
         "content": "<?php foreach ($${1:variable} as $${2:key} => $${3:value}): ?>\n\t${0:<!-- html... -->}\n<?php endforeach; ?>",
         "doc": "",
         "grammar": "snu",
-        "label": "\"<?php foreach ($var as $key => $value): ?>  ... <?php endforeach; ?>\"",
+        "label": "<?php foreach ($var as $key => $value): ?>  ... <?php endforeach; ?>",
         "matches": {
           "foreachkil": true
         },
@@ -63484,7 +63506,7 @@
         "content": "$${1:arrayName} = ['${2}' => ${3}];",
         "doc": "",
         "grammar": "snu",
-        "label": "\"$... = ['' => ]\"",
+        "label": "$... = ['' => ]",
         "matches": {
           "array": true
         },
@@ -63494,7 +63516,7 @@
         "content": "try {\n\t${0:${VISUAL}}\n} catch (${1:Exception} $e) {\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"try { ... } catch (Exception $e) { ... }\"",
+        "label": "try { ... } catch (Exception $e) { ... }",
         "matches": {
           "try": true
         },
@@ -63594,7 +63616,7 @@
         "content": "error_log(var_export(${1}, true));",
         "doc": "",
         "grammar": "snu",
-        "label": "\"error_log(var_export($var, true));\"",
+        "label": "error_log(var_export($var, true));",
         "matches": {
           "log": true
         },
@@ -63604,7 +63626,7 @@
         "content": "var_export(${1});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"var_export($var)\"",
+        "label": "var_export($var)",
         "matches": {
           "var": true
         },
@@ -63614,7 +63636,7 @@
         "content": "echo '<pre>' . var_export(${1}, 1) . '</pre>';",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Dumb debug helper in HTML\"",
+        "label": "Dumb debug helper in HTML",
         "matches": {
           "ve": true
         },
@@ -63624,7 +63646,7 @@
         "content": "var_export($1);$0",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Dumb debug helper in cli\"",
+        "label": "Dumb debug helper in cli",
         "matches": {
           "pc": true
         },
@@ -63714,7 +63736,7 @@
         "content": "$this->assertEquals(${1:$expected}, ${2:$actual});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"$this->assertEquals($a, $b)\"",
+        "label": "$this->assertEquals($a, $b)",
         "matches": {
           "ase": true
         },
@@ -63724,7 +63746,7 @@
         "content": "$this->assertNotEquals(${1:$expected}, ${2:$actual});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"$this->assertNotEquals($a, $b)\"",
+        "label": "$this->assertNotEquals($a, $b)",
         "matches": {
           "asne": true
         },
@@ -63734,7 +63756,7 @@
         "content": "$this->assertFalse(${1});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"$this->assertFalse($a)\"",
+        "label": "$this->assertFalse($a)",
         "matches": {
           "asf": true
         },
@@ -63744,7 +63766,7 @@
         "content": "$this->assertTrue(${1});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"$this->assertTrue($a)\"",
+        "label": "$this->assertTrue($a)",
         "matches": {
           "ast": true
         },
@@ -63754,7 +63776,7 @@
         "content": "$this->assertFileExists(${1:'path/to/file'});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"$this->assertFileExists('path/to/file')\"",
+        "label": "$this->assertFileExists('path/to/file')",
         "matches": {
           "asfex": true
         },
@@ -63764,7 +63786,7 @@
         "content": "$this->assertFileNotExists(${1:'path/to/file'});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"$this->assertFileNotExists('path/to/file')\"",
+        "label": "$this->assertFileNotExists('path/to/file')",
         "matches": {
           "asfnex": true
         },
@@ -63774,7 +63796,7 @@
         "content": "$this->assertContains(${1:$needle}, ${2:$haystack});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"$this->assertContains($needle, $haystack)\"",
+        "label": "$this->assertContains($needle, $haystack)",
         "matches": {
           "ascon": true
         },
@@ -63784,7 +63806,7 @@
         "content": "$this->assertNotContains(${1:$needle}, ${2:$haystack});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"$this->assertNotContains($needle, $haystack)\"",
+        "label": "$this->assertNotContains($needle, $haystack)",
         "matches": {
           "asncon": true
         },
@@ -63794,7 +63816,7 @@
         "content": "$this->assertContainsOnly(${1:$needle}, ${2:$haystack});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"$this->assertContainsOnly($needle, $haystack)\"",
+        "label": "$this->assertContainsOnly($needle, $haystack)",
         "matches": {
           "ascono": true
         },
@@ -63804,7 +63826,7 @@
         "content": "$this->assertContainsOnlyInstancesOf(${1:Example}::class, ${2:$haystack});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"$this->assertContainsOnlyInstancesOf(Example::class, $haystack)\"",
+        "label": "$this->assertContainsOnlyInstancesOf(Example::class, $haystack)",
         "matches": {
           "asconoi": true
         },
@@ -63814,7 +63836,7 @@
         "content": "$this->assertArrayHasKey(${1:$key}, ${2:$array});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"$this->assertArrayHasKey($key, $array)\"",
+        "label": "$this->assertArrayHasKey($key, $array)",
         "matches": {
           "ashk": true
         },
@@ -63824,7 +63846,7 @@
         "content": "this->assertArrayNotHasKey(${1:$key}, ${2:$array});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"$this->assertArrayNotHasKey($key, $array)\"",
+        "label": "$this->assertArrayNotHasKey($key, $array)",
         "matches": {
           "asnhk": true
         },
@@ -63834,7 +63856,7 @@
         "content": "$this->assertClassHasAttribute(${1:$attributeName}, ${2:Example}::class);",
         "doc": "",
         "grammar": "snu",
-        "label": "\"$this->assertClassHasAttribute($name, Example::class)\"",
+        "label": "$this->assertClassHasAttribute($name, Example::class)",
         "matches": {
           "ascha": true
         },
@@ -63844,7 +63866,7 @@
         "content": "$this->assertInstanceOf(${1:Example}::class, ${2:$actual});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"$this->assertInstanceOf(Example::class, $actual)\"",
+        "label": "$this->assertInstanceOf(Example::class, $actual)",
         "matches": {
           "asi": true
         },
@@ -63854,7 +63876,7 @@
         "content": "$this->assertInternalType(${1:'string'}, ${2:actual});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"$this->assertInternalType('string', $actual)\"",
+        "label": "$this->assertInternalType('string', $actual)",
         "matches": {
           "asit": true
         },
@@ -63864,7 +63886,7 @@
         "content": "$this->assertCount(${1:$expectedCount}, ${2:$haystack});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"$this->assertCount($count, $haystack)\"",
+        "label": "$this->assertCount($count, $haystack)",
         "matches": {
           "asco": true
         },
@@ -63874,7 +63896,7 @@
         "content": "$this->assertNotCount(${1:$count}, ${2:$haystack});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"$this->assertNotCount($count, $haystack)\"",
+        "label": "$this->assertNotCount($count, $haystack)",
         "matches": {
           "asnco": true
         },
@@ -63884,7 +63906,7 @@
         "content": "$this->assertArraySubset(${1:$subset}, ${2:$array});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"$this->assertArraySubset($subset, $array)\"",
+        "label": "$this->assertArraySubset($subset, $array)",
         "matches": {
           "assub": true
         },
@@ -63894,7 +63916,7 @@
         "content": "$this->assertNull(${1});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"$this->assertNull($a)\"",
+        "label": "$this->assertNull($a)",
         "matches": {
           "asnu": true
         },
@@ -63904,7 +63926,7 @@
         "content": "$this->assertNotNull(${1});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"$this->assertNotNull($a)\"",
+        "label": "$this->assertNotNull($a)",
         "matches": {
           "asnnu": true
         },
@@ -63914,7 +63936,7 @@
         "content": "public function test${1}()\n{\n\t${0:${VISUAL}}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"public function testXYZ() { ... }\"",
+        "label": "public function testXYZ() { ... }",
         "matches": {
           "test": true
         },
@@ -63924,7 +63946,7 @@
         "content": "protected function setUp()\n{\n\t${0:${VISUAL}}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"protected function setUp() { ... }\"",
+        "label": "protected function setUp() { ... }",
         "matches": {
           "setup": true
         },
@@ -63934,7 +63956,7 @@
         "content": "protected function tearDown()\n{\n\t${0:${VISUAL}}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"protected function tearDown() { ... }\"",
+        "label": "protected function tearDown() { ... }",
         "matches": {
           "teardown": true
         },
@@ -63944,7 +63966,7 @@
         "content": "$${1:observer} = $this->prophesize(${2:SomeClass}::class);",
         "doc": "",
         "grammar": "snu",
-        "label": "\"$observer = $this->prophesize(SomeClass::class);\"",
+        "label": "$observer = $this->prophesize(SomeClass::class);",
         "matches": {
           "proph": true
         },
@@ -63954,7 +63976,7 @@
         "content": "$${1:mock} = $this->createMock(${2:SomeClass}::class);",
         "doc": "",
         "grammar": "snu",
-        "label": "\"$mock = $this->createMock(SomeClass::class);\"",
+        "label": "$mock = $this->createMock(SomeClass::class);",
         "matches": {
           "mock": true
         },
@@ -63964,7 +63986,7 @@
         "content": "expects($this->${1:once}())\n\t->method('${2}')\n\t->with(${3})\n\t->willReturn(${4});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"phpunit expects\"",
+        "label": "phpunit expects",
         "matches": {
           "exp": true
         },
@@ -63974,7 +63996,7 @@
         "content": "/**\n* @group ${1}\n*/",
         "doc": "",
         "grammar": "snu",
-        "label": "\"phpunit comment with group\"",
+        "label": "phpunit comment with group",
         "matches": {
           "testcmt": true
         },
@@ -63984,7 +64006,7 @@
         "content": "$this->fail(${1});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"$this->fail()\"",
+        "label": "$this->fail()",
         "matches": {
           "fail": true
         },
@@ -63994,7 +64016,7 @@
         "content": "$this->markTestIncomplete(${1});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"$this->markTestIncomplete()\"",
+        "label": "$this->markTestIncomplete()",
         "matches": {
           "marki": true
         },
@@ -64004,7 +64026,7 @@
         "content": "$this->markTestSkipped(${1});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"$this->markTestSkipped()\"",
+        "label": "$this->markTestSkipped()",
         "matches": {
           "marks": true
         },
@@ -64014,7 +64036,7 @@
         "content": "throw new ${1:Exception}(\"${2:Error Processing Request}\");",
         "doc": "",
         "grammar": "snu",
-        "label": "\"throw new Exception()\"",
+        "label": "throw new Exception()",
         "matches": {
           "te": true
         },
@@ -64024,17 +64046,19 @@
         "content": "file_put_contents(${1:file}, ${2:content}${3:, FILE_APPEND});$0",
         "doc": "",
         "grammar": "snu",
-        "label": "\"file_put_contents\" b",
+        "label": "file_put_contents",
         "matches": {
           "fpc": true
         },
-        "options": {}
+        "options": {
+          "b": true
+        }
       },
       {
         "content": "str_replace(${1:search}, ${2:replace}, ${3:subject})$0",
         "doc": "",
         "grammar": "snu",
-        "label": "\"str_replace\"",
+        "label": "str_replace",
         "matches": {
           "sr": true
         },
@@ -64044,7 +64068,7 @@
         "content": "in_array(${1:needle}, ${2:haystack})$0",
         "doc": "",
         "grammar": "snu",
-        "label": "\"in_array\"",
+        "label": "in_array",
         "matches": {
           "ia": true
         },
@@ -64054,7 +64078,7 @@
         "content": "isset(${1:var})$0",
         "doc": "",
         "grammar": "snu",
-        "label": "\"isset\"",
+        "label": "isset",
         "matches": {
           "is": true
         },
@@ -64064,7 +64088,7 @@
         "content": "isset($${1:array}[${2:key}])$0",
         "doc": "",
         "grammar": "snu",
-        "label": "\"isset array\"",
+        "label": "isset array",
         "matches": {
           "isa": true
         },
@@ -64074,7 +64098,7 @@
         "content": "is_null($${1:var})$0",
         "doc": "",
         "grammar": "snu",
-        "label": "\"is_null\"",
+        "label": "is_null",
         "matches": {
           "in": true
         },
@@ -64084,7 +64108,7 @@
         "content": "file_exists(${1:file})$0",
         "doc": "",
         "grammar": "snu",
-        "label": "\"file_exists\"",
+        "label": "file_exists",
         "matches": {
           "fe": true
         },
@@ -64094,7 +64118,7 @@
         "content": "is_dir(${1:path})$0",
         "doc": "",
         "grammar": "snu",
-        "label": "\"is_dir\"",
+        "label": "is_dir",
         "matches": {
           "id": true
         },
@@ -68772,11 +68796,13 @@
         "content": "@unittest.skip(${1:skip_reason})",
         "doc": "",
         "grammar": "snu",
-        "label": "\"skip unittests\" b",
+        "label": "skip unittests",
         "matches": {
           "sk": true
         },
-        "options": {}
+        "options": {
+          "b": true
+        }
       },
       {
         "content": "while ${1:condition}:\n\t${0:${VISUAL}}",
@@ -69432,47 +69458,55 @@
         "content": "def __len__(self):\n\t${1:pass}\ndef __getitem__(self, key):\n\t${2:pass}\ndef __setitem__(self, key, value):\n\t${3:pass}\ndef __delitem__(self, key):\n\t${4:pass}\ndef __iter__(self):\n\t${5:pass}\ndef __reversed__(self):\n\t${6:pass}\ndef __contains__(self, item):\n\t${7:pass}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"methods for emulating a container type\" b",
+        "label": "methods for emulating a container type",
         "matches": {
           "contain": true
         },
-        "options": {}
+        "options": {
+          "b": true
+        }
       },
       {
         "content": "def __enter__(self):\n\t${1:pass}\ndef __exit__(self, exc_type, exc_value, traceback):\n\t${2:pass}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"context manager methods\" b",
+        "label": "context manager methods",
         "matches": {
           "context": true
         },
-        "options": {}
+        "options": {
+          "b": true
+        }
       },
       {
         "content": "def __getattr__(self, name):\n\t${1:pass}\ndef __setattr__(self, name, value):\n\t${2:pass}\ndef __delattr__(self, name):\n\t${3:pass}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"methods for customizing attribute access\" b",
+        "label": "methods for customizing attribute access",
         "matches": {
           "attr": true
         },
-        "options": {}
+        "options": {
+          "b": true
+        }
       },
       {
         "content": "def __get__(self, instance, owner):\n\t${1:pass}\ndef __set__(self, instance, value):\n\t${2:pass}\ndef __delete__(self, instance):\n\t${3:pass}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"methods implementing descriptors\" b",
+        "label": "methods implementing descriptors",
         "matches": {
           "desc": true
         },
-        "options": {}
+        "options": {
+          "b": true
+        }
       },
       {
         "content": "def __eq__(self, other):\n\t${1:pass}\ndef __ne__(self, other):\n\t${2:pass}\ndef __lt__(self, other):\n\t${3:pass}\ndef __le__(self, other):\n\t${4:pass}\ndef __gt__(self, other):\n\t${5:pass}\ndef __ge__(self, other):\n\t${6:pass}\ndef __cmp__(self, other):\n\t${7:pass}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"methods implementing rich comparison\"",
+        "label": "methods implementing rich comparison",
         "matches": {
           "cmp": true
         },
@@ -69482,7 +69516,7 @@
         "content": "def __repr__(self):\n\t${1:pass}\ndef __str__(self):\n\t${2:pass}\ndef __unicode__(self):\n\t${3:pass}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"methods implementing string representation\"",
+        "label": "methods implementing string representation",
         "matches": {
           "repr": true
         },
@@ -69492,11 +69526,13 @@
         "content": "def __add__(self, other):\n\t${1:pass}\ndef __sub__(self, other):\n\t${2:pass}\ndef __mul__(self, other):\n\t${3:pass}\ndef __div__(self, other):\n\t${4:pass}\ndef __truediv__(self, other):\n\t${5:pass}\ndef __floordiv__(self, other):\n\t${6:pass}\ndef __mod__(self, other):\n\t${7:pass}\ndef __divmod__(self, other):\n\t${8:pass}\ndef __pow__(self, other):\n\t${9:pass}\ndef __lshift__(self, other):\n\t${10:pass}\ndef __rshift__(self, other):\n\t${11:pass}\ndef __and__(self, other):\n\t${12:pass}\ndef __xor__(self, other):\n\t${13:pass}\ndef __or__(self, other):\n\t${14:pass}\ndef __neg__(self):\n\t${15:pass}\ndef __pos__(self):\n\t${16:pass}\ndef __abs__(self):\n\t${17:pass}\ndef __invert__(self):\n\t${18:pass}\ndef __complex__(self):\n\t${19:pass}\ndef __int__(self):\n\t${20:pass}\ndef __long__(self):\n\t${21:pass}\ndef __float__(self):\n\t${22:pass}\ndef __oct__(self):\n\t${22:pass}\ndef __hex__(self):\n\t${23:pass}\ndef __index__(self):\n\t${24:pass}\ndef __coerce__(self, other):\n\t${25:pass}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"methods for emulating a numeric type\" b",
+        "label": "methods for emulating a numeric type",
         "matches": {
           "numeric": true
         },
-        "options": {}
+        "options": {
+          "b": true
+        }
       },
       {
         "content": "#!/usr/bin/env python\n$0",
@@ -70832,7 +70868,7 @@
         "content": "(define-values (${1}) (${0}))",
         "doc": "",
         "grammar": "snu",
-        "label": "\"define-values\"",
+        "label": "define-values",
         "matches": {
           "defv": true
         },
@@ -70842,7 +70878,7 @@
         "content": "(define/match (${1})\n  [(${2}) ${3}]\n\t${0})",
         "doc": "",
         "grammar": "snu",
-        "label": "\"define/match\"",
+        "label": "define/match",
         "matches": {
           "defm": true
         },
@@ -70852,7 +70888,7 @@
         "content": "(define-syntax (${1})\n\t${0})",
         "doc": "",
         "grammar": "snu",
-        "label": "\"define-syntax\"",
+        "label": "define-syntax",
         "matches": {
           "defs": true
         },
@@ -70992,7 +71028,7 @@
         "content": "(for/list ([${1}])\n\t${0})",
         "doc": "",
         "grammar": "snu",
-        "label": "\"for/list\"",
+        "label": "for/list",
         "matches": {
           "forl": true
         },
@@ -71002,7 +71038,7 @@
         "content": "(for/fold\n\t([${1}])\n\t([${2}])\n\t${0})",
         "doc": "",
         "grammar": "snu",
-        "label": "\"for/fold\"",
+        "label": "for/fold",
         "matches": {
           "forf": true
         },
@@ -71012,7 +71048,7 @@
         "content": "(for/foldr\n\t([${1}])\n\t([${2}])\n\t${0})",
         "doc": "",
         "grammar": "snu",
-        "label": "\"for/foldr\"",
+        "label": "for/foldr",
         "matches": {
           "forfr": true
         },
@@ -71022,7 +71058,7 @@
         "content": "(for/and ([${1}])\n\t${0})",
         "doc": "",
         "grammar": "snu",
-        "label": "\"for/and\"",
+        "label": "for/and",
         "matches": {
           "fora": true
         },
@@ -71032,7 +71068,7 @@
         "content": "(for/or ([${1}])\n\t${0})",
         "doc": "",
         "grammar": "snu",
-        "label": "\"for/or\"",
+        "label": "for/or",
         "matches": {
           "foro": true
         },
@@ -71042,7 +71078,7 @@
         "content": "(for/sum ([${1}])\n\t${0})",
         "doc": "",
         "grammar": "snu",
-        "label": "\"for/sum\"",
+        "label": "for/sum",
         "matches": {
           "fors": true
         },
@@ -71052,7 +71088,7 @@
         "content": "(for/product ([${1}])\n\t${0})",
         "doc": "",
         "grammar": "snu",
-        "label": "\"for/product\"",
+        "label": "for/product",
         "matches": {
           "forp": true
         },
@@ -71062,7 +71098,7 @@
         "content": "(for/first ([${1}])\n\t${0})",
         "doc": "",
         "grammar": "snu",
-        "label": "\"for/first\"",
+        "label": "for/first",
         "matches": {
           "forfi": true
         },
@@ -71072,7 +71108,7 @@
         "content": "(for/last ([${1}])\n\t${0})",
         "doc": "",
         "grammar": "snu",
-        "label": "\"for/last\"",
+        "label": "for/last",
         "matches": {
           "forla": true
         },
@@ -80371,7 +80407,7 @@
         "content": "fn ${1:function_name}(${2})${3} {\n\t${0}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Function definition\"",
+        "label": "Function definition",
         "matches": {
           "fn": true
         },
@@ -80381,7 +80417,7 @@
         "content": "pub fn ${1:function_name}(${2})${3} {\n\t${0}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Function definition\"",
+        "label": "Function definition",
         "matches": {
           "pfn": true
         },
@@ -80391,7 +80427,7 @@
         "content": "async fn ${1:function_name}(${2})${3} {\n\t${0}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Async function definition\"",
+        "label": "Async function definition",
         "matches": {
           "afn": true
         },
@@ -80401,7 +80437,7 @@
         "content": "pub async fn ${1:function_name}(${2})${3} {\n\t${0}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Async function definition\"",
+        "label": "Async function definition",
         "matches": {
           "pafn": true
         },
@@ -80411,17 +80447,19 @@
         "content": "#[bench]\nfn ${1:bench_function_name}(b: &mut test::Bencher) {\n\tb.iter(|| {\n\t\t${0}\n\t})\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Bench function\" b",
+        "label": "Bench function",
         "matches": {
           "bench": true
         },
-        "options": {}
+        "options": {
+          "b": true
+        }
       },
       {
         "content": "pub fn new(${2}) -> ${1:Self} {\n\t$1 { ${3} }\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Constructor function\"",
+        "label": "Constructor function",
         "matches": {
           "new": true
         },
@@ -80431,7 +80469,7 @@
         "content": "pub fn main() {\n\t${0}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Main function\"",
+        "label": "Main function",
         "matches": {
           "main": true
         },
@@ -80441,7 +80479,7 @@
         "content": "let ${1} = ${2};",
         "doc": "",
         "grammar": "snu",
-        "label": "\"let variable declaration with type inference\"",
+        "label": "let variable declaration with type inference",
         "matches": {
           "let": true
         },
@@ -80451,7 +80489,7 @@
         "content": "let ${1}: ${2} = ${3};",
         "doc": "",
         "grammar": "snu",
-        "label": "\"let variable declaration with explicit type annotation\"",
+        "label": "let variable declaration with explicit type annotation",
         "matches": {
           "lett": true
         },
@@ -80461,7 +80499,7 @@
         "content": "let mut ${1} = ${2};",
         "doc": "",
         "grammar": "snu",
-        "label": "\"let mut variable declaration with type inference\"",
+        "label": "let mut variable declaration with type inference",
         "matches": {
           "letm": true
         },
@@ -80471,7 +80509,7 @@
         "content": "let mut ${1}: ${2} = ${3};",
         "doc": "",
         "grammar": "snu",
-        "label": "\"let mut variable declaration with explicit type annotation\"",
+        "label": "let mut variable declaration with explicit type annotation",
         "matches": {
           "lettm": true
         },
@@ -80481,7 +80519,7 @@
         "content": "print!(\"${1}\");",
         "doc": "",
         "grammar": "snu",
-        "label": "\"print!\"",
+        "label": "print!",
         "matches": {
           "pri": true
         },
@@ -80491,7 +80529,7 @@
         "content": "print!(\"${1}{${2}}\", ${3});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"print! with format param\"",
+        "label": "print! with format param",
         "matches": {
           "pri,": true
         },
@@ -80501,7 +80539,7 @@
         "content": "println!(\"${1}\");",
         "doc": "",
         "grammar": "snu",
-        "label": "\"println!\"",
+        "label": "println!",
         "matches": {
           "pln": true
         },
@@ -80511,7 +80549,7 @@
         "content": "println!(\"${1}{${2}}\", ${3});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"println! with format param\"",
+        "label": "println! with format param",
         "matches": {
           "pln,": true
         },
@@ -80521,7 +80559,7 @@
         "content": "format!(\"${1}{${2}}\", ${3});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"format!\"",
+        "label": "format!",
         "matches": {
           "fmt": true
         },
@@ -80531,7 +80569,7 @@
         "content": "dbg!(${0:${VISUAL}})",
         "doc": "",
         "grammar": "snu",
-        "label": "\"dbg! debugging macro\"",
+        "label": "dbg! debugging macro",
         "matches": {
           "d": true
         },
@@ -80541,7 +80579,7 @@
         "content": "dbg!(&${1});\n${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"dbg! debugging macro statement\"",
+        "label": "dbg! debugging macro statement",
         "matches": {
           "d;": true
         },
@@ -80551,7 +80589,7 @@
         "content": "extern crate ${1:sync};",
         "doc": "",
         "grammar": "snu",
-        "label": "\"extern crate\"",
+        "label": "extern crate",
         "matches": {
           "ec": true
         },
@@ -80561,7 +80599,7 @@
         "content": "#[macro_use]\nextern crate log;",
         "doc": "",
         "grammar": "snu",
-        "label": "\"extern crate log\"",
+        "label": "extern crate log",
         "matches": {
           "ecl": true
         },
@@ -80571,7 +80609,7 @@
         "content": "assert!(${1:predicate});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"assert!\"",
+        "label": "assert!",
         "matches": {
           "as": true
         },
@@ -80581,7 +80619,7 @@
         "content": "assert_eq!(${1:expected}, ${2:actual});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"assert_eq!\"",
+        "label": "assert_eq!",
         "matches": {
           "ase": true
         },
@@ -80591,7 +80629,7 @@
         "content": "#[test]\nfn ${1:function_name}_test() {\n\t${0}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Unit test function\"",
+        "label": "Unit test function",
         "matches": {
           "test": true
         },
@@ -80601,17 +80639,19 @@
         "content": "#[cfg(test)]\nmod tests {\n\tuse super::${1:*};\n\ttest${0}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Test module\" b",
+        "label": "Test module",
         "matches": {
           "testmod": true
         },
-        "options": {}
+        "options": {
+          "b": true
+        }
       },
       {
         "content": "#[ignore]",
         "doc": "",
         "grammar": "snu",
-        "label": "\"#[ignore]\"",
+        "label": "#[ignore]",
         "matches": {
           "ig": true
         },
@@ -80621,57 +80661,67 @@
         "content": "#[allow(${1:unused_variables})]",
         "doc": "",
         "grammar": "snu",
-        "label": "\"allow lint attribute\" b",
+        "label": "allow lint attribute",
         "matches": {
           "allow": true
         },
-        "options": {}
+        "options": {
+          "b": true
+        }
       },
       {
         "content": "#[cfg(${1:target_os = \"linux\"})]",
         "doc": "",
         "grammar": "snu",
-        "label": "\"cfg attribute\" b",
+        "label": "cfg attribute",
         "matches": {
           "cfg": true
         },
-        "options": {}
+        "options": {
+          "b": true
+        }
       },
       {
         "content": "#![feature(${1:plugin})]",
         "doc": "",
         "grammar": "snu",
-        "label": "\"feature attribute\" b",
+        "label": "feature attribute",
         "matches": {
           "feat": true
         },
-        "options": {}
+        "options": {
+          "b": true
+        }
       },
       {
         "content": "#[derive(${1:Debug})]",
         "doc": "",
         "grammar": "snu",
-        "label": "\"#[derive(..)]\" b",
+        "label": "#[derive(..)]",
         "matches": {
           "der": true
         },
-        "options": {}
+        "options": {
+          "b": true
+        }
       },
       {
         "content": "#[${1:inline}]",
         "doc": "",
         "grammar": "snu",
-        "label": "\"#[..]\" b",
+        "label": "#[..]",
         "matches": {
           "attr": true
         },
-        "options": {}
+        "options": {
+          "b": true
+        }
       },
       {
         "content": "// Crate name\n#![crate_name = \"${1:crate_name}\"]\n// Additional metadata attributes\n#![desc = \"${2:Description.}\"]\n#![license = \"${3:BSD}\"]\n#![comment = \"${4:Comment.}\"]\n// Specify the output type\n#![crate_type = \"${5:lib}\"]",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Define create meta attributes\"",
+        "label": "Define create meta attributes",
         "matches": {
           "crate": true
         },
@@ -80681,7 +80731,7 @@
         "content": "Option<${1:i32}>",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Option<T>\"",
+        "label": "Option<T>",
         "matches": {
           "opt": true
         },
@@ -80691,7 +80741,7 @@
         "content": "Result<${1:&str}, ${2:()}>",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Result<T, E>\"",
+        "label": "Result<T, E>",
         "matches": {
           "res": true
         },
@@ -80711,7 +80761,7 @@
         "content": "if ${1} {\n\t${2:${VISUAL}}\n} else {\n\t${0}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"if / else\"",
+        "label": "if / else",
         "matches": {
           "ife": true
         },
@@ -80721,7 +80771,7 @@
         "content": "if let ${1:Some($2)} = $3 {\n\t${0:${VISUAL}}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"if let (...)\"",
+        "label": "if let (...)",
         "matches": {
           "ifl": true
         },
@@ -80731,7 +80781,7 @@
         "content": "else {\n\t${0:${VISUAL}}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"else\"",
+        "label": "else",
         "matches": {
           "el": true
         },
@@ -80741,7 +80791,7 @@
         "content": "else if ${1} {\n\t${0:${VISUAL}}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"else if\"",
+        "label": "else if",
         "matches": {
           "eli": true
         },
@@ -80751,7 +80801,7 @@
         "content": "match ${1} {\n\t${2} => ${3}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"match pattern\"",
+        "label": "match pattern",
         "matches": {
           "mat": true
         },
@@ -80761,7 +80811,7 @@
         "content": "${1:_} => ${2:expression}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Case clause of pattern match\"",
+        "label": "Case clause of pattern match",
         "matches": {
           "case": true
         },
@@ -80771,7 +80821,7 @@
         "content": "=> $0",
         "doc": "",
         "grammar": "snu",
-        "label": "\"=> \"",
+        "label": "=> ",
         "matches": {
           "=": true
         },
@@ -80781,17 +80831,19 @@
         "content": "loop {\n\t${0:${VISUAL}}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"loop {}\" b",
+        "label": "loop {}",
         "matches": {
           "loop": true
         },
-        "options": {}
+        "options": {
+          "b": true
+        }
       },
       {
         "content": "while ${1:condition} {\n\t${0:${VISUAL}}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"while loop\"",
+        "label": "while loop",
         "matches": {
           "wh": true
         },
@@ -80801,7 +80853,7 @@
         "content": "while let ${1:Some($2)} = $3 {\n\t${0:${VISUAL}}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"while let (...)\"",
+        "label": "while let (...)",
         "matches": {
           "whl": true
         },
@@ -80811,7 +80863,7 @@
         "content": "for ${1:i} in ${2} {\n\t${0}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"for ... in ... loop\"",
+        "label": "for ... in ... loop",
         "matches": {
           "for": true
         },
@@ -80821,7 +80873,7 @@
         "content": "// TODO: $0",
         "doc": "",
         "grammar": "snu",
-        "label": "\"TODO comment\"",
+        "label": "TODO comment",
         "matches": {
           "todo": true
         },
@@ -80831,7 +80883,7 @@
         "content": "// FIXME: $0",
         "doc": "",
         "grammar": "snu",
-        "label": "\"FIXME comment\"",
+        "label": "FIXME comment",
         "matches": {
           "fixme": true
         },
@@ -80841,7 +80893,7 @@
         "content": "impl ${1:Type/Trait}${2: for $3} {\n\t${0}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Struct/Trait implementation\"",
+        "label": "Struct/Trait implementation",
         "matches": {
           "impl": true
         },
@@ -80851,7 +80903,7 @@
         "content": "type ${1:NewName} = $2;",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Type alias\"",
+        "label": "Type alias",
         "matches": {
           "ty": true
         },
@@ -80861,7 +80913,7 @@
         "content": "enum ${1:Name} {\n\t${2},\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"enum definition\"",
+        "label": "enum definition",
         "matches": {
           "enum": true
         },
@@ -80871,7 +80923,7 @@
         "content": "pub enum ${1:Name} {\n\t${2},\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"pub enum definition\"",
+        "label": "pub enum definition",
         "matches": {
           "penum": true
         },
@@ -80881,7 +80933,7 @@
         "content": "trait ${1:Name} {\n\t${0}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Trait definition\"",
+        "label": "Trait definition",
         "matches": {
           "trait": true
         },
@@ -80891,7 +80943,7 @@
         "content": "impl Drop for $1 {\n\tfn drop(&mut self) {\n\t\t${0}\n\t}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Drop trait implementation (destructor)\"",
+        "label": "Drop trait implementation (destructor)",
         "matches": {
           "drop": true
         },
@@ -80901,7 +80953,7 @@
         "content": "static ${1}: &'static str = \"${0}\";",
         "doc": "",
         "grammar": "snu",
-        "label": "\"static string declaration\"",
+        "label": "static string declaration",
         "matches": {
           "ss": true
         },
@@ -80911,7 +80963,7 @@
         "content": "static ${1}: ${2:usize} = ${0};",
         "doc": "",
         "grammar": "snu",
-        "label": "\"static item declaration\"",
+        "label": "static item declaration",
         "matches": {
           "stat": true
         },
@@ -80921,7 +80973,7 @@
         "content": "thread::spawn(${1:move }|| {\n\t${0}\n});",
         "doc": "",
         "grammar": "snu",
-        "label": "\"spawn a thread\"",
+        "label": "spawn a thread",
         "matches": {
           "spawn": true
         },
@@ -80931,7 +80983,7 @@
         "content": "let (${1:tx}, ${2:rx}): (Sender<${3:i32}>, Receiver<${4:i32}>) = channel();",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Declare (Sender, Receiver) pair of asynchronous channel()\"",
+        "label": "Declare (Sender, Receiver) pair of asynchronous channel()",
         "matches": {
           "chan": true
         },
@@ -80941,7 +80993,7 @@
         "content": "impl AsRef<${1:Ref}> for ${2:Type} {\n\tfn as_ref(&self) -> &${3:$1} {\n\t\t&self.${0:field}\n\t}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"AsRef trait implementation\"",
+        "label": "AsRef trait implementation",
         "matches": {
           "asref": true
         },
@@ -80951,7 +81003,7 @@
         "content": "impl AsMut<${1:Ref}> for ${2:Type} {\n\tfn as_mut(&mut self) -> &mut ${3:$1} {\n\t\t&mut self.${0:field}\n\t}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"AsMut trait implementation\"",
+        "label": "AsMut trait implementation",
         "matches": {
           "asmut": true
         },
@@ -80961,47 +81013,55 @@
         "content": "${1:name}: ${2:Type},",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Struct field definition\" w",
+        "label": "Struct field definition",
         "matches": {
           "fd": true
         },
-        "options": {}
+        "options": {
+          "w": true
+        }
       },
       {
         "content": "${1:move }|$2| { $3 }",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Closure, anonymous function (inline)\" i",
+        "label": "Closure, anonymous function (inline)",
         "matches": {
           "||": true
         },
-        "options": {}
+        "options": {
+          "i": true
+        }
       },
       {
         "content": "${1:move }|$2| {\n\t$3\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Closure, anonymous function (block)\" i",
+        "label": "Closure, anonymous function (block)",
         "matches": {
           "|}": true
         },
-        "options": {}
+        "options": {
+          "i": true
+        }
       },
       {
         "content": "macro_rules! ${1:name} {\n\t(${2:matcher}) => (\n\t\t$3\n\t)\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"macro_rules!\" b",
+        "label": "macro_rules!",
         "matches": {
           "macro": true
         },
-        "options": {}
+        "options": {
+          "b": true
+        }
       },
       {
         "content": "Box::new(${0:${VISUAL}})",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Box::new()\"",
+        "label": "Box::new()",
         "matches": {
           "boxp": true
         },
@@ -81011,7 +81071,7 @@
         "content": "Rc::new(${0:${VISUAL}})",
         "doc": "",
         "grammar": "snu",
-        "label": "\"Rc::new()\"",
+        "label": "Rc::new()",
         "matches": {
           "rc": true
         },
@@ -81021,7 +81081,7 @@
         "content": "unimplemented!()",
         "doc": "",
         "grammar": "snu",
-        "label": "\"unimplemented!()\"",
+        "label": "unimplemented!()",
         "matches": {
           "unim": true
         },
@@ -81031,11 +81091,13 @@
         "content": "use ${1:std::$2};",
         "doc": "",
         "grammar": "snu",
-        "label": "\"use ...;\" b",
+        "label": "use ...;",
         "matches": {
           "use": true
         },
-        "options": {}
+        "options": {
+          "b": true
+        }
       },
       {
         "content": ".iter()$0",
@@ -103696,7 +103758,7 @@
         "content": "{% apply ${1} %}\n\t${0}\n{% endapply %}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig apply\"",
+        "label": "twig apply",
         "matches": {
           "apply": true
         },
@@ -103706,7 +103768,7 @@
         "content": "{% autoescape %}\n\t${0}\n{% endautoescape %}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig autoescape\"",
+        "label": "twig autoescape",
         "matches": {
           "autoescape": true
         },
@@ -103716,7 +103778,7 @@
         "content": "{% endautoescape %}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig endautoescape\"",
+        "label": "twig endautoescape",
         "matches": {
           "endautoescape": true
         },
@@ -103726,7 +103788,7 @@
         "content": "{% block ${1} %}\n\t${0}\n{% endblock %}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig block\"",
+        "label": "twig block",
         "matches": {
           "bl": true
         },
@@ -103736,7 +103798,7 @@
         "content": "{% block ${1} %}\n\t${0}\n{% endblock %}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig block\"",
+        "label": "twig block",
         "matches": {
           "block": true
         },
@@ -103746,7 +103808,7 @@
         "content": "{% endblock %}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig endblock\"",
+        "label": "twig endblock",
         "matches": {
           "endblock": true
         },
@@ -103756,7 +103818,7 @@
         "content": "{% cache %}\n\t${0}\n{% endcache %}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig cache\"",
+        "label": "twig cache",
         "matches": {
           "cache": true
         },
@@ -103766,7 +103828,7 @@
         "content": "{% endcache %}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig endcache\"",
+        "label": "twig endcache",
         "matches": {
           "endcache": true
         },
@@ -103776,7 +103838,7 @@
         "content": "{% css %}\n\t${0}\n{% endcss %}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig css\"",
+        "label": "twig css",
         "matches": {
           "css": true
         },
@@ -103786,7 +103848,7 @@
         "content": "{% endcss %}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig endcss\"",
+        "label": "twig endcss",
         "matches": {
           "endcss": true
         },
@@ -103796,7 +103858,7 @@
         "content": "{% dd ${1} %}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig dd\"",
+        "label": "twig dd",
         "matches": {
           "dd": true
         },
@@ -103806,7 +103868,7 @@
         "content": "{% do ${1} %}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig do\"",
+        "label": "twig do",
         "matches": {
           "do": true
         },
@@ -103816,7 +103878,7 @@
         "content": "{% embed \"${1}\" %}\n\t${0}\n{% endembed %}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig embed\"",
+        "label": "twig embed",
         "matches": {
           "embed": true
         },
@@ -103826,7 +103888,7 @@
         "content": "{% endembed %}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig endembed\"",
+        "label": "twig endembed",
         "matches": {
           "endembed": true
         },
@@ -103836,7 +103898,7 @@
         "content": "{% exit ${1} %}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig exit\"",
+        "label": "twig exit",
         "matches": {
           "exit": true
         },
@@ -103846,7 +103908,7 @@
         "content": "{% extends \"${1}\" %}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig extends\"",
+        "label": "twig extends",
         "matches": {
           "extends": true
         },
@@ -103856,7 +103918,7 @@
         "content": "{% extends \"${1}\" %}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig extends\"",
+        "label": "twig extends",
         "matches": {
           "ext": true
         },
@@ -103866,7 +103928,7 @@
         "content": "{% for ${1} in ${2} %}\n\t${0}\n{% endfor %}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig for\"",
+        "label": "twig for",
         "matches": {
           "for": true
         },
@@ -103876,7 +103938,7 @@
         "content": "{% for ${1} in ${2} %}\n\t${3}\n{% else %}\n\t${0}\n{% endfor %}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig for else\"",
+        "label": "twig for else",
         "matches": {
           "fore": true
         },
@@ -103886,7 +103948,7 @@
         "content": "{% endfor %}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig endfor\"",
+        "label": "twig endfor",
         "matches": {
           "endfor": true
         },
@@ -103896,7 +103958,7 @@
         "content": "{% from \"${1}\" import ${2} %}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig from\"",
+        "label": "twig from",
         "matches": {
           "from": true
         },
@@ -103906,7 +103968,7 @@
         "content": "{% header \"${1}\" %}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig header\"",
+        "label": "twig header",
         "matches": {
           "header": true
         },
@@ -103916,7 +103978,7 @@
         "content": "{% hook \"${1}\" %}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig hook\"",
+        "label": "twig hook",
         "matches": {
           "hook": true
         },
@@ -103926,7 +103988,7 @@
         "content": "{% html %}\n\t${0}\n{% endhtml %}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig html\"",
+        "label": "twig html",
         "matches": {
           "html": true
         },
@@ -103936,7 +103998,7 @@
         "content": "{% endhtml %}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig endhtml\"",
+        "label": "twig endhtml",
         "matches": {
           "endhtml": true
         },
@@ -103946,7 +104008,7 @@
         "content": "{% if ${1} %}\n\t${0}\n{% endif %}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig if\"",
+        "label": "twig if",
         "matches": {
           "if": true
         },
@@ -103956,7 +104018,7 @@
         "content": "{% if ${1} %}\n\t${2}\n{% else %}\n\t${0}\n{% endif %}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig if else\"",
+        "label": "twig if else",
         "matches": {
           "ife": true
         },
@@ -103966,7 +104028,7 @@
         "content": "{% else %}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig else\"",
+        "label": "twig else",
         "matches": {
           "el": true
         },
@@ -103976,7 +104038,7 @@
         "content": "{% elseif ${1} %}\n\t${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig elseif\"",
+        "label": "twig elseif",
         "matches": {
           "eif": true
         },
@@ -103986,7 +104048,7 @@
         "content": "{% endif %}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig endif\"",
+        "label": "twig endif",
         "matches": {
           "endif": true
         },
@@ -103996,7 +104058,7 @@
         "content": "{% import \"${1}\" as ${2} %}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig import\"",
+        "label": "twig import",
         "matches": {
           "import": true
         },
@@ -104006,7 +104068,7 @@
         "content": "{% include \"${1}\" %}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig include\"",
+        "label": "twig include",
         "matches": {
           "include": true
         },
@@ -104016,7 +104078,7 @@
         "content": "{% include \"${1}\" with ${2} %}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig include with parameters\"",
+        "label": "twig include with parameters",
         "matches": {
           "includewith": true
         },
@@ -104026,7 +104088,7 @@
         "content": "{% js %}\n\t${0}\n{% endjs %}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig js\"",
+        "label": "twig js",
         "matches": {
           "js": true
         },
@@ -104036,7 +104098,7 @@
         "content": "{% endjs %}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig endjs\"",
+        "label": "twig endjs",
         "matches": {
           "endjs": true
         },
@@ -104046,7 +104108,7 @@
         "content": "{% macro ${1}(${2}) %}\n\t${0}\n{% endmacro %}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig macro\"",
+        "label": "twig macro",
         "matches": {
           "macro": true
         },
@@ -104056,7 +104118,7 @@
         "content": "{% endmacro %}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig endmacro\"",
+        "label": "twig endmacro",
         "matches": {
           "endmacro": true
         },
@@ -104066,7 +104128,7 @@
         "content": "{% namespace \"${1}\" %}\n\t${0}\n{% endnamespace %}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig namespace\"",
+        "label": "twig namespace",
         "matches": {
           "namespace": true
         },
@@ -104076,7 +104138,7 @@
         "content": "{% endnamespace %}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig endnamespace\"",
+        "label": "twig endnamespace",
         "matches": {
           "endnamespace": true
         },
@@ -104086,7 +104148,7 @@
         "content": "{% nav ${1} in ${2} %}\n\t${0}\n{% endnav %}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig nav\"",
+        "label": "twig nav",
         "matches": {
           "nav": true
         },
@@ -104096,7 +104158,7 @@
         "content": "{% endnav %}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig endnav\"",
+        "label": "twig endnav",
         "matches": {
           "endnav": true
         },
@@ -104106,7 +104168,7 @@
         "content": "{% paginate ${1} as ${2} %}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig paginate\"",
+        "label": "twig paginate",
         "matches": {
           "paginate": true
         },
@@ -104116,7 +104178,7 @@
         "content": "{% redirect \"${1}\" %}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig redirect\"",
+        "label": "twig redirect",
         "matches": {
           "redirect": true
         },
@@ -104126,7 +104188,7 @@
         "content": "{% requireGuest %}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig requireguest\"",
+        "label": "twig requireguest",
         "matches": {
           "requireguest": true
         },
@@ -104136,7 +104198,7 @@
         "content": "{% requireLogin %}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig requirelogin\"",
+        "label": "twig requirelogin",
         "matches": {
           "requirelogin": true
         },
@@ -104146,7 +104208,7 @@
         "content": "{% requirePermission \"${1}\" %}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig requirepermission\"",
+        "label": "twig requirepermission",
         "matches": {
           "requirepermission": true
         },
@@ -104156,7 +104218,7 @@
         "content": "{% set ${1} = ${2} %}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig set\"",
+        "label": "twig set",
         "matches": {
           "set": true
         },
@@ -104166,7 +104228,7 @@
         "content": "{% set ${1} %}\n\t${0}\n{% endset %}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig set block\"",
+        "label": "twig set block",
         "matches": {
           "setb": true
         },
@@ -104176,7 +104238,7 @@
         "content": "{% endset %}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig endset\"",
+        "label": "twig endset",
         "matches": {
           "endset": true
         },
@@ -104186,7 +104248,7 @@
         "content": "{% switch ${1} %}\n\t{% case \"${2}\" %}\n\t\t${0}\n\t{% default %}\n{% endswitch %}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig switch\"",
+        "label": "twig switch",
         "matches": {
           "switch": true
         },
@@ -104196,7 +104258,7 @@
         "content": "{% case \"${1}\" %}\n\t${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig switch case\"",
+        "label": "twig switch case",
         "matches": {
           "case": true
         },
@@ -104206,7 +104268,7 @@
         "content": "{% default %}\n\t${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig switch default\"",
+        "label": "twig switch default",
         "matches": {
           "default": true
         },
@@ -104216,7 +104278,7 @@
         "content": "{% endswitch %}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig endswitch\"",
+        "label": "twig endswitch",
         "matches": {
           "endswitch": true
         },
@@ -104226,7 +104288,7 @@
         "content": "{% use \"${1}\" %}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig use\"",
+        "label": "twig use",
         "matches": {
           "use": true
         },
@@ -104236,7 +104298,7 @@
         "content": "{% verbatim %}\n\t${0}\n{% endverbatim %}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig verbatim\"",
+        "label": "twig verbatim",
         "matches": {
           "verbatim": true
         },
@@ -104246,7 +104308,7 @@
         "content": "{% endverbatim %}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig endverbatim\"",
+        "label": "twig endverbatim",
         "matches": {
           "endverbatim": true
         },
@@ -104256,7 +104318,7 @@
         "content": "{% with %}\n\t${0}\n{% endwith %}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig with\"",
+        "label": "twig with",
         "matches": {
           "with": true
         },
@@ -104266,7 +104328,7 @@
         "content": "{% endwith %}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig endwith\"",
+        "label": "twig endwith",
         "matches": {
           "endwith": true
         },
@@ -104276,7 +104338,7 @@
         "content": "<pre>\n\t{{ dump(${1}) }}\n</pre>",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig dump\"",
+        "label": "twig dump",
         "matches": {
           "dump": true
         },
@@ -104286,7 +104348,7 @@
         "content": "{{ \"${1}\"|t }}${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"twig translate\"",
+        "label": "twig translate",
         "matches": {
           "translate": true
         },
@@ -104861,7 +104923,7 @@
         "content": "const ${1}: ${2:any} = ${3};\n${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"ts const\"",
+        "label": "ts const",
         "matches": {
           "tconst": true
         },
@@ -104871,7 +104933,7 @@
         "content": "let ${1}: ${2:any} = ${3};\n${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"ts let\"",
+        "label": "ts let",
         "matches": {
           "tlet": true
         },
@@ -104881,7 +104943,7 @@
         "content": "var ${1}: ${2:any} = ${3};\n${0}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"ts var\"",
+        "label": "ts var",
         "matches": {
           "tvar": true
         },
@@ -104891,7 +104953,7 @@
         "content": "${1}: ${0:any}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"ts create field\"",
+        "label": "ts create field",
         "matches": {
           "+": true
         },
@@ -104901,7 +104963,7 @@
         "content": "#${1}: ${0:any}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"ts create private field using #\"",
+        "label": "ts create private field using #",
         "matches": {
           "#+": true
         },
@@ -104911,7 +104973,7 @@
         "content": "public ${1}: ${0:any}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"ts create public field\"",
+        "label": "ts create public field",
         "matches": {
           "tpfi": true
         },
@@ -104921,7 +104983,7 @@
         "content": "private ${1}: ${0:any}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"ts create private field\"",
+        "label": "ts create private field",
         "matches": {
           "tprfi": true
         },
@@ -104931,7 +104993,7 @@
         "content": "protected ${1}: ${0:any}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"ts create protected field\"",
+        "label": "ts create protected field",
         "matches": {
           "tprofi": true
         },
@@ -104941,7 +105003,7 @@
         "content": "interface ${1} {\n\t${2}: ${3:any};\n\t${0}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"interface\"",
+        "label": "interface",
         "matches": {
           "int": true
         },
@@ -104951,7 +105013,7 @@
         "content": "interface ${1} extends ${2} {\n\t${3}: ${4:any};\n\t${0}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"interface extends\"",
+        "label": "interface extends",
         "matches": {
           "intx": true
         },
@@ -104961,7 +105023,7 @@
         "content": "function ${1}(${2}): ${3:any} {\n\t${0}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"ts function\"",
+        "label": "ts function",
         "matches": {
           "tfun": true
         },
@@ -104971,7 +105033,7 @@
         "content": "public ${1}(${2}): ${3:any} {\n\t${0}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"ts public method\"",
+        "label": "ts public method",
         "matches": {
           "tpmet": true
         },
@@ -104981,7 +105043,7 @@
         "content": "public static ${1}(${2}): ${3:any} {\n\t${0}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"ts public static method\"",
+        "label": "ts public static method",
         "matches": {
           "tpsmet": true
         },
@@ -104991,7 +105053,7 @@
         "content": "private ${1}(${2}): ${3:any} {\n\t${0}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"ts private method\"",
+        "label": "ts private method",
         "matches": {
           "tprmet": true
         },
@@ -105001,7 +105063,7 @@
         "content": "protected ${1}(${2}): ${3:any} {\n\t${0}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"ts protected method\"",
+        "label": "ts protected method",
         "matches": {
           "tpromet": true
         },
@@ -105011,7 +105073,7 @@
         "content": "class ${1} {\n\t${2}\n\tconstructor(public ${3}: ${4: any}) {\n\t\t${5}\n\t}\n\t${0}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"ts class\"",
+        "label": "ts class",
         "matches": {
           "tcla": true
         },
@@ -105021,7 +105083,7 @@
         "content": "class ${1} extends ${2} {\n\t${3}\n\tconstructor(public ${4}: ${5: any}) {\n\t\t${6}\n\t}\n\t${0}\n}",
         "doc": "",
         "grammar": "snu",
-        "label": "\"ts class extends\"",
+        "label": "ts class extends",
         "matches": {
           "tclax": true
         },
