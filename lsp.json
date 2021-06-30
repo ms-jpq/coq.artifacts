@@ -1,5 +1,5 @@
 {
-  "CodeActionKind": [],
+  "CodeActionKind": {},
   "CompletionItemKind": {
     "Class": 7,
     "Color": 16,
@@ -60,7 +60,7 @@
     "serverErrorEnd": -32000,
     "serverErrorStart": -32099
   },
-  "FailureHandlingKind": [],
+  "FailureHandlingKind": {},
   "FileChangeType": {
     "Changed": 2,
     "Created": 1,
@@ -73,14 +73,14 @@
     "PlainText": 1,
     "Snippet": 2
   },
-  "MarkupKind": [],
+  "MarkupKind": {},
   "MessageType": {
     "Error": 1,
     "Info": 3,
     "Log": 4,
     "Warning": 2
   },
-  "ResourceOperationKind": [],
+  "ResourceOperationKind": {},
   "SymbolKind": {
     "Array": 18,
     "Boolean": 17,
