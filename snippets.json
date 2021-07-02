@@ -11094,7 +11094,7 @@
         "grammar": "snu",
         "label": "def <name>...",
         "matches": {
-          "\"\\b(de)?f": true
+          "\"\\b(de)?f\"": true
         },
         "options": {
           "r": true
@@ -11106,7 +11106,7 @@
         "grammar": "snu",
         "label": "private def <name>...",
         "matches": {
-          "\"\\b(pde)?f": true
+          "\"\\b(pde)?f\"": true
         },
         "options": {
           "r": true
@@ -31865,6 +31865,7 @@
           "errn": true
         },
         "options": {
+          "!": true,
           "b": true
         }
       },
@@ -31877,6 +31878,7 @@
           "errnw": true
         },
         "options": {
+          "!": true,
           "b": true
         }
       },
@@ -31889,6 +31891,7 @@
           "errnwf": true
         },
         "options": {
+          "!": true,
           "b": true
         }
       },
@@ -31901,6 +31904,7 @@
           "errl": true
         },
         "options": {
+          "!": true,
           "b": true
         }
       },
@@ -31913,6 +31917,7 @@
           "errn,": true
         },
         "options": {
+          "!": true,
           "b": true
         }
       },
@@ -31925,6 +31930,7 @@
           "errn,w": true
         },
         "options": {
+          "!": true,
           "b": true
         }
       },
@@ -31937,6 +31943,7 @@
           "errn,wf": true
         },
         "options": {
+          "!": true,
           "b": true
         }
       },
@@ -31949,6 +31956,7 @@
           "errp": true
         },
         "options": {
+          "!": true,
           "b": true
         }
       },
@@ -31961,6 +31969,7 @@
           "errt": true
         },
         "options": {
+          "!": true,
           "b": true
         }
       },
@@ -31973,6 +31982,7 @@
           "errh": true
         },
         "options": {
+          "!": true,
           "b": true
         }
       },
@@ -32035,6 +32045,7 @@
           "selc": true
         },
         "options": {
+          "!": true,
           "b": true
         }
       },
@@ -32287,6 +32298,7 @@
           "hhf": true
         },
         "options": {
+          "!": true,
           "b": true
         }
       },
@@ -69550,13 +69562,11 @@
         "content": "# -*- coding: utf-8 -*-\n$0",
         "doc": "",
         "grammar": "snu",
-        "label": "# encoding: UTF-8",
+        "label": "?[uU][tT][fF]-?8\" \"# encoding: UTF-8\" r",
         "matches": {
-          "\"^# ?[uU][tT][fF]-?8": true
+          "\"^#": true
         },
-        "options": {
-          "r": true
-        }
+        "options": {}
       }
     ],
     "r": [
@@ -103408,7 +103418,7 @@
         "options": {}
       },
       {
-        "content": "import React from 'react'\nimport { View } from 'react-native'\n\ninterface ${1:${TM_FILENAME_BASE}}Props {\n\t\n}\n\nconst ${1:${TM_FILENAME_BASE}}: React.FunctionComponent<${1:${TM_FILENAME_BASE}}Props> = (props) => {\n\treturn (\n\t\t<View>\n\t\t\t$0\n\t\t</View>\n\t)\n}\n\nexport default ${1:${TM_FILENAME_BASE}}\n",
+        "content": "import React from 'react'\nimport { View } from 'react-native'\n\ninterface ${1:${TM_FILENAME_BASE}}Props {\n\t\n}\n\nconst ${1:${TM_FILENAME_BASE}}: React.FC<${1:${TM_FILENAME_BASE}}Props> = (props) => {\n\treturn (\n\t\t<View>\n\t\t\t$0\n\t\t</View>\n\t)\n}\n\nexport default ${1:${TM_FILENAME_BASE}}\n",
         "doc": "Creates a React Native Arrow Function Component with ES7 module system and named TypeScript interface",
         "grammar": "lsp",
         "label": "typescriptReactNativeArrowFunctionComponentNamedProps",
