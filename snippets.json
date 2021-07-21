@@ -1,107 +1,107 @@
 {
   "neosnippet-snippets/neosnippets": [
     {
-      "Gemfile": [],
-      "_": [],
-      "actionscript": [],
-      "ada": [],
-      "apache": [],
-      "applescript": [],
-      "asciidoc": [],
-      "asciidoctor": [
-        "asciidoc"
-      ],
-      "asm": [],
-      "beancount": [],
-      "bib": [],
-      "blade": [],
-      "c": [],
-      "clojure": [],
-      "cmake": [],
-      "coffee": [],
-      "cpp": [
-        "c"
-      ],
-      "cs": [],
-      "css": [],
-      "cuda": [
-        "cpp"
-      ],
-      "d": [
-        "c"
-      ],
-      "elixir": [],
-      "elm": [],
-      "erlang": [],
-      "eruby": [],
-      "fortran": [],
-      "fsharp": [],
-      "gnuplot": [],
-      "go": [],
-      "groovy": [],
-      "haskell": [],
-      "html": [],
-      "java": [],
-      "javascript": [],
-      "julia": [],
-      "kp19pp": [],
-      "liquid": [],
-      "lua": [],
-      "make": [],
-      "markdown": [],
-      "mediawiki": [],
-      "mkd": [
-        "markdown"
-      ],
-      "moon": [],
-      "neosnippet": [],
-      "nim": [],
-      "objc": [],
-      "ocaml": [],
-      "perl": [],
-      "php": [],
-      "prolog": [],
-      "python": [],
-      "rails": [],
-      "rst": [],
-      "ruby": [],
-      "rust": [],
-      "scala": [],
-      "scheme": [],
-      "scss": [
-        "css"
-      ],
-      "sh": [],
-      "sql": [],
-      "sshconfig": [],
-      "swift": [],
-      "systemverilog": [
-        "verilog"
-      ],
-      "tex": [],
-      "toml": [],
-      "twig": [],
-      "typescript": [
-        "javascript"
-      ],
-      "typescriptreact": [
-        "typescript"
-      ],
-      "verilog": [],
-      "vim": [],
-      "vimshell": [],
-      "vimspec": [
-        "vim"
-      ],
-      "vimwiki": [],
-      "vital": [],
-      "vue": [],
-      "xhtml": [
-        "html"
-      ],
-      "zsh": [
-        "sh"
-      ]
+      "Gemfile": {},
+      "_": {},
+      "actionscript": {},
+      "ada": {},
+      "apache": {},
+      "applescript": {},
+      "asciidoc": {},
+      "asciidoctor": {
+        "asciidoc": true
+      },
+      "asm": {},
+      "beancount": {},
+      "bib": {},
+      "blade": {},
+      "c": {},
+      "clojure": {},
+      "cmake": {},
+      "coffee": {},
+      "cpp": {
+        "c": true
+      },
+      "cs": {},
+      "css": {},
+      "cuda": {
+        "cpp": true
+      },
+      "d": {
+        "c": true
+      },
+      "elixir": {},
+      "elm": {},
+      "erlang": {},
+      "eruby": {},
+      "fortran": {},
+      "fsharp": {},
+      "gnuplot": {},
+      "go": {},
+      "groovy": {},
+      "haskell": {},
+      "html": {},
+      "java": {},
+      "javascript": {},
+      "julia": {},
+      "kp19pp": {},
+      "liquid": {},
+      "lua": {},
+      "make": {},
+      "markdown": {},
+      "mediawiki": {},
+      "mkd": {
+        "markdown": true
+      },
+      "moon": {},
+      "neosnippet": {},
+      "nim": {},
+      "objc": {},
+      "ocaml": {},
+      "perl": {},
+      "php": {},
+      "prolog": {},
+      "python": {},
+      "rails": {},
+      "rst": {},
+      "ruby": {},
+      "rust": {},
+      "scala": {},
+      "scheme": {},
+      "scss": {
+        "css": true
+      },
+      "sh": {},
+      "sql": {},
+      "sshconfig": {},
+      "swift": {},
+      "systemverilog": {
+        "verilog": true
+      },
+      "tex": {},
+      "toml": {},
+      "twig": {},
+      "typescript": {
+        "javascript": true
+      },
+      "typescriptreact": {
+        "typescript": true
+      },
+      "verilog": {},
+      "vim": {},
+      "vimshell": {},
+      "vimspec": {
+        "vim": true
+      },
+      "vimwiki": {},
+      "vital": {},
+      "vue": {},
+      "xhtml": {
+        "html": true
+      },
+      "zsh": {
+        "sh": true
+      }
     },
     {
       "Gemfile": [
@@ -17829,8 +17829,8 @@
   ],
   "rocketseat-vscode-react-native-snippets/snippets": [
     {
-      "snippets": [],
-      "snippets-ts": []
+      "snippets": {},
+      "snippets-ts": {}
     },
     {
       "snippets": [
@@ -17861,33 +17861,33 @@
   ],
   "snipsnap/snippets": [
     {
-      "angular": [],
-      "axios": [],
-      "base": [],
-      "classnames": [],
-      "cypress": [],
-      "dotenv": [],
-      "dotenv-safe": [],
-      "framer-motion": [],
-      "gatsby": [],
-      "gatsby-image": [],
-      "graphql-request": [],
-      "jest": [],
-      "lodash": [],
-      "next": [],
-      "nuxt": [],
-      "prop-types": [],
-      "react": [],
-      "react-helmet": [],
-      "react-intersection-observer": [],
-      "react-modal": [],
-      "redux": [],
-      "redux-thunk": [],
-      "styled-components": [],
-      "svelte": [],
-      "vue": [],
-      "vuex": [],
-      "yup": []
+      "angular": {},
+      "axios": {},
+      "base": {},
+      "classnames": {},
+      "cypress": {},
+      "dotenv": {},
+      "dotenv-safe": {},
+      "framer-motion": {},
+      "gatsby": {},
+      "gatsby-image": {},
+      "graphql-request": {},
+      "jest": {},
+      "lodash": {},
+      "next": {},
+      "nuxt": {},
+      "prop-types": {},
+      "react": {},
+      "react-helmet": {},
+      "react-intersection-observer": {},
+      "react-modal": {},
+      "redux": {},
+      "redux-thunk": {},
+      "styled-components": {},
+      "svelte": {},
+      "vue": {},
+      "vuex": {},
+      "yup": {}
     },
     {
       "angular": [
@@ -28081,7 +28081,7 @@
   ],
   "vim-go/gosnippets/UltiSnips": [
     {
-      "go": []
+      "go": {}
     },
     {
       "go": [
@@ -28826,7 +28826,7 @@
   ],
   "vim-go/gosnippets/snippets": [
     {
-      "go": []
+      "go": {}
     },
     {
       "go": [
@@ -29439,136 +29439,136 @@
   ],
   "vim-snippets/UltiSnips": [
     {
-      "ada": [],
-      "all": [],
-      "bib": [],
-      "bindzone": [],
-      "blade": [
-        "html"
-      ],
-      "c": [],
-      "coffee": [],
-      "coffee-jasmine": [
-        "coffee"
-      ],
-      "coffee-react": [
-        "coffee"
-      ],
-      "cpp": [
-        "c"
-      ],
-      "crystal": [],
-      "cs": [],
-      "css": [],
-      "cuda": [
-        "cpp"
-      ],
-      "d": [],
-      "django": [],
-      "eelixir": [
-        "html"
-      ],
-      "ejs": [],
-      "elm": [],
-      "erlang": [],
-      "eruby": [
-        "html"
-      ],
-      "gitcommit": [],
-      "go": [],
-      "haskell": [],
-      "help": [],
-      "html": [],
-      "html_minimal": [],
-      "htmldjango": [
-        "html"
-      ],
-      "htmljinja": [
-        "jinja2",
-        "html"
-      ],
-      "java": [],
-      "javascript": [],
-      "javascript-angular": [],
-      "javascript-ember": [],
-      "javascript-jasmine-arrow": [],
-      "javascript-jsdoc": [],
-      "javascript-node": [],
-      "javascript_react": [],
-      "jinja2": [],
-      "json": [],
-      "julia": [],
-      "ledger": [],
-      "lhaskell": [
-        "haskell"
-      ],
-      "lua": [],
-      "mako": [],
-      "markdown": [],
-      "matlab": [],
-      "objc": [],
-      "ocaml": [],
-      "octave": [
-        "matlab"
-      ],
-      "pandoc": [
-        "markdown"
-      ],
-      "perl": [],
-      "php": [],
-      "php-laravel": [],
-      "php-phpspec": [],
-      "php-symfony2": [],
-      "plsql": [],
-      "proto": [],
-      "puppet": [],
-      "python": [],
-      "r": [],
-      "rails": [],
-      "rnoweb": [
-        "tex",
-        "r"
-      ],
-      "robot": [],
-      "rst": [],
-      "ruby": [],
-      "rust": [],
-      "sh": [],
-      "snippets": [],
-      "soy": [
-        "html"
-      ],
-      "supercollider": [],
-      "svelte": [
-        "css",
-        "javascript",
-        "html"
-      ],
-      "tcl": [],
-      "tex": [
-        "texmath"
-      ],
-      "texmath": [],
-      "typescript": [
-        "javascript"
-      ],
-      "typescript_react": [
-        "typescript",
-        "javascript_react"
-      ],
-      "vim": [],
-      "vue": [
-        "css",
-        "javascript",
-        "html"
-      ],
-      "xhtml": [
-        "html"
-      ],
-      "xml": [],
-      "zsh": [
-        "sh"
-      ]
+      "ada": {},
+      "all": {},
+      "bib": {},
+      "bindzone": {},
+      "blade": {
+        "html": true
+      },
+      "c": {},
+      "coffee": {},
+      "coffee-jasmine": {
+        "coffee": true
+      },
+      "coffee-react": {
+        "coffee": true
+      },
+      "cpp": {
+        "c": true
+      },
+      "crystal": {},
+      "cs": {},
+      "css": {},
+      "cuda": {
+        "cpp": true
+      },
+      "d": {},
+      "django": {},
+      "eelixir": {
+        "html": true
+      },
+      "ejs": {},
+      "elm": {},
+      "erlang": {},
+      "eruby": {
+        "html": true
+      },
+      "gitcommit": {},
+      "go": {},
+      "haskell": {},
+      "help": {},
+      "html": {},
+      "html_minimal": {},
+      "htmldjango": {
+        "html": true
+      },
+      "htmljinja": {
+        "html": true,
+        "jinja2": true
+      },
+      "java": {},
+      "javascript": {},
+      "javascript-angular": {},
+      "javascript-ember": {},
+      "javascript-jasmine-arrow": {},
+      "javascript-jsdoc": {},
+      "javascript-node": {},
+      "javascript_react": {},
+      "jinja2": {},
+      "json": {},
+      "julia": {},
+      "ledger": {},
+      "lhaskell": {
+        "haskell": true
+      },
+      "lua": {},
+      "mako": {},
+      "markdown": {},
+      "matlab": {},
+      "objc": {},
+      "ocaml": {},
+      "octave": {
+        "matlab": true
+      },
+      "pandoc": {
+        "markdown": true
+      },
+      "perl": {},
+      "php": {},
+      "php-laravel": {},
+      "php-phpspec": {},
+      "php-symfony2": {},
+      "plsql": {},
+      "proto": {},
+      "puppet": {},
+      "python": {},
+      "r": {},
+      "rails": {},
+      "rnoweb": {
+        "r": true,
+        "tex": true
+      },
+      "robot": {},
+      "rst": {},
+      "ruby": {},
+      "rust": {},
+      "sh": {},
+      "snippets": {},
+      "soy": {
+        "html": true
+      },
+      "supercollider": {},
+      "svelte": {
+        "css": true,
+        "html": true,
+        "javascript": true
+      },
+      "tcl": {},
+      "tex": {
+        "texmath": true
+      },
+      "texmath": {},
+      "typescript": {
+        "javascript": true
+      },
+      "typescript_react": {
+        "javascript_react": true,
+        "typescript": true
+      },
+      "vim": {},
+      "vue": {
+        "css": true,
+        "html": true,
+        "javascript": true
+      },
+      "xhtml": {
+        "html": true
+      },
+      "xml": {},
+      "zsh": {
+        "sh": true
+      }
     },
     {
       "ada": [],
@@ -40677,170 +40677,170 @@
   ],
   "vim-snippets/snippets": [
     {
-      "_": [],
-      "actionscript": [],
-      "ada": [],
-      "alpaca": [],
-      "angular_coffee": [],
-      "apache": [],
-      "arduino": [],
-      "autoit": [],
-      "awk": [],
-      "c": [],
-      "chef": [],
-      "clojure": [],
-      "cmake": [],
-      "codeigniter": [],
-      "coffee": [],
-      "cpp": [
-        "c"
-      ],
-      "crystal": [],
-      "cs": [],
-      "css": [],
-      "cuda": [
-        "cpp"
-      ],
-      "d": [],
-      "dart": [],
-      "dart-flutter": [],
-      "diff": [],
-      "django": [],
-      "dosini": [],
-      "eelixir": [
-        "html"
-      ],
-      "elixir": [],
-      "elm": [],
-      "erlang": [],
-      "eruby": [
-        "html"
-      ],
-      "falcon": [],
-      "fortran": [],
-      "freemarker": [
-        "html"
-      ],
-      "fsharp": [],
-      "gitcommit": [],
-      "go": [],
-      "haml": [],
-      "handlebars": [],
-      "haskell": [],
-      "helm": [],
-      "html": [],
-      "htmldjango": [
-        "html"
-      ],
-      "htmltornado": [],
-      "idris": [],
-      "jade": [],
-      "java": [],
-      "javascript": [],
-      "javascript-bemjson": [],
-      "javascript-d3": [],
-      "javascript-jasmine": [],
-      "javascript-jquery": [],
-      "javascript-mocha": [],
-      "javascript-openui5": [],
-      "javascript-react": [],
-      "javascript-redux": [],
-      "javascript-requirejs": [],
-      "javascript.node": [],
-      "jenkins": [],
-      "jinja": [
-        "html"
-      ],
-      "jquery_coffee": [],
-      "jsp": [],
-      "julia": [],
-      "kotlin": [],
-      "laravel": [],
-      "ledger": [],
-      "lfe": [],
-      "liquid": [],
-      "lpc": [],
-      "ls": [],
-      "lua": [],
-      "make": [],
-      "mako": [],
-      "markdown": [],
-      "matlab": [],
-      "mustache": [],
-      "objc": [],
-      "ocaml": [],
-      "octave": [
-        "matlab"
-      ],
-      "openfoam": [],
-      "pandoc": [
-        "markdown"
-      ],
-      "perl": [],
-      "perl6": [],
-      "phoenix": [],
-      "php": [],
-      "plsql": [],
-      "po": [],
-      "processing": [],
-      "progress": [],
-      "ps1": [],
-      "puppet": [],
-      "purescript": [],
-      "python": [],
-      "r": [],
-      "racket": [],
-      "rails": [],
-      "reason": [],
-      "requirejs_coffee": [],
-      "rmd": [],
-      "rst": [],
-      "ruby": [],
-      "rust": [],
-      "sass": [],
-      "scala": [],
-      "scheme": [],
-      "scss": [
-        "css"
-      ],
-      "sh": [],
-      "simplemvcf": [],
-      "slim": [],
-      "snippets": [],
-      "sql": [],
-      "stylus": [],
-      "supercollider": [],
-      "svelte": [
-        "css",
-        "javascript",
-        "html"
-      ],
-      "systemverilog": [
-        "verilog"
-      ],
-      "tcl": [],
-      "tex": [],
-      "textile": [],
-      "twig": [],
-      "typescript": [
-        "javascript"
-      ],
-      "typescriptreact": [
-        "typescript"
-      ],
-      "verilog": [],
-      "vhdl": [],
-      "vim": [],
-      "vue": [
-        "css",
-        "javascript",
-        "html"
-      ],
-      "xml": [],
-      "xslt": [],
-      "yii": [],
-      "yii-chtml": [],
-      "zsh": []
+      "_": {},
+      "actionscript": {},
+      "ada": {},
+      "alpaca": {},
+      "angular_coffee": {},
+      "apache": {},
+      "arduino": {},
+      "autoit": {},
+      "awk": {},
+      "c": {},
+      "chef": {},
+      "clojure": {},
+      "cmake": {},
+      "codeigniter": {},
+      "coffee": {},
+      "cpp": {
+        "c": true
+      },
+      "crystal": {},
+      "cs": {},
+      "css": {},
+      "cuda": {
+        "cpp": true
+      },
+      "d": {},
+      "dart": {},
+      "dart-flutter": {},
+      "diff": {},
+      "django": {},
+      "dosini": {},
+      "eelixir": {
+        "html": true
+      },
+      "elixir": {},
+      "elm": {},
+      "erlang": {},
+      "eruby": {
+        "html": true
+      },
+      "falcon": {},
+      "fortran": {},
+      "freemarker": {
+        "html": true
+      },
+      "fsharp": {},
+      "gitcommit": {},
+      "go": {},
+      "haml": {},
+      "handlebars": {},
+      "haskell": {},
+      "helm": {},
+      "html": {},
+      "htmldjango": {
+        "html": true
+      },
+      "htmltornado": {},
+      "idris": {},
+      "jade": {},
+      "java": {},
+      "javascript": {},
+      "javascript-bemjson": {},
+      "javascript-d3": {},
+      "javascript-jasmine": {},
+      "javascript-jquery": {},
+      "javascript-mocha": {},
+      "javascript-openui5": {},
+      "javascript-react": {},
+      "javascript-redux": {},
+      "javascript-requirejs": {},
+      "javascript.node": {},
+      "jenkins": {},
+      "jinja": {
+        "html": true
+      },
+      "jquery_coffee": {},
+      "jsp": {},
+      "julia": {},
+      "kotlin": {},
+      "laravel": {},
+      "ledger": {},
+      "lfe": {},
+      "liquid": {},
+      "lpc": {},
+      "ls": {},
+      "lua": {},
+      "make": {},
+      "mako": {},
+      "markdown": {},
+      "matlab": {},
+      "mustache": {},
+      "objc": {},
+      "ocaml": {},
+      "octave": {
+        "matlab": true
+      },
+      "openfoam": {},
+      "pandoc": {
+        "markdown": true
+      },
+      "perl": {},
+      "perl6": {},
+      "phoenix": {},
+      "php": {},
+      "plsql": {},
+      "po": {},
+      "processing": {},
+      "progress": {},
+      "ps1": {},
+      "puppet": {},
+      "purescript": {},
+      "python": {},
+      "r": {},
+      "racket": {},
+      "rails": {},
+      "reason": {},
+      "requirejs_coffee": {},
+      "rmd": {},
+      "rst": {},
+      "ruby": {},
+      "rust": {},
+      "sass": {},
+      "scala": {},
+      "scheme": {},
+      "scss": {
+        "css": true
+      },
+      "sh": {},
+      "simplemvcf": {},
+      "slim": {},
+      "snippets": {},
+      "sql": {},
+      "stylus": {},
+      "supercollider": {},
+      "svelte": {
+        "css": true,
+        "html": true,
+        "javascript": true
+      },
+      "systemverilog": {
+        "verilog": true
+      },
+      "tcl": {},
+      "tex": {},
+      "textile": {},
+      "twig": {},
+      "typescript": {
+        "javascript": true
+      },
+      "typescriptreact": {
+        "typescript": true
+      },
+      "verilog": {},
+      "vhdl": {},
+      "vim": {},
+      "vue": {
+        "css": true,
+        "html": true,
+        "javascript": true
+      },
+      "xml": {},
+      "xslt": {},
+      "yii": {},
+      "yii-chtml": {},
+      "zsh": {}
     },
     {
       "_": [
@@ -105822,8 +105822,8 @@
   ],
   "vscode-R/snippets": [
     {
-      "r-snippets": [],
-      "rmarkdown": []
+      "r-snippets": {},
+      "rmarkdown": {}
     },
     {
       "r-snippets": [
@@ -106694,11 +106694,11 @@
   ],
   "vscode-angular-snippets/snippets": [
     {
-      "dockerfile": [],
-      "html": [],
-      "javascript": [],
-      "jsonc": [],
-      "typescript": []
+      "dockerfile": {},
+      "html": {},
+      "javascript": {},
+      "jsonc": {},
+      "typescript": {}
     },
     {
       "dockerfile": [
@@ -107445,8 +107445,8 @@
   ],
   "vscode-es7-javascript-react-snippets/snippets": [
     {
-      "snippets": [],
-      "ts-snippets": []
+      "snippets": {},
+      "ts-snippets": {}
     },
     {
       "snippets": [
@@ -109527,7 +109527,7 @@
   ],
   "vscode-javascript/snippets": [
     {
-      "snippets": []
+      "snippets": {}
     },
     {
       "snippets": [
@@ -109976,7 +109976,7 @@
   ],
   "vscode-react/snippets": [
     {
-      "snippets": []
+      "snippets": {}
     },
     {
       "snippets": [
@@ -110765,15 +110765,15 @@
   ],
   "vue-vscode-snippets/snippets": [
     {
-      "ignore": [],
-      "nuxt-config": [],
-      "nuxt-script": [],
-      "vue": [],
-      "vue-pug": [],
-      "vue-script": [],
-      "vue-script-router": [],
-      "vue-script-vuex": [],
-      "vue-template": []
+      "ignore": {},
+      "nuxt-config": {},
+      "nuxt-script": {},
+      "vue": {},
+      "vue-pug": {},
+      "vue-script": {},
+      "vue-script-router": {},
+      "vue-script-vuex": {},
+      "vue-template": {}
     },
     {
       "ignore": [
