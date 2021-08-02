@@ -107631,7 +107631,7 @@
           "options": {}
         },
         {
-          "content": "const {${1:propertyName}} = ${2:objectToDestruct}",
+          "content": "const {${2:propertyName}} = ${1:objectToDestruct}",
           "doc": "Creates and assigns a local variable using object destructing",
           "grammar": "lsp",
           "label": "destructingObject",
@@ -107641,7 +107641,7 @@
           "options": {}
         },
         {
-          "content": "const [${1:propertyName}] = ${2:arrayToDestruct}",
+          "content": "const [${2:propertyName}] = ${1:arrayToDestruct}",
           "doc": "Creates and assigns a local variable using array destructing",
           "grammar": "lsp",
           "label": "destructingArray",
