@@ -102543,7 +102543,7 @@
           "options": {}
         },
         {
-          "content": "\\\\frac{\\\\partial {$1}}{\\partial {$2}} {$0}",
+          "content": "\\\\frac{\\\\partial {$1}}{\\\\partial {$2}} {$0}",
           "doc": "",
           "grammar": "snu",
           "label": "partial derivation",
@@ -102553,7 +102553,7 @@
           "options": {}
         },
         {
-          "content": "\\\\frac{\\partial^2 {$1}}{\\partial {$2} \\partial {$3}} {$0}",
+          "content": "\\\\frac{\\\\partial^2 {$1}}{\\\\partial {$2} \\\\partial {$3}} {$0}",
           "doc": "",
           "grammar": "snu",
           "label": "second partial derivation",
@@ -102633,7 +102633,7 @@
           "options": {}
         },
         {
-          "content": "\\\\int_{{$1}}^{{$2}} {$3} \\: d{$4} {$5}",
+          "content": "\\\\int_{{$1}}^{{$2}} {$3} \\\\: d{$4} {$0}",
           "doc": "",
           "grammar": "snu",
           "label": "integral",
