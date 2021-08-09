@@ -42993,6 +42993,86 @@
           "options": {}
         },
         {
+          "content": "assert(${1:condition});",
+          "doc": "",
+          "grammar": "snu",
+          "label": "",
+          "matches": {
+            "asr": true
+          },
+          "options": {}
+        },
+        {
+          "content": "assert(${1:ptr} != NULL);",
+          "doc": "",
+          "grammar": "snu",
+          "label": "",
+          "matches": {
+            "anl": true
+          },
+          "options": {}
+        },
+        {
+          "content": "${1:ptr} = (${2:type}*) malloc(sizeof($2));",
+          "doc": "",
+          "grammar": "snu",
+          "label": "",
+          "matches": {
+            "mlc": true
+          },
+          "options": {}
+        },
+        {
+          "content": "${1:ptr} = (${2:type}*) calloc(${3:size}, sizeof($2));",
+          "doc": "",
+          "grammar": "snu",
+          "label": "",
+          "matches": {
+            "clc": true
+          },
+          "options": {}
+        },
+        {
+          "content": "${1:ptr} = realloc($1, ${2:size} * sizeof(${3:type}));",
+          "doc": "",
+          "grammar": "snu",
+          "label": "",
+          "matches": {
+            "rlc": true
+          },
+          "options": {}
+        },
+        {
+          "content": "${1:type} ${2:ptr} = ($1*) malloc(sizeof($1));",
+          "doc": "",
+          "grammar": "snu",
+          "label": "",
+          "matches": {
+            "mlcd": true
+          },
+          "options": {}
+        },
+        {
+          "content": "${1:type} ${2:ptr} = ($1*) calloc(${3:size}, sizeof($1));",
+          "doc": "",
+          "grammar": "snu",
+          "label": "",
+          "matches": {
+            "clcd": true
+          },
+          "options": {}
+        },
+        {
+          "content": "free(${1:ptr});",
+          "doc": "",
+          "grammar": "snu",
+          "label": "",
+          "matches": {
+            "fre": true
+          },
+          "options": {}
+        },
+        {
           "content": "/*! TODO: ${1:Todo description here}\n *  \\todo $1\n */",
           "doc": "",
           "grammar": "snu",
