@@ -67550,7 +67550,7 @@
           "options": {}
         },
         {
-          "content": "${1:const} ${2} = require('${3:module_name}');",
+          "content": "const ${1} = require('${2:module_name}');",
           "doc": "",
           "grammar": "snu",
           "label": "",
