@@ -1176,6 +1176,16 @@
         "procd": true
       }
     },
+    "0271569d-e84a-3da4-88c9-41fa3f902327": {
+      "content": "console.timeEnd(`${1:object}`)",
+      "doc": "Console time end wrapper",
+      "filetype": "snippets",
+      "grammar": "lsp",
+      "label": "consoleTimeEnd",
+      "matches": {
+        "cte": true
+      }
+    },
     "02727539-545f-3c6e-9cd8-362181d211ee": {
       "content": "border-style wave",
       "doc": "",
@@ -3065,6 +3075,17 @@
       "label": "",
       "matches": {
         "wordwrap": true
+      }
+    },
+    "06dc4038-d388-3b3e-a9ce-ff611cd2bff3": {
+      "content": "${1|transition,in,out|}:${2:name}|${3:local}",
+      "doc": "",
+      "filetype": "svelte",
+      "grammar": "lsp",
+      "label": "svelte-transition-local",
+      "matches": {
+        "svelte transition local": true,
+        "svtl": true
       }
     },
     "06ed93fc-7d6a-3290-a192-d23c913fbea9": {
@@ -5280,6 +5301,17 @@
         "open": true
       }
     },
+    "0c2fee80-0f70-3b16-9857-979917453143": {
+      "content": "import { mapActions } from 'vuex'\n\nexport default {\n\tmethods: {\n\t\t...mapActions([\n\t\t\t${1:'nameOfAction'}, //also supports payload `this.nameOfAction(amount)` \n\t\t])\n\t},\n}",
+      "doc": "mapactions inside a vue component",
+      "filetype": "vue",
+      "grammar": "lsp",
+      "label": "vue-mapactions",
+      "matches": {
+        "vmapactions": true,
+        "vue mapactions": true
+      }
+    },
     "0c31bb7c-59ff-3c1b-9ac5-ec05f00a2583": {
       "content": "place-content: ${0}",
       "doc": "",
@@ -5611,6 +5643,16 @@
       "label": "",
       "matches": {
         "iexpb": true
+      }
+    },
+    "0d347304-b567-36f1-82af-e7ffdd6e1898": {
+      "content": "const ${1:queryName} = `query ${1:queryName} {\n  ${2:query}\n}\n`;",
+      "doc": "",
+      "filetype": "graphql-request",
+      "grammar": "lsp",
+      "label": "graphql-request-query",
+      "matches": {
+        "graphql-request query": true
       }
     },
     "0d3f35f2-b793-388f-aac9-73d6154b4bcf": {
@@ -5956,6 +5998,17 @@
         "if": true
       }
     },
+    "0dfdc7e0-deef-3800-bb96-35ff77933318": {
+      "content": "module.exports = {\n\tcss: {\n\t\tloaderOptions: {\n\t\t\t${1:sass}: {\n\t\t\t\tdata: `${2:@import '@/styles/_variables.scss';}`\n\t\t\t}\n\t\t}\n\t}\n}",
+      "doc": "vue.config.js",
+      "filetype": "vue",
+      "grammar": "lsp",
+      "label": "vue-vue-config-js-import",
+      "matches": {
+        "vconfig": true,
+        "vue vue.config.js import": true
+      }
+    },
     "0e0a40f4-9c5c-3843-8039-315681086f1f": {
       "content": "name=\"${1}\"",
       "doc": "",
@@ -6054,6 +6107,17 @@
       "label": "",
       "matches": {
         "template": true
+      }
+    },
+    "0e4b608d-f495-3c29-b932-4df3921eab2e": {
+      "content": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n\tselector: '${1:selector-name}',\n\ttemplate: `$0`\n})\n\nexport class ${2:Name}Component implements OnInit {\n\tconstructor() { }\n\n\tngOnInit() { }\n}",
+      "doc": "Angular component with an inline template",
+      "filetype": "angular",
+      "grammar": "lsp",
+      "label": "angular-component-with-inline-template",
+      "matches": {
+        "a-component-inline": true,
+        "angular component inline template": true
       }
     },
     "0e5364cb-95aa-3c10-91f2-5343477f14df": {
@@ -7505,6 +7569,17 @@
         "te:c": true
       }
     },
+    "11a56926-4ea3-3d14-ae6f-158c79190ad6": {
+      "content": "const ${1} = styled(${2})`\n  ${3}\n`;",
+      "doc": "Styled-Component from existing component",
+      "filetype": "styled-components",
+      "grammar": "lsp",
+      "label": "styled-components-styled-component-from-existing-component",
+      "matches": {
+        "scc": true,
+        "styled-components component from existing": true
+      }
+    },
     "11aab120-2563-3c51-b116-fc7f4d3631ce": {
       "content": "if ${1:TARGET}\nthen ${2}\nelse ${0}",
       "doc": "",
@@ -8066,16 +8141,6 @@
       "label": "",
       "matches": {
         "curve": true
-      }
-    },
-    "1302e5aa-9c2a-36fc-b0db-fa4c6d3bffc6": {
-      "content": "async fetch () {\n\tlet this.data = await this.$axios.$get('${1:endpoint/${this.$route.params.slug}}')\n},",
-      "doc": "Nuxt Fetch with Axios module",
-      "filetype": "nuxt-script",
-      "grammar": "lsp",
-      "label": "Nuxt Fetch with Axios",
-      "matches": {
-        "nfetchaxios": true
       }
     },
     "131db561-19c1-34ee-a71b-f2247bf78a32": {
@@ -10894,6 +10959,16 @@
       "label": "",
       "matches": {
         "autoescape": true
+      }
+    },
+    "19a36f06-d309-368d-a958-8f1922b4a245": {
+      "content": "import { mapActions } from 'vuex';\n\nexport default {\n\tmethods: {\n\t\t...mapActions([\n\t\t\t${1:'nameOfAction'}, //also supports payload `this.nameOfAction(amount)` \n\t\t])\n\t},\n};",
+      "doc": "mapactions inside a vue component",
+      "filetype": "vue-script",
+      "grammar": "lsp",
+      "label": "Vue MapActions",
+      "matches": {
+        "vmapactions": true
       }
     },
     "19ac30e0-d518-306c-beca-fc6f04b09b92": {
@@ -14828,16 +14903,6 @@
         "mark": true
       }
     },
-    "231ac482-faa2-3047-82a9-bfd80a981105": {
-      "content": "import React from 'react';\nimport { View } from 'react-native';\n\n// import { Container } from './styles';\n\nconst ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}}: React.FC = () => {\n  return <View />;\n}\n\nexport default ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}};",
-      "doc": "Create React Native TypeScript Functional Component",
-      "filetype": "snippets-ts",
-      "grammar": "lsp",
-      "label": "componentFunctionalTypescript",
-      "matches": {
-        "rnfc": true
-      }
-    },
     "231bff56-4d51-391e-b617-9650b9e81301": {
       "content": "echo CHtml::metaTag('${1:content}', '${2:name}', '${3:httpEquiv}',array('${4:optionName}'=>${0:optionValue}));",
       "doc": "",
@@ -17439,17 +17504,6 @@
       "label": "",
       "matches": {
         "sslt": true
-      }
-    },
-    "29a49ffe-fc68-30c3-abea-d41073b8b241": {
-      "content": "const ${1:derivedStore} = derived(${2:storeA}, $${2:storeA} => $${2:storeA} * 2);",
-      "doc": "",
-      "filetype": "svelte",
-      "grammar": "lsp",
-      "label": "svelte-derived",
-      "matches": {
-        "svder": true,
-        "svelte derived": true
       }
     },
     "29ab7764-2704-3505-b74d-4a96f965e2a5": {
@@ -20387,6 +20441,17 @@
         "dump": true
       }
     },
+    "30db3232-6063-3f76-99a3-a9d2105c2fef": {
+      "content": "import { HttpInterceptor, HttpHandler, HttpRequest, HttpEvent, HttpResponse } from '@angular/common/http';\nimport { Observable } from 'rxjs';\nimport { tap } from 'rxjs/operators';\n\n@Injectable()\nexport class LogInterceptor implements HttpInterceptor {\n\tconstructor() {}\n\n\tintercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {\n\t\tconst started = Date.now();\n\t\treturn next.handle(req).pipe(\n\t\t\ttap(event => {\n\t\t\t\tif (event instanceof HttpResponse) {\n\t\t\t\t\tconst elapsed = Date.now() - started;\n\t\t\t\t\tconsole.log(`Request for \\${req.urlWithParams} took \\${elapsed} ms.`);\n\t\t\t\t}\n\t\t\t})\n\t\t);\n\t}\n}",
+      "doc": "Angular HttpInterceptor for Logging HttpClient",
+      "filetype": "angular",
+      "grammar": "lsp",
+      "label": "angular-httpinterceptor-for-logging",
+      "matches": {
+        "a-http-interceptor-logging": true,
+        "angular http interceptor logging": true
+      }
+    },
     "30dc1ae1-1565-3bd4-8ce3-17fd6dba3367": {
       "content": "args:\n{{- range $key, $value := .Values.${1:value_key}.extraArgs }}\n  {{- if $value }}\n  - --{{ $key }}={{ $value }}\n  {{- else }}\n  - --{{ $key }}\n  {{- end }}\n{{- end }}\n${0}",
       "doc": "",
@@ -21764,6 +21829,17 @@
       "label": "",
       "matches": {
         "if": true
+      }
+    },
+    "341b23af-708b-3fbf-8053-66c668cafed1": {
+      "content": "const ${1} = styled.${2}.attrs({\n  ${3}: ${4}\n})`\n  ${5}\n`;",
+      "doc": "Styled-Component with attributes",
+      "filetype": "styled-components",
+      "grammar": "lsp",
+      "label": "styled-components-styled-component-with-attributes",
+      "matches": {
+        "scattrs": true,
+        "styled-components component with attributes": true
       }
     },
     "343152f1-0421-3743-b547-e04384b445e8": {
@@ -28336,16 +28412,6 @@
         "font": true
       }
     },
-    "4410c2af-da2a-30bb-b8e4-fbf1d6be1ff1": {
-      "content": "_.template(${string}, ${options}, ${options.escape}, ${options.evaluate}, ${options.imports}, ${options.interpolate}, ${options.sourceURL}, ${options.variable})",
-      "doc": "// Use the \"interpolate\" delimiter to create a compiled template.\nvar compiled = _.template('hello <%= user %>!');\ncompiled({ 'user': 'fred' });\n// => 'hello fred!'\n\n// Use the HTML \"escape\" delimiter to escape data property values.\nvar compiled = _.template('<b><%- value %></b>');\ncompiled({ 'value': '<script>' });\n// => '<b>&lt;script&gt;</b>'\n\n// Use the \"evaluate\" delimiter to execute JavaScript and generate HTML.\nvar compiled = _.template('<% _.forEach(users, function(user) { %><li><%- user %></li><% }); %>');\ncompiled({ 'users': ['fred', 'barney'] });\n// => '<li>fred</li><li>barney</li>'\n\n// Use the internal `print` function in \"evaluate\" delimiters.\nvar compiled = _.template('<% print(\"hello \" + user); %>!');\ncompiled({ 'user': 'barney' });\n// => 'hello barney!'\n\n// Use the ES template literal delimiter as an \"interpolate\" delimiter.\n// Disable support by replacing the \"interpolate\" delimiter.\nvar compiled = _.template('hello ${ user }!');\ncompiled({ 'user': 'pebbles' });\n// => 'hello pebbles!'\n\n// Use backslashes to treat delimiters as plain text.\nvar compiled = _.template('<%= \"\\\\<%- value %\\\\>\" %>');\ncompiled({ 'value': 'ignored' });\n// => '<%- value %>'\n\n// Use the `imports` option to import `jQuery` as `jq`.\nvar text = '<% jq.each(users, function(user) { %><li><%- user %></li><% }); %>';\nvar compiled = _.template(text, { 'imports': { 'jq': jQuery } });\ncompiled({ 'users': ['fred', 'barney'] });\n// => '<li>fred</li><li>barney</li>'\n\n// Use the `sourceURL` option to specify a custom sourceURL for the template.\nvar compiled = _.template('hello <%= user %>!', { 'sourceURL': '/basic/greeting.jst' });\ncompiled(data);\n// => Find the source of \"greeting.jst\" under the Sources tab or Resources panel of the web inspector.\n\n// Use the `variable` option to ensure a with-statement isn't used in the compiled template.\nvar compiled = _.template('hi <%= data.user %>!', { 'variable': 'data' });\ncompiled.source;\n// => function(data) {\n//   var __t, __p = '';\n//   __p += 'hi ' + ((__t = ( data.user )) == null ? '' : __t) + '!';\n//   return __p;\n// }\n\n// Use custom template delimiters.\n_.templateSettings.interpolate = /{{([\\s\\S]+?)}}/g;\nvar compiled = _.template('hello {{ user }}!');\ncompiled({ 'user': 'mustache' });\n// => 'hello mustache!'\n\n// Use the `source` property to inline compiled templates for meaningful\n// line numbers in error messages and stack traces.\nfs.writeFileSync(path.join(process.cwd(), 'jst.js'), '\\\n  var JST = {\\\n    \"main\": ' + _.template(mainText).source + '\\\n  };\\\n');\n\nCreates a compiled template function that can interpolate data properties\nin \"interpolate\" delimiters, HTML-escape interpolated data properties in\n\"escape\" delimiters, and execute JavaScript in \"evaluate\" delimiters. Data\nproperties may be accessed as free variables in the template. If a setting\nobject is given, it takes precedence over `_.templateSettings` values.\n\n**Note:** In the development build `_.template` utilizes\n[sourceURLs](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/#toc-sourceurl)\nfor easier debugging.\n\nFor more information on precompiling templates see\n[lodash's custom builds documentation](https://lodash.com/custom-builds).\n\nFor more information on Chrome extension sandboxes see\n[Chrome's extensions documentation](https://developer.chrome.com/extensions/sandboxingEval).",
-      "filetype": "lodash",
-      "grammar": "lsp",
-      "label": "lodash-template",
-      "matches": {
-        "lodash template": true
-      }
-    },
     "44123461-c9ec-39d4-afee-c383746e4a06": {
       "content": "{% widthratio ${1:this_value} ${2:max_value} ${0:100} %}",
       "doc": "",
@@ -29161,6 +29227,16 @@
         "tj:ic": true
       }
     },
+    "461c4766-e8e1-37dd-9aa8-cd7518cb2f8e": {
+      "content": "const {${1:site}} = useStaticQuery(\n  graphql`${2:query}`\n);",
+      "doc": "",
+      "filetype": "gatsby",
+      "grammar": "lsp",
+      "label": "gatsby-usestatic-query",
+      "matches": {
+        "gatsby usestaticquery": true
+      }
+    },
     "462033c7-be0e-3751-883d-171a71f1f3ca": {
       "content": "${1:FIELDNAME} = forms.EmailField($2)",
       "doc": "",
@@ -29664,17 +29740,6 @@
         "xunless": true
       }
     },
-    "474e74d5-b8e1-3931-b8f3-1e78e4b5a892": {
-      "content": "$: { ${1:console.log(${2:prop});}}",
-      "doc": "",
-      "filetype": "svelte",
-      "grammar": "lsp",
-      "label": "svelte-reactive-block",
-      "matches": {
-        "svelte reactive": true,
-        "svrb": true
-      }
-    },
     "474fc09f-6599-3cc8-a7d5-1158b794fcfd": {
       "content": "<#function ${1:function_name} ${2:param1}>\n\t${0:${VISUAL}}\n</#function>",
       "doc": "",
@@ -30109,6 +30174,16 @@
         "textup \\textup{": true
       }
     },
+    "484d3c51-ec86-3d69-b629-9e1319315e9b": {
+      "content": "```{${1:language}}\n$0\n```",
+      "doc": "Insert code chunk",
+      "filetype": "rmarkdown",
+      "grammar": "lsp",
+      "label": "Insert code chunk",
+      "matches": {
+        "code chunk": true
+      }
+    },
     "4855f422-72c3-312d-ac43-a08792fdd5c1": {
       "content": "| url_param_escape",
       "doc": "",
@@ -30377,17 +30452,6 @@
       "label": "",
       "matches": {
         "sapmresponsivepopup": true
-      }
-    },
-    "4941cb22-5a8c-3722-bf54-bbe55f62a938": {
-      "content": "$: ${1:variable} = ${2:prop}",
-      "doc": "",
-      "filetype": "svelte",
-      "grammar": "lsp",
-      "label": "svelte-reactive-statement",
-      "matches": {
-        "svelte reactive statement": true,
-        "svrs": true
       }
     },
     "49481c30-b8a0-3a8f-90e4-1af57de11a5a": {
@@ -32377,6 +32441,16 @@
       "label": "ModelChoiceField",
       "matches": {
         "fmochoice": true
+      }
+    },
+    "4e6ecdea-62e3-3628-9737-073e7ba62ddc": {
+      "content": "<nuxt-link :to=\"{\t${1|name,path|}: '${2:value}', ${3|params,query|}: {\t${4:key}: '${5:value}'\t}\t}\">$6</nuxt-link>$0",
+      "doc": "",
+      "filetype": "nuxt",
+      "grammar": "lsp",
+      "label": "nuxt-namedlinkto",
+      "matches": {
+        "nuxt namedlinkto": true
       }
     },
     "4e718d87-66f4-389d-8bb4-e94a9d28f91d": {
@@ -35238,6 +35312,16 @@
         "th": true
       }
     },
+    "547e930f-09c6-3b99-befe-37107e42cd9f": {
+      "content": "```${1:language}\n$0\n```",
+      "doc": "Insert fenced code block",
+      "filetype": "rmarkdown",
+      "grammar": "lsp",
+      "label": "Insert fenced code block",
+      "matches": {
+        "fenced codeblock": true
+      }
+    },
     "5480be41-fb39-333a-b75e-0fb943dee361": {
       "content": "border-length: auto",
       "doc": "",
@@ -35637,6 +35721,17 @@
       "label": "",
       "matches": {
         "ru": true
+      }
+    },
+    "55596f3f-14d0-32f4-b9ce-9cbdfca95fbb": {
+      "content": "function ${1:foo}(node, ${2:parameters}) {\n\t// the node has been mounted in the DOM\n\treturn {\n\t\tupdate(${2:parameters}) {\n\t\t\t// the value of `${2:parameters}` has changed\n\t\t}\n\t\tdestroy() {\n\t\t\t// the node has been removed from the DOM\n\t\t}\n\t};\n}",
+      "doc": "",
+      "filetype": "svelte",
+      "grammar": "lsp",
+      "label": "svelte-action-update",
+      "matches": {
+        "svactionu": true,
+        "svelte action update": true
       }
     },
     "555a8dee-1ec1-302f-b510-f46c050637f8": {
@@ -37543,17 +37638,6 @@
         "link": true
       }
     },
-    "5a2f19ae-fbaf-361c-83c6-978919220f92": {
-      "content": "const ${1:derivedStore} = derived(${2:storeA}, ($${2:storeA}, set) => {\n\tsetTimeout(() => set($${2:storeA}), 1000);\n}, 'one moment...');",
-      "doc": "",
-      "filetype": "svelte",
-      "grammar": "lsp",
-      "label": "svelte-derived-set",
-      "matches": {
-        "svders": true,
-        "svelte derived set": true
-      }
-    },
     "5a302aca-b131-3931-b23d-7bb8a9c5ed7b": {
       "content": "\\${3:TARGET}${0}",
       "doc": "",
@@ -38871,6 +38955,17 @@
       "label": "",
       "matches": {
         "meta:d": true
+      }
+    },
+    "5d29747e-6bea-3641-8885-1bdf7dcfb8db": {
+      "content": "constructor( @Optional() @SkipSelf() parentModule: ${1:ModuleName} {\n\tif (parentModule) {\n\t\tconst msg = `${1:ModuleName} has already been loaded. \n\t\t\tImport ${1:ModuleName} once, only, in the root AppModule.`;\n\t\tthrow new Error(msg);\n\t}\n}",
+      "doc": "Angular Module SkipSelf constructor",
+      "filetype": "angular",
+      "grammar": "lsp",
+      "label": "angular-module-skipself-constructor",
+      "matches": {
+        "a-ctor-skip-self": true,
+        "angular module skip self constructor": true
       }
     },
     "5d2aa8ea-9c2c-3ebf-b085-c329d0ec418c": {
@@ -40714,6 +40809,17 @@
         "fori": true
       }
     },
+    "61c622a8-5c6e-3165-a66a-12d7c16f3afc": {
+      "content": "bind:${1|clientWidth,clientHeight,offsetWidth,offsetHeight|}={${2:variable}}",
+      "doc": "",
+      "filetype": "svelte",
+      "grammar": "lsp",
+      "label": "svelte-bind-block-level",
+      "matches": {
+        "svbind-level": true,
+        "svelte bind level": true
+      }
+    },
     "61dd8996-c1d6-3a45-9a8f-d594a146928c": {
       "content": "def index\n\t@${1:model_class_name} = ${2:ModelClassName}.all\n\trespond_to do |format|\n\t\tformat.html # index.html.erb\n\t\tformat.json  { render json: @$1s }\n\tend\nend",
       "doc": "",
@@ -42134,16 +42240,6 @@
         "content": true
       }
     },
-    "64d4fc6e-e2ab-3d3c-af95-a2f2c4b029aa": {
-      "content": "_.truncate(${string}, ${options}, ${options.length}, ${options.omission}, ${options.separator})",
-      "doc": "_.truncate('hi-diddly-ho there, neighborino');\n// => 'hi-diddly-ho there, neighbo...'\n\n_.truncate('hi-diddly-ho there, neighborino', {\n  'length': 24,\n  'separator': ' '\n});\n// => 'hi-diddly-ho there,...'\n\n_.truncate('hi-diddly-ho there, neighborino', {\n  'length': 24,\n  'separator': /,? +/\n});\n// => 'hi-diddly-ho there...'\n\n_.truncate('hi-diddly-ho there, neighborino', {\n  'omission': ' [...]'\n});\n// => 'hi-diddly-ho there, neig [...]'\n\nTruncates `string` if it's longer than the given maximum string length.\nThe last characters of the truncated string are replaced with the omission\nstring which defaults to \"...\".",
-      "filetype": "lodash",
-      "grammar": "lsp",
-      "label": "lodash-truncate",
-      "matches": {
-        "lodash truncate": true
-      }
-    },
     "64dbf0b0-176d-3a0e-800e-5ad5d3f189fd": {
       "content": "function! ${1:#:func_name}(arglead, cmdline, cursorpos) abort\n  return filter(${2:#:list}, 'stridx(v:val, a:arglead) == 0')\nendfunction",
       "doc": "",
@@ -43382,6 +43478,17 @@
         "rafcp": true
       }
     },
+    "67e89d64-2dfc-3d7b-bdcd-1e5e96e8410b": {
+      "content": "export const Global${1} = createGlobalStyle`\n  ${2}\n`;",
+      "doc": "Export createGlobalStyle",
+      "filetype": "styled-components",
+      "grammar": "lsp",
+      "label": "styled-components-export-create-global-style",
+      "matches": {
+        "exscg": true,
+        "styled-components export createglobalstyle": true
+      }
+    },
     "67e8c1ac-6733-3f51-b55d-e104178742c1": {
       "content": "[${0:TARGET} for ${1:x} in ${2:xs}]",
       "doc": "",
@@ -44138,6 +44245,17 @@
       "label": "test function",
       "matches": {
         "test": true
+      }
+    },
+    "695f2fef-d578-3e01-aba8-9ed00a4887b9": {
+      "content": "const Global${1} = createGlobalStyle`\n  ${2}\n`;",
+      "doc": "createGlobalStyle",
+      "filetype": "styled-components",
+      "grammar": "lsp",
+      "label": "styled-components-create-global-style",
+      "matches": {
+        "scg": true,
+        "styled-components createglobalstyle": true
       }
     },
     "696c08b3-561f-3cd7-87e8-371fe30777e7": {
@@ -46291,6 +46409,17 @@
         "bdbk:c": true
       }
     },
+    "6eb80d5e-37e0-3f67-ba48-9b6403780d26": {
+      "content": "${1|transition,in,out|}:${2:name}",
+      "doc": "",
+      "filetype": "svelte",
+      "grammar": "lsp",
+      "label": "svelte-transition",
+      "matches": {
+        "svelte transition": true,
+        "svt": true
+      }
+    },
     "6ebb4499-eede-38e0-b8e6-06a0ea5cd59e": {
       "content": "$this->shouldBe$1();",
       "doc": "",
@@ -48268,6 +48397,17 @@
       "label": "",
       "matches": {
         "args": true
+      }
+    },
+    "74104383-dbc2-3f60-bfb9-96e47b3c2b70": {
+      "content": "<svelte:options ${1|immutable,accessors,namespace,tag|}={${2:value}}/>",
+      "doc": "",
+      "filetype": "svelte",
+      "grammar": "lsp",
+      "label": "svelte-options",
+      "matches": {
+        "svelte options": true,
+        "svop": true
       }
     },
     "7410cc5d-0e49-3d00-bef3-3de8a84ac572": {
@@ -53653,6 +53793,17 @@
         ".": true
       }
     },
+    "806812d0-1768-3c81-94b3-17209486732b": {
+      "content": "on:${1:eventname}|${2|preventDefault,stopPropagation,passive,capture,once|}={${3:handler}}",
+      "doc": "",
+      "filetype": "svelte",
+      "grammar": "lsp",
+      "label": "svelte-on-event-modifiers",
+      "matches": {
+        "svelte on event modifiers": true,
+        "svon-modifiers": true
+      }
+    },
     "806a95cc-e23d-3c83-9a1f-12117e55c73d": {
       "content": "function* ${1:function_name}(${2}) {\n\t${0:${VISUAL}}\n}",
       "doc": "",
@@ -54780,6 +54931,17 @@
         "dep": true
       }
     },
+    "82f5c657-7b12-37c0-a320-00c0ba576ae2": {
+      "content": "export const ${1} = styled(${2})`\n  ${3}\n`;",
+      "doc": "Export styled-component from existing component",
+      "filetype": "styled-components",
+      "grammar": "lsp",
+      "label": "styled-components-export-styled-component-from-existing-component",
+      "matches": {
+        "exscc": true,
+        "styled-components export component from existing": true
+      }
+    },
     "83042a0e-5541-3555-aeda-22636648811c": {
       "content": "${1:obj}.position()",
       "doc": "",
@@ -55130,6 +55292,16 @@
       "label": "",
       "matches": {
         "ste": true
+      }
+    },
+    "83d00bf9-02a4-37be-9d6d-64ef4422d860": {
+      "content": "export async function getStaticPaths() {\n  return {\n    paths: [\n      { params: { ... } } \n    ],\n    fallback: ${1|true,false|}\n  };\n}",
+      "doc": "If a page has dynamic routes (documentation) and uses getStaticProps it needs to define a list of paths that have to be rendered to HTML at build time. If you export an async function called getStaticPaths from a page that uses dynamic routes, Next.js will statically pre-render all the paths specified by getStaticPaths.",
+      "filetype": "next",
+      "grammar": "lsp",
+      "label": "next-get-static-paths",
+      "matches": {
+        "next getstaticpaths": true
       }
     },
     "83d3a4cd-ff2e-3623-82a7-68aee4ca48b2": {
@@ -56003,6 +56175,17 @@
         "?": true
       }
     },
+    "85d54f00-4fc8-3b6b-9f3b-0244a28ebe8f": {
+      "content": "const express = require('express');\nconst app = express();\nconst port = process.env.PORT || ${1:port};\nconst www = process.env.WWW || '${2:./}';\napp.use(express.static(www));\nconsole.log(`serving \\${www}`);\napp.get('*', (req, res) => {\n\tres.sendFile(`index.html`, { root: www });\n});\napp.listen(port, () => console.log(`listening on http://localhost:\\${port}`));\n$0",
+      "doc": "Node.js Express Server",
+      "filetype": "angular",
+      "grammar": "lsp",
+      "label": "node-js-express-server",
+      "matches": {
+        "angular node express server": true,
+        "ex-node-server-simple": true
+      }
+    },
     "85e3d930-6605-3ea8-8e73-964ffbfc5d73": {
       "content": "_.camelCase(${string})",
       "doc": "_.camelCase('Foo Bar');\n// => 'fooBar'\n\n_.camelCase('--foo-bar--');\n// => 'fooBar'\n\n_.camelCase('__FOO_BAR__');\n// => 'fooBar'\n\nConverts `string` to [camel case](https://en.wikipedia.org/wiki/CamelCase).",
@@ -56323,6 +56506,16 @@
       "label": "",
       "matches": {
         "header.": true
+      }
+    },
+    "86a68d06-e709-3fe5-8a93-945d4a9f825e": {
+      "content": "const {\n  ${1:queryName}: { childImageSharp: {fixed: ${2:imageFixed}}}\n} = useStaticQuery(graphql`\n  query {\n    ${1:queryName}: file(relativePath: { eq: \"${3:imagePath.png}\" }) {\n      childImageSharp {\n        fixed(width: ${4:300}) {\n          ...${5|GatsbyImageSharpFixed,GatsbyImageSharpFixed_noBase64,GatsbyImageSharpFixed_tracedSVG,GatsbyImageSharpFixed_withWebp,GatsbyImageSharpFixed_withWebp_noBase64,GatsbyImageSharpFixed_withWebp_tracedSVG|}\n        }\n      }\n    }\n  }\n`)",
+      "doc": "",
+      "filetype": "gatsby-image",
+      "grammar": "lsp",
+      "label": "gatsby-image-usestaticquery-fixed",
+      "matches": {
+        "gatsby-image usestaticquery fixed": true
       }
     },
     "86a763a5-a488-3e71-9b10-d111d82326ad": {
@@ -58447,6 +58640,16 @@
       "label": "with",
       "matches": {
         "with": true
+      }
+    },
+    "8b8c7aaa-456d-30d1-8bd2-efbe90a7150f": {
+      "content": "<template>\n\t<div>\n\n\t</div>\n</template>\n\n<script>\nimport { ${0|ref,reactive,computed,readonly,watchEffect,watch|} } from '${1|vue,@vue/composition-api|}'\nexport default {\n\tsetup () {\n\t\t${2}\n\n\t\treturn {}\n\t}\n}\n</script>\n\n<style lang=\"scss\" scoped>\n\n</style>",
+      "doc": "Base for Vue File Composition API with SCSS",
+      "filetype": "vue",
+      "grammar": "lsp",
+      "label": "vue-single-file-component-v3",
+      "matches": {
+        "vue v3 base": true
       }
     },
     "8b95db6b-1482-3db1-b695-3bd2eab3c170": {
@@ -61103,14 +61306,15 @@
         "ac:fe": true
       }
     },
-    "91c30b1c-9065-3932-8c1c-86340f3e77de": {
-      "content": "_.debounce(${func}, ${wait}, ${options}, ${options.leading}, ${options.maxWait}, ${options.trailing})",
-      "doc": "// Avoid costly calculations while the window size is in flux.\njQuery(window).on('resize', _.debounce(calculateLayout, 150));\n\n// Invoke `sendMail` when clicked, debouncing subsequent calls.\njQuery(element).on('click', _.debounce(sendMail, 300, {\n  'leading': true,\n  'trailing': false\n}));\n\n// Ensure `batchLog` is invoked once after 1 second of debounced calls.\nvar debounced = _.debounce(batchLog, 250, { 'maxWait': 1000 });\nvar source = new EventSource('/stream');\njQuery(source).on('message', debounced);\n\n// Cancel the trailing debounced invocation.\njQuery(window).on('popstate', debounced.cancel);\n\nCreates a debounced function that delays invoking `func` until after `wait`\nmilliseconds have elapsed since the last time the debounced function was\ninvoked. The debounced function comes with a `cancel` method to cancel\ndelayed `func` invocations and a `flush` method to immediately invoke them.\nProvide `options` to indicate whether `func` should be invoked on the\nleading and/or trailing edge of the `wait` timeout. The `func` is invoked\nwith the last arguments provided to the debounced function. Subsequent\ncalls to the debounced function return the result of the last `func`\ninvocation.\n\n**Note:** If `leading` and `trailing` options are `true`, `func` is\ninvoked on the trailing edge of the timeout only if the debounced function\nis invoked more than once during the `wait` timeout.\n\nIf `wait` is `0` and `leading` is `false`, `func` invocation is deferred\nuntil to the next tick, similar to `setTimeout` with a timeout of `0`.\n\nSee [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)\nfor details over the differences between `_.debounce` and `_.throttle`.",
-      "filetype": "lodash",
+    "91c82db6-79c4-3ceb-858c-db661718773d": {
+      "content": "import { Component } from '@angular/core';\n\n@Component({\n\tselector: '${1:prefix-app}',\n\ttemplate: `\n\t\t<router-outlet></router-outlet>\n\t\t`\n})\nexport class ${2:App}Component { }\n$0",
+      "doc": "Angular App root component",
+      "filetype": "angular",
       "grammar": "lsp",
-      "label": "lodash-debounce",
+      "label": "angular-root-component",
       "matches": {
-        "lodash debounce": true
+        "a-component-root": true,
+        "angular root component": true
       }
     },
     "91cc56dd-d678-34ee-810a-8cdca8c5bc7c": {
@@ -61594,6 +61798,17 @@
         "t:a": true
       }
     },
+    "932ee089-a99b-3cf4-b0f6-098dddaea6be": {
+      "content": "describe.each([${1:[1, 2], [2, 4]}])(\n\t'${2:double(%d)}',\n\t(${3:input, expected}) => {\n\t\ttest(`returns \\${expected}`, () => {\n\t\t\t${4:expect(double(input)).toBe(expected);}\n\t\t});\n\t}\n);",
+      "doc": "creates a describe block with different test data sets",
+      "filetype": "jest",
+      "grammar": "lsp",
+      "label": "jest-describe-each",
+      "matches": {
+        "desce": true,
+        "jest describe each": true
+      }
+    },
     "933634a3-bd04-3f4c-a842-1772d76873e9": {
       "content": "dockerfile {\n\tfilename '${1:Dockerfile.build}'\n\tdir '${2:build}'\n\tlabel '${3:my-defined-label}'\n\tregistryUrl '${4:https://myregistry.com/}'\n\tregistryCredentialsId '${5:myPredefinedCredentialsInJenkins}'\n}",
       "doc": "",
@@ -61984,6 +62199,16 @@
       "label": "",
       "matches": {
         "inputcheckbox": true
+      }
+    },
+    "94016bce-bc5b-3226-a187-c72dcf992d8a": {
+      "content": "import { mapMutations } from 'vuex';\n\nexport default {\n\tmethods: {\n\t\t...mapMutations([\n\t\t\t${1:'nameOfMutation'}, //also supports payload `this.nameOfMutation(amount)` \n\t\t])\n\t},\n};",
+      "doc": "mapmutations inside a vue component",
+      "filetype": "vue-script",
+      "grammar": "lsp",
+      "label": "Vue MapMutations",
+      "matches": {
+        "vmapmutations": true
       }
     },
     "940a5752-fab6-37f5-8020-19d32c950075": {
@@ -64046,6 +64271,17 @@
         "case": true
       }
     },
+    "99226e15-e02f-3c23-bc4c-fd1f4534e414": {
+      "content": "export const ${1} = styled.${2}.attrs({\n  ${3}: ${4}\n})`\n  ${5}\n`;",
+      "doc": "Export styled-component with attributes",
+      "filetype": "styled-components",
+      "grammar": "lsp",
+      "label": "styled-components-export-styled-component-with-attributes",
+      "matches": {
+        "exscattrs": true,
+        "styled-components export component with attributes": true
+      }
+    },
     "99269e9c-2e04-33c5-8b3c-490f4a0b5cbe": {
       "content": "Long",
       "doc": "",
@@ -65837,16 +66073,6 @@
         "svon-foward": true
       }
     },
-    "9d7e1ff3-3778-36d9-ab2e-e802116f3993": {
-      "content": "import React from 'react';\nimport { View } from 'react-native';\n\n// import { Container } from './styles';\n\nconst ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}} = () => {\n  return <View />;\n}\n\nexport default ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}};",
-      "doc": "Create React Native Functional Component",
-      "filetype": "snippets",
-      "grammar": "lsp",
-      "label": "componentFunctionalTypescript",
-      "matches": {
-        "rnfc": true
-      }
-    },
     "9d87c36f-8782-3bbe-b04e-f7b90ce27d82": {
       "content": "list-style-type: circle;",
       "doc": "",
@@ -66167,6 +66393,16 @@
       "label": "",
       "matches": {
         "request": true
+      }
+    },
+    "9e14e8cc-0abf-3796-9de5-4ad3ac858878": {
+      "content": "import { HttpInterceptor, HttpHandler, HttpRequest, HttpEvent, HttpResponse } from '@angular/common/http';\nimport { Observable } from 'rxjs';\nimport { tap } from 'rxjs/operators';\n\n@Injectable()\nexport class LogInterceptor implements HttpInterceptor {\n\tconstructor() {}\n\n\tintercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {\n\t\tconst started = Date.now();\n\t\treturn next.handle(req).pipe(\n\t\t\ttap(event => {\n\t\t\t\tif (event instanceof HttpResponse) {\n\t\t\t\t\tconst elapsed = Date.now() - started;\n\t\t\t\t\tconsole.log(`Request for \\${req.urlWithParams} took \\${elapsed} ms.`);\n\t\t\t\t}\n\t\t\t})\n\t\t);\n\t}\n}",
+      "doc": "Angular HttpInterceptor for Logging HttpClient",
+      "filetype": "typescript",
+      "grammar": "lsp",
+      "label": "Angular HttpInterceptor for Logging",
+      "matches": {
+        "a-http-interceptor-logging": true
       }
     },
     "9e1cd97a-be51-36c1-8128-e1bcc094b3a0": {
@@ -68030,17 +68266,6 @@
         "object": true
       }
     },
-    "a1ef0b3c-668c-31e0-a0e7-5fe01a7240cb": {
-      "content": "${1:effectName}$ = createEffect(() => {\n\treturn this.actions$.pipe(\n\t\t\tofType(${2:action}),\n\t\t\t/** An EMPTY observable only emits completion. Replace with your own observable stream */\n\t\t\t${3:operator}(() => ${4:EMPTY}));\n});",
-      "doc": "Creates an NgRx Effect",
-      "filetype": "angular",
-      "grammar": "lsp",
-      "label": "ngrx-create-effect",
-      "matches": {
-        "a-ngrx-create-effect": true,
-        "angular ng rx create effect": true
-      }
-    },
     "a1ef61c1-dbee-3fee-95e2-bde663715bc6": {
       "content": "fmt.Println(\"${1:s}\")",
       "doc": "",
@@ -68916,6 +69141,17 @@
       "label": "",
       "matches": {
         "isrwl": true
+      }
+    },
+    "a466c08d-5ced-36ff-809b-a0f39f8ce400": {
+      "content": "${1|transition,in,out|}:${2:name}|${3:local}={${4:params}}",
+      "doc": "",
+      "filetype": "svelte",
+      "grammar": "lsp",
+      "label": "svelte-transition-all",
+      "matches": {
+        "svelte transition all": true,
+        "svta": true
       }
     },
     "a46a23df-5e78-36ca-b19c-1130c188977d": {
@@ -70766,6 +71002,16 @@
         "wbsa": true
       }
     },
+    "a89d2bb9-9198-3a18-a68e-8b5f5c27bc85": {
+      "content": "require('dotenv-safe').config({ debug: ${1|true,false|} })",
+      "doc": "You may turn on logging to help debug why certain keys or values are not being set as you expect.",
+      "filetype": "dotenv-safe",
+      "grammar": "lsp",
+      "label": "dotenv-safe-debug",
+      "matches": {
+        "dotenv-safe debug": true
+      }
+    },
     "a8b9f3cf-d31e-3e7a-9411-d456795c4a36": {
       "content": "@each ${1:$item} in ${2:items}\n\t${0}",
       "doc": "",
@@ -70794,6 +71040,17 @@
       "label": "new (new)",
       "matches": {
         "new": true
+      }
+    },
+    "a8c800ee-5722-3779-9237-e63ebc8ce7c2": {
+      "content": "${1|transition,in,out|}:${2:name}={${3:params}}",
+      "doc": "",
+      "filetype": "svelte",
+      "grammar": "lsp",
+      "label": "svelte-transition-params",
+      "matches": {
+        "svelte transition params": true,
+        "svtp": true
       }
     },
     "a8c8d358-afe4-3fb4-a522-6baa9a1d8d08": {
@@ -71670,6 +71927,16 @@
       "matches": {
         "gdsfp": true,
         "react getderivedstatefromprops": true
+      }
+    },
+    "ab018f44-cab5-391f-ad95-ba8456c785e7": {
+      "content": "import styled from 'styled-components/native';\n\nexport const ${1:Container} = styled.${2:View}`\n  ${3}\n`;\n",
+      "doc": "Create React Native Styled Components file",
+      "filetype": "snippets",
+      "grammar": "lsp",
+      "label": "styles",
+      "matches": {
+        "styled-react-native": true
       }
     },
     "ab0588fc-c6c7-378b-ba74-068442658792": {
@@ -73297,6 +73564,16 @@
       "label": "ClassImplementation",
       "matches": {
         "clm": true
+      }
+    },
+    "ae8d608c-6bba-3463-9df6-65ce214d07b8": {
+      "content": "console.time(`${1:object}`)",
+      "doc": "Console time wrapper",
+      "filetype": "snippets",
+      "grammar": "lsp",
+      "label": "consoleTime",
+      "matches": {
+        "ctm": true
       }
     },
     "ae8fc5c4-f75b-3b44-9b98-543cf08a2d75": {
@@ -75092,6 +75369,16 @@
       "label": "",
       "matches": {
         "swi": true
+      }
+    },
+    "b2eeb5ff-70f7-3d84-8b17-f5d4ce13e92f": {
+      "content": "```{r}\n$0\n```",
+      "doc": "Insert R code chunk",
+      "filetype": "rmarkdown",
+      "grammar": "lsp",
+      "label": "Insert R code chunk",
+      "matches": {
+        "r code chunk": true
       }
     },
     "b2ff56f3-42d5-38eb-abf1-6174587bc7ad": {
@@ -77131,6 +77418,16 @@
         "desc": true
       }
     },
+    "b7d17f18-d692-3375-b53f-6316e9bef088": {
+      "content": "import { Component } from '@angular/core';\n\n@Component({\n\tselector: '${1:prefix-app}',\n\ttemplate: `\n\t\t<router-outlet></router-outlet>\n\t\t`\n})\nexport class ${2:App}Component { }\n$0",
+      "doc": "Angular App root component",
+      "filetype": "typescript",
+      "grammar": "lsp",
+      "label": "Angular Root Component",
+      "matches": {
+        "a-component-root": true
+      }
+    },
     "b7d50b74-1954-3f9d-976e-01e7d8852680": {
       "content": "${1:obj}.hasClass('${2:className}')",
       "doc": "",
@@ -77845,6 +78142,16 @@
         "mm": true
       }
     },
+    "b9ddda62-a9ef-30b7-944f-2a901a9b6039": {
+      "content": "${1:dfname} <- read.csv(file = \"${2:file}\", header = ${3|TRUE,FALSE|},  sep = \"${4|\\,,;|}\", row.names = ${5:NULL},  stringsAsFactors = ${6|FALSE,TRUE|})",
+      "doc": "Read a data table from a comma-separated file (CSV) and create a data frame",
+      "filetype": "r-snippets",
+      "grammar": "lsp",
+      "label": "Read CSV",
+      "matches": {
+        "readc": true
+      }
+    },
     "b9e251d7-93b6-344b-9753-72b2b863d4dc": {
       "content": "updated () {\n\t${0};\n},",
       "doc": "updated lifecycle method",
@@ -77913,16 +78220,6 @@
       "label": "",
       "matches": {
         "sm_session_id": true
-      }
-    },
-    "ba0c6dc0-d831-35b6-a16d-201e44e0b349": {
-      "content": "${1:effectName}$ = createEffect(() => {\n\treturn this.actions$.pipe(\n\t\t\tofType(${2:Feature}Actions.${3:action}),\n\t\t\t${4:operator}(() =>\n\t\t\t\t${5:apiSource}.pipe(\n\t\t\t\t\tmap(data => $2Actions.$3Success({ data })),\n\t\t\t\t\tcatchError(error => of($2Actions.$3Failure({ error }))))\n\t\t\t\t),\n\t);\n});",
-      "doc": "Creates an NgRx Effect Scaffolded for API Call",
-      "filetype": "typescript",
-      "grammar": "lsp",
-      "label": "NgRx Create Effect for API Call",
-      "matches": {
-        "a-ngrx-create-effect-api": true
       }
     },
     "ba13ab7a-1a64-36f1-9dec-4c35fa6f83e9": {
@@ -78461,6 +78758,16 @@
         "directory": true
       }
     },
+    "bb611cec-b87f-3360-b004-867b85636d7e": {
+      "content": "require('dotenv').config({ debug: ${1|true,false|} })",
+      "doc": "You may turn on logging to help debug why certain keys or values are not being set as you expect.",
+      "filetype": "dotenv",
+      "grammar": "lsp",
+      "label": "dotenv-debug",
+      "matches": {
+        "dotenv debug": true
+      }
+    },
     "bb64c52c-1728-3ddf-92cf-edc9de1c057f": {
       "content": "<slot></slot>",
       "doc": "",
@@ -78983,6 +79290,17 @@
       "label": "",
       "matches": {
         "xput": true
+      }
+    },
+    "bcc3d738-20c9-3b9e-b277-4d355c47de88": {
+      "content": "on:${1|introstart,introend,outrostart,outroend|}=\"{() => status = '${1|introstart,introend,outrostart,outroend|}'}\"",
+      "doc": "",
+      "filetype": "svelte",
+      "grammar": "lsp",
+      "label": "svelte-transition-events",
+      "matches": {
+        "svelte transition events": true,
+        "svte": true
       }
     },
     "bcd2e9df-4e8b-3324-a871-4a437adcfaa0": {
@@ -79697,16 +80015,6 @@
       "label": "",
       "matches": {
         "eald": true
-      }
-    },
-    "be76c352-015c-38fd-89a5-250624d031b5": {
-      "content": "_.throttle(${func}, ${wait}, ${options}, ${options.leading}, ${options.trailing})",
-      "doc": "// Avoid excessively updating the position while scrolling.\njQuery(window).on('scroll', _.throttle(updatePosition, 100));\n\n// Invoke `renewToken` when the click event is fired, but not more than once every 5 minutes.\nvar throttled = _.throttle(renewToken, 300000, { 'trailing': false });\njQuery(element).on('click', throttled);\n\n// Cancel the trailing throttled invocation.\njQuery(window).on('popstate', throttled.cancel);\n\nCreates a throttled function that only invokes `func` at most once per\nevery `wait` milliseconds. The throttled function comes with a `cancel`\nmethod to cancel delayed `func` invocations and a `flush` method to\nimmediately invoke them. Provide `options` to indicate whether `func`\nshould be invoked on the leading and/or trailing edge of the `wait`\ntimeout. The `func` is invoked with the last arguments provided to the\nthrottled function. Subsequent calls to the throttled function return the\nresult of the last `func` invocation.\n\n**Note:** If `leading` and `trailing` options are `true`, `func` is\ninvoked on the trailing edge of the timeout only if the throttled function\nis invoked more than once during the `wait` timeout.\n\nIf `wait` is `0` and `leading` is `false`, `func` invocation is deferred\nuntil to the next tick, similar to `setTimeout` with a timeout of `0`.\n\nSee [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)\nfor details over the differences between `_.throttle` and `_.debounce`.",
-      "filetype": "lodash",
-      "grammar": "lsp",
-      "label": "lodash-throttle",
-      "matches": {
-        "lodash throttle": true
       }
     },
     "be7a5667-965c-3193-b4b9-d14ae7c6772f": {
@@ -80444,6 +80752,16 @@
       "label": "setup(func)",
       "matches": {
         "setup": true
+      }
+    },
+    "c0b05119-fe7f-32e6-b1c3-e8b132c1c746": {
+      "content": "`${1:${TM_SELECTED_TEXT}}`$0",
+      "doc": "Insert code",
+      "filetype": "rmarkdown",
+      "grammar": "lsp",
+      "label": "Insert code",
+      "matches": {
+        "code": true
       }
     },
     "c0b2f5b3-c24b-34cc-bc0e-1bc4a55819e5": {
@@ -81958,6 +82276,16 @@
         "vm": true
       }
     },
+    "c4021563-925d-3cfa-b648-0c676ed4225f": {
+      "content": "require('dotenv-safe').config({ allowEmptyValues: ${1|true,false|} })",
+      "doc": "If a variable is defined in the example file and has an empty value in the environment, enabling this option will not throw an error after loading.",
+      "filetype": "dotenv-safe",
+      "grammar": "lsp",
+      "label": "dotenv-safe-allowemptyvalues",
+      "matches": {
+        "dotenv-safe allowemptyvalues": true
+      }
+    },
     "c4043478-b320-3576-bee8-5099431f47d2": {
       "content": "display: inline;",
       "doc": "",
@@ -83410,17 +83738,6 @@
         "artnpp": true
       }
     },
-    "c79fd7c1-436b-3107-b835-e567cc15b493": {
-      "content": "const ${1:derivedStore} = derived([${2:storeA}, ${3:storeB}], ([$${2:storeA}, $${3:storeB}]) => $${2:storeA} + $${3:storeB});",
-      "doc": "",
-      "filetype": "svelte",
-      "grammar": "lsp",
-      "label": "svelte-derived-multiple",
-      "matches": {
-        "svderm": true,
-        "svelte derived multiple": true
-      }
-    },
     "c7a6d64b-9c1d-3a52-914f-f5c603ecd02c": {
       "content": "border-fit: overwrite;",
       "doc": "",
@@ -83813,6 +84130,16 @@
         "describe": true
       }
     },
+    "c880f428-2fc2-3781-9e64-c413bbca7f48": {
+      "content": "${1|onBeforeMount,onMounted,onBeforeUpdate,onUpdated,onBeforeUnmount,onUnmounted,,onActivated,onDeactivated,onErrorCaptured,onRenderTracked,onRenderTriggered|}(() => {${2}})",
+      "doc": "Lifecycle hooks can be registered with directly imported `onXXX` functions:",
+      "filetype": "vue",
+      "grammar": "lsp",
+      "label": "vue-v3lifecyclehook",
+      "matches": {
+        "vue v3 lifecyclehook": true
+      }
+    },
     "c883ff78-62d5-33a8-8485-c7e3b1143add": {
       "content": "_.pullAll(${array}, ${values})",
       "doc": "var array = ['a', 'b', 'c', 'a', 'b', 'c'];\n\n_.pullAll(array, ['a', 'c']);\nconsole.log(array);\n// => ['b', 'b']\n\nThis method is like `_.pull` except that it accepts an array of values to remove.\n\n**Note:** Unlike `_.difference`, this method mutates `array`.",
@@ -83942,6 +84269,17 @@
       "label": "",
       "matches": {
         "enum": true
+      }
+    },
+    "c8fd3d47-eb4a-3916-8f65-62ccb2c08d16": {
+      "content": "export const ${1} = styled.${2}`\n  ${3}\n`;",
+      "doc": "Export styled-component",
+      "filetype": "styled-components",
+      "grammar": "lsp",
+      "label": "styled-components-export-styled-component",
+      "matches": {
+        "exsc": true,
+        "styled-components export component": true
       }
     },
     "c90a007c-a82e-3721-9b10-a3dc3aec6c33": {
@@ -85033,6 +85371,17 @@
         "afn": true
       }
     },
+    "cb645c09-5264-3745-889b-0f4a280a03d7": {
+      "content": "bind:${1|innerWidth,innerHeight,outerWidth,outerHeight,scrollX,scrollY,online|}={${2:variable}}",
+      "doc": "",
+      "filetype": "svelte",
+      "grammar": "lsp",
+      "label": "svelte-window-bind",
+      "matches": {
+        "svelte window bind": true,
+        "svwb": true
+      }
+    },
     "cb68bb71-7299-3c09-be69-40ae285f0030": {
       "content": "require('dotenv-safe').config({ path: '${1:/full/custom/path/to/your/env/vars}' })",
       "doc": "You may specify a custom path if your file containing environment variables is located elsewhere.",
@@ -85399,16 +85748,6 @@
         "border-bottom-width": true
       }
     },
-    "cc38e240-8fe2-3f93-8013-2081046df86d": {
-      "content": "${1:effectName}$ = createEffect(() => {\n\treturn this.actions$.pipe(\n\t\t\tofType(${2:action}),\n\t\t\t/** An EMPTY observable only emits completion. Replace with your own observable stream */\n\t\t\t${3:operator}(() => ${4:EMPTY}));\n});",
-      "doc": "Creates an NgRx Effect",
-      "filetype": "typescript",
-      "grammar": "lsp",
-      "label": "NgRx Create Effect",
-      "matches": {
-        "a-ngrx-create-effect": true
-      }
-    },
     "cc3947fa-75d7-3873-ba07-f4308273b0df": {
       "content": "_.divide(${dividend}, ${divisor})",
       "doc": "_.divide(6, 4);\n// => 1.5\n\nDivide two numbers.",
@@ -85597,6 +85936,26 @@
       "label": "",
       "matches": {
         "ngmfi": true
+      }
+    },
+    "ccbe180d-5861-30bb-b020-c59265d90bb3": {
+      "content": "import ${1|onBeforeMount,onMounted,onBeforeUpdate,onUpdated,onBeforeUnmount,onUnmounted,,onActivated,onDeactivated,onErrorCaptured,onRenderTracked,onRenderTriggered|} from '${2|vue,@vue/composition-api|}'",
+      "doc": "Import Lifecycle hooks to use in file",
+      "filetype": "vue",
+      "grammar": "lsp",
+      "label": "vue-v3lifecyclehook-import",
+      "matches": {
+        "vue v3 importlifecyclehook ": true
+      }
+    },
+    "ccc8e3be-d857-32e1-8f24-6b0f73887277": {
+      "content": "console.log(`${1:object}`, JSON.stringify(${1:object}, null, 2))",
+      "doc": "Logs stringified JSON property with name.",
+      "filetype": "snippets",
+      "grammar": "lsp",
+      "label": "consoleLogJson",
+      "matches": {
+        "clj": true
       }
     },
     "cccafc70-3307-3e7d-92dc-91b4d8aa1116": {
@@ -87117,6 +87476,17 @@
         "include": true
       }
     },
+    "d0619b05-baf7-3c3a-8796-6983619cae5c": {
+      "content": "import { mapMutations } from 'vuex'\n\nexport default {\n\tmethods: {\n\t\t...mapMutations([\n\t\t\t${1:'nameOfMutation'}, //also supports payload `this.nameOfMutation(amount)` \n\t\t])\n\t},\n}",
+      "doc": "mapmutations inside a vue component",
+      "filetype": "vue",
+      "grammar": "lsp",
+      "label": "vue-mapmutations",
+      "matches": {
+        "vmapmutations": true,
+        "vue mapmutations": true
+      }
+    },
     "d067cc8c-b8e4-3113-bb34-0bbcfa7f0b22": {
       "content": "(others => '${1:0}');",
       "doc": "",
@@ -88324,6 +88694,16 @@
         "asnd": true
       }
     },
+    "d2f6ee54-aa8d-32c9-af90-11eb477d1f62": {
+      "content": "export const query = graphql`${1:query}`;",
+      "doc": "Gatsby uses the concept of a page query, which is a query for a specific page in a site.Note that you can only have one page query per file.",
+      "filetype": "gatsby",
+      "grammar": "lsp",
+      "label": "gatsby-export-query",
+      "matches": {
+        "gatsby export query": true
+      }
+    },
     "d2f74e4a-f4c6-3409-b555-84ddbde0decd": {
       "content": "::after",
       "doc": "",
@@ -88633,6 +89013,16 @@
       "label": "",
       "matches": {
         "yregc": true
+      }
+    },
+    "d3afba2d-3735-3034-8f8a-844011f2df6b": {
+      "content": "console.log(`${1:object}`, ${1:object})",
+      "doc": "Logs property with name.",
+      "filetype": "snippets",
+      "grammar": "lsp",
+      "label": "consoleLogObject",
+      "matches": {
+        "clo": true
       }
     },
     "d3b49cca-709a-3415-94f7-f18476865f39": {
@@ -91967,17 +92357,6 @@
         "ovs": true
       }
     },
-    "db092c65-e585-3c73-a496-4e613ee9b2eb": {
-      "content": "const ${1:derivedStore} = derived([${2:storeA}, ${3:storeB}], ([$${2:storeA}, $${3:storeB}], set) => {\n\tsetTimeout(() => set($${2:storeA} + $${3:storeB}), 1000);\n}, 'one moment...');",
-      "doc": "",
-      "filetype": "svelte",
-      "grammar": "lsp",
-      "label": "svelte-derived-multiple-set",
-      "matches": {
-        "svderms": true,
-        "svelte derived multiple set": true
-      }
-    },
     "db15f6c9-67c4-348c-a299-d38f98a341c4": {
       "content": "PropTypes.array.isRequired,",
       "doc": "Array prop type required",
@@ -92325,6 +92704,17 @@
         "ul.": true
       }
     },
+    "dc05f32c-f6d6-395a-b5ef-0be94bd33799": {
+      "content": "|${1|preventDefault,stopPropagation,passive,capture,once|}",
+      "doc": "",
+      "filetype": "svelte",
+      "grammar": "lsp",
+      "label": "svelte-modifiers",
+      "matches": {
+        "svelte modifier": true,
+        "svmodifier": true
+      }
+    },
     "dc075fd2-7325-34f7-897d-34612b97a00c": {
       "content": "nfc(${1:value}${2:, }${0:right});",
       "doc": "",
@@ -92354,6 +92744,16 @@
       "label": "",
       "matches": {
         "ac:fb": true
+      }
+    },
+    "dc252f47-120f-35e4-9b32-bf03e36ddae8": {
+      "content": "const express = require('express');\nconst app = express();\nconst port = process.env.PORT || ${1:port};\nconst www = process.env.WWW || '${2:./}';\napp.use(express.static(www));\nconsole.log(`serving \\${www}`);\napp.get('*', (req, res) => {\n\tres.sendFile(`index.html`, { root: www });\n});\napp.listen(port, () => console.log(`listening on http://localhost:\\${port}`));\n$0",
+      "doc": "Node.js Express Server",
+      "filetype": "javascript",
+      "grammar": "lsp",
+      "label": "Node.js Express Server",
+      "matches": {
+        "ex-node-server-simple": true
       }
     },
     "dc333cef-0888-3815-a394-f8583aeb3f37": {
@@ -93411,16 +93811,6 @@
       "label": "Vue Mixin",
       "matches": {
         "vmixin": true
-      }
-    },
-    "deeea18e-24ed-3879-a5d1-61de4f5fd25d": {
-      "content": "_.mixin(${object}, ${source}, ${options}, ${options.chain})",
-      "doc": "function vowels(string) {\n  return _.filter(string, function(v) {\n    return /[aeiou]/i.test(v);\n  });\n}\n\n_.mixin({ 'vowels': vowels });\n_.vowels('fred');\n// => ['e']\n\n_('fred').vowels().value();\n// => ['e']\n\n_.mixin({ 'vowels': vowels }, { 'chain': false });\n_('fred').vowels();\n// => ['e']\n\nAdds all own enumerable string keyed function properties of a source\nobject to the destination object. If `object` is a function, then methods\nare added to its prototype as well.\n\n**Note:** Use `_.runInContext` to create a pristine `lodash` function to\navoid conflicts caused by modifying the original.",
-      "filetype": "lodash",
-      "grammar": "lsp",
-      "label": "lodash-mixin",
-      "matches": {
-        "lodash mixin": true
       }
     },
     "def49235-fe8e-35b6-a551-8725a3beffdf": {
@@ -94795,6 +95185,17 @@
       "label": "",
       "matches": {
         "isnum": true
+      }
+    },
+    "e1f6407a-d013-3ca9-96dd-fb36dcb4aaf4": {
+      "content": "const component = new ${1:App}({\n\ttarget: ${2|target,document.body|},\n\tprops: ${3:props},\n\tanchor: ${4:anchor},\n\thydrate: ${5|false,true|},\n\tintro: ${5|false,true|}\n})",
+      "doc": "",
+      "filetype": "svelte",
+      "grammar": "lsp",
+      "label": "svelte-create-component",
+      "matches": {
+        "svcreate-component": true,
+        "svelte create component": true
       }
     },
     "e1f93fcd-052f-30b0-b863-5b231bcf3d17": {
@@ -96653,6 +97054,16 @@
         "labelaxis": true
       }
     },
+    "e6a71d6e-41af-3177-ae85-5b77398562a9": {
+      "content": "constructor( @Optional() @SkipSelf() parentModule: ${1:ModuleName} {\n\tif (parentModule) {\n\t\tconst msg = `${1:ModuleName} has already been loaded. \n\t\t\tImport ${1:ModuleName} once, only, in the root AppModule.`;\n\t\tthrow new Error(msg);\n\t}\n}",
+      "doc": "Angular Module SkipSelf constructor",
+      "filetype": "typescript",
+      "grammar": "lsp",
+      "label": "Angular Module SkipSelf Constructor",
+      "matches": {
+        "a-ctor-skip-self": true
+      }
+    },
     "e6a75aa8-83d0-3afa-92d4-da52ed8f7e04": {
       "content": "<transition></transition>",
       "doc": "",
@@ -97114,6 +97525,16 @@
       "label": "",
       "matches": {
         "for": true
+      }
+    },
+    "e7be9100-8ead-3a4e-88bb-037337f04e61": {
+      "content": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n\tselector: '${1:selector-name}',\n\ttemplate: `$0`\n})\n\nexport class ${2:Name}Component implements OnInit {\n\tconstructor() { }\n\n\tngOnInit() { }\n}",
+      "doc": "Angular component with an inline template",
+      "filetype": "typescript",
+      "grammar": "lsp",
+      "label": "Angular Component with Inline Template",
+      "matches": {
+        "a-component-inline": true
       }
     },
     "e7c07b1a-e317-3dc5-b241-bb66b11bb5e5": {
@@ -98542,6 +98963,16 @@
       "label": "for range",
       "matches": {
         "range": true
+      }
+    },
+    "eb0c2d5b-e26c-380f-92ba-7313b3746c2f": {
+      "content": "const {\n  ${1:queryName}: { childImageSharp: {fluid: ${2:imageFluid}}}\n} = useStaticQuery(graphql`\n  query {\n    ${1:queryName}: file(relativePath: { eq: \"${3:imagePath.png}\" }) {\n      childImageSharp {\n        fluid(maxWidth: ${4:300}) {\n          ...${5|GatsbyImageSharpFluid,GatsbyImageSharpFluid_noBase64,GatsbyImageSharpFluid_tracedSVG,GatsbyImageSharpFluid_withWebp,GatsbyImageSharpFluid_withWebp_noBase64,GatsbyImageSharpFluid_withWebp_tracedSVG|}\n        }\n      }\n    }\n  }\n`)",
+      "doc": "",
+      "filetype": "gatsby-image",
+      "grammar": "lsp",
+      "label": "gatsby-image-usestaticquery-fluid",
+      "matches": {
+        "gatsby-image usestaticquery fluid": true
       }
     },
     "eb0dcb8f-16d0-3459-a3c8-4fce03872b26": {
@@ -100062,6 +100493,16 @@
         "lcp": true
       }
     },
+    "eeb7072e-8522-355e-8c70-c5e39a2b1810": {
+      "content": "head () {\n\treturn {\n\t\ttitle: ${1:'Page Title'},\n\t\tmeta: [\n\t\t\t// hid is used as unique identifier. Do not use `vmid` for it as it will not work\n\t\t\t{ hid: 'description', name: 'description', content: ${2:'My custom description'} }\n\t\t]\n\t}\n},",
+      "doc": "Nuxt Head",
+      "filetype": "nuxt-script",
+      "grammar": "lsp",
+      "label": "Nuxt Head",
+      "matches": {
+        "nhead": true
+      }
+    },
     "eec2ba7d-ffe2-35d7-b722-55e413ae630e": {
       "content": "__asm__ __volatile__(\n\"${0}\\n\\t\"\n:\n:\n);",
       "doc": "",
@@ -100374,6 +100815,16 @@
         "tcl": true
       }
     },
+    "ef78070f-7efa-32e9-8e98-ab8c715f6522": {
+      "content": "import styled from 'styled-components/native';\n\nexport const ${1:Container} = styled.${2:View}`\n  ${3}\n`;\n",
+      "doc": "Create React Native Styled Components file",
+      "filetype": "snippets-ts",
+      "grammar": "lsp",
+      "label": "styles",
+      "matches": {
+        "styled-react-native": true
+      }
+    },
     "ef80b93d-0963-3498-950f-efa287eadb2a": {
       "content": "static if(${1}) {\n\t${2}\n} else static if(${3}) {\n\t${4}\n} else {\n\t${5}\n}",
       "doc": "",
@@ -100652,6 +101103,16 @@
       "label": "propTypeAny",
       "matches": {
         "ptan": true
+      }
+    },
+    "efed2473-c854-32b9-8f30-fe2338306a36": {
+      "content": "module.exports = {\n\tcss: {\n\t\tloaderOptions: {\n\t\t\t${1:sass}: {\n\t\t\t\tdata: `${2:@import '@/styles/_variables.scss';}`\n\t\t\t}\n\t\t}\n\t}\n}",
+      "doc": "vue.config.js",
+      "filetype": "vue-script",
+      "grammar": "lsp",
+      "label": "Vue.config.js Import",
+      "matches": {
+        "vconfig": true
       }
     },
     "eff2ceec-e306-307a-ac17-18ce159e7463": {
@@ -102493,17 +102954,6 @@
       "label": "",
       "matches": {
         "serr": true
-      }
-    },
-    "f3eb3b48-dc68-3ffb-9278-a98ec4b49f5b": {
-      "content": "${props => props.$1};",
-      "doc": "Use props inside styled-component",
-      "filetype": "styled-components",
-      "grammar": "lsp",
-      "label": "styled-components-use-props-inside-styled-component",
-      "matches": {
-        "scp": true,
-        "styled-components props inside component": true
       }
     },
     "f3f0c727-16cd-3242-b0fb-ebbce5cabd68": {
@@ -104899,6 +105349,17 @@
         "class": true
       }
     },
+    "f9ad7258-ce34-3feb-bfcc-2ed96f9a2f48": {
+      "content": "import styled from 'styled-components';\n\nconst ${1} = styled.${2}`\n  ${3}\n`;\n\nexport default ${1};",
+      "doc": "Styled-Components file",
+      "filetype": "styled-components",
+      "grammar": "lsp",
+      "label": "styled-components-styled-components-file",
+      "matches": {
+        "scf": true,
+        "styled-components file": true
+      }
+    },
     "f9afd17f-9953-31eb-9e89-3928ec87883f": {
       "content": "dbg!(${0:${VISUAL}})",
       "doc": "",
@@ -106470,17 +106931,6 @@
         "tt": true
       }
     },
-    "fcfa38c3-f36a-3261-b122-523efd798de9": {
-      "content": "${1:effectName}$ = createEffect(() => {\n\treturn this.actions$.pipe(\n\t\t\tofType(${2:Feature}Actions.${3:action}),\n\t\t\t${4:operator}(() =>\n\t\t\t\t${5:apiSource}.pipe(\n\t\t\t\t\tmap(data => $2Actions.$3Success({ data })),\n\t\t\t\t\tcatchError(error => of($2Actions.$3Failure({ error }))))\n\t\t\t\t),\n\t);\n});",
-      "doc": "Creates an NgRx Effect Scaffolded for API Call",
-      "filetype": "angular",
-      "grammar": "lsp",
-      "label": "ngrx-create-effect-for-api-call",
-      "matches": {
-        "a-ngrx-create-effect-api": true,
-        "angular ng rx create effect api call": true
-      }
-    },
     "fd0163a2-0cd1-309e-aabc-3072d1985e54": {
       "content": "?assertNotEqual(${1}, ${0})",
       "doc": "",
@@ -107212,6 +107662,17 @@
       "label": "reactMemo",
       "matches": {
         "rscm": true
+      }
+    },
+    "ff040904-910c-3f4e-af6f-b82658e9c53f": {
+      "content": "const ${1} = styled.${2}`\n  ${3}\n`;",
+      "doc": "Styled-Component",
+      "filetype": "styled-components",
+      "grammar": "lsp",
+      "label": "styled-components-styled-component",
+      "matches": {
+        "sc": true,
+        "styled-components component": true
       }
     },
     "ff0cb533-7b87-35e9-a314-fd7ba2d25d30": {
