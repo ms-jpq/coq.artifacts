@@ -176,6 +176,7 @@
       "matlab": true
     },
     "openfoam": {},
+    "org": {},
     "pandoc": {
       "markdown": true
     },
@@ -2617,6 +2618,16 @@
       "label": "until",
       "matches": {
         "until": true
+      }
+    },
+    "049a8f5c-7a29-382d-9e7d-efb037c9388e": {
+      "content": "#+BEGIN_LATEX\n$0\n#+END_LATEX",
+      "doc": "latex",
+      "filetype": "org",
+      "grammar": "lsp",
+      "label": "latex",
+      "matches": {
+        "latex": true
       }
     },
     "049b4e85-96b4-3bf5-8508-04eafc055a5b": {
@@ -8240,6 +8251,16 @@
       "label": "",
       "matches": {
         "mapf": true
+      }
+    },
+    "0fd57081-57f0-3a92-8637-69a09e9d4311": {
+      "content": "TODO ${1:task description}",
+      "doc": "TODO item",
+      "filetype": "org",
+      "grammar": "lsp",
+      "label": "todo",
+      "matches": {
+        "todo": true
       }
     },
     "0fe4b92a-5c23-3a96-bab4-1447438c1882": {
@@ -22996,6 +23017,16 @@
         "read": true
       }
     },
+    "2d2582d8-e96e-3337-984f-134939545725": {
+      "content": "#+BEGIN_CENTER\n$0\n#+END_CENTER",
+      "doc": "#+BEGIN_CENTER block",
+      "filetype": "org",
+      "grammar": "lsp",
+      "label": "center block",
+      "matches": {
+        "<C": true
+      }
+    },
     "2d27ec04-ef0b-3d18-921d-40188a804388": {
       "content": "/// ${3:/*documentation*/}\nclass $1Exception : $2Exception\n{\n\tpublic this(string msg, string file = __FILE__, int line = __LINE__)\n\t{\n\t\tsuper(msg, file, line);\n\t}\n}",
       "doc": "",
@@ -27499,6 +27530,16 @@
         "bdts": true
       }
     },
+    "36a01cfc-5502-3311-8bfc-dd5ef7eff401": {
+      "content": "#+BEGIN_SRC ${1:lang}\n$0\n#+END_SRC",
+      "doc": "#+BEGIN_SRC ... block",
+      "filetype": "org",
+      "grammar": "lsp",
+      "label": "src block",
+      "matches": {
+        "<s": true
+      }
+    },
     "36a02129-9f0a-333b-88a9-7eed07f6118f": {
       "content": "animation-play-state: ${1|paused,running|};",
       "doc": "initial value: running",
@@ -29321,6 +29362,16 @@
       "label": "exportNamedVariable",
       "matches": {
         "env": true
+      }
+    },
+    "3a6473d5-2dd2-304a-8485-03f96e336748": {
+      "content": "<img src=\"$1\" alt=\"$2\"/>$3",
+      "doc": "HTML - Defines an image",
+      "filetype": "html",
+      "grammar": "lsp",
+      "label": "img",
+      "matches": {
+        "img": true
       }
     },
     "3a65c679-ea05-31a1-9221-5b43d61ff981": {
@@ -35776,6 +35827,16 @@
         "vmProps": true
       }
     },
+    "46acf793-671e-3e6c-b38d-6128ee990a80": {
+      "content": "#+BEGIN_SRC dot :file ${1:file} :cmdline -T${2:pdf} :exports none :results silent\n$0\n#+END_SRC\n\n[[file:$1]]",
+      "doc": "dot",
+      "filetype": "org",
+      "grammar": "lsp",
+      "label": "dot",
+      "matches": {
+        "dot": true
+      }
+    },
     "46aebcdb-0d43-3c3c-9713-9a3c5df6e78e": {
       "content": "min-width: ${0}",
       "doc": "",
@@ -37342,6 +37403,16 @@
       "label": "Scaffold <style> with less",
       "matches": {
         "style_with_less": true
+      }
+    },
+    "4a12a7fb-2863-301d-9529-1227d9b93b1f": {
+      "content": "#+TITLE:     ${1:Untitled Document}\n#+AUTHOR:    ${2:Author}\n#+DATE:      ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
+      "doc": "org-file header",
+      "filetype": "org",
+      "grammar": "lsp",
+      "label": "header",
+      "matches": {
+        "head": true
       }
     },
     "4a196836-82b6-3054-8b5a-3aa1dff122a5": {
@@ -43410,6 +43481,16 @@
         "else": true
       }
     },
+    "560edbe7-8f8b-353d-9b73-26e4eee42e55": {
+      "content": "#+CAPTION: ${1:caption}\n#+ATTR_LATEX: ${2:scale=0.75}\n#+LABEL: fig:${3:label}",
+      "doc": "figure",
+      "filetype": "org",
+      "grammar": "lsp",
+      "label": "figure",
+      "matches": {
+        "fig": true
+      }
+    },
     "560f35a7-4cbd-3f61-a9d7-d7de7ff439b4": {
       "content": "console.trace(${1:object});",
       "doc": "Prints a stack trace from the point where the method was called",
@@ -43699,6 +43780,16 @@
       "label": "",
       "matches": {
         "pudb": true
+      }
+    },
+    "56a5412a-3027-3fec-aee8-f19bba3f1b00": {
+      "content": "#+BEGIN_QUOTE\n$0\n#+END_QUOTE",
+      "doc": "#+BEGIN_QUOTE block",
+      "filetype": "org",
+      "grammar": "lsp",
+      "label": "quote block",
+      "matches": {
+        "<q": true
       }
     },
     "56a6aff0-0f2a-3e38-9c62-eac11ca83a9b": {
@@ -44003,6 +44094,16 @@
         "assign": true
       }
     },
+    "572f0686-0c75-3cb9-910e-61e210c4b965": {
+      "content": "#+BEGIN_EXPORT ${1:type}\n$0\n#+END_EXPORT",
+      "doc": "export",
+      "filetype": "org",
+      "grammar": "lsp",
+      "label": "export",
+      "matches": {
+        "export": true
+      }
+    },
     "57381794-2c73-3851-b59b-c2e75950845c": {
       "content": ".and.",
       "doc": "And",
@@ -44052,6 +44153,16 @@
       "label": "",
       "matches": {
         "pgba:r": true
+      }
+    },
+    "57469bf0-06a1-36e0-a09f-bbbe6097878f": {
+      "content": "#+BEGIN_EXPORT ascii\n$0\n#+END_EXPORT",
+      "doc": "#+BEGIN_EXPORT ascii",
+      "filetype": "org",
+      "grammar": "lsp",
+      "label": "export ascii",
+      "matches": {
+        "<a": true
       }
     },
     "57477154-4e63-3f14-9d4b-65ab1aa18bf1": {
@@ -55134,6 +55245,16 @@
         "df": true
       }
     },
+    "6d10f1c7-4019-3cf4-b0e0-6f99ca44565e": {
+      "content": "#+BEGIN_EXAMPLE\n$0\n#+END_EXAMPLE",
+      "doc": "#+BEGIN_EXAMPLE block",
+      "filetype": "org",
+      "grammar": "lsp",
+      "label": "example block",
+      "matches": {
+        "<e": true
+      }
+    },
     "6d167f8b-4c53-3d60-90fd-487d75937e05": {
       "content": "${1:#:set the_application to }choose application with prompt \"${2:#:Choose an application:}\"${3:#:with multiple selections allowed}",
       "doc": "",
@@ -57756,6 +57877,16 @@
       "label": "",
       "matches": {
         "dt": true
+      }
+    },
+    "728c7c42-5922-3ccc-9bf2-ad049abe0459": {
+      "content": "#+ATTR_HTML: :alt $2 :align ${3:left} :class img\n[[${1:src}]${4:[${5:title}]}]\n$0",
+      "doc": "img",
+      "filetype": "org",
+      "grammar": "lsp",
+      "label": "image",
+      "matches": {
+        "img": true
       }
     },
     "728cd110-54b8-3843-87c7-f4aa455221ec": {
@@ -66071,6 +66202,16 @@
       "label": "Getting Params",
       "matches": {
         "pa": true
+      }
+    },
+    "82b0cfc3-c0b3-3fb5-a8aa-60655645e86e": {
+      "content": "#+BEGIN_COMMENT\n$0\n#+END_COMMENT",
+      "doc": "#+BEGIN_COMMENT block",
+      "filetype": "org",
+      "grammar": "lsp",
+      "label": "comment block",
+      "matches": {
+        "<c": true
       }
     },
     "82b5d383-44be-3c7a-95ca-801b8d422460": {
@@ -85204,6 +85345,16 @@
         "acos": true
       }
     },
+    "a7f5d69e-b724-3acd-8139-e8ca1e0f7b64": {
+      "content": "#+ATTR_HTML: :width ${1:500px}",
+      "doc": "#+attr_html: :width ...",
+      "filetype": "org",
+      "grammar": "lsp",
+      "label": "html width",
+      "matches": {
+        "#+ATTR_HTML: :width ${1:500px}": true
+      }
+    },
     "a805d5d0-1d38-36e3-9199-130dc28abde0": {
       "content": "void main(string[] args) {\n\t${0}\n}",
       "doc": "",
@@ -90932,6 +91083,16 @@
         "bn": true
       }
     },
+    "b2af7bed-02a1-32cf-a70d-ef62ce0fd5a7": {
+      "content": "#+BEGIN_${1:LANG} ${2:options}\n$0\n#+END_$1",
+      "doc": "code",
+      "filetype": "org",
+      "grammar": "lsp",
+      "label": "code",
+      "matches": {
+        "code": true
+      }
+    },
     "b2af9c27-9869-355f-98da-e539ab217773": {
       "content": "${1:public} int ${2} { get; set; }",
       "doc": "",
@@ -91965,6 +92126,16 @@
       "label": "",
       "matches": {
         "isfp": true
+      }
+    },
+    "b4c8d988-8ffb-3628-b1af-bf5a96bf8dfc": {
+      "content": "#+BEGIN_EXPORT html\n$0\n#+END_EXPORT",
+      "doc": "#+BEGIN_EXPORT html block",
+      "filetype": "org",
+      "grammar": "lsp",
+      "label": "export html",
+      "matches": {
+        "<h": true
       }
     },
     "b4cacfe6-19ba-3c6a-880a-c4daa07832ec": {
@@ -104163,6 +104334,16 @@
         "data inline": true
       }
     },
+    "cd0ebf0c-f39a-368d-9783-927fa51310a4": {
+      "content": "src_${1:lang}${2:[${3:where}]}{${4:code}}",
+      "doc": "embedded",
+      "filetype": "org",
+      "grammar": "lsp",
+      "label": "embedded",
+      "matches": {
+        "emb": true
+      }
+    },
     "cd12dd04-3bdc-3866-b5d6-4e4b426ae733": {
       "content": "overflow ${0}",
       "doc": "",
@@ -106847,16 +107028,6 @@
       "label": "",
       "matches": {
         "var": true
-      }
-    },
-    "d21f832d-9383-36fc-93e6-5d0cd435c6b9": {
-      "content": "<img src=\"$1\" alt=\"$2\">$3",
-      "doc": "HTML - Defines an image",
-      "filetype": "html",
-      "grammar": "lsp",
-      "label": "img",
-      "matches": {
-        "img": true
       }
     },
     "d220c49f-3788-3c51-a05b-1a662cc13f53": {
@@ -110380,6 +110551,16 @@
       "label": "Number",
       "matches": {
         "n": true
+      }
+    },
+    "d8fc881a-dcdf-3b33-ba4d-e6225c5b80cc": {
+      "content": "#+BEGIN_SRC emacs-lisp :tangle yes\n$0\n#+END_SRC",
+      "doc": "elisp",
+      "filetype": "org",
+      "grammar": "lsp",
+      "label": "elisp",
+      "matches": {
+        "elisp": true
       }
     },
     "d8fdf277-60f9-38b1-a0bf-a59939a1e3aa": {
@@ -115706,6 +115887,16 @@
         "comment": true
       }
     },
+    "e2fa1c88-8111-37f8-90c7-857e5303923f": {
+      "content": "#+BEGIN_VERSE\n$0\n#+END_VERSE",
+      "doc": "verse",
+      "filetype": "org",
+      "grammar": "lsp",
+      "label": "verse",
+      "matches": {
+        "<v": true
+      }
+    },
     "e30db586-42e4-36eb-887d-16ad9691fc0a": {
       "content": "display: table-column",
       "doc": "",
@@ -117390,6 +117581,16 @@
       "label": "set title '...'",
       "matches": {
         "labelaxis": true
+      }
+    },
+    "e696f408-16bd-3975-89d8-89e856348c33": {
+      "content": "#+BEGIN_HTML\n---\nlayout: ${1:default}\ntitle: ${2:title}\n---\n#+END_HTML\n$0",
+      "doc": "entry",
+      "filetype": "org",
+      "grammar": "lsp",
+      "label": "entry",
+      "matches": {
+        "entry": true
       }
     },
     "e6a71d6e-41af-3177-ae85-5b77398562a9": {
@@ -121560,6 +121761,16 @@
       "label": "",
       "matches": {
         "fst:n": true
+      }
+    },
+    "eeed90e7-aee9-38b0-9064-e27e5d1ab25c": {
+      "content": "#+BEGIN_EXPORT latex\n$0\n#+END_EXPORT",
+      "doc": "#+BEGIN_EXPORT latex block",
+      "filetype": "org",
+      "grammar": "lsp",
+      "label": "export latex",
+      "matches": {
+        "<l": true
       }
     },
     "eef09ccd-9db0-3ee9-a31a-4215aae20cb2": {
@@ -127400,6 +127611,16 @@
       "label": "Map type",
       "matches": {
         "map": true
+      }
+    },
+    "f9e64996-55d4-3489-95d7-97287b1f1ef4": {
+      "content": "#+STARTUP: showall indent\n#+STARTUP: hidestars\n#+BEGIN_HTML\n---\nlayout: default\ntitle: ${1:title}\nexcerpt: ${2:excerpt}\n---\n$0",
+      "doc": "blog",
+      "filetype": "org",
+      "grammar": "lsp",
+      "label": "blog",
+      "matches": {
+        "blog": true
       }
     },
     "f9eb1402-c792-342e-a114-3cbb60b2a6f8": {
