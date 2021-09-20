@@ -66089,16 +66089,6 @@
         "filter": true
       }
     },
-    "82a56f47-5514-3e19-8709-6703d0e52d38": {
-      "content": "def ${1:foo}():\n\tdoc = \"${2:The $1 property.}\"\n\tdef fget(self):\n\t\t${3:return self._$1}\n\tdef fset(self, value):\n\t\t${4:self._$1 = value}\n\tdef fdel(self):\n\t\t${0:del self._$1}\n\treturn locals()\n$1 = property(**$1())",
-      "doc": "",
-      "filetype": "python",
-      "grammar": "snu",
-      "label": "",
-      "matches": {
-        "property": true
-      }
-    },
     "82a6bc50-c4e4-311e-a997-387426971e46": {
       "content": "params[:${1:id}]",
       "doc": "getting params using attribute",
@@ -75860,6 +75850,16 @@
       "label": "gettext",
       "matches": {
         "gt": true
+      }
+    },
+    "95c1e268-4722-34ae-aa7a-902b8018560f": {
+      "content": "@property\ndef ${1:foo}(self) -> ${2:type}:\n\t\"\"\"${3:doc}\"\"\"\n\treturn self._${1:foo}\n\n@${1:foo}.setter\ndef ${1:foo}(self, value: ${2:type}):\n\tself._${1:foo} = value",
+      "doc": "",
+      "filetype": "python",
+      "grammar": "snu",
+      "label": "",
+      "matches": {
+        "property": true
       }
     },
     "95c299f2-46e5-35d8-87f7-5f931adc3c88": {
