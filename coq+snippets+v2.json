@@ -1837,6 +1837,16 @@
         "fun": true
       }
     },
+    "032cec84-1b95-317d-be8a-c2b9a1fe742a": {
+      "content": "if ${1}err != nil {\n\treturn fmt.Errorf(\"${2} %w\", err)\n}",
+      "doc": "",
+      "filetype": "go",
+      "grammar": "snu",
+      "label": "Error handling with fmt.Errorf",
+      "matches": {
+        "errwr": true
+      }
+    },
     "032ea219-a3f8-3096-9477-2cc6b3466188": {
       "content": "${1}:\ndeclare\n\t${2}\nbegin\n\t${0}\nend $1;",
       "doc": "",
@@ -55266,6 +55276,16 @@
         "menu:t": true
       }
     },
+    "6c96835c-8cdb-35b9-b646-bba4105aa542": {
+      "content": "#!/usr/bin/env python3\n$0",
+      "doc": "",
+      "filetype": "python",
+      "grammar": "snu",
+      "label": "#!/usr/bin/env python3",
+      "matches": {
+        "#!3": true
+      }
+    },
     "6c9818d8-9151-38ce-93e7-be696332f6d3": {
       "content": "each_line {|${1:#:variable}| ${0} }",
       "doc": "",
@@ -60241,16 +60261,6 @@
       "label": "",
       "matches": {
         "bgr": true
-      }
-    },
-    "770555d5-64e6-35f5-b244-69028e95b258": {
-      "content": "if ${1}err != nil {\n\treturn errors.Wrap(err, \"${2}\")\n}",
-      "doc": "",
-      "filetype": "go",
-      "grammar": "snu",
-      "label": "Error handling with errors.Wrap",
-      "matches": {
-        "errwr": true
       }
     },
     "7706710e-8c80-3e83-9acd-9e7445fc09fb": {
@@ -72181,6 +72191,16 @@
       "label": "lodash-before",
       "matches": {
         "lodash before": true
+      }
+    },
+    "8e076dfe-774c-37fd-ab7c-63260b97c8db": {
+      "content": "[[multiple_plugins]]\nplugins = [${1}]\n${0}",
+      "doc": "",
+      "filetype": "toml",
+      "grammar": "snu",
+      "label": "[[multiple_plugins]]",
+      "matches": {
+        "multiple_plugins": true
       }
     },
     "8e0bfd6d-80cf-354b-8505-c27eb4792c09": {
@@ -104938,6 +104958,16 @@
       "label": "",
       "matches": {
         "mbn": true
+      }
+    },
+    "cdcbde6d-d650-357c-859f-26421fe1af54": {
+      "content": "#!/usr/bin/env python2\n# -*- coding: utf-8 -*-\n$0",
+      "doc": "",
+      "filetype": "python",
+      "grammar": "snu",
+      "label": "#!/usr/bin/env python2",
+      "matches": {
+        "#!2": true
       }
     },
     "cdcc9f57-b170-3cd8-8b84-9413c615398e": {
