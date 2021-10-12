@@ -86,6 +86,7 @@
     "fsharp": {},
     "gatsby": {},
     "gatsby-image": {},
+    "gdscript": {},
     "gitcommit": {},
     "global": {},
     "gnuplot": {},
@@ -342,6 +343,16 @@
       "label": "",
       "matches": {
         "if": true
+      }
+    },
+    "000c965a-747c-3d81-9188-5af1dafa4d83": {
+      "content": "#include \"$0\"",
+      "doc": "Code snippet for #include \" \"",
+      "filetype": "c",
+      "grammar": "lsp",
+      "label": "#inc",
+      "matches": {
+        "#inc": true
       }
     },
     "001e6740-a829-3a2b-9d86-9c8ac6358b7d": {
@@ -1022,6 +1033,16 @@
         "angular directive": true
       }
     },
+    "01aba968-9238-3b8b-8850-e556e7d0e2cb": {
+      "content": "build(${1:scope}): ${2:title}\n\n$0",
+      "doc": "",
+      "filetype": "gitcommit",
+      "grammar": "lsp",
+      "label": "build conventional commit",
+      "matches": {
+        "build": true
+      }
+    },
     "01b5a6b9-a486-3189-9f98-22a2c2901ede": {
       "content": "module type ${1} = sig\n  ${2:TARGET}\nend",
       "doc": "",
@@ -1455,16 +1476,6 @@
         "bds:w": true
       }
     },
-    "0273cb08-a889-3f9e-83dd-009f19f8679b": {
-      "content": "def ${1:funcname}(self, ${2:parameter_list}):\n\t${3:pass}",
-      "doc": "Code snippet for a class method",
-      "filetype": "python",
-      "grammar": "lsp",
-      "label": "def(class method)",
-      "matches": {
-        "def(class method)": true
-      }
-    },
     "027a8300-3948-3d8d-a8c0-82455f68a2f1": {
       "content": "classify { |${1:e}| ${0} }",
       "doc": "",
@@ -1845,6 +1856,16 @@
       "label": "Error handling with fmt.Errorf",
       "matches": {
         "errwr": true
+      }
+    },
+    "032d9cbb-a82a-3782-b807-82e2ba5df79c": {
+      "content": "${1:type}(${2:scope}): ${3:title}\n\n$0",
+      "doc": "",
+      "filetype": "gitcommit",
+      "grammar": "lsp",
+      "label": "conventional commit",
+      "matches": {
+        "cc": true
       }
     },
     "032ea219-a3f8-3096-9477-2cc6b3466188": {
@@ -4821,6 +4842,16 @@
         "td:l": true
       }
     },
+    "08f3c2cb-a88d-3e0b-8194-9f85dcdc298a": {
+      "content": "func _process(delta):\n\t${1:pass}",
+      "doc": "",
+      "filetype": "gdscript",
+      "grammar": "lsp",
+      "label": "_process method of Node",
+      "matches": {
+        "process": true
+      }
+    },
     "08fb2957-7113-3d0d-bd0b-218ff7c6e8ba": {
       "content": "<xsl:call-template name=\"${1:template}\" />",
       "doc": "",
@@ -4860,6 +4891,16 @@
       "label": "Tag stylesheet",
       "matches": {
         "stylesheet": true
+      }
+    },
+    "090efcdd-00f8-3f4a-89fa-dbbeadebc9c0": {
+      "content": "pass",
+      "doc": "",
+      "filetype": "gdscript",
+      "grammar": "lsp",
+      "label": "pass statement",
+      "matches": {
+        "pass": true
       }
     },
     "09165465-98de-36e7-9af8-720d9b42f411": {
@@ -6238,6 +6279,16 @@
         "replace_first": true
       }
     },
+    "0bc40a10-8130-35d0-826e-e12d6829c323": {
+      "content": "if ${1:condition}:\n\t${3:pass}\nelif ${2:condition}:\n\t${4:pass}\nelse:\n\t${5:pass}",
+      "doc": "",
+      "filetype": "gdscript",
+      "grammar": "lsp",
+      "label": "if elif else",
+      "matches": {
+        "if": true
+      }
+    },
     "0bc689e3-5dca-3ecb-9156-dd9a3a29dfc6": {
       "content": "${1:name} :: ${2:a}\n$1 = ${0:undefined}",
       "doc": "",
@@ -7185,6 +7236,16 @@
         "white": true
       }
     },
+    "0dab4695-b90b-3b45-85e1-f44116e88ab7": {
+      "content": "extends ${1:BaseClass}\n\n# class member variables go here, for example:\n# var a = 2\n# var b = \"textvar\"\n\nfunc _ready():\n\t# Called every time the node is added to the scene.\n\t# Initialization here\n\tpass",
+      "doc": "",
+      "filetype": "gdscript",
+      "grammar": "lsp",
+      "label": "GDScript template",
+      "matches": {
+        "gdscript": true
+      }
+    },
     "0db659d0-3368-3e35-bfd5-6a76e5cbfd13": {
       "content": "expect(${1:target}).not.toBeLessThan(${2:value});",
       "doc": "",
@@ -7900,6 +7961,16 @@
       "matches": {
         "method-id": true,
         "mi": true
+      }
+    },
+    "0f39acd9-2cb1-3481-9664-5ce1401f2e05": {
+      "content": "#define $0",
+      "doc": "Code snippet for #define \" \"",
+      "filetype": "c",
+      "grammar": "lsp",
+      "label": "#def",
+      "matches": {
+        "def": true
       }
     },
     "0f3c36c6-5dba-3ed9-8670-7f01153b1641": {
@@ -9207,6 +9278,16 @@
         "d": true
       }
     },
+    "1173dfa8-ba01-3949-b6d9-8871c330e709": {
+      "content": "`r ${0}`",
+      "doc": "",
+      "filetype": "rmarkdown",
+      "grammar": "lsp",
+      "label": "Insert Inline Chunck",
+      "matches": {
+        "`": true
+      }
+    },
     "11852293-86e7-39cb-8307-739476d2ba5f": {
       "content": "<rt>$1</rt>$2",
       "doc": "HTML - Defines explanation to ruby annotations",
@@ -9932,6 +10013,16 @@
       "label": "function-cos",
       "matches": {
         "function cos": true
+      }
+    },
+    "131b47ca-21df-3af8-bd2a-dbee26e149f5": {
+      "content": "test(${1:scope}): ${2:title}\n\n$0",
+      "doc": "",
+      "filetype": "gitcommit",
+      "grammar": "lsp",
+      "label": "test conventional commit",
+      "matches": {
+        "test": true
       }
     },
     "131db561-19c1-34ee-a71b-f2247bf78a32": {
@@ -11365,6 +11456,16 @@
       "label": "",
       "matches": {
         "try": true
+      }
+    },
+    "15e651eb-deb2-314e-9e44-1912dc44b303": {
+      "content": "func _init():\n\t${1:pass}",
+      "doc": "",
+      "filetype": "gdscript",
+      "grammar": "lsp",
+      "label": "_init method of Object",
+      "matches": {
+        "init": true
       }
     },
     "15f38e0e-23d1-318c-be48-11d2c3e1bc0a": {
@@ -13752,6 +13853,16 @@
         "append": true
       }
     },
+    "1a86768c-0396-3eec-93f6-4038c782f975": {
+      "content": "for $1 in range(${2:start}{$3:,end}):\n\t${4:pass}",
+      "doc": "",
+      "filetype": "gdscript",
+      "grammar": "lsp",
+      "label": "for range loop",
+      "matches": {
+        "for": true
+      }
+    },
     "1a8701de-8222-3a4b-b9ab-934c110e8a8c": {
       "content": "border-style double",
       "doc": "",
@@ -14920,6 +15031,16 @@
       "label": "",
       "matches": {
         "lorem": true
+      }
+    },
+    "1c8b8f07-d9d9-34f5-b83e-880f2b1c2f02": {
+      "content": "signal ${1:signalname}(${2:args})",
+      "doc": "",
+      "filetype": "gdscript",
+      "grammar": "lsp",
+      "label": "signal declaration",
+      "matches": {
+        "signal": true
       }
     },
     "1c9e030d-c233-3daf-8511-aaefdfdb6f35": {
@@ -23591,6 +23712,16 @@
         "Dnotify": true
       }
     },
+    "2e1fb338-5c88-35ac-8a8c-b7f55a8f9c7e": {
+      "content": "def ${1:funcname}(self, ${2:parameter_list}):\n\traise NotImplementedError",
+      "doc": "Code snippet for an abstract class method",
+      "filetype": "python",
+      "grammar": "lsp",
+      "label": "def(abstract class method)",
+      "matches": {
+        "def abstract class method": true
+      }
+    },
     "2e215ffd-5498-35d5-b18a-608f8a611a44": {
       "content": "type ${1} interface {\n  ${0:TARGET}\n}",
       "doc": "",
@@ -26552,16 +26683,6 @@
       "label": "",
       "matches": {
         "if": true
-      }
-    },
-    "341abc0e-912f-3900-989b-af5705c6d90e": {
-      "content": "#include \"$1\"$0",
-      "doc": "Code snippet for #include \" \"",
-      "filetype": "cpp",
-      "grammar": "lsp",
-      "label": "#inc",
-      "matches": {
-        "#inc": true
       }
     },
     "341b23af-708b-3fbf-8053-66c668cafed1": {
@@ -31372,6 +31493,16 @@
         "add": true
       }
     },
+    "3e3243dd-ecbf-3bca-b891-2af175df3424": {
+      "content": "${1:instance} is ${2:class}",
+      "doc": "",
+      "filetype": "gdscript",
+      "grammar": "lsp",
+      "label": "Is instance of a class or script",
+      "matches": {
+        "is": true
+      }
+    },
     "3e368415-9391-3633-84e4-9c3ccdd87e3f": {
       "content": "useCallback(\n\t() => {\n\t\t${1:callback}\n\t},\n\t[${2:input}],\n)",
       "doc": "",
@@ -33877,6 +34008,16 @@
         "+": true
       }
     },
+    "426665b1-a033-38b5-b976-7ade6eb6bf1c": {
+      "content": "if ${1:condition}:\n\t${2:pass}",
+      "doc": "",
+      "filetype": "gdscript",
+      "grammar": "lsp",
+      "label": "if",
+      "matches": {
+        "if": true
+      }
+    },
     "4269c764-0e31-35fd-baa3-83d388977b33": {
       "content": "foreach(${1:elem}; ${2:range}) {\n\t${0}\n}",
       "doc": "",
@@ -34692,6 +34833,16 @@
       "label": "local",
       "matches": {
         "l": true
+      }
+    },
+    "444b3c16-49b7-35c3-b927-7c46995fcc37": {
+      "content": "feat(${1:scope}): ${2:title}\n\n$0",
+      "doc": "",
+      "filetype": "gitcommit",
+      "grammar": "lsp",
+      "label": "feat conventional commit",
+      "matches": {
+        "feat": true
       }
     },
     "444e0175-590a-3eb4-867e-24eadea5a318": {
@@ -36002,6 +36153,16 @@
       "label": "v-on",
       "matches": {
         "vOn": true
+      }
+    },
+    "46cf36a4-b1aa-35a5-8366-65a95ba8d695": {
+      "content": "onready var ${1:name} = get_node($2)",
+      "doc": "",
+      "filetype": "gdscript",
+      "grammar": "lsp",
+      "label": "define onready variables",
+      "matches": {
+        "onready": true
       }
     },
     "46d640d9-992c-3072-87ce-62d9ff08dfca": {
@@ -37671,16 +37832,6 @@
       "label": "",
       "matches": {
         ":": true
-      }
-    },
-    "4a4f87a5-9503-3b0f-82a3-f02a5e27140b": {
-      "content": "#include <$1>$0",
-      "doc": "Code snippet for #include < >",
-      "filetype": "c",
-      "grammar": "lsp",
-      "label": "#inc<",
-      "matches": {
-        "#inc<": true
       }
     },
     "4a501ca7-39b4-3397-9165-da9149ba1079": {
@@ -41980,6 +42131,16 @@
       "label": "",
       "matches": {
         "bin": true
+      }
+    },
+    "52d754bc-405d-3711-87c7-044d530f7c9f": {
+      "content": "@staticmethod\ndef ${1:funcname}(${2:parameter_list}):\n\t${3:pass}",
+      "doc": "Code snippet for a static class method",
+      "filetype": "python",
+      "grammar": "lsp",
+      "label": "def(static class method)",
+      "matches": {
+        "def static class method": true
       }
     },
     "52d8e8bc-1d67-3477-981b-b68374e7310c": {
@@ -52832,6 +52993,16 @@
         "ptnd": true
       }
     },
+    "681e696f-dccb-35a2-8ae1-13f36e62b64f": {
+      "content": "#define $0",
+      "doc": "Code snippet for #define \" \"",
+      "filetype": "cpp",
+      "grammar": "lsp",
+      "label": "#def",
+      "matches": {
+        "def": true
+      }
+    },
     "6821edbe-554c-3da1-92ba-7729a12415b1": {
       "content": "letter-spacing: $1px;$0",
       "doc": "",
@@ -53739,6 +53910,16 @@
       "label": "",
       "matches": {
         "bds:dt": true
+      }
+    },
+    "69b1d0ff-c4e8-3999-b677-3c891baf8229": {
+      "content": "#include <$0>",
+      "doc": "Code snippet for #include < >",
+      "filetype": "c",
+      "grammar": "lsp",
+      "label": "#inc<",
+      "matches": {
+        "#inc<": true
       }
     },
     "69b21ce0-a7b2-3828-baa9-745d49e48ba2": {
@@ -59258,6 +59439,16 @@
         "mat": true
       }
     },
+    "75132b72-dde9-39ed-a96b-831d494817d7": {
+      "content": "func _draw():\n\t${1:pass}",
+      "doc": "",
+      "filetype": "gdscript",
+      "grammar": "lsp",
+      "label": "_draw method of Node",
+      "matches": {
+        "draw": true
+      }
+    },
     "7514bc16-9531-350a-a3cb-0d6aa9f13df1": {
       "content": "(fun ${1:x} -> ${2:x})",
       "doc": "",
@@ -59509,6 +59700,16 @@
       "label": "<c></c>",
       "matches": {
         "c": true
+      }
+    },
+    "758f1fab-335f-37a6-92e5-bcbbc822d336": {
+      "content": "func ${1:method}(${2:args}):\n\t${3:pass}",
+      "doc": "",
+      "filetype": "gdscript",
+      "grammar": "lsp",
+      "label": "function define",
+      "matches": {
+        "func": true
       }
     },
     "75931c82-54db-316c-8df1-d2715d6a7ef4": {
@@ -62600,6 +62801,16 @@
         "lodash forin": true
       }
     },
+    "7b7a0059-0d24-3470-a665-0f92ef6cf078": {
+      "content": "style(${1:scope}): ${2:title}\n\n$0",
+      "doc": "",
+      "filetype": "gitcommit",
+      "grammar": "lsp",
+      "label": "style conventional commit",
+      "matches": {
+        "style": true
+      }
+    },
     "7b83c26c-0a5c-3b46-9013-bf13b2657ab8": {
       "content": "continue;",
       "doc": "",
@@ -62959,16 +63170,6 @@
       "matches": {
         "jest test todo": true,
         "testt": true
-      }
-    },
-    "7c395cea-3865-3629-a3b8-9a19cf474f81": {
-      "content": "def ${1:funcname}(self, ${2:parameter_list}):\n\traise NotImplementedError",
-      "doc": "Code snippet for an abstract class method",
-      "filetype": "python",
-      "grammar": "lsp",
-      "label": "def(abstract class method)",
-      "matches": {
-        "def(abstract class method)": true
       }
     },
     "7c3c67d8-8f58-3269-aca9-dd0ec85c7eaf": {
@@ -65535,6 +65736,16 @@
         "wdb": true
       }
     },
+    "81523e1c-5c84-306a-a05f-7208b9a4b631": {
+      "content": "for $1 in $2:\n\t${3:pass}",
+      "doc": "",
+      "filetype": "gdscript",
+      "grammar": "lsp",
+      "label": "for loop",
+      "matches": {
+        "for": true
+      }
+    },
     "815bd862-3f6d-3501-a987-047f176eba1a": {
       "content": "display: flex",
       "doc": "",
@@ -65784,16 +65995,6 @@
       "label": "t.Run(\"test name\", func(t *testing.T){ ... })",
       "matches": {
         "tr": true
-      }
-    },
-    "81bb42d9-932d-3c1d-9102-84c147ae7109": {
-      "content": "#define $1",
-      "doc": "Code snippet for #define \" \"",
-      "filetype": "cpp",
-      "grammar": "lsp",
-      "label": "#def",
-      "matches": {
-        "def": true
       }
     },
     "81bb6177-4b78-3be2-8d23-5c7d20f3ecd1": {
@@ -66663,6 +66864,16 @@
       "label": "",
       "matches": {
         "tj:ii": true
+      }
+    },
+    "8332b324-ccd3-3a5a-ad19-e906af7d1a83": {
+      "content": "func _input_event(event):\n\t${1:pass}",
+      "doc": "",
+      "filetype": "gdscript",
+      "grammar": "lsp",
+      "label": "_input_event method of Node",
+      "matches": {
+        "inpute": true
       }
     },
     "8334f76e-ca1f-3399-a802-e39bf95fc74a": {
@@ -67542,6 +67753,16 @@
       "label": "",
       "matches": {
         "stful": true
+      }
+    },
+    "84db33a0-87ab-3e30-8de7-662765ed8774": {
+      "content": "#include <$0>",
+      "doc": "Code snippet for #include < >",
+      "filetype": "cpp",
+      "grammar": "lsp",
+      "label": "#inc<",
+      "matches": {
+        "#inc<": true
       }
     },
     "84e3fa72-19fc-38c0-b769-2d1293aaf6a4": {
@@ -69028,16 +69249,6 @@
         "its": true
       }
     },
-    "87ea1c12-7191-30a0-b0ed-27fb0476b3dc": {
-      "content": "#include <$1>$0",
-      "doc": "Code snippet for #include < >",
-      "filetype": "cpp",
-      "grammar": "lsp",
-      "label": "#inc<",
-      "matches": {
-        "#inc<": true
-      }
-    },
     "87ea5ea8-a3b7-3bec-b183-7e71839a4210": {
       "content": "elseif {${1}} {\n\t${0}\n}",
       "doc": "",
@@ -69056,6 +69267,16 @@
       "label": "",
       "matches": {
         "$g": true
+      }
+    },
+    "87eeec68-283f-3238-8a45-585d155e2a8e": {
+      "content": "def ${1:funcname}(self, ${2:parameter_list}):\n\t${3:pass}",
+      "doc": "Code snippet for a class method",
+      "filetype": "python",
+      "grammar": "lsp",
+      "label": "def(class method)",
+      "matches": {
+        "def class method": true
       }
     },
     "87f10d97-2192-39d4-abd3-7270be081838": {
@@ -71155,6 +71376,16 @@
       "label": "",
       "matches": {
         "fst:sc": true
+      }
+    },
+    "8c11c8cd-c65f-3892-8579-b11f33dc198e": {
+      "content": "func _ready():\n\t${1:pass}",
+      "doc": "",
+      "filetype": "gdscript",
+      "grammar": "lsp",
+      "label": "_ready method of Node",
+      "matches": {
+        "ready": true
       }
     },
     "8c160afd-8e0a-372a-8292-ce2cad51ee4d": {
@@ -74040,6 +74271,16 @@
         "table_grid": true
       }
     },
+    "91b36793-656b-3be4-b7e1-636ae1a91d4e": {
+      "content": "export(${1:type}${2:,other_configs}) var ${3:name}${4: = }${5:}${6: setget }",
+      "doc": "",
+      "filetype": "gdscript",
+      "grammar": "lsp",
+      "label": "export variables",
+      "matches": {
+        "export": true
+      }
+    },
     "91b4c5e0-1a0a-343a-8c0e-dede91cc8f11": {
       "content": "each_with_index do |${1:e}, ${2:i}|\n\t$0\nend",
       "doc": "",
@@ -75638,6 +75879,16 @@
       "label": "",
       "matches": {
         "lisi": true
+      }
+    },
+    "94bd7782-2138-322b-9a96-eb4c4ca00ea9": {
+      "content": "refactor(${1:scope}): ${2:title}\n\n$0",
+      "doc": "",
+      "filetype": "gitcommit",
+      "grammar": "lsp",
+      "label": "refactor conventional commit",
+      "matches": {
+        "refactor": true
       }
     },
     "94c10bb3-7aa5-35cd-acb6-93e3d37ebfdc": {
@@ -79349,6 +79600,16 @@
         "orientationBldr": true
       }
     },
+    "9c2cf411-d8d7-3c9e-a713-04ff438b2eb4": {
+      "content": "while ${1:condition}:\n\t${2:pass}",
+      "doc": "",
+      "filetype": "gdscript",
+      "grammar": "lsp",
+      "label": "while",
+      "matches": {
+        "while": true
+      }
+    },
     "9c2f9c47-c087-3953-a4f7-1b97ae3cce59": {
       "content": "#!/usr/bin/env rdmd",
       "doc": "",
@@ -81766,6 +82027,16 @@
         "shift": true
       }
     },
+    "a05a92fa-4c60-3c06-9108-d42df5dbfabb": {
+      "content": "var ${1:name}${2: = }${3:}${4: setget }",
+      "doc": "",
+      "filetype": "gdscript",
+      "grammar": "lsp",
+      "label": "define variables",
+      "matches": {
+        "var": true
+      }
+    },
     "a05bcb84-7463-3c65-89be-ed963c2e138a": {
       "content": "${1:callbacks}.locked()",
       "doc": "",
@@ -82909,6 +83180,16 @@
       "label": "mixed-label",
       "matches": {
         "yup mixed label": true
+      }
+    },
+    "a21d87b5-5933-370f-8d91-54b313d61e49": {
+      "content": "perf(${1:scope}): ${2:title}\n\n$0",
+      "doc": "",
+      "filetype": "gitcommit",
+      "grammar": "lsp",
+      "label": "perf conventional commit",
+      "matches": {
+        "perf": true
       }
     },
     "a21f25b6-60e4-3fd4-ac9d-1bd9beef289a": {
@@ -89535,6 +89816,16 @@
         "elif": true
       }
     },
+    "af2aa170-0969-397a-8548-baf70ff588ed": {
+      "content": "ci(${1:scope}): ${2:title}\n\n$0",
+      "doc": "",
+      "filetype": "gitcommit",
+      "grammar": "lsp",
+      "label": "ci conventional commit",
+      "matches": {
+        "ci": true
+      }
+    },
     "af31f281-6fb1-35b2-befb-d2e61e7bdb4d": {
       "content": "${1:#:title}\n====================================",
       "doc": "",
@@ -89986,6 +90277,16 @@
       "label": "",
       "matches": {
         "truncatewords": true
+      }
+    },
+    "b009eec8-bb08-3f3c-afc3-bf380f710eca": {
+      "content": "---\ntitle: ${1:title}\ndate: ${2:`r Sys.Date()`}\noutput: ${4:pdf_document}\n---",
+      "doc": "",
+      "filetype": "rmarkdown",
+      "grammar": "lsp",
+      "label": "YAML Header",
+      "matches": {
+        "---": true
       }
     },
     "b0137e84-20d9-3c7b-90a1-fb1e2724e977": {
@@ -90512,6 +90813,16 @@
       "label": "\\citeauthor",
       "matches": {
         "citea": true
+      }
+    },
+    "b120ee1c-f864-3aeb-af7c-3e6da5dd5f88": {
+      "content": "#include \"$0\"",
+      "doc": "Code snippet for #include \" \"",
+      "filetype": "cpp",
+      "grammar": "lsp",
+      "label": "#inc",
+      "matches": {
+        "#inc": true
       }
     },
     "b123d6df-1897-34b5-84b7-12e03d5877d8": {
@@ -91832,16 +92143,6 @@
         "enterActiveClass": true
       }
     },
-    "b39633c4-8fb4-38eb-a558-02b8d8731d77": {
-      "content": "@staticmethod\ndef ${1:funcname}(${2:parameter_list}):\n\t${3:pass}",
-      "doc": "Code snippet for a static class method",
-      "filetype": "python",
-      "grammar": "lsp",
-      "label": "def(static class method)",
-      "matches": {
-        "def(static class method)": true
-      }
-    },
     "b39edf1e-6167-344c-8b3a-1dbfec510275": {
       "content": "default:\n\t${0}",
       "doc": "",
@@ -92785,6 +93086,16 @@
       "label": "",
       "matches": {
         "boolean": true
+      }
+    },
+    "b5539ffc-e8a1-3148-92a2-eeeae86b2b27": {
+      "content": "fix(${1:scope}): ${2:title}\n\n$0",
+      "doc": "",
+      "filetype": "gitcommit",
+      "grammar": "lsp",
+      "label": "fix conventional commit",
+      "matches": {
+        "fix": true
       }
     },
     "b55754a6-7478-3ed2-b93b-22c4b97860f0": {
@@ -94389,6 +94700,16 @@
       "label": "phpunit expects",
       "matches": {
         "exp": true
+      }
+    },
+    "b888c0de-3bc7-3584-9cd4-ca5751dbd1ab": {
+      "content": "```{r}\n${1}\n```",
+      "doc": "",
+      "filetype": "rmarkdown",
+      "grammar": "lsp",
+      "label": "Insert Block Chunck",
+      "matches": {
+        "```": true
       }
     },
     "b88c199f-7908-3343-9af3-fe9b18311c14": {
@@ -96475,6 +96796,16 @@
         "asnhk": true
       }
     },
+    "bd1ac19e-16b6-3520-a4f2-813db09b9340": {
+      "content": "print($1)",
+      "doc": "",
+      "filetype": "gdscript",
+      "grammar": "lsp",
+      "label": "Print messages to console",
+      "matches": {
+        "pr": true
+      }
+    },
     "bd1d0d99-eb0d-31e1-8481-1e79740548eb": {
       "content": "${1:deferred}.state()",
       "doc": "",
@@ -98497,6 +98828,16 @@
         "select": true
       }
     },
+    "c161201f-8ee9-39be-a4ad-06ff5724df4a": {
+      "content": "if ${1:condition}:\n\t${2:pass}\nelse:\n\t${3:pass}",
+      "doc": "",
+      "filetype": "gdscript",
+      "grammar": "lsp",
+      "label": "if else",
+      "matches": {
+        "if": true
+      }
+    },
     "c16725e3-953b-3e60-b56a-414f0cc73957": {
       "content": "#lang datalog",
       "doc": "",
@@ -98819,6 +99160,16 @@
       "label": "round",
       "matches": {
         "round": true
+      }
+    },
+    "c1c45fa6-1d96-38b1-a0ea-41fa858bd82b": {
+      "content": "BREAKING CHANGE: $0",
+      "doc": "",
+      "filetype": "gitcommit",
+      "grammar": "lsp",
+      "label": "breaking change conventional commit footer",
+      "matches": {
+        "BREAK": true
       }
     },
     "c1c80c8f-5698-3760-97a6-76839a7b2714": {
@@ -102351,16 +102702,6 @@
         "case": true
       }
     },
-    "c8b798e2-7e8b-34b6-9c6c-79f98b0b3cac": {
-      "content": "#include \"$1\"$0",
-      "doc": "Code snippet for #include \" \"",
-      "filetype": "c",
-      "grammar": "lsp",
-      "label": "#inc",
-      "matches": {
-        "#inc": true
-      }
-    },
     "c8bf00f8-72b6-32bc-8c34-cc2891822144": {
       "content": "border-collapse: separate;",
       "doc": "",
@@ -104440,6 +104781,16 @@
         "ofs": true
       }
     },
+    "ccd165c2-587c-3e4d-b1d1-c9fa3eae0edf": {
+      "content": "func _input(event):\n\t${1:pass}",
+      "doc": "",
+      "filetype": "gdscript",
+      "grammar": "lsp",
+      "label": "_input method of Node",
+      "matches": {
+        "input": true
+      }
+    },
     "ccd32e9b-92ab-3624-bda7-4f29c7307206": {
       "content": "| rstrip",
       "doc": "String filter: rstrip",
@@ -104868,16 +105219,6 @@
       "label": "",
       "matches": {
         "sm_session_display": true
-      }
-    },
-    "cd9316f3-aa53-3d54-ab7c-5e8b7ed6f23a": {
-      "content": "defp ${1:name}() do\n  $0\nend",
-      "doc": "Define a private function",
-      "filetype": "elixir",
-      "grammar": "lsp",
-      "label": "defp",
-      "matches": {
-        "defp": true
       }
     },
     "cd993e62-2a53-390c-9ab7-3e9f6d496c4f": {
@@ -105352,6 +105693,16 @@
       "label": "",
       "matches": {
         "te": true
+      }
+    },
+    "ce777e53-85cb-3e7a-9ebf-e58cd1b8d93b": {
+      "content": "```{${1:lang}}\n${0}\n```",
+      "doc": "",
+      "filetype": "rmarkdown",
+      "grammar": "lsp",
+      "label": "Insert Code Language",
+      "matches": {
+        "```": true
       }
     },
     "ce77d93f-e9f5-3e33-aeda-fa0c2ccab218": {
@@ -106087,16 +106438,6 @@
       "label": "",
       "matches": {
         "ex": true
-      }
-    },
-    "cffad3b1-eb68-3e37-8a83-2fdefdf14178": {
-      "content": "#define $1",
-      "doc": "Code snippet for #define \" \"",
-      "filetype": "c",
-      "grammar": "lsp",
-      "label": "#def",
-      "matches": {
-        "def": true
       }
     },
     "d008b6b5-d537-39d7-90b6-49265e7a36bf": {
@@ -109391,6 +109732,16 @@
       "label": "",
       "matches": {
         "R": true
+      }
+    },
+    "d6669e32-2e36-3b6c-b833-a02bb4f20754": {
+      "content": "func _gui_input(event):\n\t${1:pass}",
+      "doc": "",
+      "filetype": "gdscript",
+      "grammar": "lsp",
+      "label": "_gui_input method of Node",
+      "matches": {
+        "guii": true
       }
     },
     "d667c33c-20d1-32b0-a23e-8a81a10f4c57": {
@@ -118381,6 +118732,16 @@
         "debug": true
       }
     },
+    "e77c1377-dc34-37a4-9e5e-769b2cd3ce73": {
+      "content": "docs(${1:scope}): ${2:title}\n\n$0",
+      "doc": "",
+      "filetype": "gitcommit",
+      "grammar": "lsp",
+      "label": "docs conventional commit",
+      "matches": {
+        "docs": true
+      }
+    },
     "e78128c8-16f1-3c9a-b4b4-0a466dc62697": {
       "content": "noiseSeed(${0:x});",
       "doc": "",
@@ -119979,16 +120340,6 @@
       "label": "",
       "matches": {
         "s*": true
-      }
-    },
-    "eab2d639-e0ef-3234-bfcb-a2122b12eb59": {
-      "content": "defmodule ${1:Name} do\n  $0\nend",
-      "doc": "Define a module",
-      "filetype": "elixir",
-      "grammar": "lsp",
-      "label": "defmodule",
-      "matches": {
-        "defmodule": true
       }
     },
     "eab40396-1e33-30c8-977a-b9b10ec61671": {
@@ -124118,6 +124469,16 @@
         "cb": true
       }
     },
+    "f282a264-603e-34f1-bec5-a618954df1b1": {
+      "content": "class $1 extends ${2:Reference}\n\t$3",
+      "doc": "",
+      "filetype": "gdscript",
+      "grammar": "lsp",
+      "label": "Inner class",
+      "matches": {
+        "class": true
+      }
+    },
     "f28697cf-0ccd-3590-9e6a-7beba24e4d18": {
       "content": "wordwrap:${0}",
       "doc": "",
@@ -126170,6 +126531,16 @@
         "lis:n": true
       }
     },
+    "f640d181-6941-3ead-84a5-af19a078743c": {
+      "content": "chore(${1:scope}): ${2:title}\n\n$0",
+      "doc": "",
+      "filetype": "gitcommit",
+      "grammar": "lsp",
+      "label": "chore conventional commit",
+      "matches": {
+        "chore": true
+      }
+    },
     "f64161ee-70e9-3633-be76-15d0014d20ec": {
       "content": "<%namespace file=\"${1:name}\" />",
       "doc": "",
@@ -127273,16 +127644,6 @@
       "label": "",
       "matches": {
         "cs": true
-      }
-    },
-    "f87e800a-2cca-3ea2-9d2d-83f56e1b0bcd": {
-      "content": "def ${1:name}() do\n  $0\nend",
-      "doc": "Define a function",
-      "filetype": "elixir",
-      "grammar": "lsp",
-      "label": "def",
-      "matches": {
-        "def": true
       }
     },
     "f884c143-e364-3716-b071-330ca8faf1be": {
