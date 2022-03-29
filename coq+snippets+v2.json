@@ -34059,16 +34059,6 @@
         "regroup": true
       }
     },
-    "3f72399f-bb42-3f5f-a706-cf50d39f3637": {
-      "content": "class ${1:ModelClassName}Sweeper < ActionController::Caching::Sweeper\n\tobserve $1\n\n\tdef after_save(${0:model_class_name})\n\t\texpire_cache($2)\n\tend\n\n\tdef after_destroy($2)\n\t\texpire_cache($2)\n\tend\n\n\tdef expire_cache($2)\n\t\texpire_page\n\tend\nend",
-      "doc": "",
-      "filetype": "rails",
-      "grammar": "snu",
-      "label": "",
-      "matches": {
-        "sweeper": true
-      }
-    },
     "3f728995-1fcf-3566-ae7c-c31a6261e6c3": {
       "content": "limit: ${1:5}",
       "doc": "For loops option",
