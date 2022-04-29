@@ -4,6 +4,7 @@
     "_": {},
     "actionscript": {},
     "ada": {},
+    "admin": {},
     "all": {},
     "alpaca": {},
     "angular": {},
@@ -59,6 +60,7 @@
     "debug": {},
     "diff": {},
     "django": {},
+    "djangohtml": {},
     "dockerfile": {},
     "dosini": {},
     "dotenv": {},
@@ -76,7 +78,6 @@
     },
     "falcon": {},
     "fennel": {},
-    "filetemplates": {},
     "flutter": {},
     "forms": {},
     "fortran": {},
@@ -113,7 +114,6 @@
     "htmltornado": {},
     "idris": {},
     "ignore": {},
-    "imports": {},
     "jade": {},
     "java": {},
     "javascript": {},
@@ -242,6 +242,7 @@
     "scss": {
       "css": true
     },
+    "serializers": {},
     "sh": {},
     "shell": {},
     "simplemvcf": {},
@@ -266,6 +267,7 @@
     "systemverilog": {
       "verilog": true
     },
+    "tags": {},
     "tcl": {},
     "tex": {},
     "texmath": {},
@@ -283,6 +285,7 @@
       "typescript": true
     },
     "unittest": {},
+    "urls": {},
     "verilog": {},
     "vhdl": {},
     "views": {},
@@ -442,16 +445,6 @@
         "include": true
       }
     },
-    "0041be92-67f9-32c0-b129-50f5b1050dbd": {
-      "content": "path(\"${1:Path}\", v.${2:View}, name=${0:PathName})",
-      "doc": "Django Path For ``Function Based Views``",
-      "filetype": "views",
-      "grammar": "lsp",
-      "label": "Django FBV Path",
-      "matches": {
-        "fpath": true
-      }
-    },
     "0043a3c5-cc52-34a6-b77c-f3a50b4d696e": {
       "content": "else\n{\n\t$0\n}",
       "doc": "Code snippet for else statement",
@@ -521,6 +514,16 @@
       "label": "classList.toggle",
       "matches": {
         "hect": true
+      }
+    },
+    "00682455-4ec4-3989-a57c-a5091b5ffd59": {
+      "content": "{% for $1 in  %}\n  \n{% empty %}\n  \n{% endfor %}",
+      "doc": "foreach with empty tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "fore",
+      "matches": {
+        "fore": true
       }
     },
     "00729f53-a764-348e-8f3e-e6021c6ec9cf": {
@@ -775,6 +778,16 @@
         "rpc": true
       }
     },
+    "00e426d1-511e-3123-9d5d-5c3d189aeee1": {
+      "content": "${1:FIELDNAME} = forms.FileField($2,${3: max_length=$4,} required=${5:False})",
+      "doc": "FileField (ffile)",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "ffile",
+      "matches": {
+        "ffile": true
+      }
+    },
     "00e51632-e3d9-38eb-bfb0-81b6da12f92b": {
       "content": "for (${2:i} = 0; i < ${1:n}; ${3:++i}) {\n\t${0}\n}",
       "doc": "",
@@ -844,16 +857,6 @@
       "label": "option_env",
       "matches": {
         "option_env": true
-      }
-    },
-    "010c84b0-2678-3fe1-a7a5-674291da6b64": {
-      "content": "${1:FIELDNAME} = models.OneToOneField(${2:OtherModel}, related_name=\"${4:RelatedName}\"${0:, to_field=''})",
-      "doc": "Django model ``OneToOneField``",
-      "filetype": "models",
-      "grammar": "lsp",
-      "label": "Models OneToOneField",
-      "matches": {
-        "o2o": true
       }
     },
     "0110b290-8ff0-3620-8790-912981d6055a": {
@@ -987,6 +990,16 @@
         "tab": true
       }
     },
+    "01688456-8030-3103-9cac-ffe86ed1338b": {
+      "content": "class $1Mixin(models.Model):\n\t${2:# TODO}\r\n\n\tclass Meta:\n\t\tabstract = True",
+      "doc": "",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "modelmixin",
+      "matches": {
+        "modelmixin": true
+      }
+    },
     "016c7739-2102-34a1-978a-208f4cdb64bf": {
       "content": "\\\\begin{${1:env}}\n\t${0:${VISUAL}}\n\\\\end{$1}",
       "doc": "",
@@ -1047,6 +1060,16 @@
       "label": "",
       "matches": {
         "amsp": true
+      }
+    },
+    "0195bdc0-c50d-3edb-8388-f67078769568": {
+      "content": "${1:FIELDNAME} = HStoreField()",
+      "doc": "HStoreField (fhstore).\n\n*PostgreSQL specific form fields*.",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "fhstore",
+      "matches": {
+        "fhstore": true
       }
     },
     "01981db5-bfb1-3d22-ae73-98b5c6f7aa1b": {
@@ -1439,6 +1462,16 @@
       "label": "Insert 3x2 table",
       "matches": {
         "3x2table": true
+      }
+    },
+    "023bbf31-db9e-32ed-85de-dcc0d14b05e4": {
+      "content": "${1:FIELDNAME} = forms.GenericIPAddressField($2)",
+      "doc": "IPAddressField (fgenericip)",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "fgenericip",
+      "matches": {
+        "fip": true
       }
     },
     "023dbcbc-e03f-3749-904b-2247dfce3614": {
@@ -2285,6 +2318,16 @@
         "settimeout": true
       }
     },
+    "03b1eaea-c97e-3f1b-b442-816239beed84": {
+      "content": "{{ $1 }}",
+      "doc": "Variable autocomplete",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "var",
+      "matches": {
+        "var": true
+      }
+    },
     "03b5b5c8-7b13-3b06-956f-c255745d2b6d": {
       "content": "IF ${1:CONDITION}\n   $0\nELSE\n   \nEND-IF",
       "doc": "",
@@ -3129,16 +3172,6 @@
         "<c": true
       }
     },
-    "0571575f-220c-3c5e-976c-8c8bf03a0d57": {
-      "content": "def get_queryset(self):\n\treturn ${1:ModelName}.objects.filter(${2})",
-      "doc": "Django Views ``get_queryset`` method",
-      "filetype": "views",
-      "grammar": "lsp",
-      "label": "Django Views get_queryset",
-      "matches": {
-        "getqueryset": true
-      }
-    },
     "0575151d-ab37-3f38-9995-815f7ef8ab31": {
       "content": "immutable",
       "doc": "",
@@ -3652,6 +3685,16 @@
         "a-route-path-default": true
       }
     },
+    "067813a1-5b1e-3834-9653-394779e7c0cc": {
+      "content": "from django.db.models.signals import ${1|pre_init,post_init,pre_save,post_save,pre_delete,post_delete,m2m_changed,class_prepared,Management signals,pre_migrate,post_migrate|}",
+      "doc": "Signals for Django Model",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "isignals",
+      "matches": {
+        "isignals": true
+      }
+    },
     "06791441-d159-38fd-8d2b-b84b8d631796": {
       "content": "<rt>${0}</rt>",
       "doc": "",
@@ -4005,6 +4048,16 @@
         "ntc": true
       }
     },
+    "071e622e-ba6c-384d-8fb1-ed0b034ab9a1": {
+      "content": "def __str__(self):\n\treturn self${1: # TODO}",
+      "doc": "",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "__str__",
+      "matches": {
+        "str": true
+      }
+    },
     "071edad5-ae52-3aa2-87f6-f613edc19d54": {
       "content": "<%= link_to '${1:link text...}', controller: '${2:items}', action: '${3:edit}', id: ${0:@item} %>",
       "doc": "",
@@ -4193,6 +4246,16 @@
       "label": "Job/DISP",
       "matches": {
         "DISP": true
+      }
+    },
+    "0765a08e-b2b5-3b75-87b0-87762bfd61ce": {
+      "content": "{% firstof %}",
+      "doc": "firstof tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "firstof",
+      "matches": {
+        "firstof": true
       }
     },
     "07673fd5-4523-358b-9365-9eb2b213ff93": {
@@ -4447,16 +4510,6 @@
         "fef": true
       }
     },
-    "07d1fba6-7f5f-3252-977d-e282ee4c8c69": {
-      "content": "class ${1:ModelName}Inline(admin.TabularInline):\n\tmodel = ${2:$1}\n\tmin_num = ${4:0}\n\tmax_num = ${4:8}\n\textra = ${5:1}",
-      "doc": "Django TabularInline for ``admin.py``",
-      "filetype": "views",
-      "grammar": "lsp",
-      "label": "Django AdminTabularInline",
-      "matches": {
-        "tabularinline": true
-      }
-    },
     "07d5dc85-d0bb-34ce-883c-6e39cfcfd75f": {
       "content": "guard ${1:condition} else {\n\t$0\n}",
       "doc": "guard statement",
@@ -4588,16 +4641,6 @@
         "sim": true
       }
     },
-    "0801c6c4-e19c-3fed-a5db-0bba6b24aae0": {
-      "content": "${1:FIELDNAME} = forms.FileField(${2})",
-      "doc": "Django forms ``FileField``",
-      "filetype": "forms",
-      "grammar": "lsp",
-      "label": "Forms FileField",
-      "matches": {
-        "ffile": true
-      }
-    },
     "0802c44a-a020-3431-8afa-5cd32e8f1d00": {
       "content": "{#each ${1:items} as ${2:item}, ${3:i}}\n\t${4: <!-- content here -->}\n{/each}",
       "doc": "",
@@ -4628,6 +4671,16 @@
       "matches": {
         "$$": true,
         "mathenva": true
+      }
+    },
+    "08061ad9-c91f-3692-beee-5351c8cd8f91": {
+      "content": "${1:FIELDNAME} = serializers.TimeField(${2})",
+      "doc": "Django-rest Serializers ``TimeField``",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF TimeField",
+      "matches": {
+        "stime": true
       }
     },
     "08070a60-b43f-33e1-8853-090b6e46e1bc": {
@@ -4929,6 +4982,16 @@
       "label": "",
       "matches": {
         "raw": true
+      }
+    },
+    "089ab76c-8a05-3a64-bbb3-413995b6fc8e": {
+      "content": "class ${1:MODELNAME}(models.Model):\n\t\"\"\"${2:Model definition for $1}.\"\"\"\n\n\t${3:# TODO: Define fields here}\n\n\tclass Meta:\n\t\t\"\"\"Meta definition for $1.\"\"\"\n\n\t\tverbose_name = '$1'\n\t\tverbose_name_plural = '$1s'\n\n\tdef ${4|__str__,__unicode__|}(self):\n\t\t\"\"\"Unicode representation of $1.\"\"\"\n\t\t${5|pass,return '{}'.format(self. ) # TODO,return f'{self. }' # TODO|}",
+      "doc": "Model",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "Model",
+      "matches": {
+        "Model": true
       }
     },
     "089c4544-6351-3bc0-ae98-699748f7ee8e": {
@@ -5270,6 +5333,16 @@
       "label": "",
       "matches": {
         "ac:st": true
+      }
+    },
+    "093d154b-a0a3-3197-bc47-5fff464c641a": {
+      "content": "class $1Manager(models.Manager):\n\tdef get_queryset(self):\n\t\treturn super ($1Manager, self).get_queryset().${2|filter,exclude,order_by,distinct,reverse|}($3)",
+      "doc": "Add extra Manager methods",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "manager",
+      "matches": {
+        "mngr": true
       }
     },
     "093f4e83-009b-339e-8fd9-6b6142a47c97": {
@@ -5808,16 +5881,6 @@
       "label": "",
       "matches": {
         "get": true
-      }
-    },
-    "0a1c42b0-a74d-337d-9605-0001592a2e23": {
-      "content": "class ${1:Name}Form(forms.Form):\n\t# Define $1Form fields here\n\t${0}",
-      "doc": "Django Simple Form",
-      "filetype": "forms",
-      "grammar": "lsp",
-      "label": "Django Simple Form ",
-      "matches": {
-        "sform": true
       }
     },
     "0a21c149-a4cd-3d94-b0f3-1d3d8b1d8a55": {
@@ -6721,16 +6784,6 @@
       "label": "function-median",
       "matches": {
         "function median": true
-      }
-    },
-    "0c05f7a7-f9ca-32d8-937f-3a1f64f42f7e": {
-      "content": "${1:FIELDNAME} = models.AutoField(${2})",
-      "doc": "Django model ``AutoField``",
-      "filetype": "models",
-      "grammar": "lsp",
-      "label": "Models BigIntegerField",
-      "matches": {
-        "mbigint": true
       }
     },
     "0c091474-ee17-326e-9997-6958d76ac059": {
@@ -8750,6 +8803,16 @@
         "todo": true
       }
     },
+    "0fe3b33b-e10b-35d2-9cd5-a8bf5103e9ad": {
+      "content": "${1:FIELDNAME} = serializers.UUIDField(${2})",
+      "doc": "Django-rest Serializers ``UUIDField``",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF UUIDField",
+      "matches": {
+        "suuid": true
+      }
+    },
     "0fe4b92a-5c23-3a96-bab4-1447438c1882": {
       "content": "$this->db->get(\"${1:table}\", ${2:limit}, ${3:offset});${4}",
       "doc": "",
@@ -9049,16 +9112,6 @@
       "label": "",
       "matches": {
         "dfun2": true
-      }
-    },
-    "1052fa1a-85ec-35d6-81c9-845360c2c469": {
-      "content": "from django.urls import reverse",
-      "doc": "Import Django ``reverse``",
-      "filetype": "imports",
-      "grammar": "lsp",
-      "label": "Import reverse",
-      "matches": {
-        "di-reverse": true
       }
     },
     "105344e8-cd3f-329c-b5f8-1cddda74b953": {
@@ -9483,6 +9536,16 @@
         "call": true
       }
     },
+    "1111e176-ce7a-32d1-8465-9874be1e1ae2": {
+      "content": "${1:FIELDNAME} = forms.FilePathField($2, path=${3:/absolute_path/}, required=${4:False})",
+      "doc": "FilePathField (ffilepath)",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "ffilepath",
+      "matches": {
+        "ffilepath": true
+      }
+    },
     "111cc4b8-37fc-3acf-b024-1f65e9c0690b": {
       "content": "<table>\n\t${0}\n</table>",
       "doc": "",
@@ -9875,16 +9938,6 @@
       "label": "",
       "matches": {
         "#!": true
-      }
-    },
-    "11cd2682-9b11-3e79-a79a-19974ed905a1": {
-      "content": "${1:FIELDNAME} = models.FilePathField(path=${2:\"/abs/path/to/dir\"}${3:, max_length=100}${4:, match=\"*.ext\"}${4:, recursive=True})",
-      "doc": "Django model ``FilePathField``",
-      "filetype": "models",
-      "grammar": "lsp",
-      "label": "Models FilePathField",
-      "matches": {
-        "mfilepath": true
       }
     },
     "11d1fc40-dbb6-3e83-ba01-a6590f671fc8": {
@@ -10481,6 +10534,16 @@
         "s-dispatch": true
       }
     },
+    "13130855-23fc-3964-97e8-3cf32f0ee3ae": {
+      "content": "${1:FIELDNAME} = forms.IPAddressField($2)",
+      "doc": "IPAddressField (fip).\n\nThis field has been deprecated since version 1.7 in favor of GenericIPAddressField.",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "fip",
+      "matches": {
+        "fip": true
+      }
+    },
     "131b47ca-21df-3af8-bd2a-dbee26e149f5": {
       "content": "test(${1:scope}): ${2:title}\n\n$0",
       "doc": "",
@@ -10499,6 +10562,16 @@
       "label": "function",
       "matches": {
         "fun": true
+      }
+    },
+    "131fbc40-07da-37f8-a7d3-4c23a3384eff": {
+      "content": "save_and_open_screenshot${0}",
+      "doc": "save_and_open_screenshot",
+      "filetype": "rails",
+      "grammar": "lsp",
+      "label": "Save and open screenshot",
+      "matches": {
+        "saos": true
       }
     },
     "1320d13e-935d-3ac5-aa16-4676a49f8a50": {
@@ -11348,6 +11421,16 @@
         "pgbi": true
       }
     },
+    "14af1389-36da-35a9-b11f-5f0daa879bf7": {
+      "content": "${1:FIELDNAME} = serializers.NullBooleanField(${2})",
+      "doc": "Django-rest Serializers ``NullBooleanField``",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF NullBooleanField",
+      "matches": {
+        "snullbool": true
+      }
+    },
     "14b30a5b-226f-3f91-bcad-a7d31b063052": {
       "content": "switch ${1:-exact} -- ${2:\\$var} {\n\t${3:match} {\n\t\t$4\n\t}\n\tdefault {$5}\n}",
       "doc": "",
@@ -12106,6 +12189,16 @@
         "a-guard-can-activate": true
       }
     },
+    "16195896-0f4d-39b3-a6dc-315e78ccae63": {
+      "content": "${1:FIELDNAME} = FloatRangeField()",
+      "doc": "FloatRangeField (ffloatrange).\n\n*PostgreSQL specific form fields*.",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "ffloatrange",
+      "matches": {
+        "ffloatrange": true
+      }
+    },
     "161de26e-aa41-35e8-8bd8-5c570a910914": {
       "content": "File.foreach(${1:'path/to/file'}) { |${2:line}| ${0} }",
       "doc": "",
@@ -12531,16 +12624,6 @@
         "ishc": true
       }
     },
-    "16fe82f0-d2a1-34c6-8284-5865110c1dda": {
-      "content": "data() {\n\treturn {\n\t\t${1:key}: ${2:value}\n\t};\n}",
-      "doc": "",
-      "filetype": "vue",
-      "grammar": "snu",
-      "label": "",
-      "matches": {
-        "vdata": true
-      }
-    },
     "16ffc6b5-c9df-3868-b866-818cfa98aa62": {
       "content": "enum ${1:Name} {\n  $0\n}",
       "doc": "Insert a enum.",
@@ -12611,6 +12694,16 @@
       "label": "pipe into filter",
       "matches": {
         ">f": true
+      }
+    },
+    "17147db7-30d3-3bef-8d83-e4e231609596": {
+      "content": "${1:FIELDNAME} = forms.ModelMultipleChoiceField($2)",
+      "doc": "ModelMultipleChoiceField (fmomuchoice)",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "fmomuchoice",
+      "matches": {
+        "fmomuchoice": true
       }
     },
     "1715f57a-9097-3d3d-8a18-9a051bd9a12b": {
@@ -13528,6 +13621,16 @@
         "case": true
       }
     },
+    "18bdd1e8-b1e3-3e7c-bb62-30209b823766": {
+      "content": "${1:FIELDNAME} = forms.IntegerField($2, required=${3:False})",
+      "doc": "IntegerField (fint)",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "fint",
+      "matches": {
+        "fint": true
+      }
+    },
     "18be1991-c4f4-3c40-af36-64b28f6a5ef9": {
       "content": "in\n{\n\tassert(${1:/*condition*/}, \"${2:error message}\");\n\t$3\n}\nbody",
       "doc": "",
@@ -13921,6 +14024,16 @@
         "extends": true
       }
     },
+    "19755a01-7bcb-3039-b9de-13fab7356806": {
+      "content": "from django.db import models",
+      "doc": "from ... import models",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "imodels",
+      "matches": {
+        "imodels": true
+      }
+    },
     "1977bad9-09f5-3b86-9a9a-e0ce148c059b": {
       "content": "this.${1:first}Ref = React.createRef()",
       "doc": "Create ref statement used inside constructor",
@@ -14070,6 +14183,16 @@
       "label": "",
       "matches": {
         "cau:": true
+      }
+    },
+    "1994e6fd-d355-327b-b633-4d703b19e202": {
+      "content": "${1:FIELDNAME} = IntegerRangeField()",
+      "doc": "IntegerRangeField (fintrange).\n\n*PostgreSQL specific form fields*.",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "fintrange",
+      "matches": {
+        "fintrange": true
       }
     },
     "199ff0eb-c5bb-34ca-8c17-b7f4bdf2acce": {
@@ -14941,6 +15064,16 @@
         "ln": true
       }
     },
+    "1b3522c8-7cc2-3b38-bf62-1a137869250e": {
+      "content": "${1:FIELDNAME} = models.CharField($2, max_length=${3:50})",
+      "doc": "CharField (mchar)",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "mchar",
+      "matches": {
+        "mchar": true
+      }
+    },
     "1b3b0255-9882-35dd-9f56-beb86067a446": {
       "content": "@misc{${1:LABEL},\n    memo = {author, title, howpublished, month, year, note},\n}",
       "doc": "",
@@ -15647,6 +15780,16 @@
         "try/except/finally": true
       }
     },
+    "1c5e6ae5-bc9e-33dd-9c02-7c089c97ff3f": {
+      "content": "{% blocktrans %}\n  $1\n{% endblocktrans %}",
+      "doc": "blocktrans tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "blocktrans",
+      "matches": {
+        "blocktrans": true
+      }
+    },
     "1c5ea664-3dc3-3127-96bf-7a36fda371fe": {
       "content": "$.ajaxSetup({\n\turl: \"${1:mydomain.com/url}\",\n\ttype: \"${2:POST}\",\n\tdataType: \"${3:xml/html/script/json}\",\n\tdata: $.param( $(\"${4:Element or Expression}\") ),\n\tcomplete: function (jqXHR, textStatus) {\n\t\t${5:// callback}\n\t},\n\tsuccess: function (data, textStatus, jqXHR) {\n\t\t${6:// success callback}\n\t},\n\terror: function (jqXHR, textStatus, errorThrown) {\n\t\t${0:// error callback}\n\t}\n});",
       "doc": "",
@@ -15795,6 +15938,16 @@
       "label": "",
       "matches": {
         "tsub": true
+      }
+    },
+    "1cc943fa-2d88-366c-aff1-c91c1bde111e": {
+      "content": "class ${1:CLASS_NAME}(TemplateView):\r\n    template_name = \"${2:TEMPLATE_NAME}\"",
+      "doc": "",
+      "filetype": "views",
+      "grammar": "lsp",
+      "label": "templateview",
+      "matches": {
+        "templateview": true
       }
     },
     "1ccb81fb-7a9d-38f5-88fc-2c6b0b27e937": {
@@ -16150,6 +16303,16 @@
         "stylesheet": true
       }
     },
+    "1d909712-6863-39e9-bafa-41c2871d4287": {
+      "content": "{% templatetag $1 %}",
+      "doc": "templatetag tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "templatetag",
+      "matches": {
+        "templatetag": true
+      }
+    },
     "1d9241d3-608f-3545-ac4b-eaec1ce8d0dd": {
       "content": "async ${0}",
       "doc": "",
@@ -16158,6 +16321,16 @@
       "label": "async",
       "matches": {
         "as": true
+      }
+    },
+    "1d947e7a-0b61-3736-aa60-d57078f409b6": {
+      "content": "from django.urls import ${1|path,re_path,include,reverse,reverse_lazy,register_converter|}",
+      "doc": "Utility functions for use in URLconfs.",
+      "filetype": "urls",
+      "grammar": "lsp",
+      "label": "urls (≥2.0)",
+      "matches": {
+        "iurls": true
       }
     },
     "1d966be9-5c88-3ca0-b084-61834d667dd2": {
@@ -16291,6 +16464,16 @@
       "label": "",
       "matches": {
         "bds:h": true
+      }
+    },
+    "1dda5c71-dd70-351a-95c8-3cf22dab8009": {
+      "content": "${1:FIELDNAME} = forms.TypedChoiceField($2, required=${3:False})",
+      "doc": "TypedChoiceField (ftchoice)",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "ftchoice",
+      "matches": {
+        "ftchoice": true
       }
     },
     "1dddd276-1d44-3b7f-bb6d-6fcee153f712": {
@@ -16741,16 +16924,6 @@
       "label": "",
       "matches": {
         "model": true
-      }
-    },
-    "1e9fe133-173f-30cd-b292-e72f1aa7da78": {
-      "content": "${1:FIELDNAME} = forms.MultipleChoiceField(${2})",
-      "doc": "Django forms ``MultipleChoiceField``",
-      "filetype": "forms",
-      "grammar": "lsp",
-      "label": "Forms MultipleChoiceField",
-      "matches": {
-        "fmuchoice": true
       }
     },
     "1ea08907-315f-3269-b94b-210caef84044": {
@@ -17325,6 +17498,16 @@
       "label": "<include file='' path=''/>",
       "matches": {
         "include": true
+      }
+    },
+    "1fb03acd-fb19-3c57-9dc7-eacf989e3ddc": {
+      "content": "<%= link_to '${1:link text...}' do %>\n<% end %>",
+      "doc": "",
+      "filetype": "eruby",
+      "grammar": "snu",
+      "label": "",
+      "matches": {
+        "lib": true
       }
     },
     "1fba61f5-2697-3246-8dd3-0041208680cb": {
@@ -19165,6 +19348,16 @@
         "FUNCTION TAN": true
       }
     },
+    "22f3eb4c-f8d3-3edf-9efe-260da9d5fcdd": {
+      "content": "class ${1:MODEL_NAME}CreateView(CreateView):\r\n    model = ${1:MODEL_NAME}\r\n    template_name = \"${2:TEMPLATE_NAME}\"",
+      "doc": "",
+      "filetype": "views",
+      "grammar": "lsp",
+      "label": "createview",
+      "matches": {
+        "createview": true
+      }
+    },
     "22f81ff5-e72c-3330-b26c-84a335ab40fe": {
       "content": "import { createStore } from 'redux';",
       "doc": "",
@@ -19195,16 +19388,6 @@
         "dar": true
       }
     },
-    "230d06fd-a597-3dab-bbf9-1b9b75010109": {
-      "content": "class ${1:ModelName}UpdateView(generic.UpdateView):\n\tmodel = ${2:$1}\n\ttemplate_name = \"${3:$1/$1_form.html}\"\n\tform_class = ${4:forms.$1Form}\n\tsuccess_url = \"${5:.}\"\n\n\tdef get_object(self):\n\t\treturn $1.objects.get(pk=${6:self.kwargs.get(\"pk\")})",
-      "doc": "Django CBV ``UpdateView``",
-      "filetype": "views",
-      "grammar": "lsp",
-      "label": "Django UpdateView",
-      "matches": {
-        "updateview": true
-      }
-    },
     "230ec4a8-cabf-35a9-8915-66c27f899290": {
       "content": "<span>${0}</span>",
       "doc": "",
@@ -19213,6 +19396,16 @@
       "label": "",
       "matches": {
         "span": true
+      }
+    },
+    "23131e67-dbee-3f3f-a8ca-a150d55097e5": {
+      "content": "class ${1:Name}ModelSerializer(serializers.ModelSerializer):\n\t${2}\n\tclass Meta:\n\t\tmodel = ${3:$1}\n\t\tfields = \"${4:__all__}\"",
+      "doc": "Django-rest Serializers ``ModelSerializer`` Class",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF ModelSerializer (class)",
+      "matches": {
+        "modelserializer": true
       }
     },
     "2314811a-81a1-35f1-becf-aab0e0736bac": {
@@ -19686,16 +19879,6 @@
         "va": true
       }
     },
-    "2406f6b2-2164-3f13-ba62-48e5bb1660a3": {
-      "content": "${1:FIELDNAME} = models.PositiveSmallIntegerField(${2})",
-      "doc": "Django model ``PositiveSmallIntegerField``",
-      "filetype": "models",
-      "grammar": "lsp",
-      "label": "Models PositiveSmallIntegerField",
-      "matches": {
-        "mpossmallint": true
-      }
-    },
     "24177b77-1a3a-311c-b145-09c111ce39d2": {
       "content": "expect(${1:what}) {\n\t${0}\n}",
       "doc": "",
@@ -19734,6 +19917,16 @@
       "label": "",
       "matches": {
         "rpl": true
+      }
+    },
+    "242aa713-1da2-3f57-a951-ce68dedcfaf6": {
+      "content": "${1:FIELDNAME} = serializers.DateField(${2})",
+      "doc": "Django-rest Serializers ``DateField``",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF DateField",
+      "matches": {
+        "sdate": true
       }
     },
     "242ea20f-453d-3237-80d5-624984eb5219": {
@@ -20681,6 +20874,16 @@
         "fl:l": true
       }
     },
+    "25e67386-1817-330a-9a09-bd94073f77f9": {
+      "content": "class ${1}Inline(admin.TabularInline):\n\t'''Tabular Inline View for ${1}'''\n\n\tmodel = ${2:${1}}\n\tmin_num = ${3:3}\n\tmax_num = ${4:20}\n\textra = ${5:1}\n\traw_id_fields = (${6},)",
+      "doc": "Tabular Inline",
+      "filetype": "admin",
+      "grammar": "lsp",
+      "label": "tabularinline",
+      "matches": {
+        "tabularinline": true
+      }
+    },
     "25f045c6-033d-3da5-bfee-0e5e50727d4a": {
       "content": "border-top-style: ${0}",
       "doc": "",
@@ -21172,6 +21375,16 @@
       "label": "Page Should Contain Image",
       "matches": {
         "psci": true
+      }
+    },
+    "26e584c1-3256-319e-bc1a-a39cc8271265": {
+      "content": "actions: {\n\t${1:updateValue}({commit}, ${2:payload}) {\n\t\tcommit($1, $2);\n\t}\n},",
+      "doc": "",
+      "filetype": "vue",
+      "grammar": "snu",
+      "label": "",
+      "matches": {
+        "vactions": true
       }
     },
     "26eff8b2-4a81-3d54-9dd5-d72685729e7a": {
@@ -21920,6 +22133,16 @@
         "bdr": true
       }
     },
+    "28278252-9204-3924-982a-9ef57324607e": {
+      "content": "from django.core.urlresolvers import ${1|reverse,reverse_lazy,resolve,get_script_prefix|}",
+      "doc": "*Deprecated since version 1.10*\n\nUtility functions.",
+      "filetype": "urls",
+      "grammar": "lsp",
+      "label": "urlresolvers",
+      "matches": {
+        "iurlresolvers": true
+      }
+    },
     "2828d710-8bce-360d-a409-99aa94e30dde": {
       "content": "@debug \"${1}\" ${0}",
       "doc": "",
@@ -22000,16 +22223,6 @@
         "rnfes": true
       }
     },
-    "284d8dfc-e1c6-3ca8-9f72-9515c078b0f6": {
-      "content": "${1:FIELDNAME} = models.SlugField(${2})",
-      "doc": "Django model ``SlugField``",
-      "filetype": "models",
-      "grammar": "lsp",
-      "label": "Models SlugField",
-      "matches": {
-        "mslug": true
-      }
-    },
     "284dfac9-5ad0-3f82-b8f7-b8aa0414a68a": {
       "content": "\\$set dialect\"${2|ans85,bs2000,bs2000-offload,cob370,cob371,cob372,mf,mvs,os390,osvs,vsc21,vsc22,vsc23,vsc24|}\"\n$0",
       "doc": "",
@@ -22018,6 +22231,16 @@
       "label": "dialect",
       "matches": {
         "$set": true
+      }
+    },
+    "2852bf47-d223-3019-a92f-a33f788747f4": {
+      "content": "def dispatch(self, request, *args, **kwargs):\r\n    return super(${1:CLASS_NAME}, self).dispatch(request, *args, **kwargs)",
+      "doc": "",
+      "filetype": "views",
+      "grammar": "lsp",
+      "label": "dispatch",
+      "matches": {
+        "dispatch": true
       }
     },
     "2857d046-d02b-3375-87cc-7abb296219a0": {
@@ -22498,6 +22721,16 @@
       "label": "appear",
       "matches": {
         "appearEvent": true
+      }
+    },
+    "29671e33-ea17-31b7-b68a-3cda52a5885b": {
+      "content": "from .models import $1",
+      "doc": "",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "fmi",
+      "matches": {
+        "fmi": true
       }
     },
     "296be9f7-de67-3e01-a0af-2ce7593ab31c": {
@@ -23596,6 +23829,16 @@
         "class": true
       }
     },
+    "2b8774a4-006a-3458-b546-4c6e3911831b": {
+      "content": "${1:FIELDNAME} = serializers.MultipleChoiceField(choices=${2})",
+      "doc": "Django-rest Serializers ``MultipleChoiceField``",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF MultipleChoiceField",
+      "matches": {
+        "smchoice": true
+      }
+    },
     "2b88b50a-9bb9-342a-9480-64e350874e5a": {
       "content": "align-items: stretch;",
       "doc": "",
@@ -24118,6 +24361,16 @@
       "label": "FUNCTION-LOG10",
       "matches": {
         "FUNCTION LOG10": true
+      }
+    },
+    "2c8998b0-54ad-3b18-8644-f7bf4ddc834f": {
+      "content": "![${1:alt}](${2:link})$0",
+      "doc": "Insert image",
+      "filetype": "rmarkdown",
+      "grammar": "lsp",
+      "label": "Insert image",
+      "matches": {
+        "image": true
       }
     },
     "2c937e35-d618-3f86-9956-6679d4495d3e": {
@@ -25266,16 +25519,6 @@
       "label": "",
       "matches": {
         "break": true
-      }
-    },
-    "2ec549a0-05d7-3fc8-9f98-471bad655fc8": {
-      "content": "filters: {\n\t${1:fnName}: function(${2:value}) {\n\t\treturn;\n\t}\n}",
-      "doc": "",
-      "filetype": "vue",
-      "grammar": "snu",
-      "label": "",
-      "matches": {
-        "vfilter": true
       }
     },
     "2ed02890-e868-3040-8212-30d013653d79": {
@@ -26660,6 +26903,16 @@
         "[[": true
       }
     },
+    "314e93d9-a892-3431-9b74-ac7ac8975298": {
+      "content": "${1:FIELDNAME} = serializers.JSONField(binary=${2})",
+      "doc": "Django-rest Serializers ``JSONField``",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF JSONField",
+      "matches": {
+        "sjson": true
+      }
+    },
     "31528fff-119a-3894-94be-bb7d544f623a": {
       "content": "function ${1:new_function}(${2:args})\n\t$0\nend",
       "doc": "",
@@ -26862,16 +27115,6 @@
         "bdi:m+": true
       }
     },
-    "31ed6a5a-dbf6-3db8-b021-19f78e0e8202": {
-      "content": "from django.contrib import messages",
-      "doc": "Import Django ``messages``",
-      "filetype": "imports",
-      "grammar": "lsp",
-      "label": "Import messages",
-      "matches": {
-        "di-messages": true
-      }
-    },
     "31ee5c7a-1ad1-3b8f-8543-12d9aca43d73": {
       "content": "background-origin: padding-box",
       "doc": "",
@@ -26922,16 +27165,6 @@
         "rig": true
       }
     },
-    "32017bf3-9e16-3478-bd4a-3b8ed35192af": {
-      "content": "${1:FIELDNAME} = forms.MultipleValueField(${2})",
-      "doc": "Django forms ``MultipleValueField``",
-      "filetype": "forms",
-      "grammar": "lsp",
-      "label": "Forms MultipleValueField",
-      "matches": {
-        "fmuvalue": true
-      }
-    },
     "3206d124-ff11-30bf-a2b6-49fb45af6556": {
       "content": "for ${1:i} in ${2:1}..${3:42} loop\n\t${0}\nend loop;",
       "doc": "",
@@ -26940,6 +27173,16 @@
       "label": "",
       "matches": {
         "for": true
+      }
+    },
+    "32099244-8b6f-3c0e-bc79-2e28d7b08a32": {
+      "content": "${1:FIELDNAME} = forms.ComboField($2)",
+      "doc": "ComboField (fcombo)",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "fcombo",
+      "matches": {
+        "fcombo": true
       }
     },
     "32136734-03fe-3f24-b28c-a63789ea7cde": {
@@ -28151,16 +28394,6 @@
         "s-action-update": true
       }
     },
-    "34291a53-c487-3bdc-a2f3-8304d27b48ae": {
-      "content": "@admin.register($1)\nclass ${1:ModelName}Admin(admin.ModelAdmin):\n\tlist_display = ${2:\"pk\",}\n\tsearch_fields = ${3:\"pk\",}\n\tlist_filter = ${4:\"FilterFields\",}",
-      "doc": "Django AdminView for ``admin.py``",
-      "filetype": "views",
-      "grammar": "lsp",
-      "label": "Django AdminView",
-      "matches": {
-        "adminview": true
-      }
-    },
     "34306d53-506c-30e8-a44d-81989aa614be": {
       "content": "if (allocated($1)) deallocate(${1:array}, stat=${2:err})\r\nif ($2 /= 0) print *, \"$1: Deallocation request denied$0\"",
       "doc": "Deallocate Array",
@@ -28563,6 +28796,16 @@
         "ac:se": true
       }
     },
+    "350adfef-cfc5-3df2-96b4-f1dca6465cf9": {
+      "content": "class ${1:MODEL_NAME}UpdateView(UpdateView):\r\n    model = ${1:MODEL_NAME}\r\n    template_name = \"${2:TEMPLATE_NAME}\"",
+      "doc": "",
+      "filetype": "views",
+      "grammar": "lsp",
+      "label": "updateview",
+      "matches": {
+        "updateview": true
+      }
+    },
     "3515b0b6-b701-3952-81de-0b947b7bd53d": {
       "content": "if ( ${1:condition} )\n{\n\t${2:}\n}",
       "doc": "",
@@ -28701,6 +28944,16 @@
       "label": "renderer",
       "matches": {
         "renderer": true
+      }
+    },
+    "355e5d34-3894-39b9-bd4c-48b93eee5019": {
+      "content": "void main() {\n\trunApp(\n\t\tMaterialApp(\n\t\t\ttitle: 'Flutter Demo',\n\t\t\ttheme: ThemeData(\n\t\t\t\tprimarySwatch: Colors.blue,\n\t\t\t),\n\t\t\tdebugShowCheckedModeBanner: false,\n\t\t\thome: const HomePage(),\n\t\t),\n\t);\n}\n\nclass HomePage extends StatelessWidget {\n\tconst HomePage({Key? key}) : super(key: key);\n\n\t@override\n\tWidget build(BuildContext context) {\n\t\treturn Scaffold(\n\t\t\tappBar: AppBar(\n\t\t\t\ttitle: const Text('Home Page'),\n\t\t\t),\n\t\t);\n\t}\n}",
+      "doc": "",
+      "filetype": "dart-flutter",
+      "grammar": "snu",
+      "label": "",
+      "matches": {
+        "fsa": true
       }
     },
     "35634f02-d98f-33f9-b9c3-8efd562f005c": {
@@ -29226,6 +29479,16 @@
         "ec:h": true
       }
     },
+    "36b3ee50-1008-3f12-9c6f-73504e199f63": {
+      "content": "@register.inclusion_tag(${2:'$1.html'}, takes_context=True)\ndef $1(context):\n\trequest = context.get('request')\n\t$3\n\treturn {\n\t\t'request': request,\n\t\t$4\n\t}",
+      "doc": "",
+      "filetype": "tags",
+      "grammar": "lsp",
+      "label": "register_inclusion_tag",
+      "matches": {
+        "register_inclusion_tag": true
+      }
+    },
     "36b52404-470b-3904-a938-914d3d9ab533": {
       "content": "typedef ${1:void} (^${2:type_name}) (${3:parameters})",
       "doc": "Create a block field",
@@ -29324,6 +29587,16 @@
       "label": "",
       "matches": {
         "trans": true
+      }
+    },
+    "36d15027-0359-3ecb-bab6-99230b905bda": {
+      "content": "getters: {\n\t${1:value}: state => {\n\t\treturn state.$1;\n\t}\n},",
+      "doc": "",
+      "filetype": "vue",
+      "grammar": "snu",
+      "label": "",
+      "matches": {
+        "vgetters": true
       }
     },
     "36d4a15e-f3d8-3324-9b1b-13e62469700e": {
@@ -29558,6 +29831,16 @@
         "frustrum": true
       }
     },
+    "376de770-1dac-3470-ad75-27c02ab7ad80": {
+      "content": "{% cycle %}",
+      "doc": "cycle tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "cycle",
+      "matches": {
+        "cycle": true
+      }
+    },
     "377716cd-a04a-338b-87fb-8b6faf3b4547": {
       "content": "color: rgb(${1:255},${2:255},${3:255});$0",
       "doc": "",
@@ -29616,16 +29899,6 @@
       "label": "",
       "matches": {
         ":lc": true
-      }
-    },
-    "378d4b42-557c-3590-99d2-b87021a5a38d": {
-      "content": "${1:FIELDNAME} = forms.ModelMultipleChoiceField(${2})",
-      "doc": "Django forms ``ModelMultipleChoiceField``",
-      "filetype": "forms",
-      "grammar": "lsp",
-      "label": "Forms ModelMultipleChoiceField",
-      "matches": {
-        "fmomuchoice": true
       }
     },
     "378e56f1-c4af-33f9-859f-fdc522115ec9": {
@@ -29820,6 +30093,16 @@
         "ceil": true
       }
     },
+    "37ebd42e-7634-3981-b4dc-22172416b32c": {
+      "content": "__ScriptVersion=\"${1:version}\"\n\n#===  FUNCTION  ================================================================\n#         NAME:  usage\n#  DESCRIPTION:  Display usage information.\n#===============================================================================\nfunction usage ()\n{\n\techo \"Usage :  \\$${0:0} [options] [--]\n\n    Options:\n    -h|help       Display this message\n    -v|version    Display script version\"\n\n}    # ----------  end of function usage  ----------\n\n#-----------------------------------------------------------------------\n#  Handle command line arguments\n#-----------------------------------------------------------------------\n\nwhile getopts \":hv\" opt\ndo\n  case \\$opt in\n\n\th|help     )  usage; exit 0   ;;\n\n\tv|version  )  echo \"\\$${0:0} -- Version \\$__ScriptVersion\"; exit 0   ;;\n\n\t* )  echo -e \"\\\\n  Option does not exist : \\$OPTARG\\\\n\"\n\t\t  usage; exit 1   ;;\n\n  esac    # --- end of case ---\ndone\nshift \\$(($OPTIND-1))",
+      "doc": "",
+      "filetype": "sh",
+      "grammar": "snu",
+      "label": "",
+      "matches": {
+        "getopt": true
+      }
+    },
     "37f573da-606e-3663-96d6-efff513c570f": {
       "content": "PropTypes.bool.isRequired,",
       "doc": "Bool prop type required",
@@ -29849,6 +30132,16 @@
       "label": "background-repeat",
       "matches": {
         "bgr": true
+      }
+    },
+    "380276cd-a548-3ceb-861b-34d87a569bfa": {
+      "content": "def ${1:FUNCTIONNAME}_${2|pre_init,post_init,pre_save,post_save,pre_delete,post_delete,m2m_changed,class_prepared,Management signals,pre_migrate,post_migrate|}_receiver(sender, instance, *args, **kwargs):\n\tpass\n\n\n${2|pre_init,post_init,pre_save,post_save,pre_delete,post_delete,m2m_changed,class_prepared,Management signals,pre_migrate,post_migrate|}.connect(${1:name}_${2|pre_init,post_init,pre_save,post_save,pre_delete,post_delete,m2m_changed,class_prepared,Management signals,pre_migrate,post_migrate|}_receiver, sender=${3:MODELNAME})",
+      "doc": "",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "receiver",
+      "matches": {
+        "receiver": true
       }
     },
     "38034440-bffa-34ae-93d0-e81188aee901": {
@@ -30464,6 +30757,16 @@
         "rdb": true
       }
     },
+    "38eb9ff4-0d8f-3ad1-b7ba-659c007e493b": {
+      "content": "${1:FIELDNAME} = forms.TypedMultipleChoiceField($2)",
+      "doc": "TypedMultipleChoiceField (ftmuchoice)",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "ftmuchoice",
+      "matches": {
+        "ftmuchoice": true
+      }
+    },
     "38f954ec-c1ab-3a51-8f7a-0370137b951f": {
       "content": "\\begin{mdseries}\n\t${1:TARGET}\n\\end{mdseries}",
       "doc": "",
@@ -30664,16 +30967,6 @@
       "label": "FUNCTION-ACOS",
       "matches": {
         "FUNCTION ACOS": true
-      }
-    },
-    "39532afa-bcaa-3c3a-bf14-b703e6a16304": {
-      "content": "path(\"${1:Path}\", include(\"${2}.urls\", namespace=${0:Name})",
-      "doc": "Django Path as ``Include``",
-      "filetype": "views",
-      "grammar": "lsp",
-      "label": "Django Path as Include",
-      "matches": {
-        "ipath": true
       }
     },
     "39577085-7fd6-3c1c-bf05-b52610ae112b": {
@@ -30987,6 +31280,16 @@
         "fp": true
       }
     },
+    "3a1cfa03-4f51-3f75-8809-a6a3dc9659f4": {
+      "content": "from django import template\nregister = template.Library()",
+      "doc": "",
+      "filetype": "tags",
+      "grammar": "lsp",
+      "label": "ilib",
+      "matches": {
+        "ilib": true
+      }
+    },
     "3a303259-f3c1-367b-86c9-248da274f815": {
       "content": "${1:obj}.not('${2:selector expression}')",
       "doc": "",
@@ -31168,6 +31471,16 @@
         "lerpColor": true
       }
     },
+    "3a7cc513-5956-3c62-9e96-b58557556b0a": {
+      "content": "${1:FIELDNAME} = models.IPAddressField($2)",
+      "doc": "IPAddressField (mip).\n\nThis field has been deprecated since version 1.7 in favor of GenericIPAddressField.",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "mip",
+      "matches": {
+        "mip": true
+      }
+    },
     "3a810a2e-0239-3781-8098-1214808acbbc": {
       "content": "_.padStart(${string}, ${length}, ${chars})",
       "doc": "_.padStart('abc', 6);\n// => '   abc'\n\n_.padStart('abc', 6, '_-');\n// => '_-_abc'\n\n_.padStart('abc', 3);\n// => 'abc'\n\nPads `string` on the left side if it's shorter than `length`. Padding\ncharacters are truncated if they exceed `length`.",
@@ -31347,6 +31660,16 @@
       "label": "",
       "matches": {
         "for": true
+      }
+    },
+    "3b0c1990-6149-3a1e-aaad-052ba692f35c": {
+      "content": "${1:FIELDNAME} = serializers.BooleanField(${2})",
+      "doc": "Django-rest Serializers ``BooleanField``",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF BooleanField",
+      "matches": {
+        "sbool": true
       }
     },
     "3b0e10ea-e788-3e05-b085-00698ee30bee": {
@@ -31639,16 +31962,6 @@
       "label": "",
       "matches": {
         "form#": true
-      }
-    },
-    "3ba136c6-6de3-38b5-b8c8-1a2885547ce9": {
-      "content": "from django import models",
-      "doc": "Import Django ``models``",
-      "filetype": "imports",
-      "grammar": "lsp",
-      "label": "Import models",
-      "matches": {
-        "di-model": true
       }
     },
     "3ba67a4e-d32c-357f-a538-4221aa24e9d8": {
@@ -32181,16 +32494,6 @@
       "label": "t.integer (tci)",
       "matches": {
         "t.": true
-      }
-    },
-    "3cb42a20-c483-3e44-8994-7c22848b2ad9": {
-      "content": "def clean_${1:FieldName}(self):\n\t$1 = self.cleaned_data[\"$1\"]\n\t${0}\n\treturn $1",
-      "doc": "Django Views ``field_clean`` method",
-      "filetype": "views",
-      "grammar": "lsp",
-      "label": "Django Forms field_clean",
-      "matches": {
-        "cleanf": true
       }
     },
     "3cbe687d-3a35-3404-8c69-91f2b05f417a": {
@@ -34039,16 +34342,6 @@
         "tid": true
       }
     },
-    "3f6ca8ae-04ba-34c1-96af-2b89dcc15474": {
-      "content": "${1:FIELDNAME} = forms.TypedMultipleChoiceField(${2})",
-      "doc": "Django forms ``TypedMultipleChoiceField``",
-      "filetype": "forms",
-      "grammar": "lsp",
-      "label": "Forms TypedMultipleChoiceField",
-      "matches": {
-        "ftmuchoice": true
-      }
-    },
     "3f6e6076-8e0f-3b05-93d2-4e6abb13662f": {
       "content": "{% regroup ${1} by ${2} as ${0} %}",
       "doc": "",
@@ -34943,6 +35236,16 @@
         "usect": true
       }
     },
+    "40c9241a-1f91-33cd-ad2c-3bea9051c9a8": {
+      "content": "${1:FIELDNAME} = serializers.URLField(${2})",
+      "doc": "Django-rest Serializers ``URLField``",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF URLField",
+      "matches": {
+        "surl": true
+      }
+    },
     "40d3075c-83fb-39e5-9f18-202065327fcf": {
       "content": "setInterval(() => {\n\t$0\n}, ${1:interval});",
       "doc": "Set Interval Function",
@@ -35242,6 +35545,16 @@
       "label": "",
       "matches": {
         "opt": true
+      }
+    },
+    "4159c845-2101-3125-acad-9e4b44859cb8": {
+      "content": "{% ssi $1 parsed %}",
+      "doc": "ssi tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "ssi",
+      "matches": {
+        "ssi": true
       }
     },
     "41607dd1-36d5-3a1b-a658-5481f58d24ca": {
@@ -35576,16 +35889,6 @@
         "rp": true
       }
     },
-    "41eccb42-6719-3062-af40-9d5441703e5b": {
-      "content": "${1:FIELDNAME} = models.ImageField(upload_to=${2:path/for/upload}${3:, height_field=height, width_field=width}${4:, max_length=100})",
-      "doc": "Django model ``ImageField``",
-      "filetype": "models",
-      "grammar": "lsp",
-      "label": "Models ImageField",
-      "matches": {
-        "mimg": true
-      }
-    },
     "41ed52f0-8c6c-321e-a62d-1d5607af0f0f": {
       "content": "use Symfony\\Component\\HttpFoundation\\File\\UploadedFile;$1",
       "doc": "",
@@ -35604,6 +35907,16 @@
       "label": "templateLang",
       "matches": {
         "templateLang": true
+      }
+    },
+    "41f44af2-2fa3-30d0-820e-6c9ea9313ab9": {
+      "content": "CONSTRAINT ${1:attribute} FOREIGN KEY (${2:attribute(s)})\n\tREFERENCES ${3:tableName}(${4:attribute})",
+      "doc": "Constraint foreing Key",
+      "filetype": "sql",
+      "grammar": "lsp",
+      "label": "foreingkc",
+      "matches": {
+        "foreingkc": true
       }
     },
     "41f5b8e1-b6c6-369b-a43e-23739f475d4e": {
@@ -36059,6 +36372,16 @@
       "label": "componentDidMount",
       "matches": {
         "cdm": true
+      }
+    },
+    "42f7c329-0ac8-349a-a87c-4a670205e089": {
+      "content": "def update(self, instance, validated_data):\n\treturn ${1:super().update(instance, validated_data)}",
+      "doc": "Django-rest Serializers ``Update`` Method",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF Update (serializers-method)",
+      "matches": {
+        "supdate": true
       }
     },
     "42f865fe-75f0-347c-867b-7c54de395a38": {
@@ -37200,6 +37523,16 @@
         "m": true
       }
     },
+    "457e47db-2cb6-30c4-9a3c-e90fe768d800": {
+      "content": "${1:FIELDNAME} = models.IntegerField($2)",
+      "doc": "IntegerField (mint).\n\nAn integer. Values from -2147483648 to 2147483647 are safe in all databases supported by Django.",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "mint",
+      "matches": {
+        "mint": true
+      }
+    },
     "457f1e9f-9b6f-390c-bdc3-10f337449562": {
       "content": "SELECT DISTINCT ${1:attribute(s)}\n\tFROM ${2:tableName};",
       "doc": "Select Distinct",
@@ -37935,6 +38268,16 @@
         "s-lifecycle-destroy": true
       }
     },
+    "46cc8fd6-45ba-3cb1-98cd-8f5d68579c44": {
+      "content": "${1:FIELDNAME} = forms.NullBooleanField($2, required=${3:False})",
+      "doc": "NullBooleanField (fnullbool)",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "fnullbool",
+      "matches": {
+        "fnullbool": true
+      }
+    },
     "46cf36a4-b1aa-35a5-8366-65a95ba8d695": {
       "content": "onready var ${1:name} = get_node($2)",
       "doc": "",
@@ -38589,6 +38932,16 @@
         "op:ms": true
       }
     },
+    "48074923-a070-32d5-b508-2de3ada503f7": {
+      "content": "from django.conf.urls import ${1|static,url,handler400,handler403,handler404,handler500|}",
+      "doc": "Utilityfunctions for use in URLconfs.",
+      "filetype": "urls",
+      "grammar": "lsp",
+      "label": "conf.urls (≥2.0)",
+      "matches": {
+        "iconf_urls": true
+      }
+    },
     "48082542-f6cb-316e-ba79-bc07caf64ab9": {
       "content": "<a href=\"http://${1:example.com}\">${0:$1}</a>",
       "doc": "",
@@ -38970,6 +39323,16 @@
         "gl": true
       }
     },
+    "48c541f2-95e5-37bf-972a-df054d89c277": {
+      "content": "{% if $1 %}\n  \n{% else %}\n  \n{% endif %}",
+      "doc": "if else tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "ifelse",
+      "matches": {
+        "ifelse": true
+      }
+    },
     "48c71a76-ba5c-3ef2-9f91-815deb36d1fd": {
       "content": "def update\n\t@${1:model_class_name} = ${2:ModelClassName}.find(params[:id])\n\n\trespond_to do |format|\n\t\tif @$1.update($1_params)\n\t\t\tflash[:notice] = '$2 was successfully updated.'\n\t\t\tformat.html { redirect_to(@$1) }\n\t\t\tformat.json  { head :ok }\n\t\telse\n\t\t\tformat.html { render action: 'edit' }\n\t\t\tformat.json  { render json: @$1.errors, status: :unprocessable_entity }\n\t\tend\n\tend\nend",
       "doc": "",
@@ -39341,16 +39704,6 @@
       "label": "border-color: color (border)",
       "matches": {
         "border": true
-      }
-    },
-    "499ed530-944a-3ff9-8318-b67c787269d3": {
-      "content": "def get_initial(self):\n\tinit = super().get_initial()\n\treturn init",
-      "doc": "Django Views ``get_initial`` method",
-      "filetype": "views",
-      "grammar": "lsp",
-      "label": "Django Views get_initial",
-      "matches": {
-        "getinitial": true
       }
     },
     "499ed591-a56b-3d13-b3e5-fc6bf23b9dda": {
@@ -39735,6 +40088,16 @@
         "der": true
       }
     },
+    "4a7306d2-e1ae-3b4c-aa4f-e315a4e4a803": {
+      "content": "{% if $1 %}\n  \n{% else %}\n  \n{% endif %}",
+      "doc": "if else tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "ife",
+      "matches": {
+        "ife": true
+      }
+    },
     "4a76724e-0616-3d64-8e34-3d82eb9b396c": {
       "content": "import EmberObject from '@ember/object';\n\nexport default EmberObject.extend({\n\t${0://Properties here...}\n});",
       "doc": "",
@@ -40106,16 +40469,6 @@
       "label": "",
       "matches": {
         "ans": true
-      }
-    },
-    "4aff9771-f278-367b-9542-547a51a775b2": {
-      "content": "def get_object(self):\n\treturn ${1:ModelName}.objects.get(${2})",
-      "doc": "Django Views ``get_object`` method",
-      "filetype": "views",
-      "grammar": "lsp",
-      "label": "Django Views get_object",
-      "matches": {
-        "getobject": true
       }
     },
     "4b003677-f493-3632-9682-ae682186c4b3": {
@@ -41082,16 +41435,6 @@
         "fems:dt": true
       }
     },
-    "4d298bf0-f081-39d7-8ef3-a9ba612b5c76": {
-      "content": "from django.urls import revers_lazy",
-      "doc": "Import Django ``revers_lazy``",
-      "filetype": "imports",
-      "grammar": "lsp",
-      "label": "Import reverse_lazy",
-      "matches": {
-        "di-reverse_lazy": true
-      }
-    },
     "4d2d10f0-ff1c-3d45-a4d9-0c47afd6dfc4": {
       "content": "enum ${1} {\n    ${0:TARGET}\n}",
       "doc": "",
@@ -41452,6 +41795,16 @@
         "agg": true
       }
     },
+    "4e039b14-1248-3086-8786-65ea774baa69": {
+      "content": "class ${1:Name}Serializer(serializers.Serializer):\n\t${2}",
+      "doc": "Django-rest Serializers ``Serializer`` Class",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF Serializer (class)",
+      "matches": {
+        "serializer": true
+      }
+    },
     "4e1ce320-8a9a-36fa-832f-67a9c43d86ce": {
       "content": "<li>${1:TARGET}</li>${2}",
       "doc": "",
@@ -41572,6 +41925,16 @@
       "label": "",
       "matches": {
         "next": true
+      }
+    },
+    "4e4145f8-ee83-33f7-bb77-17a69c8218dc": {
+      "content": "${1:FIELDNAME} = serializers.DecimalField(max_digits=${2}, decimal_places=${3})",
+      "doc": "Django-rest Serializers ``DecimalField``",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF DecimalField",
+      "matches": {
+        "sdecimal": true
       }
     },
     "4e46b6de-b383-3f44-9d52-7d40a4ab371b": {
@@ -41705,6 +42068,26 @@
         "ifelif": true
       }
     },
+    "4e8584cb-1936-37f7-a723-7ff3563f62da": {
+      "content": "class ${1:FORMNAME}(forms.Form):\n\t\"\"\"${2:$1 definition}.\"\"\"\n\n\t${3:# TODO: Define form fields here}",
+      "doc": "Form",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "Form",
+      "matches": {
+        "Form": true
+      }
+    },
+    "4e8f49ee-cd75-3a06-8a92-770e71e1d020": {
+      "content": "${1:FIELDNAME} = forms.ChoiceField($2, choices=[${3:CHOICES}], required=${4:False})",
+      "doc": "ChoiceField (fchoice)",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "fchoice",
+      "matches": {
+        "fchoice": true
+      }
+    },
     "4e952f3f-1c30-3646-a544-7da1f9053fa5": {
       "content": "vertical-align: middle;",
       "doc": "",
@@ -41713,6 +42096,16 @@
       "label": "vertical-align: middle",
       "matches": {
         "vam": true
+      }
+    },
+    "4e98c08e-df34-3ded-8a6b-f2ce0123ec67": {
+      "content": "${1:FIELDNAME} = models.CommaSeparatedIntegerField($2)",
+      "doc": "CommaSeparatedIntegerField (mcoseint).\n\nThis field is deprecated since 1.9 in favor of CharField with validators.",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "mcoseint",
+      "matches": {
+        "mcoseint": true
       }
     },
     "4e9aff67-2e95-33da-88ed-766223a07b8e": {
@@ -41974,16 +42367,6 @@
       "label": "",
       "matches": {
         "bds:ds": true
-      }
-    },
-    "4ee35499-b7b8-3eb2-aa43-8da33443175b": {
-      "content": "class ${1:ModelName}Form(forms.ModelForm):\n\tclass Meta:\n\t\tmodel = ${2:$1}\n\t\tfields = (${3:\"__all__\"})\n\t\t${0}",
-      "doc": "Django Model Form",
-      "filetype": "forms",
-      "grammar": "lsp",
-      "label": "Django Model Form ",
-      "matches": {
-        "modelform": true
       }
     },
     "4f02ca5b-9ba9-307b-9e3b-d3b4b12a8e8e": {
@@ -42249,6 +42632,16 @@
         "imd": true
       }
     },
+    "4f59cec7-f77e-315d-8645-595712022183": {
+      "content": "${1:FIELDNAME} = forms.FloatField($2, required=${3:False})",
+      "doc": "FloatField (ffloat)",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "ffloat",
+      "matches": {
+        "ffloat": true
+      }
+    },
     "4f5abb21-d3ab-3808-a3c8-7c3206e1c44a": {
       "content": "set xtics ${1:#:start}, ${2:#:incr}, ${3:#:end}",
       "doc": "",
@@ -42399,6 +42792,16 @@
       "label": "",
       "matches": {
         "each_byte": true
+      }
+    },
+    "4fb19a6b-778d-3612-9c8b-a1efde5de8a3": {
+      "content": "from django.views.generic import ${1|CreateView,DetailView,FormView,ListView,TemplateView,UpdateView|}",
+      "doc": "Generic class-based views",
+      "filetype": "views",
+      "grammar": "lsp",
+      "label": "igenericviews",
+      "matches": {
+        "igenericviews": true
       }
     },
     "4fb89652-49ca-33c3-8d48-994848217c8d": {
@@ -43562,6 +43965,16 @@
         "continue": true
       }
     },
+    "51d5e4a4-4be7-310f-b203-ae672976533e": {
+      "content": "{% ifchanged $1 %}\n  \n{% endifchanged %}",
+      "doc": "ifchanged tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "ifchanged",
+      "matches": {
+        "ifchanged": true
+      }
+    },
     "51d603c1-3e71-3289-8a90-3f350de0e5bf": {
       "content": "__MODULE__",
       "doc": "",
@@ -43792,16 +44205,6 @@
         "eget": true
       }
     },
-    "525f2a0d-de02-3911-990c-bbb3da15bd55": {
-      "content": "from django import template\n\nregister = template.Library()\n\n# TODO: Create your custom tags here\n${0}",
-      "doc": "Django File-Template Sinppet For ``CustomTags`` File",
-      "filetype": "filetemplates",
-      "grammar": "lsp",
-      "label": "Django CustomTagsFile Template",
-      "matches": {
-        "ftcutomtags": true
-      }
-    },
     "5262e54f-83d8-319e-b72f-8ad70ff32784": {
       "content": "text-justify: distribute;",
       "doc": "",
@@ -43960,16 +44363,6 @@
       "label": "",
       "matches": {
         "dl": true
-      }
-    },
-    "529d2eeb-865e-37ba-948d-753df284ec81": {
-      "content": "${1:FIELDNAME} = models.SmallIntegerField(${2})",
-      "doc": "Django model ``SmallIntegerField``",
-      "filetype": "models",
-      "grammar": "lsp",
-      "label": "Models SmallIntegerField",
-      "matches": {
-        "msmallint": true
       }
     },
     "52a12d56-49c8-331a-8025-5a59ffe85b7f": {
@@ -44483,6 +44876,16 @@
         "wh": true
       }
     },
+    "5352d6ac-39f0-3a71-9bc6-2e4ab5bc1941": {
+      "content": "[${1:text}](${2:link})$0",
+      "doc": "Insert link",
+      "filetype": "rmarkdown",
+      "grammar": "lsp",
+      "label": "Insert link",
+      "matches": {
+        "link": true
+      }
+    },
     "535a4681-12c4-33a1-b244-2fa9914a9af5": {
       "content": "import std.stdio, std.string, std.array;\nimport std.traits, std.conv, std.algorithm;\nimport std.math, std.regex;",
       "doc": "",
@@ -44874,16 +45277,6 @@
         "try": true
       }
     },
-    "53f61519-61c6-300d-9c9f-f06e691f6bb7": {
-      "content": "${1:FIELDNAME} = models.DateField(auto_now_add=${2:True}, auto_now=${3:False}})",
-      "doc": "Django model ``DateField``",
-      "filetype": "models",
-      "grammar": "lsp",
-      "label": "Models DateField",
-      "matches": {
-        "mdate": true
-      }
-    },
     "5403004e-f5c7-3c25-99ab-5662625e7e14": {
       "content": "import { NavLink } from 'react-router-dom'",
       "doc": "",
@@ -45062,6 +45455,16 @@
       "label": "",
       "matches": {
         "bg+": true
+      }
+    },
+    "545fa484-1e8a-33b8-977e-3ffd5ec758c5": {
+      "content": "${1:FIELDNAME} = serializers.EmailField(${2})",
+      "doc": "Django-rest Serializers ``EmailField``",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF EmailField",
+      "matches": {
+        "semail": true
       }
     },
     "5468105f-f6ff-30c2-a97a-662b4c89980c": {
@@ -45314,6 +45717,16 @@
       "label": "else (el)",
       "matches": {
         "el": true
+      }
+    },
+    "54c75958-a3cb-3063-a33f-f03cb13214f8": {
+      "content": "def get_queryset(self):\n\tqueryset = super(${1:CLASS_NAME}, self).get_queryset()\n\tqueryset = queryset${3: # TODO}\n\treturn queryset",
+      "doc": "",
+      "filetype": "views",
+      "grammar": "lsp",
+      "label": "get_queryset",
+      "matches": {
+        "get_queryset": true
       }
     },
     "54c8956d-6627-3a3a-a097-c658508f8a8c": {
@@ -46021,6 +46434,16 @@
         "dialog_OK": true
       }
     },
+    "5615f1e8-f604-3025-be37-fc76c67a1b33": {
+      "content": "${1:FIELDNAME} = serializers.ModelField(model_field=${2})",
+      "doc": "Django-rest Serializers `ModelField``",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF ModelField",
+      "matches": {
+        "smodel": true
+      }
+    },
     "561d6dac-6829-3e64-9816-55348768926e": {
       "content": "it { expect(${1:object}).${2} ${0} }",
       "doc": "",
@@ -46212,16 +46635,6 @@
       "label": "",
       "matches": {
         "rett": true
-      }
-    },
-    "56859aef-9adc-3298-afbc-9403d134a156": {
-      "content": "${1:FIELDNAME} = models.BinaryField(${2})",
-      "doc": "Django model ``BinaryField``",
-      "filetype": "models",
-      "grammar": "lsp",
-      "label": "Models BinaryField",
-      "matches": {
-        "mbinary": true
       }
     },
     "568d7895-8c66-394f-917a-54d587d8e07f": {
@@ -46635,16 +47048,6 @@
         "d:b": true
       }
     },
-    "5729b125-4fa3-39e0-8ad8-e169e34978ad": {
-      "content": "${1:FIELDNAME} = models.XMLField(schema_path=${2:None})",
-      "doc": "Django model ``XMLField``",
-      "filetype": "models",
-      "grammar": "lsp",
-      "label": "Models XMLField",
-      "matches": {
-        "mxml": true
-      }
-    },
     "572bc0e5-357a-3e03-8a1a-6f3385105227": {
       "content": "console.log(${0:TARGET});",
       "doc": "",
@@ -46958,6 +47361,16 @@
         "ndef": true
       }
     },
+    "57bceec2-c6a8-3e52-b332-e7fe64a658a9": {
+      "content": "{% verbatim %}\n  $1\n{% endverbatim %}",
+      "doc": "verbatim tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "verbatim",
+      "matches": {
+        "verbatim": true
+      }
+    },
     "57cae46d-43c7-39a3-a7ad-b2be11abd5bd": {
       "content": "static_assert( ${1}, \"${2}\" );${0}",
       "doc": "",
@@ -47159,16 +47572,6 @@
         "dfn": true
       }
     },
-    "5821f861-0491-3c0e-8926-ba85966f67e8": {
-      "content": "${1:FIELDNAME} = models.BooleanField(default=${2:False})",
-      "doc": "Django model ``BooleanField``",
-      "filetype": "models",
-      "grammar": "lsp",
-      "label": "Models Boolean",
-      "matches": {
-        "mbool": true
-      }
-    },
     "582869e9-4700-31c2-9e3e-87c8f41ac913": {
       "content": "Option<${1:i32}>",
       "doc": "",
@@ -47267,6 +47670,16 @@
       "label": "Vue Lifecycle beforeCreate",
       "matches": {
         "vbeforecreate": true
+      }
+    },
+    "58620493-e8bc-3ea1-8ecb-ce78533392a4": {
+      "content": "${1:FIELDNAME} = HStoreField()",
+      "doc": "HStoreField (mstore).\n\n*PostgreSQL specific model fields*.\n\nA field for storing key-value pairs. The Python data type used is a dict.",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "mstore",
+      "matches": {
+        "mstore": true
       }
     },
     "586e835e-b4b4-314a-a939-f0c954b22fa3": {
@@ -47619,16 +48032,6 @@
       "label": "",
       "matches": {
         "/*": true
-      }
-    },
-    "5902f8fb-f17d-355a-b807-5ab6a89e753a": {
-      "content": "${1:FIELDNAME} = forms.DecimalField(${2})",
-      "doc": "Django forms ``DecimalField``",
-      "filetype": "forms",
-      "grammar": "lsp",
-      "label": "Forms DecimalField",
-      "matches": {
-        "fdecimal": true
       }
     },
     "59077165-0022-3ee2-9040-2e5afdb5d1cc": {
@@ -48135,16 +48538,6 @@
         "bdli": true
       }
     },
-    "5a141662-e0ad-3187-b412-5e32c73b72a7": {
-      "content": "from django.contrib.auth import get_user_model",
-      "doc": "Import Django ``get_user_model``",
-      "filetype": "imports",
-      "grammar": "lsp",
-      "label": "Import get_user_model",
-      "matches": {
-        "di-getusermodel": true
-      }
-    },
     "5a1dfe46-efeb-3fc8-8e94-d53ee2f79a1c": {
       "content": "<${1:elementName}>\n\t$0\n</${1}>",
       "doc": "an element",
@@ -48526,6 +48919,16 @@
       "label": "",
       "matches": {
         "pb&-": true
+      }
+    },
+    "5ad164a8-3ba0-3cfd-be6a-b3cec562f824": {
+      "content": "{% with $1 as  %}\n  \n{% endwith %}",
+      "doc": "with tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "with",
+      "matches": {
+        "with": true
       }
     },
     "5ad2f87c-c40d-324c-996f-41f59f48e028": {
@@ -49855,6 +50258,16 @@
         "shinymod": true
       }
     },
+    "5d192080-0a8a-3ea0-a77b-6ccdb5fce245": {
+      "content": "{% load staticfiles %}",
+      "doc": "",
+      "filetype": "tags",
+      "grammar": "lsp",
+      "label": "lstatic",
+      "matches": {
+        "lstatic": true
+      }
+    },
     "5d1ffbcf-caf6-3856-a7c9-a11b5a7f372c": {
       "content": "switch (${1}) {\n| ${2} => ${0}\n}",
       "doc": "",
@@ -50629,6 +51042,16 @@
         "strong1": true
       }
     },
+    "5e761d9f-de1f-327e-bb51-d196fb5fff9c": {
+      "content": "{% trans \"$1\" %}",
+      "doc": "trans tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "trans",
+      "matches": {
+        "trans": true
+      }
+    },
     "5e774bd5-108d-3bc0-9755-653058de3648": {
       "content": "try {\n  $0\n} catch (${1:e}) {\n}",
       "doc": "Insert a try/catch block.",
@@ -51352,6 +51775,16 @@
         "FUNCTION HIGHEST-ALGEBRAIC": true
       }
     },
+    "5fd8d19a-a997-3c06-8656-59813f0436fb": {
+      "content": "${1:FIELDNAME} = models.TextField($2)",
+      "doc": "TextField (mtext).\n\nA large text field.",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "mtext",
+      "matches": {
+        "mtext": true
+      }
+    },
     "5fda0b97-96e4-3510-8b72-98c8114b94d7": {
       "content": "<dl>\n\t<dt>${1}</dt>\n\t<dd>${2}</dd>\n\tdt+${0}\n</dl>",
       "doc": "",
@@ -51674,16 +52107,6 @@
       "label": "",
       "matches": {
         "fn2": true
-      }
-    },
-    "6083d272-b115-33a9-9e5b-aaae1e03b884": {
-      "content": "${1:FIELDNAME} = models.PositiveIntegerField(${2})",
-      "doc": "Django model ``PositiveIntegerField``",
-      "filetype": "models",
-      "grammar": "lsp",
-      "label": "Models PositiveIntegerField",
-      "matches": {
-        "mposint": true
       }
     },
     "60882e99-ea54-3b59-98db-34c78dbc6df6": {
@@ -53150,6 +53573,16 @@
         "padding": true
       }
     },
+    "631b7843-542f-3858-95f2-3fcb41499f2f": {
+      "content": "${1:FIELDNAME} = forms.RegexField($2, regex=${3:REGEX}, required=${4:False})",
+      "doc": "RegexField (fregex)",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "fregex",
+      "matches": {
+        "fregex": true
+      }
+    },
     "631ba1d6-1161-3059-8a00-bc42cf93ed10": {
       "content": "${1:callbacks}.fire(${2:args})",
       "doc": "",
@@ -53502,6 +53935,16 @@
       "label": "",
       "matches": {
         "kdown": true
+      }
+    },
+    "63d3a4ee-7ed0-32cd-8545-2de5f4c11ac9": {
+      "content": "mutations: {\n\t${1:updateValue}(state, ${3:payload}) => {\n\t\tstate.${2:value} = $3;\n\t}\n},",
+      "doc": "",
+      "filetype": "vue",
+      "grammar": "snu",
+      "label": "",
+      "matches": {
+        "vmutations": true
       }
     },
     "63d85fb0-40f5-30f2-9abe-36df572424d0": {
@@ -54408,16 +54851,6 @@
         "print": true
       }
     },
-    "6583a809-edce-355c-ab94-3b1a219aa5a2": {
-      "content": "class ${1:ModelName}(models.Model):\n\t# Define $1 fields here\n\t${2}\n\n\tclass Meta:\n\t\tordering = [\"${3:-pk}\"]\n\t\tverbose_name = \"${4:$1}\"\n\t\tverbose_name_plural = \"${5:$1s}\"\n\n\tdef __str__(self):\n\t\treturn ${6:super().__str__()}\n\n\t# Define $1 properties here\n\t${0}",
-      "doc": "Django Simple Model with properties and attributes",
-      "filetype": "models",
-      "grammar": "lsp",
-      "label": "Django Simple Model",
-      "matches": {
-        "smodel": true
-      }
-    },
     "658cc8a0-7651-374d-8c60-26b7aab9a74e": {
       "content": "<<\"${0:TARGET}\">>",
       "doc": "",
@@ -54486,16 +54919,6 @@
       "label": "",
       "matches": {
         "bdlw": true
-      }
-    },
-    "65b4fd75-1f1a-3d8a-9e3a-3aa1456429bd": {
-      "content": "getters: {\n\t${1:value}: state => {\n\t\treturn state.$1;\n\t}\n}",
-      "doc": "",
-      "filetype": "vue",
-      "grammar": "snu",
-      "label": "",
-      "matches": {
-        "vgetters": true
       }
     },
     "65c5e4e2-f188-3295-a5d5-86a41955ad2f": {
@@ -54971,16 +55394,6 @@
         "createt": true
       }
     },
-    "668071af-f973-312b-a421-184a7a7a3801": {
-      "content": "func Benchmark${1} (${2:b *testing.B}) {\n  for i := 0; i < ${3:b.N}; i++ {\n    ${4}\n  }\n}",
-      "doc": "",
-      "filetype": "go",
-      "grammar": "snu",
-      "label": "func Benchmark... (b *testing.B) { ... }",
-      "matches": {
-        "funcbench": true
-      }
-    },
     "668386ae-304b-3659-bcf9-e63702e799bb": {
       "content": "background-attachment: ${0}",
       "doc": "",
@@ -55109,6 +55522,16 @@
       "label": "svelte-readable",
       "matches": {
         "s-readable": true
+      }
+    },
+    "66f2d218-3082-3806-815b-facf074a128b": {
+      "content": "${1:FIELDNAME} = serializers.RegexField(regex=${2})",
+      "doc": "Django-rest Serializers `RegexField``",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF RegexField",
+      "matches": {
+        "sregex": true
       }
     },
     "66f9c68d-e80c-3aa8-85b6-9a97f88626db": {
@@ -55472,6 +55895,16 @@
       "matches": {
         "\\begin{verse} \\verse": true,
         "verse": true
+      }
+    },
+    "67a86eb1-c1a7-3020-bcb0-ed6563f48072": {
+      "content": "${1:FIELDNAME} = models.DecimalField($2, max_digits=${3:5}, decimal_places=${4:2})",
+      "doc": "DecimalField (mdecimal).\n\nA fixed-precision decimal number, represented in Python by a Decimal instance.",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "mdecimal",
+      "matches": {
+        "mdecimal": true
       }
     },
     "67adca5f-2eef-3e1e-84f8-30726d6423e3": {
@@ -55999,6 +56432,16 @@
         "bgcp": true
       }
     },
+    "6882c18c-7637-37dd-9667-a21584e97ae9": {
+      "content": "def ${1:mname}(self, ${2:arg}) -> ${3:return_type}:\n\t${4:pass}$0",
+      "doc": "Code snippet for a class method definition.",
+      "filetype": "base",
+      "grammar": "lsp",
+      "label": "New method w/ return",
+      "matches": {
+        "defst": true
+      }
+    },
     "6884e86f-3377-39ce-b23d-6521202ca3e0": {
       "content": "enum ${1:Name} {\n\t${2},\n}",
       "doc": "",
@@ -56431,6 +56874,16 @@
       "label": "",
       "matches": {
         "fst:se": true
+      }
+    },
+    "693f5c31-6a6e-3f99-a054-42fd406bfcf5": {
+      "content": "${1:FIELDNAME} = models.AutoField($2)",
+      "doc": "AutoField (mauto).\n\nAn IntegerField that automatically increments according to available IDs.",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "mauto",
+      "matches": {
+        "mauto": true
       }
     },
     "693fe13a-c5c6-3797-a229-8c28cdf5a7e1": {
@@ -57497,6 +57950,16 @@
         "case": true
       }
     },
+    "6b37eb0a-ad0e-31c7-a6cd-e49533411b59": {
+      "content": "{% debug %}",
+      "doc": "debug tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "debug",
+      "matches": {
+        "debug": true
+      }
+    },
     "6b3a3275-98d6-3d71-9f72-95d3bdb4c5b8": {
       "content": "font-family: ${1:Arial, \"MS Trebuchet\"}, ${2:sans-}serif;$0",
       "doc": "",
@@ -57618,16 +58081,6 @@
         "cgd": true
       }
     },
-    "6b66bf69-8554-3205-8a3a-4ba330459cd1": {
-      "content": "${1:FIELDNAME} = forms.RegexField(${2})",
-      "doc": "Django forms ``RegexField``",
-      "filetype": "forms",
-      "grammar": "lsp",
-      "label": "Forms RegexField",
-      "matches": {
-        "fregex": true
-      }
-    },
     "6b6abb18-7826-39ed-ac5b-8cd2e7b2ac04": {
       "content": "when {\n\texpression '${1:expression}'\n}\n${0}",
       "doc": "",
@@ -57656,6 +58109,16 @@
       "label": "",
       "matches": {
         "{": true
+      }
+    },
+    "6b742b37-2106-39d3-86b8-229e7c2a8921": {
+      "content": "${1:FIELDNAME} = models.SmallIntegerField($2)",
+      "doc": "SmallIntegerField (msmallint).\n\nLike an IntegerField, but only allows values under a certain (database-dependent) point.",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "msmallint",
+      "matches": {
+        "msmallint": true
       }
     },
     "6b776985-5bff-34ea-b3fc-a515dbc31198": {
@@ -57850,6 +58313,16 @@
         "tbi": true
       }
     },
+    "6bd7c8c1-2510-3f00-b28d-85c772f220c7": {
+      "content": "def get_absolute_url(self):\n\tfrom django.core.urlresolvers import reverse\n\treturn reverse('$1', kwargs={'pk': self.pk})",
+      "doc": "",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "get_absolute_url",
+      "matches": {
+        "get_absolute_url": true
+      }
+    },
     "6bd99177-4fc3-306b-8f5f-5d9884c85257": {
       "content": "System.Windows.Forms.MessageBox.Show(\"${1:Text}\");$0",
       "doc": "MessageBox.Show",
@@ -57890,6 +58363,16 @@
         "fst:c": true
       }
     },
+    "6be746f7-0565-3b61-afa6-3153bca1714b": {
+      "content": "path(\n\t'${1:ROUTE}/',\n\t${2:VIEW}${3:.as_view()},\n\tname='$4'\n),",
+      "doc": "path(route, view, kwargs=None, name=None)",
+      "filetype": "urls",
+      "grammar": "lsp",
+      "label": "path_stack",
+      "matches": {
+        "path_stack": true
+      }
+    },
     "6bea0f77-fb60-35b3-a9d9-6bac1e060dc6": {
       "content": "try {\n\t${1:TARGET}\n} catch {\n\tcase e${2:: Exception} => ${0}\n}",
       "doc": "",
@@ -57908,6 +58391,16 @@
       "label": "",
       "matches": {
         "color": true
+      }
+    },
+    "6bef533d-6d7d-3df8-bd35-9b0722d2b961": {
+      "content": "${1:FIELDNAME} = models.BigAutoField($2)",
+      "doc": "BigAutoField (mbigauto).\n\n[New in Django 1.10.]\n\nA 64-bit integer, much like an AutoField.",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "mbigauto",
+      "matches": {
+        "mbigauto": true
       }
     },
     "6c04de0d-6a10-318f-84ff-42a3ef272e9b": {
@@ -58018,16 +58511,6 @@
       "label": "",
       "matches": {
         "pgbi:a": true
-      }
-    },
-    "6c2be3f3-4325-33ee-b005-e16c45ac911b": {
-      "content": "__ScriptVersion=\"${1:version}\"\n\n#===  FUNCTION  ================================================================\n#         NAME:  usage\n#  DESCRIPTION:  Display usage information.\n#===============================================================================\nfunction usage ()\n{\n\techo \"Usage :  $${0:0} [options] [--]\n\n    Options:\n    -h|help       Display this message\n    -v|version    Display script version\"\n\n}    # ----------  end of function usage  ----------\n\n#-----------------------------------------------------------------------\n#  Handle command line arguments\n#-----------------------------------------------------------------------\n\nwhile getopts \":hv\" opt\ndo\n  case $opt in\n\n\th|help     )  usage; exit 0   ;;\n\n\tv|version  )  echo \"$${0:0} -- Version $__ScriptVersion\"; exit 0   ;;\n\n\t* )  echo -e \"\\n  Option does not exist : $OPTARG\\n\"\n\t\t  usage; exit 1   ;;\n\n  esac    # --- end of case ---\ndone\nshift $(($OPTIND-1))",
-      "doc": "",
-      "filetype": "sh",
-      "grammar": "snu",
-      "label": "",
-      "matches": {
-        "getopt": true
       }
     },
     "6c33be36-7a37-38c2-a49b-92fef009cc30": {
@@ -58330,16 +58813,6 @@
         "region": true
       }
     },
-    "6cd9e49e-d569-379a-bacc-656b8618379d": {
-      "content": "${1:FIELDNAME} = forms.FloatField(${2})",
-      "doc": "Django forms ``FloatField``",
-      "filetype": "forms",
-      "grammar": "lsp",
-      "label": "Forms FloatField",
-      "matches": {
-        "ffloat": true
-      }
-    },
     "6ce21f45-ea2f-3ce5-8c2c-c76b9b71dce1": {
       "content": "<ng-content select=\"${0:selector}\"></ng-content>",
       "doc": "Angular ng-content",
@@ -58408,6 +58881,16 @@
       "label": "",
       "matches": {
         "whs:nw": true
+      }
+    },
+    "6d0e708e-4195-3c5a-891a-b8d4beebae45": {
+      "content": "{% load i18n %}",
+      "doc": "",
+      "filetype": "tags",
+      "grammar": "lsp",
+      "label": "li18n",
+      "matches": {
+        "li18n": true
       }
     },
     "6d10954d-86e6-3a97-b4a7-d547d971dcc9": {
@@ -58601,6 +59084,16 @@
         "gatsby-image import": true
       }
     },
+    "6d5cf3ca-cfcd-38cb-ab31-f7e50ec2bb75": {
+      "content": "{% load $1 %}",
+      "doc": "load tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "load",
+      "matches": {
+        "load": true
+      }
+    },
     "6d5d404a-16fb-355b-abb6-521e8c7e4b7e": {
       "content": "#!/usr/bin/env tclsh",
       "doc": "",
@@ -58761,6 +59254,16 @@
       "matches": {
         "@bs": true,
         "external": true
+      }
+    },
+    "6d988b60-90e3-3647-8f26-04aa9af1435d": {
+      "content": "def ${1:VIEWNAME}(request):",
+      "doc": "View",
+      "filetype": "views",
+      "grammar": "lsp",
+      "label": "view",
+      "matches": {
+        "view": true
       }
     },
     "6d9de72f-6ef5-393a-8af8-c02f67a11d5a": {
@@ -59085,6 +59588,16 @@
       "label": "",
       "matches": {
         "loo": true
+      }
+    },
+    "6e4fe9d0-9f80-3be2-bdd2-01f178cbf766": {
+      "content": "from django.conf.urls import ${1|static,url,include,handler400,handler403,handler404,handler500|}",
+      "doc": "Utility functions for use in URLconfs.",
+      "filetype": "urls",
+      "grammar": "lsp",
+      "label": "conf.urls (≤1.11)",
+      "matches": {
+        "iconf_urls": true
       }
     },
     "6e509db9-ef95-3a39-b95b-c9b37c708cea": {
@@ -59701,6 +60214,16 @@
         "rgba": true
       }
     },
+    "6f7d644f-a611-3acd-b405-0c9c5a1ea644": {
+      "content": "${1:FIELDNAME} = models.PhoneNumberField($2)",
+      "doc": "PhoneNumberField (mphone).\n\n*external package: django-phonenumber-field*",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "mphone",
+      "matches": {
+        "mphone": true
+      }
+    },
     "6f81ba22-4a43-369b-a652-97de379a7a93": {
       "content": "Stream<${1:type}> get ${2:name} => _${2:name}Controller.stream;\nfinal _${2:name}Controller = StreamController<${1:type}>();",
       "doc": "A source of asynchronous data events. A stream can be of any data type <T>",
@@ -59989,16 +60512,6 @@
       "label": "exportclassextends",
       "matches": {
         "base export class extends": true
-      }
-    },
-    "700173f4-b2d5-35e5-887b-de52273a6089": {
-      "content": "${1:FIELDNAME} = models.AutoField(${2})",
-      "doc": "Django model ``AutoField``",
-      "filetype": "models",
-      "grammar": "lsp",
-      "label": "Models AutoField",
-      "matches": {
-        "mauto": true
       }
     },
     "7034af80-a89b-33be-8f82-d04af7c824f0": {
@@ -61058,6 +61571,16 @@
         "rce": true
       }
     },
+    "72356756-1dd6-3b97-95b7-ccfd8467b0f7": {
+      "content": "func Fuzz${1}(${2:f *testing.F}) {\n  f.Fuzz(func(t *testing.T, ${3:b []byte}) {\n    ${4}\n  })\n}",
+      "doc": "",
+      "filetype": "go",
+      "grammar": "snu",
+      "label": "func Fuzz...(f *testing.F) { ... }",
+      "matches": {
+        "funcfuzz": true
+      }
+    },
     "72384590-4c96-389e-ad51-5f673342f568": {
       "content": "max-width: none",
       "doc": "",
@@ -61862,16 +62385,6 @@
         "lia": true
       }
     },
-    "742855bd-3f2d-3851-9ee5-10fcec188a35": {
-      "content": "${1:FIELDNAME} = models.IPAddressField(${2})",
-      "doc": "Django model ``IPAddressField``",
-      "filetype": "models",
-      "grammar": "lsp",
-      "label": "Models IPAddressField",
-      "matches": {
-        "mip": true
-      }
-    },
     "742cd069-b0de-3a1f-990d-05773a1f8c35": {
       "content": "${1:type} ${2:ptr} = ($1*) calloc(${3:size}, sizeof($1));",
       "doc": "",
@@ -62343,6 +62856,16 @@
         "unsafe": true
       }
     },
+    "74db3647-0466-3515-b1ec-de7c7a506204": {
+      "content": "def create(self, validated_data):\n\treturn ${1:super().create(validated_data)}",
+      "doc": "Django-rest Serializers ``Create`` Method",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF Create (serializers-method)",
+      "matches": {
+        "screate": true
+      }
+    },
     "74e6af70-6784-354e-9e2d-fd8448741323": {
       "content": "${1:document}.querySelector('${0:CSS selector}')",
       "doc": "",
@@ -62757,16 +63280,6 @@
         "lis:n": true
       }
     },
-    "7593d090-668a-3db3-a8c6-1c5a5d691ff2": {
-      "content": "def clean(self):\n\tcleaned_data = super().clean()\n\t${0}",
-      "doc": "Django Views ``clean`` method",
-      "filetype": "views",
-      "grammar": "lsp",
-      "label": "Django Forms clean",
-      "matches": {
-        "cleanff": true
-      }
-    },
     "7597a814-ee6d-3f43-b037-e96b4eae1e0e": {
       "content": "appear-active-class='$1'$0",
       "doc": "appear-active-class=''. Expects: string.",
@@ -63008,16 +63521,6 @@
         "vPre": true
       }
     },
-    "75f0fd89-3dc1-3ab7-a538-d783327d1f36": {
-      "content": "${1:FIELDNAME} = forms.NullBooleanField(${2})",
-      "doc": "Django forms ``NullBooleanField``",
-      "filetype": "forms",
-      "grammar": "lsp",
-      "label": "Forms NullBooleanField",
-      "matches": {
-        "fnullbool": true
-      }
-    },
     "75f23d20-d94c-3dac-84e7-a2c5831f85aa": {
       "content": "splitTokens(${1:str}${2:, }${0:tokens});",
       "doc": "",
@@ -63137,16 +63640,6 @@
       "label": "",
       "matches": {
         "bdli:n": true
-      }
-    },
-    "762e37da-64cd-33b8-bbb2-7c3a09a4ab5f": {
-      "content": "${1:FIELDNAME} = forms.URLField(${2})",
-      "doc": "Django forms ``URLField``",
-      "filetype": "forms",
-      "grammar": "lsp",
-      "label": "Forms URLField",
-      "matches": {
-        "fulr": true
       }
     },
     "762fed03-55e6-36a3-9063-49a1fcedaecf": {
@@ -64503,16 +64996,6 @@
         "cl:r": true
       }
     },
-    "78c24107-74b2-3a3b-9590-61d7e6decc03": {
-      "content": "def get_context_data(self, *args, **kwargs):\n\tcontext = super().get_context_data(*args, **kwargs)\n\treturn context",
-      "doc": "Django Views ``get_context_data`` method",
-      "filetype": "views",
-      "grammar": "lsp",
-      "label": "Django Views get_context_data",
-      "matches": {
-        "getcontextdata": true
-      }
-    },
     "78c97c20-766b-35f7-938a-ea1afe41597b": {
       "content": "async def ${1:fname}(${2:arg}):\n\t${3:pass}$0",
       "doc": "Code snippet for async function definition.",
@@ -64651,16 +65134,6 @@
       "label": "augroup ... autocmd block",
       "matches": {
         "au": true
-      }
-    },
-    "790ea81a-a83b-3da2-a9d9-e2bb6060501b": {
-      "content": "${1:FIELDNAME} = models.TimeField(auto_now_add=${2:True}, auto_now=${3:False})",
-      "doc": "Django model ``TimeField``",
-      "filetype": "models",
-      "grammar": "lsp",
-      "label": "Models TimeField",
-      "matches": {
-        "mtime": true
       }
     },
     "791038f9-af86-3bdc-928c-bd81ad54355a": {
@@ -65145,6 +65618,16 @@
         "ip": true
       }
     },
+    "79eec619-4ee2-3c76-a6d1-31d42062f8f6": {
+      "content": "{% regroup $1 by  as  %}",
+      "doc": "regroup tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "regroup",
+      "matches": {
+        "regroup": true
+      }
+    },
     "79ef64ff-ab40-36f1-ba53-570efd7888b8": {
       "content": "{%- continue -%}",
       "doc": "Iteration tag: continue",
@@ -65213,6 +65696,16 @@
       "label": "",
       "matches": {
         "pos:a": true
+      }
+    },
+    "7a133b46-2722-3578-b0c7-707be04304b2": {
+      "content": "${1:FIELDNAME} = models.USStateField($2)",
+      "doc": "USStateField (musstate).\n\n*external package: django-localflavor*",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "musstate",
+      "matches": {
+        "musstate": true
       }
     },
     "7a134add-8a8a-352f-8fd2-eed5652bb3b8": {
@@ -65293,6 +65786,16 @@
       "label": "lodash-defaultto",
       "matches": {
         "lodash defaultto": true
+      }
+    },
+    "7a35241b-ec75-3a90-9bac-a165161aaedb": {
+      "content": "${1:FIELDNAME} = models.TimeField($2, auto_now=${4:False}, auto_now_add=${5:False})",
+      "doc": "TimeField (mtime).\n\nA time, represented in Python by a datetime.time instance.",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "mtime",
+      "matches": {
+        "mtime": true
       }
     },
     "7a40d1c8-ae21-342f-874d-bc2512b2d417": {
@@ -66007,6 +66510,16 @@
         "do": true
       }
     },
+    "7b5e6d12-0087-343a-be81-fa8d185c6918": {
+      "content": "${1:FIELDNAME} = forms.ModelChoiceField($2)",
+      "doc": "ModelChoiceField (fmochoice)",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "fmochoice",
+      "matches": {
+        "fmochoice": true
+      }
+    },
     "7b61551b-f468-3898-88e8-503e00b7c8b8": {
       "content": "std::unordered_multimap<${1:Key}, ${2:T}> ${3};",
       "doc": "",
@@ -66257,6 +66770,16 @@
         "usesecure": true
       }
     },
+    "7be1436f-d9f6-3ecf-bff7-e4dfb50d8343": {
+      "content": "${1:FIELDNAME} = models.SlugField($2)",
+      "doc": "SlugField (mslug).\n\nA slug is a short label for something, containing only letters, numbers, underscores or hyphens. They’re generally used in URLs.",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "mslug",
+      "matches": {
+        "mslug": true
+      }
+    },
     "7be32bde-4b05-3411-ba3a-304aeaaff7bf": {
       "content": "Url:templatePath();",
       "doc": "",
@@ -66265,6 +66788,16 @@
       "label": "",
       "matches": {
         "sm_url_templatepath": true
+      }
+    },
+    "7bf01a3b-8c7e-3029-93a8-805678f8445c": {
+      "content": "admin.site.register($1, $1Admin)",
+      "doc": "register the model class providing a ModelAdmin description",
+      "filetype": "admin",
+      "grammar": "lsp",
+      "label": "registermadmin",
+      "matches": {
+        "registermadmin": true
       }
     },
     "7bf0f0fa-31d3-39e7-80e5-aea3ae395d7b": {
@@ -66702,6 +67235,16 @@
         "nl": true
       }
     },
+    "7ca17dbf-df36-3aa3-a125-f3353c48791e": {
+      "content": "${1:FIELDNAME} = SplitArrayField()",
+      "doc": "SplitArrayField (fsplitarray).\n\n*PostgreSQL specific form fields*.",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "fsplitarray",
+      "matches": {
+        "fsplitarray": true
+      }
+    },
     "7ca4e8fa-82dc-397f-99da-29e0ab4f2861": {
       "content": "beforeEach(() => {\n\t$0\n});",
       "doc": "",
@@ -66740,6 +67283,16 @@
       "label": "",
       "matches": {
         "con": true
+      }
+    },
+    "7cb16597-de7f-3ccb-807e-b9697d25d334": {
+      "content": "{% autoescape ${off} %}\n  \n{% autoescape %}",
+      "doc": "autoescape tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "autoescape",
+      "matches": {
+        "autoescape": true
       }
     },
     "7cb269aa-e5d6-35cc-8700-48214759b4a5": {
@@ -66965,6 +67518,16 @@
         "f": true
       }
     },
+    "7d0a6ce2-3cd7-3f9f-a9e1-4488e3b5ad54": {
+      "content": "from .managers import $1QuerySet",
+      "doc": "",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "fmai",
+      "matches": {
+        "fmai": true
+      }
+    },
     "7d11cdf2-a31f-3d1d-ba7f-026170b96a1d": {
       "content": "| round: ${round:0}",
       "doc": "Math filter: round",
@@ -67135,16 +67698,6 @@
         "style": true
       }
     },
-    "7d6cdcfe-3700-354c-b948-3e4f1a6cae9f": {
-      "content": "${1:FieldName} = models.CharField(max_length=${2:32})",
-      "doc": "Django model ``CharField``",
-      "filetype": "models",
-      "grammar": "lsp",
-      "label": "Models CharField",
-      "matches": {
-        "mchar": true
-      }
-    },
     "7d6e26e1-8c5a-378f-938c-07c306a5e3f2": {
       "content": "round(precision=${1:0}, method=${2:'common|ceil|floor'})",
       "doc": "",
@@ -67163,16 +67716,6 @@
       "label": "#include<iostream> int main...",
       "matches": {
         "helloworld": true
-      }
-    },
-    "7d7189a5-1b35-3332-99f0-1ad22eff0938": {
-      "content": "class ${1:ModelName}(models.Model):\n\t# Define $1 fields here\n\t${2}\n\n\tclass Meta:\n\t\tordering = [\"${3:-pk}\"]\n\t\tverbose_name = \"${4:$1}\"\n\t\tverbose_name_plural = \"${5:$1s}\"\n\n\tdef __str__(self):\n\t\treturn ${6:super().__str__()}\n\n\tdef save(self, *args, **kwargs):\n\t\treturn ${7:super().save(*args, **kwargs)}\n\n\tdef get_absolute_url(self):\n\t\treturn reverse('${8:view_or_url_name}', kwargs={${9:'pk'}: ${10: self.pk}})\n\n\t# Define $1 properties here\n\t${0}",
-      "doc": "Django Full Model with properties and attributes",
-      "filetype": "models",
-      "grammar": "lsp",
-      "label": "Django Full Model",
-      "matches": {
-        "model": true
       }
     },
     "7d726743-e975-3551-b503-9600952a4ef5": {
@@ -67936,6 +68479,16 @@
       "label": "console.info",
       "matches": {
         "ci": true
+      }
+    },
+    "7ee3f071-09e5-3700-b679-8249b9c70fca": {
+      "content": "${1:FIELDNAME} = serializers.DictField(child=${2})",
+      "doc": "Django-rest Serializers ``DictField``",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF DictField",
+      "matches": {
+        "sdict": true
       }
     },
     "7ee63185-f77e-3929-901a-72413add38ea": {
@@ -68853,6 +69406,16 @@
         "parent": true
       }
     },
+    "80ab6579-1e41-3901-acd5-d4fa722b76a9": {
+      "content": "${1:FIELDNAME} = forms.SplitDateTimeField($2)",
+      "doc": "SplitDateTimeField (fsdatetime)",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "fsdatetime",
+      "matches": {
+        "fsdatetime": true
+      }
+    },
     "80ae41c7-add5-35eb-b7ee-ca4c5100bb06": {
       "content": "{% endfor %}$0",
       "doc": "endfor",
@@ -69324,6 +69887,16 @@
         "fem": true
       }
     },
+    "817f526b-65f7-35c7-9f3e-ad51ed36f672": {
+      "content": "{% include \"$1\" %}",
+      "doc": "include tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "inc",
+      "matches": {
+        "inc": true
+      }
+    },
     "8180cb19-ab79-35d2-8f8a-d16dd06cffcc": {
       "content": "word-break: normal;",
       "doc": "",
@@ -69513,6 +70086,16 @@
       "label": "",
       "matches": {
         "ci_session_set_userdata": true
+      }
+    },
+    "81c3e9ba-c51d-3590-9f9c-935ba4a8528d": {
+      "content": "${1:FIELDNAME} = serializers.DateTimeField(${2})",
+      "doc": "Django-rest Serializers ``DateTimeField``",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF DateTimeField",
+      "matches": {
+        "sdatetime": true
       }
     },
     "81cbedac-c6e9-320c-90d3-27957c81c2df": {
@@ -70040,16 +70623,6 @@
         "uss": true
       }
     },
-    "82b88bbc-9a4d-3585-ad6a-16c75094a629": {
-      "content": "${1:FIELDNAME} = forms.IntegerField(${2})",
-      "doc": "Django forms ``IntegerField``",
-      "filetype": "forms",
-      "grammar": "lsp",
-      "label": "Forms IntegerField",
-      "matches": {
-        "fint": true
-      }
-    },
     "82b890de-658e-3aa7-a8ce-ba1ac741114c": {
       "content": "PropTypes.objectOf(PropTypes.shape($0)),",
       "doc": "An object whose keys are known ahead of time",
@@ -70240,16 +70813,6 @@
       "label": "Connect",
       "matches": {
         "con": true
-      }
-    },
-    "82ffef07-a507-39ad-85f6-455b11f96735": {
-      "content": "${1:FIELDNAME} = models.IntegerField(${2})",
-      "doc": "Django model ``IntegerField``",
-      "filetype": "models",
-      "grammar": "lsp",
-      "label": "Models IntegerField",
-      "matches": {
-        "mint": true
       }
     },
     "83036af6-756a-3069-bdbd-f70535ed050b": {
@@ -70475,6 +71038,16 @@
         "te:a": true
       }
     },
+    "83538cdb-c97a-3166-8634-b0aef1427b6d": {
+      "content": "def get_context_data(self, **kwargs):\r\n    context = super(${1:CLASS_NAME}, self).get_context_data(**kwargs)\r\n    return context",
+      "doc": "",
+      "filetype": "views",
+      "grammar": "lsp",
+      "label": "context",
+      "matches": {
+        "get_context_data": true
+      }
+    },
     "835df1b7-e5c7-399f-8570-a118f61459d8": {
       "content": "-include_lib(\"${1:lib}/include/${1}.hrl\").${2}",
       "doc": "",
@@ -70513,6 +71086,16 @@
       "label": "",
       "matches": {
         "bdt+": true
+      }
+    },
+    "837b3c77-5c2f-3c86-b79d-5b518f66dbdf": {
+      "content": "${1:FIELDNAME} = forms.UUIDField($2, required=${3:False})",
+      "doc": "UUIDField (fuuid)",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "fuuid",
+      "matches": {
+        "fuuid": true
       }
     },
     "838d7138-8361-376b-ac41-c418adab6166": {
@@ -70910,16 +71493,6 @@
         "pl": true
       }
     },
-    "842b7138-967d-33a8-9037-2461e0072b65": {
-      "content": "![${1:alt}](http://${2:link})$0",
-      "doc": "Insert image",
-      "filetype": "rmarkdown",
-      "grammar": "lsp",
-      "label": "Insert image",
-      "matches": {
-        "image": true
-      }
-    },
     "843533cc-cc5e-3619-a7aa-860b087441ce": {
       "content": "margin: ${1:0} ${2:0};${0}",
       "doc": "",
@@ -71078,6 +71651,16 @@
       "label": "plain",
       "matches": {
         "apply-templates": true
+      }
+    },
+    "846d82ed-82f7-3c47-aa70-f7e6c5b6b50c": {
+      "content": "${1:FIELDNAME} = serializers.IPAddressField(${2})",
+      "doc": "Django-rest Serializers ``IPAddressField``",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF IPAddressField",
+      "matches": {
+        "sip": true
       }
     },
     "8474998f-9538-36b8-967b-c72866a90c5d": {
@@ -72130,6 +72713,16 @@
         "psubi": true
       }
     },
+    "8677d036-f52c-3ded-a159-991e64eab5c5": {
+      "content": "class ${1}Inline(admin.StackedInline):\n\t'''Stacked Inline View for ${1}'''\n\n\tmodel = ${2:${1}}\n\tmin_num = ${3:3}\n\tmax_num = ${4:20}\n\textra = ${5:1}\n\traw_id_fields = (${6},)",
+      "doc": "Stacked Inline",
+      "filetype": "admin",
+      "grammar": "lsp",
+      "label": "stackedinline",
+      "matches": {
+        "stackedinline": true
+      }
+    },
     "867a11d1-0b0b-3ff4-90ca-a96b1e0b33f3": {
       "content": "if err != nil {\n\treturn err\n}\n${0}",
       "doc": "",
@@ -72432,16 +73025,6 @@
       "label": "unregisterModule",
       "matches": {
         "unregisterModule": true
-      }
-    },
-    "86eee93a-fb6f-3311-9316-68ce44787335": {
-      "content": "class ${1:ModelName}TemplateView(generic.TemplateView):\n\ttemplate_name = \"${2:$1/$1_list.html}\"\n\n${3}",
-      "doc": "Django CBV ``TemplateView``",
-      "filetype": "views",
-      "grammar": "lsp",
-      "label": "Django TemplateView",
-      "matches": {
-        "templateview": true
       }
     },
     "86fbd509-1584-3af8-a8cc-365a3a4b010f": {
@@ -73263,6 +73846,16 @@
         "lodash tosafeinteger": true
       }
     },
+    "88855fc7-c930-32cb-9bb7-7b3551e4da18": {
+      "content": "${1:FIELDNAME} = models.ImageField($2, upload_to=${3:None}, height_field=${4:None}, width_field=${5:None}, max_length=${5:100})",
+      "doc": "ImageField (mimg).\n\nInherits all attributes and methods from FileField, but also validates that the uploaded object is a valid image.",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "mimg",
+      "matches": {
+        "mimg": true
+      }
+    },
     "88858510-1810-3132-aa14-58a499434787": {
       "content": "assert_redirected_to ${2:${12:parent}_${13:child}_path(${14:@}${15:$12}, ${16:@}${17:$13})}",
       "doc": "",
@@ -73401,6 +73994,16 @@
       "label": "",
       "matches": {
         "gcg": true
+      }
+    },
+    "88b412ad-1ea6-3b3e-9523-8091c7f21e29": {
+      "content": "@register.filter\ndef $1(value):\n\treturn value$2",
+      "doc": "",
+      "filetype": "tags",
+      "grammar": "lsp",
+      "label": "register_filter",
+      "matches": {
+        "register_filter": true
       }
     },
     "88b6afdd-3abd-300f-9ca1-3fbd2fbd1784": {
@@ -73853,6 +74456,16 @@
       "label": "",
       "matches": {
         "p:0": true
+      }
+    },
+    "899b9881-d9fc-3780-9eca-b851a68b117b": {
+      "content": "${1:FIELDNAME} = serializers.PrimaryKeyRelatedField(${2})",
+      "doc": "Django-rest Serializers ``PrimaryKeyRelatedField``",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF PrimaryKeyRelatedField",
+      "matches": {
+        "spkr": true
       }
     },
     "899d96fc-70db-3f20-b6a9-7eb1ebcd1772": {
@@ -74336,16 +74949,6 @@
         "rst": true
       }
     },
-    "8a4e2179-76b0-3bf0-a6ff-bcc528ecbb5a": {
-      "content": "class ${1:ModelName}FormView(generic.FormView):\n\tform_class = ${2:forms.$1Form}\n\ttemplate_name = \"${3}\"",
-      "doc": "Django CBV ``FormView``",
-      "filetype": "views",
-      "grammar": "lsp",
-      "label": "Django FormView",
-      "matches": {
-        "formview": true
-      }
-    },
     "8a4e8202-9ae1-3a2a-9ce5-b54472d1925b": {
       "content": "${1:moduleName} = angular.module('$1', [${2:moduleDeps}], (${3:configDeps}) ->\n\t${4}\n)",
       "doc": "",
@@ -74766,16 +75369,6 @@
         "ps:s": true
       }
     },
-    "8b154913-31c5-3aad-abd2-384ad110065a": {
-      "content": "def dispatch(self, request, *args, **kwargs):\n\treturn super().dispatch(request, *args, **kwargs)",
-      "doc": "Django Views ``dispatch`` method",
-      "filetype": "views",
-      "grammar": "lsp",
-      "label": "Django Views dispatch",
-      "matches": {
-        "dispatch": true
-      }
-    },
     "8b17e94f-2dba-32c4-a136-75bfbe62795c": {
       "content": "try:\n\t${1:pass}\nexcept${2: ${3:Exception} as ${4:e}}:\n\t${5:raise}\nelse:\n\t${6:pass}\nfinally:\n\t${7:pass}$0",
       "doc": "Code Snippet for a try/except/finally with else statement.",
@@ -74864,6 +75457,16 @@
       "label": "k8s CronJob",
       "matches": {
         "k-cronjob": true
+      }
+    },
+    "8b3f9692-f835-394b-88d8-94c15c79de18": {
+      "content": "from .forms import $1",
+      "doc": "",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "ffi",
+      "matches": {
+        "ffi": true
       }
     },
     "8b3feadd-92d8-33c6-8345-dc7a41216c25": {
@@ -75075,6 +75678,16 @@
       "label": "",
       "matches": {
         "tcts": true
+      }
+    },
+    "8bae2773-6402-3289-8973-f823d5e837b0": {
+      "content": "filters: {\n\t${1:fnName}: function(${2:value}) {\n\t\treturn;\n\t}\n},",
+      "doc": "",
+      "filetype": "vue",
+      "grammar": "snu",
+      "label": "",
+      "matches": {
+        "vfilter": true
       }
     },
     "8bbad73d-04c2-393b-8b82-12f40cbe15fb": {
@@ -75736,6 +76349,16 @@
         "bor": true
       }
     },
+    "8ce0de87-9a06-3f7d-a534-6cf8a31f5288": {
+      "content": "${1:FIELDNAME} = models.OneToOneField(${2:OTHERMODEL}, on_delete=models.${3|CASCADE,PROTECT,SET_NULL,SET_DEFAULT,SET(),DO_NOTHING|})",
+      "doc": "OneToOneField (o2o).\n\nA one-to-one relationship.\n\non_delete will become a required argument in Django 2.0. In older versions it defaults to CASCADE.",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "o2o",
+      "matches": {
+        "o2o": true
+      }
+    },
     "8cf3198f-5037-3b1f-81f3-c5a37ae7036d": {
       "content": "export const ${1:constantName} = '${1:constantName}'",
       "doc": "",
@@ -76289,6 +76912,16 @@
         "wh": true
       }
     },
+    "8ddce5c6-7509-3427-bb40-f86d8f57faee": {
+      "content": "{% ifequal $1 %}\n  \n{% endifequal %}",
+      "doc": "ifequal tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "ifeq",
+      "matches": {
+        "ifeq": true
+      }
+    },
     "8de6224b-e376-3e20-8fd5-8cfbdacccd34": {
       "content": "border-left-color: ${1};${2}",
       "doc": "",
@@ -76448,16 +77081,6 @@
       "label": "",
       "matches": {
         "sort": true
-      }
-    },
-    "8e30d6a9-a2ef-3ee7-a8da-1bf76557f4fb": {
-      "content": "class ${1:ModelName}Inline(admin.StackedInline):\n\tmodel = ${2:$1}\n\tmin_num = ${4:0}\n\tmax_num = ${4:8}\n\textra = ${5:1}",
-      "doc": "Django StackedInline for ``admin.py``",
-      "filetype": "views",
-      "grammar": "lsp",
-      "label": "Django AdminStackedInline",
-      "matches": {
-        "stackedinline": true
       }
     },
     "8e338c2b-247b-305a-b262-29046122a04c": {
@@ -77383,6 +78006,16 @@
         "sid:": true
       }
     },
+    "8ff44fd3-f243-3f69-8563-dd5183dca69e": {
+      "content": "${1:FIELDNAME} = models.BinaryField($2)",
+      "doc": "BinaryField (mbinary).\n\nA field to store raw binary data.",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "mbinary",
+      "matches": {
+        "mbinary": true
+      }
+    },
     "8ff5ca2f-5908-3148-b4ee-3a899cfbe18f": {
       "content": "<template>\n\t<div>\n\n\t</div>\n</template>\n\n<script lang=\"ts\">\n\timport Vue from 'vue'\n\n\texport default Vue.extend({\n\t\t${0}\n\t})\n</script>\n\n<style scoped>\n\n</style>",
       "doc": "Base for Vue File with Typescript",
@@ -77625,6 +78258,16 @@
         "_header": true
       }
     },
+    "9074514e-e25d-3e61-9a7c-c98e00ff5f8c": {
+      "content": "from django.contrib.admin import AdminSite",
+      "doc": "from ... import AdminSite",
+      "filetype": "admin",
+      "grammar": "lsp",
+      "label": "iadminsite",
+      "matches": {
+        "iadminsite": true
+      }
+    },
     "907529d9-396d-36c8-a0fc-6e71f41c645d": {
       "content": "{%- include_relative '${file:}' -%}",
       "doc": "Tag: include relative",
@@ -77855,16 +78498,6 @@
         "top": true
       }
     },
-    "90f9e6ca-a0a9-326b-8111-e8f2517fe1a5": {
-      "content": "${1:FIELDNAME} = forms.ComboField(${2})",
-      "doc": "Django forms ``ComboField``",
-      "filetype": "forms",
-      "grammar": "lsp",
-      "label": "Forms ComboField",
-      "matches": {
-        "fcombo": true
-      }
-    },
     "90fbc6a0-1190-38b5-8cc9-ce3e8fb10e02": {
       "content": "<del>${1:TARGET}</del>${2}",
       "doc": "",
@@ -77943,16 +78576,6 @@
       "label": "Vue Nuxt Routing Link",
       "matches": {
         "vnuxtl": true
-      }
-    },
-    "911cdd75-d224-3cdc-a4e2-d70faf0dfff8": {
-      "content": "${1:FIELDNAME} = forms.FilePathField(${2})",
-      "doc": "Django forms ``FilePathField``",
-      "filetype": "forms",
-      "grammar": "lsp",
-      "label": "Forms FilePathField",
-      "matches": {
-        "ffilepath": true
       }
     },
     "911ea86c-5745-33b9-b5e1-d21c909b6da3": {
@@ -78859,16 +79482,6 @@
         "ptoo": true
       }
     },
-    "92871b93-39d1-3357-a9ec-c71a83fbeb38": {
-      "content": "${1:FIELDNAME} = forms.GenericIPAddressField(${2})",
-      "doc": "Django forms ``GenericIPAddressField``",
-      "filetype": "forms",
-      "grammar": "lsp",
-      "label": "Forms GenericIPAddressField",
-      "matches": {
-        "fgip": true
-      }
-    },
     "92937a7c-dd79-35ec-bedf-b73bdd8abe21": {
       "content": "async function (${1:arguments}) {\n\t${0}\n}",
       "doc": "",
@@ -79624,16 +80237,6 @@
         "rf": true
       }
     },
-    "93ebdcea-7272-3957-a52b-4133573044f3": {
-      "content": "from django.urls import path\nfrom . import views as v\n\n\napp_name = ${1:AppName}\nurlpatterns = [\n\t# TODO: Define $1 URLs here\n\t${0}\n]",
-      "doc": "Django File-Template Sinppet For ``URL`` File",
-      "filetype": "filetemplates",
-      "grammar": "lsp",
-      "label": "Django URLFile Template",
-      "matches": {
-        "fturl": true
-      }
-    },
     "93ec2369-5eaa-34ef-9952-6534a0400bcb": {
       "content": "# Cookbook File resource\ncookbook_file ${1:\"/path/to/file\"} do # The remote path where the file will reside\n\t${2:#}backup ${3} # How many backups of this file to keep. Set to false  if you want no backups\n\t${4:#}group ${5} # The group owner of the file (string or id)\n\t${6:#}mode ${7} # The octal mode of the file - e.g. 0755\n\t${8:#}owner ${9} # The owner for the file\n\t${10:#}source ${11} # The basename of the source file\n\t${12:#}cookbook ${13} # The cookbook this file is stored in\n\n\t${14:#}${15: action :create} # Create this file (Default)\n\t${16:#}${17: action :create_if_missing} # Create only if it doesn't exist yet\n\t${18:#}${0: action :delete} # Delete this file\nend",
       "doc": "",
@@ -79682,16 +80285,6 @@
       "label": "Vue MapMutations",
       "matches": {
         "vmapmutations": true
-      }
-    },
-    "9405dcc0-ee11-350f-bb83-b4c3136b7b8f": {
-      "content": "def get_form_kwargs(self, form):\n\tkwargs = super().get_form_kwargs()\n\treturn kwargs",
-      "doc": "Django Views ``get_form_kwargs`` method",
-      "filetype": "views",
-      "grammar": "lsp",
-      "label": "Django Views get_form_kwargs",
-      "matches": {
-        "getformkwargs": true
       }
     },
     "940a5752-fab6-37f5-8020-19d32c950075": {
@@ -80259,16 +80852,6 @@
         "ctimestamp": true
       }
     },
-    "9534642c-8a43-3c65-8b39-91bc7aa7ab65": {
-      "content": "from django import forms",
-      "doc": "Import Django ``forms``",
-      "filetype": "imports",
-      "grammar": "lsp",
-      "label": "Import forms",
-      "matches": {
-        "di-forms": true
-      }
-    },
     "953b68c0-eab5-39b4-b3e2-fec3855eb2d8": {
       "content": "const ${1:memoizedCallback} = useMemo(() => ${2}(${3}), [$3]);",
       "doc": "",
@@ -80760,16 +81343,6 @@
         "tcd": true
       }
     },
-    "96193b4e-1469-327a-a351-e9e4f1f6871c": {
-      "content": "${1:FIELDNAME} = forms.EmailField(${2})",
-      "doc": "Django forms ``EmailField``",
-      "filetype": "forms",
-      "grammar": "lsp",
-      "label": "Forms EmailField",
-      "matches": {
-        "femail": true
-      }
-    },
     "961dcf69-98ba-3d44-b757-814cbc1601e7": {
       "content": "import (\n\t\"${1:package}\"\n)",
       "doc": "Snippet for a import block",
@@ -80889,6 +81462,16 @@
       "label": "useImperativeHandle",
       "matches": {
         "usei": true
+      }
+    },
+    "9671e9e7-bf4b-3f45-a602-15a1f189d161": {
+      "content": "{% csrf_token %}",
+      "doc": "csrf token django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "csrf",
+      "matches": {
+        "csrf": true
       }
     },
     "96727f9f-1755-3cfd-bc66-f93af8fb93eb": {
@@ -81142,16 +81725,6 @@
         "sort": true
       }
     },
-    "96d9a8ad-cb19-3871-a01d-1f89823e1385": {
-      "content": "${1:FIELDNAME} = models.TextField(${2})",
-      "doc": "Django model ``TextField``",
-      "filetype": "models",
-      "grammar": "lsp",
-      "label": "Models TextField",
-      "matches": {
-        "mtext": true
-      }
-    },
     "96dc2a6a-a1fb-32b3-8b92-9338b1c5916e": {
       "content": "max-height: ${0:1px};",
       "doc": "",
@@ -81321,6 +81894,16 @@
       "matches": {
         "animate-presence": true,
         "framer-motion import animate-presence": true
+      }
+    },
+    "971100b9-b96b-3f6b-8a81-b7f4777b228d": {
+      "content": "${1:FIELDNAME} = serializers.HyperlinkedRelatedField(${2})",
+      "doc": "Django-rest Serializers ``HyperlinkedRelatedField``",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF HyperlinkedRelatedField",
+      "matches": {
+        "shyperlinkrelated": true
       }
     },
     "9711dd39-237c-34c5-a276-28e378adb896": {
@@ -81613,6 +82196,16 @@
         "case": true
       }
     },
+    "97d22131-7715-392a-b236-a2ad00ec1637": {
+      "content": "${1:FIELDNAME} = forms.DateField($2, required=${3:False})",
+      "doc": "DateField (fdate)",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "fdate",
+      "matches": {
+        "fdate": true
+      }
+    },
     "97d53b9c-166e-3cdb-bd1d-dcf9d3359ab3": {
       "content": "let ${1:x} = ${2:undefined}$0",
       "doc": "let statement",
@@ -81822,6 +82415,16 @@
       "label": "constants with iota",
       "matches": {
         "co": true
+      }
+    },
+    "9837ec06-1dd3-3c88-aacc-4a6a68a83c6a": {
+      "content": "{% for $1 in  %}\n  \n{% endfor %}",
+      "doc": "for tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "for",
+      "matches": {
+        "for": true
       }
     },
     "983bf3d2-2697-3af4-98a7-cfde20171056": {
@@ -82295,16 +82898,6 @@
         "prop": true
       }
     },
-    "990b0c89-5094-397c-ae1b-356c81ccedf7": {
-      "content": "${1:FIELDNAME} = forms.CharField(${2})",
-      "doc": "Django forms ``CharField``",
-      "filetype": "forms",
-      "grammar": "lsp",
-      "label": "Forms CharField",
-      "matches": {
-        "fchar": true
-      }
-    },
     "990dbea7-9443-3d22-b6f1-83d81255f228": {
       "content": "thread_local!(static ${1:STATIC}: ${2:Type} = ${4:init});",
       "doc": "thread_local!(static …: … = …);",
@@ -82474,6 +83067,16 @@
       "label": "",
       "matches": {
         "perspective": true
+      }
+    },
+    "99452a4d-5385-3a15-a675-6d26b74cf6ba": {
+      "content": "@register.simple_tag(takes_context=True)\ndef $1(context):\n\trequest = context.get('request')\n\treturn ${2:'It Works!'}",
+      "doc": "",
+      "filetype": "tags",
+      "grammar": "lsp",
+      "label": "register_simple_tag",
+      "matches": {
+        "register_simple_tag": true
       }
     },
     "9946b719-c2bb-3b58-a2c2-089d2eaa347a": {
@@ -82960,6 +83563,16 @@
         "matcho": true
       }
     },
+    "9a233cf6-83d2-3c8a-bdee-1a5af815335e": {
+      "content": "mounted() {\n\tconsole.log('mounted');\n},",
+      "doc": "",
+      "filetype": "vue",
+      "grammar": "snu",
+      "label": "",
+      "matches": {
+        "vmounted": true
+      }
+    },
     "9a37cd08-f389-3a8b-8b7b-f30169edd360": {
       "content": "require_once '${1:file}';",
       "doc": "",
@@ -83018,6 +83631,16 @@
       "label": "Angular CanDeactivate Guard",
       "matches": {
         "a-guard-can-deactivate": true
+      }
+    },
+    "9a5f64a1-6142-346f-98dc-4133560e404c": {
+      "content": "${1:FIELDNAME} = models.FileField($2, upload_to=${3:None}, max_length=${4:100})",
+      "doc": "FileField (mfile).\n\nA file-upload field.",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "mfile",
+      "matches": {
+        "mfile": true
       }
     },
     "9a60d75e-0f98-3895-85b9-4eeb7c326959": {
@@ -83997,6 +84620,16 @@
         "if": true
       }
     },
+    "9c1dcd27-7e2c-373f-80e1-73f603875cd6": {
+      "content": "${1:FIELDNAME} = models.BooleanField($2)",
+      "doc": "BooleanField (mbool).\n\nA true/false field.",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "mbool",
+      "matches": {
+        "mbool": true
+      }
+    },
     "9c1edb99-a3ec-3bdd-86af-d1159339ab6a": {
       "content": "functor (${1:Arg} : ${2:ARG}) -> ${3:(* BODY *)}",
       "doc": "",
@@ -84085,16 +84718,6 @@
       "label": "Migration Create Column (mcc)",
       "matches": {
         "mcol": true
-      }
-    },
-    "9c3edf7c-dd1e-3953-88da-821c360de867": {
-      "content": "${1:FIELDNAME} = models.FloatField(${2})",
-      "doc": "Django model ``FloatField``",
-      "filetype": "models",
-      "grammar": "lsp",
-      "label": "Models FloatField",
-      "matches": {
-        "mfloat": true
       }
     },
     "9c419003-991b-31c6-9da7-136055780d3c": {
@@ -85073,6 +85696,16 @@
         "trycatch": true
       }
     },
+    "9de0c069-3db5-3b16-98d4-14f32ac01cd2": {
+      "content": "@admin.register(${1})\nclass ${1}Admin(admin.ModelAdmin):\n\t'''Admin View for ${1}'''\n\n\tlist_display = ('${2}',)\n\tlist_filter = ('${3}',)\n\tinlines = [\n\t\t${4}Inline,\n\t]\n\traw_id_fields = ('${5}',)\n\treadonly_fields = ('${6}',)\n\tsearch_fields = ('${7}',)\n\tdate_hierarchy = '${8}'\n\tordering = ('${9}',)",
+      "doc": "Model Admin View",
+      "filetype": "admin",
+      "grammar": "lsp",
+      "label": "adminview",
+      "matches": {
+        "adminview": true
+      }
+    },
     "9de0f5bb-4cfd-3003-a0db-b639ec235684": {
       "content": "attr_accessor :${0:attr_names}",
       "doc": "",
@@ -85638,16 +86271,6 @@
         "base reduce": true
       }
     },
-    "9ec022c7-56dc-374e-8a9a-8b1f6439173e": {
-      "content": "${1:FIELDNAME} = forms.UUIDField(${2})",
-      "doc": "Django forms ``UUIDField``",
-      "filetype": "forms",
-      "grammar": "lsp",
-      "label": "Forms UUIDField",
-      "matches": {
-        "fuuid": true
-      }
-    },
     "9ec2ed1f-6b19-3b67-881d-7b13d800744d": {
       "content": "place-content stretch",
       "doc": "",
@@ -85656,6 +86279,16 @@
       "label": "",
       "matches": {
         "pc:st": true
+      }
+    },
+    "9ec33666-7c14-311c-b10d-d0d124ca696f": {
+      "content": "${1:FIELDNAME} = serializers.SerializerMethodField(${2})\ndef get_$1(self, object):\n\treturn",
+      "doc": "Django-rest Serializers ``SerializerMethodField``",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF SerializerMethodField",
+      "matches": {
+        "ssmethod": true
       }
     },
     "9ec4ea8b-9e23-3c51-ab5a-6f01395a292e": {
@@ -85716,16 +86349,6 @@
       "label": "maxHeight",
       "matches": {
         "max": true
-      }
-    },
-    "9ecfb248-901e-35be-a31b-991ee3cb938c": {
-      "content": "${1:FIELDNAME} = forms.TimeField(${2})",
-      "doc": "Django forms ``TimeField``",
-      "filetype": "forms",
-      "grammar": "lsp",
-      "label": "Forms TimeField",
-      "matches": {
-        "ftime": true
       }
     },
     "9edd64c1-acfb-3fb7-810f-d7d309f627e3": {
@@ -85999,6 +86622,16 @@
         "ps": true
       }
     },
+    "9f5cec32-449b-3935-9907-1e8a6e5c50a3": {
+      "content": "{% widthratio ${this_value} max_value 100 %}",
+      "doc": "widthratio tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "widthratio",
+      "matches": {
+        "widthratio": true
+      }
+    },
     "9f5ff0ac-d63f-3070-bcb5-8345e421961f": {
       "content": "border-left ${0}",
       "doc": "",
@@ -86242,6 +86875,16 @@
         "switch": true
       }
     },
+    "9fd0fce0-fcc7-38c6-ad49-34bfc9b1337b": {
+      "content": "def get_$1(context):\n\trequest = context.get('request')\n\t$1 = ${2:[]}\n\treturn ${3:$1}",
+      "doc": "",
+      "filetype": "tags",
+      "grammar": "lsp",
+      "label": "register_assignment_tag",
+      "matches": {
+        "register_assignment_tag": true
+      }
+    },
     "9fd12f9e-d2e1-3581-8c6c-7a0f8f621ab8": {
       "content": "| money",
       "doc": "",
@@ -86414,6 +87057,16 @@
         "command": true
       }
     },
+    "a00d6b9d-9e0a-3477-8a80-a92b4c075d83": {
+      "content": "{{ MEDIA_URL }}",
+      "doc": "",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "mediaurl",
+      "matches": {
+        "mediaurl": true
+      }
+    },
     "a0193474-7d58-3f58-9dcc-7f9315e6f54b": {
       "content": "<img src=\"$1\"${2: alt=\"$3\"}/>",
       "doc": "",
@@ -86533,6 +87186,16 @@
       "label": "typescriptReactFunctionalExportComponent",
       "matches": {
         "tsrfce": true
+      }
+    },
+    "a04b912b-3243-36a4-918f-745256be5540": {
+      "content": "class ${1:MODEL_NAME}ListView(ListView):\r\n    model = ${1:MODEL_NAME}\r\n    template_name = \"${2:TEMPLATE_NAME}\"",
+      "doc": "",
+      "filetype": "views",
+      "grammar": "lsp",
+      "label": "listview",
+      "matches": {
+        "listview": true
       }
     },
     "a05359df-19d4-3057-ad0a-13e5919fb021": {
@@ -87561,6 +88224,16 @@
         "for": true
       }
     },
+    "a1d91776-2270-3fa6-a106-49e88b1fca06": {
+      "content": "${1:FIELDNAME} = DateTimeRangeField()",
+      "doc": "DateTimeRangeField (fdatetimerange).\n\n*PostgreSQL specific form fields*.",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "fdatetimerange",
+      "matches": {
+        "fdatetimerange": true
+      }
+    },
     "a1df6ba5-b1a9-302e-846c-ebe8b3de7eef": {
       "content": "div(ng-repeat='${1} in ${2}')",
       "doc": "",
@@ -87579,6 +88252,16 @@
       "label": "",
       "matches": {
         "dblclick": true
+      }
+    },
+    "a1e66000-2c62-31bf-81d5-d699df543836": {
+      "content": "${1:FIELDNAME} = forms.ImageField($2, required=${3:False})",
+      "doc": "ImageField (fimg)",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "fimg",
+      "matches": {
+        "fimg": true
       }
     },
     "a1e66c1a-0b12-3703-972b-ffaa53d23893": {
@@ -87753,6 +88436,16 @@
         "vmData": true
       }
     },
+    "a21b5532-8464-3a1e-b8ca-76bb76eb2f70": {
+      "content": "path('${1:ROUTE}/', ${2:VIEW}${3:.as_view()}, name='$4'),",
+      "doc": "path(route, view, kwargs=None, name=None)",
+      "filetype": "urls",
+      "grammar": "lsp",
+      "label": "path_inline",
+      "matches": {
+        "path_inline": true
+      }
+    },
     "a21d0e96-0613-3943-9233-c558ae9389ff": {
       "content": "mixed.label()",
       "doc": "mixed.label(label: string): Schema\n\nOverrides the key name which is used in error messages.",
@@ -87771,16 +88464,6 @@
       "label": "perf conventional commit",
       "matches": {
         "perf": true
-      }
-    },
-    "a2326def-6c45-353a-9343-d266bde3db54": {
-      "content": "${1:FIELDNAME} = models.URLField(verify_exists=${2:False})",
-      "doc": "Django model ``URLField``",
-      "filetype": "models",
-      "grammar": "lsp",
-      "label": "Models URLField",
-      "matches": {
-        "murl": true
       }
     },
     "a238a8e0-3f11-3047-8401-0255f509fbc1": {
@@ -87821,6 +88504,16 @@
       "label": "legend",
       "matches": {
         "legend": true
+      }
+    },
+    "a2463cb5-3277-3d22-a8c2-698e5acc5ab7": {
+      "content": "${1:FIELDNAME} = models.ManyToManyField(${2:OTHERMODEL})",
+      "doc": "ManyToManyField (m2m).\n\nA many-to-many relationship.",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "m2m",
+      "matches": {
+        "m2m": true
       }
     },
     "a2476ff8-cc1c-3c42-8ef0-ad12c54bfea7": {
@@ -87891,6 +88584,16 @@
       "label": "",
       "matches": {
         "docxf": true
+      }
+    },
+    "a25fc73d-b6de-3fc8-83b4-9fd2a07880c0": {
+      "content": "${1:FIELDNAME} = serializers.ListField(child=${2})",
+      "doc": "Django-rest Serializers ``ListField``",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF ListField",
+      "matches": {
+        "slist": true
       }
     },
     "a26a7a06-a620-3802-a1f5-fe02ef1a2aef": {
@@ -88435,6 +89138,16 @@
         "gcg": true
       }
     },
+    "a3a37cc1-de7e-3197-85ca-b6f36569fa41": {
+      "content": "${1:FIELDNAME} = serializers.CharField(${2})",
+      "doc": "Django-rest Serializers ``CharField``",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF CharField",
+      "matches": {
+        "schar": true
+      }
+    },
     "a3a915af-b4b4-3277-a392-85d370bd739c": {
       "content": "resize none",
       "doc": "",
@@ -88950,6 +89663,16 @@
       "label": "clamp",
       "matches": {
         "clamp": true
+      }
+    },
+    "a4958441-98e6-3ed6-8e2e-253c08ef7bb4": {
+      "content": "{% load $SELECTION$1_tags %}",
+      "doc": "",
+      "filetype": "tags",
+      "grammar": "lsp",
+      "label": "ltags",
+      "matches": {
+        "ltags": true
       }
     },
     "a4982ff4-526a-3bc8-a16e-7cdeb1751af4": {
@@ -89565,6 +90288,16 @@
         "module": true
       }
     },
+    "a5bde340-2725-3c5c-95ce-aaefa97c9150": {
+      "content": "${1:FIELDNAME} = forms.DateTimeField($2, required=${3:False})",
+      "doc": "DateTimeField (fdatetime)",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "fdatetime",
+      "matches": {
+        "fdatetime": true
+      }
+    },
     "a5bee595-109f-371f-ab7d-2ea4924d6b75": {
       "content": "scanf(\"${1}\", ${2});",
       "doc": "",
@@ -89746,6 +90479,16 @@
         "pb+&": true
       }
     },
+    "a60ba647-0f28-33bf-9a49-2c33d92380ee": {
+      "content": "class ${1:MODEL_NAME}DeleteView(DeleteView):\r\n    model = ${1:MODEL_NAME}\r\n    template_name = \"${2:TEMPLATE_NAME}\"",
+      "doc": "",
+      "filetype": "views",
+      "grammar": "lsp",
+      "label": "deleteview",
+      "matches": {
+        "deleteview": true
+      }
+    },
     "a6130dc9-31ca-3fa5-a305-c2f9f44ef7d8": {
       "content": "#if ${1:0}\n$0\n#endif /* $1 */",
       "doc": "Code snippet for #if",
@@ -89834,6 +90577,16 @@
       "label": "fjoin",
       "matches": {
         "fjoin": true
+      }
+    },
+    "a635ec04-7c5c-33d2-8e81-3a2597ba2919": {
+      "content": "${1:FIELDNAME} = models.NullBooleanField($2)",
+      "doc": "NullBooleanField (mnullbool).\n\nLike a BooleanField, but allows NULL as one of the options.",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "mnullbool",
+      "matches": {
+        "mnullbool": true
       }
     },
     "a6379806-c1cf-3887-aaea-592b16703d3f": {
@@ -89945,6 +90698,16 @@
       "label": "else if .. (eli)",
       "matches": {
         "eli": true
+      }
+    },
+    "a6714b80-577b-34e4-aef3-ded8e7ccf13c": {
+      "content": "${1:FIELDNAME} = serializers.IntegerField(${2})",
+      "doc": "Django-rest Serializers ``IntegerField``",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF IntegerField",
+      "matches": {
+        "sint": true
       }
     },
     "a6732dfe-ce07-3802-9ed1-37a0f158bd3f": {
@@ -91222,16 +91985,6 @@
         "warn": true
       }
     },
-    "a8c4e3cf-28e1-35d4-bd6e-dacbce703010": {
-      "content": "func Test${1} (${2:t *testing.T}) {\n  for i := 0; i < ${3:t.N}; i++ {\n    ${4}\n  }\n}",
-      "doc": "",
-      "filetype": "go",
-      "grammar": "snu",
-      "label": "func Test... (t *testing.T) { ... }",
-      "matches": {
-        "funcTest": true
-      }
-    },
     "a8c5a3e3-bfa1-320b-83d6-ae76a728e5b2": {
       "content": "new $1($2);",
       "doc": "",
@@ -91372,6 +92125,16 @@
       "label": "",
       "matches": {
         "em": true
+      }
+    },
+    "a8fd6eb0-8093-342c-8225-5eb940ca9651": {
+      "content": "${1:FIELDNAME} = serializers.DurationField(${2})",
+      "doc": "Django-rest Serializers ``DurationField``",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF DurationField",
+      "matches": {
+        "sduration": true
       }
     },
     "a8fe9cbc-edc6-3ad7-a53d-b06a272f4338": {
@@ -91603,6 +92366,16 @@
       "label": "",
       "matches": {
         "esc": true
+      }
+    },
+    "a9620db9-15a8-3f99-97fd-bc9dbd3b4cc4": {
+      "content": "from django.contrib import admin",
+      "doc": "from ... import admin",
+      "filetype": "admin",
+      "grammar": "lsp",
+      "label": "iadmin",
+      "matches": {
+        "iadmin": true
       }
     },
     "a962ca2e-d286-3034-b10d-6de061c9f4eb": {
@@ -91964,6 +92737,16 @@
       "label": "lodash-isempty",
       "matches": {
         "lodash isempty": true
+      }
+    },
+    "aa57f5ea-3a62-3fed-b852-a5a7ac02561e": {
+      "content": "${1:FIELDNAME} = forms.URLField($2, required=${3:False})",
+      "doc": "URLField (furl)",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "furl",
+      "matches": {
+        "furl": true
       }
     },
     "aa5b8d9f-9c4e-3514-9891-8874a18a22e4": {
@@ -92477,6 +93260,16 @@
       "label": "case",
       "matches": {
         "case": true
+      }
+    },
+    "ab3a91dc-6999-3874-b485-7104f36037ad": {
+      "content": "{{ block.super }}",
+      "doc": "Block super",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "super",
+      "matches": {
+        "super": true
       }
     },
     "ab444822-a797-3c62-96a8-6bc7e52d92f3": {
@@ -93644,6 +94437,16 @@
         "sscanf": true
       }
     },
+    "ad1fe2cc-54aa-36d8-bf4d-69353cbc4402": {
+      "content": "${1:FIELDNAME} = forms.MultiValueField($2)",
+      "doc": "MultiValueField (fmuval)",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "fmuval",
+      "matches": {
+        "fmuval": true
+      }
+    },
     "ad2123a7-4420-39d2-b05f-7d88df93dd97": {
       "content": "paddingTop: ${1},",
       "doc": "paddingTop",
@@ -93755,16 +94558,6 @@
         "modelform": true
       }
     },
-    "ad44ef14-15f6-3486-8db4-7e49cd1cd4e5": {
-      "content": "${0:Object} ${1:foo} = new ${0:Object}();",
-      "doc": "Create new Object",
-      "filetype": "java",
-      "grammar": "lsp",
-      "label": "newObject",
-      "matches": {
-        "new": true
-      }
-    },
     "ad4699f2-a036-3cfd-b541-5830a0c838b7": {
       "content": "expect.assertions($0);",
       "doc": "expects the test to make the indicated number of assertions (useful for async)",
@@ -93784,16 +94577,6 @@
       "label": "fscanf(file, \"...\", ...);",
       "matches": {
         "fscanf": true
-      }
-    },
-    "ad5a2af8-8330-33da-bc3b-f0b959e613da": {
-      "content": "class ${1:ModelName}DetailView(generic.DetailView):\n\tmodel = ${2:$1}\n\ttemplate_name = \"${3:$1/$1_detail.html}\"\n\n\tdef get_object(self):\n\t\treturn $1.objects.get(pk=${4:self.kwargs.get(\"pk\")})\n\n\tdef get_queryset(self):\n\t\treturn $1.objects.filter(${5})",
-      "doc": "Django CBV ``DetailView``",
-      "filetype": "views",
-      "grammar": "lsp",
-      "label": "Django DetailView",
-      "matches": {
-        "detailview": true
       }
     },
     "ad5fd397-e324-3ec2-ad21-3eb900d57520": {
@@ -93915,6 +94698,16 @@
       "label": "",
       "matches": {
         "h5.": true
+      }
+    },
+    "ad85fe9a-e288-3fa0-b476-74d9695d3126": {
+      "content": "class ${1:MODELNAME}(models.Model):\n\t\"\"\"${2:Model definition for $1}.\"\"\"\n\n\t${3:# TODO: Define fields here}\n\n\tclass Meta:\n\t\t\"\"\"Meta definition for $1.\"\"\"\n\n\t\tverbose_name = '$1'\n\t\tverbose_name_plural = '$1s'\n\n\tdef ${4|__str__,__unicode__|}(self):\n\t\t\"\"\"Unicode representation of $1.\"\"\"\n\t\t${7|pass,return '{}'.format(self. ) # TODO,return f'{self. }' # TODO|}\n\n\tdef save(self):\n\t\t\"\"\"Save method for $1.\"\"\"\n\t\tpass\n\n\tdef get_absolute_url(self):\n\t\t\"\"\"Return absolute url for $1.\"\"\"\n\t\treturn ('')\n\n\t${6:# TODO: Define custom methods here}",
+      "doc": "Model (full)",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "Model_full",
+      "matches": {
+        "Model_full": true
       }
     },
     "ad87011d-4489-3c8b-b891-0035882b86bf": {
@@ -95172,6 +95965,16 @@
         "d:tbr": true
       }
     },
+    "affe6bc9-fdd8-399c-aa79-1a05a94a5c02": {
+      "content": "{% extends \"$1\" %}",
+      "doc": "extends tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "ext",
+      "matches": {
+        "ext": true
+      }
+    },
     "b0049e89-ca73-3cac-9e7c-26130f3f15df": {
       "content": "| truncatewords: ${1:5}, '${2:...}'",
       "doc": "",
@@ -95455,16 +96258,6 @@
         "tw:s": true
       }
     },
-    "b09650c7-ef81-36c9-b753-13dcbcfc66ca": {
-      "content": "${1:FIELDNAME} = forms.ModelChoiceField(${2})",
-      "doc": "Django forms ``ModelChoiceField``",
-      "filetype": "forms",
-      "grammar": "lsp",
-      "label": "Forms ModelChoiceField",
-      "matches": {
-        "fmochoice": true
-      }
-    },
     "b0b10569-548d-302c-ac1b-7b495ee1c431": {
       "content": "echo CHtml::activeLabelEx(${1:model}, '${2:attribute}',array('${3:optionName}'=>${0:optionValue}));",
       "doc": "",
@@ -95473,6 +96266,16 @@
       "label": "",
       "matches": {
         "yhale": true
+      }
+    },
+    "b0b29fc0-aa67-3445-aaf5-a41f4535cbd4": {
+      "content": "${1:FIELDNAME} = forms.SlugField($2, allow_unicode=${3:False}, required=${4:False})",
+      "doc": "SlugField (fslug)",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "fslug",
+      "matches": {
+        "fslug": true
       }
     },
     "b0b4d338-5140-352a-a676-ba6bb8d29f5d": {
@@ -96083,6 +96886,16 @@
         "th": true
       }
     },
+    "b1aea92f-ca39-3a4a-85a3-0fc27c86087c": {
+      "content": "from django.urls import ${1|reverse,reverse_lazy,resolve,get_script_prefix|}",
+      "doc": "Utility functions for use in URLconfs.",
+      "filetype": "urls",
+      "grammar": "lsp",
+      "label": "urls (≥1.10 & ≤1.11)",
+      "matches": {
+        "iurls": true
+      }
+    },
     "b1af76da-7342-339b-99d0-f5b118265cc3": {
       "content": "font-effect: emboss",
       "doc": "",
@@ -96201,6 +97014,16 @@
       "label": "Book reference",
       "matches": {
         "book": true
+      }
+    },
+    "b1e0b3c1-a2a2-3b9b-910c-ac6b3dc7b8f5": {
+      "content": "${1:FIELDNAME} = models.DateTimeField($2, auto_now=${3:False}, auto_now_add=${4:False})",
+      "doc": "DateTimeField (mdatetime).\n\nA date, represented in Python by a datetime.datetime instance.",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "mdatetime",
+      "matches": {
+        "mdatetime": true
       }
     },
     "b1e25301-83ad-3a21-9655-e66981933b65": {
@@ -96656,16 +97479,6 @@
         "vmutation": true
       }
     },
-    "b2c726df-710b-38a3-bc29-94b9515f2df9": {
-      "content": "${1:FIELDNAME} = forms.DateTime(${2})",
-      "doc": "Django forms ``DateTime``",
-      "filetype": "forms",
-      "grammar": "lsp",
-      "label": "Forms DateTime",
-      "matches": {
-        "fdatetime": true
-      }
-    },
     "b2cc5e4f-e2b0-30d2-98aa-06d3789ac90b": {
       "content": "CFLAGS=-Wall -g ${0: -llua -lzeromq}",
       "doc": "",
@@ -96784,16 +97597,6 @@
       "label": "paddingLeft",
       "matches": {
         "padding": true
-      }
-    },
-    "b2f4724e-3a48-32f4-901d-11f2c0f5e2e3": {
-      "content": "class ${1:ModelName}CreateView(generic.CreateView):\n\tmodel = ${2:$1}\n\ttemplate_name = \"${3:$1/$1_form.html}\"\n\tform_class = ${4:forms.$1Form}\n\tsuccess_url = \"${5:.}\"",
-      "doc": "Django CBV ``CreateView``",
-      "filetype": "views",
-      "grammar": "lsp",
-      "label": "Django CreateView",
-      "matches": {
-        "createview": true
       }
     },
     "b2ff56f3-42d5-38eb-abf1-6174587bc7ad": {
@@ -97006,6 +97809,16 @@
         "ead": true
       }
     },
+    "b35f5cb6-c52c-3d55-88b0-fc1b882667a9": {
+      "content": "${1:FIELDNAME} = forms.EmailField($2, required=${3:False})",
+      "doc": "EmailField (femail)",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "femail",
+      "matches": {
+        "femail": true
+      }
+    },
     "b360e4ce-9633-3762-828f-b79a549002da": {
       "content": "text-indent -9999px",
       "doc": "",
@@ -97086,16 +97899,6 @@
         "if": true
       }
     },
-    "b379a0ee-209f-36a3-a005-a2e635aaddd0": {
-      "content": "${1:FIELDNAME} = models.ForeignKey(${2:OtherModel}, on_delete=models.${3:CASCADE}, related_name=\"${4:RelatedName}\" ${0:, limit_choices_to=})",
-      "doc": "Django model ``ForeignKey``",
-      "filetype": "models",
-      "grammar": "lsp",
-      "label": "Models ForeignKey",
-      "matches": {
-        "fk": true
-      }
-    },
     "b37ae319-477f-349d-bbee-c917dcd94733": {
       "content": "before_save $0",
       "doc": "",
@@ -97114,16 +97917,6 @@
       "label": "destroyed",
       "matches": {
         "destroyed": true
-      }
-    },
-    "b37fa6a0-60f7-32d9-9377-5803bb812db8": {
-      "content": "from django.views import generic",
-      "doc": "Import Django ``generic``",
-      "filetype": "imports",
-      "grammar": "lsp",
-      "label": "Import generic views",
-      "matches": {
-        "di-generic": true
       }
     },
     "b384aa0a-fb86-32b6-a260-e95bf65457ec": {
@@ -98081,6 +98874,16 @@
         "id": true
       }
     },
+    "b536f4c4-0897-3a77-8485-d51c1af451ff": {
+      "content": "{% static \"$1\" %}",
+      "doc": "static tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "static",
+      "matches": {
+        "static": true
+      }
+    },
     "b5394895-9443-3c08-a69f-88ac609baefe": {
       "content": "public static void main(String[] args) {\n\t$0\n}",
       "doc": "Public static main method",
@@ -98511,6 +99314,16 @@
       "label": "",
       "matches": {
         "ct:noq": true
+      }
+    },
+    "b5f60d4c-7888-3371-8bf4-ac216355dc2c": {
+      "content": "{% now \"$1\" %}",
+      "doc": "now tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "now",
+      "matches": {
+        "now": true
       }
     },
     "b5fa0dd0-bab3-3d6d-a02e-70c8d33267a2": {
@@ -98945,6 +99758,16 @@
         "ajaxsetup": true
       }
     },
+    "b6b54425-e056-34ab-9de0-5a5308c2bb40": {
+      "content": "{% block extrahead %}\n    $1\n{% endblock extrahead %}",
+      "doc": "Extrastyle no oficial Tag",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "extrastyle",
+      "matches": {
+        "extrastyle": true
+      }
+    },
     "b6c99cf1-56d4-373e-8c34-20c25329d44e": {
       "content": "${0:name}.view.zipWithIndex",
       "doc": "",
@@ -99230,6 +100053,16 @@
         "ruby_code_nonl": true
       }
     },
+    "b76e96af-361b-3e3c-a56a-d03c4574e909": {
+      "content": "${1:FIELDNAME} = SimpleArrayField()",
+      "doc": "SimpleArrayField (fsimplearray).\n\n*PostgreSQL specific form fields*.",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "fsimplearray",
+      "matches": {
+        "fsimplearray": true
+      }
+    },
     "b76ea696-5967-3b42-bb8d-b8e322acefd3": {
       "content": "foreach ($${1:#:variable} as $${2:#:x}) {\n\t${0:TARGET}\n}",
       "doc": "",
@@ -99401,6 +100234,16 @@
       "label": "",
       "matches": {
         "(a": true
+      }
+    },
+    "b7a780a3-2cbb-34e5-9a40-c01ea2c4ab61": {
+      "content": "class ${1:NAME}Filter(admin.SimpleListFilter):\n\n\ttitle = '$2'\n\tparameter_name = '$0'\n\n\tdef lookups(self, request, model_admin):\n\t\tpass\n\n\tdef queryset(self, request, queryset):\n\t\treturn queryset",
+      "doc": "Admin SimpleList Filter",
+      "filetype": "admin",
+      "grammar": "lsp",
+      "label": "simplelistfilter",
+      "matches": {
+        "simplelistfilter": true
       }
     },
     "b7af9891-3eaf-35d5-8ae4-83573c0d2233": {
@@ -99964,6 +100807,16 @@
       "label": "",
       "matches": {
         "main": true
+      }
+    },
+    "b8c37463-89ef-3f16-96fd-8482eda141ea": {
+      "content": "func Benchmark${1}(${2:b *testing.B}) {\n  for i := 0; i < ${3:b.N}; i++ {\n    ${4}\n  }\n}",
+      "doc": "",
+      "filetype": "go",
+      "grammar": "snu",
+      "label": "func Benchmark...(b *testing.B) { ... }",
+      "matches": {
+        "funcbench": true
       }
     },
     "b8cd6637-dcca-3c6c-aabc-84a9e58940a8": {
@@ -100838,6 +101691,16 @@
         "stv": true
       }
     },
+    "ba87803d-46c8-32a0-9d9d-2ca37eaefaf2": {
+      "content": "{{ STATIC_URL }}",
+      "doc": "STATIC_URL no oficial var",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "staticurl",
+      "matches": {
+        "staticurl": true
+      }
+    },
     "ba8abb94-dda5-30cf-976f-061d6059e02c": {
       "content": "#pragma warning ${2:disable} ${3:#:errno}",
       "doc": "",
@@ -101557,6 +102420,16 @@
         "function2": true
       }
     },
+    "bc04a200-7115-3aaf-af09-a3a9dd8b6c96": {
+      "content": "${1:FIELDNAME} = models.GenericIPAddressField($2, protocol=${3:'both'}, unpack_ipv4=${4:False})",
+      "doc": "GenericIPAddressField (mimg).\n\nAn IPv4 or IPv6 address, in string format.",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "mgenericip",
+      "matches": {
+        "mgenericip": true
+      }
+    },
     "bc05d6e7-5f22-3028-86a5-98e066ec0c34": {
       "content": "require('dotenv').config({ encoding: '${1:latin1}' })",
       "doc": "You may specify the encoding of your file containing environment variables.",
@@ -101665,16 +102538,6 @@
       "label": "",
       "matches": {
         "bgo": true
-      }
-    },
-    "bc2d8977-c084-3ed6-9482-b2e634cb10ef": {
-      "content": "actions: {\n\t${1:updateValue}({commit}, ${2:payload}) {\n\t\tcommit($1, $2);\n\t}\n}",
-      "doc": "",
-      "filetype": "vue",
-      "grammar": "snu",
-      "label": "",
-      "matches": {
-        "vactions": true
       }
     },
     "bc3cff64-5f22-3293-a143-d2853eb29290": {
@@ -102824,6 +103687,16 @@
         "oc:i": true
       }
     },
+    "be655fbe-e3f5-37ce-b512-1c07dceb193f": {
+      "content": "from django import forms",
+      "doc": "from ... import forms",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "iforms",
+      "matches": {
+        "iforms": true
+      }
+    },
     "be67ef6e-888b-320e-a8d5-cec543e4bbb4": {
       "content": "<{ \"${Message}\" }>",
       "doc": "HTML Expressions allows inserting data into HTML elements or components.",
@@ -103490,6 +104363,16 @@
         "vue v-once": true
       }
     },
+    "bfe144c7-c1ef-377e-9062-47605961a80b": {
+      "content": "${1:FIELDNAME} = models.BigIntegerField($2)",
+      "doc": "BigIntegerField (mbigint).\n\nA 64-bit integer, much like an IntegerField.",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "mbigint",
+      "matches": {
+        "mbigint": true
+      }
+    },
     "bfea964d-a4bc-360b-8002-28a90d12d893": {
       "content": "\\${4:#${0:optional}}",
       "doc": "",
@@ -103852,6 +104735,16 @@
         "fef:eg": true
       }
     },
+    "c09d9c26-6c76-33f4-b5d4-29d9eeaa045a": {
+      "content": "{% extends \"$1\" %}",
+      "doc": "extends tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "extends",
+      "matches": {
+        "extends": true
+      }
+    },
     "c0a6ff10-fe55-3e8c-bd26-5fdab1595a1d": {
       "content": "${1:obj}.load(function (${2:e}) {\n\t${0:// event handler}\n});",
       "doc": "",
@@ -103900,6 +104793,16 @@
       "label": "",
       "matches": {
         "string": true
+      }
+    },
+    "c0bc9493-7d57-3e68-9c4f-7bddbc319d59": {
+      "content": "{% block ${blockname} %}\n  \n{% endblock ${blockname} %}",
+      "doc": "block tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "block",
+      "matches": {
+        "block": true
       }
     },
     "c0bcc997-4699-30fa-9cba-3765282968c2": {
@@ -104949,16 +105852,6 @@
         "th.": true
       }
     },
-    "c287d7f5-6c02-38f4-9281-e05dfdb643d5": {
-      "content": "mutations: {\n\t${1:updateValue}(state, ${3:payload}) => {\n\t\tstate.${2:value} = $3;\n\t}\n}",
-      "doc": "",
-      "filetype": "vue",
-      "grammar": "snu",
-      "label": "",
-      "matches": {
-        "vmutations": true
-      }
-    },
     "c287da27-35fa-34b4-8c99-83d71d562870": {
       "content": "{% endautoescape %}$0",
       "doc": "endautoescape",
@@ -105159,6 +106052,16 @@
         "pi&-": true
       }
     },
+    "c2da7578-25a8-35b0-9448-d53e1b47c5bd": {
+      "content": "class $1Manager(models.Manager):\n\tdef get_queryset(self):\n\t\treturn $1QuerySet(self.model, using=self._db)",
+      "doc": "Modify the initial QuerySet the Manager returns.",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "queryset_from_manager",
+      "matches": {
+        "qs_mngr": true
+      }
+    },
     "c2de0246-fc5b-3412-922c-28529e789cda": {
       "content": "background-repeat: repeat-x;",
       "doc": "",
@@ -105257,16 +106160,6 @@
       "label": "",
       "matches": {
         "makearray": true
-      }
-    },
-    "c2f0c8fa-b718-3f05-8300-3f80499386a8": {
-      "content": "${1:FIELDNAME} = forms.SplitDateTime(${2})",
-      "doc": "Django forms ``SplitDateTime`` Field",
-      "filetype": "forms",
-      "grammar": "lsp",
-      "label": "Forms SplitDateTime",
-      "matches": {
-        "fsdatetime": true
       }
     },
     "c2f6e220-ddc3-395a-92a3-28e86d7a8a59": {
@@ -105524,6 +106417,16 @@
         "main": true
       }
     },
+    "c36b3a33-55bb-3e25-bb35-174d53b1caf8": {
+      "content": "class $1QuerySet(models.QuerySet):\n\tpass",
+      "doc": "",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "queryset",
+      "matches": {
+        "qs": true
+      }
+    },
     "c36ce812-d9d7-30c7-892d-9d219b229002": {
       "content": "router.beforeEach((to, from, next) => {\n\t${1:next();}\n});",
       "doc": "Vue Router global guards beforeEach",
@@ -105763,16 +106666,6 @@
       "label": "",
       "matches": {
         "pecho": true
-      }
-    },
-    "c3d5e8f6-27e9-303f-aaa6-26b1aa85118f": {
-      "content": "${1:FIELDNAME} = forms.DurationField(${2})",
-      "doc": "Django forms ``DurationField``",
-      "filetype": "forms",
-      "grammar": "lsp",
-      "label": "Forms DurationField",
-      "matches": {
-        "fduration": true
       }
     },
     "c3dc63a4-286e-3ae3-b3d4-83af6ba4d3a9": {
@@ -106631,6 +107524,16 @@
         "list": true
       }
     },
+    "c54e473c-8116-3367-9d38-58fd2bbe7697": {
+      "content": "methods: {\n\t${1:method}() {\n\t\tconsole.log('method');\n\t}\n},",
+      "doc": "",
+      "filetype": "vue",
+      "grammar": "snu",
+      "label": "",
+      "matches": {
+        "vmethods": true
+      }
+    },
     "c555366a-338f-3689-9087-f0a1818d27fb": {
       "content": "args <- commandArgs(TRUE)\nif (length(args) == 0)\n    stop(\"Please give ${1:}!\")\nif (!all(file.exists(args)))\n     stop(\"Couln't find input files!\")",
       "doc": "",
@@ -106830,6 +107733,16 @@
       "label": "",
       "matches": {
         "h6#": true
+      }
+    },
+    "c5d0f739-5bbc-39dc-a2b4-9aad73f95233": {
+      "content": "${1:FIELDNAME} = ArrayField()",
+      "doc": "ArrayField (marray).\n\n*PostgreSQL specific model fields*.\n\nA field for storing lists of data",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "marray",
+      "matches": {
+        "marray": true
       }
     },
     "c5d322e3-f2f1-3fb1-b713-2124732ea3d7": {
@@ -107456,6 +108369,26 @@
         "r:a": true
       }
     },
+    "c7277a87-22f0-3d89-a8aa-b94830be95e3": {
+      "content": "from django.contrib.postgres.forms import ${1|SimpleArrayField,SplitArrayField,HStoreField,JSONField,IntegerRangeField,FloatRangeField,DateTimeRangeField,DateRangeField|}",
+      "doc": "PostgreSQL specific forms fields",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "ipostgresff",
+      "matches": {
+        "ipostgresff": true
+      }
+    },
+    "c72ed916-046c-3ba3-b118-a28e3a8d40ea": {
+      "content": "${1:FIELDNAME} = models.UUIDField($2)",
+      "doc": "UUIDField (muuid).\n\nA field for storing universally unique identifiers. Uses Python’s UUID class.",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "muuid",
+      "matches": {
+        "muuid": true
+      }
+    },
     "c72f5518-be5e-3bf3-adfd-131e4ba5a3a1": {
       "content": "mix($2, $3, $4)",
       "doc": "float mix(float x, float y, float a)\nvec2 mix(vec2 x, vec2 y, vec2 a)\nvec3 mix(vec3 x, vec3 y, vec3 a)\nvec4 mix(vec4 x, vec4 y, vec4 a)\n\nThe mix function returns the linear blend of x and y, i.e. the product of x and (1 - a) plus the product of y and a. The input parameters can be floating scalars or float vectors. In case of float vectors the operation is done component-wise.\n\nfloat mix(float x, float y, float a)\nvec2 mix(vec2 x, vec2 y, float a)\nvec3 mix(vec3 x, vec3 y, float a)\nvec4 mix(vec4 x, vec4 y, float a)\n\nThere is also a variation of the mix function where the third parameter is always a floating scalar.",
@@ -107918,16 +108851,6 @@
         "class": true
       }
     },
-    "c7f6146b-bafc-3d56-8f3a-0dcb5c6cf734": {
-      "content": "[${1:text}](http://${2:link})$0",
-      "doc": "Insert link",
-      "filetype": "rmarkdown",
-      "grammar": "lsp",
-      "label": "Insert link",
-      "matches": {
-        "link": true
-      }
-    },
     "c7f7ef06-2c82-3c8e-badd-05016ba21ba0": {
       "content": "record ${1:User} {\n\t${2:name} : ${3:String},\n\t${4:email} : ${5:String}\n}",
       "doc": "Records are object like data structures, that have a fix set of keys and values.",
@@ -108349,6 +109272,16 @@
         "bdcl:s": true
       }
     },
+    "c8c0e455-877b-3bfc-8eef-227eaa9b39a7": {
+      "content": "${1:FIELDNAME} = forms.MultipleChoiceField($2, choices=[${3:CHOICES}], required=${4:False})",
+      "doc": "MultipleChoiceField (fmuchoice)",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "fmuchoice",
+      "matches": {
+        "fmuchoice": true
+      }
+    },
     "c8c40c29-58ba-3095-8b2f-9ac05d822d83": {
       "content": "require IEx; IEx.pry\n$0",
       "doc": "",
@@ -108509,6 +109442,16 @@
       "label": "import { observer } from '@ember/object';",
       "matches": {
         "prooimport": true
+      }
+    },
+    "c9291495-708b-3859-a168-eef8aa6c0676": {
+      "content": "from django.conf import settings",
+      "doc": "from django.conf import settings",
+      "filetype": "views",
+      "grammar": "lsp",
+      "label": "isettings",
+      "matches": {
+        "isettings": true
       }
     },
     "c92b5993-9855-318a-9a2e-ca0d343eb589": {
@@ -109531,6 +110474,16 @@
         "req": true
       }
     },
+    "cac2b521-f685-3c8b-86a9-db93398c3a5e": {
+      "content": "${1:FIELDNAME} = forms.BooleanField($2, required=${3:False})",
+      "doc": "BooleanField (fbool)",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "fbool",
+      "matches": {
+        "fbool": true
+      }
+    },
     "cac313ad-27bb-36ff-a78f-a2fb7798e95c": {
       "content": "<c:if test=\"\\${${1}}\">\n\t${0}\n</c:if>",
       "doc": "",
@@ -110348,6 +111301,16 @@
         "vmForceUpdate": true
       }
     },
+    "cc418743-9011-317d-af97-bcadedbf2cab": {
+      "content": "data() {\n\treturn {\n\t\t${1:key}: ${2:value}\n\t};\n},",
+      "doc": "",
+      "filetype": "vue",
+      "grammar": "snu",
+      "label": "",
+      "matches": {
+        "vdata": true
+      }
+    },
     "cc420a44-79c3-31de-a806-5d1ec32368c5": {
       "content": "margin-top ${0}",
       "doc": "",
@@ -110466,6 +111429,16 @@
       "label": "",
       "matches": {
         "case": true
+      }
+    },
+    "cc82a0a7-876e-3e08-8d71-be6963ebfa46": {
+      "content": "${1:FIELDNAME} = serializers.ChoiceField(choices={${2}})",
+      "doc": "Django-rest Serializers ``ChoiceField``",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF ChoiceField",
+      "matches": {
+        "schoice": true
       }
     },
     "cc89963e-a1ff-31e7-9ce3-5741e4f7ebed": {
@@ -110978,16 +111951,6 @@
         "rtl": true
       }
     },
-    "cd65ee9a-685d-39fc-b0e7-816f1ddcc5a8": {
-      "content": "${1:FIELDNAME} = models.CommaSeparatedIntegerField(max_length=${2})",
-      "doc": "Django model ``CommaSeparatedIntegerField``",
-      "filetype": "models",
-      "grammar": "lsp",
-      "label": "Models CommaSeparatedIntegerField",
-      "matches": {
-        "mcomma": true
-      }
-    },
     "cd683c50-eea1-3970-a36f-d0a2cb6713c7": {
       "content": "clear: right;",
       "doc": "",
@@ -111096,6 +112059,16 @@
       "label": "foreach if (forif)",
       "matches": {
         "forif": true
+      }
+    },
+    "cda18641-6466-3470-b31a-5a5eb3f0cdbf": {
+      "content": "${1:FIELDNAME} = serializers.ImageField(${2})",
+      "doc": "Django-rest Serializers ``ImageField``",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF ImageField",
+      "matches": {
+        "simg": true
       }
     },
     "cda6007e-8e6f-3765-9b27-56ae3f0dfb6c": {
@@ -111642,6 +112615,16 @@
         "fm": true
       }
     },
+    "ce9ca283-1436-3f61-8ba4-e4f4d7591e48": {
+      "content": "${1:FIELDNAME} = serializers.SlugRelatedField(${2})",
+      "doc": "Django-rest Serializers ``SlugRelatedField``",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF SlugRelatedField",
+      "matches": {
+        "sslugrelated": true
+      }
+    },
     "cea1aa01-9a4c-34e6-b045-d0a0e821b0be": {
       "content": "Ada.Text_IO.Get(${1});\n${0}",
       "doc": "",
@@ -111741,16 +112724,6 @@
       "label": "lodash-assign",
       "matches": {
         "lodash assign": true
-      }
-    },
-    "cec32cd7-d474-388a-817a-9faedc83f8bb": {
-      "content": "path(\"${1:Path}\", v.${2:View}.as_viewJ(), name=${0:PathName})",
-      "doc": "Django Path For ``Class Based Views``",
-      "filetype": "views",
-      "grammar": "lsp",
-      "label": "Django CBV Path",
-      "matches": {
-        "cpath": true
       }
     },
     "cece08df-cedb-3d54-a6bf-9513ae5bf4e4": {
@@ -113196,6 +114169,16 @@
         "rest": true
       }
     },
+    "d1608519-7007-3cd0-8763-28f7141687e0": {
+      "content": "class ${1:MODEL_NAME}DetailView(DetailView):\r\n    model = ${1:MODEL_NAME}\r\n    template_name = \"${2:TEMPLATE_NAME}\"",
+      "doc": "",
+      "filetype": "views",
+      "grammar": "lsp",
+      "label": "detailview",
+      "matches": {
+        "detailview": true
+      }
+    },
     "d161d7ed-6e92-321d-82d5-e6e2e6344201": {
       "content": "function lowest-algebraic(${1:numeric-identifier})$0",
       "doc": "lowest value that could possibly be stored in the specified numeric-identifier",
@@ -113908,6 +114891,16 @@
         "CANCEL": true
       }
     },
+    "d2a4e831-e744-39a2-be44-e0f13ec0091b": {
+      "content": "class ${1:MODELNAME}Form(forms.ModelForm):\n\t\"\"\"${2:Form definition for $1}.\"\"\"\n\n\tclass Meta:\n\t\t\"\"\"Meta definition for ${1}form.\"\"\"\n\n\t\tmodel = $1\n\t\tfields = ('$3',)",
+      "doc": "ModelForm",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "ModelForm",
+      "matches": {
+        "ModelForm": true
+      }
+    },
     "d2a95fa6-1571-3d59-9348-4a5a5821cecf": {
       "content": "<%= for ${1:item} <- ${2:items} ${3:@conn} do %>\n\t${0}\n<% end %>",
       "doc": "",
@@ -113966,6 +114959,16 @@
       "label": "",
       "matches": {
         "yregsf": true
+      }
+    },
+    "d2c62730-ca59-3913-bc23-eb2f5a4b1078": {
+      "content": "{% comment %}\n  $1\n{% endcomment %}",
+      "doc": "Comment tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "comment",
+      "matches": {
+        "comment": true
       }
     },
     "d2cb321d-f2a7-3ac6-8163-4cf6f5cdd5a7": {
@@ -114459,16 +115462,6 @@
         "inco": true
       }
     },
-    "d39957af-66b2-3020-8224-7e55a97c47bf": {
-      "content": "${1:FIELDNAME} = models.ManyToManyField(${2:OtherModel}, related_name=\"${3:RelatedName}\" ${0:, limit_choices_to=})",
-      "doc": "Django model ``ManyToManyField``",
-      "filetype": "models",
-      "grammar": "lsp",
-      "label": "Models ManyToManyField",
-      "matches": {
-        "m2m": true
-      }
-    },
     "d39a40d6-943c-34f2-950c-eb88123926e1": {
       "content": "@spec ${1:name}(${2:args}) :: ${3:no_return}\ndef $1{4:args} do\n  $0\nend",
       "doc": "",
@@ -114853,16 +115846,6 @@
         "tsrpc": true
       }
     },
-    "d45fb7b3-2da4-3e64-a63d-7c5823567e4d": {
-      "content": "${1:FIELDNAME} = models.EmailField(${2})",
-      "doc": "Django model ``EmailField``",
-      "filetype": "models",
-      "grammar": "lsp",
-      "label": "Models EmailField",
-      "matches": {
-        "memail": true
-      }
-    },
     "d4617439-2365-340c-940e-be41eb20fb43": {
       "content": "-module(${0:module}).",
       "doc": "",
@@ -115084,16 +116067,6 @@
         "if": true
       }
     },
-    "d4af1aad-d97a-34ba-bbae-361b1cfcd777": {
-      "content": "${1:FIELDNAME} = forms.SlugField(${2})",
-      "doc": "Django forms ``SlugField``",
-      "filetype": "forms",
-      "grammar": "lsp",
-      "label": "Forms SlugField",
-      "matches": {
-        "fslug": true
-      }
-    },
     "d4b53b3c-e45a-3265-9e80-38e194d4d2d5": {
       "content": "_.spread(${func}, ${start})",
       "doc": "var say = _.spread(function(who, what) {\n  return who + ' says ' + what;\n});\n\nsay(['fred', 'hello']);\n// => 'fred says hello'\n\nvar numbers = Promise.all([\n  Promise.resolve(40),\n  Promise.resolve(36)\n]);\n\nnumbers.then(_.spread(function(x, y) {\n  return x + y;\n}));\n// => a Promise of 76\n\nCreates a function that invokes `func` with the `this` binding of the\ncreate function and an array of arguments much like\n[`Function#apply`](http://www.ecma-international.org/ecma-262/7.0/#sec-function.prototype.apply).\n\n**Note:** This method is based on the\n[spread operator](https://mdn.io/spread_operator).",
@@ -115223,16 +116196,6 @@
       "label": "namespace {}",
       "matches": {
         "namespace": true
-      }
-    },
-    "d4fd9d98-f73e-3134-a14a-eb3397eff09c": {
-      "content": "class ${1:ModelName}DeleteView(generic.DeleteView):\n\tmodel = ${2:$1}\n\n\tdef get_success_url(self):\n\t\treturn reverse(\"${3:$1:list}\")\n\n\tdef get(self, request, *args, **kwargs):\n\t\treturn post(request, *args, **kwargs)",
-      "doc": "Django CBV ``DeleteView``",
-      "filetype": "views",
-      "grammar": "lsp",
-      "label": "Django DeleteView",
-      "matches": {
-        "deleteview": true
       }
     },
     "d4fe57ed-48d4-37f7-b66c-85737f8122de": {
@@ -115497,6 +116460,16 @@
       "label": "fract",
       "matches": {
         "fract": true
+      }
+    },
+    "d5b8fa3a-7de5-3c0f-92ce-60dc65854cfc": {
+      "content": "${1:FIELDNAME} = models.ForeignKey(${2:OTHERMODEL}, on_delete=models.${3|CASCADE,PROTECT,SET_NULL,SET_DEFAULT,SET(),DO_NOTHING|})",
+      "doc": "ForeignKey (fk).\n\nA many-to-one relationship.\n\non_delete will become a required argument in Django 2.0. In older versions it defaults to CASCADE.",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "fk",
+      "matches": {
+        "fk": true
       }
     },
     "d5bf5195-732c-363d-bc3c-e6b44bdc3825": {
@@ -115943,16 +116916,6 @@
         "motion": true
       }
     },
-    "d66bf666-32c2-33cd-9f42-33b1bb774b47": {
-      "content": "${1:FIELDNAME} = forms.BooleanField(${2})",
-      "doc": "Django forms ``BooleanField``",
-      "filetype": "forms",
-      "grammar": "lsp",
-      "label": "Forms BooleanField",
-      "matches": {
-        "fbool": true
-      }
-    },
     "d67260d3-149f-3f6b-aefe-65546d857641": {
       "content": "text-outline: ${1:0} ${2:0} #${0:000}",
       "doc": "",
@@ -116255,16 +117218,6 @@
         "svelte bind video": true
       }
     },
-    "d6f61221-3d60-3cd8-b615-bad54a3462de": {
-      "content": "def form_valid(self, form):\n\treturn super().form_valid(form)",
-      "doc": "Django Views ``form_valid`` method",
-      "filetype": "views",
-      "grammar": "lsp",
-      "label": "Django Views form_valid",
-      "matches": {
-        "formvalid": true
-      }
-    },
     "d700c342-696c-3e15-9dbe-82fa872920fa": {
       "content": "{%- else -%}",
       "doc": "Control flow tag: else",
@@ -116456,6 +117409,16 @@
         "bgo:bb": true
       }
     },
+    "d7523685-f5da-3d97-8c62-aadc30d7dc3b": {
+      "content": "${1:FIELDNAME} = forms.DurationField($2, required=${3:False})",
+      "doc": "DurationField (fduration)",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "fduration",
+      "matches": {
+        "fduration": true
+      }
+    },
     "d7523815-c1cd-345f-8cf4-c5c06f15faa6": {
       "content": "{% endfilter %}$0",
       "doc": "endfilter",
@@ -116640,6 +117603,16 @@
         "vue filter": true
       }
     },
+    "d784716a-f599-30db-b4dd-9af78ca174f5": {
+      "content": "{% ifnotequal $1 %}\n  \n{% ifnotequal %}",
+      "doc": "ifnotequal tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "ifnotequal",
+      "matches": {
+        "ifnotequal": true
+      }
+    },
     "d78cde44-ed52-3ea6-8542-8b73a62435b4": {
       "content": "<%= link \"${1:Submit}\", to: ${2:\"/users\"}, method: ${3::delete} %>",
       "doc": "",
@@ -116679,6 +117652,16 @@
       "label": "classnames-import-bind",
       "matches": {
         "classnames import bind": true
+      }
+    },
+    "d7a527ed-8e0c-3c60-83e0-fc05ec68df56": {
+      "content": "computed: {\n\t${1:fnName}() {\n\t\treturn;\n\t}\n},",
+      "doc": "",
+      "filetype": "vue",
+      "grammar": "snu",
+      "label": "",
+      "matches": {
+        "vcomputed": true
       }
     },
     "d7a5b3ab-4159-36d0-8d0c-8888780c199c": {
@@ -117209,6 +118192,16 @@
         "ife": true
       }
     },
+    "d88b202b-0a0a-30b9-a635-1136576cf6b2": {
+      "content": "def ${1:fname}(${2:arg}) -> ${3:return_type}:\n\t${4:pass}$0",
+      "doc": "Code snippet for function definition.",
+      "filetype": "base",
+      "grammar": "lsp",
+      "label": "New function w/ return",
+      "matches": {
+        "deft": true
+      }
+    },
     "d8924cb8-58ce-3d65-89de-11c7b1ec830a": {
       "content": "Examples:\n/// --------------------\n/// ${1:example code}\n/// --------------------",
       "doc": "",
@@ -117347,6 +118340,16 @@
       "label": "",
       "matches": {
         "sm": true
+      }
+    },
+    "d8e3386d-1669-3399-8ac0-eba40f00d9f9": {
+      "content": "{% block extrahead %}\n    $1\n{% endblock extrahead %}",
+      "doc": "Extrahead no oficial tag",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "extrahead",
+      "matches": {
+        "extrahead": true
       }
     },
     "d8e5b90c-b1a4-340a-9408-f8be1313d8fc": {
@@ -118102,6 +119105,16 @@
         "ptor": true
       }
     },
+    "da2ea5b2-a3f9-39f5-8993-c81e817b244a": {
+      "content": "{% url $1 %}",
+      "doc": "url tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "url",
+      "matches": {
+        "url": true
+      }
+    },
     "da2ff17b-6056-3210-bdc1-e35a3201b852": {
       "content": "Return From Keyword If    '\\${${1:rc}}' != '${2:abc}'    ${3:${optional return value}}",
       "doc": "",
@@ -118432,6 +119445,16 @@
         "m:3": true
       }
     },
+    "daaa8e4c-2e60-35f7-ad4c-4a987593ec5e": {
+      "content": "${1:FIELDNAME} = serializers.FloatField(${2})",
+      "doc": "Django-rest Serializers ``FloatField``",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF FloatField",
+      "matches": {
+        "sfloat": true
+      }
+    },
     "dab178b2-a2d4-3470-97d8-ec1cc4a4decf": {
       "content": "var (\n\t${1:name} ${2:type} = ${3:value}\n)",
       "doc": "Snippet for a variable",
@@ -118644,16 +119667,6 @@
         "findall": true
       }
     },
-    "db012261-b478-31b7-9a0d-8bd244e25560": {
-      "content": "${1:FIELDNAME} = models.DecimalField(max_digits=${2}, decimal_places=${3})",
-      "doc": "Django model ``DecimalField``",
-      "filetype": "models",
-      "grammar": "lsp",
-      "label": "Models DecimalField",
-      "matches": {
-        "mdecimal": true
-      }
-    },
     "db0476b5-55ca-3365-99ce-adfdea2f549c": {
       "content": "failwith \"${0:TARGET}\"",
       "doc": "",
@@ -118713,6 +119726,16 @@
       "label": "read",
       "matches": {
         "read": true
+      }
+    },
+    "db219bc6-dfda-308c-a7ce-0b1ef50a499d": {
+      "content": "${1:FIELDNAME} = JSONField()",
+      "doc": "JSONField (fjson).\n\n*PostgreSQL specific form fields*.",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "fjson",
+      "matches": {
+        "fjson": true
       }
     },
     "db2dffd6-a669-3290-bf91-1bb3c66b0e14": {
@@ -119090,6 +120113,16 @@
         "fcc": true
       }
     },
+    "dbe730d6-2c09-3d2b-8fad-77bf8035a10c": {
+      "content": "${1:FIELDNAME} = models.FloatField($2)",
+      "doc": "FloatField (mfloat).\n\nA floating-point number represented in Python by a float instance.",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "mfloat",
+      "matches": {
+        "mfloat": true
+      }
+    },
     "dbeb7711-61b3-3aab-ba44-a125e525f5cc": {
       "content": "FUNCTION CHAR(${1:integer})$0",
       "doc": "function character in the ordinal position specified by integer, from the current alphanumeric collating sequence",
@@ -119345,6 +120378,16 @@
         "send_error_message": true
       }
     },
+    "dc619755-ae2b-3173-88a4-dd33ff46d7f1": {
+      "content": "fieldsets = (\n\t(None, {\n\t\t'fields': (\n\t\t\t$1\n\t\t),\n\t}),\n)",
+      "doc": "",
+      "filetype": "admin",
+      "grammar": "lsp",
+      "label": "fieldsets",
+      "matches": {
+        "fieldsets": true
+      }
+    },
     "dc61fe99-1ff3-34f5-8b0d-5122f30c2ae4": {
       "content": "Meta.parse(\"{$1:expression}\")",
       "doc": "Code snippet for parse an expression.",
@@ -119464,6 +120507,16 @@
       "label": "assets",
       "matches": {
         "assets": true
+      }
+    },
+    "dc9a471f-08f5-3bd7-82f6-6d1ee554ca1f": {
+      "content": "${1:FIELDNAME} = models.DateField($2, auto_now=${3:False}, auto_now_add=${4:False})",
+      "doc": "DateField (mdate).\n\nA date, represented in Python by a datetime.date instance.",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "mdate",
+      "matches": {
+        "mdate": true
       }
     },
     "dc9d2b4b-fb0a-35cd-b443-bd54d12f7470": {
@@ -119716,6 +120769,16 @@
         "Err": true
       }
     },
+    "dd0947b1-311c-3ebc-a1e7-f113ede1434f": {
+      "content": "${1:FIELDNAME} = models.DurationField($2)",
+      "doc": "DurationField (mduration).\n\nA field for storing periods of time - modeled in Python by timedelta.",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "mduration",
+      "matches": {
+        "mduration": true
+      }
+    },
     "dd0fb15b-46c0-3353-8eed-715ffc6977cd": {
       "content": "page-break-inside: auto",
       "doc": "",
@@ -119936,16 +120999,6 @@
       "matches": {
         "prop": true,
         "property": true
-      }
-    },
-    "dd651ea9-de76-368c-bed1-408f3bbce029": {
-      "content": "${1:FIELDNAME} = models.NullBooleanField(${2})",
-      "doc": "Django model ``NullBooleanField``",
-      "filetype": "models",
-      "grammar": "lsp",
-      "label": "Models NullBooleanField",
-      "matches": {
-        "mnullboolean": true
       }
     },
     "dd678e11-bddc-302b-8675-40ff159d2c10": {
@@ -120190,6 +121243,16 @@
         "useref": true
       }
     },
+    "dde22344-49d5-33e0-8948-9c42f851d359": {
+      "content": "def clean_${1:FIELD}(self):\n\t${1:FIELD} = self.cleaned_data.get('${1:FIELD}')\n\n\n\t # TODO Validation\n\n\treturn ${1:FIELD}",
+      "doc": "",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "clean_data",
+      "matches": {
+        "clean_data": true
+      }
+    },
     "dde56757-7fed-3901-93b3-664beccb1e33": {
       "content": "[${1:id}]: https://${2:url} \"${3:title}\"",
       "doc": "",
@@ -120250,16 +121313,6 @@
       "label": "Promise",
       "matches": {
         "p": true
-      }
-    },
-    "ddf34193-0f8a-376a-89ae-5466e029a972": {
-      "content": "def form_invalid(self, form):\n\treturn super().form_invalid(form)",
-      "doc": "Django Views ``form_invalid`` method",
-      "filetype": "views",
-      "grammar": "lsp",
-      "label": "Django Views form_invalid",
-      "matches": {
-        "forminvalid": true
       }
     },
     "ddf8fec8-a214-300a-9181-e5c8475fa048": {
@@ -121901,6 +122954,16 @@
         "lodash orderby": true
       }
     },
+    "e1150f19-f7e5-3f2f-99cb-ae68c01a3331": {
+      "content": "${1:FIELDNAME} = forms.CharField($2,${3: max_length=$4,} required=${5:False})",
+      "doc": "CharField (fchar)",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "fchar",
+      "matches": {
+        "fchar": true
+      }
+    },
     "e11acc61-5da3-32e1-bdbd-6b86674fed11": {
       "content": "unless ${1:condition}\n\t$2\nelsif ${3:condition}\n\t$4\nelse\n\t$0\nend",
       "doc": "",
@@ -121979,16 +123042,6 @@
       "label": "vm.$destroy",
       "matches": {
         "vmDestroy": true
-      }
-    },
-    "e144526e-b6ca-3ecc-bf66-f57c3164eba8": {
-      "content": "${1:FIELDNAME} = models.DateTimeField(auto_now_add=${2:True}, auto_now=${3:False})",
-      "doc": "Django model ``DateTimeField``",
-      "filetype": "models",
-      "grammar": "lsp",
-      "label": "Models DateTimeField",
-      "matches": {
-        "mdatetime": true
       }
     },
     "e153af3b-9c1f-3763-9a85-bb2e97a65dca": {
@@ -122497,6 +123550,16 @@
         "defr": true
       }
     },
+    "e22702be-8479-340a-b5f3-64bb30bab32d": {
+      "content": "from django.utils.encoding import python_2_unicode_compatible",
+      "doc": "For forwards compatibility, this decorator is available as of Django 1.4.2.",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "ipy2_unicode_compatible",
+      "matches": {
+        "iuc": true
+      }
+    },
     "e22f3700-d9ca-3b98-a102-e454712c8bc3": {
       "content": "$(this)",
       "doc": "",
@@ -122830,6 +123893,16 @@
         "<rem": true
       }
     },
+    "e2b8f4c6-08d7-38ca-8e03-5ddc38500369": {
+      "content": "admin.site.register($1)",
+      "doc": "register the model class without providing a ModelAdmin description.",
+      "filetype": "admin",
+      "grammar": "lsp",
+      "label": "register",
+      "matches": {
+        "register": true
+      }
+    },
     "e2b9e654-5af6-3e7c-ac79-07bf1d13d6a6": {
       "content": "if ${1:let} ${2:name} = ${3:expression} else {\n    ${0:TARGET}\n}${9}",
       "doc": "",
@@ -123123,6 +124196,16 @@
         "click": true
       }
     },
+    "e3407061-b7b6-3be9-a20a-0e4f3df29ecc": {
+      "content": "{% include \"$1\" %}",
+      "doc": "include tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "include",
+      "matches": {
+        "include": true
+      }
+    },
     "e34182d1-7ab2-3fdb-bfbf-ea4526e0cfba": {
       "content": "expect(${1:target}).wasNotCalledWith(${2:arguments})",
       "doc": "",
@@ -123365,6 +124448,16 @@
         ".": true
       }
     },
+    "e3a0701d-78f0-38f2-a073-afbe8b79b11a": {
+      "content": "${1:FIELDNAME} = models.EmailField($2, max_length=${3:254})",
+      "doc": "EmailField (memail).\n\nA CharField that checks that the value is a valid email address.",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "memail",
+      "matches": {
+        "memail": true
+      }
+    },
     "e3a3ed8c-1daa-35ec-8534-1ff3a0f514e1": {
       "content": "visibility: ${1:visible/hidden/collapse};$0",
       "doc": "",
@@ -123454,6 +124547,16 @@
       "label": "propTypeInstanceOf",
       "matches": {
         "pti": true
+      }
+    },
+    "e3c76fef-82b1-3fef-aabf-24c2a8f3e67c": {
+      "content": "${1:FIELDNAME} = DateRangeField()",
+      "doc": "DateRangeField (fdaterange).\n\n*PostgreSQL specific form fields*.",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "fdaterange",
+      "matches": {
+        "fdaterange": true
       }
     },
     "e3c8a54c-990f-3c6e-bfa3-7c3dea43ddf9": {
@@ -123554,16 +124657,6 @@
       "label": "output [] o_,",
       "matches": {
         "O": true
-      }
-    },
-    "e3e7575d-0310-3500-a281-280f7412d917": {
-      "content": "${1:FIELDNAME} = models.FileField(upload_to=${2:path/for/upload})",
-      "doc": "Django model ``FileField``",
-      "filetype": "models",
-      "grammar": "lsp",
-      "label": "Models FileField",
-      "matches": {
-        "mfile": true
       }
     },
     "e3e7810b-5a57-3ce0-88be-f4404e880a7d": {
@@ -123961,16 +125054,6 @@
         "ifelse": true
       }
     },
-    "e4941894-3ca5-3037-868f-76273daa4073": {
-      "content": "${1:FIELDNAME} = forms.DateField(${2})",
-      "doc": "Django forms ``DateField``",
-      "filetype": "forms",
-      "grammar": "lsp",
-      "label": "Forms DateField",
-      "matches": {
-        "fdate": true
-      }
-    },
     "e4a4f4ca-f6cc-30db-b5fe-da437bcecbae": {
       "content": "process (${1:clk})\nbegin\n\tif rising_edge ($1) then\n\t\t${2}\n\tend if;\nend process;",
       "doc": "",
@@ -123979,6 +125062,16 @@
       "label": "",
       "matches": {
         "prc": true
+      }
+    },
+    "e4a719a0-539e-3b4a-859d-db95bc69eaab": {
+      "content": "func Test${1}(${2:t *testing.T}) {\n  ${3}\n}",
+      "doc": "",
+      "filetype": "go",
+      "grammar": "snu",
+      "label": "func Test...(t *testing.T) { ... }",
+      "matches": {
+        "functest": true
       }
     },
     "e4ae321e-3f99-35fd-a866-687c79ff6cef": {
@@ -124589,6 +125682,16 @@
         "ai:fb": true
       }
     },
+    "e5fe8c76-ad3f-38d8-afae-361957281c57": {
+      "content": "${1:FIELDNAME} = models.PositiveSmallIntegerField($2)",
+      "doc": "PositiveSmallIntegerField (mpossmallint).\n\nLike a PositiveIntegerField, but only allows values under a certain (database-dependent) point.",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "mpossmallint",
+      "matches": {
+        "mpossmallint": true
+      }
+    },
     "e6023ecd-26da-3d03-bd76-ce7d87174693": {
       "content": "this.setState((state, props) => { return { $0 }})",
       "doc": "Performs a shallow merge of nextState into current state",
@@ -124708,16 +125811,6 @@
       "matches": {
         "a-ngclass": true,
         "angular ng class": true
-      }
-    },
-    "e64aaaba-3be9-3eef-8495-77c6345c3536": {
-      "content": "from django.http import JsonResponse",
-      "doc": "Import Django ``JsonResponse``",
-      "filetype": "imports",
-      "grammar": "lsp",
-      "label": "Import JsonResponse",
-      "matches": {
-        "di-jsonresponse": true
       }
     },
     "e64b6b15-3816-3aee-a34a-67a2dc5a4722": {
@@ -125845,16 +126938,6 @@
         "tt:l": true
       }
     },
-    "e852cf2b-d565-39d1-b12b-49bb8bd207dc": {
-      "content": "${1:FIELDNAME} = forms.ImageField(${2})",
-      "doc": "Django forms ``ImageField``",
-      "filetype": "forms",
-      "grammar": "lsp",
-      "label": "Forms ImageField",
-      "matches": {
-        "fimg": true
-      }
-    },
     "e8599321-8341-3cd0-9064-e3a8a69d330e": {
       "content": "async def ${1:mname}(self, ${2:arg}):\n\t${0}",
       "doc": "",
@@ -125883,6 +126966,16 @@
       "label": "mixed-nullable",
       "matches": {
         "yup mixed nullable": true
+      }
+    },
+    "e8617564-4e9a-314d-a420-1b6651b9b771": {
+      "content": "${1:FIELDNAME} = models.URLField($2, max_length=${3:200})",
+      "doc": "URLField (murl).\n\nA CharField for a URL.",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "murl",
+      "matches": {
+        "murl": true
       }
     },
     "e8638546-a857-31a3-b9fc-80e3f932f3b1": {
@@ -126295,16 +127388,6 @@
       "label": "try { ... } catch (Exception $e) { ... }",
       "matches": {
         "try": true
-      }
-    },
-    "e91edd66-872e-3219-a957-52019bb8b767": {
-      "content": "from django import forms\nfrom ${1:.models} import ${2}\n\n\n# TODO: Create your forms here\n${0}",
-      "doc": "Django File-Template Sinppet For ``Form`` File",
-      "filetype": "filetemplates",
-      "grammar": "lsp",
-      "label": "Django FormFile Template",
-      "matches": {
-        "ftform": true
       }
     },
     "e924852e-0d83-3c82-82bb-4b2e2f40286c": {
@@ -126758,6 +127841,16 @@
       "label": "destructingarray",
       "matches": {
         "base const destruct array": true
+      }
+    },
+    "ea159c19-1a2d-3776-9113-5ce38edffef0": {
+      "content": "{% filter $1 %}\n  \n{% endfilter %}",
+      "doc": "filter tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "filter",
+      "matches": {
+        "filter": true
       }
     },
     "ea1abec6-b796-3e86-a0bd-0916c1508a71": {
@@ -127463,6 +128556,26 @@
         "case": true
       }
     },
+    "eb86eb41-09ea-3be4-b9c1-4ae391b8df82": {
+      "content": "${1:FIELDNAME} = serializers.ReadOnlyField(${2})",
+      "doc": "Django-rest Serializers ``ReadOnlyField``",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF ReadOnlyField",
+      "matches": {
+        "sreadonly": true
+      }
+    },
+    "eb87a3af-123a-3130-95e8-3c6ed4fab498": {
+      "content": "from .views import $1",
+      "doc": "",
+      "filetype": "views",
+      "grammar": "lsp",
+      "label": "from views import",
+      "matches": {
+        "fvi": true
+      }
+    },
     "eb89665f-40a5-39eb-ba5b-5b7dd4510465": {
       "content": "sizeof(${0:TARGET})",
       "doc": "",
@@ -127845,6 +128958,16 @@
         "pgba": true
       }
     },
+    "ec291317-6ac1-37cc-b9e0-d1795cf27828": {
+      "content": "{% spaceless %}\n  $1\n{% endspaceless %}",
+      "doc": "spaceless tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "spaceless",
+      "matches": {
+        "spaceless": true
+      }
+    },
     "ec2d1fdc-680a-3323-8c68-4464431aa3db": {
       "content": "if !reflect.DeepEqual(${1:expected}, ${2:actual}) {\n\t_, file, line, _ := runtime.Caller(0)\n\tfmt.Printf(\"%s:%d:\\n\\n\\texp: %#v\\n\\n\\tgot: %#v\\n\\n\", filepath.Base(file), line, $1, $2)\n\tt.FailNow()\n}",
       "doc": "",
@@ -127873,6 +128996,16 @@
       "label": "",
       "matches": {
         "gt": true
+      }
+    },
+    "ec32588d-28de-3973-b9e1-1e81fbdb1beb": {
+      "content": "${1:FIELDNAME} = models.XMLField($2)",
+      "doc": "XMLField (mxml).\n\n*All uses of XMLField can be replaced with TextField. This field has been deprecated since version 1.3*",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "mxml",
+      "matches": {
+        "mxml": true
       }
     },
     "ec3b895c-9164-3ff3-b065-9e0b572a06d7": {
@@ -128639,6 +129772,16 @@
         "fw:lr": true
       }
     },
+    "edd7d7a4-62bf-30b5-be4d-8aa06a7244ec": {
+      "content": "${1:FIELDNAME} = JSONField()",
+      "doc": "JSONField (mjson).\n\n*PostgreSQL specific model fields*.\n\n[New in Django 1.11.]\n\nA field for storing JSON encoded data.",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "mjson",
+      "matches": {
+        "mjson": true
+      }
+    },
     "edd7e0a4-195e-32cd-8cb0-391fbd63d84f": {
       "content": "${1:obj}.scrollLeft(${2:value})",
       "doc": "",
@@ -128829,6 +129972,16 @@
       "label": "after_update",
       "matches": {
         "aftu": true
+      }
+    },
+    "ee3628f4-3112-3147-8c32-f98fdfb1fad7": {
+      "content": "${1:FIELDNAME} = serializers.SlugField(${2})",
+      "doc": "Django-rest Serializers ``SlugField``",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF SlugField",
+      "matches": {
+        "sslug": true
       }
     },
     "ee3bd485-761c-3383-be54-3beaeca0027b": {
@@ -129102,6 +130255,16 @@
         "tsh:n": true
       }
     },
+    "ee98ebde-f6e1-39e6-9a82-fea964c705ef": {
+      "content": "${1:FIELDNAME} = serializers.StringRelatedField(${2})",
+      "doc": "Django-rest Serializers ``StringRelatedField``",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF StringRelatedField",
+      "matches": {
+        "ssr": true
+      }
+    },
     "ee9e3524-e991-34a0-b518-9b7e08dd91a1": {
       "content": "(fun ${1:x} -> ${2:TARGET})",
       "doc": "",
@@ -129364,6 +130527,16 @@
         "function": true
       }
     },
+    "ef0bb8b4-8b05-3230-bb55-16ea4a246ec7": {
+      "content": "${1:FIELDNAME} = serializers.HiddenField(${2})",
+      "doc": "Django-rest Serializers ``HiddenField``",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF HiddenField",
+      "matches": {
+        "shidden": true
+      }
+    },
     "ef0f7524-28ca-387e-9f7c-63f525e86e42": {
       "content": "fmt\"${0:#:TARGET}\"",
       "doc": "",
@@ -129454,6 +130627,16 @@
         "fun3": true
       }
     },
+    "ef351c72-0995-3cb6-8378-84f52aa4414b": {
+      "content": "{% $1 %}",
+      "doc": "tag autocomplete no oficial",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "tag",
+      "matches": {
+        "tag": true
+      }
+    },
     "ef354c34-5ab1-3a98-8498-5736d24322e8": {
       "content": "width: auto;",
       "doc": "",
@@ -129523,6 +130706,16 @@
       "label": "unlesse",
       "matches": {
         "unlesse": true
+      }
+    },
+    "ef6d9c21-461b-392b-8874-6eeb2a2bc028": {
+      "content": "```{${1|language,awk,bash,coffee,gawk,groovy,haskell,lein,mysql,node,octave,perl,psql,Rscript,ruby,sas,scala,sed,sh,stata,zsh,asis,asy,block,block2,bslib,c,cat,cc,comment,css,dot,embed,fortran,fortran95,go,highlight,js,julia,python,R,Rcpp,sass,scss,sql\\, connection=db,stan\\, output.var=\"stanmodel\",targets,tikz,verbatim,exec\\, command=\"\"|}}\n${TM_SELECTED_TEXT}$0\n```",
+      "doc": "Insert code chunk",
+      "filetype": "rmarkdown",
+      "grammar": "lsp",
+      "label": "Insert code chunk",
+      "matches": {
+        "code chunk": true
       }
     },
     "ef71729c-c3f5-327a-b568-902e14782c7d": {
@@ -129993,16 +131186,6 @@
       "label": "\\usepackage",
       "matches": {
         "up": true
-      }
-    },
-    "f033eabc-eb0f-3cb3-9679-225aa7084766": {
-      "content": "def get_success_url(self):\n\treturn reverse(\"${1:ViewName}\", kwargs={${2:\"pk\": self.get_object().pk}})",
-      "doc": "Django Views ``get_success_url`` method",
-      "filetype": "views",
-      "grammar": "lsp",
-      "label": "Django Views get_success_url",
-      "matches": {
-        "getsuccessurl": true
       }
     },
     "f03b34f3-e764-3ad9-91d1-e7985f53d8fe": {
@@ -130688,6 +131871,16 @@
         "cout": true
       }
     },
+    "f184368c-a5f5-3442-85db-178a48c02b2b": {
+      "content": "${1:FIELDNAME} = serializers.FileField(${2})",
+      "doc": "Django-rest Serializers ``FileField``",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF FileField",
+      "matches": {
+        "sfile": true
+      }
+    },
     "f18528cb-f0cf-35d0-8ec4-4a15887ee6a3": {
       "content": "border-image: none",
       "doc": "",
@@ -130737,6 +131930,16 @@
       "matches": {
         "jest test each": true,
         "teste": true
+      }
+    },
+    "f196342a-ef03-3be3-9dcc-352b3c646f46": {
+      "content": "${1:FIELDNAME} = serializers.FilePathField(path=${2})",
+      "doc": "Django-rest Serializers ``FilePathField``",
+      "filetype": "serializers",
+      "grammar": "lsp",
+      "label": "DRF FilePathField",
+      "matches": {
+        "sfilepath": true
       }
     },
     "f196869b-afdc-322f-976b-64901f36e777": {
@@ -131059,6 +132262,16 @@
       "label": "",
       "matches": {
         "wil": true
+      }
+    },
+    "f1fb06ce-a30c-320b-9bd4-dcbf734c8007": {
+      "content": "from django.contrib.postgres.fields import ${1|ArrayField,JSONField,HStoreField|}",
+      "doc": "PostgreSQL specific model fields",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "ipostgresmf",
+      "matches": {
+        "ipostgresmf": true
       }
     },
     "f209f947-3557-3cfe-846b-2798e57167ba": {
@@ -133312,16 +134525,6 @@
         "input:time": true
       }
     },
-    "f5d67da2-6a02-3dd1-927e-f0523b495dcb": {
-      "content": "```{${1:language}}\n${TM_SELECTED_TEXT}$0\n```",
-      "doc": "Insert code chunk",
-      "filetype": "rmarkdown",
-      "grammar": "lsp",
-      "label": "Insert code chunk",
-      "matches": {
-        "code chunk": true
-      }
-    },
     "f5dcdf05-ea15-37d0-a25f-a5649924c913": {
       "content": "import styled from 'styled-components/native';\n\nexport const ${1:Container} = styled.${2:View}`\n  ${3}\n`;",
       "doc": "Create React Native Styled Components file",
@@ -133644,16 +134847,6 @@
       "label": "",
       "matches": {
         "ovx": true
-      }
-    },
-    "f66a7516-d75a-3baa-a1bc-3c05d554d591": {
-      "content": "class ${1:ModelName}ListView(generic.ListView):\n\tmodel = ${2:$1}\n\ttemplate_name = \"${3:$1/$1_list.html}\"\n\n\tdef get_queryset(self):\n\t\treturn $1.objects.filter(${4})",
-      "doc": "Django CBV ``ListView``",
-      "filetype": "views",
-      "grammar": "lsp",
-      "label": "Django ListView",
-      "matches": {
-        "listview": true
       }
     },
     "f66af462-3f79-37f6-b574-0ccf40aa95e4": {
@@ -134279,16 +135472,6 @@
         "not:": true
       }
     },
-    "f783d7b8-4381-3bf1-91ad-4bdb2a7b877c": {
-      "content": "def post(self, request, *args, **kwargs):\n\treturn super().post(request, *args, **kwargs)",
-      "doc": "Django Views ``post`` method",
-      "filetype": "views",
-      "grammar": "lsp",
-      "label": "Django Views post",
-      "matches": {
-        "post": true
-      }
-    },
     "f78416f9-0545-3fa2-83c0-320d2ff0e7ec": {
       "content": "(cond\n\t[(${1}) ${0}])",
       "doc": "",
@@ -134357,6 +135540,16 @@
       "label": "func main() { ... }",
       "matches": {
         "main": true
+      }
+    },
+    "f7bd7d53-2ac4-3767-a69e-5c635d43de84": {
+      "content": "${1:FIELDNAME} = forms.TimeField($2, required=${3:False})",
+      "doc": "TimeField (ftime)",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "ftime",
+      "matches": {
+        "ftime": true
       }
     },
     "f7cc0185-1b6d-3efd-bd26-309e5f06c52f": {
@@ -134488,6 +135681,16 @@
       "label": "",
       "matches": {
         "str": true
+      }
+    },
+    "f8000010-17f9-314e-ab15-dce8f35e0f80": {
+      "content": "${1:FIELDNAME} = models.FilePathField($2, path=${3:None}, match=${4:None}, recursive=${5:recursive}, max_length=${6:100})",
+      "doc": "FilePathField (mfilepath).\n\nA CharField whose choices are limited to the filenames in a certain directory on the filesystem.",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "mfilepath",
+      "matches": {
+        "mfilepath": true
       }
     },
     "f80664aa-0b46-3944-b3af-9ea150a3cfaa": {
@@ -134985,16 +136188,6 @@
         "ptelr": true
       }
     },
-    "f924e42f-56ef-320c-adc4-deccffae8c4e": {
-      "content": "${1:FIELDNAME} = forms.IPAddressField(${2})",
-      "doc": "Django forms ``IPAddressField``",
-      "filetype": "forms",
-      "grammar": "lsp",
-      "label": "Forms IPAddressField",
-      "matches": {
-        "fip": true
-      }
-    },
     "f92aab73-a463-3134-ad58-63eec97160dd": {
       "content": "text-align right",
       "doc": "",
@@ -135145,16 +136338,6 @@
         "elif": true
       }
     },
-    "f95cd8c1-2d2a-30f3-a63b-0d6c3ca5bcef": {
-      "content": "CONSTRAINT ${1:attribute} FOREING KEY (${2:attribute(s)})\n\tREFERENCES ${3:tableName}(${4:attribute})",
-      "doc": "Constraint foreing Key",
-      "filetype": "sql",
-      "grammar": "lsp",
-      "label": "foreingkc",
-      "matches": {
-        "foreingkc": true
-      }
-    },
     "f96a5c05-817b-31a9-8400-d41fed05837a": {
       "content": "require 'test/unit'\n\nrequire 'tc_${1:test_case_file}'\nrequire 'tc_${2:test_case_file}'",
       "doc": "",
@@ -135175,6 +136358,16 @@
         "prop": true
       }
     },
+    "f96c54a6-ea13-35e1-96f4-70b00431fcf1": {
+      "content": "{% ifequal $1 %}\n  \n{% endifequal %}",
+      "doc": "ifequal tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "ifequal",
+      "matches": {
+        "ifeq": true
+      }
+    },
     "f96e824d-6052-30df-9e8c-ef5c2bf064f1": {
       "content": "it('should $1', () => {\n  $0\n})",
       "doc": "Testing `it` block",
@@ -135193,6 +136386,16 @@
       "label": "",
       "matches": {
         "fst": true
+      }
+    },
+    "f9722a42-3042-3ea7-bb55-4a2b71af5cdb": {
+      "content": "{% if $1 %}\n  \n{% endif %}",
+      "doc": "if tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "if",
+      "matches": {
+        "if": true
       }
     },
     "f972d40f-9dbd-3497-9665-79d7f82a7459": {
@@ -135833,6 +137036,16 @@
         "for": true
       }
     },
+    "fa68398d-c7e2-3929-b6ce-55cbe060974c": {
+      "content": "urlpatterns = [\n\t$0\n]",
+      "doc": "",
+      "filetype": "urls",
+      "grammar": "lsp",
+      "label": "urlpatterns",
+      "matches": {
+        "urlpatterns": true
+      }
+    },
     "fa6e449d-9a31-378c-ac38-4bf5cb4b8d57": {
       "content": "<address>\n\t${0}\n</address>",
       "doc": "",
@@ -136315,6 +137528,16 @@
         "fxd:c": true
       }
     },
+    "fb5146f6-fb8b-35c2-aca9-c7cf3b31dc4b": {
+      "content": "${1:FIELDNAME} = forms.TypedMultipleChoiceField($2, choices=[${3:CHOICES}], coerce=${4:TYPE}, required=${5:False})",
+      "doc": "TypedMultipleChoiceField (ftypedmuchoice)",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "ftypedmuchoice",
+      "matches": {
+        "ftypedmuchoice": true
+      }
+    },
     "fb51cb9f-d23b-3aae-80df-236ca1d28e92": {
       "content": "rotate${1:X}(${0:angle});",
       "doc": "",
@@ -136614,16 +137837,6 @@
       "label": "",
       "matches": {
         "ifdef": true
-      }
-    },
-    "fbf4eb39-7dae-3776-ae14-922b873521f3": {
-      "content": "${1:FIELDNAME} = forms.TypedChoiceField(${2})",
-      "doc": "Django forms ``TypedChoiceField``",
-      "filetype": "forms",
-      "grammar": "lsp",
-      "label": "Forms TypedChoiceField",
-      "matches": {
-        "ftchoice": true
       }
     },
     "fbfa1c8f-0c7d-3345-82d4-93c7c0762bdc": {
@@ -137171,16 +138384,6 @@
         "jc:s": true
       }
     },
-    "fcb6ffc8-d3b3-3efa-af82-cbf94a1a1c9a": {
-      "content": "def get(self, request, *args, **kwargs):\n\treturn super().get(request, *args, **kwargs)",
-      "doc": "Django Views ``post`` method",
-      "filetype": "views",
-      "grammar": "lsp",
-      "label": "Django Views get",
-      "matches": {
-        "get": true
-      }
-    },
     "fcb9b0a5-734c-3918-8e66-6b92e58eb432": {
       "content": "No Operation",
       "doc": "",
@@ -137279,6 +138482,16 @@
       "label": "",
       "matches": {
         "bdrs:n": true
+      }
+    },
+    "fce24c5d-70dd-3456-928d-b97ceedecf3d": {
+      "content": "${1:FIELDNAME} = models.PositiveIntegerField($2)",
+      "doc": "PositiveIntegerField (mposint).\n\nLike an IntegerField, but must be either positive or zero (0).",
+      "filetype": "models",
+      "grammar": "lsp",
+      "label": "mposint",
+      "matches": {
+        "mposint": true
       }
     },
     "fcedf6d7-5e37-3e40-ba41-c07bab431ae2": {
@@ -137549,6 +138762,16 @@
       "label": "",
       "matches": {
         "try": true
+      }
+    },
+    "fdb25937-cbdb-3a6d-8cea-e8ec2e358f1c": {
+      "content": "${1:Object} ${2:foo} = new ${1:Object}();",
+      "doc": "Create new Object",
+      "filetype": "java",
+      "grammar": "lsp",
+      "label": "newObject",
+      "matches": {
+        "new": true
       }
     },
     "fdb43c02-0a9d-3b02-9acf-d90ecfb0f02b": {
@@ -138395,6 +139618,16 @@
         "fora": true
       }
     },
+    "ff1db918-99d4-38fa-b1ad-de43c996dc61": {
+      "content": "${1:FIELDNAME} = forms.DecimalField($2, required=${3:False})",
+      "doc": "DecimalField (fdecimal)",
+      "filetype": "forms",
+      "grammar": "lsp",
+      "label": "fdecimal",
+      "matches": {
+        "fdecimal": true
+      }
+    },
     "ff220651-c6e6-38ad-be0b-221e0ddcad6d": {
       "content": "must_be_within_epsilon ${1:0.1}, ${2:0.1}",
       "doc": "",
@@ -138804,6 +140037,16 @@
       "label": "margin:   all (margin)",
       "matches": {
         "margin": true
+      }
+    },
+    "fff6fa52-434f-30e7-92ec-4acae3f0aeb8": {
+      "content": "@JvmStatic\nfun main(args: Array<String>) {\n\t${0}\n}",
+      "doc": "",
+      "filetype": "kotlin",
+      "grammar": "snu",
+      "label": "",
+      "matches": {
+        "main": true
       }
     },
     "fffc8201-50b1-37bc-b025-d464da8202f2": {
