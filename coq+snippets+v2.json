@@ -55,7 +55,9 @@
     "d": {
       "c": true
     },
-    "dart": {},
+    "dart": {
+      "dart-flutter": true
+    },
     "dart-flutter": {},
     "debug": {},
     "diff": {},
@@ -304,7 +306,13 @@
     "vue": {
       "css": true,
       "html": true,
-      "javascript": true
+      "javascript": true,
+      "vue-pug": true,
+      "vue-script": true,
+      "vue-script-router": true,
+      "vue-script-vuex": true,
+      "vue-template": true,
+      "vuex": true
     },
     "vue-pug": {},
     "vue-script": {},
