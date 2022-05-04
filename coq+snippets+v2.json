@@ -56,16 +56,21 @@
       "c": true
     },
     "dart": {
-      "dart-flutter": true
+      "dart-flutter": true,
+      "flutter": true
     },
     "dart-flutter": {},
     "debug": {},
     "diff": {},
-    "django": {},
+    "django": {
+      "djangohtml": true
+    },
     "djangohtml": {},
     "dockerfile": {},
     "dosini": {},
-    "dotenv": {},
+    "dotenv": {
+      "dotenv-safe": true
+    },
     "dotenv-safe": {},
     "eelixir": {
       "html": true
