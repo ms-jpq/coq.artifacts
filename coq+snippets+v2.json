@@ -277,6 +277,7 @@
     "reason": {},
     "redux": {},
     "redux-thunk": {},
+    "remix-ts": {},
     "requirejs_coffee": {},
     "rescript": {},
     "rmarkdown": {},
@@ -384,6 +385,7 @@
     "vue-pug": {},
     "vue-script": {},
     "vue-script-router": {},
+    "vue-script-setup": {},
     "vue-script-vuex": {},
     "vue-template": {},
     "vuex": {},
@@ -396,6 +398,7 @@
     "yii": {},
     "yii-chtml": {},
     "yup": {},
+    "zig": {},
     "zsh": {
       "bash": true,
       "sh": true
@@ -771,6 +774,16 @@
       "label": "uvm_macro_do_pri_with",
       "matches": {
         "`uvm_do_pri_with": true
+      }
+    },
+    "007a7abd-7399-3573-a0cc-191f688358f0": {
+      "content": "include_directories(${1:\\${PROJECT_SOURCE_DIR\\}})",
+      "doc": "Add the snippet include_directories() to set include directories",
+      "filetype": "cmake",
+      "grammar": "lsp",
+      "label": "include_directories()",
+      "matches": {
+        "i_d": true
       }
     },
     "007c7067-6783-39ed-85e2-f45f4a936ab4": {
@@ -1312,6 +1325,16 @@
       "label": "typescriptReactClassExportPureComponent",
       "matches": {
         "tsrpce": true
+      }
+    },
+    "01711e2d-5f78-3eb1-a16c-db232891fed6": {
+      "content": "${1:generate_label}: if ${2:condition} generate\n\t$0\nend generate $1;",
+      "doc": "If Generate Statement",
+      "filetype": "vhdl",
+      "grammar": "lsp",
+      "label": "if_generate",
+      "matches": {
+        "ifgen": true
       }
     },
     "0174de30-1541-332a-8252-17ace6fe6623": {
@@ -2127,16 +2150,6 @@
       "label": "Category",
       "matches": {
         "cat": true
-      }
-    },
-    "02ea2423-7bb8-34b5-8cff-6ae570753cd8": {
-      "content": "std_ulogic_vector(${1:7} ${2|downto,to|} ${3:0});",
-      "doc": "std_ulogic_vector Type",
-      "filetype": "vhdl",
-      "grammar": "lsp",
-      "label": "std_ulogic_vector",
-      "matches": {
-        "stduv": true
       }
     },
     "02ec04e3-dcab-37d1-87fe-70fd471403c5": {
@@ -5797,6 +5810,16 @@
         "go": true
       }
     },
+    "09152b2a-4417-36f4-a50a-2e655a0ae896": {
+      "content": "local ${1:var} = require(${2:module})",
+      "doc": "Require module as a variable",
+      "filetype": "lua",
+      "grammar": "lsp",
+      "label": "locreq",
+      "matches": {
+        "lreq": true
+      }
+    },
     "091741ee-05cc-3ec0-b232-1937110afe1c": {
       "content": "<button id=\"${1}\" type=\"${2:submit}\">${0}</button>",
       "doc": "",
@@ -6976,6 +6999,16 @@
         "function": true
       }
     },
+    "0ae743e4-395c-3a66-952f-0028fab52a59": {
+      "content": "import { type ActionFunction, json } from '@remix-run/node'\n\nexport const action: ActionFunction = async ({ request }) => {\n\treturn json({ ok: true })\n}",
+      "doc": "Remix action function",
+      "filetype": "remix-ts",
+      "grammar": "lsp",
+      "label": "Remix action function",
+      "matches": {
+        "rxa": true
+      }
+    },
     "0ae81cb9-d8db-3856-a88f-78cefb7d2496": {
       "content": "<pre>{{${1:model} | json}}</pre>$0",
       "doc": "Angular pre debug | json",
@@ -7500,6 +7533,16 @@
       "label": "",
       "matches": {
         "bdlt": true
+      }
+    },
+    "0bd5e0a7-e05b-3799-b8c1-d37867dc01e2": {
+      "content": "//${2:STEPID01} EXEC PGM=IEBGENER \n//SYSUT1   DD *\n${3}\n/*\n//SYSUT2   DD      DISP=NEW,DSN=${4:A.B.C}\n//SYSPRINT DD      SYSOUT=*\n$0",
+      "doc": "IEBGENER create/load a dataset",
+      "filetype": "vscode_cobol_jcl",
+      "grammar": "lsp",
+      "label": "Job/IEBGENER ",
+      "matches": {
+        "IEBGENER": true
       }
     },
     "0bdb8a4f-2f0f-3809-8721-ad28ef0b9afe": {
@@ -9017,6 +9060,16 @@
       "label": "setinterval",
       "matches": {
         "base set interval": true
+      }
+    },
+    "0e3d6412-25b5-336b-a4fc-ef04b1abe373": {
+      "content": "configure_file(\n\t${1:\\${PROJECT_SOURCE_DIR\\}/includes/version.h.in}\n\t${2:\\${PROJECT_SOURCE_DIR\\}/includes/version.h}\n\t@ONLY\n)",
+      "doc": "Add the snippet for configure_file()",
+      "filetype": "cmake",
+      "grammar": "lsp",
+      "label": "configure_file",
+      "matches": {
+        "conf": true
       }
     },
     "0e3dbedb-4ecb-3424-8485-118d026e27db": {
@@ -10716,16 +10769,6 @@
       "label": "",
       "matches": {
         "entry": true
-      }
-    },
-    "10c8bfe3-6baa-3901-83d5-31b5593a9342": {
-      "content": "std_logic;",
-      "doc": "std_logic Type",
-      "filetype": "vhdl",
-      "grammar": "lsp",
-      "label": "std_logic",
-      "matches": {
-        "std": true
       }
     },
     "10c8c3cb-9941-39b3-bc27-272e404b44bc": {
@@ -14606,6 +14649,16 @@
         "angular ng form control name": true
       }
     },
+    "167cfa03-51da-31de-a57a-82fd077bc69a": {
+      "content": "set(CMAKE_EXPORT_COMPILE_COMMANDS ON)",
+      "doc": "Add the snippet to generate 'compile_commands.json'",
+      "filetype": "cmake",
+      "grammar": "lsp",
+      "label": "export compile commands",
+      "matches": {
+        "ecc": true
+      }
+    },
     "167f3f26-a2f6-30c3-9b0c-ec96761ee9d4": {
       "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} |\n| --------------- | --------------- | --------------- |\n| ${4:Item1.1} | ${5:Item2.1} | ${6:Item3.1} |\n| ${7:Item1.2} | ${8:Item2.2} | ${9:Item3.2} |\n| ${10:Item1.3} | ${11:Item2.3} | ${12:Item3.3} |\n${0}",
       "doc": "Insert table with 4 rows and 3 columns. First row is heading.",
@@ -16201,6 +16254,16 @@
       "label": "runs (coffee)",
       "matches": {
         "ru": true
+      }
+    },
+    "18de577a-de40-3b22-99dd-3f5aee54bdf2": {
+      "content": "local f = io.open(${1:${2:filename}}, \"${3:r}\")\n\nwhile true do\n\tline = f:read()\n\tif line == nil then break end\n\n\t${0}\nend",
+      "doc": "read file line by line",
+      "filetype": "lua",
+      "grammar": "lsp",
+      "label": "forline",
+      "matches": {
+        "forline": true
       }
     },
     "18e04f26-6264-3fe4-9c22-502d7e999435": {
@@ -22812,6 +22875,16 @@
         "to:n": true
       }
     },
+    "226d7937-73b2-3e57-9296-0a712568ef20": {
+      "content": "target_link_libraries(\n\t${1:myTarget}\n\t${2:myLib}\n)",
+      "doc": "Add the snippet target_link_libraries() to link libraries",
+      "filetype": "cmake",
+      "grammar": "lsp",
+      "label": "target_link_libraries()",
+      "matches": {
+        "tll": true
+      }
+    },
     "226daebe-0514-34bb-851b-3875284843ef": {
       "content": "${1:public} ${2:void} ${3}(${4})\n{\n\t${0}\n}",
       "doc": "",
@@ -24743,16 +24816,6 @@
         "for": true
       }
     },
-    "254c9c1e-0767-3b7a-a906-6c81417d30a8": {
-      "content": "if err != nil {\n\t${1:return ${2:nil, }${3:err}}\n}",
-      "doc": "Snippet for if err != nil",
-      "filetype": "go",
-      "grammar": "lsp",
-      "label": "if err != nil",
-      "matches": {
-        "ir": true
-      }
-    },
     "254cc11e-950a-3fa2-bb40-d505b068cedf": {
       "content": "@link ${1:namePathOrUrl}$0",
       "doc": "Link to another item in the documentation. Synonysm of @linkcode and @linkplain.",
@@ -26323,6 +26386,16 @@
         "ai:fb": true
       }
     },
+    "27a405f2-e93f-3960-ab8f-7026316bd65e": {
+      "content": "local ${0}",
+      "doc": "declare a variable",
+      "filetype": "lua",
+      "grammar": "lsp",
+      "label": "local",
+      "matches": {
+        "l": true
+      }
+    },
     "27a54bf5-db34-307a-962d-09c65a613d51": {
       "content": "<cite>$1</cite>$2",
       "doc": "HTML - Defines a citation",
@@ -26691,6 +26764,16 @@
       "label": "",
       "matches": {
         "textarea": true
+      }
+    },
+    "282d4fdd-3dc2-3d79-8341-0e790a1b5c90": {
+      "content": "add_library(\n\t${1:myLib}\n\t${2|STATIC,SHARED,MODULE|}\n\t${3:\\${SOURCES\\}}\n)",
+      "doc": "Add the snippet add_library() to build source files as a library",
+      "filetype": "cmake",
+      "grammar": "lsp",
+      "label": "add_library()",
+      "matches": {
+        "lib": true
       }
     },
     "28304040-6652-364f-a3b1-4b7b52a32bd5": {
@@ -27188,6 +27271,16 @@
         "footer.": true
       }
     },
+    "290672f9-3558-3ab9-932f-b441d13b01bf": {
+      "content": "std_logic_vector(${1:7} ${2|downto,to|} ${3:0})",
+      "doc": "std_logic_vector Type",
+      "filetype": "vhdl",
+      "grammar": "lsp",
+      "label": "std_logic_vector",
+      "matches": {
+        "stdv": true
+      }
+    },
     "2908aa39-201b-3819-9584-f57d66e58970": {
       "content": "LABEL ${1:label}=\"${2:value}\"",
       "doc": "",
@@ -27346,6 +27439,16 @@
       "label": "MonoBehaviour OnCollisionEnter2D",
       "matches": {
         "OnCollisionEnter2D(Collision2D)": true
+      }
+    },
+    "293abc22-8dde-3ca2-b0f4-878678c6ac9a": {
+      "content": "else()\n\t${1:commands}",
+      "doc": "Add the snippet else()",
+      "filetype": "cmake",
+      "grammar": "lsp",
+      "label": "else()",
+      "matches": {
+        "else": true
       }
     },
     "293e5d5e-4b9b-318d-ba3e-ac485d23e508": {
@@ -27881,16 +27984,6 @@
         "bdti:n": true
       }
     },
-    "29c44c3a-5225-3d67-9bd4-4333199b76a1": {
-      "content": "CONSTRAINT ${1:attribute} FOREIGN KEY (${2:attribute(s)})\n\tREFERENCES ${3:tableName}(${4:attribute})",
-      "doc": "Constraint foreign Key",
-      "filetype": "sql",
-      "grammar": "lsp",
-      "label": "foreingkc",
-      "matches": {
-        "foreingkc": true
-      }
-    },
     "29c653ff-e961-3266-83e5-173ba6c47098": {
       "content": "import { PropTypes } from 'react'\n\nconst ${TM_FILENAME_BASE} = props => {\n\treturn (\n\t\t<div>\n\t\t\t\n\t\t</div>\n\t)\n}\n\n${1}.propTypes = {\n\t$0\n}\n\nexport default ${1}",
       "doc": "Creates a React function component with PropTypes",
@@ -28303,6 +28396,16 @@
       "label": "",
       "matches": {
         "dfpw": true
+      }
+    },
+    "2a51ccba-d90b-3527-8670-51f09e8990e0": {
+      "content": "if err != nil {\n\treturn ${1:nil}, ${2:err}\n}",
+      "doc": "Snippet for if err != nil",
+      "filetype": "go",
+      "grammar": "lsp",
+      "label": "if err != nil",
+      "matches": {
+        "ir": true
       }
     },
     "2a53ee63-dead-3291-b451-dcf925faf313": {
@@ -31872,6 +31975,16 @@
       "label": "",
       "matches": {
         "traits": true
+      }
+    },
+    "30873320-9e6c-3e8a-adca-9b72a42e5c75": {
+      "content": "${1:dst} <= ${2: true_value} when ${3: condition} else ${4:false_value};",
+      "doc": "When-Else assignment",
+      "filetype": "vhdl",
+      "grammar": "lsp",
+      "label": "when_else",
+      "matches": {
+        "whenelse": true
       }
     },
     "308bfada-acbb-3607-b168-9b2c548d02f2": {
@@ -36445,16 +36558,6 @@
         "rfc": true
       }
     },
-    "376d2431-e30e-3434-9934-b06b70671c3e": {
-      "content": "{${1:key}: ${2:value} for ${3:key}, ${4:value} in ${5:iterable}}$0",
-      "doc": "Handy and faster way to create dictionaries based on existing dictionaries.",
-      "filetype": "comprehension",
-      "grammar": "lsp",
-      "label": "Dictionary comprehension",
-      "matches": {
-        "dc": true
-      }
-    },
     "37700f2a-b8cb-373f-a9a7-6930444c3017": {
       "content": "while (${1:condition}) {\n\t$0\n}",
       "doc": "While Statement",
@@ -37037,6 +37140,16 @@
         "notf": true
       }
     },
+    "389b8645-9e85-3211-8e4b-3fbc501bbd92": {
+      "content": "with ${1:src} select ${2:dst} <= ${3:value} when $4{condition};",
+      "doc": "With-Select assignment",
+      "filetype": "vhdl",
+      "grammar": "lsp",
+      "label": "with_select",
+      "matches": {
+        "with": true
+      }
+    },
     "389d9d4c-c2d0-3427-8249-21b8bde1d15e": {
       "content": "-webkit-border-image: url('${1}') ${2:0} ${3:0} ${4:0} ${5:0} ${6:stretch} ${0:stretch}",
       "doc": "",
@@ -37567,6 +37680,16 @@
       "label": "useMemo",
       "matches": {
         "ume": true
+      }
+    },
+    "396eb642-23ec-352f-8c55-60677bc672d8": {
+      "content": "{${4:key}: ${5:value} for ${2:key}, ${3:value} in ${1:iterable}}$0",
+      "doc": "Handy and faster way to create dictionaries based on existing dictionaries.",
+      "filetype": "comprehension",
+      "grammar": "lsp",
+      "label": "Dictionary comprehension",
+      "matches": {
+        "dc": true
       }
     },
     "3971b856-d91e-3079-bc94-244885865b7d": {
@@ -38736,6 +38859,16 @@
         "show": true
       }
     },
+    "3b211fa0-3d69-3c09-85d1-004d330c7b43": {
+      "content": "CONSTRAINT ${1:attribute} FOREIGN KEY (${2:attribute(s)})\n\tREFERENCES ${3:tableName}(${4:attribute})",
+      "doc": "Constraint foreign Key",
+      "filetype": "sql",
+      "grammar": "lsp",
+      "label": "foreignkc",
+      "matches": {
+        "foreignkc": true
+      }
+    },
     "3b269baf-364d-30ec-918d-d62fead46640": {
       "content": "import styled from 'styled-components/native';\n\nexport const ${1:Container} = styled.${2:View}`\n  ${3}\n`;",
       "doc": "Create React Native Styled Components file",
@@ -39128,6 +39261,16 @@
       "label": "Filter plus",
       "matches": {
         "plus": true
+      }
+    },
+    "3b9e2aec-5921-3247-b1a0-b8c78443c087": {
+      "content": "cmake_minimum_required(VERSION ${1:3.16})$2",
+      "doc": "Add the snippet for cmake_minimum_required()",
+      "filetype": "cmake",
+      "grammar": "lsp",
+      "label": "cmake_minimum_required()",
+      "matches": {
+        "cmr": true
       }
     },
     "3ba15e1a-03da-34c0-9017-38dfd3bff5e6": {
@@ -43340,6 +43483,16 @@
         "match": true
       }
     },
+    "41ce83a8-e5e1-388d-b068-cbc4bfd9a239": {
+      "content": "include(${1:FetchContent})",
+      "doc": "Add the snippet for include()",
+      "filetype": "cmake",
+      "grammar": "lsp",
+      "label": "include()",
+      "matches": {
+        "inc": true
+      }
+    },
     "41e5e14f-8b13-3368-9d74-6bd338939c64": {
       "content": "import React, { PureComponent } from 'react'\n\nexport class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}} extends PureComponent {\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t)\n\t}\n}\n\nexport default ${1:$TM_FILENAME_BASE}",
       "doc": "Creates a React pure component class with ES7 module system export",
@@ -44525,6 +44678,16 @@
         "article": true
       }
     },
+    "439da5c3-be26-3ae5-be69-52acaf8cba6e": {
+      "content": "set(${1:variable} ${2:0})$3",
+      "doc": "Add the snippet to use set() for defining a variable",
+      "filetype": "cmake",
+      "grammar": "lsp",
+      "label": "set a variable",
+      "matches": {
+        "sv": true
+      }
+    },
     "43ae2a8a-fd6b-3f5d-9e4e-8177271dbca2": {
       "content": "self.fail('${1:message}')$0",
       "doc": "",
@@ -45458,6 +45621,16 @@
         "mbsa": true
       }
     },
+    "44fbd9c5-3238-3765-b1d8-67b6da793b0a": {
+      "content": "message(${1|STATUS,DEBUG,WARNING,SEND_ERROR,FATAL_ERROR|} \"${2:message}\")$3",
+      "doc": "Add the snippet for message()",
+      "filetype": "cmake",
+      "grammar": "lsp",
+      "label": "message()",
+      "matches": {
+        "msg": true
+      }
+    },
     "44fd0a86-63af-3766-ad52-f1739b0d2d57": {
       "content": "border-right: ${1};${0}",
       "doc": "",
@@ -45527,6 +45700,16 @@
       "label": "",
       "matches": {
         "asns": true
+      }
+    },
+    "4519477b-2892-3707-b625-50ddb20be0ad": {
+      "content": "with $1; $0;",
+      "doc": "with expression",
+      "filetype": "nix",
+      "grammar": "lsp",
+      "label": "with",
+      "matches": {
+        "with": true
       }
     },
     "4520c06b-3752-385f-aa00-bb6761dd49d8": {
@@ -46110,6 +46293,26 @@
       "label": "google_compute_instance",
       "matches": {
         "tf-google_compute_instance": true
+      }
+    },
+    "461e4f80-e4b1-31c5-95a6-5e389d86aa0c": {
+      "content": "add_executable(\n\t${1:exe}\n\t${2:\\${SOURCES\\}}\n)",
+      "doc": "Add the snippet add_executable() to build source files as an exeutable file",
+      "filetype": "cmake",
+      "grammar": "lsp",
+      "label": "add_executable()",
+      "matches": {
+        "exe": true
+      }
+    },
+    "4622ddb2-88fd-3a44-a1ee-41230048b5e7": {
+      "content": "${1:generate_label}: for ${2:iteration} generate\n\t$0\nend generate $1;",
+      "doc": "For Generate",
+      "filetype": "vhdl",
+      "grammar": "lsp",
+      "label": "for_generate",
+      "matches": {
+        "forgen": true
       }
     },
     "46264516-f6c7-334d-b1dd-43d496ded09b": {
@@ -46735,16 +46938,6 @@
         "textSize": true
       }
     },
-    "473e8620-8c63-319e-98c9-4a84a53f83c9": {
-      "content": "# https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/\napiVersion: batch/v1beta1\nkind: CronJob\nmetadata:\n  name: ${1:cronjobname}\n  namespace: ${2:default}\nspec:\n  schedule: \"${3:*/1 * * * *}\"\n  jobTemplate:\n    spec:\n      template:\n        spec:\n          containers:\n          - name: ${4:jobname}\n            image: ${5:busybox}\n            args: ['/bin/sh', '-c', '${6:date; echo Hello from the Kubernetes cluster}']\n          restartPolicy: OnFailure\n---\n$0",
-      "doc": "k8s CronJob",
-      "filetype": "kubernetes",
-      "grammar": "lsp",
-      "label": "k8s CronJob",
-      "matches": {
-        "k-cronjob": true
-      }
-    },
     "4740cb97-8de2-3529-8fbb-6424865d4ec4": {
       "content": "list-style-type: upper-roman",
       "doc": "",
@@ -46905,6 +47098,16 @@
         "log": true
       }
     },
+    "4788d224-836c-334b-b4f5-90595a1df19e": {
+      "content": "add_test(\n\t${1:test_myTest} ${1}\n)",
+      "doc": "Add the snippet for add_test()",
+      "filetype": "cmake",
+      "grammar": "lsp",
+      "label": "add_test()",
+      "matches": {
+        "adt": true
+      }
+    },
     "478a9950-c056-3086-b2af-3f730d055aa9": {
       "content": "let ${1} = ${0}",
       "doc": "let assignment",
@@ -47053,6 +47256,16 @@
       "label": "DRF NullBooleanField",
       "matches": {
         "snullbool": true
+      }
+    },
+    "47ca8166-5517-39c7-9e40-b1db5e792487": {
+      "content": "[${3:value} if ${4:condition} else ${5:condition} for ${2:value} in ${1:iterable}]$0",
+      "doc": "List comprehension for creating a list based on existing lists, with conditional if-else statement.",
+      "filetype": "comprehension",
+      "grammar": "lsp",
+      "label": "List comprehension if else",
+      "matches": {
+        "lcie": true
       }
     },
     "47cbef5a-8922-315f-9142-81bc3d9e834b": {
@@ -47675,16 +47888,6 @@
       "label": "defineComponent",
       "matches": {
         "defineComponent": true
-      }
-    },
-    "48d68239-c6b4-39e7-847b-8ca0da7e3864": {
-      "content": "(${1:key} for ${2:value} in ${3:iterable})$0",
-      "doc": "Create a generator based on existing iterables.",
-      "filetype": "comprehension",
-      "grammar": "lsp",
-      "label": "Generator comprehension",
-      "matches": {
-        "gc": true
       }
     },
     "48d7d2c8-11f5-3482-827f-35a87d59efaf": {
@@ -49351,6 +49554,16 @@
         "match": true
       }
     },
+    "4b65ac79-14f5-3017-938f-77e366794d8d": {
+      "content": "[${3:value} for ${2:value} in ${1:iterable}]$0",
+      "doc": "List comprehension for creating a list based on existing lists.",
+      "filetype": "comprehension",
+      "grammar": "lsp",
+      "label": "List comprehension",
+      "matches": {
+        "lc": true
+      }
+    },
     "4b6abb41-2e73-3f20-ae79-ca551e1d4400": {
       "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n${0}",
       "doc": "Insert task list with 2 tasks",
@@ -50309,6 +50522,16 @@
         "fw:br": true
       }
     },
+    "4cdc2c5a-d65c-39d6-a446-f15fa3e30d0a": {
+      "content": "elseif(${1:condition})\n\t${2:commands}",
+      "doc": "Add the snippet 'elseif()'",
+      "filetype": "cmake",
+      "grammar": "lsp",
+      "label": "else if()",
+      "matches": {
+        "elif": true
+      }
+    },
     "4cddd54d-83d8-3e1b-ba95-33abbac2e7c7": {
       "content": "background-origin: ${1|border-box,padding-box,content-box|};",
       "doc": "initial value: padding-box",
@@ -50810,6 +51033,16 @@
         "for": true
       }
     },
+    "4d9a554c-df9c-3a0a-8ea9-e38d6db9581d": {
+      "content": "#ifdef ${1:DEBUG}\n$0\n#endif // $1",
+      "doc": "Code snippet for #ifdef",
+      "filetype": "cpp",
+      "grammar": "lsp",
+      "label": "#ifdef",
+      "matches": {
+        "#ifdef": true
+      }
+    },
     "4d9c6990-7913-34e3-8e81-de15f48f7d60": {
       "content": "background-color: ${1:red};$0",
       "doc": "",
@@ -50958,6 +51191,16 @@
       "label": "",
       "matches": {
         "hash": true
+      }
+    },
+    "4ddd0801-fd5f-3a2a-bd2d-633068ebc620": {
+      "content": "enum ${1:EnumName}\n{\n\tcase $0;\n}",
+      "doc": "Enum definition",
+      "filetype": "php",
+      "grammar": "lsp",
+      "label": "enum …",
+      "matches": {
+        "enum": true
       }
     },
     "4dded458-c520-3142-8230-510caae98de9": {
@@ -52848,6 +53091,16 @@
         "a-component-standalone": true
       }
     },
+    "50684d48-a96a-3e47-a8c4-10efee318672": {
+      "content": "min($1, $2, ${3:...})$0",
+      "doc": "min",
+      "filetype": "fortran",
+      "grammar": "lsp",
+      "label": "min",
+      "matches": {
+        "min": true
+      }
+    },
     "506b6f45-5f74-3b3e-96eb-0ff57baf1b05": {
       "content": "<typeparam name=\"${1:#:name}\">${0:#:description}</typeparam>",
       "doc": "",
@@ -52886,6 +53139,16 @@
       "label": "",
       "matches": {
         "deploy_spec": true
+      }
+    },
+    "5078cbd9-9b71-3e27-a45b-1f064ae1ec10": {
+      "content": "${1:generate_label}: case ${2:expression} generate\n\twhen ${3:choice} =>\n\t\t$0\n\n\twhen others =>\n\t\tnull;\n\nend generate $1;",
+      "doc": "Case Generate Statement",
+      "filetype": "vhdl",
+      "grammar": "lsp",
+      "label": "case_generate",
+      "matches": {
+        "casegen": true
       }
     },
     "5078df9f-52c0-300b-b3a3-cd30ed77ad50": {
@@ -53432,16 +53695,6 @@
         "sk": true
       }
     },
-    "5152dbd3-2044-3287-a586-83cbaeb570cc": {
-      "content": "local ${1:varName} = ${0:value}",
-      "doc": "create a variable",
-      "filetype": "lua",
-      "grammar": "lsp",
-      "label": "assigment",
-      "matches": {
-        "ll": true
-      }
-    },
     "5161bc79-8a43-391b-9fe8-9e284e3496b9": {
       "content": "#endinitclip",
       "doc": "",
@@ -53912,16 +54165,6 @@
       "label": "return null",
       "matches": {
         "rn": true
-      }
-    },
-    "5236c436-87c9-3d6c-819c-7a368fe66cc9": {
-      "content": "local ${0}",
-      "doc": "create a variable",
-      "filetype": "lua",
-      "grammar": "lsp",
-      "label": "local",
-      "matches": {
-        "l": true
       }
     },
     "523a6716-fd84-3e39-ba30-95ceda1e81a0": {
@@ -55701,6 +55944,16 @@
         "lassign": true
       }
     },
+    "5500cc23-d2cb-36e5-a649-45750f07037e": {
+      "content": "(${3:key} for ${2:value} in ${1:iterable})$0",
+      "doc": "Create a generator based on existing iterables.",
+      "filetype": "comprehension",
+      "grammar": "lsp",
+      "label": "Generator comprehension",
+      "matches": {
+        "gc": true
+      }
+    },
     "55074331-8ef7-3fba-9349-594f718d432e": {
       "content": "font-stretch: semi-expanded;",
       "doc": "",
@@ -56093,16 +56346,6 @@
       "label": "",
       "matches": {
         "bdrz:m": true
-      }
-    },
-    "55b8c472-fa09-3b4c-a5cc-abf8e6837abe": {
-      "content": "{${1:key}: ${2:value} for ${3:key}, ${4:value} in ${5:iterable} if ${6:condition}}$0",
-      "doc": "Handy and faster way to create dictionaries based on existing dictionaries, with conditional if statement.",
-      "filetype": "comprehension",
-      "grammar": "lsp",
-      "label": "Dictionary comprehension if filter",
-      "matches": {
-        "dci": true
       }
     },
     "55c793de-ea1c-35f0-ae2b-12ed2464342e": {
@@ -57834,16 +58077,6 @@
         "=": true
       }
     },
-    "586f8805-6a2b-36a1-8b13-47089111d745": {
-      "content": "${1:generate_label}: for ${2:iteration} generate\n\t$0\nend generate $1;",
-      "doc": "For Generate",
-      "filetype": "vhdl",
-      "grammar": "lsp",
-      "label": "for_generate",
-      "matches": {
-        "for": true
-      }
-    },
     "5873367f-0bb2-3898-b6e3-488601118784": {
       "content": "let ${1}: ${2} = ${3};",
       "doc": "",
@@ -58746,6 +58979,16 @@
       "label": "extern C",
       "matches": {
         "#nocpp": true
+      }
+    },
+    "59e6ad33-5d3e-379d-ad6a-50b73b6a316e": {
+      "content": "constant ${1:const_name} : ${2:integer} := ${3:0};",
+      "doc": "Constant declaration with initialisation",
+      "filetype": "vhdl",
+      "grammar": "lsp",
+      "label": "constant",
+      "matches": {
+        "constant": true
       }
     },
     "59e6cc16-abd9-3f7c-823b-94f9064678e0": {
@@ -60608,6 +60851,17 @@
         "lerpColor": true
       }
     },
+    "5c576aa5-496f-3a57-9ded-000c3576e8d2": {
+      "content": "<script setup>\n\n</script>\n\n<template>\n\t<div>\n\n\t</div>\n</template>\n\n<style scoped>\n\n</style>",
+      "doc": "Base for Vue Single File Component Script Setup (Composition API)",
+      "filetype": "vue-script-setup",
+      "grammar": "lsp",
+      "label": "Vue SFC Script Setup (Composition API)",
+      "matches": {
+        "vbase-3-script-setup": true,
+        "vbase-3-ss": true
+      }
+    },
     "5c5f4b96-6593-3e3a-9289-e49ba286309f": {
       "content": "<figure>${0}</figure>",
       "doc": "",
@@ -61794,16 +62048,6 @@
         "textarea": true
       }
     },
-    "5e2b0705-a1f8-3d04-8ed9-5d6d1c6eef02": {
-      "content": "{% block ${blockname} %}\n$2\n{% endblock ${blockname} %}",
-      "doc": "block tag django template",
-      "filetype": "djangohtml",
-      "grammar": "lsp",
-      "label": "block",
-      "matches": {
-        "block": true
-      }
-    },
     "5e2d718d-b826-3b56-a974-f1f0d9711d9c": {
       "content": "const { ${1:scrollYProgress} } = useElementScroll(${2:ref})",
       "doc": "useElementScroll(ref): Returns MotionValues that update when the provided element scrolls.",
@@ -61843,6 +62087,16 @@
       "label": "kubernetes_namespace",
       "matches": {
         "tf-kubernetes_namespace": true
+      }
+    },
+    "5e39f3ef-987c-3b28-a354-19d89ea8b8fd": {
+      "content": "inherit $1;",
+      "doc": "inherit expression",
+      "filetype": "nix",
+      "grammar": "lsp",
+      "label": "inherit",
+      "matches": {
+        "inherit": true
       }
     },
     "5e3b85fe-8a0b-32a1-a646-ffd7762d87c2": {
@@ -63078,6 +63332,16 @@
       "label": "auto function",
       "matches": {
         "af": true
+      }
+    },
+    "6011ccc6-b6a5-3153-930f-36b92754cbea": {
+      "content": "import { type MetaFunction } from '@remix-run/node'\n\nexport const meta: MetaFunction = () => {\n\treturn [\n\t\t{ title: ''},\n\t\t{ name: 'description', content: ''}\n\t]\n}",
+      "doc": "Remix meta function",
+      "filetype": "remix-ts",
+      "grammar": "lsp",
+      "label": "Remix meta function",
+      "matches": {
+        "rxm": true
       }
     },
     "6014db86-5449-39b6-b1fe-b4455c28c353": {
@@ -64616,16 +64880,6 @@
         "cur:d": true
       }
     },
-    "62af33f0-6c0a-3285-9bd0-7a7171ebcf05": {
-      "content": "if (${1:condition}) {\n\t$0\n} else {\n\t\n}",
-      "doc": "If-Else Statement",
-      "filetype": "typescript",
-      "grammar": "lsp",
-      "label": "If-Else Statement",
-      "matches": {
-        "ifelse": true
-      }
-    },
     "62b081a8-1d3a-33ee-a8f0-c495023550c9": {
       "content": "_.mergeWith(${object}, ${sources}, ${customizer})",
       "doc": "function customizer(objValue, srcValue) {\n  if (_.isArray(objValue)) {\n    return objValue.concat(srcValue);\n  }\n}\n\nvar object = { 'a': [1], 'b': [2] };\nvar other = { 'a': [3], 'b': [4] };\n\n_.mergeWith(object, other, customizer);\n// => { 'a': [1, 3], 'b': [2, 4] }\n\nThis method is like `_.merge` except that it accepts `customizer` which\nis invoked to produce the merged values of the destination and source\nproperties. If `customizer` returns `undefined`, merging is handled by the\nmethod instead. The `customizer` is invoked with six arguments:\n(objValue, srcValue, key, object, source, stack).\n\n**Note:** This method mutates `object`.",
@@ -65399,6 +65653,16 @@
       "label": "call",
       "matches": {
         "call": true
+      }
+    },
+    "63ebad17-7755-37de-bffc-ada9fca896f5": {
+      "content": "{${3:value} for ${2:value} in ${1:iterable}}$0",
+      "doc": "Create a set based on existing iterables.",
+      "filetype": "comprehension",
+      "grammar": "lsp",
+      "label": "Set comprehension",
+      "matches": {
+        "sc": true
       }
     },
     "63edf026-a9bc-355d-ba2f-89fab3be5b98": {
@@ -66360,6 +66624,16 @@
         "Cdis": true
       }
     },
+    "655be4d5-40d0-385a-b260-3dc78ffcfcf3": {
+      "content": "{% block ${1:blockname} %}\n$2\n{% endblock $1 %}",
+      "doc": "block tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "block",
+      "matches": {
+        "block": true
+      }
+    },
     "655ee412-fd61-3e09-8e83-c221c02cf735": {
       "content": "__MODULE__",
       "doc": "",
@@ -67072,6 +67346,16 @@
       "label": "<code></code>",
       "matches": {
         "code": true
+      }
+    },
+    "663c0d54-cffd-300b-9352-ad1d8c566c68": {
+      "content": "local ${1:varName} = ${0:value}",
+      "doc": "define a variable",
+      "filetype": "lua",
+      "grammar": "lsp",
+      "label": "assigment",
+      "matches": {
+        "ll": true
       }
     },
     "663ce0db-96b5-3990-b2f6-c9326e6e8dfe": {
@@ -67808,6 +68092,16 @@
         "warn": true
       }
     },
+    "673ee014-659b-3b6d-b784-79ab1db44eea": {
+      "content": "function ${1:name}($2)\n\t${0}\nend",
+      "doc": "",
+      "filetype": "lua",
+      "grammar": "lsp",
+      "label": "function",
+      "matches": {
+        "fu": true
+      }
+    },
     "67413b61-937b-3ee0-8c0a-4364c6cb6390": {
       "content": "_.curryRight(${func}, ${arity})",
       "doc": "var abc = function(a, b, c) {\n  return [a, b, c];\n};\n\nvar curried = _.curryRight(abc);\n\ncurried(3)(2)(1);\n// => [1, 2, 3]\n\ncurried(2, 3)(1);\n// => [1, 2, 3]\n\ncurried(1, 2, 3);\n// => [1, 2, 3]\n\n// Curried with placeholders.\ncurried(3)(1, _)(2);\n// => [1, 2, 3]\n\nThis method is like `_.curry` except that arguments are applied to `func`\nin the manner of `_.partialRight` instead of `_.partial`.\n\nThe `_.curryRight.placeholder` value, which defaults to `_` in monolithic\nbuilds, may be used as a placeholder for provided arguments.\n\n**Note:** This method doesn't set the \"length\" property of curried functions.",
@@ -68383,16 +68677,6 @@
         "throw": true
       }
     },
-    "684b4f6c-c87c-3e3c-9784-cc2b916d0e17": {
-      "content": "(${1:key} for ${2:value} in ${3:iterable} if ${4:condition})$0",
-      "doc": "Create a generator based on existing iterables, with condition if statement.",
-      "filetype": "comprehension",
-      "grammar": "lsp",
-      "label": "Generator comprehension if filter",
-      "matches": {
-        "gci": true
-      }
-    },
     "684bf50c-92a0-3072-ade6-5f717a2f7049": {
       "content": "Return From Keyword If    '\\${${1:rc}}' != '${2:abc}'    ${3:${optional return value}}",
       "doc": "",
@@ -68421,6 +68705,16 @@
       "label": "propTypeArray",
       "matches": {
         "pta": true
+      }
+    },
+    "685c7989-8d89-321f-990f-069a84ee58ad": {
+      "content": "procedure ${1:proc_name}(${2:}) is\nbegin\n\t$0\nend procedure $1;",
+      "doc": "Procedure declaration",
+      "filetype": "vhdl",
+      "grammar": "lsp",
+      "label": "procedure",
+      "matches": {
+        "procedure": true
       }
     },
     "685c896c-1141-3959-9551-059c5811ad67": {
@@ -68848,16 +69142,6 @@
       "label": "text-decoration: line-through",
       "matches": {
         "tdl": true
-      }
-    },
-    "68e6c0ce-07ce-3511-9419-8e191d91910f": {
-      "content": "[${1:value} for ${2:value} in ${3:iterable}]$0",
-      "doc": "List comprehension for creating a list based on existing lists.",
-      "filetype": "comprehension",
-      "grammar": "lsp",
-      "label": "List comprehension",
-      "matches": {
-        "lc": true
       }
     },
     "68e80744-1645-3de6-83ce-06df28b2ef19": {
@@ -72544,6 +72828,16 @@
         "sqrt": true
       }
     },
+    "6e066d0b-d547-34ce-9edb-f46ed9f88428": {
+      "content": "include(FetchContent)\nset(gtest_force_shared_crt ON CACHE BOOL \"\" FORCE)\nset(INSTALL_GTEST OFF CACHE BOOL \"\" FORCE)\nFetchContent_Declare(\n\tgoogletest\n\tGIT_REPOSITORY https://github.com/google/googletest.git\n\tGIT_TAG ${1:v1.14.0}\n)\nFetchContent_MakeAvailable(googletest)",
+      "doc": "Add the snippet to use gtest",
+      "filetype": "cmake",
+      "grammar": "lsp",
+      "label": "Use googletest",
+      "matches": {
+        "gtest": true
+      }
+    },
     "6e0a5c50-aab7-3158-b772-2c64e0050939": {
       "content": "<td class=\"${1}\">${0}</td>",
       "doc": "",
@@ -74713,16 +75007,6 @@
         "var": true
       }
     },
-    "71885919-d3f3-361d-b468-e609fba6a817": {
-      "content": "f = io.open(${1:\"${2:filename}\"}, \"${3:r}\")\n\nwhile true do\n\tline = f:read()\n\tif line == nil then break end\n\n\t${0:-- code}\nend",
-      "doc": "read file line by line",
-      "filetype": "lua",
-      "grammar": "lsp",
-      "label": "forline",
-      "matches": {
-        "forline": true
-      }
-    },
     "718c8515-468e-377c-9eb8-73a8beed51dd": {
       "content": "folder $1",
       "doc": "A folder for project organization",
@@ -74861,16 +75145,6 @@
       "label": "vec2",
       "matches": {
         "vec2": true
-      }
-    },
-    "71bf3854-5bd8-3275-9bba-961d4c5c96d5": {
-      "content": "{${1:value} for ${2:value} in ${3:iterable}}$0",
-      "doc": "Create a set based on existing iterables.",
-      "filetype": "comprehension",
-      "grammar": "lsp",
-      "label": "Set comprehension",
-      "matches": {
-        "sc": true
       }
     },
     "71c1575b-8747-3b30-8a04-3db757d31485": {
@@ -76527,6 +76801,16 @@
         "hexadecimal": true
       }
     },
+    "7420cf44-890b-3bcc-9483-6c958eacdf6e": {
+      "content": "signal ${1:signal_name} : ${2:std_logic};",
+      "doc": "Signal declaration",
+      "filetype": "vhdl",
+      "grammar": "lsp",
+      "label": "signal",
+      "matches": {
+        "signal": true
+      }
+    },
     "74242e70-ae1e-3dd2-a60c-c8ae337cd48f": {
       "content": "PropTypes.oneOf(['$0'])",
       "doc": "Prop type limited to specific values by treating it as an enum",
@@ -77326,16 +77610,6 @@
       "label": "fontFamily",
       "matches": {
         "fo": true
-      }
-    },
-    "7542fa46-dfbc-3042-87a6-77625d725ff6": {
-      "content": "local ${1:var} = require(\"${2:module}\")",
-      "doc": "Require module as a variable",
-      "filetype": "lua",
-      "grammar": "lsp",
-      "label": "locreq",
-      "matches": {
-        "lreq": true
       }
     },
     "75483bd4-fca8-3819-b57f-21d67d94a760": {
@@ -78532,16 +78806,6 @@
         "fig3": true
       }
     },
-    "77a12d6d-1297-3ffa-942a-a1cd9d30b1fc": {
-      "content": "function ${1:name}($2)\n\t${0:-- code}\nend",
-      "doc": "",
-      "filetype": "lua",
-      "grammar": "lsp",
-      "label": "function",
-      "matches": {
-        "fu": true
-      }
-    },
     "77a13aa0-ec60-3917-9ca4-fd818475346a": {
       "content": "this(${1:/*args*/})\n{\n\t${VISUAL}$2\n}",
       "doc": "",
@@ -79515,6 +79779,16 @@
       "label": "exit",
       "matches": {
         "exit": true
+      }
+    },
+    "78ff7569-7fa7-3e6d-9b6a-49c82d38ea92": {
+      "content": "if(${1:condition})\n\t${2:commands}\nendif()",
+      "doc": "Add the snippet if()",
+      "filetype": "cmake",
+      "grammar": "lsp",
+      "label": "if() ... endif()",
+      "matches": {
+        "if": true
       }
     },
     "78fff983-ee70-34aa-88f8-175be0ef6674": {
@@ -80650,6 +80924,16 @@
         "uvm_nonblocking_transport_imp": true
       }
     },
+    "7ab60ea4-c61c-3146-867f-1e69582f19ab": {
+      "content": "find_package(${1:OpenCV} REQUIRED)",
+      "doc": "Add the snippet find_package()",
+      "filetype": "cmake",
+      "grammar": "lsp",
+      "label": "find_package()",
+      "matches": {
+        "f_p": true
+      }
+    },
     "7ab79349-7be1-351a-ad86-aa90b5b3e7d9": {
       "content": "resource \"aws_elb_attachment\" \"${MyAWSResource}\" {\n}",
       "doc": "Defines aws_elb_attachment",
@@ -81542,16 +81826,6 @@
       "label": "path join builtin",
       "matches": {
         "path-join": true
-      }
-    },
-    "7c19a02c-f66d-39f7-ab56-e0da1ad5c905": {
-      "content": "[${1:value} if ${2:condition} else ${3:condition} for ${4:value} in ${5:iterable}]$0",
-      "doc": "List comprehension for creating a list based on existing lists, with conditional if-else statement.",
-      "filetype": "comprehension",
-      "grammar": "lsp",
-      "label": "List comprehension if else",
-      "matches": {
-        "lcie": true
       }
     },
     "7c1a949d-a1a4-3e44-99e9-6408c2fc1ff0": {
@@ -87802,16 +88076,6 @@
         "amap": true
       }
     },
-    "85424709-98ac-3155-aaf6-9e20a2e70265": {
-      "content": "local ${1:name} = function($2)\n\t${0:-- code}\nend",
-      "doc": "",
-      "filetype": "lua",
-      "grammar": "lsp",
-      "label": "inline-function",
-      "matches": {
-        "f=": true
-      }
-    },
     "85432941-91c3-37a1-bd4a-4bc762da347c": {
       "content": "dict remove ${1:dictionaryValue} ${0:?key ...?}",
       "doc": "Return a new dictionary that is a copy of an old one passed in as first argument except without mappings for each of the keys listed. It is legal for there to be no keys to remove, and it also legal for any of the keys to be removed to not be present in the input dictionary in the first place.",
@@ -88172,6 +88436,16 @@
       "label": "",
       "matches": {
         "ld": true
+      }
+    },
+    "85c38ab5-6a88-3572-ab09-275fbba90731": {
+      "content": "if (${1:condition}) {\n\t$2\n} else {\n\t$0\n}",
+      "doc": "If-Else Statement",
+      "filetype": "typescript",
+      "grammar": "lsp",
+      "label": "If-Else Statement",
+      "matches": {
+        "ifelse": true
       }
     },
     "85cc41c0-6c73-3698-9eb7-2c64920ee3d3": {
@@ -89329,6 +89603,16 @@
       "label": "",
       "matches": {
         "bxsh:m": true
+      }
+    },
+    "87b86180-e618-3465-bf58-8653de8dac6e": {
+      "content": "def ${1:name}(), do: $0",
+      "doc": "Define a one-liner function",
+      "filetype": "elixir",
+      "grammar": "lsp",
+      "label": "df",
+      "matches": {
+        "df": true
       }
     },
     "87bb32e8-dd2f-3367-b9e3-452ea461c6da": {
@@ -90828,6 +91112,16 @@
       "label": "cloudstack_network_acl",
       "matches": {
         "tf-cloudstack_network_acl": true
+      }
+    },
+    "8a30fc17-8975-372e-ab08-de5c890ca8ff": {
+      "content": "${1:element} in ${2:array}",
+      "doc": "",
+      "filetype": "gdscript",
+      "grammar": "lsp",
+      "label": "element in array",
+      "matches": {
+        "in": true
       }
     },
     "8a347572-b281-30ff-8013-a33b78fd579a": {
@@ -92730,6 +93024,16 @@
         "re": true
       }
     },
+    "8ceca3ed-e80c-3763-895e-9d00992cfcc0": {
+      "content": "{${4:key}: ${5:value} for ${2:key}, ${3:value} in ${1:iterable} if ${6:condition}}$0",
+      "doc": "Handy and faster way to create dictionaries based on existing dictionaries, with conditional if statement.",
+      "filetype": "comprehension",
+      "grammar": "lsp",
+      "label": "Dictionary comprehension if filter",
+      "matches": {
+        "dci": true
+      }
+    },
     "8cf54449-cb09-3b73-b18f-566ea33ab8df": {
       "content": "func ${1:name}(${2:#:arguments})${0}",
       "doc": "",
@@ -93221,6 +93525,16 @@
         "tf-aws_cloudwatch_event_rule": true
       }
     },
+    "8dad67be-a227-38dc-be2e-64ebc8469dc5": {
+      "content": "aux_source_directory(${1:./} ${2:SOURCES})",
+      "doc": "Add the snippet for aux_source_directory()",
+      "filetype": "cmake",
+      "grammar": "lsp",
+      "label": "aux_source_directory",
+      "matches": {
+        "aux": true
+      }
+    },
     "8daf37f7-638e-3aad-a14b-4957b15b8734": {
       "content": "content counter(${0})",
       "doc": "",
@@ -93510,6 +93824,16 @@
       "label": "",
       "matches": {
         "cl": true
+      }
+    },
+    "8e122d15-48e4-3ff2-aff5-591e9df0556c": {
+      "content": "option(${1:variable} \"${2:message}\" ${3|ON,OFF|})",
+      "doc": "Add the snippet for option()",
+      "filetype": "cmake",
+      "grammar": "lsp",
+      "label": "option()",
+      "matches": {
+        "opt": true
       }
     },
     "8e12f4fd-10a1-3f0b-89e0-4f64bfa59e16": {
@@ -96051,16 +96375,6 @@
         "opt": true
       }
     },
-    "916d1021-7ca2-337a-88cc-fabde882e0e4": {
-      "content": "if (${1:condition}) {\n\t$0\n} else {\n\t\n}",
-      "doc": "If-Else Statement",
-      "filetype": "javascript",
-      "grammar": "lsp",
-      "label": "If-Else Statement",
-      "matches": {
-        "ifelse": true
-      }
-    },
     "916ef0ef-1d50-3342-8cfe-15b84a93738e": {
       "content": "render file: \"${1:filepath}\"",
       "doc": "",
@@ -96130,16 +96444,6 @@
       "label": "",
       "matches": {
         "code": true
-      }
-    },
-    "918677c7-f5da-35e8-be06-4700ce873b49": {
-      "content": "require(\"${1:module}\")",
-      "doc": "Require module",
-      "filetype": "lua",
-      "grammar": "lsp",
-      "label": "require",
-      "matches": {
-        "req": true
       }
     },
     "9188f7dd-e84f-3cb4-b6a6-8b5ea4c833ba": {
@@ -96813,6 +97117,16 @@
       "label": "",
       "matches": {
         "if": true
+      }
+    },
+    "92919500-6318-3550-af4b-8e586dce411d": {
+      "content": "const exe = b.addExecutable(.{\n    .name = \"${1}\",\n    .root_source_file = b.path(\"${2:path}\"),\n    .target = target,\n    .optimize = optimize,\n});\nb.installArtifact(exe);",
+      "doc": "Building an exe",
+      "filetype": "zig",
+      "grammar": "lsp",
+      "label": "buildExe",
+      "matches": {
+        "bExe": true
       }
     },
     "92959fed-64a6-30b8-b2b9-04eade836631": {
@@ -98653,6 +98967,16 @@
         "fadein": true
       }
     },
+    "951c8d51-af21-3101-9f91-f4e3c2c6aeca": {
+      "content": "max($1, $2, ${3:...})$0",
+      "doc": "max",
+      "filetype": "fortran",
+      "grammar": "lsp",
+      "label": "max",
+      "matches": {
+        "max": true
+      }
+    },
     "95221e0f-b3a9-3645-a01f-f3e3a79f34a3": {
       "content": "const { ${1:name} } = this.state",
       "doc": "",
@@ -98862,6 +99186,16 @@
       "label": "af",
       "matches": {
         "af": true
+      }
+    },
+    "95859416-8b7f-3e42-bfd2-2d7fc5c489ab": {
+      "content": "set(${1:variable} ${2:value} CACHE ${3|BOOL,FILEPATH,PATH,STRING|} \"${4:message} FORCE)$5",
+      "doc": "Add the snippet set() for cache entry",
+      "filetype": "cmake",
+      "grammar": "lsp",
+      "label": "set variable cache",
+      "matches": {
+        "sc": true
       }
     },
     "95864b9e-fe90-3bb5-8489-a4052d828fcf": {
@@ -101730,6 +102064,16 @@
         "ptsr": true
       }
     },
+    "9996d8d9-1d20-3bea-8a1a-d183a0baa2ea": {
+      "content": "{${3:value} for ${2:value} in ${1:iterable} if ${4:condition}}$0",
+      "doc": "Create a set based on existing iterables, with condition if statement.",
+      "filetype": "comprehension",
+      "grammar": "lsp",
+      "label": "Set Comprehension if filter",
+      "matches": {
+        "sci": true
+      }
+    },
     "999941ef-e07f-327c-823a-5a1685d7db54": {
       "content": "for(int ${1:i} = ${2:0}; ${3:$1 < 10}; $1${4:++})\n{\n\t${5}\n}",
       "doc": "",
@@ -102393,6 +102737,16 @@
       "label": "import",
       "matches": {
         "import": true
+      }
+    },
+    "9a8bc0b3-adf2-31e2-975b-5b55325e35e8": {
+      "content": "set(CMAKE_CXX_STANDDARD ${1:14})\nset(CMAKE_CXX_STANDDARD_REQUIRED ON)",
+      "doc": "Add the snippet to set c++ standard",
+      "filetype": "cmake",
+      "grammar": "lsp",
+      "label": "Set c++ standard",
+      "matches": {
+        "cxx": true
       }
     },
     "9a8be1c2-752c-347f-bf31-7c894e169c8b": {
@@ -104290,6 +104644,16 @@
         "foreach": true
       }
     },
+    "9d94d15a-e800-3d03-806f-50d8152849aa": {
+      "content": "add_subdirectory(${1:./src})",
+      "doc": "Add the snippet for add_subdirectory()",
+      "filetype": "cmake",
+      "grammar": "lsp",
+      "label": "add_subdirectory()",
+      "matches": {
+        "ads": true
+      }
+    },
     "9d95a2b4-2aed-36cd-9458-200afd8b9516": {
       "content": "${1:obj}.queue(${2:name}${3:, newQueue})",
       "doc": "",
@@ -105075,6 +105439,16 @@
       "label": "",
       "matches": {
         "printf": true
+      }
+    },
+    "9ea39604-d290-339c-bf12-0a0543b2fea7": {
+      "content": "std_logic",
+      "doc": "std_logic Type",
+      "filetype": "vhdl",
+      "grammar": "lsp",
+      "label": "std_logic",
+      "matches": {
+        "std": true
       }
     },
     "9ea83513-b398-3050-a7ed-2026c3415a1b": {
@@ -106717,16 +107091,6 @@
       "label": "Vue v-model Directive",
       "matches": {
         "vmodel": true
-      }
-    },
-    "a10be91c-6e55-3511-8ced-859f4cd9a9f0": {
-      "content": "${1:generate_label}: if ${2:condition} generate\n\t$0\nend generate $1;",
-      "doc": "If Generate Statement",
-      "filetype": "vhdl",
-      "grammar": "lsp",
-      "label": "if_generate",
-      "matches": {
-        "if": true
       }
     },
     "a10c46b0-a72e-3382-b8dd-2b04a7a0499b": {
@@ -111662,16 +112026,6 @@
         "@augments": true
       }
     },
-    "a8296cec-7364-390c-b688-f235d5ed4c69": {
-      "content": "std_logic_vector(${1:7} ${2|downto,to|} ${3:0});",
-      "doc": "std_logic_vector Type",
-      "filetype": "vhdl",
-      "grammar": "lsp",
-      "label": "std_logic_vector",
-      "matches": {
-        "stdv": true
-      }
-    },
     "a82ae220-9ba7-3f6f-83e9-bf845219e0f1": {
       "content": "$routeProvider.when '${1:url}',\n\ttemplateUrl: '${2:templateUrl}'\n\tcontroller: '${3:controller}'\n${4}",
       "doc": "",
@@ -113881,6 +114235,16 @@
         "mb:a": true
       }
     },
+    "ab83beb8-8431-31a4-aecb-3150bdf164b1": {
+      "content": "std_ulogic_vector(${1:7} ${2|downto,to|} ${3:0})",
+      "doc": "std_ulogic_vector Type",
+      "filetype": "vhdl",
+      "grammar": "lsp",
+      "label": "std_ulogic_vector",
+      "matches": {
+        "stduv": true
+      }
+    },
     "ab89e376-4ef4-3124-877c-fb6f9b0972eb": {
       "content": "${1:FIELDNAME} = models.BigIntegerField($2)",
       "doc": "",
@@ -114300,6 +114664,16 @@
       "label": "",
       "matches": {
         "gar:mic": true
+      }
+    },
+    "ac69e9ea-2664-38d5-b5ac-76c3480d145d": {
+      "content": "import { type LinksFunction } from '@remix-run/node'\n\nexport const links: LinksFunction = () => {\n\treturn [\n\t\t{\n\t\t}\n\t]\n}",
+      "doc": "Remix links function",
+      "filetype": "remix-ts",
+      "grammar": "lsp",
+      "label": "Remix links function",
+      "matches": {
+        "rxi": true
       }
     },
     "ac6d5394-f45a-33fe-a45d-100dbd4425a3": {
@@ -116469,6 +116843,16 @@
         "tprmet": true
       }
     },
+    "afc23190-b3f0-3d12-9c44-fb1ed3b553d3": {
+      "content": "when ${1:choice} => $0",
+      "doc": "when alternative of a case statement",
+      "filetype": "vhdl",
+      "grammar": "lsp",
+      "label": "when_in_case",
+      "matches": {
+        "cwhen, whenc": true
+      }
+    },
     "afc6712c-1a4d-3cd6-9f4f-1147705dc274": {
       "content": "def update(self, instance, validated_data):\n\treturn ${1:super().update(instance, validated_data)}",
       "doc": "Django-rest Serializers ``Update`` Method",
@@ -116851,6 +117235,16 @@
       "label": "",
       "matches": {
         "arr": true
+      }
+    },
+    "b05bc2ab-9c6e-3f33-9990-c3871d458d12": {
+      "content": ":(${1:void} (^${2:nullability}) (${3:parameters}))${4:name}",
+      "doc": "Create a block field",
+      "filetype": "objc",
+      "grammar": "lsp",
+      "label": "Block field",
+      "matches": {
+        "fieldblock": true
       }
     },
     "b06351bf-6d43-34ff-8f54-bdd18585ea2e": {
@@ -121949,6 +122343,16 @@
         "olist5": true
       }
     },
+    "b8d76c25-fd77-3777-b965-0e5e4f4d8afd": {
+      "content": "# https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/\napiVersion: batch/v1\nkind: CronJob\nmetadata:\n  name: ${1:cronjobname}\n  namespace: ${2:default}\nspec:\n  schedule: \"${3:*/1 * * * *}\"\n  jobTemplate:\n    spec:\n      template:\n        spec:\n          containers:\n          - name: ${4:jobname}\n            image: ${5:busybox}\n            args: ['/bin/sh', '-c', '${6:date; echo Hello from the Kubernetes cluster}']\n          restartPolicy: OnFailure\n---\n$0",
+      "doc": "k8s CronJob",
+      "filetype": "kubernetes",
+      "grammar": "lsp",
+      "label": "k8s CronJob",
+      "matches": {
+        "k-cronjob": true
+      }
+    },
     "b8de5667-28f8-3bb1-be9a-fab9cdb40613": {
       "content": "text-emphasis accent",
       "doc": "",
@@ -123318,16 +123722,6 @@
         "extend": true
       }
     },
-    "bb3c0e20-ffcb-3fb7-8ded-16b674e6e59a": {
-      "content": "FOREIGN KEY(${1:attribute}) REFERENCES ${2:tableName}(${3:attribute})",
-      "doc": "Foreign Key",
-      "filetype": "sql",
-      "grammar": "lsp",
-      "label": "foreingk",
-      "matches": {
-        "foreingk": true
-      }
-    },
     "bb4330f4-7eb8-3eac-ad5a-11c6dbd5f59a": {
       "content": "${1:expression} if ${2:condition};",
       "doc": "",
@@ -123618,6 +124012,16 @@
       "label": "",
       "matches": {
         "w?": true
+      }
+    },
+    "bba34e32-d499-3651-a15c-80c5d76fc1f8": {
+      "content": "[${3:value} for ${2:value} in ${1:iterable} if ${4:condition}$0]",
+      "doc": "List comprehension for creating a list based on existing lists, with conditional if statement.",
+      "filetype": "comprehension",
+      "grammar": "lsp",
+      "label": "List comprehension if filter",
+      "matches": {
+        "lci": true
       }
     },
     "bba49478-a9e5-3e90-97b0-2a0fd59555d8": {
@@ -127988,6 +128392,16 @@
         "tf-azurerm_eventhub_namespace": true
       }
     },
+    "c273f221-a1b1-345d-adf4-d1c7e5beb145": {
+      "content": "console.log(${0})",
+      "doc": "",
+      "filetype": "javascript",
+      "grammar": "lsp",
+      "label": "console.log with log",
+      "matches": {
+        "log": true
+      }
+    },
     "c2776d7f-b704-30db-bfc3-eea1ea3e6df7": {
       "content": "quad(${1:x1}, ${2:y1}, ${3:x2}, ${4:y2}, ${5:x3}, ${6:y3}, ${7:x4}, ${0:y4});",
       "doc": "",
@@ -128646,6 +129060,16 @@
       "label": "grafana_data_source",
       "matches": {
         "tf-grafana_data_source": true
+      }
+    },
+    "c36ee474-a716-38cd-86e7-070d3990a00b": {
+      "content": "FOREIGN KEY(${1:attribute}) REFERENCES ${2:tableName}(${3:attribute})",
+      "doc": "Foreign Key",
+      "filetype": "sql",
+      "grammar": "lsp",
+      "label": "foreignk",
+      "matches": {
+        "foreignk": true
       }
     },
     "c37c6a59-852f-3fc3-9d34-1eb37f6505c0": {
@@ -130193,6 +130617,16 @@
         "input:datetime-local": true
       }
     },
+    "c5d9659f-f400-37ae-b472-ad2d5163a64b": {
+      "content": "if (${1:condition}) {\n\t$2\n} else {\n\t$0\n}",
+      "doc": "If-Else Statement",
+      "filetype": "javascript",
+      "grammar": "lsp",
+      "label": "If-Else Statement",
+      "matches": {
+        "ifelse": true
+      }
+    },
     "c5da8e74-b33e-3229-b1d8-fd3ab50e5015": {
       "content": "export old-alias ${1:name} = ${2:value}",
       "doc": "\"export old-alias\" invocation",
@@ -130543,16 +130977,6 @@
       "label": "",
       "matches": {
         "_": true
-      }
-    },
-    "c65d8d0c-aa5b-3a38-8dd1-d4e30e6f59da": {
-      "content": "{${1:value} for ${2:value} in ${3:iterable} if ${4:condition}}$0",
-      "doc": "Create a set based on existing iterables, with condition if statement.",
-      "filetype": "comprehension",
-      "grammar": "lsp",
-      "label": "Set Comprehension if filter",
-      "matches": {
-        "sci": true
       }
     },
     "c6619908-8619-3a26-a51f-e911de98f579": {
@@ -131518,6 +131942,16 @@
       "label": "@let-env builtin",
       "matches": {
         "@let-env": true
+      }
+    },
+    "c7b96ee4-5fc1-3120-b884-81226dbef731": {
+      "content": "signal ${1:signal_name} : ${2:std_logic} := ${3:'0'};",
+      "doc": "Signal declaration with initialisation",
+      "filetype": "vhdl",
+      "grammar": "lsp",
+      "label": "signal initialised",
+      "matches": {
+        "sigi, signali": true
       }
     },
     "c7c3babc-45c6-35cb-a18e-334593b4514d": {
@@ -136262,6 +136696,16 @@
         "OnCollisionStay2D(Collision2D)": true
       }
     },
+    "cec2a251-9fe9-39a5-9195-64d3205a97dd": {
+      "content": "${1:M} = {}\n\n$1.${2:new} = function($3)\n\t${6}\nend",
+      "doc": "Create a class",
+      "filetype": "lua",
+      "grammar": "lsp",
+      "label": "class",
+      "matches": {
+        "cl": true
+      }
+    },
     "cec41c1d-338d-30ba-b88d-33636dfe063d": {
       "content": "cat(${1:file}, ${2:sep = ${3:\"\"}}, ${4:fill = ${5:FALSE}}, ${6:labels = ${7:NULL}}, ${8:append = ${9:FALSE}})",
       "doc": "Cat",
@@ -136462,6 +136906,16 @@
       "matches": {
         "PD": true,
         "PROCEDURE DIVISION": true
+      }
+    },
+    "cf3d3477-afb7-3ac4-be70-b36beae1acd2": {
+      "content": "(${3:key} for ${2:value} in ${1:iterable} if ${4:condition})$0",
+      "doc": "Create a generator based on existing iterables, with condition if statement.",
+      "filetype": "comprehension",
+      "grammar": "lsp",
+      "label": "Generator comprehension if filter",
+      "matches": {
+        "gci": true
       }
     },
     "cf41c73e-53e4-35ca-8c06-6c028dda37bd": {
@@ -137652,6 +138106,16 @@
       "label": "",
       "matches": {
         "remc": true
+      }
+    },
+    "d12e15fd-0534-3b99-8777-69d731e35273": {
+      "content": "function ${1:func_name}(${2:})\n\treturn ${3:return_type} is\nbegin\n\t$0\nend function $1;",
+      "doc": "Pure function declaration",
+      "filetype": "vhdl",
+      "grammar": "lsp",
+      "label": "function",
+      "matches": {
+        "function, pfunc": true
       }
     },
     "d12e414e-d77f-34b6-9f12-528d238bebf0": {
@@ -139072,6 +139536,16 @@
         "lodash eq": true
       }
     },
+    "d38b0f72-7e0b-36ed-8204-af724e4bb38e": {
+      "content": "<include file=\"${1:filename}\" path=\"${2:xpath}\"/>$0",
+      "doc": "This tag allows including information from an XML document that is external to the source code file. The external file must be a well-formed XML document, and an XPath expression is applied to that document to specify what XML from that document to include. The <include> tag is then replaced with the selected XML from the external document. Note this is a self closing tag.",
+      "filetype": "csharpdoc",
+      "grammar": "lsp",
+      "label": "<include>",
+      "matches": {
+        "<include>": true
+      }
+    },
     "d38c013e-d9a3-30b3-ab86-8ff09348d237": {
       "content": "place-content space-between",
       "doc": "",
@@ -139504,16 +139978,6 @@
       "label": "importNextRouter",
       "matches": {
         "imro": true
-      }
-    },
-    "d44d6d92-bff1-3a5d-a16e-bc474376be0a": {
-      "content": "[${1:value} for ${2:value} in ${3:iterable} if ${4:condition}$0]",
-      "doc": "List comprehension for creating a list based on existing lists, with conditional if statement.",
-      "filetype": "comprehension",
-      "grammar": "lsp",
-      "label": "List comprehension if filter",
-      "matches": {
-        "lci": true
       }
     },
     "d44e19de-9f15-341c-9bf2-586bfaea9715": {
@@ -146413,6 +146877,16 @@
         "tf-aws_sns_topic_policy": true
       }
     },
+    "df282363-e066-362c-beca-31435da19136": {
+      "content": "include(FetchContent)\nFetchContent_Declare(\n\t${1:repo_name}\n\tGIT_REPOSITORY ${2:repo_url}\n\tGIT_TAG ${3:tag}\n)\nFetchContent_MakeAvailable($1)",
+      "doc": "Add the snippet for FetchContent_Declare()",
+      "filetype": "cmake",
+      "grammar": "lsp",
+      "label": "FetchContent_Declare()",
+      "matches": {
+        "Fet": true
+      }
+    },
     "df31f1eb-e698-350b-97f8-639a64602a4e": {
       "content": "System.out.print(${1});",
       "doc": "",
@@ -146853,6 +147327,17 @@
       "label": "Run Keyword If Timeout Occurred",
       "matches": {
         "rkito": true
+      }
+    },
+    "dfdae785-4861-3476-afe7-cd07e9ce2e41": {
+      "content": "<script setup lang=\"ts\">\n\n</script>\n\n<template>\n\t<div>\n\n\t</div>\n</template>\n\n<style scoped>\n\n</style>",
+      "doc": "Base for Vue Single File Component Script Setup with TypeScript (Composition API)",
+      "filetype": "vue-script-setup",
+      "grammar": "lsp",
+      "label": "Vue SFC Script Setup with TypeScript (Composition API)",
+      "matches": {
+        "vbase-3-script-setup-ts": true,
+        "vbase-3-ss-ts": true
       }
     },
     "dfdcc0f8-a157-35f5-822e-49dc64c55ac2": {
@@ -147803,6 +148288,16 @@
         "external": true
       }
     },
+    "e1b87f39-8122-377c-aea0-fb7e62bb2499": {
+      "content": "const ${1} = @import(\"${1}\")",
+      "doc": "Importing Libraries",
+      "filetype": "zig",
+      "grammar": "lsp",
+      "label": "Import",
+      "matches": {
+        "import": true
+      }
+    },
     "e1be8664-dd11-33f1-a788-4974e304235c": {
       "content": "export { ${2:second} } from '${1:first}'",
       "doc": "",
@@ -147901,6 +148396,16 @@
       "label": "loop",
       "matches": {
         "b:loop": true
+      }
+    },
+    "e1d59d72-de25-32b3-b306-4bda17bf3e23": {
+      "content": "require(${1:module})",
+      "doc": "Require module",
+      "filetype": "lua",
+      "grammar": "lsp",
+      "label": "require",
+      "matches": {
+        "req": true
       }
     },
     "e1d5a639-44db-3008-911f-18365b651e7b": {
@@ -150238,6 +150743,16 @@
         "ycag": true
       }
     },
+    "e5d4087e-ca24-307a-8c33-ddd3d3ed9693": {
+      "content": "def ${1:name}(${2:args}) when ${3:guard}, do: $0",
+      "doc": "Define a one-liner function with when guard",
+      "filetype": "elixir",
+      "grammar": "lsp",
+      "label": "dfw",
+      "matches": {
+        "dfw": true
+      }
+    },
     "e5da3e3d-2eb1-355f-be64-3122de7f9b98": {
       "content": "@production\n    $1\n@endproduction",
       "doc": "production",
@@ -150539,6 +151054,16 @@
       "label": "aws_api_gateway_resource",
       "matches": {
         "tf-aws_api_gateway_resource": true
+      }
+    },
+    "e66f3f7f-cd1e-310d-bc86-23bf31a3bff3": {
+      "content": "variable ${1:var_name} : ${2:integer} := ${3:0};",
+      "doc": "Variable declaration with initialisation",
+      "filetype": "vhdl",
+      "grammar": "lsp",
+      "label": "variable initialised",
+      "matches": {
+        "vari, variablei": true
       }
     },
     "e6727776-8c9a-37cb-89e4-989faaa2a832": {
@@ -151005,6 +151530,16 @@
         "ac:sa": true
       }
     },
+    "e6ed38b6-80a1-3299-a5f7-b79f97248e61": {
+      "content": "target_include_directories(\n\t${1:myTarget}\n\t${2|PUBLIC,INTERFACE,PRIVATE|} ${3:\\${PROJECT_SOURCE_DIR\\}/includes}\n)",
+      "doc": "Add the snippet target_include_directories() to set the include directories for target",
+      "filetype": "cmake",
+      "grammar": "lsp",
+      "label": "target_include_directories()",
+      "matches": {
+        "tid": true
+      }
+    },
     "e6f1e10e-13fd-35f2-a2f7-e615e2fdb958": {
       "content": "nextFrame();",
       "doc": "",
@@ -151043,6 +151578,16 @@
       "label": "wh",
       "matches": {
         "wh": true
+      }
+    },
+    "e7282cdf-ce1e-35b0-b3a4-d8156b029f13": {
+      "content": "if(${1:condition})\n\t${2:command1}\nelse()\n\t${3:command2}\nendif()",
+      "doc": "Add the snippet 'if() ... else() ... endif()'",
+      "filetype": "cmake",
+      "grammar": "lsp",
+      "label": "if() ... else() ... endif()",
+      "matches": {
+        "ife": true
       }
     },
     "e72da31c-2de0-3de2-a2fd-a19cb49f208d": {
@@ -152450,6 +152995,16 @@
       "label": "",
       "matches": {
         "vers": true
+      }
+    },
+    "e951b365-6e8f-3b6c-a220-92ddc2c391b8": {
+      "content": "project(${1:myProject})$2",
+      "doc": "Add the snippet for project()",
+      "filetype": "cmake",
+      "grammar": "lsp",
+      "label": "project()",
+      "matches": {
+        "prj": true
       }
     },
     "e952b54d-d58f-3e0e-94c8-1635738f6842": {
@@ -153911,6 +154466,16 @@
         "gr": true
       }
     },
+    "ebe8ad53-4e88-3caa-a441-e907041cc666": {
+      "content": "cmake_minimum_required(VERSION ${1:3.16})\nproject(${2:myProject})\n\nif(NOT CMAKE_BUILD_TYPE)\n\tset(default_build_type \"Debug\")\n\tmessage(STATUS \"Set the build type to `\\${default_build_type}` as none was specified.\")\n\tset(CMAKE_BUILD_TYPE \\${default_build_type} CACHE STRING \"Chooce the build type.\" FORCE)\n\tset_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS\n\t\"Debug\" \"Release\" \"MinSizeRel\" \"RelWithDebInfo\")\nendif()\nmessage(STATUS \"$2 Build Type: \\${CMAKE_BUILD_TYPE}\")\n\n# Set the version for $2\nset($2_Version_Major ${3:0})\nset($2_Version_Minor ${4:1})\nset($2_Version_Patch ${5:0})\nset($2_Version_Status \"${6:-dev}\")\nset(${7:PROJECT_VERSION}\n\t\"\\${$2_Version_Major}.\\${$2_Version_Minor}.\\${$2_Version_Patch}\\${$2_Version_Status}\"\n)\nmessage(STATUS \"\\${PROJECT_NAME} version: \\${PROJECT_VERSION}\")",
+      "doc": "Init 'CMakeLists.txt'.",
+      "filetype": "cmake",
+      "grammar": "lsp",
+      "label": "Init cmake",
+      "matches": {
+        "cmi": true
+      }
+    },
     "ebea7b2a-d2b1-31f5-a03a-47dc6d38618e": {
       "content": "align-content: center;",
       "doc": "",
@@ -154493,16 +155058,6 @@
       "label": "timeit builtin",
       "matches": {
         "timeit": true
-      }
-    },
-    "ecec88ff-0769-3d99-9f23-c349d4df0af0": {
-      "content": "${1:generate_label}: case ${2:expression} generate\n\twhen ${3:choice} =>\n\t\t$0\n\n\twhen others =>\n\t\tnull;\n\nend generate $1;",
-      "doc": "Case Generate Statement",
-      "filetype": "vhdl",
-      "grammar": "lsp",
-      "label": "case_generate",
-      "matches": {
-        "case": true
       }
     },
     "eceecfb0-82bc-3645-9862-f8b71eb77570": {
@@ -155609,6 +156164,16 @@
       "label": "",
       "matches": {
         "sim": true
+      }
+    },
+    "ee7f7a5e-eff2-3822-8c05-594359bfb422": {
+      "content": "import { type LoaderFunction, json } from '@remix-run/node'\nimport { useLoaderData } from '@remix-run/react'\n\nexport const loader: LoaderFunction = async () => {\n\treturn json({ ok: true })\n}",
+      "doc": "Remix loader function",
+      "filetype": "remix-ts",
+      "grammar": "lsp",
+      "label": "Remix loader function",
+      "matches": {
+        "rxl": true
       }
     },
     "ee80a699-92b7-3632-80cb-3ea20e2f29a5": {
@@ -158908,16 +159473,6 @@
         "pr": true
       }
     },
-    "f34919e3-7d5a-3ff1-ae0c-9ec8fa75427f": {
-      "content": "${1:className} = {}\n\n$1.${2:new} = function($3)\n\tlocal ${4:varName} = ${5:value}\n\n\t${6: --code}\n\n\treturn $4\nend",
-      "doc": "Create a class",
-      "filetype": "lua",
-      "grammar": "lsp",
-      "label": "class",
-      "matches": {
-        "cl": true
-      }
-    },
     "f3499197-766f-34aa-aac4-5347768b6c52": {
       "content": "expect($1).toBeLessThanOrEqual($0);",
       "doc": "expects the argument is less than or equal",
@@ -159935,16 +160490,6 @@
       "label": "constants with iota",
       "matches": {
         "co": true
-      }
-    },
-    "f4d1d753-45a0-3b9e-ad1a-64fa7455f602": {
-      "content": "#ifdef ${1:DEBUG}\n$0\n#endif // ${DEBUG}",
-      "doc": "Code snippet for #ifdef",
-      "filetype": "cpp",
-      "grammar": "lsp",
-      "label": "#ifdef",
-      "matches": {
-        "#ifdef": true
       }
     },
     "f4d24a9c-5cef-3ec8-8200-3a64504a5ff6": {
@@ -161131,6 +161676,16 @@
         "importself": true
       }
     },
+    "f6b18412-3f41-3fab-8f54-3c6e722ad661": {
+      "content": "const c = @cImport({\n    @cDefine(\"${1}\")\n});",
+      "doc": "Importing C Header Files",
+      "filetype": "zig",
+      "grammar": "lsp",
+      "label": "CImport",
+      "matches": {
+        "cimport": true
+      }
+    },
     "f6b3d711-f528-3c51-82b0-6e9c834f75da": {
       "content": "is_dir(${1:path})$0",
       "doc": "",
@@ -161220,6 +161775,16 @@
       "label": "",
       "matches": {
         "ct:cs": true
+      }
+    },
+    "f6cfa187-b963-3285-a41e-4d90a3629096": {
+      "content": "local ${1:name} = function($2)\n\t${0}\nend",
+      "doc": "",
+      "filetype": "lua",
+      "grammar": "lsp",
+      "label": "inline-function",
+      "matches": {
+        "f=": true
       }
     },
     "f6d0f085-26af-3c64-b569-18ad25157aa8": {
@@ -162668,6 +163233,16 @@
       "label": "svelte-expression",
       "matches": {
         "s-expression": true
+      }
+    },
+    "f8df2ffc-6653-3434-b88b-3057e937801e": {
+      "content": "install(\n\t${1|FILES,TARGETS|} ${2:source_files}\n\tDESTINATION ${3:target_path}\n)",
+      "doc": "Add the snippet for install()",
+      "filetype": "cmake",
+      "grammar": "lsp",
+      "label": "install()",
+      "matches": {
+        "inst": true
       }
     },
     "f8e09c12-d7d4-3ac6-af09-eadec0bf452d": {
@@ -164540,6 +165115,16 @@
         "psvm": true
       }
     },
+    "fbfc8e06-9aff-3a1a-9287-d69ee952b6d5": {
+      "content": "variable ${1:var_name} : ${2:integer};",
+      "doc": "variable declaration",
+      "filetype": "vhdl",
+      "grammar": "lsp",
+      "label": "variable",
+      "matches": {
+        "variable": true
+      }
+    },
     "fbfcce73-0ec1-330f-8558-a5b858ae91ad": {
       "content": "${1:command} | str distance ${2:value}",
       "doc": "\"str-distance\" invocation",
@@ -166154,6 +166739,16 @@
       "label": "str builtin",
       "matches": {
         "str": true
+      }
+    },
+    "fe9e96bb-f992-363c-a9c8-6703836b3a4d": {
+      "content": "<exception cref=\"${1:ExceptionName}\">${2:description.}$0</exception>",
+      "doc": "This tag provides a way to document the exceptions a method can throw. cref=\"member\" is the name of the exceptionh, which should be a member. The documentation generator checks that the given member exists and translates member to the canonical element name in the documentation file. Description is a description of the circumstances in which the exception is thrown.",
+      "filetype": "csharpdoc",
+      "grammar": "lsp",
+      "label": "<exception>",
+      "matches": {
+        "<exception>": true
       }
     },
     "fea014ef-cb5c-3f52-bc3c-5d868e54d16a": {
