@@ -1,0 +1,317 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "import React from 'react';",
+      "doc": "",
+      "label": "import React",
+      "matches": {
+        "ir": true
+      }
+    },
+    {
+      "content": "import React, { Component } from 'react';",
+      "doc": "",
+      "label": "import React and Component",
+      "matches": {
+        "irc": true
+      }
+    },
+    {
+      "content": "import { use$1 } from 'react';",
+      "doc": "",
+      "label": "import React hooks",
+      "matches": {
+        "irh": true
+      }
+    },
+    {
+      "content": "import ReactDOM from 'react-dom';",
+      "doc": "",
+      "label": "import ReactDOM",
+      "matches": {
+        "ird": true
+      }
+    },
+    {
+      "content": "import PropTypes from 'prop-types';",
+      "doc": "",
+      "label": "import PropTypes",
+      "matches": {
+        "irp": true
+      }
+    },
+    {
+      "content": "componentDidMount() {\n\t${1}\n};",
+      "doc": "",
+      "label": "componentDidMount",
+      "matches": {
+        "cdm": true
+      }
+    },
+    {
+      "content": "componentDidUpdate(prevProps, prevState) {\n\t${1}\n};",
+      "doc": "",
+      "label": "componentDidUpdate",
+      "matches": {
+        "cdup": true
+      }
+    },
+    {
+      "content": "componentWillMount() {\n\t${1}\n};",
+      "doc": "",
+      "label": "componentWillMount",
+      "matches": {
+        "cwm": true
+      }
+    },
+    {
+      "content": "componentWillReceiveProps(nextProps) {\n\t${1}\n};",
+      "doc": "",
+      "label": "componentWillReceiveProps",
+      "matches": {
+        "cwr": true
+      }
+    },
+    {
+      "content": "componentWillUnmount() {\n\t${1}\n};",
+      "doc": "",
+      "label": "componentWillUnmount",
+      "matches": {
+        "cwun": true
+      }
+    },
+    {
+      "content": "componentWillUpdate(nextProps, nextState) {\n\t${1}\n};",
+      "doc": "",
+      "label": "componentWillUpdate",
+      "matches": {
+        "cwu": true
+      }
+    },
+    {
+      "content": "shouldComponentUpdate(nextProps, nextState) {\n\t${1}\n}",
+      "doc": "",
+      "label": "shouldComponentUpdate",
+      "matches": {
+        "scu": true
+      }
+    },
+    {
+      "content": "static propTypes = {\n\t${1}: PropTypes.${2}\n};",
+      "doc": "",
+      "label": "static propTypes",
+      "matches": {
+        "spt": true
+      }
+    },
+    {
+      "content": "${1}.propTypes = {\n\t${2}: PropTypes.${2}\n};",
+      "doc": "",
+      "label": "propTypes",
+      "matches": {
+        "pt": true
+      }
+    },
+    {
+      "content": "static defaultProps = {\n\t${1}: ${2}\n};",
+      "doc": "",
+      "label": "static defaultProps",
+      "matches": {
+        "sdp": true
+      }
+    },
+    {
+      "content": "${1}.defaultProps = {\n\t${2}: ${3}\n};",
+      "doc": "",
+      "label": "defaultProps",
+      "matches": {
+        "dp": true
+      }
+    },
+    {
+      "content": "props.${1};",
+      "doc": "",
+      "label": "props",
+      "matches": {
+        "pp": true
+      }
+    },
+    {
+      "content": "this.props.${1};",
+      "doc": "",
+      "label": "this props",
+      "matches": {
+        "tp": true
+      }
+    },
+    {
+      "content": "state = {\n\t${1}: ${2},\n};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "st": true
+      }
+    },
+    {
+      "content": "this.setState({\n\t${1}: ${2}\n});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sst": true
+      }
+    },
+    {
+      "content": "this.state.${1};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tst": true
+      }
+    },
+    {
+      "content": "const ${1:ComponentName} = (${2:props}) => {\n\t${3:state}\n\n\treturn (\n\t\t<>\n\t\t\t${4}\n\t\t</>\n\t);\n};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "raf": true
+      }
+    },
+    {
+      "content": "class ${1:ClassName} extends Component {\n\trender() {\n\t\treturn (\n\t\t\t<>\n\t\t\t\t${2}\n\t\t\t</>\n\t\t);\n\t}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rcla": true
+      }
+    },
+    {
+      "content": "export default class ${1:ClassName} extends Component {\n\trender() {\n\t\treturn (\n\t\t\t<>\n\t\t\t\t${2}\n\t\t\t</>\n\t\t);\n\t};\n};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ercla": true
+      }
+    },
+    {
+      "content": "constructor() {\n\tsuper();\n\n\t${1:state}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ctor": true
+      }
+    },
+    {
+      "content": "render() {\n\treturn (\n\t\t<>\n\t\t\t${2}\n\t\t</>\n\t);\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ren": true
+      }
+    },
+    {
+      "content": "forceUpdate(${1:callback});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fup": true
+      }
+    },
+    {
+      "content": "const [${1:state}, set${2}] = useState(${3:initialState});",
+      "doc": "",
+      "label": "useState",
+      "matches": {
+        "uses": true
+      }
+    },
+    {
+      "content": "useEffect(() => {\n\t${1}\n});",
+      "doc": "",
+      "label": "useEffect",
+      "matches": {
+        "usee": true
+      }
+    },
+    {
+      "content": "const [${1:state}, ${2:dispatch}] = useReducer(${3:reducer});",
+      "doc": "",
+      "label": "useReducer",
+      "matches": {
+        "userd": true
+      }
+    },
+    {
+      "content": "const ${1:refContainer} = useRef(${2:initialValue});",
+      "doc": "",
+      "label": "useRef",
+      "matches": {
+        "userf": true
+      }
+    },
+    {
+      "content": "const ${1:value} = useContext(${2:MyContext});",
+      "doc": "",
+      "label": "useContext",
+      "matches": {
+        "usect": true
+      }
+    },
+    {
+      "content": "const ${1:memoizedCallback} = useCallback(\n() => {\n\t${2}(${3})\n},\n[$3]\n);",
+      "doc": "",
+      "label": "useCallback",
+      "matches": {
+        "usecb": true
+      }
+    },
+    {
+      "content": "const ${1:memoizedCallback} = useMemo(() => ${2}(${3}), [$3]);",
+      "doc": "",
+      "label": "useMemo",
+      "matches": {
+        "usem": true
+      }
+    },
+    {
+      "content": "useImperativeHandle(${1:ref}, ${2:createHandle});",
+      "doc": "",
+      "label": "useImperativeHandle",
+      "matches": {
+        "usei": true
+      }
+    },
+    {
+      "content": "useDebugValue(${1:value});",
+      "doc": "",
+      "label": "useDebugValue",
+      "matches": {
+        "used": true
+      }
+    },
+    {
+      "content": "ReactDOM.render(${1}, ${2});",
+      "doc": "",
+      "label": "ReactDOM.render",
+      "matches": {
+        "rdr": true
+      }
+    },
+    {
+      "content": "ReactDOM.hydrate(${1:element}, ${2:container}[, ${3:callback}]);",
+      "doc": "",
+      "label": "ReactDOM.hydrate",
+      "matches": {
+        "rdh": true
+      }
+    },
+    {
+      "content": "ReactDOM.createPortal(${1:child}, ${2:container});",
+      "doc": "",
+      "label": "ReactDOM.createPortal",
+      "matches": {
+        "rdcp": true
+      }
+    }
+  ]
+}

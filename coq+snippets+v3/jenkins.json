@@ -1,0 +1,301 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "steps {\n\tsh '${1:make check}'\n\tjunit '${2:reports/**/*.xml}'\n}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "steps": true
+      }
+    },
+    {
+      "content": "stage('${1:Test}'){\n\tsteps {\n\t\tsh '${2:make check}'\n\t\tjunit '${3:reports/**/*.xml}'\n\t}\n}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "stage": true
+      }
+    },
+    {
+      "content": "pipeline {\n\tagent any\n\tstages {\n\t\tstage('${1:Build}') {\n\t\t\tsteps {\n\t\t\t\tsh '${2:make}'\n\t\t\t}\n\t\t}\n\t}\n}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pipeline": true
+      }
+    },
+    {
+      "content": "pipeline {\n\tagent any\n\tstages {\n\t\tstage('${1:Build}') {\n\t\t\tsteps {\n\t\t\t\tsh '${2:make}'\n\t\t\t}\n\t\t}\n\t\tstage('${3:Test}'){\n\t\t\tsteps {\n\t\t\t\tsh '${4:make check}'\n\t\t\t\tjunit '${5:reports/**/*.xml}'\n\t\t\t}\n\t\t}\n\t\tstage('${6:Deploy}') {\n\t\t\tsteps {\n\t\t\t\tsh '${7:make publish}'\n\t\t\t}\n\t\t}\n\t}\n}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pipeline_sample": true
+      }
+    },
+    {
+      "content": "docker {\n\timage '${1:myregistry.com/node'}'\n\tlabel '${2:my-defined-label'}'\n\tregistryUrl '${3:https://myregistry.com/'}'\n\tregistryCredentialsId '${4:myPredefinedCredentialsInJenkins'}'\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "d": true
+      }
+    },
+    {
+      "content": "dockerfile {\n\tfilename '${1:Dockerfile.build}'\n\tdir '${2:build}'\n\tlabel '${3:my-defined-label}'\n\tregistryUrl '${4:https://myregistry.com/}'\n\tregistryCredentialsId '${5:myPredefinedCredentialsInJenkins}'\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "df": true
+      }
+    },
+    {
+      "content": "post {\n\talways {\n\t\t${1}\n\t}\n}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pa": true
+      }
+    },
+    {
+      "content": "post {\n\tchanged {\n\t\t${1}\n\t}\n}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pc": true
+      }
+    },
+    {
+      "content": "post {\n\tfixed {\n\t\t${1}\n\t}\n}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pf": true
+      }
+    },
+    {
+      "content": "post {\n\tregression {\n\t\t${1}\n\t}\n}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pr": true
+      }
+    },
+    {
+      "content": "post {\n\taborted {\n\t\t${1}\n\t}\n}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pab": true
+      }
+    },
+    {
+      "content": "post {\n\tfailure {\n\t\t${1}\n\t}\n}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pfa": true
+      }
+    },
+    {
+      "content": "post {\n\tsuccess {\n\t\t${1}\n\t}\n}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ps": true
+      }
+    },
+    {
+      "content": "post {\n\tunstable {\n\t\t${1}\n\t}\n}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pu": true
+      }
+    },
+    {
+      "content": "post {\n\tcleanup {\n\t\t${1}\n\t}\n}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pc": true
+      }
+    },
+    {
+      "content": "pipeline {\n\tagent any\n\tstages {\n\t\tstage('${1:Build}') {\n\t\t\tsteps {\n\t\t\t\tsh '${2:make}'\n\t\t\t}\n\t\t}\n}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "psss": true
+      }
+    },
+    {
+      "content": "stages {\n\tstage('${1:Build}') {\n\t\tsteps {\n\t\t\tsh '${2:make}'\n\t\t}\n\t}\n}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sss": true
+      }
+    },
+    {
+      "content": "parameters{\n\t${1}\n}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "parameters": true
+      }
+    },
+    {
+      "content": "text(name: \"${1:BIOGRAPHY}\" , defaultValue: \"${2:default}\" , description: \"${3:Enter some information about the person}\")\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "paramtext": true
+      }
+    },
+    {
+      "content": "booleanParam(name: \"${1:TOGGLE}\" , defaultValue: ${2:default}, description: \"${3:Toggle this value}\")\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "parambool": true
+      }
+    },
+    {
+      "content": "choice(name: \"${1:CHOICE}\" , choices: [\"${2:Choices}\",] , description: \"${3:Pick something}\")\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "paramchoice": true
+      }
+    },
+    {
+      "content": "password(name: \"${1:PASSWORD}\" , defaultValue: \"${2:SECRET}\" , description: \"${3:Enter a password}\")\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "parampassword": true
+      }
+    },
+    {
+      "content": "file(name: \"${1:FILE}\" , description: \"${2:Choose a file to upload}\")${0}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "paramfile": true
+      }
+    },
+    {
+      "content": "triggers {\n\tcron('${1:H */4 * * 1-5}')\n}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "triggers": true
+      }
+    },
+    {
+      "content": "input {\n\tmessage '${1:Should we continue?}'\n\tok '${2:Yes, we should.}'\n\tsubmitter '${3:alice,bob}'\n\tparameters {\n\t\tstring(name: '${4:PERSON}' , defaultValue: '${5:Mr Jenkins}' , description: '${6:Who should I say hello to?}')\n\t}\n}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "input": true
+      }
+    },
+    {
+      "content": "when {\n\tbranch '${1:branch}'\n}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "whenbranch": true
+      }
+    },
+    {
+      "content": "when {\n\tbuildingTag '${1:tag}'\n}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "whenbuildingTag": true
+      }
+    },
+    {
+      "content": "when {\n\tchangelog '${1:changelog}'\n}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "whenchangelog": true
+      }
+    },
+    {
+      "content": "when {\n\tchangeset '${1:changeSet}'\n}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "whenchangeset": true
+      }
+    },
+    {
+      "content": "when {\n\tchangeRequest '${1:changeRequest}'\n}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "whenchangeRequest": true
+      }
+    },
+    {
+      "content": "when {\n\tenvironment '${1:environment}'\n}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "whenenvironment": true
+      }
+    },
+    {
+      "content": "when {\n\tequals '${1:equals}'\n}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "whenequals": true
+      }
+    },
+    {
+      "content": "when {\n\texpression '${1:expression}'\n}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "whenexpression": true
+      }
+    },
+    {
+      "content": "when {\n\ttag '${1:tag}'\n}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "whentag": true
+      }
+    },
+    {
+      "content": "when {\n\tnot '${1:not}'\n}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "whennot": true
+      }
+    },
+    {
+      "content": "when {\n\tallOf '${1:allOf}'\n}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "whenallOf": true
+      }
+    },
+    {
+      "content": "when {\n\tanyOf '${1:anyOf}'\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "whenanyOf": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "option \"${1:name}\" \"${2:value}\"\n$0",
+      "doc": "Add option.",
+      "label": "option",
+      "matches": {
+        "option": true
+      }
+    },
+    {
+      "content": "${1:$CURRENT_YEAR}-${2:$CURRENT_MONTH}-${3:$CURRENT_DATE} event \"${4:Key}\" \"${5:Value}\"\n$0",
+      "doc": "Add a dated event/variable to track.",
+      "label": "event",
+      "matches": {
+        "event": true
+      }
+    },
+    {
+      "content": "${1:$CURRENT_YEAR}-${2:$CURRENT_MONTH}-${3:$CURRENT_DATE} commodity ${4:ISO/Ticker}\n  name: \"${5:FullName}\"\n  asset-class: \"${6|cash,stock|}\"\n$0",
+      "doc": "Add a commodity metadata (optional).",
+      "label": "commoditiy directive",
+      "matches": {
+        "commodity": true
+      }
+    },
+    {
+      "content": "plugin \"${4:PluginName}\" \"${5:ConfigString}\"\n$0",
+      "doc": "Load a plugin.",
+      "label": "plugin",
+      "matches": {
+        "plugin": true
+      }
+    },
+    {
+      "content": "${1:$CURRENT_YEAR}-${2:$CURRENT_MONTH}-${3:$CURRENT_DATE} custom \"${4:TypeName}\" ${5:Value...}\n$0",
+      "doc": "Add a custom directive.",
+      "label": "custom",
+      "matches": {
+        "custom": true
+      }
+    },
+    {
+      "content": "${1:$CURRENT_YEAR}-${2:$CURRENT_MONTH}-${3:$CURRENT_DATE} * \"${4:Payee}\" \"${5:Narration}\"\n  $0",
+      "doc": "Add a completed transaction.",
+      "label": "completed transaction directive",
+      "matches": {
+        "txn*": true
+      }
+    },
+    {
+      "content": "pushtag #${1:TagName}\n$0",
+      "doc": "Push a tag onto the stack.",
+      "label": "pushtag",
+      "matches": {
+        "pushtag": true
+      }
+    },
+    {
+      "content": "${1:$CURRENT_YEAR}-${2:$CURRENT_MONTH}-${3:$CURRENT_DATE} note ${4|Assets:,Liabilities:,Equity:,Income:,Expenses:|} ${5:Description}\n$0",
+      "doc": "Insert a dated comment.",
+      "label": "note",
+      "matches": {
+        "note": true
+      }
+    },
+    {
+      "content": "${1:$CURRENT_YEAR}-${2:$CURRENT_MONTH}-${3:$CURRENT_DATE} ! \"${4:Payee}\" \"${5:Narration}\"\n  $0",
+      "doc": "Add an incomplete transaction.",
+      "label": "incomplete transaction directive",
+      "matches": {
+        "txn!": true
+      }
+    },
+    {
+      "content": "${1:$CURRENT_YEAR}-${2:$CURRENT_MONTH}-${3:$CURRENT_DATE} custom \"budget\" ${5:Expenses:} \"${6|daily,weekly,monthly,quaterly,yearly|}\" ${7:Amount}\n$0",
+      "doc": "Add a Fava compatible budget directive.",
+      "label": "budget",
+      "matches": {
+        "budget": true
+      }
+    },
+    {
+      "content": "${1:$CURRENT_YEAR}-${2:$CURRENT_MONTH}-${3:$CURRENT_DATE} balance ${4|Assets:,Liabilities:,Equity:,Income:,Expenses:|} ${5:Amount}\n$0",
+      "doc": "Assert balance on given day.",
+      "label": "balance assertion",
+      "matches": {
+        "balance": true
+      }
+    },
+    {
+      "content": "${1:$CURRENT_YEAR}-${2:$CURRENT_MONTH}-${3:$CURRENT_DATE} query \"${4:Name}\" \"${5:SQLContents}\"\n$0",
+      "doc": "Insert query into the stream of transactions.",
+      "label": "query",
+      "matches": {
+        "query": true
+      }
+    },
+    {
+      "content": "${1:$CURRENT_YEAR}-${2:$CURRENT_MONTH}-${3:$CURRENT_DATE} pad ${4:AccountTo} ${5:AccountFrom}\n$0",
+      "doc": "Pad balance between two accounts.",
+      "label": "pad",
+      "matches": {
+        "pad": true
+      }
+    },
+    {
+      "content": "${1:$CURRENT_YEAR}-${2:$CURRENT_MONTH}-${3:$CURRENT_DATE} document ${4|Assets:,Liabilities:,Equity:,Income:,Expenses:|} \"${5:PathToDocument}\"\n$0",
+      "doc": "Insert a dated document relating to a account.",
+      "label": "document",
+      "matches": {
+        "document": true
+      }
+    },
+    {
+      "content": "poptag #${1:TagName}\n$0",
+      "doc": "Pop a tag from the stack.",
+      "label": "poptag",
+      "matches": {
+        "poptag": true
+      }
+    },
+    {
+      "content": "${1:$CURRENT_YEAR}-${2:$CURRENT_MONTH}-${3:$CURRENT_DATE} close ${4|Assets:,Liabilities:,Equity:,Income:,Expenses:|}\n$0",
+      "doc": "Close an account.",
+      "label": "close directive",
+      "matches": {
+        "close": true
+      }
+    },
+    {
+      "content": "${1:$CURRENT_YEAR}-${2:$CURRENT_MONTH}-${3:$CURRENT_DATE} price ${4:Commodity} ${5:Price}\n$0",
+      "doc": "Add a dated price between commodities (for unrealized gains).",
+      "label": "price",
+      "matches": {
+        "price": true
+      }
+    },
+    {
+      "content": "${1:$CURRENT_YEAR}-${2:$CURRENT_MONTH}-${3:$CURRENT_DATE} open ${4|Assets:,Liabilities:,Equity:,Income:,Expenses:|} ${5:[ConstraintCurrency] [BookingMethod]}\n$0",
+      "doc": "Open an account.",
+      "label": "open directive",
+      "matches": {
+        "open": true
+      }
+    },
+    {
+      "content": "include \"${4:Filename}\"\n$0",
+      "doc": "Include a beancount file.",
+      "label": "include",
+      "matches": {
+        "include": true
+      }
+    },
+    {
+      "content": "${1:YYYY}-${2:MM}-${3:DD} open ${4:Account} ${8:#:Commodity}",
+      "doc": "",
+      "label": "open account",
+      "matches": {
+        "open": true
+      }
+    },
+    {
+      "content": "${1:YYYY}-${2:MM}-${3:DD} close ${4:#:Account}",
+      "doc": "",
+      "label": "close account",
+      "matches": {
+        "close": true
+      }
+    },
+    {
+      "content": "${1:YYYY}-${2:MM}-${3:DD} commodity ${4:Commodity}",
+      "doc": "",
+      "label": "declare commodity",
+      "matches": {
+        "commodity": true
+      }
+    },
+    {
+      "content": "${1:YYYY}-${2:MM}-${3:DD} commodity ${4:Commodity}",
+      "doc": "",
+      "label": "declare commodity",
+      "matches": {
+        "currency": true
+      }
+    },
+    {
+      "content": "${1:YYYY}-${2:MM}-${3:DD} * \"${5:Payee}\" \"${6:Narration}\"\n\t${9:Account} ${10:Amount} ${11:Commodity}\n\t${14:Account} ${15:#:Amount} ${16:#:Commodity}",
+      "doc": "",
+      "label": "transaction",
+      "matches": {
+        "transaction": true
+      }
+    },
+    {
+      "content": "${1:YYYY}-${2:MM}-${3:DD} balance ${4:Account} ${5:Amount} ${6:#:Commodity}",
+      "doc": "",
+      "label": "balance",
+      "matches": {
+        "balance": true
+      }
+    },
+    {
+      "content": "${1:YYYY}-${2:MM}-${3:DD} pad ${4:BalanceAccount} ${5:PadAccount}",
+      "doc": "",
+      "label": "pad",
+      "matches": {
+        "pad": true
+      }
+    }
+  ]
+}

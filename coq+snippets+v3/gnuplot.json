@@ -1,0 +1,221 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "set ${1:#:axis}range [${2:*}:${3:*}]",
+      "doc": "",
+      "label": "set x/y range.",
+      "matches": {
+        "range": true
+      }
+    },
+    {
+      "content": "set xrange [${1:*}:${2:*}]",
+      "doc": "",
+      "label": "set xrange [X1:X2]",
+      "matches": {
+        "xrange": true
+      }
+    },
+    {
+      "content": "set yrange [${1:*}:${2:*}]",
+      "doc": "",
+      "label": "set yrange [Y1:Y2]",
+      "matches": {
+        "yrange": true
+      }
+    },
+    {
+      "content": "set title ${1:#:title}",
+      "doc": "",
+      "label": "set title '...'",
+      "matches": {
+        "title": true
+      }
+    },
+    {
+      "content": "set ${1:#:axis}label ${2:#:label}",
+      "doc": "",
+      "label": "set title '...'",
+      "matches": {
+        "labelaxis": true
+      }
+    },
+    {
+      "content": "set ${1:#:axis}tics ${2:#:start}, ${3:#:incr}, ${4:#:end}",
+      "doc": "",
+      "label": "set x/y tics start, incr, end",
+      "matches": {
+        "tics": true
+      }
+    },
+    {
+      "content": "set xtics ${1:#:start}, ${2:#:incr}, ${3:#:end}",
+      "doc": "",
+      "label": "set xtics start, incr, end",
+      "matches": {
+        "xtics": true
+      }
+    },
+    {
+      "content": "set ytics ${1:#:start}, ${2:#:incr}, ${3:#:end}",
+      "doc": "",
+      "label": "set ytics start, incr, end",
+      "matches": {
+        "ytics": true
+      }
+    },
+    {
+      "content": "set datafile separator '${1:#:separator}'",
+      "doc": "",
+      "label": "set datafile separator 'separator'",
+      "matches": {
+        "datasep": true
+      }
+    },
+    {
+      "content": "set terminal ${1:#:terminal}",
+      "doc": "",
+      "label": "set terminal",
+      "matches": {
+        "term": true
+      }
+    },
+    {
+      "content": "set output '${1:#:filename}'",
+      "doc": "",
+      "label": "set output 'filename'",
+      "matches": {
+        "out": true
+      }
+    },
+    {
+      "content": "set key",
+      "doc": "",
+      "label": "set key",
+      "matches": {
+        "key": true
+      }
+    },
+    {
+      "content": "unset key",
+      "doc": "",
+      "label": "unset key",
+      "matches": {
+        "key!": true
+      }
+    },
+    {
+      "content": "set grid",
+      "doc": "",
+      "label": "set grid",
+      "matches": {
+        "grid": true
+      }
+    },
+    {
+      "content": "unset grid",
+      "doc": "",
+      "label": "unset grid",
+      "matches": {
+        "grid!": true
+      }
+    },
+    {
+      "content": "set border",
+      "doc": "",
+      "label": "set border",
+      "matches": {
+        "border": true
+      }
+    },
+    {
+      "content": "print(${1:#:string}}",
+      "doc": "",
+      "label": "print",
+      "matches": {
+        "print": true
+      }
+    },
+    {
+      "content": "sprintf('${1:#:format}', ${2:#:vars})",
+      "doc": "",
+      "label": "sprintf",
+      "matches": {
+        "sprintf": true
+      }
+    },
+    {
+      "content": "set multiplot\n${1:#:plot code}\nunset multiplot",
+      "doc": "",
+      "label": "set multiplot ... unset multiplot",
+      "matches": {
+        "multiplot": true
+      }
+    },
+    {
+      "content": "if (${1:#:condition}) {\n    ${2:#:commands}\n}",
+      "doc": "",
+      "label": "if (...) {...}",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "else {\n    ${1:#:commands}\n}",
+      "doc": "",
+      "label": "else {...}",
+      "matches": {
+        "else": true
+      }
+    },
+    {
+      "content": "if (${1:#:condition}) {\n    ${2:#:commands}\n} else {\n    ${3:#:commands}\n}",
+      "doc": "",
+      "label": "if (...) {...} else {...}",
+      "matches": {
+        "ifelse": true
+      }
+    },
+    {
+      "content": "while (${1:#:expression}) {\n    ${2:#:commands}\n}",
+      "doc": "",
+      "label": "while (...) {...}",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "do for ${1:#:iter} {\n    ${2:#:commands}\n}",
+      "doc": "",
+      "label": "do for <iter> {...}",
+      "matches": {
+        "do": true
+      }
+    },
+    {
+      "content": "for [${1:str} in '${2:#:string list}']",
+      "doc": "",
+      "label": "for [string in \"A B C...\"]",
+      "matches": {
+        "fors": true
+      }
+    },
+    {
+      "content": "for [${1:i} = ${2:#:start}, ${3:#:end}, ${4:1}",
+      "doc": "",
+      "label": "for [intvar = start, end, incr]",
+      "matches": {
+        "fori": true
+      }
+    },
+    {
+      "content": "set logscale ${1:#:axis}",
+      "doc": "",
+      "label": "set logscale <axis>",
+      "matches": {
+        "logscale": true
+      }
+    }
+  ]
+}

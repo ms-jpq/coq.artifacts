@@ -1,0 +1,85 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "if ${1}\n\t${0}\nend",
+      "doc": "",
+      "label": "if",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "if ${1}\n\t${2}\nelse\n\t${0}\nend",
+      "doc": "",
+      "label": "if ... else",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "else\n\t${0}",
+      "doc": "",
+      "label": "else",
+      "matches": {
+        "el": true
+      }
+    },
+    {
+      "content": "elseif ${1}\n\t${0}",
+      "doc": "",
+      "label": "elsif",
+      "matches": {
+        "eif": true
+      }
+    },
+    {
+      "content": "while ${1}\n\t${0}\nend",
+      "doc": "",
+      "label": "while",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "for ${1:i} = ${2:1:n}\n\t${0}\nend",
+      "doc": "",
+      "label": "for",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "parfor ${1:i} = ${2:1:n}\n\t${0}\nend",
+      "doc": "",
+      "label": "parfor",
+      "matches": {
+        "parfor": true
+      }
+    },
+    {
+      "content": "try\n\t${1}\ncatch ${2:err}\n\t${0}\nend",
+      "doc": "",
+      "label": "try ... catch",
+      "matches": {
+        "try": true
+      }
+    },
+    {
+      "content": "switch ${1:n}\n\tcase ${2:0}\n\t\t${0}\nend",
+      "doc": "",
+      "label": "switch",
+      "matches": {
+        "switch": true
+      }
+    },
+    {
+      "content": "@(${1:x}) ${0:x*x}",
+      "doc": "",
+      "label": "anonymous function",
+      "matches": {
+        "@": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "class $1 extends StatelessWidget {\n\tconst $1({super.key});\n\n\t@override\n\tWidget build(BuildContext context) {\n\t\treturn Container(\n\t\t\t$2\n\t\t);\n\t}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "stless": true
+      }
+    },
+    {
+      "content": "class $1 extends StatefulWidget {\n\tconst $1({super.key});\n\n\t@override\n\tState<$1> createState() => _$1State();\n}\n\nclass _$1State extends State<$1> {\n\t@override\n\tWidget build(BuildContext context) {\n\t\treturn Container(\n\t\t\t$2\n\t\t);\n\t}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "stful": true
+      }
+    },
+    {
+      "content": "class $1 extends StatefulWidget {\n\tconst $1({super.key});\n\n\t@override\n\tState<$1> createState() => _$1State();\n}\n\nclass _$1State extends State<$1>\n\t\twith SingleTickerProviderStateMixin {\n\tAnimationController _controller;\n\n\t@override\n\tvoid initState() {\n\t\tsuper.initState();\n\t\t_controller = AnimationController(vsync: this);\n\t}\n\n\t@override\n\tvoid dispose() {\n\t\tsuper.dispose();\n\t\t_controller.dispose();\n\t}\n\n\t@override\n\tWidget build(BuildContext context) {\n\t\treturn Container(\n\t\t\t$2\n\t\t);\n\t}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "stanim": true
+      }
+    },
+    {
+      "content": "void main() {\n\trunApp(\n\t\tMaterialApp(\n\t\t\ttitle: 'Flutter Demo',\n\t\t\ttheme: ThemeData(\n\t\t\t\tprimarySwatch: Colors.blue,\n\t\t\t),\n\t\t\tdebugShowCheckedModeBanner: false,\n\t\t\thome: const HomePage(),\n\t\t),\n\t);\n}\n\nclass HomePage extends StatelessWidget {\n\tconst HomePage({Key? key}) : super(key: key);\n\n\t@override\n\tWidget build(BuildContext context) {\n\t\treturn Scaffold(\n\t\t\tappBar: AppBar(\n\t\t\t\ttitle: const Text('Home Page'),\n\t\t\t),\n\t\t);\n\t}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fsa": true
+      }
+    }
+  ]
+}

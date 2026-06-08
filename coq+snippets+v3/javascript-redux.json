@@ -1,0 +1,53 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "import { createStore } from 'redux';",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ist": true
+      }
+    },
+    {
+      "content": "connect(${1:mapStateToProps}, ${2:mapDispatchToProps})(<${3:VISUAL}/>);",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "con": true
+      }
+    },
+    {
+      "content": "const ${1:actionName} = (${2:arg}) => {\n\treturn {\n\t\ttype: ${3:VISUAL},\n\t\t$2\n\t};\n};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "act": true
+      }
+    },
+    {
+      "content": "const ${1:reducerName} = (state={}, action) => {\n\tswitch(action.type) {\n\t\tcase ${1:action}:\n\t\t\treturn {\n\t\t\t\t...state,\n\t\t\t\t$2\n\t\t\t};\n\t\tdefault:\n\t\t\treturn state;\n\t};\n};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rdc": true
+      }
+    },
+    {
+      "content": "const mapStateToProps = (state) => {\n\treturn {\n\t\t${1:propName}: state.$1,\n\t};\n};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mstp": true
+      }
+    },
+    {
+      "content": "const mapDispatchToProps = (dispatch) => {\n\treturn {\n\t\t${1:propName}: () => {\n\t\t\tdispatch(${2:actionName}());\n\t\t},\n\t};\n};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mdtp": true
+      }
+    }
+  ]
+}

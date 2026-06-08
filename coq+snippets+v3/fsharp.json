@@ -1,0 +1,325 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "if ${1:TARGET}\nthen ${2}\nelse ${0}",
+      "doc": "",
+      "label": "if..then..else",
+      "matches": {
+        "If": true
+      }
+    },
+    {
+      "content": "if ${1:TARGET} then ${2} else ${0}",
+      "doc": "",
+      "label": "if..then..else - oneline",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "match ${1:TARGET} with\n| ${2} -> ${0}",
+      "doc": "",
+      "label": "match",
+      "matches": {
+        "match": true
+      }
+    },
+    {
+      "content": "(fun ${1:x} -> ${2:x})",
+      "doc": "",
+      "label": "(fun x -> ..)",
+      "matches": {
+        "fun": true
+      }
+    },
+    {
+      "content": "[| ${0:TARGET} |]",
+      "doc": "",
+      "label": "array literal [| |]",
+      "matches": {
+        "arl": true
+      }
+    },
+    {
+      "content": "[<${0:TARGET}>]",
+      "doc": "",
+      "label": "attribute [<..>]",
+      "matches": {
+        "att": true
+      }
+    },
+    {
+      "content": "#if ${1}\n  ${2:TARGET}\n#endif",
+      "doc": "",
+      "label": "#if .. #endif",
+      "matches": {
+        "#if": true
+      }
+    },
+    {
+      "content": "#if ${1}\n  ${2}\nelse\n  #{3}\n#endif",
+      "doc": "",
+      "label": "#if .. else .. #endif",
+      "matches": {
+        "#ife": true
+      }
+    },
+    {
+      "content": "__SOURCE_DIRECTORY__",
+      "doc": "",
+      "label": "__SOURCE_DIRECTORY__",
+      "matches": {
+        "sourced": true
+      }
+    },
+    {
+      "content": "__LINE__",
+      "doc": "",
+      "label": "__LINE__",
+      "matches": {
+        "line": true
+      }
+    },
+    {
+      "content": "__SOURCE_FILE__",
+      "doc": "",
+      "label": "__FILE__",
+      "matches": {
+        "sourcef": true
+      }
+    },
+    {
+      "content": "/// ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "doc": true
+      }
+    },
+    {
+      "content": "// ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "comment": true
+      }
+    },
+    {
+      "content": "let ${1} = ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "let": true
+      }
+    },
+    {
+      "content": "[<Literal>]\nlet ${1} = ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lit": true
+      }
+    },
+    {
+      "content": "type ${1} = { ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rec": true
+      }
+    },
+    {
+      "content": "{| ${0} |}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "arec": true
+      }
+    },
+    {
+      "content": "let ${1} =\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fn": true
+      }
+    },
+    {
+      "content": "let rec ${1} =\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fnr": true
+      }
+    },
+    {
+      "content": "(fun ${1} -> ${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lam": true
+      }
+    },
+    {
+      "content": "module ${1} =\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mod": true
+      }
+    },
+    {
+      "content": "for ${1} in ${2} do\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "if ${1} then\n\t${2}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "if ${1} then\n\t${2}\nelse\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "if ${1} then\n\t${2}\nelif ${3} then\n\t${4}\nelse\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ifee": true
+      }
+    },
+    {
+      "content": "elif ${1} then\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eif": true
+      }
+    },
+    {
+      "content": "else\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "el": true
+      }
+    },
+    {
+      "content": "try\n\t${1}\nwith ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "try": true
+      }
+    },
+    {
+      "content": "match ${1} with\n| ${2} -> ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "match": true
+      }
+    },
+    {
+      "content": "| ${1} -> ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "|": true
+      }
+    },
+    {
+      "content": "|> ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "p": true
+      }
+    },
+    {
+      "content": "printfn \"${1}\" ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pr": true
+      }
+    },
+    {
+      "content": "printfn \\$\"${0}\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pri": true
+      }
+    },
+    {
+      "content": "|> Array.map (fun ${1} -> ${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "amap": true
+      }
+    },
+    {
+      "content": "|> List.map (fun ${1} -> ${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lmap": true
+      }
+    },
+    {
+      "content": "|> Seq.map (fun ${1} -> ${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "smap": true
+      }
+    },
+    {
+      "content": "|> Array.map (fun x -> printfn \"%A\" x; x) // tap",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "atap": true
+      }
+    },
+    {
+      "content": "|> List.map (fun x -> printfn \"%A\" x; x) // tap",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ltap": true
+      }
+    },
+    {
+      "content": "|> Seq.map (fun x -> printfn \"%A\" x; x) // tap",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "stap": true
+      }
+    },
+    {
+      "content": "[<EntryPoint>]\nlet main argv =\n\t${0}\n\t0",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "main": true
+      }
+    }
+  ]
+}

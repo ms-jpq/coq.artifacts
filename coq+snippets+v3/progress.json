@@ -1,0 +1,149 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "DEFINE BUFFER b_${1:TableName} FOR $1 ${0}.",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defbuf": true
+      }
+    },
+    {
+      "content": "DEFINE VARIABLE ${1:VariableName} AS ${0}.",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defvar": true
+      }
+    },
+    {
+      "content": "NO-LOCK",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "nl": true
+      }
+    },
+    {
+      "content": "NO-ERROR",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ne": true
+      }
+    },
+    {
+      "content": "NO-LOCK NO-ERROR",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "nle": true
+      }
+    },
+    {
+      "content": "INITIAL ${0:?}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ini": true
+      }
+    },
+    {
+      "content": "NO-UNDO",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "nu": true
+      }
+    },
+    {
+      "content": "ERROR",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "err": true
+      }
+    },
+    {
+      "content": "DEFINE INPUT PARAMETER ${1:ParamName} AS ${0}.",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "input": true
+      }
+    },
+    {
+      "content": "DEFINE OUTPUT PARAMETER ${1:ParamName} AS ${0:ParamType}.",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "output": true
+      }
+    },
+    {
+      "content": "/******************************************************************************/\n\nPROCEDURE ${1:ProcName}:\n\n\t${0}\n\nEND PROCEDURE. /* $1 */\n\n/******************************************************************************/",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "proc": true
+      }
+    },
+    {
+      "content": "MESSAGE \"${1:MessageContent}\" ${2:Data} VIEW-AS ALERT-BOX.",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "alert": true
+      }
+    },
+    {
+      "content": "DO${1: Clauses}:\n\t${0}\nEND.",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "do": true
+      }
+    },
+    {
+      "content": "INTEGER",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "int": true
+      }
+    },
+    {
+      "content": "CHARACTER",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "char": true
+      }
+    },
+    {
+      "content": "LOGICAL",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "log": true
+      }
+    },
+    {
+      "content": "DECIMAL",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dec": true
+      }
+    },
+    {
+      "content": "/* ------------------------------------------------------------------------- */",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sep": true
+      }
+    }
+  ]
+}

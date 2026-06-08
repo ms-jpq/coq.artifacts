@@ -1,0 +1,1473 @@
+{
+  "extends": [
+    "css",
+    "html",
+    "javascript",
+    "nuxt",
+    "nuxt-config",
+    "nuxt-html",
+    "nuxt-script",
+    "vue-pug",
+    "vue-script",
+    "vue-script-router",
+    "vue-script-setup",
+    "vue-script-vuex",
+    "vue-template",
+    "vuex"
+  ],
+  "snippets": [
+    {
+      "content": "<script>\nexport default {\n\t$0\n}\n</script>",
+      "doc": "script element",
+      "label": "script",
+      "matches": {
+        "script": true
+      }
+    },
+    {
+      "content": "<template>\n\t<div>\n\n\t</div>\n</template>\n\n<script>\n\texport default {\n\t\tname:\"$TM_FILENAME_BASE\",\n\t\t${0}\n\t}\n</script>",
+      "doc": "Base for Vue File with no styles",
+      "label": "Vue Single File Component with No Style",
+      "matches": {
+        "vbase-ns": true
+      }
+    },
+    {
+      "content": "<script setup lang=\"ts\">\n\t$0\n</script>",
+      "doc": "script setup vue with lang ts composition api element",
+      "label": "script-ts-composition",
+      "matches": {
+        "scriptTsSetup": true
+      }
+    },
+    {
+      "content": "<style lang=\"$1\">\n\t$0\n</style>",
+      "doc": "style element with lang attribute",
+      "label": "styleLang",
+      "matches": {
+        "styleLang": true
+      }
+    },
+    {
+      "content": "<template>\n\t<div>\n\n\t</div>\n</template>\n\n<script setup>\n\n</script>\n\n<style lang=\"scss\" scoped>\n\n</style>",
+      "doc": "Base for Vue File Setup Composition API with SCSS",
+      "label": "Vue Single File Component Setup Composition API",
+      "matches": {
+        "vbase-3-setup": true
+      }
+    },
+    {
+      "content": "<style lang=\"$1\" scoped>\n\t$0\n</style>",
+      "doc": "style scoped element with lang attribute",
+      "label": "styleLangScoped",
+      "matches": {
+        "styleLangScoped": true
+      }
+    },
+    {
+      "content": "<template>\n\t<div>\n\n\t</div>\n</template>\n\n<script>\nimport { reactive, toRefs } from 'vue'\n\nexport default {\n\tsetup () {\n\t\tconst state = reactive({\n\t\t\t${0:count}: ${1:0},\n\t\t})\n\t\n\t\treturn {\n\t\t\t...toRefs(state),\n\t\t}\n\t}\n}\n</script>\n\n<style lang=\"scss\" scoped>\n\n</style>",
+      "doc": "Base for Vue File Composition API with SCSS",
+      "label": "Vue Single File Component Composition API Reactive",
+      "matches": {
+        "vbase-3-reactive": true
+      }
+    },
+    {
+      "content": "<style scoped>\n\t$0\n</style>",
+      "doc": "style scoped vue attribute",
+      "label": "styleScoped",
+      "matches": {
+        "styleScoped": true
+      }
+    },
+    {
+      "content": "<template>\n\t<div>\n\n\t</div>\n</template>\n\n<script>\n\texport default {\n\t\tname:\"$TM_FILENAME_BASE\",\n\t\t${0}\n\t}\n</script>\n\n<style lang=\"scss\" scoped>\n\n</style>",
+      "doc": "Base for Vue File with SCSS",
+      "label": "Vue Single File Component",
+      "matches": {
+        "vbase": true
+      }
+    },
+    {
+      "content": "<template>\n\t<div>\n\n\t</div>\n</template>\n\n<script lang=\"ts\">\nimport { defineComponent } from 'vue'\n\nexport default defineComponent({\n\tsetup () {\n\t\t${0}\n\n\t\treturn {}\n\t}\n})\n</script>\n\n<style scoped>\n\n</style>",
+      "doc": "Base for Vue File Composition API - Typescript",
+      "label": "Vue Single File Component Composition API with Typescript",
+      "matches": {
+        "vbase-3-ts": true
+      }
+    },
+    {
+      "content": "<template>\n\t<div>\n\n\t</div>\n</template>\n\n<script>\n\texport default {\n\t\t${0}\n\t}\n</script>\n\n<style scoped>\n\n</style>",
+      "doc": "Base for Vue File with CSS",
+      "label": "Vue Single File Component with Css",
+      "matches": {
+        "vbase-css": true
+      }
+    },
+    {
+      "content": "<template>\n\t<div>\n\n\t</div>\n</template>\n\n<script>\n\texport default {\n\t\tname:\"$TM_FILENAME_BASE\",\n\t\t${0}\n\t}\n</script>\n\n<style lang=\"sass\" scoped>\n\n</style>",
+      "doc": "Base for Vue File with PostCSS",
+      "label": "Vue Single File Component with SASS",
+      "matches": {
+        "vbase-sass": true
+      }
+    },
+    {
+      "content": "<template lang=\"$1\">\n\t<div$2>\n\t\t$0\n\t</div>\n</template>",
+      "doc": "template element",
+      "label": "templateLang",
+      "matches": {
+        "templateLang": true
+      }
+    },
+    {
+      "content": "<template>\n\t<div>\n\n\t</div>\n</template>\n\n<script lang=\"ts\">\n\timport Vue from 'vue'\n\n\texport default Vue.extend({\n\t\tname:\"$TM_FILENAME_BASE\",\n\t\t${0}\n\t})\n</script>\n\n<style scoped>\n\n</style>",
+      "doc": "Base for Vue File with Typescript",
+      "label": "Vue Single File Component with Typescript",
+      "matches": {
+        "vbase-ts": true
+      }
+    },
+    {
+      "content": "<template>\n\t<div>\n\n\t</div>\n</template>\n\n<script setup lang=\"ts\">\n\n</script>\n\n<style scoped>\n\n</style>",
+      "doc": "Base for Vue File Setup Composition API - Typescript",
+      "label": "Vue Single File Component Setup Composition API with Typescript",
+      "matches": {
+        "vbase-3-ts-setup": true
+      }
+    },
+    {
+      "content": "<template>\n\t<div>\n\n\t</div>\n</template>\n\n<script>\n\texport default {\n\t\tname:\"$TM_FILENAME_BASE\",\n\t\t${0}\n\t}\n</script>\n\n<style lang=\"less\" scoped>\n\n</style>",
+      "doc": "Base for Vue File with PostCSS",
+      "label": "Vue Single File Component with LESS",
+      "matches": {
+        "vbase-less": true
+      }
+    },
+    {
+      "content": "<script setup>\n\t$0\n</script>",
+      "doc": "script setup vue composition api element",
+      "label": "script-composition",
+      "matches": {
+        "scriptSetup": true
+      }
+    },
+    {
+      "content": "<template>\n\t<div>\n\n\t</div>\n</template>\n\n<script>\nexport default {\n\tsetup () {\n\t\t${0}\n\n\t\treturn {}\n\t}\n}\n</script>\n\n<style lang=\"scss\" scoped>\n\n</style>",
+      "doc": "Base for Vue File Composition API with SCSS",
+      "label": "Vue Single File Component Composition API",
+      "matches": {
+        "vbase-3": true
+      }
+    },
+    {
+      "content": "const ${1:mixinName} = {\n\tmounted() {\n\t\tconsole.log('hello from mixin!')\n\t},\n}",
+      "doc": "vue mixin",
+      "label": "vue-mixin",
+      "matches": {
+        "vmixin": true,
+        "vue mixin": true
+      }
+    },
+    {
+      "content": "appear-to-class=\"$1\"$0",
+      "doc": "appear-to-class=''. Expects: string.",
+      "label": "vue-appear-to-class",
+      "matches": {
+        "appeartoclass": true,
+        "vue appear-to-class": true
+      }
+    },
+    {
+      "content": "v-text=\"${1:msg}\"",
+      "doc": "Expects: string. Updates the element’s textContent.",
+      "label": "vue-v-text",
+      "matches": {
+        "vtext": true,
+        "vue v-text": true
+      }
+    },
+    {
+      "content": "mixins: [${1:mixinName}],",
+      "doc": "vue use mixin",
+      "label": "vue-use-mixin",
+      "matches": {
+        "vmixin-use": true,
+        "vue use mixin": true
+      }
+    },
+    {
+      "content": "v-html=\"${1:html}\"",
+      "doc": "Expects: string. Updates the element’s innerHTML.",
+      "label": "vue-v-html",
+      "matches": {
+        "vhtml": true,
+        "vue v-html": true
+      }
+    },
+    {
+      "content": "enter-active-class=\"$1\"$0",
+      "doc": "enter-active-class=''. Expects: string.",
+      "label": "vue-enter-active-class",
+      "matches": {
+        "enteractiveclass": true,
+        "vue enter-active-class": true
+      }
+    },
+    {
+      "content": "beforeCreate () {\n\t${0};\n},",
+      "doc": "beforeCreate lifecycle method",
+      "label": "vue-lifecycle-beforecreate",
+      "matches": {
+        "vbeforecreate": true,
+        "vue lifecycle beforecreate": true
+      }
+    },
+    {
+      "content": "v-show=\"${1:condition}\"",
+      "doc": "Expects: any",
+      "label": "vue-v-show",
+      "matches": {
+        "vshow": true,
+        "vue v-show": true
+      }
+    },
+    {
+      "content": "v-if=\"${1:condition}\"",
+      "doc": "Expects: any",
+      "label": "vue-v-if",
+      "matches": {
+        "vif": true,
+        "vue v-if": true
+      }
+    },
+    {
+      "content": "created () {\n\t${0};\n},",
+      "doc": "created lifecycle method",
+      "label": "vue-lifecycle-created",
+      "matches": {
+        "vcreated": true,
+        "vue lifecycle created": true
+      }
+    },
+    {
+      "content": "v-else",
+      "doc": "Does not expect expression. previous sibling element must have v-if or v-else-if.",
+      "label": "vue-v-else",
+      "matches": {
+        "velse": true,
+        "vue v-else": true
+      }
+    },
+    {
+      "content": "import Vue from 'vue'\nimport ${1:HelloWorld} from './components/${1:HelloWorld}'\n\ndescribe('${1:HelloWorld}.vue', () => {\n\tit('${2:should render correct contents}', () => {\n\t\tconst Constructor = Vue.extend(${1:HelloWorld})\n\t\tconst vm = new Constructor().$mount()\n\t\texpect(vm.$el.querySelector('.hello h1').textContent)\n\t\t\t.to.equal(${3:'Welcome to Your Vue.js App'})\n\t})\n})",
+      "doc": "unit test component",
+      "label": "vue-unit-test",
+      "matches": {
+        "vtest": true,
+        "vue unit test": true
+      }
+    },
+    {
+      "content": "appear-active-class=\"$1\"$0",
+      "doc": "appear-active-class=''. Expects: string.",
+      "label": "vue-appear-active-class",
+      "matches": {
+        "appearactiveclass": true,
+        "vue appear-active-class": true
+      }
+    },
+    {
+      "content": "v-else-if=\"${1:condition}\"",
+      "doc": "Expects: any. previous sibling element must have v-if or v-else-if.",
+      "label": "vue-v-else-if",
+      "matches": {
+        "velseif": true,
+        "vue v-else-if": true
+      }
+    },
+    {
+      "content": "beforeMount () {\n\t${0};\n},",
+      "doc": "beforeMount lifecycle method",
+      "label": "vue-lifecycle-beforemount",
+      "matches": {
+        "vbeforemount": true,
+        "vue lifecycle beforemount": true
+      }
+    },
+    {
+      "content": "import { TimelineMax, ${1:Ease} } from 'gsap'",
+      "doc": "component methods options that dispatch an action from vuex store.",
+      "label": "vue-import-gsap",
+      "matches": {
+        "vimport-gsap": true,
+        "vue import gsap": true
+      }
+    },
+    {
+      "content": "v-for=\"${1:item} in ${2:items}\"",
+      "doc": "Expects: Array | Object | number | string",
+      "label": "vue-v-for-without-key",
+      "matches": {
+        "vforwithoutkey": true,
+        "vue v-for-without-key": true
+      }
+    },
+    {
+      "content": "@before-enter=\"$1\"$0",
+      "doc": "@before-enter=''",
+      "label": "vue-before-enter",
+      "matches": {
+        "beforeenterevent": true,
+        "vue before-enter": true
+      }
+    },
+    {
+      "content": "v-for=\"(${1:item}, ${2:index}) in ${3:items}\" :key=\"${4:index}\"",
+      "doc": "Expects: Array | Object | number | string",
+      "label": "vue-v-for",
+      "matches": {
+        "vfor": true,
+        "vue v-for": true
+      }
+    },
+    {
+      "content": "beforeEnter(el) {\n\tconsole.log('beforeEnter');\n},\nenter(el, done) {\n\tconsole.log('enter');\n\tdone();\n},\nbeforeLeave(el) {\n\tconsole.log('beforeLeave');\n},\nleave(el, done) {\n\tconsole.log('leave');\n\tdone();\n},",
+      "doc": "transition component js hooks",
+      "label": "vue-transition-methods-with-javascript-hooks",
+      "matches": {
+        "vanimhook-js": true,
+        "vue transition methods with javascript hooks": true
+      }
+    },
+    {
+      "content": "v-on:${1:event}=\"${2:handle}\"",
+      "doc": "Expects: Function | Inline Statement",
+      "label": "vue-v-on",
+      "matches": {
+        "von": true,
+        "vue v-on": true
+      }
+    },
+    {
+      "content": "beforeUpdate () {\n\t${0};\n},",
+      "doc": "beforeUpdate lifecycle method",
+      "label": "vue-lifecycle-beforeupdate",
+      "matches": {
+        "vbeforeupdate": true,
+        "vue lifecycle beforeupdate": true
+      }
+    },
+    {
+      "content": "v-bind$1=\"${2}\"",
+      "doc": "Expects: any (with argument) | Object (without argument)",
+      "label": "vue-v-bind",
+      "matches": {
+        "vbind": true,
+        "vue v-bind": true
+      }
+    },
+    {
+      "content": "updated () {\n\t${0};\n},",
+      "doc": "updated lifecycle method",
+      "label": "vue-lifecycle-updated",
+      "matches": {
+        "vue lifecycle updated": true,
+        "vupdated": true
+      }
+    },
+    {
+      "content": "v-model=\"${1:something}\"",
+      "doc": "Expects: varies based on value of form inputs element or output of components",
+      "label": "vue-v-model",
+      "matches": {
+        "vmodel": true,
+        "vue v-model": true
+      }
+    },
+    {
+      "content": "${1:mutationName}() {\n\tthis.\\$store.commit('${1:mutationName}', ${2:payload})\n}",
+      "doc": "commit to vuex store in methods for mutation",
+      "label": "vue-commit-vuex-store-in-methods",
+      "matches": {
+        "vcommit": true,
+        "vue commit vuex store in methods": true
+      }
+    },
+    {
+      "content": "beforeDestroy () {\n\t${0};\n},",
+      "doc": "beforeDestroy lifecycle method",
+      "label": "vue-lifecycle-beforedestroy",
+      "matches": {
+        "vbeforedestroy": true,
+        "vue lifecycle beforedestroy": true
+      }
+    },
+    {
+      "content": "v-cloak",
+      "doc": "Does not expect expression",
+      "label": "vue-v-cloak",
+      "matches": {
+        "vcloak": true,
+        "vue v-cloak": true
+      }
+    },
+    {
+      "content": "destroyed () {\n\t${0};\n},",
+      "doc": "destroyed lifecycle method",
+      "label": "vue-lifecycle-destroyed",
+      "matches": {
+        "vdestroyed": true,
+        "vue lifecycle destroyed": true
+      }
+    },
+    {
+      "content": "v-once",
+      "doc": "Does not expect expression",
+      "label": "vue-v-once",
+      "matches": {
+        "vonce": true,
+        "vue v-once": true
+      }
+    },
+    {
+      "content": "<template>\n\t<div>\n\n\t</div>\n</template>\n\n<script>\n\texport default {\n\t\t${0}\n\t}\n</script>\n\n<style scoped>\n\n</style>",
+      "doc": "Base for Vue File with CSS",
+      "label": "vue-single-file-component-with-css",
+      "matches": {
+        "vue base css": true
+      }
+    },
+    {
+      "content": ":key=\"${1:key}\"",
+      "doc": "Expects: string. Children of the same common parent must have unique keys. Duplicate keys will cause render errors.",
+      "label": "vue-key",
+      "matches": {
+        "key": true,
+        "vue key": true
+      }
+    },
+    {
+      "content": "watch: {\n\t${1:data}(${2:newValue}, ${3:oldValue}) {\n\t\t${0}\n\t}\n},",
+      "doc": "vue watcher",
+      "label": "vue-watchers",
+      "matches": {
+        "vue watchers": true,
+        "vwatcher": true
+      }
+    },
+    {
+      "content": "@before-leave=\"$1\"$0",
+      "doc": "@before-leave=''",
+      "label": "vue-before-leave",
+      "matches": {
+        "beforeleaveevent": true,
+        "vue before-leave": true
+      }
+    },
+    {
+      "content": "slot=\"$1\"$0",
+      "doc": "slot=''. Expects: string. Used on content inserted into child components to indicate which named slot the content belongs to.",
+      "label": "vue-slota",
+      "matches": {
+        "slota": true,
+        "vue slota": true
+      }
+    },
+    {
+      "content": "watch: {\n\t${1:data}: {\n\t\timmediate: ${2:true},\n\t\tdeep: ${3:true},\n\t\thandler(${4:newValue}, ${5:oldValue}) {\n\t\t\t${0}\n\t\t}\n\t}\n},",
+      "doc": "vue watcher with options",
+      "label": "vue-watchers-with-options",
+      "matches": {
+        "vue watchers with options": true,
+        "vwatcher-options": true
+      }
+    },
+    {
+      "content": "slot-scope=\"$1\"$0",
+      "doc": "Used to denote an element or component as a scoped slot. The attribute’s value should be a valid JavaScript expression that can appear in the argument position of a function signature. This means in supported environments you can also use ES2015 destructuring in the expression. Serves as a replacement for scope in 2.5.0+.",
+      "label": "vue-slotscope",
+      "matches": {
+        "slotscope": true,
+        "vue slotscope": true
+      }
+    },
+    {
+      "content": "@enter=\"$1\"$0",
+      "doc": "@enter=''",
+      "label": "vue-enter",
+      "matches": {
+        "enterevent": true,
+        "vue enter": true
+      }
+    },
+    {
+      "content": "scope=\"${1:this api replaced by slot-scope in 2.5.0+}\"$0",
+      "doc": "Used to denote a <template> element as a scoped slot, which is replaced by `slot-scope` in 2.5.0+.",
+      "label": "vue-scope",
+      "matches": {
+        "scope": true,
+        "vue scope": true
+      }
+    },
+    {
+      "content": "props: {\n\t${1:propName}: {\n\t\ttype: ${2:Number},\n\t\tdefault: ${0}\n\t},\n},",
+      "doc": "Vue Props with Default",
+      "label": "vue-props-with-default",
+      "matches": {
+        "vprops": true,
+        "vue props with default": true
+      }
+    },
+    {
+      "content": "@leave=\"$1\"$0",
+      "doc": "@leave=''",
+      "label": "vue-leave",
+      "matches": {
+        "leaveevent": true,
+        "vue leave": true
+      }
+    },
+    {
+      "content": "<component :is=\"${1:componentId}\"></component>$0",
+      "doc": "component element",
+      "label": "vue-component",
+      "matches": {
+        "component": true,
+        "vue component": true
+      }
+    },
+    {
+      "content": "<keep-alive$1>\n$2\n</keep-alive>$0",
+      "doc": "keep-alive element",
+      "label": "vue-keep-alive",
+      "matches": {
+        "keepalive": true,
+        "vue keep-alive": true
+      }
+    },
+    {
+      "content": "@appear=\"$1\"$0",
+      "doc": "@appear=''",
+      "label": "vue-appear",
+      "matches": {
+        "appearevent": true,
+        "vue appear": true
+      }
+    },
+    {
+      "content": "import ${1:New} from '@/components/${1:New}.vue';",
+      "doc": "Import one component into another",
+      "label": "vue-import-file",
+      "matches": {
+        "vimport": true,
+        "vue import file": true
+      }
+    },
+    {
+      "content": "<transition$1>\n$2\n</transition>$0",
+      "doc": "transition element",
+      "label": "vue-transition",
+      "matches": {
+        "transition": true,
+        "vue transition": true
+      }
+    },
+    {
+      "content": "<template>\n\t<div>\n\n\t</div>\n</template>\n\n<script lang=\"ts\">\nimport Vue from 'vue'\n\nexport default Vue.extend({\n\tsetup () {\n\t\t${0}\n\n\t\treturn {}\n\t}\n})\n</script>\n\n<style scoped>\n\n</style>",
+      "doc": "Base for Vue File Composition API - Typescript",
+      "label": "vue-single-file-component-with-typescript-v3",
+      "matches": {
+        "vue v3 base ts": true
+      }
+    },
+    {
+      "content": "@after-enter=\"$1\"$0",
+      "doc": "@after-enter=''",
+      "label": "vue-after-enter",
+      "matches": {
+        "afterenterevent": true,
+        "vue after-enter": true
+      }
+    },
+    {
+      "content": "<template>\n\t<div>\n\n\t</div>\n</template>\n\n<script lang=\"ts\">\n\timport Vue from 'vue'\n\n\texport default Vue.extend({\n\t\t${0}\n\t})\n</script>\n\n<style scoped>\n\n</style>",
+      "doc": "Base for Vue File with Typescript",
+      "label": "vue-single-file-component-with-typescript",
+      "matches": {
+        "vue base ts": true
+      }
+    },
+    {
+      "content": "<transition-group$1>\n$2\n</transition-group>",
+      "doc": "transition-group element",
+      "label": "vue-transition-group",
+      "matches": {
+        "transitiongroup": true,
+        "vue transition-group": true
+      }
+    },
+    {
+      "content": "watch(() => ${1:foo}, (newValue, oldValue) => {\n\t${2}\n})",
+      "doc": "Requires watching a specific data source, and applies side effects in a separate callback function.",
+      "label": "vue-v3watch",
+      "matches": {
+        "vue v3 watch": true
+      }
+    },
+    {
+      "content": "watchEffect(() => {\n\t${1}\n})",
+      "doc": "Run a function immediately while reactively tracking its dependencies, and re-run it whenever the dependencies have changed.",
+      "label": "vue-v3watcheffect",
+      "matches": {
+        "vue v3 watcheffect": true
+      }
+    },
+    {
+      "content": "@after-leave=\"$1\"$0",
+      "doc": "@after-leave=''",
+      "label": "vue-after-leave",
+      "matches": {
+        "afterleaveevent": true,
+        "vue after-leave": true
+      }
+    },
+    {
+      "content": "const ${1:name} = ref(${2:initialValue})",
+      "doc": "Takes an inner value and returns a reactive and mutable ref object.",
+      "label": "vue-v3ref",
+      "matches": {
+        "vue v3ref": true
+      }
+    },
+    {
+      "content": "enter-class=\"$1\"$0",
+      "doc": "enter-class=''. Expects: string.",
+      "label": "vue-enter-class",
+      "matches": {
+        "enterclass": true,
+        "vue enter-class": true
+      }
+    },
+    {
+      "content": "import ${1:Name} from '@/components/${1:Name}.vue'\n\nexport default {\n\tcomponents: {\n\t\t${1:Name}\n\t},\n}",
+      "doc": "import a component and include it in export default",
+      "label": "vue-import-export",
+      "matches": {
+        "vimport-export": true,
+        "vue import export": true
+      }
+    },
+    {
+      "content": "@after-appear=\"$1\"$0",
+      "doc": "@after-appear=''",
+      "label": "vue-after-appear",
+      "matches": {
+        "afterappearevent": true,
+        "vue after-appear": true
+      }
+    },
+    {
+      "content": "watch([${1:foo}, ${2:bar}], ([new${1}, new${2}], [prev${1}, prev${2}]) => {\n\t${3}\n})",
+      "doc": "Requires watching an array, and applies side effects in a separate callback function.",
+      "label": "vue-v3watch-array",
+      "matches": {
+        "vue v3 watch-array": true
+      }
+    },
+    {
+      "content": "leave-class=\"$1\"$0",
+      "doc": "leave-class=''. Expects: string.",
+      "label": "vue-leave-class",
+      "matches": {
+        "leaveclass": true,
+        "vue leave-class": true
+      }
+    },
+    {
+      "content": "const ${1:name} = computed(() => {\n\treturn ${2}\n})",
+      "doc": "Set computed property - Vue Composition API",
+      "label": "vue-v3computed",
+      "matches": {
+        "vue v3 computed": true
+      }
+    },
+    {
+      "content": "@enter-cancelled=\"$1\"$0",
+      "doc": "@enter-cancelled=''",
+      "label": "vue-enter-cancelled",
+      "matches": {
+        "entercancelledevent": true,
+        "vue enter-cancelled": true
+      }
+    },
+    {
+      "content": "const ${1:name} = reactive({\n\t${2:count}: ${3:0}\n})",
+      "doc": "Set reactive property - Vue Composition API",
+      "label": "vue-v3reactive",
+      "matches": {
+        "vue v3 reactive": true
+      }
+    },
+    {
+      "content": "<template>\n\t<div>\n\n\t</div>\n</template>\n\n<script>\nimport { ${0|ref,reactive,computed,readonly,watchEffect,watch|} } from '${1|vue,@vue/composition-api|}'\nexport default {\n\tsetup () {\n\t\t${2}\n\n\t\treturn {}\n\t}\n}\n</script>\n\n<style lang=\"scss\" scoped>\n\n</style>",
+      "doc": "Base for Vue File Composition API with SCSS",
+      "label": "vue-single-file-component-v3",
+      "matches": {
+        "vue v3 base": true
+      }
+    },
+    {
+      "content": "<template>\n\t<div>\n\n\t</div>\n</template>\n\n<script>\n\texport default {\n\t\t${0}\n\t}\n</script>\n\n<style lang=\"postcss\" scoped>\n\n</style>",
+      "doc": "Base for Vue File with PostCSS",
+      "label": "vue-single-file-component-with-postcss",
+      "matches": {
+        "vue base postcss": true
+      }
+    },
+    {
+      "content": "<template>\n\t<div>\n\n\t</div>\n</template>\n\n<script>\n\texport default {\n\t\t${0}\n\t}\n</script>\n\n<style lang=\"scss\" scoped>\n\n</style>",
+      "doc": "Base for Vue File with SCSS",
+      "label": "vue-single-file-component",
+      "matches": {
+        "vue base": true
+      }
+    },
+    {
+      "content": "@leave-cancelled=\"$1\"$0",
+      "doc": "@leave-cancelled='' (v-show only)",
+      "label": "vue-leave-cancelled",
+      "matches": {
+        "leavecancelledevent": true,
+        "vue leave-cancelled": true
+      }
+    },
+    {
+      "content": "module.exports = {\n\tcss: {\n\t\tloaderOptions: {\n\t\t\t${1:sass}: {\n\t\t\t\tdata: `${2:@import '@/styles/_variables.scss';}`\n\t\t\t}\n\t\t}\n\t}\n}",
+      "doc": "vue.config.js",
+      "label": "vue-vue-config-js-import",
+      "matches": {
+        "vconfig": true,
+        "vue vue.config.js import": true
+      }
+    },
+    {
+      "content": "return ${1:this.num} -= ${2:1}",
+      "doc": "decrement",
+      "label": "vue-decrementer",
+      "matches": {
+        "vdec": true,
+        "vue decrementer": true
+      }
+    },
+    {
+      "content": "<template>\n\t<${1:div}$2>\n\t\t$0\n\t</${1:div}>\n</template>",
+      "doc": "template element",
+      "label": "vue-template",
+      "matches": {
+        "template": true,
+        "vue template": true
+      }
+    },
+    {
+      "content": "import { mapGetters } from 'vuex'\n\nexport default {\n\tcomputed: {\n\t\t...mapGetters([\n\t\t\t${1:'nameOfGetter'},\n\t\t])\n\t},\n}",
+      "doc": "mapgetters inside a vue component",
+      "label": "vue-mapgetters",
+      "matches": {
+        "vmapgetters": true,
+        "vue mapgetters": true
+      }
+    },
+    {
+      "content": "@appear-cancelled=\"$1\"$0",
+      "doc": "@appear-cancelled=''",
+      "label": "vue-appear-cancelled",
+      "matches": {
+        "appearcancelledevent": true,
+        "vue appear-cancelled": true
+      }
+    },
+    {
+      "content": "return ${1:this.num} += ${2:1}",
+      "doc": "increment",
+      "label": "vue-incrementer",
+      "matches": {
+        "vinc": true,
+        "vue incrementer": true
+      }
+    },
+    {
+      "content": "${1:actionName}() {\n\tthis.\\$store.dispatch('${1:actionName}', ${2:payload})\n}",
+      "doc": "dispatch to vuex store in methods for action",
+      "label": "vue-dispatch-vuex-store-in-methods",
+      "matches": {
+        "vdispatch": true,
+        "vue dispatch vuex store in methods": true
+      }
+    },
+    {
+      "content": "import { ${1:libName} } from '${1:libName}'",
+      "doc": "import a library",
+      "label": "vue-import-library",
+      "matches": {
+        "vimport-lib": true,
+        "vue import library": true
+      }
+    },
+    {
+      "content": "Vue.directive('${1:directiveName}', {\n\tbind(el, binding, vnode) {\n\t\tel.style.${2:arg} = binding.value.${2:arg};\n\t}\n});",
+      "doc": "vue custom directive",
+      "label": "vue-custom-directive",
+      "matches": {
+        "vc-direct": true,
+        "vue custom directive": true
+      }
+    },
+    {
+      "content": "<router-link $1>$2</router-link>$0",
+      "doc": "router-link element",
+      "label": "vue-routerlink",
+      "matches": {
+        "routerlink": true,
+        "vue routerlink": true
+      }
+    },
+    {
+      "content": "import { mapMutations } from 'vuex'\n\nexport default {\n\tmethods: {\n\t\t...mapMutations([\n\t\t\t${1:'nameOfMutation'}, //also supports payload `this.nameOfMutation(amount)` \n\t\t])\n\t},\n}",
+      "doc": "mapmutations inside a vue component",
+      "label": "vue-mapmutations",
+      "matches": {
+        "vmapmutations": true,
+        "vue mapmutations": true
+      }
+    },
+    {
+      "content": "@before-appear=\"$1\"$0",
+      "doc": "@before-appear=''",
+      "label": "vue-before-appear",
+      "matches": {
+        "beforeappearevent": true,
+        "vue before-appear": true
+      }
+    },
+    {
+      "content": "<router-link to=\"$1\">$2</router-link>$0",
+      "doc": "<router-link to=''></router-link>. router-link element",
+      "label": "vue-routerlinkto",
+      "matches": {
+        "routerlinkto": true,
+        "vue routerlinkto": true
+      }
+    },
+    {
+      "content": "computed: {\n\t${1:name}() {\n\t\treturn this.${2:data} ${0}\n\t}\n},",
+      "doc": "computed value",
+      "label": "vue-computed",
+      "matches": {
+        "vcomputed": true,
+        "vue computed": true
+      }
+    },
+    {
+      "content": "import { mapState } from 'vuex'\n\nexport default {\n\tcomputed: {\n\t\t...mapState([\n\t\t\t${1:'nameOfState'},\n\t\t])\n\t},\n}",
+      "doc": "map getters inside a vue component",
+      "label": "vue-mapstate",
+      "matches": {
+        "vmapstate": true,
+        "vue mapstate": true
+      }
+    },
+    {
+      "content": "to=\"$1\"$0",
+      "doc": "to=''",
+      "label": "vue-to",
+      "matches": {
+        "to": true,
+        "vue to": true
+      }
+    },
+    {
+      "content": "components: {\n\t${1:New},\n},",
+      "doc": "Import one component into another, within export statement",
+      "label": "vue-import-into-the-component",
+      "matches": {
+        "vcomponents": true,
+        "vue import into the component": true
+      }
+    },
+    {
+      "content": "tag=\"$1\"$0",
+      "doc": "tag=''",
+      "label": "vue-tag",
+      "matches": {
+        "tag": true,
+        "vue tag": true
+      }
+    },
+    {
+      "content": "import { mapActions } from 'vuex'\n\nexport default {\n\tmethods: {\n\t\t...mapActions([\n\t\t\t${1:'nameOfAction'}, //also supports payload `this.nameOfAction(amount)` \n\t\t])\n\t},\n}",
+      "doc": "mapactions inside a vue component",
+      "label": "vue-mapactions",
+      "matches": {
+        "vmapactions": true,
+        "vue mapactions": true
+      }
+    },
+    {
+      "content": "<router-view>$1</router-view>$0",
+      "doc": "router-view element",
+      "label": "vue-routerview",
+      "matches": {
+        "routerview": true,
+        "vue routerview": true
+      }
+    },
+    {
+      "content": "ref=\"${1:reference}\"$0",
+      "doc": "Expects: string. ref is used to register a reference to an element or a child component. The reference will be registered under the parent component’s $refs object. If used on a plain DOM element, the reference will be that element; if used on a child component, the reference will be component instance.",
+      "label": "vue-ref",
+      "matches": {
+        "ref": true,
+        "vue ref": true
+      }
+    },
+    {
+      "content": "leave-active-class=\"$1\"$0",
+      "doc": "leave-active-class=''. Expects: string.",
+      "label": "vue-leave-active-class",
+      "matches": {
+        "leaveactiveclass": true,
+        "vue leave-active-class": true
+      }
+    },
+    {
+      "content": "data() {\n\treturn {\n\t\t${1:key}: ${2:value}\n\t}\n},",
+      "doc": "Vue Component Data",
+      "label": "vue-data",
+      "matches": {
+        "vdata": true,
+        "vue data": true
+      }
+    },
+    {
+      "content": "<slot$1>$2</slot>$0",
+      "doc": "<slot></slot>. Expects: string. Used on content inserted into child components to indicate which named slot the content belongs to.",
+      "label": "vue-slote",
+      "matches": {
+        "slote": true,
+        "vue slote": true
+      }
+    },
+    {
+      "content": "enter-to-class=\"$1\"$0",
+      "doc": "enter-to-class=''. Expects: string.",
+      "label": "vue-enter-to-class",
+      "matches": {
+        "entertoclass": true,
+        "vue enter-to-class": true
+      }
+    },
+    {
+      "content": "filters: {\n\t${1:fnName}: function(${2:value}) {\n\t\treturn ${2:value}${0};\n\t}\n}",
+      "doc": "vue filter",
+      "label": "vue-filter",
+      "matches": {
+        "vfilter": true,
+        "vue filter": true
+      }
+    },
+    {
+      "content": "appear-class=\"$1\"$0",
+      "doc": "appear-class=''. Expects: string.",
+      "label": "vue-appear-class",
+      "matches": {
+        "appearclass": true,
+        "vue appear-class": true
+      }
+    },
+    {
+      "content": "methods: {\n\t${1:name}() {\n\t\t${0}\n\t}\n},",
+      "doc": "vue method",
+      "label": "vue-methods",
+      "matches": {
+        "vmethod": true,
+        "vue methods": true
+      }
+    },
+    {
+      "content": "v-pre",
+      "doc": "Does not expect expression",
+      "label": "vue-v-pre",
+      "matches": {
+        "vpre": true,
+        "vue v-pre": true
+      }
+    },
+    {
+      "content": "leave-to-class=\"$1\"$0",
+      "doc": "leave-to-class=''. Expects: string.",
+      "label": "vue-leave-to-class",
+      "matches": {
+        "leavetoclass": true,
+        "vue leave-to-class": true
+      }
+    },
+    {
+      "content": "mounted () {\n\t${0};\n},",
+      "doc": "mounted lifecycle method",
+      "label": "vue-lifecycle-mounted",
+      "matches": {
+        "vmounted": true,
+        "vue lifecycle mounted": true
+      }
+    },
+    {
+      "content": "<template>\n\t<div>\n\n\t</div>\n</template>\n\n<script>\n\texport default {\n\t\t${0}\n\t}\n</script>\n\n<style lang=\"scss\" scoped>\n\n</style>",
+      "doc": "Base for Vue File with SCSS",
+      "label": "Vue Single File Component",
+      "matches": {
+        "vbase": true
+      }
+    },
+    {
+      "content": "<template>\n\t<div>\n\n\t</div>\n</template>\n\n<script lang=\"ts\">\n\timport { Component, Vue } from 'vue-property-decorator';\n\n\t@Component\n\texport default class ${0} extends Vue {\n\t\t\n\t}\n</script>\n\n<style scoped>\n\n</style>",
+      "doc": "Base for Vue File with Class based Typescript format",
+      "label": "Vue Single File Component with Class based Typescript format",
+      "matches": {
+        "vbase-ts-class": true
+      }
+    },
+    {
+      "content": "<template>\n\t<div>\n\n\t</div>\n</template>\n\n<script>\n\texport default {\n\t\t${0}\n\t}\n</script>\n\n<style lang=\"postcss\" scoped>\n\n</style>",
+      "doc": "Base for Vue File with PostCSS",
+      "label": "Vue Single File Component with postcss",
+      "matches": {
+        "vbase-pcss": true
+      }
+    },
+    {
+      "content": "<template>\n\t<div>\n\n\t</div>\n</template>\n\n<script>\nexport default {\n\tsetup () {\n\t\t${0}\n\n\t\treturn {}\n\t}\n}\n</script>\n\n<style lang=\"scss\" scoped>\n\n</style>",
+      "doc": "Base for Vue File Composition API with SCSS",
+      "label": "Vue Single File Component Composition API",
+      "matches": {
+        "vbase-3": true
+      }
+    },
+    {
+      "content": "<template>\n\t<div>\n\n\t</div>\n</template>\n\n<script lang=\"ts\">\nimport { defineComponent } from 'vue'\n\nexport default defineComponent({\n\tsetup () {\n\t\t${0}\n\n\t\treturn {}\n\t}\n})\n</script>\n\n<style scoped>\n\n</style>",
+      "doc": "Base for Vue File Composition API - Typescript",
+      "label": "Vue Single File Component Composition API with Typescript",
+      "matches": {
+        "vbase-3-ts": true
+      }
+    },
+    {
+      "content": "<template>\n\t<div>\n\n\t</div>\n</template>\n\n<script>\n\texport default {\n\t\t${0}\n\t}\n</script>\n\n<style lang=\"stylus\" scoped>\n\n</style>",
+      "doc": "Base for Vue File with Stylus",
+      "label": "Vue Single File Component with Stylus",
+      "matches": {
+        "vbase-styl": true
+      }
+    },
+    {
+      "content": "<template>\n\t<div>\n\n\t</div>\n</template>\n\n<script>\n\texport default {\n\t\t${0}\n\t}\n</script>\n\n<style scoped>\n\n</style>",
+      "doc": "Base for Vue File with CSS",
+      "label": "Vue Single File Component with Css",
+      "matches": {
+        "vbase-css": true
+      }
+    },
+    {
+      "content": "<template>\n\t<div>\n\n\t</div>\n</template>\n\n<script>\n\texport default {\n\t\t${0}\n\t}\n</script>\n\n<style lang=\"sass\" scoped>\n\n</style>",
+      "doc": "Base for Vue File with PostCSS",
+      "label": "Vue Single File Component with SASS",
+      "matches": {
+        "vbase-sass": true
+      }
+    },
+    {
+      "content": "<template>\n\t<div>\n\n\t</div>\n</template>\n\n<script setup lang=\"ts\">\n\n</script>\n\n<style scoped>\n\n</style>",
+      "doc": "Base for Vue File Setup Composition API - Typescript",
+      "label": "Vue Single File Component Setup Composition API with Typescript",
+      "matches": {
+        "vbase-3-ts-setup": true
+      }
+    },
+    {
+      "content": "<template>\n\t<div>\n\n\t</div>\n</template>\n\n<script lang=\"ts\">\n\timport Vue from 'vue'\n\n\texport default Vue.extend({\n\t\t${0}\n\t})\n</script>\n\n<style scoped>\n\n</style>",
+      "doc": "Base for Vue File with Typescript",
+      "label": "Vue Single File Component with Typescript",
+      "matches": {
+        "vbase-ts": true
+      }
+    },
+    {
+      "content": "<template>\n\t<div>\n\n\t</div>\n</template>\n\n<script>\nimport { reactive, toRefs } from 'vue'\n\nexport default {\n\tsetup () {\n\t\tconst state = reactive({\n\t\t\t${0:count}: ${1:0},\n\t\t})\n\t\n\t\treturn {\n\t\t\t...toRefs(state),\n\t\t}\n\t}\n}\n</script>\n\n<style lang=\"scss\" scoped>\n\n</style>",
+      "doc": "Base for Vue File Composition API with SCSS",
+      "label": "Vue Single File Component Composition API Reactive",
+      "matches": {
+        "vbase-3-reactive": true
+      }
+    },
+    {
+      "content": "<template>\n\t<div>\n\n\t</div>\n</template>\n\n<script>\n\texport default {\n\t\t${0}\n\t}\n</script>\n\n<style lang=\"less\" scoped>\n\n</style>",
+      "doc": "Base for Vue File with PostCSS",
+      "label": "Vue Single File Component with LESS",
+      "matches": {
+        "vbase-less": true
+      }
+    },
+    {
+      "content": "<template>\n\t<div>\n\n\t</div>\n</template>\n\n<script setup>\n\n</script>\n\n<style lang=\"scss\" scoped>\n\n</style>",
+      "doc": "Base for Vue File Setup Composition API with SCSS",
+      "label": "Vue Single File Component Setup Composition API",
+      "matches": {
+        "vbase-3-setup": true
+      }
+    },
+    {
+      "content": "<template>\n\t<div>\n\n\t</div>\n</template>\n\n<script>\n\texport default {\n\t\t${0}\n\t}\n</script>",
+      "doc": "Base for Vue File with no styles",
+      "label": "Vue Single File Component with No Style",
+      "matches": {
+        "vbase-ns": true
+      }
+    },
+    {
+      "content": "<template>\n  ${0}\n</template>\n\n<script>\nexport default {\n}\n</script>\n\n<style>\n\n</style>",
+      "doc": "",
+      "label": "Scaffold <template> <script> and <style>",
+      "matches": {
+        "scaffold": true
+      }
+    },
+    {
+      "content": "<template>\n  ${0}\n</template>",
+      "doc": "",
+      "label": "Scaffold <template> with html",
+      "matches": {
+        "template_with_html": true
+      }
+    },
+    {
+      "content": "<template lang=\"pug\">\n  ${0}\n</template>",
+      "doc": "",
+      "label": "Scaffold <template> with pug",
+      "matches": {
+        "template_with_pug": true
+      }
+    },
+    {
+      "content": "<script>\nexport default {\n  ${0}\n}\n</script>",
+      "doc": "",
+      "label": "Scaffold <script> with JavaScript",
+      "matches": {
+        "script_with_JavaScript": true
+      }
+    },
+    {
+      "content": "<script lang=\"ts\">\nimport Vue from 'vue'\nexport default Vue.extend({\n  ${0}\n})\n</script>",
+      "doc": "",
+      "label": "Scaffold <script> with TypeScript",
+      "matches": {
+        "script_with_TypeScript": true
+      }
+    },
+    {
+      "content": "<style>\n${0}\n</style>",
+      "doc": "",
+      "label": "Scaffold <style> with CSS",
+      "matches": {
+        "style_with_CSS": true
+      }
+    },
+    {
+      "content": "<style scoped>\n${0}\n</style>",
+      "doc": "",
+      "label": "Scaffold <style> with CSS scoped",
+      "matches": {
+        "style_with_CSS_scoped": true
+      }
+    },
+    {
+      "content": "<style lang=\"scss\">\n${0}\n</style>",
+      "doc": "",
+      "label": "Scaffold <style> with scss",
+      "matches": {
+        "style_with_scss": true
+      }
+    },
+    {
+      "content": "<style lang=\"scss\" scoped>\n${0}\n</style>",
+      "doc": "",
+      "label": "Scaffold <style> with scss scoped",
+      "matches": {
+        "style_with_scss_scoped": true
+      }
+    },
+    {
+      "content": "<style lang=\"less\">\n${0}\n</style>",
+      "doc": "",
+      "label": "Scaffold <style> with less",
+      "matches": {
+        "style_with_less": true
+      }
+    },
+    {
+      "content": "<style lang=\"less\" scoped>\n${0}\n</style>",
+      "doc": "",
+      "label": "Scaffold <style> with less scoped",
+      "matches": {
+        "style_with_less_scoped": true
+      }
+    },
+    {
+      "content": "<style lang=\"sass\">\n${0}\n</style>",
+      "doc": "",
+      "label": "Scaffold <style> with sass",
+      "matches": {
+        "style_with_sass": true
+      }
+    },
+    {
+      "content": "<style lang=\"sass\" scoped>\n${0}\n</style>",
+      "doc": "",
+      "label": "Scaffold <style> with sass scoped",
+      "matches": {
+        "style_with_sass_scoped": true
+      }
+    },
+    {
+      "content": "<style lang=\"postcss\">\n${0}\n</style>",
+      "doc": "",
+      "label": "Scaffold <style> with postcss",
+      "matches": {
+        "style_with_postcss": true
+      }
+    },
+    {
+      "content": "<style lang=\"postcss\" scoped>\n${0}\n</style>",
+      "doc": "",
+      "label": "Scaffold <style> with postcss scoped",
+      "matches": {
+        "style_with_postcss_scoped": true
+      }
+    },
+    {
+      "content": "<style lang=\"stylus\">\n${0}\n</style>",
+      "doc": "",
+      "label": "Scaffold <style> with stylus",
+      "matches": {
+        "style_with_stylus": true
+      }
+    },
+    {
+      "content": "<style lang=\"stylus\" scoped>\n${0}\n</style>",
+      "doc": "",
+      "label": "Scaffold <style> with stylus scoped",
+      "matches": {
+        "style_with_stylus_scoped": true
+      }
+    },
+    {
+      "content": "<slot></slot>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "slot": true
+      }
+    },
+    {
+      "content": "<template></template>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "template": true
+      }
+    },
+    {
+      "content": "<transition></transition>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "transition": true
+      }
+    },
+    {
+      "content": "<template>\n\t<div>\n\n\t</div>\n</template>\n\n<script>\n\texport default{\n\t\t${0}\n\t}\n</script>\n\n<style scoped>\n\n</style>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vbase": true
+      }
+    },
+    {
+      "content": "import ${1:Name} from './components/$1.vue';\n\nexport default {\n\tcomponents: {\n\t\t$1\n\t}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vimport:c": true
+      }
+    },
+    {
+      "content": "actions: {\n\t${1:updateValue}({commit}, ${2:payload}) {\n\t\tcommit($1, $2);\n\t}\n},",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vactions": true
+      }
+    },
+    {
+      "content": "<transition\n  @before-enter=\"beforeEnter\"\n  @enter=\"enter\"\n  @after-enter=\"afterEnter\"\n  @enter-cancelled=\"enterCancelled\"\n\n  @before-Leave=\"beforeLeave\"\n  @leave=\"leave\"\n  @after-leave=\"afterLeave\"\n  @leave-cancelled=\"leaveCancelled\"\n  :css=\"false\">\n\n </transition>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vanim:js:el": true
+      }
+    },
+    {
+      "content": "methods: {\n\tbeforeEnter(el) {\n\t\tconsole.log('beforeEnter');\n\t},\n\tenter(el, done) {\n\t\tconsole.log('enter');\n\t\tdone();\n\t},\n\tafterEnter(el) {\n\t\tconsole.log('afterEnter');\n\t},\n\tenterCancelled(el, done) {\n\t\tconsole.log('enterCancelled');\n\t},\n\tbeforeLeave(el) {\n\t\tconsole.log('beforeLeave');\n\t},\n\tleave(el, done) {\n\t\tconsole.log('leave');\n\t\tdone();\n\t},\n\tafterLeave(el) {\n\t\tconsole.log('afterLeave');\n\t},\n\tleaveCancelled(el, done) {\n\t\tconsole.log('leaveCancelled');\n\t}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vanim:js:method": true
+      }
+    },
+    {
+      "content": "@click=\"${1}\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vcl": true
+      }
+    },
+    {
+      "content": "data() {\n\treturn {\n\t\t${1:key}: ${2:value}\n\t};\n},",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vdata": true
+      }
+    },
+    {
+      "content": "mounted() {\n\tconsole.log('mounted');\n},",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vmounted": true
+      }
+    },
+    {
+      "content": "methods: {\n\t${1:method}() {\n\t\tconsole.log('method');\n\t}\n},",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vmethods": true
+      }
+    },
+    {
+      "content": "computed: {\n\t${1:fnName}() {\n\t\treturn;\n\t}\n},",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vcomputed": true
+      }
+    },
+    {
+      "content": "filters: {\n\t${1:fnName}: function(${2:value}) {\n\t\treturn;\n\t}\n},",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vfilter": true
+      }
+    },
+    {
+      "content": "<div v-for=\"${1:item} in ${2:items}\" :key=\"$1.id\">\n\t{{ $1 }}\n</div>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vfor": true
+      }
+    },
+    {
+      "content": "getters: {\n\t${1:value}: state => {\n\t\treturn state.$1;\n\t}\n},",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vgetters": true
+      }
+    },
+    {
+      "content": "import ${1:New} from './components/$1.vue';",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vimport": true
+      }
+    },
+    {
+      "content": "<keep-alive>\n\t<component :is=\"\">\n\t\t<p>default</p>\n\t</component>\n</keep-alive>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vkeep": true
+      }
+    },
+    {
+      "content": "const ${1:mixinName} = {\n\tmounted() {\n\t\tconsole.log('hello from mixin!')\n\t},\n}\nconst ${2:Component} = Vue.extend({\n\tmixins: [$1]\n})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vmixin": true
+      }
+    },
+    {
+      "content": "mutations: {\n\t${1:updateValue}(state, ${3:payload}) => {\n\t\tstate.${2:value} = $3;\n\t}\n},",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vmutations": true
+      }
+    },
+    {
+      "content": "${1:propName}: {\n  type: ${2:Number},\n  default: ${0}\n},",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vprops:d": true
+      }
+    },
+    {
+      "content": "${1:propName}: {\n\ttype: ${2:Number}\n},",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vprops": true
+      }
+    },
+    {
+      "content": "import Vue from 'vue';\nimport Vuex from 'vuex';\n\nVue.use(Vuex);\n\nexport const store = new Vuex.Store({\n\tstate: {\n\t\t${1:key}: ${2:value}\n\t}\n});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vstore": true
+      }
+    },
+    {
+      "content": "$t('$1')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "trans": true
+      }
+    },
+    {
+      "content": "$t('$1', { $2: $3 })",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "transc": true
+      }
+    }
+  ]
+}

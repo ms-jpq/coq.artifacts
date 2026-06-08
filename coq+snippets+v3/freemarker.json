@@ -1,0 +1,71 @@
+{
+  "extends": [
+    "html"
+  ],
+  "snippets": [
+    {
+      "content": "\\${.version}",
+      "doc": "",
+      "label": "${.version}",
+      "matches": {
+        "ver": true
+      }
+    },
+    {
+      "content": "<#if ${1:true}>\n\t${0:${VISUAL}}\n</#if>",
+      "doc": "",
+      "label": "<#if condition>...</#if>",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "<#if ${1:true}>\n\t${0:${VISUAL}}\n<#else>\n\t${2}\n</#if>",
+      "doc": "",
+      "label": "<#if condition>...<#else>...</#if>",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "<#list ${1:sequence} as ${2:element}>\n\t${0:${VISUAL}}\n</#list>",
+      "doc": "",
+      "label": "<#list sequence as element>...</#list>",
+      "matches": {
+        "lis": true
+      }
+    },
+    {
+      "content": "<#list ${1:hashmap}?keys as ${2:key}>\n\t\\${$2\\}: \\${$1[$2]\\}${0:${VISUAL}}\n</#list>",
+      "doc": "",
+      "label": "<#list hashmap?keys as element>...</#list>",
+      "matches": {
+        "lish": true
+      }
+    },
+    {
+      "content": "<#macro ${1:macro_name} ${2:param1}>\n\t${0:${VISUAL}}\n</#macro>",
+      "doc": "",
+      "label": "<#macro macro_name param1>...</#macro>",
+      "matches": {
+        "mac": true
+      }
+    },
+    {
+      "content": "<#function ${1:function_name} ${2:param1}>\n\t${0:${VISUAL}}\n</#function>",
+      "doc": "",
+      "label": "<#function function_name param1>...</#function>",
+      "matches": {
+        "fun": true
+      }
+    },
+    {
+      "content": "<#attempt>\n\t${0:${VISUAL}}\n<#recover>\n</#attempt>",
+      "doc": "",
+      "label": "<#attempt>...<#recover></#attempt>",
+      "matches": {
+        "att": true
+      }
+    }
+  ]
+}

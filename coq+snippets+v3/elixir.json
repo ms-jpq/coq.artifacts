@@ -1,0 +1,1087 @@
+{
+  "extends": [
+    "phoenix"
+  ],
+  "snippets": [
+    {
+      "content": "def ${1:name}(), do: $0",
+      "doc": "Define a one-liner function",
+      "label": "df",
+      "matches": {
+        "df": true
+      }
+    },
+    {
+      "content": "@moduledoc ~S\"\"\"\n$0\n\"\"\"",
+      "doc": "",
+      "label": "moduledoc s",
+      "matches": {
+        "mdocs": true
+      }
+    },
+    {
+      "content": "@moduledoc false",
+      "doc": "",
+      "label": "moduledoc false",
+      "matches": {
+        "mdocf": true
+      }
+    },
+    {
+      "content": "defmodule ${1:module} do\n  $0\nend",
+      "doc": "Define a module",
+      "label": "defmodule",
+      "matches": {
+        "defmo": true
+      }
+    },
+    {
+      "content": "describe \"${1:test group subject}\" do\n  $0\nend",
+      "doc": "",
+      "label": "des",
+      "matches": {
+        "desc": true
+      }
+    },
+    {
+      "content": "defp ${1:name}() do\n  $0\nend",
+      "doc": "Define a private function",
+      "label": "defp",
+      "matches": {
+        "defp": true
+      }
+    },
+    {
+      "content": "require IEx; IEx.pry\n$0",
+      "doc": "",
+      "label": "IEx.pry",
+      "matches": {
+        "pry": true
+      }
+    },
+    {
+      "content": "|> $0",
+      "doc": "",
+      "label": "pipe char",
+      "matches": {
+        "p": true
+      }
+    },
+    {
+      "content": "def ${1:name}(${2:args}) when ${3:guard}, do: $0",
+      "doc": "Define a one-liner function with when guard",
+      "label": "dfw",
+      "matches": {
+        "dfw": true
+      }
+    },
+    {
+      "content": "|> Enum.each($0)",
+      "doc": "",
+      "label": "pipe into each",
+      "matches": {
+        ">e": true
+      }
+    },
+    {
+      "content": "IO.puts($0)",
+      "doc": "",
+      "label": "IO.puts",
+      "matches": {
+        "put": true
+      }
+    },
+    {
+      "content": "|> Enum.map($0)",
+      "doc": "",
+      "label": "pipe into map",
+      "matches": {
+        ">m": true
+      }
+    },
+    {
+      "content": "IO.inspect($0)",
+      "doc": "",
+      "label": "IO.inspect",
+      "matches": {
+        "ins": true
+      }
+    },
+    {
+      "content": "IO.inspect($1, label: \"$0\")",
+      "doc": "",
+      "label": "IO.inspect with label",
+      "matches": {
+        "insl": true
+      }
+    },
+    {
+      "content": "cond do\n  $1 -> \n  $0\nend",
+      "doc": "",
+      "label": "cond",
+      "matches": {
+        "cond": true
+      }
+    },
+    {
+      "content": "for ${1:item} <- ${2:items} do\n  $0\nend",
+      "doc": "",
+      "label": "for",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "if ${1:condition}, do: $0",
+      "doc": "",
+      "label": "if .. do:",
+      "matches": {
+        "if:": true
+      }
+    },
+    {
+      "content": "~w($0)",
+      "doc": "",
+      "label": "word list",
+      "matches": {
+        "wl": true
+      }
+    },
+    {
+      "content": "if ${1:condition} do\n  $2\nelse\n  $0\nend",
+      "doc": "",
+      "label": "if .. do .. else .. end",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "if ${1:condition}, do: $2, else: $0",
+      "doc": "",
+      "label": "if .. do: .. else:",
+      "matches": {
+        "ife:": true
+      }
+    },
+    {
+      "content": "require ${0:Logger}",
+      "doc": "",
+      "label": "require",
+      "matches": {
+        "req": true
+      }
+    },
+    {
+      "content": "test \"${1:name}\" do\n  $0\nend",
+      "doc": "",
+      "label": "test",
+      "matches": {
+        "test": true
+      }
+    },
+    {
+      "content": "@doc \"\"\"\n${1:doc}\n\"\"\"\ndef ${2:name} do\n  $0\nend",
+      "doc": "",
+      "label": "def + doc",
+      "matches": {
+        "defd": true
+      }
+    },
+    {
+      "content": "case $1 do\n  $2 -> \n    $0\nend",
+      "doc": "",
+      "label": "case",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "@spec ${1:name}(${2:args}) :: ${3:no_return}\ndef $1{4:args} do\n  $0\nend",
+      "doc": "",
+      "label": "def + spec",
+      "matches": {
+        "defs": true
+      }
+    },
+    {
+      "content": "@doc \"\"\"\n${1:doc}\n\"\"\"\n@spec ${2:name}(${3:args}) :: ${4:no_return}\ndef $2{5:args} do\n  $0\nend",
+      "doc": "",
+      "label": "def + doc + spec",
+      "matches": {
+        "defsd": true
+      }
+    },
+    {
+      "content": "~w($0)a",
+      "doc": "",
+      "label": "atom list",
+      "matches": {
+        "al": true
+      }
+    },
+    {
+      "content": "|> Enum.reduce(${1:acc}, fn ${2}, ${3:acc} -> $0 end)",
+      "doc": "",
+      "label": "pipe into reduce",
+      "matches": {
+        ">r": true
+      }
+    },
+    {
+      "content": "|> Enum.filter($0)",
+      "doc": "",
+      "label": "pipe into filter",
+      "matches": {
+        ">f": true
+      }
+    },
+    {
+      "content": "@doc ~S\"\"\"\n$0\n\"\"\"",
+      "doc": "",
+      "label": "doc s",
+      "matches": {
+        "docs": true
+      }
+    },
+    {
+      "content": "do\n  $0\nend",
+      "doc": "",
+      "label": "do",
+      "matches": {
+        "do": true
+      }
+    },
+    {
+      "content": "if ${1:condition} do\n  $0\nend",
+      "doc": "",
+      "label": "if .. do .. end",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "@doc false",
+      "doc": "",
+      "label": "doc false",
+      "matches": {
+        "docf": true
+      }
+    },
+    {
+      "content": "def ${1:name}() do\n  $0\nend",
+      "doc": "Define a function",
+      "label": "def",
+      "matches": {
+        "def": true
+      }
+    },
+    {
+      "content": "@doc \"\"\"\n$0\n\"\"\"",
+      "doc": "",
+      "label": "doc",
+      "matches": {
+        "doc": true
+      }
+    },
+    {
+      "content": "@moduledoc \"\"\"\n$0\n\"\"\"",
+      "doc": "",
+      "label": "moduledoc",
+      "matches": {
+        "mdoc": true
+      }
+    },
+    {
+      "content": "do\n  ${1:TARGET}\nend",
+      "doc": "",
+      "label": "do...end",
+      "matches": {
+        "do": true
+      }
+    },
+    {
+      "content": "if ${1:true} do\n  ${2:TARGET}\nend",
+      "doc": "",
+      "label": "if .. do .. end",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "if ${1:true} do\n  ${2:ok}\nelse\n  ${3:ok}\nend",
+      "doc": "",
+      "label": "if .. do .. else .. end",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "case ${1} do\n  ${2} -> ${3}\nend",
+      "doc": "",
+      "label": "case .. end",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "def ${1:name} do\n  ${2:TARGET}\nend",
+      "doc": "",
+      "label": "def .. do .. end",
+      "matches": {
+        "def": true
+      }
+    },
+    {
+      "content": "defmodule ${1:module_name} do\n  ${2:TARGET}\nend",
+      "doc": "",
+      "label": "def module",
+      "matches": {
+        "defm": true
+      }
+    },
+    {
+      "content": "defp ${1:name} do\n  ${2:TARGET}\nend",
+      "doc": "",
+      "label": "defp .. end",
+      "matches": {
+        "defp": true
+      }
+    },
+    {
+      "content": "@doc \"\"\"${0:TARGET}\"\"\"",
+      "doc": "",
+      "label": "@doc \"\"\"...\"\"\"",
+      "matches": {
+        "doc": true
+      }
+    },
+    {
+      "content": "@moduledoc \"\"\"${0:TARGET}\"\"\"",
+      "doc": "",
+      "label": "@moduledoc \"\"\"...\"\"\"",
+      "matches": {
+        "mdoc": true
+      }
+    },
+    {
+      "content": "fn(${1:args}) -> ${2:TARGET} end",
+      "doc": "",
+      "label": "fn(..) -> .. end",
+      "matches": {
+        "fn": true
+      }
+    },
+    {
+      "content": "receive do\n${1} -> ${2}\nend",
+      "doc": "",
+      "label": "receive .. do .. end",
+      "matches": {
+        "rec": true
+      }
+    },
+    {
+      "content": "test \"${1:test_name}\" do\n  ${2:TARGET}\nend",
+      "doc": "",
+      "label": "test .. do .. end",
+      "matches": {
+        "test": true
+      }
+    },
+    {
+      "content": "try do\n  ${1:TARGET}\nrescue\n  ${2} -> ${3}",
+      "doc": "",
+      "label": "try .. rescue .. end",
+      "matches": {
+        "try": true
+      }
+    },
+    {
+      "content": "with ${1}\ndo\n  ${2:TARGET}\nend",
+      "doc": "",
+      "label": "with .. do .. end",
+      "matches": {
+        "with": true
+      }
+    },
+    {
+      "content": "describe \"${1:describe_name}\" do\n  ${2:TARGET}\nend",
+      "doc": "",
+      "label": "describe .. do .. end",
+      "matches": {
+        "describe": true
+      }
+    },
+    {
+      "content": "IO.puts(${1})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "puts": true
+      }
+    },
+    {
+      "content": "IO.inspect(${1})",
+      "doc": "",
+      "label": "IO.inspect()",
+      "matches": {
+        "p": true
+      }
+    },
+    {
+      "content": "defmodule Main do\n  def main do\n    ${1:TARGET}\n  end\nend\n\nMain.main",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "main": true
+      }
+    },
+    {
+      "content": "do\n\t${0:${VISUAL}}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "do": true
+      }
+    },
+    {
+      "content": "IO.puts(\"${0}\")",
+      "doc": "",
+      "label": "IO.puts",
+      "matches": {
+        "put": true
+      }
+    },
+    {
+      "content": "IO.inspect(${0})",
+      "doc": "",
+      "label": "IO.inspect",
+      "matches": {
+        "ins": true
+      }
+    },
+    {
+      "content": "IO.inspect(${0}label: \"${1:label}\")",
+      "doc": "",
+      "label": "IO.inspect with label",
+      "matches": {
+        "insl": true
+      }
+    },
+    {
+      "content": "if ${1} do\n\t${0:${VISUAL}}\nend",
+      "doc": "",
+      "label": "if .. do .. end",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "if $1, do: ${0}",
+      "doc": "",
+      "label": "if .. do: ..",
+      "matches": {
+        "if:": true
+      }
+    },
+    {
+      "content": "if $1 do\n\t${2:${VISUAL}}\nelse\n\t${0}\nend",
+      "doc": "",
+      "label": "if .. do .. else .. end",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "if $1, do: ${2}, else: ${0}",
+      "doc": "",
+      "label": "if .. do: .. else:",
+      "matches": {
+        "ife:": true
+      }
+    },
+    {
+      "content": "unless ${1} do\n\t${0:${VISUAL}}\nend",
+      "doc": "",
+      "label": "unless .. do .. end",
+      "matches": {
+        "unless": true
+      }
+    },
+    {
+      "content": "unless $1, do: ${0}",
+      "doc": "",
+      "label": "unless .. do: ..",
+      "matches": {
+        "unless:": true
+      }
+    },
+    {
+      "content": "unless $1 do\n\t${2:${VISUAL}}\nelse\n\t${0}\nend",
+      "doc": "",
+      "label": "unless .. do .. else .. end",
+      "matches": {
+        "unlesse": true
+      }
+    },
+    {
+      "content": "unless $1, do: ${2}, else: ${0}",
+      "doc": "",
+      "label": "unless .. do: .. else:",
+      "matches": {
+        "unlesse:": true
+      }
+    },
+    {
+      "content": "cond do\n\t${1} ->\n\t${0:${VISUAL}}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cond": true
+      }
+    },
+    {
+      "content": "case ${1} do\n\t${2} ->\n\t\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "for ${1:item} <- ${2:items} do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "for ${1:item} <- ${2:items}, do: ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for:": true
+      }
+    },
+    {
+      "content": "for ${1:item} <- ${2:items}, into: ${3} do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fori": true
+      }
+    },
+    {
+      "content": "with ${1:item} <- ${2:items} do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wi": true
+      }
+    },
+    {
+      "content": "with(\n\t${1:item} <- ${2:items}\n) do\n\t${3}\nelse\n\t${4} ->\n\t\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wie": true
+      }
+    },
+    {
+      "content": "@spec ${1:name}(${2:args}) :: ${3:returns}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sp": true
+      }
+    },
+    {
+      "content": "@opaque ${1:type_name} :: ${2:type}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "op": true
+      }
+    },
+    {
+      "content": "@type ${1:type_name} :: ${2:type}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ty": true
+      }
+    },
+    {
+      "content": "@typep ${1:type_name} :: ${2:type}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "typ": true
+      }
+    },
+    {
+      "content": "@callback ${1:name}(${2:args}) :: ${3:returns}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cb": true
+      }
+    },
+    {
+      "content": "def ${1:name}, do: ${2}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "df": true
+      }
+    },
+    {
+      "content": "def ${1:name}(${2:args}) when ${3:guard}, do:",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dfw": true
+      }
+    },
+    {
+      "content": "def ${1:name} do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "def": true
+      }
+    },
+    {
+      "content": "@doc \"\"\"\n${1:doc string}\n\"\"\"\ndef ${2:name} do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defd": true
+      }
+    },
+    {
+      "content": "@spec ${1:name}(${2:arg types}) :: ${3:no_return}\ndef $1(${4:args}) do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defs": true
+      }
+    },
+    {
+      "content": "@doc \"\"\"\n${1:doc string}\n\"\"\"\n@spec ${2:name}(${3:arg types}) :: ${4:no_return}\ndef $2(${5:args}) do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defsd": true
+      }
+    },
+    {
+      "content": "def ${1:name}(${2:args}) when ${3:guard} do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defw": true
+      }
+    },
+    {
+      "content": "defimpl ${1:protocol_name}, for: ${2:data_type} do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defim": true
+      }
+    },
+    {
+      "content": "defmacro ${1:name} do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defma": true
+      }
+    },
+    {
+      "content": "%__MODULE__{\n\t${1:key_name}: ${2:value}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "%M": true
+      }
+    },
+    {
+      "content": "@enforce_keys [:${1:key_name}]",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "enfk": true
+      }
+    },
+    {
+      "content": "defp ${1:name}, do: ${2}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dfp": true
+      }
+    },
+    {
+      "content": "defp ${1:name}(${2:args}) when ${3:guard}, do: ${4}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dfpw": true
+      }
+    },
+    {
+      "content": "defp ${1:name} do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defp": true
+      }
+    },
+    {
+      "content": "defp ${1:name}(${2:args}) when ${3:guard} do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defpw": true
+      }
+    },
+    {
+      "content": "defprotocol ${1:name}, [${0:function}]",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defpr": true
+      }
+    },
+    {
+      "content": "defrecord ${1:record_name}, ${0:fields}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defr": true
+      }
+    },
+    {
+      "content": "@doc \"\"\"\n${0}\n\"\"\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "doc": true
+      }
+    },
+    {
+      "content": "@doc ~S\"\"\"\n${0}\n\"\"\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "docs": true
+      }
+    },
+    {
+      "content": "@doc false",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "docf": true
+      }
+    },
+    {
+      "content": "@impl true",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "im": true
+      }
+    },
+    {
+      "content": "fn ${1:args} -> ${0} end",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fn": true
+      }
+    },
+    {
+      "content": "@moduledoc \"\"\"\n${0}\n\"\"\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mdoc": true
+      }
+    },
+    {
+      "content": "@moduledoc ~S\"\"\"\n${0}\n\"\"\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mdocs": true
+      }
+    },
+    {
+      "content": "@moduledoc false",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mdocf": true
+      }
+    },
+    {
+      "content": "receive do\n\t${1} ->\n\t\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rec": true
+      }
+    },
+    {
+      "content": "require ${0:Logger}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "req": true
+      }
+    },
+    {
+      "content": "import ${0:module_name}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "imp": true
+      }
+    },
+    {
+      "content": "alias ${0:module_name}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ali": true
+      }
+    },
+    {
+      "content": "test \"${1:test name}\" do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "test": true
+      }
+    },
+    {
+      "content": "test \"${1:test_name}\", ctx do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "testc": true
+      }
+    },
+    {
+      "content": "test \"${1:test_name}\", %{${2:arg: arg}} do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "testa": true
+      }
+    },
+    {
+      "content": "describe \"${1:test group subject}\" do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "des": true
+      }
+    },
+    {
+      "content": "@describetag :${1:describe tag}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "destag": true
+      }
+    },
+    {
+      "content": "@moduletag :${1:module tag}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mtag": true
+      }
+    },
+    {
+      "content": "doctest ${1:filename}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dt": true
+      }
+    },
+    {
+      "content": "@tag :pending",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tp": true
+      }
+    },
+    {
+      "content": "setup do\n\t${1}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "setup": true
+      }
+    },
+    {
+      "content": "setup_all do\n\t${1}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "setupa": true
+      }
+    },
+    {
+      "content": "try do\n\t${1:${VISUAL}}\nrescue\n\t${2} -> ${0}\nend",
+      "doc": "",
+      "label": "try .. rescue .. end",
+      "matches": {
+        "try": true
+      }
+    },
+    {
+      "content": "require IEx; IEx.pry\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pry": true
+      }
+    },
+    {
+      "content": "|> (fn x -> require IEx; IEx.pry; x end).()${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ppry": true
+      }
+    },
+    {
+      "content": "quote do\n\t${1}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "qu": true
+      }
+    },
+    {
+      "content": "@behaviour ${1:Mix.Task}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "beh": true
+      }
+    },
+    {
+      "content": "|> ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "p": true
+      }
+    },
+    {
+      "content": "|> Enum.each(fn ${1} -> ${0} end)",
+      "doc": "",
+      "label": "pipe to each",
+      "matches": {
+        ">e": true
+      }
+    },
+    {
+      "content": "|> Enum.map(fn ${1} -> ${0} end)",
+      "doc": "",
+      "label": "pipe to map",
+      "matches": {
+        ">m": true
+      }
+    },
+    {
+      "content": "|> Enum.filter(fn ${1} -> ${0} end)",
+      "doc": "",
+      "label": "pipe to filter",
+      "matches": {
+        ">f": true
+      }
+    },
+    {
+      "content": "|> Enum.reduce(${1:acc}, fn ${2}, ${3:acc} -> ${0} end)",
+      "doc": "",
+      "label": "pipe to reduce",
+      "matches": {
+        ">r": true
+      }
+    },
+    {
+      "content": "|> IO.inspect()",
+      "doc": "",
+      "label": "pipe to inspect",
+      "matches": {
+        ">i": true
+      }
+    },
+    {
+      "content": "|> IO.inspect(label: \"${1:label}\")",
+      "doc": "",
+      "label": "pipe to inspect with label",
+      "matches": {
+        ">il": true
+      }
+    },
+    {
+      "content": "@doc false\ndef child_spec(${1:_opts}) do\n\t%{\n\t\tid: __MODULE__,\n\t\tstart: {__MODULE__, :start_link, ${2:[]}},\n\t\trestart: ${3::permanent},\n\t\tshutdown: ${4:5000},\n\t\ttype: ${5::worker}\n\t}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cs": true
+      }
+    },
+    {
+      "content": "use GenServer\n\n@doc false\ndef start_link(init_args) do\n\tGenServer.start_link(__MODULE__, init_args, name: __MODULE__)\nend\n\n@impl true\ndef init(state) do\n\t{:ok, state}\nend",
+      "doc": "",
+      "label": "basic genserver structure",
+      "matches": {
+        "genserver": true
+      }
+    },
+    {
+      "content": "use Supervisor\n\n@doc false\ndef start_link(init_args) do\n\tSupervisor.start_link(__MODULE__, init_args, name: __MODULE__)\nend\n\n@impl true\ndef init(_init_args) do\n\tchildren = [${1}]\n\tSupervisor.init(children, strategy: :one_for_one)\nend",
+      "doc": "",
+      "label": "basic supervisor structure",
+      "matches": {
+        "super": true
+      }
+    },
+    {
+      "content": "@impl true\ndef ${1:name} do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "impl": true
+      }
+    },
+    {
+      "content": "~w(${0})",
+      "doc": "",
+      "label": "word list",
+      "matches": {
+        "wl": true
+      }
+    },
+    {
+      "content": "~w(${0})a",
+      "doc": "",
+      "label": "atom list",
+      "matches": {
+        "al": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "classnames",
+    "components",
+    "framer-motion",
+    "gatsby",
+    "gatsby-image",
+    "javascript-react",
+    "next",
+    "prop-types",
+    "react",
+    "react-es7",
+    "react-helmet",
+    "react-intersection-observer",
+    "react-modal",
+    "react-native",
+    "redux",
+    "styled-components"
+  ],
+  "snippets": []
+}

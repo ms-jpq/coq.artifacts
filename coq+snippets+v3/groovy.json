@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "jenkins"
+  ],
+  "snippets": [
+    {
+      "content": "package ${1:com.github.ujihisa}\n\nclass ${2:TARGET} {\n  public static void main(String[] args) {\n    println(\"Hello world!\")\n  }\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "helloworld": true
+      }
+    }
+  ]
+}

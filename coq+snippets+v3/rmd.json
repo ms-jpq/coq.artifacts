@@ -1,0 +1,151 @@
+{
+  "extends": [
+    "markdown"
+  ],
+  "snippets": [
+    {
+      "content": "% ${1:`Filename('', 'title')`}\n% ${2:`g:snips_author`}\n% ${3:`strftime(\"%d %B %Y\")`}\n\n${4}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "%%": true
+      }
+    },
+    {
+      "content": "% ${1:`Filename('', @*)`}\n% ${2:`g:snips_author`}\n% ${3:`strftime(\"%d %b %Y\")`}\n\n${4}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "%%*": true
+      }
+    },
+    {
+      "content": "require(${1:}, quietly = TRUE)",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "req": true
+      }
+    },
+    {
+      "content": "if ( $1 )\n{\n\t${2:}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "else\n{\n\t${1:}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "el": true
+      }
+    },
+    {
+      "content": "${1:funname} <- \t\t\t# ${2:}\n\tfunction\n(\n \t${3:}\n)\n{\n  ${4:}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fun": true
+      }
+    },
+    {
+      "content": "repeat{\n  ${2:}\n  if($1) break\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "re": true
+      }
+    },
+    {
+      "content": "matrix(NA, nrow = ${1:}, ncol = ${2:})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ma": true
+      }
+    },
+    {
+      "content": "data.frame(${1:}, header = TRUE)",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "df": true
+      }
+    },
+    {
+      "content": "args <- commandArgs(TRUE)\nif (length(args) == 0)\n    stop(\"Please give ${1:}!\")\nif (!all(file.exists(args)))\n     stop(\"Couln't find input files!\")",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cmdarg": true
+      }
+    },
+    {
+      "content": "require(\"optparse\", quietly = TRUE)\noption_list <-\n    list(make_option(c(\"-n\", \"--add_numbers\"), action=\"store_true\", default=FALSE,\n                     help=\"Print line number at the beginning of each line [default]\")\n         )\nparser <- OptionParser(usage = \"%prog [options] file\", option_list=option_list)\narguments <- parse_args(parser, positional_arguments = TRUE)\nopt <- arguments$options\n\nif(length(arguments$args) != 1) {\n    cat(\"Incorrect number of required positional arguments\\n\\n\")\n    print_help(parser)\n    stop()\n} else {\n    file <- arguments$args\n}\n\nif( file.access(file) == -1) {\n    stop(sprintf(\"Specified file ( %s ) does not exist\", file))\n} else {\n    file_text <- readLines(file)\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "optparse": true
+      }
+    },
+    {
+      "content": "#!/usr/bin/env Rscript",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "#!": true
+      }
+    },
+    {
+      "content": "# Development & Debugging, don't forget to uncomment afterwards!\n#--------------------------------------------------------------------------------\n#setwd(\"~/Projekte/${1:}\")\n#opt <- list(${2:}\n#            )\n#--------------------------------------------------------------------------------",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "debug": true
+      }
+    },
+    {
+      "content": "#`repeat('=', strlen(getline(line(\".\") - 1)))`\n${1}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "#===": true
+      }
+    },
+    {
+      "content": "#`repeat('-', strlen(getline(line(\".\") - 1)))`\n${1}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "#---": true
+      }
+    },
+    {
+      "content": "\\`\\`\\`{r ${1:chung_tag}, echo = FALSE ${2:options}}\n${3:}\n\\`\\`\\`",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "r": true
+      }
+    },
+    {
+      "content": "\\`{r ${1:}}\\`",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ri": true
+      }
+    },
+    {
+      "content": "\\`\\`\\` {r setup, echo = FALSE}\n\topts_chunk$set(fig.path='../figures/${1:}', cache.path='../cache/-'\n\t, fig.align='center', fig.show='hold', par=TRUE)\n\t#opts_knit$set(upload.fun = imgur_upload) # upload images\n\\`\\`\\`",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "copt": true
+      }
+    }
+  ]
+}

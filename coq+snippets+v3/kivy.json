@@ -1,0 +1,307 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "size_hint_y:",
+      "doc": "",
+      "label": "size_y from pykv-snippets",
+      "matches": {
+        "size_hint_y": true,
+        "sy": true
+      }
+    },
+    {
+      "content": "on_release=${1:callback}",
+      "doc": "keyword argument of Widget.bind",
+      "label": "on_release from pykv-sippets",
+      "matches": {
+        "on_release": true,
+        "onrelease": true
+      }
+    },
+    {
+      "content": "size_hint: $1, $2",
+      "doc": "",
+      "label": "size_hint from pykv-snippets",
+      "matches": {
+        "size_hint": true
+      }
+    },
+    {
+      "content": "pos_hint: {'${1|x,right,center_x|}': $2, '${3|y,top,center_y|}': $4}$0",
+      "doc": "",
+      "label": "pos_hint from pykv-snippets",
+      "matches": {
+        "pos_hint": true
+      }
+    },
+    {
+      "content": "on_complete=${1:callback}",
+      "doc": "keyword argument of Widget.bind",
+      "label": "on_complete from pykv-snippets",
+      "matches": {
+        "on_complete": true,
+        "oncomplete": true
+      }
+    },
+    {
+      "content": "Rectangle:",
+      "doc": "",
+      "label": "Rectangle: from pykv-snippets",
+      "matches": {
+        "rect": true
+      }
+    },
+    {
+      "content": "on_progress=${1:callback}",
+      "doc": "keyword argument of Widget.bind",
+      "label": "on_progress from pykv-snippets",
+      "matches": {
+        "on_progress": true,
+        "onprogress": true
+      }
+    },
+    {
+      "content": "rectangle:",
+      "doc": "",
+      "label": "rectangle: from pykv-snippets",
+      "matches": {
+        "rect": true
+      }
+    },
+    {
+      "content": "Color:",
+      "doc": "",
+      "label": "Color: from pykv-snippets",
+      "matches": {
+        "color": true
+      }
+    },
+    {
+      "content": "color:",
+      "doc": "",
+      "label": "color: from pykv-snippets",
+      "matches": {
+        "color": true
+      }
+    },
+    {
+      "content": "on_press:",
+      "doc": "",
+      "label": "on_press from pykv-snippets",
+      "matches": {
+        "on_press": true,
+        "onpress": true
+      }
+    },
+    {
+      "content": "on_release:",
+      "doc": "",
+      "label": "on_release from pykv-snippets",
+      "matches": {
+        "on_release": true,
+        "onrelease": true
+      }
+    },
+    {
+      "content": "on_text:",
+      "doc": "",
+      "label": "on_text from pykv-snippets",
+      "matches": {
+        "on_text": true,
+        "ontext": true
+      }
+    },
+    {
+      "content": "on_text_validate:",
+      "doc": "",
+      "label": "on_text_validate from pykv-snippets",
+      "matches": {
+        "on_text_validate": true,
+        "ontextvalidate": true
+      }
+    },
+    {
+      "content": "#: set ${1:key} ${2:expr}",
+      "doc": "",
+      "label": "set from pykv-snippets",
+      "matches": {
+        "#:set": true
+      }
+    },
+    {
+      "content": "#: import ${1:alias} ${2:package}",
+      "doc": "",
+      "label": "import from pykv-snippets",
+      "matches": {
+        "#:import": true
+      }
+    },
+    {
+      "content": "#: include ${1:file}",
+      "doc": "",
+      "label": "include from pykv-snippets",
+      "matches": {
+        "#:include": true
+      }
+    },
+    {
+      "content": "orientation='${1|vertical,horizontal|}'",
+      "doc": "keyword argument of Layout classes",
+      "label": "orientation from pykv-sippets",
+      "matches": {
+        "orientation": true
+      }
+    },
+    {
+      "content": "size_hint_x=",
+      "doc": "keyword argument of Widget",
+      "label": "size_hint_x from pykv-sippets",
+      "matches": {
+        "size_hint_x": true,
+        "sx": true
+      }
+    },
+    {
+      "content": "text='$1'$0",
+      "doc": "keyword argument of Widget",
+      "label": "text from pykv-sippets",
+      "matches": {
+        "text": true
+      }
+    },
+    {
+      "content": "size_hint_y=",
+      "doc": "keyword argument of Widget",
+      "label": "size_hint_y from pykv-sippets",
+      "matches": {
+        "size_hint_y": true,
+        "sy": true
+      }
+    },
+    {
+      "content": "size_hint=($1, $2)$0",
+      "doc": "keyword argument of Widget",
+      "label": "size_hint from pykv-sippets",
+      "matches": {
+        "size_hint": true
+      }
+    },
+    {
+      "content": "background_color=",
+      "doc": "keyword argument of Button and so on",
+      "label": "background_color from pykv-snippets",
+      "matches": {
+        "background_color": true,
+        "bg": true
+      }
+    },
+    {
+      "content": "pos_hint={'${1|x,right,center_x|}': $2, '${3|y,top,center_y|}': $4}$0",
+      "doc": "keyword argument of Widget",
+      "label": "pos_hint from pykv-sippets",
+      "matches": {
+        "pos_hint": true
+      }
+    },
+    {
+      "content": "orientation: '${1|vertical,horizontal|}'",
+      "doc": "",
+      "label": "orientaiton from pykv-snippets",
+      "matches": {
+        "orientation": true
+      }
+    },
+    {
+      "content": "font_size=",
+      "doc": "keyword argument of Widget",
+      "label": "font_size from pykv-sippets",
+      "matches": {
+        "font_size": true
+      }
+    },
+    {
+      "content": "duration=",
+      "doc": "keyword argument of Animation",
+      "label": "duration from pykv-snippets",
+      "matches": {
+        "duration": true
+      }
+    },
+    {
+      "content": "font_size:",
+      "doc": "",
+      "label": "font_size from pykv-snippets",
+      "matches": {
+        "font_size": true
+      }
+    },
+    {
+      "content": "on_start=${1:callback}",
+      "doc": "keyword argument of Widget.bind",
+      "label": "on_start from pykv-snippets",
+      "matches": {
+        "on_start": true,
+        "onstart": true
+      }
+    },
+    {
+      "content": "opacity=",
+      "doc": "keyword argument of Animation",
+      "label": "opacity from pykv-snippets",
+      "matches": {
+        "opacity": true
+      }
+    },
+    {
+      "content": "padding:",
+      "doc": "",
+      "label": "padding from pykv-snippets",
+      "matches": {
+        "padding": true
+      }
+    },
+    {
+      "content": "step=",
+      "doc": "keyword argument of Animation",
+      "label": "step from pykv-snippets",
+      "matches": {
+        "step": true
+      }
+    },
+    {
+      "content": "size_hint_x:",
+      "doc": "",
+      "label": "size_x from pykv-snippets",
+      "matches": {
+        "size_hint_x": true,
+        "sx": true
+      }
+    },
+    {
+      "content": "size=",
+      "doc": "keyword argument of Animation",
+      "label": "size from pykv-snippets",
+      "matches": {
+        "size": true
+      }
+    },
+    {
+      "content": "transition=",
+      "doc": "keyword argument of ScreenManager",
+      "label": "transition from pykv-snippets",
+      "matches": {
+        "transition": true
+      }
+    },
+    {
+      "content": "on_press=${1:callback}",
+      "doc": "keyword argument of Widget.bind",
+      "label": "on_press from pykv-sippets",
+      "matches": {
+        "on_press": true,
+        "onpress": true
+      }
+    }
+  ]
+}

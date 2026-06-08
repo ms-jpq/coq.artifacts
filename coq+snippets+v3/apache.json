@@ -1,0 +1,141 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "AllowOverride ${1:#:AuthConfig} ${2:#:FileInfo} ${3:#:Indexes} ${4:#:Limit} ${5:#:Options}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "allow": true
+      }
+    },
+    {
+      "content": "Options ${1:#:All} ${2:#:ExecCGI} ${3:#:FollowSymLinks} ${4:#:Includes} ${5:#:IncludesNOEXEC} ${6:#:Indexes} ${7:#:MultiViews} ${8:#:SymLinksIfOwnerMatch}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "opt": true
+      }
+    },
+    {
+      "content": "<VirtualHost ${1:example.org}>\n\tServerAdmin webmaster@${1}\n\tDocumentRoot /www/vhosts/${1}\n\tServerName ${1}\n\tErrorLog logs/${1}-error_log\n\tCustomLog logs/${1}-access_log common\n</VirtualHost>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vhost": true
+      }
+    },
+    {
+      "content": "<Directory ${1:/Library/WebServer/}>\n\t${0}\n</Directory>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dir": true
+      }
+    },
+    {
+      "content": "<IfModule ${1:module_name}>\n        ${2}\n</IfModule>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ifmodule": true
+      }
+    },
+    {
+      "content": "<If ${1:condition}>\n        ${2}\n</If>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "RemoteIPHeader X-Forwarded-For",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "RemoteIPHeader": true
+      }
+    },
+    {
+      "content": "<Location ${1:location}>\n        ${2:config}\n</Location>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "location": true
+      }
+    },
+    {
+      "content": "<LocationMatch \"${1:regex}\">\n        ${2:config}\n</LocationMatch>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "locationmatch": true
+      }
+    },
+    {
+      "content": "DirectoryIndex index.php index.html",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "directoryindex": true
+      }
+    },
+    {
+      "content": "Require all granted",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "require": true
+      }
+    },
+    {
+      "content": "<Directory ${1:/}>\n\tDirectoryIndex ${0:index.html}\n\tOrder Deny,Allow\n\tDeny from All\n</Directory>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dir": true
+      }
+    },
+    {
+      "content": "<FilesMatch \"${1:regex}\">\n\t${0:${VISUAL}}\n</FilesMatch>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "filesmatch": true
+      }
+    },
+    {
+      "content": "<IfModule ${1:mod_example.c}>\n\t${0:${VISUAL}}\n</IfModule>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ifmodule": true
+      }
+    },
+    {
+      "content": "<LimitExcept ${1:POST GET}>\n\t${0:${VISUAL}}\n</LimitExcept>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "limitexcept": true
+      }
+    },
+    {
+      "content": "<Proxy ${1:*}>\n\t${0:${VISUAL}}\n</Proxy>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "proxy": true
+      }
+    },
+    {
+      "content": "<VirtualHost ${1:*}:${2:80}>\n\tServerAdmin ${3:webmaster@example.com}\n\tDocumentRoot ${4:/www/example.com}\n\tServerName ${0:www.example.com}\n</VirtualHost>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "virtualhost": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "extends": [
+    "css",
+    "html",
+    "javascript"
+  ],
+  "snippets": [
+    {
+      "content": "{if ${1}}\n\t${0:${VISUAL}}\n{/if}",
+      "doc": "",
+      "label": "{if cond} ... {/if}",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "{if ${1}}\n\t${0:${VISUAL}}\n{/if}",
+      "doc": "",
+      "label": "{if !cond} ... {/if}",
+      "matches": {
+        "ifn": true
+      }
+    },
+    {
+      "content": "{if ${1}}\n\t${0:${VISUAL}}\n{else}\n\t${2}\n{/if}",
+      "doc": "",
+      "label": "{if cond} ... {else} ... {/if}",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "{elseif ${1}}\n\t${0:${VISUAL}}\n{/if}",
+      "doc": "",
+      "label": "{elseif cond} ... {/if}",
+      "matches": {
+        "eif": true
+      }
+    },
+    {
+      "content": "{else}\n\t${1}\n{/if}",
+      "doc": "",
+      "label": "{else} ... {/if}",
+      "matches": {
+        "el": true
+      }
+    },
+    {
+      "content": "{while ${1}}\n\t${0:${VISUAL}}\n{/while}",
+      "doc": "",
+      "label": "{while} loops in Smarty have much the same flexibility as PHP while statements, with a few added features for the template engine. Every {while} must be paired with a matching {/while}. All PHP conditionals and functions are recognized, such as ||, or, &&, and, is_array(), etc.",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "{block name='${1}'}\n\t${0:${VISUAL}}\n{/block}",
+      "doc": "",
+      "label": "{block} is used to define a named area of template source for template inheritance.",
+      "matches": {
+        "block": true
+      }
+    },
+    {
+      "content": "{extends file='${1}'}",
+      "doc": "",
+      "label": "{extends} tags are used in child templates in template inheritance for extending parent templates.",
+      "matches": {
+        "extends": true
+      }
+    },
+    {
+      "content": "{function name='${1}' ${2:variables}}\n\t${0:${VISUAL}}\n{/function}",
+      "doc": "",
+      "label": "{function} is used to create functions within a template and call them just like a plugin function. Instead of writing a plugin that generates presentational content, keeping it in the template is often a more manageable choice. It also simplifies data traversal, such as deeply nested menus.",
+      "matches": {
+        "function": true
+      }
+    },
+    {
+      "content": "{literal}\n\t${0:${VISUAL}}\n{/literal}",
+      "doc": "",
+      "label": "{literal} tags allow a block of data to be taken literally. This is typically used around Javascript or stylesheet blocks where {curly braces} would interfere with the template delimiter syntax",
+      "matches": {
+        "literal": true
+      }
+    },
+    {
+      "content": "{nocache}\n\t${0:${VISUAL}}\n{/nocache}",
+      "doc": "",
+      "label": "{nocache} is used to disable caching of a template section. Every {nocache} must be paired with a matching {/nocache}.",
+      "matches": {
+        "nocache": true
+      }
+    },
+    {
+      "content": "{setfilter ${1:filters}}\n\t${0:${VISUAL}}\n{/setfilter}",
+      "doc": "",
+      "label": "The {setfilter}...{/setfilter} block tag allows the definition of template instance's variable filters.",
+      "matches": {
+        "setfilter": true
+      }
+    },
+    {
+      "content": "{strip}\n\t${0:${VISUAL}}\n{/strip}",
+      "doc": "",
+      "label": "Anything within {strip}{/strip} tags are stripped of the extra spaces or carriage returns at the beginnings and ends of the lines before they are displayed. This way you can keep your templates readable, and not worry about extra white space causing problems.",
+      "matches": {
+        "strip": true
+      }
+    }
+  ]
+}

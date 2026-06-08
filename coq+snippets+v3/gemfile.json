@@ -1,0 +1,21 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "source :rubygems",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "source-rubygems": true
+      }
+    },
+    {
+      "content": "gem '${1}', '${2} >= 1.0'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gem": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,815 @@
+{
+  "extends": [
+    "c"
+  ],
+  "snippets": [
+    {
+      "content": "foreach (${1:#:var}; ${2:#:list}) {\n    ${3:TARGET}\n}",
+      "doc": "",
+      "label": "foreach() {}",
+      "matches": {
+        "foreach": true
+      }
+    },
+    {
+      "content": "class ${1:#:name} {\n    ${2:TARGET}\n}",
+      "doc": "",
+      "label": "class {}",
+      "matches": {
+        "class": true
+      }
+    },
+    {
+      "content": "struct ${1:#:name} {\n    ${2:TARGET}\n}",
+      "doc": "",
+      "label": "struct {}",
+      "matches": {
+        "struct": true
+      }
+    },
+    {
+      "content": "enum ${1:#:name} {\n    ${2:TARGET}\n}",
+      "doc": "",
+      "label": "enum {}",
+      "matches": {
+        "enum": true
+      }
+    },
+    {
+      "content": "import",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "imp": true
+      }
+    },
+    {
+      "content": "public import",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pimp": true
+      }
+    },
+    {
+      "content": "std.stdio",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "io": true
+      }
+    },
+    {
+      "content": "std.traits",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "traits": true
+      }
+    },
+    {
+      "content": "std.conv",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "conv": true
+      }
+    },
+    {
+      "content": "std.array",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "arr": true
+      }
+    },
+    {
+      "content": "std.algorithm",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "algo": true
+      }
+    },
+    {
+      "content": "import std.stdio, std.string, std.array;\nimport std.traits, std.conv, std.algorithm;\nimport std.math, std.regex;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "theusual": true
+      }
+    },
+    {
+      "content": "for(int ${1:i} = 0; $1 < ${2:count}; $1++) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "foreach(${1:elem}; ${2:range}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fe": true
+      }
+    },
+    {
+      "content": "foreach(${1:i}, ${2:elem}; ${3:range}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fei": true
+      }
+    },
+    {
+      "content": "foreach_reverse(${1:elem}; ${2:range}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fer": true
+      }
+    },
+    {
+      "content": "foreach_reverse(${1:i}, ${2:elem}; ${3:range}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "feri": true
+      }
+    },
+    {
+      "content": "scope(exit) ${1:f.close();}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sce": true
+      }
+    },
+    {
+      "content": "scope(success) ${1}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "scs": true
+      }
+    },
+    {
+      "content": "scope(failure) ${1}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "scf": true
+      }
+    },
+    {
+      "content": "else {\n\t${1}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "el": true
+      }
+    },
+    {
+      "content": "else if(${1}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eif": true
+      }
+    },
+    {
+      "content": "if(${1}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "if(${1}) {\n\t${2}\n} else {\n\t${3}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "if(${1}) {\n\t${2}\n} else if(${3}) {\n\t${4}\n} else {\n\t${5}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ifee": true
+      }
+    },
+    {
+      "content": "switch(${1}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sw": true
+      }
+    },
+    {
+      "content": "case ${1:0}:\n\t${2}\n\tbreak;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cs": true
+      }
+    },
+    {
+      "content": "default:\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "def": true
+      }
+    },
+    {
+      "content": "final switch(${1}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fsw": true
+      }
+    },
+    {
+      "content": "try {\n\t${1:${VISUAL}}\n} catch(${2:Exception} ${3:e}) {\n\t${4}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "try": true
+      }
+    },
+    {
+      "content": "try {\n\t${0:${VISUAL}}\n} catch(${1:Exception} ${2:e}) {\n\t${3}\n} finally {\n\t${4}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tcf": true
+      }
+    },
+    {
+      "content": "while(${1:cond}) {\n\t${0:${VISUAL}}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "do {\n\t${1}\n} while(${2});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dowh": true
+      }
+    },
+    {
+      "content": "static if(${1:cond}) {\n\t${2}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sif": true
+      }
+    },
+    {
+      "content": "static if(${1}) {\n\t${2}\n} else {\n\t${3}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sife": true
+      }
+    },
+    {
+      "content": "static if(${1}) {\n\t${2}\n} else static if(${3}) {\n\t${4}\n} else {\n\t${5}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sifee": true
+      }
+    },
+    {
+      "content": "else static if(${1}) {\n\t${2}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "seif": true
+      }
+    },
+    {
+      "content": "(${1: a > b}) ? ${2:a} : ${3:b};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "?": true
+      }
+    },
+    {
+      "content": "with(${1:exp}) {\n\t${2}\n} ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "with": true
+      }
+    },
+    {
+      "content": "${1:auto} ${2:func}(${3:params}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fun": true
+      }
+    },
+    {
+      "content": "in {\n\t${1}\n} out {\n\t${2}\n} body {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "contr": true
+      }
+    },
+    {
+      "content": "(${1:x}) => ${2:x}${0:;}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "l": true
+      }
+    },
+    {
+      "content": "function (${1:int x}) => ${2}${3:;}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "funl": true
+      }
+    },
+    {
+      "content": "delegate (${1:int x}) => ${2}${3:;}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "del": true
+      }
+    },
+    {
+      "content": "int opApply(Dg)(Dg dg) if(ParameterTypeTuble!Dg.length == 2) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "opApply": true
+      }
+    },
+    {
+      "content": "pure @safe nothrow",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "psn": true
+      }
+    },
+    {
+      "content": "@safe",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "safe": true
+      }
+    },
+    {
+      "content": "@trusted",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "trusted": true
+      }
+    },
+    {
+      "content": "@system",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "system": true
+      }
+    },
+    {
+      "content": "enum ${1} {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "enum": true
+      }
+    },
+    {
+      "content": "public",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pu": true
+      }
+    },
+    {
+      "content": "private",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pr": true
+      }
+    },
+    {
+      "content": "protected",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "po": true
+      }
+    },
+    {
+      "content": "this(${1}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ctor": true
+      }
+    },
+    {
+      "content": "~this(${1}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dtor": true
+      }
+    },
+    {
+      "content": "alias ${1:b} = ${2:a};\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "al": true
+      }
+    },
+    {
+      "content": "alias ${1:value} this;\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "alth": true
+      }
+    },
+    {
+      "content": "void main() {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "main": true
+      }
+    },
+    {
+      "content": "void main(string[] args) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "maina": true
+      }
+    },
+    {
+      "content": "module ${1:main};${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mod": true
+      }
+    },
+    {
+      "content": "${1:auto} ${2:var} = ${0:1};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "var": true
+      }
+    },
+    {
+      "content": "${1:auto} ${2:var} = new ${3:Object}(${4});\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "new": true
+      }
+    },
+    {
+      "content": "auto ${1:f} = File(${2:\"useful_info.xml\"}, ${3:\"rw\"});\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "file": true
+      }
+    },
+    {
+      "content": "map!(${1:f})(${2:xs});\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "map": true
+      }
+    },
+    {
+      "content": "filter!(${1:p})(${2:xs});\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "filter": true
+      }
+    },
+    {
+      "content": "reduce!(${1:f})(${2:xs});\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "reduce": true
+      }
+    },
+    {
+      "content": "find!(${1:p})($2:xs);\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "find": true
+      }
+    },
+    {
+      "content": "${1:int}[${2:string}] ${3:dict} = ${0};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "aa": true
+      }
+    },
+    {
+      "content": "#!/usr/bin/env rdmd",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "#!": true
+      }
+    },
+    {
+      "content": "#!/usr/bin/env rdmd",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bang": true
+      }
+    },
+    {
+      "content": "#!/usr/bin/env rdmd",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rdmd": true
+      }
+    },
+    {
+      "content": "isSomeString!${1:S}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "isstr": true
+      }
+    },
+    {
+      "content": "isNumeric!${1:N}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "isnum": true
+      }
+    },
+    {
+      "content": "to!string(${1:x});\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tos": true
+      }
+    },
+    {
+      "content": "to!int(${1:str});\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "toi": true
+      }
+    },
+    {
+      "content": "to!double(${1:str});\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tod": true
+      }
+    },
+    {
+      "content": "unittest {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "un": true
+      }
+    },
+    {
+      "content": "version(${1:Posix}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ver": true
+      }
+    },
+    {
+      "content": "debug {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "de": true
+      }
+    },
+    {
+      "content": "shared static this(${1}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sst": true
+      }
+    },
+    {
+      "content": "// Typedef is deprecated. Use alias instead.\ntypedef",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "td": true
+      }
+    },
+    {
+      "content": "inout",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ino": true
+      }
+    },
+    {
+      "content": "immutable",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "imm": true
+      }
+    },
+    {
+      "content": "final",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fin": true
+      }
+    },
+    {
+      "content": "const",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "con": true
+      }
+    },
+    {
+      "content": "private static immutable ${1:int} ${2:Constant} = ${3:1};\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "psi": true
+      }
+    },
+    {
+      "content": "pragma(${1})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "prag": true
+      }
+    },
+    {
+      "content": "pragma(msg, ${1:Warning});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pms": true
+      }
+    },
+    {
+      "content": "asm {\n\t${1}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "asm": true
+      }
+    },
+    {
+      "content": "mixin(${1:`writeln(\"Hello, World!\");`});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mixin": true
+      }
+    },
+    {
+      "content": "override",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "over": true
+      }
+    },
+    {
+      "content": "return ${1};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ret": true
+      }
+    },
+    {
+      "content": "__FILE__",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "FILE": true
+      }
+    },
+    {
+      "content": "__MODULE__",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "MOD": true
+      }
+    },
+    {
+      "content": "__LINE__",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "LINE": true
+      }
+    },
+    {
+      "content": "__FUNCTION__",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "FUN": true
+      }
+    },
+    {
+      "content": "__PRETTY_FUNCTION__",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "PF": true
+      }
+    },
+    {
+      "content": "cast(${1:T})(${2:val});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cast": true
+      }
+    },
+    {
+      "content": "/*\n * ${1}\n*/",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "/*": true
+      }
+    },
+    {
+      "content": "// I don't know how this works. Don't touch it.",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "idk": true
+      }
+    },
+    {
+      "content": "// Don't FUCKING touch this.",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "idfk": true
+      }
+    }
+  ]
+}

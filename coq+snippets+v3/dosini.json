@@ -1,0 +1,13 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "; http://editorconfig.org\n\nroot = true\n\n[*]\nindent_style = ${1:space_or_tab}\nindent_size = ${2:indent_size}\nend_of_line = lf\ncharset = utf-8\ntrim_trailing_whitespace = true\ninsert_final_newline = true",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ec": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,1202 @@
+{
+  "extends": [
+    "pydoc",
+    "unittest",
+    "urls",
+    "views"
+  ],
+  "snippets": [
+    {
+      "content": "if ${1:condition}:\n\t${2:pass}\nelse:\n\t${3:pass}",
+      "doc": "if statement with else",
+      "label": "if/else",
+      "matches": {
+        "ifelse": true
+      }
+    },
+    {
+      "content": "elif ${1:expression}:\n\t${2:pass}",
+      "doc": "elif statement",
+      "label": "elif",
+      "matches": {
+        "elif": true
+      }
+    },
+    {
+      "content": "match ${1:expression}:\n\tcase ${2:pattern}:\n\t\t${3:pass}",
+      "doc": "match/case statements",
+      "label": "match/case",
+      "matches": {
+        "match": true
+      }
+    },
+    {
+      "content": "# pyright: ignore[$0]",
+      "doc": "Ignore specific line diagnostic in pyright (ignore all is unsafe)",
+      "label": "pyright ignore line",
+      "matches": {
+        "#ignore": true
+      }
+    },
+    {
+      "content": "# %% [markdown]",
+      "doc": "Add a new markdown cell",
+      "label": "Jupyter markdown cell",
+      "matches": {
+        "#mark": true
+      }
+    },
+    {
+      "content": "case _:\n\t${1:pass}",
+      "doc": "case wildcard block if other cases fail",
+      "label": "case wildcard",
+      "matches": {
+        "casew": true
+      }
+    },
+    {
+      "content": "\"\"\"$0\n\"\"\"",
+      "doc": "Snippet to avoid autopair plugin annoyances when typing multiple \"",
+      "label": "Multiline string",
+      "matches": {
+        "#": true
+      }
+    },
+    {
+      "content": "\"\"\"$0\"\"\"",
+      "doc": "Snippet to avoid autopair plugin annoyances when typing multiple \"",
+      "label": "One-line multiline string",
+      "matches": {
+        "##": true
+      }
+    },
+    {
+      "content": "for ${1:value} in range($2):\n\t${3:pass}",
+      "doc": "for loop that iterates over range of integers",
+      "label": "for w/ range",
+      "matches": {
+        "forr": true
+      }
+    },
+    {
+      "content": "__${1:init}__$0",
+      "doc": "Create magic method",
+      "label": "__magic__",
+      "matches": {
+        "__": true
+      }
+    },
+    {
+      "content": "if __name__ == \"__main__\":\n\t${1:main()}",
+      "doc": "Execute code if the file is executed directly",
+      "label": "if __name__ == __main__",
+      "matches": {
+        "ifmain": true
+      }
+    },
+    {
+      "content": "def ${1:fname}($2) -> ${3:None}:\n\t${4:pass}",
+      "doc": "Function definition with return type",
+      "label": "Function w/ return type",
+      "matches": {
+        "deft": true
+      }
+    },
+    {
+      "content": "for ${1:value} in ${2:iterable}:\n\t${3:pass}",
+      "doc": "for loop",
+      "label": "for",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "from ${1:pathlib} import ${2:Path}",
+      "doc": "Import individual objects directly into the caller’s symbol table",
+      "label": "from ... import ...",
+      "matches": {
+        "fromim": true
+      }
+    },
+    {
+      "content": "def ${1:mname}(self$2) -> ${3:None}:\n\t${4:pass}",
+      "doc": "Class method definition",
+      "label": "Method w/ return type",
+      "matches": {
+        "defst": true
+      }
+    },
+    {
+      "content": "if ${1:condition}:\n\t${2:pass}",
+      "doc": "if statement",
+      "label": "if",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "class ${1:classname}:\n\t${2:pass}",
+      "doc": "Class definition",
+      "label": "class",
+      "matches": {
+        "class": true
+      }
+    },
+    {
+      "content": "except$1:\n\t${2:pass}",
+      "doc": "except statement",
+      "label": "except",
+      "matches": {
+        "except": true
+      }
+    },
+    {
+      "content": "while ${1:condition}:\n\t${2:pass}",
+      "doc": "while loop",
+      "label": "while",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "case ${2:pattern}:\n\t${3:pass}",
+      "doc": "case block",
+      "label": "case",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "self.$0",
+      "doc": "Snippet to reference the self property in an object",
+      "label": "self",
+      "matches": {
+        "s": true
+      }
+    },
+    {
+      "content": "with ${1:expression} as ${2:target}:\n\t${3:pass}",
+      "doc": "'with' statement",
+      "label": "with",
+      "matches": {
+        "with": true
+      }
+    },
+    {
+      "content": "import ${1:datetime}",
+      "doc": "Import a package or module",
+      "label": "import",
+      "matches": {
+        "import": true
+      }
+    },
+    {
+      "content": "# %%",
+      "doc": "Add a new cell",
+      "label": "Jupyter cell",
+      "matches": {
+        "#cell": true
+      }
+    },
+    {
+      "content": "def ${1:mname}(self$2):\n\t${3:pass}",
+      "doc": "Class method definition",
+      "label": "Method",
+      "matches": {
+        "defs": true
+      }
+    },
+    {
+      "content": "def ${1:fname}($2):\n\t${3:pass}",
+      "doc": "Function definition",
+      "label": "Function",
+      "matches": {
+        "def": true
+      }
+    },
+    {
+      "content": "else:\n\t${1:pass}",
+      "doc": "else statement",
+      "label": "else",
+      "matches": {
+        "else": true
+      }
+    },
+    {
+      "content": "#!/usr/bin/env python$0",
+      "doc": "Shebang line for the first python in PATH",
+      "label": "#!/usr/bin/env pythonX",
+      "matches": {
+        "#env": true
+      }
+    },
+    {
+      "content": "class ${1:classname}($2):\n\t${3:pass}",
+      "doc": "Class definition with inheritance",
+      "label": "Derived class",
+      "matches": {
+        "classd": true
+      }
+    },
+    {
+      "content": "lambda ${1:parameter_list}: ${2:expression}",
+      "doc": "lambda statement",
+      "label": "lambda",
+      "matches": {
+        "lambda": true
+      }
+    },
+    {
+      "content": "#!/usr/bin/env python3\n${0}",
+      "doc": "",
+      "label": "#!/usr/bin/env python3",
+      "matches": {
+        "#!": true
+      }
+    },
+    {
+      "content": "#!/usr/bin/env python3\n${0}",
+      "doc": "",
+      "label": "#!/usr/bin/env python3",
+      "matches": {
+        "shebang": true
+      }
+    },
+    {
+      "content": "class ${1:#:name}(${2:object}):\n\n\tdef __init__(self, ${3}):\n\t\t${0:pass}",
+      "doc": "",
+      "label": "class Class(...): ...",
+      "matches": {
+        "class": true
+      }
+    },
+    {
+      "content": "class ${1:#:name}(${2:object}):\n\t\"\"\"${3:#:class documentation}\"\"\"\n\n\tdef __init__(self, ${4}):\n\t\t\"\"\"${5:#:__init__ documentation}\"\"\"\n\t\t${0:pass}",
+      "doc": "",
+      "label": "class Class(...): \"...\"",
+      "matches": {
+        "classd": true
+      }
+    },
+    {
+      "content": "def ${1:#:name}(${2}):\n\t${0:pass}",
+      "doc": "",
+      "label": "def function(...): ...",
+      "matches": {
+        "def": true
+      }
+    },
+    {
+      "content": "def ${1:#:name}(${2}):\n\t\"\"\"${3:#:function documentation}\"\"\"\n\t${0:pass}",
+      "doc": "",
+      "label": "def function(...): \"\"\"...\"\"\"",
+      "matches": {
+        "defd": true
+      }
+    },
+    {
+      "content": "def ${1:#:name}(self, ${2}):\n\t${0:pass}",
+      "doc": "",
+      "label": "def method(self, ...): ...",
+      "matches": {
+        "defm": true
+      }
+    },
+    {
+      "content": "def ${1:#:name}(self, ${2}):\n\t\"\"\"${3:#:method documentation}\"\"\"\n\t${0:pass}",
+      "doc": "",
+      "label": "def method(self, ...): \"...\"",
+      "matches": {
+        "defmd": true
+      }
+    },
+    {
+      "content": "elif ${1:#:condition}:\n\t${0:pass}",
+      "doc": "",
+      "label": "elif ...: ...",
+      "matches": {
+        "elif": true
+      }
+    },
+    {
+      "content": "else:\n\t${0:pass}",
+      "doc": "",
+      "label": "else: ...",
+      "matches": {
+        "else": true
+      }
+    },
+    {
+      "content": "with open(${1:#:file}, '${2:r}') as ${3:f}:\n\t${0:pass}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "with_open": true
+      }
+    },
+    {
+      "content": "with open(${1:#:file}, '${2:r}') as ${3:f}:\n\t${0:pass}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fileidiom": true
+      }
+    },
+    {
+      "content": "for ${1:#:value} in ${2:#:list}:\n\t${0:pass}",
+      "doc": "",
+      "label": "for ... in ...: ...",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "if ${1:#:condition}:\n\t${0:pass}",
+      "doc": "",
+      "label": "if ...: ...",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "if __name__ == '__main__':\n\t${0:pass}",
+      "doc": "",
+      "label": "if __name__ == '__main__': ...",
+      "matches": {
+        "ifmain": true
+      }
+    },
+    {
+      "content": "if __name__ == '__main__':\n\t${0:pass}",
+      "doc": "",
+      "label": "if __name__ == '__main__': ...",
+      "matches": {
+        "main": true
+      }
+    },
+    {
+      "content": "try:\n\t${1:pass}\nexcept ${2:#:ExceptionClass}:\n\t${3:pass}",
+      "doc": "",
+      "label": "try: ... except ...: ...",
+      "matches": {
+        "tryexcept": true
+      }
+    },
+    {
+      "content": "try:\n\t${1:pass}\nfinally:\n\t${2:pass}",
+      "doc": "",
+      "label": "try: ... finally: ...",
+      "matches": {
+        "tryfinally": true
+      }
+    },
+    {
+      "content": "while ${1:#:condition}:\n\t${0:pass}",
+      "doc": "",
+      "label": "while ...: ...",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "with ${1:open}(${2:#:filename, mode}) as ${3:f}:\n\t${0:pass}",
+      "doc": "",
+      "label": "with {func}({file}) as :",
+      "matches": {
+        "with": true
+      }
+    },
+    {
+      "content": "[$1 for ${1:x} in ${2:#:list} if ${3:#:condition}]",
+      "doc": "",
+      "label": "[x for x in {list} if {condition}]",
+      "matches": {
+        "filter": true
+      }
+    },
+    {
+      "content": "print(${0:#:TARGET})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "print": true
+      }
+    },
+    {
+      "content": "# -*- coding: utf-8 -*-",
+      "doc": "",
+      "label": "# -*- coding ...",
+      "matches": {
+        "coding": true
+      }
+    },
+    {
+      "content": "getattr(${1:#:obj}, ${2:#:attr})",
+      "doc": "",
+      "label": "getattr(..., ...)",
+      "matches": {
+        "getattr": true
+      }
+    },
+    {
+      "content": "setattr(${1:#:obj}, ${2:#:attr}, ${3:#:value})",
+      "doc": "",
+      "label": "setattr(..., ...)",
+      "matches": {
+        "setattr": true
+      }
+    },
+    {
+      "content": "hasattr(${1:#:obj}, ${2:#:attr})",
+      "doc": "",
+      "label": "hasattr(..., ...)",
+      "matches": {
+        "hasattr": true
+      }
+    },
+    {
+      "content": "import pdb; pdb.set_trace()",
+      "doc": "",
+      "label": "import pdb..",
+      "matches": {
+        "pdb": true
+      }
+    },
+    {
+      "content": "import ipdb; ipdb.set_trace()",
+      "doc": "",
+      "label": "import ipdb..",
+      "matches": {
+        "ipdb": true
+      }
+    },
+    {
+      "content": "import pudb; pudb.set_trace()",
+      "doc": "",
+      "label": "import pudb..",
+      "matches": {
+        "pudb": true
+      }
+    },
+    {
+      "content": "from PyQt5.QtCore import pyqtRemoveInputHook\npyqtRemoveInputHook()\nimport pdb; pdb.set_trace()",
+      "doc": "",
+      "label": "removeInputHook...pdb",
+      "matches": {
+        "qtpdb": true
+      }
+    },
+    {
+      "content": "from IPython import embed; embed()",
+      "doc": "",
+      "label": "import ipython..",
+      "matches": {
+        "ipy": true
+      }
+    },
+    {
+      "content": "#!/usr/bin/env python3",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "#!": true
+      }
+    },
+    {
+      "content": "#!/usr/bin/env python2\n# -*- coding: utf-8 -*-",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "#!2": true
+      }
+    },
+    {
+      "content": "#!/usr/bin/env python3",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "#!3": true
+      }
+    },
+    {
+      "content": "import ${0:module}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "imp": true
+      }
+    },
+    {
+      "content": "def __unicode__(self):\n\t${0:representation}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "uni": true
+      }
+    },
+    {
+      "content": "from ${1:package} import ${0:module}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "from": true
+      }
+    },
+    {
+      "content": "@unittest.skip(${1:skip_reason})",
+      "doc": "",
+      "label": "skip unittests",
+      "matches": {
+        "sk": true
+      }
+    },
+    {
+      "content": "while $1:\n\t${0:${VISUAL}}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "while True:\n\t${1}\n\tif $0:\n\t\tbreak",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dowh": true
+      }
+    },
+    {
+      "content": "with ${1:expr} as ${2:var}:\n\t${0:${VISUAL}}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "with": true
+      }
+    },
+    {
+      "content": "async with ${1:expr} as ${2:var}:\n\t${0:${VISUAL}}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "awith": true
+      }
+    },
+    {
+      "content": "class ${1:class_name}:\n\t\"\"\"${0:description}\"\"\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cla": true
+      }
+    },
+    {
+      "content": "class ${1:class_name}:\n\t\"\"\"${2:description}\"\"\"\n\tdef __init__(self, ${3:args}):\n\t\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "clai": true
+      }
+    },
+    {
+      "content": "def ${1:fname}(${2:`indent('.') ? 'self' : ''`}):\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "deff": true
+      }
+    },
+    {
+      "content": "async def ${1:fname}(${2:`indent('.') ? 'self' : ''`}):\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "adeff": true
+      }
+    },
+    {
+      "content": "def __init__(self, ${1:args}):\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defi": true
+      }
+    },
+    {
+      "content": "def ${1:mname}(self, ${2:arg}):\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defm": true
+      }
+    },
+    {
+      "content": "async def ${1:mname}(self, ${2:arg}):\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "adefm": true
+      }
+    },
+    {
+      "content": "@property\ndef ${1:foo}(self) -> ${2:type}:\n\t\"\"\"${3:doc}\"\"\"\n\treturn self._$1\n\n@$1.setter\ndef $1(self, value: $2):\n\tself._$1 = value",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "property": true
+      }
+    },
+    {
+      "content": "if $1:\n\t${0:${VISUAL}}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "else:\n\t${0:${VISUAL}}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "el": true
+      }
+    },
+    {
+      "content": "elif $1:\n\t${0:${VISUAL}}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ei": true
+      }
+    },
+    {
+      "content": "match ${1:expression}:\n\tcase ${2:pattern_1}:\n\t\t${3:pass}\n\tcase ${4:pattern_2}:\n\t\t${5:pass}",
+      "doc": "",
+      "label": "Structural pattern matching",
+      "matches": {
+        "match": true
+      }
+    },
+    {
+      "content": "match ${1:expression}:\n\tcase ${2:pattern_1}:\n\t\t${3:pass}\n\tcase _:\n\t\t${0:pass}",
+      "doc": "",
+      "label": "Pattern matching with wildcard",
+      "matches": {
+        "matchw": true
+      }
+    },
+    {
+      "content": "for ${1:item} in ${2:items}:\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "# -*- coding: utf-8 -*-",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cutf8": true
+      }
+    },
+    {
+      "content": "# -*- coding: latin-1 -*-",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "clatin1": true
+      }
+    },
+    {
+      "content": "# -*- coding: ascii -*-",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cascii": true
+      }
+    },
+    {
+      "content": "${1:var} = lambda ${2:vars} : ${0:action}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ld": true
+      }
+    },
+    {
+      "content": "return ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ret": true
+      }
+    },
+    {
+      "content": "self.",
+      "doc": "",
+      "label": "",
+      "matches": {
+        ".": true
+      }
+    },
+    {
+      "content": "self.${1:attribute} = $1",
+      "doc": "",
+      "label": "self.attribute = attribute",
+      "matches": {
+        "sa": true
+      }
+    },
+    {
+      "content": "if __name__ == '__main__':\n\t${0:main()}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ifmain": true
+      }
+    },
+    {
+      "content": "__${1:init}__",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "_": true
+      }
+    },
+    {
+      "content": "breakpoint()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "br": true
+      }
+    },
+    {
+      "content": "__import__('pdb').set_trace()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pdb": true
+      }
+    },
+    {
+      "content": "__import__('bpdb').set_trace()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bpdb": true
+      }
+    },
+    {
+      "content": "__import__('ipdb').set_trace()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ipdb": true
+      }
+    },
+    {
+      "content": "__import__('IPython').embed()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "iem": true
+      }
+    },
+    {
+      "content": "__import__('rpdb').set_trace()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rpdb": true
+      }
+    },
+    {
+      "content": "__import__('wdb').set_trace()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wdb": true
+      }
+    },
+    {
+      "content": "__import__('ptpython.repl', fromlist=('repl')).embed(globals(), locals(), vi_mode=${1:False}, history_filename=${2:None})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ptpython": true
+      }
+    },
+    {
+      "content": "__import__('pudb').set_trace()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pudb": true
+      }
+    },
+    {
+      "content": "from pudb.remote import set_trace\nset_trace()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pudbr": true
+      }
+    },
+    {
+      "content": "__import__('nose').tools.set_trace()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "nosetrace": true
+      }
+    },
+    {
+      "content": "__import__('pprint').pprint(${1})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pprint": true
+      }
+    },
+    {
+      "content": "\"\"\"${0:doc}\n\"\"\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\"": true
+      }
+    },
+    {
+      "content": "self.assertEqual(${0}, ${1})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "a=": true
+      }
+    },
+    {
+      "content": "def test_${1:description}(${2:`indent('.') ? 'self' : ''`}):\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "test": true
+      }
+    },
+    {
+      "content": "class ${1:ExampleCase}(unittest.TestCase):\n\n\tdef test_${2:description}(self):\n\t\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "testcase": true
+      }
+    },
+    {
+      "content": "# given: ${1}\n# when: ${2}\n# then: ${3}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tgwt": true
+      }
+    },
+    {
+      "content": "from __future__ import ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fut": true
+      }
+    },
+    {
+      "content": "try:\n\t# Short option syntax: \"hv:\"\n\t# Long option syntax: \"help\" or \"verbose=\"\n\topts, args = getopt.getopt(sys.argv[1:], \"${1:short_options}\", [${2:long_options}])\n\nexcept getopt.GetoptError, err:\n\t# Print debug info\n\tprint str(err)\n\t${3:error_action}\n\nfor option, argument in opts:\n\tif option in (\"-h\", \"--help\"):\n\t\t${0}\n\telif option in (\"-v\", \"--verbose\"):\n\t\tverbose = argument",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "getopt": true
+      }
+    },
+    {
+      "content": "parser = ${VISUAL:argparse.}ArgumentParser()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "addp": true
+      }
+    },
+    {
+      "content": "${0:sub_parser} = parser.add_subparsers().add_parser(\"${1:name}\")",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "addsp": true
+      }
+    },
+    {
+      "content": "parser.add_argument(\"${0:short_arg}\", \"${1:long_arg}\", default=${2:None}, help=\"${3:Help text}\")",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "addarg": true
+      }
+    },
+    {
+      "content": "parser.add_argument(\"${0:arg}\", nargs=\"${1:*}\", default=${2:None}, help=\"${3:Help text}\")",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "addnarg": true
+      }
+    },
+    {
+      "content": "parser.add_argument(\"${0:arg}\", \"${1:long_arg}\", action=\"${2:store_true}\", default=${3:False}, help=\"${4:Help text}\")",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "addaarg": true
+      }
+    },
+    {
+      "content": "\"${VISUAL:return }\"parser.parse_args()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pargs": true
+      }
+    },
+    {
+      "content": "import logging\nLOGGER = logging.getLogger(${0:__name__})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "glog": true
+      }
+    },
+    {
+      "content": "LOGGER.error(${0:msg})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "le": true
+      }
+    },
+    {
+      "content": "LOGGER.debug(${0:msg})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lg": true
+      }
+    },
+    {
+      "content": "LOGGER.warning(${0:msg})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lw": true
+      }
+    },
+    {
+      "content": "LOGGER.critical(${0:msg})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lc": true
+      }
+    },
+    {
+      "content": "LOGGER.info(${0:msg})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "li": true
+      }
+    },
+    {
+      "content": "\"\"\"${1:Description}\n\n@param ${2:param}: ${3: Description}\n@type  $2: ${4: Type}\n\n@return: ${5: Description}\n@rtype : ${6: Type}\n\n@raise e: ${0: Description}\n\"\"\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "epydoc": true
+      }
+    },
+    {
+      "content": "def ${1:__init__}(self, *args, **kwargs):\n\tsuper(${0:ClassName}, self).$1(*args, **kwargs)",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dol": true
+      }
+    },
+    {
+      "content": "self.${1:var_name} = kwargs.get('$1', ${2:None})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "kwg": true
+      }
+    },
+    {
+      "content": "${1:var_name} = kwargs.get('$1', ${2:None})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lkwg": true
+      }
+    },
+    {
+      "content": "*args${1:,}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "args": true
+      }
+    },
+    {
+      "content": "**kwargs${1:,}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "kwargs": true
+      }
+    },
+    {
+      "content": "*args, **kwargs${1:,}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "akw": true
+      }
+    },
+    {
+      "content": "[${1} for ${2} in ${3:${VISUAL}}]${0}",
+      "doc": "",
+      "label": "list comprehension",
+      "matches": {
+        "lcp": true
+      }
+    },
+    {
+      "content": "{${1}: ${2} for ${3} in ${4:${VISUAL}}}${0}",
+      "doc": "",
+      "label": "dict comprehension",
+      "matches": {
+        "dcp": true
+      }
+    },
+    {
+      "content": "{${1} for ${2} in ${3:${VISUAL}}}${0}",
+      "doc": "",
+      "label": "set comprehension",
+      "matches": {
+        "scp": true
+      }
+    },
+    {
+      "content": "def __len__(self):\n\t${1:pass}\n\ndef __getitem__(self, key):\n\t${2:pass}\n\ndef __setitem__(self, key, value):\n\t${3:pass}\n\ndef __delitem__(self, key):\n\t${4:pass}\n\ndef __iter__(self):\n\t${5:pass}\n\ndef __reversed__(self):\n\t${6:pass}\n\ndef __contains__(self, item):\n\t${7:pass}",
+      "doc": "",
+      "label": "methods for emulating a container type",
+      "matches": {
+        "contain": true
+      }
+    },
+    {
+      "content": "def __enter__(self):\n\t${1:pass}\n\ndef __exit__(self, exc_type, exc_value, traceback):\n\t${2:pass}",
+      "doc": "",
+      "label": "context manager methods",
+      "matches": {
+        "context": true
+      }
+    },
+    {
+      "content": "def __getattr__(self, name):\n\t${1:pass}\n\ndef __setattr__(self, name, value):\n\t${2:pass}\n\ndef __delattr__(self, name):\n\t${3:pass}",
+      "doc": "",
+      "label": "methods for customizing attribute access",
+      "matches": {
+        "attr": true
+      }
+    },
+    {
+      "content": "def __get__(self, instance, owner):\n\t${1:pass}\n\ndef __set__(self, instance, value):\n\t${2:pass}\n\ndef __delete__(self, instance):\n\t${3:pass}",
+      "doc": "",
+      "label": "methods implementing descriptors",
+      "matches": {
+        "desc": true
+      }
+    },
+    {
+      "content": "def __eq__(self, other):\n\t${1:pass}\n\ndef __ne__(self, other):\n\t${2:pass}\n\ndef __lt__(self, other):\n\t${3:pass}\n\ndef __le__(self, other):\n\t${4:pass}\n\ndef __gt__(self, other):\n\t${5:pass}\n\ndef __ge__(self, other):\n\t${6:pass}\n\ndef __cmp__(self, other):\n\t${7:pass}",
+      "doc": "",
+      "label": "methods implementing rich comparison",
+      "matches": {
+        "cmp": true
+      }
+    },
+    {
+      "content": "def __repr__(self):\n\t${1:pass}\n\ndef __str__(self):\n\t${2:pass}\n\ndef __unicode__(self):\n\t${3:pass}",
+      "doc": "",
+      "label": "methods implementing string representation",
+      "matches": {
+        "repr": true
+      }
+    },
+    {
+      "content": "def __add__(self, other):\n\t${1:pass}\n\ndef __sub__(self, other):\n\t${2:pass}\n\ndef __mul__(self, other):\n\t${3:pass}\n\ndef __div__(self, other):\n\t${4:pass}\n\ndef __truediv__(self, other):\n\t${5:pass}\n\ndef __floordiv__(self, other):\n\t${6:pass}\n\ndef __mod__(self, other):\n\t${7:pass}\n\ndef __divmod__(self, other):\n\t${8:pass}\n\ndef __pow__(self, other):\n\t${9:pass}\n\ndef __lshift__(self, other):\n\t${10:pass}\n\ndef __rshift__(self, other):\n\t${11:pass}\n\ndef __and__(self, other):\n\t${12:pass}\n\ndef __xor__(self, other):\n\t${13:pass}\n\ndef __or__(self, other):\n\t${14:pass}\n\ndef __neg__(self):\n\t${15:pass}\n\ndef __pos__(self):\n\t${16:pass}\n\ndef __abs__(self):\n\t${17:pass}\n\ndef __invert__(self):\n\t${18:pass}\n\ndef __complex__(self):\n\t${19:pass}\n\ndef __int__(self):\n\t${20:pass}\n\ndef __long__(self):\n\t${21:pass}\n\ndef __float__(self):\n\t${22:pass}\n\ndef __oct__(self):\n\t${22:pass}\n\ndef __hex__(self):\n\t${23:pass}\n\ndef __index__(self):\n\t${24:pass}\n\ndef __coerce__(self, other):\n\t${25:pass}",
+      "doc": "",
+      "label": "methods for emulating a numeric type",
+      "matches": {
+        "numeric": true
+      }
+    },
+    {
+      "content": "print($0)",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pr": true
+      }
+    },
+    {
+      "content": "print(\"$0\")",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "prs": true
+      }
+    },
+    {
+      "content": "print(f\"$0\")",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "prf": true
+      }
+    },
+    {
+      "content": "print($0, file=${1:sys.stderr})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fpr": true
+      }
+    },
+    {
+      "content": "print(\"$0\", file=${1:sys.stderr})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fprs": true
+      }
+    },
+    {
+      "content": "print(f\"$0\", file=${1:sys.stderr})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fprf": true
+      }
+    }
+  ]
+}

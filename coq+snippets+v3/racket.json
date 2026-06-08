@@ -1,0 +1,341 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "#lang racket",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "#r": true
+      }
+    },
+    {
+      "content": "#lang typed/racket",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "#tr": true
+      }
+    },
+    {
+      "content": "#lang racket/gui",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "#rg": true
+      }
+    },
+    {
+      "content": "#lang scribble/base",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "#sb": true
+      }
+    },
+    {
+      "content": "#lang datalog",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "#d": true
+      }
+    },
+    {
+      "content": "#lang web-server/insta",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "#wi": true
+      }
+    },
+    {
+      "content": "(define ${1} ${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "def": true
+      }
+    },
+    {
+      "content": "(define (${1})\n\t${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defun": true
+      }
+    },
+    {
+      "content": "(define-values (${1}) (${0}))",
+      "doc": "",
+      "label": "define-values",
+      "matches": {
+        "defv": true
+      }
+    },
+    {
+      "content": "(define/match (${1})\n  [(${2}) ${3}]\n\t${0})",
+      "doc": "",
+      "label": "define/match",
+      "matches": {
+        "defm": true
+      }
+    },
+    {
+      "content": "(define-syntax (${1})\n\t${0})",
+      "doc": "",
+      "label": "define-syntax",
+      "matches": {
+        "defs": true
+      }
+    },
+    {
+      "content": "(if ${1} ${2} ${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "(if (not ${1}) ${2} ${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ifn": true
+      }
+    },
+    {
+      "content": "(if ${1}\n\t(let (${2})\n\t\t${3})\n\t${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ifl": true
+      }
+    },
+    {
+      "content": "(if (not ${1})\n\t(let (${2})\n\t\t${3})\n\t${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ifnl": true
+      }
+    },
+    {
+      "content": "(if ${1}\n\t(begin\n\t\t${2})\n\t${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ifb": true
+      }
+    },
+    {
+      "content": "(if (not ${1})\n\t(begin\n\t\t${2})\n\t${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ifnb": true
+      }
+    },
+    {
+      "content": "(when ${1}\n\t${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "when": true
+      }
+    },
+    {
+      "content": "(unless ${1} ${2} ${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "unless": true
+      }
+    },
+    {
+      "content": "(cond\n\t[(${1}) ${0}])",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cond": true
+      }
+    },
+    {
+      "content": "(cond\n\t[(${1}) ${2}]\n\t[else ${0}])",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "conde": true
+      }
+    },
+    {
+      "content": "(case ${1}\n\t[(${2}) ${0}])",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "(match ${1}\n\t[(${2}) ${0}])",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "match": true
+      }
+    },
+    {
+      "content": "(for ([${1}])\n\t${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "(for/list ([${1}])\n\t${0})",
+      "doc": "",
+      "label": "for/list",
+      "matches": {
+        "forl": true
+      }
+    },
+    {
+      "content": "(for/fold\n\t([${1}])\n\t([${2}])\n\t${0})",
+      "doc": "",
+      "label": "for/fold",
+      "matches": {
+        "forf": true
+      }
+    },
+    {
+      "content": "(for/foldr\n\t([${1}])\n\t([${2}])\n\t${0})",
+      "doc": "",
+      "label": "for/foldr",
+      "matches": {
+        "forfr": true
+      }
+    },
+    {
+      "content": "(for/and ([${1}])\n\t${0})",
+      "doc": "",
+      "label": "for/and",
+      "matches": {
+        "fora": true
+      }
+    },
+    {
+      "content": "(for/or ([${1}])\n\t${0})",
+      "doc": "",
+      "label": "for/or",
+      "matches": {
+        "foro": true
+      }
+    },
+    {
+      "content": "(for/sum ([${1}])\n\t${0})",
+      "doc": "",
+      "label": "for/sum",
+      "matches": {
+        "fors": true
+      }
+    },
+    {
+      "content": "(for/product ([${1}])\n\t${0})",
+      "doc": "",
+      "label": "for/product",
+      "matches": {
+        "forp": true
+      }
+    },
+    {
+      "content": "(for/first ([${1}])\n\t${0})",
+      "doc": "",
+      "label": "for/first",
+      "matches": {
+        "forfi": true
+      }
+    },
+    {
+      "content": "(for/last ([${1}])\n\t${0})",
+      "doc": "",
+      "label": "for/last",
+      "matches": {
+        "forla": true
+      }
+    },
+    {
+      "content": "(lambda (${1}) ${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lambda": true
+      }
+    },
+    {
+      "content": "(apply ${1} ${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "apply": true
+      }
+    },
+    {
+      "content": "(map ${1} ${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "map": true
+      }
+    },
+    {
+      "content": "(filter ${1} ${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "filter": true
+      }
+    },
+    {
+      "content": "(require ${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "req": true
+      }
+    },
+    {
+      "content": "(provide ${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "prov": true
+      }
+    },
+    {
+      "content": "(let ([${1}]) ${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "let": true
+      }
+    },
+    {
+      "content": "(let/cc here (set! ${1} here) ${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "letcc": true
+      }
+    },
+    {
+      "content": "(begin\n\t${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "begin": true
+      }
+    }
+  ]
+}

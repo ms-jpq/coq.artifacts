@@ -1,0 +1,61 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "<NuxtErrorBoundary>\n</NuxtErrorBoundary>",
+      "doc": "The <NuxtErrorBoundary> component handles client-side errors happening in its default slot, using Vue's onErrorCaptured hook.",
+      "label": "NuxtErrorBoundary",
+      "matches": {
+        "NuxtErrorBoundary": true
+      }
+    },
+    {
+      "content": "<NuxtWelcome />",
+      "doc": "The <NuxtWelcome> component greets users in new projects made from the starter template. It includes links to the Nuxt documentation, source code, and social media accounts.",
+      "label": "NuxtWelcome",
+      "matches": {
+        "NuxtWelcome": true
+      }
+    },
+    {
+      "content": "<NuxtLink to=\"$1\">$0</NuxtLink>",
+      "doc": "Nuxt provides <NuxtLink> component to handle any kind of links within your application.",
+      "label": "NuxtLink",
+      "matches": {
+        "NuxtLink": true
+      }
+    },
+    {
+      "content": "<NuxtLayout>\n</NuxtLayout>",
+      "doc": "<NuxtLayout /> can be used to override default layout on app.vue, error.vue or even page components found in the /pages directory.",
+      "label": "NuxtLayout",
+      "matches": {
+        "NuxtLayout": true
+      }
+    },
+    {
+      "content": "<NuxtLoadingIndicator />",
+      "doc": "The <NuxtLoadingIndicator> component displays a progress bar on page navigation.",
+      "label": "NuxtLoadingIndicator",
+      "matches": {
+        "NuxtLoadingIndicator": true
+      }
+    },
+    {
+      "content": "<NuxtPage />",
+      "doc": "<NuxtPage> is a built-in component that comes with Nuxt. NuxtPage is required to display top-level or nested pages located in the pages/ directory.",
+      "label": "NuxtPage",
+      "matches": {
+        "NuxtPage": true
+      }
+    },
+    {
+      "content": "<ClientOnly>\n</ClientOnly>",
+      "doc": "The <ClientOnly> component renders its slot only in client-side. To import a component only on the client, register the component in a client-side only plugin.",
+      "label": "ClientOnly",
+      "matches": {
+        "ClientOnly": true
+      }
+    }
+  ]
+}

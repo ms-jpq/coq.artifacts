@@ -1,0 +1,366 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "pub external fn ${1:function_name}(${2}) -> ${3:Nil} = \"${4}\" \"${0}\"",
+      "doc": "public external function",
+      "label": "Public External Function",
+      "matches": {
+        "pexfn": true,
+        "pub": true,
+        "pub external": true,
+        "pub external fn": true
+      }
+    },
+    {
+      "content": "pub fn ${1:name}_test() {\n\t${0}\n}",
+      "doc": "test function",
+      "label": "Test Function",
+      "matches": {
+        "test": true
+      }
+    },
+    {
+      "content": "fn(${1}) { ${0} }",
+      "doc": "anonymous function",
+      "label": "Anonymous Function",
+      "matches": {
+        "af": true,
+        "fn": true
+      }
+    },
+    {
+      "content": "import ${0:gleam/result}",
+      "doc": "import",
+      "label": "Import",
+      "matches": {
+        "im": true,
+        "import": true
+      }
+    },
+    {
+      "content": "let ${1} = ${0}",
+      "doc": "let assignment",
+      "label": "Let assignment",
+      "matches": {
+        "let": true
+      }
+    },
+    {
+      "content": "import ${1:gleam/result}.{${0}}",
+      "doc": "import unqualified",
+      "label": "Import Unqualified",
+      "matches": {
+        "im.": true,
+        "import": true
+      }
+    },
+    {
+      "content": "type ${1:Name} {\n\t${0:$1}\n}",
+      "doc": "type declaration",
+      "label": "Type",
+      "matches": {
+        "type": true
+      }
+    },
+    {
+      "content": "const ${1} = ${0}",
+      "doc": "constant",
+      "label": "Constant",
+      "matches": {
+        "const": true
+      }
+    },
+    {
+      "content": "|> ${0}",
+      "doc": "Pipe |>",
+      "label": "Pipe",
+      "matches": {
+        "p": true,
+        "|>": true
+      }
+    },
+    {
+      "content": "use ${1} <- ${0}",
+      "doc": "use expression",
+      "label": "Use expression",
+      "matches": {
+        "use": true
+      }
+    },
+    {
+      "content": "#(${0})",
+      "doc": "tuple #()",
+      "label": "Tuple",
+      "matches": {
+        "#": true,
+        "tuple": true
+      }
+    },
+    {
+      "content": "case ${1} {\n\t${2} -> ${0}\n}",
+      "doc": "case expression",
+      "label": "Case Expression",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "{\n\t${0}\n}",
+      "doc": "block",
+      "label": "Block",
+      "matches": {
+        "bl": true
+      }
+    },
+    {
+      "content": "should.equal(${0})",
+      "doc": "should.equal",
+      "label": "Should Equal",
+      "matches": {
+        "seq": true,
+        "should": true
+      }
+    },
+    {
+      "content": "pub type ${1:Name} {\n\t${0:$1}\n}",
+      "doc": "public type declaration",
+      "label": "Public Type",
+      "matches": {
+        "pty": true,
+        "pub": true,
+        "pub type": true
+      }
+    },
+    {
+      "content": "pub fn ${1:function_name}(${2}) -> ${3:Nil} {\n\t${0:todo}\n}",
+      "doc": "public function",
+      "label": "Public Function",
+      "matches": {
+        "pub": true,
+        "pub fn": true
+      }
+    },
+    {
+      "content": "pub const ${1} = ${0}",
+      "doc": "public constant",
+      "label": "Public Constant",
+      "matches": {
+        "pub": true,
+        "pub const": true
+      }
+    },
+    {
+      "content": "should.be_false(${0})",
+      "doc": "should.be_false",
+      "label": "Should Be False",
+      "matches": {
+        "sfalse": true,
+        "should": true,
+        "should.b": true
+      }
+    },
+    {
+      "content": "should.be_true(${0})",
+      "doc": "should.be_true",
+      "label": "Should Be True",
+      "matches": {
+        "should": true,
+        "should.b": true,
+        "strue": true
+      }
+    },
+    {
+      "content": "@external(${1:erlang}, \"${2}\", \"${0}\")",
+      "doc": "external attribute",
+      "label": "External attribute",
+      "matches": {
+        "external": true
+      }
+    },
+    {
+      "content": "let assert ${1} = ${0}",
+      "doc": "let assert assignment",
+      "label": "Let Assert assignment",
+      "matches": {
+        "leta": true
+      }
+    },
+    {
+      "content": "fn ${1:function_name}(${2}) -> ${3:Nil} {\n\t${0:todo}\n}",
+      "doc": "private function",
+      "label": "Private Function",
+      "matches": {
+        "fn": true
+      }
+    },
+    {
+      "content": "fn ${1:function_name}(${2}) -> ${3:Nil} {\n  ${0:${VISUAL:todo}}\n}",
+      "doc": "",
+      "label": "fn",
+      "matches": {
+        "fn": true
+      }
+    },
+    {
+      "content": "pub fn ${1:function_name}(${2}) -> ${3:Nil} {\n  ${0:${VISUAL:todo}}\n}",
+      "doc": "",
+      "label": "pub fn",
+      "matches": {
+        "pfn": true
+      }
+    },
+    {
+      "content": "pub fn ${1:name}_test() {\n  ${0}\n}",
+      "doc": "",
+      "label": "test fn",
+      "matches": {
+        "test": true
+      }
+    },
+    {
+      "content": "fn(${1}) { ${0:${VISUAL}} }",
+      "doc": "",
+      "label": "anonymous fn",
+      "matches": {
+        "af": true
+      }
+    },
+    {
+      "content": "let ${1} = ${0}",
+      "doc": "",
+      "label": "let binding",
+      "matches": {
+        "let": true
+      }
+    },
+    {
+      "content": "let ${1} = ${0}",
+      "doc": "",
+      "label": "let binding",
+      "matches": {
+        "l": true
+      }
+    },
+    {
+      "content": "let assert ${1} = ${0}",
+      "doc": "",
+      "label": "assert binding",
+      "matches": {
+        "as": true
+      }
+    },
+    {
+      "content": "-> ${0}",
+      "doc": "",
+      "label": "->",
+      "matches": {
+        "-": true
+      }
+    },
+    {
+      "content": "case ${1} {\n  ${2} -> ${0}\n}",
+      "doc": "",
+      "label": "case expression",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "type ${1:Name} {\n  ${0:$1}\n}",
+      "doc": "",
+      "label": "type",
+      "matches": {
+        "ty": true
+      }
+    },
+    {
+      "content": "pub type ${1:Name} {\n  ${0:$1}\n}",
+      "doc": "",
+      "label": "pub type",
+      "matches": {
+        "pty": true
+      }
+    },
+    {
+      "content": "type ${1:Name} =\n  ${0:$1}",
+      "doc": "",
+      "label": "type alias",
+      "matches": {
+        "tya": true
+      }
+    },
+    {
+      "content": "pub type ${1:Name} =\n  ${0:$1}",
+      "doc": "",
+      "label": "pub type alias",
+      "matches": {
+        "ptya": true
+      }
+    },
+    {
+      "content": "import ${0:gleam/result}",
+      "doc": "",
+      "label": "import",
+      "matches": {
+        "im": true
+      }
+    },
+    {
+      "content": "import ${1:gleam/result}.{${0}}",
+      "doc": "",
+      "label": "import exposing",
+      "matches": {
+        "im.": true
+      }
+    },
+    {
+      "content": "|> ${0}",
+      "doc": "",
+      "label": "|>",
+      "matches": {
+        "p": true
+      }
+    },
+    {
+      "content": "{\n  ${0:${VISUAL}}\n}",
+      "doc": "",
+      "label": "block",
+      "matches": {
+        "bl": true
+      }
+    },
+    {
+      "content": "fn(${1}) -> ${0}",
+      "doc": "",
+      "label": "fn(Type) -> Type",
+      "matches": {
+        "tf": true
+      }
+    },
+    {
+      "content": "should.equal(${0:${VISUAL}})",
+      "doc": "",
+      "label": "should.equal",
+      "matches": {
+        "seq": true
+      }
+    },
+    {
+      "content": "should.be_true(${0:${VISUAL}})",
+      "doc": "",
+      "label": "should.be_true",
+      "matches": {
+        "strue": true
+      }
+    },
+    {
+      "content": "should.be_false(${0:${VISUAL}})",
+      "doc": "",
+      "label": "should.be_false",
+      "matches": {
+        "sfalse": true
+      }
+    }
+  ]
+}

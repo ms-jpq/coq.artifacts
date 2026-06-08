@@ -1,0 +1,464 @@
+{
+  "extends": [
+    "erb",
+    "html"
+  ],
+  "snippets": [
+    {
+      "content": "<%= ${1:TARGET} %>${2}",
+      "doc": "",
+      "label": "<%= %>",
+      "matches": {
+        "ruby_print": true
+      }
+    },
+    {
+      "content": "<% ${1:TARGET} %>${2}",
+      "doc": "",
+      "label": "<% %>",
+      "matches": {
+        "ruby_code": true
+      }
+    },
+    {
+      "content": "<%= ${1:TARGET} -%>${2}",
+      "doc": "",
+      "label": "<%= -%>",
+      "matches": {
+        "ruby_print_nonl": true
+      }
+    },
+    {
+      "content": "<% ${1:TARGET} -%>${2}",
+      "doc": "",
+      "label": "<% -%>",
+      "matches": {
+        "ruby_code_nonl": true
+      }
+    },
+    {
+      "content": "<%# ${1:TARGET} %>${2}",
+      "doc": "",
+      "label": "<%# %>",
+      "matches": {
+        "comment": true
+      }
+    },
+    {
+      "content": "<% ${0} %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rc": true
+      }
+    },
+    {
+      "content": "<%= ${1} %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rce": true
+      }
+    },
+    {
+      "content": "<% ${0} %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "%": true
+      }
+    },
+    {
+      "content": "<%= ${1} %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "=": true
+      }
+    },
+    {
+      "content": "<% end %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "end": true
+      }
+    },
+    {
+      "content": "<% ${1}.each do |${2}| %>\n\t${0}\n<% end %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ead": true
+      }
+    },
+    {
+      "content": "<% for ${2:item} in ${1} %>\n\t${0}\n<% end %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "<%= render partial: '${0:item}' %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rp": true
+      }
+    },
+    {
+      "content": "<%= render partial: '${1:item}', locals: { :${2:name} => '${3:value}'${0} } %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rpl": true
+      }
+    },
+    {
+      "content": "<%= render partial: '${1:item}', status: ${0:500} %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rps": true
+      }
+    },
+    {
+      "content": "<%= render partial: '${1:item}', collection: ${0:items} %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rpc": true
+      }
+    },
+    {
+      "content": "<%= link_to '${1:link text...}', action: '${0:index}' %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lia": true
+      }
+    },
+    {
+      "content": "<%= link_to '${1:link text...}', action: '${2:edit}', id: ${0:@item} %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "liai": true
+      }
+    },
+    {
+      "content": "<%= link_to '${1:link text...}', controller: '${0:items}' %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lic": true
+      }
+    },
+    {
+      "content": "<%= link_to '${1:link text...}', controller: '${2:items}', action: '${0:index}' %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lica": true
+      }
+    },
+    {
+      "content": "<%= link_to '${1:link text...}', controller: '${2:items}', action: '${3:edit}', id: ${0:@item} %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "licai": true
+      }
+    },
+    {
+      "content": "<%= link_to '${1:link text...}' do %>\n<% end %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lib": true
+      }
+    },
+    {
+      "content": "<%= yield ${1::content_symbol} %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yield": true
+      }
+    },
+    {
+      "content": "<% content_for :${1:head} do %>\n\t${0}\n<% end %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "conf": true
+      }
+    },
+    {
+      "content": "<%= collection_select(:${1:object}, :${2:method}, ${3:collection}, :${4:value_method}, :${5:text_method}, options = {${0:prompt: true}}) %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cs": true
+      }
+    },
+    {
+      "content": "<%= content_tag '${1:DIV}', ${2:content}${0:,options} %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ct": true
+      }
+    },
+    {
+      "content": "<%= form_for @${1:model} do |f| %>\n\t${0}\n<% end %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ff": true
+      }
+    },
+    {
+      "content": "<%= ${1:f}.input :${0:attribute} %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ffi": true
+      }
+    },
+    {
+      "content": "<%= ${1:f}.check_box :${0:attribute} %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ffcb": true
+      }
+    },
+    {
+      "content": "<% error_messages_for :${1:model} %>\n\n<%= form_for @${2:model} do |f| %>\n\t${0}\n<% end %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ffe": true
+      }
+    },
+    {
+      "content": "<%= ${1:f}.file_field :${0:attribute} %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ffff": true
+      }
+    },
+    {
+      "content": "<%= ${1:f}.hidden_field :${0:attribute} %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ffhf": true
+      }
+    },
+    {
+      "content": "<%= ${1:f}.label :${2:attribute}, '${0:$2}' %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ffl": true
+      }
+    },
+    {
+      "content": "<%= ${1:f}.password_field :${0:attribute} %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ffpf": true
+      }
+    },
+    {
+      "content": "<%= ${1:f}.radio_button :${2:attribute}, :${0:tag_value} %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ffrb": true
+      }
+    },
+    {
+      "content": "<%= ${1:f}.submit \"${0:submit}\" %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ffs": true
+      }
+    },
+    {
+      "content": "<%= ${1:f}.text_area :${0:attribute} %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ffta": true
+      }
+    },
+    {
+      "content": "<%= ${1:f}.text_field :${0:attribute} %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fftf": true
+      }
+    },
+    {
+      "content": "<%= ${1:f}.collection_select(:${2:method}, ${3:collection}, :${4:value_method}, :${5:text_method}, options = {${0:prompt: true}}) %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fcs": true
+      }
+    },
+    {
+      "content": "<%= fields_for :${1:model}, @$1 do |${2:f}| %>\n\t${0}\n<% end %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fields": true
+      }
+    },
+    {
+      "content": "I18n.t('${1:type.key}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "i18": true
+      }
+    },
+    {
+      "content": "<%= image_tag \"${1}\"${0} %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "it": true
+      }
+    },
+    {
+      "content": "<%= javascript_include_tag ${0::all} %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "jit": true
+      }
+    },
+    {
+      "content": "<%= javascript_include_tag \"${0}\" %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "jsit": true
+      }
+    },
+    {
+      "content": "<%= link_to ${1:model}.${2:name}, ${3:$1}_path(${0:$1}) %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lim": true
+      }
+    },
+    {
+      "content": "<%= link_to \"${1:Link text...}\", ${0:model}s_path %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lipp": true
+      }
+    },
+    {
+      "content": "<%= link_to \"${1:name}\", ${0:dest} %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lt": true
+      }
+    },
+    {
+      "content": "<%= number_to_currency(${1}) %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ntc": true
+      }
+    },
+    {
+      "content": "<%= options_from_collection_for_select ${1:collection}, ${2:value_method}, ${3:text_method}, ${0:selected_value} %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ofcfs": true
+      }
+    },
+    {
+      "content": "<%= options_for_select ${1:collection}, ${2:value_method} %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ofs": true
+      }
+    },
+    {
+      "content": "<%= render file: \"${1:file}\"${0} %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rf": true
+      }
+    },
+    {
+      "content": "<%= render template: \"${1:file}\"${0} %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rt": true
+      }
+    },
+    {
+      "content": "<%= stylesheet_link_tag ${1::all}, cache: ${0:true} %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "slt": true
+      }
+    },
+    {
+      "content": "<%= stylesheet_link_tag \"${0}\" %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sslt": true
+      }
+    },
+    {
+      "content": "<% if ${1} %>\n\t${0:${VISUAL}}\n<% end %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "<% if ${1} %>\n\t${2}\n<% else %>\n\t${0}\n<% end %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "<% require 'pry'; binding.pry %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pry": true
+      }
+    }
+  ]
+}

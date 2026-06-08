@@ -1,0 +1,157 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "#!/usr/bin/awk -f",
+      "doc": "",
+      "label": "#!/usr/bin/awk -f",
+      "matches": {
+        "#!": true
+      }
+    },
+    {
+      "content": "@include \"${1}\"${0}",
+      "doc": "",
+      "label": "@include",
+      "matches": {
+        "inc": true
+      }
+    },
+    {
+      "content": "@load \"${1}\"${0}",
+      "doc": "",
+      "label": "@load",
+      "matches": {
+        "loa": true
+      }
+    },
+    {
+      "content": "BEGIN {\n\t${0}\n}",
+      "doc": "",
+      "label": "BEGIN { ... }",
+      "matches": {
+        "beg": true
+      }
+    },
+    {
+      "content": "BEGINFILE {\n\t${0}\n}",
+      "doc": "",
+      "label": "BEGINFILE { ... }",
+      "matches": {
+        "begf": true
+      }
+    },
+    {
+      "content": "END {\n\t${0}\n}",
+      "doc": "",
+      "label": "END { ... }",
+      "matches": {
+        "end": true
+      }
+    },
+    {
+      "content": "ENDFILE {\n\t${0}\n}",
+      "doc": "",
+      "label": "ENDFILE { ... }",
+      "matches": {
+        "endf": true
+      }
+    },
+    {
+      "content": "printf(\"${1:%s}\\n\", ${2})${0}",
+      "doc": "",
+      "label": "printf",
+      "matches": {
+        "printf": true
+      }
+    },
+    {
+      "content": "IGNORECASE = ${1:1}",
+      "doc": "",
+      "label": "IGNORECASE",
+      "matches": {
+        "ign": true
+      }
+    },
+    {
+      "content": "if (${1}) {\n\t${0:${VISUAL}}\n}",
+      "doc": "",
+      "label": "if {...}",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "if (${1}) {\n\t${2:${VISUAL}}\n} else {\n\t${0}\n}",
+      "doc": "",
+      "label": "if ... else ...",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "else if (${1}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "else if ...",
+      "matches": {
+        "eif": true
+      }
+    },
+    {
+      "content": "else {\n\t${0}\n}",
+      "doc": "",
+      "label": "else {...}",
+      "matches": {
+        "el": true
+      }
+    },
+    {
+      "content": "while (${1}) {\n\t${2}\n}",
+      "doc": "",
+      "label": "while",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "do {\n\t${0}\n} while (${1})",
+      "doc": "",
+      "label": "do ... while",
+      "matches": {
+        "do": true
+      }
+    },
+    {
+      "content": "for (${2:i} = 0; i < ${1:n}; ${3:++i}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "for",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "for (${1:i} in ${2:array}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "for each",
+      "matches": {
+        "fore": true
+      }
+    },
+    {
+      "content": "switch (${1}) {\ncase ${2}:\n\t${3}\n\tbreak\ndefault:\n\t${0}\n\tbreak\n}",
+      "doc": "",
+      "label": "switch",
+      "matches": {
+        "sw": true
+      }
+    },
+    {
+      "content": "case ${1}:\n\t${0}\n\tbreak",
+      "doc": "",
+      "label": "case",
+      "matches": {
+        "case": true
+      }
+    }
+  ]
+}

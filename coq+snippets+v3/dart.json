@@ -1,0 +1,360 @@
+{
+  "extends": [
+    "dart-flutter",
+    "flutter"
+  ],
+  "snippets": [
+    {
+      "content": "for (var ${1:item} in ${2:items}) {\n  $0\n}",
+      "doc": "Insert a for-in loop.",
+      "label": "for in",
+      "matches": {
+        "fori": true
+      }
+    },
+    {
+      "content": "if ($1) {\n  $0\n} else {\n}",
+      "doc": "Insert an if statement with an else block.",
+      "label": "if else",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "try {\n  $0\n} catch (${1:e}) {\n}",
+      "doc": "Insert a try/catch block.",
+      "label": "try",
+      "matches": {
+        "try": true
+      }
+    },
+    {
+      "content": "enum ${1:Name} {\n  $0\n}",
+      "doc": "Insert a enum.",
+      "label": "enum",
+      "matches": {
+        "enum": true
+      }
+    },
+    {
+      "content": "group('$1', () {\n  $0\n});",
+      "doc": "Insert a test group block.",
+      "label": "group",
+      "matches": {
+        "group": true
+      }
+    },
+    {
+      "content": "class ${1:Name} {\n  $0\n}",
+      "doc": "Insert a class definition.",
+      "label": "class",
+      "matches": {
+        "class": true
+      }
+    },
+    {
+      "content": "switch ($1) {\n  case $2:\n    $0\n    break;\n  default:\n}",
+      "doc": "Insert a switch statement.",
+      "label": "switch case",
+      "matches": {
+        "switch": true
+      }
+    },
+    {
+      "content": "typedef ${1:Type} ${2:Name}(${3:params});",
+      "doc": "Insert a typedef.",
+      "label": "typedef",
+      "matches": {
+        "typedef": true
+      }
+    },
+    {
+      "content": "while ($1) {\n  $0\n}",
+      "doc": "Insert a while loop.",
+      "label": "while",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "void main(List<String> args) {\n  $0\n}",
+      "doc": "Insert a main function, used as an entry point.",
+      "label": "main",
+      "matches": {
+        "main": true
+      }
+    },
+    {
+      "content": "for (var i = 0; i < ${1:count}; i++) {\n  $0\n}",
+      "doc": "Insert a for loop.",
+      "label": "for",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "${3:void} ${1:name}(${2:args}) {\n  $0\n}",
+      "doc": "Insert a function definition.",
+      "label": "fun",
+      "matches": {
+        "fun": true
+      }
+    },
+    {
+      "content": "test('$1', () {\n  $0\n});",
+      "doc": "Insert a test block.",
+      "label": "test",
+      "matches": {
+        "test": true
+      }
+    },
+    {
+      "content": "if ($1) {\n  $0\n}",
+      "doc": "Insert an if statement.",
+      "label": "if",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "do {\n  $0\n} while ($1);",
+      "doc": "Insert a do-while loop.",
+      "label": "do while",
+      "matches": {
+        "do": true
+      }
+    },
+    {
+      "content": "(${1}) {${2}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "af": true
+      }
+    },
+    {
+      "content": "print(${1});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pr": true
+      }
+    },
+    {
+      "content": "debugger();\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "deb": true
+      }
+    },
+    {
+      "content": "library ${1};\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lib": true
+      }
+    },
+    {
+      "content": "import 'package:${1}/${2}.dart';\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "im": true
+      }
+    },
+    {
+      "content": "new RegExp(r'${1}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rgx": true
+      }
+    },
+    {
+      "content": "var ${1} = ${2};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "var": true
+      }
+    },
+    {
+      "content": "main() {\n  ${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "main": true
+      }
+    },
+    {
+      "content": "static ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "st": true
+      }
+    },
+    {
+      "content": "final ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fi": true
+      }
+    },
+    {
+      "content": "return ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "re": true
+      }
+    },
+    {
+      "content": "break;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "br": true
+      }
+    },
+    {
+      "content": "throw ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "th": true
+      }
+    },
+    {
+      "content": "class ${1:`vim_snippets#Filename(\"\", \"untitled\")`} ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cl": true
+      }
+    },
+    {
+      "content": "interface ${1:`vim_snippets#Filename(\"\", \"untitled\")`} ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "in": true
+      }
+    },
+    {
+      "content": "implements ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "imp": true
+      }
+    },
+    {
+      "content": "extends ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ext": true
+      }
+    },
+    {
+      "content": "if (${1:true}) {\n  ${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "if (${1:true}) {\n  ${2}\n} else {\n  ${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "else",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "el": true
+      }
+    },
+    {
+      "content": "switch (${1}) {\n  ${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sw": true
+      }
+    },
+    {
+      "content": "case ${1}:\n  ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cs": true
+      }
+    },
+    {
+      "content": "default:\n  ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "de": true
+      }
+    },
+    {
+      "content": "for (final ${2:item} in ${1:itemList}) {\n  ${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fore": true
+      }
+    },
+    {
+      "content": "while ($1) {\n  ${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "do {\n  ${0}\n} while ($0);",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dowh": true
+      }
+    },
+    {
+      "content": "assert($0);",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "as": true
+      }
+    },
+    {
+      "content": "try {\n  ${0:${VISUAL}}\n} catch (${1:Exception e}) {\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "try": true
+      }
+    },
+    {
+      "content": "try {\n  ${0:${VISUAL}}\n} catch (${1:Exception e}) {\n} finally {\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tryf": true
+      }
+    }
+  ]
+}

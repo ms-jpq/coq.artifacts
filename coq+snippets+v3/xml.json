@@ -1,0 +1,29 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "xml": true
+      }
+    },
+    {
+      "content": "<${1:}>\n\t${2}\n</$1>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "t": true
+      }
+    },
+    {
+      "content": "<${1:}>${2}</$1>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ti": true
+      }
+    }
+  ]
+}

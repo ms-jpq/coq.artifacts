@@ -1,0 +1,181 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "require \"${1}\"",
+      "doc": "",
+      "label": "require",
+      "matches": {
+        "req": true
+      }
+    },
+    {
+      "content": "case $1\nwhen $2\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "when $1\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "when": true
+      }
+    },
+    {
+      "content": "def ${1:method_name}\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "def": true
+      }
+    },
+    {
+      "content": "private def ${1:method_name}\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pdef": true
+      }
+    },
+    {
+      "content": "if $1\n\t${0:${VISUAL}}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "if $1\n\t${2:${VISUAL}}\nelse\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "while $1\n\t${0:${VISUAL}}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "getter ${0:name}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "r": true
+      }
+    },
+    {
+      "content": "getter! ${0:name}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "r!": true
+      }
+    },
+    {
+      "content": "getter? ${0:name}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "r?": true
+      }
+    },
+    {
+      "content": "setter ${0:name}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "w": true
+      }
+    },
+    {
+      "content": "setter! ${0:name}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "w!": true
+      }
+    },
+    {
+      "content": "setter? ${0:name}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "w?": true
+      }
+    },
+    {
+      "content": "property ${0:name}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rw": true
+      }
+    },
+    {
+      "content": "property! ${0:name}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rw!": true
+      }
+    },
+    {
+      "content": "property? ${0:name}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rw?": true
+      }
+    },
+    {
+      "content": "def self.${1:class_method_name}\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defs": true
+      }
+    },
+    {
+      "content": "def initialize(${1})\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defi": true
+      }
+    },
+    {
+      "content": "do\n\t${0:${VISUAL}}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "do": true
+      }
+    },
+    {
+      "content": "do |${1:v}|\n\t${2}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dov": true
+      }
+    },
+    {
+      "content": "it \"${1}\" do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "it": true
+      }
+    }
+  ]
+}

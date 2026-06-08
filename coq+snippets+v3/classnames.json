@@ -1,0 +1,37 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "const ${1:cx} = ${2:classNames}.bind(styles);",
+      "doc": "",
+      "label": "classnames-bind-usage",
+      "matches": {
+        "classnames bind usage": true
+      }
+    },
+    {
+      "content": "import ${1:classNames} from 'classnames/bind';",
+      "doc": "",
+      "label": "classnames-import-bind",
+      "matches": {
+        "classnames import bind": true
+      }
+    },
+    {
+      "content": "${1:classNames}('${2:foo}', '${3:bar}');",
+      "doc": "",
+      "label": "classnames-usage",
+      "matches": {
+        "classnames usage": true
+      }
+    },
+    {
+      "content": "${1:classNames}({ '${2:foo-bar}': true });",
+      "doc": "",
+      "label": "classnames-usage-object",
+      "matches": {
+        "classnames usage object": true
+      }
+    }
+  ]
+}

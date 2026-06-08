@@ -1,0 +1,13 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "rule ${1:pattern} = parse\n| $0",
+      "doc": "Snippet for a rule",
+      "label": "rule",
+      "matches": {
+        "rule": true
+      }
+    }
+  ]
+}

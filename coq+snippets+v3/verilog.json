@@ -1,0 +1,629 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "typedef enum ${2:logic[15:0]} \n{\n\n${3:REG = 16'h0000}\n\n} ${1:my_dest_t};",
+      "doc": "Typedef enum",
+      "label": "typedef enum",
+      "matches": {
+        "tde": true
+      }
+    },
+    {
+      "content": "forever begin\n\t${0}\nend",
+      "doc": "Forever loop",
+      "label": "forever",
+      "matches": {
+        "forev": true
+      }
+    },
+    {
+      "content": "if (${1}) begin\n\n\t${2}\n\nend\n\nelse begin\n\n\t${3}\n\nend",
+      "doc": "If-else statement",
+      "label": "if-else",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "whlie (${1}) begin\n\t${0}\nend",
+      "doc": "While loop",
+      "label": "while",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "initial begin\n\t${0}\nend",
+      "doc": "Initial Begin",
+      "label": "Initial Begin",
+      "matches": {
+        "ini": true
+      }
+    },
+    {
+      "content": "repeat (${1}) begin\n\t${0}\nend",
+      "doc": "Repeat loop",
+      "label": "repeat loop",
+      "matches": {
+        "repeat (${1}) begin": true
+      }
+    },
+    {
+      "content": "typedef struct packed {\n\n\tint ${2:data};\n\n${1:name}",
+      "doc": "Typedef struct packed",
+      "label": "typedef struct packed",
+      "matches": {
+        "tdsp": true
+      }
+    },
+    {
+      "content": "case (${1:variable})\n\t${2: value}: begin\n\t\t${3}\n\tend\ndefault: begin\n\t${4}\n\nend\nendcase",
+      "doc": "Case Statement",
+      "label": "case statement",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "casez (${1:variable})\n\t${2: value}: begin\n\t\t${3}\n\tend\ndefault: begin\n\t${4}\n\nend\nendcase",
+      "doc": "Casez Statement",
+      "label": "casez statement",
+      "matches": {
+        "casez": true
+      }
+    },
+    {
+      "content": "always @(${1:Sensitive list}) begin\n\n\t${0}\n\nend",
+      "doc": "Always block",
+      "label": "always block",
+      "matches": {
+        "al": true
+      }
+    },
+    {
+      "content": "module ${1:FILENAME} (\n\t${2}\n);\n\t${0}\n\nendmodule",
+      "doc": "Module Block",
+      "label": "module block",
+      "matches": {
+        "modu": true
+      }
+    },
+    {
+      "content": "else if (${1}) begin\n\n${0}\n\nend",
+      "doc": "else-if statement",
+      "label": "else-if",
+      "matches": {
+        "eif": true
+      }
+    },
+    {
+      "content": "for (int ${2:i} = 0; $2 < ${1:count}; $2${3:++}) begin\n\n\t${4}\n\nend",
+      "doc": "For loop",
+      "label": "for",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "function ${1:void} ${2:name}(${3});\n\n\t${0}\nendfunction: $2",
+      "doc": "Function snippet",
+      "label": "function",
+      "matches": {
+        "fun": true
+      }
+    },
+    {
+      "content": "else begin\n\n${0}\n\nend",
+      "doc": "else-if statement",
+      "label": "else",
+      "matches": {
+        "el": true
+      }
+    },
+    {
+      "content": "if (${1}) begin\n\n${0}\n\nend",
+      "doc": "If statement",
+      "label": "if",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "task ${1:name}(${2});\n\n\t${0}\n\nendtask: $1",
+      "doc": "Task snippet",
+      "label": "task",
+      "matches": {
+        "task": true
+      }
+    },
+    {
+      "content": "always @(${1:*})${2:TARGET}",
+      "doc": "",
+      "label": "always @()",
+      "matches": {
+        "al": true
+      }
+    },
+    {
+      "content": "always @(posedge clk${1})${2:TARGET}",
+      "doc": "",
+      "label": "always @(posedge clk)",
+      "matches": {
+        "alclk": true
+      }
+    },
+    {
+      "content": "begin\n    ${1:TARGET}\nend",
+      "doc": "",
+      "label": "begin ... end",
+      "matches": {
+        "beginend": true
+      }
+    },
+    {
+      "content": "begin\n    ${1:TARGET}\nend",
+      "doc": "",
+      "label": "begin ... end",
+      "matches": {
+        "be": true
+      }
+    },
+    {
+      "content": "module ${1:`expand(\"%:r\")`}(\n    ${2:TARGET}\n);\nendmodule",
+      "doc": "",
+      "label": "module () ... endmodule",
+      "matches": {
+        "module": true
+      }
+    },
+    {
+      "content": "module ${1:`expand(\"%:r\")`}(\n    ${2:TARGET}\n);\nendmodule",
+      "doc": "",
+      "label": "module () ... endmodule",
+      "matches": {
+        "mod": true
+      }
+    },
+    {
+      "content": "reg${1:#: nbit} ${2:reg}_r, $2_w;${3:TARGET}",
+      "doc": "",
+      "label": "reg [] _r, _w;",
+      "matches": {
+        "rw": true
+      }
+    },
+    {
+      "content": "input${1:#: nbit} i_${2:name},",
+      "doc": "",
+      "label": "input [] i_,",
+      "matches": {
+        "I": true
+      }
+    },
+    {
+      "content": "output${1:#: nbit} o_${2:name},",
+      "doc": "",
+      "label": "output [] o_,",
+      "matches": {
+        "O": true
+      }
+    },
+    {
+      "content": "inout${1:#: nbit} io_${2:name},",
+      "doc": "",
+      "label": "inout [] io_,",
+      "matches": {
+        "IO": true
+      }
+    },
+    {
+      "content": "reg [${1}:${2:0}] ${3:name} [${4:0}:${5}];${6:TARGET}",
+      "doc": "",
+      "label": "reg [] name []",
+      "matches": {
+        "regmemory": true
+      }
+    },
+    {
+      "content": "reg [${1}:${2:0}] ${3:name} [${4:0}:${5}];${6:TARGET}",
+      "doc": "",
+      "label": "reg [] name []",
+      "matches": {
+        "regm": true
+      }
+    },
+    {
+      "content": "${1:reg}_r <= $1_w;${2:TARGET}",
+      "doc": "",
+      "label": "_r <= _w;",
+      "matches": {
+        "regseq": true
+      }
+    },
+    {
+      "content": "${1:reg}_w = $1_r;${2:TARGET}",
+      "doc": "",
+      "label": "_w = _r",
+      "matches": {
+        "regkeep": true
+      }
+    },
+    {
+      "content": "assign ${1:#:name} = ${2:#:val};${3:TARGET}",
+      "doc": "",
+      "label": "assign ... = ...",
+      "matches": {
+        "assign": true
+      }
+    },
+    {
+      "content": "assign ${1:#:name} = ${2:#:val};${3:TARGET}",
+      "doc": "",
+      "label": "assign ... = ...",
+      "matches": {
+        "as": true
+      }
+    },
+    {
+      "content": "parameter ${1:#:name} = ${2:#:val};${3:TARGET}",
+      "doc": "",
+      "label": "parameter ... = ...",
+      "matches": {
+        "parameter": true
+      }
+    },
+    {
+      "content": "parameter ${1:#:name} = ${2:#:val};${3:TARGET}",
+      "doc": "",
+      "label": "parameter ... = ...",
+      "matches": {
+        "pa": true
+      }
+    },
+    {
+      "content": "localparam ${1:#:name} = ${2:#:val};${3:TARGET}",
+      "doc": "",
+      "label": "localparam ... = ...",
+      "matches": {
+        "localparam": true
+      }
+    },
+    {
+      "content": "localparam ${1:#:name} = ${2:#:val};${3:TARGET}",
+      "doc": "",
+      "label": "localparam ... = ...",
+      "matches": {
+        "lpa": true
+      }
+    },
+    {
+      "content": "if (${1:#:condition})${0:TARGET}",
+      "doc": "",
+      "label": "if()",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "else${0:TARGET}",
+      "doc": "",
+      "label": "else",
+      "matches": {
+        "else": true
+      }
+    },
+    {
+      "content": "else${0:TARGET}",
+      "doc": "",
+      "label": "else",
+      "matches": {
+        "el": true
+      }
+    },
+    {
+      "content": "else if (${1:#:condition})${0:TARGET}",
+      "doc": "",
+      "label": "else if ()",
+      "matches": {
+        "elseif": true
+      }
+    },
+    {
+      "content": "initial begin\n    ${0:TARGET}\nend",
+      "doc": "",
+      "label": "initial begin ... end",
+      "matches": {
+        "initial": true
+      }
+    },
+    {
+      "content": "initial begin\n    ${0:TARGET}\nend",
+      "doc": "",
+      "label": "initial begin ... end",
+      "matches": {
+        "init": true
+      }
+    },
+    {
+      "content": "while (${1:#:condition})${0:TARGET}",
+      "doc": "",
+      "label": "while () begin ... end",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "case (${1})\n    ${2:'b0}: begin\n        ${3}\n    end\n    default : begin\n        ${4}\n    end\nendcase",
+      "doc": "",
+      "label": "case () ... endcase",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "function${1:# nbit} ${1:func_name};\n    ${2:portlist};\n    begin\n        ${0:TARGET};\n    end\nendfunction",
+      "doc": "",
+      "label": "function ... endfunction",
+      "matches": {
+        "function": true
+      }
+    },
+    {
+      "content": "function${1:# nbit} ${1:func_name};\n    ${2:portlist};\n    begin\n        ${0:TARGET};\n    end\nendfunction",
+      "doc": "",
+      "label": "function ... endfunction",
+      "matches": {
+        "func": true
+      }
+    },
+    {
+      "content": "\\`include \"${1}\"${0}",
+      "doc": "",
+      "label": "`include \"...\"",
+      "matches": {
+        "inc": true
+      }
+    },
+    {
+      "content": "\\`include \"${1}\"${0}",
+      "doc": "",
+      "label": "`include \"...\"",
+      "matches": {
+        "`inc, `include": true
+      }
+    },
+    {
+      "content": "\\`define ${1} ${2}",
+      "doc": "",
+      "label": "`define ... ...",
+      "matches": {
+        "def": true
+      }
+    },
+    {
+      "content": "\\`define ${1} ${2}",
+      "doc": "",
+      "label": "`define ... ...",
+      "matches": {
+        "`def, `define": true
+      }
+    },
+    {
+      "content": "\\`default_nettype ${1:none}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "default_nettype": true
+      }
+    },
+    {
+      "content": "\\`default_nettype ${1:none}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dn, defn": true
+      }
+    },
+    {
+      "content": "\\`timescale ${1:1ns}/${2:100ps}${0}",
+      "doc": "",
+      "label": "`timescale 1ns/100ps",
+      "matches": {
+        "timescale": true
+      }
+    },
+    {
+      "content": "\\`timescale ${1:1ns}/${2:100ps}${0}",
+      "doc": "",
+      "label": "`timescale 1ns/100ps",
+      "matches": {
+        "ts, `time, `timescale": true
+      }
+    },
+    {
+      "content": "(${1:#:condition}) ? ${2:#:a} : ${3:#:b}",
+      "doc": "",
+      "label": "() ? a : b",
+      "matches": {
+        "ternary": true
+      }
+    },
+    {
+      "content": "(${1:#:condition}) ? ${2:#:a} : ${3:#:b}",
+      "doc": "",
+      "label": "() ? a : b",
+      "matches": {
+        "ter": true
+      }
+    },
+    {
+      "content": "$dumpfile(\"${1:`expand(\"%:r\")`}.vcd\");${0}",
+      "doc": "",
+      "label": "$dumpfile(\"....vcd\");",
+      "matches": {
+        "dumpfile": true
+      }
+    },
+    {
+      "content": "$dumpfile(\"${1:`expand(\"%:r\")`}.vcd\");${0}",
+      "doc": "",
+      "label": "$dumpfile(\"....vcd\");",
+      "matches": {
+        "df": true
+      }
+    },
+    {
+      "content": "$dumpvars(${1:0}, ${2:`expand(\"%:r\")`});${0}",
+      "doc": "",
+      "label": "$dumpvars(0, ...);",
+      "matches": {
+        "dumpvars": true
+      }
+    },
+    {
+      "content": "$dumpvars(${1:0}, ${2:`expand(\"%:r\")`});${0}",
+      "doc": "",
+      "label": "$dumpvars(0, ...);",
+      "matches": {
+        "dv": true
+      }
+    },
+    {
+      "content": "$display(\"${1}\", ${2});",
+      "doc": "",
+      "label": "$display(\"...\", ...);",
+      "matches": {
+        "display": true
+      }
+    },
+    {
+      "content": "$strobe(\"${1}\", ${2});",
+      "doc": "",
+      "label": "$strobe(\"...\", ...);",
+      "matches": {
+        "strobe": true
+      }
+    },
+    {
+      "content": "if (${1}) begin\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "if (${1}) begin\n\t${2}\nend\nelse begin\n\t${3}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "else if (${1}) begin\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eif": true
+      }
+    },
+    {
+      "content": "else begin\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "el": true
+      }
+    },
+    {
+      "content": "while (${1}) begin\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "repeat (${1}) begin\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rep": true
+      }
+    },
+    {
+      "content": "case (${1:/* variable */})\n\t${2:/* value */}: begin\n\t\t${3}\n\tend\n\tdefault: begin\n\t\t${4}\n\tend\nendcase",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "casez (${1:/* variable */})\n\t${2:/* value */}: begin\n\t\t${3}\n\tend\n\tdefault: begin\n\t\t${4}\n\tend\nendcase",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "casez": true
+      }
+    },
+    {
+      "content": "always @(${1:/* sensitive list */}) begin\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "al": true
+      }
+    },
+    {
+      "content": "for (int ${2:i} = 0; $2 < ${1:count}; $2${3:++}) begin\n\t${4}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "forever begin\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "forev": true
+      }
+    },
+    {
+      "content": "function ${1:void} ${2:name}(${3});\n\t${0}\nendfunction: $2",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fun": true
+      }
+    },
+    {
+      "content": "task ${1:name}(${2});\n\t${0}\nendtask: $1",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "task": true
+      }
+    },
+    {
+      "content": "initial begin\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ini": true
+      }
+    },
+    {
+      "content": "typedef enum ${2:logic[15:0]}\n{\n\t${3:REG = 16'h0000}\n} ${1:my_dest_t};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tde": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "(\n\t${0}\n)",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "b": true
+      }
+    },
+    {
+      "content": "if (${1}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "if (${1}) {\n\t${2}\n} {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "for (${1:1}, ${2:10}) { |i|\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "SynthDef(\\\\${1:synthName}, {${2}\n\t${0}\n}).add;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sdef": true
+      }
+    }
+  ]
+}

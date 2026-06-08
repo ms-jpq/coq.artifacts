@@ -1,0 +1,439 @@
+{
+  "extends": [
+    "bibtex"
+  ],
+  "snippets": [
+    {
+      "content": "@article{${1:LABEL},\n    author = {${2}},\n    title = {${3}},\n    journal = {${4}},\n    year = {${5}},\n    memo = {volume, number, pages, month, note}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "article": true
+      }
+    },
+    {
+      "content": "@article{${1:LABEL},\n    author = {${2}},\n    title = {${3}},\n    journal = {${4}},\n    year = {${5}},\n    memo = {volume, number, pages, month, note}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "@article": true
+      }
+    },
+    {
+      "content": "@book{${1:LABEL},\n    author/editor = {${2}},\n    title = {${3}},\n    publisher = {${4}},\n    year = {${5}},\n    memo = {volume, series, address, edition, month, note},\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "book": true
+      }
+    },
+    {
+      "content": "@book{${1:LABEL},\n    author/editor = {${2}},\n    title = {${3}},\n    publisher = {${4}},\n    year = {${5}},\n    memo = {volume, series, address, edition, month, note},\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "@book": true
+      }
+    },
+    {
+      "content": "@booklet{${1:LABEL},\n    title = {${2}},\n    memo = {author, howpublished, address, month, year, note},\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "booklet": true
+      }
+    },
+    {
+      "content": "@booklet{${1:LABEL},\n    title = {${2}},\n    memo = {author, howpublished, address, month, year, note},\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "@booklet": true
+      }
+    },
+    {
+      "content": "@inbook{${1:LABEL},\n    author/editor = {${2}},\n    title = {${3}},\n    chapter/pages = {${4}},\n    publisher = {${5}},\n    year = {${6}},\n    memo = {volume, series, address, edition, month, note},\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "inbook": true
+      }
+    },
+    {
+      "content": "@inbook{${1:LABEL},\n    author/editor = {${2}},\n    title = {${3}},\n    chapter/pages = {${4}},\n    publisher = {${5}},\n    year = {${6}},\n    memo = {volume, series, address, edition, month, note},\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "@inbook": true
+      }
+    },
+    {
+      "content": "@incollection{${1:LABEL},\n    author = {${2}},\n    title = {${3}},\n    booktitle = {${4}},\n    year = {${5}},\n    memo = {editor, pages, organization, publisher, address, month, note},\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "incollection": true
+      }
+    },
+    {
+      "content": "@incollection{${1:LABEL},\n    author = {${2}},\n    title = {${3}},\n    booktitle = {${4}},\n    year = {${5}},\n    memo = {editor, pages, organization, publisher, address, month, note},\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "@incollection": true
+      }
+    },
+    {
+      "content": "@inproceedings{${1:LABEL},\n    author = {${2}},\n    title = {${3}},\n    booktitle = {${4}},\n    year = {${5}},\n    memo = {editor, volume, number, series, pages, address, month,\n        organization, publisher, note}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "inproceedings": true
+      }
+    },
+    {
+      "content": "@inproceedings{${1:LABEL},\n    author = {${2}},\n    title = {${3}},\n    booktitle = {${4}},\n    year = {${5}},\n    memo = {editor, volume, number, series, pages, address, month,\n        organization, publisher, note}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "@inproceedings @conference conference": true
+      }
+    },
+    {
+      "content": "@manual{${1:LABEL},\n    title = {${2}},\n    memo = {author, organization, address, edition, month, year, note},\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "manual": true
+      }
+    },
+    {
+      "content": "@manual{${1:LABEL},\n    title = {${2}},\n    memo = {author, organization, address, edition, month, year, note},\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "@manual": true
+      }
+    },
+    {
+      "content": "@mastersthesis{${1:LABEL},\n    author = {${2}},\n    title = {${3}},\n    school = {${4}},\n    year = {${5}},\n    memo = {address, month, note},\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mastersthesis": true
+      }
+    },
+    {
+      "content": "@mastersthesis{${1:LABEL},\n    author = {${2}},\n    title = {${3}},\n    school = {${4}},\n    year = {${5}},\n    memo = {address, month, note},\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "@mastersthesis": true
+      }
+    },
+    {
+      "content": "@misc{${1:LABEL},\n    memo = {author, title, howpublished, month, year, note},\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "misc": true
+      }
+    },
+    {
+      "content": "@misc{${1:LABEL},\n    memo = {author, title, howpublished, month, year, note},\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "@misc": true
+      }
+    },
+    {
+      "content": "@online{${1:LABEL},\n    author = {${2}},\n    title = {${3}},\n    url = {${4}},\n    note = {year/date},\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "online": true
+      }
+    },
+    {
+      "content": "@online{${1:LABEL},\n    author = {${2}},\n    title = {${3}},\n    url = {${4}},\n    note = {year/date},\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "@online": true
+      }
+    },
+    {
+      "content": "@phdthesis{${1:LABEL},\n    author = {${2}},\n    title = {${3}},\n    school = {${4}},\n    year = {${5}},\n    memo = {address, month, note},\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "phdthesis": true
+      }
+    },
+    {
+      "content": "@phdthesis{${1:LABEL},\n    author = {${2}},\n    title = {${3}},\n    school = {${4}},\n    year = {${5}},\n    memo = {address, month, note},\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "@phdthesis": true
+      }
+    },
+    {
+      "content": "@proceedings{${1:LABEL},\n    title = {${2}},\n    year = {${3}},\n    memo = {editor, publisher, organization, address, month, note},\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "proceedings": true
+      }
+    },
+    {
+      "content": "@proceedings{${1:LABEL},\n    title = {${2}},\n    year = {${3}},\n    memo = {editor, publisher, organization, address, month, note},\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "@proceedings": true
+      }
+    },
+    {
+      "content": "@techreport{${1:LABEL},\n    author = {${2}},\n    title = {${3}},\n    institution = {${4}},\n    year = {${5}},\n    memo = {type, number, address, month, note},\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "techreport": true
+      }
+    },
+    {
+      "content": "@techreport{${1:LABEL},\n    author = {${2}},\n    title = {${3}},\n    institution = {${4}},\n    year = {${5}},\n    memo = {type, number, address, month, note},\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "@techreport": true
+      }
+    },
+    {
+      "content": "@unpublished{${1:LABEL},\n    author = {${2}},\n    title = {${3}},\n    note = {${4}},\n    memo = {month, year},\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "unpublished": true
+      }
+    },
+    {
+      "content": "@unpublished{${1:LABEL},\n    author = {${2}},\n    title = {${3}},\n    note = {${4}},\n    memo = {month, year},\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "@unpublished": true
+      }
+    },
+    {
+      "content": "address = {${1}},\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "address": true
+      }
+    },
+    {
+      "content": "annote = {${1}},\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "annote": true
+      }
+    },
+    {
+      "content": "author = {${1}},\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "author": true
+      }
+    },
+    {
+      "content": "booktitle = {${1}},\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "booktitle": true
+      }
+    },
+    {
+      "content": "crossref = {${1}},\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "crossref": true
+      }
+    },
+    {
+      "content": "chapter = {${1}},\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "chapter": true
+      }
+    },
+    {
+      "content": "edition = {${1}},\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "edition": true
+      }
+    },
+    {
+      "content": "editor = {${1}},\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "editor": true
+      }
+    },
+    {
+      "content": "eprint = {${1}},\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eprint": true
+      }
+    },
+    {
+      "content": "howpublished = {${1}},\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "howpublished": true
+      }
+    },
+    {
+      "content": "institution = {${1}},\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "institution": true
+      }
+    },
+    {
+      "content": "journal = {${1}},\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "journal": true
+      }
+    },
+    {
+      "content": "key = {${1}},\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "key": true
+      }
+    },
+    {
+      "content": "month = {${1}},\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "month": true
+      }
+    },
+    {
+      "content": "note = {${1}},\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "note": true
+      }
+    },
+    {
+      "content": "number = {${1}},\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "number": true
+      }
+    },
+    {
+      "content": "organization = {${1}},\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "organization": true
+      }
+    },
+    {
+      "content": "pages = {${1}},\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pages": true
+      }
+    },
+    {
+      "content": "publisher = {${1}},\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "publisher": true
+      }
+    },
+    {
+      "content": "school = {${1}},\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "school": true
+      }
+    },
+    {
+      "content": "series = {${1}},\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "series": true
+      }
+    },
+    {
+      "content": "title = {${1}},\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "title": true
+      }
+    },
+    {
+      "content": "type = {${1}},\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "type": true
+      }
+    },
+    {
+      "content": "url = {${1}},\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "url": true
+      }
+    },
+    {
+      "content": "volume = {${1}},\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "volume": true
+      }
+    },
+    {
+      "content": "year = {${1}},\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "year": true
+      }
+    }
+  ]
+}

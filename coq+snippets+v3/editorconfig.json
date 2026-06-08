@@ -1,0 +1,77 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "charset = utf-8",
+      "doc": "File character encoding (latin1, utf-8, utf-16be, utf-16le, utf-8-bom)",
+      "label": "charset",
+      "matches": {
+        "char": true
+      }
+    },
+    {
+      "content": "indent_style = space",
+      "doc": "Indentation Style (tab or space)",
+      "label": "indent_style",
+      "matches": {
+        "istyle": true
+      }
+    },
+    {
+      "content": "trim_trailing_whitespace = true",
+      "doc": "Denotes whether whitespace is removed from the end of lines",
+      "label": "trim_trailing_space",
+      "matches": {
+        "tts": true
+      }
+    },
+    {
+      "content": "indent_size = 2",
+      "doc": "Indentation Size (integer or 'tab')",
+      "label": "indent_size",
+      "matches": {
+        "isize": true
+      }
+    },
+    {
+      "content": "# EditorConfig is awesome: https://EditorConfig.org\n\n# top-most EditorConfig file\nroot = true\n\n# Unix-style newlines with a newline ending every file\n[*]\nend_of_line = lf\ninsert_final_newline = true\n\n# Matches multiple files with brace expansion notation\n# Set default charset\n[*.{js,py}]\ncharset = utf-8\n\n# 4 space indentation\n[*.py]\nindent_style = space\nindent_size = 4\n\n# Tab indentation (no size specified)\n[Makefile]\nindent_style = tab\n\n# Indentation override for all JS under lib directory\n[lib/**.js]\nindent_style = space\nindent_size = 2\n\n# Matches the exact files either package.json or .travis.yml\n[{package.json,.travis.yml}]\nindent_style = space\nindent_size = 2",
+      "doc": "Editorconfig root configuration",
+      "label": "root",
+      "matches": {
+        "root": true
+      }
+    },
+    {
+      "content": "insert_final_newline = true",
+      "doc": "Denotes whether file should end with a newline",
+      "label": "insert_final_newline",
+      "matches": {
+        "ifn": true
+      }
+    },
+    {
+      "content": "tab_width = 4",
+      "doc": "Width of a single tabstop character",
+      "label": "tab_width",
+      "matches": {
+        "tw": true
+      }
+    },
+    {
+      "content": "max_line_length = 80",
+      "doc": "Forces hard line wrapping after the amount of characters specified. 'off' to turn off this feature.",
+      "label": "max_line_length",
+      "matches": {
+        "mll": true
+      }
+    },
+    {
+      "content": "end_of_line = lf",
+      "doc": "Line ending file format (lf, crlf, or cr)",
+      "label": "end_of_line",
+      "matches": {
+        "eol": true
+      }
+    }
+  ]
+}

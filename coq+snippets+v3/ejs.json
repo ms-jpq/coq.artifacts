@@ -1,0 +1,93 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "<%= $1 %> $2",
+      "doc": "EJS outputs no value",
+      "label": "EJS Output Value",
+      "matches": {
+        "ejsout": true
+      }
+    },
+    {
+      "content": "<% } else { %>\n $1",
+      "doc": "EJS if statement",
+      "label": "EJS Else Statement",
+      "matches": {
+        "ejselse": true
+      }
+    },
+    {
+      "content": "<% for( let ${1:index} = 0; ${1:index} < ${2:array}.length; ${1:index}++ ) { %>\n$3\n<% } %>",
+      "doc": "EJS For Loop",
+      "label": "EJS For Loop",
+      "matches": {
+        "ejsfor": true
+      }
+    },
+    {
+      "content": "<% } else if ({$1:condition}) { %>\n $2",
+      "doc": "EJS if statement",
+      "label": "EJS Else If Statement",
+      "matches": {
+        "ejselif": true
+      }
+    },
+    {
+      "content": "<% ${1:array}.forEach(${2:element} => { %>\n $3\n<% }) %>",
+      "doc": "EJS ForEach Loop",
+      "label": "EJS ForEach",
+      "matches": {
+        "ejseach": true
+      }
+    },
+    {
+      "content": "<% if (${1:condition}) { %>\n $2\n<% } %>",
+      "doc": "EJS if statement",
+      "label": "EJS If Statement",
+      "matches": {
+        "ejsif": true
+      }
+    },
+    {
+      "content": "<%# $1 %> $2",
+      "doc": "EJS comment tag with no output",
+      "label": "EJS Comment",
+      "matches": {
+        "ejscom": true
+      }
+    },
+    {
+      "content": "<%% $1 %> $2",
+      "doc": "EJS outputs a literal '<%'",
+      "label": "EJS Literal",
+      "matches": {
+        "ejslit": true
+      }
+    },
+    {
+      "content": "<%- $1 %> $2",
+      "doc": "EJS outputs value",
+      "label": "EJS Output Escaped",
+      "matches": {
+        "ejsesc": true
+      }
+    },
+    {
+      "content": "<% $1 %> $2",
+      "doc": "EJS No Output",
+      "label": "EJS No Output",
+      "matches": {
+        "ejs": true
+      }
+    },
+    {
+      "content": "<% include $1 %> $2",
+      "doc": "EJS include statement",
+      "label": "EJS Include",
+      "matches": {
+        "ejsinc": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "(cond\n  ((${1}) ${2})\n  (${0:else}))",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cond": true
+      }
+    },
+    {
+      "content": "(case ${1}\n  ((${2}) ${3})\n  (${0:else}))",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "(use gauche.test)\n(test-start \"${1}.scm\")\n\n(load \"$1.scm\")\n\n(test* \"${2}\" ${3:expected} ${4:actual})",
+      "doc": "",
+      "label": "(use gauche.test)(test-start ...",
+      "matches": {
+        "gauche-testsuite": true
+      }
+    },
+    {
+      "content": "(+ ${1}\n\t${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "+": true
+      }
+    },
+    {
+      "content": "(- ${1}\n\t${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "-": true
+      }
+    },
+    {
+      "content": "(/ ${1}\n\t${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "/": true
+      }
+    },
+    {
+      "content": "(* ${1}\n\t${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "*": true
+      }
+    },
+    {
+      "content": "(define (${1:name})\n\t${0:definition})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "def": true
+      }
+    },
+    {
+      "content": "(define ${1:name}\n\t(lambda (x)(${0:definition})))",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defl": true
+      }
+    },
+    {
+      "content": "(cond ((${1:predicate}) (${2:action}))\n\t((${3:predicate}) (${0:action})))",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cond": true
+      }
+    },
+    {
+      "content": "(if (${1:predicate})\n\t(${2:true-action})\n\t(${0:false-action}))",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    }
+  ]
+}

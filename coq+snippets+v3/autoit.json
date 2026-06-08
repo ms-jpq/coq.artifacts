@@ -1,0 +1,109 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "If $1 Then\n\t${0:; True code}\nEndIf",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "Else\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "el": true
+      }
+    },
+    {
+      "content": "ElseIf $1 Then\n\t${0:; True code}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eif": true
+      }
+    },
+    {
+      "content": "If $1 Then\n\t${2:; True code}\nElse\n\t${0:; Else code}\nEndIf",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "If ${1:condition 1} Then\n\t${2:; True code}\nElseIf ${3:condition 2} Then\n\t${4:; True code}\nElse\n\t${0:; Else code}\nEndIf",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ifelif": true
+      }
+    },
+    {
+      "content": "Switch ($1)\nCase ${2:case1}:\n\t${3:; Case 1 code}\nCase Else:\n\t${0:; Else code}\nEndSwitch",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "switch": true
+      }
+    },
+    {
+      "content": "Select ($1)\nCase ${2:case1}:\n\t${3:; Case 1 code}\nCase Else:\n\t${0:; Else code}\nEndSelect",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "select": true
+      }
+    },
+    {
+      "content": "While ($1)\n\t${0:; code...}\nWEnd",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "For ${1:n} = ${3:1} to ${2:count}\n\t${0:; code...}\nNext",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "Func ${1:fname}(${2:`indent('.') ? 'self' : ''`}):\n\t${0:Return}\nEndFunc",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "func": true
+      }
+    },
+    {
+      "content": "MsgBox(${0:MsgType}, ${1:\"Title\"}, ${2:\"Message Text\"})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "msg": true
+      }
+    },
+    {
+      "content": "MsgBox(0, \"Debug\", ${0:\"Debug Message\"})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "debug": true
+      }
+    },
+    {
+      "content": "MsgBox(0, \"${0:VarName}\", $1)",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "showvar": true
+      }
+    }
+  ]
+}

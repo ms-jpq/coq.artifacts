@@ -1,0 +1,29 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "const exe = b.addExecutable(.{\n    .name = \"${1}\",\n    .root_source_file = b.path(\"${2:path}\"),\n    .target = target,\n    .optimize = optimize,\n});\nb.installArtifact(exe);",
+      "doc": "Building an exe",
+      "label": "buildExe",
+      "matches": {
+        "bExe": true
+      }
+    },
+    {
+      "content": "const ${1} = @import(\"${1}\");",
+      "doc": "Importing Libraries",
+      "label": "Import",
+      "matches": {
+        "import": true
+      }
+    },
+    {
+      "content": "const c = @cImport({\n    @cDefine(\"${1}\");\n});",
+      "doc": "Importing C Header Files",
+      "label": "CImport",
+      "matches": {
+        "cimport": true
+      }
+    }
+  ]
+}

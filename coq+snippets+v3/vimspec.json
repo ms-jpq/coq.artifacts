@@ -1,0 +1,23 @@
+{
+  "extends": [
+    "vim"
+  ],
+  "snippets": [
+    {
+      "content": "function! s:suite.${1}()\n  ${2:TARGET}\n  call s:assert.equal(${3:expected}, ${4:actual})\nendfunction",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "suite": true
+      }
+    },
+    {
+      "content": "call themis#log(${TARGET})",
+      "doc": "",
+      "label": "p",
+      "matches": {
+        "themis#log": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,1849 @@
+{
+  "extends": [
+    "csharp",
+    "csharpdoc",
+    "unity"
+  ],
+  "snippets": [
+    {
+      "content": "namespace ${1:#:Name} {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "namespace {}",
+      "matches": {
+        "namespace": true
+      }
+    },
+    {
+      "content": "namespace ${1:#:Name} {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "namespace {}",
+      "matches": {
+        "name": true
+      }
+    },
+    {
+      "content": "class ${1:#:Name} ${2::} ${3:Parent}${4:,} ${5:Interface} {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "class {}",
+      "matches": {
+        "class": true
+      }
+    },
+    {
+      "content": "struct ${1:#:Name} ${2::} ${3:Interface} {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "struct {}",
+      "matches": {
+        "struct": true
+      }
+    },
+    {
+      "content": "interface ${1:#:IName} ${2::} ${3:Parent} {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "interface {}",
+      "matches": {
+        "interface": true
+      }
+    },
+    {
+      "content": "${1:void} ${2:#:Method}(${3:#:arguments}) {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "method": true
+      }
+    },
+    {
+      "content": "enum ${1:#:Name} {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "enum {}",
+      "matches": {
+        "enum": true
+      }
+    },
+    {
+      "content": "delegate ${1:void} ${2:#:Delegate}(${3:#:arguments});${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "delegate": true
+      }
+    },
+    {
+      "content": "${1:int} ${2:#:Name} { get${3:;} ${4:#:private }set${5:;} }${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "property": true
+      }
+    },
+    {
+      "content": "${1:int} ${2:#:Name} { get${3:;} ${4:#:private }set${5:;} }${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "prop": true
+      }
+    },
+    {
+      "content": "get {${1:TARGET}}${0}",
+      "doc": "",
+      "label": "get {}",
+      "matches": {
+        "get": true
+      }
+    },
+    {
+      "content": "set {${1:TARGET}}${0}",
+      "doc": "",
+      "label": "set {}",
+      "matches": {
+        "set": true
+      }
+    },
+    {
+      "content": "#define ${0:#:SYMBOL}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "define": true
+      }
+    },
+    {
+      "content": "#define ${0:#:SYMBOL}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "def": true
+      }
+    },
+    {
+      "content": "#undef ${0:#:SYMBOL}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "undef": true
+      }
+    },
+    {
+      "content": "#undef ${0:#:SYMBOL}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "und": true
+      }
+    },
+    {
+      "content": "#if ${1:SYMBOL}\n    ${0:TARGET}\n#endif",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ifdef": true
+      }
+    },
+    {
+      "content": "#warning ${0:#:message}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "warning": true
+      }
+    },
+    {
+      "content": "#warning ${0:#:message}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "warn": true
+      }
+    },
+    {
+      "content": "#error ${0:#:message}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "error": true
+      }
+    },
+    {
+      "content": "#error ${0:#:message}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "err": true
+      }
+    },
+    {
+      "content": "#line ${0:#:number}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "line": true
+      }
+    },
+    {
+      "content": "#region ${1:#:name}\n    ${0:TARGET}\n#endregion",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "region": true
+      }
+    },
+    {
+      "content": "#region ${1:#:name}\n    ${0:TARGET}\n#endregion",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "reg": true
+      }
+    },
+    {
+      "content": "#pragma warning ${2:disable} ${3:#:errno}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pragma_warning": true
+      }
+    },
+    {
+      "content": "#pragma warning ${2:disable} ${3:#:errno}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pragma pragma_warn": true
+      }
+    },
+    {
+      "content": "if (${1:#:condition}) {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "if () {}",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "else if (${1:#:condition}) {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "else if () {}",
+      "matches": {
+        "elseif": true
+      }
+    },
+    {
+      "content": "else if (${1:#:condition}) {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "else if () {}",
+      "matches": {
+        "elif": true
+      }
+    },
+    {
+      "content": "if (${1:#:condition}) {\n    ${2:TARGET}\n} else {\n    ${3:TARGET}\n}",
+      "doc": "",
+      "label": "if () {} else {}",
+      "matches": {
+        "ifelse": true
+      }
+    },
+    {
+      "content": "if (${1:#:condition}) {\n    ${2:TARGET}\n} else {\n    ${3:TARGET}\n}",
+      "doc": "",
+      "label": "if () {} else {}",
+      "matches": {
+        "ifel": true
+      }
+    },
+    {
+      "content": "while (${1:#:condition}) {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "while () {}",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "do {\n    ${0:TARGET}\n} while (${1:#:condition});",
+      "doc": "",
+      "label": "do {} while() {}",
+      "matches": {
+        "do_while": true
+      }
+    },
+    {
+      "content": "do {\n    ${0:TARGET}\n} while (${1:#:condition});",
+      "doc": "",
+      "label": "do {} while() {}",
+      "matches": {
+        "dowhile": true
+      }
+    },
+    {
+      "content": "for (${1:#:var}; ${2:#:condition}; ${3:#:effect}) {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "for () {}",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "foreach (${1:#:var} in ${2:#:iter}) {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "foreach () {}",
+      "matches": {
+        "foreach": true
+      }
+    },
+    {
+      "content": "foreach (${1:#:var} in ${2:#:iter}) {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "foreach () {}",
+      "matches": {
+        "fore": true
+      }
+    },
+    {
+      "content": "switch (${1:#:var}) {\ncase ${2:#:val}:\n    ${0:TARGET}\n    break;\n}",
+      "doc": "",
+      "label": "switch () {}",
+      "matches": {
+        "switch": true
+      }
+    },
+    {
+      "content": "case ${1:#:val}:\n    ${0:TARGET}\n    break;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "break;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "break": true
+      }
+    },
+    {
+      "content": "goto case ${1:#:Val};${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "goto": true
+      }
+    },
+    {
+      "content": "default:\n    ${0:TARGET}\n    break;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "default": true
+      }
+    },
+    {
+      "content": "try {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "try_without_catch_nor_finally": true
+      }
+    },
+    {
+      "content": "try {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "try_n": true
+      }
+    },
+    {
+      "content": "try {\n    ${0:TARGET}\n} catch (${1:Exception} ${2:e}) {\n    ${3:Console.WriteLine(e.Message);}\n}",
+      "doc": "",
+      "label": "try {} catch () {}",
+      "matches": {
+        "try_catch": true
+      }
+    },
+    {
+      "content": "try {\n    ${0:TARGET}\n} catch (${1:Exception} ${2:e}) {\n    ${3:Console.WriteLine(e.Message);}\n}",
+      "doc": "",
+      "label": "try {} catch () {}",
+      "matches": {
+        "try": true
+      }
+    },
+    {
+      "content": "try {\n    ${0:TARGET}\n} catch {\n    ${1}\n}",
+      "doc": "",
+      "label": "try {} catch {}",
+      "matches": {
+        "try_catch_n": true
+      }
+    },
+    {
+      "content": "try {\n    ${0:TARGET}\n} catch {\n    ${1}\n}",
+      "doc": "",
+      "label": "try {} catch {}",
+      "matches": {
+        "try_cn": true
+      }
+    },
+    {
+      "content": "try {\n    ${0:TARGET}\n} catch (${1:Exception} ${2:e}) {\n    ${3:Console.WriteLine(e.Message);}\n} finally {\n    ${4}\n}",
+      "doc": "",
+      "label": "try {} catch () {} finally {}",
+      "matches": {
+        "try_catch_finally": true
+      }
+    },
+    {
+      "content": "try {\n    ${0:TARGET}\n} catch (${1:Exception} ${2:e}) {\n    ${3:Console.WriteLine(e.Message);}\n} finally {\n    ${4}\n}",
+      "doc": "",
+      "label": "try {} catch () {} finally {}",
+      "matches": {
+        "try_cf": true
+      }
+    },
+    {
+      "content": "try {\n    ${0:TARGET}\n} finally {\n    ${1}\n}",
+      "doc": "",
+      "label": "try {} finally {}",
+      "matches": {
+        "try_finally": true
+      }
+    },
+    {
+      "content": "try {\n    ${0:TARGET}\n} finally {\n    ${1}\n}",
+      "doc": "",
+      "label": "try {} finally {}",
+      "matches": {
+        "try_f": true
+      }
+    },
+    {
+      "content": "try {\n    ${0:TARGET}\n} catch {\n    ${1}\n} finally {\n    ${2}\n}",
+      "doc": "",
+      "label": "try {} catch {} finally {}",
+      "matches": {
+        "try_catch_n_finally": true
+      }
+    },
+    {
+      "content": "try {\n    ${0:TARGET}\n} catch {\n    ${1}\n} finally {\n    ${2}\n}",
+      "doc": "",
+      "label": "try {} catch {} finally {}",
+      "matches": {
+        "try_cnf": true
+      }
+    },
+    {
+      "content": "catch (${1:Exception} ${2:e}) {\n    ${0:Console.WriteLine(e.Message);}\n}",
+      "doc": "",
+      "label": "catch () {}",
+      "matches": {
+        "catch": true
+      }
+    },
+    {
+      "content": "catch {\n    ${0}\n}",
+      "doc": "",
+      "label": "catch {}",
+      "matches": {
+        "catch_n": true
+      }
+    },
+    {
+      "content": "finally {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "finally {}",
+      "matches": {
+        "finally": true
+      }
+    },
+    {
+      "content": "finally {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "finally {}",
+      "matches": {
+        "fin": true
+      }
+    },
+    {
+      "content": "throw ${0:#:exception}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "throw": true
+      }
+    },
+    {
+      "content": "lock (${1:#:resource}) {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "lock () {}",
+      "matches": {
+        "lock": true
+      }
+    },
+    {
+      "content": "using (${1:#:resource}) {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "using () {}",
+      "matches": {
+        "using_resource": true
+      }
+    },
+    {
+      "content": "using (${1:#:resource}) {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "using () {}",
+      "matches": {
+        "using resource": true
+      }
+    },
+    {
+      "content": "checked (${1:#:var}) {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "checked () {}",
+      "matches": {
+        "checked": true
+      }
+    },
+    {
+      "content": "unchecked (${1:#:var}) {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "unchecked () {}",
+      "matches": {
+        "unchecked": true
+      }
+    },
+    {
+      "content": "unsafe {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "unsafe {}",
+      "matches": {
+        "unsafe": true
+      }
+    },
+    {
+      "content": "fixed (${1:#:type}* ${2:#:var} = ${3:#:adress}) {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "fixed () {}",
+      "matches": {
+        "fixed": true
+      }
+    },
+    {
+      "content": "using ${1:#:path};${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "using_import": true
+      }
+    },
+    {
+      "content": "using ${1:#:path};${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "import": true
+      }
+    },
+    {
+      "content": "using ${1:Name} = ${2:Type};${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "using_typedef": true
+      }
+    },
+    {
+      "content": "using ${1:Name} = ${2:Type};${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "typedef": true
+      }
+    },
+    {
+      "content": "System.Linq",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "s.l": true
+      }
+    },
+    {
+      "content": "System.Collections.Generic",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "s.c.g": true
+      }
+    },
+    {
+      "content": "System.Text",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "s.t": true
+      }
+    },
+    {
+      "content": "System.IO",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "s.i": true
+      }
+    },
+    {
+      "content": "System.Diagnostics",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "s.d": true
+      }
+    },
+    {
+      "content": "System.Runtie.CompilerServices",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "s.r.c": true
+      }
+    },
+    {
+      "content": "System.Windows.Forms",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "s.w.f": true
+      }
+    },
+    {
+      "content": "[SerializableAttribute]",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "serializable": true
+      }
+    },
+    {
+      "content": "[SerializableAttribute]",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "serial": true
+      }
+    },
+    {
+      "content": "[Conditional(\"${1:#:SYMBOL}\")]${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "conditional": true
+      }
+    },
+    {
+      "content": "[Conditional(\"${1:#:SYMBOL}\")]${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cond": true
+      }
+    },
+    {
+      "content": "[Obsolete(\"${1:#:description}\")]${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "obsolete": true
+      }
+    },
+    {
+      "content": "[Obsolete(\"${1:#:description}\")]${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "obs dep deprecated": true
+      }
+    },
+    {
+      "content": "[assembly: InternalsVisibleTo(\"${1:#:FriendName}\")]${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "asm_internals_visible_to": true
+      }
+    },
+    {
+      "content": "[assembly: InternalsVisibleTo(\"${1:#:FriendName}\")]${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "internals asmInternalsVisibleTo friend_attr": true
+      }
+    },
+    {
+      "content": "<c>${1:#:text}</c>",
+      "doc": "",
+      "label": "<c></c>",
+      "matches": {
+        "c": true
+      }
+    },
+    {
+      "content": "<code>${0:#:content}</code>",
+      "doc": "",
+      "label": "<code></code>",
+      "matches": {
+        "code": true
+      }
+    },
+    {
+      "content": "<example>${0:#:description}</example>",
+      "doc": "",
+      "label": "<example></example>",
+      "matches": {
+        "example": true
+      }
+    },
+    {
+      "content": "<exception cref=\"${1:#:class}\">${2:#:description}</exception>",
+      "doc": "",
+      "label": "<exception cref=\"\"></exception>",
+      "matches": {
+        "exception": true
+      }
+    },
+    {
+      "content": "<include file='${1:#:filename}' path='${2:#:tabpath}[@${3:#:name}=\"${4:#:id}\"]'/>",
+      "doc": "",
+      "label": "<include file='' path=''/>",
+      "matches": {
+        "include": true
+      }
+    },
+    {
+      "content": "<param name=\"${1:#:name}\">${0:#:description}</param>",
+      "doc": "",
+      "label": "<param name=\"\"></param>",
+      "matches": {
+        "param": true
+      }
+    },
+    {
+      "content": "<paramref name=\"${1:#:name}\"/>",
+      "doc": "",
+      "label": "<paramref name=\"\"/>",
+      "matches": {
+        "paramref": true
+      }
+    },
+    {
+      "content": "<returns>${0:#:description}</returns>",
+      "doc": "",
+      "label": "<returns></returns>",
+      "matches": {
+        "returns": true
+      }
+    },
+    {
+      "content": "<remarks>${0:#:description}</remarks>",
+      "doc": "",
+      "label": "<remarks></remarks>",
+      "matches": {
+        "remarks": true
+      }
+    },
+    {
+      "content": "<see cref=\"${1:#:member}\"/>",
+      "doc": "",
+      "label": "<see cref=\"\"/>",
+      "matches": {
+        "see": true
+      }
+    },
+    {
+      "content": "<seealso cref=\"${1:#:member}\"/>}",
+      "doc": "",
+      "label": "<seealso cref=\"\"/>",
+      "matches": {
+        "seealso": true
+      }
+    },
+    {
+      "content": "<summary>${0:#:description}</summary>",
+      "doc": "",
+      "label": "<summary></summary>",
+      "matches": {
+        "summary": true
+      }
+    },
+    {
+      "content": "<typeparam name=\"${1:#:name}\">${0:#:description}</typeparam>",
+      "doc": "",
+      "label": "<typeparam name=\"\"></typeparam>",
+      "matches": {
+        "typeparam": true
+      }
+    },
+    {
+      "content": "<typeparamref name=\"${1:#:name}\"/>",
+      "doc": "",
+      "label": "<typeparamref name=\"\"/>",
+      "matches": {
+        "typeparamref": true
+      }
+    },
+    {
+      "content": "<value>${0:#:description}</value>",
+      "doc": "",
+      "label": "<value></value>",
+      "matches": {
+        "value": true
+      }
+    },
+    {
+      "content": "public static void Main(string[] args) {\n    ${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "main": true
+      }
+    },
+    {
+      "content": "Console.WriteLine(${1:#:message});${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "writeline": true
+      }
+    },
+    {
+      "content": "Console.WriteLine(${1:#:message});${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "println p": true
+      }
+    },
+    {
+      "content": "Console.Write(${1:#:message});${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "write": true
+      }
+    },
+    {
+      "content": "Console.Write(${1:#:message});${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "print": true
+      }
+    },
+    {
+      "content": "public class ${1:Hello} {\n    public static void Main(string[] args) {\n        System.Console.WriteLine(\"Hello, world!\");\n    }\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "helloworld": true
+      }
+    },
+    {
+      "content": "[TestFixture]\npublic class ${1}Test {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "testclass": true
+      }
+    },
+    {
+      "content": "[TestFixture]\npublic class ${1}Test {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tc": true
+      }
+    },
+    {
+      "content": "[SetUp]\npublic void SetUp() {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "testsetup": true
+      }
+    },
+    {
+      "content": "[SetUp]\npublic void SetUp() {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tsu": true
+      }
+    },
+    {
+      "content": "[TearDown]\npublic void TearDown() {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "testteardown": true
+      }
+    },
+    {
+      "content": "[TearDown]\npublic void TearDown() {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ttd": true
+      }
+    },
+    {
+      "content": "[Test]\npublic void ${1:#:Name}Test() {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "test": true
+      }
+    },
+    {
+      "content": "[Category(\"${0:#:category}\")]",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "category": true
+      }
+    },
+    {
+      "content": "${1:public} static int Main(string[] args)\n{\n\t${0}\n\treturn 0;\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sim": true
+      }
+    },
+    {
+      "content": "public class Application\n{\n\t${1:public} static int Main(string[] args)\n\t{\n\t\t${0}\n\t\treturn 0;\n\t}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "simc": true
+      }
+    },
+    {
+      "content": "${1:public} static void Main(string[] args)\n{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "svm": true
+      }
+    },
+    {
+      "content": "if (${1:true})\n{\n\t${0:${VISUAL}}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "else\n{\n\t${0:${VISUAL}}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "el": true
+      }
+    },
+    {
+      "content": "if (${1})\n\t${0:${VISUAL}}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ifs": true
+      }
+    },
+    {
+      "content": "${1} ? ${2} : ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "t": true
+      }
+    },
+    {
+      "content": "${1} ? ${2} : ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "?": true
+      }
+    },
+    {
+      "content": "do\n{\n\t${0:${VISUAL}}\n} while (${1:true});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "do": true
+      }
+    },
+    {
+      "content": "while (${1:true})\n{\n\t${0:${VISUAL}}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "for (int ${1:i} = 0; $1 < ${2:count}; $1${3:++})\n{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "for (int ${1:i} = ${2:length}; $1 >= 0; $1--)\n{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "forr": true
+      }
+    },
+    {
+      "content": "foreach (${1:var} ${2:entry} in ${3})\n{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fore": true
+      }
+    },
+    {
+      "content": "foreach (${1:var} ${2:entry} in ${3})\n{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "foreach": true
+      }
+    },
+    {
+      "content": "foreach (${1:var} ${2:entry} in ${3})\n{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "each": true
+      }
+    },
+    {
+      "content": "public interface ${1:`vim_snippets#Filename()`}\n{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "interface": true
+      }
+    },
+    {
+      "content": "public interface ${1:`vim_snippets#Filename()`}\n{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if+": true
+      }
+    },
+    {
+      "content": "public class ${1:`vim_snippets#Filename()`}\n{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "class": true
+      }
+    },
+    {
+      "content": "${2:public} class ${1:`vim_snippets#Filename()`}\n{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cls": true
+      }
+    },
+    {
+      "content": "public class ${1:`vim_snippets#Filename()`}\n{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cls+": true
+      }
+    },
+    {
+      "content": "public static class ${1:`vim_snippets#Filename()`}\n{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cls+^": true
+      }
+    },
+    {
+      "content": "internal class ${1:`vim_snippets#Filename()`}\n{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cls&": true
+      }
+    },
+    {
+      "content": "internal static class ${1:`vim_snippets#Filename()`}\n{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cls&^": true
+      }
+    },
+    {
+      "content": "protected class ${1:`vim_snippets#Filename()`}\n{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cls|": true
+      }
+    },
+    {
+      "content": "protected abstract class ${1:`vim_snippets#Filename()`}\n{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cls|%": true
+      }
+    },
+    {
+      "content": "public ${1:`vim_snippets#Filename()`}()\n{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ctor": true
+      }
+    },
+    {
+      "content": "${1:public} ${2:int} ${3} { get; set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "prop": true
+      }
+    },
+    {
+      "content": "${1:public} ${2:int} ${3} { get; set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "p": true
+      }
+    },
+    {
+      "content": "public ${1:int} ${2} { get; set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "p+": true
+      }
+    },
+    {
+      "content": "public ${1:int} ${2} { get; internal set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "p+&": true
+      }
+    },
+    {
+      "content": "public ${1:int} ${2} { get; protected set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "p+|": true
+      }
+    },
+    {
+      "content": "public ${1:int} ${2} { get; private set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "p+-": true
+      }
+    },
+    {
+      "content": "internal ${1:int} ${2} { get; set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "p&": true
+      }
+    },
+    {
+      "content": "internal ${1:int} ${2} { get; protected set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "p&|": true
+      }
+    },
+    {
+      "content": "internal ${1:int} ${2} { get; private set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "p&-": true
+      }
+    },
+    {
+      "content": "protected ${1:int} ${2} { get; set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "p|": true
+      }
+    },
+    {
+      "content": "protected ${1:int} ${2} { get; private set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "p|-": true
+      }
+    },
+    {
+      "content": "private ${1:int} ${2} { get; set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "p-": true
+      }
+    },
+    {
+      "content": "${1:public} int ${2} { get; set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pi": true
+      }
+    },
+    {
+      "content": "public int ${1} { get; set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pi+": true
+      }
+    },
+    {
+      "content": "public int ${1} { get; internal set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pi+&": true
+      }
+    },
+    {
+      "content": "public int ${1} { get; protected set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pi+|": true
+      }
+    },
+    {
+      "content": "public int ${1} { get; private set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pi+-": true
+      }
+    },
+    {
+      "content": "internal int ${1} { get; set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pi&": true
+      }
+    },
+    {
+      "content": "internal int ${1} { get; protected set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pi&|": true
+      }
+    },
+    {
+      "content": "internal int ${1} { get; private set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pi&-": true
+      }
+    },
+    {
+      "content": "protected int ${1} { get; set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pi|": true
+      }
+    },
+    {
+      "content": "protected int ${1} { get; private set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pi|-": true
+      }
+    },
+    {
+      "content": "private int ${1} { get; set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pi-": true
+      }
+    },
+    {
+      "content": "${1:public} bool ${2} { get; set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pb": true
+      }
+    },
+    {
+      "content": "public bool ${1} { get; set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pb+": true
+      }
+    },
+    {
+      "content": "public bool ${1} { get; internal set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pb+&": true
+      }
+    },
+    {
+      "content": "public bool ${1} { get; protected set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pb+|": true
+      }
+    },
+    {
+      "content": "public bool ${1} { get; private set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pb+-": true
+      }
+    },
+    {
+      "content": "internal bool ${1} { get; set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pb&": true
+      }
+    },
+    {
+      "content": "internal bool ${1} { get; protected set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pb&|": true
+      }
+    },
+    {
+      "content": "internal bool ${1} { get; private set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pb&-": true
+      }
+    },
+    {
+      "content": "protected bool ${1} { get; set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pb|": true
+      }
+    },
+    {
+      "content": "protected bool ${1} { get; private set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pb|-": true
+      }
+    },
+    {
+      "content": "private bool ${1} { get; set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pb-": true
+      }
+    },
+    {
+      "content": "${1:public} string ${2} { get; set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ps": true
+      }
+    },
+    {
+      "content": "public string ${1} { get; set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ps+": true
+      }
+    },
+    {
+      "content": "public string ${1} { get; internal set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ps+&": true
+      }
+    },
+    {
+      "content": "public string ${1} { get; protected set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ps+|": true
+      }
+    },
+    {
+      "content": "public string ${1} { get; private set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ps+-": true
+      }
+    },
+    {
+      "content": "internal string ${1} { get; set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ps&": true
+      }
+    },
+    {
+      "content": "internal string ${1} { get; protected set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ps&|": true
+      }
+    },
+    {
+      "content": "internal string ${1} { get; private set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ps&-": true
+      }
+    },
+    {
+      "content": "protected string ${1} { get; set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ps|": true
+      }
+    },
+    {
+      "content": "protected string ${1} { get; private set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ps|-": true
+      }
+    },
+    {
+      "content": "private string ${1} { get; set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ps-": true
+      }
+    },
+    {
+      "content": "${1:public} ${2:void} ${3}(${4})\n{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "m": true
+      }
+    },
+    {
+      "content": "public ${1:void} ${2}(${3})\n{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "m+": true
+      }
+    },
+    {
+      "content": "internal ${1:void} ${2}(${3})\n{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "m&": true
+      }
+    },
+    {
+      "content": "protected ${1:void} ${2}(${3})\n{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "m|": true
+      }
+    },
+    {
+      "content": "private ${1:void} ${2}(${3})\n{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "m-": true
+      }
+    },
+    {
+      "content": "${1:public} int ${2}(${3})\n{\n\t${0:return 0;}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mi": true
+      }
+    },
+    {
+      "content": "public int ${1}(${2})\n{\n\t${0:return 0;}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mi+": true
+      }
+    },
+    {
+      "content": "internal int ${1}(${2})\n{\n\t${0:return 0;}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mi&": true
+      }
+    },
+    {
+      "content": "protected int ${1}(${2})\n{\n\t${0:return 0;}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mi|": true
+      }
+    },
+    {
+      "content": "private int ${1}(${2})\n{\n\t${0:return 0;}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mi-": true
+      }
+    },
+    {
+      "content": "${1:public} bool ${2}(${3})\n{\n\t${0:return false;}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mb": true
+      }
+    },
+    {
+      "content": "public bool ${1}(${2})\n{\n\t${0:return false;}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mb+": true
+      }
+    },
+    {
+      "content": "internal bool ${1}(${2})\n{\n\t${0:return false;}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mb&": true
+      }
+    },
+    {
+      "content": "protected bool ${1}(${2})\n{\n\t${0:return false;}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mb|": true
+      }
+    },
+    {
+      "content": "private bool ${1}(${2})\n{\n\t${0:return false;}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mb-": true
+      }
+    },
+    {
+      "content": "${1:public} string ${2}(${3})\n{\n\t${0:return \"\";}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ms": true
+      }
+    },
+    {
+      "content": "public string ${1}(${2})\n{\n\t${0:return \"\";}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ms+": true
+      }
+    },
+    {
+      "content": "internal string ${1}(${2})\n{\n\t${0:return \"\";}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ms&": true
+      }
+    },
+    {
+      "content": "protected string ${1:}(${2:})\n{\n\t${0:return \"\";}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ms|": true
+      }
+    },
+    {
+      "content": "private string ${1}(${2})\n{\n\t${0:return \"\";}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ms-": true
+      }
+    },
+    {
+      "content": "public struct ${1:`vim_snippets#Filename()`}\n{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "struct": true
+      }
+    },
+    {
+      "content": "enum ${1}\n{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "enum": true
+      }
+    },
+    {
+      "content": "public enum ${1}\n{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "enum+": true
+      }
+    },
+    {
+      "content": "#if\n\t${0}\n#endif",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "#if": true
+      }
+    },
+    {
+      "content": "/// <summary>\n/// ${0}\n/// </summary>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "///": true
+      }
+    },
+    {
+      "content": "<param name=\"${1}\">${2:$1}</param>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "<p": true
+      }
+    },
+    {
+      "content": "<exception cref=\"${1:System.Exception}\">${2}</exception>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "<ex": true
+      }
+    },
+    {
+      "content": "<returns>${1}</returns>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "<r": true
+      }
+    },
+    {
+      "content": "<see cref=\"${1}\"/>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "<s": true
+      }
+    },
+    {
+      "content": "<remarks>${1}</remarks>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "<rem": true
+      }
+    },
+    {
+      "content": "<code>${1}</code>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "<c": true
+      }
+    },
+    {
+      "content": "Console.WriteLine(${1});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cw": true
+      }
+    },
+    {
+      "content": "public override bool Equals(object obj)\n{\n\tif (obj == null || GetType() != obj.GetType())\n\t{\n\t\treturn false;\n\t}\n\t${0:throw new NotImplementedException();}\n\treturn base.Equals(obj);\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eq": true
+      }
+    },
+    {
+      "content": "public class ${1:MyException} : ${2:Exception}\n{\n\tpublic $1() { }\n\tpublic $1(string message) : base(message) { }\n\tpublic $1(string message, Exception inner) : base(message, inner) { }\n\tprotected $1(\n\t\tSystem.Runtime.Serialization.SerializationInfo info,\n\t\tSystem.Runtime.Serialization.StreamingContext context)\n\t\t\t: base(info, context) { }\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "exc": true
+      }
+    },
+    {
+      "content": "public ${1:object} this[${2:int} index]\n{\n\tget { ${0} }\n\tset { ${0} }\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "index": true
+      }
+    },
+    {
+      "content": "EventHandler temp = ${1:MyEvent};\nif (${2:temp} != null)\n{\n\t$2();\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "inv": true
+      }
+    },
+    {
+      "content": "lock (${1:this})\n{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lock": true
+      }
+    },
+    {
+      "content": "namespace ${1:MyNamespace}\n{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "namespace": true
+      }
+    },
+    {
+      "content": "public ${1:int} ${2:MyProperty} { get; set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "propr": true
+      }
+    },
+    {
+      "content": "private ${1:int} ${2:myVar};\npublic $1 ${3:MyProperty}\n{\n\tget { return $2; }\n\tset { $2 = value; }\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "propf": true
+      }
+    },
+    {
+      "content": "public ${1:int} ${2:MyProperty} { get; private set; }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "propg": true
+      }
+    },
+    {
+      "content": "switch (${1:switch_on})\n{\n\t${0}\n\tdefault:\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "switch": true
+      }
+    },
+    {
+      "content": "try\n{\n\t${0:${VISUAL}}\n}\ncatch (${1:System.Exception})\n{\n\tthrow;\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "try": true
+      }
+    },
+    {
+      "content": "try\n{\n\t${0:${VISUAL}}\n}\nfinally\n{\n\t${1}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tryf": true
+      }
+    },
+    {
+      "content": "using (${1:resource})\n{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "usi": true
+      }
+    }
+  ]
+}

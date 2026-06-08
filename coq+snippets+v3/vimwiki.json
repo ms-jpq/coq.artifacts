@@ -1,0 +1,93 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "*${1}*${2}",
+      "doc": "",
+      "label": "*text*",
+      "matches": {
+        "bold": true
+      }
+    },
+    {
+      "content": "~~${1}~~${2}",
+      "doc": "",
+      "label": "~~scratch~~",
+      "matches": {
+        "scratch": true
+      }
+    },
+    {
+      "content": "_${1}_${2}",
+      "doc": "",
+      "label": "_italic_",
+      "matches": {
+        "italic": true
+      }
+    },
+    {
+      "content": ",,${1},,${2}",
+      "doc": "",
+      "label": ",,sub,,",
+      "matches": {
+        "sub": true
+      }
+    },
+    {
+      "content": "^${1}^${2}",
+      "doc": "",
+      "label": "^upper^",
+      "matches": {
+        "upper": true
+      }
+    },
+    {
+      "content": "{{local:${1:image_path}}}${2}",
+      "doc": "",
+      "label": "{{<image path>}}",
+      "matches": {
+        "image_local": true
+      }
+    },
+    {
+      "content": "{{http://${1:image_url}}}${2}",
+      "doc": "",
+      "label": "{{<image url>}}",
+      "matches": {
+        "image": true
+      }
+    },
+    {
+      "content": "|${1:title}|${2:title}|\n|---|---|\n|${3:value}|${4:value}${5:TARGET}|",
+      "doc": "",
+      "label": "table template",
+      "matches": {
+        "table": true
+      }
+    },
+    {
+      "content": "term:: ${1:definintion}",
+      "doc": "",
+      "label": "definition",
+      "matches": {
+        "definintion": true
+      }
+    },
+    {
+      "content": ":${1:tag}:${3}",
+      "doc": "",
+      "label": ":tag1:tag2:",
+      "matches": {
+        "tag": true
+      }
+    },
+    {
+      "content": "{{{\n${0:TARGET}\n}}}",
+      "doc": "",
+      "label": "{{{<code>}}}",
+      "matches": {
+        "code": true
+      }
+    }
+  ]
+}

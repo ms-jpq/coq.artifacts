@@ -1,0 +1,53 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "type\t\tfixedValue;\nvalue\t\tuniform ${0};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fv": true
+      }
+    },
+    {
+      "content": "type\t\tzeroGradient;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "zg": true
+      }
+    },
+    {
+      "content": "type\t\tsymmetryPlane;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sym": true
+      }
+    },
+    {
+      "content": "forces\n{\n\ttype\t\t\t\tforces;\n\tfunctionObjectLibs\t(\"libforces.so\");\n\tenabled\t\t\t\ttrue;\n\toutputControl\t\t${1:timeStep};\n\toutputInterval\t\t${2:1};\n\tpatches\t\t\t\t(${3});\n\tlog\t\t\t\t\t${4:true};\n\tCofR\t\t\t\t(${0:0 0 0});\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "forces": true
+      }
+    },
+    {
+      "content": "${1:p}\n{\n\tsolver          GAMG;\n\ttolerance       1e-${2:6};\n\trelTol          ${0:0.0};\n\tsmoother        GaussSeidel;\n\tcacheAgglomeration true;\n\tnCellsInCoarsestLevel 10;\n\tagglomerator    faceAreaPair;\n\tmergeLevels     1;\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gamg": true
+      }
+    },
+    {
+      "content": "${1:U}\n{\n\tsolver          PBiCG;\n\tpreconditioner  DILU;\n\ttolerance       1e-${2:6};\n\trelTol          ${0:0.0};\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pbicg": true
+      }
+    }
+  ]
+}

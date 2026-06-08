@@ -1,0 +1,53 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "---\ntitle: ${1:title}\nlayout: post\ndate: ${2:date} ${0:hour:minute:second} -05:00\n---",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "header": true
+      }
+    },
+    {
+      "content": "!${1:url}(${2:title}):${0:link}!",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "img": true
+      }
+    },
+    {
+      "content": "|${1}|",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "|": true
+      }
+    },
+    {
+      "content": "\"${1:link text}\":${0:url}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "link": true
+      }
+    },
+    {
+      "content": "(${1:Expand acronym})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "(": true
+      }
+    },
+    {
+      "content": "[${1:ref number}] ${0}\n\nfn$1. ${2:footnote}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fn": true
+      }
+    }
+  ]
+}

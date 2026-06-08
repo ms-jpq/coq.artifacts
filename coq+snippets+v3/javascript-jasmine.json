@@ -1,0 +1,413 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "describe('${1:description}', function() {\n\t$0\n});",
+      "doc": "",
+      "label": "Describe (js)",
+      "matches": {
+        "des": true
+      }
+    },
+    {
+      "content": "it('${1:description}', function() {\n\t$0\n});",
+      "doc": "",
+      "label": "it (js)",
+      "matches": {
+        "it": true
+      }
+    },
+    {
+      "content": "beforeEach(function() {\n\t$0\n});",
+      "doc": "",
+      "label": "before each (js)",
+      "matches": {
+        "bef": true
+      }
+    },
+    {
+      "content": "afterEach(function() {\n\t$0\n});",
+      "doc": "",
+      "label": "after each (js)",
+      "matches": {
+        "aft": true
+      }
+    },
+    {
+      "content": "beforeAll(function() {\n\t$0\n});",
+      "doc": "",
+      "label": "before all (js)",
+      "matches": {
+        "befa": true
+      }
+    },
+    {
+      "content": "afterAll(function() {\n\t$0\n});",
+      "doc": "",
+      "label": "after all (js)",
+      "matches": {
+        "afta": true
+      }
+    },
+    {
+      "content": "jasmine.any($1)",
+      "doc": "",
+      "label": "any (js)",
+      "matches": {
+        "any": true
+      }
+    },
+    {
+      "content": "jasmine.anything()",
+      "doc": "",
+      "label": "anything (js)",
+      "matches": {
+        "anyt": true
+      }
+    },
+    {
+      "content": "jasmine.objectContaining({\n\t${VISUAL}$0\n});",
+      "doc": "",
+      "label": "object containing (js)",
+      "matches": {
+        "objc": true
+      }
+    },
+    {
+      "content": "jasmine.arrayContaining([${1:value1}]);",
+      "doc": "",
+      "label": "array containing (js)",
+      "matches": {
+        "arrc": true
+      }
+    },
+    {
+      "content": "jasmine.stringMatching(\"${1:matcher}\")",
+      "doc": "",
+      "label": "string matching (js)",
+      "matches": {
+        "strm": true
+      }
+    },
+    {
+      "content": "runs(function() {\n\t$0\n});",
+      "doc": "",
+      "label": "runs (js)",
+      "matches": {
+        "ru": true
+      }
+    },
+    {
+      "content": "waits($1);",
+      "doc": "",
+      "label": "waits (js)",
+      "matches": {
+        "wa": true
+      }
+    },
+    {
+      "content": "expect(${1:target})$0;",
+      "doc": "",
+      "label": "expect (js)",
+      "matches": {
+        "ex": true
+      }
+    },
+    {
+      "content": "expect(${1:target}).toEqual(${2:value});",
+      "doc": "",
+      "label": "expect to equal (js)",
+      "matches": {
+        "ee": true
+      }
+    },
+    {
+      "content": "expect(${1:target}).toBeLessThan(${2:value});",
+      "doc": "",
+      "label": "expect to be less than (js)",
+      "matches": {
+        "el": true
+      }
+    },
+    {
+      "content": "expect(${1:target}).toBeGreaterThan(${2:value});",
+      "doc": "",
+      "label": "expect to be greater than (js)",
+      "matches": {
+        "eg": true
+      }
+    },
+    {
+      "content": "expect(${1:target}).toBe(${2:value});",
+      "doc": "",
+      "label": "expect to be (js)",
+      "matches": {
+        "eb": true
+      }
+    },
+    {
+      "content": "expect(${1:target}).toMatch(${2:pattern});",
+      "doc": "",
+      "label": "expect to match (js)",
+      "matches": {
+        "em": true
+      }
+    },
+    {
+      "content": "expect(${1:target}).toBeTruthy();",
+      "doc": "",
+      "label": "expect to be truthy (js)",
+      "matches": {
+        "et": true
+      }
+    },
+    {
+      "content": "expect(${1:target}).toBeFalsy();",
+      "doc": "",
+      "label": "expect to be falsy (js)",
+      "matches": {
+        "ef": true
+      }
+    },
+    {
+      "content": "expect(${1:target}).toBeDefined();",
+      "doc": "",
+      "label": "expect to be defined (js)",
+      "matches": {
+        "etbd": true
+      }
+    },
+    {
+      "content": "expect(${1:target}).toBeUndefined();",
+      "doc": "",
+      "label": "expect to be defined (js)",
+      "matches": {
+        "eud": true
+      }
+    },
+    {
+      "content": "expect(${1:target}).toBeNull();",
+      "doc": "",
+      "label": "expect to be null (js)",
+      "matches": {
+        "en": true
+      }
+    },
+    {
+      "content": "expect(${1:target}).toContain(${2:value});",
+      "doc": "",
+      "label": "expect to contain (js)",
+      "matches": {
+        "ec": true
+      }
+    },
+    {
+      "content": "expect(${1:target}).toBeVisible();",
+      "doc": "",
+      "label": "expect to be visible (js)",
+      "matches": {
+        "ev": true
+      }
+    },
+    {
+      "content": "expect(${1:target}).toBeHidden();",
+      "doc": "",
+      "label": "expect to be hidden (js)",
+      "matches": {
+        "eh": true
+      }
+    },
+    {
+      "content": "expect(${1:target}).toThrow(${2:value});",
+      "doc": "",
+      "label": "expect to throw (js)",
+      "matches": {
+        "eth": true
+      }
+    },
+    {
+      "content": "expect(${1:target}).toThrowError(${2:value});",
+      "doc": "",
+      "label": "expect to throw error (js)",
+      "matches": {
+        "ethe": true
+      }
+    },
+    {
+      "content": "expect(${1:target}).not$0;",
+      "doc": "",
+      "label": "expect not (js)",
+      "matches": {
+        "notx": true
+      }
+    },
+    {
+      "content": "expect(${1:target}).not.toEqual(${2:value});",
+      "doc": "",
+      "label": "expect not to equal (js)",
+      "matches": {
+        "note": true
+      }
+    },
+    {
+      "content": "expect(${1:target}).not.toBeLessThan(${2:value});",
+      "doc": "",
+      "label": "expect to not be less than (js)",
+      "matches": {
+        "notl": true
+      }
+    },
+    {
+      "content": "expect(${1:target}).not.toBeGreaterThan(${2:value});",
+      "doc": "",
+      "label": "expect to not be greater than (js)",
+      "matches": {
+        "notg": true
+      }
+    },
+    {
+      "content": "expect(${1:target}).not.toMatch(${2:pattern});",
+      "doc": "",
+      "label": "expect not to match (js)",
+      "matches": {
+        "notm": true
+      }
+    },
+    {
+      "content": "expect(${1:target}).not.toBeTruthy();",
+      "doc": "",
+      "label": "expect not to be truthy (js)",
+      "matches": {
+        "nott": true
+      }
+    },
+    {
+      "content": "expect(${1:target}).not.toBeFalsy();",
+      "doc": "",
+      "label": "expect not to be falsy (js)",
+      "matches": {
+        "notf": true
+      }
+    },
+    {
+      "content": "expect(${1:target}).not.toBeDefined();",
+      "doc": "",
+      "label": "expect not to be defined (js)",
+      "matches": {
+        "notd": true
+      }
+    },
+    {
+      "content": "expect(${1:target}).not.toBeNull();",
+      "doc": "",
+      "label": "expect not to be null (js)",
+      "matches": {
+        "notn": true
+      }
+    },
+    {
+      "content": "expect(${1:target}).not.toContain(${2:value});",
+      "doc": "",
+      "label": "expect not to contain (js)",
+      "matches": {
+        "notc": true
+      }
+    },
+    {
+      "content": "expect(${1:target}).not.toBeVisible();",
+      "doc": "",
+      "label": "expect not to be visible (js)",
+      "matches": {
+        "notv": true
+      }
+    },
+    {
+      "content": "expect(${1:target}).not.toBeHidden();",
+      "doc": "",
+      "label": "expect not to be hidden (js)",
+      "matches": {
+        "noth": true
+      }
+    },
+    {
+      "content": "expect(${1:target}).not.toThrow(${2:value});",
+      "doc": "",
+      "label": "expect not to throw (js)",
+      "matches": {
+        "notth": true
+      }
+    },
+    {
+      "content": "expect(${1:target}).not.toThrowError(${2:value});",
+      "doc": "",
+      "label": "expect not to throw error (js)",
+      "matches": {
+        "notthe": true
+      }
+    },
+    {
+      "content": "spyOn(${1:object}, '${2:method}')$0;",
+      "doc": "",
+      "label": "spy on (js)",
+      "matches": {
+        "s": true
+      }
+    },
+    {
+      "content": "spyOn(${1:object}, '${2:method}').and.returnValue(${3:arguments});",
+      "doc": "",
+      "label": "spy on and return (js)",
+      "matches": {
+        "sr": true
+      }
+    },
+    {
+      "content": "spyOn(${1:object}, '${2:method}').and.throwError(${3:exception});",
+      "doc": "",
+      "label": "spy on and throw (js)",
+      "matches": {
+        "st": true
+      }
+    },
+    {
+      "content": "spyOn(${1:object}, '${2:method}').and.callThrough();",
+      "doc": "",
+      "label": "spy on and call through (js)",
+      "matches": {
+        "sct": true
+      }
+    },
+    {
+      "content": "spyOn(${1:object}, '${2:method}').and.callFake(${3:function});",
+      "doc": "",
+      "label": "spy on and call fake (js)",
+      "matches": {
+        "scf": true
+      }
+    },
+    {
+      "content": "expect(${1:target}).toHaveBeenCalled();",
+      "doc": "",
+      "label": "expect to have been called (js)",
+      "matches": {
+        "ethbc": true
+      }
+    },
+    {
+      "content": "expect(${1:target}).not.toHaveBeenCalled();",
+      "doc": "",
+      "label": "expect not to have been called (js)",
+      "matches": {
+        "nthbc": true
+      }
+    },
+    {
+      "content": "expect(${1:target}).toHaveBeenCalledWith(${2:arguments});",
+      "doc": "",
+      "label": "expect to have been called with (js)",
+      "matches": {
+        "ethbcw": true
+      }
+    }
+  ]
+}

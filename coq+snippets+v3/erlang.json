@@ -1,0 +1,445 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "-module(${1:module}).",
+      "doc": "module",
+      "label": "module",
+      "matches": {
+        "mod": true
+      }
+    },
+    {
+      "content": "-export([\n         ${1}\n        ]).",
+      "doc": "export",
+      "label": "export",
+      "matches": {
+        "exp": true
+      }
+    },
+    {
+      "content": "receive\n    ${1:pattern} ->\n        ${2:todo}\nend$3",
+      "doc": "receive block",
+      "label": "receive",
+      "matches": {
+        "rec": true
+      }
+    },
+    {
+      "content": "-define(${1:def_name}, ${2:def_value}).",
+      "doc": "define",
+      "label": "define",
+      "matches": {
+        "def": true
+      }
+    },
+    {
+      "content": "case ${1:Expr} of\n    ${2:Cond} ->\n        ${3:todo};\n    _ ->\n        ${4:todo}\nend$5",
+      "doc": "case block",
+      "label": "case",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "if ${1:Cond} ->\n       ${2:todo};\n   true ->\n       ${3:todo}\nend$4",
+      "doc": "if block",
+      "label": "if",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "-include(\"${1:hrl_name}.hrl\").",
+      "doc": "module",
+      "label": "include",
+      "matches": {
+        "inc": true
+      }
+    },
+    {
+      "content": "main(_) -> io:format(\"Hello, world!\\n\").",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "helloworld": true
+      }
+    },
+    {
+      "content": "-module(${0:module}).",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "-module": true
+      }
+    },
+    {
+      "content": "-export([${0:f/1}]).",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "-export": true
+      }
+    },
+    {
+      "content": "io:format(\"${1:~w~n}\"${2:, []})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ioformat": true
+      }
+    },
+    {
+      "content": "main(_) -> ${0}.",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "main": true
+      }
+    },
+    {
+      "content": "case ${0:TARGET} of\n    ${1}\nend",
+      "doc": "",
+      "label": "case",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "<<\"${0:TARGET}\">>",
+      "doc": "",
+      "label": "<<\"...\">>",
+      "matches": {
+        "bs": true
+      }
+    },
+    {
+      "content": "-module(${1:`vim_snippets#Filename()`}).",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mod": true
+      }
+    },
+    {
+      "content": "-module(${1:`vim_snippets#Filename()`}).\n-compile([export_all]).\n\nstart() ->\n\t${0}\n\nstop() ->\n\tok.",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "modall": true
+      }
+    },
+    {
+      "content": "erlang:display(${0}),",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "d": true
+      }
+    },
+    {
+      "content": "erlang:display({${1}, ${0}}),",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dt": true
+      }
+    },
+    {
+      "content": "-define(${1:macro}, $2).",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "def": true
+      }
+    },
+    {
+      "content": "-export([${1:function}/${0:arity}]).",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "exp": true
+      }
+    },
+    {
+      "content": "-include(\"${1:file}\").",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "inc": true
+      }
+    },
+    {
+      "content": "-include_lib(\"${1:lib}/include/${1}.hrl\").${2}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "incl": true
+      }
+    },
+    {
+      "content": "-behaviour(${1:behaviour}).",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "beh": true
+      }
+    },
+    {
+      "content": "-ifdef(${1:TEST}).\n${0}\n-endif.",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ifd": true
+      }
+    },
+    {
+      "content": "-ifndef(${1:TEST}).\n${0}\n-endif.",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ifnd": true
+      }
+    },
+    {
+      "content": "-undef(${1:macro}).",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "undef": true
+      }
+    },
+    {
+      "content": "if\n\t${1:guard} ->\n\t\t$0\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "case ${1:expression} of\n\t${2:pattern} ->\n\t\t$0;\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "fun (${1:Parameters}) -> $2 end",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fun": true
+      }
+    },
+    {
+      "content": "try\n\t${1:${VISUAL}}\ncatch\n\t${2:_:_} -> ${0:got_some_exception}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "try": true
+      }
+    },
+    {
+      "content": "-record(${1:record}, {${2:field}=${3:value}}).",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rec": true
+      }
+    },
+    {
+      "content": "%% TODO: ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "todo": true
+      }
+    },
+    {
+      "content": "%% @doc ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "%d": true
+      }
+    },
+    {
+      "content": "%% @end",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "%e": true
+      }
+    },
+    {
+      "content": "%% @spec ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "%s": true
+      }
+    },
+    {
+      "content": "%% @private",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "%p": true
+      }
+    },
+    {
+      "content": "-module(${1:`vim_snippets#Filename()`}).\n\n-behaviour(application).\n\n-export([start/2, stop/1]).\n\nstart(_Type, _StartArgs) ->\n\tcase ${0:root_supervisor}:start_link() of\n\t\t{ok, Pid} ->\n\t\t\t{ok, Pid};\n\t\tOther ->\n\t\t\t{error, Other}\n\tend.\n\nstop(_State) ->\n\tok.",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "application": true
+      }
+    },
+    {
+      "content": "-module(${1:`vim_snippets#Filename()`}).\n\n-behaviour(supervisor).\n\n%% API\n-export([start_link/0]).\n\n%% Supervisor callbacks\n-export([init/1]).\n\n-define(SERVER, ?MODULE).\n\nstart_link() ->\n\t\tsupervisor:start_link({local, ?SERVER}, ?MODULE, []).\n\ninit([]) ->\n\tServer = {${0:my_server}, {${2}, start_link, []},\n\t\tpermanent, 2000, worker, [${2}]},\n\tChildren = [Server],\n\tRestartStrategy = {one_for_one, 0, 1},\n\t{ok, {RestartStrategy, Children}}.",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "supervisor": true
+      }
+    },
+    {
+      "content": "-module(${0:`vim_snippets#Filename()`}).\n\n-behaviour(gen_server).\n\n%% API\n-export([start_link/0]).\n\n%% gen_server callbacks\n-export([init/1, handle_call/3, handle_cast/2, handle_info/2, terminate/2, code_change/3]).\n\n-define(SERVER, ?MODULE).\n\n-record(state, {}).\n\n%%%===================================================================\n%%% API\n%%%===================================================================\n\nstart_link() ->\n\tgen_server:start_link({local, ?SERVER}, ?MODULE, [], []).\n\n%%%===================================================================\n%%% gen_server callbacks\n%%%===================================================================\n\ninit([]) ->\n\t{ok, #state{}}.\n\nhandle_call(_Request, _From, State) ->\n\tReply = ok,\n\t{reply, Reply, State}.\n\nhandle_cast(_Msg, State) ->\n\t{noreply, State}.\n\nhandle_info(_Info, State) ->\n\t{noreply, State}.\n\nterminate(_Reason, _State) ->\n\tok.\n\ncode_change(_OldVsn, State, _Extra) ->\n\t{ok, State}.\n\n%%%===================================================================\n%%% Internal functions\n%%%===================================================================",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gen_server": true
+      }
+    },
+    {
+      "content": "-module(${0:`vim_snippets#Filename()`}).\n\n-behaviour(gen_fsm).\n\n%% API\n-export([start_link/0]).\n\n%% gen_fsm callbacks\n-export([init/1, state_name/2, state_name/3, handle_event/3, handle_sync_event/4,\n\thandle_info/3, terminate/3, code_change/4]).\n\n-record(state, {}).\n\n%%%===================================================================\n%%% API\n%%%===================================================================\n\n%%--------------------------------------------------------------------\n%% @doc\n%% Creates a gen_fsm process which calls Module:init/1 to\n%% initialize. To ensure a synchronized start-up procedure, this\n%% function does not return until Module:init/1 has returned.\n%%\n%% @spec start_link() -> {ok, Pid} | ignore | {error, Error}\n%% @end\n%%--------------------------------------------------------------------\nstart_link() ->\n\tgen_fsm:start_link({local, ?MODULE}, ?MODULE, [], []).\n\n%%%===================================================================\n%%% gen_fsm callbacks\n%%%===================================================================\n\n%%--------------------------------------------------------------------\n%% @private\n%% @doc\n%% Whenever a gen_fsm is started using gen_fsm:start/[3,4] or\n%% gen_fsm:start_link/[3,4], this function is called by the new\n%% process to initialize.\n%%\n%% @spec init(Args) -> {ok, StateName, State} |\n%%                     {ok, StateName, State, Timeout} |\n%%                     ignore |\n%%                     {stop, StopReason}\n%% @end\n%%--------------------------------------------------------------------\ninit([]) ->\n\t{ok, state_name, #state{}}.\n\n%%--------------------------------------------------------------------\n%% @private\n%% @doc\n%% There should be one instance of this function for each possible\n%% state name. Whenever a gen_fsm receives an event sent using\n%% gen_fsm:send_event/2, the instance of this function with the same\n%% name as the current state name StateName is called to handle\n%% the event. It is also called if a timeout occurs.\n%%\n%% @spec state_name(Event, State) ->\n%%                   {next_state, NextStateName, NextState} |\n%%                   {next_state, NextStateName, NextState, Timeout} |\n%%                   {stop, Reason, NewState}\n%% @end\n%%--------------------------------------------------------------------\nstate_name(_Event, State) ->\n\t{next_state, state_name, State}.\n\n%%--------------------------------------------------------------------\n%% @private\n%% @doc\n%% There should be one instance of this function for each possible\n%% state name. Whenever a gen_fsm receives an event sent using\n%% gen_fsm:sync_send_event/[2,3], the instance of this function with\n%% the same name as the current state name StateName is called to\n%% handle the event.\n%%\n%% @spec state_name(Event, From, State) ->\n%%                   {next_state, NextStateName, NextState} |\n%%                   {next_state, NextStateName, NextState, Timeout} |\n%%                   {reply, Reply, NextStateName, NextState} |\n%%                   {reply, Reply, NextStateName, NextState, Timeout} |\n%%                   {stop, Reason, NewState} |\n%%                   {stop, Reason, Reply, NewState}\n%% @end\n%%--------------------------------------------------------------------\nstate_name(_Event, _From, State) ->\n\tReply = ok,\n\t{reply, Reply, state_name, State}.\n\n%%--------------------------------------------------------------------\n%% @private\n%% @doc\n%% Whenever a gen_fsm receives an event sent using\n%% gen_fsm:send_all_state_event/2, this function is called to handle\n%% the event.\n%%\n%% @spec handle_event(Event, StateName, State) ->\n%%                   {next_state, NextStateName, NextState} |\n%%                   {next_state, NextStateName, NextState, Timeout} |\n%%                   {stop, Reason, NewState}\n%% @end\n%%--------------------------------------------------------------------\nhandle_event(_Event, StateName, State) ->\n\t{next_state, StateName, State}.\n\n%%--------------------------------------------------------------------\n%% @private\n%% @doc\n%% Whenever a gen_fsm receives an event sent using\n%% gen_fsm:sync_send_all_state_event/[2,3], this function is called\n%% to handle the event.\n%%\n%% @spec handle_sync_event(Event, From, StateName, State) ->\n%%                   {next_state, NextStateName, NextState} |\n%%                   {next_state, NextStateName, NextState, Timeout} |\n%%                   {reply, Reply, NextStateName, NextState} |\n%%                   {reply, Reply, NextStateName, NextState, Timeout} |\n%%                   {stop, Reason, NewState} |\n%%                   {stop, Reason, Reply, NewState}\n%% @end\n%%--------------------------------------------------------------------\nhandle_sync_event(_Event, _From, StateName, State) ->\n\tReply = ok,\n\t{reply, Reply, StateName, State}.\n\n%%--------------------------------------------------------------------\n%% @private\n%% @doc\n%% This function is called by a gen_fsm when it receives any\n%% message other than a synchronous or asynchronous event\n%% (or a system message).\n%%\n%% @spec handle_info(Info,StateName,State)->\n%%                   {next_state, NextStateName, NextState} |\n%%                   {next_state, NextStateName, NextState, Timeout} |\n%%                   {stop, Reason, NewState}\n%% @end\n%%--------------------------------------------------------------------\nhandle_info(_Info, StateName, State) ->\n\t{next_state, StateName, State}.\n\n%%--------------------------------------------------------------------\n%% @private\n%% @doc\n%% This function is called by a gen_fsm when it is about to\n%% terminate. It should be the opposite of Module:init/1 and do any\n%% necessary cleaning up. When it returns, the gen_fsm terminates with\n%% Reason. The return value is ignored.\n%%\n%% @spec terminate(Reason, StateName, State) -> void()\n%% @end\n%%--------------------------------------------------------------------\nterminate(_Reason, _StateName, _State) ->\n\tok.\n\n%%--------------------------------------------------------------------\n%% @private\n%% @doc\n%% Convert process state when code is changed\n%%\n%% @spec code_change(OldVsn, StateName, State, Extra) ->\n%%                   {ok, StateName, NewState}\n%% @end\n%%--------------------------------------------------------------------\ncode_change(_OldVsn, StateName, State, _Extra) ->\n\t{ok, StateName, State}.\n\n%%%===================================================================\n%%% Internal functions\n%%%===================================================================",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gen_fsm": true
+      }
+    },
+    {
+      "content": "-module(${0:`vim_snippets#Filename()`}).\n\n-behaviour(gen_event).\n\n%% API\n-export([start_link/0,\n\tadd_handler/2]).\n\n%% gen_event callbacks\n-export([init/1,\n\thandle_event/2,\n\thandle_call/2,\n\thandle_info/2,\n\tterminate/2,\n\tcode_change/3]).\n\n-record(state, {}).\n\n%%%===================================================================\n%%% gen_event callbacks\n%%%===================================================================\n\n%%--------------------------------------------------------------------\n%% @doc\n%% Creates an event manager\n%%\n%% @spec start_link() -> {ok, Pid} | {error, Error}\n%% @end\n%%--------------------------------------------------------------------\nstart_link() ->\n\tgen_event:start_link({local, ?MODULE}).\n\n%%--------------------------------------------------------------------\n%% @doc\n%% Adds an event handler\n%%\n%% @spec add_handler(Handler, Args) -> ok | {'EXIT', Reason} | term()\n%% @end\n%%--------------------------------------------------------------------\nadd_handler(Handler, Args) ->\n\tgen_event:add_handler(?MODULE, Handler, Args).\n\n%%%===================================================================\n%%% gen_event callbacks\n%%%===================================================================\n\n%%--------------------------------------------------------------------\n%% @private\n%% @doc\n%% Whenever a new event handler is added to an event manager,\n%% this function is called to initialize the event handler.\n%%\n%% @spec init(Args) -> {ok, State}\n%% @end\n%%--------------------------------------------------------------------\ninit([]) ->\n\t{ok, #state{}}.\n\n%%--------------------------------------------------------------------\n%% @private\n%% @doc\n%% Whenever an event manager receives an event sent using\n%% gen_event:notify/2 or gen_event:sync_notify/2, this function is\n%% called for each installed event handler to handle the event.\n%%\n%% @spec handle_event(Event, State) ->\n%%                          {ok, State} |\n%%                          {swap_handler, Args1, State1, Mod2, Args2} |\n%%                          remove_handler\n%% @end\n%%--------------------------------------------------------------------\nhandle_event(_Event, State) ->\n\t{ok, State}.\n\n%%--------------------------------------------------------------------\n%% @private\n%% @doc\n%% Whenever an event manager receives a request sent using\n%% gen_event:call/3,4, this function is called for the specified\n%% event handler to handle the request.\n%%\n%% @spec handle_call(Request, State) ->\n%%                   {ok, Reply, State} |\n%%                   {swap_handler, Reply, Args1, State1, Mod2, Args2} |\n%%                   {remove_handler, Reply}\n%% @end\n%%--------------------------------------------------------------------\nhandle_call(_Request, State) ->\n\tReply = ok,\n\t{ok, Reply, State}.\n\n%%--------------------------------------------------------------------\n%% @private\n%% @doc\n%% This function is called for each installed event handler when\n%% an event manager receives any other message than an event or a\n%% synchronous request (or a system message).\n%%\n%% @spec handle_info(Info, State) ->\n%%                         {ok, State} |\n%%                         {swap_handler, Args1, State1, Mod2, Args2} |\n%%                         remove_handler\n%% @end\n%%--------------------------------------------------------------------\nhandle_info(_Info, State) ->\n\t{ok, State}.\n\n%%--------------------------------------------------------------------\n%% @private\n%% @doc\n%% Whenever an event handler is deleted from an event manager, this\n%% function is called. It should be the opposite of Module:init/1 and\n%% do any necessary cleaning up.\n%%\n%% @spec terminate(Reason, State) -> void()\n%% @end\n%%--------------------------------------------------------------------\nterminate(_Reason, _State) ->\n\tok.\n\n%%--------------------------------------------------------------------\n%% @private\n%% @doc\n%% Convert process state when code is changed\n%%\n%% @spec code_change(OldVsn, State, Extra) -> {ok, NewState}\n%% @end\n%%--------------------------------------------------------------------\ncode_change(_OldVsn, State, _Extra) ->\n\t{ok, State}.\n\n%%%===================================================================\n%%% Internal functions\n%%%===================================================================",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gen_event": true
+      }
+    },
+    {
+      "content": "-module(${1:`vim_snippets#Filename()`}).\n-include_lib(\"eunit/include/eunit.hrl\").\n\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eunit": true
+      }
+    },
+    {
+      "content": "-ifdef(TEST).\n-include_lib(\"eunit/include/eunit.hrl\").\n\n${0}\n\n-endif.",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ieunit": true
+      }
+    },
+    {
+      "content": "-ifdef(TEST).\n\n${1}_test() ->\n\t${0}\n\n-endif.",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "itest": true
+      }
+    },
+    {
+      "content": "${1}_test() ->\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "test": true
+      }
+    },
+    {
+      "content": "?assert(${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "as": true
+      }
+    },
+    {
+      "content": "?assertNot(${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "asn": true
+      }
+    },
+    {
+      "content": "?assertEqual(${1}, ${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "aseq": true
+      }
+    },
+    {
+      "content": "?assertNotEqual(${1}, ${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "asneq": true
+      }
+    },
+    {
+      "content": "?assertMatch(${1:Pattern}, ${0:Expression})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "asmat": true
+      }
+    },
+    {
+      "content": "?assertNotMatch(${1:Pattern}, ${0:Expression})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "asnmat": true
+      }
+    },
+    {
+      "content": "?assertError(${1:Pattern}, ${0:Expression})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "aserr": true
+      }
+    },
+    {
+      "content": "?assertExit(${1:Pattern}, ${0:Expression})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "asex": true
+      }
+    },
+    {
+      "content": "?assertException(${1:Class}, ${2:Pattern}, ${0:Expression})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "asexc": true
+      }
+    },
+    {
+      "content": "-module(${0:`vim_snippets#Filename()`}).\n\n-include_lib(\"common_test/include/ct.hrl\").\n\n%% Test server callbacks\n-export([suite/0, all/0, groups/0,\n\tinit_per_suite/1, end_per_suite/1,\n\tinit_per_group/2, end_per_group/2,\n\tinit_per_testcase/2, end_per_testcase/2]).\n\n%% Test cases\n-export([\n\t]).\n\n%%--------------------------------------------------------------------\n%% COMMON TEST CALLBACK FUNCTIONS\n%%--------------------------------------------------------------------\n\n%%--------------------------------------------------------------------\n%% Function: suite() -> Info\n%%\n%% Info = [tuple()]\n%%   List of key/value pairs.\n%%\n%% Description: Returns list of tuples to set default properties\n%%              for the suite.\n%%\n%% Note: The suite/0 function is only meant to be used to return\n%% default data values, not perform any other operations.\n%%--------------------------------------------------------------------\nsuite() ->\n    [{timetrap,{minutes,10}}].\n\n%%--------------------------------------------------------------------\n%% Function: init_per_suite(Config0) ->\n%%               Config1 | {skip,Reason} | {skip_and_save,Reason,Config1}\n%%\n%% Config0 = Config1 = [tuple()]\n%%   A list of key/value pairs, holding the test case configuration.\n%% Reason = term()\n%%   The reason for skipping the suite.\n%%\n%% Description: Initialization before the suite.\n%%\n%% Note: This function is free to add any key/value pairs to the Config\n%% variable, but should NOT alter/remove any existing entries.\n%%--------------------------------------------------------------------\ninit_per_suite(Config) ->\n    Config.\n\n%%--------------------------------------------------------------------\n%% Function: end_per_suite(Config0) -> void() | {save_config,Config1}\n%%\n%% Config0 = Config1 = [tuple()]\n%%   A list of key/value pairs, holding the test case configuration.\n%%\n%% Description: Cleanup after the suite.\n%%--------------------------------------------------------------------\nend_per_suite(_Config) ->\n    ok.\n\n%%--------------------------------------------------------------------\n%% Function: init_per_group(GroupName, Config0) ->\n%%               Config1 | {skip,Reason} | {skip_and_save,Reason,Config1}\n%%\n%% GroupName = atom()\n%%   Name of the test case group that is about to run.\n%% Config0 = Config1 = [tuple()]\n%%   A list of key/value pairs, holding configuration data for the group.\n%% Reason = term()\n%%   The reason for skipping all test cases and subgroups in the group.\n%%\n%% Description: Initialization before each test case group.\n%%--------------------------------------------------------------------\ninit_per_group(_GroupName, Config) ->\n    Config.\n\n%%--------------------------------------------------------------------\n%% Function: end_per_group(GroupName, Config0) ->\n%%               void() | {save_config,Config1}\n%%\n%% GroupName = atom()\n%%   Name of the test case group that is finished.\n%% Config0 = Config1 = [tuple()]\n%%   A list of key/value pairs, holding configuration data for the group.\n%%\n%% Description: Cleanup after each test case group.\n%%--------------------------------------------------------------------\nend_per_group(_GroupName, _Config) ->\n    ok.\n\n%%--------------------------------------------------------------------\n%% Function: init_per_testcase(TestCase, Config0) ->\n%%               Config1 | {skip,Reason} | {skip_and_save,Reason,Config1}\n%%\n%% TestCase = atom()\n%%   Name of the test case that is about to run.\n%% Config0 = Config1 = [tuple()]\n%%   A list of key/value pairs, holding the test case configuration.\n%% Reason = term()\n%%   The reason for skipping the test case.\n%%\n%% Description: Initialization before each test case.\n%%\n%% Note: This function is free to add any key/value pairs to the Config\n%% variable, but should NOT alter/remove any existing entries.\n%%--------------------------------------------------------------------\ninit_per_testcase(_TestCase, Config) ->\n    Config.\n\n%%--------------------------------------------------------------------\n%% Function: end_per_testcase(TestCase, Config0) ->\n%%               void() | {save_config,Config1} | {fail,Reason}\n%%\n%% TestCase = atom()\n%%   Name of the test case that is finished.\n%% Config0 = Config1 = [tuple()]\n%%   A list of key/value pairs, holding the test case configuration.\n%% Reason = term()\n%%   The reason for failing the test case.\n%%\n%% Description: Cleanup after each test case.\n%%--------------------------------------------------------------------\nend_per_testcase(_TestCase, _Config) ->\n    ok.\n\n%%--------------------------------------------------------------------\n%% Function: groups() -> [Group]\n%%\n%% Group = {GroupName,Properties,GroupsAndTestCases}\n%% GroupName = atom()\n%%   The name of the group.\n%% Properties = [parallel | sequence | Shuffle | {RepeatType,N}]\n%%   Group properties that may be combined.\n%% GroupsAndTestCases = [Group | {group,GroupName} | TestCase]\n%% TestCase = atom()\n%%   The name of a test case.\n%% Shuffle = shuffle | {shuffle,Seed}\n%%   To get cases executed in random order.\n%% Seed = {integer(),integer(),integer()}\n%% RepeatType = repeat | repeat_until_all_ok | repeat_until_all_fail |\n%%              repeat_until_any_ok | repeat_until_any_fail\n%%   To get execution of cases repeated.\n%% N = integer() | forever\n%%\n%% Description: Returns a list of test case group definitions.\n%%--------------------------------------------------------------------\ngroups() ->\n    [].\n\n%%--------------------------------------------------------------------\n%% Function: all() -> GroupsAndTestCases | {skip,Reason}\n%%\n%% GroupsAndTestCases = [{group,GroupName} | TestCase]\n%% GroupName = atom()\n%%   Name of a test case group.\n%% TestCase = atom()\n%%   Name of a test case.\n%% Reason = term()\n%%   The reason for skipping all groups and test cases.\n%%\n%% Description: Returns the list of groups and test cases that\n%%              are to be executed.\n%%--------------------------------------------------------------------\nall() ->\n    [].\n\n\n%%--------------------------------------------------------------------\n%% TEST CASES\n%%--------------------------------------------------------------------\n\n%%--------------------------------------------------------------------\n%% Function: TestCase(Config0) ->\n%%               ok | exit() | {skip,Reason} | {comment,Comment} |\n%%               {save_config,Config1} | {skip_and_save,Reason,Config1}\n%%\n%% Config0 = Config1 = [tuple()]\n%%   A list of key/value pairs, holding the test case configuration.\n%% Reason = term()\n%%   The reason for skipping the test case.\n%% Comment = term()\n%%   A comment about the test case that will be printed in the html log.\n%%\n%% Description: Test case function. (The name of it must be specified in\n%%              the all/0 list or in a test case group for the test case\n%%              to be executed).\n%%--------------------------------------------------------------------",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "testsuite": true
+      }
+    }
+  ]
+}

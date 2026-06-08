@@ -1,0 +1,135 @@
+{
+  "extends": [
+    "cpp"
+  ],
+  "snippets": [
+    {
+      "content": "__global__ void ${1:kernel}(${2:void}) {\n\t${0:// TODO: Implement}\n}",
+      "doc": "",
+      "label": "Kernel definition",
+      "matches": {
+        "kern": true
+      }
+    },
+    {
+      "content": "__device__ ${1:int} ${2:foo}(${3:void}) {\n\t${0:// TODO: Implement}\n\treturn 0;\n}",
+      "doc": "",
+      "label": "Device function definition",
+      "matches": {
+        "dev": true
+      }
+    },
+    {
+      "content": "${1:kernel}<<<${2:args}>>>(${3});${0}",
+      "doc": "",
+      "label": "Kernel call",
+      "matches": {
+        "call": true
+      }
+    },
+    {
+      "content": "__syncthreads();",
+      "doc": "",
+      "label": "Synchonize threads",
+      "matches": {
+        "sync": true
+      }
+    },
+    {
+      "content": "threadIdx.${0}",
+      "doc": "",
+      "label": "Thread Index",
+      "matches": {
+        "tid": true
+      }
+    },
+    {
+      "content": "blockIdx.${0}",
+      "doc": "",
+      "label": "Block Index",
+      "matches": {
+        "bid": true
+      }
+    },
+    {
+      "content": "blockDim.${0}",
+      "doc": "",
+      "label": "Block Dimension",
+      "matches": {
+        "bdim": true
+      }
+    },
+    {
+      "content": "int ${1:index} = threadIdx.${2:x} + blockIdx.$2 * blockDim.$2;",
+      "doc": "",
+      "label": "Get current index (1D)",
+      "matches": {
+        "ii": true
+      }
+    },
+    {
+      "content": "int ${1:x} = threadIdx.x + blockIdx.x * blockDim.x;",
+      "doc": "",
+      "label": "Get current X index (1D)",
+      "matches": {
+        "ix": true
+      }
+    },
+    {
+      "content": "int ${1:y} = threadIdx.y + blockIdx.y * blockDim.y;",
+      "doc": "",
+      "label": "Get current Y index (1D)",
+      "matches": {
+        "iy": true
+      }
+    },
+    {
+      "content": "int ${1:z} = threadIdx.z + blockIdx.z * blockDim.z;",
+      "doc": "",
+      "label": "Get current Z index (1D)",
+      "matches": {
+        "iz": true
+      }
+    },
+    {
+      "content": "int ${1:x} = threadIdx.x + blockIdx.x * blockDim.x;\nint ${2:y} = threadIdx.y + blockIdx.y * blockDim.y;",
+      "doc": "",
+      "label": "Get current X,Y index (2D)",
+      "matches": {
+        "ixy": true
+      }
+    },
+    {
+      "content": "int ${1:x} = threadIdx.x + blockIdx.x * blockDim.x;\nint ${3:z} = threadIdx.z + blockIdx.z * blockDim.z;",
+      "doc": "",
+      "label": "Get current X,Z index (2D)",
+      "matches": {
+        "ixz": true
+      }
+    },
+    {
+      "content": "int ${2:y} = threadIdx.y + blockIdx.y * blockDim.y;\nint ${3:z} = threadIdx.z + blockIdx.z * blockDim.z;",
+      "doc": "",
+      "label": "Get current Y,Z index (2D)",
+      "matches": {
+        "iyz": true
+      }
+    },
+    {
+      "content": "int ${1:x} = threadIdx.x + blockIdx.x * blockDim.x;\nint ${2:y} = threadIdx.y + blockIdx.y * blockDim.y;\nint ${3:z} = threadIdx.z + blockIdx.z * blockDim.z;",
+      "doc": "",
+      "label": "Get current X,Y,Z index (3D)",
+      "matches": {
+        "ixyz": true
+      }
+    },
+    {
+      "content": "__shared__ ${1:int} ${2:memo}[${3:SIZE}];${0}",
+      "doc": "",
+      "label": "Shared memory declaration",
+      "matches": {
+        "share": true
+      }
+    }
+  ]
+}

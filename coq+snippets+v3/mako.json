@@ -1,0 +1,125 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "<%def name=\"${1:name}\">\n\t${0:}\n</%def>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "def": true
+      }
+    },
+    {
+      "content": "<%call expr=\"${1:name}\">\n\t${0:}\n</%call>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "call": true
+      }
+    },
+    {
+      "content": "<%doc>\n\t${0:}\n</%doc>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "doc": true
+      }
+    },
+    {
+      "content": "<%text>\n\t${0:}\n</%text>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "text": true
+      }
+    },
+    {
+      "content": "% for ${1:i} in ${2:iter}:\n\t${0:}\n% endfor",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "% if $1:\n\t${0:}\n% endif",
+      "doc": "",
+      "label": "if",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "% if $1:\n\t${2:}\n% else:\n\t${0:}\n% endif",
+      "doc": "",
+      "label": "if/else",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "% try:\n\t${1:${VISUAL}}\n% except${2:}:\n\t${0:pass}\n% endtry",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "try": true
+      }
+    },
+    {
+      "content": "% while ${1:}:\n\t${0:}\n% endwhile",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "<% ${0:} %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "<%": true
+      }
+    },
+    {
+      "content": "<!% ${0:} %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "<!%": true
+      }
+    },
+    {
+      "content": "<%inherit file=\"${0:filename}\" />",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "inherit": true
+      }
+    },
+    {
+      "content": "<%include file=\"${0:filename}\" />",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "include": true
+      }
+    },
+    {
+      "content": "<%namespace file=\"${0:name}\" />",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "namespace": true
+      }
+    },
+    {
+      "content": "<%page args=\"${0:}\" />",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "page": true
+      }
+    }
+  ]
+}

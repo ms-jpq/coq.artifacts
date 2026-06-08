@@ -1,0 +1,341 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "{% $1 %}",
+      "doc": "tag autocomplete no oficial",
+      "label": "tag",
+      "matches": {
+        "tag": true
+      }
+    },
+    {
+      "content": "{% include \"$1\" %}",
+      "doc": "include tag django template",
+      "label": "inc",
+      "matches": {
+        "inc": true
+      }
+    },
+    {
+      "content": "{% ifequal $1 %}\n$2\n{% endifequal %}",
+      "doc": "ifequal tag django template",
+      "label": "ifeq",
+      "matches": {
+        "ifeq": true
+      }
+    },
+    {
+      "content": "{{ MEDIA_URL }}",
+      "doc": "",
+      "label": "mediaurl",
+      "matches": {
+        "mediaurl": true
+      }
+    },
+    {
+      "content": "{% ifequal $1 %}\n$2\n{% endifequal %}",
+      "doc": "ifequal tag django template",
+      "label": "ifequal",
+      "matches": {
+        "ifeq": true
+      }
+    },
+    {
+      "content": "{% ifnotequal $1 %}\n$2\n{% ifnotequal %}",
+      "doc": "ifnotequal tag django template",
+      "label": "ifnotequal",
+      "matches": {
+        "ifnotequal": true
+      }
+    },
+    {
+      "content": "{% load $1 %}",
+      "doc": "load tag django template",
+      "label": "load",
+      "matches": {
+        "load": true
+      }
+    },
+    {
+      "content": "{% regroup $1 by $2 as $3 %}",
+      "doc": "regroup tag django template",
+      "label": "regroup",
+      "matches": {
+        "regroup": true
+      }
+    },
+    {
+      "content": "{% spaceless %}\n  $1\n{% endspaceless %}",
+      "doc": "spaceless tag django template",
+      "label": "spaceless",
+      "matches": {
+        "spaceless": true
+      }
+    },
+    {
+      "content": "{% csrf_token %}",
+      "doc": "csrf token django template",
+      "label": "csrf",
+      "matches": {
+        "csrf": true
+      }
+    },
+    {
+      "content": "{% templatetag $1 %}",
+      "doc": "templatetag tag django template",
+      "label": "templatetag",
+      "matches": {
+        "templatetag": true
+      }
+    },
+    {
+      "content": "{% if $1 %}\n$2\n{% endif %}",
+      "doc": "if tag django template",
+      "label": "if",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "{% include \"$1\" %}",
+      "doc": "include tag django template",
+      "label": "include",
+      "matches": {
+        "include": true
+      }
+    },
+    {
+      "content": "{% url $1 %}",
+      "doc": "url tag django template",
+      "label": "url",
+      "matches": {
+        "url": true
+      }
+    },
+    {
+      "content": "{% verbatim %}\n  $1\n{% endverbatim %}",
+      "doc": "verbatim tag django template",
+      "label": "verbatim",
+      "matches": {
+        "verbatim": true
+      }
+    },
+    {
+      "content": "{% filter $1 %}\n$2\n{% endfilter %}",
+      "doc": "filter tag django template",
+      "label": "filter",
+      "matches": {
+        "filter": true
+      }
+    },
+    {
+      "content": "{% widthratio ${this_value} max_value 100 %}",
+      "doc": "widthratio tag django template",
+      "label": "widthratio",
+      "matches": {
+        "widthratio": true
+      }
+    },
+    {
+      "content": "{{ STATIC_URL }}",
+      "doc": "STATIC_URL no oficial var",
+      "label": "staticurl",
+      "matches": {
+        "staticurl": true
+      }
+    },
+    {
+      "content": "{{ $1 }}",
+      "doc": "Variable autocomplete",
+      "label": "var",
+      "matches": {
+        "var": true
+      }
+    },
+    {
+      "content": "{% block extrahead %}\n    $1\n{% endblock extrahead %}",
+      "doc": "Extrastyle no oficial Tag",
+      "label": "extrastyle",
+      "matches": {
+        "extrastyle": true
+      }
+    },
+    {
+      "content": "{% block extrahead %}\n    $1\n{% endblock extrahead %}",
+      "doc": "Extrahead no oficial tag",
+      "label": "extrahead",
+      "matches": {
+        "extrahead": true
+      }
+    },
+    {
+      "content": "{{ block.super }}",
+      "doc": "Block super",
+      "label": "super",
+      "matches": {
+        "super": true
+      }
+    },
+    {
+      "content": "{% blocktrans %}$1{% endblocktrans %}",
+      "doc": "blocktrans tag django template (single line)",
+      "label": "blocktransinline",
+      "matches": {
+        "blocktransinline": true
+      }
+    },
+    {
+      "content": "{% trans \"$1\" %}",
+      "doc": "trans tag django template",
+      "label": "trans",
+      "matches": {
+        "trans": true
+      }
+    },
+    {
+      "content": "{% blocktrans %}\n  $1\n{% endblocktrans %}",
+      "doc": "blocktrans tag django template",
+      "label": "blocktrans",
+      "matches": {
+        "blocktrans": true
+      }
+    },
+    {
+      "content": "{% autoescape ${off} %}\n$2\n{% autoescape %}",
+      "doc": "autoescape tag django template",
+      "label": "autoescape",
+      "matches": {
+        "autoescape": true
+      }
+    },
+    {
+      "content": "{% if $1 %}\n$2\n{% else %}\n$3\n{% endif %}",
+      "doc": "if else tag django template",
+      "label": "ife",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "{% static \"$1\" %}",
+      "doc": "static tag django template",
+      "label": "static",
+      "matches": {
+        "static": true
+      }
+    },
+    {
+      "content": "{% extends \"$1\" %}",
+      "doc": "extends tag django template",
+      "label": "extends",
+      "matches": {
+        "extends": true
+      }
+    },
+    {
+      "content": "{% with $1 as $2 %}\n$3\n{% endwith %}",
+      "doc": "with tag django template",
+      "label": "with",
+      "matches": {
+        "with": true
+      }
+    },
+    {
+      "content": "{% ifchanged $1 %}\n$2\n{% endifchanged %}",
+      "doc": "ifchanged tag django template",
+      "label": "ifchanged",
+      "matches": {
+        "ifchanged": true
+      }
+    },
+    {
+      "content": "{% extends \"$1\" %}",
+      "doc": "extends tag django template",
+      "label": "ext",
+      "matches": {
+        "ext": true
+      }
+    },
+    {
+      "content": "{% for $1 in $2 %}\n$3\n{% empty %}\n$4\n{% endfor %}",
+      "doc": "foreach with empty tag django template",
+      "label": "fore",
+      "matches": {
+        "fore": true
+      }
+    },
+    {
+      "content": "{% cycle %}",
+      "doc": "cycle tag django template",
+      "label": "cycle",
+      "matches": {
+        "cycle": true
+      }
+    },
+    {
+      "content": "{% debug %}",
+      "doc": "debug tag django template",
+      "label": "debug",
+      "matches": {
+        "debug": true
+      }
+    },
+    {
+      "content": "{% for $1 in $2 %}\n$3\n{% endfor %}",
+      "doc": "for tag django template",
+      "label": "for",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "{% block ${1:blockname} %}\n$2\n{% endblock $1 %}",
+      "doc": "block tag django template",
+      "label": "block",
+      "matches": {
+        "block": true
+      }
+    },
+    {
+      "content": "{% ssi $1 parsed %}",
+      "doc": "ssi tag django template",
+      "label": "ssi",
+      "matches": {
+        "ssi": true
+      }
+    },
+    {
+      "content": "{% firstof %}",
+      "doc": "firstof tag django template",
+      "label": "firstof",
+      "matches": {
+        "firstof": true
+      }
+    },
+    {
+      "content": "{% comment %}\n  $1\n{% endcomment %}",
+      "doc": "Comment tag django template",
+      "label": "comment",
+      "matches": {
+        "comment": true
+      }
+    },
+    {
+      "content": "{% if $1 %}\n$2\n{% else %}\n$3\n{% endif %}",
+      "doc": "if else tag django template",
+      "label": "ifelse",
+      "matches": {
+        "ifelse": true
+      }
+    },
+    {
+      "content": "{% now \"$1\" %}",
+      "doc": "now tag django template",
+      "label": "now",
+      "matches": {
+        "now": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "import { useStaticQuery, graphql } from \"gatsby\"",
+      "doc": "",
+      "label": "gatsby-usestaticquery-import",
+      "matches": {
+        "gatsby import usestaticquery": true
+      }
+    },
+    {
+      "content": "<Link to=\"${1:/blog}\" activeClassName={\"${2:myActiveClassName}\"} >Text</Link>",
+      "doc": "",
+      "label": "gatsby-link-activeclassname",
+      "matches": {
+        "gatsby link activeclassname": true
+      }
+    },
+    {
+      "content": "<Link to=\"${1:/blog}\">${2:Text}</Link>",
+      "doc": "",
+      "label": "gatsby-link",
+      "matches": {
+        "gatsby link": true
+      }
+    },
+    {
+      "content": "const {${1:site}} = useStaticQuery(\n  graphql`${2:query}`\n);",
+      "doc": "",
+      "label": "gatsby-usestatic-query",
+      "matches": {
+        "gatsby usestaticquery": true
+      }
+    },
+    {
+      "content": "import { Link } from \"gatsby\"",
+      "doc": "",
+      "label": "gatsby-link-import",
+      "matches": {
+        "gatsby link import": true
+      }
+    },
+    {
+      "content": "import { graphql } from 'gatsby';",
+      "doc": "",
+      "label": "gatsby-graphql-import",
+      "matches": {
+        "gatsby import graphql": true
+      }
+    },
+    {
+      "content": "<Link to=\"${1:/blog}\" activeStyle={{ ${2:color}: \"${3:red}\" }} >Text</Link>",
+      "doc": "",
+      "label": "gatsby-link-activestyle",
+      "matches": {
+        "gatsby link activestyle": true
+      }
+    },
+    {
+      "content": "export const query = graphql`${1:query}`;",
+      "doc": "Gatsby uses the concept of a page query, which is a query for a specific page in a site.Note that you can only have one page query per file.",
+      "label": "gatsby-export-query",
+      "matches": {
+        "gatsby export query": true
+      }
+    }
+  ]
+}

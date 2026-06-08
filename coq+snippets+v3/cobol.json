@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "vscode_cobol",
+    "vscode_cobol-compound",
+    "vscode_cobol_dir",
+    "vscode_cobol_jcl"
+  ],
+  "snippets": []
+}

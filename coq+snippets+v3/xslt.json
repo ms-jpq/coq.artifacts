@@ -1,0 +1,205 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "<xsl:apply-templates select=\"${1:*}\">\n\t<xsl:with-param name=\"${2:param}\">${3}</xsl:with-param>${4}\n</xsl:apply-templates>",
+      "doc": "",
+      "label": "with-param",
+      "matches": {
+        "apply-templates": true
+      }
+    },
+    {
+      "content": "<xsl:apply-templates select=\"${1:*}\">\n\t<xsl:sort select=\"${2:node}\" order=\"${3:ascending}\" data-type=\"${4:text}\">${5}\n</xsl:apply-templates>",
+      "doc": "",
+      "label": "sort-by",
+      "matches": {
+        "apply-templates": true
+      }
+    },
+    {
+      "content": "<xsl:apply-templates select=\"${1:*}\" />",
+      "doc": "",
+      "label": "plain",
+      "matches": {
+        "apply-templates": true
+      }
+    },
+    {
+      "content": "<xsl:attribute name=\"${1:name}\">${2}</xsl:attribute>",
+      "doc": "",
+      "label": "blank",
+      "matches": {
+        "attribute": true
+      }
+    },
+    {
+      "content": "<xsl:attribute name=\"${1:name}\">\n\t<xsl:value-of select=\"${2:*}\" />\n</xsl:attribute>",
+      "doc": "",
+      "label": "value-of",
+      "matches": {
+        "attribute": true
+      }
+    },
+    {
+      "content": "<xsl:call-template name=\"${1:template}\" />",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "call-template": true
+      }
+    },
+    {
+      "content": "<xsl:call-template name=\"${1:template}\">\n\t<xsl:with-param name=\"${2:param}\">${3}</xsl:with-param>${4}\n</xsl:call-template>",
+      "doc": "",
+      "label": "with-param",
+      "matches": {
+        "call-template": true
+      }
+    },
+    {
+      "content": "<xsl:choose>\n\t<xsl:when test=\"${1:value}\">\n\t\t${2}\n\t</xsl:when>\n</xsl:choose>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "choose": true
+      }
+    },
+    {
+      "content": "<xsl:copy-of select=\"${1:*}\" />",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "copy-of": true
+      }
+    },
+    {
+      "content": "<xsl:for-each select=\"${1:*}\">${2}\n</xsl:for-each>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for-each": true
+      }
+    },
+    {
+      "content": "<xsl:if test=\"${1:test}\">${2}\n</xsl:if>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "<xsl:import href=\"${1:stylesheet}\" />",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "import": true
+      }
+    },
+    {
+      "content": "<xsl:include href=\"${1:stylesheet}\" />",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "include": true
+      }
+    },
+    {
+      "content": "<xsl:otherwise>${0}\n</xsl:otherwise>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "otherwise": true
+      }
+    },
+    {
+      "content": "<xsl:param name=\"${1:name}\">${2}\n</xsl:param>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "param": true
+      }
+    },
+    {
+      "content": "<xsl:stylesheet version=\"1.0\"\nxmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\">${0}\n</xsl:stylesheet>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "stylesheet": true
+      }
+    },
+    {
+      "content": "<xsl:template match=\"${1:*}\">${0}\n</xsl:template>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "template": true
+      }
+    },
+    {
+      "content": "<xsl:template name=\"${1:name}\">${0}\n</xsl:template>",
+      "doc": "",
+      "label": "named",
+      "matches": {
+        "template": true
+      }
+    },
+    {
+      "content": "<xsl:text>${0}</xsl:text>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "text": true
+      }
+    },
+    {
+      "content": "<xsl:value-of select=\"${1:*}\" />",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "value-of": true
+      }
+    },
+    {
+      "content": "<xsl:variable name=\"${1:name}\">${0}\n</xsl:variable>",
+      "doc": "",
+      "label": "blank",
+      "matches": {
+        "variable": true
+      }
+    },
+    {
+      "content": "<xsl:variable select=\"${1:*}\" />",
+      "doc": "",
+      "label": "select",
+      "matches": {
+        "variable": true
+      }
+    },
+    {
+      "content": "<xsl:when test=\"${1:test}\">${0}\n</xsl:when>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "when": true
+      }
+    },
+    {
+      "content": "<xsl:with-param name=\"${1:name}\">${0}</xsl:with-param>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "with-param": true
+      }
+    },
+    {
+      "content": "<xsl:with-param name=\"${1:name}\" select=\"${0:*}\" />",
+      "doc": "",
+      "label": "select",
+      "matches": {
+        "with-param": true
+      }
+    }
+  ]
+}

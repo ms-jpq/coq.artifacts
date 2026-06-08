@@ -1,0 +1,101 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "#!/usr/bin/env falcon",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "#!": true
+      }
+    },
+    {
+      "content": "import ${0:module}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "imp": true
+      }
+    },
+    {
+      "content": "function ${2:function_name}(${3})\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fun": true
+      }
+    },
+    {
+      "content": "class ${1:class_name}(${2:class_params})\n\t${0:/* members/methods */}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "class": true
+      }
+    },
+    {
+      "content": "if $1\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "if $1\n\t${0}\nelse\n    ${1}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "elif $1\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eif": true
+      }
+    },
+    {
+      "content": "switch ${1:expression}\n\tcase ${2:item}\n\tcase ${0:item}\n\tdefault\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "switch": true
+      }
+    },
+    {
+      "content": "select ${1:variable}\n\tcase ${2:TypeSpec}\n\tcase ${0:TypeSpec}\n\tdefault\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "select": true
+      }
+    },
+    {
+      "content": "for ${1:element} in ${2:container}\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "forin": true
+      }
+    },
+    {
+      "content": "for ${1:lowerbound} to ${2:upperbound}\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "forto": true
+      }
+    },
+    {
+      "content": "while ${1:conidition}\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wh": true
+      }
+    }
+  ]
+}

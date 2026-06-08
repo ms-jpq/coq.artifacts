@@ -1,0 +1,61 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "{% load staticfiles %}",
+      "doc": "",
+      "label": "lstatic",
+      "matches": {
+        "lstatic": true
+      }
+    },
+    {
+      "content": "@register.filter\ndef $1(value):\n\treturn value$2",
+      "doc": "",
+      "label": "register_filter",
+      "matches": {
+        "register_filter": true
+      }
+    },
+    {
+      "content": "{% load $SELECTION$1_tags %}",
+      "doc": "",
+      "label": "ltags",
+      "matches": {
+        "ltags": true
+      }
+    },
+    {
+      "content": "@register.simple_tag(takes_context=True)\ndef $1(context):\n\trequest = context.get('request')\n\treturn ${2:'It Works!'}",
+      "doc": "",
+      "label": "register_simple_tag",
+      "matches": {
+        "register_simple_tag": true
+      }
+    },
+    {
+      "content": "def get_$1(context):\n\trequest = context.get('request')\n\t$1 = ${2:[]}\n\treturn ${3:$1}",
+      "doc": "",
+      "label": "register_assignment_tag",
+      "matches": {
+        "register_assignment_tag": true
+      }
+    },
+    {
+      "content": "{% load i18n %}",
+      "doc": "",
+      "label": "li18n",
+      "matches": {
+        "li18n": true
+      }
+    },
+    {
+      "content": "from django import template\nregister = template.Library()",
+      "doc": "",
+      "label": "ilib",
+      "matches": {
+        "ilib": true
+      }
+    }
+  ]
+}

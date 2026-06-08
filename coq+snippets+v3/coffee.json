@@ -1,0 +1,289 @@
+{
+  "extends": [
+    "angular_coffee",
+    "jquery_coffee",
+    "requirejs_coffee"
+  ],
+  "snippets": [
+    {
+      "content": "${1:#:object} = require('$1')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "req": true
+      }
+    },
+    {
+      "content": "console.log ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "log": true
+      }
+    },
+    {
+      "content": "${1:#:action} unless ${2:#:condition}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "unl": true
+      }
+    },
+    {
+      "content": "try\n  ${1:TARGET}\ncatch ${2:#:error}\n  ${3}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "try": true
+      }
+    },
+    {
+      "content": "if ${1:#:condition}\n  ${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "else if ${1:#:condition}\n  ${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "elif": true
+      }
+    },
+    {
+      "content": "if ${1:#:condition} then ${2:#:value} else ${3:#:other}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ifte": true
+      }
+    },
+    {
+      "content": "if ${1:#:condition}\n  ${2:TARGET}\nelse\n  ${3:#:body...}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "switch ${1:#:object}\n  when ${2:#:value}\n    ${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "swi": true
+      }
+    },
+    {
+      "content": "\\`${1:javascript}\\`",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "^j": true
+      }
+    },
+    {
+      "content": "for ${1:#:key}, ${2:#:value} of ${3:#:object}\n  ${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "foro": true
+      }
+    },
+    {
+      "content": "for ${1:#:name} in ${2:#:array}\n  ${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fora": true
+      }
+    },
+    {
+      "content": "${1:#:name} = (${2:#:args}) ->\n  ${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fun": true
+      }
+    },
+    {
+      "content": "(${1:#:args}) =>\n  ${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bfun": true
+      }
+    },
+    {
+      "content": "for ${1:name} in ${2:array}\n\tdo ($1) ->\n\t\t$0",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "forindo": true
+      }
+    },
+    {
+      "content": "for ${1:name} in ${2:array}\n\t$0",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fora": true
+      }
+    },
+    {
+      "content": "for ${1:key}, ${2:value} of ${3:object}\n\t$0",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "foro": true
+      }
+    },
+    {
+      "content": "for ${1:name} in [${2:start}..${3:finish}]\n\t$0",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "forr": true
+      }
+    },
+    {
+      "content": "for ${1:name} in [${2:start}..${3:finish}] by ${4:step}\n\t$0",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "forrb": true
+      }
+    },
+    {
+      "content": "for ${1:name} in [${2:start}...${3:finish}]\n\t$0",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "forrex": true
+      }
+    },
+    {
+      "content": "for ${1:name} in [${2:start}...${3:finish}] by ${4:step}\n\t$0",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "forrexb": true
+      }
+    },
+    {
+      "content": "(${1:args}) ->\n\t$0",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fun": true
+      }
+    },
+    {
+      "content": "(${1:args}) =>\n\t$0",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bfun": true
+      }
+    },
+    {
+      "content": "if $1\n\t${0:${VISUAL}}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "if $1\n\t${2:${VISUAL}}\nelse\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "else if $1\n\t${0:${VISUAL}}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eif": true
+      }
+    },
+    {
+      "content": "if $1 then $2 else $0",
+      "doc": "",
+      "label": "Ternary",
+      "matches": {
+        "ifte": true
+      }
+    },
+    {
+      "content": "$1 unless $0",
+      "doc": "",
+      "label": "Unless",
+      "matches": {
+        "unl": true
+      }
+    },
+    {
+      "content": "switch ${1:object}\n\twhen ${2:value}\n\t\t$0",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "swi": true
+      }
+    },
+    {
+      "content": "console.log ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "log": true
+      }
+    },
+    {
+      "content": "try\n\t${1:${VISUAL}}\ncatch ${2:error}\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "try": true
+      }
+    },
+    {
+      "content": "${2:$1} = require '${1:sys}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "req": true
+      }
+    },
+    {
+      "content": "${0:root} = exports ? this",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "exp": true
+      }
+    },
+    {
+      "content": "JSON.parse ${0:jstr}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "jsonp": true
+      }
+    },
+    {
+      "content": "JSON.stringify ${0:object}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "jsons": true
+      }
+    }
+  ]
+}

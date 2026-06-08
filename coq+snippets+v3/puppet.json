@@ -1,0 +1,333 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "class ${1:`vim_snippets#Filename('', 'name')`} {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "class": true
+      }
+    },
+    {
+      "content": "node \"${1:`vim_snippets#Filename('', 'fqdn')`}\" {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "node": true
+      }
+    },
+    {
+      "content": "if defined(${1:Resource}[\"${2:name}\"]) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ifd": true
+      }
+    },
+    {
+      "content": "if !defined(${1:Resource}[\"${2:name}\"]) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ifnd": true
+      }
+    },
+    {
+      "content": "else {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "el": true
+      }
+    },
+    {
+      "content": "? {\n\t\"${1}\"\t=> ${0}\n  }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "?": true
+      }
+    },
+    {
+      "content": "[ ${1} ]",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "[": true
+      }
+    },
+    {
+      "content": "${1}\t=> ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        ">": true
+      }
+    },
+    {
+      "content": "\"puppet://puppet/${1:module name}/${0:file name}\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "p:": true
+      }
+    },
+    {
+      "content": "alert(\"${1:message}\")",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "alert": true
+      }
+    },
+    {
+      "content": "crit(\"${1:message}\")",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "crit": true
+      }
+    },
+    {
+      "content": "debug(\"${1:message}\")",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "debug": true
+      }
+    },
+    {
+      "content": "defined(${1:Resource}[\"${2:name}\"])",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defined": true
+      }
+    },
+    {
+      "content": "emerg(\"${1:message}\")",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "emerg": true
+      }
+    },
+    {
+      "content": "extlookup(\"${1:variable}\")",
+      "doc": "",
+      "label": "Simple extlookup",
+      "matches": {
+        "extlookup": true
+      }
+    },
+    {
+      "content": "extlookup(\"${1:variable}\", \"${2:default}\")",
+      "doc": "",
+      "label": "Extlookup with defaults",
+      "matches": {
+        "extlookup": true
+      }
+    },
+    {
+      "content": "extlookup(\"${1:variable}\", \"${2:default}\", \"${3:data source}\")",
+      "doc": "",
+      "label": "Extlookup with defaults and custom data file",
+      "matches": {
+        "extlookup": true
+      }
+    },
+    {
+      "content": "fail(\"${1:message}\")",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fail": true
+      }
+    },
+    {
+      "content": "info(\"${1:message}\")",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "info": true
+      }
+    },
+    {
+      "content": "inline_template(\"<%= ${1} %>\")",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "inline_template": true
+      }
+    },
+    {
+      "content": "notice(\"${1:message}\")",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "notice": true
+      }
+    },
+    {
+      "content": "realize(${1:Resource}[${2:name}])",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "realize": true
+      }
+    },
+    {
+      "content": "regsubst(${1:hay stack}, ${2:needle}, \"${3:replacement}\")",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "regsubst": true
+      }
+    },
+    {
+      "content": "include ${1:classname}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "inc": true
+      }
+    },
+    {
+      "content": "split(${1:hay stack}, \"${2:patten}\")",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "split": true
+      }
+    },
+    {
+      "content": "versioncmp(\"${1:version}\", \"${2:version}\")",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "versioncmp": true
+      }
+    },
+    {
+      "content": "warning(\"${1:message}\")",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "warning": true
+      }
+    },
+    {
+      "content": "cron { \"${1:name}\":\n\tcommand => \"${2}\",\n\tuser    => \"${3:root}\",\n\t${4}    => ${0},\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cron": true
+      }
+    },
+    {
+      "content": "exec { \"${1:name}\":\n\tcommand => \"${2:$1}\",\n\tuser    => \"${3:root}\",\n\t${4}    => ${0},\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "exec": true
+      }
+    },
+    {
+      "content": "group { \"${1:group}\":\n\tensure => ${0:present},\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "group": true
+      }
+    },
+    {
+      "content": "host { \"${1:hostname}\":\n\tip => ${0:127.0.0.1},\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "host": true
+      }
+    },
+    {
+      "content": "mailalias { \"${1:localpart}\":\n\trecipient => \"${0:recipient}\",\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mailalias": true
+      }
+    },
+    {
+      "content": "mount { \"${1:destination path}\":\n\tensure\t=> ${2:mounted},\n\tdevice\t=> \"${0:device name or path}\",\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mount": true
+      }
+    },
+    {
+      "content": "notify { \"${1:message}\": }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "notify": true
+      }
+    },
+    {
+      "content": "package { \"${1:package name}\":\n\tensure\t=> ${0:present},\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "package": true
+      }
+    },
+    {
+      "content": "yumrepo { \"${1:repo name}\":\n\tdescr   => \"${2:$1}\",\n\tenabled => ${0:1},\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yumrepo": true
+      }
+    },
+    {
+      "content": "define ${1} (${2}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "define": true
+      }
+    },
+    {
+      "content": "service { \"${1:service}\":\n\tensure    => running,\n\tenable    => true,\n\trequire   => [ Package[\"${2:package}\"], File[\"${3:file}\"], ],\n\tsubscribe => [ File[\"${4:configfile1}\"], File[\"${5:configfile2}\"], Package[\"${6:package}\"], ],\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "service": true
+      }
+    },
+    {
+      "content": "file { \"${1:filename}\":\n\tensure  => ${2:present},\n\towner   => \"${3:root}\",\n\tgroup   => \"${4:root}\",\n\tmode    => \"${5:0644}\",\n\tsource  => \"puppet:///modules/${6:module}/${7:source}\",\n\tcontent => template(\"${8:module}/${9:template}\"),\n\talias   => \"${10:alias}\",\n\trequire => [ Package[\"${11:package}\"], File[\"${12:file}\"], ],\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "file": true
+      }
+    },
+    {
+      "content": "archive { \"${1:filename}\":\n\tensure     => ${2:present},\n\turl        => \"http://${3:url}\",\n\textension  => \"${4:tgz}\",\n\ttarget     => \"${5:target}\",\n\tchecksum   => ${6:false},\n\tsrc_target => \"${7:/tmp}\",\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "archive": true
+      }
+    },
+    {
+      "content": "firewall { \"${1:comment}\":\n\tproto\t=> ${2:tcp},\n\taction\t=> ${3:accept},\n\tport\t=> ${4},\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "firewall": true
+      }
+    }
+  ]
+}

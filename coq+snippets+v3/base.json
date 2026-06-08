@@ -1,0 +1,773 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "${1:promise}.catch((${2:err}) => {\n\t${0}\n})",
+      "doc": "Promise.catch",
+      "label": "promise-catch",
+      "matches": {
+        "base promise catch": true
+      }
+    },
+    {
+      "content": "export const ${1:exportVariable} = ${2:localVariable};",
+      "doc": "Export named variable in ES6 syntax",
+      "label": "exportnamedvariable",
+      "matches": {
+        "base export named variable": true
+      }
+    },
+    {
+      "content": "export const ${1:functionName} = (${2:params}) => {\n\t$0\n};",
+      "doc": "Export named function in ES6 syntax",
+      "label": "exportnamedfunction",
+      "matches": {
+        "base export named function": true
+      }
+    },
+    {
+      "content": "export default function ${1:${TM_FILENAME_BASE}}(${2:params}) {\n\t$0\n};",
+      "doc": "Export default function in ES6 syntax",
+      "label": "exportdefaultfunction",
+      "matches": {
+        "base export default function": true
+      }
+    },
+    {
+      "content": "let {${1:name}} = ${2:value};",
+      "doc": "Object destructing",
+      "label": "destructuring-let-assignment",
+      "matches": {
+        "base let destruct object": true
+      }
+    },
+    {
+      "content": "export default class ${1:className} {\n\t$0\n};",
+      "doc": "Export default class in ES6 syntax",
+      "label": "exportclass",
+      "matches": {
+        "base export class": true
+      }
+    },
+    {
+      "content": "let [${1:name}] = ${2:value};",
+      "doc": "Array destructing",
+      "label": "destructuring-let-array",
+      "matches": {
+        "base let destruct array": true
+      }
+    },
+    {
+      "content": "export default class ${1:className} extends ${2:baseclassName} {\n\t$0\n};",
+      "doc": "Export default class which extends a base one in ES6 syntax",
+      "label": "exportclassextends",
+      "matches": {
+        "base export class extends": true
+      }
+    },
+    {
+      "content": "const ${1:name} = ${2:value};",
+      "doc": "const assignment",
+      "label": "const-assignment",
+      "matches": {
+        "base const": true
+      }
+    },
+    {
+      "content": "const {${1:name}} = ${2:value};",
+      "doc": "Object destructing",
+      "label": "destructuring-const-assignment",
+      "matches": {
+        "base const destruct object": true
+      }
+    },
+    {
+      "content": "import '${1:module}';$0",
+      "doc": "Imports entire module in ES6 syntax without module name",
+      "label": "importnomodulename",
+      "matches": {
+        "base import no module name": true
+      }
+    },
+    {
+      "content": "const [${2:propertyName}] = ${1:arrayToDestruct};",
+      "doc": "Array destructing",
+      "label": "destructingarray",
+      "matches": {
+        "base const destruct array": true
+      }
+    },
+    {
+      "content": "import { $2 } from '${1:module}';$0",
+      "doc": "Imports only a portion of the module in ES6 syntax",
+      "label": "importdestructing",
+      "matches": {
+        "base import destructing": true
+      }
+    },
+    {
+      "content": "else {\n\t${0}\n}",
+      "doc": "else statement",
+      "label": "else-statement",
+      "matches": {
+        "base else": true
+      }
+    },
+    {
+      "content": "import * as ${2:alias} from '${1:module}';$0",
+      "doc": "Imports everything as alias from the module in ES6 syntax",
+      "label": "importeverything",
+      "matches": {
+        "base import everything": true
+      }
+    },
+    {
+      "content": "if (${1:condition}) {\n\t${0}\n} else {\n\t\n}",
+      "doc": "if/else statement",
+      "label": "if-else-statement",
+      "matches": {
+        "base if else": true
+      }
+    },
+    {
+      "content": "return ${0};",
+      "doc": "return",
+      "label": "return",
+      "matches": {
+        "base return": true
+      }
+    },
+    {
+      "content": "else if (${1:condition}) {\n\t${0}\n}",
+      "doc": "else if statement",
+      "label": "else-if-statement",
+      "matches": {
+        "base else if": true
+      }
+    },
+    {
+      "content": "${1:condition} ? ${2:expression} : ${3:expression};",
+      "doc": "ternary operator",
+      "label": "ternary-operator",
+      "matches": {
+        "base ternary operator": true
+      }
+    },
+    {
+      "content": "try {\n\t${0}\n} finally {\n\t\n}",
+      "doc": "try/finally",
+      "label": "try-finally",
+      "matches": {
+        "base try finally": true
+      }
+    },
+    {
+      "content": "for (let ${1:i} = 0, ${2:len} = ${3:iterable}.length; ${1:i} < ${2:len}; ${1:i}++) {\n\t${0}\n}",
+      "doc": "for loop",
+      "label": "for-loop",
+      "matches": {
+        "base for": true
+      }
+    },
+    {
+      "content": "require('./${1:module}');",
+      "doc": "require local",
+      "label": "require-local",
+      "matches": {
+        "base require local": true
+      }
+    },
+    {
+      "content": "for (let ${1:i} = ${2:iterable}.length - 1; ${1:i} >= 0; ${1:i}--) {\n\t${0}\n}",
+      "doc": "reverse for loop",
+      "label": "reverse-for-loop",
+      "matches": {
+        "base for reverse": true
+      }
+    },
+    {
+      "content": "const ${1:module} = require('${1:module}');",
+      "doc": "require assignment",
+      "label": "require-assignment",
+      "matches": {
+        "base require assignment": true
+      }
+    },
+    {
+      "content": "for (let ${1:key} in ${2:array}) {\n\tif (${2:array}.hasOwnProperty(${1:key})) {\n\t\t${0}\n\t}\n}",
+      "doc": "for in loop",
+      "label": "for-in-loop",
+      "matches": {
+        "base for in": true
+      }
+    },
+    {
+      "content": "const ${1:module} = require('./${1:module}');",
+      "doc": "require assignment local",
+      "label": "require-assignment-local",
+      "matches": {
+        "base require assignment local": true
+      }
+    },
+    {
+      "content": "for (let ${1:key} of ${2:array}) {\n\t${0}\n}",
+      "doc": "for of loop (ES6)",
+      "label": "for-of-loop-es6-",
+      "matches": {
+        "base for of": true
+      }
+    },
+    {
+      "content": "const {${1:module}} = require('${1:module}');",
+      "doc": "destructuring require assignment",
+      "label": "destructuring-require-assignment",
+      "matches": {
+        "base require assignment": true
+      }
+    },
+    {
+      "content": "while (${1:condition}) {\n\t${0}\n}",
+      "doc": "while loop",
+      "label": "while-loop",
+      "matches": {
+        "base while": true
+      }
+    },
+    {
+      "content": "const {${1:module}} = require('./${1:module}');",
+      "doc": "destructuring require assignment local",
+      "label": "destructuring-require-assignment-local",
+      "matches": {
+        "base require assignment local destruct": true
+      }
+    },
+    {
+      "content": "'use strict';",
+      "doc": "insert 'use strict' statement",
+      "label": "insert-use-strict-statement",
+      "matches": {
+        "base use strict": true
+      }
+    },
+    {
+      "content": "process.nextTick(() => {\n\t${0}\n});",
+      "doc": "process nextTick",
+      "label": "process-nexttick",
+      "matches": {
+        "base process next tick": true
+      }
+    },
+    {
+      "content": "exports.${1:member} = ${2:value};",
+      "doc": "exports.member",
+      "label": "exports-member",
+      "matches": {
+        "base exports member": true
+      }
+    },
+    {
+      "content": "switch (${1:expr}) {\n\tcase ${2:value}:\n\t\treturn $0;\n\tdefault:\n\t\treturn;\n}",
+      "doc": "switch case",
+      "label": "switch-case",
+      "matches": {
+        "base switch case": true
+      }
+    },
+    {
+      "content": "console.table(${1:object});",
+      "doc": "Displays tabular data as a table.",
+      "label": "consoletable",
+      "matches": {
+        "base console table": true
+      }
+    },
+    {
+      "content": "module.exports = ${1:name};",
+      "doc": "module.exports",
+      "label": "module-exports",
+      "matches": {
+        "base module exports": true
+      }
+    },
+    {
+      "content": "setImmediate(() => {\n\t${0}\n});",
+      "doc": "setImmediate",
+      "label": "setimmediate",
+      "matches": {
+        "base set immediate": true
+      }
+    },
+    {
+      "content": "setInterval(() => {\n\t${0}\n}, ${1:delay});",
+      "doc": "setInterval",
+      "label": "setinterval",
+      "matches": {
+        "base set interval": true
+      }
+    },
+    {
+      "content": "function ${1:name}(${2:arguments}) {\n\t${0}\n}",
+      "doc": "named function",
+      "label": "named-function",
+      "matches": {
+        "base function named": true
+      }
+    },
+    {
+      "content": "setTimeout(() => {\n\t${0}\n}, ${1:delay});",
+      "doc": "setTimeout",
+      "label": "settimeout",
+      "matches": {
+        "base set timeout": true
+      }
+    },
+    {
+      "content": "console.timeEnd(${1:object});",
+      "doc": "Sets end point for execution time measurement",
+      "label": "consoletimeend",
+      "matches": {
+        "base console time end": true
+      }
+    },
+    {
+      "content": "((${1:arguments}) => {\n\t${0}\n})(${2});",
+      "doc": "immediately-invoked function expression (IIFE)",
+      "label": "immediately-invoked-function-expression-iife-",
+      "matches": {
+        "base function immediate": true
+      }
+    },
+    {
+      "content": "${1:emitter}.on('${2:event}', (${3:arguments}) => {\n\t${0}\n});",
+      "doc": "event handler",
+      "label": "event-handler",
+      "matches": {
+        "base event handler": true
+      }
+    },
+    {
+      "content": "class ${1:name} {\n\tconstructor(${2:arguments}) {\n\t\t${0}\n\t}\n}",
+      "doc": "class (ES6)",
+      "label": "class-es6-",
+      "matches": {
+        "base class": true
+      }
+    },
+    {
+      "content": "console.time(${1:object});",
+      "doc": "Sets starting point for execution time measurement",
+      "label": "consoletime",
+      "matches": {
+        "base console time": true
+      }
+    },
+    {
+      "content": "${1:fn}.apply(${2:this}, ${3:arguments})",
+      "doc": "function apply",
+      "label": "function-apply",
+      "matches": {
+        "base function apply": true
+      }
+    },
+    {
+      "content": "get ${1:property}() {\n\t${0}\n}",
+      "doc": "getter (ES6 syntax)",
+      "label": "getter-es6-syntax-",
+      "matches": {
+        "base getter": true
+      }
+    },
+    {
+      "content": "class ${1:name} extends ${2:base} {\n\tconstructor(${3:arguments}) {\n\t\tsuper(${3:arguments});\n\t\t${0}\n\t}\n}",
+      "doc": "child class (ES6)",
+      "label": "child-class-es6-",
+      "matches": {
+        "base child class": true
+      }
+    },
+    {
+      "content": "console.clear();",
+      "doc": "Clears the console",
+      "label": "consoleclear",
+      "matches": {
+        "base console clear": true
+      }
+    },
+    {
+      "content": "${1:fn}.call(${2:this}, ${3:arguments})",
+      "doc": "function call",
+      "label": "function-call",
+      "matches": {
+        "base function call": true
+      }
+    },
+    {
+      "content": "constructor(${1:arguments}) {\n\tsuper(${1:arguments});${0}\n}",
+      "doc": "class constructor (ES6)",
+      "label": "class-constructor-es6-",
+      "matches": {
+        "base class constructor": true
+      }
+    },
+    {
+      "content": "${1}.find(${2:item} => {\n\t${0}\n});",
+      "doc": "find",
+      "label": "find",
+      "matches": {
+        "base find": true
+      }
+    },
+    {
+      "content": "require('${1:module}');",
+      "doc": "require",
+      "label": "require",
+      "matches": {
+        "base require": true
+      }
+    },
+    {
+      "content": "${1:fn}.bind(${2:this}, ${3:arguments})",
+      "doc": "function bind",
+      "label": "function-bind",
+      "matches": {
+        "base function bind": true
+      }
+    },
+    {
+      "content": "console.debug(${1:object});",
+      "doc": "Displays a message in the console. Also display a blue right arrow icon along with the logged message in Safari",
+      "label": "consoledebug",
+      "matches": {
+        "base console debug": true
+      }
+    },
+    {
+      "content": "${1:method}(${2:arguments}) {\n\t${0}\n}",
+      "doc": "method (ES6 syntax)",
+      "label": "method-es6-syntax-",
+      "matches": {
+        "base method": true
+      }
+    },
+    {
+      "content": "console.log('${1:object} :>> ', ${1:object});",
+      "doc": "Displays an object in the console with its name",
+      "label": "consolelogobject",
+      "matches": {
+        "base console log object": true
+      }
+    },
+    {
+      "content": "(${1:arguments}) => ${2:statement}",
+      "doc": "arrow function (ES6)",
+      "label": "arrow-function-es6-",
+      "matches": {
+        "base function arrow": true
+      }
+    },
+    {
+      "content": "console.dir(${1:object});",
+      "doc": "Prints a JavaScript representation of the specified object",
+      "label": "consoledir",
+      "matches": {
+        "base console dir": true
+      }
+    },
+    {
+      "content": "${1}.reduce((${2:previous}, ${3:current}) => {\n\t${0}\n}${4:, initial});",
+      "doc": "reduce",
+      "label": "reduce",
+      "matches": {
+        "base reduce": true
+      }
+    },
+    {
+      "content": "(${1:arguments}) => {\n\t${0}\n}",
+      "doc": "arrow function with body (ES6)",
+      "label": "arrow-function-with-body-es6-",
+      "matches": {
+        "base function arrow body": true
+      }
+    },
+    {
+      "content": "console.error(${1:object});",
+      "doc": "Displays a message in the console and also includes a stack trace from where the method was called",
+      "label": "consoleerror",
+      "matches": {
+        "base console error": true
+      }
+    },
+    {
+      "content": "console.assert(${1:expression}, ${2:object});",
+      "doc": "If the specified expression is false, the message is written to the console along with a stack trace",
+      "label": "consoleassert",
+      "matches": {
+        "base console assert": true
+      }
+    },
+    {
+      "content": "function* (${1:arguments}) {\n\t${0}\n}",
+      "doc": "generator function (ES6)",
+      "label": "generator-function-es6-",
+      "matches": {
+        "base function generator": true
+      }
+    },
+    {
+      "content": "console.group('${1:label}');",
+      "doc": "Groups and indents all following output by an additional level, until console.groupEnd() is called.",
+      "label": "consolegroup",
+      "matches": {
+        "base console group": true
+      }
+    },
+    {
+      "content": "console.groupEnd();",
+      "doc": "Closes out the corresponding console.group().",
+      "label": "consolegroupend",
+      "matches": {
+        "base console group end": true
+      }
+    },
+    {
+      "content": "function* ${1:name}(${2:arguments}) {\n\t${0}\n}",
+      "doc": "named generator function (ES6)",
+      "label": "named-generator-function-es6-",
+      "matches": {
+        "base function generator named": true
+      }
+    },
+    {
+      "content": "get ${1:property}() {\n\t${0}\n}\nset ${1:property}(${2:value}) {\n\t\n}",
+      "doc": "getter and setter (ES6 syntax)",
+      "label": "getter-and-setter-es6-syntax-",
+      "matches": {
+        "base getter setter": true
+      }
+    },
+    {
+      "content": "console.count(${1:label});",
+      "doc": "Writes the the number of times that count() has been invoked at the same line and with the same label",
+      "label": "consolecount",
+      "matches": {
+        "base console count": true
+      }
+    },
+    {
+      "content": "[...Array(${1:length}).keys()]${0}",
+      "doc": "sequence of 0..n",
+      "label": "sequence-of-0-n",
+      "matches": {
+        "base sequence of": true
+      }
+    },
+    {
+      "content": "console.log(${1:object});",
+      "doc": "Displays a message in the console",
+      "label": "consolelog",
+      "matches": {
+        "base console log": true
+      }
+    },
+    {
+      "content": "${1:Class}.prototype.${2:method} = function(${3:arguments}) {\n\t${0}\n};",
+      "doc": "prototype method",
+      "label": "prototype-method",
+      "matches": {
+        "base prototype method": true
+      }
+    },
+    {
+      "content": "module.exports = {\n\t${1:member}\n};",
+      "doc": "module exports object",
+      "label": "module-exports-object",
+      "matches": {
+        "base module exports object": true
+      }
+    },
+    {
+      "content": "${1}.map((${2:item}) => {\n\t${0}\n});",
+      "doc": "map",
+      "label": "map",
+      "matches": {
+        "base map": true
+      }
+    },
+    {
+      "content": "Object.assign(${1:dest}, ${2:source})",
+      "doc": "Object.assign",
+      "label": "object-assign",
+      "matches": {
+        "base object assign": true
+      }
+    },
+    {
+      "content": "typeof ${1:source} === '${2:undefined}'",
+      "doc": "typeof",
+      "label": "typeof",
+      "matches": {
+        "base typeof": true
+      }
+    },
+    {
+      "content": "Object.assign({}, ${1:original}, ${2:source})",
+      "doc": "Object.assign copy (shallow clone)",
+      "label": "object-assign-copy-shallow-clone-",
+      "matches": {
+        "base object assign copy": true
+      }
+    },
+    {
+      "content": "console.trace(${1:object});",
+      "doc": "Prints a stack trace from the point where the method was called",
+      "label": "consoletrace",
+      "matches": {
+        "base console trace": true
+      }
+    },
+    {
+      "content": "${1:source} instanceof ${2:Object}",
+      "doc": "instanceof",
+      "label": "instanceof",
+      "matches": {
+        "base instanceof": true
+      }
+    },
+    {
+      "content": "import { ${2:originalName} as ${3:alias} } from '${1:module}';$0",
+      "doc": "Imports a specific portion of the module by assigning a local alias in ES6 syntax",
+      "label": "importas",
+      "matches": {
+        "base import as": true
+      }
+    },
+    {
+      "content": "console.warn(${1:object});",
+      "doc": "Displays a message in the console but also displays a yellow warning icon along with the logged message",
+      "label": "consolewarn",
+      "matches": {
+        "base console warn": true
+      }
+    },
+    {
+      "content": "let ${1:name} = ${2:value};",
+      "doc": "let assignment",
+      "label": "let-assignment",
+      "matches": {
+        "base let": true
+      }
+    },
+    {
+      "content": "return new Promise((resolve, reject) => {\n\t${0}\n});",
+      "doc": "return Promise (ES6)",
+      "label": "return-promise-es6-",
+      "matches": {
+        "base return promise": true
+      }
+    },
+    {
+      "content": "console.info(${1:object});",
+      "doc": "Displays a message in the console but also displays a blue information icon along with the logged message",
+      "label": "consoleinfo",
+      "matches": {
+        "base console info": true
+      }
+    },
+    {
+      "content": "function (${1:arguments}) {\n\t${0}\n}",
+      "doc": "anonymous function",
+      "label": "anonymous-function",
+      "matches": {
+        "base function anonymous": true
+      }
+    },
+    {
+      "content": "import ${2:moduleName} from '${1:module}';$0",
+      "doc": "Imports entire module statement in ES6 syntax",
+      "label": "import",
+      "matches": {
+        "base import": true
+      }
+    },
+    {
+      "content": "return (\n\t${0}\n);",
+      "doc": "return complex value (such as JSX components)",
+      "label": "return-complex-value-such-as-jsx-components-",
+      "matches": {
+        "base return complex value": true
+      }
+    },
+    {
+      "content": "try {\n\t${0}\n} catch (${1:err}) {\n\t\n} finally {\n\t\n}",
+      "doc": "try/catch/finally",
+      "label": "try-catch-finally",
+      "matches": {
+        "base try catch finally": true
+      }
+    },
+    {
+      "content": "try {\n\t${0}\n} catch (${1:err}) {\n\t\n}",
+      "doc": "try/catch",
+      "label": "try-catch",
+      "matches": {
+        "base try catch": true
+      }
+    },
+    {
+      "content": "if (${1:condition}) {\n\t${0}\n}",
+      "doc": "if statement",
+      "label": "if-statement",
+      "matches": {
+        "base if": true
+      }
+    },
+    {
+      "content": "${1}.forEach((${2:item}) => {\n\t${0}\n});",
+      "doc": "forEach loop",
+      "label": "foreach-loop",
+      "matches": {
+        "base foreach": true
+      }
+    },
+    {
+      "content": "${1}.filter(${2:item} => {\n\t${0}\n});",
+      "doc": "filter",
+      "label": "filter",
+      "matches": {
+        "base filter": true
+      }
+    },
+    {
+      "content": "new Promise((resolve, reject) => {\n\t${0}\n})",
+      "doc": "Promise (ES6)",
+      "label": "promise-es6-",
+      "matches": {
+        "base promise": true
+      }
+    },
+    {
+      "content": "set ${1:property}(${2:value}) {\n\t${0}\n}",
+      "doc": "setter (ES6 syntax)",
+      "label": "setter-es6-syntax-",
+      "matches": {
+        "base setter": true
+      }
+    },
+    {
+      "content": "var ${1:name} = ${2:value};",
+      "doc": "var assignment",
+      "label": "var-assignment",
+      "matches": {
+        "base var": true
+      }
+    },
+    {
+      "content": "${1:promise}.then((${2:value}) => {\n\t${0}\n})",
+      "doc": "Promise.then",
+      "label": "promise-then",
+      "matches": {
+        "base promise then": true
+      }
+    }
+  ]
+}

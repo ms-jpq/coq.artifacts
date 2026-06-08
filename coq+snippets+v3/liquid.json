@@ -1,0 +1,2333 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "{\n\t\"type\": \"checkbox\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"default\": ${3|false,true|},\n\t\"info\": \"$4\"\n},$5",
+      "doc": "",
+      "label": "Shopify Schema checkbox",
+      "matches": {
+        "_checkbox": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"header\",\n\t\"content\": \"$1\",\n\t\"info\": \"$2\"\n},$3",
+      "doc": "",
+      "label": "Shopify Schema header",
+      "matches": {
+        "_header": true
+      }
+    },
+    {
+      "content": "| join: '${1:, }'",
+      "doc": "Array filter: join",
+      "label": "Filter join",
+      "matches": {
+        "join": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"article\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"info\": \"$3\"\n},$4",
+      "doc": "",
+      "label": "Shopify Schema article",
+      "matches": {
+        "_article": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"blog\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"info\": \"$3\"\n},$4",
+      "doc": "",
+      "label": "Shopify Schema blog dropdown",
+      "matches": {
+        "_blog": true
+      }
+    },
+    {
+      "content": "{% stylesheet %}\n\t$1\n{% endstylesheet %}",
+      "doc": "Stylesheet tag: stylesheet",
+      "label": "Tag stylesheet",
+      "matches": {
+        "stylesheet": true
+      }
+    },
+    {
+      "content": "| money_without_trailing_zeros",
+      "doc": "Money filter: money without trailing zeros",
+      "label": "Filter money without trailing zeros",
+      "matches": {
+        "money_without_trailing_zeros": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"richtext\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"default\": \"<p>$3</p>\"\n},$4",
+      "doc": "",
+      "label": "Shopify Schema richtext",
+      "matches": {
+        "_richtext": true
+      }
+    },
+    {
+      "content": "| last",
+      "doc": "Array filter: last",
+      "label": "Filter last",
+      "matches": {
+        "last": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"video_url\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"accept\": [$7\"youtube\", \"vimeo\"],\n\t\"default\": \"$3\",\n\t\"info\": \"$4\",\n\t\"placeholder\": \"$5\"\n},$6",
+      "doc": "",
+      "label": "Shopify Schema video",
+      "matches": {
+        "_video": true
+      }
+    },
+    {
+      "content": "{% stylesheet '${1:scss}' %}\n\t$2\n{% endstylesheet %}",
+      "doc": "Stylesheet tag: stylesheet for scss",
+      "label": "Tag stylesheet for scss",
+      "matches": {
+        "stylesheet_scss": true
+      }
+    },
+    {
+      "content": "| map: '${1:key}'",
+      "doc": "Array filter: map",
+      "label": "Filter map",
+      "matches": {
+        "map": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"url\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"info\": \"$3\"\n},$4",
+      "doc": "",
+      "label": "Shopify Schema url dropdown",
+      "matches": {
+        "_url": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"link_list\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"info\": \"$3\"\n},$4",
+      "doc": "",
+      "label": "Shopify Schema link list dropdown",
+      "matches": {
+        "_link_list": true
+      }
+    },
+    {
+      "content": "{% javascript %}\n\t$4\n{% endjavascript %}",
+      "doc": "Javascript tag: javascript",
+      "label": "Tag javascript",
+      "matches": {
+        "javascript": true
+      }
+    },
+    {
+      "content": "| camelcase",
+      "doc": "String filter: camelcase",
+      "label": "Filter camelcase",
+      "matches": {
+        "camelcase": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"page\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"info\": \"$3\"\n},$4",
+      "doc": "",
+      "label": "Shopify Schema page dropdown",
+      "matches": {
+        "_page": true
+      }
+    },
+    {
+      "content": "| sort: '${1:key}'",
+      "doc": "Array filter: sort",
+      "label": "Filter sort",
+      "matches": {
+        "sort": true
+      }
+    },
+    {
+      "content": "{%- comment -%}$1{%- endcomment -%}",
+      "doc": "Comment tag: comment, whitespaced",
+      "label": "Tag comment, whitespaced",
+      "matches": {
+        "comment-": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"html\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"default\": \"<div>$3</div>\"\n},$4",
+      "doc": "",
+      "label": "Shopify Schema html",
+      "matches": {
+        "_html": true
+      }
+    },
+    {
+      "content": "| uniq",
+      "doc": "Array filter: uniq",
+      "label": "Filter uniq",
+      "matches": {
+        "uniq": true
+      }
+    },
+    {
+      "content": "{%- capture ${1:variable} -%}$2{%- endcapture -%}",
+      "doc": "Variable tag: capture, whitespaced",
+      "label": "Tag capture, whitespaced",
+      "matches": {
+        "capture-": true
+      }
+    },
+    {
+      "content": "{%- if ${1:condition} -%}\n\t$2\n{%- endif -%}",
+      "doc": "Control flow tag: if, whitespaced",
+      "label": "Tag if, whitespaced",
+      "matches": {
+        "if-": true
+      }
+    },
+    {
+      "content": "| ceil",
+      "doc": "Math filter: ceil",
+      "label": "Filter ceil",
+      "matches": {
+        "ceil": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"collection\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"info\": \"$3\"\n},$4",
+      "doc": "",
+      "label": "Shopify Schema collections dropdown",
+      "matches": {
+        "_collections": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"font_picker\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"info\": \"$3\",\n\t\"default\": \"${4|Abel,Abril Fatface,Agmena,Akko,Alegreya,Alegreya Sans,Alfie,Americana,Amiri,Anonymous Pro,Antique Olive,Arapey,Archivo Narrow,Arimo,Armata,Arvo,Asap,Assistant,Asul,Avenir Next,Avenir Next Rounded,Azbuka,Basic Commercial,Basic Commercial Soft Rounded,Baskerville No 2,Bauer Bodoni,Beefcakes,Bembo Book,Bernhard Modern,Bio Rhyme,Bitter,Bodoni Poster,Burlingame,Cabin,Cachet,Cardamon,Cardo,Carter Sans,Caslon Bold,Caslon Old Face,Catamaran,Centaur,Century Gothic,Chivo,Chong Modern,Claire News,Cooper BT,Courier New,Crimson Text,DIN Neuzeit Grotesk,DIN Next,DIN Next Slab,Daytona,Domine,Dosis,Electra,Eurostile Next,FF Meta,FF Meta Serif,FF Tisa,FF Tisa Sans,FF Unit,FF Unit Rounded,FF Unit Slab,Fette Gotisch,Fira Sans,Fjalla One,Friz Quadrata,Frutiger Serif,Futura,Garamond,Geometric 415,Georgia Pro,Gill Sans Nova,Glegoo,Goudy Old Style,Harmonia Sans,Helvetica,Humanist 521,IBM Plex Sans,ITC Avant Garde Gothic,ITC Benguiat,ITC Berkeley Old Style,ITC Bodoni Seventytwo,ITC Bodoni Twelve,ITC Caslon No 224,ITC Charter,ITC Cheltenham,ITC Clearface,ITC Conduit,ITC Esprit,ITC Founders Caslon,ITC Franklin Gothic,ITC Galliard,ITC Gamma,ITC Goudy Sans,ITC Johnston,ITC Mendoza Roman,ITC Modern No 216,ITC New Baskerville,ITC New Esprit,ITC New Veljovic,ITC Novarese,ITC Officina Sans,ITC Officina Serif,ITC Stepp,ITC Stone Humanist,ITC Stone Informal,ITC Stone Sans II,ITC Stone Serif,ITC Tapioca,Inconsolata,Joanna Nova,Joanna Sans Nova,Josefin Sans,Josefin Slab,Kairos,Kalam,Karla,Kreon,Lato,Laurentian,Libelle,Libre Baskerville,Libre Franklin,Linotype Didot,Linotype Gianotten,Linotype Really,Linotype Syntax Serif,Lobster,Lobster Two,Lora,Lucia,Lucida Grande,Luthersche Fraktur,Madera,Malabar,Mariposa Sans,Maven Pro,Megrim,Melior,Memphis,Memphis Soft Rounded,Mentor Sans,Merriweather Sans,Metro Nova,Modern No 20,Monaco,Monotype Baskerville,Monotype Bodoni,Monotype Century Old Style,Monotype Goudy,Monotype Goudy Modern,Monotype Italian Old Style,Monotype New Clarendon,Monotype News Gothic,Monotype Sabon,Montserrat,Mouse Memoirs,Muli,Mundo Sans,Neo Sans,Neue Aachen,Neue Frutiger 1450,Neue Haas Unica,Neue Swift,Neuton,Neuzeit Office,Neuzeit Office Soft Rounded,Neuzeit S,New Century Schoolbook,News 702,News 705,News Cycle,News Gothic No 2,News Plantin,Nobile,Noticia Text,Noto Serif,Nunito,Nunito Sans,Old Standard TT,Open Sans,Open Sans Condensed,Optima nova,Oswald,Ovo,Oxygen,PMN Caecilia,PT Mono,PT Sans,PT Sans Narrow,PT Serif,Pacifico,Palatino,Parma,Perpetua,Plantin,Playfair Display,Poppins,Prata,Prompt,Quantico,Quattrocento,Quattrocento Sans,Questrial,Quicksand,Quire Sans,Rajdhani,Raleway,Really No 2,Righteous,Roboto,Roboto Condensed,Roboto Mono,Roboto Slab,Rockwell,Rubik,Sabon Next,Sackers Square Gothic,Sagrantino,Scene,Scherzo,Shadows Into Light,Slate,Soho,Soho Gothic,Source Code Pro,Source Sans Pro,Stempel Schneidler,Swiss 721,Swiss 721 Rounded,Tenor Sans,Tiemann,Times New Roman,Tinos,Titillium Web,Trade Gothic,Trade Gothic Next,Trebuchet MS,Twentieth Century,Ubuntu,Unica One,Univers Next,Univers Next Typewriter,Unna,Vala,Varela,Varela Round,Verdana Pro,Volkhov,Vollkorn,Waza,Wola,Work Sans,Ysobel|}\"\n},$5",
+      "doc": "",
+      "label": "Shopify Schema font picker",
+      "matches": {
+        "_font": true
+      }
+    },
+    {
+      "content": "| divided_by: ${1:2}",
+      "doc": "Math filter: divided by",
+      "label": "Filter divided by",
+      "matches": {
+        "divided_by": true
+      }
+    },
+    {
+      "content": "{%- else -%}",
+      "doc": "Control flow tag: else, whitespaced",
+      "label": "Tag else, whitespaced",
+      "matches": {
+        "else-": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"color\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"default\": \"$3\",\n\t\"info\": \"$4\"\n},$5",
+      "doc": "",
+      "label": "Shopify Schema color",
+      "matches": {
+        "_color": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"range\",\n\t\"id\": \"$1\",\n\t\"min\": \"$2\",\n\t\"max\": \"$3\",\n\t\"step\": \"$4\",\n\t\"unit\": \"$5\",\n\t\"label\": \"$6\",\n\t\"default\": \"$7\"\n},$8",
+      "doc": "",
+      "label": "Shopify Schema range",
+      "matches": {
+        "_range": true
+      }
+    },
+    {
+      "content": "{%- elsif ${1:condition} -%}",
+      "doc": "Control flow tag: elsif, whitespaced",
+      "label": "Tag elsif, whitespaced",
+      "matches": {
+        "elsif-": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"paragraph\",\n\t\"content\": \"$1\"\n},$2",
+      "doc": "",
+      "label": "Shopify Schema paragraph",
+      "matches": {
+        "_paragraph": true
+      }
+    },
+    {
+      "content": "| url_escape",
+      "doc": "String filter: url escape",
+      "label": "Filter url escape",
+      "matches": {
+        "url_escape": true
+      }
+    },
+    {
+      "content": "| minus: ${1:1}",
+      "doc": "Math filter: minus",
+      "label": "Filter minus",
+      "matches": {
+        "minus": true
+      }
+    },
+    {
+      "content": "{%- if ${1:condition} -%}\n\t$2\n{%- else -%}\n\t$3\n{%- endif -%}",
+      "doc": "Control flow tag: if else, whitespaced",
+      "label": "Tag if else, whitespaced",
+      "matches": {
+        "ifelse-": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"select\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"options\": [\n\t\t{\n\t\t\"group\": \"$6\",\n\t\t\"value\": \"$7\",\n\t\t\"label\": \"$8\"\n\t\t}\n\t],\n\t\"default\": \"$3\",\n\t\"info\": \"$4\"\n},$5",
+      "doc": "",
+      "label": "Shopify Schema select",
+      "matches": {
+        "_select": true
+      }
+    },
+    {
+      "content": "| url_param_escape",
+      "doc": "String filter: url param escape",
+      "label": "Filter url param escape",
+      "matches": {
+        "url_param_escape": true
+      }
+    },
+    {
+      "content": "{%- unless ${1:condition} -%}\n\t$2\n{%- endunless -%}",
+      "doc": "Control flow tag: unless, whitespaced",
+      "label": "Tag unless, whitespaced",
+      "matches": {
+        "unless-": true
+      }
+    },
+    {
+      "content": "| pluralize: '${1:item}', '${2:items}'",
+      "doc": "String filter: pluralize",
+      "label": "Filter pluralize",
+      "matches": {
+        "pluralize": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"image_picker\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\"\n},$3",
+      "doc": "",
+      "label": "Shopify Schema image picker",
+      "matches": {
+        "_image_picker": true
+      }
+    },
+    {
+      "content": "| asset_url",
+      "doc": "URL filter: asset url",
+      "label": "Filter asset url",
+      "matches": {
+        "asset_url": true
+      }
+    },
+    {
+      "content": "| plus: ${1:1}",
+      "doc": "Math filter: plus",
+      "label": "Filter plus",
+      "matches": {
+        "plus": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"textarea\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"default\": \"$3\",\n\t\"info\": \"$4\",\n\t\"placeholder\": \"$5\"\n},$6",
+      "doc": "",
+      "label": "Shopify Schema textarea",
+      "matches": {
+        "_textarea": true
+      }
+    },
+    {
+      "content": "| lstrip",
+      "doc": "String filter: lstrip",
+      "label": "Filter lstrip",
+      "matches": {
+        "lstrip": true
+      }
+    },
+    {
+      "content": "| asset_img_url: '${1:medium}'",
+      "doc": "URL filter: asset img url",
+      "label": "Filter asset img url",
+      "matches": {
+        "asset_img_url": true
+      }
+    },
+    {
+      "content": "| round: ${1:0}",
+      "doc": "Math filter: round",
+      "label": "Filter round",
+      "matches": {
+        "round": true
+      }
+    },
+    {
+      "content": "| strip_newlines",
+      "doc": "String filter: strip newlines",
+      "label": "Filter strip newlines",
+      "matches": {
+        "strip_newlines": true
+      }
+    },
+    {
+      "content": "{% schema %}\n\t{\n\t\t\"name\": \"$1\",\n\t\t\"class\": \"$2\",\n\t\t\"settings\": [\n\t\t$3\n\t\t]\n\t}\n{% endschema %}",
+      "doc": "",
+      "label": "Shopify Schema",
+      "matches": {
+        "_schema": true
+      }
+    },
+    {
+      "content": "| img_url: '${1:medium}'",
+      "doc": "URL filter: img url",
+      "label": "Filter img url",
+      "matches": {
+        "img_url": true
+      }
+    },
+    {
+      "content": "| times: ${1:1}",
+      "doc": "Math filter: times",
+      "label": "Filter times",
+      "matches": {
+        "times": true
+      }
+    },
+    {
+      "content": "{% else %}",
+      "doc": "Control flow tag: else",
+      "label": "Tag else",
+      "matches": {
+        "else": true
+      }
+    },
+    {
+      "content": "| url_encode",
+      "doc": "String filter: url encode",
+      "label": "Filter url encode",
+      "matches": {
+        "url_encode": true
+      }
+    },
+    {
+      "content": "{%- case ${1:variable} -%}\n\t{%- when ${2:condition} -%}\n\t\t$3\n\t{%- else -%}\n\t\t$4\n{%- endcase -%}",
+      "doc": "Control flow tag: case, whitespaced",
+      "label": "Tag case, whitespaced",
+      "matches": {
+        "case-": true
+      }
+    },
+    {
+      "content": "{% elsif ${1:condition} %}",
+      "doc": "Control flow tag: elsif",
+      "label": "Tag elsif",
+      "matches": {
+        "elsif": true
+      }
+    },
+    {
+      "content": "| upcase",
+      "doc": "String filter: upcase",
+      "label": "Filter upcase",
+      "matches": {
+        "upcase": true
+      }
+    },
+    {
+      "content": "| strip",
+      "doc": "String filter: strip",
+      "label": "Filter strip",
+      "matches": {
+        "strip": true
+      }
+    },
+    {
+      "content": "| capitalize",
+      "doc": "String filter: capitalize",
+      "label": "Filter capitalize",
+      "matches": {
+        "capitalize": true
+      }
+    },
+    {
+      "content": "| truncate: ${1:20}, '${2:...}'",
+      "doc": "String filter: truncate",
+      "label": "Filter truncate",
+      "matches": {
+        "truncate": true
+      }
+    },
+    {
+      "content": "\"blocks\": [\n\t{\n\t\t\"type\": \"$1\",\n\t\t\"name\": \"$2\",\n\t\t\"settings\": [\n\t\t\t$3\n\t\t]\n\t},$4\n]",
+      "doc": "",
+      "label": "Shopify Schema blocks",
+      "matches": {
+        "_blocks": true
+      }
+    },
+    {
+      "content": "{%- when ${1:condition} -%}\n$0",
+      "doc": "Control flow tag: when, whitespaced",
+      "label": "Tag when, whitespaced",
+      "matches": {
+        "when-": true
+      }
+    },
+    {
+      "content": "| downcase",
+      "doc": "String filter: downcase",
+      "label": "Filter downcase",
+      "matches": {
+        "downcase": true
+      }
+    },
+    {
+      "content": "{% cycle '${1:group name}': '${2:odd}', '${3:even}' %}",
+      "doc": "Iteration tag: cycle group",
+      "label": "Tag cycle group",
+      "matches": {
+        "cyclegroup": true
+      }
+    },
+    {
+      "content": "| rstrip",
+      "doc": "String filter: rstrip",
+      "label": "Filter rstrip",
+      "matches": {
+        "rstrip": true
+      }
+    },
+    {
+      "content": "{%- cycle '${1:odd}', '${2:even}' -%}",
+      "doc": "Iteration tag: cycle, whitespaced",
+      "label": "Tag cycle, whitespaced",
+      "matches": {
+        "cycle-": true
+      }
+    },
+    {
+      "content": "| escape",
+      "doc": "String filter: escape",
+      "label": "Filter escape",
+      "matches": {
+        "escape": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"text\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"default\": \"$3\",\n\t\"info\": \"$4\",\n\t\"placeholder\": \"$5\"\n},$6",
+      "doc": "",
+      "label": "Shopify Schema text",
+      "matches": {
+        "_text": true
+      }
+    },
+    {
+      "content": "| truncatewords: ${1:5}, '${2:...}'",
+      "doc": "String filter: truncatewords",
+      "label": "Filter truncatewords",
+      "matches": {
+        "truncatewords": true
+      }
+    },
+    {
+      "content": "{% assign ${1:variable} = ${2:value} %}",
+      "doc": "Variable tag: assign",
+      "label": "Tag assign",
+      "matches": {
+        "assign": true
+      }
+    },
+    {
+      "content": "| first",
+      "doc": "Array filter: first",
+      "label": "Filter first",
+      "matches": {
+        "first": true
+      }
+    },
+    {
+      "content": "| money_without_currency",
+      "doc": "Money filter: money without currency",
+      "label": "Filter money without currency",
+      "matches": {
+        "money_without_currency": true
+      }
+    },
+    {
+      "content": "| prepend: '${1:string}'",
+      "doc": "String filter: prepend",
+      "label": "Filter prepend",
+      "matches": {
+        "prepend": true
+      }
+    },
+    {
+      "content": "{% break %}",
+      "doc": "Iteration tag: break",
+      "label": "Tag break",
+      "matches": {
+        "break": true
+      }
+    },
+    {
+      "content": "| handleize",
+      "doc": "String filter: handleize",
+      "label": "Filter handleize",
+      "matches": {
+        "handleize": true
+      }
+    },
+    {
+      "content": "| remove: '${1:string}'",
+      "doc": "String filter: remove",
+      "label": "Filter remove",
+      "matches": {
+        "remove": true
+      }
+    },
+    {
+      "content": "{% capture ${1:variable} %}$2{% endcapture %}",
+      "doc": "Variable tag: capture",
+      "label": "Tag capture",
+      "matches": {
+        "capture": true
+      }
+    },
+    {
+      "content": "{% if ${1:condition} %}\n\t$2\n{% else %}\n\t$3\n{% endif %}",
+      "doc": "Control flow tag: if else",
+      "label": "Tag if else",
+      "matches": {
+        "ifelse": true
+      }
+    },
+    {
+      "content": "{%- continue -%}",
+      "doc": "Iteration tag: continue, whitespaced",
+      "label": "Tag continue, whitespaced",
+      "matches": {
+        "continue-": true
+      }
+    },
+    {
+      "content": "{% case ${1:variable} %}\n\t{% when ${2:condition} %}\n\t\t$3\n\t{% else %}\n\t\t$4\n{% endcase %}",
+      "doc": "Control flow tag: case",
+      "label": "Tag case",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "| newline_to_br",
+      "doc": "String filter: newline to br",
+      "label": "Filter newline to br",
+      "matches": {
+        "newline_to_br": true
+      }
+    },
+    {
+      "content": "{%- tablerow ${1:item} in ${2:collection} cols: ${3:2} -%}\n\t$4\n{%- endtablerow -%}",
+      "doc": "Iteration tag: tablerow, whitespaced",
+      "label": "Tag tablerow, whitespaced",
+      "matches": {
+        "tablerow-": true
+      }
+    },
+    {
+      "content": "| replace: '${1:target}', '${2:replace}'",
+      "doc": "String filter: replace",
+      "label": "Filter replace",
+      "matches": {
+        "replace": true
+      }
+    },
+    {
+      "content": "| remove_first: '${1:string}'",
+      "doc": "String filter: remove first",
+      "label": "Filter remove first",
+      "matches": {
+        "remove_first": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"radio\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"options\": [\n\t\t{ \"value\": \"$6\", \"label\": \"$7\" }\n\t],\n\t\"default\": \"$3\",\n\t\"info\": \"$4\"\n},$5",
+      "doc": "",
+      "label": "Shopify Schema radio",
+      "matches": {
+        "_radio": true
+      }
+    },
+    {
+      "content": "| replace_first: '${1:target}', '${2:replace}'",
+      "doc": "String filter: replace first",
+      "label": "Filter replace first",
+      "matches": {
+        "replace_first": true
+      }
+    },
+    {
+      "content": "{%- assign ${1:variable} = ${2:value} -%}",
+      "doc": "Variable tag: assign, whitespaced",
+      "label": "Tag assign, whitespaced",
+      "matches": {
+        "assign-": true
+      }
+    },
+    {
+      "content": "{% tablerow ${1:item} in ${2:collection} cols: ${3:2} %}\n\t$4\n{% endtablerow %}",
+      "doc": "Iteration tag: tablerow",
+      "label": "Tag tablerow",
+      "matches": {
+        "tablerow": true
+      }
+    },
+    {
+      "content": "| md5",
+      "doc": "String filter: md5",
+      "label": "Filter md5",
+      "matches": {
+        "md5": true
+      }
+    },
+    {
+      "content": "| slice: ${1:0}, ${2:5}",
+      "doc": "String filter: slice",
+      "label": "Filter slice",
+      "matches": {
+        "slice": true
+      }
+    },
+    {
+      "content": "{% include '${1:snippet}' %}",
+      "doc": "Theme tag: include",
+      "label": "Tag include",
+      "matches": {
+        "include": true
+      }
+    },
+    {
+      "content": "| append: '${1:string}'",
+      "doc": "String filter: append",
+      "label": "Filter append",
+      "matches": {
+        "append": true
+      }
+    },
+    {
+      "content": "| slice: ${1:at}",
+      "doc": "String filter: slice with single parameter",
+      "label": "Filter slice single character",
+      "matches": {
+        "slice_single": true
+      }
+    },
+    {
+      "content": "{% continue %}",
+      "doc": "Iteration tag: continue",
+      "label": "Tag continue",
+      "matches": {
+        "continue": true
+      }
+    },
+    {
+      "content": "| money_with_currency",
+      "doc": "Money filter: money with currency",
+      "label": "Filter money with currency",
+      "matches": {
+        "money_with_currency": true
+      }
+    },
+    {
+      "content": "| concat: ${1:array}",
+      "doc": "Array filter: concat",
+      "label": "Filter concat",
+      "matches": {
+        "concat": true
+      }
+    },
+    {
+      "content": "| split: '${1:,}'",
+      "doc": "String filter: split",
+      "label": "Filter split",
+      "matches": {
+        "split": true
+      }
+    },
+    {
+      "content": "{% cycle '${1:odd}', '${2:even}' %}",
+      "doc": "Iteration tag: cycle",
+      "label": "Tag cycle",
+      "matches": {
+        "cycle": true
+      }
+    },
+    {
+      "content": "| modulo: ${1:2}",
+      "doc": "Math filter: modulo",
+      "label": "Filter modulo",
+      "matches": {
+        "modulo": true
+      }
+    },
+    {
+      "content": "| reverse",
+      "doc": "Array filter or String filter: reverse",
+      "label": "Filter reverse",
+      "matches": {
+        "reverse": true
+      }
+    },
+    {
+      "content": "| floor",
+      "doc": "Math filter: floor",
+      "label": "Filter floor",
+      "matches": {
+        "floor": true
+      }
+    },
+    {
+      "content": "| size",
+      "doc": "Array filter: size",
+      "label": "Filter size",
+      "matches": {
+        "size": true
+      }
+    },
+    {
+      "content": "{% when ${1:condition} %}\n$0",
+      "doc": "Control flow tag: when",
+      "label": "Tag when",
+      "matches": {
+        "when": true
+      }
+    },
+    {
+      "content": "| img_tag",
+      "doc": "HTML filter: img tag",
+      "label": "Filter img tag",
+      "matches": {
+        "img_tag": true
+      }
+    },
+    {
+      "content": "{% unless ${1:condition} %}\n\t$2\n{% endunless %}",
+      "doc": "Control flow tag: unless",
+      "label": "Tag unless",
+      "matches": {
+        "unless": true
+      }
+    },
+    {
+      "content": "{% if ${1:condition} %}\n\t$2\n{% endif %}",
+      "doc": "Control flow tag: if",
+      "label": "Tag if",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "{% render '${1:snippet}', ${2:variable}: ${3:value} %}",
+      "doc": "Theme tag: render with parameters",
+      "label": "Tag render with parameters",
+      "matches": {
+        "renderwith": true
+      }
+    },
+    {
+      "content": "| img_tag: '${1:alt}', '${2:class}'",
+      "doc": "HTML filter: img tag with parameters",
+      "label": "Filter img tag with parameters",
+      "matches": {
+        "img_tag_param": true
+      }
+    },
+    {
+      "content": "{% decrement ${1:variable} %}",
+      "doc": "Variable tag: decrement",
+      "label": "Tag decrement",
+      "matches": {
+        "decrement": true
+      }
+    },
+    {
+      "content": "| strip_html",
+      "doc": "String filter: strip html",
+      "label": "Filter strip html",
+      "matches": {
+        "strip_html": true
+      }
+    },
+    {
+      "content": "{% section '${1:snippet}' %}",
+      "doc": "Theme tag: section",
+      "label": "Tag section",
+      "matches": {
+        "section": true
+      }
+    },
+    {
+      "content": "| script_tag",
+      "doc": "HTML filter: script tag",
+      "label": "Filter script tag",
+      "matches": {
+        "script_tag": true
+      }
+    },
+    {
+      "content": "{% for ${1:item} in ${2:collection} %}\n\t$3\n{% endfor %}",
+      "doc": "Iteration tag: for",
+      "label": "Tag for",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "limit: ${1:5}",
+      "doc": "For loops option",
+      "label": "Tag Option limit",
+      "matches": {
+        "limit": true
+      }
+    },
+    {
+      "content": "{%- cycle '${1:group name}': '${2:odd}', '${3:even}' -%}",
+      "doc": "Iteration tag: cycle group, whitespaced",
+      "label": "Tag cycle group, whitespaced",
+      "matches": {
+        "cyclegroup-": true
+      }
+    },
+    {
+      "content": "| stylesheet_tag",
+      "doc": "HTML filter: stylesheet tag",
+      "label": "Filter stylesheet tag",
+      "matches": {
+        "stylesheet_tag": true
+      }
+    },
+    {
+      "content": "offset: ${1:0}",
+      "doc": "For loops option",
+      "label": "Tag Option offset",
+      "matches": {
+        "offset": true
+      }
+    },
+    {
+      "content": "{% increment ${1:variable} %}",
+      "doc": "Variable tag: increment",
+      "label": "Tag increment",
+      "matches": {
+        "increment": true
+      }
+    },
+    {
+      "content": "{% layout '${1:layout}' %}",
+      "doc": "Theme tag: layout",
+      "label": "Tag layout",
+      "matches": {
+        "layout": true
+      }
+    },
+    {
+      "content": "| abs",
+      "doc": "Math filter: abs",
+      "label": "Filter abs",
+      "matches": {
+        "abs": true
+      }
+    },
+    {
+      "content": "{% layout none %}",
+      "doc": "Theme tag: layout none",
+      "label": "Tag no layout",
+      "matches": {
+        "layoutnone": true
+      }
+    },
+    {
+      "content": "{% raw %}$1{% endraw %}",
+      "doc": "Theme tag: raw",
+      "label": "Tag raw",
+      "matches": {
+        "raw": true
+      }
+    },
+    {
+      "content": "reversed",
+      "doc": "For loops option",
+      "label": "Tag Option reversed",
+      "matches": {
+        "reversed": true
+      }
+    },
+    {
+      "content": "{% paginate ${1:collection.products} by ${2:12} %}\n\t{% for ${3:product} in ${1:collection.products} %}\n\t\t$4\n\t{% endfor %}\n{% endpaginate %}",
+      "doc": "Theme tag: paginate",
+      "label": "Tag paginate",
+      "matches": {
+        "paginate": true
+      }
+    },
+    {
+      "content": "{% render '${1:snippet}' %}",
+      "doc": "Theme tag: render",
+      "label": "Tag render",
+      "matches": {
+        "render": true
+      }
+    },
+    {
+      "content": "{%- for ${1:item} in ${2:collection} -%}\n\t$3\n{%- endfor -%}",
+      "doc": "Iteration tag: for, whitespaced",
+      "label": "Tag for, whitespaced",
+      "matches": {
+        "for-": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"product\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"info\": \"$3\"\n},$4",
+      "doc": "",
+      "label": "Shopify Schema product dropdown",
+      "matches": {
+        "_product": true
+      }
+    },
+    {
+      "content": "{% include '${1:snippet}', ${2:variable}: ${3:value} %}",
+      "doc": "Theme tag: include with parameters",
+      "label": "Tag include with parameters",
+      "matches": {
+        "includewith": true
+      }
+    },
+    {
+      "content": "| money",
+      "doc": "Money filter: money",
+      "label": "Filter money",
+      "matches": {
+        "money": true
+      }
+    },
+    {
+      "content": "{% schema %}\n\t{\n\t\t$1\n\t}\n{% endschema %}",
+      "doc": "Schema tag: schema",
+      "label": "Tag schema",
+      "matches": {
+        "schema": true
+      }
+    },
+    {
+      "content": "{% comment %}${1:#:comment}{% endcomment %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "comment": true
+      }
+    },
+    {
+      "content": "{% raw %}${1:#:TARGET}{% endraw %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "raw": true
+      }
+    },
+    {
+      "content": "{% if ${1:#:condition} %}\n  ${0:TARGET}\n{% endif %}",
+      "doc": "",
+      "label": "if endif",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "{% elseif ${1:#:condition} %}\n  ${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "elseif": true
+      }
+    },
+    {
+      "content": "{% if ${1:#:condition} %}\n  ${2:TARGET}\n{% else %}\n  ${3}\n{% endif %}",
+      "doc": "",
+      "label": "if else endif",
+      "matches": {
+        "ifelse": true
+      }
+    },
+    {
+      "content": "{% unless ${1:#:TARGET} %}\n  ${0:TARGET}\n{% endunless %}",
+      "doc": "",
+      "label": "unless endunless",
+      "matches": {
+        "unless": true
+      }
+    },
+    {
+      "content": "{% case ${1:#:condition} %}\n{% when ${2:#:TARGET} %}\n  ${3}\n{% endcase%}",
+      "doc": "",
+      "label": "case when endcase",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "{% else %}\n  ${1:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "else": true
+      }
+    },
+    {
+      "content": "{% when ${1:#:TARGET} %}\n  ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "when": true
+      }
+    },
+    {
+      "content": "{% cycle ${1:#:TARGET} %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cycle": true
+      }
+    },
+    {
+      "content": "{% for ${1:#:var} in ${2:#:list} %}\n  ${0:TARGET}\n{% endfor%}",
+      "doc": "",
+      "label": "for in endfor",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "{% tablerow ${1:#:var} in ${2:#:list} %}\n  ${0:TARGET}\n{% endtablerow %}",
+      "doc": "",
+      "label": "tablerow in endtablerow",
+      "matches": {
+        "tablerow": true
+      }
+    },
+    {
+      "content": "{% assign ${1:#:var} = ${2:#:value} %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "assign": true
+      }
+    },
+    {
+      "content": "{% capture ${1:#:var} %}${2:#:TARGET}{% endcapture %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "capture": true
+      }
+    },
+    {
+      "content": "{% include ${1:#:TARGET} %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "include": true
+      }
+    },
+    {
+      "content": "{{ ${1:#:TARGET} }}",
+      "doc": "",
+      "label": "{{ }}",
+      "matches": {
+        "output": true
+      }
+    },
+    {
+      "content": "{{ ${1:#:TARGET} }}",
+      "doc": "",
+      "label": "{{ }}",
+      "matches": {
+        "{{": true
+      }
+    },
+    {
+      "content": "{{ ${1:#:TARGET} | ${2:#:filter} }}",
+      "doc": "",
+      "label": "{{ | }}",
+      "matches": {
+        "filter": true
+      }
+    },
+    {
+      "content": "{{ ${1:#:TARGET} | ${2:#:filter} }}",
+      "doc": "",
+      "label": "{{ | }}",
+      "matches": {
+        "{{": true
+      }
+    },
+    {
+      "content": "{% highlight ${1:#:TARGET} %}\n  ${2:code}\n{% endhighlight %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "highlight": true
+      }
+    },
+    {
+      "content": "{% highlight ${1:#:TARGET} %}\n  ${2:code}\n{% endhighlight %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "hl": true
+      }
+    },
+    {
+      "content": "{% highlight ${1:#:TARGET} linenos %}\n  ${2:code}\n{% endhighlight %}",
+      "doc": "",
+      "label": "Line number",
+      "matches": {
+        "highlight_line": true
+      }
+    },
+    {
+      "content": "{% highlight ${1:#:TARGET} linenos %}\n  ${2:code}\n{% endhighlight %}",
+      "doc": "",
+      "label": "Line number",
+      "matches": {
+        "hl_l": true
+      }
+    },
+    {
+      "content": "{% post_url ${1:#:TARGET} %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "post_url": true
+      }
+    },
+    {
+      "content": "{% gist `getreg('+')=='' ? '<\\`0\\`>' : getreg('+')` %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gist": true
+      }
+    },
+    {
+      "content": "---\nlayout: ${1}\ntitle: ${2}\ncategory: ${3}\n---\n${0}",
+      "doc": "",
+      "label": "layout title category",
+      "matches": {
+        "front-matter": true
+      }
+    },
+    {
+      "content": "---\nlayout: ${1}\ntitle: ${2}\ncategory: ${3}\n---\n${0}",
+      "doc": "",
+      "label": "layout title category",
+      "matches": {
+        "---": true
+      }
+    },
+    {
+      "content": "{% if $1 %}\n\t${0:${VISUAL}}\n{% endif %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "{% else %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "else": true
+      }
+    },
+    {
+      "content": "{% elsif $1 %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "elsif": true
+      }
+    },
+    {
+      "content": "{% if $1 %}\n\t${2}\n{% else %}\n\t${0}\n{% endif %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ifelse": true
+      }
+    },
+    {
+      "content": "{% unless $1 %}\n\t${0:${VISUAL}}\n{% endunless %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "unless": true
+      }
+    },
+    {
+      "content": "{% case ${1:variable} %}\n\t{% when $2 %}\n\t\t${3}\n\t{% else %}\n\t\t${0}\n{% endcase %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "{% when $1 %}\n\t${0:${VISUAL}}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "when": true
+      }
+    },
+    {
+      "content": "{% cycle '${1:odd}', '${2:even}' %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cycle": true
+      }
+    },
+    {
+      "content": "{% cycle '${1:group name}': '${2:odd}', '${3:even}' %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cyclegroup": true
+      }
+    },
+    {
+      "content": "{% for ${1:item} in ${2:collection} %}\n\t${0}\n{% endfor %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "limit: ${1:5}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "limit": true
+      }
+    },
+    {
+      "content": "offset: ${1:0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "offset": true
+      }
+    },
+    {
+      "content": "reversed",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "reversed": true
+      }
+    },
+    {
+      "content": "{% break %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "break": true
+      }
+    },
+    {
+      "content": "{% continue %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "continue": true
+      }
+    },
+    {
+      "content": "{% tablerow ${1:item} in ${2:collection} cols: ${3:2} %}\n\t${0}\n{% endtablerow %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tablerow": true
+      }
+    },
+    {
+      "content": "{% assign ${1:variable} = ${0:value} %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "assign": true
+      }
+    },
+    {
+      "content": "{% increment ${0:variable} %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "increment": true
+      }
+    },
+    {
+      "content": "{% decrement ${0:variable} %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "decrement": true
+      }
+    },
+    {
+      "content": "{% capture ${1:variable} %}${0}{% endcapture %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "capture": true
+      }
+    },
+    {
+      "content": "{% include '${0:snippet}' %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "include": true
+      }
+    },
+    {
+      "content": "{% include '${1:snippet}', ${2:variable}: ${0:value} %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "includewith": true
+      }
+    },
+    {
+      "content": "{% render '${0:snippet}' %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "render": true
+      }
+    },
+    {
+      "content": "{% render '${1:snippet}', ${2:variable}: ${0:value} %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "renderwith": true
+      }
+    },
+    {
+      "content": "{% section '${1:snippet}' %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "section": true
+      }
+    },
+    {
+      "content": "{% raw %}${0}{% endraw %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "raw": true
+      }
+    },
+    {
+      "content": "{% layout '${1:layout}' %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "layout": true
+      }
+    },
+    {
+      "content": "{% layout none %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "layoutnone": true
+      }
+    },
+    {
+      "content": "{% paginate ${1:collection.products} by ${2:12} %}\n\t{% for ${3:product} in $1 %}\n\t\t${0}\n\t{% endfor %}\n{% endpaginate %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "paginate": true
+      }
+    },
+    {
+      "content": "{% schema %}\n\t{\n\t\t${0}\n\t}\n{% endschema %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "schema": true
+      }
+    },
+    {
+      "content": "{% stylesheet %}\n\t${0}\n{% endstylesheet %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "stylesheet": true
+      }
+    },
+    {
+      "content": "{% stylesheet '${1:scss}' %}\n\t${0}\n{% endstylesheet %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "stylesheet_scss": true
+      }
+    },
+    {
+      "content": "{% javascript %}\n\t${0}\n{% endjavascript %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "javascript": true
+      }
+    },
+    {
+      "content": "{%- comment -%}${0:${VISUAL}}{%- endcomment -%}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "comment-": true
+      }
+    },
+    {
+      "content": "{%- if $1 -%}\n\t${0:${VISUAL}}\n{%- endif -%}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if-": true
+      }
+    },
+    {
+      "content": "{%- else -%}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "else-": true
+      }
+    },
+    {
+      "content": "{%- elsif $1 -%}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "elsif-": true
+      }
+    },
+    {
+      "content": "{%- if $1 -%}\n\t${2}\n{%- else -%}\n\t${0}\n{%- endif -%}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ifelse-": true
+      }
+    },
+    {
+      "content": "{%- unless $1 -%}\n\t${0:${VISUAL}}\n{%- endunless -%}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "unless-": true
+      }
+    },
+    {
+      "content": "{%- case ${1:variable} -%}\n\t{%- when $2 -%}\n\t\t${3}\n\t{%- else -%}\n\t\t${0}\n{%- endcase -%}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "case-": true
+      }
+    },
+    {
+      "content": "{%- when $1 -%}\n\t${0:${VISUAL}}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "when-": true
+      }
+    },
+    {
+      "content": "{%- cycle '${1:odd}', '${2:even}' -%}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cycle-": true
+      }
+    },
+    {
+      "content": "{%- cycle '${1:group name}': '${2:odd}', '${3:even}' -%}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cyclegroup-": true
+      }
+    },
+    {
+      "content": "{%- for ${1:item} in ${2:collection} -%}\n\t${0}\n{%- endfor -%}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for-": true
+      }
+    },
+    {
+      "content": "{%- continue -%}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "continue-": true
+      }
+    },
+    {
+      "content": "{%- tablerow ${1:item} in ${2:collection} cols: ${3:2} -%}\n\t${0}\n{%- endtablerow -%}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tablerow-": true
+      }
+    },
+    {
+      "content": "{%- assign ${1:variable} = ${0:value} -%}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "assign-": true
+      }
+    },
+    {
+      "content": "{%- capture ${1:variable} -%}${0}{%- endcapture -%}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "capture-": true
+      }
+    },
+    {
+      "content": "{%- include '${0:snippet}' -%}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "include-": true
+      }
+    },
+    {
+      "content": "{%- include '${1:snippet}', ${2:variable}: ${0:value} -%}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "includewith-": true
+      }
+    },
+    {
+      "content": "{%- render '${0:snippet}' -%}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "render-": true
+      }
+    },
+    {
+      "content": "{%- render '${1:snippet}', ${2:variable}: ${0:value} -%}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "renderwith-": true
+      }
+    },
+    {
+      "content": "{%- section '${1:snippet}' -%}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "section-": true
+      }
+    },
+    {
+      "content": "{%- layout '${1:layout}' -%}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "layout-": true
+      }
+    },
+    {
+      "content": "{%- layout none -%}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "layoutnone-": true
+      }
+    },
+    {
+      "content": "{%- paginate ${1:collection.products} by ${2:12} -%}\n\t{%- for ${3:product} in $1 -%}\n\t\t${0}\n\t{%- endfor -%}\n{%- endpaginate -%}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "paginate-": true
+      }
+    },
+    {
+      "content": "| join: '${1:, }'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "join": true
+      }
+    },
+    {
+      "content": "| first",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "first": true
+      }
+    },
+    {
+      "content": "| last",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "last": true
+      }
+    },
+    {
+      "content": "| concat: ${1:array}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "concat": true
+      }
+    },
+    {
+      "content": "| map: '${1:key}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "map": true
+      }
+    },
+    {
+      "content": "| reverse",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "reverse": true
+      }
+    },
+    {
+      "content": "| size",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "size": true
+      }
+    },
+    {
+      "content": "| sort: '${1:key}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sort": true
+      }
+    },
+    {
+      "content": "| uniq",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "uniq": true
+      }
+    },
+    {
+      "content": "| img_tag",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "img_tag": true
+      }
+    },
+    {
+      "content": "| img_tag: '${1:alt}', '${2:class}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "img_tag_param": true
+      }
+    },
+    {
+      "content": "| script_tag",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "script_tag": true
+      }
+    },
+    {
+      "content": "| stylesheet_tag",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "stylesheet_tag": true
+      }
+    },
+    {
+      "content": "| abs",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "abs": true
+      }
+    },
+    {
+      "content": "| ceil",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ceil": true
+      }
+    },
+    {
+      "content": "| divided_by: ${1:2}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "divided_by": true
+      }
+    },
+    {
+      "content": "| floor",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "floor": true
+      }
+    },
+    {
+      "content": "| minus: ${1:1}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "minus": true
+      }
+    },
+    {
+      "content": "| plus: ${1:1}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "plus": true
+      }
+    },
+    {
+      "content": "| round: ${1:0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "round": true
+      }
+    },
+    {
+      "content": "| times: ${1:1}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "times": true
+      }
+    },
+    {
+      "content": "| modulo: ${1:2}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "modulo": true
+      }
+    },
+    {
+      "content": "| money",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "money": true
+      }
+    },
+    {
+      "content": "| money_with_currency",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "money_with_currency": true
+      }
+    },
+    {
+      "content": "| money_without_trailing_zeros",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "money_without_trailing_zeros": true
+      }
+    },
+    {
+      "content": "| money_without_currency",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "money_without_currency": true
+      }
+    },
+    {
+      "content": "| append: '${1:string}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "append": true
+      }
+    },
+    {
+      "content": "| camelcase",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "camelcase": true
+      }
+    },
+    {
+      "content": "| capitalize",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "capitalize": true
+      }
+    },
+    {
+      "content": "| downcase",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "downcase": true
+      }
+    },
+    {
+      "content": "| escape",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "escape": true
+      }
+    },
+    {
+      "content": "| handleize",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "handleize": true
+      }
+    },
+    {
+      "content": "| md5",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "md5": true
+      }
+    },
+    {
+      "content": "| newline_to_br",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "newline_to_br": true
+      }
+    },
+    {
+      "content": "| pluralize: '${1:item}', '${2:items}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pluralize": true
+      }
+    },
+    {
+      "content": "| prepend: '${1:string}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "prepend": true
+      }
+    },
+    {
+      "content": "| remove: '${1:string}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "remove": true
+      }
+    },
+    {
+      "content": "| remove_first: '${1:string}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "remove_first": true
+      }
+    },
+    {
+      "content": "| replace: '${1:target}', '${2:replace}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "replace": true
+      }
+    },
+    {
+      "content": "| replace_first: '${1:target}', '${2:replace}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "replace_first": true
+      }
+    },
+    {
+      "content": "| slice: ${1:0}, ${2:5}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "slice": true
+      }
+    },
+    {
+      "content": "| slice: ${1:at}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "slice_single": true
+      }
+    },
+    {
+      "content": "| split: '${1:,}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "split": true
+      }
+    },
+    {
+      "content": "| strip",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "strip": true
+      }
+    },
+    {
+      "content": "| lstrip",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lstrip": true
+      }
+    },
+    {
+      "content": "| rstrip",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rstrip": true
+      }
+    },
+    {
+      "content": "| strip_html",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "strip_html": true
+      }
+    },
+    {
+      "content": "| strip_newlines",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "strip_newlines": true
+      }
+    },
+    {
+      "content": "| truncate: ${1:20}, '${2:...}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "truncate": true
+      }
+    },
+    {
+      "content": "| truncatewords: ${1:5}, '${2:...}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "truncatewords": true
+      }
+    },
+    {
+      "content": "| upcase",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "upcase": true
+      }
+    },
+    {
+      "content": "| url_encode",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "url_encode": true
+      }
+    },
+    {
+      "content": "| url_escape",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "url_escape": true
+      }
+    },
+    {
+      "content": "| url_param_escape",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "url_param_escape": true
+      }
+    },
+    {
+      "content": "| asset_url",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "asset_url": true
+      }
+    },
+    {
+      "content": "| asset_img_url: '${1:medium}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "asset_img_url": true
+      }
+    },
+    {
+      "content": "| img_url: '${1:medium}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "img_url": true
+      }
+    },
+    {
+      "content": "{% schema %}\n\t{\n\t\t\"name\": \"${1}\",\n\t\t\"class\": \"${2}\",\n\t\t\"settings\": [\n\t\t\t${0}\n\t\t]\n\t}\n{% endschema %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "_schema": true
+      }
+    },
+    {
+      "content": "\"blocks\": [\n\t{\n\t\t\"type\": \"${1}\",\n\t\t\"name\": \"${2}\",\n\t\t\"settings\": [\n\t\t\t${0}\n\t\t]\n\t}\n]",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "_blocks": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"text\",\n\t\"id\": \"${1}\",\n\t\"label\": \"${2}\",\n\t\"default\": \"${3}\",\n\t\"info\": \"${4}\",\n\t\"placeholder\": \"${0}\"\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "_text": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"textarea\",\n\t\"id\": \"${1}\",\n\t\"label\": \"${2}\",\n\t\"default\": \"${3}\",\n\t\"info\": \"${4}\",\n\t\"placeholder\": \"${0}\"\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "_textarea": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"image_picker\",\n\t\"id\": \"${1}\",\n\t\"label\": \"${0}\"\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "_image_picker": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"radio\",\n\t\"id\": \"${1}\",\n\t\"label\": \"${2}\",\n\t\"options\": [\n\t\t{ \"value\": \"${5}\", \"label\": \"${0}\" }\n\t],\n\t\"default\": \"${3}\",\n\t\"info\": \"${4}\"\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "_radio": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"select\",\n\t\"id\": \"${1}\",\n\t\"label\": \"${2}\",\n\t\"options\": [\n\t\t{\n\t\t\t\"group\": \"${5}\",\n\t\t\t\"value\": \"${6}\",\n\t\t\t\"label\": \"${0}\"\n\t\t}\n\t],\n\t\"default\": \"${3}\",\n\t\"info\": \"${4}\"\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "_select": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"checkbox\",\n\t\"id\": \"${1}\",\n\t\"label\": \"${2}\",\n\t\"default\": ${3:true},\n\t\"info\": \"${0}\"\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "_checkbox": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"range\",\n\t\"id\": \"${1}\",\n\t\"min\": ${2},\n\t\"max\": ${3},\n\t\"step\": ${4},\n\t\"unit\": \"${5}\",\n\t\"label\": \"${6}\",\n\t\"default\": ${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "_range": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"color\",\n\t\"id\": \"${1}\",\n\t\"label\": \"${2}\",\n\t\"default\": \"${3}\",\n\t\"info\": \"${0}\"\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "_color": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"font_picker\",\n\t\"id\": \"${1}\",\n\t\"label\": \"${2}\",\n\t\"info\": \"${3}\",\n\t\"default\": \"${0:helvetica_n4}\"\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "_font": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"collection\",\n\t\"id\": \"${1}\",\n\t\"label\": \"${2}\",\n\t\"info\": \"${0}\"\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "_collection": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"product\",\n\t\"id\": \"${1}\",\n\t\"label\": \"${2}\",\n\t\"info\": \"${0}\"\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "_product": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"blog\",\n\t\"id\": \"${1}\",\n\t\"label\": \"${2}\",\n\t\"info\": \"${0}\"\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "_blog": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"page\",\n\t\"id\": \"${1}\",\n\t\"label\": \"${2}\",\n\t\"info\": \"${0}\"\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "_page": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"link_list\",\n\t\"id\": \"${1}\",\n\t\"label\": \"${2}\",\n\t\"info\": \"${0}\"\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "_link_list": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"url\",\n\t\"id\": \"${1}\",\n\t\"label\": \"${2}\",\n\t\"info\": \"${0}\"\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "_url": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"video_url\",\n\t\"id\": \"${1}\",\n\t\"label\": \"${2}\",\n\t\"accept\": [\"youtube\", \"vimeo\"${0}],\n\t\"default\": \"${3}\",\n\t\"info\": \"${4}\",\n\t\"placeholder\": \"${5}\"\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "_video": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"richtext\",\n\t\"id\": \"${1}\",\n\t\"label\": \"${2}\",\n\t\"default\": \"<p>${0}</p>\"\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "_richtext": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"html\",\n\t\"id\": \"${1}\",\n\t\"label\": \"${2}\",\n\t\"default\": \"<div>${0}</div>\"\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "_html": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"article\",\n\t\"id\": \"${1}\",\n\t\"label\": \"${2}\",\n\t\"info\": \"${0}\"\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "_article": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"header\",\n\t\"content\": \"${1}\",\n\t\"info\": \"${0}\"\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "_header": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"paragraph\",\n\t\"content\": \"${0}\"\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "_paragraph": true
+      }
+    }
+  ]
+}

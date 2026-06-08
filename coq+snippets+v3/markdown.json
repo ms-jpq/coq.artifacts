@@ -1,0 +1,964 @@
+{
+  "extends": [
+    "jekyll",
+    "loremipsum",
+    "mkd",
+    "rmarkdown"
+  ],
+  "snippets": [
+    {
+      "content": "```${1:language}\n$0\n```",
+      "doc": "Insert fenced code block",
+      "label": "Insert code block",
+      "matches": {
+        "codeblock": true
+      }
+    },
+    {
+      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} | ${4:Column4} | ${5:Column5} |\n| --------------- | --------------- | --------------- | --------------- | --------------- |\n| ${6:Item1.1} | ${7:Item2.1} | ${8:Item3.1} | ${9:Item4.1} | ${10:Item5.1} |\n| ${11:Item1.2} | ${12:Item2.2} | ${13:Item3.2} | ${14:Item4.2} | ${15:Item5.2} |\n| ${16:Item1.3} | ${17:Item2.3} | ${18:Item3.3} | ${19:Item4.3} | ${20:Item5.3} |\n| ${21:Item1.4} | ${22:Item2.4} | ${23:Item3.4} | ${24:Item4.4} | ${25:Item5.4} |\n${0}",
+      "doc": "Insert table with 5 rows and 5 columns. First row is heading.",
+      "label": "Insert 5x5 table",
+      "matches": {
+        "5x5table": true
+      }
+    },
+    {
+      "content": "| ${1:Column1} | ${2:Column2} |\n| -------------- | --------------- |\n| ${3:Item1.1} | ${4:Item2.1} |\n| ${5:Item1.2} | ${6:Item2.2} |\n| ${7:Item1.3} | ${8:Item2.3} |\n${0}",
+      "doc": "Insert table with 4 rows and 2 columns. First row is heading.",
+      "label": "Insert 4x2 table",
+      "matches": {
+        "4x2table": true
+      }
+    },
+    {
+      "content": "${1}<sub>${0}",
+      "doc": "Create a subscript.",
+      "label": "Insert subscript",
+      "matches": {
+        "sub": true
+      }
+    },
+    {
+      "content": "| ${1:Column1}   | ${2:Column2}    |\n|--------------- | --------------- |\n| ${3:Item1.1}   | ${4:Item2.1}   |\n| ${5:Item1.2}   | ${6:Item2.2}   |\n| ${7:Item1.3}   | ${8:Item2.3}   |\n| ${9:Item1.4}   | ${10:Item2.4}   |\n${0}",
+      "doc": "Insert table with 5 rows and 2 columns. First row is heading.",
+      "label": "Insert 5x2 table",
+      "matches": {
+        "5x2table": true
+      }
+    },
+    {
+      "content": "1. ${1:first}\n2. ${2:second}\n3. ${3:third}\n$0",
+      "doc": "Insert ordered list",
+      "label": "Insert ordered list",
+      "matches": {
+        "ordered list": true
+      }
+    },
+    {
+      "content": "> [!NOTE]\n>",
+      "doc": "Insert Note",
+      "label": "Insert Note",
+      "matches": {
+        "n": true,
+        "note": true
+      }
+    },
+    {
+      "content": "----------",
+      "doc": "Insert horizontal rule",
+      "label": "Insert horizontal rule",
+      "matches": {
+        "horizontal rule": true
+      }
+    },
+    {
+      "content": "- [${1| ,x|}] ${2:text}\n${0}",
+      "doc": "Insert task list",
+      "label": "Insert task list",
+      "matches": {
+        "task": true
+      }
+    },
+    {
+      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} |\n| --------------- | --------------- | --------------- |\n| ${4:Item1.1} | ${5:Item2.1} | ${6:Item3.1} |\n${0}",
+      "doc": "Insert table with 2 rows and 3 columns. First row is heading.",
+      "label": "Insert 2x3 table",
+      "matches": {
+        "2x3table": true
+      }
+    },
+    {
+      "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n${0}",
+      "doc": "Insert task list with 2 tasks",
+      "label": "Insert task list 2",
+      "matches": {
+        "task2": true
+      }
+    },
+    {
+      "content": "> [!WARNING]\n>",
+      "doc": "Insert Warning",
+      "label": "Insert Warning",
+      "matches": {
+        "w": true,
+        "warning": true
+      }
+    },
+    {
+      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} |\n| --------------- | --------------- | --------------- |\n| ${4:Item1.1} | ${5:Item2.1} | ${6:Item3.1} |\n| ${7:Item1.2} | ${8:Item2.2} | ${9:Item3.2} |\n${0}",
+      "doc": "Insert table with 3 rows and 3 columns. First row is heading.",
+      "label": "Insert 3x3 table",
+      "matches": {
+        "3x3table": true
+      }
+    },
+    {
+      "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n- [${5| ,x|}] ${6:text}\n${0}",
+      "doc": "Insert task list with 3 tasks",
+      "label": "Insert task list 3",
+      "matches": {
+        "task3": true
+      }
+    },
+    {
+      "content": "# ${0}",
+      "doc": "Add header level 1",
+      "label": "header 1",
+      "matches": {
+        "h1": true
+      }
+    },
+    {
+      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} |\n| --------------- | --------------- | --------------- |\n| ${4:Item1.1} | ${5:Item2.1} | ${6:Item3.1} |\n| ${7:Item1.2} | ${8:Item2.2} | ${9:Item3.2} |\n| ${10:Item1.3} | ${11:Item2.3} | ${12:Item3.3} |\n${0}",
+      "doc": "Insert table with 4 rows and 3 columns. First row is heading.",
+      "label": "Insert 4x3 table",
+      "matches": {
+        "4x3table": true
+      }
+    },
+    {
+      "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n- [${5| ,x|}] ${6:text}\n- [${7| ,x|}] ${8:text}\n${0}",
+      "doc": "Insert task list with 4 tasks",
+      "label": "Insert task list 4",
+      "matches": {
+        "task4": true
+      }
+    },
+    {
+      "content": "> [!CAUTION]\n>",
+      "doc": "Insert Caution",
+      "label": "Insert Caution",
+      "matches": {
+        "c": true,
+        "caution": true
+      }
+    },
+    {
+      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} |\n| --------------- | --------------- | --------------- |\n| ${4:Item1.1} | ${5:Item2.1} | ${6:Item3.1} |\n| ${7:Item1.2} | ${8:Item2.2} | ${9:Item3.2} |\n| ${10:Item1.3} | ${11:Item2.3} | ${12:Item3.3} |\n| ${13:Item1.4} | ${14:Item2.4} | ${15:Item3.4} |\n${0}",
+      "doc": "Insert table with 5 rows and 3 columns. First row is heading.",
+      "label": "Insert 5x3 table",
+      "matches": {
+        "5x3table": true
+      }
+    },
+    {
+      "content": "### ${0}",
+      "doc": "Add header level 3",
+      "label": "header 3",
+      "matches": {
+        "h3": true
+      }
+    },
+    {
+      "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n- [${5| ,x|}] ${6:text}\n- [${7| ,x|}] ${8:text}\n- [${9| ,x|}] ${10:text}\n${0}",
+      "doc": "Insert task list with 5 tasks",
+      "label": "Insert task list 5",
+      "matches": {
+        "task5": true
+      }
+    },
+    {
+      "content": "> [!IMPORTANT]\n>",
+      "doc": "Insert Important",
+      "label": "Insert Important",
+      "matches": {
+        "imp": true,
+        "important": true
+      }
+    },
+    {
+      "content": "#### ${0}",
+      "doc": "Add header level 4",
+      "label": "header 4",
+      "matches": {
+        "h4": true
+      }
+    },
+    {
+      "content": "> [!TIP]\n>",
+      "doc": "Insert Tip",
+      "label": "Insert Tip",
+      "matches": {
+        "t": true,
+        "tip": true
+      }
+    },
+    {
+      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} |\n| ------------- | -------------- | -------------- |\n| ${4:Item1} | ${5:Item1} | ${6:Item1} |\n${0}",
+      "doc": "Insert table with 2 rows and 3 columns. First row is heading.",
+      "label": "Insert table",
+      "matches": {
+        "table": true
+      }
+    },
+    {
+      "content": "##### ${0}",
+      "doc": "Add header level 5",
+      "label": "header 5",
+      "matches": {
+        "h5": true
+      }
+    },
+    {
+      "content": "${1}<sup>${0}",
+      "doc": "Create a superscript.",
+      "label": "Insert superscript",
+      "matches": {
+        "sup": true
+      }
+    },
+    {
+      "content": "~~${1}~~ ${0}",
+      "doc": "Insert strikethrough",
+      "label": "Insert strikethrough",
+      "matches": {
+        "strikethrough": true
+      }
+    },
+    {
+      "content": "###### ${0}",
+      "doc": "Add header level 6",
+      "label": "header 6",
+      "matches": {
+        "h6": true
+      }
+    },
+    {
+      "content": "| ${1:Column1} |\n| ------------- |\n| ${2:Item1} |\n${0}",
+      "doc": "Insert table with 2 rows and 1 column. First row is heading.",
+      "label": "Insert 2x1 table",
+      "matches": {
+        "2x1table": true
+      }
+    },
+    {
+      "content": "- ${1:first}\n- ${2:second}\n- ${3:third}\n$0",
+      "doc": "Insert unordered list",
+      "label": "Insert unordered list",
+      "matches": {
+        "unordered list": true
+      }
+    },
+    {
+      "content": "| ${1:Column1} | ${2:Column2} |\n| -------------- | --------------- |\n| ${3:Item1.1} | ${4:Item2.1} |\n| ${5:Item1.2} | ${6:Item2.2} |\n${0}",
+      "doc": "Insert table with 3 rows and 2 columns. First row is heading.",
+      "label": "Insert 3x2 table",
+      "matches": {
+        "3x2table": true
+      }
+    },
+    {
+      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} | ${4:Column4} |\n| --------------- | --------------- | --------------- | --------------- |\n| ${5:Item1.1} | ${6:Item2.1} | ${7:Item3.1} | ${8:Item4.1} |\n| ${9:Item1.2} | ${10:Item2.2} | ${11:Item3.2} | ${12:Item4.2} |\n| ${13:Item1.3} | ${14:Item2.3} | ${15:Item3.3} | ${16:Item4.3} |\n${0}",
+      "doc": "Insert table with 4 rows and 4 columns. First row is heading.",
+      "label": "Insert 4x4 table",
+      "matches": {
+        "4x4table": true
+      }
+    },
+    {
+      "content": "<${1}> ${0}",
+      "doc": "Add urls",
+      "label": "URLS",
+      "matches": {
+        "u": true,
+        "url": true
+      }
+    },
+    {
+      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} | ${4:Column4} |\n| --------------- | --------------- | --------------- | --------------- |\n| ${5:Item1.1} | ${6:Item2.1} | ${7:Item3.1} | ${8:Item4.1} |\n| ${9:Item1.2} | ${10:Item2.2} | ${11:Item3.2} | ${12:Item4.2} |\n| ${13:Item1.3} | ${14:Item2.3} | ${15:Item3.3} | ${16:Item4.3} |\n| ${17:Item1.4} | ${18:Item2.4} | ${19:Item3.4} | ${20:Item4.4} |\n${0}",
+      "doc": "Insert table with 5 rows and 4 columns. First row is heading.",
+      "label": "Insert 5x4 table",
+      "matches": {
+        "5x4table": true
+      }
+    },
+    {
+      "content": "| ${1:Column1} |\n| ------------- |\n| ${2:Item1} |\n| ${3:Item2} |\n${0}",
+      "doc": "Insert table with 3 rows and 1 column. First row is heading.",
+      "label": "Insert 3x1 table",
+      "matches": {
+        "3x1table": true
+      }
+    },
+    {
+      "content": "![${1:alt text}](${2:path}) ${0}",
+      "doc": "Add images",
+      "label": "Images",
+      "matches": {
+        "img": true
+      }
+    },
+    {
+      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} | ${4:Column4} |\n| --------------- | --------------- | --------------- | --------------- |\n| ${5:Item1.1} | ${6:Item2.1} | ${7:Item3.1} | ${8:Item4.1} |\n| ${9:Item1.2} | ${10:Item2.2} | ${11:Item3.2} | ${12:Item4.2} |\n${0}",
+      "doc": "Insert table with 3 rows and 4 columns. First row is heading.",
+      "label": "Insert 3x4 table",
+      "matches": {
+        "3x4table": true
+      }
+    },
+    {
+      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} | ${4:Column4} |\n| --------------- | --------------- | --------------- | --------------- |\n| ${5:Item1.1} | ${6:Item2.1} | ${7:Item3.1} | ${8:Item4.1} |\n${0}",
+      "doc": "Insert table with 2 rows and 4 columns. First row is heading.",
+      "label": "Insert 2x4 table",
+      "matches": {
+        "2x4table": true
+      }
+    },
+    {
+      "content": "| ${1:Column1} |\n| ------------- |\n| ${2:Item1} |\n| ${3:Item2} |\n| ${4:Item3} |\n${0}",
+      "doc": "Insert table with 4 rows and 1 column. First row is heading.",
+      "label": "Insert 4x1 table",
+      "matches": {
+        "4x1table": true
+      }
+    },
+    {
+      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} | ${4:Column4} | ${5:Column5} |\n| --------------- | --------------- | --------------- | --------------- | --------------- |\n| ${6:Item1.1} | ${7:Item2.1} | ${8:Item3.1} | ${9:Item4.1} | ${10:Item5.1} |\n${0}",
+      "doc": "Insert table with 2 rows and 5 columns. First row is heading.",
+      "label": "Insert 2x5 table",
+      "matches": {
+        "2x5table": true
+      }
+    },
+    {
+      "content": "**${1}** $0",
+      "doc": "Insert bold text",
+      "label": "Insert bold text",
+      "matches": {
+        "b": true,
+        "bold": true
+      }
+    },
+    {
+      "content": "[${1:text}](${2:url}) ${0}",
+      "doc": "Add links",
+      "label": "Links",
+      "matches": {
+        "l": true,
+        "link": true
+      }
+    },
+    {
+      "content": "| ${1:Column1} |\n| ------------- |\n| ${2:Item1} |\n| ${3:Item2} |\n| ${4:Item3} |\n| ${5:Item4} |\n${0}",
+      "doc": "Insert table with 5 rows and 1 column. First row is heading.",
+      "label": "Insert 5x1 table",
+      "matches": {
+        "5x1table": true
+      }
+    },
+    {
+      "content": "## ${0}",
+      "doc": "Add header level 2",
+      "label": "header 2",
+      "matches": {
+        "h2": true
+      }
+    },
+    {
+      "content": "***${1}*** $0",
+      "doc": "Insert bold and italic text",
+      "label": "Insert bold and italic text",
+      "matches": {
+        "bi": true,
+        "bold and italic": true
+      }
+    },
+    {
+      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} | ${4:Column4} | ${5:Column5} |\n| --------------- | --------------- | --------------- | --------------- | --------------- |\n| ${6:Item1.1} | ${7:Item2.1} | ${8:Item3.1} | ${9:Item4.1} | ${10:Item5.1} |\n| ${11:Item1.2} | ${12:Item2.2} | ${13:Item3.2} | ${14:Item4.2} | ${15:Item5.2} |\n${0}",
+      "doc": "Insert table with 3 rows and 5 columns. First row is heading.",
+      "label": "Insert 3x5 table",
+      "matches": {
+        "3x5table": true
+      }
+    },
+    {
+      "content": "| ${1:Column1} | ${2:Column2} |\n| -------------- | --------------- |\n| ${3:Item1.1} | ${4:Item2.1} |\n${0}",
+      "doc": "Insert table with 2 rows and 2 columns. First row is heading.",
+      "label": "Insert 2x2 table",
+      "matches": {
+        "2x2table": true
+      }
+    },
+    {
+      "content": "> ${1}",
+      "doc": "Insert quoted text",
+      "label": "Insert quoted text",
+      "matches": {
+        "quote": true
+      }
+    },
+    {
+      "content": "*${1}* $0",
+      "doc": "Insert italic text",
+      "label": "Insert italic text",
+      "matches": {
+        "i": true,
+        "italic": true
+      }
+    },
+    {
+      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} | ${4:Column4} | ${5:Column5} |\n| --------------- | --------------- | --------------- | --------------- | --------------- |\n| ${6:Item1.1} | ${7:Item2.1} | ${8:Item3.1} | ${9:Item4.1} | ${10:Item5.1} |\n| ${11:Item1.2} | ${12:Item2.2} | ${13:Item3.2} | ${14:Item4.2} | ${15:Item5.2} |\n| ${16:Item1.3} | ${17:Item2.3} | ${18:Item3.3} | ${19:Item4.3} | ${20:Item5.3} |\n${0}",
+      "doc": "Insert table with 4 rows and 5 columns. First row is heading.",
+      "label": "Insert 4x5 table",
+      "matches": {
+        "4x5table": true
+      }
+    },
+    {
+      "content": "`${1}` $0",
+      "doc": "Insert code",
+      "label": "Insert code",
+      "matches": {
+        "code": true
+      }
+    },
+    {
+      "content": "# ${0}",
+      "doc": "",
+      "label": "# section heading",
+      "matches": {
+        "heading": true
+      }
+    },
+    {
+      "content": "# ${0}",
+      "doc": "",
+      "label": "# section heading",
+      "matches": {
+        "section": true
+      }
+    },
+    {
+      "content": "[${1:#:link_id}][]${2}",
+      "doc": "",
+      "label": "[link][]",
+      "matches": {
+        "link": true
+      }
+    },
+    {
+      "content": "[${1:#:link}][${2:id}]${3}",
+      "doc": "",
+      "label": "[link][id]",
+      "matches": {
+        "linkid": true
+      }
+    },
+    {
+      "content": "[${1:#:link}](https://${2:#:url})${3}",
+      "doc": "",
+      "label": "[link](url)",
+      "matches": {
+        "linkurl": true
+      }
+    },
+    {
+      "content": "[${1:#:link}](mailto:${2:#:email})${3}",
+      "doc": "",
+      "label": "[link](email)",
+      "matches": {
+        "linkemail": true
+      }
+    },
+    {
+      "content": "[${1:#:link}](${2:#:url} \"${3:#:title}\")${4}",
+      "doc": "",
+      "label": "[link](url \"title\")",
+      "matches": {
+        "linkurltitle": true
+      }
+    },
+    {
+      "content": "[${1:#:id}]: https://${2:#:url} \"${3:#:title}\"",
+      "doc": "",
+      "label": "[id]: url \"title\"",
+      "matches": {
+        "idurl": true
+      }
+    },
+    {
+      "content": "[${1:#:id}]: mailto:${2:#:url} \"${3:#:title}\"",
+      "doc": "",
+      "label": "[id]: email \"title\"",
+      "matches": {
+        "idemail": true
+      }
+    },
+    {
+      "content": "![${1:#:alt}][${2:#:id}]${3}",
+      "doc": "",
+      "label": "![alt][id]",
+      "matches": {
+        "altid": true
+      }
+    },
+    {
+      "content": "![${1:#:alt}](${2:#:url})${3}",
+      "doc": "",
+      "label": "![alt](url)",
+      "matches": {
+        "alturl": true
+      }
+    },
+    {
+      "content": "![${1:#:alt}](${2:#:url} \"${3:#:title}\")${4}",
+      "doc": "",
+      "label": "![alt](url \"title\")",
+      "matches": {
+        "alturltitle": true
+      }
+    },
+    {
+      "content": "*${1}*${2}",
+      "doc": "",
+      "label": "*emphasis*",
+      "matches": {
+        "emphasis1": true
+      }
+    },
+    {
+      "content": "_${1}_${2}",
+      "doc": "",
+      "label": "_emphasis_",
+      "matches": {
+        "emphasis2": true
+      }
+    },
+    {
+      "content": "**${1}**${2}",
+      "doc": "",
+      "label": "**strong**",
+      "matches": {
+        "strong1": true
+      }
+    },
+    {
+      "content": "__${1}__${2}",
+      "doc": "",
+      "label": "__strong__",
+      "matches": {
+        "strong2": true
+      }
+    },
+    {
+      "content": "\\`${1}\\`${2}",
+      "doc": "",
+      "label": "`code`",
+      "matches": {
+        "code": true
+      }
+    },
+    {
+      "content": "\\`\\`\\`${1:#:language}\n${2:#:code }\n\\`\\`\\`",
+      "doc": "",
+      "label": "code block",
+      "matches": {
+        "codeblock": true
+      }
+    },
+    {
+      "content": "> ${0}",
+      "doc": "",
+      "label": "quote block",
+      "matches": {
+        "blockquote": true
+      }
+    },
+    {
+      "content": "[${1:text}](${2:address})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "[": true
+      }
+    },
+    {
+      "content": "[${1:link}](${2:`@*`})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "[*": true
+      }
+    },
+    {
+      "content": "[${1:link}](${2:`@+`})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "[c": true
+      }
+    },
+    {
+      "content": "[${1:text}](https://${2:address} \"${3:title}\")",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "[\"": true
+      }
+    },
+    {
+      "content": "[${1:link}](${2:`@*`} \"${3:title}\")",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "[\"*": true
+      }
+    },
+    {
+      "content": "[${1:link}](${2:`@+`} \"${3:title}\")",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "[\"c": true
+      }
+    },
+    {
+      "content": "[${1:id}]: https://${2:url}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "[:": true
+      }
+    },
+    {
+      "content": "[${1:id}]: ${2:`@*`}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "[:*": true
+      }
+    },
+    {
+      "content": "[${1:id}]: ${2:`@+`}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "[:c": true
+      }
+    },
+    {
+      "content": "[${1:id}]: https://${2:url} \"${3:title}\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "[:\"": true
+      }
+    },
+    {
+      "content": "[${1:id}]: ${2:`@*`} \"${3:title}\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "[:\"*": true
+      }
+    },
+    {
+      "content": "[${1:id}]: ${2:`@+`} \"${3:title}\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "[:\"c": true
+      }
+    },
+    {
+      "content": "![${1:alttext}](${2:/images/image.jpg})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "![": true
+      }
+    },
+    {
+      "content": "![${1:alt}](${2:`@*`})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "![*": true
+      }
+    },
+    {
+      "content": "![${1:alt}](${2:`@+`})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "![c": true
+      }
+    },
+    {
+      "content": "![${1:alttext}](${2:/images/image.jpg} \"${3:title}\")",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "![\"": true
+      }
+    },
+    {
+      "content": "![${1:alt}](${2:`@*`} \"${3:title}\")",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "![\"*": true
+      }
+    },
+    {
+      "content": "![${1:alt}](${2:`@+`} \"${3:title}\")",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "![\"c": true
+      }
+    },
+    {
+      "content": "![${1:id}]: ${2:url}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "![:": true
+      }
+    },
+    {
+      "content": "![${1:id}]: ${2:`@*`}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "![:*": true
+      }
+    },
+    {
+      "content": "![${1:id}]: ${2:url} \"${3:title}\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "![:\"": true
+      }
+    },
+    {
+      "content": "![${1:id}]: ${2:`@*`} \"${3:title}\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "![:\"*": true
+      }
+    },
+    {
+      "content": "![${1:id}]: ${2:`@+`} \"${3:title}\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "![:\"c": true
+      }
+    },
+    {
+      "content": "<http://${1:url}>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "<": true
+      }
+    },
+    {
+      "content": "<`@*`>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "<*": true
+      }
+    },
+    {
+      "content": "<`@+`>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "<c": true
+      }
+    },
+    {
+      "content": "**$0**",
+      "doc": "",
+      "label": "Bold",
+      "matches": {
+        "**": true
+      }
+    },
+    {
+      "content": "__$0__",
+      "doc": "",
+      "label": "Bold",
+      "matches": {
+        "__": true
+      }
+    },
+    {
+      "content": "---\n$0\n---",
+      "doc": "",
+      "label": "Front matter",
+      "matches": {
+        "---": true
+      }
+    },
+    {
+      "content": "`repeat('=', strlen(getline(line('.') - 3)))`\n\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "====": true
+      }
+    },
+    {
+      "content": "-   ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "-": true
+      }
+    },
+    {
+      "content": "`repeat('-', strlen(getline(line('.') - 3)))`\n\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "----": true
+      }
+    },
+    {
+      "content": "{% blockquote %}\n${0:quote}\n{% endblockquote %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "blockquote": true
+      }
+    },
+    {
+      "content": "{% blockquote ${1:author}, ${2:title} %}\n${0:quote}\n{% endblockquote %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "blockquote-author": true
+      }
+    },
+    {
+      "content": "{% blockquote ${1:author} ${2:URL} ${3:link_text} %}\n${0:quote}\n{% endblockquote %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "blockquote-link": true
+      }
+    },
+    {
+      "content": "\\`\\`\\`${1}\n${0:${VISUAL}}\n\\`\\`\\`",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "```": true
+      }
+    },
+    {
+      "content": "\\`\\`\\`${1:language}\n${2:code}\n\\`\\`\\`",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "```l": true
+      }
+    },
+    {
+      "content": "{% codeblock %}\n${0:code_snippet}\n{% endcodeblock %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "codeblock-short": true
+      }
+    },
+    {
+      "content": "{% codeblock ${1:title} lang:${2:language} ${3:URL} ${4:link_text} %}\n${0:code_snippet}\n{% endcodeblock %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "codeblock-full": true
+      }
+    },
+    {
+      "content": "{% gist ${1:gist_id} ${0:filename} %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gist-full": true
+      }
+    },
+    {
+      "content": "{% gist ${0:gist_id} %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gist-short": true
+      }
+    },
+    {
+      "content": "{% img ${1:class} ${2:URL} ${3:width} ${4:height} ${5:title_text} ${0:alt_text} %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "img": true
+      }
+    },
+    {
+      "content": "{% youtube ${0:video_id} %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "youtube": true
+      }
+    },
+    {
+      "content": "|  ${0:factors}      |    ${1:a}       |  ${2:b}   \t|\n| ------------- |-------------  | ------- |\n|    ${3:f1}    |    Y          | N       |\n|    ${4:f2}    |    Y          | N       |",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tb": true
+      }
+    },
+    {
+      "content": "{% pullquote %}\n${1:text} {\" ${2:quote} \"} ${0:text}\n{% endpullquote %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pullquote": true
+      }
+    },
+    {
+      "content": "$1\n: $0",
+      "doc": "",
+      "label": "Definition list",
+      "matches": {
+        ":": true
+      }
+    },
+    {
+      "content": "$1\n  - $0",
+      "doc": "",
+      "label": "Alternate definition list",
+      "matches": {
+        "::": true
+      }
+    }
+  ]
+}

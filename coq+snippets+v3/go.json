@@ -1,0 +1,1710 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "package main\n\nfunc main() {\n\t$0\n}",
+      "doc": "Snippet for main package & function",
+      "label": "package main and main function",
+      "matches": {
+        "pkgm": true
+      }
+    },
+    {
+      "content": "func (${1:receiver} ${2:type}) ${3:method}($4) $5 {\n\t$0\n}",
+      "doc": "Snippet for method declaration",
+      "label": "method declaration",
+      "matches": {
+        "fum": true,
+        "meth": true
+      }
+    },
+    {
+      "content": "log.Printf(\"$1\", ${2:var})",
+      "doc": "Snippet for log.Printf()",
+      "label": "log.Printf",
+      "matches": {
+        "lf": true
+      }
+    },
+    {
+      "content": "func $1($2) $3 {\n\t$0\n}",
+      "doc": "Snippet for function declaration",
+      "label": "function declaration",
+      "matches": {
+        "func": true
+      }
+    },
+    {
+      "content": "for ${1}{\n\t$0\n}",
+      "doc": "Snippet for a pure for loop",
+      "label": "for statement",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "var ${1:name} ${2:type}",
+      "doc": "Snippet for a variable",
+      "label": "variable declaration",
+      "matches": {
+        "var": true
+      }
+    },
+    {
+      "content": "func Benchmark$1(b *testing.B) {\n\tfor ${2:i} := 0; ${2:i} < b.N; ${2:i}++ {\n\t\t$0\n\t}\n}",
+      "doc": "Snippet for Benchmark function",
+      "label": "benchmark function",
+      "matches": {
+        "bf": true
+      }
+    },
+    {
+      "content": "t.Log(\"$1\")",
+      "doc": "Snippet for t.Log()",
+      "label": "t.Log",
+      "matches": {
+        "tl": true
+      }
+    },
+    {
+      "content": "t.Logf(\"$1\", ${2:var})",
+      "doc": "Snippet for t.Logf()",
+      "label": "t.Logf",
+      "matches": {
+        "tlf": true
+      }
+    },
+    {
+      "content": "if ${1:value}, ok := ${2:map}[${3:key}]; ok {\n\t$4\n}",
+      "doc": "",
+      "label": "if key in a map",
+      "matches": {
+        "om": true
+      }
+    },
+    {
+      "content": "`xml:\"$1\"`",
+      "doc": "Snippet for struct xml tag",
+      "label": "xml tag",
+      "matches": {
+        "xml": true
+      }
+    },
+    {
+      "content": "t.Logf(\"${1:var}: %#+v\\\\n\", ${1:var})",
+      "doc": "Snippet for t.Logf() with variable content",
+      "label": "t.Logf variable content",
+      "matches": {
+        "tlv": true
+      }
+    },
+    {
+      "content": "`json:\"$1\"`",
+      "doc": "Snippet for struct json tag",
+      "label": "json tag",
+      "matches": {
+        "json": true
+      }
+    },
+    {
+      "content": "type ${1:SortBy} []${2:Type}\n\nfunc (a $1) Len() int           { return len(a) }\nfunc (a $1) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }\nfunc (a $1) Less(i, j int) bool { ${3:return a[i] < a[j]} }",
+      "doc": "Snippet for a custom sort.Sort interface implementation, for a given slice type.",
+      "label": "sort implementation",
+      "matches": {
+        "sort": true
+      }
+    },
+    {
+      "content": "case ${1:condition}:$0",
+      "doc": "Snippet for case clause",
+      "label": "case clause",
+      "matches": {
+        "cs": true
+      }
+    },
+    {
+      "content": "make(${1:type}, ${2:0})",
+      "doc": "Snippet for make statement",
+      "label": "make(...)",
+      "matches": {
+        "make": true
+      }
+    },
+    {
+      "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"net/http\"\n\t\"time\"\n)\n\nfunc greet(w http.ResponseWriter, r *http.Request) {\n\tfmt.Fprintf(w, \"Hello World! %s\", time.Now())\n}\n\nfunc main() {\n\thttp.HandleFunc(\"/\", greet)\n\thttp.ListenAndServe(\":8080\", nil)\n}",
+      "doc": "Snippet for sample hello world webapp",
+      "label": "hello world web app",
+      "matches": {
+        "helloweb": true
+      }
+    },
+    {
+      "content": "switch ${1:expression} {\ncase ${2:condition}:\n\t$0\n}",
+      "doc": "Snippet for switch statement",
+      "label": "switch statement",
+      "matches": {
+        "switch": true
+      }
+    },
+    {
+      "content": "new(${1:type})",
+      "doc": "Snippet for new statement",
+      "label": "new(...)",
+      "matches": {
+        "new": true
+      }
+    },
+    {
+      "content": "for ${1:i} := ${2:0}; $1 < ${3:count}; $1${4:++} {\n\t$0\n}",
+      "doc": "Snippet for a for loop",
+      "label": "for n statement",
+      "matches": {
+        "fori": true
+      }
+    },
+    {
+      "content": "select {\ncase ${1:condition}:\n\t$0\n}",
+      "doc": "Snippet for select statement",
+      "label": "select statement",
+      "matches": {
+        "sel": true
+      }
+    },
+    {
+      "content": "panic(\"$0\")",
+      "doc": "Snippet for panic",
+      "label": "panic(...)",
+      "matches": {
+        "pn": true
+      }
+    },
+    {
+      "content": "for ${1:_, }${2:v} := range ${3:v} {\n\t$0\n}",
+      "doc": "Snippet for a for range loop",
+      "label": "for range statement",
+      "matches": {
+        "forr": true
+      }
+    },
+    {
+      "content": "func Test$1(t *testing.T) {\n\ttestCases := []struct {\n\t\tdesc\tstring\n\t\t$2\n\t}{\n\t\t{\n\t\t\tdesc: \"$3\",\n\t\t\t$4\n\t\t},\n\t}\n\tfor _, tC := range testCases {\n\t\tt.Run(tC.desc, func(t *testing.T) {\n\t\t\t$0\n\t\t})\n\t}\n}",
+      "doc": "Snippet for table driven test",
+      "label": "table driven test",
+      "matches": {
+        "tdt": true
+      }
+    },
+    {
+      "content": "func Example$1() {\n\t$2\n\t//Output:\n\t$3\n}",
+      "doc": "Snippet for Example function",
+      "label": "example function",
+      "matches": {
+        "ef": true
+      }
+    },
+    {
+      "content": "${1:w} http.ResponseWriter, ${2:r} *http.Request",
+      "doc": "Snippet for http Response",
+      "label": "http ResponseWriter *Request",
+      "matches": {
+        "wr": true
+      }
+    },
+    {
+      "content": "chan ${1:type}",
+      "doc": "Snippet for a channel",
+      "label": "channel declaration",
+      "matches": {
+        "ch": true
+      }
+    },
+    {
+      "content": "func TestMain(m *testing.M) {\n\t$1\n\n\tos.Exit(m.Run())\n}",
+      "doc": "Snippet for TestMain function",
+      "label": "test main",
+      "matches": {
+        "tm": true
+      }
+    },
+    {
+      "content": "${1:http}.HandleFunc(\"${2:/}\", ${3:handler})",
+      "doc": "Snippet for http.HandleFunc()",
+      "label": "http.HandleFunc",
+      "matches": {
+        "hf": true
+      }
+    },
+    {
+      "content": "map[${1:type}]${2:type}",
+      "doc": "Snippet for a map",
+      "label": "map declaration",
+      "matches": {
+        "map": true
+      }
+    },
+    {
+      "content": "func Test$1(t *testing.T) {\n\t$0\n}",
+      "doc": "Snippet for Test function",
+      "label": "test function",
+      "matches": {
+        "tf": true
+      }
+    },
+    {
+      "content": "defer ${1:func}($0)",
+      "doc": "Snippet for defer statement",
+      "label": "defer statement",
+      "matches": {
+        "df": true
+      }
+    },
+    {
+      "content": "interface{}",
+      "doc": "Snippet for empty interface",
+      "label": "empty interface",
+      "matches": {
+        "in": true
+      }
+    },
+    {
+      "content": "go ${1:func}($0)",
+      "doc": "Snippet for goroutine declaration",
+      "label": "goroutine function",
+      "matches": {
+        "gf": true
+      }
+    },
+    {
+      "content": "go func($1) {\n\t$0\n}($2)",
+      "doc": "Snippet for anonymous goroutine declaration",
+      "label": "goroutine anonymous function",
+      "matches": {
+        "go": true
+      }
+    },
+    {
+      "content": "import (\n\t\"${1:package}\"\n)",
+      "doc": "Snippet for a import block",
+      "label": "multiple imports",
+      "matches": {
+        "ims": true
+      }
+    },
+    {
+      "content": "http.Redirect(${1:w}, ${2:r}, \"${3:/}\", ${4:http.StatusFound})",
+      "doc": "Snippet for http.Redirect()",
+      "label": "http.Redirect",
+      "matches": {
+        "rd": true
+      }
+    },
+    {
+      "content": "log.Printf(\"${1:var}: %#+v\\\\n\", ${1:var})",
+      "doc": "Snippet for log.Printf() with variable content",
+      "label": "log variable content",
+      "matches": {
+        "lv": true
+      }
+    },
+    {
+      "content": "else {\n\t$0\n}",
+      "doc": "Snippet for else branch",
+      "label": "else branch",
+      "matches": {
+        "el": true
+      }
+    },
+    {
+      "content": "const ${1:name} = ${2:value}",
+      "doc": "Snippet for a constant",
+      "label": "single constant",
+      "matches": {
+        "co": true
+      }
+    },
+    {
+      "content": "http.ListenAndServe(\"${1::8080}\", ${2:nil})",
+      "doc": "Snippet for http.ListenAndServe",
+      "label": "http.ListenAndServe",
+      "matches": {
+        "las": true
+      }
+    },
+    {
+      "content": "if ${1:condition} {\n\t$2\n} else {\n\t$0\n}",
+      "doc": "Snippet for if else",
+      "label": "if else statement",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "http.Error(${1:w}, ${2:err}.Error(), ${3:http.StatusInternalServerError})",
+      "doc": "Snippet for http.Error()",
+      "label": "http.Error",
+      "matches": {
+        "herr": true
+      }
+    },
+    {
+      "content": "const (\n\t${1:name} = ${2:value}\n)",
+      "doc": "Snippet for a constant block",
+      "label": "multiple constants",
+      "matches": {
+        "cos": true
+      }
+    },
+    {
+      "content": "func $1(${2:w} http.ResponseWriter, ${3:r} *http.Request) {\n\t$0\n}",
+      "doc": "Snippet for http handler declaration",
+      "label": "http handler declaration",
+      "matches": {
+        "hand": true
+      }
+    },
+    {
+      "content": "if err != nil {\n\treturn ${1:nil}, ${2:err}\n}",
+      "doc": "Snippet for if err != nil",
+      "label": "if err != nil",
+      "matches": {
+        "ir": true
+      }
+    },
+    {
+      "content": "type ${1:name} func($3) $4",
+      "doc": "Snippet for a type function declaration",
+      "label": "type function declaration",
+      "matches": {
+        "tyf": true
+      }
+    },
+    {
+      "content": "http.Serve(\"${1::8080}\", ${2:nil})",
+      "doc": "Snippet for http.Serve",
+      "label": "http.Serve",
+      "matches": {
+        "sv": true
+      }
+    },
+    {
+      "content": "import \"${1:package}\"",
+      "doc": "Snippet for import statement",
+      "label": "single import",
+      "matches": {
+        "im": true
+      }
+    },
+    {
+      "content": "fmt.Println(\"$1\")",
+      "doc": "Snippet for fmt.Println()",
+      "label": "fmt.Println",
+      "matches": {
+        "fp": true
+      }
+    },
+    {
+      "content": "type ${1:name} interface {\n\t$0\n}",
+      "doc": "Snippet for a type interface",
+      "label": "type interface declaration",
+      "matches": {
+        "tyi": true
+      }
+    },
+    {
+      "content": "func init() {\n\t$1\n}",
+      "doc": "Snippet for init function",
+      "label": "init function",
+      "matches": {
+        "finit": true
+      }
+    },
+    {
+      "content": "if ${1:condition} {\n\t$0\n}",
+      "doc": "Snippet for if statement",
+      "label": "if statement",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "fmt.Printf(\"$1\", ${2:var})",
+      "doc": "Snippet for fmt.Printf()",
+      "label": "fmt.Printf",
+      "matches": {
+        "ff": true
+      }
+    },
+    {
+      "content": "type ${1:name} struct {\n\t$0\n}",
+      "doc": "Snippet for a struct declaration",
+      "label": "type struct declaration",
+      "matches": {
+        "tys": true
+      }
+    },
+    {
+      "content": "func main() {\n\t$1\n}",
+      "doc": "Snippet for main function",
+      "label": "main function",
+      "matches": {
+        "fmain": true
+      }
+    },
+    {
+      "content": "var (\n\t${1:name} ${2:type} = ${3:value}\n)",
+      "doc": "Snippet for a variable",
+      "label": "variables declaration",
+      "matches": {
+        "vars": true
+      }
+    },
+    {
+      "content": "log.Println(\"$1\")",
+      "doc": "Snippet for log.Println()",
+      "label": "log.Println",
+      "matches": {
+        "lp": true
+      }
+    },
+    {
+      "content": "package main\n\nimport (\n  \"fmt\"\n)\n\nfunc main() {\n  fmt.Printf(\"Hello, world\\n\")\n}",
+      "doc": "",
+      "label": "package main\\nimport fmt...",
+      "matches": {
+        "helloworld": true
+      }
+    },
+    {
+      "content": "func ${1:fname}(${2}) ${3:int }{\n  ${0:TARGET:return }\n}",
+      "doc": "",
+      "label": "func ...() { ... }",
+      "matches": {
+        "func": true
+      }
+    },
+    {
+      "content": "func ${1:fname}(${2}) ${3:int }{\n  ${0:TARGET:return }\n}",
+      "doc": "",
+      "label": "func ...() { ... }",
+      "matches": {
+        "fn": true
+      }
+    },
+    {
+      "content": "import (\n  \"${1:fmt}\"\n)\n${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "import": true
+      }
+    },
+    {
+      "content": "import (\n  \"${1:fmt}\"\n)\n${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "im": true
+      }
+    },
+    {
+      "content": "package ${1:main}\n${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "package": true
+      }
+    },
+    {
+      "content": "package ${1:main}\n${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pk": true
+      }
+    },
+    {
+      "content": "fmt.Printf(\"${1}\\n\"${2:})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "printf": true
+      }
+    },
+    {
+      "content": "fmt.Printf(\"${1}\\n\"${2:})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pf": true
+      }
+    },
+    {
+      "content": "fmt.Println(${0:TARGET})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "println": true
+      }
+    },
+    {
+      "content": "fmt.Println(${0:TARGET})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pl": true
+      }
+    },
+    {
+      "content": "type ${1} struct {\n  ${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "struct": true
+      }
+    },
+    {
+      "content": "type ${1} struct {\n  ${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ts": true
+      }
+    },
+    {
+      "content": "type ${1} interface {\n  ${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "interface": true
+      }
+    },
+    {
+      "content": "type ${1} interface {\n  ${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ti": true
+      }
+    },
+    {
+      "content": "for ${1} {\n  ${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "for ${1:v} := range ${2:#:iterator} {\n  ${0:TARGET}\n}",
+      "doc": "",
+      "label": "for range",
+      "matches": {
+        "range": true
+      }
+    },
+    {
+      "content": "if ${1:#:condition} {\n  ${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "if err != nil {\n  return `g:NeosnippetSnippets_Goiferr()`\n}\n${2}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "iferr": true
+      }
+    },
+    {
+      "content": "if err != nil {\n  return `g:NeosnippetSnippets_Goiferr()`\n}\n${2}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "switch ${1:#:v} {\ncase ${2:#:condition}:\n  ${0:TARGET}\n}",
+      "doc": "",
+      "label": "switch {}",
+      "matches": {
+        "switch": true
+      }
+    },
+    {
+      "content": "select {\ncase ${1:#:condition}:\n  ${0:TARGET}\n}",
+      "doc": "",
+      "label": "select {}",
+      "matches": {
+        "select": true
+      }
+    },
+    {
+      "content": "case ${1:#:condition}:\n  ${2:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "func Test${1}(${2:t *testing.T}) {\n  ${3}\n}",
+      "doc": "",
+      "label": "func Test...(t *testing.T) { ... }",
+      "matches": {
+        "functest": true
+      }
+    },
+    {
+      "content": "func Benchmark${1}(${2:b *testing.B}) {\n  for i := 0; i < ${3:b.N}; i++ {\n    ${4}\n  }\n}",
+      "doc": "",
+      "label": "func Benchmark...(b *testing.B) { ... }",
+      "matches": {
+        "funcbench": true
+      }
+    },
+    {
+      "content": "func Fuzz${1}(${2:f *testing.F}) {\n  f.Fuzz(func(t *testing.T, ${3:b []byte}) {\n    ${4}\n  })\n}",
+      "doc": "",
+      "label": "func Fuzz...(f *testing.F) { ... }",
+      "matches": {
+        "funcfuzz": true
+      }
+    },
+    {
+      "content": "var tests = []struct {\n    name string\n    expected string\n    given string\n}{\n    {\"${2}\", \"${3}\", \"${4}\",},\n}\nfor _, tt := range tests {\n    tt := tt\n    t.Run(tt.name, func(t *testing.T){\n        actual := ${1:Function}(tt.given)\n        if actual != tt.expected {\n            t.Errorf(\"given(%s): expected %s, actual %s\", tt.given, tt.expected, actual)\n        }\n    })\n}",
+      "doc": "",
+      "label": "var test = {...}{...} for {t.Run(){...}}",
+      "matches": {
+        "testtable": true
+      }
+    },
+    {
+      "content": "${1} := ${0}",
+      "doc": "",
+      "label": "v := value",
+      "matches": {
+        ":": true
+      }
+    },
+    {
+      "content": "${1:fn} := func() {\n\t${0}\n}",
+      "doc": "",
+      "label": "fn := func() { ... }",
+      "matches": {
+        "anon": true
+      }
+    },
+    {
+      "content": "append(${1:slice}, ${0:value})",
+      "doc": "",
+      "label": "append(slice, value)",
+      "matches": {
+        "ap": true
+      }
+    },
+    {
+      "content": "${1:slice} = append($1, ${0:value})",
+      "doc": "",
+      "label": "slice = append(slice, value)",
+      "matches": {
+        "ap=": true
+      }
+    },
+    {
+      "content": "break",
+      "doc": "",
+      "label": "break",
+      "matches": {
+        "br": true
+      }
+    },
+    {
+      "content": "chan ${0:int}",
+      "doc": "",
+      "label": "chan Type",
+      "matches": {
+        "ch": true
+      }
+    },
+    {
+      "content": "case ${1:value}:\n\t${0}",
+      "doc": "",
+      "label": "case ...:",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "const ${1:NAME} ${2:Type} = ${0:0}",
+      "doc": "",
+      "label": "const XXX Type = ...",
+      "matches": {
+        "con": true
+      }
+    },
+    {
+      "content": "const (\n\t${1:NAME} ${2:Type} = ${3:value}\n\t${0}\n)",
+      "doc": "",
+      "label": "const ( ... )",
+      "matches": {
+        "cons": true
+      }
+    },
+    {
+      "content": "const (\n\t${1:NAME} ${2:Type} = iota\n\t${0}\n)",
+      "doc": "",
+      "label": "const ( ... = iota )",
+      "matches": {
+        "iota": true
+      }
+    },
+    {
+      "content": "continue",
+      "doc": "",
+      "label": "continue",
+      "matches": {
+        "cn": true
+      }
+    },
+    {
+      "content": "default:\n\t${0}",
+      "doc": "",
+      "label": "default: ...",
+      "matches": {
+        "default": true
+      }
+    },
+    {
+      "content": "defer ${1:func}(${2})\n${0}",
+      "doc": "",
+      "label": "defer someFunction()",
+      "matches": {
+        "df": true
+      }
+    },
+    {
+      "content": "defer func() {\n\t${0}\n}()",
+      "doc": "",
+      "label": "defer func() { ... }",
+      "matches": {
+        "def": true
+      }
+    },
+    {
+      "content": "defer func() {\n\tif err := recover(); err != nil {\n\t\t${0}\n\t}\n}()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defr": true
+      }
+    },
+    {
+      "content": "/*\n * This program is free software; you can redistribute it and/or modify\n * it under the terms of the GNU General Public License as published by\n * the Free Software Foundation; either version 2 of the License, or\n * (at your option) any later version.\n *\n * This program is distributed in the hope that it will be useful,\n * but WITHOUT ANY WARRANTY; without even the implied warranty of\n * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n * GNU General Public License for more details.\n *\n * You should have received a copy of the GNU General Public License\n * along with this program; if not, see <http://www.gnu.org/licenses/>.\n *\n * Copyright (C) ${1:Author}, `strftime(\"%Y\")`\n */\n\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gpl": true
+      }
+    },
+    {
+      "content": "import (\n\t\"${1:package}\"\n)",
+      "doc": "",
+      "label": "import ( ... )",
+      "matches": {
+        "import": true
+      }
+    },
+    {
+      "content": "type ${1:Interface} interface {\n\t${2:/* TODO: add methods */}\n}",
+      "doc": "",
+      "label": "interface I { ... }",
+      "matches": {
+        "interface": true
+      }
+    },
+    {
+      "content": "if ${1:condition} {\n\t${0}\n}",
+      "doc": "",
+      "label": "else { ... }",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "else {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "else": true
+      }
+    },
+    {
+      "content": "if err := ${1:condition}; err != nil {\n\t${0}\n}",
+      "doc": "",
+      "label": "if err := ...; err != nil { ... }",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "if err != nil {\n\treturn err\n}\n${0}",
+      "doc": "",
+      "label": "if err != nil { return err }",
+      "matches": {
+        "errn": true
+      }
+    },
+    {
+      "content": "if err != nil {\n\tt.Fatal(err)\n}",
+      "doc": "",
+      "label": "if err != nil { t.Fatal(err) }",
+      "matches": {
+        "errt": true
+      }
+    },
+    {
+      "content": "if err != nil {\n\tlog.Fatal(err)\n}",
+      "doc": "",
+      "label": "if err != nil { log.Fatal(err) }",
+      "matches": {
+        "errl": true
+      }
+    },
+    {
+      "content": "if err != nil {\n\treturn ${1:nil}, err\n}\n${0}",
+      "doc": "",
+      "label": "if err != nil { return [...], err }",
+      "matches": {
+        "errn,": true
+      }
+    },
+    {
+      "content": "if err != nil {\n\t${1}\n\treturn\n}\n${0}",
+      "doc": "",
+      "label": "if err != nil { ... return }",
+      "matches": {
+        "errh": true
+      }
+    },
+    {
+      "content": "if err != nil {\n\tpanic(${1})\n}\n${0}",
+      "doc": "",
+      "label": "if err != nil { panic(...) }",
+      "matches": {
+        "errp": true
+      }
+    },
+    {
+      "content": "\\`json:\"${1:keyName}\"\\`",
+      "doc": "",
+      "label": "\\`json:key\\`",
+      "matches": {
+        "json": true
+      }
+    },
+    {
+      "content": "\\`yaml:\"${1:keyName}\"\\`",
+      "doc": "",
+      "label": "\\`yaml:key\\`",
+      "matches": {
+        "yaml": true
+      }
+    },
+    {
+      "content": "fallthrough",
+      "doc": "",
+      "label": "fallthrough",
+      "matches": {
+        "ft": true
+      }
+    },
+    {
+      "content": "for ${1} {\n\t${0}\n}",
+      "doc": "",
+      "label": "for ... { ... }",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "for ${1:i} := 0; $1 < ${2:N}; $1++ {\n\t${0}\n}",
+      "doc": "",
+      "label": "for 0..N-1 { ... }",
+      "matches": {
+        "fori": true
+      }
+    },
+    {
+      "content": "for ${2:k}, ${3:v} := range ${1} {\n\t${0}\n}",
+      "doc": "",
+      "label": "for k, v := range items { ... }",
+      "matches": {
+        "forr": true
+      }
+    },
+    {
+      "content": "func ${1:function}(${2}) ${3:error }{\n\t${0}\n}",
+      "doc": "",
+      "label": "func function(...) [error] { ... }",
+      "matches": {
+        "func": true
+      }
+    },
+    {
+      "content": "fmt.Printf(\"${1} = %+v\\n\", $1)\n${0}",
+      "doc": "",
+      "label": "fmt.Printf(...)",
+      "matches": {
+        "ff": true
+      }
+    },
+    {
+      "content": "fmt.Println(\"${1}\")",
+      "doc": "",
+      "label": "fmt.Println(...)",
+      "matches": {
+        "fn": true
+      }
+    },
+    {
+      "content": "fmt.Errorf(\"${1}\")",
+      "doc": "",
+      "label": "fmt.Errorf(...)",
+      "matches": {
+        "fe": true
+      }
+    },
+    {
+      "content": "log.Printf(\"${1} = %+v\\n\", $1)",
+      "doc": "",
+      "label": "log.Printf(...)",
+      "matches": {
+        "lf": true
+      }
+    },
+    {
+      "content": "log.Println(\"${1}\")",
+      "doc": "",
+      "label": "log.Println(...)",
+      "matches": {
+        "ln": true
+      }
+    },
+    {
+      "content": "make(${1:[]string}, ${2:0})${0}",
+      "doc": "",
+      "label": "make(Type, size)",
+      "matches": {
+        "make": true
+      }
+    },
+    {
+      "content": "map[${1:string}]${0:int}",
+      "doc": "",
+      "label": "map[Type]Type",
+      "matches": {
+        "map": true
+      }
+    },
+    {
+      "content": "func main() {\n\t${0}\n}",
+      "doc": "",
+      "label": "func main() { ... }",
+      "matches": {
+        "main": true
+      }
+    },
+    {
+      "content": "func (${1:self} ${2:Type}) ${3:Do}(${4}) ${5:error }{\n\t${0}\n}",
+      "doc": "",
+      "label": "func (self Type) Method(...) [error] { ... }",
+      "matches": {
+        "meth": true
+      }
+    },
+    {
+      "content": "if !ok {\n\t${0}\n}",
+      "doc": "",
+      "label": "if !ok { ... }",
+      "matches": {
+        "ok": true
+      }
+    },
+    {
+      "content": "// Package $1 provides ${2:...}\npackage ${1:main}\n${0}",
+      "doc": "",
+      "label": "package ...",
+      "matches": {
+        "package": true
+      }
+    },
+    {
+      "content": "panic(\"${0}\")",
+      "doc": "",
+      "label": "panic(\"...\")",
+      "matches": {
+        "panic": true
+      }
+    },
+    {
+      "content": "panic(\"${0}\")",
+      "doc": "",
+      "label": "panic(\"...\")",
+      "matches": {
+        "pn": true
+      }
+    },
+    {
+      "content": "return ${0}",
+      "doc": "",
+      "label": "return ...",
+      "matches": {
+        "return": true
+      }
+    },
+    {
+      "content": "return ${0}",
+      "doc": "",
+      "label": "return ...",
+      "matches": {
+        "rt": true
+      }
+    },
+    {
+      "content": "select {\ncase ${1:v1} := <-${2:chan1}\n\t${0}\n}",
+      "doc": "",
+      "label": "select { case a := <-chan: ... }",
+      "matches": {
+        "select": true
+      }
+    },
+    {
+      "content": "type ${1:Type} struct {\n\t${0}\n}",
+      "doc": "",
+      "label": "type T struct { ... }",
+      "matches": {
+        "st": true
+      }
+    },
+    {
+      "content": "switch ${1:var} {\ncase ${2:value1}:\n\t${0}\n}",
+      "doc": "",
+      "label": "switch x { ... }",
+      "matches": {
+        "switch": true
+      }
+    },
+    {
+      "content": "fmt.Sprintf(\"%${1:s}\", ${2:var})",
+      "doc": "",
+      "label": "fmt.Sprintf(...)",
+      "matches": {
+        "sp": true
+      }
+    },
+    {
+      "content": "go ${1:funcName}(${0})",
+      "doc": "",
+      "label": "go someFunc(...)",
+      "matches": {
+        "go": true
+      }
+    },
+    {
+      "content": "go func(${1}) {\n\t${3:/* TODO */}\n}(${2})",
+      "doc": "",
+      "label": "go func(...) { ... }(...)",
+      "matches": {
+        "gof": true
+      }
+    },
+    {
+      "content": "func Test${1:Function}(t *testing.T) {\n\t${0}\n}",
+      "doc": "",
+      "label": "func TestXYZ(t *testing.T) { ... }",
+      "matches": {
+        "test": true
+      }
+    },
+    {
+      "content": "t.Run(\"${0}\", func(t *testing.T){\n\n})",
+      "doc": "",
+      "label": "t.Run(\"test name\", func(t *testing.T){ ... })",
+      "matches": {
+        "tr": true
+      }
+    },
+    {
+      "content": "var tests = []struct {\n    name string\n    expected string\n    given string\n}{\n    {\"${2}\", \"${3}\", \"${4}\",},\n}\nfor _, tt := range tests {\n    tt := tt\n    t.Run(tt.name, func(t *testing.T){\n        actual := ${1:Function}(tt.given)\n        if actual != tt.expected {\n            t.Errorf(\"given(%s): expected %s, actual %s\", tt.given, tt.expected, actual)\n        }\n    })\n}",
+      "doc": "",
+      "label": "var test = {...}{...} for {t.Run(){...}}",
+      "matches": {
+        "tt": true
+      }
+    },
+    {
+      "content": "func Fuzz${1:Function}(f *testing.F) {\n        f.Fuzz(func(t *testing.T, ${2:ff}) {\n            ${0}\n        })\n\t}",
+      "doc": "",
+      "label": "func FuzzXYZ(f *testing.F) { ... }",
+      "matches": {
+        "fuzz": true
+      }
+    },
+    {
+      "content": "ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {\n  fmt.Fprintln(w, ${1:`response`})\n}))\ndefer ts.Close()\n\n//Use testing server url (type string) somewhere\n${0:someUrl} = ts.URL",
+      "doc": "",
+      "label": "ts := httptest.NewServer(...)",
+      "matches": {
+        "tsrv": true
+      }
+    },
+    {
+      "content": "if err != nil {\n  t.Errorf(\"${1}\")\n}",
+      "doc": "",
+      "label": "if err != nil { t.Errorf(...) }",
+      "matches": {
+        "ter": true
+      }
+    },
+    {
+      "content": "if err != nil {\n  t.Fatalf(\"${1}\")\n}",
+      "doc": "",
+      "label": "if err != nil { t.Fatalf(...) }",
+      "matches": {
+        "terf": true
+      }
+    },
+    {
+      "content": "func Example${1:Method}() {\n\t${0}\n\t// Output:\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "example": true
+      }
+    },
+    {
+      "content": "func Benchmark${1:Method}(b *testing.B) {\n\tfor i := 0; i < b.N; i++ {\n\t\t${0}\n\t}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "benchmark": true
+      }
+    },
+    {
+      "content": "if !reflect.DeepEqual(${1:expected}, ${2:actual}) {\n\t_, file, line, _ := runtime.Caller(0)\n\tfmt.Printf(\"%s:%d:\\n\\n\\texp: %#v\\n\\n\\tgot: %#v\\n\\n\", filepath.Base(file), line, $1, $2)\n\tt.FailNow()\n}",
+      "doc": "",
+      "label": "equals: test two identifiers with DeepEqual",
+      "matches": {
+        "eq": true
+      }
+    },
+    {
+      "content": "func ${1:handler}(w http.ResponseWriter, r *http.Request) {\n  ${0:fmt.Fprintf(w, \"hello world\")}\n}",
+      "doc": "",
+      "label": "http.HandlerFunc",
+      "matches": {
+        "hf": true
+      }
+    },
+    {
+      "content": "${1:http}.HandleFunc(\"${2:/}\", func(w http.ResponseWriter, r *http.Request) {\n  ${0:fmt.Fprintf(w, \"hello world\")}\n})",
+      "doc": "",
+      "label": "mux.HandleFunc(...)",
+      "matches": {
+        "hhf": true
+      }
+    },
+    {
+      "content": "${1} := ${2}",
+      "doc": "",
+      "label": "shorthand variable declaration",
+      "matches": {
+        "v": true
+      }
+    },
+    {
+      "content": "var ${1:t} ${0:string}",
+      "doc": "",
+      "label": "variable initialization",
+      "matches": {
+        "vr": true
+      }
+    },
+    {
+      "content": "var ${1} ${2} = ${3}",
+      "doc": "",
+      "label": "variable declaration",
+      "matches": {
+        "var": true
+      }
+    },
+    {
+      "content": "var (\n\t${1} ${2} = ${3}\n)",
+      "doc": "",
+      "label": "variables declaration",
+      "matches": {
+        "vars": true
+      }
+    },
+    {
+      "content": "append(${1:slice}, ${0:value})",
+      "doc": "",
+      "label": "append",
+      "matches": {
+        "ap": true
+      }
+    },
+    {
+      "content": "bool",
+      "doc": "",
+      "label": "bool",
+      "matches": {
+        "bl": true
+      }
+    },
+    {
+      "content": "byte",
+      "doc": "",
+      "label": "byte",
+      "matches": {
+        "bt": true
+      }
+    },
+    {
+      "content": "break",
+      "doc": "",
+      "label": "break",
+      "matches": {
+        "br": true
+      }
+    },
+    {
+      "content": "chan ${0:int}",
+      "doc": "",
+      "label": "channel",
+      "matches": {
+        "ch": true
+      }
+    },
+    {
+      "content": "case ${1:value}:\n\t${0:${VISUAL}}",
+      "doc": "",
+      "label": "case",
+      "matches": {
+        "cs": true
+      }
+    },
+    {
+      "content": "const (\n\t${1:NAME1} = iota\n\t${0:NAME2}\n)",
+      "doc": "",
+      "label": "constants with iota",
+      "matches": {
+        "co": true
+      }
+    },
+    {
+      "content": "continue",
+      "doc": "",
+      "label": "continue",
+      "matches": {
+        "cn": true
+      }
+    },
+    {
+      "content": "defer ${0:func}()",
+      "doc": "",
+      "label": "defer",
+      "matches": {
+        "df": true
+      }
+    },
+    {
+      "content": "defer func() {\n\tif err := recover(); err != nil {\n\t\t${0:${VISUAL}}\n\t}\n}()",
+      "doc": "",
+      "label": "defer recover",
+      "matches": {
+        "dfr": true
+      }
+    },
+    {
+      "content": "import (\n\t\"${1:package}\"\n)",
+      "doc": "",
+      "label": "import",
+      "matches": {
+        "im": true
+      }
+    },
+    {
+      "content": "interface{}",
+      "doc": "",
+      "label": "interface",
+      "matches": {
+        "in": true
+      }
+    },
+    {
+      "content": "type ${1:name} interface {\n\t${2:/* methods */}\n}",
+      "doc": "",
+      "label": "full interface ",
+      "matches": {
+        "inf": true
+      }
+    },
+    {
+      "content": "if $1 {\n\t${2:${VISUAL}}\n}",
+      "doc": "",
+      "label": "if condition",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "if $1 {\n\t${2:${VISUAL}}\n} else {\n\t${0}\n}",
+      "doc": "",
+      "label": "if else condition",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "else {\n\t${0:${VISUAL}}\n}",
+      "doc": "",
+      "label": "else",
+      "matches": {
+        "el": true
+      }
+    },
+    {
+      "content": "if err != nil {\n\treturn err\n}\n${0}",
+      "doc": "",
+      "label": "if error not nil, return err",
+      "matches": {
+        "ir": true
+      }
+    },
+    {
+      "content": "false",
+      "doc": "",
+      "label": "false",
+      "matches": {
+        "f": true
+      }
+    },
+    {
+      "content": "fallthrough",
+      "doc": "",
+      "label": "fallthrough",
+      "matches": {
+        "ft": true
+      }
+    },
+    {
+      "content": "float32",
+      "doc": "",
+      "label": "float",
+      "matches": {
+        "fl": true
+      }
+    },
+    {
+      "content": "float32",
+      "doc": "",
+      "label": "float32",
+      "matches": {
+        "f3": true
+      }
+    },
+    {
+      "content": "float64",
+      "doc": "",
+      "label": "float64",
+      "matches": {
+        "f6": true
+      }
+    },
+    {
+      "content": "for ${1}{\n\t${0:${VISUAL}}\n}",
+      "doc": "",
+      "label": "for loop",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "for ${2:i} := 0; $2 < ${1:count}; $2${3:++} {\n\t${0:${VISUAL}}\n}",
+      "doc": "",
+      "label": "for int loop",
+      "matches": {
+        "fori": true
+      }
+    },
+    {
+      "content": "for ${1:e} := range ${2:collection} {\n\t${0:${VISUAL}}\n}",
+      "doc": "",
+      "label": "for range loop",
+      "matches": {
+        "forr": true
+      }
+    },
+    {
+      "content": "func ${1:funcName}(${2}) ${3:error} {\n\t${4}\n}\n${0}",
+      "doc": "",
+      "label": "function",
+      "matches": {
+        "fun": true
+      }
+    },
+    {
+      "content": "func (${1:receiver} ${2:type}) ${3:funcName}(${4}) ${5:error} {\n\t${6}\n}\n${0}",
+      "doc": "",
+      "label": "method",
+      "matches": {
+        "fum": true
+      }
+    },
+    {
+      "content": "func (${1:receiver} ${2:type}) ${3:funcName}(${4:w} http.ResponseWriter, ${5:r} *http.Request) {\n\t${0:${VISUAL}}\n}",
+      "doc": "",
+      "label": "http handler function on receiver",
+      "matches": {
+        "fumh": true
+      }
+    },
+    {
+      "content": "log.Printf(\"%${1:s}\", ${2:var})",
+      "doc": "",
+      "label": "log printf",
+      "matches": {
+        "lf": true
+      }
+    },
+    {
+      "content": "log.Println(\"${1}\")",
+      "doc": "",
+      "label": "log println",
+      "matches": {
+        "lp": true
+      }
+    },
+    {
+      "content": "make(${1:[]string}, ${0:0})",
+      "doc": "",
+      "label": "make",
+      "matches": {
+        "mk": true
+      }
+    },
+    {
+      "content": "map[${1:string}]${0:int}",
+      "doc": "",
+      "label": "map",
+      "matches": {
+        "mp": true
+      }
+    },
+    {
+      "content": "func main() {\n\t${1}\n}\n${0}",
+      "doc": "",
+      "label": "func main()",
+      "matches": {
+        "main": true
+      }
+    },
+    {
+      "content": "new(${0:type})",
+      "doc": "",
+      "label": "new",
+      "matches": {
+        "nw": true
+      }
+    },
+    {
+      "content": "package ${1:main}",
+      "doc": "",
+      "label": "package",
+      "matches": {
+        "pa": true
+      }
+    },
+    {
+      "content": "panic(\"${0:msg}\")",
+      "doc": "",
+      "label": "panic",
+      "matches": {
+        "pn": true
+      }
+    },
+    {
+      "content": "fmt.Printf(\"%${1:s}\\n\", ${2:var})",
+      "doc": "",
+      "label": "fmt.Printf()",
+      "matches": {
+        "pf": true
+      }
+    },
+    {
+      "content": "fmt.Println(\"${1:s}\")",
+      "doc": "",
+      "label": "fmt.Println()",
+      "matches": {
+        "pl": true
+      }
+    },
+    {
+      "content": "range ${0}",
+      "doc": "",
+      "label": "range",
+      "matches": {
+        "rn": true
+      }
+    },
+    {
+      "content": "return ${0}",
+      "doc": "",
+      "label": "return",
+      "matches": {
+        "rt": true
+      }
+    },
+    {
+      "content": "result",
+      "doc": "",
+      "label": "result",
+      "matches": {
+        "rs": true
+      }
+    },
+    {
+      "content": "select {\ncase ${1:v1} := <-${2:chan1}\n\t${3}\ndefault:\n\t${0}\n}",
+      "doc": "",
+      "label": "select",
+      "matches": {
+        "sl": true
+      }
+    },
+    {
+      "content": "string",
+      "doc": "",
+      "label": "string",
+      "matches": {
+        "sr": true
+      }
+    },
+    {
+      "content": "type ${1:name} struct {\n\t${2:/* data */}\n}\n${0}",
+      "doc": "",
+      "label": "struct",
+      "matches": {
+        "st": true
+      }
+    },
+    {
+      "content": "switch ${1:var} {\ncase ${2:value1}:\n\t${3}\ncase ${4:value2}:\n\t${5}\ndefault:\n\t${0}\n}",
+      "doc": "",
+      "label": "switch",
+      "matches": {
+        "sw": true
+      }
+    },
+    {
+      "content": "fmt.Sprintf(\"%${1:s}\", ${2:var})",
+      "doc": "",
+      "label": "fmt.Sprintf",
+      "matches": {
+        "ps": true
+      }
+    },
+    {
+      "content": "true",
+      "doc": "",
+      "label": "true",
+      "matches": {
+        "t": true
+      }
+    },
+    {
+      "content": "go ${1:funcName}(${0})",
+      "doc": "",
+      "label": "goroutine named function",
+      "matches": {
+        "g": true
+      }
+    },
+    {
+      "content": "go func(${1} ${2:type}) {\n\t${3:/* code */}\n}(${0})",
+      "doc": "",
+      "label": "goroutine anonymous function",
+      "matches": {
+        "ga": true
+      }
+    },
+    {
+      "content": "func Test${1:name}(t *testing.T) {\n\t${0:${VISUAL}}\n}",
+      "doc": "",
+      "label": "test function",
+      "matches": {
+        "test": true
+      }
+    },
+    {
+      "content": "func Test${1:name}(t *testing.T) {\n\ttests := []struct {\n\t\tname string\n\t}{\n\t\t{\n\t\t\tname: \"${2:test name}\",\n\t\t},\n\t}\n\n\tfor _, test := range tests {\n\t\tt.Run(test.name, func(t *testing.T) {\n\t\t\t${0:${VISUAL}}\n\t\t})\n\t}\n}",
+      "doc": "",
+      "label": "table test function",
+      "matches": {
+        "testt": true
+      }
+    },
+    {
+      "content": "func Benchmark${1:name}(b *testing.B) {\n\tfor i := 0; i < b.N; i++ {\n\t\t${2}\n\t}\n}\n${0}",
+      "doc": "",
+      "label": "benchmark function",
+      "matches": {
+        "bench": true
+      }
+    },
+    {
+      "content": "type ${1:name} struct {\n\t${2:attrName} ${3:attrType}\n}",
+      "doc": "",
+      "label": "composite literals",
+      "matches": {
+        "cl": true
+      }
+    },
+    {
+      "content": "if ${1:value}, ok := ${2:map}[${3:key}]; ok == true {\n\t${4:/* code */}\n}",
+      "doc": "",
+      "label": "if key in a map",
+      "matches": {
+        "om": true
+      }
+    },
+    {
+      "content": "var ${1:var} = struct{\n\t${2:name} ${3:type}\n}{\n\t$2: ${4:value},\n}",
+      "doc": "",
+      "label": "Grouped globals with anonymous struct",
+      "matches": {
+        "gg": true
+      }
+    },
+    {
+      "content": "type ${1:parentType}Alias $1\n\nfunc (p *$1) MarshalJSON() ([]byte, error) {\n\treturn json.Marshal(&struct{ *$1Alias }{(*$1Alias)(p)})\n}",
+      "doc": "",
+      "label": "Marshalable json alias",
+      "matches": {
+        "ja": true
+      }
+    },
+    {
+      "content": "if ${1}err != nil {\n\treturn fmt.Errorf(\"${2} %w\", err)\n}",
+      "doc": "",
+      "label": "Error handling with fmt.Errorf",
+      "matches": {
+        "errwr": true
+      }
+    }
+  ]
+}

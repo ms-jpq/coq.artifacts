@@ -1,0 +1,37 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "(defmodule ${1:`vim_snippets#Filename()`}\n\t(export ${2:all}))\n$0",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defmo": true
+      }
+    },
+    {
+      "content": "(defun $1 ($2)\n\t$0)",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "def": true
+      }
+    },
+    {
+      "content": "(defmodule ${1:`vim_snippets#Filename()`}\n\t(behaviour ltest-unit)\n\t(export all))\n\n(include-lib \"ltest/include/ltest-macros.lfe\")\n\n$0",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ltest": true
+      }
+    },
+    {
+      "content": "(deftest $1\n\t$0)",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "test": true
+      }
+    }
+  ]
+}

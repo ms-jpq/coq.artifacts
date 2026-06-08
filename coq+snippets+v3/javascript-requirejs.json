@@ -1,0 +1,29 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "define([\"${1:#dependencies1}\"], function (${2:#dependencies2}) {\n\treturn ${0:TARGET};\n});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "def": true
+      }
+    },
+    {
+      "content": "define(\"${1:#name}\", [\"${2:#dependencies1}\"], function (${3:#dependencies2}) {\n\treturn ${0:TARGET};\n});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defn": true
+      }
+    },
+    {
+      "content": "require([\"${1:#dependencies1}\"], function (${2:#dependencies2}) {\n\treturn ${0:TARGET};\n});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "reqjs": true
+      }
+    }
+  ]
+}

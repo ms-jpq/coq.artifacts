@@ -1,0 +1,373 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "factor(${1:x})",
+      "doc": "Factor",
+      "label": "fac",
+      "matches": {
+        "factor": true
+      }
+    },
+    {
+      "content": "glm(${1:formula}, ${2:family = {3:gaussian}}, ${4:data})",
+      "doc": "Generalized Linear Models",
+      "label": "glm",
+      "matches": {
+        "glm": true
+      }
+    },
+    {
+      "content": "library(shiny)\n\nui <- fluidPage(\n    titlePanel(\"${1:title}\"),\n    sidebarLayout(\n        sidebarPanel(),\n        mainPanel()\n    )\n)\n\nserver <- function(input, output, session) {\n\n}\n\nshinyApp(ui, server)$0",
+      "doc": "Shiny sidebar page",
+      "label": "Shiny sidebar page",
+      "matches": {
+        "shiny sidebar page": true
+      }
+    },
+    {
+      "content": "kruskal.test(${1:formula}, ${2:data}, ${3:subset}, ${4:na.action}, ${5:...})",
+      "doc": "Kruskal-Wallis Rank Sum test",
+      "label": "kr",
+      "matches": {
+        "kruskal": true
+      }
+    },
+    {
+      "content": "lapply(${1:X}, ${2:FUN}, ${3:...})",
+      "doc": "Lapply",
+      "label": "lap",
+      "matches": {
+        "lapply": true
+      }
+    },
+    {
+      "content": "for (${1:identifier} in ${2:collection}) {\n   ${3:selected}\n}",
+      "doc": "Code snippet for 'for' loop",
+      "label": "for",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "if (${1:condition}) {\n   ${2:selected}\n}",
+      "doc": "Code snippet for 'if' conditional",
+      "label": "if",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "${1:file = }file.choose()${0:}",
+      "doc": "file.choose",
+      "label": "fch",
+      "matches": {
+        "fch": true
+      }
+    },
+    {
+      "content": "library(cluster)\nclara(${1:xData}, k = ${2:k}, metric = ${3:metric}, stand = ${4:stand}, samples = ${5:samples})",
+      "doc": "Cluster data into k clusters (library: cluster)",
+      "label": "Clustering",
+      "matches": {
+        "clara": true
+      }
+    },
+    {
+      "content": "lmObj <- lm(${1:yCol} ~ {2:xCol}, data = ${3:data}, subset = ${4:subset}, weights = ${5:weights}, na.action = ${6:na.action})\nsummary(lmObj)",
+      "doc": "Fit a linear model",
+      "label": "Linear model",
+      "matches": {
+        "lm": true
+      }
+    },
+    {
+      "content": "lmObj <- lm(${1:yCol} ~ {2:xCol}, data = ${3:data}, subset = ${4:subset}, weights = ${5:weights}, na.action = ${6:na.action})\nsummary(lmObj)\nplot(lmObj, which=c(1)) # Plot residuals versus fitted",
+      "doc": "Fit a linear model and create a plot",
+      "label": "Linear model with plot",
+      "matches": {
+        "lmplot": true
+      }
+    },
+    {
+      "content": "loess(${1:yCol} ~ {2:xCol}, data = ${3:data}, subset = ${4:subset}, weights = ${5:weights}, span = ${6:span},\ndegree = ${7:degree}, na.action = {8:na.action})",
+      "doc": "Local polynomial regression",
+      "label": "loess",
+      "matches": {
+        "loess": true
+      }
+    },
+    {
+      "content": "summary(${1:dataName}, digits = ${2:digits}, maxsum = ${3:maxsum})",
+      "doc": "Mean, median, 25th and 75th quartiles, min, and max of variables",
+      "label": "Descriptive statistics summary",
+      "matches": {
+        "summary": true
+      }
+    },
+    {
+      "content": "crossTable <- xtabs(~${1:varNames}, data= ${2:dataName}, exclude = c(${3:exclude}), subset = ${4:subset})\nftable(crossTable)  # print crosstabs\nsummary(crossTable) # chi-square tests",
+      "doc": "Crosstabulations for variables in a data frame",
+      "label": "Crosstabs",
+      "matches": {
+        "xtabs": true
+      }
+    },
+    {
+      "content": "${1:dfname} <- data.frame(${2:a} = character(), ${3:b} = character())",
+      "doc": "Code snippet for an empty character data frame",
+      "label": "Empty data frame (character)",
+      "matches": {
+        "df2c": true
+      }
+    },
+    {
+      "content": "${1:dfname} <- data.frame(${2:x} = numeric(), ${3:y} = numeric())",
+      "doc": "Code snippet for an empty numerical data frame",
+      "label": "Empty data frame (numeric)",
+      "matches": {
+        "df2n": true
+      }
+    },
+    {
+      "content": "length(${1:x})",
+      "doc": "Length",
+      "label": "len",
+      "matches": {
+        "length": true
+      }
+    },
+    {
+      "content": "rep(${1:x}, ${2:...})",
+      "doc": "Rep",
+      "label": "rep",
+      "matches": {
+        "rep": true
+      }
+    },
+    {
+      "content": "${1:name}ui <- function(id) {\n    ns <- NS(id)\n    tagList(\n    ${0}\n        )\n    }\n\n${1:name} <- function(input, output, session) {\n    ns <- session\\$ns\n}\n\n# Copy in UI\n#${1:name}ui(\"${1:name}ui\")\n\n# Copy in server\n#callModule(${1:name}, \"${1:name}ui\")",
+      "doc": "Shiny module",
+      "label": "Shiny module",
+      "matches": {
+        "shiny module": true
+      }
+    },
+    {
+      "content": "withProgress(message = \"${1:message}\", {\n${0}\n})",
+      "doc": "Shiny withProgress",
+      "label": "Shiny withProgress",
+      "matches": {
+        "shiny withProgress": true
+      }
+    },
+    {
+      "content": "observeEvent(${1:event}, {\n    ${0}\n})",
+      "doc": "Shiny observe event",
+      "label": "Shiny observe event",
+      "matches": {
+        "shiny observe event": true
+      }
+    },
+    {
+      "content": "#endregion",
+      "doc": "Folding Region End",
+      "label": "Region End",
+      "matches": {
+        "#endregion": true
+      }
+    },
+    {
+      "content": "#region $0",
+      "doc": "Folding Region Start",
+      "label": "Region Start",
+      "matches": {
+        "#region": true
+      }
+    },
+    {
+      "content": "if (${1:condition}) {\n   ${2:selected}\n} else {\n   \n}",
+      "doc": "Code snippet for 'if-else' conditional block",
+      "label": "if-else block",
+      "matches": {
+        "ifelse": true
+      }
+    },
+    {
+      "content": "${1:name} <- function(${2:parameters}) {\n   ${3:selected}\n}",
+      "doc": "Named function",
+      "label": "function",
+      "matches": {
+        "function": true
+      }
+    },
+    {
+      "content": "else if (${1:condition}) {\n   ${2:selected}\n}",
+      "doc": "Code snippet for 'else' conditional",
+      "label": "elseif",
+      "matches": {
+        "elseif": true
+      }
+    },
+    {
+      "content": "data(${1:name})",
+      "doc": "Load Dataset",
+      "label": "dat",
+      "matches": {
+        "data": true
+      }
+    },
+    {
+      "content": "table(${1:...})",
+      "doc": "Table",
+      "label": "tab",
+      "matches": {
+        "table": true
+      }
+    },
+    {
+      "content": "cum${1:max}(${2:x})",
+      "doc": "Cummulative",
+      "label": "cum",
+      "matches": {
+        "cum": true
+      }
+    },
+    {
+      "content": "cummax(${1:x}",
+      "doc": "Cummulative max",
+      "label": "cuma",
+      "matches": {
+        "cumaax": true
+      }
+    },
+    {
+      "content": "attach(${1:frame})",
+      "doc": "Attach",
+      "label": "att",
+      "matches": {
+        "attach": true
+      }
+    },
+    {
+      "content": "sort(${1:x})",
+      "doc": "Sort",
+      "label": "sor",
+      "matches": {
+        "sort": true
+      }
+    },
+    {
+      "content": "${1:outFactor} <- factor(x = ${2:dataVec}, levels = ${3:levels}, exclude = ${4:exclude})",
+      "doc": "Create a factor (categorical variable) from a vector",
+      "label": "Categorical variable",
+      "matches": {
+        "factor": true
+      }
+    },
+    {
+      "content": "detach(${0:})",
+      "doc": "Detach",
+      "label": "det",
+      "matches": {
+        "detach": true
+      }
+    },
+    {
+      "content": "names(${1:x})",
+      "doc": "Names",
+      "label": "nam",
+      "matches": {
+        "names": true
+      }
+    },
+    {
+      "content": "${1:outMatrix} <- matrix(data = ${2:dataVec}, nrow = ${3:nrow}, ncol = ${4:ncol}, byrow = ${5:byrow})",
+      "doc": "Create a matrix from a vector",
+      "label": "Matrix",
+      "matches": {
+        "matrix": true
+      }
+    },
+    {
+      "content": "${1:newdataframe} <- na.omit(${2:dataframe})",
+      "doc": "Remove all rows with missing values from data frame",
+      "label": "remove missings",
+      "matches": {
+        "naomit": true
+      }
+    },
+    {
+      "content": "cummin(${1:x}",
+      "doc": "Cummulative min",
+      "label": "cumi",
+      "matches": {
+        "cumin": true
+      }
+    },
+    {
+      "content": "apply(${1:X}, ${2:MARGIN}, ${3:FUN}, ${4:...})",
+      "doc": "Apply",
+      "label": "app",
+      "matches": {
+        "apply": true
+      }
+    },
+    {
+      "content": "${1:dfname} <- read.csv(file = \"${2:file}\", header = ${3|TRUE,FALSE|},  sep = \"${4|\\,,;|}\", row.names = ${5:NULL},  stringsAsFactors = ${6|FALSE,TRUE|})",
+      "doc": "Read a data table from a comma-separated file (CSV) and create a data frame",
+      "label": "Read CSV",
+      "matches": {
+        "readc": true
+      }
+    },
+    {
+      "content": "plot(${1:x}, ${2:y}, ${3:...})",
+      "doc": "Plot",
+      "label": "plot",
+      "matches": {
+        "plot": true
+      }
+    },
+    {
+      "content": "seq(${1:from}, ${2:to}, ${3:by})",
+      "doc": "Sequence (from,to,by)",
+      "label": "seq",
+      "matches": {
+        "seq": true
+      }
+    },
+    {
+      "content": "options(${1:...})",
+      "doc": "Options",
+      "label": "opt",
+      "matches": {
+        "option": true
+      }
+    },
+    {
+      "content": "print(${1:x}, ${2:...})",
+      "doc": "Print",
+      "label": "pri",
+      "matches": {
+        "print": true
+      }
+    },
+    {
+      "content": "else {\n   ${1:selected}\n}",
+      "doc": "Code snippet for 'else' conditional",
+      "label": "else",
+      "matches": {
+        "else": true
+      }
+    },
+    {
+      "content": "${1:dfname} <- data.frame(${2:varlist})",
+      "doc": "Create a data frame from vectors",
+      "label": "Data frame",
+      "matches": {
+        "dfv": true
+      }
+    }
+  ]
+}

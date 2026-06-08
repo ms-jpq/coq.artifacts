@@ -1,0 +1,55 @@
+{
+  "extends": [
+    "sh"
+  ],
+  "snippets": [
+    {
+      "content": "#!/usr/bin/env bash",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "#!": true
+      }
+    },
+    {
+      "content": "#!/usr/bin/env bash\nset -eu",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "s#!": true
+      }
+    },
+    {
+      "content": "if [[ $1 ]]; then\n\t${0:${VISUAL}}\nfi",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "elif [[ $1 ]]; then\n\t${0:${VISUAL}}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "elif": true
+      }
+    },
+    {
+      "content": "while [[ $1 ]]; do\n\t${0:${VISUAL}}\ndone",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "until [[ $1 ]]; do\n\t${0:${VISUAL}}\ndone",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "until": true
+      }
+    }
+  ]
+}

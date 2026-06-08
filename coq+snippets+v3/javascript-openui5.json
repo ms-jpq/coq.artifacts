@@ -1,0 +1,109 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "var $1 = new sap.m.Label({\n\t\t\tdesign : $2,\n\t\t\ttext : $3,\n\t\t\tvisible : $4,\n\t\t\ttextAlign : $5,\n\t\t\ttextDirection : $6,\n\t\t\twidth : $7,\n\t\t\trequired : $7\n\t\t});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sapmlabel": true
+      }
+    },
+    {
+      "content": "var $1 = new sap.m.Text({\n\t\t\ttext :$2,\n\t\t\ttextDirection :$3,\n\t\t\tvisible :$4,\n\t\t\twrapping : $5,\n\t\t\ttextAlign : $6,\n\t\t\twidth :$7,\n\t\t\tmaxLines :$8\n\t\t});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sapmtext": true
+      }
+    },
+    {
+      "content": "var $1 = new sap.m.Button({\n\t\t\ttext : $2,\n\t\t\ttype : $3,\n\t\t\twidth : $4,\n\t\t\tenabled :$5,\n\t\t\tvisible :$6,\n\t\t\ticon : $7,\n\t\t\ticonFirst : $8,\n\t\t\tactiveIcon :$9,\n\t\t\ticonDensityAware : $10,\n\t\t});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sapmbutton": true
+      }
+    },
+    {
+      "content": "var $1 = new sap.m.FlexBox({\n\t\t\tvisible : $2,\n\t\t\theight : $3,\n\t\t\twidth : $4,\n\t\t\tdisplayInline :$5,\n\t\t\tdirection :$6,\n\t\t\tfitContainer : $7,\n\t\t\trenderType : $8,\n\t\t\tjustifyContent :$9,\n\t\t\talignItems : $10,\n\t\t\titems:[]\n\t\t});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sapmflexbox": true
+      }
+    },
+    {
+      "content": "var $1 = new sap.m.HBox({\n\t\t\tvisible : $2,\n\t\t\theight : $3,\n\t\t\twidth : $4,\n\t\t\tdisplayInline :$5,\n\t\t\tdirection :$6,\n\t\t\tfitContainer : $7,\n\t\t\trenderType : $8,\n\t\t\tjustifyContent :$9,\n\t\t\talignItems : $10,\n\t\t\titems:[]\n\t\t});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sapmhbox": true
+      }
+    },
+    {
+      "content": "var $1 = new sap.m.VBox({\n\t\t\tvisible : $2,\n\t\t\theight : $3,\n\t\t\twidth : $4,\n\t\t\tdisplayInline :$5,\n\t\t\tdirection :$6,\n\t\t\tfitContainer : $7,\n\t\t\trenderType : $8,\n\t\t\tjustifyContent :$9,\n\t\t\talignItems : $10,\n\t\t\titems:[]\n\t\t});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sapmvbox": true
+      }
+    },
+    {
+      "content": "sap.ui.controller(\"$1\", {\n   onInit: function(){\n   },\n   onAfterRendering: function() {\n   },\n   onAfterRendering: function() {\n   },\n   onExit: function() {\n   },\n});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sapcomponent": true
+      }
+    },
+    {
+      "content": "var $1 = new sap.m.Input({\n\tvalue :$2,\n\twidth : $3,\n\tenabled :$4,\n\tvisible :$5,\n\tvalueState :$6,\n\tname : $7,\n\tplaceholder : $8,\n\teditable : $9,\n\ttype : $10,\n\tmaxLength :$11,\n\tvalueStateText :$12,\n\tshowValueStateMessage :$13,\n\tdateFormat :$14,\n\tshowValueHelp :$15,\n\tshowSuggestion :$16,\n\tvalueHelpOnly :$17,\n\tfilterSuggests :$18,\n\tmaxSuggestionWidth :$19,\n\tstartSuggestion : $20,\n\tshowTableSuggestionValueHelp : $21,\n\tdescription : $22,\n\tfieldWidth : $23,\n\tvalueLiveUpdate :$24,\n\tsuggestionItems  :[$25],\n\tsuggestionColumns : [$26],\n\tsuggestionRows : [$27],\n\tliveChange : $28,\n\tvalueHelpRequest :$29,\n\tsuggest : $30,\n\tsuggestionItemSelected : $31\n});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sapminput": true
+      }
+    },
+    {
+      "content": "var _self = this;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "_sthis": true
+      }
+    },
+    {
+      "content": "var $1 = new sap.m.ResponsivePopover({\n\t\t\tplacement :$2 ,//sap.m.PlacementType (default: sap.m.PlacementType.Right)\n\t\t\tshowHeader :$3 ,//boolean (default: true)\n\t\t\ttitle : $4,//string\n\t\t\ticon :$5 ,//sap.ui.core.URI\n\t\t\tmodal :$6 ,// boolean\n\t\t\toffsetX :$7, //int\n\t\t\toffsetY :$8, //int\n\t\t\tcontentWidth : $9,//sap.ui.core.CSSSize\n\t\t\tcontentHeight :$10, //sap.ui.core.CSSSize\n\t\t\thorizontalScrolling :$11, //boolean\n\t\t\tverticalScrolling :$12, //boolean\n\t\t\tshowCloseButton :$13, //boolean (default: true)\n\t\t\t//Aggregations\n\t\t\tcontent :$14,  //sap.ui.core.Control[]\n\t\t\tcustomHeader :$15,  //sap.m.IBar\n\t\t\tsubHeader : $16, //sap.m.IBar\n\t\t\tbeginButton :$17,  //sap.m.Button\n\t\t\tendButton : $18, //sap.m.Button\n\t\t\t//Associations\n\t\t\tinitialFocus : $19, //string | sap.ui.core.Control\n\t\t\t//Events\n\t\t\tbeforeOpen :$20,  //fnListenerFunction or [fnListenerFunction, oListenerObject] or [oData, fnListenerFunction, oListenerObject]\n\t\t\tafterOpen : $21, //fnListenerFunction or [fnListenerFunction, oListenerObject] or [oData, fnListenerFunction, oListenerObject]\n\t\t\tbeforeClose : $22, //fnListenerFunction or [fnListenerFunction, oListenerObject] or [oData, fnListenerFunction, oListenerObject]\n\t\t\tafterClose : $23 //fnList\n\t\t});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sapmresponsivepopup": true
+      }
+    },
+    {
+      "content": "var $1 = new sap.ui.core.Icon({\n\t\t\t\tsrc :$2 , //sap.ui.core.URI\n\t\t\t\tsize :$3 , //sap.ui.core.CSSSize\n\t\t\t\tcolor :$4 , //sap.ui.core.CSSColor\n\t\t\t\thoverColor : $5 ,  // sap.ui.core.CSSColor\n\t\t\t\tactiveColor :$6 , //sap.ui.core.CSSColor\n\t\t\t\twidth :$7 , //sap.ui.core.CSSSize\n\t\t\t\theight : $8 ,//sap.ui.core.CSSSize\n\t\t\t\tbackgroundColor :$8 , //sap.ui.core.CSSColor\n\t\t\t\thoverBackgroundColor :$9 , //sap.ui.core.CSSColor\n\t\t\t\tactiveBackgroundColor :$10 , //sap.ui.core.CSSColor\n\t\t\t\tvisible :$11 , //boolean (default: true)\n\t\t\t\tdecorative : $12 ,//boolean (default: true)\n\t\t\t});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sapicon": true
+      }
+    },
+    {
+      "content": "sap.ui.layout.VerticalLayout.extend(\"$1\", {\n    metadata: {\n\tproperties: {\n\t  \t$2\n\t},\n\taggregations: {\n\t\t$3\n\t},\n\tevents: {\n\t\t$4\n\t}\n    },\n   init: function(){\n\t$5\n    },\n\n    renderer: \"$6\"\n});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "extendVerticalL": true
+      }
+    },
+    {
+      "content": "sap.ui.layout.HorizontalLayout.extend(\"$1\", {\n    metadata: {\n\tproperties: {\n\t  \t$2\n\t},\n\taggregations: {\n\t\t$3\n\t},\n\tevents: {\n\t\t$4\n\t}\n    },\n   init: function(){\n\t$5\n    },\n\n    renderer: \"$6\"\n});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "extendHorizontalL": true
+      }
+    }
+  ]
+}

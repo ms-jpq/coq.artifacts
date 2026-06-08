@@ -1,0 +1,605 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "import type {$1} from '$2'",
+      "doc": "import type ... from ...",
+      "label": "import-type",
+      "matches": {
+        "importType": true
+      }
+    },
+    {
+      "content": "createRenderer({\n\t$1\n})",
+      "doc": "createRenderer({ })",
+      "label": "createRenderer",
+      "matches": {
+        "createRenderer": true
+      }
+    },
+    {
+      "content": "nextTick()",
+      "doc": "A utility for waiting for the next DOM update flush.",
+      "label": "nextTick",
+      "matches": {
+        "nextTick": true
+      }
+    },
+    {
+      "content": "import useRouter from 'vue-router'",
+      "doc": "import useRouter from 'vue-router'",
+      "label": "importuseRouter-composition",
+      "matches": {
+        "importuseRouter": true
+      }
+    },
+    {
+      "content": "const props = defineProps({\n\t$0\n});",
+      "doc": "A list/hash of attributes that are exposed to accept data from the parent component.",
+      "label": "defineProps",
+      "matches": {
+        "defineProps": true
+      }
+    },
+    {
+      "content": "const ${1:router} = new VueRouter({\n\t$2\n})$0",
+      "doc": "const router = newVueRouter({ })",
+      "label": "newVueRouter",
+      "matches": {
+        "newVueRouter": true
+      }
+    },
+    {
+      "content": "const props = defineProps<{\n\t$0\n}>()",
+      "doc": "A list/hash of attributes that are exposed to accept data from the parent component.",
+      "label": "defineProps-TS",
+      "matches": {
+        "definePropsTS": true
+      }
+    },
+    {
+      "content": "const ${1:router} = useRouter()",
+      "doc": "const router = useRouter()",
+      "label": "useRouter-composition",
+      "matches": {
+        "useRouter": true
+      }
+    },
+    {
+      "content": "const ${1:emit} = defineEmits([ $0 ]);",
+      "doc": "A list of events that componetnt can emits to the parent component.",
+      "label": "defineEmits",
+      "matches": {
+        "defineEmits": true
+      }
+    },
+    {
+      "content": "${1:router}.beforeEach((to, from, next) => {\n\t${2:// to and from are both route objects. must call `next`.}\n})$0",
+      "doc": "router.beforeEach",
+      "label": "routerBeforeEach",
+      "matches": {
+        "routerBeforeEach": true
+      }
+    },
+    {
+      "content": "const ${1:emit} = defineEmits<{\n\t(e: '${2:event}', ${3:id}: ${4:type}: ${5:type}) \n\t$0\n}>()",
+      "doc": "A list of events that componetnt can emits to the parent component.",
+      "label": "defineEmits-TS",
+      "matches": {
+        "defineEmitsTS": true
+      }
+    },
+    {
+      "content": "${1:router}.go($2)$0",
+      "doc": "router.go()",
+      "label": "routerGo",
+      "matches": {
+        "routerGo": true
+      }
+    },
+    {
+      "content": "${1:router}.beforeResolve((to, from, next) => {\n\t${2:// to and from are both route objects. must call `next`.}\n})$0",
+      "doc": "router.beforeResolve",
+      "label": "routerBeforeResolve",
+      "matches": {
+        "routerBeforeResolve": true
+      }
+    },
+    {
+      "content": "const ${1:emit} = defineEmits<{\n\t${2:event}: [${3:id}: ${4:type}]\n\t$0\n}>()",
+      "doc": "(3.3+: alternative, more succinct syntax) a list of events that componetnt can emits to the parent component.",
+      "label": "defineEmits-TS-tuple",
+      "matches": {
+        "defineEmitsTStuple": true
+      }
+    },
+    {
+      "content": "${1:router}.back($2)$0",
+      "doc": "router.back()",
+      "label": "routerBack",
+      "matches": {
+        "routerBack": true
+      }
+    },
+    {
+      "content": "${1:router}.afterEach((to, from) => {\n\t${2:// to and from are both route objects.}\n})$0",
+      "doc": "router.afterEach",
+      "label": "routerAfterEach",
+      "matches": {
+        "routerAfterEach": true
+      }
+    },
+    {
+      "content": "${1:router}.forward($2)$0",
+      "doc": "router.forward()",
+      "label": "routerForward",
+      "matches": {
+        "routerForward": true
+      }
+    },
+    {
+      "content": "const $1 = ($2) => {\n$0\n};",
+      "doc": "Method composition properties to be mixed into the Vue instance.",
+      "label": "function",
+      "matches": {
+        "functionVue3": true
+      }
+    },
+    {
+      "content": "${1:router}.push($2)$0",
+      "doc": "router.push()",
+      "label": "routerPush",
+      "matches": {
+        "routerPush": true
+      }
+    },
+    {
+      "content": "${1:router}.getMatchedComponents($2)$0",
+      "doc": "router.getMatchedComponents()",
+      "label": "routerGetMatchedComponents",
+      "matches": {
+        "routerGetMatchedComponents": true
+      }
+    },
+    {
+      "content": "${1:router}.replace($2)$0",
+      "doc": "router.replace()",
+      "label": "routerReplace",
+      "matches": {
+        "routerReplace": true
+      }
+    },
+    {
+      "content": "${1:router}.resolve($2)$0",
+      "doc": "router.resolve()",
+      "label": "routerResolve",
+      "matches": {
+        "routerResolve": true
+      }
+    },
+    {
+      "content": "const $1 = defineCustomElement({\n\t$0\n})",
+      "doc": "create a custom element vue",
+      "label": "defineCustomElement",
+      "matches": {
+        "defineCustomElement": true
+      }
+    },
+    {
+      "content": "${1:router}.addRoutes($2)$0",
+      "doc": "router.addRoutes()",
+      "label": "routerAddRoutes",
+      "matches": {
+        "routerAddRoutes": true
+      }
+    },
+    {
+      "content": "data() {\n\treturn {\n\t\t$1\n\t}\n},$0",
+      "doc": "The data object for the Vue instance.",
+      "label": "data-options",
+      "matches": {
+        "data": true
+      }
+    },
+    {
+      "content": "${1:router}.onReady($2)$0",
+      "doc": "router.onReady()",
+      "label": "routerOnReady",
+      "matches": {
+        "routerOnReady": true
+      }
+    },
+    {
+      "content": "${1:router}.onError($2)$0",
+      "doc": "router.onError()",
+      "label": "routerOnError",
+      "matches": {
+        "routerOnError": true
+      }
+    },
+    {
+      "content": "computed: {\n\t$1\n},$0",
+      "doc": "Computed properties to be mixed into the Vue instance.",
+      "label": "computed-options",
+      "matches": {
+        "computed": true
+      }
+    },
+    {
+      "content": "beforeEnter: (to, from, next) => {\n\t${0:// ...}\n}",
+      "doc": "beforeEnter: (to, from, next) => { }",
+      "label": "beforeEnter",
+      "matches": {
+        "beforeEnter": true
+      }
+    },
+    {
+      "content": "const $1 = computed(() => {\n\t$0\n});",
+      "doc": "Computed properties to be mixed into the Vue instance.",
+      "label": "computed-composition",
+      "matches": {
+        "computedVue": true
+      }
+    },
+    {
+      "content": "const $1 = computed<${2:type}>(() => {\n\t$0\n});",
+      "doc": "Computed properties to be mixed into the Vue instance.",
+      "label": "computed-composition-ts",
+      "matches": {
+        "computedVueTS": true
+      }
+    },
+    {
+      "content": "const $1 = reactive({\n\t$0\n})",
+      "doc": "Reactive properties to be mixed into the Vue instance.",
+      "label": "reactive-composition",
+      "matches": {
+        "reactiveVue": true
+      }
+    },
+    {
+      "content": "scrollBehavior (to, from, savedPosition) {\n\t${1:// ...}\n}",
+      "doc": "scrollBehavior (to, from, savedPosition) { }",
+      "label": "scrollBehavior",
+      "matches": {
+        "scrollBehavior": true
+      }
+    },
+    {
+      "content": "interface $1 {\n\t${2:property}: ${3:type}\n}\n\nconst $4:${5:type} = reactive({\n\t$0\n})",
+      "doc": "Reactive properties to be mixed into the Vue instance.",
+      "label": "reactive-composition-ts",
+      "matches": {
+        "reactiveVueTS": true
+      }
+    },
+    {
+      "content": "onRenderTriggered(() => {$0})",
+      "doc": "Vue onRenderTriggered lifecycle hook",
+      "label": "onRenderTriggered-composition",
+      "matches": {
+        "onRenderTriggered": true
+      }
+    },
+    {
+      "content": "const ${1:state} = shallowReactive({\n\t$0\n})",
+      "doc": "Shallow version of reactive(). Use with Caution !! Shallow data structures should only be used for root level state in a component. Avoid nesting it inside a deep reactive object as it creates a tree with inconsistent reactivity behavior which can be difficult to understand and debug.",
+      "label": "shallow-reactive-composition",
+      "matches": {
+        "shallowReactive": true
+      }
+    },
+    {
+      "content": "onErrorCaptured(() => {$0})",
+      "doc": "Vue oneErrorCaptured lifecycle hook",
+      "label": "onErrorCaptured-composition",
+      "matches": {
+        "onErrorCaptured": true
+      }
+    },
+    {
+      "content": "const ${1:state} = shallowReadonly({\n\t$0\n})",
+      "doc": "Shallow version of readonly(). Use with Caution !! Shallow data structures should only be used for root level state in a component. Avoid nesting it inside a deep reactive object as it creates a tree with inconsistent reactivity behavior which can be difficult to understand and debug.",
+      "label": "shallowReadonly",
+      "matches": {
+        "shallowReadonly": true
+      }
+    },
+    {
+      "content": "onRenderTracked(() => {$0})",
+      "doc": "Vue onRenderTracked lifecycle hook",
+      "label": "onRenderTracked-composition",
+      "matches": {
+        "onRenderTracked": true
+      }
+    },
+    {
+      "content": "toRaw($0)",
+      "doc": "Returns the raw, original object of a Vue-created proxy.",
+      "label": "toRaw",
+      "matches": {
+        "toRaw()": true
+      }
+    },
+    {
+      "content": "onServerPrefetch(() => {$0})",
+      "doc": "Vue onServerPrefetch lifecycle hook SSR Only",
+      "label": "onServerPrefetch-compositionSSR",
+      "matches": {
+        "onServerPrefetch": true
+      }
+    },
+    {
+      "content": "const $1 = effectScope()\n$0",
+      "doc": "Returns the current active effect scope if there is one.",
+      "label": "effectScope",
+      "matches": {
+        "effectScope()": true
+      }
+    },
+    {
+      "content": "const $1 = getCurrentScope()\n$0",
+      "doc": "Returns the current active effect scope if there is one.",
+      "label": "getCurrentScope",
+      "matches": {
+        "getCurrentScope": true
+      }
+    },
+    {
+      "content": "const $1 = onScopeDispose()\n$0",
+      "doc": "Registers a dispose callback on the current active effect scope. The callback will be invoked when the associated effect scope is stopped.",
+      "label": "onScopeDispose",
+      "matches": {
+        "onScopeDispose()": true
+      }
+    },
+    {
+      "content": "const $1 = ref($2)\n$0",
+      "doc": "Ref properties to be mixed into the Vue instance.",
+      "label": "ref-composition",
+      "matches": {
+        "refVue": true
+      }
+    },
+    {
+      "content": "const $3 = ref<${2:type}>($1)\n$0",
+      "doc": "Ref properties to be mixed into the Vue instance.",
+      "label": "ref-composition-ts",
+      "matches": {
+        "refVueTS": true
+      }
+    },
+    {
+      "content": "const $0 = ref<HTMLInputElement | null>(null)",
+      "doc": "Template ref to be mixed into the Vue instance.",
+      "label": "template-ref-ts-composition",
+      "matches": {
+        "trfVue": true
+      }
+    },
+    {
+      "content": "onUnmounted(() => {$0})",
+      "doc": "Vue unMounted lifecycle hook",
+      "label": "onUnmounted",
+      "matches": {
+        "onunmounted": true
+      }
+    },
+    {
+      "content": "const $1 = ref<InstanceType<typeof $0> | null>(null)",
+      "doc": "Template ref to be mixed into the Vue instance.",
+      "label": "component-ref-ts-composition",
+      "matches": {
+        "crfVue": true
+      }
+    },
+    {
+      "content": "beforeUpdate() {\n\t$1\n},",
+      "doc": "Type: Function.",
+      "label": "beforeUpdate",
+      "matches": {
+        "beforeUpdate": true
+      }
+    },
+    {
+      "content": "updated() {\n\t$1\n},",
+      "doc": "Type: Function.",
+      "label": "updated",
+      "matches": {
+        "updated": true
+      }
+    },
+    {
+      "content": "onBeforeUpdate(() => {$0})",
+      "doc": "Vue before update composition lifecycle hook",
+      "label": "onBeforeUpdate",
+      "matches": {
+        "onBeforeUpdate": true
+      }
+    },
+    {
+      "content": "beforeRouteLeave (to, from, next) {\n\t${0:// ...}\n}",
+      "doc": "beforeRouteLeave (to, from, next) { }",
+      "label": "beforeRouteLeave",
+      "matches": {
+        "beforeRouteLeave": true
+      }
+    },
+    {
+      "content": "beforeRouteEnter (to, from, next) {\n\t${0:// ...}\n}",
+      "doc": "beforeRouteEnter (to, from, next) { }",
+      "label": "beforeRouteEnter",
+      "matches": {
+        "beforeRouteEnter": true
+      }
+    },
+    {
+      "content": "onUpdated(() => {$0})",
+      "doc": "Vue updated lifecycle hook",
+      "label": "onUpdated-composition",
+      "matches": {
+        "onupdated": true
+      }
+    },
+    {
+      "content": "routes: [$1]$0",
+      "doc": "routes: []",
+      "label": "routes",
+      "matches": {
+        "routes": true
+      }
+    },
+    {
+      "content": "watchEffect($1, ($2, $3) => {\n$0\n});",
+      "doc": "watchEffect from vue composition",
+      "label": "watchEffect-composition",
+      "matches": {
+        "watchEffect": true
+      }
+    },
+    {
+      "content": "const $1 = defineComponent({\n\t$0\n})",
+      "doc": "create a component vue component",
+      "label": "defineComponent",
+      "matches": {
+        "defineComponent": true
+      }
+    },
+    {
+      "content": "activated() {\n\t$1\n},",
+      "doc": "Type: Function.",
+      "label": "activated",
+      "matches": {
+        "activated": true
+      }
+    },
+    {
+      "content": "const $1 = defineAsyncComponent(() =>\n\timport('$0')\n);",
+      "doc": "create a async vue component",
+      "label": "defineAsyncComponent",
+      "matches": {
+        "defineAsyncComponent": true
+      }
+    },
+    {
+      "content": "deactivated() {\n\t$1\n},",
+      "doc": "Type: Function.",
+      "label": "deactivated",
+      "matches": {
+        "deactivated": true
+      }
+    },
+    {
+      "content": "watch($1, ($2, $3) => {\n$0\n});",
+      "doc": "Watch over a reactive source and call a function in reaction to state changes",
+      "label": "watch",
+      "matches": {
+        "watch": true
+      }
+    },
+    {
+      "content": "onActivated(() => {$0})",
+      "doc": "Vue activated composition lifecycle hook",
+      "label": "onActivated-composition",
+      "matches": {
+        "onActivated": true
+      }
+    },
+    {
+      "content": "const ${1:route} = useRoute()",
+      "doc": "const route = useRoute()",
+      "label": "useRoute-composition",
+      "matches": {
+        "useRoute": true
+      }
+    },
+    {
+      "content": "import $1 from '$2'",
+      "doc": "import ... from ...",
+      "label": "import",
+      "matches": {
+        "import": true
+      }
+    },
+    {
+      "content": "onBeforeMount(() => {$0})",
+      "doc": "Vue before mount composition lifecycle hook",
+      "label": "onBeforeMount",
+      "matches": {
+        "onBeforeMount": true
+      }
+    },
+    {
+      "content": "onDeactivated(() => {$0})",
+      "doc": "Vue deactivated composition lifecycle hook",
+      "label": "onDeactivated-composition",
+      "matches": {
+        "onDeactivated": true
+      }
+    },
+    {
+      "content": "methods: {\n\t$1\n},$0",
+      "doc": "Methods to be mixed into the Vue instance.",
+      "label": "methods-options",
+      "matches": {
+        "methods": true
+      }
+    },
+    {
+      "content": "setTimeout(() => {\n\twatchEffect(() => {})\n}, ${1:100})\n$0",
+      "doc": "Stopping a Watcher vue",
+      "label": "stoppingWatcher",
+      "matches": {
+        "stopWatcher": true
+      }
+    },
+    {
+      "content": "onMounted(() => {$0})",
+      "doc": "Vue mounted lifecycle hook",
+      "label": "onMounted",
+      "matches": {
+        "onmounted": true
+      }
+    },
+    {
+      "content": "beforeDestroy() {\n\t$1\n},",
+      "doc": "Type: Function.",
+      "label": "beforeDestroy",
+      "matches": {
+        "beforeDestroy": true
+      }
+    },
+    {
+      "content": "import VueRouter from 'vue-router'",
+      "doc": "import VueRouter from 'vue-router'",
+      "label": "importVueRouter",
+      "matches": {
+        "importVueRouter": true
+      }
+    },
+    {
+      "content": "destroyed() {\n\t$1\n},",
+      "doc": "Type: Function.",
+      "label": "destroyed",
+      "matches": {
+        "destroyed": true
+      }
+    },
+    {
+      "content": "onBeforeUnmount(() => {$0})",
+      "doc": "Vue before unmount composition lifecycle hook",
+      "label": "onBeforeUnmount",
+      "matches": {
+        "onBeforeUnmount": true
+      }
+    },
+    {
+      "content": "errorCaptured: (err, vm, info) => {\n\t$1\n},",
+      "doc": "Type: (err: Error, vm: Component, info: string) => ?boolean",
+      "label": "errorCaptured",
+      "matches": {
+        "errorCaptured": true
+      }
+    }
+  ]
+}

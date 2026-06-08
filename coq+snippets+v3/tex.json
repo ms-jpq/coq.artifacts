@@ -1,0 +1,2521 @@
+{
+  "extends": [
+    "latex",
+    "latex-snippets",
+    "vscode-latex-snippets"
+  ],
+  "snippets": [
+    {
+      "content": "\\documentclass[${1}]{${2:article}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\documentclass": true
+      }
+    },
+    {
+      "content": "\\documentclass[${1}]{${2:article}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "documentclass": true
+      }
+    },
+    {
+      "content": "\\begin{${1:#:type}}\n\t${2:TARGET}\n\\end{$1}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "begin": true
+      }
+    },
+    {
+      "content": "\\begin{${1:#:type}}\n\t${2:TARGET}\n\\end{$1}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin": true
+      }
+    },
+    {
+      "content": "\\begin{list}\n\t${1:TARGET}\n\\end{list}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "list": true
+      }
+    },
+    {
+      "content": "\\begin{list}\n\t${1:TARGET}\n\\end{list}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{list} \\list": true
+      }
+    },
+    {
+      "content": "\\begin{quotation}\n\t${1:TARGET}\n\\end{quotation}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "quotation": true
+      }
+    },
+    {
+      "content": "\\begin{quotation}\n\t${1:TARGET}\n\\end{quotation}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{quotation} \\quotation": true
+      }
+    },
+    {
+      "content": "\\begin{description}\n\t\\item[${1}] ${0}\n\\end{description}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "description": true
+      }
+    },
+    {
+      "content": "\\begin{description}\n\t\\item[${1}] ${0}\n\\end{description}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{description} \\description desc": true
+      }
+    },
+    {
+      "content": "\\item[${1}] ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "itd": true
+      }
+    },
+    {
+      "content": "\\item[${1}] ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "item[ \\item[": true
+      }
+    },
+    {
+      "content": "\\item ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "it": true
+      }
+    },
+    {
+      "content": "\\item ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "item \\item": true
+      }
+    },
+    {
+      "content": "\\begin{sloppypar}\n\t${1:TARGET}\n\\end{sloppypar}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sloppypar": true
+      }
+    },
+    {
+      "content": "\\begin{sloppypar}\n\t${1:TARGET}\n\\end{sloppypar}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{sloppypar} \\sloppypar": true
+      }
+    },
+    {
+      "content": "\\begin{enumerate}\n\t\\item ${1:TARGET}\n\\end{enumerate}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "enumerate": true
+      }
+    },
+    {
+      "content": "\\begin{enumerate}\n\t\\item ${1:TARGET}\n\\end{enumerate}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{enumerate} \\enumerate enum": true
+      }
+    },
+    {
+      "content": "\\begin{theindex}\n\t${1:TARGET}\n\\end{theindex}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "theindex": true
+      }
+    },
+    {
+      "content": "\\begin{theindex}\n\t${1:TARGET}\n\\end{theindex}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{theindex} \\theindex": true
+      }
+    },
+    {
+      "content": "\\begin{itemize}\n\t\\item ${1:TARGET}\n\\end{itemize}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "itemize": true
+      }
+    },
+    {
+      "content": "\\begin{itemize}\n\t\\item ${1:TARGET}\n\\end{itemize}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{itemize} \\itemize": true
+      }
+    },
+    {
+      "content": "\\begin{titlepage}\n\t${1:TARGET}\n\\end{titlepage}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "titlepage": true
+      }
+    },
+    {
+      "content": "\\begin{titlepage}\n\t${1:TARGET}\n\\end{titlepage}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{titlepage} \\titlepage": true
+      }
+    },
+    {
+      "content": "\\begin{verbatim}\n\t${1:TARGET}\n\\end{verbatim}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "verbatim": true
+      }
+    },
+    {
+      "content": "\\begin{verbatim}\n\t${1:TARGET}\n\\end{verbatim}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{verbatim} verb \\verbatim": true
+      }
+    },
+    {
+      "content": "\\begin{verbatimtab}[${1:8}]\n\t${2:TARGET}\n\\end{verbatim}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "verbatimtab": true
+      }
+    },
+    {
+      "content": "\\begin{verbatimtab}[${1:8}]\n\t${2:TARGET}\n\\end{verbatim}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{verbatimtab} \\verbatimtab": true
+      }
+    },
+    {
+      "content": "\\begin{trivlist}\n\t${1:TARGET}\n\\end{trivlist}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "trivlist": true
+      }
+    },
+    {
+      "content": "\\begin{trivlist}\n\t${1:TARGET}\n\\end{trivlist}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{trivlist} \\trivlist": true
+      }
+    },
+    {
+      "content": "\\begin{verse}\n\t${1:TARGET}\n\\end{verse}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "verse": true
+      }
+    },
+    {
+      "content": "\\begin{verse}\n\t${1:TARGET}\n\\end{verse}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{verse} \\verse": true
+      }
+    },
+    {
+      "content": "\\begin{table}[${1}]\n\t\\centering\n\t\\caption{${2}}\n\t\\label{${3}}\n\t\\begin{tabular}{${4}}\n\t\t${5}\n\t\\end{tabular}\n\\end{table}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "table": true
+      }
+    },
+    {
+      "content": "\\begin{table}[${1}]\n\t\\centering\n\t\\caption{${2}}\n\t\\label{${3}}\n\t\\begin{tabular}{${4}}\n\t\t${5}\n\t\\end{tabular}\n\\end{table}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{table} \\table": true
+      }
+    },
+    {
+      "content": "\\begin{thebibliography}\n\t${1:TARGET}\n\\end{thebibliography}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "thebibliography": true
+      }
+    },
+    {
+      "content": "\\begin{thebibliography}\n\t${1:TARGET}\n\\end{thebibliography}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{thebibliography} \\thebibliography": true
+      }
+    },
+    {
+      "content": "\\begin{tabbing}\n\t${1:TARGET}\n\\end{tabbing}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tabbing": true
+      }
+    },
+    {
+      "content": "\\begin{tabbing}\n\t${1:TARGET}\n\\end{tabbing}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{tabbing} \\tabbing": true
+      }
+    },
+    {
+      "content": "\\begin{note}\n\t${1:TARGET}\n\\end{note}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "note": true
+      }
+    },
+    {
+      "content": "\\begin{note}\n\t${1:TARGET}\n\\end{note}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{note} \\note": true
+      }
+    },
+    {
+      "content": "\\begin{tabular}{${1}}\n\t${2:TARGET}\n\\end{tabular}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tabular": true
+      }
+    },
+    {
+      "content": "\\begin{tabular}{${1}}\n\t${2:TARGET}\n\\end{tabular}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{tabular} \\tabular": true
+      }
+    },
+    {
+      "content": "\\begin{overlay}\n\t${1:TARGET}\n\\end{overlay}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "overlay": true
+      }
+    },
+    {
+      "content": "\\begin{overlay}\n\t${1:TARGET}\n\\end{overlay}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{overlay} \\overlay": true
+      }
+    },
+    {
+      "content": "\\begin{array}{${1}}\n\t${2:TARGET}\n\\end{array}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "array": true
+      }
+    },
+    {
+      "content": "\\begin{array}{${1}}\n\t${2:TARGET}\n\\end{array}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{array} \\array": true
+      }
+    },
+    {
+      "content": "\\begin{cases}{${1}}\n\t${2:TARGET}\n\\end{cases}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cases": true
+      }
+    },
+    {
+      "content": "\\begin{cases}{${1}}\n\t${2:TARGET}\n\\end{cases}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{cases} \\cases": true
+      }
+    },
+    {
+      "content": "\\begin{slide}\n\t${1:TARGET}\n\\end{slide}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "slide": true
+      }
+    },
+    {
+      "content": "\\begin{slide}\n\t${1:TARGET}\n\\end{slide}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{slide} \\slide": true
+      }
+    },
+    {
+      "content": "\\begin{displaymath}\n\t${1:TARGET}\n\\end{displaymath}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "displaymath": true
+      }
+    },
+    {
+      "content": "\\begin{displaymath}\n\t${1:TARGET}\n\\end{displaymath}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{displaymath} \\displaymath": true
+      }
+    },
+    {
+      "content": "\\begin{abstract}\n\t${1:TARGET}\n\\end{abstract}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "abstract": true
+      }
+    },
+    {
+      "content": "\\begin{abstract}\n\t${1:TARGET}\n\\end{abstract}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{abstract} \\abstract": true
+      }
+    },
+    {
+      "content": "\\begin{align}\n\t${1:TARGET}\n\\end{align}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "align": true
+      }
+    },
+    {
+      "content": "\\begin{align}\n\t${1:TARGET}\n\\end{align}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{align} \\align": true
+      }
+    },
+    {
+      "content": "\\begin{align*}\n\t${1:TARGET}\n\\end{align*}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "align*": true
+      }
+    },
+    {
+      "content": "\\begin{align*}\n\t${1:TARGET}\n\\end{align*}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{align*} \\align*": true
+      }
+    },
+    {
+      "content": "\\begin{aligned}\n        ${1:TARGET}\n\\end{aligned}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "aligned": true
+      }
+    },
+    {
+      "content": "\\begin{aligned}\n        ${1:TARGET}\n\\end{aligned}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{aligned} \\aligned": true
+      }
+    },
+    {
+      "content": "\\begin{eqnarray}\n\t${1:TARGET}\n\\end{eqnarray}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eqnarray": true
+      }
+    },
+    {
+      "content": "\\begin{eqnarray}\n\t${1:TARGET}\n\\end{eqnarray}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{eqnarray} \\eqnarray": true
+      }
+    },
+    {
+      "content": "\\begin{eqnarray*}\n\t${1:TARGET}\n\\end{eqnarray*}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eqnarray*": true
+      }
+    },
+    {
+      "content": "\\begin{eqnarray*}\n\t${1:TARGET}\n\\end{eqnarray*}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{eqnarray*} \\eqnarray*": true
+      }
+    },
+    {
+      "content": "\\begin{equation}\n\t${1:TARGET}\n\\end{equation}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "equation": true
+      }
+    },
+    {
+      "content": "\\begin{equation}\n\t${1:TARGET}\n\\end{equation}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{equation} \\equation": true
+      }
+    },
+    {
+      "content": "\\begin{equation*}\n\t${1:TARGET}\n\\end{equation*}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "equation*": true
+      }
+    },
+    {
+      "content": "\\begin{equation*}\n\t${1:TARGET}\n\\end{equation*}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{equation*} \\equation*": true
+      }
+    },
+    {
+      "content": "\\begin{center}\n\t${1:TARGET}\n\\end{center}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "center": true
+      }
+    },
+    {
+      "content": "\\begin{center}\n\t${1:TARGET}\n\\end{center}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{center} \\center": true
+      }
+    },
+    {
+      "content": "\\begin{document}\n\t${1:TARGET}\n\\end{document}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "document": true
+      }
+    },
+    {
+      "content": "\\begin{document}\n\t${1:TARGET}\n\\end{document}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{document} \\document": true
+      }
+    },
+    {
+      "content": "\\begin{filecontents}\n\t${1:TARGET}\n\\end{filecontents}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "filecontents": true
+      }
+    },
+    {
+      "content": "\\begin{filecontents}\n\t${1:TARGET}\n\\end{filecontents}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{filecontents} \\filecontents": true
+      }
+    },
+    {
+      "content": "\\begin{lrbox}\n\t${1:TARGET}\n\\end{lrbox}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lrbox": true
+      }
+    },
+    {
+      "content": "\\begin{lrbox}\n\t${1:TARGET}\n\\end{lrbox}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{lrbox} \\lrbox": true
+      }
+    },
+    {
+      "content": "\\begin{flushleft}\n\t${1:TARGET}\n\\end{flushleft}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "flushleft": true
+      }
+    },
+    {
+      "content": "\\begin{flushleft}\n\t${1:TARGET}\n\\end{flushleft}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{flushleft} \\flushleft": true
+      }
+    },
+    {
+      "content": "\\begin{flushright}\n\t${1:TARGET}\n\\end{flushright}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "flushright": true
+      }
+    },
+    {
+      "content": "\\begin{flushright}\n\t${1:TARGET}\n\\end{flushright}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{flushright} \\flushright": true
+      }
+    },
+    {
+      "content": "\\begin{minipage}{${1:0.45}\\linewidth}\n\t${2:TARGET}\n\\end{minipage}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "minipage": true
+      }
+    },
+    {
+      "content": "\\begin{minipage}{${1:0.45}\\linewidth}\n\t${2:TARGET}\n\\end{minipage}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{minipage} \\minipage": true
+      }
+    },
+    {
+      "content": "\\begin{picture}\n\t${1:TARGET}\n\\end{picture}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "picture": true
+      }
+    },
+    {
+      "content": "\\begin{picture}\n\t${1:TARGET}\n\\end{picture}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{picture} \\picture": true
+      }
+    },
+    {
+      "content": "\\begin{math}\n\t${1:TARGET}\n\\end{math}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "math": true
+      }
+    },
+    {
+      "content": "\\begin{math}\n\t${1:TARGET}\n\\end{math}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{math} \\math": true
+      }
+    },
+    {
+      "content": "\\begin{quote}\n\t${1:TARGET}\n\\end{quote}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "quote": true
+      }
+    },
+    {
+      "content": "\\begin{quote}\n\t${1:TARGET}\n\\end{quote}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{quote} \\quote": true
+      }
+    },
+    {
+      "content": "\\begin{matrix}\n\t${1:TARGET}\n\\end{matrix}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "matrix": true
+      }
+    },
+    {
+      "content": "\\begin{matrix}\n\t${1:TARGET}\n\\end{matrix}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{matrix} \\matrix": true
+      }
+    },
+    {
+      "content": "\\begin{bmatrix}\n\t${1:TARGET}\n\\end{bmatrix}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bmatrix": true
+      }
+    },
+    {
+      "content": "\\begin{bmatrix}\n\t${1:TARGET}\n\\end{bmatrix}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{bmatrix} \\bmatrix": true
+      }
+    },
+    {
+      "content": "\\begin{pmatrix}\n\t${1:TARGET}\n\\end{pmatrix}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pmatrix": true
+      }
+    },
+    {
+      "content": "\\begin{pmatrix}\n\t${1:TARGET}\n\\end{pmatrix}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\pegin{bmatrix} \\pmatrix": true
+      }
+    },
+    {
+      "content": "\\begin{vmatrix}\n\t${1:TARGET}\n\\end{vmatrix}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vmatrix": true
+      }
+    },
+    {
+      "content": "\\begin{vmatrix}\n\t${1:TARGET}\n\\end{vmatrix}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{vmatrix} \\vmatrix": true
+      }
+    },
+    {
+      "content": "\\begin{Bmatrix}\n\t${1:TARGET}\n\\end{Bmatrix}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Bmatrix": true
+      }
+    },
+    {
+      "content": "\\begin{Bmatrix}\n\t${1:TARGET}\n\\end{Bmatrix}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{Bmatrix} \\Bmatrix": true
+      }
+    },
+    {
+      "content": "\\begin{Vmatrix}\n\t${1:TARGET}\n\\end{Vmatrix}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Vmatrix": true
+      }
+    },
+    {
+      "content": "\\begin{Vmatrix}\n\t${1:TARGET}\n\\end{Vmatrix}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{Vmatrix} \\Vmatrix": true
+      }
+    },
+    {
+      "content": "\\part{${1}}\n${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\part": true
+      }
+    },
+    {
+      "content": "\\part{${1}}\n${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "part \\part{": true
+      }
+    },
+    {
+      "content": "\\chapter{${1}}\n${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\chapter": true
+      }
+    },
+    {
+      "content": "\\chapter{${1}}\n${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "chapter \\chapter{": true
+      }
+    },
+    {
+      "content": "\\section{${1}}\n${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\section": true
+      }
+    },
+    {
+      "content": "\\section{${1}}\n${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "section \\section{": true
+      }
+    },
+    {
+      "content": "\\subsection{${1}}\n${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\subsection": true
+      }
+    },
+    {
+      "content": "\\subsection{${1}}\n${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "subsection \\subsection{": true
+      }
+    },
+    {
+      "content": "\\subsubsection{${1}}\n${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\subsubsection": true
+      }
+    },
+    {
+      "content": "\\subsubsection{${1}}\n${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "subsubsection \\subsubsection{": true
+      }
+    },
+    {
+      "content": "\\paragraph{${1}}\n${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\paragraph": true
+      }
+    },
+    {
+      "content": "\\paragraph{${1}}\n${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "paragraph \\paragraph{": true
+      }
+    },
+    {
+      "content": "\\subparagraph{${1}}\n${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\subparagraph": true
+      }
+    },
+    {
+      "content": "\\subparagraph{${1}}\n${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "subparagraph \\subparagraph{": true
+      }
+    },
+    {
+      "content": "\\frac{${1}}{${2}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\frac": true
+      }
+    },
+    {
+      "content": "\\frac{${1}}{${2}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "frac \\frac{": true
+      }
+    },
+    {
+      "content": "\\left${1:(} ${3:#:body} \\right${2:)}${0}",
+      "doc": "",
+      "label": "\\left \\right",
+      "matches": {
+        "\\left": true
+      }
+    },
+    {
+      "content": "\\left${1:(} ${3:#:body} \\right${2:)}${0}",
+      "doc": "",
+      "label": "\\left \\right",
+      "matches": {
+        "left": true
+      }
+    },
+    {
+      "content": "\\begin{bfseries}\n\t${1:TARGET}\n\\end{bfseries}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bfseries": true
+      }
+    },
+    {
+      "content": "\\begin{bfseries}\n\t${1:TARGET}\n\\end{bfseries}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{bfseries} \\bfseries": true
+      }
+    },
+    {
+      "content": "\\begin{mdseries}\n\t${1:TARGET}\n\\end{mdseries}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mdseries": true
+      }
+    },
+    {
+      "content": "\\begin{mdseries}\n\t${1:TARGET}\n\\end{mdseries}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{mdseries} \\mdseries": true
+      }
+    },
+    {
+      "content": "\\begin{ttfamily}\n\t${1:TARGET}\n\\end{ttfamily}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ttfamily": true
+      }
+    },
+    {
+      "content": "\\begin{ttfamily}\n\t${1:TARGET}\n\\end{ttfamily}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{ttfamily} \\ttfamily": true
+      }
+    },
+    {
+      "content": "\\begin{sffamily}\n\t${1:TARGET}\n\\end{sffamily}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sffamily": true
+      }
+    },
+    {
+      "content": "\\begin{sffamily}\n\t${1:TARGET}\n\\end{sffamily}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{sffamily} \\sffamily": true
+      }
+    },
+    {
+      "content": "\\begin{rmfamily}\n\t${1:TARGET}\n\\end{rmfamily}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rmfamily": true
+      }
+    },
+    {
+      "content": "\\begin{rmfamily}\n\t${1:TARGET}\n\\end{rmfamily}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{rmfamily} \\rmfamily": true
+      }
+    },
+    {
+      "content": "\\begin{upshape}\n\t${1:TARGET}\n\\end{upshape}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "upshape": true
+      }
+    },
+    {
+      "content": "\\begin{upshape}\n\t${1:TARGET}\n\\end{upshape}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{upshape} \\upshape": true
+      }
+    },
+    {
+      "content": "\\begin{slshape}\n\t${1:TARGET}\n\\end{slshape}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "slshape": true
+      }
+    },
+    {
+      "content": "\\begin{slshape}\n\t${1:TARGET}\n\\end{slshape}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{slshape} \\slshape": true
+      }
+    },
+    {
+      "content": "\\begin{scshape}\n\t${1:TARGET}\n\\end{scshape}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "scshape": true
+      }
+    },
+    {
+      "content": "\\begin{scshape}\n\t${1:TARGET}\n\\end{scshape}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{scshape} \\scshape": true
+      }
+    },
+    {
+      "content": "\\begin{itshape}\n\t${1:TARGET}\n\\end{itshape}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "itshape": true
+      }
+    },
+    {
+      "content": "\\begin{itshape}\n\t${1:TARGET}\n\\end{itshape}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{itshape} \\itshape": true
+      }
+    },
+    {
+      "content": "\\textbf{${1:TARGET}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\textbf": true
+      }
+    },
+    {
+      "content": "\\textbf{${1:TARGET}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "textbf \\textbf{": true
+      }
+    },
+    {
+      "content": "\\textmd{${1:TARGET}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\textmd": true
+      }
+    },
+    {
+      "content": "\\textmd{${1:TARGET}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "textmd \\textmd{": true
+      }
+    },
+    {
+      "content": "\\texttt{${1:TARGET}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\texttt": true
+      }
+    },
+    {
+      "content": "\\texttt{${1:TARGET}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "texttt \\texttt{": true
+      }
+    },
+    {
+      "content": "\\textsf{${1:TARGET}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\textsf": true
+      }
+    },
+    {
+      "content": "\\textsf{${1:TARGET}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "textsf \\textsf{": true
+      }
+    },
+    {
+      "content": "\\textrm{${1:TARGET}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\textrm": true
+      }
+    },
+    {
+      "content": "\\textrm{${1:TARGET}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "textrm \\textrm{": true
+      }
+    },
+    {
+      "content": "\\textup{${1:TARGET}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\textup": true
+      }
+    },
+    {
+      "content": "\\textup{${1:TARGET}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "textup \\textup{": true
+      }
+    },
+    {
+      "content": "\\textsl{${1:TARGET}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\textsl": true
+      }
+    },
+    {
+      "content": "\\textsl{${1:TARGET}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "textsl \\textsl{": true
+      }
+    },
+    {
+      "content": "\\textsc{${1:TARGET}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\textsc": true
+      }
+    },
+    {
+      "content": "\\textsc{${1:TARGET}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "textsc \\textsc{": true
+      }
+    },
+    {
+      "content": "\\textit{${1:TARGET}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\textit": true
+      }
+    },
+    {
+      "content": "\\textit{${1:TARGET}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "textit \\textit{": true
+      }
+    },
+    {
+      "content": "\\begin{frame}{${1:#:frametitle}}\n\t${2:TARGET}\n\\end{frame}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "frame": true
+      }
+    },
+    {
+      "content": "\\begin{frame}{${1:#:frametitle}}\n\t${2:TARGET}\n\\end{frame}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{frame} \\frame": true
+      }
+    },
+    {
+      "content": "\\begin{block}{${1:#:title}}\n\t${2:TARGET}\n\\end{block}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "block": true
+      }
+    },
+    {
+      "content": "\\begin{block}{${1:#:title}}\n\t${2:TARGET}\n\\end{block}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{block}": true
+      }
+    },
+    {
+      "content": "\\begin{exampleblock}{${1:#:title}}\n\t${2:TARGET}\n\\end{exampleblock}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "exampleblock": true
+      }
+    },
+    {
+      "content": "\\begin{exampleblock}{${1:#:title}}\n\t${2:TARGET}\n\\end{exampleblock}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{exampleblock}": true
+      }
+    },
+    {
+      "content": "\\begin{alertblock}{${1:#:title}}\n\t${2:TARGET}\n\\end{alertblock}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "alertblock": true
+      }
+    },
+    {
+      "content": "\\begin{alertblock}{${1:#:title}}\n\t${2:TARGET}\n\\end{alertblock}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{alertblock}": true
+      }
+    },
+    {
+      "content": "\\begin{figure}[${1}]\n\t\\centering\n\t\\begin{tikzpicture}[${2}]\n\t\t${3:TARGET}\n\t\\end{tikzpicture}\n\t\\caption{${4}}\n\t\\label{${5}}\n\\end{figure}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tikzfig": true
+      }
+    },
+    {
+      "content": "\\begin{figure}[${1}]\n\t\\centering\n\t\\begin{tikzpicture}[${2}]\n\t\t${3:TARGET}\n\t\\end{tikzpicture}\n\t\\caption{${4}}\n\t\\label{${5}}\n\\end{figure}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "figuretikz": true
+      }
+    },
+    {
+      "content": "\\begin{tikzpicture}[${1}]\n\t${2:TARGET}\n\\end{tikzpicture}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tikzpicture": true
+      }
+    },
+    {
+      "content": "\\begin{tikzpicture}[${1}]\n\t${2:TARGET}\n\\end{tikzpicture}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{tikzpicture}": true
+      }
+    },
+    {
+      "content": "\\begin{scope}[${1}]\n\t${2:TARGET}\n\\end{scope}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "scope": true
+      }
+    },
+    {
+      "content": "\\begin{scope}[${1}]\n\t${2:TARGET}\n\\end{scope}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\begin{scope}": true
+      }
+    },
+    {
+      "content": "\\path[${1}] ${2};${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "path": true
+      }
+    },
+    {
+      "content": "\\path[${1}] ${2};${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\path": true
+      }
+    },
+    {
+      "content": "\\draw[${1}] ${2};${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "draw": true
+      }
+    },
+    {
+      "content": "\\draw[${1}] ${2};${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\draw": true
+      }
+    },
+    {
+      "content": "\\fill[${1}] ${2};${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fill": true
+      }
+    },
+    {
+      "content": "\\fill[${1}] ${2};${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\fill": true
+      }
+    },
+    {
+      "content": "\\filldraw[${1}] ${2};${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "filldraw": true
+      }
+    },
+    {
+      "content": "\\filldraw[${1}] ${2};${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\filldraw": true
+      }
+    },
+    {
+      "content": "\\shade[${1}] ${2};${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "shade": true
+      }
+    },
+    {
+      "content": "\\shade[${1}] ${2};${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\shade": true
+      }
+    },
+    {
+      "content": "\\coordinate[${1}](${2:name}) ${3};${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "coordinate": true
+      }
+    },
+    {
+      "content": "\\coordinate[${1}](${2:name}) ${3};${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\coordinate": true
+      }
+    },
+    {
+      "content": "\\node[${1}](${2:name}) ${3};${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "node": true
+      }
+    },
+    {
+      "content": "\\node[${1}](${2:name}) ${3};${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\node": true
+      }
+    },
+    {
+      "content": "\\addbibresource{${1:resource}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "addbibresource": true
+      }
+    },
+    {
+      "content": "\\addbibresource{${1:resource}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\addbibresource": true
+      }
+    },
+    {
+      "content": "\\cite{${1}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cite": true
+      }
+    },
+    {
+      "content": "\\cite{${1}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\cite": true
+      }
+    },
+    {
+      "content": "\\nocite{${1}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "nocite": true
+      }
+    },
+    {
+      "content": "\\nocite{${1}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\nocite": true
+      }
+    },
+    {
+      "content": "\\supercite{${1}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "supercite": true
+      }
+    },
+    {
+      "content": "\\supercite{${1}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\supercite": true
+      }
+    },
+    {
+      "content": "\\autocite{${1}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "autocite": true
+      }
+    },
+    {
+      "content": "\\autocite{${1}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\autocite": true
+      }
+    },
+    {
+      "content": "\\fullcite{${1}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fullcite": true
+      }
+    },
+    {
+      "content": "\\fullcite{${1}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\fullcite": true
+      }
+    },
+    {
+      "content": "\\ref{${1}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ref": true
+      }
+    },
+    {
+      "content": "\\ref{${1}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\ref": true
+      }
+    },
+    {
+      "content": "\\label{${1}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "label": true
+      }
+    },
+    {
+      "content": "\\label{${1}}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\label": true
+      }
+    },
+    {
+      "content": "\\\\documentclass{${1:class}} ${0}",
+      "doc": "",
+      "label": "\\documentclass{}",
+      "matches": {
+        "dcl": true
+      }
+    },
+    {
+      "content": "\\\\documentclass[${1:options}]{${2:class}} ${0}",
+      "doc": "",
+      "label": "\\documentclass[]{}",
+      "matches": {
+        "dclo": true
+      }
+    },
+    {
+      "content": "\\\\documentclass{${1:article}}\n\n\\\\usepackage{import}\n\\\\usepackage{pdfpages}\n\\\\usepackage{transparent}\n\\\\usepackage{xcolor}\n$2\n\n\\\\newcommand{\\incfig}[2][1]{%\n\t    \\def\\svgwidth{#1\\columnwidth}\n\t    \\import{./figures/}{#2.pdf_tex}\n}\n$3\n\\\\pdfsuppresswarningpagegroup=1\n\n\\\\begin{document}\n\t    $0\n\\\\end{document}",
+      "doc": "",
+      "label": "Template",
+      "matches": {
+        "tmplt": true
+      }
+    },
+    {
+      "content": "\\\\newcommand{\\\\${1:cmd}}[${2:opt}]{${3:realcmd}} ${0}",
+      "doc": "",
+      "label": "\\newcommand",
+      "matches": {
+        "nc": true
+      }
+    },
+    {
+      "content": "\\\\usepackage[${1:options}]{${2:package}} ${0}",
+      "doc": "",
+      "label": "\\usepackage",
+      "matches": {
+        "up": true
+      }
+    },
+    {
+      "content": "\\\\newunicodechar{${1}}{${2:\\\\ensuremath}${3:tex-substitute}}} ${0}",
+      "doc": "",
+      "label": "\\newunicodechar",
+      "matches": {
+        "nuc": true
+      }
+    },
+    {
+      "content": "\\\\DeclareMathOperator{${1}}{${2}} ${0}",
+      "doc": "",
+      "label": "\\DeclareMathOperator",
+      "matches": {
+        "dmo": true
+      }
+    },
+    {
+      "content": "\\\\begin{${1:env}}\n\t${0:${VISUAL}}\n\\\\end{$1}",
+      "doc": "",
+      "label": "\\begin{} ... \\end{} block",
+      "matches": {
+        "begin": true
+      }
+    },
+    {
+      "content": "\\\\maketitle",
+      "doc": "",
+      "label": "maketitle",
+      "matches": {
+        "mkt": true
+      }
+    },
+    {
+      "content": "\\\\begin{${1:tabular}}{${2:c}}\n\t${0:${VISUAL}}\n\\\\end{$1}",
+      "doc": "",
+      "label": "tabular (or arbitrary) environment",
+      "matches": {
+        "tab": true
+      }
+    },
+    {
+      "content": "\\\\begin[${1:author}]{${2:thm}}\n\t${0:${VISUAL}}\n\\\\end{$2}",
+      "doc": "",
+      "label": "thm (or arbitrary) environment with optional argument",
+      "matches": {
+        "thm": true
+      }
+    },
+    {
+      "content": "\\\\begin{center}\n\t${0:${VISUAL}}\n\\\\end{center}",
+      "doc": "",
+      "label": "center environment",
+      "matches": {
+        "center": true
+      }
+    },
+    {
+      "content": "\\\\begin{align${1:ed}}\n\t\\\\label{eq:${2}}\n\t${0:${VISUAL}}\n\\\\end{align$1}",
+      "doc": "",
+      "label": "align(ed) environment",
+      "matches": {
+        "ali": true
+      }
+    },
+    {
+      "content": "\\\\begin{gather${1:ed}}\n\t${0:${VISUAL}}\n\\\\end{gather$1}",
+      "doc": "",
+      "label": "gather(ed) environment",
+      "matches": {
+        "gat": true
+      }
+    },
+    {
+      "content": "\\\\begin{equation}\n\t${0:${VISUAL}}\n\\\\end{equation}",
+      "doc": "",
+      "label": "equation environment",
+      "matches": {
+        "eq": true
+      }
+    },
+    {
+      "content": "\\\\begin{equation}\n\t\\\\label{eq:${2}}\n\t${0:${VISUAL}}\n\\\\end{equation}",
+      "doc": "",
+      "label": "Labeled equation environment",
+      "matches": {
+        "eql": true
+      }
+    },
+    {
+      "content": "\\\\begin{equation*}\n\t${0:${VISUAL}}\n\\\\end{equation*}",
+      "doc": "",
+      "label": "unnumbered equation environment",
+      "matches": {
+        "eq*": true
+      }
+    },
+    {
+      "content": "\\\\begin{eqnarray}\n\t${0:${VISUAL}}\n\\\\end{eqnarray}",
+      "doc": "",
+      "label": "eqnarray environment",
+      "matches": {
+        "eqnarray": true
+      }
+    },
+    {
+      "content": "\\\\label{${1:eq:}${2:fig:}${3:tab:}${0}}",
+      "doc": "",
+      "label": "\\label",
+      "matches": {
+        "lab": true
+      }
+    },
+    {
+      "content": "\\\\begin{enumerate}\n\t\\\\item ${0}\n\\\\end{enumerate}",
+      "doc": "",
+      "label": "enumerate environment",
+      "matches": {
+        "enum": true
+      }
+    },
+    {
+      "content": "\\\\begin{enumerate}[(a)]\n\t\\\\item ${0}\n\\\\end{enumerate}",
+      "doc": "",
+      "label": "enumerate environment",
+      "matches": {
+        "enuma": true
+      }
+    },
+    {
+      "content": "\\\\begin{enumerate}[(i)]\n\t\\\\item ${0}\n\\\\end{enumerate}",
+      "doc": "",
+      "label": "enumerate environment",
+      "matches": {
+        "enumi": true
+      }
+    },
+    {
+      "content": "\\\\begin{itemize}\n\t\\\\item ${0}\n\\\\end{itemize}",
+      "doc": "",
+      "label": "itemize environment",
+      "matches": {
+        "item": true
+      }
+    },
+    {
+      "content": "\\\\item ${1:${VISUAL}}",
+      "doc": "",
+      "label": "\\item",
+      "matches": {
+        "it": true
+      }
+    },
+    {
+      "content": "\\\\begin{description}\n\t\\\\item[${1}] ${0}\n\\\\end{description}",
+      "doc": "",
+      "label": "description environment",
+      "matches": {
+        "desc": true
+      }
+    },
+    {
+      "content": "\\\\item ${1}\n\t${0:]i}",
+      "doc": "",
+      "label": "\\item (recursive)",
+      "matches": {
+        "]i": true
+      }
+    },
+    {
+      "content": "\\\\begin{${1:p/b/v/V/B/small}matrix}\n\t${0:${VISUAL}}\n\\\\end{$1matrix}",
+      "doc": "",
+      "label": "smart matrix environment",
+      "matches": {
+        "mat": true
+      }
+    },
+    {
+      "content": "\\\\begin{cases}\n\t${1:equation}, &\\\\text{ if }${2:case}\\\\\n\t${0:${VISUAL}}\n\\\\end{cases}",
+      "doc": "",
+      "label": "cases environment",
+      "matches": {
+        "cas": true
+      }
+    },
+    {
+      "content": "\\\\begin{split}\n\t${0:${VISUAL}}\n\\\\end{split}",
+      "doc": "",
+      "label": "split environment",
+      "matches": {
+        "spl": true
+      }
+    },
+    {
+      "content": "\\\\part{${1:part name}} % (fold)%\n\\\\label{prt:${2:$1}}\n${0}\n% part $2 (end)",
+      "doc": "",
+      "label": "document \\part",
+      "matches": {
+        "part": true
+      }
+    },
+    {
+      "content": "\\\\chapter{${1:chapter name}}%\n\\\\label{cha:${2:$1}}\n${0}",
+      "doc": "",
+      "label": "\\chapter",
+      "matches": {
+        "cha": true
+      }
+    },
+    {
+      "content": "\\\\section{${1:section name}}%\n\\\\label{sec:${2:$1}}\n${0}",
+      "doc": "",
+      "label": "\\section",
+      "matches": {
+        "sec": true
+      }
+    },
+    {
+      "content": "\\\\section*{${1:section name}}%\n\\\\label{sec:${2:$1}}\n${0}",
+      "doc": "",
+      "label": "\\section*",
+      "matches": {
+        "sec*": true
+      }
+    },
+    {
+      "content": "\\\\subsection{${1:subsection name}}%\n\\\\label{sub:${2:$1}}\n${0}",
+      "doc": "",
+      "label": "\\subsection",
+      "matches": {
+        "sub": true
+      }
+    },
+    {
+      "content": "\\\\subsection*{${1:subsection name}}%\n\\\\label{sub:${2:$1}}\n${0}",
+      "doc": "",
+      "label": "\\subsection*",
+      "matches": {
+        "sub*": true
+      }
+    },
+    {
+      "content": "\\\\subsubsection{${1:subsubsection name}}%\n\\\\label{ssub:${2:$1}}\n${0}",
+      "doc": "",
+      "label": "\\subsubsection",
+      "matches": {
+        "ssub": true
+      }
+    },
+    {
+      "content": "\\\\subsubsection*{${1:subsubsection name}}%\n\\\\label{ssub:${2:$1}}\n${0}",
+      "doc": "",
+      "label": "\\subsubsection*",
+      "matches": {
+        "ssub*": true
+      }
+    },
+    {
+      "content": "\\\\paragraph{${1:paragraph name}}%\n\\\\label{par:${2:$1}}\n${0}",
+      "doc": "",
+      "label": "\\paragraph",
+      "matches": {
+        "par": true
+      }
+    },
+    {
+      "content": "\\\\paragraph*{${1:paragraph name}}%\n\\\\label{par:${2:$1}}\n${0}",
+      "doc": "",
+      "label": "\\paragraph*",
+      "matches": {
+        "par*": true
+      }
+    },
+    {
+      "content": "\\\\subparagraph{${1:subparagraph name}}%\n\\\\label{subp:${2:$1}}\n${0}",
+      "doc": "",
+      "label": "\\subparagraph",
+      "matches": {
+        "subp": true
+      }
+    },
+    {
+      "content": "\\\\subparagraph*{${1:subparagraph name}}%\n\\\\label{subp:${2:$1}}\n${0}",
+      "doc": "",
+      "label": "\\subparagraph*",
+      "matches": {
+        "subp*": true
+      }
+    },
+    {
+      "content": "\\\\noindent\n${0}",
+      "doc": "",
+      "label": "\\noindent",
+      "matches": {
+        "ni": true
+      }
+    },
+    {
+      "content": "\\\\item[${1:description}] ${0:item}",
+      "doc": "",
+      "label": "description \\item",
+      "matches": {
+        "itd": true
+      }
+    },
+    {
+      "content": "${1:Figure}~\\\\ref{${2:fig:}}",
+      "doc": "",
+      "label": "reference to a figure",
+      "matches": {
+        "figure": true
+      }
+    },
+    {
+      "content": "${1:Table}~\\\\ref{${2:tab:}}",
+      "doc": "",
+      "label": "reference to a table",
+      "matches": {
+        "table": true
+      }
+    },
+    {
+      "content": "${1:Listing}~\\\\ref{${2:list}}",
+      "doc": "",
+      "label": "reference to a listing",
+      "matches": {
+        "listing": true
+      }
+    },
+    {
+      "content": "${1:Section}~\\\\ref{sec:${2}} ${0}",
+      "doc": "",
+      "label": "reference to a section",
+      "matches": {
+        "section": true
+      }
+    },
+    {
+      "content": "${1:page}~\\\\pageref{${2}} ${0}",
+      "doc": "",
+      "label": "reference to a page",
+      "matches": {
+        "page": true
+      }
+    },
+    {
+      "content": "\\\\index{${1:index}} ${0}",
+      "doc": "",
+      "label": "\\index",
+      "matches": {
+        "index": true
+      }
+    },
+    {
+      "content": "\\\\citen{${1}} ${0}",
+      "doc": "",
+      "label": "\\citen",
+      "matches": {
+        "citen": true
+      }
+    },
+    {
+      "content": "\\\\citep{${1}} ${0}",
+      "doc": "",
+      "label": "\\citep",
+      "matches": {
+        "citep": true
+      }
+    },
+    {
+      "content": "\\\\citet{${1}} ${0}",
+      "doc": "",
+      "label": "\\citet",
+      "matches": {
+        "citet": true
+      }
+    },
+    {
+      "content": "\\\\cite[${1}]{${2}} ${0}",
+      "doc": "",
+      "label": "\\cite[]{}",
+      "matches": {
+        "cite": true
+      }
+    },
+    {
+      "content": "\\\\citeauthor{${1}} ${0}",
+      "doc": "",
+      "label": "\\citeauthor",
+      "matches": {
+        "citea": true
+      }
+    },
+    {
+      "content": "\\\\citeyear{${1}} ${0}",
+      "doc": "",
+      "label": "\\citeyear",
+      "matches": {
+        "citey": true
+      }
+    },
+    {
+      "content": "\\\\footcite[${1}]{${2}}${0}",
+      "doc": "",
+      "label": "\\footcite[]{}",
+      "matches": {
+        "fcite": true
+      }
+    },
+    {
+      "content": "\\\\textit{${1:${VISUAL:text}}}${0}",
+      "doc": "",
+      "label": "italic text",
+      "matches": {
+        "ita": true
+      }
+    },
+    {
+      "content": "\\\\textbf{${1:${VISUAL:text}}}${0}",
+      "doc": "",
+      "label": "bold face text",
+      "matches": {
+        "bf": true
+      }
+    },
+    {
+      "content": "\\\\underline{${1:${VISUAL:text}}}${0}",
+      "doc": "",
+      "label": "underline text",
+      "matches": {
+        "under": true
+      }
+    },
+    {
+      "content": "\\\\overline{${1:${VISUAL:text}}}${0}",
+      "doc": "",
+      "label": "overline text",
+      "matches": {
+        "over": true
+      }
+    },
+    {
+      "content": "\\\\emph{${1:${VISUAL:text}}}${0}",
+      "doc": "",
+      "label": "emphasize text",
+      "matches": {
+        "emp": true
+      }
+    },
+    {
+      "content": "\\\\textsc{${1:${VISUAL:text}}}${0}",
+      "doc": "",
+      "label": "small caps text",
+      "matches": {
+        "sc": true
+      }
+    },
+    {
+      "content": "\\\\textsf{${1:${VISUAL:text}}}${0}",
+      "doc": "",
+      "label": "sans serife text",
+      "matches": {
+        "sf": true
+      }
+    },
+    {
+      "content": "\\\\textrm{${1:${VISUAL:text}}}${0}",
+      "doc": "",
+      "label": "roman font text",
+      "matches": {
+        "rm": true
+      }
+    },
+    {
+      "content": "\\\\texttt{${1:${VISUAL:text}}}${0}",
+      "doc": "",
+      "label": "typewriter (monospace) text",
+      "matches": {
+        "tt": true
+      }
+    },
+    {
+      "content": "\\\\textsubscript{${1:${VISUAL:text}}}${0}",
+      "doc": "",
+      "label": "subscripted text",
+      "matches": {
+        "tsub": true
+      }
+    },
+    {
+      "content": "\\\\textsuperscript{${1:${VISUAL:text}}}${0}",
+      "doc": "",
+      "label": "superscripted text",
+      "matches": {
+        "tsup": true
+      }
+    },
+    {
+      "content": "\\\\mathfrak{${1:${VISUAL:text}}}${0}",
+      "doc": "",
+      "label": "mathfrak",
+      "matches": {
+        "mf": true
+      }
+    },
+    {
+      "content": "\\\\mathcal{${1:${VISUAL:text}}}${0}",
+      "doc": "",
+      "label": "mathcal",
+      "matches": {
+        "mc": true
+      }
+    },
+    {
+      "content": "\\\\mathscr{${1:${VISUAL:text}}}${0}",
+      "doc": "",
+      "label": "mathscr",
+      "matches": {
+        "ms": true
+      }
+    },
+    {
+      "content": "\\\\footnote{${1:${VISUAL:text}}}${0}",
+      "doc": "",
+      "label": "\\footnote",
+      "matches": {
+        "ft": true
+      }
+    },
+    {
+      "content": "\\\\begin{figure}\n\\\\begin{center}\n\t\\\\includegraphics[scale=${1}]{Figures/${2}}\n\\\\end{center}\n\\\\caption{${3}}\n\\\\label{fig:${4}}\n\\\\end{figure}\n${0}",
+      "doc": "",
+      "label": "figure environment (includegraphics)",
+      "matches": {
+        "fig": true
+      }
+    },
+    {
+      "content": "\\\\begin{figure}[htpb]\n\\\\begin{center}\n\\\\begin{tikzpicture}[scale=${1:1}, transform shape]\n\t${2}\n\\\\end{tikzpicture}\n\\\\end{center}\n\\\\caption{${3}}%\n\\\\label{fig:${4}}\n\\\\end{figure}\n${0}",
+      "doc": "",
+      "label": "figure environment (tikzpicture)",
+      "matches": {
+        "tikz": true
+      }
+    },
+    {
+      "content": "\\\\begin{subfigure}[${1}]{${2:\\\\textwidth}}\n\\\\begin{center}\n\t${3}\n\\\\end{center}\n\\\\caption{${4}}\n\\\\label{fig:${5}}\n\\\\end{subfigure}\n${0}",
+      "doc": "",
+      "label": "subfigure environment",
+      "matches": {
+        "subfig": true
+      }
+    },
+    {
+      "content": "\\\\begin{equation}\n\\\\begin{tikzcd}\n\t${1}\n\\\\end{tikzcd}\n\\\\end{equation}\n${0}",
+      "doc": "",
+      "label": "tikzcd environment in equation",
+      "matches": {
+        "tikzcd": true
+      }
+    },
+    {
+      "content": "\\\\begin{equation*}\n\\\\begin{tikzcd}\n\t${1}\n\\\\end{tikzcd}\n\\\\end{equation*}\n${0}",
+      "doc": "",
+      "label": "tikzcd environment in equation*",
+      "matches": {
+        "tikzcd*": true
+      }
+    },
+    {
+      "content": "\\\\stackrel{${1:above}}{${2:below}} ${0}",
+      "doc": "",
+      "label": "\\stackrel{}{}",
+      "matches": {
+        "stackrel": true
+      }
+    },
+    {
+      "content": "\\\\frac{${1:num}}{${2:denom}} ${0}",
+      "doc": "",
+      "label": "\\frac{}{}",
+      "matches": {
+        "frac": true
+      }
+    },
+    {
+      "content": "\\\\sum^{${1:n}}_{${2:i=1}} ${0}",
+      "doc": "",
+      "label": "\\sum^{}_{}",
+      "matches": {
+        "sum": true
+      }
+    },
+    {
+      "content": "\\\\lim_{${1:n \\\\to \\\\infty}} ${0}",
+      "doc": "",
+      "label": "\\lim_{}",
+      "matches": {
+        "lim": true
+      }
+    },
+    {
+      "content": "\\\\begin{frame}[${1:t}]\n\t\\frametitle{${2:title}}\n\t\\framesubtitle{${3:subtitle}}\n\t${0:${VISUAL}}\n\\\\end{frame}",
+      "doc": "",
+      "label": "frame environment",
+      "matches": {
+        "frame": true
+      }
+    },
+    {
+      "content": "\\\\begin{block}{${1:title}}\n\t${0:${VISUAL}}\n\\\\end{block}",
+      "doc": "",
+      "label": "block environment",
+      "matches": {
+        "block": true
+      }
+    },
+    {
+      "content": "\\\\alert{${1:${VISUAL:text}}} ${0}",
+      "doc": "",
+      "label": "alert text",
+      "matches": {
+        "alert": true
+      }
+    },
+    {
+      "content": "\\\\begin{alertblock}{${1:title}}\n\t${0:${VISUAL}}\n\\\\end{alertblock}",
+      "doc": "",
+      "label": "alertblock environment",
+      "matches": {
+        "alertblock": true
+      }
+    },
+    {
+      "content": "\\\\begin{exampleblock}{${1:title}}\n\t${0:${VISUAL}}\n\\\\end{exampleblock}",
+      "doc": "",
+      "label": "exampleblock environment",
+      "matches": {
+        "example": true
+      }
+    },
+    {
+      "content": "\\\\begin{columns}\n\t\\\\begin{column}{0.5\\\\textwidth}\n\t\t${1}\n\t\\\\end{column}\n\t\\\\begin{column}{0.5\\\\textwidth}\n\t\t${0}\n\t\\\\end{column}\n\\\\end{columns}",
+      "doc": "",
+      "label": "two-column environment",
+      "matches": {
+        "col2": true
+      }
+    },
+    {
+      "content": "\\\\begin{multicols}{2}\n\t${1}\n\t\\columnbreak\n\t${0}\n\\\\end{multicols}",
+      "doc": "",
+      "label": "two-column environment with multicol",
+      "matches": {
+        "multicol2": true
+      }
+    },
+    {
+      "content": "\\\\{ ${0} \\\\}",
+      "doc": "",
+      "label": "\\{ \\}",
+      "matches": {
+        "\\{": true
+      }
+    },
+    {
+      "content": "\\\\left${1} ${0:${VISUAL}} \\\\right$1",
+      "doc": "",
+      "label": "left right",
+      "matches": {
+        "lr": true
+      }
+    },
+    {
+      "content": "\\\\left( ${0:${VISUAL}} \\\\right)",
+      "doc": "",
+      "label": "left( right)",
+      "matches": {
+        "lr(": true
+      }
+    },
+    {
+      "content": "\\\\left| ${0:${VISUAL}} \\\\right|",
+      "doc": "",
+      "label": "left| right|",
+      "matches": {
+        "lr|": true
+      }
+    },
+    {
+      "content": "\\\\left\\\\{ ${0:${VISUAL}} \\\\right\\\\}",
+      "doc": "",
+      "label": "left\\{ right\\}",
+      "matches": {
+        "lr{": true
+      }
+    },
+    {
+      "content": "\\\\left[ ${0:${VISUAL}} \\\\right]",
+      "doc": "",
+      "label": "left[ right]",
+      "matches": {
+        "lr[": true
+      }
+    },
+    {
+      "content": "\\\\langle ${0:${VISUAL}} \\\\rangle",
+      "doc": "",
+      "label": "langle rangle",
+      "matches": {
+        "lra": true
+      }
+    },
+    {
+      "content": "\\\\begin{listing}[language=${1:language}]\n\t${0:${VISUAL}}\n\\\\end{listing}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lst": true
+      }
+    },
+    {
+      "content": "\\\\lstinline|${1}| ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lsi": true
+      }
+    },
+    {
+      "content": "\\\\url{${1}} ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "url": true
+      }
+    },
+    {
+      "content": "\\\\href{${1}}{${2}} ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "href": true
+      }
+    },
+    {
+      "content": "\\\\url{`@+`} ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "urlc": true
+      }
+    },
+    {
+      "content": "\\\\href{`@+`}{${1}} ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "hrefc": true
+      }
+    },
+    {
+      "content": "\\\\enquote{${1:${VISUAL:text}}} ${0}",
+      "doc": "",
+      "label": "enquote",
+      "matches": {
+        "enq": true
+      }
+    },
+    {
+      "content": "\\\\frac{d}{dt} {$1} {$0}",
+      "doc": "",
+      "label": "time derivative",
+      "matches": {
+        "ddt": true
+      }
+    },
+    {
+      "content": "\\\\lim_{{$1}} {{$2}} {$0}",
+      "doc": "",
+      "label": "limit",
+      "matches": {
+        "lim": true
+      }
+    },
+    {
+      "content": "\\\\frac{\\\\partial {$1}}{\\\\partial {$2}} {$0}",
+      "doc": "",
+      "label": "partial derivation",
+      "matches": {
+        "pdv": true
+      }
+    },
+    {
+      "content": "\\\\frac{\\\\partial^2 {$1}}{\\\\partial {$2} \\\\partial {$3}} {$0}",
+      "doc": "",
+      "label": "second partial derivation",
+      "matches": {
+        "ppdv": true
+      }
+    },
+    {
+      "content": "\\\\frac{d {$1}}{d {$2}} {$0}",
+      "doc": "",
+      "label": "derivative",
+      "matches": {
+        "dv": true
+      }
+    },
+    {
+      "content": "\\\\sum_{{$1}} {$0}",
+      "doc": "",
+      "label": "summation",
+      "matches": {
+        "summ": true
+      }
+    },
+    {
+      "content": "\\\\dot{{$1}} {$0}",
+      "doc": "",
+      "label": "dot",
+      "matches": {
+        "dot": true
+      }
+    },
+    {
+      "content": "\\\\ddot{{$1}} {$0}",
+      "doc": "",
+      "label": "ddot",
+      "matches": {
+        "ddot": true
+      }
+    },
+    {
+      "content": "\\\\vec{{$1}} {$0}",
+      "doc": "",
+      "label": "vector",
+      "matches": {
+        "vec": true
+      }
+    },
+    {
+      "content": "\\\\bar{{$1}} {$0}",
+      "doc": "",
+      "label": "bar",
+      "matches": {
+        "bar": true
+      }
+    },
+    {
+      "content": "\\\\times {$0}",
+      "doc": "",
+      "label": "cross product",
+      "matches": {
+        "\\x": true
+      }
+    },
+    {
+      "content": "\\\\cdot {$0}",
+      "doc": "",
+      "label": "dot product",
+      "matches": {
+        ".": true
+      }
+    },
+    {
+      "content": "\\\\int_{{$1}}^{{$2}} {$3} \\\\: d{$4} {$0}",
+      "doc": "",
+      "label": "integral",
+      "matches": {
+        "int": true
+      }
+    },
+    {
+      "content": "\\\\rightarrow {$0}",
+      "doc": "",
+      "label": "rightarrow",
+      "matches": {
+        "ra": true
+      }
+    },
+    {
+      "content": "\\\\longrightarrow {$0}",
+      "doc": "",
+      "label": "longrightarrow",
+      "matches": {
+        "lra": true
+      }
+    }
+  ]
+}

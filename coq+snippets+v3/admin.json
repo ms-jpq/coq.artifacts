@@ -1,0 +1,77 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "fieldsets = (\n\t(None, {\n\t\t'fields': (\n\t\t\t$1\n\t\t),\n\t}),\n)",
+      "doc": "",
+      "label": "fieldsets",
+      "matches": {
+        "fieldsets": true
+      }
+    },
+    {
+      "content": "class ${1}Inline(admin.StackedInline):\n\t'''Stacked Inline View for ${1}'''\n\n\tmodel = ${2:${1}}\n\tmin_num = ${3:3}\n\tmax_num = ${4:20}\n\textra = ${5:1}\n\traw_id_fields = (${6},)",
+      "doc": "Stacked Inline",
+      "label": "stackedinline",
+      "matches": {
+        "stackedinline": true
+      }
+    },
+    {
+      "content": "@admin.register(${1})\nclass ${1}Admin(admin.ModelAdmin):\n\t'''Admin View for ${1}'''\n\n\tlist_display = ('${2}',)\n\tlist_filter = ('${3}',)\n\tinlines = [\n\t\t${4}Inline,\n\t]\n\traw_id_fields = ('${5}',)\n\treadonly_fields = ('${6}',)\n\tsearch_fields = ('${7}',)\n\tdate_hierarchy = '${8}'\n\tordering = ('${9}',)",
+      "doc": "Model Admin View",
+      "label": "adminview",
+      "matches": {
+        "adminview": true
+      }
+    },
+    {
+      "content": "from django.contrib import admin",
+      "doc": "from ... import admin",
+      "label": "iadmin",
+      "matches": {
+        "iadmin": true
+      }
+    },
+    {
+      "content": "from django.contrib.admin import AdminSite",
+      "doc": "from ... import AdminSite",
+      "label": "iadminsite",
+      "matches": {
+        "iadminsite": true
+      }
+    },
+    {
+      "content": "class ${1}Inline(admin.TabularInline):\n\t'''Tabular Inline View for ${1}'''\n\n\tmodel = ${2:${1}}\n\tmin_num = ${3:3}\n\tmax_num = ${4:20}\n\textra = ${5:1}\n\traw_id_fields = (${6},)",
+      "doc": "Tabular Inline",
+      "label": "tabularinline",
+      "matches": {
+        "tabularinline": true
+      }
+    },
+    {
+      "content": "admin.site.register($1)",
+      "doc": "register the model class without providing a ModelAdmin description.",
+      "label": "register",
+      "matches": {
+        "register": true
+      }
+    },
+    {
+      "content": "admin.site.register($1, $1Admin)",
+      "doc": "register the model class providing a ModelAdmin description",
+      "label": "registermadmin",
+      "matches": {
+        "registermadmin": true
+      }
+    },
+    {
+      "content": "class ${1:NAME}Filter(admin.SimpleListFilter):\n\n\ttitle = '$2'\n\tparameter_name = '$0'\n\n\tdef lookups(self, request, model_admin):\n\t\tpass\n\n\tdef queryset(self, request, queryset):\n\t\treturn queryset",
+      "doc": "Admin SimpleList Filter",
+      "label": "simplelistfilter",
+      "matches": {
+        "simplelistfilter": true
+      }
+    }
+  ]
+}

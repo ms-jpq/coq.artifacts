@@ -1,0 +1,231 @@
+{
+  "extends": [
+    "html"
+  ],
+  "snippets": [
+    {
+      "content": "<% $0 %>",
+      "doc": "",
+      "label": "%",
+      "matches": {
+        "%": true
+      }
+    },
+    {
+      "content": "<%= gettext(\"$0\") %>",
+      "doc": "",
+      "label": "gettext",
+      "matches": {
+        "gt": true
+      }
+    },
+    {
+      "content": "<%= for ${1:item} <- ${2:items} do %>\n  $0\n<% end %>",
+      "doc": "",
+      "label": "for",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "<%= link \"${1:Submit}\", to: ${2:\"/users\"}, method: ${3::delete} %>",
+      "doc": "",
+      "label": "lin",
+      "matches": {
+        "lin": true
+      }
+    },
+    {
+      "content": "<%= if ${1} do %>\n  $2\n<% else %>\n  $0\n<% end %>",
+      "doc": "",
+      "label": "ife",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "<%= if ${1} do %>\n  $0\n<% end %>",
+      "doc": "",
+      "label": "if",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "<%= $0 %>",
+      "doc": "",
+      "label": "=",
+      "matches": {
+        "=": true
+      }
+    },
+    {
+      "content": "<% ${0} %>",
+      "doc": "",
+      "label": "<% %>",
+      "matches": {
+        "%": true
+      }
+    },
+    {
+      "content": "<%= ${0} %>",
+      "doc": "",
+      "label": "<%= %>",
+      "matches": {
+        "=": true
+      }
+    },
+    {
+      "content": "<%# ${0} %>",
+      "doc": "",
+      "label": "<%# %>",
+      "matches": {
+        "#": true
+      }
+    },
+    {
+      "content": "<% end %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "end": true
+      }
+    },
+    {
+      "content": "<%= for ${1:item} <- ${2:items} ${3:@conn} do %>\n\t${0}\n<% end %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "<%= if ${1} do %>\n\t${0:${VISUAL}}\n<% end %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "<%= if ${1} do %>\n\t${2:${VISUAL}}\n<% else %>\n\t${0}\n<% end %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "<%= cond do %>\n\t<% ${1} -> %>\n\t\t${2:${VISUAL}}\n\n\t<% true -> %>\n\t\t${0}\n<% end %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cond": true
+      }
+    },
+    {
+      "content": "<%= unless ${1} do %>\n\t${0:${VISUAL}}\n<% end %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "unless": true
+      }
+    },
+    {
+      "content": "<%= form_tag(${1:\"/users\"}, method: ${2::post}) %>\n\t${0}\n</form>",
+      "doc": "",
+      "label": "form_tag",
+      "matches": {
+        "ft": true
+      }
+    },
+    {
+      "content": "<%= select ${1:f}, :${2:field}, ${3:[{\"key\", \"value\"}]}, prompt: ${4:\"Prompt\"} %>",
+      "doc": "",
+      "label": "select",
+      "matches": {
+        "sl": true
+      }
+    },
+    {
+      "content": "<%= submit ${1:\"Submit\"} %>",
+      "doc": "",
+      "label": "submit",
+      "matches": {
+        "sb": true
+      }
+    },
+    {
+      "content": "<%= radio_button ${1:f}, :${2:field},  ${3:\"value\"} %>",
+      "doc": "",
+      "label": "radio_button",
+      "matches": {
+        "rb": true
+      }
+    },
+    {
+      "content": "<%= error_tag ${1:f}, :${2:field} %>",
+      "doc": "",
+      "label": "error_tag",
+      "matches": {
+        "et": true
+      }
+    },
+    {
+      "content": "<%= text_input ${1:f}, :${2:field} %>",
+      "doc": "",
+      "label": "text_input",
+      "matches": {
+        "ti": true
+      }
+    },
+    {
+      "content": "<%= label ${1:f}, :${2:field}, \"${3:Label}\" %>",
+      "doc": "",
+      "label": "label",
+      "matches": {
+        "la": true
+      }
+    },
+    {
+      "content": "<%= password_input ${1:f}, :${2:password} %>",
+      "doc": "",
+      "label": "password_input",
+      "matches": {
+        "pi": true
+      }
+    },
+    {
+      "content": "<%= render \"${1:index}.html\", ${2:var: @var} %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "render": true
+      }
+    },
+    {
+      "content": "<%= link \"${1:Submit}\", to: ${2:\"/users\"}, method: ${3::delete} %>",
+      "doc": "",
+      "label": "link",
+      "matches": {
+        "lin": true
+      }
+    },
+    {
+      "content": "<%= form_for @changeset, ${1:\"/users\"}, fn f -> %>\n\t\t${0}\n\n\t<%= submit \"Submit\" %>\n<% end %>",
+      "doc": "",
+      "label": "form_for",
+      "matches": {
+        "ff": true
+      }
+    },
+    {
+      "content": "<% require IEx; IEx.pry %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pry": true
+      }
+    }
+  ]
+}

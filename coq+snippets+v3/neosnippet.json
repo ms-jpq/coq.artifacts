@@ -1,0 +1,277 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "snippet     ${1:#:trigger}\nabbr        ${2:#:abbr}\noptions     head\n    ${3:#:TARGET}",
+      "doc": "",
+      "label": "snippet abbr options <snippet code>",
+      "matches": {
+        "snippet": true
+      }
+    },
+    {
+      "content": "snippet     ${1:#:trigger}\nabbr        ${2:#:abbr}\noptions     head\n    ${3:#:TARGET}",
+      "doc": "",
+      "label": "snippet abbr options <snippet code>",
+      "matches": {
+        "snip": true
+      }
+    },
+    {
+      "content": "include ${0:filetype}.snip",
+      "doc": "",
+      "label": "include *.snip",
+      "matches": {
+        "include": true
+      }
+    },
+    {
+      "content": "include ${0:filetype}.snip",
+      "doc": "",
+      "label": "include *.snip",
+      "matches": {
+        "inc": true
+      }
+    },
+    {
+      "content": "\\${0}${0}",
+      "doc": "",
+      "label": "${0}",
+      "matches": {
+        "0": true
+      }
+    },
+    {
+      "content": "\\${1}${0}",
+      "doc": "",
+      "label": "${1}",
+      "matches": {
+        "1": true
+      }
+    },
+    {
+      "content": "\\${2}${0}",
+      "doc": "",
+      "label": "${2}",
+      "matches": {
+        "2": true
+      }
+    },
+    {
+      "content": "\\${3}${0}",
+      "doc": "",
+      "label": "${3}",
+      "matches": {
+        "3": true
+      }
+    },
+    {
+      "content": "\\${4}${0}",
+      "doc": "",
+      "label": "${4}",
+      "matches": {
+        "4": true
+      }
+    },
+    {
+      "content": "\\${5}${0}",
+      "doc": "",
+      "label": "${5}",
+      "matches": {
+        "5": true
+      }
+    },
+    {
+      "content": "\\${0:${0:default}}",
+      "doc": "",
+      "label": "${0:default}",
+      "matches": {
+        "0:": true
+      }
+    },
+    {
+      "content": "\\${1:${0:default}}",
+      "doc": "",
+      "label": "${1:default}",
+      "matches": {
+        "1:": true
+      }
+    },
+    {
+      "content": "\\${2:${0:default}}",
+      "doc": "",
+      "label": "${2:default}",
+      "matches": {
+        "2:": true
+      }
+    },
+    {
+      "content": "\\${3:${0:default}}",
+      "doc": "",
+      "label": "${3:default}",
+      "matches": {
+        "3:": true
+      }
+    },
+    {
+      "content": "\\${4:${0:default}}",
+      "doc": "",
+      "label": "${4:default}",
+      "matches": {
+        "4:": true
+      }
+    },
+    {
+      "content": "\\${5:${0:default}}",
+      "doc": "",
+      "label": "${5:default}",
+      "matches": {
+        "5:": true
+      }
+    },
+    {
+      "content": "\\${0:#${0:optional}}",
+      "doc": "",
+      "label": "${0:#optional}",
+      "matches": {
+        "0#": true
+      }
+    },
+    {
+      "content": "\\${1:#${0:optional}}",
+      "doc": "",
+      "label": "${1:#optional}",
+      "matches": {
+        "1#": true
+      }
+    },
+    {
+      "content": "\\${2:#${0:optional}}",
+      "doc": "",
+      "label": "${2:#optional}",
+      "matches": {
+        "2#": true
+      }
+    },
+    {
+      "content": "\\${3:#${0:optional}}",
+      "doc": "",
+      "label": "${3:#optional}",
+      "matches": {
+        "3#": true
+      }
+    },
+    {
+      "content": "\\${4:#${0:optional}}",
+      "doc": "",
+      "label": "${4:#optional}",
+      "matches": {
+        "4#": true
+      }
+    },
+    {
+      "content": "\\${5:#${0:optional}}",
+      "doc": "",
+      "label": "${5:#optional}",
+      "matches": {
+        "5#": true
+      }
+    },
+    {
+      "content": "\\${0:TARGET}${0}",
+      "doc": "",
+      "label": "${0:TARGET}",
+      "matches": {
+        "0T": true
+      }
+    },
+    {
+      "content": "\\${0:TARGET}${0}",
+      "doc": "",
+      "label": "${0:TARGET}",
+      "matches": {
+        "0t": true
+      }
+    },
+    {
+      "content": "\\${1:TARGET}${0}",
+      "doc": "",
+      "label": "${1:TARGET}",
+      "matches": {
+        "1T": true
+      }
+    },
+    {
+      "content": "\\${1:TARGET}${0}",
+      "doc": "",
+      "label": "${1:TARGET}",
+      "matches": {
+        "1t": true
+      }
+    },
+    {
+      "content": "\\${2:TARGET}${0}",
+      "doc": "",
+      "label": "${2:TARGET}",
+      "matches": {
+        "2T": true
+      }
+    },
+    {
+      "content": "\\${2:TARGET}${0}",
+      "doc": "",
+      "label": "${2:TARGET}",
+      "matches": {
+        "2t": true
+      }
+    },
+    {
+      "content": "\\${3:TARGET}${0}",
+      "doc": "",
+      "label": "${3:TARGET}",
+      "matches": {
+        "3T": true
+      }
+    },
+    {
+      "content": "\\${3:TARGET}${0}",
+      "doc": "",
+      "label": "${3:TARGET}",
+      "matches": {
+        "3t": true
+      }
+    },
+    {
+      "content": "\\${4:TARGET}${0}",
+      "doc": "",
+      "label": "${4:TARGET}",
+      "matches": {
+        "4T": true
+      }
+    },
+    {
+      "content": "\\${4:TARGET}${0}",
+      "doc": "",
+      "label": "${4:TARGET}",
+      "matches": {
+        "4t": true
+      }
+    },
+    {
+      "content": "\\${5:TARGET}${0}",
+      "doc": "",
+      "label": "${5:TARGET}",
+      "matches": {
+        "5T": true
+      }
+    },
+    {
+      "content": "\\${5:TARGET}${0}",
+      "doc": "",
+      "label": "${5:TARGET}",
+      "matches": {
+        "5t": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "extends": [
+    "css"
+  ],
+  "snippets": [
+    {
+      "content": "@mixin ${1:NAME}(${2:#:ARGS}) {\n  ${0:TARGET}\n}",
+      "doc": "",
+      "label": "@mixin(...){...}",
+      "matches": {
+        "mixin": true
+      }
+    },
+    {
+      "content": "@include ${1:NAME}(${2:#:ARGS});",
+      "doc": "",
+      "label": "@include ...",
+      "matches": {
+        "include": true
+      }
+    },
+    {
+      "content": "@import '${0:TARGET}';",
+      "doc": "",
+      "label": "@import '...';",
+      "matches": {
+        "import": true
+      }
+    },
+    {
+      "content": "@extend ${0:TARGET};",
+      "doc": "",
+      "label": "@extend ...;",
+      "matches": {
+        "extend": true
+      }
+    },
+    {
+      "content": "@import '${0}';",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "imp": true
+      }
+    },
+    {
+      "content": "@mixin ${1:name}(${2}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mix": true
+      }
+    },
+    {
+      "content": "@include ${1:mixin}(${2});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "inc": true
+      }
+    },
+    {
+      "content": "@extend ${0};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ext": true
+      }
+    },
+    {
+      "content": "@function ${1:name}(${2:args}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fun": true
+      }
+    },
+    {
+      "content": "@if $1 {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "@if $1 {\n\t${2}\n} @else {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "@else if $1 {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eif": true
+      }
+    },
+    {
+      "content": "@for ${1:$i} from ${2:1} through ${3:3} {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "@each ${1:$item} in ${2:items} {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "each": true
+      }
+    },
+    {
+      "content": "@while ${1:$i} ${2:>} ${3:0} {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "while": true
+      }
+    }
+  ]
+}

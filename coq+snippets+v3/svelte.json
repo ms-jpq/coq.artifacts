@@ -1,0 +1,1369 @@
+{
+  "extends": [
+    "css",
+    "html",
+    "javascript"
+  ],
+  "snippets": [
+    {
+      "content": "on:${1:click}=\"{() => ${2:count += 1}}\"",
+      "doc": "on event inline",
+      "label": "svelte-on-event-inline",
+      "matches": {
+        "s-on-event-inline": true
+      }
+    },
+    {
+      "content": "dispatch(${1:key},${2:data})",
+      "doc": "svelte dispatch event",
+      "label": "svelte-dispatch-event",
+      "matches": {
+        "s-dispatch-event": true
+      }
+    },
+    {
+      "content": "|${1|preventDefault,stopPropagation,passive,capture,once|}",
+      "doc": "modifier",
+      "label": "svelte-modifiers",
+      "matches": {
+        "s-modifier": true
+      }
+    },
+    {
+      "content": "<script>\n\t${1:// your script goes here}\n</script>\n\n<style>\n\t${2:/* your styles go here */}\n</style>\n\n${3:<!-- markup (zero or more items) goes here -->}",
+      "doc": "add a script to your svelte file",
+      "label": "svelte-component-format",
+      "matches": {
+        "s-component-format": true
+      }
+    },
+    {
+      "content": "bind:${1:property}",
+      "doc": "bind property",
+      "label": "svelte-bind",
+      "matches": {
+        "s-bind": true
+      }
+    },
+    {
+      "content": "bind:${1:property}={${2:variable}}",
+      "doc": "bind property",
+      "label": "svelte-bind-property",
+      "matches": {
+        "s-bind-property": true
+      }
+    },
+    {
+      "content": "<script context=\"module\">\n\t${1:// your script goes here}\n</script>",
+      "doc": "add a script with context=\"module\" to your svelte file",
+      "label": "svelte-script-context",
+      "matches": {
+        "s-script-context": true
+      }
+    },
+    {
+      "content": "<video\nsrc={${1:clip}}\nbind:${2:duration}\nbind:${3:buffered}\nbind:${4:played}\nbind:${5:seekable}\nbind:${6:seeking}\nbind:${7:ended}\nbind:${8:currentTime}\nbind:${9:playbackRate}\nbind:${10:paused}\nbind:${11:volume}\nbind:${12:muted}\nbind:${13:videoWidth}\nbind:${14:videoHeight}\n></video>",
+      "doc": "bind property",
+      "label": "svelte-bind-video",
+      "matches": {
+        "s-bind-video": true
+      }
+    },
+    {
+      "content": "<style>\n\t${1:/* your styles go here */}\n</style>",
+      "doc": "add styles to your svelte file",
+      "label": "svelte-style-tag",
+      "matches": {
+        "s-style": true
+      }
+    },
+    {
+      "content": "{${1:expression}}",
+      "doc": "basic expression",
+      "label": "svelte-expression",
+      "matches": {
+        "s-expression": true
+      }
+    },
+    {
+      "content": "{@html ${1:expression}}",
+      "doc": "html content expression",
+      "label": "svelte-expression-html",
+      "matches": {
+        "s-expression-html": true
+      }
+    },
+    {
+      "content": "<slot ${1:prop}={${2:value}}>${3:<!-- optional fallback -->}</slot>",
+      "doc": "slot w/ prop",
+      "label": "svelte-slot-prop",
+      "matches": {
+        "s-slot-prop": true
+      }
+    },
+    {
+      "content": "{@debug ${1:var1}${2:,var2}}",
+      "doc": "html content expression",
+      "label": "svelte-expression-debug",
+      "matches": {
+        "s-expression-debug": true
+      }
+    },
+    {
+      "content": "{#if ${1:condition}}\n\t${2: <!-- content here -->}\n{/if}",
+      "doc": "if block",
+      "label": "svelte-if-block",
+      "matches": {
+        "s-if-block": true
+      }
+    },
+    {
+      "content": "<svelte:self ${1:prop}={${2:value}} />",
+      "doc": "svelte:self",
+      "label": "svelte-self-prop",
+      "matches": {
+        "s-self-prop": true
+      }
+    },
+    {
+      "content": "const ${1:value} = get(${2:store});",
+      "doc": "svelte get value from store",
+      "label": "svelte-store-get",
+      "matches": {
+        "s-store-get-value": true
+      }
+    },
+    {
+      "content": "{#if ${1:condition}}\n\t${2: <!-- content here -->}\n{:else}\n\t${3: <!-- else content here -->}\n{/if}",
+      "doc": "if else block",
+      "label": "svelte-if-else-block",
+      "matches": {
+        "s-if-else-block": true
+      }
+    },
+    {
+      "content": "<svelte:component this={${1:component}} />",
+      "doc": "svelte:component",
+      "label": "svelte-component",
+      "matches": {
+        "s-component": true
+      }
+    },
+    {
+      "content": "${1:component}.$set(${2: params});",
+      "doc": "svelte component api $set",
+      "label": "svelte-component-set",
+      "matches": {
+        "s-component-set": true
+      }
+    },
+    {
+      "content": "<svelte:window />",
+      "doc": "svelte:window",
+      "label": "svelte-window",
+      "matches": {
+        "s-window": true
+      }
+    },
+    {
+      "content": "${1:component}.$on(${2:eventname}, ${3:handler});",
+      "doc": "svelte component api $on",
+      "label": "svelte-component-on",
+      "matches": {
+        "s-component-on": true
+      }
+    },
+    {
+      "content": "bind:${1|innerWidth,innerHeight,outerWidth,outerHeight,scrollX,scrollY,online|}={${2:variable}}",
+      "doc": "svelte:window bind properties",
+      "label": "svelte-window-bind",
+      "matches": {
+        "s-window-bind": true
+      }
+    },
+    {
+      "content": "${1:component}.$destroy();",
+      "doc": "svelte component api $destroy",
+      "label": "svelte-component-destroy",
+      "matches": {
+        "s-component-destroy": true
+      }
+    },
+    {
+      "content": "<svelte:body />",
+      "doc": "svelte:body",
+      "label": "svelte-body",
+      "matches": {
+        "s-body": true
+      }
+    },
+    {
+      "content": "<audio\nsrc={${1:clip}}\nbind:${2:duration}\nbind:${3:buffered}\nbind:${4:played}\nbind:${5:seekable}\nbind:${6:seeking}\nbind:${7:ended}\nbind:${8:currentTime}\nbind:${9:playbackRate}\nbind:${10:paused}\nbind:${11:volume}\nbind:${12:muted}\n></audio>",
+      "doc": "bind property",
+      "label": "svelte-bind-audio",
+      "matches": {
+        "s-bind-audio": true
+      }
+    },
+    {
+      "content": "{:else if ${1: otherCondition}}\n\t${2: <!-- else if content here -->}",
+      "doc": "else if block",
+      "label": "svelte-else-if-block",
+      "matches": {
+        "s-else-if-block": true
+      }
+    },
+    {
+      "content": "<svelte:head>\n\t${1:<!-- head content -->}\n</svelte:head>",
+      "doc": "svelte:head",
+      "label": "svelte-head",
+      "matches": {
+        "s-head": true
+      }
+    },
+    {
+      "content": "bind:${1|duration,buffered,played,seekable,seeking,ended,currentTime,playbackRate,paused,volume,muted,videoWidth,videoHeight|}",
+      "doc": "bind property",
+      "label": "svelte-bind-media-elements",
+      "matches": {
+        "s-bind-media-elements": true
+      }
+    },
+    {
+      "content": "const ${1:store} = tweened(${2:value}, ${3:options});",
+      "doc": "svelte create tweened store",
+      "label": "svelte-tweened",
+      "matches": {
+        "s-tweened": true
+      }
+    },
+    {
+      "content": "bind:${1|clientWidth,clientHeight,offsetWidth,offsetHeight|}={${2:variable}}",
+      "doc": "bind property",
+      "label": "svelte-bind-block-level",
+      "matches": {
+        "s-bind-block-level": true
+      }
+    },
+    {
+      "content": "<svelte:options ${1|immutable,accessors,namespace,tag|}={${2:value}}/>",
+      "doc": "svelte:options",
+      "label": "svelte-options",
+      "matches": {
+        "s-options": true
+      }
+    },
+    {
+      "content": "bind:group={${1:variable}}",
+      "doc": "bind group",
+      "label": "svelte-bind-group",
+      "matches": {
+        "s-bind-group": true
+      }
+    },
+    {
+      "content": "const component = new ${1:App}({\n\ttarget: ${2|target,document.body|},\n\tprops: ${3:props},\n\tanchor: ${4:anchor},\n\thydrate: ${5|false,true|},\n\tintro: ${5|false,true|}\n})",
+      "doc": "svelte create component",
+      "label": "svelte-create-component",
+      "matches": {
+        "s-create-component": true
+      }
+    },
+    {
+      "content": "{#each ${1:items} as ${2:item}}\n\t${3: <!-- content here -->}\n{/each}",
+      "doc": "each block",
+      "label": "svelte-each-block",
+      "matches": {
+        "s-each-block": true
+      }
+    },
+    {
+      "content": "class:${1:name}={${2:condition}}",
+      "doc": "class",
+      "label": "svelte-class",
+      "matches": {
+        "s-class": true
+      }
+    },
+    {
+      "content": "{#each ${1:items} as ${2:item}}\n\t${3: <!-- content here -->}\n{:else}\n\t${4: <!-- empty list -->}\n{/each}",
+      "doc": "each else block",
+      "label": "svelte-each-else-block",
+      "matches": {
+        "s-each-else-block": true
+      }
+    },
+    {
+      "content": "class:${1:name}}",
+      "doc": "class shorthand",
+      "label": "svelte-class-short",
+      "matches": {
+        "s-class-short": true
+      }
+    },
+    {
+      "content": "{#each ${1:items} as ${2:item},${3:i}}\n\t${4: <!-- content here -->}\n{/each}",
+      "doc": "each index block",
+      "label": "svelte-each-index-block",
+      "matches": {
+        "s-each-index-block": true
+      }
+    },
+    {
+      "content": "use:action",
+      "doc": "use action",
+      "label": "svelte-use",
+      "matches": {
+        "s-use": true
+      }
+    },
+    {
+      "content": "use:action={${1:parameters}}",
+      "doc": "use action w/ parameters",
+      "label": "svelte-use-parameters",
+      "matches": {
+        "s-use-parameters": true
+      }
+    },
+    {
+      "content": "function ${1:foo}(node) {\n\t// the node has been mounted in the DOM\n\treturn {\n\t\tdestroy() {\n\t\t\t// the node has been removed from the DOM\n\t\t}\n\t};\n}",
+      "doc": "action function",
+      "label": "svelte-action",
+      "matches": {
+        "s-action": true
+      }
+    },
+    {
+      "content": "{#each ${1:items} as ${2:item},i (${3:key})}\n\t${4: <!-- content here -->}\n{/each}",
+      "doc": "each index key block",
+      "label": "svelte-each-index-key-block",
+      "matches": {
+        "s-each-index-key-block": true
+      }
+    },
+    {
+      "content": "${1|transition,in,out|}:${2:name}",
+      "doc": "transition",
+      "label": "svelte-transition",
+      "matches": {
+        "s-transition": true
+      }
+    },
+    {
+      "content": "{#await ${1:promise}}\n\t<!-- promise is pending -->\n{:then ${2:value}}\n\t<!-- promise was fulfilled -->\n{/await}",
+      "doc": "await then block",
+      "label": "svelte-await-then-block",
+      "matches": {
+        "s-await-then-block": true
+      }
+    },
+    {
+      "content": "require('svelte/register');\nconst ${1:App} = require('${2:./App.svelte}').default;",
+      "doc": "svelte register",
+      "label": "svelte-register",
+      "matches": {
+        "s-register": true
+      }
+    },
+    {
+      "content": "function ${1:foo}(node, ${2:parameters}) {\n\t// the node has been mounted in the DOM\n\treturn {\n\t\tdestroy() {\n\t\t\t// the node has been removed from the DOM\n\t\t}\n\t};\n}",
+      "doc": "action function",
+      "label": "svelte-action-parameters",
+      "matches": {
+        "s-action-parameters": true
+      }
+    },
+    {
+      "content": "const ${1:store} = spring(${2:value}, ${3:options});",
+      "doc": "svelte create spring store",
+      "label": "svelte-spring",
+      "matches": {
+        "s-spring": true
+      }
+    },
+    {
+      "content": "on:${1|introstart,introend,outrostart,outroend|}=\"{() => status = '${1|introstart,introend,outrostart,outroend|}'}\"",
+      "doc": "transition-events",
+      "label": "svelte-transition-events",
+      "matches": {
+        "s-transition-events": true
+      }
+    },
+    {
+      "content": "function ${1:foo}(node, ${2:parameters}) {\n\t// the node has been mounted in the DOM\n\treturn {\n\t\tupdate(${2:parameters}) {\n\t\t\t// the value of `${2:parameters}` has changed\n\t\t}\n\t\tdestroy() {\n\t\t\t// the node has been removed from the DOM\n\t\t}\n\t};\n}",
+      "doc": "action w/ update function",
+      "label": "svelte-action-update",
+      "matches": {
+        "s-action-update": true
+      }
+    },
+    {
+      "content": "const { head, html, css } = ${1:App}.render({\n\tprops: ${3:props},\n})",
+      "doc": "svelte render component",
+      "label": "svelte-render-component",
+      "matches": {
+        "s-render-component": true
+      }
+    },
+    {
+      "content": "${1|transition,in,out|}:${2:name}|${3:local}",
+      "doc": "transition local",
+      "label": "svelte-transition-local",
+      "matches": {
+        "s-transition-local": true
+      }
+    },
+    {
+      "content": "onMount(() => {\n\t${1:// content here}\n});",
+      "doc": "onMount lifecycle function",
+      "label": "svelte-on-mount",
+      "matches": {
+        "s-lifecycle-mount": true
+      }
+    },
+    {
+      "content": "{#await ${1:promise} then ${2:value}}\n\t<!-- promise was fulfilled -->\n{/await}",
+      "doc": "await short block",
+      "label": "svelte-await-short-block",
+      "matches": {
+        "s-await-short-block": true
+      }
+    },
+    {
+      "content": "const ${1:store} = readable(${2:initialValue}, () => {\n\t${3:console.log('got a subscriber');}\n\treturn () => ${4:console.log('no more subscribers');}\n});",
+      "doc": "svelte readable (set function required)",
+      "label": "svelte-readable",
+      "matches": {
+        "s-readable": true
+      }
+    },
+    {
+      "content": "const ${1:store} = writable(${2:initialValue}, () => {\n\t${3:console.log('got a subscriber');}\n\treturn () => ${4:console.log('no more subscribers');}\n});",
+      "doc": "svelte writeable w/ set function",
+      "label": "svelte-writeable-set",
+      "matches": {
+        "s-writeable-set": true
+      }
+    },
+    {
+      "content": "beforeUpdate(() => {\n\t${1:// content here}\n});",
+      "doc": "beforeUpdate lifecycle function",
+      "label": "svelte-before-update",
+      "matches": {
+        "s-lifecycle-before-update": true
+      }
+    },
+    {
+      "content": "{#await ${1:promise}}\n\t<!-- ${1:promise} is pending -->\n{:then ${value}}\n\t<!-- ${1:promise} was fulfilled -->\n{:catch error}\n\t<!-- ${1:promise} was rejected -->\n{/await}",
+      "doc": "await catch block",
+      "label": "svelte-await-catch-block",
+      "matches": {
+        "s-await-catch-block": true
+      }
+    },
+    {
+      "content": "const ${1:store} = writable(${2:initialValue});",
+      "doc": "svelte writeable",
+      "label": "svelte-writeable",
+      "matches": {
+        "s-writeable": true
+      }
+    },
+    {
+      "content": "<svelte:self />",
+      "doc": "svelte:self",
+      "label": "svelte-self",
+      "matches": {
+        "s-self": true
+      }
+    },
+    {
+      "content": "<slot>${1:<!-- optional fallback -->}</slot>",
+      "doc": "slot",
+      "label": "svelte-slot",
+      "matches": {
+        "s-slot": true
+      }
+    },
+    {
+      "content": "${1|transition,in,out|}:${2:name}|${3:local}={${4:params}}",
+      "doc": "transition",
+      "label": "svelte-transition-all",
+      "matches": {
+        "s-transition-all": true
+      }
+    },
+    {
+      "content": "{:then ${1:value}}\n\t<!-- promise was fulfilled -->",
+      "doc": "then block",
+      "label": "svelte-then-block",
+      "matches": {
+        "s-then-block": true
+      }
+    },
+    {
+      "content": "<slot name=\"${1:x}\">${2:<!-- optional fallback -->}</slot>",
+      "doc": "slot w/ name",
+      "label": "svelte-slot-name",
+      "matches": {
+        "s-slot-name": true
+      }
+    },
+    {
+      "content": "onDestroy(() => {\n\t${1:// content here}\n});",
+      "doc": "onDestroy lifecycle function",
+      "label": "svelte-on-destroy",
+      "matches": {
+        "s-lifecycle-destroy": true
+      }
+    },
+    {
+      "content": "{:catch error}\n\t<!-- promise was rejected -->",
+      "doc": "catch block",
+      "label": "svelte-catch-block",
+      "matches": {
+        "s-catch-block": true
+      }
+    },
+    {
+      "content": "<script>\n\t${1:// your script goes here}\n</script>",
+      "doc": "add a script to your svelte file",
+      "label": "svelte-script-tag",
+      "matches": {
+        "s-script": true
+      }
+    },
+    {
+      "content": "afterUpdate(() => {\n\t${1:// content here}\n});",
+      "doc": "afterUpdate lifecycle function",
+      "label": "svelte-after-update",
+      "matches": {
+        "s-lifecycle-after-update": true
+      }
+    },
+    {
+      "content": "await tick()",
+      "doc": "svelte tick function",
+      "label": "svelte-tick",
+      "matches": {
+        "s-tick": true
+      }
+    },
+    {
+      "content": "on:${1:eventname}={${2:handler}}",
+      "doc": "on event",
+      "label": "svelte-on-event",
+      "matches": {
+        "s-on-event": true
+      }
+    },
+    {
+      "content": "{:else}\n\t${1: <!-- else content here -->}",
+      "doc": "else block",
+      "label": "svelte-else-block",
+      "matches": {
+        "s-else-block": true
+      }
+    },
+    {
+      "content": "{#each ${1:items} as ${2:item},(${3:key})}\n\t${4: <!-- content here -->}\n{/each}",
+      "doc": "each index block",
+      "label": "svelte-each-key-block",
+      "matches": {
+        "s-each-key-block": true
+      }
+    },
+    {
+      "content": "setContext(${1:key}, ${2:context})",
+      "doc": "svelte setContext",
+      "label": "svelte-set-context",
+      "matches": {
+        "s-set-content": true
+      }
+    },
+    {
+      "content": "on:${1:eventname}",
+      "doc": "on event foward",
+      "label": "svelte-on-event-forward",
+      "matches": {
+        "s-on-event-foward": true
+      }
+    },
+    {
+      "content": "bind:this={${1:dom_node}}",
+      "doc": "bind this",
+      "label": "svelte-bind-this",
+      "matches": {
+        "s-bind-this": true
+      }
+    },
+    {
+      "content": "{#if ${1:condition}}\n\t${2: <!-- content here -->}\n{:else if ${3: otherCondition}}\n\t${4: <!-- else if content here -->}\n{:else}\n\t${5: <!-- else content here -->}\n{/if}",
+      "doc": "if else if block",
+      "label": "svelte-if-else-if-block",
+      "matches": {
+        "s-if-else-if-block": true
+      }
+    },
+    {
+      "content": "getContext(${1:key})",
+      "doc": "svelte getContext",
+      "label": "svelte-get-context",
+      "matches": {
+        "s-get-content": true
+      }
+    },
+    {
+      "content": "on:${1:eventname}|${2|preventDefault,stopPropagation,passive,capture,once|}={${3:handler}}",
+      "doc": "on event w/ modifiers",
+      "label": "svelte-on-event-modifiers",
+      "matches": {
+        "s-on-event-modifiers": true
+      }
+    },
+    {
+      "content": "${1|transition,in,out|}:${2:name}={${3:params}}",
+      "doc": "transition-params",
+      "label": "svelte-transition-params",
+      "matches": {
+        "s-transition-params": true
+      }
+    },
+    {
+      "content": "animate:${1:name}={${2:params}}",
+      "doc": "animate",
+      "label": "svelte-animate",
+      "matches": {
+        "s-animate": true
+      }
+    },
+    {
+      "content": "const dispatch = createEventDispatcher();",
+      "doc": "svelte dispatch",
+      "label": "svelte-dispatch",
+      "matches": {
+        "s-dispatch": true
+      }
+    },
+    {
+      "content": "on:${1:click}=\"{() => ${2:count += 1}}\"",
+      "doc": "",
+      "label": "svelte-on-event-inline",
+      "matches": {
+        "svelte on event inline": true,
+        "svon-inline": true
+      }
+    },
+    {
+      "content": "dispatch(${1:key},${2:data})",
+      "doc": "",
+      "label": "svelte-dispatch-event",
+      "matches": {
+        "svdpe": true,
+        "svelte dispatch event": true
+      }
+    },
+    {
+      "content": "|${1|preventDefault,stopPropagation,passive,capture,once|}",
+      "doc": "",
+      "label": "svelte-modifiers",
+      "matches": {
+        "svelte modifier": true,
+        "svmodifier": true
+      }
+    },
+    {
+      "content": "<script>\n\t${1:// your script goes here}\n</script>\n\n<style>\n\t${2:/* your styles go here */}\n</style>\n\n${3:<!-- markup (zero or more items) goes here -->}",
+      "doc": "",
+      "label": "svelte-component-format",
+      "matches": {
+        "svcomponent": true,
+        "svelte component template": true
+      }
+    },
+    {
+      "content": "bind:${1:property}",
+      "doc": "",
+      "label": "svelte-bind",
+      "matches": {
+        "svbind-simple": true,
+        "svelte bind": true
+      }
+    },
+    {
+      "content": "bind:${1:property}={${2:variable}}",
+      "doc": "",
+      "label": "svelte-bind-property",
+      "matches": {
+        "svbind-property": true,
+        "svelte bind property": true
+      }
+    },
+    {
+      "content": "<script context=\"module\">\n\t${1:// your script goes here}\n</script>",
+      "doc": "add a script with context=\"module\" to your svelte file",
+      "label": "svelte-script-context",
+      "matches": {
+        "svelte script context": true,
+        "svscriptc": true
+      }
+    },
+    {
+      "content": "<video\nsrc={${1:clip}}\nbind:${2:duration}\nbind:${3:buffered}\nbind:${4:seekable}\nbind:${5:played}\nbind:${6:currentTime}\nbind:${7:paused}\nbind:${8:volume}\n></video>",
+      "doc": "",
+      "label": "svelte-bind-video",
+      "matches": {
+        "svbind-video": true,
+        "svelte bind video": true
+      }
+    },
+    {
+      "content": "<style>\n\t${1:/* your styles go here */}\n</style>",
+      "doc": "add styles to your svelte file",
+      "label": "svelte-style-tag",
+      "matches": {
+        "svelte style": true,
+        "svstyle": true
+      }
+    },
+    {
+      "content": "{${1:expression}}",
+      "doc": "",
+      "label": "svelte-expression",
+      "matches": {
+        "svelte expression": true,
+        "svexp": true
+      }
+    },
+    {
+      "content": "{@html ${1:expression}}",
+      "doc": "",
+      "label": "svelte-expression-html",
+      "matches": {
+        "svelte expression html": true,
+        "svexphtml": true
+      }
+    },
+    {
+      "content": "<slot ${1:prop}={${2:value}}>${3:<!-- optional fallback -->}</slot>",
+      "doc": "",
+      "label": "svelte-slot-prop",
+      "matches": {
+        "svelte slot prop": true,
+        "svsp": true
+      }
+    },
+    {
+      "content": "{@debug ${1:var1}${2:,var2}}",
+      "doc": "",
+      "label": "svelte-expression-debug",
+      "matches": {
+        "svelte expression debug": true,
+        "svexpdebug": true
+      }
+    },
+    {
+      "content": "{#if ${1:condition}}\n\t${2: <!-- content here -->}\n{/if}",
+      "doc": "if block",
+      "label": "svelte-if-block",
+      "matches": {
+        "svelte if-block": true,
+        "svif": true
+      }
+    },
+    {
+      "content": "<svelte:self ${1:prop}={${2:value}} />",
+      "doc": "",
+      "label": "svelte-self-prop",
+      "matches": {
+        "svelte self prop": true,
+        "svsep": true
+      }
+    },
+    {
+      "content": "const ${1:value} = get(${2:store});",
+      "doc": "",
+      "label": "svelte-store-get",
+      "matches": {
+        "svelte store-get-value": true,
+        "svstoregm": true
+      }
+    },
+    {
+      "content": "{#if ${1:condition}}\n\t${2: <!-- content here -->}\n{:else}\n\t${3: <!-- else content here -->}\n{/if}",
+      "doc": "",
+      "label": "svelte-if-else-block",
+      "matches": {
+        "svelte if else": true,
+        "svif-else": true
+      }
+    },
+    {
+      "content": "<svelte:component this={${1:component}} />",
+      "doc": "",
+      "label": "svelte-component",
+      "matches": {
+        "svc": true,
+        "svelte component": true
+      }
+    },
+    {
+      "content": "${1:component}.$set(${2: params});",
+      "doc": "",
+      "label": "svelte-component-set",
+      "matches": {
+        "svcoms": true,
+        "svelte component set": true
+      }
+    },
+    {
+      "content": "<svelte:window />",
+      "doc": "",
+      "label": "svelte-window",
+      "matches": {
+        "svelte window": true,
+        "svw": true
+      }
+    },
+    {
+      "content": "${1:component}.$on(${2:eventname}, ${3:handler});",
+      "doc": "",
+      "label": "svelte-component-on",
+      "matches": {
+        "svcomon": true,
+        "svelte component on": true
+      }
+    },
+    {
+      "content": "bind:${1|innerWidth,innerHeight,outerWidth,outerHeight,scrollX,scrollY,online|}={${2:variable}}",
+      "doc": "",
+      "label": "svelte-window-bind",
+      "matches": {
+        "svelte window bind": true,
+        "svwb": true
+      }
+    },
+    {
+      "content": "${1:component}.$destroy();",
+      "doc": "",
+      "label": "svelte-component-destroy",
+      "matches": {
+        "svcomd": true,
+        "svelte component destroy": true
+      }
+    },
+    {
+      "content": "<svelte:body />",
+      "doc": "",
+      "label": "svelte-body",
+      "matches": {
+        "svb": true,
+        "svelte body": true
+      }
+    },
+    {
+      "content": "{:else if ${1: otherCondition}}\n\t${2: <!-- else if content here -->}",
+      "doc": "",
+      "label": "svelte-else-if-block",
+      "matches": {
+        "svelse-if": true,
+        "svelte else if": true
+      }
+    },
+    {
+      "content": "<svelte:head>\n\t${1:<!-- head content -->}\n</svelte:head>",
+      "doc": "",
+      "label": "svelte-head",
+      "matches": {
+        "svelte head": true,
+        "svh": true
+      }
+    },
+    {
+      "content": "const ${1:store} = tweened(${2:value}, ${3:options});",
+      "doc": "",
+      "label": "svelte-tweened",
+      "matches": {
+        "svelte tweened": true,
+        "svtw": true
+      }
+    },
+    {
+      "content": "bind:${1|clientWidth,clientHeight,offsetWidth,offsetHeight|}={${2:variable}}",
+      "doc": "",
+      "label": "svelte-bind-block-level",
+      "matches": {
+        "svbind-level": true,
+        "svelte bind level": true
+      }
+    },
+    {
+      "content": "<svelte:options ${1|immutable,accessors,namespace,tag|}={${2:value}}/>",
+      "doc": "",
+      "label": "svelte-options",
+      "matches": {
+        "svelte options": true,
+        "svop": true
+      }
+    },
+    {
+      "content": "bind:group={${1:variable}}",
+      "doc": "",
+      "label": "svelte-bind-group",
+      "matches": {
+        "svbind-group": true,
+        "svelte bind group": true
+      }
+    },
+    {
+      "content": "const component = new ${1:App}({\n\ttarget: ${2|target,document.body|},\n\tprops: ${3:props},\n\tanchor: ${4:anchor},\n\thydrate: ${5|false,true|},\n\tintro: ${5|false,true|}\n})",
+      "doc": "",
+      "label": "svelte-create-component",
+      "matches": {
+        "svcreate-component": true,
+        "svelte create component": true
+      }
+    },
+    {
+      "content": "{#each ${1:items} as ${2:item}}\n\t${3: <!-- content here -->}\n{/each}",
+      "doc": "each block",
+      "label": "svelte-each-block",
+      "matches": {
+        "sveach": true,
+        "svelte each": true
+      }
+    },
+    {
+      "content": "class:${1:name}={${2:condition}}",
+      "doc": "",
+      "label": "svelte-class",
+      "matches": {
+        "svcl": true,
+        "svelte class": true
+      }
+    },
+    {
+      "content": "{#each ${1:items} as ${2:item}}\n\t${3: <!-- content here -->}\n{:else}\n\t${4: <!-- empty list -->}\n{/each}",
+      "doc": "",
+      "label": "svelte-each-else-block",
+      "matches": {
+        "sveach-else": true,
+        "svelte each else": true
+      }
+    },
+    {
+      "content": "class:${1:name}}",
+      "doc": "",
+      "label": "svelte-class-short",
+      "matches": {
+        "svcls": true,
+        "svelte class short": true
+      }
+    },
+    {
+      "content": "import { Route, Router } from 'svelte-routing'",
+      "doc": "",
+      "label": "svelte-routing-import",
+      "matches": {
+        "svelte import routing": true,
+        "svroute": true
+      }
+    },
+    {
+      "content": "{#each ${1:items} as ${2:item}, ${3:i}}\n\t${4: <!-- content here -->}\n{/each}",
+      "doc": "",
+      "label": "svelte-each-index-block",
+      "matches": {
+        "sveach-index": true,
+        "svelte each index": true
+      }
+    },
+    {
+      "content": "use:action",
+      "doc": "",
+      "label": "svelte-use",
+      "matches": {
+        "svelte use": true,
+        "svu": true
+      }
+    },
+    {
+      "content": ":global(${1:body}) {\n\t/* this will apply to <body> */\n\t${2:/* your styles go here */}\n}",
+      "doc": "",
+      "label": "svelte-global-style",
+      "matches": {
+        "svelte global style": true,
+        "svsglobal": true
+      }
+    },
+    {
+      "content": "use:action={${1:parameters}}",
+      "doc": "",
+      "label": "svelte-use-parameters",
+      "matches": {
+        "svelte use parameters": true,
+        "svupar": true
+      }
+    },
+    {
+      "content": "function ${1:foo}(node) {\n\t// the node has been mounted in the DOM\n\treturn {\n\t\tdestroy() {\n\t\t\t// the node has been removed from the DOM\n\t\t}\n\t};\n}",
+      "doc": "",
+      "label": "svelte-action",
+      "matches": {
+        "svaction": true,
+        "svelte action": true
+      }
+    },
+    {
+      "content": "require('svelte/register');\nconst ${1:App} = require('${2:./App.svelte}').default;",
+      "doc": "",
+      "label": "svelte-register",
+      "matches": {
+        "svelte register": true,
+        "svreg": true
+      }
+    },
+    {
+      "content": "{#each ${1:items} as ${2:item}, i (${3:key})}\n\t${4: <!-- content here -->}\n{/each}",
+      "doc": "",
+      "label": "svelte-each-index-key-block",
+      "matches": {
+        "sveach-i-k": true,
+        "svelte each index key": true
+      }
+    },
+    {
+      "content": "${1|transition,in,out|}:${2:name}",
+      "doc": "",
+      "label": "svelte-transition",
+      "matches": {
+        "svelte transition": true,
+        "svt": true
+      }
+    },
+    {
+      "content": "const ${1:store} = spring(${2:value}, ${3:options});",
+      "doc": "",
+      "label": "svelte-spring",
+      "matches": {
+        "svelte spring": true,
+        "svsp": true
+      }
+    },
+    {
+      "content": "const { head, html, css } = ${1:App}.render({\n\tprops: ${3:props},\n})",
+      "doc": "",
+      "label": "svelte-render-component",
+      "matches": {
+        "svelte render component": true,
+        "svrcom": true
+      }
+    },
+    {
+      "content": "{#await ${1:promise}}\n\t${2: <!-- content when promise is pending -->}\n{:then ${3:value}}\n\t${4: <!-- content when promise was fulfilled -->}\n{/await}",
+      "doc": "",
+      "label": "svelte-await-then-block",
+      "matches": {
+        "svawait": true,
+        "svelte await then": true
+      }
+    },
+    {
+      "content": "function ${1:foo}(node, ${2:parameters}) {\n\t// the node has been mounted in the DOM\n\treturn {\n\t\tdestroy() {\n\t\t\t// the node has been removed from the DOM\n\t\t}\n\t};\n}",
+      "doc": "",
+      "label": "svelte-action-parameters",
+      "matches": {
+        "svactionp": true,
+        "svelte action parameters": true
+      }
+    },
+    {
+      "content": "on:${1|introstart,introend,outrostart,outroend|}=\"{() => status = '${1|introstart,introend,outrostart,outroend|}'}\"",
+      "doc": "",
+      "label": "svelte-transition-events",
+      "matches": {
+        "svelte transition events": true,
+        "svte": true
+      }
+    },
+    {
+      "content": "function ${1:foo}(node, ${2:parameters}) {\n\t// the node has been mounted in the DOM\n\treturn {\n\t\tupdate(${2:parameters}) {\n\t\t\t// the value of `${2:parameters}` has changed\n\t\t}\n\t\tdestroy() {\n\t\t\t// the node has been removed from the DOM\n\t\t}\n\t};\n}",
+      "doc": "",
+      "label": "svelte-action-update",
+      "matches": {
+        "svactionu": true,
+        "svelte action update": true
+      }
+    },
+    {
+      "content": "${1|transition,in,out|}:${2:name}|${3:local}",
+      "doc": "",
+      "label": "svelte-transition-local",
+      "matches": {
+        "svelte transition local": true,
+        "svtl": true
+      }
+    },
+    {
+      "content": "const ${1:store} = readable(${2:initialValue}, () => {\n\t${3:console.log('got a subscriber');}\n\treturn () => ${4:console.log('no more subscribers');}\n});",
+      "doc": "",
+      "label": "svelte-readable",
+      "matches": {
+        "svelte readable": true,
+        "svr": true
+      }
+    },
+    {
+      "content": "onMount(() => {\n\t${1:// content here}\n});",
+      "doc": "",
+      "label": "svelte-on-mount",
+      "matches": {
+        "svelte lifecycle mount": true,
+        "svlfm": true
+      }
+    },
+    {
+      "content": "const ${1:store} = writable(${2:initialValue}, () => {\n\t${3:console.log('got a subscriber');}\n\treturn () => ${4:console.log('no more subscribers');}\n});",
+      "doc": "",
+      "label": "svelte-writeable-set",
+      "matches": {
+        "svelte writeable set": true,
+        "svwt": true
+      }
+    },
+    {
+      "content": "{#await ${1:promise} then ${2:value}}\n\t${3: <!-- content when promise was fulfilled -->}\n{/await}",
+      "doc": "",
+      "label": "svelte-await-short-block",
+      "matches": {
+        "svawait-short": true,
+        "svelte await short": true
+      }
+    },
+    {
+      "content": "const ${1:store} = writable(${2:initialValue});",
+      "doc": "",
+      "label": "svelte-writeable",
+      "matches": {
+        "svelte writeable": true,
+        "svw": true
+      }
+    },
+    {
+      "content": "<script>\n\t${1:// your script goes here}\n</script>",
+      "doc": "",
+      "label": "svelte-script-tag",
+      "matches": {
+        "svelte script": true,
+        "svscript": true
+      }
+    },
+    {
+      "content": "beforeUpdate(() => {\n\t${1:// content here}\n});",
+      "doc": "",
+      "label": "svelte-before-update",
+      "matches": {
+        "svelte lifecycle before update": true,
+        "svlfbu": true
+      }
+    },
+    {
+      "content": "{#await ${1:promise}}\n\t${2: <!-- content when promise is pending -->}\n{:then ${3:value}}\n\t${4: <!-- content when promise was fulfilled -->}\n{:catch error}\n\t${5: <!-- content when promise was rejected -->}\n{/await}",
+      "doc": "",
+      "label": "svelte-await-catch-block",
+      "matches": {
+        "svawait-catch": true,
+        "svelte await catch": true
+      }
+    },
+    {
+      "content": "${1|transition,in,out|}:${2:name}|${3:local}={${4:params}}",
+      "doc": "",
+      "label": "svelte-transition-all",
+      "matches": {
+        "svelte transition all": true,
+        "svta": true
+      }
+    },
+    {
+      "content": "${1|transition,in,out|}:${2:name}={${3:params}}",
+      "doc": "",
+      "label": "svelte-transition-params",
+      "matches": {
+        "svelte transition params": true,
+        "svtp": true
+      }
+    },
+    {
+      "content": "afterUpdate(() => {\n\t${1:// content here}\n});",
+      "doc": "",
+      "label": "svelte-after-update",
+      "matches": {
+        "svelte lifecycle-after-update": true,
+        "svlfap": true
+      }
+    },
+    {
+      "content": "bind:this={${1:dom_node}}",
+      "doc": "",
+      "label": "svelte-bind-this",
+      "matches": {
+        "svbind-this": true,
+        "svelte bind this": true
+      }
+    },
+    {
+      "content": "{:then ${1:value}}\n\t${2: <!-- content when promise was fulfilled -->}",
+      "doc": "",
+      "label": "svelte-then-block",
+      "matches": {
+        "svelte then": true,
+        "svthen": true
+      }
+    },
+    {
+      "content": "<slot name=\"${1:x}\">${2:<!-- optional fallback -->}</slot>",
+      "doc": "",
+      "label": "svelte-slot-name",
+      "matches": {
+        "svelte slot name": true,
+        "svsn": true
+      }
+    },
+    {
+      "content": "onDestroy(() => {\n\t${1:// content here}\n});",
+      "doc": "",
+      "label": "svelte-on-destroy",
+      "matches": {
+        "svelte lifecycle destroy": true,
+        "svlfd": true
+      }
+    },
+    {
+      "content": "{:catch error}\n\t<!-- promise was rejected -->",
+      "doc": "",
+      "label": "svelte-catch-block",
+      "matches": {
+        "svcatch": true,
+        "svelte catch": true
+      }
+    },
+    {
+      "content": "{:else}\n\t${1: <!-- else content here -->}",
+      "doc": "",
+      "label": "svelte-else-block",
+      "matches": {
+        "svelse": true,
+        "svelte else": true
+      }
+    },
+    {
+      "content": "{#each ${1:items} as ${2:item}, (${3:key})}\n\t${4: <!-- content here -->}\n{/each}",
+      "doc": "",
+      "label": "svelte-each-key-block",
+      "matches": {
+        "sveach-key": true,
+        "svelte each key": true
+      }
+    },
+    {
+      "content": "await tick()",
+      "doc": "",
+      "label": "svelte-tick",
+      "matches": {
+        "sv-tick": true,
+        "svelte tick": true
+      }
+    },
+    {
+      "content": "on:${1:eventname}",
+      "doc": "",
+      "label": "svelte-on-event-forward",
+      "matches": {
+        "svelte on event foward": true,
+        "svon-foward": true
+      }
+    },
+    {
+      "content": "on:${1:eventname}={${2:handler}}",
+      "doc": "on event",
+      "label": "svelte-on-event",
+      "matches": {
+        "svelte on event": true,
+        "svon": true
+      }
+    },
+    {
+      "content": "setContext(${1:key}, ${2:context})",
+      "doc": "",
+      "label": "svelte-set-context",
+      "matches": {
+        "sv-content": true,
+        "svelte set content": true
+      }
+    },
+    {
+      "content": "{#if ${1:condition}}\n\t${2: <!-- content here -->}\n{:else if ${3: otherCondition}}\n\t${4: <!-- else if content here -->}\n{:else}\n\t${5: <!-- else content here -->}\n{/if}",
+      "doc": "",
+      "label": "svelte-if-else-if-block",
+      "matches": {
+        "svelte if else if": true,
+        "svif-else-if": true
+      }
+    },
+    {
+      "content": "<slot>${1:<!-- optional fallback -->}</slot>",
+      "doc": "",
+      "label": "svelte-slot",
+      "matches": {
+        "svelte slot": true,
+        "svsl": true
+      }
+    },
+    {
+      "content": "getContext(${1:key})",
+      "doc": "",
+      "label": "svelte-get-context",
+      "matches": {
+        "svelte get content": true,
+        "svgetc": true
+      }
+    },
+    {
+      "content": "on:${1:eventname}|${2|preventDefault,stopPropagation,passive,capture,once|}={${3:handler}}",
+      "doc": "",
+      "label": "svelte-on-event-modifiers",
+      "matches": {
+        "svelte on event modifiers": true,
+        "svon-modifiers": true
+      }
+    },
+    {
+      "content": "<svelte:self />",
+      "doc": "",
+      "label": "svelte-self",
+      "matches": {
+        "svelte self": true,
+        "svse": true
+      }
+    },
+    {
+      "content": "animate:${1:name}={${2:params}}",
+      "doc": "",
+      "label": "svelte-animate",
+      "matches": {
+        "sva": true,
+        "svelte animate": true
+      }
+    },
+    {
+      "content": "const dispatch = createEventDispatcher();",
+      "doc": "",
+      "label": "svelte-dispatch",
+      "matches": {
+        "svdp": true,
+        "svelte dispatch": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,941 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "allocate(${1:array}, stat=${2:err})\nif ($2 /= 0) print *, \"$1: Allocation request denied\"",
+      "doc": "Allocate Array",
+      "label": "al",
+      "matches": {
+        "al": true
+      }
+    },
+    {
+      "content": "dot_product($1,$2)",
+      "doc": "Dot Product of Vectors",
+      "label": "dot",
+      "matches": {
+        "dot": true
+      }
+    },
+    {
+      "content": "forall (${1:i=1:100}${2:, mask})\n\t$0\nend forall",
+      "doc": "forall",
+      "label": "for",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "if (${1:condition})",
+      "doc": "if (single line)",
+      "label": "if",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "type(${1:type name}) ::",
+      "doc": "Quick Custom Type",
+      "label": "t",
+      "matches": {
+        "t": true
+      }
+    },
+    {
+      "content": ".not.",
+      "doc": "Not",
+      "label": "not",
+      "matches": {
+        "not": true
+      }
+    },
+    {
+      "content": ".or.",
+      "doc": "Or",
+      "label": "or",
+      "matches": {
+        "or": true
+      }
+    },
+    {
+      "content": "character(len=*) ::",
+      "doc": "Quick Character",
+      "label": "c",
+      "matches": {
+        "c": true
+      }
+    },
+    {
+      "content": ".neqv.",
+      "doc": "Non-Equality",
+      "label": "neqv",
+      "matches": {
+        "neqv": true
+      }
+    },
+    {
+      "content": ".le.",
+      "doc": "Less or Equal",
+      "label": "le",
+      "matches": {
+        "le": true
+      }
+    },
+    {
+      "content": "case ${1:default}\n\t$0",
+      "doc": "case",
+      "label": "case",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "write(unit=${1:iounit}, fmt=\"(${2:format string})\", iostat=${3:ios}${4:, advance='NO'}) ${5:variables}\nif ($3 /= 0) stop \"Write error in file unit $1\"",
+      "doc": "Write",
+      "label": "write",
+      "matches": {
+        "write": true
+      }
+    },
+    {
+      "content": "integer ::",
+      "doc": "Quick Integer",
+      "label": "i",
+      "matches": {
+        "i": true
+      }
+    },
+    {
+      "content": "read*,",
+      "doc": "Quick Read",
+      "label": "re",
+      "matches": {
+        "re": true
+      }
+    },
+    {
+      "content": "cycle",
+      "doc": "cycle",
+      "label": "cy",
+      "matches": {
+        "cy": true
+      }
+    },
+    {
+      "content": "if (allocated($1)) deallocate(${1:array}, stat=${2:err})\nif ($2 /= 0) print *, \"$1: Deallocation request denied$0\"",
+      "doc": "Deallocate Array",
+      "label": "deal",
+      "matches": {
+        "deal": true
+      }
+    },
+    {
+      "content": "do while (${1:condition})\n\t$0\nend do",
+      "doc": "do while",
+      "label": "dow",
+      "matches": {
+        "dow": true
+      }
+    },
+    {
+      "content": "program ${1:name}\n\n\timplicit none\n\t$0\n\nend program $1",
+      "doc": "program",
+      "label": "prog",
+      "matches": {
+        "prog": true
+      }
+    },
+    {
+      "content": "else if (${1:condition}) then",
+      "doc": "else if",
+      "label": "elif",
+      "matches": {
+        "elif": true
+      }
+    },
+    {
+      "content": ".eq.",
+      "doc": "Equal",
+      "label": "eq",
+      "matches": {
+        "eq": true
+      }
+    },
+    {
+      "content": "print*,",
+      "doc": "Quick Print",
+      "label": "pr",
+      "matches": {
+        "pr": true
+      }
+    },
+    {
+      "content": ".eqv.",
+      "doc": "Equality",
+      "label": "eqv",
+      "matches": {
+        "eqv": true
+      }
+    },
+    {
+      "content": "data ${1:variable} / ${2:data} /",
+      "doc": "data",
+      "label": "data",
+      "matches": {
+        "data": true
+      }
+    },
+    {
+      "content": "write(unit=${1:iounit}, fmt=*) ${0:variables}",
+      "doc": "Quick Write",
+      "label": "wr",
+      "matches": {
+        "wr": true
+      }
+    },
+    {
+      "content": ".ge.",
+      "doc": "Greater or Equal",
+      "label": "ge",
+      "matches": {
+        "ge": true
+      }
+    },
+    {
+      "content": "call random_number($0)",
+      "doc": "Random Number",
+      "label": "rn",
+      "matches": {
+        "rn": true
+      }
+    },
+    {
+      "content": ".gt.",
+      "doc": "Greater Than",
+      "label": "gt",
+      "matches": {
+        "gt": true
+      }
+    },
+    {
+      "content": ".true.",
+      "doc": ".true.",
+      "label": "tr",
+      "matches": {
+        "tr": true
+      }
+    },
+    {
+      "content": "inquire(file=${1:filename}, opened=${2:ioopen}, exists=${3:ioexist}, number=${4:iounit})",
+      "doc": "Inquire (by Filename)",
+      "label": "inq",
+      "matches": {
+        "inq": true
+      }
+    },
+    {
+      "content": "where ($1 ${2:==} $3)\n\t$0\nend where",
+      "doc": "where",
+      "label": "whe",
+      "matches": {
+        "whe": true
+      }
+    },
+    {
+      "content": "if (${1:condition}) then\n\t$0\nend if",
+      "doc": "if",
+      "label": "if1",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "logical ::",
+      "doc": "Quick Logical",
+      "label": "l",
+      "matches": {
+        "l": true
+      }
+    },
+    {
+      "content": ".lt.",
+      "doc": "Less Than",
+      "label": "lt",
+      "matches": {
+        "lt": true
+      }
+    },
+    {
+      "content": "(${1:i}, $1 = ${2:1}, ${3:100}, ${4:1})$0",
+      "doc": "Implied do",
+      "label": "ido",
+      "matches": {
+        "ido": true
+      }
+    },
+    {
+      "content": "type ${1:type name}\n\t$0\nend type $1",
+      "doc": "Type Definition",
+      "label": "type",
+      "matches": {
+        "type": true
+      }
+    },
+    {
+      "content": "stop \"${1:message}\"",
+      "doc": "stop",
+      "label": "stop",
+      "matches": {
+        "stop": true
+      }
+    },
+    {
+      "content": "real ::",
+      "doc": "Quick Real",
+      "label": "r",
+      "matches": {
+        "r": true
+      }
+    },
+    {
+      "content": "select case ($1:variable)\n\tcase ($2:values)\n\t\t$0\nend select",
+      "doc": "select case",
+      "label": "sel",
+      "matches": {
+        "sel": true
+      }
+    },
+    {
+      "content": "matmul($1,$2)",
+      "doc": "Matrix Multiplication",
+      "label": "mat",
+      "matches": {
+        "mat": true
+      }
+    },
+    {
+      "content": "module procedure ${0:name}",
+      "doc": "module procedure",
+      "label": "mp",
+      "matches": {
+        "mp": true
+      }
+    },
+    {
+      "content": "spread(${1:source}, dim=${2:1}, ncopies=$3)",
+      "doc": "spread",
+      "label": "spread",
+      "matches": {
+        "spread": true
+      }
+    },
+    {
+      "content": "open(unit=${1:iounit}, iostat=${3:ios}, status=\"${4:scratch}\", action=\"${5:readwrite}\")\nif ($3 /= 0) stop \"Error opening scratch file on unit $1\"",
+      "doc": "Scratch File",
+      "label": "open3",
+      "matches": {
+        "open": true
+      }
+    },
+    {
+      "content": "read(unit=${1:iounit}, fmt=\"(${2:format string})\", iostat=${3:istat}) ${4:variables}\nif ($3 /= 0) stop \"Read error in file unit $1\"",
+      "doc": "Read",
+      "label": "read1",
+      "matches": {
+        "read": true
+      }
+    },
+    {
+      "content": "read(unit=${1:iounit}, fmt=\"(${2:format string})\", iostat=${3:istat}, advance='NO', size=${4:number of characters}) ${5:variables}\nif ($3 /= 0) stop \"Read error in file unit $1\"",
+      "doc": "Read (Non Advancing Mode)",
+      "label": "read",
+      "matches": {
+        "read": true
+      }
+    },
+    {
+      "content": "inquire(unit=${1:iounit}, opened=${2:ioopen}, name=${3:filename}, action=${4:ioaction})",
+      "doc": "Inquire (by Unit)",
+      "label": "inq1",
+      "matches": {
+        "inq": true
+      }
+    },
+    {
+      "content": "function ${1:name}(${2:input}) result(${3:output})\n\t${4:argument type}, intent(${5:inout}) :: $2\n\t${6:function type} :: $3\n\t$0\nend function $1",
+      "doc": "function",
+      "label": "fun",
+      "matches": {
+        "fun": true
+      }
+    },
+    {
+      "content": "min($1, $2, ${3:...})$0",
+      "doc": "min",
+      "label": "min",
+      "matches": {
+        "min": true
+      }
+    },
+    {
+      "content": "max($1, $2, ${3:...})$0",
+      "doc": "max",
+      "label": "max",
+      "matches": {
+        "max": true
+      }
+    },
+    {
+      "content": "module ${1:name}\n\n\timplicit none\n\t$0\n\nend module $1",
+      "doc": "module",
+      "label": "mod",
+      "matches": {
+        "mod": true
+      }
+    },
+    {
+      "content": "where ($1 ${2:==} $3)",
+      "doc": "where (single line)",
+      "label": "wh",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "close(unit=${1:iounit}, iostat=${2:ios}${3:, status=\"delete\"})\nif ($2 /= 0) stop \"Error closing file unit $1\"",
+      "doc": "Close File",
+      "label": "close",
+      "matches": {
+        "close": true
+      }
+    },
+    {
+      "content": "implicit none",
+      "doc": "implicit none",
+      "label": "imp",
+      "matches": {
+        "imp": true
+      }
+    },
+    {
+      "content": ".and.",
+      "doc": "And",
+      "label": "and",
+      "matches": {
+        "and": true
+      }
+    },
+    {
+      "content": "interface ${1:name}\n\t$0\nend interface $1",
+      "doc": "interface",
+      "label": "interf",
+      "matches": {
+        "interf": true
+      }
+    },
+    {
+      "content": "allocate(${1:array}, stat=${2:err})\nif ($2 /= 0) print *, \"$1: Allocation request denied\"\n\nif (allocated($1)) deallocate($1, stat=$2)\nif ($2 /= 0) print *, \"$1: Deallocation request denied\"",
+      "doc": "Allocate and Deallocate array",
+      "label": "alloc",
+      "matches": {
+        "alloc": true
+      }
+    },
+    {
+      "content": ".false.",
+      "doc": ".false.",
+      "label": "fa",
+      "matches": {
+        "fa": true
+      }
+    },
+    {
+      "content": "program ${1:main}\n\t${2}\nend program $1",
+      "doc": "",
+      "label": "program",
+      "matches": {
+        "pr": true
+      }
+    },
+    {
+      "content": "subroutine ${1:`expand('%:r')`}(${2})\n\tuse ${3:comvar}\n\timplicit none\n\t${4}\nend subroutine $1",
+      "doc": "",
+      "label": "subroutine",
+      "matches": {
+        "sua": true
+      }
+    },
+    {
+      "content": "subroutine ${1:`expand('%:r')`}\n\tuse ${2:comvar}\n\timplicit none\n\t${3}\nend subroutine $1",
+      "doc": "",
+      "label": "subroutine",
+      "matches": {
+        "su": true
+      }
+    },
+    {
+      "content": "module ${1:`expand('%:r')`}\n\timplicit none\n\tsave\n\t${2}\nend module $1",
+      "doc": "",
+      "label": "module",
+      "matches": {
+        "mo": true
+      }
+    },
+    {
+      "content": "function ${1:}(${2})\n\t${3}\nend function $1",
+      "doc": "",
+      "label": "function",
+      "matches": {
+        "fu": true
+      }
+    },
+    {
+      "content": "integer, parameter ::",
+      "doc": "",
+      "label": "integer parameter",
+      "matches": {
+        "inp": true
+      }
+    },
+    {
+      "content": "integer ::",
+      "doc": "",
+      "label": "integer",
+      "matches": {
+        "in": true
+      }
+    },
+    {
+      "content": "integer, intent(in)  ::",
+      "doc": "",
+      "label": "integer intent(in)",
+      "matches": {
+        "ini": true
+      }
+    },
+    {
+      "content": "integer, intent(out) ::",
+      "doc": "",
+      "label": "integer intent(out)",
+      "matches": {
+        "ino": true
+      }
+    },
+    {
+      "content": "real, parameter ::",
+      "doc": "",
+      "label": "real parameter",
+      "matches": {
+        "rep": true
+      }
+    },
+    {
+      "content": "real ::",
+      "doc": "",
+      "label": "real",
+      "matches": {
+        "re": true
+      }
+    },
+    {
+      "content": "real, intent(in)  ::",
+      "doc": "",
+      "label": "real intent(in)",
+      "matches": {
+        "rei": true
+      }
+    },
+    {
+      "content": "real, intent(out) ::",
+      "doc": "",
+      "label": "real intent(out)",
+      "matches": {
+        "reo": true
+      }
+    },
+    {
+      "content": "integer, dimension(${1::})${2:#:, allocatable} :: ${3}",
+      "doc": "",
+      "label": "integer dimension",
+      "matches": {
+        "ind": true
+      }
+    },
+    {
+      "content": "integer, dimension(${1}), intent(in)  :: ${2}",
+      "doc": "",
+      "label": "integer dimension intent(in)",
+      "matches": {
+        "indi": true
+      }
+    },
+    {
+      "content": "integer, dimension(${1}), intent(out) :: ${2}",
+      "doc": "",
+      "label": "integer dimension intent(out)",
+      "matches": {
+        "indo": true
+      }
+    },
+    {
+      "content": "real, dimension(${1::})${2:#:, allocatable} :: ${3}",
+      "doc": "",
+      "label": "real dimension",
+      "matches": {
+        "red": true
+      }
+    },
+    {
+      "content": "real, dimension(${1}), intent(in)  :: ${2}",
+      "doc": "",
+      "label": "real dimension intent(in)",
+      "matches": {
+        "redi": true
+      }
+    },
+    {
+      "content": "real, dimension(${1}), intent(out) :: ${2}",
+      "doc": "",
+      "label": "real dimension intent(out)",
+      "matches": {
+        "redo": true
+      }
+    },
+    {
+      "content": "character(${1}) :: ${2}",
+      "doc": "",
+      "label": "character",
+      "matches": {
+        "ch": true
+      }
+    },
+    {
+      "content": "character(${1}), dimension(${2}) :: ${3}",
+      "doc": "",
+      "label": "character dimension",
+      "matches": {
+        "chd": true
+      }
+    },
+    {
+      "content": "logical :: ${1:fileExsit}",
+      "doc": "",
+      "label": "logical",
+      "matches": {
+        "lo": true
+      }
+    },
+    {
+      "content": "if (${1}) ${2}",
+      "doc": "",
+      "label": "if",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "if (${1}) then\n\t${2}\nend if",
+      "doc": "",
+      "label": "if then",
+      "matches": {
+        "ift": true
+      }
+    },
+    {
+      "content": "read(${1:*},${2:*}) ${3}",
+      "doc": "",
+      "label": "read",
+      "matches": {
+        "read": true
+      }
+    },
+    {
+      "content": "write(${1:*},${2:*}) ${3}",
+      "doc": "",
+      "label": "write",
+      "matches": {
+        "wr": true
+      }
+    },
+    {
+      "content": "open(${1:11},file=${2},status=${3:#:old}${4:#:,position='append'})\n${5}\nclose($1)",
+      "doc": "",
+      "label": "open",
+      "matches": {
+        "op": true
+      }
+    },
+    {
+      "content": "select case (${1})\n${2}\nend select",
+      "doc": "",
+      "label": "select case",
+      "matches": {
+        "se": true
+      }
+    },
+    {
+      "content": "case(${1})\n\t${2}",
+      "doc": "",
+      "label": "case",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "do ${1}\nend do",
+      "doc": "",
+      "label": "do",
+      "matches": {
+        "do": true
+      }
+    },
+    {
+      "content": "type ${1:}\n\t${2}\nend type $1",
+      "doc": "",
+      "label": "type",
+      "matches": {
+        "ty": true
+      }
+    },
+    {
+      "content": "type(${1}), dimension(${2::}), allcatable :: ${3}",
+      "doc": "",
+      "label": "type dimension",
+      "matches": {
+        "tyd": true
+      }
+    },
+    {
+      "content": "implicit none\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "impl": true
+      }
+    },
+    {
+      "content": "program ${1:main}\n\t${0}\nend program $1",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "prog": true
+      }
+    },
+    {
+      "content": "module ${1:modulename}\n\t${0}\nend module $1",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mod": true
+      }
+    },
+    {
+      "content": "procedure ${1:name}\n\t${0}\nend procedure $1",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "proc": true
+      }
+    },
+    {
+      "content": "interface ${1:name}\n\t${0}\nend interface $1",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "iface": true
+      }
+    },
+    {
+      "content": "!> @brief ${1}\n!!\n!> ${2}\n!> @author `g:snips_author`\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dox": true
+      }
+    },
+    {
+      "content": "!> @param[${1}]${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "doxp": true
+      }
+    },
+    {
+      "content": "logical :: ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bool": true
+      }
+    },
+    {
+      "content": "integer :: ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "int": true
+      }
+    },
+    {
+      "content": "real :: ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "real": true
+      }
+    },
+    {
+      "content": "double precision :: ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "double": true
+      }
+    },
+    {
+      "content": "character(len=${1:*}) :: ${0:}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "str": true
+      }
+    },
+    {
+      "content": "type(${1:name})\n\t${0}\nend type",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "type": true
+      }
+    },
+    {
+      "content": "${1:type}, parameter :: $2 = ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "const": true
+      }
+    },
+    {
+      "content": "${1:type}, ${2:allocatable, }dimension(${3::}) :: ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "arr": true
+      }
+    },
+    {
+      "content": "${1:type}, intent(inout) :: ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "intent": true
+      }
+    },
+    {
+      "content": "(/ $1 /) ${2:,&} ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "/": true
+      }
+    },
+    {
+      "content": "if ($1) then\n\t${0}\nend if",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "select case (${1:expr})\n\tcase ($2)\n\tcase default\n\t\t$3\nend select ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "do ${1:i} = ${2:start}, ${3:end}, ${4:incr}\n\t${0}\nend do",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "do": true
+      }
+    },
+    {
+      "content": "do while ($1)\n\t$2\nend do",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dow": true
+      }
+    },
+    {
+      "content": "subroutine ${1:name}($2)\n\t${0}\nend subroutine $1",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sub": true
+      }
+    },
+    {
+      "content": "function ${1:name}($2) result($3)\n\t${0}\nend function $1",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "func": true
+      }
+    },
+    {
+      "content": "write(*,*) ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pr": true
+      }
+    },
+    {
+      "content": "write(*,*) '$1 = ', $1",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dpr": true
+      }
+    },
+    {
+      "content": "read(unit = ${1:fp}, file = ${2:filename}, iostat = ${3:ierr}) ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "read": true
+      }
+    },
+    {
+      "content": "write(unit = ${1:fp}, file = ${2:filename}, iostat = ${3:ierr}) ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "write": true
+      }
+    },
+    {
+      "content": "open(unit = ${1:fp}, file = ${2:filename}, status = ${3:unknown}, iostat = ${4:ierr}) ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "open": true
+      }
+    },
+    {
+      "content": "close(unit = ${1:fp}) ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "close": true
+      }
+    }
+  ]
+}

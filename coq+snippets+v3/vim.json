@@ -1,0 +1,514 @@
+{
+  "extends": [
+    "vimshell",
+    "vimspec",
+    "vimwiki",
+    "vital"
+  ],
+  "snippets": [
+    {
+      "content": "if ${1:#:condition}\n  ${0:TARGET}\nendif",
+      "doc": "",
+      "label": "if endif",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "elseif ${1:#:condition}\n    ${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "elseif": true
+      }
+    },
+    {
+      "content": "if ${1:#:condition}\n  ${2:TARGET}\nelse\n  ${3}\nendif",
+      "doc": "",
+      "label": "if else endif",
+      "matches": {
+        "ifelse": true
+      }
+    },
+    {
+      "content": "for ${1:#:var} in ${2:#:list}\n  ${0:TARGET}\nendfor",
+      "doc": "",
+      "label": "for in endfor",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "while ${1:#:condition}\n  ${0:TARGET}\nendwhile",
+      "doc": "",
+      "label": "while endwhile",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "function! ${1:#:func_name}(${2}) abort\n  ${0:TARGET}\nendfunction",
+      "doc": "",
+      "label": "func endfunc",
+      "matches": {
+        "function": true
+      }
+    },
+    {
+      "content": "function! ${1:#:func_name}(${2}) abort\n  ${0:TARGET}\nendfunction",
+      "doc": "",
+      "label": "func endfunc",
+      "matches": {
+        "func": true
+      }
+    },
+    {
+      "content": "try\n  ${1:TARGET}\ncatch /${2:#:pattern}/\n  ${3}\nendtry",
+      "doc": "",
+      "label": "try endtry",
+      "matches": {
+        "try": true
+      }
+    },
+    {
+      "content": "try\n  ${1:TARGET}\nfinally\n  ${2}\nendtry",
+      "doc": "",
+      "label": "try ... finally ... endtry",
+      "matches": {
+        "tryfinally": true
+      }
+    },
+    {
+      "content": "try\n  ${1:TARGET}\nfinally\n  ${2}\nendtry",
+      "doc": "",
+      "label": "try ... finally ... endtry",
+      "matches": {
+        "tryf": true
+      }
+    },
+    {
+      "content": "echomsg string(${1:TARGET})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "echomsg": true
+      }
+    },
+    {
+      "content": "echomsg string(${1:TARGET})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "log": true
+      }
+    },
+    {
+      "content": "command! ${1:#:command_name} call ${2:#:func_name}",
+      "doc": "",
+      "label": "command call function",
+      "matches": {
+        "command": true
+      }
+    },
+    {
+      "content": "function! ${1:#:func_name}(arglead, cmdline, cursorpos) abort\n  return filter(${2:#:list}, 'stridx(v:val, a:arglead) == 0')\nendfunction",
+      "doc": "",
+      "label": "customlist complete function",
+      "matches": {
+        "customlist": true
+      }
+    },
+    {
+      "content": "augroup ${1:#:augroup_name}\n  autocmd!\n  autocmd ${2:#:event}\naugroup END",
+      "doc": "",
+      "label": "augroup with autocmds",
+      "matches": {
+        "augroup": true
+      }
+    },
+    {
+      "content": "redir => ${1:#:var}\n\t${2::TARGET}\nredir END",
+      "doc": "",
+      "label": "redir => var",
+      "matches": {
+        "redir": true
+      }
+    },
+    {
+      "content": "NeoBundle '`getreg('+')=='' ? '<\\`0\\`>' : getreg('+')`'${0}",
+      "doc": "",
+      "label": "NeoBundle ''",
+      "matches": {
+        "NeoBundle": true
+      }
+    },
+    {
+      "content": "NeoBundle '`getreg('+')=='' ? '<\\`0\\`>' : getreg('+')`'${0}",
+      "doc": "",
+      "label": "NeoBundle ''",
+      "matches": {
+        "neobundle": true
+      }
+    },
+    {
+      "content": "NeoBundleLazy '`getreg('+')=='' ? '<\\`0\\`>' : getreg('+')`', {\n  \\ ${0}\n  \\ }",
+      "doc": "",
+      "label": "NeoBundleLazy ''",
+      "matches": {
+        "NeoBundleLazy": true
+      }
+    },
+    {
+      "content": "NeoBundleLazy '`getreg('+')=='' ? '<\\`0\\`>' : getreg('+')`', {\n  \\ ${0}\n  \\ }",
+      "doc": "",
+      "label": "NeoBundleLazy ''",
+      "matches": {
+        "neobundlelazy": true
+      }
+    },
+    {
+      "content": "let s:hooks = neobundle#get_hooks('${1}')\nfunction! s:hooks.on_source(bundle) abort\n  ${0}\nendfunction\nunlet s:hooks",
+      "doc": "",
+      "label": "neobundle hooks",
+      "matches": {
+        "bundle_hooks": true
+      }
+    },
+    {
+      "content": "if exists('g:loaded_${1}')\n  finish\nendif\n\n${0}\n\nlet g:loaded_$1 = 1",
+      "doc": "",
+      "label": "if exists('g:loaded_{plugin-name}')",
+      "matches": {
+        "g:loaded": true
+      }
+    },
+    {
+      "content": "if exists('g:loaded_${1}')\n  finish\nendif\n\n${0}\n\nlet g:loaded_$1 = 1",
+      "doc": "",
+      "label": "if exists('g:loaded_{plugin-name}')",
+      "matches": {
+        "loaded": true
+      }
+    },
+    {
+      "content": "\" vim: ${0:foldmethod=marker}",
+      "doc": "",
+      "label": "\" vim: {modeline}",
+      "matches": {
+        "modeline": true
+      }
+    },
+    {
+      "content": "if !exists('b:undo_ftplugin')\n  let b:undo_ftplugin = ''\nendif\n\n${1}\n\nlet b:undo_ftplugin .= '\n\\ | setlocal ${2:#:option_name1< option_name2<...}\n\\'",
+      "doc": "",
+      "label": "if !exists('b:undo_ftplugin')",
+      "matches": {
+        "undo_ftplugin": true
+      }
+    },
+    {
+      "content": "if !exists('b:undo_ftplugin')\n  let b:undo_ftplugin = ''\nendif\n\n${1}\n\nlet b:undo_ftplugin .= '\n\\ | setlocal ${2:#:option_name1< option_name2<...}\n\\'",
+      "doc": "",
+      "label": "if !exists('b:undo_ftplugin')",
+      "matches": {
+        "b:undo_ftplugin": true
+      }
+    },
+    {
+      "content": "python << EOF\n${0}\nEOF",
+      "doc": "",
+      "label": "python <<EOF | EOF",
+      "matches": {
+        "python": true
+      }
+    },
+    {
+      "content": "python << EOF\n${0}\nEOF",
+      "doc": "",
+      "label": "python <<EOF | EOF",
+      "matches": {
+        "py": true
+      }
+    },
+    {
+      "content": "python3 << EOF\n${0}\nEOF",
+      "doc": "",
+      "label": "python3 <<EOF | EOF",
+      "matches": {
+        "python3": true
+      }
+    },
+    {
+      "content": "python3 << EOF\n${0}\nEOF",
+      "doc": "",
+      "label": "python3 <<EOF | EOF",
+      "matches": {
+        "py3": true
+      }
+    },
+    {
+      "content": "lua << EOF\n${0}\nEOF",
+      "doc": "",
+      "label": "lua <<EOF | EOF",
+      "matches": {
+        "lua": true
+      }
+    },
+    {
+      "content": "let pos_save = getpos('.')\ntry\n  ${0}\nfinally\n  call setpos('.', pos_save)\nendtry",
+      "doc": "",
+      "label": "use pos save",
+      "matches": {
+        "save_pos": true
+      }
+    },
+    {
+      "content": "let save_reg_$1 = getreg('${1}')\nlet save_regtype_$1 = getregtype('$1')\ntry\n  ${0}\nfinally\n  call setreg('$1', save_reg_$1, save_regtype_$1)\nendtry",
+      "doc": "",
+      "label": "use register save",
+      "matches": {
+        "save_register": true
+      }
+    },
+    {
+      "content": "let $1_save = &${1}\nlet &$1 = ${2}\ntry\n  ${0}\nfinally\n  let &$1 = $1_save\nendtry",
+      "doc": "",
+      "label": "use option save",
+      "matches": {
+        "save_option": true
+      }
+    },
+    {
+      "content": "echomsg string([${0:TARGET}])",
+      "doc": "",
+      "label": "debug-echomsg",
+      "matches": {
+        "p": true
+      }
+    },
+    {
+      "content": "v:version > ${1} || (v:version == $1 && has('patch${2}'))",
+      "doc": "",
+      "label": "vim-version-check",
+      "matches": {
+        "version": true
+      }
+    },
+    {
+      "content": "has('patch-${1}')",
+      "doc": "",
+      "label": "vim-version-check-new",
+      "matches": {
+        "version_new": true
+      }
+    },
+    {
+      "content": "\" File: ${1:`expand('%:t')`}\n\" Author: ${2:`g:snips_author`}\n\" Description: ${3}\n${0:\" Last Modified: `strftime(\"%B %d, %Y\")`}",
+      "doc": "",
+      "label": "standard Vim script file header",
+      "matches": {
+        "header": true
+      }
+    },
+    {
+      "content": "if exists('${1:did_`vim_snippets#Filename()`}') || &cp${2: || version < 700}\n\tfinish\nendif\nlet $1 = 1${0}",
+      "doc": "",
+      "label": "script reload guard",
+      "matches": {
+        "guard": true
+      }
+    },
+    {
+      "content": "try\n\t${1:${VISUAL}}\ncatch ${2}\n\t${0}\nendtry",
+      "doc": "",
+      "label": "try ... catch statement",
+      "matches": {
+        "t": true
+      }
+    },
+    {
+      "content": "for ${1} in ${2}\n\t${0:${VISUAL}}\nendfor",
+      "doc": "",
+      "label": "for ... in loop",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "for [${1},${2}] in items(${3})\n\t${0}\n\tunlet $1 $2\nendfor",
+      "doc": "",
+      "label": "for [key, value] in loop",
+      "matches": {
+        "forkv": true
+      }
+    },
+    {
+      "content": "while ${1}\n\t${0:${VISUAL}}\nendw",
+      "doc": "",
+      "label": "while loop",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "if ${1}\n\t${0:${VISUAL}}\nendif",
+      "doc": "",
+      "label": "if statement",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "if ${1}\n\t${2:${VISUAL}}\nelse\n\t${0}\nendif",
+      "doc": "",
+      "label": "if ... else statement",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "augroup ${1:AU_NAME}\n\tautocmd!\n\tautocmd ${2:BufRead,BufNewFile} ${3:*.ext,*.ext3|<buffer[=N]>} ${0}\naugroup END",
+      "doc": "",
+      "label": "augroup ... autocmd block",
+      "matches": {
+        "au": true
+      }
+    },
+    {
+      "content": "augroup ${1:AU_NAME}\n\tautocmd!\n\t${0:${VISUAL}}\naugroup END",
+      "doc": "",
+      "label": "augroupvisual ... autocmd block with visual placeholder",
+      "matches": {
+        "auv": true
+      }
+    },
+    {
+      "content": "Plugin '${0}'",
+      "doc": "",
+      "label": "Vundle.vim Plugin definition",
+      "matches": {
+        "bun": true
+      }
+    },
+    {
+      "content": "Plug '${0}'",
+      "doc": "",
+      "label": "vim-plug Plugin definition",
+      "matches": {
+        "plug": true
+      }
+    },
+    {
+      "content": "Plug '${1}', { 'do': '${0}' }",
+      "doc": "",
+      "label": "vim-plug Plugin definition with { 'do': '' }",
+      "matches": {
+        "plugdo": true
+      }
+    },
+    {
+      "content": "Plug '${1}', { 'on': '${0}' }",
+      "doc": "",
+      "label": "vim-plug Plugin definition with { 'on': '' }",
+      "matches": {
+        "plugon": true
+      }
+    },
+    {
+      "content": "Plug '${1}', { 'for': '${0}' }",
+      "doc": "",
+      "label": "vim-plug Plugin definition with { 'for': '' }",
+      "matches": {
+        "plugfor": true
+      }
+    },
+    {
+      "content": "Plug '${1}', { 'branch': '${0}' }",
+      "doc": "",
+      "label": "vim-plug Plugin definition with { 'branch': '' }",
+      "matches": {
+        "plugbr": true
+      }
+    },
+    {
+      "content": "Plug '${1}', { 'tag': '${0}' }",
+      "doc": "",
+      "label": "vim-plug Plugin definition with { 'tag': '' }",
+      "matches": {
+        "plugtag": true
+      }
+    },
+    {
+      "content": "let ${1:variable} = ${0: value}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "let": true
+      }
+    },
+    {
+      "content": "set ${1:setting};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "se": true
+      }
+    },
+    {
+      "content": "set ${1:setting} = ${0:value}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "set": true
+      }
+    },
+    {
+      "content": "nnoremap ${1} ${2}<CR>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "nn": true
+      }
+    },
+    {
+      "content": "noremap ${1} ${2}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "no": true
+      }
+    },
+    {
+      "content": "vmap ${1} ${2}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vm": true
+      }
+    },
+    {
+      "content": "imap ${1} ${2}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "im": true
+      }
+    },
+    {
+      "content": "execute ${1}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "exe": true
+      }
+    },
+    {
+      "content": "`Filename()`",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "filename": true
+      }
+    }
+  ]
+}

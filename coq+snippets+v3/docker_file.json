@@ -1,0 +1,133 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "USER ${1:name}",
+      "doc": "",
+      "label": "USER",
+      "matches": {
+        "u": true
+      }
+    },
+    {
+      "content": "CMD ${1:command}",
+      "doc": "",
+      "label": "CMD",
+      "matches": {
+        "C": true
+      }
+    },
+    {
+      "content": "WORKDIR ${1:name}",
+      "doc": "",
+      "label": "WORKDIR",
+      "matches": {
+        "w": true
+      }
+    },
+    {
+      "content": "COPY ${1:src} ${2:dest}",
+      "doc": "",
+      "label": "COPY",
+      "matches": {
+        "cp": true
+      }
+    },
+    {
+      "content": "RUN echo \"deb http://archive.ubuntu.com/ubuntu ${1:precise} main universe\" > /etc/apt/sources.list; \\\napt-get update && apt-get -y upgrade; \\ \n${2}; \\\nrm -rf /var/lib/apt/lists/*",
+      "doc": "",
+      "label": "Update Packages",
+      "matches": {
+        "upd": true
+      }
+    },
+    {
+      "content": "LABEL ${1:label}=\"${2:value}\"",
+      "doc": "",
+      "label": "LABEL",
+      "matches": {
+        "L": true
+      }
+    },
+    {
+      "content": "EXPOSE ${1:port}",
+      "doc": "",
+      "label": "EXPOSE",
+      "matches": {
+        "exp": true
+      }
+    },
+    {
+      "content": "ONBUILD ${1}",
+      "doc": "",
+      "label": "ONBUILD",
+      "matches": {
+        "o": true
+      }
+    },
+    {
+      "content": "ENV ${1:key} ${2: value}",
+      "doc": "",
+      "label": "ENV",
+      "matches": {
+        "env": true
+      }
+    },
+    {
+      "content": "# ${1:description}\n#  \n# VERSION ${2:0.1.0}\n${3}",
+      "doc": "",
+      "label": "HEAD",
+      "matches": {
+        "head": true
+      }
+    },
+    {
+      "content": "ADD ${1:src} ${2:dst}",
+      "doc": "",
+      "label": "ADD",
+      "matches": {
+        "a": true
+      }
+    },
+    {
+      "content": "FROM ${1:ubuntu}",
+      "doc": "",
+      "label": "FROM",
+      "matches": {
+        "F": true
+      }
+    },
+    {
+      "content": "ENTRYPOINT ${1:command}",
+      "doc": "",
+      "label": "ENTRYPOINT",
+      "matches": {
+        "ent": true
+      }
+    },
+    {
+      "content": "LABEL maintainer=\"${1:name}\"",
+      "doc": "",
+      "label": "Label maintainer",
+      "matches": {
+        "m": true
+      }
+    },
+    {
+      "content": "VOLUME [\"${1:path}\"]",
+      "doc": "",
+      "label": "VOLUME",
+      "matches": {
+        "v": true
+      }
+    },
+    {
+      "content": "RUN ${1:command}",
+      "doc": "",
+      "label": "RUN",
+      "matches": {
+        "R": true
+      }
+    }
+  ]
+}

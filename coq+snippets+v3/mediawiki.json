@@ -1,0 +1,141 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "== ${1} ==\n\n${2}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "==": true
+      }
+    },
+    {
+      "content": "=== ${1} ===\n\n${2}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "===": true
+      }
+    },
+    {
+      "content": "==== ${1} ====\n\n${2}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "====": true
+      }
+    },
+    {
+      "content": "===== ${1} =====\n\n${2}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "=====": true
+      }
+    },
+    {
+      "content": "====== ${1} ======\n\n${2}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "======": true
+      }
+    },
+    {
+      "content": "[[${1}]] ${2}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "[[": true
+      }
+    },
+    {
+      "content": "''${1}''",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "''": true
+      }
+    },
+    {
+      "content": "'''${1}'''",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "'''": true
+      }
+    },
+    {
+      "content": "'''''${1}'''''",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "'''''": true
+      }
+    },
+    {
+      "content": "<syntaxhighlight lang=\"${1}\">\n${2}\n</syntaxhighlight>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sy": true
+      }
+    },
+    {
+      "content": "<pre>\n${1}\n</pre>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pre": true
+      }
+    },
+    {
+      "content": "<html>\n${1}\n</html>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "html": true
+      }
+    },
+    {
+      "content": "<nowiki>${1}</nowiki>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "nowiki": true
+      }
+    },
+    {
+      "content": "<tt>${1}</tt>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tt": true
+      }
+    },
+    {
+      "content": "<blockquote>${1}</blockquote>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "blockquote": true
+      }
+    },
+    {
+      "content": "<!--\nvim: filetype=mediawiki\n-->",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ft": true
+      }
+    },
+    {
+      "content": "{|class=\"wikitable\"\n|+ ${1}\n! ${2}\n! ${3}\n|-\n| ${4}\n| ${5}\n|-\n| ${6}\n| ${7}\n|-\n|\n|\n|}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "{|": true
+      }
+    }
+  ]
+}

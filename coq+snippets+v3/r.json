@@ -1,0 +1,607 @@
+{
+  "extends": [
+    "r-snippets"
+  ],
+  "snippets": [
+    {
+      "content": "${1:name}UI <- function(id) {\n  ns <- NS(id)\n  tagList(\n    ${2}\n  )\n}\n\n${1:name}Server <- function(id) {\n  moduleServer(id, function(input, output, session) {\n    ${3}\n  })\n}",
+      "doc": "",
+      "label": "shinymod",
+      "matches": {
+        "shinymod": true
+      }
+    },
+    {
+      "content": "setClass(\"${1:Class}\", slots = c(${2:name = \"type\"}))",
+      "doc": "",
+      "label": "setClass",
+      "matches": {
+        "sc": true
+      }
+    },
+    {
+      "content": "return(${1:code})",
+      "doc": "",
+      "label": "return",
+      "matches": {
+        "ret": true
+      }
+    },
+    {
+      "content": "while (${1:condition}) {\n    ${0}\n}",
+      "doc": "",
+      "label": "while",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "library(shiny)\n\nui <- fluidPage(\n  ${0}\n)\n\nserver <- function(input, output, session) {\n  \n}\n\nshinyApp(ui, server)",
+      "doc": "",
+      "label": "shinyapp",
+      "matches": {
+        "shinyapp": true
+      }
+    },
+    {
+      "content": "else {\n    ${0}\n}",
+      "doc": "",
+      "label": "else",
+      "matches": {
+        "el": true
+      }
+    },
+    {
+      "content": "lapply(${1:list}, ${2:function})",
+      "doc": "",
+      "label": "lapply",
+      "matches": {
+        "lapply": true
+      }
+    },
+    {
+      "content": "switch (${1:object},\n    ${2:case} = ${3:action}\n)",
+      "doc": "",
+      "label": "switch",
+      "matches": {
+        "switch": true
+      }
+    },
+    {
+      "content": "sapply(${1:list}, ${2:function})",
+      "doc": "",
+      "label": "sapply",
+      "matches": {
+        "sapply": true
+      }
+    },
+    {
+      "content": "else if (${1:condition}) {\n    ${0}\n}",
+      "doc": "",
+      "label": "else if",
+      "matches": {
+        "ei": true
+      }
+    },
+    {
+      "content": "mapply(${1:function}, ${2:...})",
+      "doc": "",
+      "label": "mapply",
+      "matches": {
+        "mapply": true
+      }
+    },
+    {
+      "content": "library(${1:package})",
+      "doc": "",
+      "label": "library",
+      "matches": {
+        "lib": true
+      }
+    },
+    {
+      "content": "tapply(${1:vector}, ${2:index}, ${3:function})",
+      "doc": "",
+      "label": "tapply",
+      "matches": {
+        "tapply": true
+      }
+    },
+    {
+      "content": "vapply(${1:list}, ${2:function}, FUN.VALUE = ${3:type}, ${4:...})",
+      "doc": "",
+      "label": "vapply",
+      "matches": {
+        "vapply": true
+      }
+    },
+    {
+      "content": "apply(${1:array}, ${2:margin}, ${3:...})",
+      "doc": "",
+      "label": "apply",
+      "matches": {
+        "apply": true
+      }
+    },
+    {
+      "content": "require(${1:package})",
+      "doc": "",
+      "label": "require",
+      "matches": {
+        "req": true
+      }
+    },
+    {
+      "content": "rapply(${1:list}, ${2:function})",
+      "doc": "",
+      "label": "rapply",
+      "matches": {
+        "rapply": true
+      }
+    },
+    {
+      "content": "matrix(${1:data}, nrow = ${2:rows}, ncol = ${3:cols})",
+      "doc": "",
+      "label": "matrix",
+      "matches": {
+        "mat": true
+      }
+    },
+    {
+      "content": "# ${CURRENT_DAY_NAME_SHORT} ${CURRENT_MONTH_NAME_SHORT} ${CURRENT_DATE} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND} ${CURRENT_YEAR} ------------------------------",
+      "doc": "",
+      "label": "timestamp",
+      "matches": {
+        "ts": true
+      }
+    },
+    {
+      "content": "setGeneric(\"${1:generic}\", function(${2:x, ...}) {\n    standardGeneric(\"${1:generic}\")\n})",
+      "doc": "",
+      "label": "setGeneric",
+      "matches": {
+        "sg": true
+      }
+    },
+    {
+      "content": "for (${1:variable} in ${2:vector}) {\n    ${0}\n}",
+      "doc": "",
+      "label": "for",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "${1:name} <- function(${2:variables}) {\n    ${0}\n}",
+      "doc": "",
+      "label": "function",
+      "matches": {
+        "fun": true
+      }
+    },
+    {
+      "content": "source(\"${1:file.R}\")",
+      "doc": "",
+      "label": "source",
+      "matches": {
+        "src": true
+      }
+    },
+    {
+      "content": "if (${1:condition}) {\n    ${0}\n}",
+      "doc": "",
+      "label": "if",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "setMethod(\"${1:generic}\", ${2:class}, function(${2:x, ...}) {\n    ${0}\n})",
+      "doc": "",
+      "label": "setMethod",
+      "matches": {
+        "sm": true
+      }
+    },
+    {
+      "content": "#!/usr/bin/env Rscript",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "#!": true
+      }
+    },
+    {
+      "content": "library(${0:package})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lib": true
+      }
+    },
+    {
+      "content": "require(${0:package})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "req": true
+      }
+    },
+    {
+      "content": "source('${0:file}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "source": true
+      }
+    },
+    {
+      "content": "if ($1) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "else {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "el": true
+      }
+    },
+    {
+      "content": "else if ($1) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ei": true
+      }
+    },
+    {
+      "content": "while(${1:true}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "while(true) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wht": true
+      }
+    },
+    {
+      "content": "for (${1:item} in ${2:list}) {\n\t${3}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "foreach (${1:item} = ${2:list}) {\n\t${3}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "foreach": true
+      }
+    },
+    {
+      "content": "${1:name} <- function (${2:variables}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fun": true
+      }
+    },
+    {
+      "content": "return(${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ret": true
+      }
+    },
+    {
+      "content": "${1:name}[${2:rows}, ${0:cols}]",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "df": true
+      }
+    },
+    {
+      "content": "c(${0:items})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "c": true
+      }
+    },
+    {
+      "content": "list(${0:items})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "li": true
+      }
+    },
+    {
+      "content": "matrix(${1:data}, nrow = ${2:rows}, ncol = ${0:cols})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mat": true
+      }
+    },
+    {
+      "content": "apply(${1:array}, ${2:margin}, ${0:function})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "apply": true
+      }
+    },
+    {
+      "content": "lapply(${1:list}, ${0:function})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lapply": true
+      }
+    },
+    {
+      "content": "lapply(${1:list}, ${0:function})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sapply": true
+      }
+    },
+    {
+      "content": "vapply(${1:list}, ${2:function}, ${0:type})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vapply": true
+      }
+    },
+    {
+      "content": "mapply(${1:function}, ${0:...})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mapply": true
+      }
+    },
+    {
+      "content": "tapply(${1:vector}, ${2:index}, ${0:function})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tapply": true
+      }
+    },
+    {
+      "content": "rapply(${1:list}, ${0:function})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rapply": true
+      }
+    },
+    {
+      "content": "ddply(${1:frame}, ${2:variables}, ${0:function})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dd": true
+      }
+    },
+    {
+      "content": "dlply(${1:frame}, ${2:variables}, ${0:function})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dl": true
+      }
+    },
+    {
+      "content": "daply(${1:frame}, ${2:variables}, ${0:function})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "da": true
+      }
+    },
+    {
+      "content": "d_ply(${1:frame}, ${2:variables}, ${0:function})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "d_": true
+      }
+    },
+    {
+      "content": "adply(${1:array}, ${2:margin}, ${0:function})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ad": true
+      }
+    },
+    {
+      "content": "alply(${1:array}, ${2:margin}, ${0:function})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "al": true
+      }
+    },
+    {
+      "content": "aaply(${1:array}, ${2:margin}, ${0:function})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "aa": true
+      }
+    },
+    {
+      "content": "a_ply(${1:array}, ${2:margin}, ${0:function})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "a_": true
+      }
+    },
+    {
+      "content": "ldply(${1:list}, ${0:function})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ld": true
+      }
+    },
+    {
+      "content": "llply(${1:list}, ${0:function})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ll": true
+      }
+    },
+    {
+      "content": "laply(${1:list}, ${0:function})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "la": true
+      }
+    },
+    {
+      "content": "l_ply(${1:list}, ${0:function})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "l_": true
+      }
+    },
+    {
+      "content": "mdply(${1:matrix}, ${0:function})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "md": true
+      }
+    },
+    {
+      "content": "mlply(${1:matrix}, ${0:function})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ml": true
+      }
+    },
+    {
+      "content": "maply(${1:matrix}, ${0:function})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ma": true
+      }
+    },
+    {
+      "content": "m_ply(${1:matrix}, ${0:function})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "m_": true
+      }
+    },
+    {
+      "content": "plot(${1:x}, ${0:y})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pl": true
+      }
+    },
+    {
+      "content": "ggplot(${1:data}, aes(${0:aesthetics}))",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ggp": true
+      }
+    },
+    {
+      "content": "${1:(jpeg,bmp,png,tiff)}(filename = '${2:filename}', width = ${3}, height = ${4}, unit = '${5}')\n${0:plot}\ndev.off()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "img": true
+      }
+    },
+    {
+      "content": "fisher.test(${1:x}, ${0:y})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fis": true
+      }
+    },
+    {
+      "content": "chisq.test(${1:x}, ${0:y})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "chi": true
+      }
+    },
+    {
+      "content": "t.test(${1:x}, ${0:y})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tt": true
+      }
+    },
+    {
+      "content": "wilcox.test(${1:x}, ${0:y})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wil": true
+      }
+    },
+    {
+      "content": "cor.test(${1:x}, ${0:y})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cor": true
+      }
+    },
+    {
+      "content": "var.test(${1:x}, ${0:y})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fte": true
+      }
+    },
+    {
+      "content": "kv.test(${1:x}, ${0:y})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "kvt": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,269 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "#include <${1:stdio}.h>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "inc": true
+      }
+    },
+    {
+      "content": "#ifndef $1\n#define ${1:SYMBOL} ${2:value}\n#endif /* ifndef $1 */",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ndef": true
+      }
+    },
+    {
+      "content": "#define",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "def": true
+      }
+    },
+    {
+      "content": "#ifdef ${1:FOO}\n\t${2:#define }\n#endif",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ifdef": true
+      }
+    },
+    {
+      "content": "#if ${1:FOO}\n\t${0:${VISUAL}}\n#endif",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "#if": true
+      }
+    },
+    {
+      "content": "if(${1:true})\n{\n\t${0:${VISUAL}}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "if(${1:true})\n{\n\t${2:${VISUAL}}\n}\nelse\n{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "else\n{\n\t${0:${VISUAL}}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "el": true
+      }
+    },
+    {
+      "content": "else if(${1:true})\n{\n\t${0:${VISUAL}}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "elif": true
+      }
+    },
+    {
+      "content": "if(${1:true}) ${0};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ifi": true
+      }
+    },
+    {
+      "content": "$1 ? $2 : $0",
+      "doc": "",
+      "label": "Ternary: `condition ? true : false`",
+      "matches": {
+        "t": true
+      }
+    },
+    {
+      "content": "switch(${1:/* variable */})\n{\n\tcase ${2:/* variable case */}:\n\t\t${3}\n\t\t${4:break;}${5}\n\tdefault:\n\t\t${6}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "switch": true
+      }
+    },
+    {
+      "content": "switch(${1:/* variable */})\n{\n\tcase ${2:/* variable case */}:\n\t\t${3}\n\t\t${4:break;}${5}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "switchndef": true
+      }
+    },
+    {
+      "content": "case ${1:/* variable case */}:\n\t${2}\n\t${3:break;}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "return ${0};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ret": true
+      }
+    },
+    {
+      "content": "foreach(${1:mixed} ${2:ele} in ${3:arr})\n{\n\t${4}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fore": true
+      }
+    },
+    {
+      "content": "for(int ${2:i} = 0; $2 < ${1:count}; $2${3:++})\n{\n\t${4}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "while($1)\n{\n\t${0:${VISUAL}}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "do{\n\t${0:${VISUAL}}\n}while ($1);",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "do": true
+      }
+    },
+    {
+      "content": "${1:void} ${2:function_name}(${3})\n{\n\t${4}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fnc": true
+      }
+    },
+    {
+      "content": "${1:void} ${2:function_name}()\n{\n\t${3}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defun0": true
+      }
+    },
+    {
+      "content": "${1:void} ${2:function_name}(${3:Type} ${4:Parameter})\n{\n\t${5}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defun1": true
+      }
+    },
+    {
+      "content": "${1:void} ${2:function_name}(${3:Type} ${4:Parameter}, ${5:Type} ${6:Parameter})\n{\n\t${7}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defun2": true
+      }
+    },
+    {
+      "content": "${1:void} ${2:function_name}(${3:Type} ${4:Parameter}, ${5:Type} ${6:Parameter}, ${7:Type} ${8:Parameter})\n{\n\t${9}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defun3": true
+      }
+    },
+    {
+      "content": "${1:void} ${2:function_name}(${3});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fund": true
+      }
+    },
+    {
+      "content": "printf(\"${1:%s}\\n\"${2});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pr": true
+      }
+    },
+    {
+      "content": "fprintf(${1:stderr}, \"${2:%s}\\n\"${3});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fpr": true
+      }
+    },
+    {
+      "content": "printf(\"${1:} = %d\\n\", $1);",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "prd": true
+      }
+    },
+    {
+      "content": "printf(\"${1:} = %f\\n\", $1);",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "prf": true
+      }
+    },
+    {
+      "content": "printf(\"${1:} = %${2}\\n\", $1);",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "prx": true
+      }
+    },
+    {
+      "content": "/*! TODO: ${1:Todo description here} */",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "todo": true
+      }
+    },
+    {
+      "content": "[${1}]",
+      "doc": "",
+      "label": "",
+      "matches": {
+        ".": true
+      }
+    },
+    {
+      "content": "// code for ${1} by `$USER` create at `strftime(\"%Y-%m-%d %H:%M:%S\")`",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "head": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "{{#if ${1:value}}}\n${0:${VISUAL}}\n{{/if}}",
+      "doc": "",
+      "label": "# {{#if value}} ... {{/if}}",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "{{#unless ${1:value}}}\n${0:${VISUAL}}\n{{/unless}}",
+      "doc": "",
+      "label": "# {{#unless value}} ... {{/unless}}",
+      "matches": {
+        "ifn": true
+      }
+    },
+    {
+      "content": "{{#if ${1:value}}}\n${2:${VISUAL}}\n{{else}}\n${3}\n{{/if}}",
+      "doc": "",
+      "label": "# {{#if value}} ... {{else}} .. {{/if}}",
+      "matches": {
+        "ife": true
+      }
+    }
+  ]
+}

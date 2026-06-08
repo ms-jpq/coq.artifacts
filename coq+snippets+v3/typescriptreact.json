@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "classnames",
+    "components",
+    "framer-motion",
+    "next-ts",
+    "prop-types",
+    "react-native-ts",
+    "react-ts",
+    "remix-ts",
+    "typescript"
+  ],
+  "snippets": []
+}

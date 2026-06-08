@@ -1,0 +1,85 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "{ lib\n, ${1:stdenv}\n, $2\n}:\n\n$0",
+      "doc": "Package arguments, starting with { lib",
+      "label": "package-arguments",
+      "matches": {
+        "pkg": true
+      }
+    },
+    {
+      "content": "fetchFrom${1|GitHub,GitLab,Gitea,Gitiles,BitBucket,Savannah,RepoOrCz,SourceHut|} {\n  owner = \"$2\";\n  repo = \"$3\";\n  rev = \"${4:v\\${version\\}}\";\n  hash = \"${5:sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=}\";\n};",
+      "doc": "fetchFromGitHub, or any other common fetcher from Nixpkgs",
+      "label": "fetchFrom",
+      "matches": {
+        "fetchFrom": true
+      }
+    },
+    {
+      "content": "stdenv.mkDerivation (finalAttrs: {\n  pname = \"$1\";\n  version = \"$2\";\n\n  src = $3\n\n  nativeBuildInputs = [\n    $4\n  ];\n  buildInputs = [\n    $0\n  ];\n\n  meta = {\n    description = \"$5\";\n    homepage = \"$6\";\n    license = lib.licenses.$7;\n    maintainers = with lib.maintainers; [ $8 ];\n  };\n})",
+      "doc": "Nixpkgs' stdenv.mkDerivation template",
+      "label": "stdenv.mkDerivation",
+      "matches": {
+        "mkd": true
+      }
+    },
+    {
+      "content": "fetchurl {\n  url = \"$1\";\n  hash = \"${2:sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=}\";\n};",
+      "doc": "fetchurl with default empty hash",
+      "label": "fetchurl",
+      "matches": {
+        "fetchurl": true
+      }
+    },
+    {
+      "content": "with $1; $0;",
+      "doc": "with expression",
+      "label": "with",
+      "matches": {
+        "with": true
+      }
+    },
+    {
+      "content": "meta = {\n  description = \"$1\";\n  homepage = \"$2\";\n  license = lib.licenses.$3;\n  maintainers = with lib.maintainers; [ $0 ];\n};",
+      "doc": "Nixpkgs' minimal meta attribute set",
+      "label": "meta",
+      "matches": {
+        "meta": true
+      }
+    },
+    {
+      "content": "\"${1:sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=}\";",
+      "doc": "Empty hash",
+      "label": "hash",
+      "matches": {
+        "hash": true
+      }
+    },
+    {
+      "content": "let\n  $1\nin $0",
+      "doc": "let-in block",
+      "label": "letin",
+      "matches": {
+        "let": true
+      }
+    },
+    {
+      "content": "if $1 then\n  $2\nelse$0",
+      "doc": "if-else block",
+      "label": "ifelse",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "inherit $1;",
+      "doc": "inherit expression",
+      "label": "inherit",
+      "matches": {
+        "inherit": true
+      }
+    }
+  ]
+}

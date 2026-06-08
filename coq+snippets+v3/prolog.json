@@ -1,0 +1,45 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": ":- initialization main.\n\nmain :-\n  current_prolog_flag(argv, Args),\n  writeln(Args),\n  halt.",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "main": true
+      }
+    },
+    {
+      "content": ":- module(${1:name}, [${0:export}]).",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "module": true
+      }
+    },
+    {
+      "content": ":- begin_tests(${1:name}).\n  ${0}\n:- end_tests($1).",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "begintest": true
+      }
+    },
+    {
+      "content": ":- run_tests.\n:- halt.",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "runtest": true
+      }
+    },
+    {
+      "content": "test(${1:case}, [true(${2:var} = ${3:value})]) :-\n  ${0:goal}.",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "test": true
+      }
+    }
+  ]
+}

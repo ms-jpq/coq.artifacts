@@ -1,0 +1,93 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "{{ csrf_field() }}",
+      "doc": "CSRF hidden field",
+      "label": "Form-csrf-field",
+      "matches": {
+        "lv:csrf-field": true
+      }
+    },
+    {
+      "content": "{{ action('${1:ControllerName}', [${2:'id'=>1}]) }}",
+      "doc": "URL-action",
+      "label": "URL-action",
+      "matches": {
+        "lv:action": true
+      }
+    },
+    {
+      "content": "{{ secure_asset('$1', ${2:\\$title}, ${3:\\$attributes=[]}) }}",
+      "doc": "URL-secure-asset",
+      "label": "URL-secure-asset",
+      "matches": {
+        "lv:secure-asset": true
+      }
+    },
+    {
+      "content": "{{ elixir('${1:file}') }}",
+      "doc": "(deprecated) elixir path",
+      "label": "Path-elixir",
+      "matches": {
+        "lv:elixir": true
+      }
+    },
+    {
+      "content": "{{ url('${1:url}', [$2]) }}",
+      "doc": "URL-url",
+      "label": "URL-url",
+      "matches": {
+        "lv:url": true
+      }
+    },
+    {
+      "content": "{{ \\$${1:collection}->links() }}",
+      "doc": "pagination links",
+      "label": "Paginate-links",
+      "matches": {
+        "lv:pagination-links": true
+      }
+    },
+    {
+      "content": "{{ mix('${1:file}') }}",
+      "doc": "mix path",
+      "label": "Path-mix",
+      "matches": {
+        "lv:mix": true
+      }
+    },
+    {
+      "content": "{{ csrf_token() }}",
+      "doc": "CSRF token",
+      "label": "csrf-token",
+      "matches": {
+        "lv:csrf-token": true
+      }
+    },
+    {
+      "content": "{{ asset('$1') }}",
+      "doc": "URL-asset",
+      "label": "URL-asset",
+      "matches": {
+        "lv:asset": true
+      }
+    },
+    {
+      "content": "{{ route('${1:routeName}', [${2:'id'=>1}]) }}",
+      "doc": "URL-route",
+      "label": "URL-route",
+      "matches": {
+        "lv:route": true
+      }
+    },
+    {
+      "content": "{{ trans('$1') }}",
+      "doc": "trans",
+      "label": "String-trans",
+      "matches": {
+        "lv:trans": true
+      }
+    }
+  ]
+}

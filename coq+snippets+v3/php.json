@@ -1,0 +1,1459 @@
+{
+  "extends": [
+    "codeigniter",
+    "laravel",
+    "livewire",
+    "phpdoc",
+    "yii"
+  ],
+  "snippets": [
+    {
+      "content": "* @param ${1:Type} ${2:var} ${3:Description}$0",
+      "doc": "Paramater documentation",
+      "label": "PHPDoc param …",
+      "matches": {
+        "param": true
+      }
+    },
+    {
+      "content": "\\$this->$0;",
+      "doc": "$this->...",
+      "label": "$this->…",
+      "matches": {
+        "this": true
+      }
+    },
+    {
+      "content": "/**\n * $1\n */\ntrait ${2:TraitName}\n{\n\t$0\n}",
+      "doc": "Trait",
+      "label": "trait …",
+      "matches": {
+        "trait": true
+      }
+    },
+    {
+      "content": "var_dump($0);",
+      "doc": "var_dump",
+      "label": "Variable Dump",
+      "matches": {
+        "vd": true
+      }
+    },
+    {
+      "content": "if (${1:condition}) {\n\t${0:# code...}\n}",
+      "doc": "If block",
+      "label": "if …",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "enum ${1:EnumName}\n{\n\tcase $0;\n}",
+      "doc": "Enum definition",
+      "label": "enum …",
+      "matches": {
+        "enum": true
+      }
+    },
+    {
+      "content": "if (${1:condition}) {\n\t${2:# code...}\n} else {\n\t${3:# code...}\n}\n$0",
+      "doc": "If Else block",
+      "label": "if … else …",
+      "matches": {
+        "ifelse": true
+      }
+    },
+    {
+      "content": "\\$${1:retVal} = (${2:condition}) ? ${3:a} : ${4:b} ;",
+      "doc": "Ternary conditional assignment",
+      "label": "$… = ( … ) ? … : …",
+      "matches": {
+        "if?": true
+      }
+    },
+    {
+      "content": "else {\n\t${0:# code...}\n}",
+      "doc": "Else block",
+      "label": "else …",
+      "matches": {
+        "else": true
+      }
+    },
+    {
+      "content": "elseif (${1:condition}) {\n\t${0:# code...}\n}",
+      "doc": "Elseif block",
+      "label": "elseif …",
+      "matches": {
+        "elseif": true
+      }
+    },
+    {
+      "content": "#region",
+      "doc": "Folding Region Start",
+      "label": "Region Start",
+      "matches": {
+        "#region": true
+      }
+    },
+    {
+      "content": "#endregion",
+      "doc": "Folding Region End",
+      "label": "Region End",
+      "matches": {
+        "#endregion": true
+      }
+    },
+    {
+      "content": "\\$${1:arrayName} = array('$2' => $3${4:,} $0);",
+      "doc": "Array initializer",
+      "label": "$… = array (…)",
+      "matches": {
+        "array": true
+      }
+    },
+    {
+      "content": "'$1' => $2${3:,} $0",
+      "doc": "Key-Value initializer",
+      "label": "… => …",
+      "matches": {
+        "keyval": true
+      }
+    },
+    {
+      "content": "echo \\$this->$0;",
+      "doc": "Echo this",
+      "label": "echo $this->…",
+      "matches": {
+        "ethis": true
+      }
+    },
+    {
+      "content": "public function __construct(${1: priarg}) {\n}",
+      "doc": "Create __construct method using the last php syntax.",
+      "label": "function __construct",
+      "matches": {
+        "con": true
+      }
+    },
+    {
+      "content": "switch (\\$${1:variable}) {\n\tcase '${2:value}':\n\t\t${3:# code...}\n\t\tbreak;\n\t$0\n\tdefault:\n\t\t${4:# code...}\n\t\tbreak;\n}",
+      "doc": "Switch block",
+      "label": "switch …",
+      "matches": {
+        "switch": true
+      }
+    },
+    {
+      "content": "\\$${1:arrayName} = ['$2' => $3${4:,} $0];",
+      "doc": "Array initializer",
+      "label": "$… = […]",
+      "matches": {
+        "shorray": true
+      }
+    },
+    {
+      "content": "for (\\$${1:i}=${2:0}; \\$${1:i} < $3; \\$${1:i}++) { \n\t${0:# code...}\n}",
+      "doc": "For-loop",
+      "label": "for …",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "case '${1:value}':\n\t${0:# code...}\n\tbreak;",
+      "doc": "Case Block",
+      "label": "case …",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "${1:public }function ${2:#:FunctionName}(${3})\n{\n\t${4:TARGET}\n}",
+      "doc": "",
+      "label": "public function () {}",
+      "matches": {
+        "function": true
+      }
+    },
+    {
+      "content": "function (${1})${2: use } {\n\t${3:TARGET}\n}",
+      "doc": "",
+      "label": "function () {}",
+      "matches": {
+        "function_literal": true
+      }
+    },
+    {
+      "content": "<?php\n${1:TARGET}\n/* End of file ${2:filename}.php */",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "php": true
+      }
+    },
+    {
+      "content": "<?php echo ${1} ?>${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pecho": true
+      }
+    },
+    {
+      "content": "<?php echo htmlentities(${1}, ENT_QUOTES, 'utf-8') ?>${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "echoh": true
+      }
+    },
+    {
+      "content": "<?php if (${1:#:condition}): ?>\n${2:TARGET}\n<?php else: ?>\n${0}\n<?php endif; ?>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pifelse": true
+      }
+    },
+    {
+      "content": "<?php if (${1:#:condition}): ?>\n${0:TARGET}\n<?php endif; ?>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pif": true
+      }
+    },
+    {
+      "content": "<?php else: ?>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pelse": true
+      }
+    },
+    {
+      "content": "<?php $this->${0} ?>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pthis": true
+      }
+    },
+    {
+      "content": "<?php echo $this->${0} ?>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pethis": true
+      }
+    },
+    {
+      "content": "/**\n * ${3:#:undocumented constant}\n **/\ndefine(${1} ${2});${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "doc_constant": true
+      }
+    },
+    {
+      "content": "/**\n * ${4:#:undocumented function}\n *\n * @return ${5:void}\n * @author ${6}\n **/\n${1}function ${2}(${3});${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "doc_interface_function": true
+      }
+    },
+    {
+      "content": "/**\n * ${4:#:undocumented function}\n *\n * @return ${5:void}\n * @author ${6}\n **/\n${1}function ${2}(${3})\n{\n\t${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "doc_function": true
+      }
+    },
+    {
+      "content": "/**\n * ${1}\n *\n * @author ${2}\n * @version ${3}\n * @copyright ${4}\n * @package ${5:default}\n **/\n\n/**\n * Define DocBlock\n **/",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "doch": true
+      }
+    },
+    {
+      "content": "/**\n * ${2:#:undocumented class}\n *\n * @package ${3:default}\n * @author ${4}\n **/\ninterface ${1}\n{\n\t${0:TARGET}\n} // END interface $1",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "doci": true
+      }
+    },
+    {
+      "content": "/**\n * ${0}\n */",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "doc": true
+      }
+    },
+    {
+      "content": "/**\n * ${1}\n */\nclass ${2:#:ClassName}${3:#:extends}\n{\n\t$5\n\tfunction ${4:__construct}(${5:#:argument})\n\t{\n\t\t${0:# code...}\n\t}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "class_with_constructor": true
+      }
+    },
+    {
+      "content": "class ${2:#:ClassName} {\n\t${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "class": true
+      }
+    },
+    {
+      "content": "${1}defined('${2}')${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "def": true
+      }
+    },
+    {
+      "content": "do {\n\t${0:TARGET}\n} while (${1:#:condition});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dowhile": true
+      }
+    },
+    {
+      "content": "if (${1:#:condition}) {\n\t${2:TARGET}\n} else {\n\t${3:#:code...}\n}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ifelse": true
+      }
+    },
+    {
+      "content": "if (${1:#:condition}) {\n\t${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "var_dump(${0:TARGET});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "var_dump": true
+      }
+    },
+    {
+      "content": "print_r(${1});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "p": true
+      }
+    },
+    {
+      "content": "echo \"${1:#:string}\";",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "echo": true
+      }
+    },
+    {
+      "content": "printf(\"${1:#:string}\\n\"${2:, });",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "println": true
+      }
+    },
+    {
+      "content": "else {\n\t${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "else": true
+      }
+    },
+    {
+      "content": "elseif (${1:#:condition}) {\n\t${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "elseif": true
+      }
+    },
+    {
+      "content": "function __construct(${1})\n{\n\t${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "construct": true
+      }
+    },
+    {
+      "content": "<<<${1:HTML}\n${2:TARGET:#:content here}\n$1;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "here": true
+      }
+    },
+    {
+      "content": "include '${1:#:file}';${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "inc": true
+      }
+    },
+    {
+      "content": "include_once '${1:#:file}';${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "inco": true
+      }
+    },
+    {
+      "content": "require '${1:#:file}';${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "req": true
+      }
+    },
+    {
+      "content": "require_once '${1:#:file}';${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "reqo": true
+      }
+    },
+    {
+      "content": "return${1};${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ret": true
+      }
+    },
+    {
+      "content": "return false;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "retf": true
+      }
+    },
+    {
+      "content": "return true;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rett": true
+      }
+    },
+    {
+      "content": "case '${1:#:variable}':\n\t${0:#:code...}\n\tbreak;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "switch (${1:#:variable}) {\ncase '${2:#:value}':\n\t${3:#:code...}\n\tbreak;\n${0}\ndefault:\n\t${4:#:code...}\n\tbreak;\n}",
+      "doc": "",
+      "label": "sw",
+      "matches": {
+        "switch": true
+      }
+    },
+    {
+      "content": "try {\n\t${1:TARGET}\n} catch (${2:#:Exception} $e) {\n\t${3:#:code}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "try": true
+      }
+    },
+    {
+      "content": "try {\n\t${1:TARGET}\n} catch (${2:#:Exception} $e) {\n\t${3:#:code}\n} finally {\n\t${4:#:code}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tryf": true
+      }
+    },
+    {
+      "content": "while (${1}) {\n\t${0:TARGET}\n}",
+      "doc": "",
+      "label": "wh",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "\\$GLOBALS['${1:#:variable}']${2: = }${3:#:something}${4:;}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gloabals": true
+      }
+    },
+    {
+      "content": "\\$_COOKIE['${1:#:variable}']",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cookie": true
+      }
+    },
+    {
+      "content": "\\$_ENV['${1:#:variable}']",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "env": true
+      }
+    },
+    {
+      "content": "\\$_FILES['${1:#:variable}']",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "files": true
+      }
+    },
+    {
+      "content": "\\$_GET['${1:#:variable}']",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "get": true
+      }
+    },
+    {
+      "content": "\\$_POST['${1:#:variable}']",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "post": true
+      }
+    },
+    {
+      "content": "\\$_REQUEST['${1:#:variable}']",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "request": true
+      }
+    },
+    {
+      "content": "\\$_SERVER['${1:#:variable}']",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "server": true
+      }
+    },
+    {
+      "content": "\\$_SESSION['${1:#:variable}']",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "session": true
+      }
+    },
+    {
+      "content": "var_export(${1}, true)",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "var_export": true
+      }
+    },
+    {
+      "content": "var_export(${1}, true)",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "inspect": true
+      }
+    },
+    {
+      "content": "<?php\n\n${0:${VISUAL}}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "<?": true
+      }
+    },
+    {
+      "content": "declare(strict_types=${1:1});",
+      "doc": "",
+      "label": "declare(strict_types=1)",
+      "matches": {
+        "dst": true
+      }
+    },
+    {
+      "content": "echo ${0};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ec": true
+      }
+    },
+    {
+      "content": "<?php echo ${0} ?>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "<?e": true
+      }
+    },
+    {
+      "content": "<?=${0}?>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "<?=": true
+      }
+    },
+    {
+      "content": "<?= ${0} ?>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "?=": true
+      }
+    },
+    {
+      "content": "<?php ${0} ?>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "?": true
+      }
+    },
+    {
+      "content": "class ${1:`vim_snippets#Filename()`}\n{\n\t${0:${VISUAL}}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "c": true
+      }
+    },
+    {
+      "content": "interface ${1:`vim_snippets#Filename()`}\n{\n\t${0:${VISUAL}}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "i": true
+      }
+    },
+    {
+      "content": "\\$this->",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "t.": true
+      }
+    },
+    {
+      "content": "function ${1}(${3})\n{\n\t${0:${VISUAL}}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "f": true
+      }
+    },
+    {
+      "content": "${1:protected} function ${2:foo}()\n{\n\t${0:${VISUAL}}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "m": true
+      }
+    },
+    {
+      "content": "/**\n * Gets the value of ${1:foo}\n *\n * @return ${2:string}\n */\n${3:public} function get${4:$1}()\n{\n\treturn $this->${5:$1};\n}",
+      "doc": "",
+      "label": "PHP Class Getter Setter",
+      "matches": {
+        "gm": true
+      }
+    },
+    {
+      "content": "${1:$foo}->set${2:Bar}(${0});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "$s": true
+      }
+    },
+    {
+      "content": "${1:$foo}->get${0:Bar}();",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "$g": true
+      }
+    },
+    {
+      "content": "${1:true} ? ${2:a} : ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "?:": true
+      }
+    },
+    {
+      "content": "$_COOKIE['${1:variable}']",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "C": true
+      }
+    },
+    {
+      "content": "$_ENV['${1:variable}']",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "E": true
+      }
+    },
+    {
+      "content": "$_FILES['${1:variable}']",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "F": true
+      }
+    },
+    {
+      "content": "$_GET['${1:variable}']",
+      "doc": "",
+      "label": "_GET array",
+      "matches": {
+        "G": true
+      }
+    },
+    {
+      "content": "$_POST['${1:variable}']",
+      "doc": "",
+      "label": "_POST array",
+      "matches": {
+        "P": true
+      }
+    },
+    {
+      "content": "$_REQUEST['${1:variable}']",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "R": true
+      }
+    },
+    {
+      "content": "$_SERVER['${1:variable}']",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "S": true
+      }
+    },
+    {
+      "content": "$_SESSION['${1:variable}']",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "SS": true
+      }
+    },
+    {
+      "content": "$_GET['${1}']",
+      "doc": "",
+      "label": "get",
+      "matches": {
+        "get": true
+      }
+    },
+    {
+      "content": "$_POST['${1}']",
+      "doc": "",
+      "label": "post",
+      "matches": {
+        "post": true
+      }
+    },
+    {
+      "content": "$_SESSION['${1}']",
+      "doc": "",
+      "label": "session",
+      "matches": {
+        "session": true
+      }
+    },
+    {
+      "content": "include '${1:file}';",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "inc": true
+      }
+    },
+    {
+      "content": "include_once '${1:file}';",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "inc1": true
+      }
+    },
+    {
+      "content": "require '${1:file}';",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "req": true
+      }
+    },
+    {
+      "content": "require_once '${1:file}';",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "req1": true
+      }
+    },
+    {
+      "content": "/**\n * ${0}\n */",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "/*": true
+      }
+    },
+    {
+      "content": "/**\n * ${1:undocumented class}\n *\n * @package ${2:default}\n * @subpackage ${3:default}\n * @author ${4:`g:snips_author`}\n */",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "doc_cp": true
+      }
+    },
+    {
+      "content": "/**\n * ${1:undocumented class variable}\n *\n * @var ${2:string}\n */",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "doc_vp": true
+      }
+    },
+    {
+      "content": "/**\n * ${3:undocumented class}\n *\n * @package ${4:default}\n * @subpackage ${5:default}\n * @author ${6:`g:snips_author`}\n */\n${1:}class ${2:}\n{\n\t${0:${VISUAL}}\n} // END $1class $2",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "doc_c": true
+      }
+    },
+    {
+      "content": "/**\n * ${1:undocumented constant}\n */",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "doc_dp": true
+      }
+    },
+    {
+      "content": "/**\n * ${3:undocumented constant}\n */\ndefine(${1}, ${2});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "doc_d": true
+      }
+    },
+    {
+      "content": "/**\n * ${1:undocumented function}\n *\n * @return ${2:void}\n * @author ${3:`g:snips_author`}\n */",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "doc_fp": true
+      }
+    },
+    {
+      "content": "/**\n * ${4:undocumented function}\n *\n * @return ${5:void}\n * @author ${6:`g:snips_author`}\n */\n${1}function ${2}(${3});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "doc_s": true
+      }
+    },
+    {
+      "content": "/**\n * ${4:undocumented function}\n *\n * @return ${5:void}\n * @author ${6:`g:snips_author`}\n */\n${1}function ${2}(${3})\n{${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "doc_f": true
+      }
+    },
+    {
+      "content": "/**\n * $1\n * @package ${2:default}\n * @author ${3:`!v g:snips_author`}\n **/\ninterface ${1:someClass}\n{${4}\n}",
+      "doc": "",
+      "label": "interface someClass {}",
+      "matches": {
+        "doc_i": true
+      }
+    },
+    {
+      "content": "/**\n * {@inheritdoc}\n */",
+      "doc": "",
+      "label": "@inheritdoc docblock",
+      "matches": {
+        "inheritdoc": true
+      }
+    },
+    {
+      "content": "/**\n * ${2:undocumented class}\n *\n * @package ${3:default}\n * @author ${4:`g:snips_author`}\n */\ninterface ${1:`vim_snippets#Filename()`}\n{\n\t${0:${VISUAL}}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "interface": true
+      }
+    },
+    {
+      "content": "/**\n * ${2:undocumented class}\n *\n * @package ${3:default}\n * @author ${4:`g:snips_author`}\n */\ntrait ${1:`vim_snippets#Filename()`}\n{\n\t${0:${VISUAL}}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "trait": true
+      }
+    },
+    {
+      "content": "/**\n * ${1}\n */\nclass ${2:`vim_snippets#Filename()`}\n{\n\t${3}\n\t/**\n\t * ${4}\n\t */\n\t${5:public} function ${6:__construct}(${7:argument})\n\t{\n\t\t${0}\n\t}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "class": true
+      }
+    },
+    {
+      "content": "define('${1:VARIABLE_NAME}', ${2:'definition'});",
+      "doc": "",
+      "label": "define('VARIABLE_NAME', 'definition')",
+      "matches": {
+        "def": true
+      }
+    },
+    {
+      "content": "${1}defined('${2}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "def?": true
+      }
+    },
+    {
+      "content": "while ($1) {\n\t${0:${VISUAL}}\n}",
+      "doc": "",
+      "label": "while (condition) { ... }",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "do {\n\t${0:${VISUAL}}\n} while (${1});",
+      "doc": "",
+      "label": "do { ... } while (condition)",
+      "matches": {
+        "do": true
+      }
+    },
+    {
+      "content": "if (${1}) {\n\t${0:${VISUAL}}\n}",
+      "doc": "",
+      "label": "if (condition) { ... }",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "if (!${1}) {\n\t${0:${VISUAL}}\n}",
+      "doc": "",
+      "label": "if (!condition) { ... }",
+      "matches": {
+        "ifn": true
+      }
+    },
+    {
+      "content": "<?php if (${1}): ?>\n\t${0:${VISUAL}}\n<?php endif; ?>",
+      "doc": "",
+      "label": "<?php if (condition): ?> ... <?php endif; ?>",
+      "matches": {
+        "ifil": true
+      }
+    },
+    {
+      "content": "if (${1}) {\n\t${0:${VISUAL}}\n} else {\n\t${2}\n}",
+      "doc": "",
+      "label": "if (cond) { ... } else { ... }",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "<?php if (${1}): ?>\n\t${0:${VISUAL}}\n<?php else: ?>\n\t${2}\n<?php endif; ?>",
+      "doc": "",
+      "label": "<?php if (condition): ?> ... <?php else: ?> ... <?php endif; ?>",
+      "matches": {
+        "ifeil": true
+      }
+    },
+    {
+      "content": "else {\n\t${0:${VISUAL}}\n}",
+      "doc": "",
+      "label": "else { ... }",
+      "matches": {
+        "el": true
+      }
+    },
+    {
+      "content": "elseif (${1}) {\n\t${0:${VISUAL}}\n}",
+      "doc": "",
+      "label": "elseif(condition) { ... }",
+      "matches": {
+        "eif": true
+      }
+    },
+    {
+      "content": "case '${1:value}':\n\t${0:${VISUAL}}\n\tbreak;",
+      "doc": "",
+      "label": "case 'value': ... break",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "try {\n\t${0:${VISUAL}}\n} catch (${1:Exception} $e) {\n}",
+      "doc": "",
+      "label": "try { ... } catch (Exception $e) { ... }",
+      "matches": {
+        "try": true
+      }
+    },
+    {
+      "content": "echo '<pre>'; var_dump(${0}); echo '</pre>';",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pd": true
+      }
+    },
+    {
+      "content": "echo '<pre>'; var_dump(${1}); echo '</pre>'; die(${0:});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pdd": true
+      }
+    },
+    {
+      "content": "var_dump(${0});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vd": true
+      }
+    },
+    {
+      "content": "var_dump(${1}); die(${0:});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vdd": true
+      }
+    },
+    {
+      "content": "print_r(${0});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pr": true
+      }
+    },
+    {
+      "content": "print_r(${0}, 1);",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "prs": true
+      }
+    },
+    {
+      "content": "header (\"HTTP/1.1 301 Moved Permanently\");\nheader (\"Location: \".URL);\nexit();",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "http_redirect": true
+      }
+    },
+    {
+      "content": "error_log(var_export(${1}, true));",
+      "doc": "",
+      "label": "error_log(var_export($var, true));",
+      "matches": {
+        "log": true
+      }
+    },
+    {
+      "content": "var_export(${1});",
+      "doc": "",
+      "label": "var_export($var)",
+      "matches": {
+        "var": true
+      }
+    },
+    {
+      "content": "echo '<pre>' . var_export(${1}, 1) . '</pre>';",
+      "doc": "",
+      "label": "Dumb debug helper in HTML",
+      "matches": {
+        "ve": true
+      }
+    },
+    {
+      "content": "var_export($1);$0",
+      "doc": "",
+      "label": "Dumb debug helper in cli",
+      "matches": {
+        "pc": true
+      }
+    },
+    {
+      "content": "return true;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rett": true
+      }
+    },
+    {
+      "content": "return false;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "retf": true
+      }
+    },
+    {
+      "content": "<?php\n\nclass CSVWriter {\n\tpublic function __construct($file_or_handle, $sep = \"\\t\", $quot = '\"'){\n\t\t$args = func_get_args();\n\t\t$mode = isset($opts['mode']) ? $opts['mode'] : 'w';\n\n\t\t$this->f =\n\t\t\tis_string($file_or_handle)\n\t\t\t? fopen($file_or_handle, $mode)\n\t\t\t: $file_or_handle;\n\n\t\t$this->fputcsv_args = [$this->f, null, $sep, $quot];\n\n\t\tif (!$this->f) throw new Exception('bad file descriptor');\n\t}\n\n\tpublic function write($row){\n\t\t$this->fputcsv_args[1] =& $row;\n\t\tcall_user_func_array('fputcsv', $this->fputcsv_args);\n\t}\n\n\tpublic function close(){\n\t\tif (!is_null($this->f))\n\t\t\tfclose($this->f);\n\t\t$this->f = null;\n\t}\n\n\tpublic function __destruct(){\n\t\t$this->close();\n\t}\n\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "CSVWriter": true
+      }
+    },
+    {
+      "content": "// http://snipplr.com/view.php?codeview&id=1986 // modified\nclass CSVIterator implements Iterator\n{\n\tprivate $f;\n\tprivate $curr;\n\tprivate $rowCounter;\n\n\t /* opts keys:\n\t\t* row_size\n\t\t* escape\n\t\t* enclosure\n\t\t* delimiter\n\t\t*/\n\tpublic function __construct( $file_or_handle, $opts = [4096, ','] )\n\t{\n\t\t$d = function($n) use(&$opts){ return isset($opts[$n]) ? $opts[$n] : false; };\n\n\t\t$this->combine = $d('combine');\n\t\t$this->headers = $d('headers');\n\t\t$this->headerCheckFunction = $d('header_check_function');\n\n\t\t$this->f =\n\t\t\tis_string($file_or_handle)\n\t\t\t? fopen( $file_or_handle, 'r' )\n\t\t\t: $file_or_handle;\n\t\tif (!$this->f) throw new Exception('bad file descriptor');\n\t\t$this->fgetcsv_args = [\n\t\t\t\t$this->f,\n\t\t\t\tisset($opts['row_size']) ? $opts['row_size'] : 4096,\n\t\t\t\tisset($opts['delimiter']) ? $opts['delimiter'] : ',',\n\t\t\t\tisset($opts['enclosure']) ? $opts['enclosure'] : '\"',\n\t\t\t\tisset($opts['escape']) ? $opts['escape'] : '\\\\',\n\t\t];\n\t\t$this->start();\n\t}\n\n\tprotected function readRow(){\n\t\t$this->curr = call_user_func_array('fgetcsv', $this->fgetcsv_args );\n\t\t$this->rowCounter++;\n\t\tif ($this->rowCounter == 1){\n\t\t\t$this->processHeader();\n\t\t} elseif ($this->curr) {\n\t\t\t$this->processRow();\n\t\t}\n\t}\n\n\tpublic function processHeader(){\n\t\tif ($this->headers || $this->combine){\n\t\t\t$this->header = $this->curr;\n\t\t\tif ($this->headerCheckFunction){\n\t\t\t\t$f = $this->headerCheckFunction;\n\t\t\t\t$f($this->header);\n\t\t\t}\n\t\t\t$this->readRow();\n\t\t}\n\t}\n\n\tpublic function processRow(){\n\t\tif ($this->combine)\n\t\t\t$this->curr = array_combine($this->header, $this->curr);\n\t}\n\n\tpublic function start(){\n\t\t$this->rowCounter = 0;\n\t\trewind( $this->f );\n\t\t$this->readRow();\n\t}\n\n\tpublic function rewind()\n\t{\n\t\t$this->start();\n\t}\n\n\tpublic function current()\n\t{\n\t\t$curr = $this->curr;\n\t\t$this->readRow();\n\t\treturn $curr;\n\t}\n\n\tpublic function key()\n\t{\n\t\treturn $this->rowCounter;\n\t}\n\n\tpublic function next()\n\t{\n\t\treturn $this->curr;\n\t}\n\n\tpublic function valid(){\n\t\tif( !$this->next() )\n\t\t{\n\t\t\tfclose( $this->f );\n\t\t\treturn FALSE;\n\t\t}\n\t\treturn TRUE;\n\t}\n\n} // end class",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "CSVIterator": true
+      }
+    },
+    {
+      "content": "$this->assertEquals(${1:$expected}, ${2:$actual});",
+      "doc": "",
+      "label": "$this->assertEquals($a, $b)",
+      "matches": {
+        "ase": true
+      }
+    },
+    {
+      "content": "$this->assertNotEquals(${1:$expected}, ${2:$actual});",
+      "doc": "",
+      "label": "$this->assertNotEquals($a, $b)",
+      "matches": {
+        "asne": true
+      }
+    },
+    {
+      "content": "$this->assertFalse(${1});",
+      "doc": "",
+      "label": "$this->assertFalse($a)",
+      "matches": {
+        "asf": true
+      }
+    },
+    {
+      "content": "$this->assertTrue(${1});",
+      "doc": "",
+      "label": "$this->assertTrue($a)",
+      "matches": {
+        "ast": true
+      }
+    },
+    {
+      "content": "$this->assertFileExists(${1:'path/to/file'});",
+      "doc": "",
+      "label": "$this->assertFileExists('path/to/file')",
+      "matches": {
+        "asfex": true
+      }
+    },
+    {
+      "content": "$this->assertFileNotExists(${1:'path/to/file'});",
+      "doc": "",
+      "label": "$this->assertFileNotExists('path/to/file')",
+      "matches": {
+        "asfnex": true
+      }
+    },
+    {
+      "content": "$this->assertContains(${1:$needle}, ${2:$haystack});",
+      "doc": "",
+      "label": "$this->assertContains($needle, $haystack)",
+      "matches": {
+        "ascon": true
+      }
+    },
+    {
+      "content": "$this->assertNotContains(${1:$needle}, ${2:$haystack});",
+      "doc": "",
+      "label": "$this->assertNotContains($needle, $haystack)",
+      "matches": {
+        "asncon": true
+      }
+    },
+    {
+      "content": "$this->assertContainsOnly(${1:$needle}, ${2:$haystack});",
+      "doc": "",
+      "label": "$this->assertContainsOnly($needle, $haystack)",
+      "matches": {
+        "ascono": true
+      }
+    },
+    {
+      "content": "$this->assertContainsOnlyInstancesOf(${1:Example}::class, ${2:$haystack});",
+      "doc": "",
+      "label": "$this->assertContainsOnlyInstancesOf(Example::class, $haystack)",
+      "matches": {
+        "asconoi": true
+      }
+    },
+    {
+      "content": "$this->assertArrayHasKey(${1:$key}, ${2:$array});",
+      "doc": "",
+      "label": "$this->assertArrayHasKey($key, $array)",
+      "matches": {
+        "ashk": true
+      }
+    },
+    {
+      "content": "this->assertArrayNotHasKey(${1:$key}, ${2:$array});",
+      "doc": "",
+      "label": "$this->assertArrayNotHasKey($key, $array)",
+      "matches": {
+        "asnhk": true
+      }
+    },
+    {
+      "content": "$this->assertClassHasAttribute(${1:$attributeName}, ${2:Example}::class);",
+      "doc": "",
+      "label": "$this->assertClassHasAttribute($name, Example::class)",
+      "matches": {
+        "ascha": true
+      }
+    },
+    {
+      "content": "$this->assertInstanceOf(${1:Example}::class, ${2:$actual});",
+      "doc": "",
+      "label": "$this->assertInstanceOf(Example::class, $actual)",
+      "matches": {
+        "asi": true
+      }
+    },
+    {
+      "content": "$this->assertInternalType(${1:'string'}, ${2:actual});",
+      "doc": "",
+      "label": "$this->assertInternalType('string', $actual)",
+      "matches": {
+        "asit": true
+      }
+    },
+    {
+      "content": "$this->assertCount(${1:$expectedCount}, ${2:$haystack});",
+      "doc": "",
+      "label": "$this->assertCount($count, $haystack)",
+      "matches": {
+        "asco": true
+      }
+    },
+    {
+      "content": "$this->assertNotCount(${1:$count}, ${2:$haystack});",
+      "doc": "",
+      "label": "$this->assertNotCount($count, $haystack)",
+      "matches": {
+        "asnco": true
+      }
+    },
+    {
+      "content": "$this->assertArraySubset(${1:$subset}, ${2:$array});",
+      "doc": "",
+      "label": "$this->assertArraySubset($subset, $array)",
+      "matches": {
+        "assub": true
+      }
+    },
+    {
+      "content": "$this->assertNull(${1});",
+      "doc": "",
+      "label": "$this->assertNull($a)",
+      "matches": {
+        "asnu": true
+      }
+    },
+    {
+      "content": "$this->assertNotNull(${1});",
+      "doc": "",
+      "label": "$this->assertNotNull($a)",
+      "matches": {
+        "asnnu": true
+      }
+    },
+    {
+      "content": "public function test${1}()\n{\n\t${0:${VISUAL}}\n}",
+      "doc": "",
+      "label": "public function testXYZ() { ... }",
+      "matches": {
+        "test": true
+      }
+    },
+    {
+      "content": "protected function setUp()\n{\n\t${0:${VISUAL}}\n}",
+      "doc": "",
+      "label": "protected function setUp() { ... }",
+      "matches": {
+        "setup": true
+      }
+    },
+    {
+      "content": "protected function tearDown()\n{\n\t${0:${VISUAL}}\n}",
+      "doc": "",
+      "label": "protected function tearDown() { ... }",
+      "matches": {
+        "teardown": true
+      }
+    },
+    {
+      "content": "expects($this->${1:once}())\n\t->method('${2}')\n\t->with(${3})\n\t->willReturn(${4});",
+      "doc": "",
+      "label": "phpunit expects",
+      "matches": {
+        "exp": true
+      }
+    },
+    {
+      "content": "/**\n* @group ${1}\n*/",
+      "doc": "",
+      "label": "phpunit comment with group",
+      "matches": {
+        "testcmt": true
+      }
+    },
+    {
+      "content": "$this->fail(${1});",
+      "doc": "",
+      "label": "$this->fail()",
+      "matches": {
+        "fail": true
+      }
+    },
+    {
+      "content": "$this->markTestIncomplete(${1});",
+      "doc": "",
+      "label": "$this->markTestIncomplete()",
+      "matches": {
+        "marki": true
+      }
+    },
+    {
+      "content": "$this->markTestSkipped(${1});",
+      "doc": "",
+      "label": "$this->markTestSkipped()",
+      "matches": {
+        "marks": true
+      }
+    },
+    {
+      "content": "throw new ${1:Exception}(\"${2:Error Processing Request}\");",
+      "doc": "",
+      "label": "throw new Exception()",
+      "matches": {
+        "te": true
+      }
+    },
+    {
+      "content": "file_put_contents(${1:file}, ${2:content}${3:, FILE_APPEND});$0",
+      "doc": "",
+      "label": "file_put_contents",
+      "matches": {
+        "fpc": true
+      }
+    },
+    {
+      "content": "str_replace(${1:search}, ${2:replace}, ${3:subject})$0",
+      "doc": "",
+      "label": "str_replace",
+      "matches": {
+        "sr": true
+      }
+    },
+    {
+      "content": "in_array(${1:needle}, ${2:haystack})$0",
+      "doc": "",
+      "label": "in_array",
+      "matches": {
+        "ia": true
+      }
+    },
+    {
+      "content": "isset(${1:var})$0",
+      "doc": "",
+      "label": "isset",
+      "matches": {
+        "is": true
+      }
+    },
+    {
+      "content": "file_exists(${1:file})$0",
+      "doc": "",
+      "label": "file_exists",
+      "matches": {
+        "fe": true
+      }
+    },
+    {
+      "content": "is_dir(${1:path})$0",
+      "doc": "",
+      "label": "is_dir",
+      "matches": {
+        "id": true
+      }
+    }
+  ]
+}

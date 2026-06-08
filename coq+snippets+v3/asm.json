@@ -1,0 +1,349 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": ";;\n;; @brief      ${1:function description}\n;;\n;; @details    ${2:detailed description}\n;;\n;; @param      ${3:param}\n;;\n;; @return     ${4:return}\n;;",
+      "doc": "",
+      "label": ";; @brief ...",
+      "matches": {
+        "doxy": true
+      }
+    },
+    {
+      "content": ".data\n\n\n.text\n\n\n.global main\n\n\nmain:",
+      "doc": "",
+      "label": "Start basic code for assembly",
+      "matches": {
+        "scode": true
+      }
+    },
+    {
+      "content": ".data\n\n\n.text\n\n\n.globl _start\n\n\n_start:",
+      "doc": "",
+      "label": "Start basic code for assembly with _start label",
+      "matches": {
+        "scodes": true
+      }
+    },
+    {
+      "content": "$1: .long $2",
+      "doc": "",
+      "label": "Long",
+      "matches": {
+        "lo": true
+      }
+    },
+    {
+      "content": "$1: .word $2",
+      "doc": "",
+      "label": "Word",
+      "matches": {
+        "wo": true
+      }
+    },
+    {
+      "content": "$1: .byte $2",
+      "doc": "",
+      "label": "Byte",
+      "matches": {
+        "by": true
+      }
+    },
+    {
+      "content": "$1: .space $2",
+      "doc": "",
+      "label": "Space",
+      "matches": {
+        "sp": true
+      }
+    },
+    {
+      "content": "$1: .ascii \"$2\"",
+      "doc": "",
+      "label": "Ascii",
+      "matches": {
+        "ai": true
+      }
+    },
+    {
+      "content": "$1: .asciz \"$2\"",
+      "doc": "",
+      "label": "Asciz",
+      "matches": {
+        "az": true
+      }
+    },
+    {
+      "content": "$1: .zero \"$2\"",
+      "doc": "",
+      "label": "Zero",
+      "matches": {
+        "ze": true
+      }
+    },
+    {
+      "content": "$1: .quad \"$2\"",
+      "doc": "",
+      "label": "Quad",
+      "matches": {
+        "qu": true
+      }
+    },
+    {
+      "content": "$1: .single \"$2\"",
+      "doc": "",
+      "label": "Single",
+      "matches": {
+        "si": true
+      }
+    },
+    {
+      "content": "$1: .single \"$2\"",
+      "doc": "",
+      "label": "Double",
+      "matches": {
+        "do": true
+      }
+    },
+    {
+      "content": "$1: .single \"$2\"",
+      "doc": "",
+      "label": "Float",
+      "matches": {
+        "fl": true
+      }
+    },
+    {
+      "content": "$1: .single \"$2\"",
+      "doc": "",
+      "label": "Octa",
+      "matches": {
+        "oc": true
+      }
+    },
+    {
+      "content": "$1: .single \"$2\"",
+      "doc": "",
+      "label": "Short",
+      "matches": {
+        "sh": true
+      }
+    },
+    {
+      "content": "movl \\$1, %eax\nxorl %ebx, %ebx\nint \\$0x80",
+      "doc": "",
+      "label": "Exit without error",
+      "matches": {
+        "exit0": true
+      }
+    },
+    {
+      "content": "mov \\$1, %eax\nmov $1, %ebx\nint \\$0x80",
+      "doc": "",
+      "label": "Exit with error",
+      "matches": {
+        "exit": true
+      }
+    },
+    {
+      "content": "mov \\$3, %eax\nmov \\$2, %ebx\nmov $1, %ecx\nmov $2, %edx\nint \\$0x80",
+      "doc": "",
+      "label": "Read fixed length text from stdin",
+      "matches": {
+        "readfstdin": true
+      }
+    },
+    {
+      "content": "mov \\$4, %eax\nmov \\$1, %ebx\nmov $1, %ecx\nmov $2, %edx\nint \\$0x80",
+      "doc": "",
+      "label": "Write text to stdout",
+      "matches": {
+        "writestdout": true
+      }
+    },
+    {
+      "content": "mov \\$4, %eax\nmov \\$2, %ebx\nmov $1, %ecx\nmov $2, %edx\nint \\$0x80",
+      "doc": "",
+      "label": "Write text to stderr",
+      "matches": {
+        "writestderr": true
+      }
+    },
+    {
+      "content": "mov $1, %eax\nmul $2",
+      "doc": "",
+      "label": "Multiplication",
+      "matches": {
+        "*": true
+      }
+    },
+    {
+      "content": "mov $1, %eax\ndiv $2",
+      "doc": "",
+      "label": "Division",
+      "matches": {
+        "/": true
+      }
+    },
+    {
+      "content": "cmp $1, $2\njl $3",
+      "doc": "",
+      "label": "Conditional lower jump",
+      "matches": {
+        "jmpl": true
+      }
+    },
+    {
+      "content": "cmp $1, $2\njle $3",
+      "doc": "",
+      "label": "Conditional lower or equal jump",
+      "matches": {
+        "jmple": true
+      }
+    },
+    {
+      "content": "cmp $1, $2\nje $3",
+      "doc": "",
+      "label": "Conditional equal jump",
+      "matches": {
+        "jmpe": true
+      }
+    },
+    {
+      "content": "cmp $1, $2\njn $3",
+      "doc": "",
+      "label": "Conditional not equal jump",
+      "matches": {
+        "jmpn": true
+      }
+    },
+    {
+      "content": "cmp $1, $2\njg $3",
+      "doc": "",
+      "label": "Conditional greater jump",
+      "matches": {
+        "jmpg": true
+      }
+    },
+    {
+      "content": "cmp $1, $2\nje $3",
+      "doc": "",
+      "label": "Conditional greater or equal jump",
+      "matches": {
+        "jmpge": true
+      }
+    },
+    {
+      "content": "mov $1, %ecx\n\net_for:\n\t$2\n\n\tloop et_for",
+      "doc": "",
+      "label": "Loop n times",
+      "matches": {
+        "loopn": true
+      }
+    },
+    {
+      "content": "mov $1, %ecx\ndec %ecx\n\net_for:\n\t$2\n\n\tloop et_for",
+      "doc": "",
+      "label": "Loop n-1 times",
+      "matches": {
+        "loopnn": true
+      }
+    },
+    {
+      "content": "lea $1, %edi\nxor %ecx, %ecx\n\net_for:\n\tcmp %ecx, $2\n\tje $3\n\n\t$4\n\n\tinc %ecx\n\tjmp et_for",
+      "doc": "",
+      "label": "Loop through a vector",
+      "matches": {
+        "loopv": true
+      }
+    },
+    {
+      "content": "xor %edx, %edx\nmov $1, %eax\nmul $2",
+      "doc": "",
+      "label": "Multiply",
+      "matches": {
+        "mul": true
+      }
+    },
+    {
+      "content": "mov $1, %edx\nmov $2, %eax\nmul $3",
+      "doc": "",
+      "label": "Multiply numbers greater than 2^32",
+      "matches": {
+        "mul64": true
+      }
+    },
+    {
+      "content": "xor %edx, %edx\nmov $1, %eax\ndiv $2",
+      "doc": "",
+      "label": "Divide",
+      "matches": {
+        "div": true
+      }
+    },
+    {
+      "content": "mov $1, %edx\nmov $2, %eax\ndiv $3",
+      "doc": "",
+      "label": "Divide numbers greater than 2^32",
+      "matches": {
+        "div64": true
+      }
+    },
+    {
+      "content": "pushl $1\ncall printf\npopl $2",
+      "doc": "",
+      "label": "Call printf",
+      "matches": {
+        "pr": true
+      }
+    },
+    {
+      "content": "pushl $1\ncall scanf\npopl $2",
+      "doc": "",
+      "label": "Call scanf",
+      "matches": {
+        "sc": true
+      }
+    },
+    {
+      "content": "xor %edx, %edx\nmovl $1, %eax\nmull $2\naddl $3, %eax",
+      "doc": "",
+      "label": "Current index from a matrix",
+      "matches": {
+        "mindex": true
+      }
+    },
+    {
+      "content": "pushl \\$0\ncall fflush\npopl $1",
+      "doc": "",
+      "label": "Call fflush",
+      "matches": {
+        "ffl": true
+      }
+    },
+    {
+      "content": "pushl $1\ncall atoi\npopl $2",
+      "doc": "",
+      "label": "Call atoi",
+      "matches": {
+        "at": true
+      }
+    },
+    {
+      "content": "pushl $1\ncall strlen\npopl $2",
+      "doc": "",
+      "label": "Call strlen",
+      "matches": {
+        "len": true
+      }
+    },
+    {
+      "content": "$1:\npushl %ebp\nmovl %esp, %ebp\n\n$2\n\npopl %ebp\nret",
+      "doc": "",
+      "label": "Basic procedure",
+      "matches": {
+        "proc": true
+      }
+    }
+  ]
+}

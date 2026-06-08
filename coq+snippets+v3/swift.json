@@ -1,0 +1,381 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "class ${1:Name} {\n\n\t$0\n}",
+      "doc": "class declaration",
+      "label": "class",
+      "matches": {
+        "class": true
+      }
+    },
+    {
+      "content": "while ${1:condition} {\n\t$0\n}",
+      "doc": "while statement",
+      "label": "while",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "repeat {\n\t$0\n} while ${1:condition}",
+      "doc": "repeat-while statement",
+      "label": "repeat-while",
+      "matches": {
+        "repeat": true
+      }
+    },
+    {
+      "content": "protocol ${1:Name} {\n\n\t$0\n}",
+      "doc": "protocol declaration",
+      "label": "protocol",
+      "matches": {
+        "protocol": true
+      }
+    },
+    {
+      "content": "func ${1:name}(${2:parameters}) -> ${3:Type} {\n\t$0\n}",
+      "doc": "function declaration",
+      "label": "func",
+      "matches": {
+        "func": true
+      }
+    },
+    {
+      "content": "switch ${1:value} {\ncase ${2:pattern}:\n\t$0\ndefault:\n\t\n}",
+      "doc": "switch statement",
+      "label": "switch",
+      "matches": {
+        "switch": true
+      }
+    },
+    {
+      "content": "enum ${1:Name} {\n\n\tcase $0\n}",
+      "doc": "enum declaration",
+      "label": "enum",
+      "matches": {
+        "enum": true
+      }
+    },
+    {
+      "content": "struct ${1:Name} {\n\n\t$0\n}",
+      "doc": "struct declaration",
+      "label": "struct",
+      "matches": {
+        "struct": true
+      }
+    },
+    {
+      "content": "struct ${1:Name}: View {\n\n\tvar body: some View {\n\t\t$0\n\t}\n}",
+      "doc": "SwiftUI view declaration",
+      "label": "swiftui-view",
+      "matches": {
+        "view": true
+      }
+    },
+    {
+      "content": "print(\"$1\")\n$0",
+      "doc": "print(\"...\")",
+      "label": "print",
+      "matches": {
+        "print": true
+      }
+    },
+    {
+      "content": "extension ${1:Type} {\n\n\t$0\n}",
+      "doc": "extension declaration",
+      "label": "extension",
+      "matches": {
+        "extension": true
+      }
+    },
+    {
+      "content": "guard ${1:condition} else {\n\t$0\n}",
+      "doc": "guard statement",
+      "label": "guard",
+      "matches": {
+        "guard": true
+      }
+    },
+    {
+      "content": "for ${1:item} in ${2:collection} {\n\t$0\n}",
+      "doc": "for-in statement",
+      "label": "for",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "do {\n\t$0\n} catch ${1:error} {\n\t$2\n}",
+      "doc": "do statement",
+      "label": "do",
+      "matches": {
+        "do": true
+      }
+    },
+    {
+      "content": "guard let ${1:value} = ${2:optional} else {\n\t$0\n}",
+      "doc": "guard statement with optional binding",
+      "label": "guard let",
+      "matches": {
+        "guardlet": true
+      }
+    },
+    {
+      "content": "else {\n\t$0\n}",
+      "doc": "else clause",
+      "label": "else",
+      "matches": {
+        "else": true
+      }
+    },
+    {
+      "content": "else if ${1:condition} {\n\t$0\n}",
+      "doc": "else clause with a nested if statement",
+      "label": "else if",
+      "matches": {
+        "elif": true
+      }
+    },
+    {
+      "content": "if ${1:condition} {\n\t$0\n}",
+      "doc": "if statement",
+      "label": "if",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "if let ${1:value} = ${2:optional} {\n\t$0\n}",
+      "doc": "if statement with optional binding",
+      "label": "if let",
+      "matches": {
+        "iflet": true
+      }
+    },
+    {
+      "content": "struct ${1:name} {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "struct": true
+      }
+    },
+    {
+      "content": "class ${1:name} {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "class": true
+      }
+    },
+    {
+      "content": "enum ${1:name} {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "enum": true
+      }
+    },
+    {
+      "content": "case ${1:pattern}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "protocol ${1:name} {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "protocol": true
+      }
+    },
+    {
+      "content": "var ${1:name}: ${2:Int}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "var": true
+      }
+    },
+    {
+      "content": "let ${1:name}: ${2:Int}${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "let": true
+      }
+    },
+    {
+      "content": "extension ${1:Int} {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "extension": true
+      }
+    },
+    {
+      "content": "func ${1:name}(${2:#:arguments}) -> ${3:Int}${0}",
+      "doc": "",
+      "label": "func name(...) -> Type { ... }",
+      "matches": {
+        "func": true
+      }
+    },
+    {
+      "content": "func ${1:name}(${2:#:arguments})${0}",
+      "doc": "",
+      "label": "func name(...) { ... }",
+      "matches": {
+        "void": true
+      }
+    },
+    {
+      "content": "for var ${1:i = 0}; ${2:i < j}; ${3:i++} {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "for ${1:item} in ${2:collection} {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "iter": true
+      }
+    },
+    {
+      "content": "while ${1:false} {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "repeat {\n    ${0:TARGET}\n} while ${1:false}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "repeat": true
+      }
+    },
+    {
+      "content": "if ${1:false} {\n    ${0:TARGET}\n}${9}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "else if ${1:false} {\n    ${0:TARGET}\n}${9}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "elif": true
+      }
+    },
+    {
+      "content": "else {\n    ${0:TARGET}\n}${9}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "else": true
+      }
+    },
+    {
+      "content": "if ${1:let} ${2:name} = ${3:expression} else {\n    ${0:TARGET}\n}${9}",
+      "doc": "",
+      "label": "if let/case ... { ... }",
+      "matches": {
+        "optional": true
+      }
+    },
+    {
+      "content": "guard let ${1} = ${2} else {\n    ${0:TARGET}\n}\n${9}",
+      "doc": "",
+      "label": "guard let ... else { ... }",
+      "matches": {
+        "guard": true
+      }
+    },
+    {
+      "content": "switch ${1:expression} {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "switch": true
+      }
+    },
+    {
+      "content": "do {\n    ${0:TARGET}\n}${9}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "do": true
+      }
+    },
+    {
+      "content": "catch${1:#:pattern} {\n    ${0:TARGET}\n}${9}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "catch": true
+      }
+    },
+    {
+      "content": "defer {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defer": true
+      }
+    },
+    {
+      "content": "import ${1:module}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "import": true
+      }
+    },
+    {
+      "content": "subscript(${1:index: Int}) -> ${2:Int} {\n    ${0:TARGET}\n}\n${9}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "subscript": true
+      }
+    },
+    {
+      "content": "init${1:#:?}(${2:#:arguments}) {\n    ${0:TARGET}\n}\n${9}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "init": true
+      }
+    },
+    {
+      "content": "deinit {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "deinit": true
+      }
+    },
+    {
+      "content": "{ ${1:#capture}(${2:#:arguments}) -> ${3:Void} in\n    ${0:TARGET}\n}\n${9}",
+      "doc": "",
+      "label": "{ (...) -> Type in ... }",
+      "matches": {
+        "closure": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "const ${1:sequence} = async () => {\n  await ${2:animateControls}.start({ ${5:opacity: 1} })\n}",
+      "doc": "sequence for animation controls",
+      "label": "framer-sequence",
+      "matches": {
+        "framer-motion sequence": true,
+        "sequence": true
+      }
+    },
+    {
+      "content": "const { ${scrollYProgress} } = useViewportScroll()",
+      "doc": "useViewportScroll(): ScrollMotionValues Returns MotionValues that update when the viewport scrolls.",
+      "label": "framer-use-viewport-scroll",
+      "matches": {
+        "framer-motion use-viewport-scroll": true,
+        "use-viewport-scroll": true
+      }
+    },
+    {
+      "content": "const ${controls} = useAnimation()",
+      "doc": "useAnimation()\nuseAnimation hook can be used to create a set of imperative AnimationControls with a start and stop method.",
+      "label": "framer-use-animation",
+      "matches": {
+        "framer-motion use-animation": true,
+        "use-animation": true
+      }
+    },
+    {
+      "content": "const { ${1:scaleX}, ${2:scaleY} } = useInvertedScale()",
+      "doc": "useInvertedScale(scale): ScaleMotionValues Returns a MotionValue each for scaleX and scaleY that update with the inverse of their respective parent scales.",
+      "label": "framer-use-inverted-scale",
+      "matches": {
+        "framer-motion use-inverted-scale": true,
+        "use-inverted-scale": true
+      }
+    },
+    {
+      "content": "${1:controls}.start({ ${2:opacity: 1} })",
+      "doc": "AnimationControls with a start and stop method",
+      "label": "framer-animation-controls",
+      "matches": {
+        "controls": true,
+        "framer-motion controls": true
+      }
+    },
+    {
+      "content": "import { motion, AnimateSharedLayout } from \"framer-motion\"",
+      "doc": "",
+      "label": "framer-import-animate-shared-layout",
+      "matches": {
+        "animate-presence": true,
+        "framer-motion import animate-shared-layout": true
+      }
+    },
+    {
+      "content": "const ${shouldReduceMotion} = useReducedMotion()",
+      "doc": "A hook that returns true if we should be using reduced motion based on the current device's Reduced Motion setting.",
+      "label": "framer-use-reduce-motion",
+      "matches": {
+        "framer-motion use-reduce-motion": true,
+        "use-reduce-motion": true
+      }
+    },
+    {
+      "content": "import { motion } from 'framer-motion'",
+      "doc": "",
+      "label": "framer-import",
+      "matches": {
+        "framer-motion import": true
+      }
+    },
+    {
+      "content": "const ${1:scale} = useMotionValue(${2:1})",
+      "doc": "useMotionValue()\nCreates a MotionValue to track the state and velocity of a value.",
+      "label": "framer-use-motion-value",
+      "matches": {
+        "framer-motion use-motion-value": true,
+        "use-motion-value": true
+      }
+    },
+    {
+      "content": "const [${1:isPresent}, ${2:safeToRemove}] = usePresence()",
+      "doc": "usePresence()\nIf isPresent is false, it means that a component has been removed the tree, but AnimatePresence won't really remove it until safeToRemove has been called.",
+      "label": "framer-use-presence",
+      "matches": {
+        "framer-motion use-presence": true,
+        "use-presence": true
+      }
+    },
+    {
+      "content": "const ${1:y} = useTransform(${2:x}, ${3:value => value * 2})",
+      "doc": "useTransform()\nCreate a MotionValue that transforms the output of another MotionValue through a function.",
+      "label": "framer-use-transform",
+      "matches": {
+        "framer-motion use-transform": true,
+        "use-transform": true
+      }
+    },
+    {
+      "content": "const ${dragControls} = useDragControls()",
+      "doc": "useDragControls()\nBy creating a dragControls using the useDragControls hook, we can pass this into the draggable component's dragControls prop.",
+      "label": "framer-use-drag-controls",
+      "matches": {
+        "framer-motion use-drag-controls": true,
+        "use-drag-controls": true
+      }
+    },
+    {
+      "content": "<AnimateSharedLayout>\n</AnimateSharedLayout>",
+      "doc": "Animate between different components that share a layout ID",
+      "label": "framer-animate-shared-layout",
+      "matches": {
+        "animate-shared-layout": true,
+        "framer-motion animate-shared-layout": true
+      }
+    },
+    {
+      "content": "const ${1:x} = useSpring(${2:0}, { ${3:stiffness}: ${4:300} })",
+      "doc": "useSpring()\nCreates a MotionValue that, when set, will use a spring animation to animate to its new state.",
+      "label": "framer-use-spring",
+      "matches": {
+        "framer-motion use-spring": true,
+        "use-spring": true
+      }
+    },
+    {
+      "content": "<AnimatePresence>\n    {${1:isVisible} && (\n      <motion.div\n        initial={{ ${3:style} }}\n        animate={{ ${4:style} }}\n        exit={{ ${5:style} }}\n      />\n    )}\n</AnimatePresence>",
+      "doc": "AnimatePresence allows components to animate out when they're removed from the React tree.",
+      "label": "framer-animate-presence",
+      "matches": {
+        "animate-presence": true,
+        "framer-motion animate-presence": true
+      }
+    },
+    {
+      "content": "const [${1:x}, ${2:cycleX}] = useCycle(${3:0}, ${4:50}, ${5:100})",
+      "doc": "useCycle(items): CycleState It works similar to useState in React. It is provided an initial array of possible states, and returns an array of two arguments.",
+      "label": "framer-use-cycle",
+      "matches": {
+        "framer-motion use-cycle": true,
+        "use-cycle": true
+      }
+    },
+    {
+      "content": "import { motion, AnimatePresence } from \"framer-motion\"",
+      "doc": "",
+      "label": "framer-animate-presence-import",
+      "matches": {
+        "animate-presence": true,
+        "framer-motion import animate-presence": true
+      }
+    },
+    {
+      "content": "<motion.${1:div}\n  initial=\"${2:hidden}\"\n  animate=\"${3:visible}\"\n></motion.${1:div}>",
+      "doc": "",
+      "label": "framer-motion",
+      "matches": {
+        "framer-motion motion": true,
+        "motion": true
+      }
+    },
+    {
+      "content": "const { ${1:scrollYProgress} } = useElementScroll(${2:ref})",
+      "doc": "useElementScroll(ref): Returns MotionValues that update when the provided element scrolls.",
+      "label": "framer-use-element-scroll",
+      "matches": {
+        "framer-motion use-element-scroll": true,
+        "use-element-scroll": true
+      }
+    },
+    {
+      "content": "const ${1:variants} = {\n  ${2:hidden}: {\n    ${3:style}\n  },\n  ${4:visible}: {\n    ${5:style}\n  },\n};",
+      "doc": "",
+      "label": "framer-variants",
+      "matches": {
+        "framer-motion variants": true,
+        "variants": true
+      }
+    }
+  ]
+}

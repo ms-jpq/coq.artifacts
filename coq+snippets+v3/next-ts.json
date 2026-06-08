@@ -1,0 +1,101 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "${1:${TM_FILENAME_BASE}}.getInitialProps = async ({ req }) => {\n\treturn $2\n}",
+      "doc": "Next.js Get initial props outside Component",
+      "label": "Next.js Get initial props outside Component",
+      "matches": {
+        "gip": true
+      }
+    },
+    {
+      "content": "import { InferGetServerSidePropsType } from 'next'",
+      "doc": "Next.js InferGetServerSidePropsType import",
+      "label": "import Next.js InferGetServerSidePropsType",
+      "matches": {
+        "ifgss": true
+      }
+    },
+    {
+      "content": "static async getInitialProps() {\n\treturn { $1 };\n}",
+      "doc": "Next.js static async getInitialProps() inside Class Component",
+      "label": "Next.js getInitialProps() inside Class Component",
+      "matches": {
+        "cgip": true
+      }
+    },
+    {
+      "content": "import { GetStaticPaths } from 'next'",
+      "doc": "Next.js GetStaticPaths type import",
+      "label": "import Next.js GetStaticPaths type",
+      "matches": {
+        "igspt": true
+      }
+    },
+    {
+      "content": "import { InferGetStaticPropsType } from 'next'",
+      "doc": "Next.js InferGetStaticPropsType import",
+      "label": "import Next.js InferGetStaticPropsType",
+      "matches": {
+        "infg": true
+      }
+    },
+    {
+      "content": "export const getStaticProps: GetStaticProps = async (context) => {\n\treturn {\n\t\tprops: {$1}\n\t};\n}",
+      "doc": "Next.js getStaticProps() export",
+      "label": "Next.js getStaticProps() export",
+      "matches": {
+        "gsp": true
+      }
+    },
+    {
+      "content": "export const getServerSideProps: GetServerSideProps = async (context) => {\n\treturn {\n\t\tprops: {$1}\n\t};\n}",
+      "doc": "Next.js getServerSideProps() export https://nextjs.org/docs/basic-features/data-fetching#getserversideprops-server-side-rendering",
+      "label": "Next.js getServerSideProps() export",
+      "matches": {
+        "gssp": true
+      }
+    },
+    {
+      "content": "function ${1:${TM_FILENAME_BASE}}({ data }: InferGetServerSidePropsType<typeof getServerSideProps>) {\n\treturn $2\n}",
+      "doc": "use InferGetServerSidePropsType snippet",
+      "label": "use Next.js InferGetServerSidePropsType",
+      "matches": {
+        "ufgss": true
+      }
+    },
+    {
+      "content": "function ${1:${TM_FILENAME_BASE}}({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {\n\treturn $2\n}",
+      "doc": "use InferGetStaticPropsType snippet",
+      "label": "use Next.js InferGetStaticPropsType",
+      "matches": {
+        "uifg": true
+      }
+    },
+    {
+      "content": "import { GetServerSideProps } from 'next'",
+      "doc": "Next.js GetServerSideProps type import",
+      "label": "import Next.js GetServerSideProps type",
+      "matches": {
+        "igss": true
+      }
+    },
+    {
+      "content": "export const getStaticPaths: GetStaticPaths = async () => {\n\treturn {\n\t\tpaths: [\n\t\t\t{ params: { $1 }}\n\t\t],\n\t\tfallback: $2\n\t};\n}",
+      "doc": "Next.js pre-renders all the static paths https://nextjs.org/docs/basic-features/data-fetching#getstaticpaths-static-generation",
+      "label": "Next.js getStaticPaths() export",
+      "matches": {
+        "gspt": true
+      }
+    },
+    {
+      "content": "import { GetStaticProps } from 'next';",
+      "doc": "Next.js GetStaticProps type import",
+      "label": "import Next.js GetStaticProps type",
+      "matches": {
+        "igsp": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "{\n\tblock : '${1:name}',\n\tcontent : [\n\t\t'${2:content}'\n\t]\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "b": true
+      }
+    },
+    {
+      "content": "{\n\t block : '${1:name}',\n\t content: '${2:content}'\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "btc": true
+      }
+    },
+    {
+      "content": "{\n\tblock : '${1:name}',\n\tmods: { ${2:modName}: '${3:modVal}' },\n\tcontent : [\n\t\t'${4:content}'\n\t]\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bwm": true
+      }
+    },
+    {
+      "content": "{\n\telem : '${1:name}',\n\tcontent : [\n\t\t'${2:content}'\n\t]\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "e": true
+      }
+    },
+    {
+      "content": "mods : { ${1:modName} : '${2:modVal}' },",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mo": true
+      }
+    },
+    {
+      "content": "mix : [ { ${1:block} : '${2:block}' } ],",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mi": true
+      }
+    },
+    {
+      "content": "attrs : { ${1:attr} : '${2:val}' },",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "a": true
+      }
+    }
+  ]
+}

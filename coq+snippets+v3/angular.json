@@ -1,0 +1,635 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "import { ${1:map} } from 'rxjs/operators';\n$0",
+      "doc": "RxJs import",
+      "label": "rxjs-operator-import",
+      "matches": {
+        "a-rxjs-operator-import": true,
+        "angular import rx js operator": true
+      }
+    },
+    {
+      "content": "import { Injectable } from '@angular/core';\nimport { Resolve, ActivatedRouteSnapshot } from '@angular/router';\nimport { Observable } from 'rxjs';\n\n@Injectable({ providedIn: ${1:'root'} })\nexport class ${2:YourResolver} implements Resolve<${3:ObjectToResolve}> {\n\tresolve(route: ActivatedRouteSnapshot): Observable<${3:ObjectToResolve}> | Promise<${3:ObjectToResolve}> | ${3:ObjectToResolve} {\n\t\treturn ${0};\n\t}\n}",
+      "doc": "Angular Resolver",
+      "label": "angular-resolver",
+      "matches": {
+        "a-resolver": true,
+        "angular resolver": true
+      }
+    },
+    {
+      "content": "import { Injectable } from '@angular/core';\nimport { CanLoad, Route } from '@angular/router';\n\n@Injectable({providedIn: ${1:'root'}})\nexport class ${2:Name}Guard implements CanLoad {\n\tconstructor() { }\n\n\tcanLoad(route: Route) {\n\t\treturn true;$0\n\t}\n}",
+      "doc": "Angular CanLoad guard",
+      "label": "angular-canload-guard",
+      "matches": {
+        "a-guard-can-load": true,
+        "angular can load guard": true
+      }
+    },
+    {
+      "content": "import { Pipe, PipeTransform } from '@angular/core';\n\n@Pipe({\n\tname: '${1:selector-name}'\n})\n\nexport class ${2:Name}Pipe implements PipeTransform {\n\ttransform(value: any, ...args: any[]): any {\n\t\t$0\n\t}\n}",
+      "doc": "Angular pipe",
+      "label": "angular-pipe",
+      "matches": {
+        "a-pipe": true,
+        "angular pipe": true
+      }
+    },
+    {
+      "content": "import { NgModule } from '@angular/core';\nimport { EffectsModule } from '@ngrx/effects';\nimport { StoreModule } from '@ngrx/store';\nimport { StoreDevtoolsModule } from '@ngrx/store-devtools';\nimport { environment } from '../../environments/environment';\n\n@NgModule({\n  imports: [\n    StoreModule.forRoot({}),\n    EffectsModule.forRoot([]),\n    environment.production ? [] : StoreDevtoolsModule.instrument()\n  ]\n})\nexport class $1StoreModule {}",
+      "doc": "NgRx Store Module",
+      "label": "ngrx-store-module",
+      "matches": {
+        "a-ngrx-store-module": true,
+        "angular ng rx store module": true
+      }
+    },
+    {
+      "content": "import { Injectable } from '@angular/core';\n\n@Injectable({providedIn: ${1:'root'}})\nexport class ${2:ServiceName}Service {\n\tconstructor() { }\n\t$0\n}",
+      "doc": "Angular Service with Injectable ProvidedIn Root",
+      "label": "angular-service",
+      "matches": {
+        "a-service": true,
+        "angular service": true
+      }
+    },
+    {
+      "content": "export const ${1:action} = createAction('[${2:Source}] ${3:Event}');",
+      "doc": "Creates an NgRx Action",
+      "label": "ngrx-create-action",
+      "matches": {
+        "a-ngrx-create-action": true,
+        "angular ng rx create action": true
+      }
+    },
+    {
+      "content": "[ngClass]=\"{${1:cssClass}: ${2:expression}}\"",
+      "doc": "Angular ngClass",
+      "label": "ngclass",
+      "matches": {
+        "a-ngclass": true,
+        "angular ng class": true
+      }
+    },
+    {
+      "content": "export const ${1:action} = createAction('[${2:Source}] ${3:Event}', props<{${4:key}: ${5:type}}>());",
+      "doc": "Creates an NgRx Action with Props",
+      "label": "ngrx-create-action-w-props",
+      "matches": {
+        "a-ngrx-create-action-props": true,
+        "angular ng rx create action props": true
+      }
+    },
+    {
+      "content": "*ngFor=\"let ${1:item} of ${2:list}\"${0}",
+      "doc": "Angular *ngFor",
+      "label": "ngfor",
+      "matches": {
+        "a-ngfor": true,
+        "angular ng for": true
+      }
+    },
+    {
+      "content": "const ${1:feature}Reducer = createReducer(\n\tinitialState,\n\ton($1Actions.action, state => ({ ...state, ${2:prop}: ${3:updatedValue} })),\n);\n\nexport function reducer(state: State | undefined, action: Action) {\n\treturn $1Reducer(state, action);\n}",
+      "doc": "Creates an NgRx Reducer",
+      "label": "ngrx-create-reducer",
+      "matches": {
+        "a-ngrx-create-reducer": true,
+        "angular ng rx create reducer": true
+      }
+    },
+    {
+      "content": "*ngFor=\"let ${1:item} of ${2:list}; trackBy:${1:item}.id\"${0}",
+      "doc": "Angular *ngFor with trackBy",
+      "label": "ngfor-with-trackby",
+      "matches": {
+        "a-ngfor-trackby": true,
+        "angular ng for with track by": true
+      }
+    },
+    {
+      "content": "{\n\tpath: '${1:path}', \n\tloadChildren: () => import('${2:lazy-path}').then(m => m.${3:lazy-module})\n},",
+      "doc": "Angular lazy route path",
+      "label": "angular-lazy-route-path",
+      "matches": {
+        "a-route-path-lazy": true,
+        "angular lazy route path": true
+      }
+    },
+    {
+      "content": "*ngFor=\"let ${1:item} of ${2:stream} | async as ${3:list}\"${0}",
+      "doc": "Angular *ngForAsync",
+      "label": "ngforasync",
+      "matches": {
+        "a-ngforasync": true,
+        "angular ng for async": true
+      }
+    },
+    {
+      "content": "this.route.paramMap\n\t.pipe(switchMap(params => params.get('id')), tap(id => (this.id = +id)))\n\t.subscribe(id => {$1});\n$0",
+      "doc": "Angular - subscribe to routing parameters",
+      "label": "routing-params-subscribe",
+      "matches": {
+        "a-route-params-subscribe": true,
+        "angular routing params subscribe": true
+      }
+    },
+    {
+      "content": "[style.${1:property}]=\"${2:expression}\"",
+      "doc": "Angular [style] binding",
+      "label": "style",
+      "matches": {
+        "a-style": true,
+        "angular style": true
+      }
+    },
+    {
+      "content": "<form (ngSubmit)=\"onSubmit()\" #${1:form}=\"ngForm\">\n</form>",
+      "doc": "Form with ngSubmit and form attributes",
+      "label": "ngform",
+      "matches": {
+        "a-form": true,
+        "angular ng form": true
+      }
+    },
+    {
+      "content": "import { Injectable } from '@angular/core';\nimport { ActivatedRouteSnapshot, CanDeactivate, RouterStateSnapshot } from '@angular/router';\nimport { Observable } from 'rxjs';\n\nimport { ${2:ComponentName}Component } from './${3:filename}.component';\n\n// Consider using this interface for all CanDeactivate guards,\n// and have your components implement this interface, too.\n//\n//   e.g. export class CanDeactivateGuard implements CanDeactivate<CanComponentDeactivate> {\n//\n// export interface CanComponentDeactivate {\n// canDeactivate: () => any;\n// }\n\n@Injectable({providedIn: ${4:'root'}})\nexport class ${1:Name}Guard implements CanDeactivate<${2:ComponentName}Component> {\n\tcanDeactivate(\n\t\tcomponent: ${2:ComponentName}Component,\n\t\tcurrentRoute: ActivatedRouteSnapshot, \n\t\tcurrentState: RouterStateSnapshot\n\t): Observable<boolean>|Promise<boolean>|boolean {\n\t\treturn false;$0\n\t}\n}",
+      "doc": "Angular CanDeactivate guard",
+      "label": "angular-candeactivate-guard",
+      "matches": {
+        "a-guard-can-deactivate": true,
+        "angular can deactivate guard": true
+      }
+    },
+    {
+      "content": "formArrayName=\"${1:control}\"",
+      "doc": "Angular formArrayName",
+      "label": "ngformarrayname",
+      "matches": {
+        "a-formarrayname": true,
+        "angular ng form array name": true
+      }
+    },
+    {
+      "content": "import { Injectable } from '@angular/core';\nimport { HttpClient } from '@angular/common/http';\n\n@Injectable({providedIn: ${1:'root'}})\nexport class ${2:ServiceName}Service {\n\tconstructor(private httpClient: HttpClient) { }\n\t$0\n}",
+      "doc": "Angular service with HttpClient",
+      "label": "angular-httpclient-service",
+      "matches": {
+        "a-service-httpclient": true,
+        "angular http client service": true
+      }
+    },
+    {
+      "content": "formControlName=\"${1:control}\"",
+      "doc": "Angular formControlName",
+      "label": "ngformcontrolname",
+      "matches": {
+        "a-formcontrolname": true,
+        "angular ng form control name": true
+      }
+    },
+    {
+      "content": "import { HttpInterceptor, HttpHandler, HttpRequest, HttpEvent, HttpResponse } from '@angular/common/http';\nimport { Observable } from 'rxjs';\nimport { tap } from 'rxjs/operators';\n\n@Injectable()\nexport class LogInterceptor implements HttpInterceptor {\n\tconstructor() {}\n\n\tintercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {\n\t\tconst started = Date.now();\n\t\treturn next.handle(req).pipe(\n\t\t\ttap(event => {\n\t\t\t\tif (event instanceof HttpResponse) {\n\t\t\t\t\tconst elapsed = Date.now() - started;\n\t\t\t\t\tconsole.log(`Request for \\${req.urlWithParams} took \\${elapsed} ms.`);\n\t\t\t\t}\n\t\t\t})\n\t\t);\n\t}\n}",
+      "doc": "Angular HttpInterceptor for Logging HttpClient",
+      "label": "angular-httpinterceptor-for-logging",
+      "matches": {
+        "a-http-interceptor-logging": true,
+        "angular http interceptor logging": true
+      }
+    },
+    {
+      "content": "[formGroupName]=\"${1:name}\"",
+      "doc": "Angular formGroupName",
+      "label": "ngformgroupname",
+      "matches": {
+        "a-formgroupname": true,
+        "angular ng form group name": true
+      }
+    },
+    {
+      "content": "<button type=\"submit\" [disabled]=\"!${1:form}.form.valid\">\n\tSave\n</button>",
+      "doc": "Angular form submit",
+      "label": "ngformsubmit",
+      "matches": {
+        "a-form-submit": true,
+        "angular ng form submit": true
+      }
+    },
+    {
+      "content": "*ngIf=\"${1:expression}\"",
+      "doc": "Angular *ngIf",
+      "label": "ngif",
+      "matches": {
+        "a-ngif": true,
+        "angular ng if": true
+      }
+    },
+    {
+      "content": "<ng-container $0></ng-container>",
+      "doc": "Angular ng-container",
+      "label": "ng-container",
+      "matches": {
+        "a-ng-container": true,
+        "angular ng-container": true
+      }
+    },
+    {
+      "content": "*ngIf=\"${1:expression};else ${2:templateName}\"",
+      "doc": "Angular *ngIfElse",
+      "label": "ngifelse",
+      "matches": {
+        "a-ngifelse": true,
+        "angular ng if else": true
+      }
+    },
+    {
+      "content": "[(ngModel)]=\"${1:binding}\"",
+      "doc": "Angular ngModel",
+      "label": "ngmodel",
+      "matches": {
+        "a-ngmodel": true,
+        "angular ng model": true
+      }
+    },
+    {
+      "content": "import { Injectable } from '@angular/core';\nimport { HttpEvent, HttpInterceptor, HttpHandler, HttpRequest } from '@angular/common/http';\nimport { Observable } from 'rxjs';\n\n@Injectable()\nexport class HeaderInterceptor implements HttpInterceptor {\n\tconstructor() {}\n\n\tintercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {\n\t\tconst headers = req.headers\n\t\t\t.set('Content-Type', 'application/json');\n\t\tconst authReq = req.clone({ headers });\n\t\treturn next.handle(authReq);\n\t}\n}",
+      "doc": "Angular HttpInterceptor for headers HttpClient",
+      "label": "angular-httpinterceptor-for-headers",
+      "matches": {
+        "a-http-interceptor-headers": true,
+        "angular http interceptor headers": true
+      }
+    },
+    {
+      "content": "<ng-template [ngTemplateOutlet]=\"${1:outlet}\" [ngOutletContext]=\"${2:context}\"></ng-template>",
+      "doc": "Angular ng-template",
+      "label": "ng-template",
+      "matches": {
+        "a-ng-template": true,
+        "angular ng-template": true
+      }
+    },
+    {
+      "content": "[routerLink]=\"['/${1:routePath}']\" routerLinkActive=\"${2:router-link-active}\" $0",
+      "doc": "Angular routerLink",
+      "label": "ngrouterlink",
+      "matches": {
+        "a-routerlink": true,
+        "angular ng router link": true
+      }
+    },
+    {
+      "content": "{ path: '', pathMatch: 'full', redirectTo: '${1:path}' }$0",
+      "doc": "Angular default route path",
+      "label": "angular-default-route-path",
+      "matches": {
+        "a-route-path-default": true,
+        "angular default route path": true
+      }
+    },
+    {
+      "content": "<ng-content select=\"${0:selector}\"></ng-content>",
+      "doc": "Angular ng-content",
+      "label": "ng-content",
+      "matches": {
+        "a-ng-content": true,
+        "angular ng-content": true
+      }
+    },
+    {
+      "content": "{\n\tpath: '${1:path}', \n\tcomponent: ${2:Component},\n\tchildren: [\n\t\t{ path: '${3:childpath}', component: ${4:ChildComponent} }\n\t]\n}$0",
+      "doc": "Angular route path with children",
+      "label": "angular-route-path-with-children",
+      "matches": {
+        "a-route-path-with-children": true,
+        "angular route path children": true
+      }
+    },
+    {
+      "content": "import { Injectable } from '@angular/core';\nimport { HttpInterceptor, HttpEvent, HttpHandler, HttpRequest } from '@angular/common/http';\nimport { Observable } from 'rxjs';\n\n@Injectable()\nexport class ${2:Your}Interceptor implements HttpInterceptor {\n\tintercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {\n\t\treturn next.handle(req);\n\t}\n}",
+      "doc": "Empty Angular HttpInterceptor for HttpClient",
+      "label": "angular-httpinterceptor-empty",
+      "matches": {
+        "a-http-interceptor": true,
+        "angular http interceptor empty": true
+      }
+    },
+    {
+      "content": "<select [(ngModel)]=\"${1:model}\">\n\t<option *ngFor=\"let ${2:item} of ${3:list}\" [value]=\"${2:item}\">{{${2:item}}}</option>\n</select>",
+      "doc": "<select> control with ngModel",
+      "label": "ngselect",
+      "matches": {
+        "a-select": true,
+        "angular ng select": true
+      }
+    },
+    {
+      "content": "@Output() ${1:eventName} = new EventEmitter<${2:eventType}>();",
+      "doc": "Angular @Output event and emitter",
+      "label": "output-event",
+      "matches": {
+        "a-output-event": true,
+        "angular output event": true
+      }
+    },
+    {
+      "content": "[ngStyle]=\"{${1:style}: ${2:expression}}\"",
+      "doc": "Angular ngStyle",
+      "label": "ngstyle",
+      "matches": {
+        "a-ngstyle": true,
+        "angular ng style": true
+      }
+    },
+    {
+      "content": "{ path: '**', component: ${1:PathNotFoundComponent} }$0",
+      "doc": "Angular 404 route path",
+      "label": "angular-404-route-path",
+      "matches": {
+        "a-route-path-404": true,
+        "angular 404 route path": true
+      }
+    },
+    {
+      "content": "this.${1:service}.${2:function}\n\t.subscribe(${3:arg} => this.${4:property} = ${3:arg});\n$0",
+      "doc": "Angular observable subscribe",
+      "label": "subscribe",
+      "matches": {
+        "a-subscribe": true,
+        "angular subscribe": true
+      }
+    },
+    {
+      "content": "<div [ngSwitch]=\"${1:conditionExpression}\">\n\t<div *ngSwitchCase=\"${2:expression}\">${3:output}</div>\n\t<div *ngSwitchDefault>${4:output2}</div>\n</div>",
+      "doc": "Angular ngSwitch",
+      "label": "ngswitch",
+      "matches": {
+        "a-ngswitch": true,
+        "angular ng switch": true
+      }
+    },
+    {
+      "content": "import { PreloadingStrategy, Route } from '@angular/router';\nimport { Observable, of } from 'rxjs';\n\nexport class PreloadSelectedModulesList implements PreloadingStrategy {\n\tpreload(route: Route, load: Function): Observable<any> {\n\t\treturn route.data && route.data['${1:preload}'] ? load() : of(null);\n\t}\n}\n$0",
+      "doc": "Angular opt-in preload strategy",
+      "label": "angular-opt-in-preload-strategy",
+      "matches": {
+        "a-preload-opt-in-strategy": true,
+        "angular opt-in preload strategy": true
+      }
+    },
+    {
+      "content": "import { Component } from '@angular/core';\n\n@Component({\n\tselector: '${1:prefix-app}',\n\ttemplate: `\n\t\t<router-outlet></router-outlet>\n\t\t`\n})\nexport class ${2:App}Component { }\n$0",
+      "doc": "Angular App root component",
+      "label": "angular-root-component",
+      "matches": {
+        "a-component-root": true,
+        "angular root component": true
+      }
+    },
+    {
+      "content": "<pre>{{${1:model} | json}}</pre>$0",
+      "doc": "Angular pre debug | json",
+      "label": "pre-w-json",
+      "matches": {
+        "a-prej": true,
+        "angular pre json": true
+      }
+    },
+    {
+      "content": "<pre>{{${1:model} | async | json}}</pre>$0",
+      "doc": "Angular pre debug | async | json",
+      "label": "pre-w-async-json",
+      "matches": {
+        "a-preja": true,
+        "angular pre async json": true
+      }
+    },
+    {
+      "content": "import { NgModule } from '@angular/core';\nimport { BrowserModule  } from '@angular/platform-browser';\nimport { HttpModule } from '@angular/http';\n\nimport { ${1:App}Component } from './${1:app}.component';\n\n@NgModule({\n\timports: [\n\t\tBrowserModule,\n\t\tHttpModule,\n\t],\n\tdeclarations: [${1:App}Component],\n\tbootstrap: [${1:App}Component],\n})\nexport class ${1:App}Module { }\n$0",
+      "doc": "Angular Root Module",
+      "label": "angular-root-module",
+      "matches": {
+        "a-module-root": true,
+        "angular root module": true
+      }
+    },
+    {
+      "content": "import { EntityMetadataMap } from '@ngrx/data';\n\nconst entityMetadata: EntityMetadataMap = {\n  ${1:Model1}: {},${0}\n};\n\nexport const entityConfig = {\n  entityMetadata\n};",
+      "doc": "NgRx Data Entity Metadata",
+      "label": "ngrx-data-entity-metadata",
+      "matches": {
+        "a-ngrx-data-entity-metadata": true,
+        "angular ng rx data entity metadata": true
+      }
+    },
+    {
+      "content": "import { Injectable } from '@angular/core';\nimport {\n  EntityCollectionServiceBase,\n  EntityCollectionServiceElementsFactory\n} from '@ngrx/data';\nimport { ${1:Model} } from '${2:../core}';\n\n@Injectable({ providedIn: ${3:'root'} })\nexport class ${1:Model}Service extends EntityCollectionServiceBase<${1:Model}> {\n  constructor(serviceElementsFactory: EntityCollectionServiceElementsFactory) {\n    super('${1:Model}', serviceElementsFactory);\n  }\n}",
+      "doc": "NgRx Data Entity Collection Data Service",
+      "label": "ngrx-data-entity-collection-data-service",
+      "matches": {
+        "a-ngrx-data-entity-collection-data-service": true,
+        "angular ng rx data entity collection service": true
+      }
+    },
+    {
+      "content": "[formGroup]=\"${1:form}\"",
+      "doc": "Angular formGroup",
+      "label": "ngformgroup",
+      "matches": {
+        "a-formgroup": true,
+        "angular ng form group": true
+      }
+    },
+    {
+      "content": "EntityDataModule.forRoot(${1:entityConfig}),",
+      "doc": "Import NgRx Entity Data Module",
+      "label": "ngrx-data-import-entity-data-module",
+      "matches": {
+        "a-ngrx-data-entity-data-module-import": true,
+        "angular ng rx data import entity module": true
+      }
+    },
+    {
+      "content": "import { Routes } from '@angular/router';\n\nexport const routes: Routes = [${0}]",
+      "doc": "Route definitions",
+      "label": "route-definitions",
+      "matches": {
+        "a-routes": true,
+        "angular route definitions": true
+      }
+    },
+    {
+      "content": "export const select${1:Feature}${2:Property} = createSelector(\n\tselect$1,\n\t(state: $1State, props) => ${3:selectLogic}\n);",
+      "doc": "Creates an NgRx Selector using props",
+      "label": "ngrx-create-selector-w-props",
+      "matches": {
+        "a-ngrx-create-selector-props": true,
+        "angular ng rx create selector props": true
+      }
+    },
+    {
+      "content": "export const select${1:Feature}${2:Property} = createSelector(\n\tselect$1,\n\t(state: $1State) => state.${3:property}\n);",
+      "doc": "Creates an NgRx Selector",
+      "label": "ngrx-create-selector",
+      "matches": {
+        "a-ngrx-create-selector": true,
+        "angular ng rx create selector": true
+      }
+    },
+    {
+      "content": "checkEvents() {\n\tthis.router.events.subscribe(event => {\n\t\tswitch (true) {\n\t\t\tcase event instanceof ${1:eventName}:\n\t\t\t\t$0\n\t\t\t\tbreak;\n\n\t\t\tdefault:\n\t\t\t\tbreak;\n\t\t}\n\t});\n}",
+      "doc": "Angular Router Events",
+      "label": "angular-router-events",
+      "matches": {
+        "a-router-events": true,
+        "angular router events": true
+      }
+    },
+    {
+      "content": "import { NgModule } from '@angular/core';\n\nimport { ${1:Name}Component } from './${2:name}.component';\n\n@NgModule({\n\timports: [],\n\texports: [],\n\tdeclarations: [${1:Name}Component],\n\tproviders: [],\n})\nexport class ${1:Name}Module { }\n$0",
+      "doc": "Angular Module",
+      "label": "angular-module",
+      "matches": {
+        "a-module": true,
+        "angular module": true
+      }
+    },
+    {
+      "content": "# Client App\nFROM johnpapa/angular-cli as client-app\nLABEL authors=\"${1:John Papa}\"\nWORKDIR /usr/src/app\nCOPY [\"package.json\", \"npm-shrinkwrap.json*\", \"./\"]\nRUN npm install --silent\nCOPY . .\nRUN ng build --prod\n\n# Node server\nFROM ${2:node:12-alpine} as node-server\nWORKDIR /usr/src/app\nCOPY [\"package.json\", \"npm-shrinkwrap.json*\", \"./\"]\nRUN npm install --production --silent && mv node_modules ../\nCOPY ${3:server.js} .\nCOPY ${4:/server} /usr/src/app/server\n\n# Final image\nFROM ${2:node:12-alpine}\nWORKDIR /usr/src/app\nCOPY --from=node-server /usr/src /usr/src\nCOPY --from=client-app /usr/src/app/dist ./\nEXPOSE ${5:3000}\n# CMD [\"node\", \"server.js\"]\nCMD [\"npm\", \"start\"]\n$0",
+      "doc": "Multi-stage Node and Angular Dockerfile",
+      "label": "multi-stage-node-and-angular-dockerfile",
+      "matches": {
+        "angular multi-stage node and dockerfile": true,
+        "docker-angular-node-multi-stage": true
+      }
+    },
+    {
+      "content": "${1:trackBy}(index: number, ${2:name}: ${3:model}): ${4:number} {\n  return ${2:name}${5:.id};$0\n}",
+      "doc": "TrackBy Function",
+      "label": "trackby-function",
+      "matches": {
+        "a-trackby": true,
+        "angular track by function": true
+      }
+    },
+    {
+      "content": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n\tselector: '${1:selector-name}',\n\ttemplateUrl: '${2:name}.component.html'\n})\n\nexport class ${3:Name}Component implements OnInit {\n\tconstructor() { }\n\n\tngOnInit() { }$0\n}",
+      "doc": "Angular component",
+      "label": "angular-component",
+      "matches": {
+        "a-component": true,
+        "angular component": true
+      }
+    },
+    {
+      "content": "[class]=\"${1:expression}\"",
+      "doc": "Angular [class] binding",
+      "label": "class",
+      "matches": {
+        "a-class": true,
+        "angular class": true
+      }
+    },
+    {
+      "content": "return this.httpClient.get('${1:url}');$0",
+      "doc": "Angular HttpClient.get",
+      "label": "httpclient-get",
+      "matches": {
+        "a-httpclient-get": true,
+        "angular http client get": true
+      }
+    },
+    {
+      "content": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n\tselector: '${1:selector-name}',\n\ttemplate: `$0`\n})\n\nexport class ${2:Name}Component implements OnInit {\n\tconstructor() { }\n\n\tngOnInit() { }\n}",
+      "doc": "Angular component with an inline template",
+      "label": "angular-component-with-inline-template",
+      "matches": {
+        "a-component-inline": true,
+        "angular component inline template": true
+      }
+    },
+    {
+      "content": "import { Directive } from '@angular/core';\n\n@Directive({ selector: '[${1:selector-name}]' })\nexport class ${2:Name}Directive {\n\tconstructor() { }\n}",
+      "doc": "Angular directive",
+      "label": "angular-directive",
+      "matches": {
+        "a-directive": true,
+        "angular directive": true
+      }
+    },
+    {
+      "content": "constructor( @Optional() @SkipSelf() parentModule: ${1:ModuleName} {\n\tif (parentModule) {\n\t\tconst msg = `${1:ModuleName} has already been loaded. \n\t\t\tImport ${1:ModuleName} once, only, in the root AppModule.`;\n\t\tthrow new Error(msg);\n\t}\n}",
+      "doc": "Angular Module SkipSelf constructor",
+      "label": "angular-module-skipself-constructor",
+      "matches": {
+        "a-ctor-skip-self": true,
+        "angular module skip self constructor": true
+      }
+    },
+    {
+      "content": "const express = require('express');\nconst app = express();\nconst port = process.env.PORT || ${1:port};\nconst www = process.env.WWW || '${2:./}';\napp.use(express.static(www));\nconsole.log(`serving \\${www}`);\napp.get('*', (req, res) => {\n\tres.sendFile(`index.html`, { root: www });\n});\napp.listen(port, () => console.log(`listening on http://localhost:\\${port}`));\n$0",
+      "doc": "Node.js Express Server",
+      "label": "node-js-express-server",
+      "matches": {
+        "angular node express server": true,
+        "ex-node-server-simple": true
+      }
+    },
+    {
+      "content": "import { Injectable } from '@angular/core';\nimport { PreloadingStrategy, Route } from '@angular/router';\nimport { Observable, EMPTY } from 'rxjs';\n\n// avoid typing issues for now\nexport declare var navigator;\n\n@Injectable({ providedIn: 'root' })\nexport class NetworkAwarePreloadStrategy implements PreloadingStrategy {\n\tpreload(route: Route, load: () => Observable<any>): Observable<any> {\n\t\treturn this.hasGoodConnection() ? load() : EMPTY;\n\t}\n\n\thasGoodConnection(): boolean {\n\t\tconst conn = navigator.connection;\n\t\tif (conn) {\n\t\t\tif (conn.saveData) {\n\t\t\t\treturn false; // save data mode is enabled, so dont preload\n\t\t\t}\n\t\t\tconst avoidTheseConnections = ['slow-2g', '2g' /* , '3g', '4g' */];\n\t\t\tconst effectiveType = conn.effectiveType || '';\n\t\t\tif (avoidTheseConnections.includes(effectiveType)) {\n\t\t\t\treturn false;\n\t\t\t}\n\t\t}\n\t\treturn true;\n\t}\n}",
+      "doc": "Angular network aware preload strategy",
+      "label": "angular-network-aware-preload-strategy",
+      "matches": {
+        "a-preload-network-strategy": true,
+        "angular network-aware preload strategy": true
+      }
+    },
+    {
+      "content": "import { Injectable } from '@angular/core';\nimport { ActivatedRouteSnapshot, CanActivateChild, RouterStateSnapshot } from '@angular/router';\n\n@Injectable({providedIn: ${1:'root'}})\nexport class ${2:Name}Guard implements CanActivateChild {\n\tconstructor() { }\n\n\tcanActivateChild(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {\n\t\treturn true;$0\n\t}\n}",
+      "doc": "Angular CanActivateChild guard",
+      "label": "angular-canactivatechild-guard",
+      "matches": {
+        "a-guard-can-activate-child": true,
+        "angular can activate child guard": true
+      }
+    },
+    {
+      "content": "import { Injectable } from '@angular/core';\nimport { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot } from '@angular/router';\n\n@Injectable({providedIn: ${1:'root'}})\nexport class ${2:Name}Guard implements CanActivate {\n\tconstructor() { }\n\n\tcanActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {\n\t\treturn true;$0\n\t}\n}",
+      "doc": "Angular CanActivate guard",
+      "label": "angular-canactivate-guard",
+      "matches": {
+        "a-guard-can-activate": true,
+        "angular can activate guard": true
+      }
+    },
+    {
+      "content": "{ path: '${1:path}', component: ${2:Name}Component },",
+      "doc": "Angular eager route path",
+      "label": "angular-eager-route-path",
+      "matches": {
+        "a-route-path-eager": true,
+        "angular eager route path": true
+      }
+    },
+    {
+      "content": "[routerLink]=\"['${1:routePath}', ${2:routeParameterValue}]\"\nrouterLinkActive=\"${3:router-link-active}\"$0",
+      "doc": "Angular routerLink with a route parameter",
+      "label": "ngrouterlinkwithparameter",
+      "matches": {
+        "a-routerlink-param": true,
+        "angular ng router link with parameter": true
+      }
+    },
+    {
+      "content": "import { ${1:Observable} } from 'rxjs';\n$0",
+      "doc": "RxJs import",
+      "label": "rxjs-import",
+      "matches": {
+        "a-rxjs-import": true,
+        "angular import rx js": true
+      }
+    }
+  ]
+}
