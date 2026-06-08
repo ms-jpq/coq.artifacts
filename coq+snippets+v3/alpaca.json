@@ -1,0 +1,125 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "module ${0:`expand('%:t:r')`}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mod": true
+      }
+    },
+    {
+      "content": "import ${0:http}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "imp": true
+      }
+    },
+    {
+      "content": "import type ${0:option.option}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "impt": true
+      }
+    },
+    {
+      "content": "export ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "exp": true
+      }
+    },
+    {
+      "content": "export ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "expt": true
+      }
+    },
+    {
+      "content": "val ${1:fn} ${2}: fn ${3:'a} -> ${4:'a}\nlet $1 ${5} =\n\t${0:${VISUAL}}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fn": true
+      }
+    },
+    {
+      "content": "match ${1} with\n| ${2} -> ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mat": true
+      }
+    },
+    {
+      "content": "| ${1} -> ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "-": true
+      }
+    },
+    {
+      "content": "let ${1} = ${2:${VISUAL}} in\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "let": true
+      }
+    },
+    {
+      "content": "let ${1} =\n\t${0:${VISUAL}}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "letf": true
+      }
+    },
+    {
+      "content": "type ${1:msg}\n\t= ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ty": true
+      }
+    },
+    {
+      "content": "test \"${1}\" =\n\t${0:${VISUAL}}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "test": true
+      }
+    },
+    {
+      "content": "{-| ${0}\n-}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "doc": true
+      }
+    },
+    {
+      "content": "|> ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "p": true
+      }
+    },
+    {
+      "content": "assert.equal ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ae": true
+      }
+    }
+  ]
+}

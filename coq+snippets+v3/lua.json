@@ -1,0 +1,511 @@
+{
+  "extends": [
+    "luadoc"
+  ],
+  "snippets": [
+    {
+      "content": "local ${0}",
+      "doc": "Declare a variable",
+      "label": "local",
+      "matches": {
+        "l": true
+      }
+    },
+    {
+      "content": "local function ${1:name}($2)\n\t${0}\nend",
+      "doc": "Define a local function",
+      "label": "local-function",
+      "matches": {
+        "lfu": true
+      }
+    },
+    {
+      "content": "require(${1:module})",
+      "doc": "Require module",
+      "label": "require",
+      "matches": {
+        "req": true
+      }
+    },
+    {
+      "content": "return $0",
+      "doc": "Return value",
+      "label": "return",
+      "matches": {
+        "rt": true
+      }
+    },
+    {
+      "content": "${1:M} = {}\n\n$1.${2:new} = function($3)\n\t${6}\nend",
+      "doc": "Create a class",
+      "label": "class",
+      "matches": {
+        "cl": true
+      }
+    },
+    {
+      "content": "for ${1:i} = ${2:1}, ${3:10} do\n\t$0\nend",
+      "doc": "for numeric range statement",
+      "label": "for-numeric",
+      "matches": {
+        "forn": true
+      }
+    },
+    {
+      "content": "function($1)\n\t${0}\nend",
+      "doc": "Create an anonymous function",
+      "label": "anonymous-function",
+      "matches": {
+        "f)": true
+      }
+    },
+    {
+      "content": "for ${1:i}, ${2:x} in ipairs(${3:t}) do\n\t$0\nend",
+      "doc": "for i, x in ipairs(t)",
+      "label": "for-ipairs",
+      "matches": {
+        "fori": true
+      }
+    },
+    {
+      "content": "${1:name} = function($2)\n\t${0}\nend,",
+      "doc": "Assign a function to a table key",
+      "label": "member-function",
+      "matches": {
+        "f,": true
+      }
+    },
+    {
+      "content": "for ${1:k}, ${2:v} in pairs(${3:t}) do\n\t$0\nend",
+      "doc": "for k, v in pairs(t)",
+      "label": "for-pairs",
+      "matches": {
+        "forp": true
+      }
+    },
+    {
+      "content": "function self:${1:methodName}($2)\n\t$0\nend",
+      "doc": "",
+      "label": "self",
+      "matches": {
+        "self:": true
+      }
+    },
+    {
+      "content": "local f = io.open(${1:${2:filename}}, \"${3:r}\")\n\nwhile true do\n\tline = f:read()\n\tif line == nil then break end\n\n\t${0}\nend",
+      "doc": "Read file line by line",
+      "label": "forline",
+      "matches": {
+        "forline": true
+      }
+    },
+    {
+      "content": "local ${1:name} = function($2)\n\t${0}\nend",
+      "doc": "Assign a function to a local variable",
+      "label": "local-assign-function",
+      "matches": {
+        "lf=": true
+      }
+    },
+    {
+      "content": "pcall(${1:function})",
+      "doc": "Protect call a function",
+      "label": "pcall",
+      "matches": {
+        "pca": true
+      }
+    },
+    {
+      "content": "print(${0})",
+      "doc": "",
+      "label": "print",
+      "matches": {
+        "p": true
+      }
+    },
+    {
+      "content": "local ${1:varName} = ${0:value}",
+      "doc": "Define a variable",
+      "label": "assigment",
+      "matches": {
+        "ll": true
+      }
+    },
+    {
+      "content": "while ${1:true} do\n\t$0\nend",
+      "doc": "",
+      "label": "while",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "local ${1:status}, ${2:err_or_value} = pcall(${3:function})",
+      "doc": "Protect call a function as a variable",
+      "label": "locpcall",
+      "matches": {
+        "lpca": true
+      }
+    },
+    {
+      "content": "elseif ${1:true} then\n\t$0",
+      "doc": "",
+      "label": "elseif",
+      "matches": {
+        "elseif": true
+      }
+    },
+    {
+      "content": "for $1 do\n\t$0\nend",
+      "doc": "for statement",
+      "label": "for",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "function ${1:name}($2)\n\t${0}\nend",
+      "doc": "Define a function",
+      "label": "function",
+      "matches": {
+        "fu": true
+      }
+    },
+    {
+      "content": "${1:name} = function($2)\n\t${0}\nend",
+      "doc": "Assign a function to a variable",
+      "label": "assign-function",
+      "matches": {
+        "f=": true
+      }
+    },
+    {
+      "content": "if ${1:true} then\n\t$0\nend",
+      "doc": "",
+      "label": "if",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "local ${1:module} = require(\"${2:$1}\")$0",
+      "doc": "Require module as a variable",
+      "label": "locreq",
+      "matches": {
+        "lreq": true
+      }
+    },
+    {
+      "content": "function ${1:#:function_name}(${2:#:argument})\n\t${0:TARGET}\nend",
+      "doc": "",
+      "label": "function name(args)...end",
+      "matches": {
+        "func": true
+      }
+    },
+    {
+      "content": "if ${1:#:condition} then\n  ${0:TARGET}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "for ${2:i} = 0, ${1:#:Things} do\n  ${0:TARGET}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "for ${2:k}, ${3:v} in ${1:ipairs(xs)} do\n  ${0:TARGET}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "forin": true
+      }
+    },
+    {
+      "content": "for k, v in ipairs(${1:table}) do\n  print(k, v)\nend",
+      "doc": "",
+      "label": "for k, v in ipairs(table) do",
+      "matches": {
+        "print_table": true
+      }
+    },
+    {
+      "content": "print(${0:TARGET})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "print": true
+      }
+    },
+    {
+      "content": "print(${0:TARGET})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "p": true
+      }
+    },
+    {
+      "content": "[[${0:TARGET}]]",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "comment": true
+      }
+    },
+    {
+      "content": "describe(${1:#:message}, function()\n  ${0:TARGET}\nend)",
+      "doc": "",
+      "label": "describe(message, func)",
+      "matches": {
+        "describe": true
+      }
+    },
+    {
+      "content": "it(${1:#:message}, function()\n  ${0:TARGET}\nend)",
+      "doc": "",
+      "label": "it(message, func)",
+      "matches": {
+        "it": true
+      }
+    },
+    {
+      "content": "before_each(function()\n  ${0:TARGET}\nend)",
+      "doc": "",
+      "label": "before_each(func)",
+      "matches": {
+        "before_each": true
+      }
+    },
+    {
+      "content": "after_each(function()\n  ${0:TARGET}\nend)",
+      "doc": "",
+      "label": "after_each(func)",
+      "matches": {
+        "after_each": true
+      }
+    },
+    {
+      "content": "setup(function()\n  ${0:TARGET}\nend)",
+      "doc": "",
+      "label": "setup(func)",
+      "matches": {
+        "setup": true
+      }
+    },
+    {
+      "content": "tear_down(function()\n  ${0:TARGET}\nend)",
+      "doc": "",
+      "label": "tear_down(func)",
+      "matches": {
+        "tear_down": true
+      }
+    },
+    {
+      "content": "finally(function()\n  ${0:TARGET}\nend)",
+      "doc": "",
+      "label": "finally(func)",
+      "matches": {
+        "finally": true
+      }
+    },
+    {
+      "content": "#!/usr/bin/env lua\n$1",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "#!": true
+      }
+    },
+    {
+      "content": "local ${1:x} = ${0:1}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "local": true
+      }
+    },
+    {
+      "content": "function ${1:fname}(${2:...})\n\t$0\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fun": true
+      }
+    },
+    {
+      "content": "for ${1:i}=${2:1},${3:10} do\n\t${0:print(i)}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "for ${1:i},${2:v} in pairs(${3:table_name}) do\n\t$0\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "forp": true
+      }
+    },
+    {
+      "content": "for ${1:i},${2:v} in ipairs(${3:table_name}) do\n\t$0\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fori": true
+      }
+    },
+    {
+      "content": "if $1 then\n\t$2\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "if $1 then\n\t${2:-- if condition}\nelse\n\t${0:-- else}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "elseif $1 then\n\t$0",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "elif": true
+      }
+    },
+    {
+      "content": "repeat\n\t$1\nuntil $0",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "repeat": true
+      }
+    },
+    {
+      "content": "while $1 do\n\t$0\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "while ${1:true} do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "while true do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wht": true
+      }
+    },
+    {
+      "content": "print(\"${1:string}\")",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "print": true
+      }
+    },
+    {
+      "content": "print($0)",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pr": true
+      }
+    },
+    {
+      "content": "print(\"$0\")",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "prs": true
+      }
+    },
+    {
+      "content": "print(string.format(\"${1:%s}\"$0))",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "prf": true
+      }
+    },
+    {
+      "content": "io.write($0)",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wr": true
+      }
+    },
+    {
+      "content": "io.write(\"$0\")",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wrs": true
+      }
+    },
+    {
+      "content": "io.write(string.format(\"${1:%s}\"$0))",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wrf": true
+      }
+    },
+    {
+      "content": "io.${1:stderr}:write($0)",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fwr": true
+      }
+    },
+    {
+      "content": "io.${1:stderr}:write(\"$0\")",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fwrs": true
+      }
+    },
+    {
+      "content": "io.${1:stderr}:write(string.format(\"${2:%s}\"$0))",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fwrf": true
+      }
+    },
+    {
+      "content": "require('${1:mod}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "req": true
+      }
+    }
+  ]
+}

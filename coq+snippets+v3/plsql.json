@@ -1,0 +1,181 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "create or replace package ${1:name}\nas\n\t${0:-- spec}\nend; -- end of package spec $1",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ps": true
+      }
+    },
+    {
+      "content": "create or replace package body ${1:name}\nas\n\t$0\nend; -- end of package body $1;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pb": true
+      }
+    },
+    {
+      "content": "procedure ${1:name}(${0:args});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pps": true
+      }
+    },
+    {
+      "content": "procedure ${1:name}(${2:args})\nas\nbegin\n\t$0\nend $2;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ppb": true
+      }
+    },
+    {
+      "content": "function ${1:name}(${2:args})\n  return ${0:type};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pfs": true
+      }
+    },
+    {
+      "content": "function ${1:name}(${2:args})\n  return ${3:type}\nas\n\tl_res\t$3;\nbegin\n\t$0;\n\treturn l_res;\nend $1;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pfb": true
+      }
+    },
+    {
+      "content": "show errors;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "err": true
+      }
+    },
+    {
+      "content": "${1:name} ${2:in} ${3:type} ${0: := null}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "p": true
+      }
+    },
+    {
+      "content": "type tr_${1:name} is record (${0:/* columns */});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tr": true
+      }
+    },
+    {
+      "content": "type tt_${1:name} is table of tr_${0:name};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tt": true
+      }
+    },
+    {
+      "content": "type tt_${1:name} is table of tr_${0:name} index by binary_integer;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tti": true
+      }
+    },
+    {
+      "content": "/*\n *\t${0: comment ...}\n */",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "doc": true
+      }
+    },
+    {
+      "content": "begin\n\t${0}\nend;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "beg": true
+      }
+    },
+    {
+      "content": "declare\n\t${1}\nbegin\n\t${0}\nend;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dec": true
+      }
+    },
+    {
+      "content": "for ${1:i} in 1 .. ${0:l_res}.count loop\n\tpipe row( $2($1) );\nend loop;\nreturn;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rpipe": true
+      }
+    },
+    {
+      "content": "bulk collect into ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bc": true
+      }
+    },
+    {
+      "content": "l_${1}\t\t${0:number};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "l": true
+      }
+    },
+    {
+      "content": "dbms_output.put_line('${0}');",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "log": true
+      }
+    },
+    {
+      "content": "for ${1:i} in ${2:1}..${3:42} loop\n\t${0}\nend loop;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "for ${1:rec} in (${2: select}) loop\n\t${0}\nend loop;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fors": true
+      }
+    },
+    {
+      "content": "if ${1} then\n\t${0}\nend if;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "if ${1} then\n\t${2}\nelse\n\t${0}\nend if;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ife": true
+      }
+    }
+  ]
+}

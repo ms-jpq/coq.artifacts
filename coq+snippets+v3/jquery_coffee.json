@@ -1,0 +1,1309 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "${1:obj}.add('${2:selector expression}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "add": true
+      }
+    },
+    {
+      "content": "${1:obj}.addClass('${2:class name}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "addClass": true
+      }
+    },
+    {
+      "content": "${1:obj}.after('${2:Some text <b>and bold!</b>}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "after": true
+      }
+    },
+    {
+      "content": "${1:obj}.ajaxComplete (${1:e}, xhr, settings) ->\n\t${0:// callback}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ajaxcomplete": true
+      }
+    },
+    {
+      "content": "${1:obj}.ajaxError (${1:e}, xhr, settings, thrownError) ->\n\t${2:// error callback}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ajaxerror": true
+      }
+    },
+    {
+      "content": "${1:obj}.ajaxSend (${1:request, settings}) ->\n\t${2:// error callback}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ajaxsend": true
+      }
+    },
+    {
+      "content": "${1:obj}.andSelf()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "andself": true
+      }
+    },
+    {
+      "content": "${1:obj}.animate({${2:param1: value1, param2: value2}}, ${3:speed})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "animate": true
+      }
+    },
+    {
+      "content": "${1:obj}.append('${2:Some text <b>and bold!</b>}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "append": true
+      }
+    },
+    {
+      "content": "${1:obj}.appendTo('${2:selector expression}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "appendTo": true
+      }
+    },
+    {
+      "content": "${1:obj}.attr('${2:attribute}', '${3:value}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "attr": true
+      }
+    },
+    {
+      "content": "${1:obj}.attr({'${2:attr1}': '${3:value1}', '${4:attr2}': '${5:value2}'})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "attrm": true
+      }
+    },
+    {
+      "content": "${1:obj}.before('${2:Some text <b>and bold!</b>}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "before": true
+      }
+    },
+    {
+      "content": "${1:obj}.bind('${2:event name}', (${3:e}) ->\n\t${0:// event handler}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bind": true
+      }
+    },
+    {
+      "content": "${1:obj}.blur (${2:e}) ->\n\t${0:// event handler}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "blur": true
+      }
+    },
+    {
+      "content": "${1:callbacks}.add(${2:callbacks})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Cadd": true
+      }
+    },
+    {
+      "content": "${1:callbacks}.disable()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Cdis": true
+      }
+    },
+    {
+      "content": "${1:callbacks}.empty()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Cempty": true
+      }
+    },
+    {
+      "content": "${1:callbacks}.fire(${2:args})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Cfire": true
+      }
+    },
+    {
+      "content": "${1:callbacks}.fired()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Cfired": true
+      }
+    },
+    {
+      "content": "${1:callbacks}.fireWith(${2:this}, ${3:args})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Cfirew": true
+      }
+    },
+    {
+      "content": "${1:callbacks}.has(${2:callback})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Chas": true
+      }
+    },
+    {
+      "content": "${1:callbacks}.lock()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Clock": true
+      }
+    },
+    {
+      "content": "${1:callbacks}.locked()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Clocked": true
+      }
+    },
+    {
+      "content": "${1:callbacks}.remove(${2:callbacks})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Crem": true
+      }
+    },
+    {
+      "content": "${1:obj}.change (${2:e}) ->\n\t${0:// event handler}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "change": true
+      }
+    },
+    {
+      "content": "${1:obj}.children('${2:selector expression}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "children": true
+      }
+    },
+    {
+      "content": "${1:obj}.clearQueue(${2:'queue name'})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "clearq": true
+      }
+    },
+    {
+      "content": "${1:obj}.click (${2:e}) ->\n\t${0:// event handler}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "click": true
+      }
+    },
+    {
+      "content": "${1:obj}.clone()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "clone": true
+      }
+    },
+    {
+      "content": "${1:obj}.css('${2:attribute}', '${3:value}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "css": true
+      }
+    },
+    {
+      "content": "${1:obj}.css({${2:attribute1}: '${3:value1}', ${4:attribute2}: '${5:value2}'})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cssm": true
+      }
+    },
+    {
+      "content": "${1:deferred}.always(${2:callbacks})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Dalways": true
+      }
+    },
+    {
+      "content": "${1:deferred}.done(${2:callbacks})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Ddone": true
+      }
+    },
+    {
+      "content": "${1:deferred}.fail(${2:callbacks})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Dfail": true
+      }
+    },
+    {
+      "content": "${1:deferred}.isRejected()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Disrej": true
+      }
+    },
+    {
+      "content": "${1:deferred}.isResolved()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Disres": true
+      }
+    },
+    {
+      "content": "${1:deferred}.notify(${2:args})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Dnotify": true
+      }
+    },
+    {
+      "content": "${1:deferred}.notifyWith(${2:this}, ${3:args})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Dnotifyw": true
+      }
+    },
+    {
+      "content": "${1:deferred}.then(${2:doneFilter}, ${3:failFilter}, ${4:progressFilter})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Dpipe": true
+      }
+    },
+    {
+      "content": "${1:deferred}.progress(${2:callbacks})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Dprog": true
+      }
+    },
+    {
+      "content": "${1:deferred}.promise(${2:target})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Dprom": true
+      }
+    },
+    {
+      "content": "${1:deferred}.reject(${2:args})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Drej": true
+      }
+    },
+    {
+      "content": "${1:deferred}.rejectWith(${2:this}, ${3:args})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Drejw": true
+      }
+    },
+    {
+      "content": "${1:deferred}.resolve(${2:args})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Dres": true
+      }
+    },
+    {
+      "content": "${1:deferred}.resolveWith(${2:this}, ${3:args})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Dresw": true
+      }
+    },
+    {
+      "content": "${1:deferred}.state()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Dstate": true
+      }
+    },
+    {
+      "content": "${1:deferred}.then(${2:doneCallbacks}, ${3:failCallbacks}, ${4:progressCallbacks})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Dthen": true
+      }
+    },
+    {
+      "content": "${1:obj}.data(${2:obj})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "data": true
+      }
+    },
+    {
+      "content": "${1:obj}.dblclick (${2:e}) ->\n\t${0:// event handler}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dblclick": true
+      }
+    },
+    {
+      "content": "${1:obj}.delay('${2:slow/400/fast}'${3:, 'queue name'})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "delay": true
+      }
+    },
+    {
+      "content": "${1:obj}.delegate '${2:selector expression}', '${3:event name}', (${4:e}) ->\n\t${0:// event handler}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dele": true
+      }
+    },
+    {
+      "content": "${1:obj}.dequeue(${2:'queue name'})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "deq": true
+      }
+    },
+    {
+      "content": "${1:obj}.detach('${2:selector expression}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "detach": true
+      }
+    },
+    {
+      "content": "${1:obj}.die(${2:event}, ${3:handler})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "die": true
+      }
+    },
+    {
+      "content": "${1:obj}.each (index) ->\n\t${0:this.innerHTML = this + \" is the element, \" + index + \" is the position\"}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "each": true
+      }
+    },
+    {
+      "content": "${1:obj}.empty()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "empty": true
+      }
+    },
+    {
+      "content": "${1:obj}.end()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "end": true
+      }
+    },
+    {
+      "content": "${1:obj}.eq(${2:element index})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eq": true
+      }
+    },
+    {
+      "content": "${1:obj}.error (${2:e}) ->\n\t${0:// event handler}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "error": true
+      }
+    },
+    {
+      "content": "{\n\t:f${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eventsmap": true
+      }
+    },
+    {
+      "content": "${1:obj}.fadeIn('${2:slow/400/fast}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fadein": true
+      }
+    },
+    {
+      "content": "${1:obj}.fadeIn 'slow/400/fast', ->\n\t${0:// callback}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fadeinc": true
+      }
+    },
+    {
+      "content": "${1:obj}.fadeOut('${2:slow/400/fast}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fadeout": true
+      }
+    },
+    {
+      "content": "${1:obj}.fadeOut 'slow/400/fast', ->\n\t${0:// callback}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fadeoutc": true
+      }
+    },
+    {
+      "content": "${1:obj}.fadeTo('${2:slow/400/fast}', ${3:0.5})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fadeto": true
+      }
+    },
+    {
+      "content": "${1:obj}.fadeTo 'slow/400/fast', ${2:0.5}, ->\n\t${0:// callback}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fadetoc": true
+      }
+    },
+    {
+      "content": "${1:obj}.filter('${2:selector expression}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "filter": true
+      }
+    },
+    {
+      "content": "${1:obj}.filter (${2:index}) ->\n\t${3}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "filtert": true
+      }
+    },
+    {
+      "content": "${1:obj}.find('${2:selector expression}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "find": true
+      }
+    },
+    {
+      "content": "${1:obj}.focus (${2:e}) ->\n\t${0:// event handler}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "focus": true
+      }
+    },
+    {
+      "content": "${1:obj}.focusIn (${2:e}) ->\n\t${0:// event handler}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "focusin": true
+      }
+    },
+    {
+      "content": "${1:obj}.focusOut (${2:e}) ->\n\t${0:// event handler}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "focusout": true
+      }
+    },
+    {
+      "content": "${1:obj}.get(${2:element index})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "get": true
+      }
+    },
+    {
+      "content": "${1:obj}.hasClass('${2:className}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "hasc": true
+      }
+    },
+    {
+      "content": "${1:obj}.height(${2:integer})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "height": true
+      }
+    },
+    {
+      "content": "${1:obj}.hide('${2:slow/400/fast}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "hide": true
+      }
+    },
+    {
+      "content": "${1:obj}.hide '${2:slow/400/fast}', ->\n\t${0:// callback}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "hidec": true
+      }
+    },
+    {
+      "content": "${1:obj}.hover (${2:e}) ->\n\t${3:// event handler}\n, ($2) ->\n\t${4:// event handler}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "hover": true
+      }
+    },
+    {
+      "content": "${1:obj}.html('${2:Some text <b>and bold!</b>}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "html": true
+      }
+    },
+    {
+      "content": "${1:obj}.insertAfter('${2:selector expression}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "insa": true
+      }
+    },
+    {
+      "content": "${1:obj}.insertBefore('${2:selector expression}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "insb": true
+      }
+    },
+    {
+      "content": "${1:obj}.is('${2:selector expression}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "is": true
+      }
+    },
+    {
+      "content": "${1:obj}.keydown (${2:e}) ->\n\t${0:// event handler}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "kdown": true
+      }
+    },
+    {
+      "content": "${1:obj}.keypress (${2:e}) ->\n\t${0:// event handler}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "kpress": true
+      }
+    },
+    {
+      "content": "${1:obj}.keyup (${2:e}) ->\n\t${0:// event handler}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "kup": true
+      }
+    },
+    {
+      "content": "${1:obj}.last('${1:selector expression}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "last": true
+      }
+    },
+    {
+      "content": "${1:obj}.live '${2:events}', (${3:e}) ->\n\t${0:// event handler}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "live": true
+      }
+    },
+    {
+      "content": "${1:obj}.load (${2:e}) ->\n\t${0:// event handler}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "load": true
+      }
+    },
+    {
+      "content": "${1:obj}.load('${2:mydomain.com/url}',\n\t${2:{ param1: value1 },}\n\t(responseText, textStatus, xhr) ->\n\t\t${0:// success callback}\n})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "loadf": true
+      }
+    },
+    {
+      "content": "${1:obj}.map (${2:index}, ${3:element}) ->\n\t${0:// callback}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "map": true
+      }
+    },
+    {
+      "content": "${1:obj}.mousedown (${2:e}) ->\n\t${0:// event handler}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mdown": true
+      }
+    },
+    {
+      "content": "${1:obj}.mouseenter (${2:e}) ->\n\t${0:// event handler}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "menter": true
+      }
+    },
+    {
+      "content": "${1:obj}.mouseleave (${2:e}) ->\n\t${0:// event handler}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mleave": true
+      }
+    },
+    {
+      "content": "${1:obj}.mousemove (${2:e}) ->\n\t${0:// event handler}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mmove": true
+      }
+    },
+    {
+      "content": "${1:obj}.mouseout (${2:e}) ->\n\t${0:// event handler}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mout": true
+      }
+    },
+    {
+      "content": "${1:obj}.mouseover (${2:e}) ->\n\t${0:// event handler}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mover": true
+      }
+    },
+    {
+      "content": "${1:obj}.mouseup (${2:e}) ->\n\t${0:// event handler}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mup": true
+      }
+    },
+    {
+      "content": "${1:obj}.next('${2:selector expression}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "next": true
+      }
+    },
+    {
+      "content": "${1:obj}.nextAll('${2:selector expression}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "nexta": true
+      }
+    },
+    {
+      "content": "${1:obj}.nextUntil('${2:selector expression}'${3:, 'filter expression'})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "nextu": true
+      }
+    },
+    {
+      "content": "${1:obj}.not('${2:selector expression}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "not": true
+      }
+    },
+    {
+      "content": "${1:obj}.off('${2:events}', '${3:selector expression}'${4:, handler})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "off": true
+      }
+    },
+    {
+      "content": "${1:obj}.offset()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "offset": true
+      }
+    },
+    {
+      "content": "${1:obj}.offsetParent()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "offsetp": true
+      }
+    },
+    {
+      "content": "${1:obj}.on '${2:events}', '${3:selector expression}', (${4:e}) ->\n\t${0:// event handler}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "on": true
+      }
+    },
+    {
+      "content": "${1:obj}.one '${2:event name}', (${3:e}) ->\n\t${0:// event handler}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "one": true
+      }
+    },
+    {
+      "content": "${1:obj}.outerHeight()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "outerh": true
+      }
+    },
+    {
+      "content": "${1:obj}.outerWidth()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "outerw": true
+      }
+    },
+    {
+      "content": "${1:obj}.parent('${2:selector expression}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "parent": true
+      }
+    },
+    {
+      "content": "${1:obj}.parents('${2:selector expression}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "parents": true
+      }
+    },
+    {
+      "content": "${1:obj}.parentsUntil('${2:selector expression}'${3:, 'filter expression'})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "parentsu": true
+      }
+    },
+    {
+      "content": "${1:obj}.position()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pos": true
+      }
+    },
+    {
+      "content": "${1:obj}.prepend('${2:Some text <b>and bold!</b>}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "prepend": true
+      }
+    },
+    {
+      "content": "${1:obj}.prependTo('${2:selector expression}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "prependto": true
+      }
+    },
+    {
+      "content": "${1:obj}.prev('${2:selector expression}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "prev": true
+      }
+    },
+    {
+      "content": "${1:obj}.prevAll('${2:selector expression}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "preva": true
+      }
+    },
+    {
+      "content": "${1:obj}.prevUntil('${2:selector expression}'${3:, 'filter expression'})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "prevu": true
+      }
+    },
+    {
+      "content": "${1:obj}.promise(${2:'fx'}, ${3:target})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "promise": true
+      }
+    },
+    {
+      "content": "${1:obj}.prop('${2:property name}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "prop": true
+      }
+    },
+    {
+      "content": "${1:obj}.pushStack(${2:elements})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pushstack": true
+      }
+    },
+    {
+      "content": "${1:obj}.queue(${2:name}${3:, newQueue})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "queue": true
+      }
+    },
+    {
+      "content": "${1:obj}.remove()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rem": true
+      }
+    },
+    {
+      "content": "${1:obj}.removeAttr('${2:attribute name}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rema": true
+      }
+    },
+    {
+      "content": "${1:obj}.removeClass('${2:class name}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "remc": true
+      }
+    },
+    {
+      "content": "${1:obj}.removeData('${2:key name}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "remd": true
+      }
+    },
+    {
+      "content": "${1:obj}.removeProp('${2:property name}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "remp": true
+      }
+    },
+    {
+      "content": "${1:obj}.replaceAll(${2:target})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "repa": true
+      }
+    },
+    {
+      "content": "${1:obj}.replaceWith(${2:content})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "repw": true
+      }
+    },
+    {
+      "content": "${1:obj}.reset (${2:e}) ->\n\t${0:// event handler}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "reset": true
+      }
+    },
+    {
+      "content": "${1:obj}.resize (${2:e}) ->\n\t${0:// event handler}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "resize": true
+      }
+    },
+    {
+      "content": "${1:obj}.scroll (${2:e}) ->\n\t${0:// event handler}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "scroll": true
+      }
+    },
+    {
+      "content": "${1:obj}.scrollLeft(${2:value})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "scrolll": true
+      }
+    },
+    {
+      "content": "${1:obj}.scrollTop(${2:value})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "scrollt": true
+      }
+    },
+    {
+      "content": "${1:obj}.slideDown('${2:slow/400/fast}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sdown": true
+      }
+    },
+    {
+      "content": "${1:obj}.slideDown('${2:slow/400/fast}', ->\n\t${0:// callback}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sdownc": true
+      }
+    },
+    {
+      "content": "${1:obj}.select (${2:e}) ->\n\t${0:// event handler}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "select": true
+      }
+    },
+    {
+      "content": "${1:obj}.serialize()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "serialize": true
+      }
+    },
+    {
+      "content": "${1:obj}.serializeArray()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "serializea": true
+      }
+    },
+    {
+      "content": "${1:obj}.show('${2:slow/400/fast}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "show": true
+      }
+    },
+    {
+      "content": "${1:obj}.show '${2:slow/400/fast}', ->\n\t${0:// callback}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "showc": true
+      }
+    },
+    {
+      "content": "${1:obj}.siblings('${2:selector expression}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sib": true
+      }
+    },
+    {
+      "content": "${1:obj}.size()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "size": true
+      }
+    },
+    {
+      "content": "${1:obj}.slice(${2:start}${3:, end})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "slice": true
+      }
+    },
+    {
+      "content": "${1:obj}.slideToggle('${2:slow/400/fast}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "stoggle": true
+      }
+    },
+    {
+      "content": "${1:obj}.stop('${2:queue}', ${3:false}, ${4:false})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "stop": true
+      }
+    },
+    {
+      "content": "${1:obj}.submit (${2:e}) ->\n\t${0:// event handler}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "submit": true
+      }
+    },
+    {
+      "content": "${1:obj}.slideUp('${2:slow/400/fast}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sup": true
+      }
+    },
+    {
+      "content": "${1:obj}.slideUp '${2:slow/400/fast}', ->\n\t${0:// callback}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "supc": true
+      }
+    },
+    {
+      "content": "${1:obj}.text(${2:'some text'})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "text": true
+      }
+    },
+    {
+      "content": "${0:obj}.toArray()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "toarr": true
+      }
+    },
+    {
+      "content": "${1:obj}.toggle  (${2:e}) ->\n\t${3:// event handler}\n, ($2) ->\n\t${4:// event handler}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tog": true
+      }
+    },
+    {
+      "content": "${1:obj}.toggleClass('${2:class name}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "togclass": true
+      }
+    },
+    {
+      "content": "${1:obj}.toggle('${2:slow/400/fast}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "togsh": true
+      }
+    },
+    {
+      "content": "${1:obj}.trigger('${2:event name}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "trig": true
+      }
+    },
+    {
+      "content": "${1:obj}.triggerHandler('${2:event name}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "trigh": true
+      }
+    },
+    {
+      "content": "${1:obj}.unbind('${2:event name}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "unbind": true
+      }
+    },
+    {
+      "content": "${1:obj}.undelegate(${2:selector expression}, ${3:event}, ${4:handler})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "undele": true
+      }
+    },
+    {
+      "content": "${1:obj}.unload (${2:e}) ->\n\t${0:// event handler}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "unload": true
+      }
+    },
+    {
+      "content": "${1:obj}.unwrap()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "unwrap": true
+      }
+    },
+    {
+      "content": "${1:obj}.val('${2:text}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "val": true
+      }
+    },
+    {
+      "content": "${1:obj}.width(${2:integer})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "width": true
+      }
+    },
+    {
+      "content": "${1:obj}.wrap('${2:&ltdiv class=\"extra-wrapper\"&gt&lt/div&gt}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wrap": true
+      }
+    }
+  ]
+}

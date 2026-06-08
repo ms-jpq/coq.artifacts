@@ -1,0 +1,213 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "script ${1:#:new_object}\n\ton run\n\t\t${2:TARGET}\n\tend run\nend script",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "script": true
+      }
+    },
+    {
+      "content": "on ${1:#:functionName}(${2:#:arguments})\n\t${3:TARGET}\nend ${1}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "on": true
+      }
+    },
+    {
+      "content": "tell ${1:#:app}\n\t${0:TARGET}\nend tell",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tell": true
+      }
+    },
+    {
+      "content": "using terms from ${1:#:app}\n\t${0:TARGET}\nend using terms from",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "terms": true
+      }
+    },
+    {
+      "content": "if ${1:true} then\n\t${0:TARGET}\nend if",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "repeat ${1} times}\n\t${0:TARGET}\nend repeat",
+      "doc": "",
+      "label": "rep",
+      "matches": {
+        "rept": true
+      }
+    },
+    {
+      "content": "repeat while ${1:#:condition}\n\t${0:TARGET}\nend repeat",
+      "doc": "",
+      "label": "rep",
+      "matches": {
+        "repwh": true
+      }
+    },
+    {
+      "content": "repeat with ${1} in ${2}\n\t${0:TARGET}\nend repeat",
+      "doc": "",
+      "label": "rep",
+      "matches": {
+        "repwi": true
+      }
+    },
+    {
+      "content": "try\n\t${0:TARGET}\non error\n\t-- error handling\nend try",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "try": true
+      }
+    },
+    {
+      "content": "with timeout ${1:#:number} seconds\n\t${0:TARGET}\nend timeout",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "timeout": true
+      }
+    },
+    {
+      "content": "considering ${1:#:case}\n\t${0:TARGET}\nend considering",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "con": true
+      }
+    },
+    {
+      "content": "ignoring ${1:#:application responses}\n\t${0:TARGET}\nend ignoring",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ign": true
+      }
+    },
+    {
+      "content": "set oldDelims to AppleScript's text item delimiters\nset AppleScript's text item delimiters to {\"${1:,}\"}\n${0:#:TARGET}\nset AppleScript's text item delimiters to oldDelims",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "delim": true
+      }
+    },
+    {
+      "content": "prop parent : app \"${1}\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "parent": true
+      }
+    },
+    {
+      "content": "display alert \"${1:#:alert text}\"\n\t${2:#:message} \"${3:#:message text}\"\n\t${4:#:as warning}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "alert": true
+      }
+    },
+    {
+      "content": "display dialog \"${1:#:text}\"\n\t${2:#:with icon} ${3:1}\n\tbuttons {\"${4:OK}\"} default button 1",
+      "doc": "",
+      "label": "dialog",
+      "matches": {
+        "dialog_OK": true
+      }
+    },
+    {
+      "content": "display dialog \"${1:#:text}\"\n\t${2:#:with icon}\n\tbuttons {\"${3:Cancel}\", \"${4:OK}\"}\n\tdefault button \"${4}\"\nset button_pressed to button returned of result\nif button_pressed is \"${4}\" then\n\t${5:#:TARGET}\nelse\n\t-- action for cancel button goes here\nend if",
+      "doc": "",
+      "label": "dialog",
+      "matches": {
+        "dialog_OK/Cancel": true
+      }
+    },
+    {
+      "content": "display dialog \"${1:#:text}\"\n\t${2:#:with icon}\n\tbuttons {\"${3:Cancel}\", \"${4:Other Choice}\", \"${5:OK}\"}\n\tdefault button \"${5}\"\nset button_pressed to button returned of result\nif button_pressed is \"${5}\" then\n\t${6:TARGET}\nelse if button_pressed is \"${3}\" then\n\t-- action for cancel button goes here\nelse\n\t-- action for other button goes here\nend if",
+      "doc": "",
+      "label": "dialog",
+      "matches": {
+        "dialog_OK/Cancel/Other": true
+      }
+    },
+    {
+      "content": "set the_result to display dialog \"${1:#:text}\"\n\tdefault answer \"${2:#:type here}\"\n\t${3:#:with icon}\n\tbuttons {\"${4:Cancel}\", \"${5:OK}\"}\n\tdefault button \"${5}\"\nset button_pressed to button returned of the_result\nset text_typed to text returned of the_result\nif button_pressed is \"${5}\" then\n\t${6:#:TARGET}\nelse\n\t-- action for cancel button goes here\nend if",
+      "doc": "",
+      "label": "dialog",
+      "matches": {
+        "dialog_TextFierld": true
+      }
+    },
+    {
+      "content": "${1:#:set the_application to }choose application with prompt \"${2:#:Choose an application:}\"${3:#:with multiple selections allowed}",
+      "doc": "",
+      "label": "choose",
+      "matches": {
+        "choose_Applications": true
+      }
+    },
+    {
+      "content": "${1:#:set the_file to }choose file with prompt \"${2:#:Pick a file:}\"\n${3:#:default location path to home folder}\n${4:#:with invisibles}\n${5:#:with multiple selections allowed}\n${6:#:with showing package contents}",
+      "doc": "",
+      "label": "choose",
+      "matches": {
+        "choose_Files": true
+      }
+    },
+    {
+      "content": "${1:#:set the_folder to }choose folder with prompt \"${2:#:Pick a folder:}\"\n${3:#:default location path to home folder}\n${4:#:with invisibles}\n${5:#:with multiple selections allowed}\n${6:#:with showing package contents}\n${0}",
+      "doc": "",
+      "label": "choose",
+      "matches": {
+        "choose_Folders": true
+      }
+    },
+    {
+      "content": "${1:#:set the_filename to }choose file name with prompt \"${2:#:Name this file:}\"\n\tdefault name \"${3:untitled}\" default location ${4:#:path to home folder}",
+      "doc": "",
+      "label": "choose",
+      "matches": {
+        "choose_NewFile": true
+      }
+    },
+    {
+      "content": "${1:#:set the_url to }choose URL showing ${2:Web} servers with editable URL",
+      "doc": "",
+      "label": "choose",
+      "matches": {
+        "choose_URL": true
+      }
+    },
+    {
+      "content": "${1:#:set the_color to }choose color default color ${2:{65536, 65536, 65536\\}}",
+      "doc": "",
+      "label": "choose",
+      "matches": {
+        "choose_Color": true
+      }
+    },
+    {
+      "content": "set the_choice to choose from list ${1}\"\\}}",
+      "doc": "",
+      "label": "choose",
+      "matches": {
+        "choose_ItemFromList": true
+      }
+    }
+  ]
+}

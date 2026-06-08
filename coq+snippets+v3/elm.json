@@ -1,0 +1,261 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "import ${1:String}\n${0}",
+      "doc": "",
+      "label": "import",
+      "matches": {
+        "import": true
+      }
+    },
+    {
+      "content": "import ${1:String}\n${0}",
+      "doc": "",
+      "label": "import",
+      "matches": {
+        "imp": true
+      }
+    },
+    {
+      "content": "import ${1} as ${2}\n${0}",
+      "doc": "",
+      "label": "import ... as ...",
+      "matches": {
+        "importAs": true
+      }
+    },
+    {
+      "content": "import ${1} as ${2}\n${0}",
+      "doc": "",
+      "label": "import ... as ...",
+      "matches": {
+        "impa": true
+      }
+    },
+    {
+      "content": "import ${1:Html} exposing (${2:..})\n${0}",
+      "doc": "",
+      "label": "import ... exposing (..)",
+      "matches": {
+        "importExposing": true
+      }
+    },
+    {
+      "content": "import ${1:Html} exposing (${2:..})\n${0}",
+      "doc": "",
+      "label": "import ... exposing (..)",
+      "matches": {
+        "impe": true
+      }
+    },
+    {
+      "content": "import ${1:Html} as ${2} exposing (${2:..})\n${0}",
+      "doc": "",
+      "label": "import ... as ... exposing (..)",
+      "matches": {
+        "importAsExposing": true
+      }
+    },
+    {
+      "content": "import ${1:Html} as ${2} exposing (${2:..})\n${0}",
+      "doc": "",
+      "label": "import ... as ... exposing (..)",
+      "matches": {
+        "impae": true
+      }
+    },
+    {
+      "content": "case ${1:#:expression} of\n\t${2:#:value} ->\n\t\t${3:TARGET}",
+      "doc": "",
+      "label": "case ... of",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "if ${1:#:condition} then\n\t${2}\nelse\n\t${3}",
+      "doc": "",
+      "label": "if ... then ... else ...",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "let\n\t${1} =\n\t\t${2}\nin\n\t${0}",
+      "doc": "",
+      "label": "let ... in ...",
+      "matches": {
+        "let": true
+      }
+    },
+    {
+      "content": "\\\\${1:x} -> ${0}",
+      "doc": "",
+      "label": "λ",
+      "matches": {
+        "lambda": true
+      }
+    },
+    {
+      "content": "import ${0:Http}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "imp": true
+      }
+    },
+    {
+      "content": "import ${1:Html} exposing (${0:..})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "impe": true
+      }
+    },
+    {
+      "content": "import ${1:Json.Encode} as ${2:Encode} exposing (${0:Value})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "impae": true
+      }
+    },
+    {
+      "content": "${1:fn} : ${2:a} -> ${3:a}\n$1 ${4} =\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fn": true
+      }
+    },
+    {
+      "content": "${1:fn} : ${2:a} -> ${3:a}\n$1 ${4} =\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fn1": true
+      }
+    },
+    {
+      "content": "${1:fn} : ${2:a} -> ${3:a} -> ${4:a}\n$1 ${5} =\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fn2": true
+      }
+    },
+    {
+      "content": "${1:fn} : ${2:a} -> ${3:a} -> ${4:a} -> ${5:a}\n$1 ${6} =\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fn3": true
+      }
+    },
+    {
+      "content": "${1:fn} : ${2:a}\n$1 =\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fn0": true
+      }
+    },
+    {
+      "content": "case ${1} of\n\t${2} ->\n\t\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "${1} ->\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "-": true
+      }
+    },
+    {
+      "content": "let\n\t${1} =\n\t\t${2}\nin\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "let": true
+      }
+    },
+    {
+      "content": "if ${1} then\n\t${2:${VISUAL}}\nelse\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "type ${1:Msg}\n\t= ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ty": true
+      }
+    },
+    {
+      "content": "type alias ${1:Model} =\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tya": true
+      }
+    },
+    {
+      "content": "test \"${1}\" <| \\_ -> $0",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "test": true
+      }
+    },
+    {
+      "content": "describe \"${1}\" [ $0 ]",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "desc": true
+      }
+    },
+    {
+      "content": "{-| ${0}\n-}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "doc": true
+      }
+    },
+    {
+      "content": "|> ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "p": true
+      }
+    },
+    {
+      "content": "import Html exposing (Html)\n\n\ntype alias Model =\n\t{}\n\n\ntype Msg\n\t= Noop\n\n\nmain : Program Never Model Msg\nmain =\n\tHtml.program\n\t\t{ init = init\n\t\t, view = view\n\t\t, update = update\n\t\t, subscriptions = subscriptions\n\t\t}\n\n\ninit : ( Model, Cmd Msg )\ninit =\n\t{} ! []\n\n\nupdate : Msg -> Model -> ( Model, Cmd Msg )\nupdate msg model =\n\tcase msg of\n\t\tNoop ->\n\t\t\tmodel ! []\n\n\nsubscriptions : Model -> Sub Msg\nsubscriptions model =\n\tSub.none\n\n\nview : Model -> Html Msg\nview model =\n\tHtml.text \"Hello, sailor!\"",
+      "doc": "",
+      "label": "Elm 0.18 program",
+      "matches": {
+        "program": true
+      }
+    },
+    {
+      "content": "module Main exposing (Model, Msg(..), init, main, subscriptions, update, view)\n\nimport Browser\nimport Html exposing (..)\nimport Json.Encode\n\n\nmain : Program Flags Model Msg\nmain =\n\tBrowser.element\n\t\t{ init = init\n\t\t, update = update\n\t\t, subscriptions = subscriptions\n\t\t, view = view\n\t\t}\n\n\ntype alias Model =\n\t{}\n\n\ntype alias Flags =\n\tJson.Encode.Value\n\n\ninit : Flags -> ( Model, Cmd Msg )\ninit flags_ =\n\t( {}\n\t, Cmd.none\n\t)\n\n\ntype Msg\n\t= Noop\n\n\nupdate : Msg -> Model -> ( Model, Cmd Msg )\nupdate msg model =\n\tcase msg of\n\t\tNoop ->\n\t\t\t( model\n\t\t\t, Cmd.none\n\t\t\t)\n\n\nsubscriptions : Model -> Sub Msg\nsubscriptions model =\n\tSub.none\n\n\nview : Model -> Html Msg\nview model =\n\th1 [] [ text \"Hello, world!\" ]",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "element": true
+      }
+    }
+  ]
+}

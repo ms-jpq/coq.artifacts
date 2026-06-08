@@ -1,0 +1,29 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "<token_desc> token{\n\t${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "token_desc": true
+      }
+    },
+    {
+      "content": "<left>{\n\t${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "left": true
+      }
+    },
+    {
+      "content": "<grammar> grammar{\n\tE<${1}>\n\t\t: [${2}] ${3}\n\t\t;\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "grammar": true
+      }
+    }
+  ]
+}

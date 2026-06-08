@@ -1,0 +1,133 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "#!/usr/bin/env node",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "#!": true
+      }
+    },
+    {
+      "content": "module.exports = ${1};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ex": true
+      }
+    },
+    {
+      "content": "const ${1} = require('${2:module_name}');",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "re": true
+      }
+    },
+    {
+      "content": "on('${1:event_name}', function(${2:stream}) {\n  ${3}\n});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "on": true
+      }
+    },
+    {
+      "content": "emit('${1:event_name}', ${2:args});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "emit": true
+      }
+    },
+    {
+      "content": "once('${1:event_name}', function(${2:stream}) {\n  ${3}\n});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "once": true
+      }
+    },
+    {
+      "content": "http.createServer(${1:handler}).listen(${2:port_number});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "http": true
+      }
+    },
+    {
+      "content": "net.createServer(function(${1:socket}){\n\t${1}.on('data', function('data'){\n\t  ${2}\n\t]});\n\t${1}.on('end', function(){\n\t  ${3}\n\t});\n}).listen(${4:8124});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "net": true
+      }
+    },
+    {
+      "content": "pipe(${1:stream})${2}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pipe": true
+      }
+    },
+    {
+      "content": "${1:app}.get('${2:route}', ${3:handler});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eget": true
+      }
+    },
+    {
+      "content": "${1:app}.post('${2:route}', ${3:handler});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "epost": true
+      }
+    },
+    {
+      "content": "${1:app}.put('${2:route}', ${3:handler});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eput": true
+      }
+    },
+    {
+      "content": "${1:app}.delete('${2:route}', ${3:handler});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "edel": true
+      }
+    },
+    {
+      "content": "process.stdin",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "stdin": true
+      }
+    },
+    {
+      "content": "process.stdout",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "stdout": true
+      }
+    },
+    {
+      "content": "process.stderr",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "stderr": true
+      }
+    }
+  ]
+}

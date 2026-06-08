@@ -1,0 +1,773 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "with ${1};${2}",
+      "doc": "",
+      "label": "with ...;...",
+      "matches": {
+        "with": true
+      }
+    },
+    {
+      "content": "package ${1} is\n\t${0}\nend $1;",
+      "doc": "",
+      "label": "package {NAME} is {...} end",
+      "matches": {
+        "package": true
+      }
+    },
+    {
+      "content": "package body ${1} is\n\t${0}\nend $1;",
+      "doc": "",
+      "label": "package body {NAME} is {...} end",
+      "matches": {
+        "package_body": true
+      }
+    },
+    {
+      "content": "entry ${1}(${2}) when ${3} is\nbegin\n\t${0}\nend $1;",
+      "doc": "",
+      "label": "entry {...} when",
+      "matches": {
+        "entry": true
+      }
+    },
+    {
+      "content": "task ${1} is\n\tentry ${0}\nend $1;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "task": true
+      }
+    },
+    {
+      "content": "task body ${1} is\n\t${2}\nbegin\n\t${0}\nend $1;",
+      "doc": "",
+      "label": "task body",
+      "matches": {
+        "task_body": true
+      }
+    },
+    {
+      "content": "accept ${1}(${2}) do\n\t${0}\nend $1;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "accept": true
+      }
+    },
+    {
+      "content": "protected type ${1}(${2}) is\n\t${0}\nend $1;",
+      "doc": "",
+      "label": "protected type",
+      "matches": {
+        "protected_type": true
+      }
+    },
+    {
+      "content": "protected body ${1} is\n\t${2}\nbegin\n\t${0}\nend $1;",
+      "doc": "",
+      "label": "protected body",
+      "matches": {
+        "protected_body": true
+      }
+    },
+    {
+      "content": "generic\n\ttype ${1} is ${2};${0}",
+      "doc": "",
+      "label": "generic type",
+      "matches": {
+        "generic": true
+      }
+    },
+    {
+      "content": "type ${1} is ${2};${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "type": true
+      }
+    },
+    {
+      "content": "type ${1} is ${2}\n\twith Default_Value => ${3};${0}",
+      "doc": "",
+      "label": "type with default value",
+      "matches": {
+        "type_default": true
+      }
+    },
+    {
+      "content": "subtype ${1} is ${2};${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "subtype": true
+      }
+    },
+    {
+      "content": "declare\n\t${1}\nbegin\n\t${0}\nend;",
+      "doc": "",
+      "label": "declare block",
+      "matches": {
+        "declare": true
+      }
+    },
+    {
+      "content": "${1}:\ndeclare\n\t${2}\nbegin\n\t${0}\nend $1;",
+      "doc": "",
+      "label": "declare named block",
+      "matches": {
+        "declare_named": true
+      }
+    },
+    {
+      "content": "if ${1} then ${2} else ${0}",
+      "doc": "",
+      "label": "if expression",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "case ${1} is\n\twhen ${2} => ${3},${0}",
+      "doc": "",
+      "label": "case expression",
+      "matches": {
+        "case_expression": true
+      }
+    },
+    {
+      "content": "for all ${1} ${2:in} ${3} => ${0}",
+      "doc": "",
+      "label": "for all",
+      "matches": {
+        "for_all": true
+      }
+    },
+    {
+      "content": "for some ${1} ${2:in} ${3} => ${0}",
+      "doc": "",
+      "label": "for some",
+      "matches": {
+        "for_some": true
+      }
+    },
+    {
+      "content": "if ${1} then\n\t${0}\nend if;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "if ${1} then\n\t${2}\nelse\n\t${0}\nend if;",
+      "doc": "",
+      "label": "if ... else",
+      "matches": {
+        "ifelse": true
+      }
+    },
+    {
+      "content": "else\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "else": true
+      }
+    },
+    {
+      "content": "elsif ${1} then\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "elseif": true
+      }
+    },
+    {
+      "content": "elsif ${1} then\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ei": true
+      }
+    },
+    {
+      "content": "while ${1} loop\n\t${0}\nend loop;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "while ${1} loop\n\t${0}\nend loop;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "w": true
+      }
+    },
+    {
+      "content": "${1}:\nwhile ${2} loop\n\t${0}\nend loop $1;",
+      "doc": "",
+      "label": "named while",
+      "matches": {
+        "named_while": true
+      }
+    },
+    {
+      "content": "for ${1:I} in ${2} loop\n\t${0}\nend loop;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "for ${1} of ${2} loop\n\t${0}\nend loop;",
+      "doc": "",
+      "label": "for each",
+      "matches": {
+        "for_each": true
+      }
+    },
+    {
+      "content": "${1}:\nfor ${2:I} in ${3} loop\n\t${0}\nend loop $1;",
+      "doc": "",
+      "label": "named for",
+      "matches": {
+        "named_for": true
+      }
+    },
+    {
+      "content": "${1}:\nfor ${2} of ${3} loop\n\t${0}\nend loop $1;",
+      "doc": "",
+      "label": "named for each",
+      "matches": {
+        "named_for_each": true
+      }
+    },
+    {
+      "content": "procedure ${1}(${2}) is\n\t${3}\nbegin\n\t${0}\nend $1;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "procedure": true
+      }
+    },
+    {
+      "content": "procedure ${1};${0}",
+      "doc": "",
+      "label": "procedure declaration",
+      "matches": {
+        "procedure_declare": true
+      }
+    },
+    {
+      "content": "function ${1}(${2}) return ${3} is\n\t${4}\nbegin\n\t${0}\nend $1;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "function": true
+      }
+    },
+    {
+      "content": "function ${1} return ${2} is\n\t(${3});${0}",
+      "doc": "",
+      "label": "expression function",
+      "matches": {
+        "function_expr": true
+      }
+    },
+    {
+      "content": "function ${1} return ${2};${0}",
+      "doc": "",
+      "label": "function declaration",
+      "matches": {
+        "function_declare": true
+      }
+    },
+    {
+      "content": "return ${1} do\n\t${0}\nend return;",
+      "doc": "",
+      "label": "extended return",
+      "matches": {
+        "return": true
+      }
+    },
+    {
+      "content": "record\n\t${0}\nend record;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "record": true
+      }
+    },
+    {
+      "content": "case ${1} is\n\twhen ${2} => ${3};${0}\nend case;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "when ${1} => ${2};${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "when": true
+      }
+    },
+    {
+      "content": "when others => ${1};${0}",
+      "doc": "",
+      "label": "when others",
+      "matches": {
+        "when_others": true
+      }
+    },
+    {
+      "content": "loop\n\t${0}\nend loop;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "loop": true
+      }
+    },
+    {
+      "content": "${1}:\nloop\n\t${0}\nend loop $1;",
+      "doc": "",
+      "label": "named loop",
+      "matches": {
+        "named_loop": true
+      }
+    },
+    {
+      "content": "exit when ${1};\n${0}",
+      "doc": "",
+      "label": "exit when",
+      "matches": {
+        "exit_when": true
+      }
+    },
+    {
+      "content": "Ada.Text_IO.Put(${1});\n${0}",
+      "doc": "",
+      "label": "Ada.Text_IO.Put",
+      "matches": {
+        "put": true
+      }
+    },
+    {
+      "content": "Ada.Text_IO.Put_Line(${1});\n${0}",
+      "doc": "",
+      "label": "Ada.Text_IO.Put_Line",
+      "matches": {
+        "put_line": true
+      }
+    },
+    {
+      "content": "Ada.Text_IO.Get(${1});\n${0}",
+      "doc": "",
+      "label": "Ada.Text_IO.Get",
+      "matches": {
+        "get": true
+      }
+    },
+    {
+      "content": "Ada.Text_IO.Get_Line(${1});\n${0}",
+      "doc": "",
+      "label": "Ada.Text_IO.Get_Line",
+      "matches": {
+        "get_line": true
+      }
+    },
+    {
+      "content": "Ada.Text_IO.New_Line(${1:1});\n${0}",
+      "doc": "",
+      "label": "Ada.Text_IO.New_Line",
+      "matches": {
+        "newline": true
+      }
+    },
+    {
+      "content": "with ${1};${0}",
+      "doc": "",
+      "label": "with",
+      "matches": {
+        "wi": true
+      }
+    },
+    {
+      "content": "package ${1} is\n\t${0}\nend $1;",
+      "doc": "",
+      "label": "package",
+      "matches": {
+        "pac": true
+      }
+    },
+    {
+      "content": "package body ${1} is\n\t${0}\nend $1;",
+      "doc": "",
+      "label": "package body",
+      "matches": {
+        "pacb": true
+      }
+    },
+    {
+      "content": "entry ${1}(${2}) when ${3} is\nbegin\n\t${0}\nend $1;",
+      "doc": "",
+      "label": "entry ... when",
+      "matches": {
+        "ent": true
+      }
+    },
+    {
+      "content": "task ${1} is\n\tentry ${0}\nend $1;",
+      "doc": "",
+      "label": "task",
+      "matches": {
+        "task": true
+      }
+    },
+    {
+      "content": "task body ${1} is\n\t${2}\nbegin\n\t${0}\nend $1;",
+      "doc": "",
+      "label": "task body",
+      "matches": {
+        "taskb": true
+      }
+    },
+    {
+      "content": "accept ${1}(${2}) do\n\t${0}\nend $1;",
+      "doc": "",
+      "label": "accept",
+      "matches": {
+        "acc": true
+      }
+    },
+    {
+      "content": "protected type ${1}(${2}) is\n\t${0}\nend $1;",
+      "doc": "",
+      "label": "protected type",
+      "matches": {
+        "prot": true
+      }
+    },
+    {
+      "content": "protected body ${1} is\n\t${2}\nbegin\n\t${0}\nend $1;",
+      "doc": "",
+      "label": "protected body",
+      "matches": {
+        "prob": true
+      }
+    },
+    {
+      "content": "generic\n\ttype ${1} is ${2};${0}",
+      "doc": "",
+      "label": "generic type",
+      "matches": {
+        "gen": true
+      }
+    },
+    {
+      "content": "type ${1} is ${2};${0}",
+      "doc": "",
+      "label": "type",
+      "matches": {
+        "ty": true
+      }
+    },
+    {
+      "content": "type ${1} is ${2}\n\twith Default_Value => ${3};${0}",
+      "doc": "",
+      "label": "type with default value",
+      "matches": {
+        "tyd": true
+      }
+    },
+    {
+      "content": "subtype ${1} is ${2};${0}",
+      "doc": "",
+      "label": "subtype",
+      "matches": {
+        "subty": true
+      }
+    },
+    {
+      "content": "declare\n\t${1}\nbegin\n\t${0}\nend;",
+      "doc": "",
+      "label": "declare block",
+      "matches": {
+        "dec": true
+      }
+    },
+    {
+      "content": "${1}:\ndeclare\n\t${2}\nbegin\n\t${0}\nend $1;",
+      "doc": "",
+      "label": "declare named block",
+      "matches": {
+        "decn": true
+      }
+    },
+    {
+      "content": "if ${1} then ${2} else ${0}",
+      "doc": "",
+      "label": "if expression",
+      "matches": {
+        "ifex": true
+      }
+    },
+    {
+      "content": "case ${1} is\n\twhen ${2} => ${3},${0}",
+      "doc": "",
+      "label": "case expression",
+      "matches": {
+        "casex": true
+      }
+    },
+    {
+      "content": "for all ${1} ${2:in} ${3} => ${0}",
+      "doc": "",
+      "label": "for all",
+      "matches": {
+        "fora": true
+      }
+    },
+    {
+      "content": "for some ${1} ${2:in} ${3} => ${0}",
+      "doc": "",
+      "label": "for some",
+      "matches": {
+        "fors": true
+      }
+    },
+    {
+      "content": "if ${1} then\n\t${0:${VISUAL}}\nend if;",
+      "doc": "",
+      "label": "if",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "if ${1} then\n\t${2:${VISUAL}}\nelse\n\t${0}\nend if;",
+      "doc": "",
+      "label": "if ... else",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "else\n\t${0:${VISUAL}}",
+      "doc": "",
+      "label": "else",
+      "matches": {
+        "el": true
+      }
+    },
+    {
+      "content": "elsif ${1} then\n\t${0}",
+      "doc": "",
+      "label": "elsif",
+      "matches": {
+        "eif": true
+      }
+    },
+    {
+      "content": "while ${1} loop\n\t${0:${VISUAL}}\nend loop;",
+      "doc": "",
+      "label": "while",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "${1}:\nwhile ${2} loop\n\t${0:${VISUAL}}\nend loop $1;",
+      "doc": "",
+      "label": "named while",
+      "matches": {
+        "nwh": true
+      }
+    },
+    {
+      "content": "for ${1:I} in ${2} loop\n\t${0}\nend loop;",
+      "doc": "",
+      "label": "for",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "for ${1} of ${2} loop\n\t${0}\nend loop;",
+      "doc": "",
+      "label": "for each",
+      "matches": {
+        "fore": true
+      }
+    },
+    {
+      "content": "${1}:\nfor ${2:I} in ${3} loop\n\t${0}\nend loop $1;",
+      "doc": "",
+      "label": "named for",
+      "matches": {
+        "nfor": true
+      }
+    },
+    {
+      "content": "${1}:\nfor ${2} of ${3} loop\n\t${0}\nend loop $1;",
+      "doc": "",
+      "label": "named for each",
+      "matches": {
+        "nfore": true
+      }
+    },
+    {
+      "content": "procedure ${1}(${2}) is\n\t${3}\nbegin\n\t${0}\nend $1;",
+      "doc": "",
+      "label": "procedure",
+      "matches": {
+        "proc": true
+      }
+    },
+    {
+      "content": "procedure ${1};${0}",
+      "doc": "",
+      "label": "procedure declaration",
+      "matches": {
+        "procd": true
+      }
+    },
+    {
+      "content": "function ${1}(${2}) return ${3} is\n\t${4}\nbegin\n\t${0}\nend $1;",
+      "doc": "",
+      "label": "function",
+      "matches": {
+        "fun": true
+      }
+    },
+    {
+      "content": "function ${1} return ${2} is\n\t(${3});${0}",
+      "doc": "",
+      "label": "expression function",
+      "matches": {
+        "fune": true
+      }
+    },
+    {
+      "content": "function ${1} return ${2};${0}",
+      "doc": "",
+      "label": "function declaration",
+      "matches": {
+        "fund": true
+      }
+    },
+    {
+      "content": "return ${1} do\n\t${0}\nend return;",
+      "doc": "",
+      "label": "extended return",
+      "matches": {
+        "ret": true
+      }
+    },
+    {
+      "content": "record\n\t${0}\nend record;",
+      "doc": "",
+      "label": "record",
+      "matches": {
+        "rec": true
+      }
+    },
+    {
+      "content": "case ${1} is\n\twhen ${2} => ${3};${0}\nend case;",
+      "doc": "",
+      "label": "case",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "when ${1} => ${2};${0}",
+      "doc": "",
+      "label": "when",
+      "matches": {
+        "whe": true
+      }
+    },
+    {
+      "content": "when others => ${1};${0}",
+      "doc": "",
+      "label": "when others",
+      "matches": {
+        "wheo": true
+      }
+    },
+    {
+      "content": "loop\n\t${0}\nend loop;",
+      "doc": "",
+      "label": "loop",
+      "matches": {
+        "lo": true
+      }
+    },
+    {
+      "content": "${1}:\nloop\n\t${0}\nend loop $1;",
+      "doc": "",
+      "label": "named loop",
+      "matches": {
+        "nlo": true
+      }
+    },
+    {
+      "content": "exit when ${1};${0}",
+      "doc": "",
+      "label": "exit when",
+      "matches": {
+        "ex": true
+      }
+    },
+    {
+      "content": "Ada.Text_IO.Put(${1});${0}",
+      "doc": "",
+      "label": "Ada.Text_IO.Put",
+      "matches": {
+        "put": true
+      }
+    },
+    {
+      "content": "Ada.Text_IO.Put_Line(${1});${0}",
+      "doc": "",
+      "label": "Ada.Text_IO.Put_Line",
+      "matches": {
+        "putl": true
+      }
+    },
+    {
+      "content": "Ada.Text_IO.Get(${1});${0}",
+      "doc": "",
+      "label": "Ada.Text_IO.Get",
+      "matches": {
+        "get": true
+      }
+    },
+    {
+      "content": "Ada.Text_IO.Get_Line(${1});${0}",
+      "doc": "",
+      "label": "Ada.Text_IO.Get_Line",
+      "matches": {
+        "getl": true
+      }
+    },
+    {
+      "content": "Ada.Text_IO.New_Line(${1:1});${0}",
+      "doc": "",
+      "label": "Ada.Text_IO.New_Line",
+      "matches": {
+        "newline": true
+      }
+    }
+  ]
+}

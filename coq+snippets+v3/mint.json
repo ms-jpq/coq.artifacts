@@ -1,0 +1,213 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "<${1:button}::${2:stylename} ${3:disabled}={${4:disabled}}>\n\t<{ \"${5:Text}\" }>\n</${1:button}>",
+      "doc": "HTML elements can be written as in standard HTML.",
+      "label": "Button Element",
+      "matches": {
+        "button": true
+      }
+    },
+    {
+      "content": "if (${1:condition}) {\n\t${2:value}\n} else {\n\t${3:otherValue}\n}",
+      "doc": "The if...else conditional expression can return two different values based on a condition.",
+      "label": "If",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "store ${1:StoreName}.Store {\n\t$0\n}",
+      "doc": "Stores are global containers of application specific data.",
+      "label": "Store",
+      "matches": {
+        "store": true
+      }
+    },
+    {
+      "content": "{${disabled}}",
+      "doc": "Attributes are either strings or expressions.",
+      "label": "Attributes",
+      "matches": {
+        "att": true
+      }
+    },
+    {
+      "content": "connect ${1:StoreName}.Store exposing { $0 }",
+      "doc": "The connect directive lets you connect a component to a store which allows you to call the stores functions and properties without using the stores name.",
+      "label": "Connect",
+      "matches": {
+        "con": true
+      }
+    },
+    {
+      "content": "fun ${1:name}(${2:object} : ${3:String}) : ${4:Void} {\n\t$0\n}",
+      "doc": "Functions can be defined on modules, components, stores and providers.",
+      "label": "Functions",
+      "matches": {
+        "fun": true
+      }
+    },
+    {
+      "content": "module ${1:ModuleName} {\n\t$0\n}",
+      "doc": "Modules are kind of containers for a set of relatable functions, usually used to gather functions that relate to a specific type.",
+      "label": "Modules",
+      "matches": {
+        "mod": true
+      }
+    },
+    {
+      "content": "case (${1:condition}) {\n\t${2:match1} => ${3:value1}\n\t${4:match3} => ${5:value3}\n\t=> ${6:defaultValue}\n}",
+      "doc": "A case expression is useful for matching enums or exact values, while also supporting a default value.",
+      "label": "Case",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "next { state | ${1:name} = ${1:name} + 1 }",
+      "doc": "Functions can be defined on modules, components, stores and providers.",
+      "label": "Next Call",
+      "matches": {
+        "next": true
+      }
+    },
+    {
+      "content": "component ${1:ComponentName} {\n\t$0\n}",
+      "doc": "Components are reusable pieces of code that have specific behavior, styles and content.",
+      "label": "Components",
+      "matches": {
+        "com": true
+      }
+    },
+    {
+      "content": "fun render : Html {\n\t$0\n}",
+      "doc": "The render function renders the component into an HTML tree.",
+      "label": "Render",
+      "matches": {
+        "render": true
+      }
+    },
+    {
+      "content": "try {\n\t$1\n} catch ${2:Json}.Error => error {\n\t$3\n}",
+      "doc": "try is a control expression for handling synchronous computations that might fail, for example when you are trying to convert an untyped JavaScript object into a typed Record.",
+      "label": "Try",
+      "matches": {
+        "try": true
+      }
+    },
+    {
+      "content": "<${1:Component} ${2:attribute}={${3:value}}/>",
+      "doc": "Tags that have the name of a component will render that component at the point where the tag is defined.",
+      "label": "Components Tags",
+      "matches": {
+        "tag": true
+      }
+    },
+    {
+      "content": "record ${1:User} {\n\t${2:name} : ${3:String},\n\t${4:email} : ${5:String}\n}",
+      "doc": "Records are object like data structures, that have a fix set of keys and values.",
+      "label": "Record",
+      "matches": {
+        "record": true
+      }
+    },
+    {
+      "content": "<${1:div}::${2:stylename}>\n\t$0\n</${1:div}>",
+      "doc": "HTML elements can be written as in standard HTML.",
+      "label": "HTML Elements",
+      "matches": {
+        "div": true
+      }
+    },
+    {
+      "content": "${onEvent}={\\event : Html.Event => ${handler}()}",
+      "doc": "All event handlers are functions, they take an event record and return Void.",
+      "label": "Events",
+      "matches": {
+        "event": true
+      }
+    },
+    {
+      "content": "do {\n\t$1\n} catch ${2:Http}.Error => error {\n\t$3\n}",
+      "doc": "do expressions are for two things: handling asynchronous computations that might fail, for example when loading something with a request, or executing asynchronous expressions sequentially.",
+      "label": "Do",
+      "matches": {
+        "do": true
+      }
+    },
+    {
+      "content": "get ${1:computedProperty} : ${2:String} {\n\t$0\n}",
+      "doc": "Computed properties works like regular properties but instead of returning a constant value it can return different values base on the state and the properties.",
+      "label": "Computed Properties",
+      "matches": {
+        "get": true
+      }
+    },
+    {
+      "content": "<${1:span}::${2:stylename}>\n\t$0\n</${1:span}>",
+      "doc": "HTML elements can be written as in standard HTML.",
+      "label": "Span Element",
+      "matches": {
+        "span": true
+      }
+    },
+    {
+      "content": "style ${1:base} {\n\t${2:attribute}: ${3:value};\n}",
+      "doc": "Styles define with CSS how an HTML element looks.",
+      "label": "Style",
+      "matches": {
+        "sty": true
+      }
+    },
+    {
+      "content": "routes {\n\t/ {\n\t\t${1:Application.setPage(\"index\")}\n\t}\n\t/${2:user}/:${3:id} {\n\t\t do {\n\t\t\t${4:Application.setPage(\"show\")}\n\t\t\t${5:Application.loadUser(id)}\n\t\t}\n\t}\n}",
+      "doc": "In Mint routes of an application are defined at the top level with the routes block.",
+      "label": "Routes",
+      "matches": {
+        "routes": true
+      }
+    },
+    {
+      "content": "<${1:p}::${2:stylename}>\n\t$0\n</${1:p}>",
+      "doc": "HTML elements can be written as in standard HTML.",
+      "label": "Paragraph Element",
+      "matches": {
+        "p": true
+      }
+    },
+    {
+      "content": "property ${1:name} : ${2:Number} = ${0:0}",
+      "doc": "The property keyword when used in a store defines part of the data that the store contains.",
+      "label": "Store property",
+      "matches": {
+        "prop": true
+      }
+    },
+    {
+      "content": "<{ \"${Message}\" }>",
+      "doc": "HTML Expressions allows inserting data into HTML elements or components.",
+      "label": "HTML Expressions",
+      "matches": {
+        "exp": true
+      }
+    },
+    {
+      "content": "<${1:h1}::${2:stylename}>\n\t$0\n</${1:h1}>",
+      "doc": "HTML elements can be written as in standard HTML.",
+      "label": "Title Element",
+      "matches": {
+        "h": true
+      }
+    },
+    {
+      "content": "component Main {\n\tfun render : Html {\n\t\t<$0/>\n\t}\n}",
+      "doc": "The component named Main is the one that get's rendered on the screen.",
+      "label": "Main component",
+      "matches": {
+        "main": true
+      }
+    }
+  ]
+}

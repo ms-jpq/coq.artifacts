@@ -1,0 +1,42 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "^slicing.discriminator.type = ${1|#value,#exists,#pattern,#type,#profile|}\n${TM_CURRENT_LINE/\\s*([^\\^]+).*/$1/}^slicing.discriminator.path = \"$2\"\n${TM_CURRENT_LINE/\\s*([^\\^]+).*/$1/}^slicing.rules = ${3|#open,#closed,#openAtEnd|}\n${TM_CURRENT_LINE/\\s*([^\\^]+).*/$1/}^slicing.description = \"$4\"\n${TM_CURRENT_LINE/\\s*([^\\^]+).*/$1/}^slicing.ordered = ${5|false,true|}\n$0",
+      "doc": "Add slicing rules",
+      "label": "Slicing rules",
+      "matches": {
+        "^slicing": true
+      }
+    },
+    {
+      "content": "Mapping: $1\nSource: $2\nTarget: \"$3\"\nId: $4\nTitle: \"$5\"\nDescription: \"$6\"\n* $0",
+      "doc": "Create a FSH Invariant",
+      "label": "FSH Mapping",
+      "matches": {
+        "Map": true,
+        "map": true
+      }
+    },
+    {
+      "content": "Invariant: $1\nDescription: \"$2\"\nExpression: \"$3\"\nSeverity: ${4|#error,#warning|}\nXPath: \"$5\"\n\n$0",
+      "doc": "Create a FSH Invariant",
+      "label": "FSH Invariant",
+      "matches": {
+        "Inv": true,
+        "inv": true
+      }
+    },
+    {
+      "content": "RuleSet: $1\n* $0",
+      "doc": "Create a FSH RuleSet",
+      "label": "FSH RuleSet",
+      "matches": {
+        "RS": true,
+        "Rule": true,
+        "rs": true,
+        "rule": true
+      }
+    }
+  ]
+}

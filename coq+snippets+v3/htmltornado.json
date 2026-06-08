@@ -1,0 +1,141 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "{{ ${0} }}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "{": true
+      }
+    },
+    {
+      "content": "{% extends \"${0:base.html}\" %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "extends": true
+      }
+    },
+    {
+      "content": "{% autoescape ${0:xhtml_escape | None} %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "autoescape": true
+      }
+    },
+    {
+      "content": "{% apply ${1:function} %}\n  ${0}\n{% end %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "apply": true
+      }
+    },
+    {
+      "content": "{% block ${1} %}\n  ${0}\n{% end %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "block": true
+      }
+    },
+    {
+      "content": "{% for ${1:item} in ${2} %}\n  ${0}\n{% end %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "{% from ${1:x} import ${0:y} %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "from": true
+      }
+    },
+    {
+      "content": "{% if $1 %}\n  ${0}\n{% end %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "{% elif $0 %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eif": true
+      }
+    },
+    {
+      "content": "{% else %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "el": true
+      }
+    },
+    {
+      "content": "{% import ${0:module} %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "import": true
+      }
+    },
+    {
+      "content": "{% include \"${0:filename}\" %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "include": true
+      }
+    },
+    {
+      "content": "{% module ${0:expression} %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "module": true
+      }
+    },
+    {
+      "content": "{% raw ${0:expression} %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "raw": true
+      }
+    },
+    {
+      "content": "{% set ${1:x} = ${0:y} %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "set": true
+      }
+    },
+    {
+      "content": "{% try %}\n  ${1:${VISUAL}}\n{% except %}\n  ${2}\n{% finallly %}\n  ${0}\n{% end %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "try": true
+      }
+    },
+    {
+      "content": "{% while $1 %}\n  ${0}\n{% end %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wh": true
+      }
+    }
+  ]
+}

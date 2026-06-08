@@ -1,0 +1,181 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "${1:controllerName} = (${2:scope}, ${3:injectables}) ->\n\t${4}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ngc": true
+      }
+    },
+    {
+      "content": "angular.forEach ${1:iterateOver}, (value, key) ->\n\t${2}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ngfor": true
+      }
+    },
+    {
+      "content": "angular.module '${1:moduleName}', [${2:moduleDependencies}]\n${3}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ngm": true
+      }
+    },
+    {
+      "content": "${1:moduleName} = angular.module '$1', [${2:moduleDeps}]\n${3}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ngma": true
+      }
+    },
+    {
+      "content": "${1:moduleName} = angular.module('$1', [${2:moduleDeps}], (${3:configDeps}) ->\n\t${4}\n)",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ngmc": true
+      }
+    },
+    {
+      "content": "factory '${1:factoryName}', (${2:dependencies}) ->\n\t${3}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ngmfa": true
+      }
+    },
+    {
+      "content": "service '${1:serviceName}', (${2:injectables}) ->\n\t${3}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ngms": true
+      }
+    },
+    {
+      "content": "filter '${1:filterName}', (${2:injectables}) ->\n\t(input, ${3:args}) ->\n\t\t${4}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ngmfi": true
+      }
+    },
+    {
+      "content": "$routeProvider.when '${1:url}',\n\ttemplateUrl: '${2:templateUrl}'\n\tcontroller: '${3:controller}'\n${4}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ngrw": true
+      }
+    },
+    {
+      "content": "$routeProvider.when '${1:url}',\n\ttemplateUrl: '${2:templateUrl}'\n\tcontroller: '${3:controller}'\n\tresolve:\n\t\t${4}\n${5}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ngrwr": true
+      }
+    },
+    {
+      "content": "$routeProvider.otherwise redirectTo: '${1:url}'\n${2}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ngro": true
+      }
+    },
+    {
+      "content": "$scope.${1:functionName} = (${2:args}) ->\n\t${3}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "$f": true
+      }
+    },
+    {
+      "content": "$scope.${1:variable} = ${2:value}\n${3}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "$v": true
+      }
+    },
+    {
+      "content": "$scope.${1:variable} = ${2:variable}\n${3}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "$va": true
+      }
+    },
+    {
+      "content": "$scope.$watch '${1:watchExpr}', (newValue, oldValue) ->\n\t${2}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "$w": true
+      }
+    },
+    {
+      "content": "$scope.$on '${1:eventName}', (event, ${2:args}) ->\n\t${3}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "$on": true
+      }
+    },
+    {
+      "content": "$scope.$broadcast '${1:eventName}', ${2:eventArgs}\n${3}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "$b": true
+      }
+    },
+    {
+      "content": "$scope.$emit '${1:eventName}', ${2:eventArgs}\n${3}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "$e": true
+      }
+    },
+    {
+      "content": "compile = (tElement, tAttrs, transclude) ->\n\t(scope, element, attrs) ->\n\t\t${1}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ngdcf": true
+      }
+    },
+    {
+      "content": "(scope, element, attrs${1:ctrl}) ->\n\t${2}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ngdlf": true
+      }
+    },
+    {
+      "content": "directive '${1:directiveName}', factory = (${2:injectables}) ->\n\tdirectiveDefinitionObject =\n\t\t${3:directiveAttrs}\n\t\tcompile: compile = (tElement, tAttrs, transclude) ->\n\t\t\t(scope, element, attrs) ->\n\tdirectiveDefinitionObject",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ngdc": true
+      }
+    },
+    {
+      "content": ".directive('${1:directiveName}', (${2:directiveDeps}) ->\n\t(scope, element, attrs${3:ctrl}) ->\n\t\t${4}\n)",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ngdl": true
+      }
+    }
+  ]
+}

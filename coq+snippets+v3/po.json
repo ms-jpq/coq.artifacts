@@ -1,0 +1,13 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "msgid \"${1}\"\nmsgstr \"${2}\"\n\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "msg": true
+      }
+    }
+  ]
+}

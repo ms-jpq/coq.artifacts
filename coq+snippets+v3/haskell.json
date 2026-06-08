@@ -1,0 +1,481 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "instance ${1:Class} ${2:Data} where\n\t${3:f} = ${4:undefined}$0",
+      "doc": "typeclass instance",
+      "label": "instance",
+      "matches": {
+        "inst": true
+      }
+    },
+    {
+      "content": "if ${1:condition} then ${2:undefined} else ${3:undefined}$0,",
+      "doc": "If inline",
+      "label": "if_inline",
+      "matches": {
+        "if inline": true
+      }
+    },
+    {
+      "content": "\\\\${1:x} -> ${2:undefined}$0",
+      "doc": "lambda function",
+      "label": "lambda",
+      "matches": {
+        "\\": true,
+        "lambda": true
+      }
+    },
+    {
+      "content": "{-# OPTIONS_GHC ${1:opt} #-}$0",
+      "doc": "GHC options pragma",
+      "label": "opt pragma",
+      "matches": {
+        "opt": true
+      }
+    },
+    {
+      "content": "case ${1:expression} of\n\t${2:case1} -> ${3:result}\n\t${4:case2} -> ${5:result}$0",
+      "doc": "Case statement",
+      "label": "case",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "{-# LANGUAGE ${1:extension} #-}$0",
+      "doc": "Language extension pragma",
+      "label": "pragma",
+      "matches": {
+        "lang": true
+      }
+    },
+    {
+      "content": "module ${1:mod} where$0",
+      "doc": "simple module",
+      "label": "module",
+      "matches": {
+        "mod simple": true,
+        "mods": true
+      }
+    },
+    {
+      "content": "module Main where\n\n\nmain :: IO ()\nmain = do\n\t${1:undefined}$0\nreturn ()",
+      "doc": "main module",
+      "label": "main",
+      "matches": {
+        "main": true
+      }
+    },
+    {
+      "content": "${1:x} <- ${2:undefined}$0",
+      "doc": "Monadic get",
+      "label": "get",
+      "matches": {
+        "get": true
+      }
+    },
+    {
+      "content": "let ${1:x} = ${2:undefined}$0",
+      "doc": "let statement",
+      "label": "let",
+      "matches": {
+        "let": true
+      }
+    },
+    {
+      "content": "{- $0 -}",
+      "doc": "Block Comment",
+      "label": "block_comment",
+      "matches": {
+        "--": true,
+        "block_comment": true,
+        "comment": true
+      }
+    },
+    {
+      "content": "import qualified ${1:module} as ${2:name}",
+      "doc": "Qualified import",
+      "label": "import_qualified",
+      "matches": {
+        "import qual": true
+      }
+    },
+    {
+      "content": "if ${1:condition}\n\tthen ${2:undefined}\n\telse ${3:undefined}$0",
+      "doc": "If block",
+      "label": "if",
+      "matches": {
+        "if simple": true
+      }
+    },
+    {
+      "content": "import qualified ${1} as ${2}",
+      "doc": "",
+      "label": "import qualified ... as ...",
+      "matches": {
+        "import": true
+      }
+    },
+    {
+      "content": "import ${1} (${2})",
+      "doc": "",
+      "label": "import ... (...)",
+      "matches": {
+        "importOnly": true
+      }
+    },
+    {
+      "content": "{-# LANGUAGE ${1} #-}",
+      "doc": "",
+      "label": "{-# LANGUAGE ... #-}",
+      "matches": {
+        "language": true
+      }
+    },
+    {
+      "content": "case ${1} of\n\t${2} -> ${0}",
+      "doc": "",
+      "label": "case ... of",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "main = do\n  ${0}",
+      "doc": "",
+      "label": "main = do",
+      "matches": {
+        "main": true
+      }
+    },
+    {
+      "content": "class ${1:Class} ${2:a} where\n  ${3:function} :: ${4:Type}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "class": true
+      }
+    },
+    {
+      "content": "instance ${1:Class} ${2:Type} where\n  ${3:function} ${4:self} = ${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "instance": true
+      }
+    },
+    {
+      "content": "\\ ${1:x} -> ${0}",
+      "doc": "",
+      "label": "λ",
+      "matches": {
+        "lambda": true
+      }
+    },
+    {
+      "content": "{-# LANGUAGE ${0:OverloadedStrings} #-}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lang": true
+      }
+    },
+    {
+      "content": "{-# OPTIONS_HADDOCK ${0:hide} #-}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "haddock": true
+      }
+    },
+    {
+      "content": "{-# OPTIONS_GHC ${0:-fno-warn-unused-imports} #-}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ghc": true
+      }
+    },
+    {
+      "content": "{-# INLINE ${0:name} #-}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "inline": true
+      }
+    },
+    {
+      "content": "import ${0:Data.Text}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "imp": true
+      }
+    },
+    {
+      "content": "import ${0:Data.Text}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "import": true
+      }
+    },
+    {
+      "content": "import ${1:Data.Text} (${0:head})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "import2": true
+      }
+    },
+    {
+      "content": "import qualified ${1:Data.Text} as ${0:T}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "impq": true
+      }
+    },
+    {
+      "content": "import qualified ${1:Data.Text} as ${0:T}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "importq": true
+      }
+    },
+    {
+      "content": "instance ${1:Monoid} ${2:Type} where\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "inst": true
+      }
+    },
+    {
+      "content": "type ${1:Type} = ${0:Type}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ty": true
+      }
+    },
+    {
+      "content": "type ${1:Type} = ${0:Type}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "type": true
+      }
+    },
+    {
+      "content": "data ${1:Type} = ${2:$1} ${0:Int}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "da": true
+      }
+    },
+    {
+      "content": "data ${1:Type} = ${2:$1} ${0:Int}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "data": true
+      }
+    },
+    {
+      "content": "newtype ${1:Type} = ${2:$1} ${0:Int}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "newtype": true
+      }
+    },
+    {
+      "content": "class ${1:Class} a where\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "class": true
+      }
+    },
+    {
+      "content": "main :: IO ()\nmain = ${0:undefined}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "main": true
+      }
+    },
+    {
+      "content": "${1:name} :: ${2:a}\n$1 = ${0:undefined}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "const": true
+      }
+    },
+    {
+      "content": "${1:fn} :: ${2:a} -> ${3:a}\n$1 ${4} = ${0:undefined}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fn": true
+      }
+    },
+    {
+      "content": "${1:fn} :: ${2:a}\n$1 = ${0:undefined}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fn0": true
+      }
+    },
+    {
+      "content": "${1:fn} :: ${2:a} -> ${3:a}\n$1 ${4} = ${0:undefined}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fn1": true
+      }
+    },
+    {
+      "content": "${1:fn} :: ${2:a} -> ${3:a} -> ${4:a}\n$1 ${5} = ${0:undefined}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fn2": true
+      }
+    },
+    {
+      "content": "${1:fn} :: ${2:a} -> ${3:a} -> ${4:a} -> ${5:a}\n$1 ${6} = ${0:undefined}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fn3": true
+      }
+    },
+    {
+      "content": "(${1:Class} ${2:a}) => $2",
+      "doc": "",
+      "label": "Type constraint",
+      "matches": {
+        "=>": true
+      }
+    },
+    {
+      "content": "${1:map} ${2:fn} ${0:list}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ap": true
+      }
+    },
+    {
+      "content": "\\\\${1:x} -> ${0:expression}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "\\": true
+      }
+    },
+    {
+      "content": "(\\\\${1:x} -> ${0:expression})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "(\\": true
+      }
+    },
+    {
+      "content": "${1:a} <- ${0:m a}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "<-": true
+      }
+    },
+    {
+      "content": "${1:m a} -> ${0:a}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "->": true
+      }
+    },
+    {
+      "content": "(${1:a}, ${0:b})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tup": true
+      }
+    },
+    {
+      "content": "(${1:a}, ${2:b}, ${0:c})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tup2": true
+      }
+    },
+    {
+      "content": "(${1:a}, ${2:b}, ${3:c}, ${0:d})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tup3": true
+      }
+    },
+    {
+      "content": "${1:Record} { ${2:recFieldA} = ${3:undefined}\n\t\t\t, ${4:recFieldB} = ${0:undefined}\n\t\t\t}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rec": true
+      }
+    },
+    {
+      "content": "case ${1:something} of\n\t${2} -> ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "let ${1} = ${2}\nin ${3}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "let": true
+      }
+    },
+    {
+      "content": "where\n\t${1:fn} = ${0:undefined}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "where": true
+      }
+    },
+    {
+      "content": "\\`shouldBe\\` $0",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sb": true
+      }
+    },
+    {
+      "content": "{-| ${0}\n-}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "doc": true
+      }
+    }
+  ]
+}

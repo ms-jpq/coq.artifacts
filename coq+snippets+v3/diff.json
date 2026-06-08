@@ -1,0 +1,13 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "Description: ${1}\nOrigin: ${2:vendor|upstream|other}, ${3:url of the original patch}\nBug: ${4:url in upstream bugtracker}\nForwarded: ${5:no|not-needed|url}\nAuthor: ${6:`g:snips_author`}\nReviewed-by: ${7:name and email}\nLast-Update: ${8:`strftime(\"%Y-%m-%d\")`}\nApplied-Upstream: ${0:upstream version|url|commit}",
+      "doc": "",
+      "label": "DEP-3 style header",
+      "matches": {
+        "header": true
+      }
+    }
+  ]
+}

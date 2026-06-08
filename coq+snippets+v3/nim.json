@@ -1,0 +1,165 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "proc ${1:#:name}(${2}) =\n  ${0:pass}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "proc": true
+      }
+    },
+    {
+      "content": "proc ${1:#:name}(${2}):\ndiscard \"\"\"${3:#:function documentation}\"\"\"\n  ${0:pass}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "procd": true
+      }
+    },
+    {
+      "content": "proc ${1:#:name}(${2}):${3:#:type} =\n  ${0:pass}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "proct": true
+      }
+    },
+    {
+      "content": "proc ${1:#:name}(${2}) =\n  ${0:pass}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "procg": true
+      }
+    },
+    {
+      "content": "proc ${1:#:name}(${2}):${3:#:type} =\n  ${0:pass}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "procgt": true
+      }
+    },
+    {
+      "content": "template ${1:#:name}(${2}):${3:type} =\n  ${0:pass}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "template": true
+      }
+    },
+    {
+      "content": "macro ${1:#:name}(${2}):${3:type} =\n  ${0:pass}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "macro": true
+      }
+    },
+    {
+      "content": "elif ${1:#:condition}:\n  ${0:pass}",
+      "doc": "",
+      "label": "elif ...: ...",
+      "matches": {
+        "elif": true
+      }
+    },
+    {
+      "content": "else:\n  ${0:pass}",
+      "doc": "",
+      "label": "else: ...",
+      "matches": {
+        "else": true
+      }
+    },
+    {
+      "content": "for ${1:#:value} in ${2:#:list}:\n  ${0:pass}",
+      "doc": "",
+      "label": "for ... in ...: ...",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "if ${1:#:condition}:\n  ${0:pass}",
+      "doc": "",
+      "label": "if ...: ...",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "when ${1:#:condition}:\n  ${0:pass}",
+      "doc": "",
+      "label": "when ...: ...",
+      "matches": {
+        "when": true
+      }
+    },
+    {
+      "content": "if isMainModule:\n  ${0:pass}",
+      "doc": "",
+      "label": "if isMainModule: ...",
+      "matches": {
+        "ifmain": true
+      }
+    },
+    {
+      "content": "if isMainModule:\n  ${0:pass}",
+      "doc": "",
+      "label": "if isMainModule: ...",
+      "matches": {
+        "main": true
+      }
+    },
+    {
+      "content": "try:\n  ${1:pass}\nexcept ${2:#:ExceptionClass}:\n  ${3:pass}",
+      "doc": "",
+      "label": "try: ... except ...: ...",
+      "matches": {
+        "tryexcept": true
+      }
+    },
+    {
+      "content": "try:\n  ${1:pass}\nfinally:\n  ${2:pass}",
+      "doc": "",
+      "label": "try: ... finally: ...",
+      "matches": {
+        "tryfinally": true
+      }
+    },
+    {
+      "content": "try: ${1:pass}\ndefer: ${2:pass}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "trydefer": true
+      }
+    },
+    {
+      "content": "while ${1:#:condition}:\n  ${0:pass}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "echo(${0:#:TARGET})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "echo": true
+      }
+    },
+    {
+      "content": "fmt\"${0:#:TARGET}\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fmt": true
+      }
+    }
+  ]
+}

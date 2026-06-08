@@ -1,0 +1,285 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "apiVersion: v1\nkind: Service\nmetadata:\n{{- if .Values.$1.service.annotations }}\n  annotations:\n{{ toYaml .Values.$1.service.annotations | indent 4 }}\n{{- end }}\n  labels:\n{{- if .Values.$1.service.labels }}\n{{ toYaml .Values.$1.service.labels | indent 4 }}\n{{- end }}\n\tapp: {{ template \"$2.name\" . }}\n\tchart: {{ .Chart.Name }}-{{ .Chart.Version }}\n\tcomponent: \"{{ .Values.$1.name }}\"\n\theritage: {{ .Release.Service }}\n\trelease: {{ .Release.Name }}\n  name: {{ template \"$2.$1.fullname\" . }}\nspec:\n  clusterIP: \"{{ .Values.$1.service.clusterIP }}\"\n{{- if .Values.$1.service.externalIPs }}\n  externalIPs:\n{{ toYaml .Values.$1.service.externalIPs | indent 4 }}\n{{- end }}\n{{- if .Values.$1.service.loadBalancerIP }}\n  loadBalancerIP: \"{{ .Values.$1.service.loadBalancerIP }}\"\n{{- end }}\n{{- if .Values.$1.service.loadBalancerSourceRanges }}\n  loadBalancerSourceRanges:\n{{ toYaml .Values.$1.service.loadBalancerSourceRanges | indent 4 }}\n{{- end }}\n  healthCheckNodePort: {{ .Values.$1.service.healthCheckNodePort }}\n  ports:\n\t- name: http\n\t  port: 80\n\t  protocol: TCP\n\t  targetPort: {{ .Values.$1.service.targetPorts.http }}\n\t  {{- if (and (eq .Values.$1.service.type \"NodePort\") (not (empty .Values.$1.service.nodePorts.http))) }}\n\t  nodePort: {{ .Values.$1.service.nodePorts.http }}\n\t  {{- end }}\n\t- name: https\n\t  port: 443\n\t  protocol: TCP\n\t  targetPort: {{ .Values.$1.service.targetPorts.https }}\n\t  {{- if (and (eq .Values.$1.service.type \"NodePort\") (not (empty .Values.$1.service.nodePorts.https))) }}\n\t  nodePort: {{ .Values.$1.service.nodePorts.https }}\n\t  {{- end }}\n  {{- range $key, $value := .Values.tcp }}\n\t- name: \"{{ $key }}-tcp\"\n\t  port: {{ $key }}\n\t  protocol: TCP\n\t  targetPort: \"{{ $key }}-tcp\"\n  {{- end }}\n  {{- range $key, $value := .Values.udp }}\n\t- name: \"{{ $key }}-udp\"\n\t  port: {{ $key }}\n\t  protocol: UDP\n\t  targetPort: \"{{ $key }}-udp\"\n  {{- end }}\n  selector:\n\tapp: {{ template \"${2:chartName}.name\" . }}\n\tcomponent: \"{{ .Values.$1.name }}\"\n\trelease: {{ .Release.Name }}\n  type: \"{{ .Values.${1:value_key}.service.type }}\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "service_sample_spec": true
+      }
+    },
+    {
+      "content": "apiVersion: v1\nkind: Service\nmetadata:\n{{- if .Values.$1.service.annotations }}\n  annotations:\n{{ toYaml .Values.$1.service.annotations | indent 4 }}\n{{- end }}\n  labels:\n{{- if .Values.$1.service.labels }}\n{{ toYaml .Values.$1.service.labels | indent 4 }}\n{{- end }}\n\tapp: {{ template \"$2.name\" . }}\n\tchart: {{ .Chart.Name }}-{{ .Chart.Version }}\n\tcomponent: \"{{ .Values.$1.name }}\"\n\theritage: {{ .Release.Service }}\n\trelease: {{ .Release.Name }}\n  name: {{ template \"${2:chartName}.${1:value_key}.fullname\" . }}\n# spec\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "service_spec": true
+      }
+    },
+    {
+      "content": "{{- if .Values.$1.service.annotations }}\n  annotations:\n{{ toYaml .Values.${1:value_key}.service.annotations | indent 4 }}\n{{- end }}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "annotations_spec": true
+      }
+    },
+    {
+      "content": "labels:\n{{- if .Values.$1.service.labels }}\n{{ toYaml .Values.$1.service.labels | indent 4 }}\n{{- end }}\n\tapp: {{ template \"$2.name\" . }}\n\tchart: {{ .Chart.Name }}-{{ .Chart.Version }}\n\tcomponent: \"{{ .Values.$1.name }}\"\n\theritage: {{ .Release.Service }}\n\trelease: {{ .Release.Name }}\n  name: {{ template \"${2:chartName}.${1:value_key}.fullname\" . }}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "labels_spec": true
+      }
+    },
+    {
+      "content": "spec:\n  type: \"{{ .Values.$1.service.type }}\"\n  clusterIP: \"{{ .Values.$1.service.clusterIP }}\"\n{{- if .Values.$1.service.externalIPs }}\n  externalIPs:\n{{ toYaml .Values.$1.service.externalIPs | indent 4 }}\n{{- end }}\n{{- if .Values.$1.service.loadBalancerIP }}\n  loadBalancerIP: \"{{ .Values.$1.service.loadBalancerIP }}\"\n{{- end }}\n{{- if .Values.$1.service.loadBalancerSourceRanges }}\n  loadBalancerSourceRanges:\n{{ toYaml .Values.$1.service.loadBalancerSourceRanges | indent 4 }}\n{{- end }}\n{{- if and (semverCompare \">=1.7-0\" .Capabilities.KubeVersion.GitVersion) (.Values.$1.service.externalTrafficPolicy) }}\n  externalTrafficPolicy: \"{{ .Values.$1.service.externalTrafficPolicy }}\"\n{{- end }}\n{{- if and (semverCompare \">=1.7-0\" .Capabilities.KubeVersion.GitVersion) (.Values.$1.service.healthCheckNodePort) }}\n  healthCheckNodePort: {{ .Values.${1:value_key}.service.healthCheckNodePort }}\n{{- end }}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "service_spec": true
+      }
+    },
+    {
+      "content": "ports:\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ports_spec": true
+      }
+    },
+    {
+      "content": "- name: http\n  port: 80\n  protocol: TCP\n  targetPort: {{ .Values.$1.service.targetPorts.http }}\n  {{- if (and (eq .Values.$1.service.type \"NodePort\") (not (empty .Values.$1.service.nodePorts.http))) }}\n  nodePort: {{ .Values.${1:value_key}.service.nodePorts.http }}\n  {{- end }}\n  ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "portHTTP_spec": true
+      }
+    },
+    {
+      "content": "- name: https\n  port: 443\n  protocol: TCP\n  targetPort: {{ .Values.$1.service.targetPorts.https }}\n  {{- if (and (eq .Values.$1.service.type \"NodePort\") (not (empty .Values.$1.service.nodePorts.https))) }}\n  nodePort: {{ .Values.${1:value_key}.service.nodePorts.https }}\n  {{- end }}\n  ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "portHTTPS_spec": true
+      }
+    },
+    {
+      "content": "{{- range $key, $value := .Values.tcp }}\n  - name: \"{{ $key }}-tcp\"\n\tport: {{ $key }}\n\tprotocol: TCP\n\ttargetPort: \"{{ $key }}-tcp\"\n{{- end }}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "portTCP_spec": true
+      }
+    },
+    {
+      "content": "{{- range $key, $value := .Values.udp }}\n  - name: \"{{ $key }}-udp\"\n\tport: {{ $key }}\n\tprotocol: UDP\n\ttargetPort: \"{{ $key }}-udp\"\n{{- end }}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "portUDP_spec": true
+      }
+    },
+    {
+      "content": "selector:\n  app: {{ template \"${2:chartName}.name\" . }}\n  component: \"{{ .Values.${1:value_key}.name }}\"\n  release: {{ .Release.Name }}\n  ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "selector_spec": true
+      }
+    },
+    {
+      "content": "{{- if .Values.$1.enabled }}\napiVersion: extensions/v1beta1\nkind: Deployment\nmetadata:\n  labels:\n\tapp: {{ template \"$2.name\" . }}\n\tchart: {{ .Chart.Name }}-{{ .Chart.Version }}\n\tcomponent: \"{{ .Values.$1.name }}\"\n\theritage: {{ .Release.Service }}\n\trelease: {{ .Release.Name }}\n  name: {{ template \"$2.$1.fullname\" . }}\nspec:\n  replicas: {{ .Values.$1.replicaCount }}\n  revisionHistoryLimit: {{ .Values.revisionHistoryLimit }}\n  template:\n\tmetadata:\n\t{{- if .Values.$1.podAnnotations }}\n\t  annotations:\n{{ toYaml .Values.$1.podAnnotations | indent 8 }}\n\t{{- end }}\n\t  labels:\n\t\tapp: {{ template \"$2.name\" . }}\n\t\tcomponent: \"{{ .Values.$1.name }}\"\n\t\trelease: {{ .Release.Name }}\n\t\t{{- if .Values.$1.podLabels }}\n{{ toYaml .Values.$1.podLabels | indent 8 }}\n\t\t{{- end }}\n\tspec:\n\t  {{- if .Values.imagePullSecrets }}\n\t  imagePullSecrets:\n{{ toYaml .Values.imagePullSecrets | indent 8 }}\n\t  {{- end }}\n\t  containers:\n\t\t- name: {{ template \"${2:chartName}.name\" . }}-{{ .Values.$1.name }}\n\t\t  image: \"{{ .Values.$1.image.repository }}:{{ .Values.$1.image.tag }}\"\n\t\t  imagePullPolicy: \"{{ .Values.$1.image.pullPolicy }}\"\n\t\t  args:\n\t\t  {{- range $key, $value := .Values.$1.extraArgs }}\n\t\t\t{{- if $value }}\n\t\t\t- --{{ $key }}={{ $value }}\n\t\t\t{{- else }}\n\t\t\t- --{{ $key }}\n\t\t\t{{- end }}\n\t\t  {{- end }}\n\t\t  livenessProbe:\n\t\t\thttpGet:\n\t\t\t  path: /healthz\n\t\t\t  port: 8080\n\t\t\t  scheme: HTTP\n\t\t\tinitialDelaySeconds: 30\n\t\t\ttimeoutSeconds: 5\n\t\t  ports:\n\t\t\t- name: http\n\t\t\t  containerPort: 8080\n\t\t\t  protocol: TCP\n\t\t  resources:\n{{ toYaml .Values.$1.resources | indent 12 }}\n\t{{- if .Values.$1.nodeSelector }}\n\t  nodeSelector:\n{{ toYaml .Values.$1.nodeSelector | indent 8 }}\n\t{{- end }}\n\t{{- if .Values.$1.tolerations }}\n\t  tolerations:\n{{ toYaml .Values.$1.tolerations | indent 8 }}\n\t{{- end }}\n\t{{- if .Values.$1.affinity }}\n\t  affinity:\n{{ toYaml .Values.${1:value_key}.affinity | indent 8 }}\n\t{{- end }}\n\t  terminationGracePeriodSeconds: 60\n{{- end }}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "deploy_sample_spec": true
+      }
+    },
+    {
+      "content": "{{- if .Values.$1.enabled }}\napiVersion: extensions/v1beta1\nkind: Deployment\nmetadata:\n  labels:\n\tapp: {{ template \"$2.name\" . }}\n\tchart: {{ .Chart.Name }}-{{ .Chart.Version }}\n\tcomponent: \"{{ .Values.$1.name }}\"\n\theritage: {{ .Release.Service }}\n\trelease: {{ .Release.Name }}\n  name: {{ template \"${2:chartName}.${1:value_key}.fullname\" . }}\n# spec\n\t# containers_spec\n\t# livenessProbe_spec\n\t# PersistentVolumeClaim_spec\n\t# initContainers_spec\n\t# resources_spec\n\t# nodeselector_spec\n\t# tolerations_spec\n\t# affinity_spec\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "deploy_spec": true
+      }
+    },
+    {
+      "content": "spec:\n  replicas: {{ .Values.$1.replicaCount }}\n  revisionHistoryLimit: {{ .Values.revisionHistoryLimit }}\n  template:\n\tmetadata:\n\t{{- if .Values.$1.podAnnotations }}\n\t  annotations:\n{{ toYaml .Values.$1.podAnnotations | indent 8 }}\n\t{{- end }}\n\t  labels:\n\t\tapp: {{ template \"${2:chartName}.name\" . }}\n\t\tcomponent: \"{{ .Values.$1.name }}\"\n\t\trelease: {{ .Release.Name }}\n\t\t{{- if .Values.$1.podLabels }}\n{{ toYaml .Values.${1:value_key}.podLabels | indent 8 }}\n\t\t{{- end }}\n\tspec:\n\t  {{- if .Values.imagePullSecrets }}\n\t  imagePullSecrets:\n{{ toYaml .Values.imagePullSecrets | indent 8 }}\n\t  {{- end }}\n\t  ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "spec_spec": true
+      }
+    },
+    {
+      "content": "{{- if .Values.imagePullSecrets }}\n\t  imagePullSecrets:\n{{ toYaml .Values.imagePullSecrets | indent 8 }}\n\t  {{- end }}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "imagePullSecrets_spec": true
+      }
+    },
+    {
+      "content": "imagePullPolicy: ${1:imagePullPolicy}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "imagePullPolicy_spec": true
+      }
+    },
+    {
+      "content": "containers:\n  - name: {{ template \"${2:chartName}.name\" . }}-{{ .Values.$1.name }}\n\timage: \"{{ .Values.$1.image.repository }}:{{ .Values.$1.image.tag }}\"\n\timagePullPolicy: \"{{ .Values.${1:value_key}.image.pullPolicy }}\"\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "containers_spec": true
+      }
+    },
+    {
+      "content": "args:\n{{- range $key, $value := .Values.${1:value_key}.extraArgs }}\n  {{- if $value }}\n  - --{{ $key }}={{ $value }}\n  {{- else }}\n  - --{{ $key }}\n  {{- end }}\n{{- end }}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "args_spec": true
+      }
+    },
+    {
+      "content": "livenessProbe:\n  httpGet:\n\tpath: /healthz\n\tport: 8080\n\tscheme: HTTP\n  initialDelaySeconds: 30\n  timeoutSeconds: 5\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "livenessProbe_spec": true
+      }
+    },
+    {
+      "content": "readinessProbe:\n  httpGet:\n\tpath: /go/api/v1/health\n\tport: 8153\n  initialDelaySeconds: {{ .Values.$1.healthCheck.initialDelaySeconds }}\n  periodSeconds: {{ .Values.$1.healthCheck.periodSeconds }}\n  failureThreshold: {{ .Values.$1.healthCheck.failureThreshold }}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "readinessProbe_spec": true
+      }
+    },
+    {
+      "content": "resources:\n{{ toYaml .Values.${1:value_key}.resources | indent 12 }}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "resources_spec": true
+      }
+    },
+    {
+      "content": "{{- if .Values.$1.nodeSelector }}\n  nodeSelector:\n{{ toYaml .Values.${1:value_key}.nodeSelector | indent 8 }}\n{{- end }}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "nodeselector_spec": true
+      }
+    },
+    {
+      "content": "{{- if .Values.$1.tolerations }}\n  tolerations:\n{{ toYaml .Values.${1:value_key}.tolerations | indent 8 }}\n{{- end }}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tolerations_spec": true
+      }
+    },
+    {
+      "content": "{{- if .Values.$1.affinity }}\n  affinity:\n{{ toYaml .Values.${1:value_key}.affinity | indent 8 }}\n{{- end }}\n  terminationGracePeriodSeconds: 60\n{{- end }}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "affinity_spec": true
+      }
+    },
+    {
+      "content": "kind: PersistentVolumeClaim\napiVersion: v1\nmetadata:\n  name: {{ template \"${2}.$1.fullname\" . }}\n  labels:\n\tapp: {{ template \"${2:chartName}.name\" . }}\n\tchart: \"{{ .Chart.Name }}-{{ .Chart.Version }}\"\n\trelease: \"{{ .Release.Name }}\"\n\theritage: \"{{ .Release.Service }}\"\nspec:\n  accessModes:\n\t- {{ .Values.$1.persistence.accessMode | quote }}\n  resources:\n\trequests:\n\t  storage: {{ .Values.$1.persistence.size | quote }}\n{{- if .Values.$1.persistence.storageClass }}\n{{- if (eq \"-\" .Values.$1.persistence.storageClass) }}\n  storageClassName: \"\"\n{{- else }}\n  storageClassName: \"{{ .Values.${1:value_key}.persistence.storageClass }}\"\n{{- end }}\n{{- end }}\n{{- end }}\n{{- end }}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "PersistentVolumeClaim_spec": true
+      }
+    },
+    {
+      "content": "{{- if .Values.artifactory.enabled -}}\n  apiVersion: v1\n  kind: ConfigMap\n  metadata:\n\tname: {{ template \"${2:chartName}.fullname\" . }}-${1:value_key}-config\n\tlabels:\n\t  app: {{ template \"${2}.name\" . }}\n\t  chart: {{ .Chart.Name }}-{{ .Chart.Version }}\n\t  heritage: {{ .Release.Service }}\n\t  release: {{ .Release.Name }}\n  data:\n\t${3:nameOfConfigFile}.conf: |\n\t  # data goes here\n{{- end -}}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "configMap_spec": true
+      }
+    },
+    {
+      "content": "{{- if .Values.$1.initContainers }}\n\t  initContainers:\n\t  - name: wait-workers\n\t\timage: \"{{ .Values.$1.image.repository }}:{{ .Values.$1.image.tag }}\"\n\t\timagePullPolicy: {{ .Values.${1:value_key}.image.pullPolicy }}\n\t\t# env\n\t\tcommand:\n\t\t  - sh\n\t\t  - -c\n\t\t  - |\n\t\t\tuntil printf \".\" && nc -z -w 2 {{ template \"${2:chartName}.fullname\" . }} {{ .Values.postgresql.service.port }}; do\n\t\t\t\tsleep 2;\n\t\t\tdone;\n\n\t\t\techo 'PostgreSQL OK ✓'\n\t\t# args\n{{- end }}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "initContainers_spec": true
+      }
+    },
+    {
+      "content": "kind: PersistentVolumeClaim\napiVersion: v1\nmetadata:\n  name: {{ template \"$2.fullname\" . }}\n  labels:\n\tchart: \"{{ .Chart.Name }}-{{ .Chart.Version }}\"\n\trelease: \"{{ .Release.Name }}\"\n\theritage: \"{{ .Release.Service }}\"\n\tapp: {{ template \"${2:chartName}.fullname\" . }}\nspec:\n  accessModes:\n\t- {{ .Values.persistence.accessMode | quote }}\n  resources:\n\trequests:\n\t  storage: {{ .Values.persistence.size | quote }}\n{{- if .Values.persistence.storageClass }}\n{{- if (eq \"-\" .Values.persistence.storageClass) }}\n  storageClassName: \"\"\n{{- else }}\n  storageClassName: \"{{ .Values.persistence.storageClass }}\"\n{{- end }}\n{{- end }}\n{{- end }}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pvc_spec": true
+      }
+    },
+    {
+      "content": "apiVersion: v1\nkind: PersistentVolume\nmetadata:\n  name: {{ template \"$2.fullname\" . }}-data-pv\n  labels:\n\tapp: {{ template \"$2.name\" . }}\n\tchart: {{ .Chart.Name }}-{{ .Chart.Version }}\n\theritage: {{ .Release.Service }}\n\trelease: {{ .Release.Name }}\n\tid: {{ template \"${2:chartName}.name\" . }}-data-pv\n\ttype: nfs-volume\nspec:\n  capacity:\n\tstorage: {{ .Values.$1.persistence.nfs.capacity }}\n  accessModes:\n  - ReadWriteOnce\n  persistentVolumeReclaimPolicy: Retain\n  nfs:\n\tserver: {{ .Values.$1.persistence.nfs.ip }}\n\tpath: \"{{ .Values.${1:value_key}.persistence.nfs.haDataMount }}\"\n\treadOnly: false\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pv_nfs_spec": true
+      }
+    },
+    {
+      "content": "{{- if and .Values.persistence.enabled .Values.persistence.$1.hostPath (not\n.Values.persistence.$1.existingClaim) -}}\napiVersion: v1\nkind: PersistentVolume\nmetadata:\n  name: {{ template \"${2:chartName}.fullname\" . }}-$1\nspec:\n  accessModes:\n\t- {{ .Values.persistence.$1.accessMode | quote }}\n  capacity:\n\tstorage: {{ .Values.persistence.$1.size | quote }}\n  hostPath:\n\tpath: {{ .Values.persistence.${1:value_key}.hostPath | quote }}\n{{- end -}}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pvc_hostpath_spec": true
+      }
+    },
+    {
+      "content": "$1:\n  name: ${1:value_key}\n  image:\n\trepository:\n\ttag:\n\tpullPolicy: IfNotPresent\n  hostNetwork: false\n  dnsPolicy: ClusterFirst\n  daemonset:\n\tuseHostPort: false\n  podLabels: {}\n  scope:\n\tenabled: false\n\tnamespace: \"\"   # defaults to .Release.Namespace\n  extraArgs: {}\n  extraEnvs: []\n  kind: Deployment\n  updateStrategy: {}\n  minReadySeconds: 0\n  tolerations: []\n  affinity: {}\n  nodeSelector: {}\n  podAnnotations: {}\n  replicaCount: 1\n  minAvailable: 1\n  resources: {}\n  autoscaling:\n\tenabled: false\n  extraContainers: {}\n  extraVolumeMounts: {}\n  extraVolumes: {}\n  extraInitContainers: []\n  lifecycle: {}\nrevisionHistoryLimit: 10\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "deploy_values": true
+      }
+    },
+    {
+      "content": "${1:value_key}:\nrbac:\n  create: true\nserviceAccount:\n  create: true\n  name:\nimagePullSecrets: []\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rbac_values": true
+      }
+    },
+    {
+      "content": "${1:value_key}:\n  service:\n\tannotations: {}\n\tlabels: {}\n\tclusterIP: \"\"\n\texternalIPs: []\n\tloadBalancerIP: \"\"\n\tloadBalancerSourceRanges: []\n\texternalTrafficPolicy: \"\"\n\thealthCheckNodePort: 0\n\ttargetPorts:\n\t  http: http\n\t  https: https\n\ttype: LoadBalancer\n\tnodePorts:\n\t  http: \"\"\n\t  https: \"\"\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "service_values": true
+      }
+    },
+    {
+      "content": "${1:value_key}:\n  readinessProbe:\n\tfailureThreshold: 3\n\tinitialDelaySeconds: 10\n\tperiodSeconds: 10\n\tsuccessThreshold: 1\n\ttimeoutSeconds: 1\n\tport: 10254\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "readinessProbe_values": true
+      }
+    },
+    {
+      "content": "${1:value_key}:\n  livenessProbe:\n\tfailureThreshold: 3\n\tinitialDelaySeconds: 10\n\tperiodSeconds: 10\n\tsuccessThreshold: 1\n\ttimeoutSeconds: 1\n\tport: 10254\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "livenessProbe_values": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "[[plugins]]\nrepo = '`getreg('+')`'\n${0}",
+      "doc": "",
+      "label": "[[plugins]]",
+      "matches": {
+        "plugins": true
+      }
+    },
+    {
+      "content": "[[multiple_plugins]]\nplugins = [${1}]\n${0}",
+      "doc": "",
+      "label": "[[multiple_plugins]]",
+      "matches": {
+        "multiple_plugins": true
+      }
+    }
+  ]
+}

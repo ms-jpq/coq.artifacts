@@ -1,0 +1,77 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+      "doc": "I give you back the time (H:M:S)",
+      "label": "timeHMS",
+      "matches": {
+        "timeHMS": true
+      }
+    },
+    {
+      "content": "${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE} ${CURRENT_HOUR}:${CURRENT_MINUTE}",
+      "doc": "I give you back the time and date (Y-m-d H:M)",
+      "label": "datetime",
+      "matches": {
+        "datetime": true
+      }
+    },
+    {
+      "content": "${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
+      "doc": "Put the date in (Y-m-D) format",
+      "label": "date",
+      "matches": {
+        "date": true
+      }
+    },
+    {
+      "content": "${CURRENT_HOUR}:${CURRENT_MINUTE}",
+      "doc": "I give you back the time (H:M)",
+      "label": "time",
+      "matches": {
+        "time": true
+      }
+    },
+    {
+      "content": "${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR}",
+      "doc": "Put date in (DD/MM/YY) format",
+      "label": "dateDMY",
+      "matches": {
+        "dateDMY": true
+      }
+    },
+    {
+      "content": "${CURRENT_MONTH}/${CURRENT_DATE}/${CURRENT_YEAR}",
+      "doc": "Put the date in (m/D/Y) format",
+      "label": "dateMDY",
+      "matches": {
+        "dateMDY": true
+      }
+    },
+    {
+      "content": "${UUID}",
+      "doc": "A Version 4 UUID",
+      "label": "uuid",
+      "matches": {
+        "uuid": true
+      }
+    },
+    {
+      "content": "Copyright (c) ${CURRENT_YEAR} ${0:Author}. All Rights Reserved.",
+      "doc": "Snippet to put copyright",
+      "label": "copyright",
+      "matches": {
+        "copyright": true
+      }
+    },
+    {
+      "content": "${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+      "doc": "ISO date time stamp",
+      "label": "diso",
+      "matches": {
+        "diso": true
+      }
+    }
+  ]
+}

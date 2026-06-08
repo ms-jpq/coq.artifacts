@@ -1,0 +1,949 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "object ${1:ObjectName} {\n\tdef main(args: Array[String]): Unit = {\n\t\t${2:println(\"Hello, world!\")}\n\t}\n}",
+      "doc": "Object with main method",
+      "label": "main_object",
+      "matches": {
+        "obj_main": true
+      }
+    },
+    {
+      "content": "object ${1:App} extends App {\n\t${2:println(\"Hello, world!\")}\n}",
+      "doc": "Object extending App",
+      "label": "app",
+      "matches": {
+        "app": true
+      }
+    },
+    {
+      "content": "${1:x} match {\n\tcase ${2:0} => ${3:\"zero\"}\n\tcase ${4:1} => ${5:\"one\"}\n}",
+      "doc": "Branch based on conditions using pattern matching",
+      "label": "match",
+      "matches": {
+        "match": true
+      }
+    },
+    {
+      "content": "class ${1:ClassName} {\n\t${2:println(\"Hello, world!\")}\n}",
+      "doc": "Class",
+      "label": "class",
+      "matches": {
+        "class": true
+      }
+    },
+    {
+      "content": "if (${1:condition}) {\n\t${2:println(\"Hello, world!\")}\n} else {\n\t${2:println(\"Hello, world!\")}\n}",
+      "doc": "Branch based on conditions using if/else",
+      "label": "ifelse",
+      "matches": {
+        "ifelse": true
+      }
+    },
+    {
+      "content": "while(${1:condition}) {\n\t${2:println(\"Hello, world!\")}\n}",
+      "doc": "While loop",
+      "label": "while",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "for (${1:element} <- elements) {\n\t${2:println(element.toString)}\n}",
+      "doc": "For loop",
+      "label": "for",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "def ${1:methodName}(${2:argName}: ${3:ArgType}): ${4:ReturnType} = ${5:println(\"Hello, world!\")}",
+      "doc": "Method as one-liner",
+      "label": "def_short",
+      "matches": {
+        "def_short": true
+      }
+    },
+    {
+      "content": "def ${1:methodName}(${2:argName}: ${3:ArgType}): ${4:ReturnType} = {\n\t${5:println(\"Hello, world!\")}\n}",
+      "doc": "Method",
+      "label": "def",
+      "matches": {
+        "def": true
+      }
+    },
+    {
+      "content": "case class ${1:CaseClassName}(${2:argName}: ${3:ArgType})",
+      "doc": "Case class",
+      "label": "case_class",
+      "matches": {
+        "case_class": true
+      }
+    },
+    {
+      "content": "object ${1:ObjectName} {\n\t${2:println(\"Hello, world!\")}\n}",
+      "doc": "Object",
+      "label": "object",
+      "matches": {
+        "object": true
+      }
+    },
+    {
+      "content": "trait ${1:TraitName} {\n\t${2:}\n}",
+      "doc": "Trait",
+      "label": "trait",
+      "matches": {
+        "trait": true
+      }
+    },
+    {
+      "content": "match {\n\tcase ${1} => ${0}\n}",
+      "doc": "",
+      "label": "match {\\n  case .. => ..",
+      "matches": {
+        "match": true
+      }
+    },
+    {
+      "content": "case ${1} => ${0}",
+      "doc": "",
+      "label": "case .. => ..",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "try {\n\t${1:TARGET}\n} catch {\n\tcase e${2:: Exception} => ${0}\n}",
+      "doc": "",
+      "label": "try {} catch { case ... }",
+      "matches": {
+        "try": true
+      }
+    },
+    {
+      "content": "for {\n\t${1}\n} yield ${2}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "if (${1}) {\n\t${2}\n}${3: else}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "println(${1})",
+      "doc": "",
+      "label": "println()",
+      "matches": {
+        "p": true
+      }
+    },
+    {
+      "content": "println('${1:#:name}, $1)",
+      "doc": "",
+      "label": "println('name, name)",
+      "matches": {
+        "pn": true
+      }
+    },
+    {
+      "content": "_ = println(${1})",
+      "doc": "",
+      "label": "p in for",
+      "matches": {
+        "pf": true
+      }
+    },
+    {
+      "content": "object ${1:`expand('%:t:r') ==# '' ? 'HelloWorld' : expand('%:t:r')`} {\n\tdef main(args: Array[String]) {\n\t\t${0:TARGET}\n\t}\n}",
+      "doc": "",
+      "label": "def main(args: Array[String]) {",
+      "matches": {
+        "main": true
+      }
+    },
+    {
+      "content": "object ${1:`expand('%:t:r') ==# '' ? 'HelloWorld' : expand('%:t:r')`} {\n\tdef main(args: Array[String]) {\n\t\tprintln(\"Hello, world!\")\n\t}\n}",
+      "doc": "",
+      "label": "object HelloWorld { def main(...) }",
+      "matches": {
+        "hello": true
+      }
+    },
+    {
+      "content": "object ${1:X} {\n\t${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "object": true
+      }
+    },
+    {
+      "content": "class ${1:X()} {\n\t${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "class": true
+      }
+    },
+    {
+      "content": "should \"${1}\" in {\n\t${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "should-scalatest": true
+      }
+    },
+    {
+      "content": "import akka.actor.{ActorSystem, Actor, ActorLogging, Props}\n\nobject ${1:X} {\n\tdef props(${2}) = Props(new X($2))\n}\n\nclass $1($2) extends Actor with ActorLogging {\n\tdef receive = {\n\t\tcase e =>\n\t\t\t${0:TARGET:println(e)}\n\t}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "akka-actor": true
+      }
+    },
+    {
+      "content": "case class ${1}(${2}: ${0})",
+      "doc": "",
+      "label": "case class ..(..: ..)",
+      "matches": {
+        "cclass": true
+      }
+    },
+    {
+      "content": "if (${1})\n\t${0:${VISUAL}}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "if (!${1})\n\t${0:${VISUAL}}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ifn": true
+      }
+    },
+    {
+      "content": "if (${1})\n\t${2:${VISUAL}}\nelse\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "if (${1})\n\t${2:${VISUAL}}\nelse if (${3})\n\t${0:${VISUAL}}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ifelif": true
+      }
+    },
+    {
+      "content": "else if (${3})\n\t${0:${VISUAL}}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eif": true
+      }
+    },
+    {
+      "content": "while (${1:obj}) {\n\t${0:${VISUAL}}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "for (${1:item} <- ${2:obj}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "for (${1:i} <- ${2:0} to ${3:obj}.length) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fori": true
+      }
+    },
+    {
+      "content": "for {\n\t${1:item} <- ${2:obj}\n} yield ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fory": true
+      }
+    },
+    {
+      "content": "try {\n\t${1:${VISUAL}}\n} catch {\n\tcase e: FileNotFoundException => ${2}\n\tcase e: IOException => ${3}\n} finally {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "try": true
+      }
+    },
+    {
+      "content": "${1:${VISUAL}} match {\n\tcase ${2} => ${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mat": true
+      }
+    },
+    {
+      "content": "${1: obj} match {\n\tcase ${2:e} => ${3}\n\tcase _ => ${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "match": true
+      }
+    },
+    {
+      "content": "case ${1:${VISUAL}} => ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "${1:a}: ${2:T}${0:, arg}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "arg": true
+      }
+    },
+    {
+      "content": "${1:args}: ${0:T}*",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "args": true
+      }
+    },
+    {
+      "content": "def ${1:name}(${2:arg}) = ${0:}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "def": true
+      }
+    },
+    {
+      "content": "private def ${1:name}(${2:arg}) = ${0:}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "prdef": true
+      }
+    },
+    {
+      "content": "override def ${1:name}(${2:arg}) = ${0:}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ovdef": true
+      }
+    },
+    {
+      "content": "(${1:a}: ${2:T}) => $1 ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fcf": true
+      }
+    },
+    {
+      "content": "${1:name} => ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "=>": true
+      }
+    },
+    {
+      "content": "def ${1:name}(${0:arg}) =\n\tif($2) $2\n\telse $1($2)",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rec": true
+      }
+    },
+    {
+      "content": "def ${1:name}(${2:arg})(${3:arg}) = ${0:}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "crdef": true
+      }
+    },
+    {
+      "content": "def main(args: Array[String]):${1:T} = ${0:}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "main": true
+      }
+    },
+    {
+      "content": "dbl",
+      "doc": "",
+      "label": "Double",
+      "matches": {
+        "T": true
+      }
+    },
+    {
+      "content": "int",
+      "doc": "",
+      "label": "Int",
+      "matches": {
+        "T": true
+      }
+    },
+    {
+      "content": "lng",
+      "doc": "",
+      "label": "Long",
+      "matches": {
+        "T": true
+      }
+    },
+    {
+      "content": "chr",
+      "doc": "",
+      "label": "Char",
+      "matches": {
+        "T": true
+      }
+    },
+    {
+      "content": "str",
+      "doc": "",
+      "label": "String",
+      "matches": {
+        "T": true
+      }
+    },
+    {
+      "content": "arr",
+      "doc": "",
+      "label": "Array",
+      "matches": {
+        "T": true
+      }
+    },
+    {
+      "content": "buf",
+      "doc": "",
+      "label": "Buffer",
+      "matches": {
+        "T": true
+      }
+    },
+    {
+      "content": "list",
+      "doc": "",
+      "label": "List",
+      "matches": {
+        "T": true
+      }
+    },
+    {
+      "content": "tpl",
+      "doc": "",
+      "label": "Tuple",
+      "matches": {
+        "T": true
+      }
+    },
+    {
+      "content": "set",
+      "doc": "",
+      "label": "Set",
+      "matches": {
+        "T": true
+      }
+    },
+    {
+      "content": "map",
+      "doc": "",
+      "label": "Map",
+      "matches": {
+        "T": true
+      }
+    },
+    {
+      "content": "hset",
+      "doc": "",
+      "label": "HashSet",
+      "matches": {
+        "T": true
+      }
+    },
+    {
+      "content": "hmap",
+      "doc": "",
+      "label": "HashMap",
+      "matches": {
+        "T": true
+      }
+    },
+    {
+      "content": "bool",
+      "doc": "",
+      "label": "Boolean",
+      "matches": {
+        "T": true
+      }
+    },
+    {
+      "content": "Boolean",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bool": true
+      }
+    },
+    {
+      "content": "AnyRef",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "anyr": true
+      }
+    },
+    {
+      "content": "Double",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dbl": true
+      }
+    },
+    {
+      "content": "Int",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "int": true
+      }
+    },
+    {
+      "content": "String",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "str": true
+      }
+    },
+    {
+      "content": "Char",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "chr": true
+      }
+    },
+    {
+      "content": "Long",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lng": true
+      }
+    },
+    {
+      "content": "Array${1:[T]}${0:()}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "arr": true
+      }
+    },
+    {
+      "content": "Buffer${1:[T]}${0:()}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "buf": true
+      }
+    },
+    {
+      "content": "List${1:[T]}${0:()}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "list": true
+      }
+    },
+    {
+      "content": "Tuple${1:2}[${2:T},${0:T}]",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tpl": true
+      }
+    },
+    {
+      "content": "Set${1:[T]}${0:()}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "set": true
+      }
+    },
+    {
+      "content": "HashSet${1:[T]}${0:()}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "hset": true
+      }
+    },
+    {
+      "content": "mutable.HashSet${1:[T]}${0:()}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mhset": true
+      }
+    },
+    {
+      "content": "${1:key}->${2:val}${0:, keyval}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "keyval": true
+      }
+    },
+    {
+      "content": "Map[${1:T},${2:T}]${0:(keyval)}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "map": true
+      }
+    },
+    {
+      "content": "HashMap[${1:T},${2:T}]${0:(keyval)}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "hmap": true
+      }
+    },
+    {
+      "content": "mutable.Map[${1:T},${2:T}]${0:(keyval)}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mmap": true
+      }
+    },
+    {
+      "content": "mutable.HashMap[${1:T},${2:T}]${0:(keyval)}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mhmap": true
+      }
+    },
+    {
+      "content": "${1:name}.asInstanceOf[${2:T}]",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "as": true
+      }
+    },
+    {
+      "content": "${1:name}.isInstanceOf[${2:T}]",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "is": true
+      }
+    },
+    {
+      "content": "(${1:a} => ${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "(a": true
+      }
+    },
+    {
+      "content": "{(${1:a},${2:b}) =>\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "{(": true
+      }
+    },
+    {
+      "content": "${0:name}.filter (a",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "filter": true
+      }
+    },
+    {
+      "content": "${0:name}.map (a",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mapf": true
+      }
+    },
+    {
+      "content": "${1:name}.flatMap${0:[T]}(a",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "flatmap": true
+      }
+    },
+    {
+      "content": "${1:name}.foldLeft(${0:first}) {(",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fldl": true
+      }
+    },
+    {
+      "content": "${1:name}.foldRight(${0:first}) {(",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fldr": true
+      }
+    },
+    {
+      "content": "(${1:first}/:${2:name})(${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "/:": true
+      }
+    },
+    {
+      "content": "(${1:first}:\\${2:name})(${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        ":\\": true
+      }
+    },
+    {
+      "content": "${1:name}.reduceLeft[${0:T}] {(",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "redl": true
+      }
+    },
+    {
+      "content": "${1:name}.reduceRight[${0:T}] {(",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "redr": true
+      }
+    },
+    {
+      "content": "${0:name}.view.zipWithIndex",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "zipwi": true
+      }
+    },
+    {
+      "content": "${1:name}.split(\"${0:,}\")",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "spl": true
+      }
+    },
+    {
+      "content": "val ${1:name}${2:: T} = ${0:value}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "val": true
+      }
+    },
+    {
+      "content": "var ${1:name}${2:: T} = ${0:value}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "var": true
+      }
+    },
+    {
+      "content": "extends ${0:what}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "extends": true
+      }
+    },
+    {
+      "content": "with ${1:what}${0: with}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "with": true
+      }
+    },
+    {
+      "content": "def this(arg) = this(arg)",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "athis": true
+      }
+    },
+    {
+      "content": "object ${1:name}${2:(arg)}${3: extends }${4: with} ${0:}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "object": true
+      }
+    },
+    {
+      "content": "trait ${1:name}${2: extends }${3: with} {\n\t${0:}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "trait": true
+      }
+    },
+    {
+      "content": "case class ${1:name}${2:(arg)}${3: extends }${4: with} ${0:}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "casecl": true
+      }
+    },
+    {
+      "content": "${1:import org.scalatest.Suite}\n${0:import org.scalatest.FunSuite}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "scalatest": true
+      }
+    },
+    {
+      "content": "assert(${1:a} === ${0:b})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "assert": true
+      }
+    },
+    {
+      "content": "ifel ensuring(${1:a}==${0:b})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ensuring": true
+      }
+    },
+    {
+      "content": "expect(${1:what}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "expect": true
+      }
+    },
+    {
+      "content": "intercept[${1:IllegalArgumentException}] {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "intercept": true
+      }
+    },
+    {
+      "content": "test(\"${1:description}\") {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "test": true
+      }
+    },
+    {
+      "content": "class ${0:name} extends Suite {\n\tdef test() {\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "suite": true
+      }
+    },
+    {
+      "content": "class ${1:name} extends FunSuite {\n\ttest(\"${0:description}\") {\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fsuite": true
+      }
+    },
+    {
+      "content": "import sbt._\n\nclass ${1:Name}(info: ProjectInfo) extends DefaultWebProject(info) {\n\tval liftVersion = \"${0:2.3}\"\n\n\toverride def libraryDependencies = Set(\n\n\t) ++ super.libraryDependencies\n\n\tval snapshots = ScalaToolsSnapshots\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "webproject": true
+      }
+    },
+    {
+      "content": "\"net.liftweb\" %% \"${0:lib}\" % liftVersion % \"compile->default\",",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "liftjar": true
+      }
+    },
+    {
+      "content": "\"org.mortbay.jetty\" % \"jetty\" % \"${0:version}\" % \"test->default\",",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "jettyjar": true
+      }
+    },
+    {
+      "content": "import _root_.net.liftweb.http._\nimport S._\nimport _root_.net.liftweb.util._\nimport Helpers._\nimport _root_.scala.xml._",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "liftimports": true
+      }
+    }
+  ]
+}

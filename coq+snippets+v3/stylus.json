@@ -1,0 +1,4885 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "!important",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "!": true
+      }
+    },
+    {
+      "content": "align-content ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ac": true
+      }
+    },
+    {
+      "content": "align-content start",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ac:s": true
+      }
+    },
+    {
+      "content": "align-content end",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ac:e": true
+      }
+    },
+    {
+      "content": "align-content center",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ac:c": true
+      }
+    },
+    {
+      "content": "align-content flex-start",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ac:fs": true
+      }
+    },
+    {
+      "content": "align-content flex-end",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ac:fe": true
+      }
+    },
+    {
+      "content": "align-content space-between",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ac:sb": true
+      }
+    },
+    {
+      "content": "align-content space-around",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ac:sa": true
+      }
+    },
+    {
+      "content": "align-content space-evenly",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ac:se": true
+      }
+    },
+    {
+      "content": "align-content stretch",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ac:st": true
+      }
+    },
+    {
+      "content": "align-content baseline",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ac:b": true
+      }
+    },
+    {
+      "content": "align-content first baseline",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ac:fb": true
+      }
+    },
+    {
+      "content": "align-content last baseline",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ac:lb": true
+      }
+    },
+    {
+      "content": "align-items ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ai": true
+      }
+    },
+    {
+      "content": "align-items start",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ai:s": true
+      }
+    },
+    {
+      "content": "align-items end",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ai:e": true
+      }
+    },
+    {
+      "content": "align-items center",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ai:c": true
+      }
+    },
+    {
+      "content": "align-items flex-start",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ai:fs": true
+      }
+    },
+    {
+      "content": "align-items flex-end",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ai:fe": true
+      }
+    },
+    {
+      "content": "align-items stretch",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ai:st": true
+      }
+    },
+    {
+      "content": "align-items baseline",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ai:b": true
+      }
+    },
+    {
+      "content": "align-items first baseline",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ai:fb": true
+      }
+    },
+    {
+      "content": "align-items last baseline",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ai:lb": true
+      }
+    },
+    {
+      "content": "align-self ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "as": true
+      }
+    },
+    {
+      "content": "align-self start",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "as:s": true
+      }
+    },
+    {
+      "content": "align-self end",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "as:e": true
+      }
+    },
+    {
+      "content": "align-self center",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "as:c": true
+      }
+    },
+    {
+      "content": "align-self stretch",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "as:st": true
+      }
+    },
+    {
+      "content": "align-self flex-start",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "as:fs": true
+      }
+    },
+    {
+      "content": "align-self flex-end",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "as:fe": true
+      }
+    },
+    {
+      "content": "align-self baseline",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "as:b": true
+      }
+    },
+    {
+      "content": "align-self first baseline",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "as:fb": true
+      }
+    },
+    {
+      "content": "align-self last baseline",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "as:lb": true
+      }
+    },
+    {
+      "content": "-moz-border-image url(${1}) ${2:0} ${3:0} ${4:0} ${5:0} ${6:stretch} ${0:stretch}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdi:m+": true
+      }
+    },
+    {
+      "content": "-moz-border-image ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdi:m": true
+      }
+    },
+    {
+      "content": "-moz-border-radius ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdrz:m": true
+      }
+    },
+    {
+      "content": "-moz-box-shadow ${1:0} ${2:0} ${3:0} ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bxsh:m+": true
+      }
+    },
+    {
+      "content": "-moz-box-shadow ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bxsh:m": true
+      }
+    },
+    {
+      "content": "-webkit-border-image url(${1}) ${2:0} ${3:0} ${4:0} ${5:0} ${6:stretch} ${0:stretch}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdi:w+": true
+      }
+    },
+    {
+      "content": "-webkit-border-image ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdi:w": true
+      }
+    },
+    {
+      "content": "-webkit-border-radius ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdrz:w": true
+      }
+    },
+    {
+      "content": "-webkit-box-shadow ${1:0} ${2:0} ${3:0} ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bxsh:w+": true
+      }
+    },
+    {
+      "content": "-webkit-box-shadow ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bxsh:w": true
+      }
+    },
+    {
+      "content": "@font-face ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "@f": true
+      }
+    },
+    {
+      "content": "@import '${0}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "@i": true
+      }
+    },
+    {
+      "content": "@require '${0}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "@r": true
+      }
+    },
+    {
+      "content": "@media ${1:screen}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "@m": true
+      }
+    },
+    {
+      "content": "@media screen and (min-width: ${0}px)",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "@msmw": true
+      }
+    },
+    {
+      "content": "@extend .${1}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "@ext": true
+      }
+    },
+    {
+      "content": "background ${1} url(${2}) ${3:0} ${4:0} ${0:no-repeat}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bg+": true
+      }
+    },
+    {
+      "content": "background-attachment ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bga": true
+      }
+    },
+    {
+      "content": "background-attachment fixed",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bga:f": true
+      }
+    },
+    {
+      "content": "background-attachment scroll",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bga:s": true
+      }
+    },
+    {
+      "content": "background-break ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bgbk": true
+      }
+    },
+    {
+      "content": "background-break bounding-box",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bgbk:bb": true
+      }
+    },
+    {
+      "content": "background-break continuous",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bgbk:c": true
+      }
+    },
+    {
+      "content": "background-break each-box",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bgbk:eb": true
+      }
+    },
+    {
+      "content": "background-clip ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bgcp": true
+      }
+    },
+    {
+      "content": "background-clip border-box",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bgcp:bb": true
+      }
+    },
+    {
+      "content": "background-clip content-box",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bgcp:cb": true
+      }
+    },
+    {
+      "content": "background-clip no-clip",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bgcp:nc": true
+      }
+    },
+    {
+      "content": "background-clip padding-box",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bgcp:pb": true
+      }
+    },
+    {
+      "content": "background-color ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bgc": true
+      }
+    },
+    {
+      "content": "background-color transparent",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bgc:t": true
+      }
+    },
+    {
+      "content": "background-image url(${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bgi": true
+      }
+    },
+    {
+      "content": "background-image none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bgi:n": true
+      }
+    },
+    {
+      "content": "background-origin ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bgo": true
+      }
+    },
+    {
+      "content": "background-origin border-box",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bgo:bb": true
+      }
+    },
+    {
+      "content": "background-origin content-box",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bgo:cb": true
+      }
+    },
+    {
+      "content": "background-origin padding-box",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bgo:pb": true
+      }
+    },
+    {
+      "content": "background-position-x ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bgpx": true
+      }
+    },
+    {
+      "content": "background-position-y ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bgpy": true
+      }
+    },
+    {
+      "content": "background-position ${1:0} ${0:0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bgp": true
+      }
+    },
+    {
+      "content": "background-repeat ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bgr": true
+      }
+    },
+    {
+      "content": "background-repeat no-repeat",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bgr:n": true
+      }
+    },
+    {
+      "content": "background-repeat repeat-x",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bgr:x": true
+      }
+    },
+    {
+      "content": "background-repeat repeat-y",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bgr:y": true
+      }
+    },
+    {
+      "content": "background-repeat repeat",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bgr:r": true
+      }
+    },
+    {
+      "content": "background-size ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bgz": true
+      }
+    },
+    {
+      "content": "background-size auto",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bgz:a": true
+      }
+    },
+    {
+      "content": "background-size contain",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bgz:ct": true
+      }
+    },
+    {
+      "content": "background-size cover",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bgz:cv": true
+      }
+    },
+    {
+      "content": "background ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bg": true
+      }
+    },
+    {
+      "content": "filter progid:DXImageTransform.Microsoft.AlphaImageLoader(src='${1}',sizingMethod='${0:crop}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bg:ie": true
+      }
+    },
+    {
+      "content": "background none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bg:n": true
+      }
+    },
+    {
+      "content": "border ${1:1px} ${2:solid} ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bd+": true
+      }
+    },
+    {
+      "content": "border-bottom ${1:1px} ${2:solid} ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdb+": true
+      }
+    },
+    {
+      "content": "border-bottom-color ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdbc": true
+      }
+    },
+    {
+      "content": "border-bottom-image url(${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdbi": true
+      }
+    },
+    {
+      "content": "border-bottom-image none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdbi:n": true
+      }
+    },
+    {
+      "content": "border-bottom-left-image url(${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdbli": true
+      }
+    },
+    {
+      "content": "border-bottom-left-image continue",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdbli:c": true
+      }
+    },
+    {
+      "content": "border-bottom-left-image none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdbli:n": true
+      }
+    },
+    {
+      "content": "border-bottom-left-radius ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdblrz": true
+      }
+    },
+    {
+      "content": "border-bottom-right-image url(${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdbri": true
+      }
+    },
+    {
+      "content": "border-bottom-right-image continue",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdbri:c": true
+      }
+    },
+    {
+      "content": "border-bottom-right-image none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdbri:n": true
+      }
+    },
+    {
+      "content": "border-bottom-right-radius ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdbrrz": true
+      }
+    },
+    {
+      "content": "border-bottom-style ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdbs": true
+      }
+    },
+    {
+      "content": "border-bottom-style none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdbs:n": true
+      }
+    },
+    {
+      "content": "border-bottom-width ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdbw": true
+      }
+    },
+    {
+      "content": "border-bottom ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdb": true
+      }
+    },
+    {
+      "content": "border-bottom none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdb:n": true
+      }
+    },
+    {
+      "content": "border-break ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdbk": true
+      }
+    },
+    {
+      "content": "border-break close",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdbk:c": true
+      }
+    },
+    {
+      "content": "border-collapse ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdcl": true
+      }
+    },
+    {
+      "content": "border-collapse collapse",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdcl:c": true
+      }
+    },
+    {
+      "content": "border-collapse separate",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdcl:s": true
+      }
+    },
+    {
+      "content": "border-color ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdc": true
+      }
+    },
+    {
+      "content": "border-corner-image url(${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdci": true
+      }
+    },
+    {
+      "content": "border-corner-image continue",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdci:c": true
+      }
+    },
+    {
+      "content": "border-corner-image none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdci:n": true
+      }
+    },
+    {
+      "content": "border-fit ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdf": true
+      }
+    },
+    {
+      "content": "border-fit clip",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdf:c": true
+      }
+    },
+    {
+      "content": "border-fit overwrite",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdf:of": true
+      }
+    },
+    {
+      "content": "border-fit overwrite",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdf:ow": true
+      }
+    },
+    {
+      "content": "border-fit repeat",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdf:r": true
+      }
+    },
+    {
+      "content": "border-fit scale",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdf:sc": true
+      }
+    },
+    {
+      "content": "border-fit space",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdf:sp": true
+      }
+    },
+    {
+      "content": "border-fit stretch",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdf:st": true
+      }
+    },
+    {
+      "content": "border-image url(${1}) ${2:0} ${3:0} ${4:0} ${5:0} ${6:stretch} ${0:stretch}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdi": true
+      }
+    },
+    {
+      "content": "border-image none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdi:n": true
+      }
+    },
+    {
+      "content": "border-left ${1:1px} ${2:solid} ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdl+": true
+      }
+    },
+    {
+      "content": "border-left-color ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdlc": true
+      }
+    },
+    {
+      "content": "border-left-image url(${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdli": true
+      }
+    },
+    {
+      "content": "border-left-image none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdli:n": true
+      }
+    },
+    {
+      "content": "border-left-style ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdls": true
+      }
+    },
+    {
+      "content": "border-left-style none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdls:n": true
+      }
+    },
+    {
+      "content": "border-left-width ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdlw": true
+      }
+    },
+    {
+      "content": "border-left ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdl": true
+      }
+    },
+    {
+      "content": "border-left none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdl:n": true
+      }
+    },
+    {
+      "content": "border-length ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdlt": true
+      }
+    },
+    {
+      "content": "border-length auto",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdlt:a": true
+      }
+    },
+    {
+      "content": "border-radius ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdrz": true
+      }
+    },
+    {
+      "content": "border-right ${1:1px} ${2:solid} ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdr+": true
+      }
+    },
+    {
+      "content": "border-right-color ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdrc": true
+      }
+    },
+    {
+      "content": "border-right-image url(${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdri": true
+      }
+    },
+    {
+      "content": "border-right-image none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdri:n": true
+      }
+    },
+    {
+      "content": "border-right-style ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdrs": true
+      }
+    },
+    {
+      "content": "border-right-style none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdrs:n": true
+      }
+    },
+    {
+      "content": "border-right-width ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdrw": true
+      }
+    },
+    {
+      "content": "border-right ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdr": true
+      }
+    },
+    {
+      "content": "border-right none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdr:n": true
+      }
+    },
+    {
+      "content": "border-spacing ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdsp": true
+      }
+    },
+    {
+      "content": "border-style ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bds": true
+      }
+    },
+    {
+      "content": "border-style dashed",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bds:ds": true
+      }
+    },
+    {
+      "content": "border-style dot-dash",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bds:dtds": true
+      }
+    },
+    {
+      "content": "border-style dot-dot-dash",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bds:dtdtds": true
+      }
+    },
+    {
+      "content": "border-style dotted",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bds:dt": true
+      }
+    },
+    {
+      "content": "border-style double",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bds:db": true
+      }
+    },
+    {
+      "content": "border-style groove",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bds:g": true
+      }
+    },
+    {
+      "content": "border-style hidden",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bds:h": true
+      }
+    },
+    {
+      "content": "border-style inset",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bds:i": true
+      }
+    },
+    {
+      "content": "border-style none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bds:n": true
+      }
+    },
+    {
+      "content": "border-style outset",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bds:o": true
+      }
+    },
+    {
+      "content": "border-style ridge",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bds:r": true
+      }
+    },
+    {
+      "content": "border-style solid",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bds:s": true
+      }
+    },
+    {
+      "content": "border-style wave",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bds:w": true
+      }
+    },
+    {
+      "content": "border-top ${1:1px} ${2:solid} ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdt+": true
+      }
+    },
+    {
+      "content": "border-top-color ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdtc": true
+      }
+    },
+    {
+      "content": "border-top-image url(${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdti": true
+      }
+    },
+    {
+      "content": "border-top-image none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdti:n": true
+      }
+    },
+    {
+      "content": "border-top-left-image url(${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdtli": true
+      }
+    },
+    {
+      "content": "border-corner-image continue",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdtli:c": true
+      }
+    },
+    {
+      "content": "border-corner-image none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdtli:n": true
+      }
+    },
+    {
+      "content": "border-top-left-radius ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdtlrz": true
+      }
+    },
+    {
+      "content": "border-top-right-image url(${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdtri": true
+      }
+    },
+    {
+      "content": "border-top-right-image continue",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdtri:c": true
+      }
+    },
+    {
+      "content": "border-top-right-image none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdtri:n": true
+      }
+    },
+    {
+      "content": "border-top-right-radius ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdtrrz": true
+      }
+    },
+    {
+      "content": "border-top-style ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdts": true
+      }
+    },
+    {
+      "content": "border-top-style none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdts:n": true
+      }
+    },
+    {
+      "content": "border-top-width ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdtw": true
+      }
+    },
+    {
+      "content": "border-top ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdt": true
+      }
+    },
+    {
+      "content": "border-top none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdt:n": true
+      }
+    },
+    {
+      "content": "border-width ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bdw": true
+      }
+    },
+    {
+      "content": "border ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bd": true
+      }
+    },
+    {
+      "content": "border none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bd:n": true
+      }
+    },
+    {
+      "content": "bottom ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "b": true
+      }
+    },
+    {
+      "content": "bottom auto",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "b:a": true
+      }
+    },
+    {
+      "content": "box-shadow ${1:0} ${2:0} ${3:0} ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bxsh+": true
+      }
+    },
+    {
+      "content": "box-shadow ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bxsh": true
+      }
+    },
+    {
+      "content": "box-shadow none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bxsh:n": true
+      }
+    },
+    {
+      "content": "box-sizing ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bxz": true
+      }
+    },
+    {
+      "content": "box-sizing border-box",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bxz:bb": true
+      }
+    },
+    {
+      "content": "box-sizing content-box",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bxz:cb": true
+      }
+    },
+    {
+      "content": "caption-side ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cps": true
+      }
+    },
+    {
+      "content": "caption-side bottom",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cps:b": true
+      }
+    },
+    {
+      "content": "caption-side top",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cps:t": true
+      }
+    },
+    {
+      "content": "clear ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cl": true
+      }
+    },
+    {
+      "content": "clear both",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cl:b": true
+      }
+    },
+    {
+      "content": "clear left",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cl:l": true
+      }
+    },
+    {
+      "content": "clear none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cl:n": true
+      }
+    },
+    {
+      "content": "clear right",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cl:r": true
+      }
+    },
+    {
+      "content": "clip ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cp": true
+      }
+    },
+    {
+      "content": "clip auto",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cp:a": true
+      }
+    },
+    {
+      "content": "clip rect(${1:0} ${2:0} ${3:0} ${0:0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cp:r": true
+      }
+    },
+    {
+      "content": "color ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "c": true
+      }
+    },
+    {
+      "content": "content ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ct": true
+      }
+    },
+    {
+      "content": "content attr(${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ct:a": true
+      }
+    },
+    {
+      "content": "content close-quote",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ct:cq": true
+      }
+    },
+    {
+      "content": "content counter(${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ct:c": true
+      }
+    },
+    {
+      "content": "content counters(${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ct:cs": true
+      }
+    },
+    {
+      "content": "content no-close-quote",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ct:ncq": true
+      }
+    },
+    {
+      "content": "content no-open-quote",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ct:noq": true
+      }
+    },
+    {
+      "content": "content normal",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ct:n": true
+      }
+    },
+    {
+      "content": "content open-quote",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ct:oq": true
+      }
+    },
+    {
+      "content": "counter-increment ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "coi": true
+      }
+    },
+    {
+      "content": "counter-reset ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cor": true
+      }
+    },
+    {
+      "content": "cursor ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cur": true
+      }
+    },
+    {
+      "content": "cursor auto",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cur:a": true
+      }
+    },
+    {
+      "content": "cursor crosshair",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cur:c": true
+      }
+    },
+    {
+      "content": "cursor default",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cur:d": true
+      }
+    },
+    {
+      "content": "cursor hand",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cur:ha": true
+      }
+    },
+    {
+      "content": "cursor help",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cur:he": true
+      }
+    },
+    {
+      "content": "cursor move",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cur:m": true
+      }
+    },
+    {
+      "content": "cursor pointer",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cur:p": true
+      }
+    },
+    {
+      "content": "cursor text",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cur:t": true
+      }
+    },
+    {
+      "content": "display ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "d": true
+      }
+    },
+    {
+      "content": "display -moz-inline-box",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "d:mib": true
+      }
+    },
+    {
+      "content": "display -moz-inline-stack",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "d:mis": true
+      }
+    },
+    {
+      "content": "display block",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "d:b": true
+      }
+    },
+    {
+      "content": "display compact",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "d:cp": true
+      }
+    },
+    {
+      "content": "display grid",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "d:g": true
+      }
+    },
+    {
+      "content": "display flex",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "d:f": true
+      }
+    },
+    {
+      "content": "display inline-block",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "d:ib": true
+      }
+    },
+    {
+      "content": "display inline-table",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "d:itb": true
+      }
+    },
+    {
+      "content": "display inline",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "d:i": true
+      }
+    },
+    {
+      "content": "display list-item",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "d:li": true
+      }
+    },
+    {
+      "content": "display none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "d:n": true
+      }
+    },
+    {
+      "content": "display run-in",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "d:ri": true
+      }
+    },
+    {
+      "content": "display table-caption",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "d:tbcp": true
+      }
+    },
+    {
+      "content": "display table-cell",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "d:tbc": true
+      }
+    },
+    {
+      "content": "display table-column-group",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "d:tbclg": true
+      }
+    },
+    {
+      "content": "display table-column",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "d:tbcl": true
+      }
+    },
+    {
+      "content": "display table-footer-group",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "d:tbfg": true
+      }
+    },
+    {
+      "content": "display table-header-group",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "d:tbhg": true
+      }
+    },
+    {
+      "content": "display table-row-group",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "d:tbrg": true
+      }
+    },
+    {
+      "content": "display table-row",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "d:tbr": true
+      }
+    },
+    {
+      "content": "display table",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "d:tb": true
+      }
+    },
+    {
+      "content": "empty-cells ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ec": true
+      }
+    },
+    {
+      "content": "empty-cells hide",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ec:h": true
+      }
+    },
+    {
+      "content": "empty-cells show",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ec:s": true
+      }
+    },
+    {
+      "content": "expression()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "exp": true
+      }
+    },
+    {
+      "content": "float ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fl": true
+      }
+    },
+    {
+      "content": "float left",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fl:l": true
+      }
+    },
+    {
+      "content": "float none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fl:n": true
+      }
+    },
+    {
+      "content": "float right",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fl:r": true
+      }
+    },
+    {
+      "content": "font ${1:1em} ${2:Arial},${0:sans-serif}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "f+": true
+      }
+    },
+    {
+      "content": "font-effect ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fef": true
+      }
+    },
+    {
+      "content": "font-effect emboss",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fef:eb": true
+      }
+    },
+    {
+      "content": "font-effect engrave",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fef:eg": true
+      }
+    },
+    {
+      "content": "font-effect none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fef:n": true
+      }
+    },
+    {
+      "content": "font-effect outline",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fef:o": true
+      }
+    },
+    {
+      "content": "font-emphasize-position ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "femp": true
+      }
+    },
+    {
+      "content": "font-emphasize-position after",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "femp:a": true
+      }
+    },
+    {
+      "content": "font-emphasize-position before",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "femp:b": true
+      }
+    },
+    {
+      "content": "font-emphasize-style ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fems": true
+      }
+    },
+    {
+      "content": "font-emphasize-style accent",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fems:ac": true
+      }
+    },
+    {
+      "content": "font-emphasize-style circle",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fems:c": true
+      }
+    },
+    {
+      "content": "font-emphasize-style disc",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fems:ds": true
+      }
+    },
+    {
+      "content": "font-emphasize-style dot",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fems:dt": true
+      }
+    },
+    {
+      "content": "font-emphasize-style none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fems:n": true
+      }
+    },
+    {
+      "content": "font-emphasize ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fem": true
+      }
+    },
+    {
+      "content": "font-family ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ff": true
+      }
+    },
+    {
+      "content": "font-family ${0:'Monotype Corsiva','Comic Sans MS'},cursive",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ff:c": true
+      }
+    },
+    {
+      "content": "font-family ${0:Capitals,Impact},fantasy",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ff:f": true
+      }
+    },
+    {
+      "content": "font-family ${0:Monaco,'Courier New'},monospace",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ff:m": true
+      }
+    },
+    {
+      "content": "font-family ${0:Helvetica,Arial},sans-serif",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ff:ss": true
+      }
+    },
+    {
+      "content": "font-family ${0:Georgia,'Times New Roman'},serif",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ff:s": true
+      }
+    },
+    {
+      "content": "font-size-adjust ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fza": true
+      }
+    },
+    {
+      "content": "font-size-adjust none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fza:n": true
+      }
+    },
+    {
+      "content": "font-size ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fz": true
+      }
+    },
+    {
+      "content": "font-smooth ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fsm": true
+      }
+    },
+    {
+      "content": "font-smooth always",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fsm:aw": true
+      }
+    },
+    {
+      "content": "font-smooth auto",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fsm:a": true
+      }
+    },
+    {
+      "content": "font-smooth never",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fsm:n": true
+      }
+    },
+    {
+      "content": "font-stretch ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fst": true
+      }
+    },
+    {
+      "content": "font-stretch condensed",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fst:c": true
+      }
+    },
+    {
+      "content": "font-stretch expanded",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fst:e": true
+      }
+    },
+    {
+      "content": "font-stretch extra-condensed",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fst:ec": true
+      }
+    },
+    {
+      "content": "font-stretch extra-expanded",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fst:ee": true
+      }
+    },
+    {
+      "content": "font-stretch normal",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fst:n": true
+      }
+    },
+    {
+      "content": "font-stretch semi-condensed",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fst:sc": true
+      }
+    },
+    {
+      "content": "font-stretch semi-expanded",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fst:se": true
+      }
+    },
+    {
+      "content": "font-stretch ultra-condensed",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fst:uc": true
+      }
+    },
+    {
+      "content": "font-stretch ultra-expanded",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fst:ue": true
+      }
+    },
+    {
+      "content": "font-style ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fs": true
+      }
+    },
+    {
+      "content": "font-style italic",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fs:i": true
+      }
+    },
+    {
+      "content": "font-style normal",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fs:n": true
+      }
+    },
+    {
+      "content": "font-style oblique",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fs:o": true
+      }
+    },
+    {
+      "content": "font-variant ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fv": true
+      }
+    },
+    {
+      "content": "font-variant normal",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fv:n": true
+      }
+    },
+    {
+      "content": "font-variant small-caps",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fv:sc": true
+      }
+    },
+    {
+      "content": "font-weight ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fw": true
+      }
+    },
+    {
+      "content": "font-weight bold",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fw:b": true
+      }
+    },
+    {
+      "content": "font-weight bolder",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fw:br": true
+      }
+    },
+    {
+      "content": "font-weight lighter",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fw:lr": true
+      }
+    },
+    {
+      "content": "font-weight normal",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fw:n": true
+      }
+    },
+    {
+      "content": "font ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "f": true
+      }
+    },
+    {
+      "content": "grid ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "g": true
+      }
+    },
+    {
+      "content": "grid-auto-flow ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gaf": true
+      }
+    },
+    {
+      "content": "grid-auto-flow ${1:row} ${0:dense}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gaf+": true
+      }
+    },
+    {
+      "content": "grid-auto-flow row",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gaf:r": true
+      }
+    },
+    {
+      "content": "grid-auto-flow column",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gaf:c": true
+      }
+    },
+    {
+      "content": "grid-auto-flow dense",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gaf:d": true
+      }
+    },
+    {
+      "content": "grid-auto-flow row dense",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gaf:rd": true
+      }
+    },
+    {
+      "content": "grid-auto-flow column dense",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gaf:cd": true
+      }
+    },
+    {
+      "content": "grid-auto-rows ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gar": true
+      }
+    },
+    {
+      "content": "grid-auto-rows auto",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gar:a": true
+      }
+    },
+    {
+      "content": "grid-auto-rows max-content",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gar:mac": true
+      }
+    },
+    {
+      "content": "grid-auto-rows min-content",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gar:mic": true
+      }
+    },
+    {
+      "content": "grid-auto-columns ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gac": true
+      }
+    },
+    {
+      "content": "grid-auto-columns auto",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gac:a": true
+      }
+    },
+    {
+      "content": "grid-auto-columns max-content",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gac:mac": true
+      }
+    },
+    {
+      "content": "grid-auto-columns min-content",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gac:mic": true
+      }
+    },
+    {
+      "content": "grid-template ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gt": true
+      }
+    },
+    {
+      "content": "grid-template ${1} / ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gt+": true
+      }
+    },
+    {
+      "content": "grid-template-rows ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gtr": true
+      }
+    },
+    {
+      "content": "grid-template-columns ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gtc": true
+      }
+    },
+    {
+      "content": "grid-template-areas ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gta": true
+      }
+    },
+    {
+      "content": "grid-gap ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gg": true
+      }
+    },
+    {
+      "content": "grid-gap ${1} ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gg+": true
+      }
+    },
+    {
+      "content": "grid-gap 0",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gg:0": true
+      }
+    },
+    {
+      "content": "grid-row-gap ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "grg": true
+      }
+    },
+    {
+      "content": "grid-row-gap 0",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "grg:0": true
+      }
+    },
+    {
+      "content": "grid-column-gap ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gcg": true
+      }
+    },
+    {
+      "content": "grid-column-gap 0",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gcg:0": true
+      }
+    },
+    {
+      "content": "grid-row ${1} / ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gr": true
+      }
+    },
+    {
+      "content": "grid-row-start ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "grs": true
+      }
+    },
+    {
+      "content": "grid-row-end ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gre": true
+      }
+    },
+    {
+      "content": "grid-column ${1} / ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gc": true
+      }
+    },
+    {
+      "content": "grid-column-start ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gcs": true
+      }
+    },
+    {
+      "content": "grid-column-end ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gce": true
+      }
+    },
+    {
+      "content": "height ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "h": true
+      }
+    },
+    {
+      "content": "height auto",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "h:a": true
+      }
+    },
+    {
+      "content": "left ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "l": true
+      }
+    },
+    {
+      "content": "left auto",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "l:a": true
+      }
+    },
+    {
+      "content": "letter-spacing ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lts": true
+      }
+    },
+    {
+      "content": "line-height ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lh": true
+      }
+    },
+    {
+      "content": "list-style-image url(${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lisi": true
+      }
+    },
+    {
+      "content": "list-style-image none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lisi:n": true
+      }
+    },
+    {
+      "content": "list-style-position ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lisp": true
+      }
+    },
+    {
+      "content": "list-style-position inside",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lisp:i": true
+      }
+    },
+    {
+      "content": "list-style-position outside",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lisp:o": true
+      }
+    },
+    {
+      "content": "list-style-type ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "list": true
+      }
+    },
+    {
+      "content": "list-style-type circle",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "list:c": true
+      }
+    },
+    {
+      "content": "list-style-type decimal-leading-zero",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "list:dclz": true
+      }
+    },
+    {
+      "content": "list-style-type decimal",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "list:dc": true
+      }
+    },
+    {
+      "content": "list-style-type disc",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "list:d": true
+      }
+    },
+    {
+      "content": "list-style-type lower-roman",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "list:lr": true
+      }
+    },
+    {
+      "content": "list-style-type none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "list:n": true
+      }
+    },
+    {
+      "content": "list-style-type square",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "list:s": true
+      }
+    },
+    {
+      "content": "list-style-type upper-roman",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "list:ur": true
+      }
+    },
+    {
+      "content": "list-style ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lis": true
+      }
+    },
+    {
+      "content": "list-style none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lis:n": true
+      }
+    },
+    {
+      "content": "margin-bottom ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mb": true
+      }
+    },
+    {
+      "content": "margin-bottom auto",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mb:a": true
+      }
+    },
+    {
+      "content": "margin-left ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ml": true
+      }
+    },
+    {
+      "content": "margin-left auto",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ml:a": true
+      }
+    },
+    {
+      "content": "margin-right ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mr": true
+      }
+    },
+    {
+      "content": "margin-right auto",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mr:a": true
+      }
+    },
+    {
+      "content": "margin-top ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mt": true
+      }
+    },
+    {
+      "content": "margin-top auto",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mt:a": true
+      }
+    },
+    {
+      "content": "margin ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "m": true
+      }
+    },
+    {
+      "content": "margin ${1:0} ${2:0} ${3:0} ${0:0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "m:4": true
+      }
+    },
+    {
+      "content": "margin ${1:0} ${2:0} ${0:0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "m:3": true
+      }
+    },
+    {
+      "content": "margin ${1:0} ${0:0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "m:2": true
+      }
+    },
+    {
+      "content": "margin 0",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "m:0": true
+      }
+    },
+    {
+      "content": "margin auto",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "m:a": true
+      }
+    },
+    {
+      "content": "max-height ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mah": true
+      }
+    },
+    {
+      "content": "max-height none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mah:n": true
+      }
+    },
+    {
+      "content": "max-width ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "maw": true
+      }
+    },
+    {
+      "content": "max-width none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "maw:n": true
+      }
+    },
+    {
+      "content": "min-height ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mih": true
+      }
+    },
+    {
+      "content": "min-width ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "miw": true
+      }
+    },
+    {
+      "content": "opacity ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "op": true
+      }
+    },
+    {
+      "content": "filter progid:DXImageTransform.Microsoft.Alpha(Opacity=${0:100})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "op:ie": true
+      }
+    },
+    {
+      "content": "-ms-filter 'progid:DXImageTransform.Microsoft.Alpha(Opacity=${0:100})'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "op:ms": true
+      }
+    },
+    {
+      "content": "orphans ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "orp": true
+      }
+    },
+    {
+      "content": "outline ${1:1px} ${2:solid} ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "o+": true
+      }
+    },
+    {
+      "content": "outline-color ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "oc": true
+      }
+    },
+    {
+      "content": "outline-color invert",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "oc:i": true
+      }
+    },
+    {
+      "content": "outline-offset ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "oo": true
+      }
+    },
+    {
+      "content": "outline-style ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "os": true
+      }
+    },
+    {
+      "content": "outline-width ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ow": true
+      }
+    },
+    {
+      "content": "outline ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "o": true
+      }
+    },
+    {
+      "content": "outline none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "o:n": true
+      }
+    },
+    {
+      "content": "overflow-style ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ovs": true
+      }
+    },
+    {
+      "content": "overflow-style auto",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ovs:a": true
+      }
+    },
+    {
+      "content": "overflow-style marquee",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ovs:mq": true
+      }
+    },
+    {
+      "content": "overflow-style move",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ovs:mv": true
+      }
+    },
+    {
+      "content": "overflow-style panner",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ovs:p": true
+      }
+    },
+    {
+      "content": "overflow-style scrollbar",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ovs:s": true
+      }
+    },
+    {
+      "content": "overflow-x ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ovx": true
+      }
+    },
+    {
+      "content": "overflow-x auto",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ovx:a": true
+      }
+    },
+    {
+      "content": "overflow-x hidden",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ovx:h": true
+      }
+    },
+    {
+      "content": "overflow-x scroll",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ovx:s": true
+      }
+    },
+    {
+      "content": "overflow-x visible",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ovx:v": true
+      }
+    },
+    {
+      "content": "overflow-y ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ovy": true
+      }
+    },
+    {
+      "content": "overflow-y auto",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ovy:a": true
+      }
+    },
+    {
+      "content": "overflow-y hidden",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ovy:h": true
+      }
+    },
+    {
+      "content": "overflow-y scroll",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ovy:s": true
+      }
+    },
+    {
+      "content": "overflow-y visible",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ovy:v": true
+      }
+    },
+    {
+      "content": "overflow ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ov": true
+      }
+    },
+    {
+      "content": "overflow auto",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ov:a": true
+      }
+    },
+    {
+      "content": "overflow hidden",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ov:h": true
+      }
+    },
+    {
+      "content": "overflow scroll",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ov:s": true
+      }
+    },
+    {
+      "content": "overflow visible",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ov:v": true
+      }
+    },
+    {
+      "content": "padding-bottom ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pb": true
+      }
+    },
+    {
+      "content": "padding-left ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pl": true
+      }
+    },
+    {
+      "content": "padding-right ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pr": true
+      }
+    },
+    {
+      "content": "padding-top ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pt": true
+      }
+    },
+    {
+      "content": "padding ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "p": true
+      }
+    },
+    {
+      "content": "padding ${1:0} ${2:0} ${3:0} ${0:0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "p:4": true
+      }
+    },
+    {
+      "content": "padding ${1:0} ${2:0} ${0:0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "p:3": true
+      }
+    },
+    {
+      "content": "padding ${1:0} ${0:0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "p:2": true
+      }
+    },
+    {
+      "content": "padding 0",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "p:0": true
+      }
+    },
+    {
+      "content": "place-content ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pc": true
+      }
+    },
+    {
+      "content": "place-content ${1} ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pc+": true
+      }
+    },
+    {
+      "content": "place-content start",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pc:s": true
+      }
+    },
+    {
+      "content": "place-content end",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pc:e": true
+      }
+    },
+    {
+      "content": "place-content center",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pc:c": true
+      }
+    },
+    {
+      "content": "place-content flex-start",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pc:fs": true
+      }
+    },
+    {
+      "content": "place-content flex-end",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pc:fe": true
+      }
+    },
+    {
+      "content": "place-content space-between",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pc:sb": true
+      }
+    },
+    {
+      "content": "place-content space-around",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pc:sa": true
+      }
+    },
+    {
+      "content": "place-content space-evenly",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pc:se": true
+      }
+    },
+    {
+      "content": "place-content stretch",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pc:st": true
+      }
+    },
+    {
+      "content": "page-break-after ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pgba": true
+      }
+    },
+    {
+      "content": "page-break-after always",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pgba:aw": true
+      }
+    },
+    {
+      "content": "page-break-after auto",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pgba:a": true
+      }
+    },
+    {
+      "content": "page-break-after left",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pgba:l": true
+      }
+    },
+    {
+      "content": "page-break-after right",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pgba:r": true
+      }
+    },
+    {
+      "content": "page-break-before ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pgbb": true
+      }
+    },
+    {
+      "content": "page-break-before always",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pgbb:aw": true
+      }
+    },
+    {
+      "content": "page-break-before auto",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pgbb:a": true
+      }
+    },
+    {
+      "content": "page-break-before left",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pgbb:l": true
+      }
+    },
+    {
+      "content": "page-break-before right",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pgbb:r": true
+      }
+    },
+    {
+      "content": "page-break-inside ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pgbi": true
+      }
+    },
+    {
+      "content": "page-break-inside auto",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pgbi:a": true
+      }
+    },
+    {
+      "content": "page-break-inside avoid",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pgbi:av": true
+      }
+    },
+    {
+      "content": "place-items ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pi": true
+      }
+    },
+    {
+      "content": "place-items ${1:stretch} ${0:stretch}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pi+": true
+      }
+    },
+    {
+      "content": "place-items start",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pi:s": true
+      }
+    },
+    {
+      "content": "place-items end",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pi:e": true
+      }
+    },
+    {
+      "content": "place-items center",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pi:c": true
+      }
+    },
+    {
+      "content": "place-items stretch",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pi:st": true
+      }
+    },
+    {
+      "content": "position ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pos": true
+      }
+    },
+    {
+      "content": "position absolute",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pos:a": true
+      }
+    },
+    {
+      "content": "position fixed",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pos:f": true
+      }
+    },
+    {
+      "content": "position relative",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pos:r": true
+      }
+    },
+    {
+      "content": "position static",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pos:s": true
+      }
+    },
+    {
+      "content": "place-self ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ps": true
+      }
+    },
+    {
+      "content": "place-self ${1:stretch} ${0:stretch}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ps+": true
+      }
+    },
+    {
+      "content": "place-self start",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ps:s": true
+      }
+    },
+    {
+      "content": "place-self end",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ps:e": true
+      }
+    },
+    {
+      "content": "place-self center",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ps:c": true
+      }
+    },
+    {
+      "content": "place-self stretch",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ps:st": true
+      }
+    },
+    {
+      "content": "quotes ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "q": true
+      }
+    },
+    {
+      "content": "quotes '\\201C' '\\201D' '\\2018' '\\2019'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "q:en": true
+      }
+    },
+    {
+      "content": "quotes none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "q:n": true
+      }
+    },
+    {
+      "content": "quotes '\\00AB' '\\00BB' '\\201E' '\\201C'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "q:ru": true
+      }
+    },
+    {
+      "content": "resize ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rz": true
+      }
+    },
+    {
+      "content": "resize both",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rz:b": true
+      }
+    },
+    {
+      "content": "resize horizontal",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rz:h": true
+      }
+    },
+    {
+      "content": "resize none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rz:n": true
+      }
+    },
+    {
+      "content": "resize vertical",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rz:v": true
+      }
+    },
+    {
+      "content": "right ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "r": true
+      }
+    },
+    {
+      "content": "right auto",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "r:a": true
+      }
+    },
+    {
+      "content": "table-layout ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tbl": true
+      }
+    },
+    {
+      "content": "table-layout auto",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tbl:a": true
+      }
+    },
+    {
+      "content": "table-layout fixed",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tbl:f": true
+      }
+    },
+    {
+      "content": "text-align-last ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tal": true
+      }
+    },
+    {
+      "content": "text-align-last auto",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tal:a": true
+      }
+    },
+    {
+      "content": "text-align-last center",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tal:c": true
+      }
+    },
+    {
+      "content": "text-align-last left",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tal:l": true
+      }
+    },
+    {
+      "content": "text-align-last right",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tal:r": true
+      }
+    },
+    {
+      "content": "text-align ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ta": true
+      }
+    },
+    {
+      "content": "text-align center",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ta:c": true
+      }
+    },
+    {
+      "content": "text-align left",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ta:l": true
+      }
+    },
+    {
+      "content": "text-align right",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ta:r": true
+      }
+    },
+    {
+      "content": "text-decoration ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "td": true
+      }
+    },
+    {
+      "content": "text-decoration line-through",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "td:l": true
+      }
+    },
+    {
+      "content": "text-decoration none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "td:n": true
+      }
+    },
+    {
+      "content": "text-decoration overline",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "td:o": true
+      }
+    },
+    {
+      "content": "text-decoration underline",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "td:u": true
+      }
+    },
+    {
+      "content": "text-emphasis ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "te": true
+      }
+    },
+    {
+      "content": "text-emphasis accent",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "te:ac": true
+      }
+    },
+    {
+      "content": "text-emphasis after",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "te:a": true
+      }
+    },
+    {
+      "content": "text-emphasis before",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "te:b": true
+      }
+    },
+    {
+      "content": "text-emphasis circle",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "te:c": true
+      }
+    },
+    {
+      "content": "text-emphasis disc",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "te:ds": true
+      }
+    },
+    {
+      "content": "text-emphasis dot",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "te:dt": true
+      }
+    },
+    {
+      "content": "text-emphasis none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "te:n": true
+      }
+    },
+    {
+      "content": "text-height ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "th": true
+      }
+    },
+    {
+      "content": "text-height auto",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "th:a": true
+      }
+    },
+    {
+      "content": "text-height font-size",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "th:f": true
+      }
+    },
+    {
+      "content": "text-height max-size",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "th:m": true
+      }
+    },
+    {
+      "content": "text-height text-size",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "th:t": true
+      }
+    },
+    {
+      "content": "text-indent ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ti": true
+      }
+    },
+    {
+      "content": "text-indent -9999px",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ti:-": true
+      }
+    },
+    {
+      "content": "text-justify ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tj": true
+      }
+    },
+    {
+      "content": "text-justify auto",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tj:a": true
+      }
+    },
+    {
+      "content": "text-justify distribute",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tj:d": true
+      }
+    },
+    {
+      "content": "text-justify inter-cluster",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tj:ic": true
+      }
+    },
+    {
+      "content": "text-justify inter-ideograph",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tj:ii": true
+      }
+    },
+    {
+      "content": "text-justify inter-word",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tj:iw": true
+      }
+    },
+    {
+      "content": "text-justify kashida",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tj:k": true
+      }
+    },
+    {
+      "content": "text-justify tibetan",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tj:t": true
+      }
+    },
+    {
+      "content": "text-outline ${1:0} ${2:0} ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "to+": true
+      }
+    },
+    {
+      "content": "text-outline ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "to": true
+      }
+    },
+    {
+      "content": "text-outline none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "to:n": true
+      }
+    },
+    {
+      "content": "text-replace ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tr": true
+      }
+    },
+    {
+      "content": "text-replace none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tr:n": true
+      }
+    },
+    {
+      "content": "text-shadow ${1:0} ${2:0} ${3:0} ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tsh+": true
+      }
+    },
+    {
+      "content": "text-shadow ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tsh": true
+      }
+    },
+    {
+      "content": "text-shadow none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tsh:n": true
+      }
+    },
+    {
+      "content": "text-transform ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tt": true
+      }
+    },
+    {
+      "content": "text-transform capitalize",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tt:c": true
+      }
+    },
+    {
+      "content": "text-transform lowercase",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tt:l": true
+      }
+    },
+    {
+      "content": "text-transform none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tt:n": true
+      }
+    },
+    {
+      "content": "text-transform uppercase",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tt:u": true
+      }
+    },
+    {
+      "content": "text-wrap ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tw": true
+      }
+    },
+    {
+      "content": "text-wrap none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tw:no": true
+      }
+    },
+    {
+      "content": "text-wrap normal",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tw:n": true
+      }
+    },
+    {
+      "content": "text-wrap suppress",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tw:s": true
+      }
+    },
+    {
+      "content": "text-wrap unrestricted",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tw:u": true
+      }
+    },
+    {
+      "content": "top ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "t": true
+      }
+    },
+    {
+      "content": "top auto",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "t:a": true
+      }
+    },
+    {
+      "content": "vertical-align ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "va": true
+      }
+    },
+    {
+      "content": "vertical-align baseline",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "va:bl": true
+      }
+    },
+    {
+      "content": "vertical-align bottom",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "va:b": true
+      }
+    },
+    {
+      "content": "vertical-align middle",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "va:m": true
+      }
+    },
+    {
+      "content": "vertical-align sub",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "va:sub": true
+      }
+    },
+    {
+      "content": "vertical-align super",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "va:sup": true
+      }
+    },
+    {
+      "content": "vertical-align text-bottom",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "va:tb": true
+      }
+    },
+    {
+      "content": "vertical-align text-top",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "va:tt": true
+      }
+    },
+    {
+      "content": "vertical-align top",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "va:t": true
+      }
+    },
+    {
+      "content": "visibility ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "v": true
+      }
+    },
+    {
+      "content": "visibility collapse",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "v:c": true
+      }
+    },
+    {
+      "content": "visibility hidden",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "v:h": true
+      }
+    },
+    {
+      "content": "visibility visible",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "v:v": true
+      }
+    },
+    {
+      "content": "white-space-collapse ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "whsc": true
+      }
+    },
+    {
+      "content": "white-space-collapse break-all",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "whsc:ba": true
+      }
+    },
+    {
+      "content": "white-space-collapse break-strict",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "whsc:bs": true
+      }
+    },
+    {
+      "content": "white-space-collapse keep-all",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "whsc:k": true
+      }
+    },
+    {
+      "content": "white-space-collapse loose",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "whsc:l": true
+      }
+    },
+    {
+      "content": "white-space-collapse normal",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "whsc:n": true
+      }
+    },
+    {
+      "content": "white-space ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "whs": true
+      }
+    },
+    {
+      "content": "white-space normal",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "whs:n": true
+      }
+    },
+    {
+      "content": "white-space nowrap",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "whs:nw": true
+      }
+    },
+    {
+      "content": "white-space pre-line",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "whs:pl": true
+      }
+    },
+    {
+      "content": "white-space pre-wrap",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "whs:pw": true
+      }
+    },
+    {
+      "content": "white-space pre",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "whs:p": true
+      }
+    },
+    {
+      "content": "widows ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wid": true
+      }
+    },
+    {
+      "content": "width ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "w": true
+      }
+    },
+    {
+      "content": "width auto",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "w:a": true
+      }
+    },
+    {
+      "content": "word-break ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wob": true
+      }
+    },
+    {
+      "content": "word-break break-all",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wob:ba": true
+      }
+    },
+    {
+      "content": "word-break break-strict",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wob:bs": true
+      }
+    },
+    {
+      "content": "word-break keep-all",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wob:k": true
+      }
+    },
+    {
+      "content": "word-break loose",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wob:l": true
+      }
+    },
+    {
+      "content": "word-break normal",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wob:n": true
+      }
+    },
+    {
+      "content": "word-spacing ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wos": true
+      }
+    },
+    {
+      "content": "word-wrap ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wow": true
+      }
+    },
+    {
+      "content": "word-wrap none",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wow:no": true
+      }
+    },
+    {
+      "content": "word-wrap normal",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wow:n": true
+      }
+    },
+    {
+      "content": "word-wrap suppress",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wow:s": true
+      }
+    },
+    {
+      "content": "word-wrap unrestricted",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wow:u": true
+      }
+    },
+    {
+      "content": "z-index ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "z": true
+      }
+    },
+    {
+      "content": "z-index auto",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "z:a": true
+      }
+    },
+    {
+      "content": "zoom 1",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "zoo": true
+      }
+    },
+    {
+      "content": ":hover",
+      "doc": "",
+      "label": "",
+      "matches": {
+        ":h": true
+      }
+    },
+    {
+      "content": ":first-child",
+      "doc": "",
+      "label": "",
+      "matches": {
+        ":fc": true
+      }
+    },
+    {
+      "content": ":last-child",
+      "doc": "",
+      "label": "",
+      "matches": {
+        ":lc": true
+      }
+    },
+    {
+      "content": ":nth-child(${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        ":nc": true
+      }
+    },
+    {
+      "content": ":nth-last-child(${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        ":nlc": true
+      }
+    },
+    {
+      "content": ":only-child",
+      "doc": "",
+      "label": "",
+      "matches": {
+        ":oc": true
+      }
+    },
+    {
+      "content": ":after",
+      "doc": "",
+      "label": "",
+      "matches": {
+        ":a": true
+      }
+    },
+    {
+      "content": ":before",
+      "doc": "",
+      "label": "",
+      "matches": {
+        ":b": true
+      }
+    },
+    {
+      "content": "::after",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "::a": true
+      }
+    },
+    {
+      "content": "::before",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "::b": true
+      }
+    },
+    {
+      "content": "if ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "${1}(${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mix": true
+      }
+    },
+    {
+      "content": "for ${1:i} in ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "@keyframes ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "keyf": true
+      }
+    },
+    {
+      "content": "justify-content ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "jc": true
+      }
+    },
+    {
+      "content": "justify-content start",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "jc:s": true
+      }
+    },
+    {
+      "content": "justify-content end",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "jc:e": true
+      }
+    },
+    {
+      "content": "justify-content center",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "jc:c": true
+      }
+    },
+    {
+      "content": "justify-content flex-start",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "jc:fs": true
+      }
+    },
+    {
+      "content": "justify-content flex-end",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "jc:fe": true
+      }
+    },
+    {
+      "content": "justify-content space-between",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "jc:sb": true
+      }
+    },
+    {
+      "content": "justify-content space-around",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "jc:sa": true
+      }
+    },
+    {
+      "content": "justify-content space-evenly",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "jc:se": true
+      }
+    },
+    {
+      "content": "justify-content space-evenly",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "jc:st": true
+      }
+    },
+    {
+      "content": "justify-content left",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "jc:l": true
+      }
+    },
+    {
+      "content": "justify-content right",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "jc:r": true
+      }
+    },
+    {
+      "content": "justify-items ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ji": true
+      }
+    },
+    {
+      "content": "justify-items start",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ji:s": true
+      }
+    },
+    {
+      "content": "justify-items end",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ji:e": true
+      }
+    },
+    {
+      "content": "justify-items center",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ji:c": true
+      }
+    },
+    {
+      "content": "justify-items stretch",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ji:st": true
+      }
+    },
+    {
+      "content": "justify-self ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "js": true
+      }
+    },
+    {
+      "content": "justify-self start",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "js:s": true
+      }
+    },
+    {
+      "content": "justify-self end",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "js:e": true
+      }
+    },
+    {
+      "content": "justify-self center",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "js:c": true
+      }
+    },
+    {
+      "content": "justify-self stretch",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "js:st": true
+      }
+    }
+  ]
+}

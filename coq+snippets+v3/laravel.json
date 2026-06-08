@@ -1,0 +1,37 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "/*!\n* \\class       $1\n*\n* \\author      ${3:`!v g:snips_author`}\n* \\date        `!v strftime('%d-%m-%y')`\n*/\n\nclass ${1:`!v expand('%:t:r')`} extends ${2:BaseController} {\n\tfunction __construct() {\n\t}\n\n\tpublic function index() {\n\t}\n\n\tpublic function create() {\n\t}\n\n\tpublic function store() {\n\t}\n\n\tpublic function show($id) {\n\t}\n\n\tpublic function edit($id) {\n\t}\n\n\tpublic function update($id) {\n\t}\n\n\tpublic function destroy($id) {\n\t}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "l_rsc": true
+      }
+    },
+    {
+      "content": "/*!\n* \\namespace   $1\n* \\class       $2\n*\n* \\author      ${3:`!v g:snips_author`}\n* \\date        `!v strftime('%d-%m-%y')`\n*/\n\nnamespace ${1:Services};\n\nuse Illuminate\\Support\\ServiceProvider;\n\nclass ${2:`!v expand('%:t:r')`} extends ServiceProvider {\n\n\tpublic function register() {\n\t\t$this->app->bind('${4}Service', function ($app) {\n\t\t\treturn new ${5}(\n\t\t\t\t$app->make('Repositories\\\\${6}Interface')\n\t\t\t);\n\t\t});\n\t}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "l_ssp": true
+      }
+    },
+    {
+      "content": "/*!\n* \\namespace   $1\n* \\class       $2\n*\n* \\author      ${3:`!v g:snips_author`}\n* \\date        `!v strftime('%d-%m-%y')`\n*/\n\nnamespace ${1:Entities};\n\nclass ${2:`!v expand('%:t:r')`} extends \\Eloquent {\n\tprotected $table   = '${4:`!p snip.rv = t[2].lower()`}';\n\n\tpublic $timestamps = ${5:false};\n\n\tprotected $hidden  = array(${6});\n\n\tprotected $guarded = array(${7:'id'});\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "l_md": true
+      }
+    },
+    {
+      "content": "/*!\n* \\namespace   $1\n* \\class       $2\n* \\implements  $3\n*\n* \\author      ${4:`!v g:snips_author`}\n* \\date        `!v strftime('%d-%m-%y')`\n*/\n\nnamespace ${1:Repositories};\n\nuse Illuminate\\Database\\Eloquent\\Model;\n\nabstract class ${2:`!v expand('%:t:r')`} implements ${3:BaseRepositoryInterface} {\n\tprotected $model;\n\n\t/*!\n\t* \\fn      __construct\n\t*\n\t* \\brief   Take the model\n\t*/\n\n\tpublic function __construct(Model $model) {\n\t\t\t$this->model = $model;\n\t}\n\n\t/*!\n\t* \\fn      all\n\t*\n\t* \\return  Illuminate\\Database\\Eloquent\\Collection\n\t*/\n\tpublic function all($columns = array('*')) {\n\t\t\treturn $this->model->all()->toArray();\n\t}\n\n\t/*!\n\t* \\fn      create\n\t*\n\t* \\return  Illuminate\\Database\\Eloquent\\Model\n\t*/\n\tpublic function create(array $attributes) {\n\t\t\treturn $this->model->create($attributes);\n\t}\n\n\t/*!\n\t* \\fn      destroy\n\t*\n\t* \\return  int\n\t*/\n\tpublic function destroy($ids) {\n\t\t\treturn $this->model->destroy($ids);\n\t}\n\n\t/*!\n\t* \\fn      find\n\t*\n\t* \\return  mixed\n\t*/\n\tpublic function find($id, $columns = array('*')) {\n\t\treturn $this->model->find($id, $columns);\n\t}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "l_ar": true
+      }
+    }
+  ]
+}

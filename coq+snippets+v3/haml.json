@@ -1,0 +1,77 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "%table\n\t%tr\n\t\t%th\n\t\t\t${1:headers}\n\t%tr\n\t\t%td\n\t\t\t${0:headers}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "t": true
+      }
+    },
+    {
+      "content": "%ul\n\t%li\n\t\t${0:item}\n\t%li",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ul": true
+      }
+    },
+    {
+      "content": "= render :partial => \"${0:item}\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rp": true
+      }
+    },
+    {
+      "content": "= link_to ${1:name}, ${2:dest}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lt": true
+      }
+    },
+    {
+      "content": "= mail_to ${1:email_address}, ${2:name}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mt": true
+      }
+    },
+    {
+      "content": "= mail_to ${1:email_address}, ${2:name}, :subject => ${3}, :body => ${4}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mts": true
+      }
+    },
+    {
+      "content": "- if $1\n\t${2:${VISUAL}}\n- else\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "- if $1.presence?\n\t${0:${VISUAL}}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ifp": true
+      }
+    },
+    {
+      "content": "= number_to_currency(${1})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ntc": true
+      }
+    }
+  ]
+}

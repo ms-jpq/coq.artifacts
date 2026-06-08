@@ -1,0 +1,13 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "Host ${1:name}\n\tHostName $1.${2:domain}\n\tPort ${3}\n\t${4:User }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Host": true
+      }
+    }
+  ]
+}

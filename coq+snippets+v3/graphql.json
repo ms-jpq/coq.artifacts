@@ -1,0 +1,6 @@
+{
+  "extends": [
+    "graphql-request"
+  ],
+  "snippets": []
+}

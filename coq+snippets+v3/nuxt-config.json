@@ -1,0 +1,21 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "{ rel: 'stylesheet', href: '${1:https://fonts.googleapis.com/css?family=Montserrat:600|Rufina:700}' }",
+      "doc": "link to include fonts in a nuxt project, in nuxt-config",
+      "label": "Nuxt Font",
+      "matches": {
+        "nfont": true
+      }
+    },
+    {
+      "content": "css: ['assets/${1:normalize.css}'],",
+      "doc": "link to css assets such as normalize",
+      "label": "Nuxt Use CSS File",
+      "matches": {
+        "ncss": true
+      }
+    }
+  ]
+}

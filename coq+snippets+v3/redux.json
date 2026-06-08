@@ -1,0 +1,84 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "const ${1:actionCreatorName} = ${2:payload} => {\n  return {\n    type: '${3:ACTION_TYPE}',\n    payload: ${2:payload},\n  };\n};",
+      "doc": "Redux action template",
+      "label": "redux-action",
+      "matches": {
+        "redux action": true,
+        "rxaction": true
+      }
+    },
+    {
+      "content": "export const ${1:constantName} = '${1:constantName}'",
+      "doc": "",
+      "label": "redux-const",
+      "matches": {
+        "redux const": true,
+        "rxconst": true
+      }
+    },
+    {
+      "content": "import { useSelector, useDispatch } from 'react-redux';",
+      "doc": "Import Redux hooks (useSelector, useDispatch)",
+      "label": "redux-import-hooks",
+      "matches": {
+        "irrh": true,
+        "redux import hooks": true
+      }
+    },
+    {
+      "content": "const initialState = {\n\n}\n\nexport default (state = initialState, { type, payload }) => {\n\tswitch (type) {\n\n\tcase ${1:typeName}:\n\t\treturn { ...state, ...payload }\n\n\tdefault:\n\t\treturn state\n\t}\n}",
+      "doc": "Redux reducer template",
+      "label": "redux-reducer",
+      "matches": {
+        "redux reducer": true,
+        "rxreducer": true
+      }
+    },
+    {
+      "content": "const $1 = useSelector(state => state.$1);",
+      "doc": "Redux useSelector() hook",
+      "label": "redux-useselector",
+      "matches": {
+        "redux useselector": true,
+        "uss": true
+      }
+    },
+    {
+      "content": "import { connect } from 'react-redux'",
+      "doc": "Import connect from Redux",
+      "label": "redux-import-connect",
+      "matches": {
+        "redux import connect": true
+      }
+    },
+    {
+      "content": "const $1 = $2 => dispatch($3);",
+      "doc": "Redux dispatch hook",
+      "label": "redux-dispatch-hook",
+      "matches": {
+        "redux dispatch": true,
+        "rxd": true
+      }
+    },
+    {
+      "content": "const mapStateToProps = (state) => ({\n\t${1}\n})\n\nconst mapDispatchToProps = {\n\t\n}",
+      "doc": "Creates mapStateToProps function.",
+      "label": "redux-map-to-props",
+      "matches": {
+        "redux map props": true
+      }
+    },
+    {
+      "content": "const dispatch = useDispatch();",
+      "doc": "Redux useDispatch() hook",
+      "label": "redux-usedispatch-hook",
+      "matches": {
+        "redux usedispatch": true,
+        "rxusdh": true
+      }
+    }
+  ]
+}

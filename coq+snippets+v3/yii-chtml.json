@@ -1,0 +1,493 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "echo CHtml::radioButton('${1:name}', ${2:false},array(${3:optionName}=>${0:optionValue} );",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhrb": true
+      }
+    },
+    {
+      "content": "echo CHtml::asset('${0:path}');",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhass": true
+      }
+    },
+    {
+      "content": "echo CHtml::activeLabelEx(${1:model}, '${2:attribute}',array('${3:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhale": true
+      }
+    },
+    {
+      "content": "echo CHtml::encodeArray(array(${0}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yheca": true
+      }
+    },
+    {
+      "content": "echo CHtml::normalizeUrl(array('${0}'));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhnurl": true
+      }
+    },
+    {
+      "content": "echo CHtml::submitButton('${1:label}',array('${2:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhsb": true
+      }
+    },
+    {
+      "content": "echo CHtml::linkButton('${1:lable}',array('${2:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhlinkb": true
+      }
+    },
+    {
+      "content": "echo CHtml::activeTextArea(${1:model}, '${2:attribute}',array('${3:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhata": true
+      }
+    },
+    {
+      "content": "echo CHtml::ajaxButton('${1:label}', '${2:url}',array('${3:ajaxOptionName}'=>${4:ajaxOptionValue}),array('${5:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhajb": true
+      }
+    },
+    {
+      "content": "echo CHtml::activeId(${1:model}, '${0:attribute}');",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhai": true
+      }
+    },
+    {
+      "content": "echo CHtml::activeCheckBox(${1:model}, '${2:attribute}',array('${3:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhacb": true
+      }
+    },
+    {
+      "content": "echo CHtml::activeHiddenField(${1:model}, '${2:attribute}',array('${3:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhahf": true
+      }
+    },
+    {
+      "content": "echo CHtml::encode(${0:text});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhec": true
+      }
+    },
+    {
+      "content": "echo CHtml::metaTag('${1:content}', '${2:name}', '${3:httpEquiv}',array('${4:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhmtag": true
+      }
+    },
+    {
+      "content": "echo CHtml::dropDownList('${1:name}', '${2:select}', array(${3}),array('${4:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhddl": true
+      }
+    },
+    {
+      "content": "echo CHtml::listBox('${1:name}', '${2:select}',array(${3}),array('${4:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhlb": true
+      }
+    },
+    {
+      "content": "echo CHtml::script('${0:test}');",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhjs": true
+      }
+    },
+    {
+      "content": "echo CHtml::ajax(array(${0}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhaj": true
+      }
+    },
+    {
+      "content": "echo CHtml::textField('${1:name}', '${2:value}',array('${3:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhtf": true
+      }
+    },
+    {
+      "content": "echo CHtml::activePasswordField(${1:model}, '${2:attribute}',array('${3:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhapf": true
+      }
+    },
+    {
+      "content": "echo CHtml::listData(array(${1}),'${2:valueField}', '${3:textField}','${0:groupField}');",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhld": true
+      }
+    },
+    {
+      "content": "echo CHtml::mailto('${1:text}', '${2:email}',array('${3:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhmt": true
+      }
+    },
+    {
+      "content": "echo CHtml::image('${1:src}', '${2:alt}',array('${3:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhimg": true
+      }
+    },
+    {
+      "content": "echo CHtml::activeListBox(${1:model}, '${2:attribute}', array(${3}),array('${4:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhalb": true
+      }
+    },
+    {
+      "content": "echo CHtml::activeFileField(${1:model}, '${2:attribute}',array('${3:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhaff": true
+      }
+    },
+    {
+      "content": "echo CHtml::closeTag('${0:tag}');",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhct": true
+      }
+    },
+    {
+      "content": "echo CHtml::activeInputField('${1:type}', ${2:model}, '${3:attribute}',array('${4:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhaif": true
+      }
+    },
+    {
+      "content": "echo CHtml::scriptFile('${0:url}');",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhjsf": true
+      }
+    },
+    {
+      "content": "echo CHtml::radioButtonList('${1:name}', ${2:select}, array(${3}),array('${4:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhrbl": true
+      }
+    },
+    {
+      "content": "echo CHtml::cssFile('${1:url}','${0:media}');",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhcssf": true
+      }
+    },
+    {
+      "content": "echo CHtml::error(${1:model}, '${0:attribute}');",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yherr": true
+      }
+    },
+    {
+      "content": "echo CHtml::passwordField('${1:name}', '${2:value}',array('${3:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhpf": true
+      }
+    },
+    {
+      "content": "echo CHtml::hiddenField('${1:name}', '${2:value}',array('${3:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhhf": true
+      }
+    },
+    {
+      "content": "echo CHtml::cdata(${0:text});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhc": true
+      }
+    },
+    {
+      "content": "echo CHtml::link('${1:text}',array(${2}),array('${3:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhlink": true
+      }
+    },
+    {
+      "content": "echo CHtml::errorSummary(${1:model},'${2:headerHtml}','${0:footerHtml}');",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yherrs": true
+      }
+    },
+    {
+      "content": "echo CHtml::tag('${1:tag}',array('${2:optionName}'=>${3:optionValue}),${4:false},${0:true});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yht": true
+      }
+    },
+    {
+      "content": "echo CHtml::ajaxLink('${1:label}', '${2:url}',array('${3:ajaxOptionName}'=>${4:ajaxOptionValue}),array('${5:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhajl": true
+      }
+    },
+    {
+      "content": "echo CHtml::label('${1:label}', '${2:for}',array('${3:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhlabel": true
+      }
+    },
+    {
+      "content": "echo CHtml::activeName(${1:model}, '${0:attribute}');",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhan": true
+      }
+    },
+    {
+      "content": "echo CHtml::statefulForm(array('${1}'), '${2:post}',array('${3:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhsform": true
+      }
+    },
+    {
+      "content": "echo CHtml::fileField('${1:name}', '${2:value}',array('${3:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhff": true
+      }
+    },
+    {
+      "content": "echo CHtml::activeTextField(${1:model}, '${2:attribute}',array('${3:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhatf": true
+      }
+    },
+    {
+      "content": "echo CHtml::css('${1:test}','${0:media}');",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhcss": true
+      }
+    },
+    {
+      "content": "echo CHtml::imageButton('${1:src}',array('${2:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhimgb": true
+      }
+    },
+    {
+      "content": "echo CHtml::ajaxSubmitButton('${1:label}', '${2:url}',array('${3:ajaxOptionName}'=>${4:ajaxOptionValue}),array('${5:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhajsb": true
+      }
+    },
+    {
+      "content": "echo CHtml::button('${1:label}',array('${2:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhb": true
+      }
+    },
+    {
+      "content": "echo CHtml::listOptions('${1:selection}', array(${2}), array('${3:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhlo": true
+      }
+    },
+    {
+      "content": "echo CHtml::activeCheckBoxList(${1:model}, '${2:attribute}', array(${3}),array('${4:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhacbl": true
+      }
+    },
+    {
+      "content": "echo CHtml::openTag('${1:tag}', array('${2:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhot": true
+      }
+    },
+    {
+      "content": "echo CHtml::checkBox('${1:name}', ${2:false}, array('${3:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhcb": true
+      }
+    },
+    {
+      "content": "echo CHtml::textArea('${1:name}', '${2:value}',array('${3:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhta": true
+      }
+    },
+    {
+      "content": "echo CHtml::linkTag('${1:relation}', '${2:type}', '${3:href}', '${4:media}',array('${5:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhlinkt": true
+      }
+    },
+    {
+      "content": "echo CHtml::resetButton('${1:label}',array('${2:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhrsb": true
+      }
+    },
+    {
+      "content": "echo CHtml::activeRadioButtonList(${1:model}, '${2:attribute}', array(${3}),array('${4:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yharbl": true
+      }
+    },
+    {
+      "content": "echo CHtml::checkBoxList('${1:name}', ${2:select}, array(${3}),array('${4:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhcbl": true
+      }
+    },
+    {
+      "content": "echo CHtml::form(array('${1}'), '${2:post}',array('${3:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhform": true
+      }
+    },
+    {
+      "content": "echo CHtml::beginForm(array('${1}'), '${2:post}',array('${3:optionName}'=>${4:optionValue}));\n${0}\necho CHtml::endForm();",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhbeform": true
+      }
+    },
+    {
+      "content": "echo CHtml::activeDropDownList(${1:model}, '${2:attribute}', array(${3}),array('${4:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhaddl": true
+      }
+    },
+    {
+      "content": "echo CHtml::activeRadioButton(${1:model}, '${2:attribute}',array('${3:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yharb": true
+      }
+    },
+    {
+      "content": "echo CHtml::activeLabel(${1:model}, '${2:attribute}',array('${3:optionName}'=>${0:optionValue}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yhal": true
+      }
+    }
+  ]
+}

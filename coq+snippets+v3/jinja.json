@@ -1,0 +1,415 @@
+{
+  "extends": [
+    "html"
+  ],
+  "snippets": [
+    {
+      "content": "{% ${1} %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "%": true
+      }
+    },
+    {
+      "content": "{% ${1:tag_name} %}\n${0}\n{% end$1 %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "%%": true
+      }
+    },
+    {
+      "content": "{{ ${1} }}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "{": true
+      }
+    },
+    {
+      "content": "{% autoescape ${1:off} %}\n\t${0}\n{% endautoescape %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "autoescape": true
+      }
+    },
+    {
+      "content": "{% block ${1} %}\n\t${0}\n{% endblock %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "block": true
+      }
+    },
+    {
+      "content": "{# ${0:comment} #}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "#": true
+      }
+    },
+    {
+      "content": "{% comment %}\n\t${0}\n{% endcomment %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "comment": true
+      }
+    },
+    {
+      "content": "{% debug %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "debug": true
+      }
+    },
+    {
+      "content": "{% extends \"${0:base.html}\" %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "extends": true
+      }
+    },
+    {
+      "content": "{% filter ${1} %}\n\t${0}\n{% endfilter %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "filter": true
+      }
+    },
+    {
+      "content": "{% firstof ${1} %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "firstof": true
+      }
+    },
+    {
+      "content": "{% for ${1} in ${2} %}\n\t${0}\n{% endfor %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "{% empty %}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "empty": true
+      }
+    },
+    {
+      "content": "{% if ${1} %}\n\t${0}\n{% endif %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "{% else %}\n\t${1}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "el": true
+      }
+    },
+    {
+      "content": "{% elif ${1} %}\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eif": true
+      }
+    },
+    {
+      "content": "{% ifchanged %}${1}{% endifchanged %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ifchanged": true
+      }
+    },
+    {
+      "content": "{% ifequal ${1} ${2} %}\n\t${0}\n{% endifequal %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ifequal": true
+      }
+    },
+    {
+      "content": "{% ifnotequal ${1} ${2} %}\n\t${0}\n{% endifnotequal %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ifnotequal": true
+      }
+    },
+    {
+      "content": "{% include \"${0}\" %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "include": true
+      }
+    },
+    {
+      "content": "{% load ${0} %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "load": true
+      }
+    },
+    {
+      "content": "{% now \"${0:jS F Y H:i}\" %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "now": true
+      }
+    },
+    {
+      "content": "{% regroup ${1} by ${2} as ${0} %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "regroup": true
+      }
+    },
+    {
+      "content": "{% spaceless %}${0}{% endspaceless %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "spaceless": true
+      }
+    },
+    {
+      "content": "{% ssi ${0} %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ssi": true
+      }
+    },
+    {
+      "content": "{% trans %}${0}{% endtrans %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "trans": true
+      }
+    },
+    {
+      "content": "{% url ${1} as ${0} %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "url": true
+      }
+    },
+    {
+      "content": "{% widthratio ${1:this_value} ${2:max_value} ${0:100} %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "widthratio": true
+      }
+    },
+    {
+      "content": "{% with ${1} as ${2} %}\n\t${0}\n{% endwith %}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "with": true
+      }
+    },
+    {
+      "content": "add:\"${0}\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "add": true
+      }
+    },
+    {
+      "content": "center:\"${0}\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "center": true
+      }
+    },
+    {
+      "content": "cut:\"${0}\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cut": true
+      }
+    },
+    {
+      "content": "date:\"${0}\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "date": true
+      }
+    },
+    {
+      "content": "default:\"${0}\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "default": true
+      }
+    },
+    {
+      "content": "default_if_none:\"${0}\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defaultifnone": true
+      }
+    },
+    {
+      "content": "dictsort:\"${0}\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dictsort": true
+      }
+    },
+    {
+      "content": "dictsortreversed:\"${0}\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dictsortrev": true
+      }
+    },
+    {
+      "content": "divisibleby:\"${0}\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "divisibleby": true
+      }
+    },
+    {
+      "content": "floatformat:\"${0}\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "floatformat": true
+      }
+    },
+    {
+      "content": "get_digit:\"${0}\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "getdigit": true
+      }
+    },
+    {
+      "content": "join:\"${0}\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "join": true
+      }
+    },
+    {
+      "content": "length_is:\"${0}\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lengthis": true
+      }
+    },
+    {
+      "content": "pluralize:\"${0}\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pluralize": true
+      }
+    },
+    {
+      "content": "removetags:\"${0}\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "removetags": true
+      }
+    },
+    {
+      "content": "slice:\"${0}\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "slice": true
+      }
+    },
+    {
+      "content": "stringformat:\"${0}\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "stringformat": true
+      }
+    },
+    {
+      "content": "time:\"${0}\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "time": true
+      }
+    },
+    {
+      "content": "truncatewords:${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "truncatewords": true
+      }
+    },
+    {
+      "content": "truncatewords_html:${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "truncatewordshtml": true
+      }
+    },
+    {
+      "content": "urlizetrunc:${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "urlizetrunc": true
+      }
+    },
+    {
+      "content": "wordwrap:${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wordwrap": true
+      }
+    }
+  ]
+}

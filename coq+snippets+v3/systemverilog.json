@@ -1,0 +1,1495 @@
+{
+  "extends": [
+    "verilog"
+  ],
+  "snippets": [
+    {
+      "content": "virtual function void extract_phase(uvm_phase phase);\n\tsuper.extract_phase(phase);\n\t$1\nendfunction: extract_phase",
+      "doc": "UVM extract_phase template",
+      "label": "uvm_extract_phase",
+      "matches": {
+        "uvm_extract_phase": true,
+        "uvm_phase_extract": true
+      }
+    },
+    {
+      "content": "virtual function void check_phase(uvm_phase phase);\n\tsuper.check_phase(phase);\n\t$1\nendfunction: check_phase",
+      "doc": "UVM check_phase template",
+      "label": "uvm_check_phase",
+      "matches": {
+        "uvm_check_phase": true,
+        "uvm_phase_check": true
+      }
+    },
+    {
+      "content": "virtual function void report_phase(uvm_phase phase);\n\tsuper.report_phase(phase);\n\t$1\nendfunction: report_phase",
+      "doc": "UVM report_phase template",
+      "label": "uvm_report_phase",
+      "matches": {
+        "uvm_phase_report": true,
+        "uvm_report_phase": true
+      }
+    },
+    {
+      "content": "package ${1:packageName};\n\t$0\nendpackage",
+      "doc": "package name; ... endpackage",
+      "label": "package",
+      "matches": {
+        "package": true
+      }
+    },
+    {
+      "content": "fork\n\t$0\njoin",
+      "doc": "fork ... join",
+      "label": "fork-join",
+      "matches": {
+        "fork join": true
+      }
+    },
+    {
+      "content": "virtual function void final_phase(uvm_phase phase);\n\tsuper.final_phase(phase);\n\t$1\nendfunction: final_phase",
+      "doc": "UVM final_phase template",
+      "label": "uvm_final_phase",
+      "matches": {
+        "uvm_final_phase": true,
+        "uvm_phase_final": true
+      }
+    },
+    {
+      "content": "fork\n\t$0\njoin_any",
+      "doc": "fork ... join_any",
+      "label": "fork-join_any",
+      "matches": {
+        "fork join_any": true
+      }
+    },
+    {
+      "content": "phase.phase_done.set_drain_time(this, ${1:drain_time});",
+      "doc": "set drain time of a phase",
+      "label": "set_drain_time",
+      "matches": {
+        "set_drain_time": true
+      }
+    },
+    {
+      "content": "fork\n\t$0\njoin_none",
+      "doc": "fork ... join_none",
+      "label": "fork-join_none",
+      "matches": {
+        "fork join_none": true
+      }
+    },
+    {
+      "content": "if (${1:conditions}) begin\n\t$0\nend",
+      "doc": "if (...) begin ... end",
+      "label": "if",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "for ($1 = $2; $3; $4) begin\n\t$0\nend",
+      "doc": "for (...) begin ... end",
+      "label": "for loop",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "module ${1:moduleName} (\n\t${2:ports}\n);\n\t$0\nendmodule",
+      "doc": "Insert a module without parameter",
+      "label": "module",
+      "matches": {
+        "module": true
+      }
+    },
+    {
+      "content": "while ($1) begin\n\t$0\nend",
+      "doc": "while (...) begin ... end",
+      "label": "while loop",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "repeat (${1:times}) begin\n\t$0\nend",
+      "doc": "repeat (...) begin ... end",
+      "label": "repeat",
+      "matches": {
+        "repeat": true
+      }
+    },
+    {
+      "content": "forever begin\n\t$0\nend",
+      "doc": "forever begin ... end",
+      "label": "forever",
+      "matches": {
+        "forever": true
+      }
+    },
+    {
+      "content": "uvm_blocking_put_port #(${1:className}) ${2:name};",
+      "doc": "UVM blocking_put_port template",
+      "label": "uvm_blocking_put_port",
+      "matches": {
+        "uvm_blocking_put_port": true
+      }
+    },
+    {
+      "content": "uvm_nonblocking_put_port #(${1:className}) ${2:name};",
+      "doc": "UVM nonblocking_put_port template",
+      "label": "uvm_nonblocking_put_port",
+      "matches": {
+        "uvm_nonblocking_put_port": true
+      }
+    },
+    {
+      "content": "case (${1:param})\n\t$2\n\tdefault : $0\nendcase",
+      "doc": "case () ... endcase",
+      "label": "case",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "uvm_put_port #(${1:className}) ${2:name};",
+      "doc": "UVM put_port template",
+      "label": "uvm_put_port",
+      "matches": {
+        "uvm_put_port": true
+      }
+    },
+    {
+      "content": "covergroup ${1:covergroupName};\n\t$0\nendgroup",
+      "doc": "SystemVerilog basic covergroup",
+      "label": "covergroup",
+      "matches": {
+        "covergroup": true
+      }
+    },
+    {
+      "content": "uvm_blocking_get_port #(${1:className}) ${2:name};",
+      "doc": "UVM blocking_get_port template",
+      "label": "uvm_blocking_get_port",
+      "matches": {
+        "uvm_blocking_get_port": true
+      }
+    },
+    {
+      "content": "covergroup ${1:covergroupName} @(${2:coverageEvent});\n\t$0\nendgroup",
+      "doc": "Covergroup with event trigger",
+      "label": "covergroup with an event trigger",
+      "matches": {
+        "covergroup trigger": true
+      }
+    },
+    {
+      "content": "uvm_nonblocking_get_port #(${1:className}) ${2:name};",
+      "doc": "UVM nonblocking_get_port template",
+      "label": "uvm_nonblocking_get_port",
+      "matches": {
+        "uvm_nonblocking_get_port": true
+      }
+    },
+    {
+      "content": "coverpoint ${1:coverpointName} {\n\t$0\n}",
+      "doc": "SystemVerilog coverage point template.",
+      "label": "sv_coverpoint",
+      "matches": {
+        "coverpoint": true,
+        "sv_coverpoint": true
+      }
+    },
+    {
+      "content": "uvm_blocking_peek_port #(${1:className}) ${2:name};",
+      "doc": "UVM blocking_peek_port template",
+      "label": "uvm_blocking_peek_port",
+      "matches": {
+        "uvm_blocking_peek_port": true
+      }
+    },
+    {
+      "content": "uvm_nonblocking_peek_port #(${1:className}) ${2:name};",
+      "doc": "UVM nonblocking_peek_port template",
+      "label": "uvm_nonblocking_peek_port",
+      "matches": {
+        "uvm_nonblocking_peek_port": true
+      }
+    },
+    {
+      "content": "program ${1:programName};\n\t$0\nendprogram",
+      "doc": "program statement",
+      "label": "program",
+      "matches": {
+        "program": true
+      }
+    },
+    {
+      "content": "uvm_peek_port #(${1:className}) ${2:name};",
+      "doc": "UVM peek_port template",
+      "label": "uvm_peek_port",
+      "matches": {
+        "uvm_peek_port": true
+      }
+    },
+    {
+      "content": "uvm_get_imp #(${1:className}, ${2:IMP}) ${3:name};",
+      "doc": "UVM get_imp template",
+      "label": "uvm_get_imp",
+      "matches": {
+        "uvm_get_imp": true
+      }
+    },
+    {
+      "content": "uvm_nonblocking_get_peek_port #(${1:className}) ${2:name};",
+      "doc": "UVM nonblocking_get_peek_port template",
+      "label": "uvm_nonblocking_get_peek_port",
+      "matches": {
+        "uvm_nonblocking_get_peek_port": true
+      }
+    },
+    {
+      "content": "class ${1:className} extends ${2:superClass};\n\t$0\nendclass",
+      "doc": "class name extends super; ... endclass",
+      "label": "class extends",
+      "matches": {
+        "class extends": true
+      }
+    },
+    {
+      "content": "uvm_get_peek_port #(${1:className}) ${2:name};",
+      "doc": "UVM get_peek_port template",
+      "label": "uvm_get_peek_port",
+      "matches": {
+        "uvm_get_peek_port": true
+      }
+    },
+    {
+      "content": "uvm_blocking_transport_port #(${1:REQ className}, ${2:RSP className}) ${3:name};",
+      "doc": "UVM blocking_transport_port template",
+      "label": "uvm_blocking_transport_port",
+      "matches": {
+        "uvm_blocking_transport_port": true
+      }
+    },
+    {
+      "content": "modport ${1:identifier} (\n\t$0\n);",
+      "doc": "SystemVerilog modport",
+      "label": "modport",
+      "matches": {
+        "modport": true
+      }
+    },
+    {
+      "content": "uvm_nonblocking_transport_port #(${1:REQ className}, ${2:RSP className}) ${3:name};",
+      "doc": "UVM nonblocking_transport_port template",
+      "label": "uvm_nonblocking_transport_port",
+      "matches": {
+        "uvm_nonblocking_transport_port": true
+      }
+    },
+    {
+      "content": "`uvm_info(\"${1:$TM_FILENAME_BASE}\", \"${2:message}\", ${3|UVM_NONE,UVM_LOW,UVM_MEDIUM,UVM_HIGH,UVM_FULL,UVM_DEBUG|})\n$0",
+      "doc": "uvm_info macro",
+      "label": "uvm_macro_info",
+      "matches": {
+        "`uvm_info": true
+      }
+    },
+    {
+      "content": "uvm_transport_port #(${1:REQ className}, ${2:RSP className}) ${3:name};",
+      "doc": "UVM transport_port template",
+      "label": "uvm_transport_port",
+      "matches": {
+        "uvm_transport_port": true
+      }
+    },
+    {
+      "content": "uvm_blocking_put_export #(${1:className}) ${2:name};",
+      "doc": "UVM blocking_put_export template",
+      "label": "uvm_blocking_put_export",
+      "matches": {
+        "uvm_blocking_put_export": true
+      }
+    },
+    {
+      "content": "uvm_nonblocking_put_export #(${1:className}) ${2:name};",
+      "doc": "UVM nonblocking_put_export template",
+      "label": "uvm_nonblocking_put_export",
+      "matches": {
+        "uvm_nonblocking_put_export": true
+      }
+    },
+    {
+      "content": "`uvm_error(\"${1:$TM_FILENAME_BASE}\", \"${2:message}\")\n$0",
+      "doc": "uvm_error macro",
+      "label": "uvm_macro_error",
+      "matches": {
+        "`uvm_error": true
+      }
+    },
+    {
+      "content": "uvm_put_export #(${1:className}) ${2:name};",
+      "doc": "UVM put_export template",
+      "label": "uvm_put_export",
+      "matches": {
+        "uvm_put_export": true
+      }
+    },
+    {
+      "content": "`uvm_fatal(\"${1:$TM_FILENAME_BASE}\", \"${2:message}\")\n$0",
+      "doc": "uvm_fatal macro",
+      "label": "uvm_macro_fatal",
+      "matches": {
+        "`uvm_fatal": true
+      }
+    },
+    {
+      "content": "uvm_blocking_get_export #(${1:className}) ${2:name};",
+      "doc": "UVM blocking_get_export template",
+      "label": "uvm_blocking_get_export",
+      "matches": {
+        "uvm_blocking_get_export": true
+      }
+    },
+    {
+      "content": "uvm_nonblocking_get_export #(${1:className}) ${2:name};",
+      "doc": "UVM nonblocking_get_export template",
+      "label": "uvm_nonblocking_get_export",
+      "matches": {
+        "uvm_nonblocking_get_export": true
+      }
+    },
+    {
+      "content": "uvm_get_export #(${1:className}) ${2:name};",
+      "doc": "UVM get_export template",
+      "label": "uvm_get_export",
+      "matches": {
+        "uvm_get_export": true
+      }
+    },
+    {
+      "content": "`uvm_object_utils_begin(${1:type})\n\t$2\n`uvm_object_utils_end",
+      "doc": "register the object class to factory, with field automation",
+      "label": "uvm_macro_object_utils_block",
+      "matches": {
+        "`uvm_object_utils_begin": true,
+        "uvm_object_utils_block": true
+      }
+    },
+    {
+      "content": "uvm_blocking_peek_export #(${1:className}) ${2:name};",
+      "doc": "UVM blocking_peek_export template",
+      "label": "uvm_blocking_peek_export",
+      "matches": {
+        "uvm_blocking_peek_export": true
+      }
+    },
+    {
+      "content": "uvm_nonblocking_peek_export #(${1:className}) ${2:name};",
+      "doc": "UVM nonblocking_peek_export template",
+      "label": "uvm_nonblocking_peek_export",
+      "matches": {
+        "uvm_nonblocking_peek_export": true
+      }
+    },
+    {
+      "content": "`uvm_field_${1:data_type}($2, ${3:flag bit});",
+      "doc": "uvm field automation",
+      "label": "uvm_macro_field",
+      "matches": {
+        "`uvm_field": true,
+        "field automation": true
+      }
+    },
+    {
+      "content": "uvm_peek_export #(${1:className}) ${2:name};",
+      "doc": "UVM peek_export template",
+      "label": "uvm_peek_export",
+      "matches": {
+        "uvm_peek_export": true
+      }
+    },
+    {
+      "content": "class ${1:$TM_FILENAME_BASE} extends uvm_sequencer #(${2:transactionType});\n\t$3\n\t\n\t`uvm_component_utils(${1:$TM_FILENAME_BASE});\n\n\tfunction new(string name = \"${1:$TM_FILENAME_BASE}\", uvm_component parent);\n\t\tsuper.new(name, parent);\n\tendfunction\n\n\t$0\nendclass",
+      "doc": "UVM sequencer class template",
+      "label": "uvm_sequencer",
+      "matches": {
+        "uvm_sequencer": true
+      }
+    },
+    {
+      "content": "uvm_blocking_get_peek_export #(${1:className}) ${2:name};",
+      "doc": "UVM blocking_get_peek_export template",
+      "label": "uvm_blocking_get_peek_export",
+      "matches": {
+        "uvm_blocking_get_peek_export": true
+      }
+    },
+    {
+      "content": "class ${1:$TM_FILENAME_BASE} extends uvm_scoreboard;\n\t$2\n\t\n\t`uvm_component_utils(${1:$TM_FILENAME_BASE});\n\n\tfunction new(string name = \"${1:$TM_FILENAME_BASE}\", uvm_component parent);\n\t\tsuper.new(name, parent);\n\tendfunction\n\n\t$0\nendclass",
+      "doc": "UVM scoreboard class template",
+      "label": "uvm_scoreboard",
+      "matches": {
+        "uvm_scoreboard": true
+      }
+    },
+    {
+      "content": "`timescale ${1:1ps}/${2:100ns}$0",
+      "doc": "add timescale for verification",
+      "label": "timescale",
+      "matches": {
+        "`timescale": true,
+        "timescale": true,
+        "ts": true
+      }
+    },
+    {
+      "content": "uvm_nonblocking_get_peek_export #(${1:className}) ${2:name};",
+      "doc": "UVM nonblocking_get_peek_export template",
+      "label": "uvm_nonblocking_get_peek_export",
+      "matches": {
+        "uvm_nonblocking_get_peek_export": true
+      }
+    },
+    {
+      "content": "`uvm_object_param_utils_begin(${1:type})\n\t$2\n`uvm_object_param_utils_end",
+      "doc": "register the object class(with parameter) to factory, with field automation",
+      "label": "uvm_macro_object_param_utils_block",
+      "matches": {
+        "`uvm_object_param_utils_begin": true,
+        "uvm_object_param_utils_block": true
+      }
+    },
+    {
+      "content": "uvm_get_peek_export #(${1:className}) ${2:name};",
+      "doc": "UVM get_peek_export template",
+      "label": "uvm_get_peek_export",
+      "matches": {
+        "uvm_get_peek_export": true
+      }
+    },
+    {
+      "content": "class ${1:$TM_FILENAME_BASE} extends uvm_test;\n\t$2\n\t\n\t`uvm_component_utils(${1:$TM_FILENAME_BASE});\n\n\tfunction new(string name = \"${1:$TM_FILENAME_BASE}\", uvm_component parent);\n\t\tsuper.new(name, parent);\n\tendfunction\n\n\t$0\nendclass",
+      "doc": "UVM test class template",
+      "label": "uvm_test",
+      "matches": {
+        "uvm_test": true
+      }
+    },
+    {
+      "content": "uvm_blocking_transport_export #(${1:REQ className}, ${2:RSP className}) ${3:name};",
+      "doc": "UVM blocking_transport_export template",
+      "label": "uvm_blocking_transport_export",
+      "matches": {
+        "uvm_blocking_transport_export": true
+      }
+    },
+    {
+      "content": "else begin\n\t$0\nend",
+      "doc": "else begin ... end",
+      "label": "else",
+      "matches": {
+        "else": true
+      }
+    },
+    {
+      "content": "uvm_nonblocking_transport_export #(${1:REQ className}, ${2:RSP className}) ${3:name};",
+      "doc": "UVM nonblocking_transport_export template",
+      "label": "uvm_nonblocking_transport_export",
+      "matches": {
+        "uvm_nonblocking_transport_export": true
+      }
+    },
+    {
+      "content": "if (${1:conditions}) begin\n\t$2\nend\nelse begin\n\t$0\nend",
+      "doc": "if (...) begin ... end else begin ... end",
+      "label": "ifelse",
+      "matches": {
+        "ifelse": true
+      }
+    },
+    {
+      "content": "`uvm_component_param_utils(${1:type})",
+      "doc": "register the component class(with parameter) to factory",
+      "label": "uvm_macro_component_param_utils",
+      "matches": {
+        "`uvm_component_param_utils": true
+      }
+    },
+    {
+      "content": "uvm_transport_export #(${1:REQ className}, ${2:RSP className}) ${3:name};",
+      "doc": "UVM transport_export template",
+      "label": "uvm_transport_export",
+      "matches": {
+        "uvm_transport_export": true
+      }
+    },
+    {
+      "content": "begin\n\t$0\nend",
+      "doc": "Insert a begin ... end block",
+      "label": "begin/end",
+      "matches": {
+        "begin": true
+      }
+    },
+    {
+      "content": "`uvm_analysis_imp_decl(${1:name})",
+      "doc": "add suffix to analysis_imp",
+      "label": "uvm_analysis_imp_decl",
+      "matches": {
+        "`uvm_analysis_imp_decl": true
+      }
+    },
+    {
+      "content": "initial begin\n\t$0\nend",
+      "doc": "initial begin ... end",
+      "label": "initial",
+      "matches": {
+        "initial": true
+      }
+    },
+    {
+      "content": "uvm_nonblocking_put_imp #(${1:className}, ${2:IMP}) ${3:name};",
+      "doc": "UVM nonblocking_put_imp template",
+      "label": "uvm_nonblocking_put_imp",
+      "matches": {
+        "uvm_nonblocking_put_imp": true
+      }
+    },
+    {
+      "content": "`uvm_declare_p_sequencer(${1:sequencer})",
+      "doc": "case m_sequencer to p_sequencer",
+      "label": "uvm_declare_p_sequencer",
+      "matches": {
+        "`uvm_declare_p_sequencer": true
+      }
+    },
+    {
+      "content": "uvm_put_imp #(${1:className}, ${2:IMP}) ${3:name};",
+      "doc": "UVM put_imp template",
+      "label": "uvm_put_imp",
+      "matches": {
+        "uvm_put_imp": true
+      }
+    },
+    {
+      "content": "class ${1:$TM_FILENAME_BASE} extends uvm_sequence_item;\n\t$2\n\t\n\t`uvm_object_utils(${1:$TM_FILENAME_BASE});\n\n\tfunction new(string name = \"${1:$TM_FILENAME_BASE}\");\n\t\tsuper.new(name);\n\tendfunction\n\n\t$0\nendclass",
+      "doc": "UVM sequence item class template",
+      "label": "uvm_sequence_item",
+      "matches": {
+        "uvm_sequence_item": true
+      }
+    },
+    {
+      "content": "casex (${1:param})\n\t$2\n\tdefault : $0\nendcase",
+      "doc": "casex () ... endcase",
+      "label": "casex",
+      "matches": {
+        "casex": true
+      }
+    },
+    {
+      "content": "uvm_blocking_get_imp #(${1:className}, ${2:IMP}) ${3:name};",
+      "doc": "UVM blocking_get_imp template",
+      "label": "uvm_blocking_get_imp",
+      "matches": {
+        "uvm_blocking_get_imp": true
+      }
+    },
+    {
+      "content": "casez (${1:param})\n\t$2\n\tdefault : $0\nendcase",
+      "doc": "casez () ... endcase",
+      "label": "casez",
+      "matches": {
+        "casez": true
+      }
+    },
+    {
+      "content": "uvm_nonblocking_get_imp #(${1:className}, ${2:IMP}) ${3:name};",
+      "doc": "UVM nonblocking_get_imp template",
+      "label": "uvm_nonblocking_get_imp",
+      "matches": {
+        "uvm_nonblocking_get_imp": true
+      }
+    },
+    {
+      "content": "class ${1:$TM_FILENAME_BASE} extends uvm_object;\n\t$2\n\t\n\t`uvm_object_utils(${1:$TM_FILENAME_BASE});\n\n\tfunction new(string name = \"${1:$TM_FILENAME_BASE}\");\n\t\tsuper.new(name);\n\tendfunction\n\n\t$0\nendclass",
+      "doc": "UVM object class template",
+      "label": "uvm_object",
+      "matches": {
+        "uvm_object": true
+      }
+    },
+    {
+      "content": "`uvm_do_with(${1:SEQ_OR_ITEM}, ${2:CONSTRAINTS})",
+      "doc": "uvm_do_with macro",
+      "label": "uvm_macro_do_with",
+      "matches": {
+        "`uvm_do_with": true
+      }
+    },
+    {
+      "content": "`uvm_do_pri_with(${1:SEQ_OR_ITEM}, ${2:PRIORITY}, ${3:CONSTRAINTS})",
+      "doc": "uvm_do_pri_with macro",
+      "label": "uvm_macro_do_pri_with",
+      "matches": {
+        "`uvm_do_pri_with": true
+      }
+    },
+    {
+      "content": "always_ff @(${1:clock}) begin : ${2:blockName}\n\t$0\nend",
+      "doc": "Insert an always_ff block",
+      "label": "always_ff block",
+      "matches": {
+        "always_ff": true
+      }
+    },
+    {
+      "content": "class ${1:$TM_FILENAME_BASE} extends uvm_component;\n\t$2\n\t\n\t`uvm_component_utils(${1:$TM_FILENAME_BASE});\n\n\tfunction new(string name = \"${1:$TM_FILENAME_BASE}\", uvm_component parent);\n\t\tsuper.new(name, parent);\n\tendfunction\n\n\t$0\nendclass",
+      "doc": "UVM component class template",
+      "label": "uvm_component",
+      "matches": {
+        "uvm_component": true
+      }
+    },
+    {
+      "content": "`uvm_do_on(${1:SEQ_OR_ITEM}, ${2:SEQR})",
+      "doc": "uvm_do_on macro",
+      "label": "uvm_macro_do_on",
+      "matches": {
+        "`uvm_do_on": true
+      }
+    },
+    {
+      "content": "always_comb begin : ${1:blockName}\n\t$0\nend",
+      "doc": "Insert an always_comb block",
+      "label": "always_comb block",
+      "matches": {
+        "always_comb": true
+      }
+    },
+    {
+      "content": "`uvm_do_on_pri(${1:SEQ_OR_ITEM}, ${2:SEQR}, ${3:PRIORITY})",
+      "doc": "uvm_do_on_pri macro",
+      "label": "uvm_macro_do_on_pri",
+      "matches": {
+        "`uvm_do_on_pri": true
+      }
+    },
+    {
+      "content": "always_latch begin : ${1:blockName}\n\t$0\nend",
+      "doc": "Insert an always_latch block",
+      "label": "always_latch block",
+      "matches": {
+        "always_latch": true
+      }
+    },
+    {
+      "content": "`uvm_do_on_with(${1:SEQ_OR_ITEM}, ${2:SEQR}, ${3:CONSTRAINTS})",
+      "doc": "uvm_do_on_with macro",
+      "label": "uvm_macro_do_on_with",
+      "matches": {
+        "`uvm_do_on_with": true
+      }
+    },
+    {
+      "content": "typedef enum {$1} ${2};",
+      "doc": "typedef enum (data_type) { ... } name",
+      "label": "typedef enum",
+      "matches": {
+        "typedef enum": true
+      }
+    },
+    {
+      "content": "class ${1:className};\n\t$0\nendclass : $1",
+      "doc": "class name; ... endclass",
+      "label": "class",
+      "matches": {
+        "class": true
+      }
+    },
+    {
+      "content": "`uvm_do_on_pri_with(${1:SEQ_OR_ITEM}, ${2:SEQR}, ${3:PRIORITY}, ${4:CONSTRAINTS})",
+      "doc": "uvm_do_on_pri_with macro",
+      "label": "uvm_macro_do_on_pri_with",
+      "matches": {
+        "`uvm_do_on_pri_with": true
+      }
+    },
+    {
+      "content": "uvm_config_db#(${1:type})::set(${2:contxt}, ${3:inst_name}, ${4:field_name}, ${5:value});",
+      "doc": "set the value to config database",
+      "label": "uvm_config_db_set",
+      "matches": {
+        "uvm_config_db_set": true
+      }
+    },
+    {
+      "content": "task ${1:automatic} ${2:taskName} (${3:arguments});\n\t$0\nendtask",
+      "doc": "task name; ... endtask",
+      "label": "task",
+      "matches": {
+        "task": true
+      }
+    },
+    {
+      "content": "uvm_config_db#(${1:type})::get(${2:contxt}, ${3:inst_name}, ${4:field_name}, ${5:value});",
+      "doc": "get the value from config database",
+      "label": "uvm_config_db_get",
+      "matches": {
+        "uvm_config_db_get": true
+      }
+    },
+    {
+      "content": "uvm_config_db#(uvm_object_wrapper)::set(${1:contxt}, ${2:inst_name}, \"default_sequence\", ${3:value});",
+      "doc": "use default_sequence to start a sequence on sequencer",
+      "label": "default_sequence",
+      "matches": {
+        "default_sequence": true,
+        "set_default_sequence": true
+      }
+    },
+    {
+      "content": "enum {$1} ${2};",
+      "doc": "enum (data_type) { ... } name",
+      "label": "enum",
+      "matches": {
+        "en": true,
+        "enum": true
+      }
+    },
+    {
+      "content": "interface ${1:interfaceName};\n\t$0\nendinterface",
+      "doc": "interface name; ... endinterface",
+      "label": "interface",
+      "matches": {
+        "interface": true
+      }
+    },
+    {
+      "content": "${1:instance_name} = ${2:<object_type>}::type_id::create(.name(\"$1\"), .contxt(get_full_name()));",
+      "doc": "use factory to create an instance of an object",
+      "label": "uvm_object_factory_instantiation",
+      "matches": {
+        "create_object": true,
+        "uvm_factory_instantiation_object": true
+      }
+    },
+    {
+      "content": "parameter $1 = $2;",
+      "doc": "paramter var = val;",
+      "label": "parameter",
+      "matches": {
+        "parameter": true
+      }
+    },
+    {
+      "content": "${1:instance_name} = ${2:component_type}::type_id::create(\"$1\", this);",
+      "doc": "use factory to create an instance of a component",
+      "label": "uvm_component_factory_instantiation",
+      "matches": {
+        "create_component": true,
+        "uvm_factory_instantation_component": true
+      }
+    },
+    {
+      "content": "set_type_override_by_type(${1:base_type}, ${2:new_type});",
+      "doc": "factory type override",
+      "label": "uvm_factory_set_type_override_by_type",
+      "matches": {
+        "set_type_override_by_type": true
+      }
+    },
+    {
+      "content": "${1:<base_type>}::type_id::set_inst_override(${2:<new_type>}::get_type(), {get_full_name(), \"${3:*}\"});",
+      "doc": "factory instance override",
+      "label": "uvm_factory_inst_override",
+      "matches": {
+        "uvm_factory_inst_override": true
+      }
+    },
+    {
+      "content": "${1:<base_type>}::type_id::set_type_override(${2:<new_type>}::get_type());",
+      "doc": "factory type override",
+      "label": "uvm_factory_type_override",
+      "matches": {
+        "uvm_factory_type_override": true
+      }
+    },
+    {
+      "content": "virtual function void build_phase(uvm_phase phase);\n\tsuper.build_phase(phase);\n\t$1\nendfunction : build_phase",
+      "doc": "UVM build_phase template",
+      "label": "uvm_build_phase",
+      "matches": {
+        "uvm_build_phase": true,
+        "uvm_phase_build": true
+      }
+    },
+    {
+      "content": "virtual function void connect_phase(uvm_phase phase);\n\tsuper.connect_phase(phase);\n\t$1\nendfunction : connect_phase",
+      "doc": "UVM connect_phase template",
+      "label": "uvm_connect_phase",
+      "matches": {
+        "uvm_connect_phase": true,
+        "uvm_phase_connect": true
+      }
+    },
+    {
+      "content": "class ${1:$TM_FILENAME_BASE} extends uvm_sequence #(${2:transactionType});\n\t$3\n\t\n\t`uvm_object_utils(${1:$TM_FILENAME_BASE});\n\n\tfunction new(string name = \"${1:$TM_FILENAME_BASE}\");\n\t\tsuper.new(name);\n\tendfunction\n\n\t$0\nendclass",
+      "doc": "UVM sequence class template",
+      "label": "uvm_sequence",
+      "matches": {
+        "uvm_sequence": true
+      }
+    },
+    {
+      "content": "class ${1:$TM_FILENAME_BASE} extends uvm_env;\n\t$2\n\t\n\t`uvm_component_utils(${1:$TM_FILENAME_BASE});\n\n\tfunction new(string name = \"${1:$TM_FILENAME_BASE}\", uvm_component parent);\n\t\tsuper.new(name, parent);\n\tendfunction\n\n\t$0\nendclass",
+      "doc": "UVM env class template",
+      "label": "uvm_env",
+      "matches": {
+        "uvm_env": true
+      }
+    },
+    {
+      "content": "virtual function void end_of_elaboration_phase(uvm_phase phase);\n\tsuper.end_of_elaboration_phase(phase);\n\t$1\nendfunction : end_of_elaboration_phase",
+      "doc": "UVM end_of_elaboration_phase template",
+      "label": "uvm_end_of_elaboration_phase",
+      "matches": {
+        "uvm_end_of_elaboration_phase": true,
+        "uvm_phase_end_of_elaboration": true
+      }
+    },
+    {
+      "content": "class ${1:$TM_FILENAME_BASE} extends uvm_monitor;\n\t$2\n\t\n\t`uvm_component_utils(${1:$TM_FILENAME_BASE});\n\n\tfunction new(string name = \"${1:$TM_FILENAME_BASE}\", uvm_component parent);\n\t\tsuper.new(name, parent);\n\tendfunction\n\n\t$0\nendclass",
+      "doc": "UVM monitor class template",
+      "label": "uvm_monitor",
+      "matches": {
+        "uvm_monitor": true
+      }
+    },
+    {
+      "content": "class ${1:$TM_FILENAME_BASE} extends uvm_driver #(${2:transactionType});\n\t$3\n\t\n\t`uvm_component_utils(${1:$TM_FILENAME_BASE});\n\n\tfunction new(string name = \"${1:$TM_FILENAME_BASE}\", uvm_component parent);\n\t\tsuper.new(name, parent);\n\tendfunction\n\n\t$0\nendclass",
+      "doc": "UVM driver class template",
+      "label": "uvm_driver",
+      "matches": {
+        "uvm_driver": true
+      }
+    },
+    {
+      "content": "virtual task pre_configure_phase(uvm_phase phase);\n\t$1\nendtask: pre_configure_phase",
+      "doc": "UVM pre_configure_phase template",
+      "label": "uvm_pre_configure_phase",
+      "matches": {
+        "uvm_phase_pre_configure": true,
+        "uvm_pre_configure_phase": true
+      }
+    },
+    {
+      "content": "uvm_tlm_analysis_fifo #(${1:className}) ${2:name};",
+      "doc": "UVM tlm_analysis_fifo template",
+      "label": "uvm_tlm_analysis_fifo",
+      "matches": {
+        "uvm_tlm_analysis_fifo": true
+      }
+    },
+    {
+      "content": "uvm_transport_imp #(${1:REQ className}, ${2:RSP className}, ${3:IMP}) ${4:name};",
+      "doc": "UVM transport_imp template",
+      "label": "uvm_transport_imp",
+      "matches": {
+        "uvm_transport_imp": true
+      }
+    },
+    {
+      "content": "virtual function void start_of_simulation_phase(uvm_phase phase);\n\tsuper.start_of_simulation_phase(phase);\n\t$1\nendfunction : start_of_simulation_phase",
+      "doc": "UVM start_of_simulation_phase template",
+      "label": "uvm_start_of_simulation_phase",
+      "matches": {
+        "uvm_phase_start_of_simulation": true,
+        "uvm_start_of_simulation_phase": true
+      }
+    },
+    {
+      "content": "uvm_nonblocking_transport_imp #(${1:REQ className}, ${2:RSP className}, ${3:IMP}) ${4:name};",
+      "doc": "UVM nonblocking_transport_imp template",
+      "label": "uvm_nonblocking_transport_imp",
+      "matches": {
+        "uvm_nonblocking_transport_imp": true
+      }
+    },
+    {
+      "content": "virtual task configure_phase(uvm_phase phase);\n\t$1\nendtask: configure_phase",
+      "doc": "UVM post_configure_phase template",
+      "label": "uvm_configure_phase",
+      "matches": {
+        "uvm_configure_phase": true,
+        "uvm_phase_configure": true
+      }
+    },
+    {
+      "content": "uvm_blocking_transport_imp #(${1:REQ className}, ${2:RSP className}, ${3:IMP}) ${4:name};",
+      "doc": "UVM blocking_transport_imp template",
+      "label": "uvm_blocking_transport_imp",
+      "matches": {
+        "uvm_blocking_transport_imp": true
+      }
+    },
+    {
+      "content": "uvm_get_peek_imp #(${1:className}, ${2:IMP}) ${3:name};",
+      "doc": "UVM get_peek_imp template",
+      "label": "uvm_get_peek_imp",
+      "matches": {
+        "uvm_get_peek_imp": true
+      }
+    },
+    {
+      "content": "uvm_nonblocking_get_peek_imp #(${1:className}, ${2:IMP}) ${3:name};",
+      "doc": "UVM nonblocking_get_peek_imp template",
+      "label": "uvm_nonblocking_get_peek_imp",
+      "matches": {
+        "uvm_nonblocking_get_peek_imp": true
+      }
+    },
+    {
+      "content": "virtual task run_phase(uvm_phase phase);\n\t$1\nendtask : run_phase",
+      "doc": "UVM run_phase template",
+      "label": "uvm_run_phase",
+      "matches": {
+        "uvm_phase_run": true,
+        "uvm_run_phase": true
+      }
+    },
+    {
+      "content": "virtual task post_configure_phase(uvm_phase phase);\n\t$1\nendtask: post_configure_phase",
+      "doc": "UVM post_configure_phase template",
+      "label": "uvm_post_configure_phase",
+      "matches": {
+        "uvm_phase_post_configure": true,
+        "uvm_post_configure_phase": true
+      }
+    },
+    {
+      "content": "uvm_blocking_get_peek_imp #(${1:className}, ${2:IMP}) ${3:name};",
+      "doc": "UVM blocking_get_peek_imp template",
+      "label": "uvm_blocking_get_peek_imp",
+      "matches": {
+        "uvm_blocking_get_peek_imp": true
+      }
+    },
+    {
+      "content": "uvm_peek_imp #(${1:className}, ${2:IMP}) ${3:name};",
+      "doc": "UVM peek_imp template",
+      "label": "uvm_peek_imp",
+      "matches": {
+        "uvm_peek_imp": true
+      }
+    },
+    {
+      "content": "uvm_nonblocking_peek_imp #(${1:className}, ${2:IMP}) ${3:name};",
+      "doc": "UVM nonblocking_peek_imp template",
+      "label": "uvm_nonblocking_peek_imp",
+      "matches": {
+        "uvm_nonblocking_peek_imp": true
+      }
+    },
+    {
+      "content": "virtual task pre_reset_phase(uvm_phase phase);\n\t$1\nendtask: pre_reset_phase",
+      "doc": "UVM pre_reset_phase template",
+      "label": "uvm_pre_reset_phase",
+      "matches": {
+        "uvm_phase_pre_reset": true,
+        "uvm_pre_reset_phase": true
+      }
+    },
+    {
+      "content": "uvm_blocking_peek_imp #(${1:className}, ${2:IMP}) ${3:name};",
+      "doc": "UVM blocking_peek_imp template",
+      "label": "uvm_blocking_peek_imp",
+      "matches": {
+        "uvm_blocking_peek_imp": true
+      }
+    },
+    {
+      "content": "`uvm_component_utils(${1:type})",
+      "doc": "register the component class to factory",
+      "label": "uvm_macro_component_utils",
+      "matches": {
+        "`uvm_component_utils": true
+      }
+    },
+    {
+      "content": "uvm_analysis_imp #(${1:className}, ${2:IMP}) ${3:name};",
+      "doc": "UVM analysis_imp template",
+      "label": "uvm_analysis_imp",
+      "matches": {
+        "uvm_analysis_imp": true
+      }
+    },
+    {
+      "content": "import ${1:packageName}::${2:scope};",
+      "doc": "import name::scope",
+      "label": "import",
+      "matches": {
+        "import": true
+      }
+    },
+    {
+      "content": "virtual task main_phase(uvm_phase phase);\n\t$1\nendtask: main_phase",
+      "doc": "UVM main_phase template",
+      "label": "uvm_main_phase",
+      "matches": {
+        "uvm_main_phase": true,
+        "uvm_phase_main": true
+      }
+    },
+    {
+      "content": "`uvm_object_utils(${1:type})",
+      "doc": "register the object class to factory",
+      "label": "uvm_macro_object_utils",
+      "matches": {
+        "`uvm_object_utils": true
+      }
+    },
+    {
+      "content": "function ${1:functionName} (${2:param});\n\t$0\nendfunction",
+      "doc": "function (...) ... endfunction",
+      "label": "function",
+      "matches": {
+        "function": true
+      }
+    },
+    {
+      "content": "`uvm_object_param_utils(${1:type})",
+      "doc": "register the object class(with parameter) to factory",
+      "label": "uvm_macro_object_param_utils",
+      "matches": {
+        "`uvm_object_param_utils": true
+      }
+    },
+    {
+      "content": "`uvm_do(${1:SEQ_OR_ITEM})",
+      "doc": "uvm_do macro",
+      "label": "uvm_macro_do",
+      "matches": {
+        "`uvm_do": true
+      }
+    },
+    {
+      "content": "virtual task post_main_phase(uvm_phase phase);\n\t$1\nendtask: post_main_phase",
+      "doc": "UVM post_main_phase template",
+      "label": "uvm_post_main_phase",
+      "matches": {
+        "uvm_phase_post_main": true,
+        "uvm_post_main_phase": true
+      }
+    },
+    {
+      "content": "virtual task post_reset_phase(uvm_phase phase);\n\t$1\nendtask: post_reset_phase",
+      "doc": "UVM post_reset_phase template",
+      "label": "uvm_post_reset_phase",
+      "matches": {
+        "uvm_phase_post_reset": true,
+        "uvm_post_reset_phase": true
+      }
+    },
+    {
+      "content": "virtual task reset_phase(uvm_phase phase);\n\t$1\nendtask: reset_phase",
+      "doc": "UVM reset_phase template",
+      "label": "uvm_reset_phase",
+      "matches": {
+        "uvm_phase_reset": true,
+        "uvm_reset_phase": true
+      }
+    },
+    {
+      "content": "virtual task pre_main_phase(uvm_phase phase);\n\t$1\nendtask: pre_main_phase",
+      "doc": "UVM pre_main_phase template",
+      "label": "uvm_pre_main_phase",
+      "matches": {
+        "uvm_phase_pre_main": true,
+        "uvm_pre_main_phase": true
+      }
+    },
+    {
+      "content": "foreach ($1) begin\n\t$0\nend",
+      "doc": "foreach (...) begin ... end",
+      "label": "foreach",
+      "matches": {
+        "foreach": true
+      }
+    },
+    {
+      "content": "virtual task pre_shutdown_phase(uvm_phase phase);\n\t$1\nendtask: pre_shutdown_phase",
+      "doc": "UVM pre_shutdown_phase template",
+      "label": "uvm_pre_shutdown_phase",
+      "matches": {
+        "uvm_phase_pre_shutdown": true,
+        "uvm_pre_shutdown_phase": true
+      }
+    },
+    {
+      "content": "phase.raise_objection(this);\n\t$0\nphase.drop_objection(this);",
+      "doc": "UVM raise_objection & drop_objection template",
+      "label": "uvm_objection_block",
+      "matches": {
+        "phase_objection": true,
+        "uvm_objection_block": true
+      }
+    },
+    {
+      "content": "`uvm_warning(\"${1:$TM_FILENAME_BASE}\", \"${2:message}\")\n$0",
+      "doc": "uvm_warning macro",
+      "label": "uvm_macro_warning",
+      "matches": {
+        "`uvm_warning": true
+      }
+    },
+    {
+      "content": "uvm_analysis_port #(${1:className}) ${2:name};",
+      "doc": "UVM analysis_port template",
+      "label": "uvm_analysis_port",
+      "matches": {
+        "uvm_analysis_port": true
+      }
+    },
+    {
+      "content": "uvm_get_port #(${1:className}) ${2:name};",
+      "doc": "UVM get_port template",
+      "label": "uvm_get_port",
+      "matches": {
+        "uvm_get_port": true
+      }
+    },
+    {
+      "content": "virtual task shutdown_phase(uvm_pase phase);\n\t$1\nendtask: shutdown_phase",
+      "doc": "UVM shutdown_phase template",
+      "label": "uvm_shutdown_phase",
+      "matches": {
+        "uvm_phase_shutdown": true,
+        "uvm_shutdown_phase": true
+      }
+    },
+    {
+      "content": "uvm_blocking_get_peek_port #(${1:className}) ${2:name};",
+      "doc": "UVM blocking_get_peek_port template",
+      "label": "uvm_blocking_get_peek_port",
+      "matches": {
+        "uvm_blocking_get_peek_port": true
+      }
+    },
+    {
+      "content": "`uvm_do_pri(${1:SEQ_OR_ITEM}, ${2:PRIORITY})",
+      "doc": "uvm_do_pri macro",
+      "label": "uvm_macro_do_pri",
+      "matches": {
+        "`uvm_do_pri": true
+      }
+    },
+    {
+      "content": "constraint ${1:constraintName} {\n\t$0\n}",
+      "doc": "systemverilog constraint",
+      "label": "constraint",
+      "matches": {
+        "constraint": true
+      }
+    },
+    {
+      "content": "localparam $1 = $2;",
+      "doc": "localparam var = val;",
+      "label": "localparam",
+      "matches": {
+        "localparam": true
+      }
+    },
+    {
+      "content": "virtual task post_shutdown_phase(uvm_phase phase);\n\t$1\nendtask: post_shutdown_phase",
+      "doc": "UVM post_shutdown_phase template",
+      "label": "uvm_post_shutdown_phase",
+      "matches": {
+        "uvm_phase_post_shutdown": true,
+        "uvm_post_shutdown_phase": true
+      }
+    },
+    {
+      "content": "uvm_blocking_put_imp #(${1:className}, ${2:IMP}) ${3:name};",
+      "doc": "UVM blocking_put_imp template",
+      "label": "uvm_blocking_put_imp",
+      "matches": {
+        "uvm_blocking_put_imp": true
+      }
+    },
+    {
+      "content": "always_comb begin\n    ${1:TARGET}\nend",
+      "doc": "",
+      "label": "always_comb",
+      "matches": {
+        "alc": true
+      }
+    },
+    {
+      "content": "always @(posedge ${1:clk} iff !${2:rst} or posedge $2) begin\n    if (${2}) begin\n        ${3:TARGET}\n    end else begin\n    end\nend",
+      "doc": "",
+      "label": "always_ff @()",
+      "matches": {
+        "alf": true
+      }
+    },
+    {
+      "content": "always_latch begin\n    if (${1:enable}) begin\n        ${2:TARGET}\n    end\nend",
+      "doc": "",
+      "label": "always_latch",
+      "matches": {
+        "all": true
+      }
+    },
+    {
+      "content": "logic${1:#: nbit} ${2:reg}_r, $2_w;${3:TARGET}",
+      "doc": "",
+      "label": "logic [] _r, _w;",
+      "matches": {
+        "rw": true
+      }
+    },
+    {
+      "content": "typedef struct packed {\n    ${2:TARGET}\n} ${1:name} ;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "struct": true
+      }
+    },
+    {
+      "content": "typedef enum {${2:TARGET}} ${1:name};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "enum": true
+      }
+    },
+    {
+      "content": "for (int ${1:i} = ${2}; $1 < ${3}; ${4:do what}) begin\n    ${5:TARGET}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "unique case (${1}) begin\n    ${2:'b0}: begin\n        ${3}\n    end\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "case_parallel": true
+      }
+    },
+    {
+      "content": "priority case (${1}) begin\n    ${2:'b0}: begin\n        ${3}\n    end\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "case_full": true
+      }
+    },
+    {
+      "content": "foreach (${1}) begin\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "forea": true
+      }
+    },
+    {
+      "content": "do begin\n\t${0}\nend while (${1});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dowh": true
+      }
+    },
+    {
+      "content": "always_comb begin ${1:: statement_label}\n\t${0}\nend $1",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "alc": true
+      }
+    },
+    {
+      "content": "always_ff @(posedge ${1:clk}) begin ${2:: statement_label}\n\t${0}\nend $2",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "alff": true
+      }
+    },
+    {
+      "content": "always_latch begin ${1:: statement_label}\n\t${0}\nend $1",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "all": true
+      }
+    },
+    {
+      "content": "class ${1:class_name};\n\t// data or class properties\n\t${0}\n\n\t// initialization\n\tfunction new();\n\tendfunction : new\n\nendclass : $1",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cl": true
+      }
+    },
+    {
+      "content": "typedef struct {\n\t${0}\n} ${1:name_t};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "types": true
+      }
+    },
+    {
+      "content": "program ${1:program_name} ();\n\t${0}\nendprogram : $1",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "prog": true
+      }
+    },
+    {
+      "content": "interface ${1:program_name} ();\n\t// nets\n\t${0}\n\t// clocking\n\n\t// modports\n\nendinterface : $1",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "intf": true
+      }
+    },
+    {
+      "content": "clocking ${1:clocking_name} @(${2:posedge} ${3:clk});\n\t${0}\nendclocking : $1",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "clock": true
+      }
+    },
+    {
+      "content": "covergroup ${1:group_name} @(${2:posedge} ${3:clk});\n\t${0}\nendgroup : $1",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cg": true
+      }
+    },
+    {
+      "content": "package ${1:package_name};\n\t${0}\nendpackage : $1",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pkg": true
+      }
+    },
+    {
+      "content": "//  Class: $1\n//\nclass ${1:my_class} extends ${2:uvm_object};\n\t\\`uvm_object_utils($1);\n\n\t//  Group: Variables\n\n\n\t//  Group: Constraints\n\n\n\t//  Group: Functions\n\n\t//  Constructor: new\n\tfunction new(string name = \"$1\");\n\t\tsuper.new(name);\n\tendfunction: new\n\t$0\nendclass: $1",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "uvm_object": true
+      }
+    },
+    {
+      "content": "//  Class: $1\n//\nclass ${1:my_class} extends ${2:uvm_component};\n\t\\`uvm_component_utils($1);\n\n\t//  Group: Configuration Object(s)\n\n\t//  Var: config_obj\n\t${3:config_obj_t} config_obj;\n\n\n\t//  Group: Components\n\n\n\t//  Group: Variables\n\n\n\t//  Group: Functions\n\n\t//  Constructor: new\n\tfunction new(string name = \"$1\", uvm_component parent);\n\t\tsuper.new(name, parent);\n\tendfunction: new\n\n\t$0\nendclass: $1",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "uvm_component": true
+      }
+    },
+    {
+      "content": "//  Class: $1\n//\nclass ${1:my_class} extends ${2:base_class};\n\t\\`uvm_component_utils($1);\n\n\t//  Group: Configuration Object(s)\n\n\n\t//  Group: Components\n\n\n\t//  Group: Variables\n\n\n\t//  Group: Functions\n\n\t//  Constructor: new\n\tfunction new(string name = \"$1\", uvm_component parent);\n\t\tsuper.new(name, parent);\n\tendfunction: new\n\n\t/*---  UVM Build Phases            ---*/\n\t/*------------------------------------*/\n\t//  Function: build_phase\n\textern function void build_phase(uvm_phase phase);\n\t//  Function: connect_phase\n\textern function void connect_phase(uvm_phase phase);\n\t//  Function: end_of_elaboration_phase\n\textern function void end_of_elaboration_phase(uvm_phase phase);\n\n\t/*---  UVM Run Phases              ---*/\n\t/*------------------------------------*/\n\t//  Function: start_of_simulation_phase\n\textern function void start_of_simulation_phase(uvm_phase phase);\n\t//  Function: reset_phase\n\textern task reset_phase(uvm_phase phase);\n\t//  Function: configure_phase\n\textern task configure_phase(uvm_phase phase);\n\t//  Function: main_phase\n\textern task main_phase(uvm_phase phase);\n\t//  Function: shutdown_phase\n\textern task shutdown_phase(uvm_phase phase);\n\n\t/*---  UVM Cleanup Phases          ---*/\n\t/*------------------------------------*/\n\t//  Function: extract_phase\n\textern function void extract_phase(uvm_phase phase);\n\t//  Function: report_phase\n\textern function void report_phase(uvm_phase phase);\n\t$0\nendclass: $1\n\n\n/*----------------------------------------------------------------------------*/\n/*  UVM Build Phases                                                          */\n/*----------------------------------------------------------------------------*/\nfunction void $1::build_phase(uvm_phase phase);\n\t/*  note: Do not call super.build_phase() from any class that is extended from an UVM base class!  */\n\t/*  For more information see UVM Cookbook v1800.2 p.503  */\n\t// super.build_phase(phase);\nendfunction: build_phase\n\n\nfunction void $1::connect_phase(uvm_phase phase);\n\tsuper.connect_phase(phase);\nendfunction: connect_phase\n\n\nfunction void $1::end_of_elaboration_phase(uvm_phase phase);\n\tsuper.end_of_elaboration_phase(phase);\nendfunction: end_of_elaboration_phase\n\n\n/*----------------------------------------------------------------------------*/\n/*  UVM Run Phases                                                            */\n/*----------------------------------------------------------------------------*/\nfunction void $1::start_of_simulation_phase(uvm_phase phase);\n\tsuper.start_of_simulation_phase(phase);\nendfunction: start_of_simulation_phase\n\n\ntask $1::reset_phase(uvm_phase phase);\nendtask: reset_phase\n\n\ntask $1::configure_phase(uvm_phase phase);\nendtask: configure_phase\n\n\ntask $1::main_phase(uvm_phase phase);\nendtask: main_phase\n\n\ntask $1::shutdown_phase(uvm_phase phase);\nendtask: shutdown_phase\n\n\n/*----------------------------------------------------------------------------*/\n/*  UVM Cleanup Phases                                                        */\n/*----------------------------------------------------------------------------*/\nfunction void $1::report_phase(uvm_phase phase);\n\tsuper.report_phase(phase);\nendfunction: report_phase\n\n\nfunction void $1::extract_phase(uvm_phase phase);\n\tsuper.extract_phase(phase);\nendfunction: extract_phase",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "uvm_component_extended": true
+      }
+    },
+    {
+      "content": "//  Class: $1\n//\nclass ${1:my_class} extends ${2:uvm_sequence};\n\t\\`uvm_object_utils($1);\n\n\t//  Group: Variables\n\n\n\t//  Group: Constraints\n\n\n\t//  Group: Functions\n\n\t//  Constructor: new\n\tfunction new(string name = \"$1\");\n\t\tsuper.new(name);\n\tendfunction: new\n\n\t//  Task: pre_start\n\t//  This task is a user-definable callback that is called before the optional\n\t//  execution of <pre_body>.\n\t// extern virtual task pre_start();\n\n\t//  Task: pre_body\n\t//  This task is a user-definable callback that is called before the execution\n\t//  of <body> ~only~ when the sequence is started with <start>.\n\t//  If <start> is called with ~call_pre_post~ set to 0, ~pre_body~ is not called.\n\t// extern virtual task pre_body();\n\n\t//  Task: pre_do\n\t//  This task is a user-definable callback task that is called ~on the parent\n\t//  sequence~, if any. The sequence has issued a wait_for_grant() call and after\n\t//  the sequencer has selected this sequence, and before the item is randomized.\n\t//\n\t//  Although pre_do is a task, consuming simulation cycles may result in unexpected\n\t//  behavior on the driver.\n\t// extern virtual task pre_do(bit is_item);\n\n\t//  Function: mid_do\n\t//  This function is a user-definable callback function that is called after the\n\t//  sequence item has been randomized, and just before the item is sent to the\n\t//  driver.\n\t// extern virtual function void mid_do(uvm_sequence_item this_item);\n\n\t//  Task: body\n\t//  This is the user-defined task where the main sequence code resides.\n\textern virtual task body();\n\n\t//  Function: post_do\n\t//  This function is a user-definable callback function that is called after the\n\t//  driver has indicated that it has completed the item, using either this\n\t//  item_done or put methods.\n\t// extern virtual function void post_do(uvm_sequence_item this_item);\n\n\t//  Task: post_body\n\t//  This task is a user-definable callback task that is called after the execution\n\t//  of <body> ~only~ when the sequence is started with <start>.\n\t//  If <start> is called with ~call_pre_post~ set to 0, ~post_body~ is not called.\n\t// extern virtual task post_body();\n\n\t//  Task: post_start\n\t//  This task is a user-definable callback that is called after the optional\n\t//  execution of <post_body>.\n\t// extern virtual task post_start();\n\t$0\nendclass: $1",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "uvm_sequence": true
+      }
+    },
+    {
+      "content": "// task ${1:my_class::}pre_start();\n// endtask: pre_start\n\n\n// task $1pre_body();\n// endtask: pre_body\n\n\n// task $1pre_do(bit is_item);\n// endtask: pre_do\n\n\n// function void $1mid_do(uvm_sequence_item this_item);\n// endfunction: mid_do\n\n\ntask $1body();\n\t$0\nendtask: body\n\n\n// function void $1post_do(uvm_sequence_item this_item);\n// endfunction: post_do\n\n\n// task $1post_body();\n// endtask: post_body\n\n\n// task $1post_start();\n// endtask: post_start",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "uvm_sequence_functions": true
+      }
+    },
+    {
+      "content": "//  Class: $1\n//\nclass ${1:my_class} extends ${2:uvm_sequence_item};\n\ttypedef $1 this_type_t;\n\t\\`uvm_object_utils($1);\n\n\t//  Group: Variables\n\n\n\t//  Group: Constraints\n\n\n\t//  Group: Functions\n\n\t//  Constructor: new\n\tfunction new(string name = \"$1\");\n\t\tsuper.new(name);\n\tendfunction: new\n\n\t//  Function: do_copy\n\t// extern function void do_copy(uvm_object rhs);\n\t//  Function: do_compare\n\t// extern function bit do_compare(uvm_object rhs, uvm_comparer comparer);\n\t//  Function: convert2string\n\t// extern function string convert2string();\n\t//  Function: do_print\n\t// extern function void do_print(uvm_printer printer);\n\t//  Function: do_record\n\t// extern function void do_record(uvm_recorder recorder);\n\t//  Function: do_pack\n\t// extern function void do_pack();\n\t//  Function: do_unpack\n\t// extern function void do_unpack();\n\t$0\nendclass: $1\n\n\n/*----------------------------------------------------------------------------*/\n/*  Constraints                                                               */\n/*----------------------------------------------------------------------------*/\n\n\n\n\n/*----------------------------------------------------------------------------*/\n/*  Functions                                                                 */\n/*----------------------------------------------------------------------------*/",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "uvm_sequence_item": true
+      }
+    },
+    {
+      "content": "function void ${1:my_class}${2:::}do_copy(uvm_object rhs);\n\tthis_type_t rhs_;\n\n\tif (!\\$cast(rhs_, rhs)) begin\n\t\t\\`uvm_error({this.get_name(), \".do_copy()\"}, \"Cast failed!\");\n\t\treturn;\n\tend\n\t// \\`uvm_info({this.get_name(), \".do_copy()\"}, \"Cast succeded.\", UVM_HIGH);\n\n\t/*  chain the copy with parent classes  */\n\tsuper.do_copy(rhs);\n\n\t/*  list of local properties to be copied  */\n\t// <this.property_name = rhs_.property_name>;\nendfunction: do_copy$0",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "uvm_sequence_item_do_copy": true
+      }
+    },
+    {
+      "content": "function bit ${1:my_class}${2:::}do_compare(uvm_object rhs, uvm_comparer comparer);\n\tthis_type_t rhs_;\n\n\tif (!\\$cast(rhs_, rhs)) begin\n\t\t\\`uvm_error({this.get_name(), \".do_compare()\"}, \"Cast failed!\");\n\t\treturn;\n\tend\n\t// \\`uvm_info({this.get_name(), \".do_compare()\"}, \"Cast succeded.\", UVM_HIGH);\n\n\t/*  chain the compare with parent classes  */\n\tdo_compare = super.do_compare(rhs, comparer);\n\n\t/*  list of local properties to be compared:  */\n\tdo_compare &= (\n\t\t// <this.property_name == rhs_.property_name> &&\n\t\t// <this.property_name == rhs_.property_name>\n\t);\nendfunction: do_compare$0",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "uvm_sequence_item_do_compare": true
+      }
+    },
+    {
+      "content": "function string ${1:my_class}${2:::}convert2string();\n\tstring s;\n\n\t/*  chain the convert2string with parent classes  */\n\ts = super.convert2string();\n\n\t/*  list of local properties to be printed:  */\n\t//  guide             0---4---8--12--16--20--24--28--32--36--40--44--48--\n\t// s = {s, \\$sformatf(\"property_label      : 0x%0h\\n\", property_name)};\n\t// s = {s, \\$sformatf(\"property_label      :   %0d\\n\", property_name)};\n\n\treturn s;\nendfunction: convert2string$0",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "uvm_sequence_item_convert2string": true
+      }
+    },
+    {
+      "content": "function void ${1:my_class}${2:::}do_print(uvm_printer printer)\n\t/*  chain the print with parent classes  */\n\tsuper.do_print(printer);\n\n\t/*  list of local properties to be printed:  */\n\t// printer.print_string(\"property_label\", property_name);\n\t// printer.print_field_int(\"property_label\", property_name, \\$bits(property_name), UVM_HEX);\nendfunction: do_print$0",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "uvm_sequence_item_do_print": true
+      }
+    },
+    {
+      "content": "function void ${1:my_class}${2:::}do_record(uvm_recorder recorder);\n\t/*  chain the record with parent classes  */\n\tsuper.do_record(recorder);\n\n\t/*  list of local properties to be recorded:  */\n\t/*  note: use uvm_record_int, uvm_record_string, uvm_record_time, uvm_record_real for known basic types.  */\n\t// \\`uvm_record_string(\"property_label\", property_name);\n\t// \\`uvm_record_int(\"property_label\", property_name, \\$bits(property_name), UVM_HEX);\nendfunction: do_record$0",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "uvm_sequence_item_do_record": true
+      }
+    },
+    {
+      "content": "function void ${1:my_class}${2:::}do_pack(uvm_packer packer);\n\t/*  chain the pack with parent classes  */\n\tsuper.do_pack(packer);\n\n\t/*  list of local properties to be packed:  */\n\t//  note: look up the appropriate macro(s) for your properties!\n\t// \\`uvm_pack_int(property_name);\n\t// \\`uvm_pack_queue(property_name);\n\t// \\`uvm_pack_string(property_name);\nendfunction: do_pack$0",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "uvm_sequence_item_do_pack": true
+      }
+    },
+    {
+      "content": "function void ${1:my_class}${2:::}do_unpack(uvm_packer packer);\n\t/*  chain the unpack with parent classes  */\n\tsuper.do_unpack(packer);\n\n\t/*  list of local properties to be unpacked:  */\n\t//  note: look up the appropriate macro(s) for your properties!\n\t// \\`uvm_unpack_int(property_name);\n\t// \\`uvm_unpack_queue(property_name);\n\t// \\`uvm_unpack_string(property_name);\nendfunction: do_unpack$0",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "uvm_sequence_item_do_unpack": true
+      }
+    }
+  ]
+}

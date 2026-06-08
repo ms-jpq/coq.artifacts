@@ -1,0 +1,53 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "vital#${1:#:plugin_name}#new()",
+      "doc": "",
+      "label": "vital#...#new()",
+      "matches": {
+        "vital_new_without_let": true
+      }
+    },
+    {
+      "content": "let ${1:s:V} = vital#${2:#:plugin_name}#new()",
+      "doc": "",
+      "label": "let s:V = vital#...#new()",
+      "matches": {
+        "vital_new": true
+      }
+    },
+    {
+      "content": "${1:s:V}.import('${2:#:module_name}')",
+      "doc": "",
+      "label": "s:V.import('...')",
+      "matches": {
+        "vital_import_without_let": true
+      }
+    },
+    {
+      "content": "let ${1:s:M} = ${2:s:V}.import('${3:#:module_name}')",
+      "doc": "",
+      "label": "let s:M = s:V.import('...')",
+      "matches": {
+        "vital_import": true
+      }
+    },
+    {
+      "content": "${1:s:V}.load('${2:#:module_name}')",
+      "doc": "",
+      "label": "s:V.load('...')",
+      "matches": {
+        "vital_load_without_call": true
+      }
+    },
+    {
+      "content": "call ${1:s:V}.load('${2:#:module_name}')",
+      "doc": "",
+      "label": "call s:V.load('...')",
+      "matches": {
+        "vital_load": true
+      }
+    }
+  ]
+}

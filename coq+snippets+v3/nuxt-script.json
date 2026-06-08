@@ -1,0 +1,133 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "const ${1:route} = useRoute()\n\t$0",
+      "doc": "The useRoute composable returns the current route and must be called in a setup function, plugin, or route middleware.",
+      "label": "useState",
+      "matches": {
+        "useState": true
+      }
+    },
+    {
+      "content": "const ${1:error} = useError()\n\t$0",
+      "doc": "useError composable returns the global Nuxt error that is being handled and it is available on both client and server.",
+      "label": "useError",
+      "matches": {
+        "useError": true
+      }
+    },
+    {
+      "content": "const {${1:data},${2:pending},${3:error},${4:refresh}} = await useFetch('$5', {\n$0\n})",
+      "doc": "This composable provides a convenient wrapper around useAsyncData and $fetch. It automatically generates a key based on URL and fetch options, provides type hints for request url based on server routes, and infers API response type.",
+      "label": "useFetch",
+      "matches": {
+        "useFetch": true
+      }
+    },
+    {
+      "content": "useHead({\n\t$0\n})",
+      "doc": "The useHead composable function allows you to manage your head tags in a programmatic and reactive way, powered by Unhead. If the data comes from a user or other untrusted source, we recommend you check out useHeadSafe",
+      "label": "useHead",
+      "matches": {
+        "useHead": true
+      }
+    },
+    {
+      "content": "const ${1:nuxtApp} = useNuxtApp()\n\t$0",
+      "doc": "useNuxtApp is a built-in composable that provides a way to access shared runtime context of Nuxt, which is available on both client and server side. It helps you access the Vue app instance, runtime hooks, runtime config variables and internal states, such as ssrContext and payload.",
+      "label": "useNuxtApp",
+      "matches": {
+        "useAppConfig": true
+      }
+    },
+    {
+      "content": "navigateTo($0)",
+      "doc": "navigateTo is a router helper function that allows programmatically navigating users through your Nuxt application.",
+      "label": "navigateTo",
+      "matches": {
+        "navigateTo": true
+      }
+    },
+    {
+      "content": "addRouteMiddleware((to, from) => {\n\tif(to.path === '$1') {\n\t\treturn false\n\t})",
+      "doc": "Anonymous route middleware does not have a name. It takes a function as the first argument, making the second middleware argument redundant",
+      "label": "Anonymouse Route Middleware",
+      "matches": {
+        "addRouteMiddlewareAnonym": true
+      }
+    },
+    {
+      "content": "const ${1:appConfig} = useAppConfig()\n\t$0",
+      "doc": "Access the reactive app config defined in the project.",
+      "label": "useAppConfig",
+      "matches": {
+        "useAppConfig": true
+      }
+    },
+    {
+      "content": "addRouteMiddleware('${1:named-middleware}', () => {\n\t$0\n\t})",
+      "doc": "Named route middleware takes a string as the first argument and a function as the second. When defined in a plugin, it overrides any existing middleware of the same name located in the middleware/ directory",
+      "label": "Named Route Middleware",
+      "matches": {
+        "addRouteMiddlewareNamed": true
+      }
+    },
+    {
+      "content": "definePageMeta({\n$0\n})",
+      "doc": "definePageMeta is a compiler macro that you can use to set metadata for your page components located in the pages/ directory (unless set otherwise). This way you can set custom metadata for each static or dynamic route of your Nuxt application.",
+      "label": "definePageMeta",
+      "matches": {
+        "definePageMeta": true
+      }
+    },
+    {
+      "content": "const ${1:router} = useRouter()\n\t$0",
+      "doc": "The useRouter composable returns the router instance and must be called in a setup function, plugin, or route middleware. Within the template of a Vue component, you can access the router using $router instead. If you have a pages/ folder, useRouter is identical in behavior to the one provided by vue-router. Feel free to read the router documentation for more information on what each method does.",
+      "label": "useRouter",
+      "matches": {
+        "useRouter": true
+      }
+    },
+    {
+      "content": "const ${1:route} = useRoute()\n\t$0",
+      "doc": "The useRoute composable returns the current route and must be called in a setup function, plugin, or route middleware.",
+      "label": "useRoute",
+      "matches": {
+        "useRoute": true
+      }
+    },
+    {
+      "content": "addRouteMiddleware('${1:global-middleware}', (to, from) => {\n\t$0\n},\n\t{global: true}\n)",
+      "doc": "Set an optional, third argument { global: true } to indicate whether the route middleware is global",
+      "label": "Global Route Middleware",
+      "matches": {
+        "addRouteMiddlewareGlobal": true
+      }
+    },
+    {
+      "content": "async fetch ({ store, ${1:params} }) {\n\tlet { data } = await fetch('${2:endpoint}').then(res => res.json())\n\tstore.commit('${3:MUTATION_TYPE}', data)\n},",
+      "doc": "Nuxt Fetch",
+      "label": "Nuxt Fetch",
+      "matches": {
+        "nfetch": true
+      }
+    },
+    {
+      "content": "head () {\n\treturn {\n\t\ttitle: ${1:'Page Title'},\n\t\tmeta: [\n\t\t\t// hid is used as unique identifier. Do not use `vmid` for it as it will not work\n\t\t\t{ hid: 'description', name: 'description', content: ${2:'My custom description'} }\n\t\t]\n\t}\n},",
+      "doc": "Nuxt Head",
+      "label": "Nuxt Head",
+      "matches": {
+        "nhead": true
+      }
+    },
+    {
+      "content": "this.$route.params.${1:id}",
+      "doc": "Nuxt Route Params",
+      "label": "Nuxt Route Params",
+      "matches": {
+        "nparam": true
+      }
+    }
+  ]
+}

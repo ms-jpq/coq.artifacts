@@ -1,0 +1,283 @@
+{
+  "extends": [
+    "dotenv",
+    "dotenv-safe",
+    "nushell",
+    "shell",
+    "shelldoc"
+  ],
+  "snippets": [
+    {
+      "content": "#!/bin/${1:sh}\n${0}",
+      "doc": "",
+      "label": "#!/bin/sh",
+      "matches": {
+        "#!": true
+      }
+    },
+    {
+      "content": "#!/bin/${1:sh}\n${0}",
+      "doc": "",
+      "label": "#!/bin/sh",
+      "matches": {
+        "shebang": true
+      }
+    },
+    {
+      "content": "if [ ${1:#:condition} ]; then\n\t${0:TARGET}\nfi",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "else\n\t${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "el": true
+      }
+    },
+    {
+      "content": "elif [ ${1:#:condition} ]; then\n\t${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "elif": true
+      }
+    },
+    {
+      "content": "for ${1:i} in ${2:#:words}; do\n\t${0:TARGET}\ndone",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "while ${1:#:condition} ; do\n\t${0:TARGET}\ndone",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "while ${1:#:condition} ; do\n\t${0:TARGET}\ndone",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "until ${1:#:condition} ; do\n\t${0:TARGET}\ndone",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "until": true
+      }
+    },
+    {
+      "content": "<< ${1:EOF}\n\t${0:#:TARGET}\n$1",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "heredoc": true
+      }
+    },
+    {
+      "content": "<< ${1:EOF}\n\t${0:#:TARGET}\n$1",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "h <<": true
+      }
+    },
+    {
+      "content": "#!/usr/bin/env ${1}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "env": true
+      }
+    },
+    {
+      "content": "${1:#:name}()\n{\n\t${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "function": true
+      }
+    },
+    {
+      "content": "${1:#:name}()\n{\n\t${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "func": true
+      }
+    },
+    {
+      "content": "${1:name}=\"${2:something}\"",
+      "doc": "",
+      "label": "var-assign",
+      "matches": {
+        "assign": true
+      }
+    },
+    {
+      "content": "echo \"${0:TARGET}\" 1>&2",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "warn": true
+      }
+    },
+    {
+      "content": "echo \"${0:TARGET}\" 1>&2\nexit 1",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "abort": true
+      }
+    },
+    {
+      "content": "#!/bin/sh",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "#!": true
+      }
+    },
+    {
+      "content": "#!/bin/sh\nset -eu",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "s#!": true
+      }
+    },
+    {
+      "content": "set -eu",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "safe": true
+      }
+    },
+    {
+      "content": "#!/usr/bin/env bash",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bash": true
+      }
+    },
+    {
+      "content": "if [ $1 ]; then\n\t${0:${VISUAL}}\nfi",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "elif [ $1 ]; then\n\t${0:${VISUAL}}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "elif": true
+      }
+    },
+    {
+      "content": "for (( ${2:i} = 0; $2 < ${1:count}; $2++ )); do\n\t${0:${VISUAL}}\ndone",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "for ${1:needle} in ${2:haystack} ; do\n\t${0:${VISUAL}}\ndone",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fori": true
+      }
+    },
+    {
+      "content": "while [ $1 ]; do\n\t${0:${VISUAL}}\ndone",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "while true; do\n\t${0:${VISUAL}}\ndone",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wht": true
+      }
+    },
+    {
+      "content": "until [ $1 ]; do\n\t${0:${VISUAL}}\ndone",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "until": true
+      }
+    },
+    {
+      "content": "case ${1:word} in\n\t${2:pattern})\n\t\t${0};;\nesac",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "SCRIPT_DIR=\"\\$( cd \"\\$( dirname \"\\${BASH_SOURCE[0]}\" )\" && pwd )\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sdir": true
+      }
+    },
+    {
+      "content": "__ScriptVersion=\"${1:version}\"\n\n#===  FUNCTION  ================================================================\n#         NAME:  usage\n#  DESCRIPTION:  Display usage information.\n#===============================================================================\nfunction usage ()\n{\n\techo \"Usage :  \\$${0:0} [options] [--]\n\n    Options:\n    -h|help       Display this message\n    -v|version    Display script version\"\n\n}    # ----------  end of function usage  ----------\n\n#-----------------------------------------------------------------------\n#  Handle command line arguments\n#-----------------------------------------------------------------------\n\nwhile getopts \":hv\" opt\ndo\n  case \\$opt in\n\n\th|help     )  usage; exit 0   ;;\n\n\tv|version  )  echo \"\\$${0:0} -- Version \\$__ScriptVersion\"; exit 0   ;;\n\n\t* )  echo -e \"\\\\n  Option does not exist : \\$OPTARG\\\\n\"\n\t\t  usage; exit 1   ;;\n\n  esac    # --- end of case ---\ndone\nshift \\$(($OPTIND-1))",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "getopt": true
+      }
+    },
+    {
+      "content": "if [ \\$(id -u) -ne 0 ]; then exec sudo \\$0; fi",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "root": true
+      }
+    },
+    {
+      "content": "${1:function_name}() {\n\t$0\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fun-sh": true
+      }
+    },
+    {
+      "content": "function ${1:function_name}() {\n\t$0\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fun": true
+      }
+    }
+  ]
+}

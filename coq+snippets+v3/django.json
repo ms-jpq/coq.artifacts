@@ -1,0 +1,277 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "${1:FIELDNAME} = models.AutoField(${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "auto": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.BigIntegerField(${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bigint": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.BinaryField(${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "binary": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.BooleanField(${0:default=True})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bool": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.CharField(max_length=${2}${0:, blank=True})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "char": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.CommaSeparatedIntegerField(max_length=${2}${0:, blank=True})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "comma": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.DateField(${2:auto_now_add=True, auto_now=True}${0:, blank=True, null=True})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "date": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.DateTimeField(${2:auto_now_add=True, auto_now=True}${0:, blank=True, null=True})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "datetime": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.DecimalField(max_digits=${2}, decimal_places=${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "decimal": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.EmailField(max_length=${2:75}${0:, blank=True})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "email": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.FileField(upload_to=${2:path/for/upload}${0:, max_length=100})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "file": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.FilePathField(path=${2:\"/abs/path/to/dir\"}${3:, max_length=100}${4:, match=\"*.ext\"}${5:, recursive=True}${0:, blank=True, })",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "filepath": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.FloatField(${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "float": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.ImageField(upload_to=${2:path/for/upload}${3:, height_field=height, width_field=width}${0:, max_length=100})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "image": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.IntegerField(${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "int": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.IPAddressField(${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ip": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.NullBooleanField(${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "nullbool": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.PositiveIntegerField(${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "posint": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.PositiveSmallIntegerField(${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "possmallint": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.SlugField(max_length=${2:50}${0:, blank=True})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "slug": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.SmallIntegerField(${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "smallint": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.TextField(${0:blank=True})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "text": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.TimeField(${2:auto_now_add=True, auto_now=True}${0:, blank=True, null=True})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "time": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.URLField(${2:verify_exists=False}${3:, max_length=200}${0:, blank=True})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "url": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.XMLField(schema_path=${2:None}${0:, blank=True})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "xml": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.ForeignKey(${2:OtherModel}${3:, related_name=''}${4:, limit_choices_to=}${0:, to_field=''})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fk": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.ManyToManyField(${2:OtherModel}${3:, related_name=''}${4:, limit_choices_to=}${5:, symmetrical=False}${6:, through=''}${0:, db_table=''})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "m2m": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.OneToOneField(${2:OtherModel}${3:, parent_link=True}${4:, related_name=''}${5:, limit_choices_to=}${0:, to_field=''})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "o2o": true
+      }
+    },
+    {
+      "content": "class ${1:FormName}(forms.Form):\n\t\"\"\"${2:docstring}\"\"\"\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "form": true
+      }
+    },
+    {
+      "content": "class ${1:ModelName}(models.Model):\n\t\"\"\"${2:docstring}\"\"\"\n\t${3}\n\n\tclass Meta:\n\t\t${4}\n\n\tdef __unicode__(self):\n\t\t${5}\n\n\tdef save(self, *args, **kwargs):\n\t\t${6}\n\n\t@models.permalink\n\tdef get_absolute_url(self):\n\t\treturn ('${7:view_or_url_name}' ${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "model": true
+      }
+    },
+    {
+      "content": "class ${1:ModelName}Admin(admin.ModelAdmin):\n\t${0}\n\nadmin.site.register($1, $1Admin)",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "modeladmin": true
+      }
+    },
+    {
+      "content": "class ${0:ModelName}Inline(admin.TabularInline):\n\tmodel = $1",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tabularinline": true
+      }
+    },
+    {
+      "content": "class ${0:ModelName}Inline(admin.StackedInline):\n\tmodel = $1",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "stackedinline": true
+      }
+    },
+    {
+      "content": "return render_to_response('${1:template.html}', {\n\t\t${2}\n\t}${0:, context_instance=RequestContext(request)}\n)",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "r2r": true
+      }
+    }
+  ]
+}

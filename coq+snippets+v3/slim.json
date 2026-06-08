@@ -1,0 +1,173 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "- binding.pry",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pry": true
+      }
+    },
+    {
+      "content": "= render partial: '${0}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "renp": true
+      }
+    },
+    {
+      "content": "fieldset\n\tlegend ${1}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fieldset": true
+      }
+    },
+    {
+      "content": "link rel=\"stylesheet\" href=\"${1:style.css}\" type=\"text/css\" media=\"${2:all}\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "css": true
+      }
+    },
+    {
+      "content": "script src=\"${1:script.js}\" type=\"text/javascript\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "script": true
+      }
+    },
+    {
+      "content": "&nbsp;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "nbs": true
+      }
+    },
+    {
+      "content": "&#x2190;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "left": true
+      }
+    },
+    {
+      "content": "&#x2192;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "right": true
+      }
+    },
+    {
+      "content": "&#x2191;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "up": true
+      }
+    },
+    {
+      "content": "&#x2193;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "down": true
+      }
+    },
+    {
+      "content": "&#x21A9;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "return": true
+      }
+    },
+    {
+      "content": "&#x21E4;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "backtab": true
+      }
+    },
+    {
+      "content": "&#x21E5;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tab": true
+      }
+    },
+    {
+      "content": "&#x21E7;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "shift": true
+      }
+    },
+    {
+      "content": "&#x2303;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ctrl": true
+      }
+    },
+    {
+      "content": "&#x2305;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "enter": true
+      }
+    },
+    {
+      "content": "&#x2318;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cmd": true
+      }
+    },
+    {
+      "content": "&#x2325;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "option": true
+      }
+    },
+    {
+      "content": "&#x2326;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "delete": true
+      }
+    },
+    {
+      "content": "&#x232B;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "backspace": true
+      }
+    },
+    {
+      "content": "&#x238B;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "esc": true
+      }
+    }
+  ]
+}

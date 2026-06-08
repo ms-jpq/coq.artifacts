@@ -1,0 +1,14 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "import Modal from 'react-modal'",
+      "doc": "import react-modal",
+      "label": "react-modal-import",
+      "matches": {
+        "imrm": true,
+        "react-modal import": true
+      }
+    }
+  ]
+}

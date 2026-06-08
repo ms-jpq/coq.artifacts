@@ -1,0 +1,69 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "DISP=${2|NEW,CATLG,DELETE|}",
+      "doc": "DISP Parameter, NEW = New data set, CATLG = Create a new catalog entry, DELETE = delete data set on abnormal termination",
+      "label": "Job/DISP",
+      "matches": {
+        "DISP": true
+      }
+    },
+    {
+      "content": "//${2:STEPID01} EXEC PGM=IEFBR14\n$0",
+      "doc": "IEFBR14 Data set utility",
+      "label": "Job/IEFBR14",
+      "matches": {
+        "IEFBR14": true
+      }
+    },
+    {
+      "content": "LRECL=${2|80,132|}",
+      "doc": "LRECL Parameter",
+      "label": "Job/LRECL",
+      "matches": {
+        "LRECL": true
+      }
+    },
+    {
+      "content": "COND=(${2:0},${3|GT,GE,EQ,LT,LE,NE|},${4:STEPNAME})${5|\\,|}",
+      "doc": "COND Parameter",
+      "label": "Job/COND",
+      "matches": {
+        "COND": true
+      }
+    },
+    {
+      "content": "//${2:STEPID01} EXEC PGM=IEBGENER \n//SYSUT1   DD *\n${3}\n/*\n//SYSUT2   DD      DISP=NEW,DSN=${4:A.B.C}\n//SYSPRINT DD      SYSOUT=*\n$0",
+      "doc": "IEBGENER create/load a dataset",
+      "label": "Job/IEBGENER ",
+      "matches": {
+        "IEBGENER": true
+      }
+    },
+    {
+      "content": "BYTES=${2:500},${3|CANCEL,DUMP,WARNING|}${4|\\,|}",
+      "doc": "BYTES Parameter",
+      "label": "JOB/BYTES",
+      "matches": {
+        "BYTES": true
+      }
+    },
+    {
+      "content": "ADDRSPC=${2|VIRT,REAL|}${3|\\,|}",
+      "doc": "ADDRSPC Parameter",
+      "label": "Job/ADDRSPC",
+      "matches": {
+        "ADDRSPC": true
+      }
+    },
+    {
+      "content": "CARDS=${2:500},${3|CANCEL,DUMP,WARNING|}${4|\\,|}",
+      "doc": "CARDS Parameter",
+      "label": "Job/CARDS",
+      "matches": {
+        "CARDS": true
+      }
+    }
+  ]
+}

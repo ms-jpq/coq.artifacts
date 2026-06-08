@@ -1,0 +1,1536 @@
+{
+  "extends": [
+    "java-tests",
+    "javadoc"
+  ],
+  "snippets": [
+    {
+      "content": "public static ${1:void} ${2:name}(${3}) {\n\t$0\n}",
+      "doc": "public static method",
+      "label": "Public static method",
+      "matches": {
+        "public_static_method": true
+      }
+    },
+    {
+      "content": "public ${1:${TM_FILENAME_BASE}}($2) {\n\t${0:super();}\n}",
+      "doc": "Public constructor",
+      "label": "Public constructor",
+      "matches": {
+        "ctor": true
+      }
+    },
+    {
+      "content": "for (${1:type} ${2:var} : ${3:iterable}) {\n\t$0\n}",
+      "doc": "Enhanced for loop",
+      "label": "foreach",
+      "matches": {
+        "foreach": true
+      }
+    },
+    {
+      "content": "public class ${1:TM_FILENAME_BASE} {\n\t$0\n}",
+      "doc": "Public class",
+      "label": "class",
+      "matches": {
+        "class": true
+      }
+    },
+    {
+      "content": "System.out.println($0);",
+      "doc": "Print to standard out",
+      "label": "sysout",
+      "matches": {
+        "sysout": true
+      }
+    },
+    {
+      "content": "if (${1:condition} == null) {\n\t$0\n}",
+      "doc": "if statement checking for null",
+      "label": "ifnull",
+      "matches": {
+        "ifnull": true
+      }
+    },
+    {
+      "content": "System.err.println($0);",
+      "doc": "Print to standard err",
+      "label": "syserr",
+      "matches": {
+        "syserr": true
+      }
+    },
+    {
+      "content": "if (${1:condition} != null) {\n\t$0\n}",
+      "doc": "if statement checking for not null",
+      "label": "ifnotnull",
+      "matches": {
+        "ifnotnull": true
+      }
+    },
+    {
+      "content": "import ${1:PackageName}",
+      "doc": "Import statement",
+      "label": "import",
+      "matches": {
+        "import": true
+      }
+    },
+    {
+      "content": "do {\n\t$0\n} while (${1:condition});",
+      "doc": "Do-While Statement",
+      "label": "Do-While Statement",
+      "matches": {
+        "dowhile": true
+      }
+    },
+    {
+      "content": "protected ${1:String} ${2:name};",
+      "doc": "Protected field",
+      "label": "Protected field",
+      "matches": {
+        "protected_field": true
+      }
+    },
+    {
+      "content": "public static void main(String[] args) {\n\t$0\n}",
+      "doc": "Public static main method",
+      "label": "main",
+      "matches": {
+        "main": true
+      }
+    },
+    {
+      "content": "package ${1:PackageName}",
+      "doc": "Package statement",
+      "label": "package",
+      "matches": {
+        "package": true
+      }
+    },
+    {
+      "content": "switch (${1:key}) {\n\tcase ${2:value}:\n\t\t$0\n\t\tbreak;\n\n\tdefault:\n\t\tbreak;\n}",
+      "doc": "Switch Statement",
+      "label": "Switch Statement",
+      "matches": {
+        "switch": true
+      }
+    },
+    {
+      "content": "${1:Object} ${2:foo} = new ${1:Object}();",
+      "doc": "Create new Object",
+      "label": "newObject",
+      "matches": {
+        "new": true
+      }
+    },
+    {
+      "content": "try ($1) {\n\t$2\n} catch (${3:Exception} ${4:e}) {\n\t$5//${0:TODO}: handle exception\n}",
+      "doc": "",
+      "label": "tryresources",
+      "matches": {
+        "try_resources": true
+      }
+    },
+    {
+      "content": "public ${1:String} ${2:name};",
+      "doc": "Public field",
+      "label": "Public field",
+      "matches": {
+        "public_field": true
+      }
+    },
+    {
+      "content": "protected ${1:void} ${2:name}(${3}) {\n\t$0\n}",
+      "doc": "Protected method",
+      "label": "Protected Method",
+      "matches": {
+        "protected_method": true
+      }
+    },
+    {
+      "content": "while (${1:condition}) {\n\t$0\n}",
+      "doc": "While Statement",
+      "label": "While Statement",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "private ${1:String} ${2:name};",
+      "doc": "Private field",
+      "label": "Private field",
+      "matches": {
+        "private_field": true
+      }
+    },
+    {
+      "content": "private ${1:void} ${2:name}($3) {\n\t$0\n}",
+      "doc": "private method",
+      "label": "private_method",
+      "matches": {
+        "private_method": true
+      }
+    },
+    {
+      "content": "if (${1:condition}) {\n\t$0\n}",
+      "doc": "if statement",
+      "label": "if",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "public ${1:void} ${2:name}(${3}) {\n\t$0\n}",
+      "doc": "public method",
+      "label": "Public method",
+      "matches": {
+        "public_method": true
+      }
+    },
+    {
+      "content": "if (${1:condition}) {\n\t$2\n} else {\n\t$0\n}",
+      "doc": "if/else statement",
+      "label": "ifelse",
+      "matches": {
+        "ifelse": true
+      }
+    },
+    {
+      "content": "for (${1:int} ${2:i} = ${3:0}; $2 < ${4:max}; $2++) {\n\t$0\n}",
+      "doc": "Indexed for loop",
+      "label": "fori",
+      "matches": {
+        "fori": true
+      }
+    },
+    {
+      "content": "private static ${1:Type} ${2:name}(${3}) {\n\t$0\n}",
+      "doc": "private static method",
+      "label": "Private static method",
+      "matches": {
+        "private_static_method": true
+      }
+    },
+    {
+      "content": "try {\n\t$1\n} catch (${2:Exception} ${3:e}) {\n\t$4//${0:TODO}: handle exception\n}",
+      "doc": "try/catch block",
+      "label": "trycatch",
+      "matches": {
+        "try_catch": true
+      }
+    },
+    {
+      "content": "class ${1} ${2:#:extends_or_implements}{\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "class": true
+      }
+    },
+    {
+      "content": "interface ${1} ${2:#:extends}{\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "interface": true
+      }
+    },
+    {
+      "content": "${1:void} ${2:#:method}(${3}) ${4:throws} {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "method": true
+      }
+    },
+    {
+      "content": "enum ${1:#:name} {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "enum {}",
+      "matches": {
+        "enum": true
+      }
+    },
+    {
+      "content": "public void set${1:Name}(${2:String} ${3:name}) {\nthis.$3 = $3;\n}${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "set": true
+      }
+    },
+    {
+      "content": "public ${1:String} get${2:Name}() {\nreturn $2;\n}${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "get": true
+      }
+    },
+    {
+      "content": "public void set${1:Name}(${2:String} ${3:name}) {\nthis.$3 = $3;\n}\npublic $2 get$1() {\nreturn $1;\n}${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "setget": true
+      }
+    },
+    {
+      "content": "${1:#:type} ${2:#:var}${3};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "var": true
+      }
+    },
+    {
+      "content": "static public final ${1:#:type} ${2:#:var} = ${3};${4}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "const": true
+      }
+    },
+    {
+      "content": "static public final String ${1:var} = \"${2}\";${4}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "const_string": true
+      }
+    },
+    {
+      "content": "public final ${1:#:type} ${2:#:var} = ${3};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "final": true
+      }
+    },
+    {
+      "content": "assert ${1:#:test} : ${2:#:Failure message};${3}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "assert": true
+      }
+    },
+    {
+      "content": "if (${1}) {\n    ${2:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "else {\n    ${1:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "else": true
+      }
+    },
+    {
+      "content": "else if (${1}) {\n    ${2:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "elif": true
+      }
+    },
+    {
+      "content": "else if (${1}) {\n    ${2:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "elseif": true
+      }
+    },
+    {
+      "content": "while (${1}) {\n    ${2:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "for (${1}; ${2}; ${3}) {\n    ${4:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "for (${1} : ${2}) {\n    ${3:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "foreach": true
+      }
+    },
+    {
+      "content": "for (${1} : ${2}) {\n    ${3:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fore": true
+      }
+    },
+    {
+      "content": "switch (${1}) {\n    ${2:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "switch": true
+      }
+    },
+    {
+      "content": "case ${1}:\n    ${2:TARGET}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "break;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "br": true
+      }
+    },
+    {
+      "content": "default:\n    ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "default": true
+      }
+    },
+    {
+      "content": "default:\n    ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "de": true
+      }
+    },
+    {
+      "content": "try {\n    ${0:TARGET}\n} catch (${1:Exception} ${2:e}) {\n    ${3:e.printStackTrace();}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "try": true
+      }
+    },
+    {
+      "content": "try (${1:#:Resources}) {\n    ${0:TARGET}\n} catch (${2:Exception} ${3:e}) {\n    ${4:e.printStackTrace();}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "try_resources": true
+      }
+    },
+    {
+      "content": "try {\n    ${0:TARGET}\n} catch (${1:Exception} ${2:e}) {\n    ${3:e.printStackTrace();}\n} finally {\n    ${4}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "try_finally": true
+      }
+    },
+    {
+      "content": "catch (${1:Exception} ${2:e}) {\n    ${0:e.printStackTrace();}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "catch": true
+      }
+    },
+    {
+      "content": "finally {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "finally": true
+      }
+    },
+    {
+      "content": "throw ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "th": true
+      }
+    },
+    {
+      "content": "synchronized",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sy": true
+      }
+    },
+    {
+      "content": "public class ${1} extends ${2:TestCase} {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "testclass": true
+      }
+    },
+    {
+      "content": "public class ${1} extends ${2:TestCase} {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tc": true
+      }
+    },
+    {
+      "content": "public void test${1:#:Name}() throws Exception {\n    ${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "test": true
+      }
+    },
+    {
+      "content": "import ${1};\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "import": true
+      }
+    },
+    {
+      "content": "import ${1};\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "imt": true
+      }
+    },
+    {
+      "content": "java.util.",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "j.u": true
+      }
+    },
+    {
+      "content": "java.io.",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "j.i": true
+      }
+    },
+    {
+      "content": "java.beans.",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "j.b": true
+      }
+    },
+    {
+      "content": "java.net",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "j.n": true
+      }
+    },
+    {
+      "content": "java.math.",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "j.m": true
+      }
+    },
+    {
+      "content": "class `expand('%:p:t:r')` {\n    public static void main(String args[]) {\n        ${0:#:body}\n    }\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "main": true
+      }
+    },
+    {
+      "content": "System.out.println(${1});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "println": true
+      }
+    },
+    {
+      "content": "System.out.println(${1});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sout": true
+      }
+    },
+    {
+      "content": "System.out.printf(\"${1}\", ${2});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "printf": true
+      }
+    },
+    {
+      "content": "System.out.printf(\"${1}\", ${2});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "souf": true
+      }
+    },
+    {
+      "content": "System.out.print(${1});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "print": true
+      }
+    },
+    {
+      "content": "System.out.format(${1});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "format": true
+      }
+    },
+    {
+      "content": "/**\n * ${0:TARGET}\n */",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "comment": true
+      }
+    },
+    {
+      "content": "@author ${0:$TM_FULLNAME}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "author": true
+      }
+    },
+    {
+      "content": "{@code ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "{code": true
+      }
+    },
+    {
+      "content": "@deprecated ${0:#:description}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "deprecated": true
+      }
+    },
+    {
+      "content": "{@docRoot",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "{docRoot": true
+      }
+    },
+    {
+      "content": "{@inheritDoc",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "{inheritDoc": true
+      }
+    },
+    {
+      "content": "{@link ${1:#:target} ${0:#:label}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "{link": true
+      }
+    },
+    {
+      "content": "{@linkplain ${1:#:target} ${0:#:label}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "{linkplain": true
+      }
+    },
+    {
+      "content": "{@literal ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "{literal": true
+      }
+    },
+    {
+      "content": "@param ${1:#:var} ${0:#:description}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "param": true
+      }
+    },
+    {
+      "content": "@return ${0:#:description}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "return": true
+      }
+    },
+    {
+      "content": "@see ${0:#:reference}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "see": true
+      }
+    },
+    {
+      "content": "@serial ${0:#:description}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "serial": true
+      }
+    },
+    {
+      "content": "@serialField ${0:#:description}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sd": true
+      }
+    },
+    {
+      "content": "@serialField ${1:#:name} ${2:#:type} ${0:#:description}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sf": true
+      }
+    },
+    {
+      "content": "@since ${0:#:version}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "since": true
+      }
+    },
+    {
+      "content": "@throws ${1:#:class} ${0:#:description}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "throws": true
+      }
+    },
+    {
+      "content": "{@value ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "{value": true
+      }
+    },
+    {
+      "content": "@version ${0:#:version}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "version": true
+      }
+    },
+    {
+      "content": "@version ${0:#:version}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ver": true
+      }
+    },
+    {
+      "content": "public class ${1:Hello} {\n  static public void main(String args[]) {\n    System.out.println(\"Hello, world!\");\n  }\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "helloworld": true
+      }
+    },
+    {
+      "content": "protected ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "po": true
+      }
+    },
+    {
+      "content": "public ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pu": true
+      }
+    },
+    {
+      "content": "private ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pr": true
+      }
+    },
+    {
+      "content": "@Before\nstatic void ${1:intercept}(${2:args}) { ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "before": true
+      }
+    },
+    {
+      "content": "@ManyToMany\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mm": true
+      }
+    },
+    {
+      "content": "@ManyToOne\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mo": true
+      }
+    },
+    {
+      "content": "@OneToMany${1:(cascade=CascadeType.ALL)}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "om": true
+      }
+    },
+    {
+      "content": "@OneToOne\n${1}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "oo": true
+      }
+    },
+    {
+      "content": "import ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "im": true
+      }
+    },
+    {
+      "content": "java.beans.",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "j.b": true
+      }
+    },
+    {
+      "content": "java.io.",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "j.i": true
+      }
+    },
+    {
+      "content": "java.math.",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "j.m": true
+      }
+    },
+    {
+      "content": "java.net.",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "j.n": true
+      }
+    },
+    {
+      "content": "java.util.",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "j.u": true
+      }
+    },
+    {
+      "content": "extends ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ext": true
+      }
+    },
+    {
+      "content": "implements ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "imp": true
+      }
+    },
+    {
+      "content": "/*\n * ${0}\n */",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "/*": true
+      }
+    },
+    {
+      "content": "static public final ${1:String} ${2:var} = ${3};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "co": true
+      }
+    },
+    {
+      "content": "static public final String ${1:var} = \"${2}\";",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cos": true
+      }
+    },
+    {
+      "content": "case ${1}:\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "default:\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "def": true
+      }
+    },
+    {
+      "content": "else",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "el": true
+      }
+    },
+    {
+      "content": "else if (${1}) ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eif": true
+      }
+    },
+    {
+      "content": "if (${1}) ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "switch (${1}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sw": true
+      }
+    },
+    {
+      "content": "${1:void} ${2:method}(${3}) ${4:throws }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "m": true
+      }
+    },
+    {
+      "content": "${1:String} ${2:var}${3: = null}${4};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "v": true
+      }
+    },
+    {
+      "content": "List<${1:Object}> ${2:list} = new ArrayList<$1>();${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "d.al": true
+      }
+    },
+    {
+      "content": "Map<${1:Object}, ${2:Object}> ${3:map} = new HashMap<$1, $2>();${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "d.hm": true
+      }
+    },
+    {
+      "content": "Set<${1:Object}> ${2:set} = new HashSet<$1>();${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "d.hs": true
+      }
+    },
+    {
+      "content": "Stack<${1:Object}> ${2:stack} = new Stack<$1>();${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "d.st": true
+      }
+    },
+    {
+      "content": "abstract ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ab": true
+      }
+    },
+    {
+      "content": "final ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fi": true
+      }
+    },
+    {
+      "content": "static ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "st": true
+      }
+    },
+    {
+      "content": "synchronized ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sy": true
+      }
+    },
+    {
+      "content": "System.err.print(\"${0:Message}\");",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "err": true
+      }
+    },
+    {
+      "content": "System.err.printf(\"${1:Message}\", ${0:exception});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "errf": true
+      }
+    },
+    {
+      "content": "System.err.println(\"${0:Message}\");",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "errln": true
+      }
+    },
+    {
+      "content": "assert ${1:test} : \"${2:Failure message}\";",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "as": true
+      }
+    },
+    {
+      "content": "assertEquals(\"${1:Failure message}\", ${2:expected}, ${3:actual});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ae": true
+      }
+    },
+    {
+      "content": "assertArrayEquals(\"${1:Failure message}\", ${2:expecteds}, ${3:actuals});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "aae": true
+      }
+    },
+    {
+      "content": "assertFalse(\"${1:Failure message}\", $2);",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "af": true
+      }
+    },
+    {
+      "content": "assertTrue(\"${1:Failure message}\", $2);",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "at": true
+      }
+    },
+    {
+      "content": "assertNull(\"${1:Failure message}\", ${2:object});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "an": true
+      }
+    },
+    {
+      "content": "assertNotNull(\"${1:Failure message}\", ${2:object});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ann": true
+      }
+    },
+    {
+      "content": "assertSame(\"${1:Failure message}\", ${2:expected}, ${3:actual});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ass": true
+      }
+    },
+    {
+      "content": "assertNotSame(\"${1:Failure message}\", ${2:expected}, ${3:actual});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "asns": true
+      }
+    },
+    {
+      "content": "fail(\"${1:Failure message}\");",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fa": true
+      }
+    },
+    {
+      "content": "catch(${1:Exception} ${2:e}) ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ca": true
+      }
+    },
+    {
+      "content": "throw ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "thr": true
+      }
+    },
+    {
+      "content": "throws ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ths": true
+      }
+    },
+    {
+      "content": "try {\n\t${0:${VISUAL}}\n} catch(${1:Exception} ${2:e}) {\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "try": true
+      }
+    },
+    {
+      "content": "try {\n\t${0:${VISUAL}}\n} catch(${1:Exception} ${2:e}) {\n} finally {\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tryf": true
+      }
+    },
+    {
+      "content": "List<${1:listName}> ${2:items} = $1.findAll();",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "findall": true
+      }
+    },
+    {
+      "content": "${1:var} ${2:item} = $1.findById(${3});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "findbyid": true
+      }
+    },
+    {
+      "content": "/**\n * ${0}\n */",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "/**": true
+      }
+    },
+    {
+      "content": "@author `system(\"grep \\`id -un\\` /etc/passwd | cut -d \\\":\\\" -f5 | cut -d \\\",\\\" -f1\")`",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "@au": true
+      }
+    },
+    {
+      "content": "@brief ${0:Description}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "@br": true
+      }
+    },
+    {
+      "content": "@param ${0:param}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "@pa": true
+      }
+    },
+    {
+      "content": "@return ${0:param}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "@re": true
+      }
+    },
+    {
+      "content": "Logger.debug(${1:param});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "debug": true
+      }
+    },
+    {
+      "content": "Logger.error(${1:param});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "error": true
+      }
+    },
+    {
+      "content": "Logger.info(${1:param});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "info": true
+      }
+    },
+    {
+      "content": "Logger.warn(${1:param});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "warn": true
+      }
+    },
+    {
+      "content": "for (${1} : ${2}) ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "enfor": true
+      }
+    },
+    {
+      "content": "for (${1}; ${2}; ${3}) ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "while (${1:true}) ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "while (true) ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wht": true
+      }
+    },
+    {
+      "content": "public static void main (String[] args) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "psvm": true
+      }
+    },
+    {
+      "content": "public static void main (String[] args) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "main": true
+      }
+    },
+    {
+      "content": "System.out.println(${0});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sout": true
+      }
+    },
+    {
+      "content": "System.err.println(${0});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "serr": true
+      }
+    },
+    {
+      "content": "System.out.print(\"${0:Message}\");",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "print": true
+      }
+    },
+    {
+      "content": "System.out.printf(\"${1:Message}\", ${0:args});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "printf": true
+      }
+    },
+    {
+      "content": "System.out.println(${0});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "println": true
+      }
+    },
+    {
+      "content": "System.out.println(Arrays.toString(${0}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "printlna": true
+      }
+    },
+    {
+      "content": "render(${1:param});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ren": true
+      }
+    },
+    {
+      "content": "renderArgs.put(\"${1}\", ${2});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rena": true
+      }
+    },
+    {
+      "content": "renderBinary(${1:param});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "renb": true
+      }
+    },
+    {
+      "content": "renderJSON(${1:param});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "renj": true
+      }
+    },
+    {
+      "content": "renderXml(${1:param});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "renx": true
+      }
+    },
+    {
+      "content": "${1:public} void set${3:}(${2:String} ${0:}){\n\tthis.$4 = $4;\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "set": true
+      }
+    },
+    {
+      "content": "${1:public} ${2:String} get${3:}(){\n\treturn this.${0:};\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "get": true
+      }
+    },
+    {
+      "content": "return ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "re": true
+      }
+    },
+    {
+      "content": "break;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "br": true
+      }
+    },
+    {
+      "content": "public void test${1:Name}() throws Exception {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "t": true
+      }
+    },
+    {
+      "content": "@Test\npublic void test${1:Name}() throws Exception {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "test": true
+      }
+    },
+    {
+      "content": "Scanner",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Sc": true
+      }
+    },
+    {
+      "content": "public static void ${1:index}(${2:args}) { ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "action": true
+      }
+    },
+    {
+      "content": "notFound(${1:param});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rnf": true
+      }
+    },
+    {
+      "content": "notFoundIfNull(${1:param});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rnfin": true
+      }
+    },
+    {
+      "content": "redirect(${1:param});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rr": true
+      }
+    },
+    {
+      "content": "unauthorized(${1:param});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ru": true
+      }
+    },
+    {
+      "content": "(unless=${1:param});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "unless": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,1989 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "save_and_open_screenshot${0}",
+      "doc": "save_and_open_screenshot",
+      "label": "Save and open screenshot",
+      "matches": {
+        "saos": true
+      }
+    },
+    {
+      "content": "before_update :${0:method}",
+      "doc": "before_update",
+      "label": "Before update",
+      "matches": {
+        "bu": true
+      }
+    },
+    {
+      "content": "before_save :${0:method}",
+      "doc": "before_save",
+      "label": "Before save",
+      "matches": {
+        "bs": true
+      }
+    },
+    {
+      "content": "params[:${1:id}]",
+      "doc": "getting params using attribute",
+      "label": "Getting Params",
+      "matches": {
+        "pa": true
+      }
+    },
+    {
+      "content": "before_destroy :${0:method}",
+      "doc": "before_destroy",
+      "label": "Before destroy",
+      "matches": {
+        "bd": true
+      }
+    },
+    {
+      "content": "delegate: :${1:method}, to: :${0:object}",
+      "doc": "delegate to",
+      "label": "Delegate to",
+      "matches": {
+        "dt": true
+      }
+    },
+    {
+      "content": "after_create :${0:method}",
+      "doc": "after_create",
+      "label": "After create",
+      "matches": {
+        "ac": true
+      }
+    },
+    {
+      "content": "delegate: :${1:method}, to: :${2:object}, prefix: :${3:prefix}, allow_nil: ${0:allow_nil}",
+      "doc": "delegate to",
+      "label": "Delegate to with prefix",
+      "matches": {
+        "dtp": true
+      }
+    },
+    {
+      "content": "after_validation :${0:method}",
+      "doc": "after_validation",
+      "label": "After validation",
+      "matches": {
+        "av": true
+      }
+    },
+    {
+      "content": "validates :${1:attribute}, presence: true",
+      "doc": "validates presence",
+      "label": "Validate presence",
+      "matches": {
+        "vp": true
+      }
+    },
+    {
+      "content": "after_update :${0:method}",
+      "doc": "after_update",
+      "label": " update",
+      "matches": {
+        "au": true
+      }
+    },
+    {
+      "content": "validates :${1:attribute}, uniqueness: true",
+      "doc": "validates presence",
+      "label": "Validate uniqueness",
+      "matches": {
+        "vu": true
+      }
+    },
+    {
+      "content": "after_save :${0:method}",
+      "doc": "after_create",
+      "label": " save",
+      "matches": {
+        "as": true
+      }
+    },
+    {
+      "content": "add_column :${1:table_name}, :${2:column_name}, :${0:data_type}",
+      "doc": "Migration add column",
+      "label": "Migration add column",
+      "matches": {
+        "mac": true
+      }
+    },
+    {
+      "content": "add_index :${1:table_name}, :${0:column_name}",
+      "doc": "Migration add index",
+      "label": "Migration add index",
+      "matches": {
+        "mai": true
+      }
+    },
+    {
+      "content": "belongs_to :${0:association}",
+      "doc": "belongs_to assocation",
+      "label": "Belongs to",
+      "matches": {
+        "bt": true
+      }
+    },
+    {
+      "content": "remove_column :${1:table_name}, :${0:column_name}",
+      "doc": "Migration remove column",
+      "label": "Migration remove column",
+      "matches": {
+        "mrc": true
+      }
+    },
+    {
+      "content": "belongs_to :${0:association}, polymorphic: true",
+      "doc": "belongs_to polymorphic assocation",
+      "label": "Belongs to polymorphic",
+      "matches": {
+        "btp": true
+      }
+    },
+    {
+      "content": "rename_column :${1:table_name}, :${2:old_column_name}, :${0:new_column_name}",
+      "doc": "Migration rename column",
+      "label": "Migration rename column",
+      "matches": {
+        "mrnc": true
+      }
+    },
+    {
+      "content": "def create\n\t@${1:model_class_name} = ${2:ModelClassName}.new($1_params)\n\trespond_to do |format|\n\t\tif @$1.save\n\t\t\tformat.html { redirect_to @$1, notice: '$2 created' }\n\t\telse\n\t\t\tformat.html { render :new, status: :unprocessable_entity }\n\t\tend\n\tend\nend",
+      "doc": "def create",
+      "label": "Create action",
+      "matches": {
+        "create": true
+      }
+    },
+    {
+      "content": "change_column :${1:table_name}, :${2:old_column_name}, :${0:data_type}",
+      "doc": "Migration  change column",
+      "label": "Migration change column",
+      "matches": {
+        "mcc": true
+      }
+    },
+    {
+      "content": "has_many :${1:object}, dependent: :${0:destroy}",
+      "doc": "has_many dependent",
+      "label": "Has many dependent",
+      "matches": {
+        "hmd": true
+      }
+    },
+    {
+      "content": "before_action :${0:method}",
+      "doc": "before_action",
+      "label": "Before action",
+      "matches": {
+        "ba": true
+      }
+    },
+    {
+      "content": "def destroy\n\t@${1:model_class_name} = ${2:ModelClassName}.find(params[:id])\n\t@$1.destroy!\n\tredirect_to $1s_path, notice: '$2 removed'\nend",
+      "doc": "def destroy",
+      "label": "Destroy action",
+      "matches": {
+        "destroy": true
+      }
+    },
+    {
+      "content": "before_validation :${0:method}",
+      "doc": "before_validation",
+      "label": "Before validation",
+      "matches": {
+        "bv": true
+      }
+    },
+    {
+      "content": "before_create :${0:method}",
+      "doc": "before_create",
+      "label": "Before create",
+      "matches": {
+        "bc": true
+      }
+    },
+    {
+      "content": "def edit\n\t@${1:model_class_name} = ${2:ModelClassName}.find(params[:id])\nend",
+      "doc": "def edit",
+      "label": "Edit action",
+      "matches": {
+        "edit": true
+      }
+    },
+    {
+      "content": "def index\n\t@${1:model_class_name} = ${2:ModelClassName}.all\nend",
+      "doc": "def index",
+      "label": "Index action",
+      "matches": {
+        "index": true
+      }
+    },
+    {
+      "content": "has_many :${1:object}, through: :${0:object}",
+      "doc": "has_many through association",
+      "label": "Has many through",
+      "matches": {
+        "hmt": true
+      }
+    },
+    {
+      "content": "save_and_open_page${0}",
+      "doc": "save_and_open_page",
+      "label": "Save and open page",
+      "matches": {
+        "saop": true
+      }
+    },
+    {
+      "content": "def new\n\t@${1:model_class_name} = ${2:ModelClassName}.new\nend",
+      "doc": "def new",
+      "label": "New action",
+      "matches": {
+        "new": true
+      }
+    },
+    {
+      "content": "has_one :${1:object}, dependent: :${0:destroy}",
+      "doc": "has_one dependent",
+      "label": "Has one dependent",
+      "matches": {
+        "hod": true
+      }
+    },
+    {
+      "content": "has_one :${0:object}",
+      "doc": "has_one association",
+      "label": "Has one",
+      "matches": {
+        "ho": true
+      }
+    },
+    {
+      "content": "def show\n\t@${1:model_class_name} = ${2:ModelClassName}.find(params[:id])\nend",
+      "doc": "def show",
+      "label": "Show action",
+      "matches": {
+        "show": true
+      }
+    },
+    {
+      "content": "has_many :${0:object}",
+      "doc": "has_many association",
+      "label": "Has many",
+      "matches": {
+        "hm": true
+      }
+    },
+    {
+      "content": "def update\n\t@${1:model_class_name} = ${2:ModelClassName}.find(params[:id])\n\trespond_to do |format|\n\t\tif @$1.update($1_params)\n\t\t\tformat.html { redirect_to @$1, notice: '$2 updated' }\n\t\telse\n\t\t\tformat.html { render :edit, status: :unprocessable_entity }\n\t\tend\n\tend\nend",
+      "doc": "def update",
+      "label": "Update action",
+      "matches": {
+        "update": true
+      }
+    },
+    {
+      "content": "def ${1:model_class_name}_params\n\tparams.require(:$1).permit(${2:attributes})\nend",
+      "doc": "def model_params",
+      "label": "Model Params",
+      "matches": {
+        "params": true
+      }
+    },
+    {
+      "content": "after_destroy :${0:method}",
+      "doc": "after_destroy",
+      "label": " destroy",
+      "matches": {
+        "ad": true
+      }
+    },
+    {
+      "content": "scope :${1:name}, -> { where(${2:field}: ${0:value}) }",
+      "doc": "AR scope",
+      "label": "Scope",
+      "matches": {
+        "scope": true
+      }
+    },
+    {
+      "content": "render",
+      "doc": "",
+      "label": "render",
+      "matches": {
+        "rr": true
+      }
+    },
+    {
+      "content": "render action:",
+      "doc": "",
+      "label": "render :action",
+      "matches": {
+        "ra": true
+      }
+    },
+    {
+      "content": "render controller:",
+      "doc": "",
+      "label": "render :controller",
+      "matches": {
+        "rc": true
+      }
+    },
+    {
+      "content": "render file:",
+      "doc": "",
+      "label": "render :file",
+      "matches": {
+        "rf": true
+      }
+    },
+    {
+      "content": "render inline:",
+      "doc": "",
+      "label": "render :inline",
+      "matches": {
+        "ri": true
+      }
+    },
+    {
+      "content": "render json:",
+      "doc": "",
+      "label": "render :json",
+      "matches": {
+        "rj": true
+      }
+    },
+    {
+      "content": "render layout:",
+      "doc": "",
+      "label": "render :layout",
+      "matches": {
+        "rl": true
+      }
+    },
+    {
+      "content": "render partial:",
+      "doc": "",
+      "label": "render :partial",
+      "matches": {
+        "rp": true
+      }
+    },
+    {
+      "content": "render text:",
+      "doc": "",
+      "label": "render :text",
+      "matches": {
+        "rt": true
+      }
+    },
+    {
+      "content": "render xml:",
+      "doc": "",
+      "label": "render :xml",
+      "matches": {
+        "rx": true
+      }
+    },
+    {
+      "content": "distance_of_time_in_words",
+      "doc": "",
+      "label": "distance_of_time_in_words",
+      "matches": {
+        "dotiw": true
+      }
+    },
+    {
+      "content": "time_ago_in_words",
+      "doc": "",
+      "label": "time_ago_in_words",
+      "matches": {
+        "taiw": true
+      }
+    },
+    {
+      "content": "redirect_to",
+      "doc": "",
+      "label": "redirect_to",
+      "matches": {
+        "re": true
+      }
+    },
+    {
+      "content": "redirect_to action:",
+      "doc": "",
+      "label": "redirect_to :action",
+      "matches": {
+        "rea": true
+      }
+    },
+    {
+      "content": "redirect_to controller:",
+      "doc": "",
+      "label": "redirect_to :controller",
+      "matches": {
+        "rec": true
+      }
+    },
+    {
+      "content": "respond_to",
+      "doc": "",
+      "label": "respond_to",
+      "matches": {
+        "rst": true
+      }
+    },
+    {
+      "content": "belongs_to",
+      "doc": "",
+      "label": "belongs_to",
+      "matches": {
+        "bt": true
+      }
+    },
+    {
+      "content": "has_one",
+      "doc": "",
+      "label": "has_one",
+      "matches": {
+        "ho": true
+      }
+    },
+    {
+      "content": "has_many",
+      "doc": "",
+      "label": "has_many",
+      "matches": {
+        "hm": true
+      }
+    },
+    {
+      "content": "has_and_belongs_to_many",
+      "doc": "",
+      "label": "has_and_belongs_to_many",
+      "matches": {
+        "habtm": true
+      }
+    },
+    {
+      "content": "composed_of",
+      "doc": "",
+      "label": "composed_of",
+      "matches": {
+        "co": true
+      }
+    },
+    {
+      "content": "validates_associated",
+      "doc": "",
+      "label": "validates_associated",
+      "matches": {
+        "va": true
+      }
+    },
+    {
+      "content": "validates_acceptance_of",
+      "doc": "",
+      "label": "validates_acceptance_of",
+      "matches": {
+        "vb": true
+      }
+    },
+    {
+      "content": "validates_confirmation_of",
+      "doc": "",
+      "label": "validates_confirmation_of",
+      "matches": {
+        "vc": true
+      }
+    },
+    {
+      "content": "validates_exclusion_of",
+      "doc": "",
+      "label": "validates_exclusion_of",
+      "matches": {
+        "ve": true
+      }
+    },
+    {
+      "content": "validates_format_of",
+      "doc": "",
+      "label": "validates_format_of",
+      "matches": {
+        "vf": true
+      }
+    },
+    {
+      "content": "validates_inclusion_of",
+      "doc": "",
+      "label": "validates_inclusion_of",
+      "matches": {
+        "vi": true
+      }
+    },
+    {
+      "content": "validates_length_of",
+      "doc": "",
+      "label": "validates_length_of",
+      "matches": {
+        "vl": true
+      }
+    },
+    {
+      "content": "validates_numericality_of",
+      "doc": "",
+      "label": "validates_numericality_of",
+      "matches": {
+        "vn": true
+      }
+    },
+    {
+      "content": "validates_presence_of",
+      "doc": "",
+      "label": "validates_presence_of",
+      "matches": {
+        "vp": true
+      }
+    },
+    {
+      "content": "validates_uniqueness_of",
+      "doc": "",
+      "label": "validates_uniqueness_of",
+      "matches": {
+        "vu": true
+      }
+    },
+    {
+      "content": "logger.debug",
+      "doc": "",
+      "label": "logger.debug",
+      "matches": {
+        "logd": true
+      }
+    },
+    {
+      "content": "logger.info",
+      "doc": "",
+      "label": "logger.info",
+      "matches": {
+        "logi": true
+      }
+    },
+    {
+      "content": "logger.warn",
+      "doc": "",
+      "label": "logger.warn",
+      "matches": {
+        "logw": true
+      }
+    },
+    {
+      "content": "logger.error",
+      "doc": "",
+      "label": "logger.error",
+      "matches": {
+        "loge": true
+      }
+    },
+    {
+      "content": "logger.fatal",
+      "doc": "",
+      "label": "logger.fatal",
+      "matches": {
+        "logf": true
+      }
+    },
+    {
+      "content": "action:",
+      "doc": "",
+      "label": "action:",
+      "matches": {
+        "action": true
+      }
+    },
+    {
+      "content": "co________:",
+      "doc": "",
+      "label": "co________:",
+      "matches": {
+        "co_": true
+      }
+    },
+    {
+      "content": "id:",
+      "doc": "",
+      "label": "id:",
+      "matches": {
+        "id": true
+      }
+    },
+    {
+      "content": "object:",
+      "doc": "",
+      "label": "object:",
+      "matches": {
+        "object": true
+      }
+    },
+    {
+      "content": "partial:",
+      "doc": "",
+      "label": "partial:",
+      "matches": {
+        "partial": true
+      }
+    },
+    {
+      "content": "assert_redirected_to ${1:action}: '${2:index}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "art": true
+      }
+    },
+    {
+      "content": "assert_redirected_to ${0:model}s_path",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "artpp": true
+      }
+    },
+    {
+      "content": "assert_difference '${1:Model}.${2:count}', ${3:1} do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "asd": true
+      }
+    },
+    {
+      "content": "assert_no_difference '${1:Model}.${2:count}' do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "asnd": true
+      }
+    },
+    {
+      "content": "assert_response :${1:success}, @response.body",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "asre": true
+      }
+    },
+    {
+      "content": "assert_rjs :${1:replace}, '${0:dom id}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "asrj": true
+      }
+    },
+    {
+      "content": "assert_select '${1:path}', ${2:text}: '${3:inner_html}' ${4:do}\n\t${0}\nend",
+      "doc": "",
+      "label": "assert_select(..)",
+      "matches": {
+        "ass": true
+      }
+    },
+    {
+      "content": "before_action :${0:method}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ba": true
+      }
+    },
+    {
+      "content": "before_filter :${0:method}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bf": true
+      }
+    },
+    {
+      "content": "belongs_to :${0:association}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bt": true
+      }
+    },
+    {
+      "content": "belongs_to :${1:association}, polymorphic: true",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "btp": true
+      }
+    },
+    {
+      "content": "cattr_accessor :${0:attr_names}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "crw": true
+      }
+    },
+    {
+      "content": "def create\n\t@${1:model_class_name} = ${2:ModelClassName}.new($1_params)\n\n\trespond_to do |format|\n\t\tif @$1.save\n\t\t\tflash[:notice] = '$2 was successfully created.'\n\t\t\tformat.html { redirect_to(@$1) }\n\t\t\tformat.json  { render json: @$1, status: :created, location: @$1 }\n\t\telse\n\t\t\tformat.html { render action: 'new' }\n\t\t\tformat.json  { render json: @$1.errors, status: :unprocessable_entity }\n\t\tend\n\tend\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defcreate": true
+      }
+    },
+    {
+      "content": "def destroy\n\t@${1:model_class_name} = ${2:ModelClassName}.find(params[:id])\n\t@$1.destroy\n\n\trespond_to do |format|\n\t\tformat.html { redirect_to($1s_url) }\n\t\tformat.json  { head :ok }\n\tend\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defdestroy": true
+      }
+    },
+    {
+      "content": "def edit\n\t@${1:model_class_name} = ${0:ModelClassName}.find(params[:id])\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defedit": true
+      }
+    },
+    {
+      "content": "def index\n\t@${1:model_class_name} = ${2:ModelClassName}.all\n\n\trespond_to do |format|\n\t\tformat.html # index.html.erb\n\t\tformat.json  { render json: @$1s }\n\tend\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defindex": true
+      }
+    },
+    {
+      "content": "def new\n\t@${1:model_class_name} = ${2:ModelClassName}.new\n\n\trespond_to do |format|\n\t\tformat.html # new.html.erb\n\t\tformat.json  { render json: @$1 }\n\tend\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defnew": true
+      }
+    },
+    {
+      "content": "def show\n\t@${1:model_class_name} = ${2:ModelClassName}.find(params[:id])\n\n\trespond_to do |format|\n\t\tformat.html # show.html.erb\n\t\tformat.json  { render json: @$1 }\n\tend\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defshow": true
+      }
+    },
+    {
+      "content": "def update\n\t@${1:model_class_name} = ${2:ModelClassName}.find(params[:id])\n\n\trespond_to do |format|\n\t\tif @$1.update($1_params)\n\t\t\tflash[:notice] = '$2 was successfully updated.'\n\t\t\tformat.html { redirect_to(@$1) }\n\t\t\tformat.json  { head :ok }\n\t\telse\n\t\t\tformat.html { render action: 'edit' }\n\t\t\tformat.json  { render json: @$1.errors, status: :unprocessable_entity }\n\t\tend\n\tend\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defupdate": true
+      }
+    },
+    {
+      "content": "def ${1:model_class_name}_params\n\tparams.require(:$1).permit()\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defparams": true
+      }
+    },
+    {
+      "content": "delegate :${1:methods}, to: :${0:object}",
+      "doc": "",
+      "label": "delegate .. to",
+      "matches": {
+        "dele": true
+      }
+    },
+    {
+      "content": "delegate :${1:methods}, to: :${2:object}, prefix: :${3:prefix}, allow_nil: ${0:allow_nil}",
+      "doc": "",
+      "label": "delegate .. to .. prefix .. allow_nil",
+      "matches": {
+        "dele": true
+      }
+    },
+    {
+      "content": "alias_method_chain :${1:method_name}, :${0:feature}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "amc": true
+      }
+    },
+    {
+      "content": "flash[:${1:notice}] = '${0}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "flash": true
+      }
+    },
+    {
+      "content": "has_and_belongs_to_many :${1:object}, join_table: '${2:table_name}', foreign_key: '${3}_id'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "habtm": true
+      }
+    },
+    {
+      "content": "has_many :${0:object}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "hm": true
+      }
+    },
+    {
+      "content": "has_many :${1:other}s, class_name: '${2:$1}', foreign_key: '${3:$1}_id', dependent: :destroy",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "hmd": true
+      }
+    },
+    {
+      "content": "has_many :${1:object}, through: :${0:object}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "hmt": true
+      }
+    },
+    {
+      "content": "has_one :${0:object}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ho": true
+      }
+    },
+    {
+      "content": "has_one :${1:object}, dependent: :${0:destroy}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "hod": true
+      }
+    },
+    {
+      "content": "I18n.t('${1:type.key}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "i18": true
+      }
+    },
+    {
+      "content": "<%= image_submit_tag('${1:agree.png}', id: '${2:id}'${0}) %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ist": true
+      }
+    },
+    {
+      "content": "Rails.logger.${1:debug} ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "log": true
+      }
+    },
+    {
+      "content": "RAILS_DEFAULT_LOGGER.${1:debug} ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "log2": true
+      }
+    },
+    {
+      "content": "logger.debug { '${1:message}' }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "logd": true
+      }
+    },
+    {
+      "content": "logger.error { '${1:message}' }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "loge": true
+      }
+    },
+    {
+      "content": "logger.fatal { '${1:message}' }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "logf": true
+      }
+    },
+    {
+      "content": "logger.info { '${1:message}' }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "logi": true
+      }
+    },
+    {
+      "content": "logger.warn { '${1:message}' }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "logw": true
+      }
+    },
+    {
+      "content": "${1:map}.${2:connect} '${0:controller/:action/:id}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mapc": true
+      }
+    },
+    {
+      "content": "${1:map}.catch_all '*${2:anything}', controller: '${3:default}', action: '${4:error}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mapca": true
+      }
+    },
+    {
+      "content": "${1:map}.resource :${0:resource}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mapr": true
+      }
+    },
+    {
+      "content": "${1:map}.resources :${0:resource}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "maprs": true
+      }
+    },
+    {
+      "content": "${1:map}.with_options ${2:controller}: '${3:thing}' do |$3|\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mapwo": true
+      }
+    },
+    {
+      "content": "before_validation :${0:method}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mbv": true
+      }
+    },
+    {
+      "content": "before_create :${0:method}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mbc": true
+      }
+    },
+    {
+      "content": "before_update :${0:method}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mbu": true
+      }
+    },
+    {
+      "content": "before_save :${0:method}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mbs": true
+      }
+    },
+    {
+      "content": "before_destroy :${0:method}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mbd": true
+      }
+    },
+    {
+      "content": "after_validation :${0:method}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mav": true
+      }
+    },
+    {
+      "content": "after_find :${0:method}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "maf": true
+      }
+    },
+    {
+      "content": "after_touch :${0:method}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mat": true
+      }
+    },
+    {
+      "content": "after_create :${0:method}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "macr": true
+      }
+    },
+    {
+      "content": "after_update :${0:method}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mau": true
+      }
+    },
+    {
+      "content": "after_save :${0:method}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mas": true
+      }
+    },
+    {
+      "content": "after_destroy :${0:method}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mad": true
+      }
+    },
+    {
+      "content": "around_create :${0:method}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "marc": true
+      }
+    },
+    {
+      "content": "around_update :${0:method}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "maru": true
+      }
+    },
+    {
+      "content": "around_save :${0:method}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mars": true
+      }
+    },
+    {
+      "content": "around_destroy :${0:method}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mard": true
+      }
+    },
+    {
+      "content": "change_table :${1:table_name} do |t|\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mcht": true
+      }
+    },
+    {
+      "content": "map(&:${0:id})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mp": true
+      }
+    },
+    {
+      "content": "mattr_accessor :${0:attr_names}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mrw": true
+      }
+    },
+    {
+      "content": "order('${0:field}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "oa": true
+      }
+    },
+    {
+      "content": "order('${0:field} DESC')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "od": true
+      }
+    },
+    {
+      "content": "params[:${1:id}]",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pa": true
+      }
+    },
+    {
+      "content": "render action: '${0:action}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ra": true
+      }
+    },
+    {
+      "content": "render action: '${1:action}', layout: '${0:layoutname}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ral": true
+      }
+    },
+    {
+      "content": "respond_to do |format|\n\tformat.${1:html} { ${0} }\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rest": true
+      }
+    },
+    {
+      "content": "render file: '${0:filepath}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rf": true
+      }
+    },
+    {
+      "content": "render file: '${1:filepath}', use_full_path: ${0:false}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rfu": true
+      }
+    },
+    {
+      "content": "render inline: \"${0:<%= 'hello' %>}\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ri": true
+      }
+    },
+    {
+      "content": "render inline: \"${1:<%= 'hello' %>}\", locals: { ${2:name}: '${3:value}'${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ril": true
+      }
+    },
+    {
+      "content": "render inline: \"${1:<%= 'hello' %>}\", type: ${0::rxml}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rit": true
+      }
+    },
+    {
+      "content": "render json: '${0:text to render}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rjson": true
+      }
+    },
+    {
+      "content": "render layout: '${0:layoutname}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rl": true
+      }
+    },
+    {
+      "content": "render nothing: ${0:true}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rn": true
+      }
+    },
+    {
+      "content": "render nothing: ${1:true}, status: ${0:401}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rns": true
+      }
+    },
+    {
+      "content": "render partial: '${0:item}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rp": true
+      }
+    },
+    {
+      "content": "render partial: '${1:item}', status: ${0:500}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rps": true
+      }
+    },
+    {
+      "content": "render text: '${0:text to render}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rt": true
+      }
+    },
+    {
+      "content": "render text: '${1:text to render}', layout: '${0:layoutname}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rtl": true
+      }
+    },
+    {
+      "content": "render text: '${1:text to render}', layout: ${0:true}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rtlt": true
+      }
+    },
+    {
+      "content": "render text: '${1:text to render}', status: ${0:401}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rts": true
+      }
+    },
+    {
+      "content": "render :update do |${1:page}|\n\t$1.${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ru": true
+      }
+    },
+    {
+      "content": "render xml: '${0:text to render}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rxml": true
+      }
+    },
+    {
+      "content": "scope :${1:name}, -> { where(${2:field}: ${0:value}) }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sc": true
+      }
+    },
+    {
+      "content": "scope :${1:name}, lambda do |${2:value}|\n\twhere('${3:field = ?}', ${0:value})\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sl": true
+      }
+    },
+    {
+      "content": "Digest::SHA1.hexdigest(${0:string})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sha1": true
+      }
+    },
+    {
+      "content": "validates_associated :${0:attribute}",
+      "doc": "",
+      "label": "validates_associated",
+      "matches": {
+        "va": true
+      }
+    },
+    {
+      "content": "validates :${0:terms}, acceptance: true",
+      "doc": "",
+      "label": "validates .., acceptance: true",
+      "matches": {
+        "va": true
+      }
+    },
+    {
+      "content": "validates :${0:attribute}, confirmation: true",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vc": true
+      }
+    },
+    {
+      "content": "validates :${1:attribute}, exclusion: { in: ${0:%w( mov avi )} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ve": true
+      }
+    },
+    {
+      "content": "validates :${1:attribute}, format: { with: /${0:regex}/ }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vf": true
+      }
+    },
+    {
+      "content": "validates :${1:attribute}, inclusion: { in: %w(${0: mov avi }) }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vi": true
+      }
+    },
+    {
+      "content": "validates :${1:attribute}, length: { in: ${2:3}..${0:20} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vl": true
+      }
+    },
+    {
+      "content": "validates :${0:attribute}, numericality: true",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vn": true
+      }
+    },
+    {
+      "content": "validates :${0:attribute}, presence: true",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vp": true
+      }
+    },
+    {
+      "content": "validates :${0:attribute}, uniqueness: true",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vu": true
+      }
+    },
+    {
+      "content": "format.${1:js|xml|html} { ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "format": true
+      }
+    },
+    {
+      "content": "where(${1:'conditions'}${0:, bind_var})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wc": true
+      }
+    },
+    {
+      "content": "where(${1:field}: ${0:value})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wf": true
+      }
+    },
+    {
+      "content": "xhr :delete, :${1:destroy}, id: ${2:1}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "xdelete": true
+      }
+    },
+    {
+      "content": "xhr :get, :${1:show}, id: ${2:1}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "xget": true
+      }
+    },
+    {
+      "content": "xhr :post, :${1:create}, ${2:object}: ${3:object}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "xpost": true
+      }
+    },
+    {
+      "content": "xhr :put, :${1:update}, id: ${2:1}, ${3:object}: ${4:object}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "xput": true
+      }
+    },
+    {
+      "content": "test '${1:should do something}' do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "test": true
+      }
+    },
+    {
+      "content": "add_column :${1:table_name}, :${2:column_name}, :${0:data_type}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mac": true
+      }
+    },
+    {
+      "content": "add_index :${1:table_name}, :${0:column_name}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mai": true
+      }
+    },
+    {
+      "content": "remove_column :${1:table_name}, :${0:column_name}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mrc": true
+      }
+    },
+    {
+      "content": "rename_column :${1:table_name}, :${2:old_column_name}, :${0:new_column_name}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mrnc": true
+      }
+    },
+    {
+      "content": "change_column :${1:table}, :${2:column}, :${0:type}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mcc": true
+      }
+    },
+    {
+      "content": "t.${1:string} :${2:title}${3:, null: false}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mnc": true
+      }
+    },
+    {
+      "content": "create_table :${1:table_name} do |t|\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mct": true
+      }
+    },
+    {
+      "content": "reversible do |dir|\n\tdir.up do\n\t\t${0}\n\tend\n\n\tdir.down do\n\tend\nend",
+      "doc": "",
+      "label": "reversible do |dir| ... dir.up .. dir.down .. end",
+      "matches": {
+        "mrev": true
+      }
+    },
+    {
+      "content": "class Migration${1:class_name} < ApplicationRecord\n\tself.table_name = :${2:model_name}s\nend",
+      "doc": "",
+      "label": "class Migration... < ApplicationModel .. self.table_name .. end",
+      "matches": {
+        "cmm": true
+      }
+    },
+    {
+      "content": "t.remove :${0:column}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "trc": true
+      }
+    },
+    {
+      "content": "t.rename :${1:old_column_name}, :${2:new_column_name}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tre": true
+      }
+    },
+    {
+      "content": "t.references :${0:model}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tref": true
+      }
+    },
+    {
+      "content": "t.boolean :${1:title}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tcb": true
+      }
+    },
+    {
+      "content": "t.binary :${1:title}, limit: ${2:2}.megabytes\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tcbi": true
+      }
+    },
+    {
+      "content": "t.decimal :${1:title}, precision: ${2:10}, scale: ${3:2}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tcd": true
+      }
+    },
+    {
+      "content": "t.date :${1:title}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tcda": true
+      }
+    },
+    {
+      "content": "t.datetime :${1:title}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tcdt": true
+      }
+    },
+    {
+      "content": "t.float :${1:title}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tcf": true
+      }
+    },
+    {
+      "content": "t.change :${1:name}, :${2:string}, ${3:limit}: ${4:80}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tch": true
+      }
+    },
+    {
+      "content": "t.integer :${1:title}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tci": true
+      }
+    },
+    {
+      "content": "t.integer :lock_version, null: false, default: 0\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tcl": true
+      }
+    },
+    {
+      "content": "t.references :${1:taggable}, polymorphic: { default: '${2:Photo}' }\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tcr": true
+      }
+    },
+    {
+      "content": "t.string :${1:title}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tcs": true
+      }
+    },
+    {
+      "content": "t.text :${1:title}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tct": true
+      }
+    },
+    {
+      "content": "t.time :${1:title}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tcti": true
+      }
+    },
+    {
+      "content": "t.timestamp :${1:title}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tcts": true
+      }
+    },
+    {
+      "content": "t.timestamps\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tctss": true
+      }
+    },
+    {
+      "content": "it { should filter_param :${0:key} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "isfp": true
+      }
+    },
+    {
+      "content": "it { should redirect_to ${0:url} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "isrt": true
+      }
+    },
+    {
+      "content": "it { should render_template ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "isrtp": true
+      }
+    },
+    {
+      "content": "it { should render_with_layout ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "isrwl": true
+      }
+    },
+    {
+      "content": "it { should rescue_from ${0:exception} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "isrf": true
+      }
+    },
+    {
+      "content": "it { should respond_with ${0:status} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "isrw": true
+      }
+    },
+    {
+      "content": "it { should route(:${1:method}, '${0:path}') }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "isr": true
+      }
+    },
+    {
+      "content": "it { should set_session :${0:key} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "isss": true
+      }
+    },
+    {
+      "content": "it { should set_the_flash('${0}') }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "issf": true
+      }
+    },
+    {
+      "content": "it { should allow_mass_assignment_of :${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "isama": true
+      }
+    },
+    {
+      "content": "it { should allow_value(${1}).for :${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "isav": true
+      }
+    },
+    {
+      "content": "it { should ensure_exclusion_of :${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "isee": true
+      }
+    },
+    {
+      "content": "it { should ensure_inclusion_of :${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "isei": true
+      }
+    },
+    {
+      "content": "it { should ensure_length_of :${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "isel": true
+      }
+    },
+    {
+      "content": "it { should validate_acceptance_of :${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "isva": true
+      }
+    },
+    {
+      "content": "it { should validate_confirmation_of :${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "isvc": true
+      }
+    },
+    {
+      "content": "it { should validate_numericality_of :${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "isvn": true
+      }
+    },
+    {
+      "content": "it { should validate_presence_of :${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "isvp": true
+      }
+    },
+    {
+      "content": "it { should validate_uniqueness_of :${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "isvu": true
+      }
+    },
+    {
+      "content": "it { should accept_nested_attributes_for :${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "isana": true
+      }
+    },
+    {
+      "content": "it { should belong_to :${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "isbt": true
+      }
+    },
+    {
+      "content": "it { should belong_to(:${1}).counter_cache ${0:true} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "isbtcc": true
+      }
+    },
+    {
+      "content": "it { should have_and_belong_to_many :${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ishbtm": true
+      }
+    },
+    {
+      "content": "it { should be_valid }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "isbv": true
+      }
+    },
+    {
+      "content": "it { should have_db_column :${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ishc": true
+      }
+    },
+    {
+      "content": "it { should have_db_index :${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ishi": true
+      }
+    },
+    {
+      "content": "it { should have_many :${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ishm": true
+      }
+    },
+    {
+      "content": "it { should have_many(:${1}).through :${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ishmt": true
+      }
+    },
+    {
+      "content": "it { should have_one :${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "isho": true
+      }
+    },
+    {
+      "content": "it { should have_readonly_attribute :${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ishro": true
+      }
+    },
+    {
+      "content": "it { should serialize :${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "iss": true
+      }
+    },
+    {
+      "content": "it { should respond_to :${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "isres": true
+      }
+    },
+    {
+      "content": "it { should respond_to(:${1}).with(${0}).arguments }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "isresw": true
+      }
+    },
+    {
+      "content": "${1:super_class}.instance_method(:${0:method}).bind(self).call",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "super_call": true
+      }
+    }
+  ]
+}

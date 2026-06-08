@@ -1,0 +1,85 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "const { GraphQLClient } = require('graphql-request');",
+      "doc": "",
+      "label": "graphql-request-require-client",
+      "matches": {
+        "graphql-request require client": true
+      }
+    },
+    {
+      "content": "const ${1:results} = await request(\n  ${2:url},\n  ${3:query}\n);",
+      "doc": "",
+      "label": "graphql-request-request",
+      "matches": {
+        "graphql-request request": true
+      }
+    },
+    {
+      "content": "const { request } = require('graphql-request');",
+      "doc": "",
+      "label": "graphql-request-require-request",
+      "matches": {
+        "graphql-request require request": true
+      }
+    },
+    {
+      "content": "const ${1:results} = await request(\n  ${2:url},\n  ${3:query},\n  ${4:variables}\n);",
+      "doc": "",
+      "label": "graphql-request-request-variables",
+      "matches": {
+        "graphql-request request variables": true
+      }
+    },
+    {
+      "content": "import { GraphQLClient } from 'graphql-request';",
+      "doc": "",
+      "label": "graphql-request-import-client",
+      "matches": {
+        "graphql-request import client": true
+      }
+    },
+    {
+      "content": "const ${1:client} = new GraphQLClient(\n  ${2:url},\n  {\n    headers: {\n      ${3:key}: ${4:value}\n    },\n  }\n);",
+      "doc": "",
+      "label": "graphql-request-client",
+      "matches": {
+        "graphql-request client": true
+      }
+    },
+    {
+      "content": "const ${1:results} = await ${2:client}.request(\n  ${3:query},\n  ${4:variables}\n);",
+      "doc": "",
+      "label": "graphql-request-client-request-variables",
+      "matches": {
+        "graphql-request client request variables": true
+      }
+    },
+    {
+      "content": "import { request } from 'graphql-request';",
+      "doc": "",
+      "label": "graphql-request-import-request",
+      "matches": {
+        "graphql-request import request": true
+      }
+    },
+    {
+      "content": "const ${1:results} = await ${2:client}.request(\n  ${3:query}\n);",
+      "doc": "",
+      "label": "graphql-request-client-request",
+      "matches": {
+        "graphql-request client request": true
+      }
+    },
+    {
+      "content": "const ${1:queryName} = `query ${1:queryName} {\n  ${2:query}\n}\n`;",
+      "doc": "",
+      "label": "graphql-request-query",
+      "matches": {
+        "graphql-request query": true
+      }
+    }
+  ]
+}

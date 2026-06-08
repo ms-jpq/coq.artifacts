@@ -1,0 +1,29 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "defmodule ${1:AppName}Web.${2:ControllerName}Controller do\n\tuse $1Web, :controller\n\n\t${3}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cont": true
+      }
+    },
+    {
+      "content": "defmodule ${1:AppName}Web.${2:ViewName}View do\n\tuse $1Web, :view\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "view": true
+      }
+    },
+    {
+      "content": "defmodule ${1:AppName}Web.${2:ChannelName}Channel do\n\tuse $1Web, :channel\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "chan": true
+      }
+    }
+  ]
+}

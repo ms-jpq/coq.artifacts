@@ -1,0 +1,157 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "<%@page contentType=\"text/html\" pageEncoding=\"UTF-8\"%>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "@page": true
+      }
+    },
+    {
+      "content": "<%@ taglib uri=\"http://java.sun.com/jsp/jstl/core\" prefix=\"c\" %>\n<%@ taglib uri=\"http://java.sun.com/jsp/jstl/functions\" prefix=\"fn\" %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "jstl": true
+      }
+    },
+    {
+      "content": "<%@ taglib uri=\"http://java.sun.com/jsp/jstl/core\" prefix=\"c\" %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "jstl:c": true
+      }
+    },
+    {
+      "content": "<%@ taglib uri=\"http://java.sun.com/jsp/jstl/functions\" prefix=\"fn\" %>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "jstl:fn": true
+      }
+    },
+    {
+      "content": "<c:out value=\"${1}\" default=\"${0}\" />",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cout": true
+      }
+    },
+    {
+      "content": "<c:set var=\"${1}\" value=\"${0}\" />",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cset": true
+      }
+    },
+    {
+      "content": "<c:remove var=\"${1}\" scope=\"${0:page}\" />",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cremove": true
+      }
+    },
+    {
+      "content": "<c:catch var=\"${0}\" />",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ccatch": true
+      }
+    },
+    {
+      "content": "<c:if test=\"\\${${1}}\">\n\t${0}\n</c:if>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cif": true
+      }
+    },
+    {
+      "content": "<c:choose>\n\t${0}\n</c:choose>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cchoose": true
+      }
+    },
+    {
+      "content": "<c:when test=\"\\${${1}}\">\n\t${0}\n</c:when>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cwhen": true
+      }
+    },
+    {
+      "content": "<c:otherwise>\n\t${0}\n</c:otherwise>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cother": true
+      }
+    },
+    {
+      "content": "<c:param name=\"${1}\" value=\"${0}\" />",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cparam": true
+      }
+    },
+    {
+      "content": "<c:param name=\"${1}\" value=\"${2}\" />\ncparam+${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cparam+": true
+      }
+    },
+    {
+      "content": "<c:import url=\"${1}\" />",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cimport": true
+      }
+    },
+    {
+      "content": "<c:import url=\"${1}\">\n\t<c:param name=\"${2}\" value=\"${3}\" />\n\tcparam+${0}\n</c:import>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cimport+": true
+      }
+    },
+    {
+      "content": "<c:url value=\"${1}\" var=\"${2}\" />\n<a href=\"\\${$2}\">${0}</a>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "curl": true
+      }
+    },
+    {
+      "content": "<c:url value=\"${1}\" var=\"${2}\">\n\t<c:param name=\"${4}\" value=\"${5}\" />\n\tcparam+${0}\n</c:url>\n<a href=\"\\${$2}\">${3}</a>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "curl+": true
+      }
+    },
+    {
+      "content": "<c:redirect url=\"${0}\" />",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "credirect": true
+      }
+    }
+  ]
+}

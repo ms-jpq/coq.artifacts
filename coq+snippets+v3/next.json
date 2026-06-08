@@ -1,0 +1,237 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "${1:${TM_FILENAME_BASE}}.getInitialProps = ({ req }) => {\treturn $2}",
+      "doc": "Next.js Get initial props outside Component",
+      "label": "Next.js Get initial props outside Component",
+      "matches": {
+        "gip": true
+      }
+    },
+    {
+      "content": "import Image from 'next/image';",
+      "doc": "Next.js 10 Image component import",
+      "label": "Import Next Image component",
+      "matches": {
+        "imni": true
+      }
+    },
+    {
+      "content": "static async getInitialProps() {\n\treturn { $1 };\n}",
+      "doc": "Next.js static async getInitialProps() inside Class Component",
+      "label": "Next.js getInitialProps() inside Class Component",
+      "matches": {
+        "cgip": true
+      }
+    },
+    {
+      "content": "<Link href={{ pathname: \"$1\", query: { queryName: queryValue } }}>\n\t<a>\n\t\t$0\n\t</a>\n</Link>",
+      "doc": "Next.js Link with Pathname",
+      "label": "Use Next.js Link With Pathname",
+      "matches": {
+        "uslp": true
+      }
+    },
+    {
+      "content": "export async function getStaticProps(context) {\n\treturn {\n\t\tprops: {$1}\n\t};\n}",
+      "doc": "Next.js getStaticProps() export",
+      "label": "Next.js getStaticProps() export",
+      "matches": {
+        "gsp": true
+      }
+    },
+    {
+      "content": "<Link href=\"/[$1]\" as={`/${2:SLUG_NAME}`}>\n\t<a>\n\t\t$0\n\t</a>\n</Link>",
+      "doc": "Next.js Link Tag with Dynamic Route",
+      "label": "Use Next.js LinkTagWithDynmicRoute",
+      "matches": {
+        "usld": true
+      }
+    },
+    {
+      "content": "import Router from 'next/router';",
+      "doc": "Next.js Router import",
+      "label": "importNextRouter",
+      "matches": {
+        "imro": true
+      }
+    },
+    {
+      "content": "const router = useRouter();",
+      "doc": "Declare Next.js Router from useRouter",
+      "label": "Next.js Router from useRouter",
+      "matches": {
+        "usro": true
+      }
+    },
+    {
+      "content": "import Head from 'next/head';",
+      "doc": "Next.js Head import",
+      "label": "import Next.js Head",
+      "matches": {
+        "imh": true
+      }
+    },
+    {
+      "content": "<Image alt=\"$1\" src=\"$1\" unsized=\"$1\" />",
+      "doc": "Use sized Next Image component",
+      "label": "Use unsized Next Image component",
+      "matches": {
+        "usimu": true
+      }
+    },
+    {
+      "content": "<Image alt=\"$1\" src=\"$1\" width=\"$1\" height=\"$1\" />",
+      "doc": "Use sized Next Image component",
+      "label": "Use sized Next Image component",
+      "matches": {
+        "usim": true
+      }
+    },
+    {
+      "content": "import Link from 'next/link';",
+      "doc": "Next.js Link import",
+      "label": "import Next.js Link",
+      "matches": {
+        "iml": true
+      }
+    },
+    {
+      "content": "import Router, { withRouter } from 'next/router';",
+      "doc": "Next.js Router and { withRouter } import",
+      "label": "importNextRouterWithRouter",
+      "matches": {
+        "imrow": true
+      }
+    },
+    {
+      "content": "<Link href=\"$1\">\n\t<a>\n\t\t$0\n\t</a>\n</Link>",
+      "doc": "Next.js Link Tag with <a>",
+      "label": "Use Next.js Link",
+      "matches": {
+        "usl": true
+      }
+    },
+    {
+      "content": "export async function getStaticPaths() {\n\treturn {\n\t\tpaths: [\n\t\t\t{ params: { $1 }}\n\t\t],\n\t\tfallback: $2\n\t};\n}",
+      "doc": "Next.js pre-renders all the static paths https://nextjs.org/docs/basic-features/data-fetching#getstaticpaths-static-generation",
+      "label": "Next.js getStaticPaths() export",
+      "matches": {
+        "gspt": true
+      }
+    },
+    {
+      "content": "export async function getServerSideProps(context) {\n\treturn {\n\t\tprops: {$1}\n\t};\n}",
+      "doc": "Next.js getServerSideProps() export https://nextjs.org/docs/basic-features/data-fetching#getserversideprops-server-side-rendering",
+      "label": "Next.js getServerSideProps() export",
+      "matches": {
+        "gssp": true
+      }
+    },
+    {
+      "content": "import { useRouter } from 'next/router';",
+      "doc": "Next.js { useRouter } import",
+      "label": "importNextUseRouter",
+      "matches": {
+        "imuro": true
+      }
+    },
+    {
+      "content": "const { $1 } = router.query;",
+      "doc": "Destructure Next.js query param from Router from useRouter",
+      "label": "Next.js query param from useRouter",
+      "matches": {
+        "nroq": true
+      }
+    },
+    {
+      "content": "export async function getStaticProps(${1:context}) {\n  return {\n    props: {}, \n  }\n}",
+      "doc": "If you export an async function called getStaticProps from a page, Next.js will pre-render this page at build time using the props returned by getStaticProps. The context parameter is an object containing the following keys: params, preview, previewData.",
+      "label": "next-get-static-props",
+      "matches": {
+        "next getstaticprops": true
+      }
+    },
+    {
+      "content": "export default (req, res) => {\n  if (req.method === 'POST') {\n    $1\n  } else {\n    $2\n  }\n};",
+      "doc": "",
+      "label": "next-api-method",
+      "matches": {
+        "next api method": true
+      }
+    },
+    {
+      "content": "export default (req, res) => {\n  res.json(${1:object});\n};",
+      "doc": "API routes provide built in middlewares which parse the incoming request. Those middlewares are: req.cookies, req.body, req.query.",
+      "label": "next-api",
+      "matches": {
+        "next api": true
+      }
+    },
+    {
+      "content": "<Link href=\"${1:#}\">\n  <a>${2:content}</a>\n</Link>",
+      "doc": "Link accepts the following props: href, as, passHref, prefetch, replace, scroll, shallow",
+      "label": "next-link",
+      "matches": {
+        "next link": true
+      }
+    },
+    {
+      "content": "import Head from 'next/head'",
+      "doc": "",
+      "label": "next-import-head",
+      "matches": {
+        "next import head": true
+      }
+    },
+    {
+      "content": "import Link from 'next/link'",
+      "doc": "",
+      "label": "next-import-link",
+      "matches": {
+        "next import link": true
+      }
+    },
+    {
+      "content": "export async function getServerSideProps(${1:context}) {\n  return {\n    props: {}, \n  }\n}",
+      "doc": "If you export an async function called getServerSideProps from a page, Next.js will pre-render this page on each request using the data returned by getServerSideProps. The context parameter is an object containing the following keys: params, req, res, query, preview, previewData.",
+      "label": "next-get-server-side-props",
+      "matches": {
+        "next getserversideprops": true
+      }
+    },
+    {
+      "content": "<Head>\n${1:content}\n</Head>",
+      "doc": "",
+      "label": "next-head",
+      "matches": {
+        "next head": true
+      }
+    },
+    {
+      "content": "export async function getStaticPaths() {\n  return {\n    paths: [\n      { params: { ... } } \n    ],\n    fallback: ${1|true,false|}\n  };\n}",
+      "doc": "If a page has dynamic routes (documentation) and uses getStaticProps it needs to define a list of paths that have to be rendered to HTML at build time. If you export an async function called getStaticPaths from a page that uses dynamic routes, Next.js will statically pre-render all the paths specified by getStaticPaths.",
+      "label": "next-get-static-paths",
+      "matches": {
+        "next getstaticpaths": true
+      }
+    },
+    {
+      "content": "import { useRouter } from 'next/router'",
+      "doc": "",
+      "label": "next-import-use-router",
+      "matches": {
+        "next import userouter": true
+      }
+    },
+    {
+      "content": "<Link href={{ pathname: '${1:/path}', query: { ${2:paramName}: '${3:paramValue}' } }}>\n  <a>${4:content}</a>\n</Link>",
+      "doc": "",
+      "label": "next-link-url-object",
+      "matches": {
+        "next link url object": true
+      }
+    }
+  ]
+}

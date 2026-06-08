@@ -1,0 +1,349 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "foreach (${1:var} ${2:item} in ${3:collection})\n{\n    $0\n}",
+      "doc": "Foreach statement",
+      "label": "Foreach statement",
+      "matches": {
+        "foreach": true
+      }
+    },
+    {
+      "content": "enum ${1:Name}\n{\n    $0\n}",
+      "doc": "Enum",
+      "label": "Enum",
+      "matches": {
+        "enum": true
+      }
+    },
+    {
+      "content": "for (int ${1:i} = ${2:length} - 1; ${1:i} >= 0 ; ${1:i}--)\n{\n    $0\n}",
+      "doc": "Reverse for loop",
+      "label": "Reverse for loop",
+      "matches": {
+        "forr": true
+      }
+    },
+    {
+      "content": "unchecked\n{\n    $0\n}",
+      "doc": "Unchecked block",
+      "label": "Unchecked block",
+      "matches": {
+        "unchecked": true
+      }
+    },
+    {
+      "content": "[System.AttributeUsage(System.AttributeTargets.${1:All}, Inherited = ${2:false}, AllowMultiple = ${3:true})]\nsealed class ${4:My}Attribute : System.Attribute\n{\n    // See the attribute guidelines at\n    //  http://go.microsoft.com/fwlink/?LinkId=85236\n    readonly string positionalString;\n    \n    // This is a positional argument\n    public ${4:My}Attribute(string positionalString)\n    {\n        this.positionalString = positionalString;\n        \n        // TODO: Implement code here\n        ${5:throw new System.NotImplementedException();}\n    }\n    \n    public string PositionalString\n    {\n        get { return positionalString; }\n    }\n    \n    // This is a named argument\n    public int NamedInt { get; set; }\n}",
+      "doc": "Attribute using recommended pattern",
+      "label": "Attribute using recommended pattern",
+      "matches": {
+        "attribute": true
+      }
+    },
+    {
+      "content": "else if (${1:true})\n{\n    $0\n}",
+      "doc": "else-if statement",
+      "label": "else-if statement",
+      "matches": {
+        "else if": true
+      }
+    },
+    {
+      "content": "using (${1:resource})\n{\n    $0\n}",
+      "doc": "Using statement",
+      "label": "Using statement",
+      "matches": {
+        "using": true
+      }
+    },
+    {
+      "content": "${1:public} ${2:object} this[${3:int} index]\n{\n    get { $4 }\n    set { $0 }\n}",
+      "doc": "Indexer",
+      "label": "Indexer",
+      "matches": {
+        "indexer": true
+      }
+    },
+    {
+      "content": "while (${1:true})\n{\n    $0\n}",
+      "doc": "While loop",
+      "label": "While loop",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "struct ${1:Name}\n{\n    $0\n}",
+      "doc": "Struct",
+      "label": "Struct",
+      "matches": {
+        "struct": true
+      }
+    },
+    {
+      "content": "[Fact]\npublic void ${1:TestName}()\n{\n//Given\n\n//When\n\n//Then\n}$0",
+      "doc": "create xunit test method",
+      "label": "xUnit Test",
+      "matches": {
+        "fact": true
+      }
+    },
+    {
+      "content": "${1:EventHandler} temp = ${2:MyEvent};\nif (temp != null)\n{\n    temp($0);\n}",
+      "doc": "Safely invoking an event",
+      "label": "Safely invoking an event",
+      "matches": {
+        "invoke": true
+      }
+    },
+    {
+      "content": "public System.Collections.Generic.IEnumerator<${1:ElementType}> GetEnumerator()\n{\n    $0throw new System.NotImplementedException();\n    yield return default(${1:ElementType});\n}",
+      "doc": "Simple iterator",
+      "label": "Simple iterator",
+      "matches": {
+        "iterator": true
+      }
+    },
+    {
+      "content": "${1:public} ${2:void} ${3:MyMethod}(${4:string} ${5:parameter})\n{\n\t$0\n}",
+      "doc": "Creates a Method structure",
+      "label": "Creates a Method structure",
+      "matches": {
+        "method": true
+      }
+    },
+    {
+      "content": "namespace ${1:Name}\n{\n    $0\n}",
+      "doc": "Namespace",
+      "label": "Namespace",
+      "matches": {
+        "namespace": true
+      }
+    },
+    {
+      "content": "public ${1:Name}Iterator ${1:Name}\n{\n    get\n    {\n        return new ${1:Name}Iterator(this);\n    }\n}\n\npublic class ${1:Name}Iterator\n{\n    readonly ${2:ClassName} outer;\n    \n    internal ${1:Name}Iterator(${2:ClassName} outer)\n    {\n        this.outer = outer;\n    }\n    \n    // TODO: provide an appropriate implementation here\n    public int Length { get { return 1; } }\n    \n    public ${3:ElementType} this[int index]\n    {\n        get\n        {\n            //\n            // TODO: implement indexer here\n            //\n            // you have full access to ${2:ClassName} privates\n            //\n            ${4:throw new System.NotImplementedException();}\n            return default(${3:ElementType});\n        }\n    }\n    \n    public System.Collections.Generic.IEnumerator<${3:ElementType}> GetEnumerator()\n    {\n        for (int i = 0; i < this.Length; i++)\n        {\n            yield return this[i];\n        }\n    }\n}",
+      "doc": "Named iterator/indexer pair using a nested class",
+      "label": "Named iterator/indexer pair using a nested class",
+      "matches": {
+        "iterindex": true
+      }
+    },
+    {
+      "content": "checked\n{\n    $0\n}",
+      "doc": "Checked block",
+      "label": "Checked block",
+      "matches": {
+        "checked": true
+      }
+    },
+    {
+      "content": "Console.WriteLine($0);",
+      "doc": "Console.WriteLine",
+      "label": "Console.WriteLine",
+      "matches": {
+        "cw": true
+      }
+    },
+    {
+      "content": "Console.ReadLine($0);",
+      "doc": "Console.ReadLine",
+      "label": "Console.ReadLine",
+      "matches": {
+        "cr": true
+      }
+    },
+    {
+      "content": "do\n{\n    $0\n} while (${1:true});",
+      "doc": "do...while loop",
+      "label": "do...while loop",
+      "matches": {
+        "do": true
+      }
+    },
+    {
+      "content": "else\n{\n    $0\n}",
+      "doc": "Else statement",
+      "label": "Else statement",
+      "matches": {
+        "else": true
+      }
+    },
+    {
+      "content": "// override object.Equals\npublic override bool Equals(object obj)\n{\n    //\n    // See the full list of guidelines at\n    //   http://go.microsoft.com/fwlink/?LinkID=85237\n    // and also the guidance for operator== at\n    //   http://go.microsoft.com/fwlink/?LinkId=85238\n    //\n    \n    if (obj == null || GetType() != obj.GetType())\n    {\n        return false;\n    }\n    \n    // TODO: write your implementation of Equals() here\n    ${1:throw new System.NotImplementedException();}\n    return base.Equals (obj);\n}\n\n// override object.GetHashCode\npublic override int GetHashCode()\n{\n    // TODO: write your implementation of GetHashCode() here\n    ${2:throw new System.NotImplementedException();}\n    return base.GetHashCode();\n}",
+      "doc": "Implementing Equals() according to guidelines",
+      "label": "Implementing Equals() according to guidelines",
+      "matches": {
+        "equals": true
+      }
+    },
+    {
+      "content": "if (${1:true})\n{\n    $0\n}",
+      "doc": "if statement",
+      "label": "if statement",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "${1:public} class ${2:$TM_FILENAME_BASE}\n{\n\t$0\n}",
+      "doc": "Create new class",
+      "label": "cls",
+      "matches": {
+        "cls": true
+      }
+    },
+    {
+      "content": "public ${1:int} ${2:MyProperty} { get; set; }$0",
+      "doc": "An automatically implemented property. C# 3.0 or higher",
+      "label": "prop",
+      "matches": {
+        "prop": true
+      }
+    },
+    {
+      "content": "${1:public} async ${2:Task}<${3:object}> ${4:MyMethodAsync}(${5:string} ${6:parameter})\n{\n\t$0\n}",
+      "doc": "Creates an async Method structure",
+      "label": "Creates an Async Method structure",
+      "matches": {
+        "method_async": true
+      }
+    },
+    {
+      "content": "#if ${1:true}\n    $0\n#endif",
+      "doc": "#if",
+      "label": "#if",
+      "matches": {
+        "ifd": true
+      }
+    },
+    {
+      "content": "unsafe\n{\n    $0\n}",
+      "doc": "Unsafe statement",
+      "label": "Unsafe statement",
+      "matches": {
+        "unsafe": true
+      }
+    },
+    {
+      "content": "lock (${1:this})\n{\n    $0\n}",
+      "doc": "Lock statement",
+      "label": "Lock statement",
+      "matches": {
+        "lock": true
+      }
+    },
+    {
+      "content": "try\n{\n    $1\n}\ncatch (${2:System.Exception})\n{\n    $0\n    throw;\n}",
+      "doc": "Try catch",
+      "label": "Try catch",
+      "matches": {
+        "try": true
+      }
+    },
+    {
+      "content": "try\n{\n    $1\n}\nfinally\n{\n    $0\n}",
+      "doc": "Try finally",
+      "label": "Try finally",
+      "matches": {
+        "tryf": true
+      }
+    },
+    {
+      "content": "System.Windows.Forms.MessageBox.Show(\"${1:Text}\");$0",
+      "doc": "MessageBox.Show",
+      "label": "MessageBox.Show",
+      "matches": {
+        "mbox": true
+      }
+    },
+    {
+      "content": "for (int ${1:i} = 0; ${1:i} < ${2:length}; ${1:i}++)\n{\n    $0\n}",
+      "doc": "for loop",
+      "label": "for loop",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "class ${1:Name}\n{\n    $0\n}",
+      "doc": "Class",
+      "label": "Class",
+      "matches": {
+        "class": true
+      }
+    },
+    {
+      "content": "${1:public} ${2:$TM_FILENAME_BASE}(${3:Parameters})\n{\n    $0\n}",
+      "doc": "constructor",
+      "label": "constructor",
+      "matches": {
+        "ctor": true
+      }
+    },
+    {
+      "content": "static void Main(string[] args)\n{\n    $0\n}",
+      "doc": "void Main()",
+      "label": "svm",
+      "matches": {
+        "svm": true
+      }
+    },
+    {
+      "content": "[System.Serializable]\npublic class ${1:My}Exception : ${2:System.Exception}\n{\n    public ${1:My}Exception() { }\n    public ${1:My}Exception(string message) : base(message) { }\n    public ${1:My}Exception(string message, System.Exception inner) : base(message, inner) { }\n    protected ${1:My}Exception(\n        System.Runtime.Serialization.SerializationInfo info,\n        System.Runtime.Serialization.StreamingContext context) : base(info, context) { }\n}",
+      "doc": "Exception",
+      "label": "Exception",
+      "matches": {
+        "exception": true
+      }
+    },
+    {
+      "content": "public ${1:int} ${2:MyProperty} { get; private set; }$0",
+      "doc": "An automatically implemented property with a 'get' accessor and a private 'set' accessor. C# 3.0 or higher",
+      "label": "propg",
+      "matches": {
+        "propg": true
+      }
+    },
+    {
+      "content": "switch (${1:switch_on})\n{\n    $0\n    default:\n}",
+      "doc": "Switch statement",
+      "label": "Switch statement",
+      "matches": {
+        "switch": true
+      }
+    },
+    {
+      "content": "#region ${1:Name}\n    $0\n#endregion",
+      "doc": "#region",
+      "label": "#region",
+      "matches": {
+        "region": true
+      }
+    },
+    {
+      "content": "private ${1:int} ${2:myVar};\npublic ${1:int} ${3:MyProperty}\n{\n    get { return ${2:myVar}; }\n    set { ${2:myVar} = value; }\n}\n$0",
+      "doc": "Property and backing field",
+      "label": "Property and backing field",
+      "matches": {
+        "propfull": true
+      }
+    },
+    {
+      "content": "interface I${1:Name}\n{\n    $0\n}",
+      "doc": "Interface",
+      "label": "Interface",
+      "matches": {
+        "interface": true
+      }
+    },
+    {
+      "content": "static int Main(string[] args)\n{\n    $0\n    return 0;\n}",
+      "doc": "int Main()",
+      "label": "sim",
+      "matches": {
+        "sim": true
+      }
+    }
+  ]
+}

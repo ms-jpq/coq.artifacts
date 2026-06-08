@@ -1,0 +1,87 @@
+{
+  "extends": [
+    "powershell"
+  ],
+  "snippets": [
+    {
+      "content": "class {\n\t[string] ${1:FirstName}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "class": true
+      }
+    },
+    {
+      "content": "function ${1:name} {\n\t[CmdletBinding()]\n\tparam (\n\t\t[Parameter(Mandatory = $true)]\n\t\t[string] ${2:Param}\n\t)\n\n\tbegin {\n\t}\n\n\tprocess {\n\t}\n\n\tend {\n\t}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "function": true
+      }
+    },
+    {
+      "content": "$Params = @{\n\t${1:Param1} = '${2:Value1}'\n\t${3:Param2} = '${4:Value2}'\n}\n${5:CommandName} @Params",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "splatting": true
+      }
+    },
+    {
+      "content": "enum ${1:name} {\n\t${2:item1}\n\t${3:item2}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "enum": true
+      }
+    },
+    {
+      "content": "if ($1) {\n\t$0\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "if ( $1 ) {\n\t${2}\n}\nelse {\n\t${3}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "while ($1) {\n\t$0\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "${1:command} | Where-Object -FilterScript { $PSItem.${2:property} -${3:operator} '${4:expression}' } | Sort-Object -Property ${5:sortproperty}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "filtersort": true
+      }
+    },
+    {
+      "content": "Export-CSV -NoTypeInformation -Path ${1:path}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "epcsv": true
+      }
+    },
+    {
+      "content": "switch ( ${1:test} ){\n\t${2:condition1} { ${3:action} }\n\t${4:condition2} { ${5:action} }\n\tdefault { ${6:action} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "switch": true
+      }
+    }
+  ]
+}

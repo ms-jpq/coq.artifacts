@@ -1,0 +1,221 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "void setup()\n{\n\tSerial.begin(${1:9600});\n\t${2}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "setup": true
+      }
+    },
+    {
+      "content": "void loop()\n{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "loop": true
+      }
+    },
+    {
+      "content": "#include <${1}.h>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "inc": true
+      }
+    },
+    {
+      "content": "#define ${1}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "def": true
+      }
+    },
+    {
+      "content": "if ($1) {\n\t${0:${VISUAL}}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "else {\n\t${1}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "el": true
+      }
+    },
+    {
+      "content": "else if ($1) {\n\t${2}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "elif": true
+      }
+    },
+    {
+      "content": "if ($1) ${2};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ifi": true
+      }
+    },
+    {
+      "content": "switch (${1:/* variable */}) {\n\tcase ${2:/* variable case */}:\n\t\t${3}\n\t\t${4:break;}${5}\n\tdefault:\n\t\t${6}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "switch": true
+      }
+    },
+    {
+      "content": "case ${1:/* variable case */}:\n\t${2}\n\t${3:break;}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "for (int ${2:i} = 0; $2 < ${1:count}; $2${3:++}) {\n\t${4}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "while ($1) {\n\t${2}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "do {\n\t${2}\n} while ($1);",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "do": true
+      }
+    },
+    {
+      "content": "${1:void} ${2:function_name}(${3})\n{\n\t${4}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fun": true
+      }
+    },
+    {
+      "content": "pinMode(${1}, OUTPUT);",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pinout": true
+      }
+    },
+    {
+      "content": "pinMode(${1}, INPUT);",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pinin": true
+      }
+    },
+    {
+      "content": "digitalWrite(${1}, HIGH);",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dwHigh": true
+      }
+    },
+    {
+      "content": "digitalWrite(${1}, LOW);",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dwLow": true
+      }
+    },
+    {
+      "content": "digitalRead(${1});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dr": true
+      }
+    },
+    {
+      "content": "analogRead(${1});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ar": true
+      }
+    },
+    {
+      "content": "analogWrite(${1});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "aw": true
+      }
+    },
+    {
+      "content": "Serial.read();",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sr": true
+      }
+    },
+    {
+      "content": "Serial.write();",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sw": true
+      }
+    },
+    {
+      "content": "Serial.print(${1});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sp": true
+      }
+    },
+    {
+      "content": "Serial.println(${1});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sl": true
+      }
+    },
+    {
+      "content": "delay(${1});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dl": true
+      }
+    },
+    {
+      "content": "millis();",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ml": true
+      }
+    }
+  ]
+}

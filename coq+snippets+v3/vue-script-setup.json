@@ -1,0 +1,23 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "<script setup lang=\"ts\">\n\n</script>\n\n<template>\n\t<div>\n\n\t</div>\n</template>\n\n<style scoped>\n\n</style>",
+      "doc": "Base for Vue Single File Component Script Setup with TypeScript (Composition API)",
+      "label": "Vue SFC Script Setup with TypeScript (Composition API)",
+      "matches": {
+        "vbase-3-script-setup-ts": true,
+        "vbase-3-ss-ts": true
+      }
+    },
+    {
+      "content": "<script setup>\n\n</script>\n\n<template>\n\t<div>\n\n\t</div>\n</template>\n\n<style scoped>\n\n</style>",
+      "doc": "Base for Vue Single File Component Script Setup (Composition API)",
+      "label": "Vue SFC Script Setup (Composition API)",
+      "matches": {
+        "vbase-3-script-setup": true,
+        "vbase-3-ss": true
+      }
+    }
+  ]
+}

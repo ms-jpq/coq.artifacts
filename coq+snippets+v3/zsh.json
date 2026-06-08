@@ -1,0 +1,160 @@
+{
+  "extends": [
+    "bash",
+    "sh"
+  ],
+  "snippets": [
+    {
+      "content": "zplug \"`getreg('+')=='' ? '<\\`0\\`>' : getreg('+')`\"${0}",
+      "doc": "",
+      "label": "zplug \"plugin\"",
+      "matches": {
+        "zplug": true
+      }
+    },
+    {
+      "content": "#!/usr/bin/env zsh",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "#!": true
+      }
+    },
+    {
+      "content": "if $1; then\n\t${0:${VISUAL}}\nfi",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "if $1; then\n\t${2:${VISUAL}}\nelse\n\t${0:# statements}\nfi",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "elif $1; then\n\t${0:${VISUAL}}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eif": true
+      }
+    },
+    {
+      "content": "for (( ${2:i} = 0; $2 < ${1:count}; $2++ )); do\n\t${0:${VISUAL}}\ndone",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "for ${1:needle} in ${2:haystack}; do\n\t${0:${VISUAL}}\ndone",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fori": true
+      }
+    },
+    {
+      "content": "for ${1:item} in ${2:list}; do\n\t${0:${VISUAL}}\ndone",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fore": true
+      }
+    },
+    {
+      "content": "while $1; do\n\t${0:${VISUAL}}\ndone",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "until $1; do\n\t${0:${VISUAL}}\ndone",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "until": true
+      }
+    },
+    {
+      "content": "repeat ${1:integer}; do\n\t${0:${VISUAL}}\ndone",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "repeat": true
+      }
+    },
+    {
+      "content": "case ${1:word} in\n\t${2:pattern})\n\t\t${0};;\nesac",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "select ${1:answer} in ${2:choices}; do\n\t${0:${VISUAL}}\ndone",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "select": true
+      }
+    },
+    {
+      "content": "( ${0:#statements} )",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "(": true
+      }
+    },
+    {
+      "content": "{ ${0:#statements} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "{": true
+      }
+    },
+    {
+      "content": "[[ ${0:test} ]]",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "[": true
+      }
+    },
+    {
+      "content": "{ ${1:try} } always { ${0:always} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "always": true
+      }
+    },
+    {
+      "content": "${1:function_name}() {\n\t${0:# function_body}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fun": true
+      }
+    },
+    {
+      "content": "function ${1:function_name}() {\n\t${0:# function_body}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ffun": true
+      }
+    }
+  ]
+}

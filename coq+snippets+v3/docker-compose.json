@@ -1,0 +1,541 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "user: ${1:value}",
+      "doc": "",
+      "label": "User",
+      "matches": {
+        "us": true
+      }
+    },
+    {
+      "content": "working_dir: ${1:dir}",
+      "doc": "",
+      "label": "Working Directory",
+      "matches": {
+        "wo": true
+      }
+    },
+    {
+      "content": "read_only: ${1:boolean}",
+      "doc": "",
+      "label": "Read Only",
+      "matches": {
+        "rea": true
+      }
+    },
+    {
+      "content": "shm_size: ${1:value}",
+      "doc": "",
+      "label": "SHM Size",
+      "matches": {
+        "sh": true
+      }
+    },
+    {
+      "content": "stdin_open: ${1:boolean}",
+      "doc": "",
+      "label": "Stdin Open",
+      "matches": {
+        "std": true
+      }
+    },
+    {
+      "content": "tty: ${1:boolean}",
+      "doc": "",
+      "label": "TTY",
+      "matches": {
+        "tt": true
+      }
+    },
+    {
+      "content": "driver: ${1:value}",
+      "doc": "",
+      "label": "Driver",
+      "matches": {
+        "driver": true
+      }
+    },
+    {
+      "content": "driver_opts:\n\t\t${1:key}: ${2:value}",
+      "doc": "",
+      "label": "Driver Opts",
+      "matches": {
+        "driver_": true
+      }
+    },
+    {
+      "content": "ipam:\n\t\t${1:value}",
+      "doc": "",
+      "label": "IPAM",
+      "matches": {
+        "ipa": true
+      }
+    },
+    {
+      "content": "healthcheck:\n\t\ttest: ${1:command}",
+      "doc": "",
+      "label": "Health Check",
+      "matches": {
+        "hc": true
+      }
+    },
+    {
+      "content": "version: '3'\nservices:\n\t$1:\n\t\timage: ${2:image}\n\t\tcontainer_name: ${3:container_name}\n\t\tports:\n\t\t\t- \"${4:host_port}:${5:container_port}\"\n\t\tvolumes:\n\t\t\t- ${6:host_volume}:${7:container_volume}\n\t\tenvironment:\n\t\t\t- ${8:env_var}=${9:env_value}",
+      "doc": "A full Docker Compose example snippet",
+      "label": "DockerCompose",
+      "matches": {
+        "docker-compose": true
+      }
+    },
+    {
+      "content": "expose:\n\t\t- ${1:port}",
+      "doc": "",
+      "label": "Expose",
+      "matches": {
+        "exp": true
+      }
+    },
+    {
+      "content": "extends:\n\t\tfile: ${1:file}\n\t\tservice: ${2:name}",
+      "doc": "",
+      "label": "Extends",
+      "matches": {
+        "exten": true
+      }
+    },
+    {
+      "content": "extra_hosts:\n\t\t- ${1:host}:${2:ip}",
+      "doc": "",
+      "label": "Extra Hosts",
+      "matches": {
+        "extr": true
+      }
+    },
+    {
+      "content": "jenkins:\n\timage: jenkins/jenkins:lts\n\tcontainer_name: jenkins\n\tports:\n\t\t- \"8080:8080\"\n\t\t- \"50000:50000\"\n\tvolumes:\n\t\t- jenkins_home:/var/jenkins_home\n\tenvironment:\n\t\t- JENKINS_OPTS=--prefix=/Jenkins",
+      "doc": "A Jenkins Docker Compose example snippet",
+      "label": "JenkinsCompose",
+      "matches": {
+        "jenkins-compose": true
+      }
+    },
+    {
+      "content": "dockerfile: ${1:file}",
+      "doc": "",
+      "label": "Dockerfile",
+      "matches": {
+        "doc": true
+      }
+    },
+    {
+      "content": "volumes:\n\t\t- ${1:value}",
+      "doc": "",
+      "label": "Volumes",
+      "matches": {
+        "volumes": true
+      }
+    },
+    {
+      "content": "labels:\n\t\t${1:dns}: ${2:label}",
+      "doc": "",
+      "label": "Labels",
+      "matches": {
+        "la": true
+      }
+    },
+    {
+      "content": "volume_driver: ${1:driver}",
+      "doc": "",
+      "label": "Volume Driver",
+      "matches": {
+        "volume_": true
+      }
+    },
+    {
+      "content": "links:\n\t\t- ${1:name}",
+      "doc": "",
+      "label": "Links",
+      "matches": {
+        "links": true
+      }
+    },
+    {
+      "content": "volumes_from:\n\t\t- ${1:name}",
+      "doc": "",
+      "label": "Volumes From",
+      "matches": {
+        "volumes_": true
+      }
+    },
+    {
+      "content": "logging:\n\t\tdriver: ${1:driver}\n\t\toptions:\n\t\t\t${2:value}",
+      "doc": "",
+      "label": "Logging",
+      "matches": {
+        "logg": true
+      }
+    },
+    {
+      "content": "external: ${1:boolean}",
+      "doc": "",
+      "label": "External",
+      "matches": {
+        "exter": true
+      }
+    },
+    {
+      "content": "services:\n\t\t${1:name}",
+      "doc": "",
+      "label": "Services",
+      "matches": {
+        "ser": true
+      }
+    },
+    {
+      "content": "log_driver: ${1:driver}",
+      "doc": "",
+      "label": "Log Driver",
+      "matches": {
+        "log_d": true
+      }
+    },
+    {
+      "content": "build:\n\t\t${1:value}",
+      "doc": "",
+      "label": "Build",
+      "matches": {
+        "bu": true
+      }
+    },
+    {
+      "content": "net: ${1:value}",
+      "doc": "",
+      "label": "Net",
+      "matches": {
+        "net": true
+      }
+    },
+    {
+      "content": "context: ${1:dir}",
+      "doc": "",
+      "label": "Context",
+      "matches": {
+        "conte": true
+      }
+    },
+    {
+      "content": "network_mode: ${1:value}",
+      "doc": "",
+      "label": "Network Mode",
+      "matches": {
+        "network_": true
+      }
+    },
+    {
+      "content": "networks:\n\t\t- ${1:value}",
+      "doc": "",
+      "label": "Networks",
+      "matches": {
+        "networks": true
+      }
+    },
+    {
+      "content": "command: ${1:command}",
+      "doc": "",
+      "label": "Command",
+      "matches": {
+        "com": true
+      }
+    },
+    {
+      "content": "depends_on:\n\t\t${1:value}",
+      "doc": "",
+      "label": "Depends on",
+      "matches": {
+        "dep": true
+      }
+    },
+    {
+      "content": "environment:\n\t\t${1:name}: ${2:value}",
+      "doc": "",
+      "label": "Environment",
+      "matches": {
+        "env": true
+      }
+    },
+    {
+      "content": "link_local_ips:\n\t\t- ${1:ip}",
+      "doc": "",
+      "label": "Link Local IPs",
+      "matches": {
+        "link_": true
+      }
+    },
+    {
+      "content": "args:\n\t\t${1:name}: ${2:value}",
+      "doc": "",
+      "label": "Args",
+      "matches": {
+        "ar": true
+      }
+    },
+    {
+      "content": "pid: ${1:host}",
+      "doc": "",
+      "label": "PID",
+      "matches": {
+        "pi": true
+      }
+    },
+    {
+      "content": "cap_add:\n\t\t- ${1:value}",
+      "doc": "",
+      "label": "Cap Add",
+      "matches": {
+        "cap_a": true
+      }
+    },
+    {
+      "content": "ports:\n\t\t- ${1:value}",
+      "doc": "",
+      "label": "Ports",
+      "matches": {
+        "po": true
+      }
+    },
+    {
+      "content": "cap_drop:\n\t\t- ${1:value}",
+      "doc": "",
+      "label": "Cap Drop",
+      "matches": {
+        "cap_d": true
+      }
+    },
+    {
+      "content": "stop_signal: ${1:signal}",
+      "doc": "",
+      "label": "Stop Signal",
+      "matches": {
+        "sto": true
+      }
+    },
+    {
+      "content": "cgroup_parent: ${1:cgroup}",
+      "doc": "",
+      "label": "cgroup_parent",
+      "matches": {
+        "cgr": true
+      }
+    },
+    {
+      "content": "ulimits:\n\t\t${1:value}",
+      "doc": "",
+      "label": "Ulimits",
+      "matches": {
+        "ul": true
+      }
+    },
+    {
+      "content": "container_name: ${1:name}",
+      "doc": "",
+      "label": "Container Name",
+      "matches": {
+        "conta": true
+      }
+    },
+    {
+      "content": "cpu_shares: ${1:value}",
+      "doc": "",
+      "label": "CPU Shares",
+      "matches": {
+        "cpu_s": true
+      }
+    },
+    {
+      "content": "devices:\n\t\t- ${1:value}",
+      "doc": "",
+      "label": "Devices",
+      "matches": {
+        "dev": true
+      }
+    },
+    {
+      "content": "cpu_quota: ${1:value}",
+      "doc": "",
+      "label": "CPU Quota",
+      "matches": {
+        "cpu_q": true
+      }
+    },
+    {
+      "content": "dns:\n\t\t- ${1:ip}",
+      "doc": "",
+      "label": "DNS",
+      "matches": {
+        "dn": true
+      }
+    },
+    {
+      "content": "cpuset: ${1:value}",
+      "doc": "",
+      "label": "CPU Set",
+      "matches": {
+        "cpus": true
+      }
+    },
+    {
+      "content": "dns_search:\n\t\t- ${1:ip}",
+      "doc": "",
+      "label": "DNS Search",
+      "matches": {
+        "dns_": true
+      }
+    },
+    {
+      "content": "domainname: ${1:name}",
+      "doc": "",
+      "label": "Domain Name",
+      "matches": {
+        "dom": true
+      }
+    },
+    {
+      "content": "tmpfs:\n\t\t- ${1:dir}",
+      "doc": "",
+      "label": "tmpfs",
+      "matches": {
+        "tm": true
+      }
+    },
+    {
+      "content": "hostname: ${1:name}",
+      "doc": "",
+      "label": "Hostname",
+      "matches": {
+        "ho": true
+      }
+    },
+    {
+      "content": "entrypoint: ${1:command}",
+      "doc": "",
+      "label": "Entrypoint",
+      "matches": {
+        "ent": true
+      }
+    },
+    {
+      "content": "ipc: ${1:host}",
+      "doc": "",
+      "label": "IPC",
+      "matches": {
+        "ipc": true
+      }
+    },
+    {
+      "content": "env_file:\n\t\t- ${1:file}",
+      "doc": "",
+      "label": "Env File",
+      "matches": {
+        "env_": true
+      }
+    },
+    {
+      "content": "mem_limit: ${1:value}",
+      "doc": "",
+      "label": "Memory Limit",
+      "matches": {
+        "mem_": true
+      }
+    },
+    {
+      "content": "image: ${1:image}",
+      "doc": "",
+      "label": "Image",
+      "matches": {
+        "im": true
+      }
+    },
+    {
+      "content": "memswap_limit: ${1:value}",
+      "doc": "",
+      "label": "Mem swap Limit",
+      "matches": {
+        "mems": true
+      }
+    },
+    {
+      "content": "group_add:\n\t\t- ${1:name}",
+      "doc": "",
+      "label": "Group Add",
+      "matches": {
+        "gr": true
+      }
+    },
+    {
+      "content": "version: '${1:3}'",
+      "doc": "",
+      "label": "Version",
+      "matches": {
+        "ver": true
+      }
+    },
+    {
+      "content": "privileged: ${1:boolean}",
+      "doc": "",
+      "label": "Privileged",
+      "matches": {
+        "pr": true
+      }
+    },
+    {
+      "content": "log_opt:\n\t\t${1:value}",
+      "doc": "",
+      "label": "Log Options",
+      "matches": {
+        "log_o": true
+      }
+    },
+    {
+      "content": "oom_score_adj: ${1:value}",
+      "doc": "",
+      "label": "OOM Score Adj",
+      "matches": {
+        "oom": true
+      }
+    },
+    {
+      "content": "ipv4_address: ${1:ip}",
+      "doc": "",
+      "label": "Ipv4 Address",
+      "matches": {
+        "ipv4": true
+      }
+    },
+    {
+      "content": "ipv6_address: ${1:ip}",
+      "doc": "",
+      "label": "Ipv6 Address",
+      "matches": {
+        "ipv6": true
+      }
+    },
+    {
+      "content": "restart: ${1:value}",
+      "doc": "",
+      "label": "Restart",
+      "matches": {
+        "res": true
+      }
+    },
+    {
+      "content": "security_opt:\n\t\t- ${1:value}",
+      "doc": "",
+      "label": "Security Opt",
+      "matches": {
+        "sec": true
+      }
+    }
+  ]
+}

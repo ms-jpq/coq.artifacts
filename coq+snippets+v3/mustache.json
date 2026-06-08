@@ -1,0 +1,29 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "{{#${1:value}}}\n${0:${VISUAL}}\n{{/$1}}",
+      "doc": "",
+      "label": "# {{#value}} ... {{/value}}",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "{{^${1:value}}}\n${0:${VISUAL}}\n{{/$1}}",
+      "doc": "",
+      "label": "# {{^value}} ... {{/value}}",
+      "matches": {
+        "ifn": true
+      }
+    },
+    {
+      "content": "{{#${1:value}}}\n${2:${VISUAL}}\n{{/$1}}\n{{^$1}}\n${3}\n{{/$1}}",
+      "doc": "",
+      "label": "# {{#value}} ... {{/value}} {{^value}} ... {{/value}}",
+      "matches": {
+        "ife": true
+      }
+    }
+  ]
+}

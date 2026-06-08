@@ -1,0 +1,509 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "---\ntitle: ${1:title}\ndate: ${2:\"`r Sys.Date()`\"}\noutput: ${4:pdf_document}\n---",
+      "doc": "",
+      "label": "YAML Header",
+      "matches": {
+        "---": true
+      }
+    },
+    {
+      "content": "```{${1:lang}}\n${0}\n```",
+      "doc": "",
+      "label": "Insert Code Language",
+      "matches": {
+        "```": true
+      }
+    },
+    {
+      "content": "```{r}\n${1}\n```",
+      "doc": "",
+      "label": "Insert Block Chunck",
+      "matches": {
+        "```": true
+      }
+    },
+    {
+      "content": "`r ${0}`",
+      "doc": "",
+      "label": "Insert Inline Chunck",
+      "matches": {
+        "`": true
+      }
+    },
+    {
+      "content": "`r ${1:${TM_SELECTED_TEXT}}`$0",
+      "doc": "Insert inline R code",
+      "label": "Insert inline R code",
+      "matches": {
+        "inline r code": true
+      }
+    },
+    {
+      "content": "^[${1:Inline footnotes text.}]$0",
+      "doc": "Insert inline footnotes",
+      "label": "Insert inline footnotes",
+      "matches": {
+        "inline footnotes": true
+      }
+    },
+    {
+      "content": "```${1:language}\n$0\n```",
+      "doc": "Insert fenced code block",
+      "label": "Insert fenced code block",
+      "matches": {
+        "fenced codeblock": true
+      }
+    },
+    {
+      "content": "- ${1:first}\n- ${2:second}\n- ${3:third}\n$0",
+      "doc": "Insert unordered list",
+      "label": "Insert unordered list",
+      "matches": {
+        "unordered list": true
+      }
+    },
+    {
+      "content": "~${1:${TM_SELECTED_TEXT}}~$0",
+      "doc": "Insert subscript",
+      "label": "Insert subscript",
+      "matches": {
+        "subscript": true
+      }
+    },
+    {
+      "content": "::: {.exercise #${1:label} name=\"${2:exercise name}\"}\n${TM_SELECTED_TEXT}$0\n:::",
+      "doc": "Insert bookdown exercise",
+      "label": "Insert bookdown exercise",
+      "matches": {
+        "exercise": true
+      }
+    },
+    {
+      "content": "^${1:${TM_SELECTED_TEXT}}^$0",
+      "doc": "Insert superscript",
+      "label": "Insert superscript",
+      "matches": {
+        "superscript": true
+      }
+    },
+    {
+      "content": "1. ${1:first}\n2. ${2:second}\n3. ${3:third}\n$0",
+      "doc": "Insert ordered list",
+      "label": "Insert ordered list",
+      "matches": {
+        "ordered list": true
+      }
+    },
+    {
+      "content": "Exercise \\@ref(exr:${1:label})$0",
+      "doc": "Cross-reference bookdown exercise",
+      "label": "Cross-reference bookdown exercise",
+      "matches": {
+        "cross-reference exercise": true
+      }
+    },
+    {
+      "content": "::: {.hypothesis #${1:label} name=\"${2:hypothesis name}\"}\n${TM_SELECTED_TEXT}$0\n:::",
+      "doc": "Insert bookdown hypothesis",
+      "label": "Insert bookdown hypothesis",
+      "matches": {
+        "hypothesis": true
+      }
+    },
+    {
+      "content": "----------",
+      "doc": "Insert horizontal rule",
+      "label": "Insert horizontal rule",
+      "matches": {
+        "horizontal rule": true
+      }
+    },
+    {
+      "content": "Lemma \\@ref(lem:${1:label})$0",
+      "doc": "Cross-reference bookdown lemma",
+      "label": "Cross-reference bookdown lemma",
+      "matches": {
+        "cross-reference lemma": true
+      }
+    },
+    {
+      "content": "- [${1|x, |}] ${2:first}\n- [${3|x, |}] ${4:second}\n- [${5|x, |}] ${6:third}\n$0",
+      "doc": "Insert task list",
+      "label": "Insert task list",
+      "matches": {
+        "task list": true
+      }
+    },
+    {
+      "content": "::: incremental\n\n- ${1:first}\n- ${2:second}\n- ${3:third}\n$0\n\n:::",
+      "doc": "Insert incremental list",
+      "label": "Insert incremental list",
+      "matches": {
+        "incremental list": true
+      }
+    },
+    {
+      "content": "# (PART\\*) Part ${1:I} {-}$0",
+      "doc": "Insert bookdown unnumbered part",
+      "label": "Insert unnumbered bookdown part",
+      "matches": {
+        "unnumbered part": true
+      }
+    },
+    {
+      "content": "\\begin{equation}\n${TM_SELECTED_TEXT}$0\n(\\#eq:${1:label})\n\\end{equation}",
+      "doc": "Insert bookdown equation",
+      "label": "Insert bookdown equation",
+      "matches": {
+        "equation": true
+      }
+    },
+    {
+      "content": "::: nonincremental\n\n- ${1:first}\n- ${2:second}\n- ${3:third}\n$0\n\n:::",
+      "doc": "Insert nonincremental list",
+      "label": "Insert nonincremental list",
+      "matches": {
+        "nonincremental list": true
+      }
+    },
+    {
+      "content": "[${1:text}](${2:link})$0",
+      "doc": "Insert link",
+      "label": "Insert link",
+      "matches": {
+        "link": true
+      }
+    },
+    {
+      "content": "Definition \\@ref(def:${1:label})$0",
+      "doc": "Cross-reference bookdown definition",
+      "label": "Cross-reference bookdown definition",
+      "matches": {
+        "cross-reference definition": true
+      }
+    },
+    {
+      "content": "::: incremental\n\n${1:${TM_SELECTED_TEXT}}$0\n\n:::",
+      "doc": "Insert incremental fenced block",
+      "label": "Insert incremental fenced block",
+      "matches": {
+        "incremental fenced block": true
+      }
+    },
+    {
+      "content": "${TM_SELECTED_TEXT} {#${1:label}}$0",
+      "doc": "Insert bookdown section label",
+      "label": "Insert bookdown section label",
+      "matches": {
+        "section label": true
+      }
+    },
+    {
+      "content": "Example \\@ref(exm:${1:label})$0",
+      "doc": "Cross-reference bookdown example",
+      "label": "Cross-reference bookdown example",
+      "matches": {
+        "cross-reference example": true
+      }
+    },
+    {
+      "content": "::: nonincremental\n\n${1:${TM_SELECTED_TEXT}}$0\n\n:::",
+      "doc": "Insert nonincremental fenced block",
+      "label": "Insert nonincremental fenced block",
+      "matches": {
+        "nonincremental fenced block": true
+      }
+    },
+    {
+      "content": "```{r ${1:label}, fig.cap = \"${2:Figure caption.}\", fig.alt = \"${3:Alt text.}\"}\nknitr::include_graphics(\"${4:path/to/file.png}\")\n```",
+      "doc": "Insert external figure chunk",
+      "label": "Insert external figure chunk",
+      "matches": {
+        "external figure chunk": true
+      }
+    },
+    {
+      "content": "::: {#refs}\n:::$0",
+      "doc": "Insert reference list",
+      "label": "Insert reference list",
+      "matches": {
+        "reference list": true
+      }
+    },
+    {
+      "content": "```{r ${1:label}, fig.cap = \"${2:Figure caption.}\", fig.alt = \"${3:Alt text.}\"}\n${TM_SELECTED_TEXT}$0\n```",
+      "doc": "Insert figure chunk",
+      "label": "Insert figure chunk",
+      "matches": {
+        "figure chunk": true
+      }
+    },
+    {
+      "content": "Table \\@ref(tab:${1:label})$0",
+      "doc": "Cross-reference bookdown table",
+      "label": "Cross-reference bookdown table",
+      "matches": {
+        "cross-reference table": true
+      }
+    },
+    {
+      "content": "Equation \\@ref(eq:${1:label})$0",
+      "doc": "Cross-reference bookdown equation",
+      "label": "Cross-reference bookdown equation",
+      "matches": {
+        "cross-reference equation": true
+      }
+    },
+    {
+      "content": "::: {.theorem #${1:label} name=\"${2:theorem name}\"}\n${TM_SELECTED_TEXT}$0\n:::",
+      "doc": "Insert bookdown theorem",
+      "label": "Insert bookdown theorem",
+      "matches": {
+        "theorem": true
+      }
+    },
+    {
+      "content": "Hypothesis \\@ref(hyp:${1:label})$0",
+      "doc": "Cross-reference bookdown hypothesis",
+      "label": "Cross-reference bookdown hypothesis",
+      "matches": {
+        "cross-reference hypothesis": true
+      }
+    },
+    {
+      "content": "Theorem \\@ref(thm:${1:label})$0",
+      "doc": "Cross-reference bookdown theorem",
+      "label": "Cross-reference bookdown theorem",
+      "matches": {
+        "cross-reference theorem": true
+      }
+    },
+    {
+      "content": "Figure \\@ref(fig:${1:label})$0",
+      "doc": "Cross-reference bookdown figure",
+      "label": "Cross-reference bookdown figure",
+      "matches": {
+        "cross-reference figure": true
+      }
+    },
+    {
+      "content": "~~${1:${TM_SELECTED_TEXT}}~~$0",
+      "doc": "Insert strikeout",
+      "label": "Insert strikeout",
+      "matches": {
+        "strikeout": true
+      }
+    },
+    {
+      "content": "::: {.lemma #${1:label} name=\"${2:lemma name}\"}\n${TM_SELECTED_TEXT}$0\n:::",
+      "doc": "Insert bookdown lemma",
+      "label": "Insert bookdown lemma",
+      "matches": {
+        "lemma": true
+      }
+    },
+    {
+      "content": "![${1:alt}](${2:link})$0",
+      "doc": "Insert image",
+      "label": "Insert image",
+      "matches": {
+        "image": true
+      }
+    },
+    {
+      "content": "::: {.example #${1:label} name=\"${2:example name}\"}\n${TM_SELECTED_TEXT}$0\n:::",
+      "doc": "Insert bookdown example",
+      "label": "Insert bookdown example",
+      "matches": {
+        "example": true
+      }
+    },
+    {
+      "content": "# ${1:text}",
+      "doc": "Insert heading",
+      "label": "Insert heading",
+      "matches": {
+        "heading": true
+      }
+    },
+    {
+      "content": "Section \\@ref(${1:label})$0",
+      "doc": "Cross-reference bookdown section",
+      "label": "Cross-reference bookdown section",
+      "matches": {
+        "cross-reference section": true
+      }
+    },
+    {
+      "content": ":::::: {.columns}\n::: {.column}\n\n${1:Content of the left column.}\n\n:::\n::: {.column}\n\n${2:Content of the right column.}\n\n:::\n::::::$0",
+      "doc": "Insert (side-by-side) two columns",
+      "label": "Insert two columns",
+      "matches": {
+        "two columns": true
+      }
+    },
+    {
+      "content": "::: {.corollary #${1:label} name=\"${2:corollary name}\"}\n${TM_SELECTED_TEXT}$0\n:::",
+      "doc": "Insert bookdown corollary",
+      "label": "Insert bookdown corollary",
+      "matches": {
+        "corollary": true
+      }
+    },
+    {
+      "content": "# (PART) Part ${1:I} {-}$0",
+      "doc": "Insert bookdown part",
+      "label": "Insert bookdown part",
+      "matches": {
+        "part": true
+      }
+    },
+    {
+      "content": "- [x] ${1:${TM_SELECTED_TEXT}}",
+      "doc": "Insert checked item",
+      "label": "Insert checked item",
+      "matches": {
+        "checked item": true
+      }
+    },
+    {
+      "content": "Corollary \\@ref(cor:${1:label})$0",
+      "doc": "Cross-reference bookdown corollary",
+      "label": "Cross-reference bookdown corollary",
+      "matches": {
+        "cross-reference corollary": true
+      }
+    },
+    {
+      "content": "Proposition \\@ref(prp:${1:label})$0",
+      "doc": "Cross-reference bookdown proposition",
+      "label": "Cross-reference bookdown proposition",
+      "matches": {
+        "cross-reference proposition": true
+      }
+    },
+    {
+      "content": "::: {.proposition #${1:label} name=\"${2:proposition name}\"}\n${TM_SELECTED_TEXT}$0\n:::",
+      "doc": "Insert bookdown proposition",
+      "label": "Insert bookdown proposition",
+      "matches": {
+        "proposition": true
+      }
+    },
+    {
+      "content": "- ${1:${TM_SELECTED_TEXT}}",
+      "doc": "Insert unordered item",
+      "label": "Insert unordered item",
+      "matches": {
+        "unordered item": true
+      }
+    },
+    {
+      "content": "# (APPENDIX) Appendix {-}$0",
+      "doc": "Insert bookdown appendix",
+      "label": "Insert bookdown appendix",
+      "matches": {
+        "appendix": true
+      }
+    },
+    {
+      "content": "- [ ] ${1:${TM_SELECTED_TEXT}}",
+      "doc": "Insert unchecked item",
+      "label": "Insert unchecked item",
+      "matches": {
+        "unchecked item": true
+      }
+    },
+    {
+      "content": "1. ${1:${TM_SELECTED_TEXT}}",
+      "doc": "Insert ordered item",
+      "label": "Insert ordered item",
+      "matches": {
+        "ordered item": true
+      }
+    },
+    {
+      "content": "::: notes\n\n${TM_SELECTED_TEXT}$0\n\n:::",
+      "doc": "Insert speaker notes",
+      "label": "Insert speaker notes",
+      "matches": {
+        "speaker notes": true
+      }
+    },
+    {
+      "content": "*${1:${TM_SELECTED_TEXT}}*$0",
+      "doc": "Insert italic text",
+      "label": "Insert italic text",
+      "matches": {
+        "italic": true
+      }
+    },
+    {
+      "content": "::: {.conjecture #${1:label} name=\"${2:conjecture name}\"}\n${TM_SELECTED_TEXT}$0\n:::",
+      "doc": "Insert bookdown conjecture",
+      "label": "Insert bookdown conjecture",
+      "matches": {
+        "conjecture": true
+      }
+    },
+    {
+      "content": "```{${1|language,awk,bash,coffee,gawk,groovy,haskell,lein,mysql,node,octave,perl,psql,Rscript,ruby,sas,scala,sed,sh,stata,zsh,asis,asy,block,block2,bslib,c,cat,cc,comment,css,dot,embed,fortran,fortran95,go,highlight,js,julia,python,R,Rcpp,sass,scss,sql\\, connection=db,stan\\, output.var=\"stanmodel\",targets,tikz,verbatim,exec\\, command=\"\"|}}\n${TM_SELECTED_TEXT}$0\n```",
+      "doc": "Insert code chunk",
+      "label": "Insert code chunk",
+      "matches": {
+        "code chunk": true
+      }
+    },
+    {
+      "content": "**${1:${TM_SELECTED_TEXT}}**$0",
+      "doc": "Insert bold text",
+      "label": "Insert bold text",
+      "matches": {
+        "bold": true
+      }
+    },
+    {
+      "content": "Conjecture \\@ref(cnj:${1:label})$0",
+      "doc": "Cross-reference bookdown conjecture",
+      "label": "Cross-reference bookdown conjecture",
+      "matches": {
+        "cross-reference conjecture": true
+      }
+    },
+    {
+      "content": "> ${1:${TM_SELECTED_TEXT}}",
+      "doc": "Insert quoted text",
+      "label": "Insert quoted text",
+      "matches": {
+        "quote": true
+      }
+    },
+    {
+      "content": "```{r}\n${TM_SELECTED_TEXT}$0\n```",
+      "doc": "Insert R code chunk",
+      "label": "Insert R code chunk",
+      "matches": {
+        "r code chunk": true
+      }
+    },
+    {
+      "content": "::: {.definition #${1:label} name=\"${2:definition name}\"}\n${TM_SELECTED_TEXT}$0\n:::",
+      "doc": "Insert bookdown definition",
+      "label": "Insert bookdown definition",
+      "matches": {
+        "definition": true
+      }
+    },
+    {
+      "content": "`${1:${TM_SELECTED_TEXT}}`$0",
+      "doc": "Insert code",
+      "label": "Insert code",
+      "matches": {
+        "code": true
+      }
+    }
+  ]
+}

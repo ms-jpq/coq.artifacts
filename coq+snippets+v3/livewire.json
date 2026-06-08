@@ -1,0 +1,21 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "@livewireStyles",
+      "doc": "Livewire Styles directive",
+      "label": "livewireStyles",
+      "matches": {
+        "livewire:styles": true
+      }
+    },
+    {
+      "content": "@livewireScripts",
+      "doc": "Livewire Scripts directive",
+      "label": "livewireScripts",
+      "matches": {
+        "livewire:scripts": true
+      }
+    }
+  ]
+}

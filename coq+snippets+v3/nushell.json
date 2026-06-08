@@ -1,0 +1,1851 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "ls ${1:pattern}",
+      "doc": "\"ls\" invocation",
+      "label": "ls builtin",
+      "matches": {
+        "ls": true
+      }
+    },
+    {
+      "content": "${1:command} | lines",
+      "doc": "\"lines\" invocation",
+      "label": "lines builtin",
+      "matches": {
+        "lines": true
+      }
+    },
+    {
+      "content": "${1:command} | every ${2:stride}",
+      "doc": "\"every\" invocation",
+      "label": "every builtin",
+      "matches": {
+        "every": true
+      }
+    },
+    {
+      "content": "match ${1:value} { ${2:pattern} => ${3:value}${4:, }, _ => ${5:value} }",
+      "doc": "\"match\" invocation",
+      "label": "match builtin",
+      "matches": {
+        "match": true
+      }
+    },
+    {
+      "content": "exec ${1:command}",
+      "doc": "\"exec\" invocation",
+      "label": "exec builtin",
+      "matches": {
+        "exec": true
+      }
+    },
+    {
+      "content": "${1:command} | math ${2|abs,arccos,arccosh,arcsin,arcsinh,arctan,arctanh,avg,ceil,cos,cosh,e,eval,exp,floor,ln,log,max,median,min,mode,pi,product,round,sin,sinh,sqrt,stddev,sum,tan,tanh,tau,variance|}",
+      "doc": "\"math\" invocation",
+      "label": "math builtin",
+      "matches": {
+        "math": true
+      }
+    },
+    {
+      "content": "exit ${1:code}",
+      "doc": "\"exit\" invocation",
+      "label": "exit builtin",
+      "matches": {
+        "exit": true
+      }
+    },
+    {
+      "content": "${1:command} | merge ${2:value}",
+      "doc": "\"merge\" invocation",
+      "label": "merge builtin",
+      "matches": {
+        "merge": true
+      }
+    },
+    {
+      "content": "explain {|| ${1:closure} }",
+      "doc": "\"explain\" invocation",
+      "label": "explain builtin",
+      "matches": {
+        "explain": true
+      }
+    },
+    {
+      "content": "${1:command} | metadata",
+      "doc": "\"metadata\" invocation",
+      "label": "metadata builtin",
+      "matches": {
+        "metadata": true
+      }
+    },
+    {
+      "content": "${1:command} | explore",
+      "doc": "\"explore\" invocation",
+      "label": "explore builtin",
+      "matches": {
+        "explore": true
+      }
+    },
+    {
+      "content": "mkdir ${1:path/to/directory}",
+      "doc": "\"mkdir\" invocation",
+      "label": "mkdir builtin",
+      "matches": {
+        "mkdir": true
+      }
+    },
+    {
+      "content": "export ${1:definition}",
+      "doc": "\"export\" invocation",
+      "label": "export builtin",
+      "matches": {
+        "export": true
+      }
+    },
+    {
+      "content": "export alias ${1:name} = ${2:value}",
+      "doc": "\"export alias\" invocation",
+      "label": "export alias builtin",
+      "matches": {
+        "export-alias": true
+      }
+    },
+    {
+      "content": "mut ${1:name} = ${2:value}",
+      "doc": "\"mut\" invocation",
+      "label": "mut builtin",
+      "matches": {
+        "mut": true
+      }
+    },
+    {
+      "content": "export def ${1:name} [${2:param}: ${3|int,float,string,bool,date,duration,filesize,range,list<>,record<>,table<>,closure,null|}${4:, }] {\n\t$0\n}",
+      "doc": "\"export def\" invocation",
+      "label": "export def builtin",
+      "matches": {
+        "export-def": true
+      }
+    },
+    {
+      "content": "# ${1:documentation}\nmut ${2:name} = ${3:value}",
+      "doc": "\"mut\" invocation",
+      "label": "@mut builtin",
+      "matches": {
+        "@mut": true
+      }
+    },
+    {
+      "content": "${1:value} in ${2:list}",
+      "doc": "\"in\" operator",
+      "label": "in",
+      "matches": {
+        "in": true
+      }
+    },
+    {
+      "content": "export def-env ${1:name} [${2:param}: ${3|int,float,string,bool,date,duration,filesize,range,list<>,record<>,table<>,closure,null|}${4:, }] {\n\t$0\n}",
+      "doc": "\"export def-env\" invocation",
+      "label": "export def-env builtin",
+      "matches": {
+        "export-def-env": true
+      }
+    },
+    {
+      "content": "mv ${1:path/to/source} ${2:path/to/destination}",
+      "doc": "\"mv\" invocation",
+      "label": "mv builtin",
+      "matches": {
+        "mv": true
+      }
+    },
+    {
+      "content": "#!/usr/bin/env nu",
+      "doc": "shebang",
+      "label": "shebang",
+      "matches": {
+        "shebang": true
+      }
+    },
+    {
+      "content": "ansi gradient --${1|fg,bg|}start ${2:0xffffff} --$1end ${3:0xffffff}",
+      "doc": "\"ansi gradient\" invocation",
+      "label": "ansi gradient builtin",
+      "matches": {
+        "ansi-gradient": true
+      }
+    },
+    {
+      "content": "export extern ${1:name} [${2:param}: string${3:, }]",
+      "doc": "\"export extern\" invocation",
+      "label": "export extern builtin",
+      "matches": {
+        "export-extern": true
+      }
+    },
+    {
+      "content": "${1:command} | split ${2|chars,words|}",
+      "doc": "\"split\" invocation",
+      "label": "split builtin",
+      "matches": {
+        "split": true
+      }
+    },
+    {
+      "content": "ansi link --text ${1:value}",
+      "doc": "\"ansi link\" invocation",
+      "label": "ansi link builtin",
+      "matches": {
+        "ansi-link": true
+      }
+    },
+    {
+      "content": "export old-alias ${1:name} = ${2:value}",
+      "doc": "\"export old-alias\" invocation",
+      "label": "export old-alias builtin",
+      "matches": {
+        "export-old-alias": true
+      }
+    },
+    {
+      "content": "0o[${1:1}]",
+      "doc": "octal",
+      "label": "octal",
+      "matches": {
+        "0o": true,
+        "octal": true
+      }
+    },
+    {
+      "content": "${1:command} | any {|${2:el}| ${3:predicate} }",
+      "doc": "\"any\" invocation",
+      "label": "any builtin",
+      "matches": {
+        "any": true
+      }
+    },
+    {
+      "content": "export use ${1:module} ${2:members}",
+      "doc": "\"export use\" invocation",
+      "label": "export use builtin",
+      "matches": {
+        "export-use": true
+      }
+    },
+    {
+      "content": "${1:value}${2|ns,us,ms,sec,min,hr,day,wk|}",
+      "doc": "duration",
+      "label": "duration",
+      "matches": {
+        "duration": true
+      }
+    },
+    {
+      "content": "${1:command} | append ${2:row}",
+      "doc": "\"append\" invocation",
+      "label": "append builtin",
+      "matches": {
+        "append": true
+      }
+    },
+    {
+      "content": "${1:value}${2|b,kb,mb,gb,tb,pb,eb,zb,kib,mib,gib,tib,pib,eib,zib|}",
+      "doc": "size",
+      "label": "filesize",
+      "matches": {
+        "size": true
+      }
+    },
+    {
+      "content": "export env { ${1:block} }",
+      "doc": "\"export env\" invocation",
+      "label": "export env builtin",
+      "matches": {
+        "export-env": true
+      }
+    },
+    {
+      "content": "ast ${1:pipeline}",
+      "doc": "\"ast\" invocation",
+      "label": "ast builtin",
+      "matches": {
+        "ast": true
+      }
+    },
+    {
+      "content": "{${1:key}: ${2:value}${3:, }}",
+      "doc": "record",
+      "label": "record",
+      "matches": {
+        "record": true
+      }
+    },
+    {
+      "content": "${1:command} | bits ${2|and,or,rol,ror,shl,shr,xor|} ${3:value}",
+      "doc": "\"bits\" invocation",
+      "label": "bits builtin",
+      "matches": {
+        "bits": true
+      }
+    },
+    {
+      "content": "${1:command} | fill --width ${2:value}",
+      "doc": "\"fill\" invocation",
+      "label": "fill builtin",
+      "matches": {
+        "fill": true
+      }
+    },
+    {
+      "content": "[${1:value}${2: }]",
+      "doc": "list",
+      "label": "list",
+      "matches": {
+        "list": true
+      }
+    },
+    {
+      "content": "[[${1:key}: ${2:value}${3:, }]${4:; }]",
+      "doc": "table",
+      "label": "table",
+      "matches": {
+        "table": true
+      }
+    },
+    {
+      "content": "${1:command} | bytes ${2|add,collect,ends-with,index-of,remove,starts-with|} ${3:value}",
+      "doc": "\"bytes\" invocation",
+      "label": "bytes builtin",
+      "matches": {
+        "bytes": true
+      }
+    },
+    {
+      "content": "--${1:long} (-${2:short}): ${3|int,float,string,bool,date,duration,filesize,range,list<>,record<>,table<>,closure,null|}",
+      "doc": "flag",
+      "label": "flag",
+      "matches": {
+        "--": true,
+        "flag": true
+      }
+    },
+    {
+      "content": "...${1:name}: ${2|int,float,string,bool,date,duration,filesize,range,list<>,record<>,table<>,closure,null|}",
+      "doc": "flag",
+      "label": "rest",
+      "matches": {
+        "...": true,
+        "rest": true
+      }
+    },
+    {
+      "content": "${1:command} | bytes at ${2:from}..${3:to}",
+      "doc": "\"bytes at\" invocation",
+      "label": "bytes at builtin",
+      "matches": {
+        "bytes-at": true
+      }
+    },
+    {
+      "content": "${1:command} | first ${2:count}",
+      "doc": "\"first\" invocation",
+      "label": "first builtin",
+      "matches": {
+        "first": true
+      }
+    },
+    {
+      "content": "${1:command} | bytes replace ${2:search} ${3:replacement}",
+      "doc": "\"bytes replace\" invocation",
+      "label": "bytes replace builtin",
+      "matches": {
+        "bytes-replace": true
+      }
+    },
+    {
+      "content": "# ${1:documentation}\nalias ${2:name} = ${3:value}",
+      "doc": "\"alias\" invocation",
+      "label": "@alias builtin",
+      "matches": {
+        "@alias": true
+      }
+    },
+    {
+      "content": "${1:command} | flatten",
+      "doc": "\"flatten\" invocation",
+      "label": "flatten builtin",
+      "matches": {
+        "flatten": true
+      }
+    },
+    {
+      "content": "${1:command} | all {|${2:el}| ${3:predicate} }",
+      "doc": "\"all\" invocation",
+      "label": "all builtin",
+      "matches": {
+        "all": true
+      }
+    },
+    {
+      "content": "${1:command} | fmt",
+      "doc": "\"fmt\" invocation",
+      "label": "fmt builtin",
+      "matches": {
+        "fmt": true
+      }
+    },
+    {
+      "content": "ansi ${3|black,red,green,yellow,blue,magenta,cyan,white,default,reset|}",
+      "doc": "\"ansi\" invocation",
+      "label": "ansi builtin",
+      "matches": {
+        "ansi": true
+      }
+    },
+    {
+      "content": "${1:command} | zip ${2:list}",
+      "doc": "\"zip\" invocation",
+      "label": "zip builtin",
+      "matches": {
+        "zip": true
+      }
+    },
+    {
+      "content": "for ${1:variable} in ${2:list} { ${3:block} }",
+      "doc": "\"for\" invocation",
+      "label": "for builtin",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "${1:command} | collect {|${2:el}| ${3:closure} }",
+      "doc": "\"collect\" invocation",
+      "label": "collect builtin",
+      "matches": {
+        "collect": true
+      }
+    },
+    {
+      "content": "${1:command} | wrap ${2:column}",
+      "doc": "\"wrap\" invocation",
+      "label": "wrap builtin",
+      "matches": {
+        "wrap": true
+      }
+    },
+    {
+      "content": "${1:command} | format ${2:value}",
+      "doc": "\"format\" invocation",
+      "label": "format builtin",
+      "matches": {
+        "format": true
+      }
+    },
+    {
+      "content": "${1:command} | split row ${2:separator}",
+      "doc": "\"split row\" invocation",
+      "label": "split row builtin",
+      "matches": {
+        "split-row": true
+      }
+    },
+    {
+      "content": "commandline ${1:command}",
+      "doc": "\"commandline\" invocation",
+      "label": "commandline builtin",
+      "matches": {
+        "commandline": true
+      }
+    },
+    {
+      "content": "${1:command} | format filesize ${2|b,kb,mb,gb,tb,pb,eb,zb,kib,mib,gib,tib,pib,eib,zib|} ${3:column}",
+      "doc": "\"format filesize\" invocation",
+      "label": "format filesize builtin",
+      "matches": {
+        "format-filesize": true
+      }
+    },
+    {
+      "content": "start ${1:path/to/file}",
+      "doc": "\"start\" invocation",
+      "label": "start builtin",
+      "matches": {
+        "start": true
+      }
+    },
+    {
+      "content": "while ${1:condition} { ${2:block} }",
+      "doc": "\"while\" invocation",
+      "label": "while builtin",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "^${1:command} | complete",
+      "doc": "\"complete\" invocation",
+      "label": "complete builtin",
+      "matches": {
+        "complete": true
+      }
+    },
+    {
+      "content": "${1:command} | from ${2|csv,eml,ics,ini,json,nuon,ods,ssv,toml,tsc,url,vcf,xlsx,xml,yaml,yml|}",
+      "doc": "\"from\" invocation",
+      "label": "from builtin",
+      "matches": {
+        "from": true
+      }
+    },
+    {
+      "content": "which ${1:command}",
+      "doc": "\"which\" invocation",
+      "label": "which builtin",
+      "matches": {
+        "which": true
+      }
+    },
+    {
+      "content": "${1:command} | where ${2:condition}",
+      "doc": "\"where\" invocation",
+      "label": "where builtin",
+      "matches": {
+        "where": true
+      }
+    },
+    {
+      "content": "${1:command} | compact",
+      "doc": "\"compact\" invocation",
+      "label": "compact builtin",
+      "matches": {
+        "compact": true
+      }
+    },
+    {
+      "content": "watch ${1:path/to/directory} {|${2:op}, ${3:path}, ${4:new_path}| ${5:block} }",
+      "doc": "\"watch\" invocation",
+      "label": "watch builtin",
+      "matches": {
+        "watch": true
+      }
+    },
+    {
+      "content": "view span ${1:from} ${2:to}",
+      "doc": "\"view span\" invocation",
+      "label": "view span builtin",
+      "matches": {
+        "view-span": true
+      }
+    },
+    {
+      "content": "${1:command} | get ${2:path/to/cell}",
+      "doc": "\"get\" invocation",
+      "label": "get builtin",
+      "matches": {
+        "get": true
+      }
+    },
+    {
+      "content": "config ${1|env,nu,reset|}",
+      "doc": "\"config\" invocation",
+      "label": "config builtin",
+      "matches": {
+        "config": true
+      }
+    },
+    {
+      "content": "view source ${1:value}",
+      "doc": "\"view source\" invocation",
+      "label": "view source builtin",
+      "matches": {
+        "view-source": true
+      }
+    },
+    {
+      "content": "glob ${1:pattern}",
+      "doc": "\"glob\" invocation",
+      "label": "glob builtin",
+      "matches": {
+        "glob": true
+      }
+    },
+    {
+      "content": "const ${1:name} = ${2:value}",
+      "doc": "\"const\" invocation",
+      "label": "const builtin",
+      "matches": {
+        "const": true
+      }
+    },
+    {
+      "content": "${1:command} | values",
+      "doc": "\"values\" invocation",
+      "label": "values builtin",
+      "matches": {
+        "values": true
+      }
+    },
+    {
+      "content": "${1:command} | grid",
+      "doc": "\"grid\" invocation",
+      "label": "grid builtin",
+      "matches": {
+        "grid": true
+      }
+    },
+    {
+      "content": "# ${1:documentation}\nconst ${2:name} = ${3:value}",
+      "doc": "\"const\" invocation",
+      "label": "@const builtin",
+      "matches": {
+        "@const": true
+      }
+    },
+    {
+      "content": "use ${2:module} ${3:members}",
+      "doc": "\"use\" invocation",
+      "label": "use builtin",
+      "matches": {
+        "use": true
+      }
+    },
+    {
+      "content": "${1:command} | bits not",
+      "doc": "\"bits not\" invocation",
+      "label": "bits not builtin",
+      "matches": {
+        "bits-not": true
+      }
+    },
+    {
+      "content": "${1:command} | group ${2:count}",
+      "doc": "\"group\" invocation",
+      "label": "group builtin",
+      "matches": {
+        "group": true
+      }
+    },
+    {
+      "content": "${1:2000}-${2|01,02,03,04,05,06,07,08,09,10,11,12|}-${3|01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31|}",
+      "doc": "date",
+      "label": "date",
+      "matches": {
+        "date": true
+      }
+    },
+    {
+      "content": "${1:command} | update cells {|${2:el}| ${3:closure} }",
+      "doc": "\"update cells\" invocation",
+      "label": "update cells builtin",
+      "matches": {
+        "update-cells": true
+      }
+    },
+    {
+      "content": "${1:command} | group-by ${2:grouper}",
+      "doc": "\"group-by\" invocation",
+      "label": "group-by builtin",
+      "matches": {
+        "group-by": true
+      }
+    },
+    {
+      "content": "${1:command} | update ${2:column} ${3:value}",
+      "doc": "\"update\" invocation",
+      "label": "update builtin",
+      "matches": {
+        "update": true
+      }
+    },
+    {
+      "content": "${1:command} | uniq-by ${2:columns}",
+      "doc": "\"uniq-by\" invocation",
+      "label": "uniq-by builtin",
+      "matches": {
+        "uniq-by": true
+      }
+    },
+    {
+      "content": "${1:command} | decode ${1|big5,euc-jp,euc-kr,gbk,iso-8859-1,utf-16,cp1252,latin5|}",
+      "doc": "\"decode\" invocation",
+      "label": "decode builtin",
+      "matches": {
+        "decode": true
+      }
+    },
+    {
+      "content": "${1:command} | date humanize",
+      "doc": "\"date humanize\" invocation",
+      "label": "date humanize builtin",
+      "matches": {
+        "date-humanize": true
+      }
+    },
+    {
+      "content": "tutor ${1:search}",
+      "doc": "\"tutor\" invocation",
+      "label": "tutor builtin",
+      "matches": {
+        "tutor": true
+      }
+    },
+    {
+      "content": "try { ${1:block} } catch { ${2:block} }",
+      "doc": "\"try catch\" invocation",
+      "label": "try catch builtin",
+      "matches": {
+        "try-catch": true
+      }
+    },
+    {
+      "content": "try { ${1:block} }",
+      "doc": "\"try\" invocation",
+      "label": "try builtin",
+      "matches": {
+        "try": true
+      }
+    },
+    {
+      "content": "${1:command} | hash ${2|md5,sha256|}",
+      "doc": "\"hash\" invocation",
+      "label": "hash builtin",
+      "matches": {
+        "hash": true
+      }
+    },
+    {
+      "content": "module ${1:name} { ${1:block} }",
+      "doc": "\"module\" invocation",
+      "label": "module builtin",
+      "matches": {
+        "module": true
+      }
+    },
+    {
+      "content": "${1:command} | nu-highlight",
+      "doc": "\"nu-highlight\" invocation",
+      "label": "nu-highlight builtin",
+      "matches": {
+        "nu-highlight": true
+      }
+    },
+    {
+      "content": "${1:command} | decode base64",
+      "doc": "\"decode base64\" invocation",
+      "label": "decode base64 builtin",
+      "matches": {
+        "decode-base64": true
+      }
+    },
+    {
+      "content": "${1:command} | headers",
+      "doc": "\"headers\" invocation",
+      "label": "headers builtin",
+      "matches": {
+        "headers": true
+      }
+    },
+    {
+      "content": "${1:command} | par-each {|${2:el}| ${3:closure} }",
+      "doc": "\"par-each\" invocation",
+      "label": "par-each builtin",
+      "matches": {
+        "par-each": true
+      }
+    },
+    {
+      "content": "timeit { ${1:block} }",
+      "doc": "\"timeit\" invocation",
+      "label": "timeit builtin",
+      "matches": {
+        "timeit": true
+      }
+    },
+    {
+      "content": "${1:command} | decode hex",
+      "doc": "\"decode hex\" invocation",
+      "label": "decode hex builtin",
+      "matches": {
+        "decode-hex": true
+      }
+    },
+    {
+      "content": "help ${1|aliases,commands,externs,modules,operators|}",
+      "doc": "\"help\" invocation",
+      "label": "help builtin",
+      "matches": {
+        "help": true
+      }
+    },
+    {
+      "content": "# ${1:documentation}\nold-alias ${2:name} = ${3:value}",
+      "doc": "\"old-alias\" invocation",
+      "label": "@old-alias builtin",
+      "matches": {
+        "@old-alias": true
+      }
+    },
+    {
+      "content": "random bool --bias ${1:value}",
+      "doc": "\"random bool\" invocation",
+      "label": "random bool builtin",
+      "matches": {
+        "random-bool": true
+      }
+    },
+    {
+      "content": "hide ${1:definitions}",
+      "doc": "\"hide\" invocation",
+      "label": "hide builtin",
+      "matches": {
+        "hide": true
+      }
+    },
+    {
+      "content": "${1:command} | open",
+      "doc": "\"open\" invocation",
+      "label": "open builtin",
+      "matches": {
+        "open": true
+      }
+    },
+    {
+      "content": "random uuid",
+      "doc": "\"random uuid\" invocation",
+      "label": "random uuid builtin",
+      "matches": {
+        "random-uuid": true
+      }
+    },
+    {
+      "content": "# ${1:documentation}\ndef ${2:name} [${3:param}: ${4|int,float,string,bool,date,duration,filesize,range,list<>,record<>,table<>,closure,null|}${5:, }] {\n\t$0\n}",
+      "doc": "\"def\" invocation",
+      "label": "@def builtin",
+      "matches": {
+        "@def": true
+      }
+    },
+    {
+      "content": "overlay hide ${1:name}",
+      "doc": "\"overlay hide\" invocation",
+      "label": "overlay hide builtin",
+      "matches": {
+        "overlay-hide": true
+      }
+    },
+    {
+      "content": "${1:command} | reduce {|${2:el}, ${3:acc}| ${4:closure} }",
+      "doc": "\"reduce\" invocation",
+      "label": "reduce builtin",
+      "matches": {
+        "reduce": true
+      }
+    },
+    {
+      "content": "def-env ${1:name} [${2:param}: ${3|int,float,string,bool,date,duration,filesize,range,list<>,record<>,table<>,closure,null|}${4:, }] {\n\t$0\n}",
+      "doc": "\"def-env\" invocation",
+      "label": "def-env builtin",
+      "matches": {
+        "def-env": true
+      }
+    },
+    {
+      "content": "${1:command} | query web --query ${2:expression}",
+      "doc": "\"query web\" invocation",
+      "label": "query web builtin",
+      "matches": {
+        "query-web": true
+      }
+    },
+    {
+      "content": "overlay new ${1:name}",
+      "doc": "\"overlay new\" invocation",
+      "label": "overlay new builtin",
+      "matches": {
+        "overlay-new": true
+      }
+    },
+    {
+      "content": "return ${1:value}",
+      "doc": "\"return\" invocation",
+      "label": "return builtin",
+      "matches": {
+        "return": true
+      }
+    },
+    {
+      "content": "# ${1:documentation}\ndef-env ${2:name} [${3:param}: ${4|int,float,string,bool,date,duration,filesize,range,list<>,record<>,table<>,closure,null|}${5:, }] {\n\t$0\n}",
+      "doc": "\"def-env\" invocation",
+      "label": "@def-env builtin",
+      "matches": {
+        "@def-env": true
+      }
+    },
+    {
+      "content": "alias ${1:name} = ${2:value}",
+      "doc": "\"alias\" invocation",
+      "label": "alias builtin",
+      "matches": {
+        "alias": true
+      }
+    },
+    {
+      "content": "overlay use ${1:name}",
+      "doc": "\"overlay use\" invocation",
+      "label": "overlay use builtin",
+      "matches": {
+        "overlay-use": true
+      }
+    },
+    {
+      "content": "${1:command} | default ${2:default} ${3:column}",
+      "doc": "\"default\" invocation",
+      "label": "default builtin",
+      "matches": {
+        "default": true
+      }
+    },
+    {
+      "content": "run-external ${1:command}",
+      "doc": "\"run-external\" invocation",
+      "label": "run-external builtin",
+      "matches": {
+        "run-external": true
+      }
+    },
+    {
+      "content": "g ${1:shell}",
+      "doc": "\"g\" invocation",
+      "label": "g builtin",
+      "matches": {
+        "g": true
+      }
+    },
+    {
+      "content": "${1:command} | describe",
+      "doc": "\"describe\" invocation",
+      "label": "describe builtin",
+      "matches": {
+        "describe": true
+      }
+    },
+    {
+      "content": "0x[${1:ff}]",
+      "doc": "hexadecimal",
+      "label": "hexadecimal",
+      "matches": {
+        "0x": true,
+        "hexadecimal": true
+      }
+    },
+    {
+      "content": "${1:command} | str contains ${2:value}",
+      "doc": "\"str-contains\" invocation",
+      "label": "str contains builtin",
+      "matches": {
+        "str-contains": true
+      }
+    },
+    {
+      "content": "${1:command} | detect columns",
+      "doc": "\"detect columns\" invocation",
+      "label": "detect columns builtin",
+      "matches": {
+        "detect-columns": true
+      }
+    },
+    {
+      "content": "${1:command} | parse ${2:pattern}",
+      "doc": "\"parse\" invocation",
+      "label": "parse builtin",
+      "matches": {
+        "parse": true
+      }
+    },
+    {
+      "content": "${1:command} | str ${2|camel-case,capitalize,downcase,kebab-case,length,pascal-case,reverse,screaming-snake-case,snake-case,title-case,trim,upcase|}",
+      "doc": "\"str\" invocation",
+      "label": "str builtin",
+      "matches": {
+        "str": true
+      }
+    },
+    {
+      "content": "${1:command} | window ${1:count}",
+      "doc": "\"window\" invocation",
+      "label": "window builtin",
+      "matches": {
+        "window": true
+      }
+    },
+    {
+      "content": "do { ${1:closure} }",
+      "doc": "\"do\" invocation",
+      "label": "do builtin",
+      "matches": {
+        "do": true
+      }
+    },
+    {
+      "content": "${1:command} | split-by ${2:separator}",
+      "doc": "\"split-by\" invocation",
+      "label": "split-by builtin",
+      "matches": {
+        "split-by": true
+      }
+    },
+    {
+      "content": "with-env ${1:variables} { ${2:block} }",
+      "doc": "\"with-env\" invocation",
+      "label": "with-env builtin",
+      "matches": {
+        "with-env": true
+      }
+    },
+    {
+      "content": "${1:command} | drop ${2:rows}",
+      "doc": "\"drop\" invocation",
+      "label": "drop builtin",
+      "matches": {
+        "drop": true
+      }
+    },
+    {
+      "content": "${1:command} | split list ${2:separator}",
+      "doc": "\"split list\" invocation",
+      "label": "split list builtin",
+      "matches": {
+        "split-list": true
+      }
+    },
+    {
+      "content": "${1:command} | split column ${2:separator}",
+      "doc": "\"split column\" invocation",
+      "label": "split column builtin",
+      "matches": {
+        "split-column": true
+      }
+    },
+    {
+      "content": "${1:command} | drop columns ${2:numbers}",
+      "doc": "\"drop columns\" invocation",
+      "label": "drop columns builtin",
+      "matches": {
+        "drop-columns": true
+      }
+    },
+    {
+      "content": "${1:command} | path relative-to ${2:path/to/directory}",
+      "doc": "\"path-relative-to\" invocation",
+      "label": "path relative-to builtin",
+      "matches": {
+        "path-relative-to": true
+      }
+    },
+    {
+      "content": "source-env ${1:path/to/script}",
+      "doc": "\"source-env\" invocation",
+      "label": "source-env builtin",
+      "matches": {
+        "source-env": true
+      }
+    },
+    {
+      "content": "${1:from}..${2:to}",
+      "doc": "range",
+      "label": "range",
+      "matches": {
+        "..": true,
+        "range": true
+      }
+    },
+    {
+      "content": "${1:command} | drop nth ${2:rows}",
+      "doc": "\"drop nth\" invocation",
+      "label": "drop nth builtin",
+      "matches": {
+        "drop-nth": true
+      }
+    },
+    {
+      "content": "port ${1:from} ${2:to}",
+      "doc": "\"port\" invocation",
+      "label": "port builtin",
+      "matches": {
+        "port": true
+      }
+    },
+    {
+      "content": "source ${1:path/to/script}",
+      "doc": "\"source\" invocation",
+      "label": "source builtin",
+      "matches": {
+        "source": true
+      }
+    },
+    {
+      "content": "${1:command} | sort-by ${2:column}",
+      "doc": "\"sort-by\" invocation",
+      "label": "sort-by builtin",
+      "matches": {
+        "sort-by": true
+      }
+    },
+    {
+      "content": "du ${1:path/to/directory}",
+      "doc": "\"du\" invocation",
+      "label": "du builtin",
+      "matches": {
+        "du": true
+      }
+    },
+    {
+      "content": "${1:command} | sort",
+      "doc": "\"sort\" invocation",
+      "label": "sort builtin",
+      "matches": {
+        "sort": true
+      }
+    },
+    {
+      "content": "sleep ${1:value}${2|ns,us,ms,sec,min,hr,day,wk|}",
+      "doc": "\"sleep\" invocation",
+      "label": "sleep builtin",
+      "matches": {
+        "sleep": true
+      }
+    },
+    {
+      "content": "profile {|| ${1:closure} }",
+      "doc": "\"profile\" invocation",
+      "label": "profile builtin",
+      "matches": {
+        "profile": true
+      }
+    },
+    {
+      "content": "${1:command} | skip while {|${2:el}| ${3:predicate} }",
+      "doc": "\"skip while\" invocation",
+      "label": "skip while builtin",
+      "matches": {
+        "skip-while": true
+      }
+    },
+    {
+      "content": "${1:command} | skip until {|${2:el}| ${3:predicate} }",
+      "doc": "\"skip until\" invocation",
+      "label": "skip until builtin",
+      "matches": {
+        "skip-until": true
+      }
+    },
+    {
+      "content": "${1:command} | skip ${2:count}",
+      "doc": "\"skip\" invocation",
+      "label": "skip builtin",
+      "matches": {
+        "skip": true
+      }
+    },
+    {
+      "content": "${1:command} | query ${2|db,json,xml|} ${3:expression}",
+      "doc": "\"query\" invocation",
+      "label": "query builtin",
+      "matches": {
+        "query": true
+      }
+    },
+    {
+      "content": "${1:command} | size",
+      "doc": "\"size\" invocation",
+      "label": "size builtin",
+      "matches": {
+        "size": true
+      }
+    },
+    {
+      "content": "${1:command} | shuffle",
+      "doc": "\"shuffle\" invocation",
+      "label": "shuffle builtin",
+      "matches": {
+        "shuffle": true
+      }
+    },
+    {
+      "content": "hide-env ${1:variables}",
+      "doc": "\"hide-env\" invocation",
+      "label": "hide-env builtin",
+      "matches": {
+        "hide-env": true
+      }
+    },
+    {
+      "content": "${1:command} | str distance ${2:value}",
+      "doc": "\"str-distance\" invocation",
+      "label": "str distance builtin",
+      "matches": {
+        "str-distance": true
+      }
+    },
+    {
+      "content": "${1:value} not-in ${2:list}",
+      "doc": "\"not-in\" operator",
+      "label": "not-in",
+      "matches": {
+        "not-in": true
+      }
+    },
+    {
+      "content": "char ${1|newline,enter,nl,line_feed,lf,carriage_return,cr,crlf,tab|}",
+      "doc": "\"char\" invocation",
+      "label": "char builtin",
+      "matches": {
+        "char": true
+      }
+    },
+    {
+      "content": "${1:command} | histogram ${2:column} ${3:frequency-column}",
+      "doc": "\"histogram\" invocation",
+      "label": "histogram builtin",
+      "matches": {
+        "histogram": true
+      }
+    },
+    {
+      "content": "${1:command} | str ends-with ${2:value}",
+      "doc": "\"str-ends-with\" invocation",
+      "label": "str ends-with builtin",
+      "matches": {
+        "str-ends-with": true
+      }
+    },
+    {
+      "content": "${1:command} | schema",
+      "doc": "\"schema\" invocation",
+      "label": "schema builtin",
+      "matches": {
+        "schema": true
+      }
+    },
+    {
+      "content": "extern ${1:name} [${2:param}: string${3:, }]",
+      "doc": "\"extern\" invocation",
+      "label": "extern builtin",
+      "matches": {
+        "extern": true
+      }
+    },
+    {
+      "content": "http ${1|delete,get,head|} ${1:url}",
+      "doc": "\"http\" invocation",
+      "label": "http builtin",
+      "matches": {
+        "http": true
+      }
+    },
+    {
+      "content": "${1:command} | str index-of ${2:value}",
+      "doc": "\"str-index-of\" invocation",
+      "label": "str index-of builtin",
+      "matches": {
+        "str-index-of": true
+      }
+    },
+    {
+      "content": "${1:command} | find",
+      "doc": "\"find\" invocation",
+      "label": "find builtin",
+      "matches": {
+        "find": true
+      }
+    },
+    {
+      "content": "http patch ${1:url} ${2:data}",
+      "doc": "\"http patch\" invocation",
+      "label": "http patch builtin",
+      "matches": {
+        "http-patch": true
+      }
+    },
+    {
+      "content": "random ${1|decimal,integer|} ${2:from}..${3:to}",
+      "doc": "\"random\" invocation",
+      "label": "random builtin",
+      "matches": {
+        "random": true
+      }
+    },
+    {
+      "content": "${1:command} | str join ${2:value}",
+      "doc": "\"str-join\" invocation",
+      "label": "str join builtin",
+      "matches": {
+        "str-join": true
+      }
+    },
+    {
+      "content": "cd ${1:path/to/directory}",
+      "doc": "\"cd\" invocation",
+      "label": "cd builtin",
+      "matches": {
+        "cd": true
+      }
+    },
+    {
+      "content": "http post ${1:url} ${2:data}",
+      "doc": "\"http post\" invocation",
+      "label": "http post builtin",
+      "matches": {
+        "http-post": true
+      }
+    },
+    {
+      "content": "${1:command} | reverse",
+      "doc": "\"reverse\" invocation",
+      "label": "reverse builtin",
+      "matches": {
+        "reverse": true
+      }
+    },
+    {
+      "content": "${1:command} | str replace ${2:search} ${3:replacement}",
+      "doc": "\"str-replace\" invocation",
+      "label": "str replace builtin",
+      "matches": {
+        "str-replace": true
+      }
+    },
+    {
+      "content": "${1:command} | rename ${2:columns}",
+      "doc": "\"rename\" invocation",
+      "label": "rename builtin",
+      "matches": {
+        "rename": true
+      }
+    },
+    {
+      "content": "http put ${1:url} ${2:data}",
+      "doc": "\"http put\" invocation",
+      "label": "http put builtin",
+      "matches": {
+        "http-put": true
+      }
+    },
+    {
+      "content": "${1:command} | path ${2|basename,dirname,exists,expand,parse,split,type|}",
+      "doc": "\"path\" invocation",
+      "label": "path builtin",
+      "matches": {
+        "path": true
+      }
+    },
+    {
+      "content": "${1:command} | table",
+      "doc": "\"table\" invocation",
+      "label": "table builtin",
+      "matches": {
+        "table": true
+      }
+    },
+    {
+      "content": "register ${1:path/to/plugin}",
+      "doc": "\"register\" invocation",
+      "label": "register builtin",
+      "matches": {
+        "register": true
+      }
+    },
+    {
+      "content": "if ${1:condition} { ${2:block} }",
+      "doc": "\"if\" invocation",
+      "label": "if builtin",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "${1:command} | table ${2:count}",
+      "doc": "\"take\" invocation",
+      "label": "take builtin",
+      "matches": {
+        "take": true
+      }
+    },
+    {
+      "content": "${1:command} | range ${2:from}..${3:to}",
+      "doc": "\"range\" invocation",
+      "label": "range builtin",
+      "matches": {
+        "range": true
+      }
+    },
+    {
+      "content": "if ${1:condition} { ${2:block} } else { ${3:block} }",
+      "doc": "\"if\" invocation",
+      "label": "if else builtin",
+      "matches": {
+        "if-else": true
+      }
+    },
+    {
+      "content": "${1:command} | take until {|${2:el}| ${3:predicate} }",
+      "doc": "\"take until\" invocation",
+      "label": "take until builtin",
+      "matches": {
+        "take-until": true
+      }
+    },
+    {
+      "content": "random dice",
+      "doc": "\"random dice\" invocation",
+      "label": "random dice builtin",
+      "matches": {
+        "random-dice": true
+      }
+    },
+    {
+      "content": "if ${1:condition} { ${2:block} } else if { ${3:block} } else { ${4:block} }",
+      "doc": "\"if\" invocation",
+      "label": "if else if else builtin",
+      "matches": {
+        "if-else-if-else": true
+      }
+    },
+    {
+      "content": "random chars --length ${1:value}",
+      "doc": "\"random chars\" invocation",
+      "label": "random chars builtin",
+      "matches": {
+        "random-chars": true
+      }
+    },
+    {
+      "content": "${1:command} | take while {|${2:el}| ${3:predicate} }",
+      "doc": "\"take while\" invocation",
+      "label": "take while builtin",
+      "matches": {
+        "take-while": true
+      }
+    },
+    {
+      "content": "${1:command} | ignore",
+      "doc": "\"ignore\" invocation",
+      "label": "ignore builtin",
+      "matches": {
+        "ignore": true
+      }
+    },
+    {
+      "content": "registry query ${1:path/to/key} ${2:value}",
+      "doc": "\"registry query\" invocation",
+      "label": "registry query builtin",
+      "matches": {
+        "registry-query": true
+      }
+    },
+    {
+      "content": "${1:command} | prepend ${2:row}",
+      "doc": "\"prepend\" invocation",
+      "label": "prepend builtin",
+      "matches": {
+        "prepend": true
+      }
+    },
+    {
+      "content": "${1:command} | inc",
+      "doc": "\"inc\" invocation",
+      "label": "inc builtin",
+      "matches": {
+        "inc": true
+      }
+    },
+    {
+      "content": "${1:command} | path join ${2:path/to/file}",
+      "doc": "\"path-join\" invocation",
+      "label": "path join builtin",
+      "matches": {
+        "path-join": true
+      }
+    },
+    {
+      "content": "${1:command} | reject ${2:columns}",
+      "doc": "\"reject\" invocation",
+      "label": "reject builtin",
+      "matches": {
+        "reject": true
+      }
+    },
+    {
+      "content": "input ${1:prompt}",
+      "doc": "\"input\" invocation",
+      "label": "input builtin",
+      "matches": {
+        "input": true
+      }
+    },
+    {
+      "content": "${1:command} | to ${2|csv,html,json,md,nuon,text,toml,tsv,xml,yaml|}",
+      "doc": "\"to\" invocation",
+      "label": "to builtin",
+      "matches": {
+        "to": true
+      }
+    },
+    {
+      "content": "old-alias ${1:name} = ${2:value}",
+      "doc": "\"old-alias\" invocation",
+      "label": "old-alias builtin",
+      "matches": {
+        "old-alias": true
+      }
+    },
+    {
+      "content": "${1:command} | insert ${2:column} ${3:value}",
+      "doc": "\"insert\" invocation",
+      "label": "insert builtin",
+      "matches": {
+        "insert": true
+      }
+    },
+    {
+      "content": "touch ${1:path/to/file}",
+      "doc": "\"touch\" invocation",
+      "label": "touch builtin",
+      "matches": {
+        "touch": true
+      }
+    },
+    {
+      "content": "${1:command} | nu-check",
+      "doc": "\"nu-check\" invocation",
+      "label": "nu-check builtin",
+      "matches": {
+        "nu-check": true
+      }
+    },
+    {
+      "content": "${1:command} | inspect",
+      "doc": "\"inspect\" invocation",
+      "label": "inspect builtin",
+      "matches": {
+        "inspect": true
+      }
+    },
+    {
+      "content": "${1:command} | move ${2:column} --${3|before,after|} ${4:column}",
+      "doc": "\"move\" invocation",
+      "label": "move builtin",
+      "matches": {
+        "move": true
+      }
+    },
+    {
+      "content": "${1:command} | transpose",
+      "doc": "\"transpose\" invocation",
+      "label": "transpose builtin",
+      "matches": {
+        "transpose": true
+      }
+    },
+    {
+      "content": "${1:command} | into ${2|binary,bool,datetime,decimal,duration,filesize,int,record,sqlite,string|}",
+      "doc": "\"into\" invocation",
+      "label": "into builtin",
+      "matches": {
+        "into": true
+      }
+    },
+    {
+      "content": "def ${1:name} [${2:param}: ${3|int,float,string,bool,date,duration,filesize,range,list<>,record<>,table<>,closure,null|}${4:, }] {\n\t$0\n}",
+      "doc": "\"def\" invocation",
+      "label": "def builtin",
+      "matches": {
+        "def": true
+      }
+    },
+    {
+      "content": "${1:command} | enumerate",
+      "doc": "\"enumerate\" invocation",
+      "label": "enumerate builtin",
+      "matches": {
+        "enumerate": true
+      }
+    },
+    {
+      "content": "rm ${1:path/to/file}",
+      "doc": "\"rm\" invocation",
+      "label": "rm builtin",
+      "matches": {
+        "rm": true
+      }
+    },
+    {
+      "content": "${1:command} | is-empty",
+      "doc": "\"is-empty\" invocation",
+      "label": "is-empty builtin",
+      "matches": {
+        "is-empty": true
+      }
+    },
+    {
+      "content": "date format ${1:%Y-%m-%d %H:%M:%S}",
+      "doc": "\"date format\" invocation",
+      "label": "date format builtin",
+      "matches": {
+        "date-format": true
+      }
+    },
+    {
+      "content": "${1:command} | roll ${2|down,left,right,up|}",
+      "doc": "\"roll\" invocation",
+      "label": "roll builtin",
+      "matches": {
+        "roll": true
+      }
+    },
+    {
+      "content": "cp ${1:path/to/from} ${2:path/to/to}",
+      "doc": "\"cp\" invocation",
+      "label": "cp builtin",
+      "matches": {
+        "cp": true
+      }
+    },
+    {
+      "content": "${1:command} | join ${2:table} ${3:column}",
+      "doc": "\"join\" invocation",
+      "label": "join builtin",
+      "matches": {
+        "join": true
+      }
+    },
+    {
+      "content": "gstat ${1:path/to/repository}",
+      "doc": "\"gstat\" invocation",
+      "label": "gstat builtin",
+      "matches": {
+        "gstat": true
+      }
+    },
+    {
+      "content": "${1:command} | rotate",
+      "doc": "\"rotate\" invocation",
+      "label": "rotate builtin",
+      "matches": {
+        "rotate": true
+      }
+    },
+    {
+      "content": "kill ${1:pid}",
+      "doc": "\"kill\" invocation",
+      "label": "kill builtin",
+      "matches": {
+        "kill": true
+      }
+    },
+    {
+      "content": "${1:command} | each {|${2:el}| ${3:closure} }",
+      "doc": "\"each\" invocation",
+      "label": "each builtin",
+      "matches": {
+        "each": true
+      }
+    },
+    {
+      "content": "${1:command} | uniq",
+      "doc": "\"uniq\" invocation",
+      "label": "uniq builtin",
+      "matches": {
+        "uniq": true
+      }
+    },
+    {
+      "content": "${1:command} | last ${2:count}",
+      "doc": "\"last\" invocation",
+      "label": "last builtin",
+      "matches": {
+        "last": true
+      }
+    },
+    {
+      "content": "${1:command} | each while {|${2:el}| ${3:closure} }",
+      "doc": "\"each while\" invocation",
+      "label": "each while builtin",
+      "matches": {
+        "each-while": true
+      }
+    },
+    {
+      "content": "${1:command} | filter {|${2:el}| ${3:predicate} }",
+      "doc": "\"filter\" invocation",
+      "label": "filter builtin",
+      "matches": {
+        "filter": true
+      }
+    },
+    {
+      "content": "${1:command} | length",
+      "doc": "\"length\" invocation",
+      "label": "length builtin",
+      "matches": {
+        "length": true
+      }
+    },
+    {
+      "content": "${1:command} | save",
+      "doc": "\"save\" invocation",
+      "label": "save builtin",
+      "matches": {
+        "save": true
+      }
+    },
+    {
+      "content": "${1:command} | encode ${2|big5,euc-jp,euc-kr,gbk,iso-8859-1,utf-16,cp1252,latin5|}",
+      "doc": "\"encode\" invocation",
+      "label": "encode builtin",
+      "matches": {
+        "encode": true
+      }
+    },
+    {
+      "content": "error make {${1:msg}: ${2:message}${3:, }}",
+      "doc": "\"error make\" invocation",
+      "label": "error make builtin",
+      "matches": {
+        "error-make": true
+      }
+    },
+    {
+      "content": "let ${1:name} = ${2:value}",
+      "doc": "\"let\" invocation",
+      "label": "let builtin",
+      "matches": {
+        "let": true
+      }
+    },
+    {
+      "content": "${1:command} | encode base64",
+      "doc": "\"encode base64\" invocation",
+      "label": "encode base64 builtin",
+      "matches": {
+        "encode-base64": true
+      }
+    },
+    {
+      "content": "0b[${1:1}]",
+      "doc": "binary",
+      "label": "binary",
+      "matches": {
+        "0b": true,
+        "binary": true
+      }
+    },
+    {
+      "content": "# ${1:documentation}\nlet ${2:name} = ${3:value}",
+      "doc": "\"let\" invocation",
+      "label": "@let builtin",
+      "matches": {
+        "@let": true
+      }
+    },
+    {
+      "content": "${1:command} | select ${2:columns}",
+      "doc": "\"select\" invocation",
+      "label": "select builtin",
+      "matches": {
+        "select": true
+      }
+    },
+    {
+      "content": "${1:command} | encode hex",
+      "doc": "\"encode hex\" invocation",
+      "label": "encode hex builtin",
+      "matches": {
+        "encode-hex": true
+      }
+    },
+    {
+      "content": "let-env ${1:name} = ${2:value}",
+      "doc": "\"let-env\" invocation",
+      "label": "let-env builtin",
+      "matches": {
+        "let-env": true
+      }
+    },
+    {
+      "content": "seq ${1:from} ${2:to}",
+      "doc": "\"seq\" invocation",
+      "label": "seq builtin",
+      "matches": {
+        "seq": true
+      }
+    },
+    {
+      "content": "${1:command} | upsert ${2:column} ${3:value}",
+      "doc": "\"upsert\" invocation",
+      "label": "upsert builtin",
+      "matches": {
+        "upsert": true
+      }
+    },
+    {
+      "content": "enter ${1:path/to/directory}",
+      "doc": "\"enter\" invocation",
+      "label": "enter builtin",
+      "matches": {
+        "enter": true
+      }
+    },
+    {
+      "content": "# ${1:documentation}\nlet-env ${2:name} = ${3:value}",
+      "doc": "\"let-env\" invocation",
+      "label": "@let-env builtin",
+      "matches": {
+        "@let-env": true
+      }
+    },
+    {
+      "content": "seq char ${1:from} ${2:to}",
+      "doc": "\"seq char\" invocation",
+      "label": "seq char builtin",
+      "matches": {
+        "seq-char": true
+      }
+    },
+    {
+      "content": "${1:command} | url ${2|build-query,encode,join,parse|}",
+      "doc": "\"url\" invocation",
+      "label": "url builtin",
+      "matches": {
+        "url": true
+      }
+    },
+    {
+      "content": "loop { ${1:block} }",
+      "doc": "\"loop\" invocation",
+      "label": "loop builtin",
+      "matches": {
+        "loop": true
+      }
+    },
+    {
+      "content": "{${1:key}: ${2:value}, ${3:key}: ${4:value}}",
+      "doc": "pair",
+      "label": "pair",
+      "matches": {
+        "pair": true
+      }
+    },
+    {
+      "content": "seq date --begin-date ${1:from} --end-date ${2:to}",
+      "doc": "\"seq date\" invocation",
+      "label": "seq date builtin",
+      "matches": {
+        "seq-date": true
+      }
+    }
+  ]
+}

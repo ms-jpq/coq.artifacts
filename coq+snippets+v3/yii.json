@@ -1,0 +1,389 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "Yii::app()->session['${0}'];",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yse": true
+      }
+    },
+    {
+      "content": "$this->renderDynamic('${0:callback}');",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yrd": true
+      }
+    },
+    {
+      "content": "Yii::app()->cache->set('${1:key}', ${2:value}, ${3:expire}, new C${4:}CacheDependency(${0}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ycas": true
+      }
+    },
+    {
+      "content": "Yii::app()->cache->add('${1:key}', ${2:value}, ${3:expire}, new C${4}CacheDependency(${0}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ycad": true
+      }
+    },
+    {
+      "content": "Yii::app()->clientScript->registerCssFile('${0:file}');",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yregcf": true
+      }
+    },
+    {
+      "content": "Yii::app()->request->requestType",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yreqtype": true
+      }
+    },
+    {
+      "content": "Yii::app()->request->isAjaxRequest",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yisajax": true
+      }
+    },
+    {
+      "content": "Yii::t('${1:category}', '${2:message}',array(${0}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yt": true
+      }
+    },
+    {
+      "content": "Yii::app()->clientScript->registerCss('${1:id}', '${0}');",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yregc": true
+      }
+    },
+    {
+      "content": "Yii::log('${1:msg}', '${0:info}');",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ylog": true
+      }
+    },
+    {
+      "content": "YYii::app()->request->userHostAddress",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yuserip": true
+      }
+    },
+    {
+      "content": "Yii::app()->clientScript->registerScriptFile('${1:scriptUrl}', CClientScript::POS_${0:END});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yregsf": true
+      }
+    },
+    {
+      "content": "$this->widget('CLinkPager', array('pages'=>$pages,'header'=>'${0}'}))",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ylinkpager": true
+      }
+    },
+    {
+      "content": "CJSON::encode(${0:text});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yjec": true
+      }
+    },
+    {
+      "content": "$dataProvider = new CActiveDataProvider('${1}', array(\n  'criteria' => array(\n\t\t'condition' => '${2}',\n\t\t'order' => '${3}',\n\t\t'with' => array('${4}')\n\t),\n//'pagination' => false,\n\t'pagination' => array(\n\t\t'pageSize'=>${5},\n\t),\n));\n${0}\n// $dataProvider->getData() will return a list of Post objects",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yadp": true
+      }
+    },
+    {
+      "content": "$this->renderDynamic('${1:callback}', array('${2:key}'=>${0:value}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yrdi": true
+      }
+    },
+    {
+      "content": "Yii::app()->clientScript->registerScript('${1:id}', '${2}', CClientScript::POS_${0:READY});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yregs": true
+      }
+    },
+    {
+      "content": "Yii::app()->cache->flush();",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ycaf": true
+      }
+    },
+    {
+      "content": "Yii::app()->request->cookies['${0}']",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yco": true
+      }
+    },
+    {
+      "content": "Yii::app()->user->",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yuser": true
+      }
+    },
+    {
+      "content": "$this->refresh();",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yrf": true
+      }
+    },
+    {
+      "content": "Yii::import('${0}');",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yimp": true
+      }
+    },
+    {
+      "content": "Yii::trace('${0:msg}');",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ytrace": true
+      }
+    },
+    {
+      "content": "Yii::app()->params['${0}']",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ypar": true
+      }
+    },
+    {
+      "content": "Yii::app()->request->isPostRequest",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yispost": true
+      }
+    },
+    {
+      "content": "if(Yii::app()->request->isAjaxRequest == TRUE)\n{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yifisajax": true
+      }
+    },
+    {
+      "content": "Yii::app()->cache->delete('${0:key}');",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ydelcache": true
+      }
+    },
+    {
+      "content": "$this->render('${1:view}',array('${2:key}'=>${0:value}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yr": true
+      }
+    },
+    {
+      "content": "$this->redirect(array('${1:controller}/${0:action}'));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yre": true
+      }
+    },
+    {
+      "content": "Yii::app()->cache->get('${0:key}');",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ycag": true
+      }
+    },
+    {
+      "content": "$this->renderText('${0}');",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yrt": true
+      }
+    },
+    {
+      "content": "$this->renderPartial('${1:view}',array('${2:key}'=>${0:value}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yrp": true
+      }
+    },
+    {
+      "content": "${1:ModelName}::model()->count($2, array('${3:key}'=>${0:value}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ycountm": true
+      }
+    },
+    {
+      "content": "${1:ModelName}::model()->countBySql(${2:sql},array('${3:key}'=>${0:value}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ycountbs": true
+      }
+    },
+    {
+      "content": "${1:ModelName}::model()->updateAll(${2:array('attributes')}, $3,array('${4:key}'=>${0:value}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yupdatea": true
+      }
+    },
+    {
+      "content": "${1:ModelName}::model()->updateByPk(${2:pk}, ${3:array('attributes')}, $4,array('${5:key}'=>${0:value}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yupdatebp": true
+      }
+    },
+    {
+      "content": "${1:ModelName}::model()->deleteAll($2,array('${3:key}'=>${0:value}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ydela": true
+      }
+    },
+    {
+      "content": "${1:ModelName}::model()->deleteByPk(${2:pk}, $3, array('${4:key}'=>${0:value}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ydelbp": true
+      }
+    },
+    {
+      "content": "${1:ModelName}::model()->find($2,array('${3:key}'=>${0:value}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yfind": true
+      }
+    },
+    {
+      "content": "${1:ModelName}::model()->findAll($2,array('${3:key}'=>${0:value}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yfinda": true
+      }
+    },
+    {
+      "content": "${1:ModelName}::model()->findByPk(${2:pk}, $3, array('${4:key}'=>${0:value}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yfindbp": true
+      }
+    },
+    {
+      "content": "${1:ModelName}::model()->findAllByPk(${2:pk}, $3,array('${4:key}'=>${0:value}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yfindabp": true
+      }
+    },
+    {
+      "content": "${1:ModelName}::model()->findBySql(${2:sql}, array('${3:key}'=>${0:value}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yfindbs": true
+      }
+    },
+    {
+      "content": "${1:ModelName}::model()->findAllByAttributes(array('${2:attributeName}'=>${3:attributeValue}), $4, array('${5:key}'=>${0:value}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yfindaba": true
+      }
+    },
+    {
+      "content": "${1:ModelName}::model()->exists($2, array('${3:key}'=>${0:value}));",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yexists": true
+      }
+    },
+    {
+      "content": "<?php\n\nclass ${1:ModelName} extends ${2:CActiveRecord}\n{\n\t/**\n\t * Returns the static model of the specified AR class.\n\t * @return CActiveRecord the static model class\n\t */\n\tpublic static function model($className=__CLASS__)\n\t{\n\t\treturn parent::model($className);\n\t}\n\n\t/**\n\t * @return string the associated database table name\n\t */\n\tpublic function tableName()\n\t{\n\t\treturn '${0:table_name}';\n\t}\n\n\t/**\n\t * @return array validation rules for model attributes.\n\t */\n\tpublic function rules()\n\t{\n\t\treturn array(\n\t\t);\n\t}\n\n\t/**\n\t * @return array relational rules.\n\t */\n\tpublic function relations()\n\t{\n\t\treturn array(\n\t\t);\n\t}\n\n\t/**\n\t * @return array customized attribute labels (name=&gt;label)\n\t */\n\tpublic function attributeLabels()\n\t{\n\t\treturn array(\n\t\t);\n\t}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ymodel": true
+      }
+    },
+    {
+      "content": "<?php\n\n/**\n * ${1:}\n */\nclass ${2:Site}Controller extends ${3:CController}\n{\n\t  public function action${4:Index}()\n\t  {\n\t      ${0}\n\t  }\n\n\t// -----------------------------------------------------------\n\t// Uncomment the following methods and override them if needed\n\t/*\n\tpublic function filters()\n\t{\n\t\t// return the filter configuration for this controller, e.g.:\n\t\treturn array(\n\t\t\t'inlineFilterName',\n\t\t\tarray(\n\t\t\t\t'class'=>'path.to.FilterClass',\n\t\t\t\t'propertyName'=>'propertyValue',\n\t\t\t),\n\t\t);\n\t}\n\n\tpublic function actions()\n\t{\n\t\t// return external action classes, e.g.:\n\t\treturn array(\n\t\t\t'action1'=>'path.to.ActionClass',\n\t\t\t'action2'=>array(\n\t\t\t\t'class'=>'path.to.AnotherActionClass',\n\t\t\t\t'propertyName'=>'propertyValue',\n\t\t\t),\n\t\t);\n\t}\n\t*/\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ycontroller": true
+      }
+    },
+    {
+      "content": "public function action${1:Index}(${2:params})\n{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "yact": true
+      }
+    }
+  ]
+}

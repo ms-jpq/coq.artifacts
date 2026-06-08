@@ -1,0 +1,61 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "import Vue from 'vue';\nimport Vuex from 'vuex';\n\nVue.use(Vuex);\n\nexport const store = new Vuex.Store({\n\tstate: {\n\t\t${1:key}: ${2:value}\n\t}\n});",
+      "doc": "Base for Vuex store",
+      "label": "Vuex Store",
+      "matches": {
+        "vstore": true
+      }
+    },
+    {
+      "content": "export const state = () => ({\n\tvalue: 'myvalue'\n})\n\nexport const getters = {\n\tgetterValue: state => {\n\t\treturn state.value\n\t}\n}\n\nexport const mutations = {\n\tupdateValue: (state, payload) => {\n\t\tstate.value = payload\n\t}\n}\n\nexport const actions = {\n\tupdateActionValue({ commit }) {\n\t\tcommit('updateValue', payload)\n\t}\n}",
+      "doc": "vuex store 2",
+      "label": "Vuex Store 2",
+      "matches": {
+        "vstore2": true
+      }
+    },
+    {
+      "content": "mutations: {\n\t${1:updateValue}(state, ${3:payload}) {\n\t\tstate.${2:value} = ${3:payload};\n\t}\n}",
+      "doc": "vuex mutation",
+      "label": "Vuex Mutation",
+      "matches": {
+        "vmutation": true
+      }
+    },
+    {
+      "content": "export default {\n\tstate: {\n\t\tvalue: 'my value'\n\t},\n\tgetters: {\n\t\tvalue: state => {\n\t\t\treturn state.value;\n\t\t}\n\t},\n\tmutations: {\n\t\tupdateValue(state, payload) {\n\t\t\tstate.value = payload;\n\t\t}\n\t},\n\tactions: {\n\t\tupdateValue({commit}, payload) {\n\t\t\tcommit('updateValue', payload);\n\t\t}\n\t}\n};",
+      "doc": "vuex module",
+      "label": "Vuex Module",
+      "matches": {
+        "vmodule": true
+      }
+    },
+    {
+      "content": "import { store } from './store/index';",
+      "doc": "import vuex store into main.js",
+      "label": "Vue Import Vuex Store",
+      "matches": {
+        "vstore-import": true
+      }
+    },
+    {
+      "content": "getters: {\n\t${1:value}: state => {\n\t\treturn state.${1:value};\n\t}\n}",
+      "doc": "vuex getter",
+      "label": "Vuex Getters",
+      "matches": {
+        "vgetter": true
+      }
+    },
+    {
+      "content": "actions: {\n\t${1:updateValue}({commit}, ${2:payload}) {\n\t\tcommit('${1:updateValue}', ${2:payload});\n\t}\n}",
+      "doc": "vuex action",
+      "label": "Vuex Action",
+      "matches": {
+        "vaction": true
+      }
+    }
+  ]
+}

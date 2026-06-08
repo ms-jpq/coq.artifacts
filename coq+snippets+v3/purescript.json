@@ -1,0 +1,212 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "ado\n  ${1:binder} ← ${2:expression}\n\n  in ${3:experssion}",
+      "doc": "Ado-block",
+      "label": "ado",
+      "matches": {
+        "ado": true
+      }
+    },
+    {
+      "content": "foreign import data ${1:name} ∷ ${2:kind}",
+      "doc": "Foreign import data",
+      "label": "foreign-import-data",
+      "matches": {
+        "foreign-data": true,
+        "frd": true
+      }
+    },
+    {
+      "content": "derive instance ${1:type}",
+      "doc": "Derive instance",
+      "label": "derive-instance",
+      "matches": {
+        "derive": true,
+        "drv": true
+      }
+    },
+    {
+      "content": "foreign import ${1:name} ∷ ${2:type}",
+      "doc": "Foreign import",
+      "label": "foreign-import",
+      "matches": {
+        "foreign": true,
+        "fri": true
+      }
+    },
+    {
+      "content": "do\n  ${1:binder} ← ${2:expression}",
+      "doc": "Do-block",
+      "label": "do",
+      "matches": {
+        "do": true
+      }
+    },
+    {
+      "content": "case ${1:expression} of\n  ${2:case1} → ${3:result}\n  ${4:case2} → ${5:result}$0",
+      "doc": "Case statement",
+      "label": "case",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "derive newtype instance ${1:type}",
+      "doc": "Derive newtype instance",
+      "label": "derive-newtype-instance",
+      "matches": {
+        "derive-newtype": true,
+        "dni": true,
+        "drvnt": true
+      }
+    },
+    {
+      "content": "type ${1:type} r =\n  ( ${2:field} ∷ ${3:type}\n  , ${4:field} ∷ ${5:type}\n  | r\n  )",
+      "doc": "Type alias for an open row",
+      "label": "open-row-type-alias",
+      "matches": {
+        "open-row-type-alias": true,
+        "row": true,
+        "rta": true
+      }
+    },
+    {
+      "content": "import ${0:Data.List}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "imp": true
+      }
+    },
+    {
+      "content": "import ${1:Data.List} as ${0:List}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "impq": true
+      }
+    },
+    {
+      "content": "${1:name} :: ${2:a}\n$1 = ${0:undefined}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fn0": true
+      }
+    },
+    {
+      "content": "${1:fn} :: ${2:a} -> ${3:a}\n$1 ${4}= ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fn": true
+      }
+    },
+    {
+      "content": "${1:fn} :: ${2:a} -> ${3:a}\n$1 ${4}= ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fn1": true
+      }
+    },
+    {
+      "content": "${1:fn} :: ${2:a} -> ${3:a} -> ${4:a}\n$1 ${5}= ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fn2": true
+      }
+    },
+    {
+      "content": "${1:fn} :: ${2:a} -> ${3:a} -> ${4:a} -> ${5:a}\n$1 ${6}= ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fn3": true
+      }
+    },
+    {
+      "content": "case ${1} of\n\t${2} -> ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "let\n\t${1} = ${2}\nin\n\t${3}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "let": true
+      }
+    },
+    {
+      "content": "where\n\t${1} = ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "where": true
+      }
+    },
+    {
+      "content": "module Test.Main where\n\nimport Prelude\nimport Test.Unit (suite, test)\nimport Test.Unit.Main (runTest)\nimport Test.Unit.Assert as Assert\n\nmain = runTest do\n\tsuite \"${1}\" do\n\t\ttest \"${2:the tests run}\" do\n\t\t\tAssert.equal\n\t\t\t\t\"Hello, world!\"\n\t\t\t\t\"Hello, sailor!\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "testunit": true
+      }
+    },
+    {
+      "content": "if ${1} then\n\t${2:${VISUAL}}\nelse\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "{-| ${0}\n-}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "doc": true
+      }
+    },
+    {
+      "content": "type ${1:Type} =\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ty": true
+      }
+    },
+    {
+      "content": "data ${1:Type} =\n\t${0:$1}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "da": true
+      }
+    },
+    {
+      "content": "newtype ${1:Type} =\n\t${2:$1} ${0:Int}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "nty": true
+      }
+    },
+    {
+      "content": "foreign import ${1} :: ${2}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fi": true
+      }
+    }
+  ]
+}

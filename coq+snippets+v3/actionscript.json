@@ -1,0 +1,613 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "#endinitclip",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ec": true
+      }
+    },
+    {
+      "content": "#include \"${1}\"",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "inc": true
+      }
+    },
+    {
+      "content": "break;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "br": true
+      }
+    },
+    {
+      "content": "call(${1:#:frame});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ca": true
+      }
+    },
+    {
+      "content": "case ${1:#:expression} :\n\t${1:TARGET}",
+      "doc": "",
+      "label": "ce",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "catch ($1) {\n\t$2\n}",
+      "doc": "",
+      "label": "ch",
+      "matches": {
+        "catch": true
+      }
+    },
+    {
+      "content": "class ${1:#:ClassName} {\n\tvar _${2};\n\tfunction ${1}(${2}){\n\t\t_${2} = ${2};${0}\n\t}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "class": true
+      }
+    },
+    {
+      "content": "continue;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "co": true
+      }
+    },
+    {
+      "content": "default :\n\t${1:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dt": true
+      }
+    },
+    {
+      "content": "delete ${1};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "de": true
+      }
+    },
+    {
+      "content": "do {\n\t${1:TARGET}\n} while (${2:#:condition});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "do": true
+      }
+    },
+    {
+      "content": "duplicateMovieClip(${1:#:target}, ${2:#:newName}, ${3:#:depth});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dm": true
+      }
+    },
+    {
+      "content": "else if (${1}) {\n\t${2:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ei": true
+      }
+    },
+    {
+      "content": "for (var ${1} in ${2}){\n\t${3:TARGET}\n};",
+      "doc": "",
+      "label": "fi",
+      "matches": {
+        "fori": true
+      }
+    },
+    {
+      "content": "for (var ${1} = 0; $1 < ${2}.length; $1++) {\n\t${0:TARGET}\n};",
+      "doc": "",
+      "label": "fr",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "fscommand(${1:#:command}, ${2:#:paramaters});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fs": true
+      }
+    },
+    {
+      "content": "function ${1}(${2}):${3}{\n\t${0:TARGET}\n};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fn": true
+      }
+    },
+    {
+      "content": "getURL(${1});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gu": true
+      }
+    },
+    {
+      "content": "gotoAndPlay(${1});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gp": true
+      }
+    },
+    {
+      "content": "gotoAndStop(${1});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gs": true
+      }
+    },
+    {
+      "content": "if (${1}) {\n\t${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "ifFrameLoaded (${1}) {\n\t${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "il": true
+      }
+    },
+    {
+      "content": "import ${1};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ip": true
+      }
+    },
+    {
+      "content": "interface ${1}{\n\t${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "it": true
+      }
+    },
+    {
+      "content": "loadMovie(${1:url}, ${2:target}, ${3:method});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lm": true
+      }
+    },
+    {
+      "content": "loadMovieNum(${1:url}, ${2:level}, ${3:method});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ln": true
+      }
+    },
+    {
+      "content": "loadVariables(${1:url}, ${2:target}, ${3:method});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lv": true
+      }
+    },
+    {
+      "content": "loadVariables(${1:url}, ${2:level}, ${3:method});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vn": true
+      }
+    },
+    {
+      "content": "MovieClip",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mc": true
+      }
+    },
+    {
+      "content": "nextFrame();",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "nf": true
+      }
+    },
+    {
+      "content": "nextScene();",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ns": true
+      }
+    },
+    {
+      "content": "on (${1}) {\n\t${2}\n};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "on": true
+      }
+    },
+    {
+      "content": "onClipEvent (${1}) {\n\t${0:TARGET}\n};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "oc": true
+      }
+    },
+    {
+      "content": "play();",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pl": true
+      }
+    },
+    {
+      "content": "pravFrame();",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pf": true
+      }
+    },
+    {
+      "content": "prevScene();",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ps": true
+      }
+    },
+    {
+      "content": "print(${1:#:target}, ${2:#:type});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pr": true
+      }
+    },
+    {
+      "content": "printAsBitmapNum(${1:#:level}, ${2:#:type});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bn": true
+      }
+    },
+    {
+      "content": "printNum(${1:#:level}, ${2:#:type});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pn": true
+      }
+    },
+    {
+      "content": "removeMovieClip(${1:#:target});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rm": true
+      }
+    },
+    {
+      "content": "return ${1};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rt": true
+      }
+    },
+    {
+      "content": "setProperty(${1:#:target}, ${2:#:property}, ${3:#:value});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sp": true
+      }
+    },
+    {
+      "content": "set(${1:#:name}, ${2:#:value});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sv": true
+      }
+    },
+    {
+      "content": "startDrag(${1:#:target}, ${2:#:lockcenter}, ${3:#:l}, ${4:#:t}, ${5:#:r}, ${6:#:b} );",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dr": true
+      }
+    },
+    {
+      "content": "stop();",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "st": true
+      }
+    },
+    {
+      "content": "stopAllSounds();",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ss": true
+      }
+    },
+    {
+      "content": "stopDrag();",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sd": true
+      }
+    },
+    {
+      "content": "switch ( ${1:#:condition} ) {\n\t${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sw": true
+      }
+    },
+    {
+      "content": "tellTarget( ${1:#:target} ) {\n\t${0:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tt": true
+      }
+    },
+    {
+      "content": "throw ${1};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "th": true
+      }
+    },
+    {
+      "content": "toggleHighQuality();",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tq": true
+      }
+    },
+    {
+      "content": "try {\n\t${0:TARGET}\n};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ty": true
+      }
+    },
+    {
+      "content": "unloadMovie(${1:#:target});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "um": true
+      }
+    },
+    {
+      "content": "unloadMovieNum(${1:#:level});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "un": true
+      }
+    },
+    {
+      "content": "var ${1}:${2};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vr": true
+      }
+    },
+    {
+      "content": "while (${1:#:condition}) {\n\t${0:TARGET}\n};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "with (${1:#:target});\n\t${0:TARGET}\n};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wt": true
+      }
+    },
+    {
+      "content": "package {\n\timport flash.display.*;\n\timport flash.Events.*;\n\n\tpublic class Main extends Sprite {\n\t\tpublic function Main (\t) {\n\t\t\ttrace(\"start\");\n\t\t\tstage.scaleMode = StageScaleMode.NO_SCALE;\n\t\t\tstage.addEventListener(Event.RESIZE, resizeListener);\n\t\t}\n\n\t\tprivate function resizeListener (e:Event):void {\n\t\t\ttrace(\"The application window changed size!\");\n\t\t\ttrace(\"New width:  \" + stage.stageWidth);\n\t\t\ttrace(\"New height: \" + stage.stageHeight);\n\t\t}\n\n\t}\n\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "main": true
+      }
+    },
+    {
+      "content": "${1:public|internal} class ${2:name} ${0:extends } {\n\tpublic function $2 (\t) {\n\t\t(\"start\");\n\t}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "class": true
+      }
+    },
+    {
+      "content": "package name {\n\n\t${1:public|internal|final} class ${2:name} ${0:extends } {\n\t\tprivate|public| static const FOO = \"abc\";\n\t\tprivate|public| static var BAR = \"abc\";\n\n\t\t// class initializer - no JIT !! one time setup\n\t\tif Cababilities.os == \"Linux|MacOS\" {\n\t\t\tFOO = \"other\";\n\t\t}\n\n\t\t// constructor:\n\t\tpublic function $2 (\t){\n\t\t\tsuper2();\n\t\t\ttrace(\"start\");\n\t\t}\n\t\tpublic function name (a, b...){\n\t\t\tsuper.name(..);\n\t\t\tlable:break\n\t\t}\n\t}\n}\n\nfunction A(){\n\t// A can only be accessed within this file\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "all": true
+      }
+    },
+    {
+      "content": "switch(${1}){\n\tcase ${2}:\n\t\t${0}\n\tbreak;\n\tdefault:\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "switch": true
+      }
+    },
+    {
+      "content": "case ${1}:\n\t${0}\nbreak;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "package ${1:package}{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "package": true
+      }
+    },
+    {
+      "content": "while ${1:cond}{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "do {\n\t${0}\n} while (${1:cond})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "do": true
+      }
+    },
+    {
+      "content": "for (${1:var} in ${2:object}){\n\t${0}\n}",
+      "doc": "",
+      "label": "enumerate names",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "for each (${1:var} in ${2:object}){\n\t${0}\n}",
+      "doc": "",
+      "label": "enumerate values",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "function get ${1:name} {\n\treturn ${2}\n}\nfunction set $1 (newValue) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "get_set": true
+      }
+    },
+    {
+      "content": "interface name {\n\tfunction method(${1}):${0:returntype};\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "interface": true
+      }
+    },
+    {
+      "content": "try {\n\t${1:${VISUAL}}\n} catch (error:ErrorType) {\n\t${2}\n} finally {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "try": true
+      }
+    },
+    {
+      "content": "for (${2:i} = 0; $2 < ${1:count}; $2${3:++}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "for (..) {..}",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "if ($1) {\n\t${0:${VISUAL}}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "else {\n\t${0:${VISUAL}}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "el": true
+      }
+    },
+    {
+      "content": "$1 ? $2 : $0",
+      "doc": "",
+      "label": "Ternary: `condition ? true : false`",
+      "matches": {
+        "t": true
+      }
+    },
+    {
+      "content": "function ${1:function_name}(${2})${3}\n{\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fun": true
+      }
+    },
+    {
+      "content": "package\n{\n\timport org.flixel.*\n\n\tpublic class ${1:ClassName} extends ${2:FlxSprite}\n\t{\n\t\tpublic function $1(${3: X:Number, Y:Number}):void\n\t\t{\n\t\t\tsuper(X,Y);\n\t\t\t${4}\n\t\t}\n\n\t\toverride public function update():void\n\t\t{\n\t\t\tsuper.update();\n\t\t\t${0}\n\t\t}\n\t}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "FlxSprite": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,885 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "\\dots",
+      "doc": "\\dots",
+      "label": "etc",
+      "matches": {
+        "...": true
+      }
+    },
+    {
+      "content": "\\textrm{${1:${TM_SELECTED_TEXT:text}}}",
+      "doc": "roman font",
+      "label": "textrm",
+      "matches": {
+        "FRM": true
+      }
+    },
+    {
+      "content": "\\cdot",
+      "doc": "\\cdot",
+      "label": "cdot",
+      "matches": {
+        "@.": true
+      }
+    },
+    {
+      "content": "\\section{${1:${TM_SELECTED_TEXT}}}",
+      "doc": "section",
+      "label": "section",
+      "matches": {
+        "SSE": true
+      }
+    },
+    {
+      "content": "\\infty",
+      "doc": "infinity symbol",
+      "label": "infinity",
+      "matches": {
+        "@8": true
+      }
+    },
+    {
+      "content": "\\partial",
+      "doc": "partial derivative symbol",
+      "label": "partial",
+      "matches": {
+        "@6": true
+      }
+    },
+    {
+      "content": "\\lambda",
+      "doc": "lambda",
+      "label": "lambda",
+      "matches": {
+        "@l": true
+      }
+    },
+    {
+      "content": "\\frac{$1}{$2}$0",
+      "doc": "fraction",
+      "label": "fraction",
+      "matches": {
+        "@/": true
+      }
+    },
+    {
+      "content": "\\dot{${1:${TM_SELECTED_TEXT}}}$0",
+      "doc": "dot",
+      "label": "dot",
+      "matches": {
+        "@;": true
+      }
+    },
+    {
+      "content": "\\frac{$1}{$2}$0",
+      "doc": "fraction",
+      "label": "fraction2",
+      "matches": {
+        "@%": true
+      }
+    },
+    {
+      "content": "\\part{${1:${TM_SELECTED_TEXT}}}",
+      "doc": "part",
+      "label": "part",
+      "matches": {
+        "SPA": true
+      }
+    },
+    {
+      "content": "\\hat{${1:${TM_SELECTED_TEXT}}}$0",
+      "doc": "hat",
+      "label": "hat",
+      "matches": {
+        "@^": true
+      }
+    },
+    {
+      "content": "\\chapter{${1:${TM_SELECTED_TEXT}}}",
+      "doc": "chapter",
+      "label": "chapter",
+      "matches": {
+        "SCH": true
+      }
+    },
+    {
+      "content": "\\bar{${1:${TM_SELECTED_TEXT}}}$0",
+      "doc": "bar",
+      "label": "bar",
+      "matches": {
+        "@_": true
+      }
+    },
+    {
+      "content": "\\textsl{${1:${TM_SELECTED_TEXT:text}}}",
+      "doc": "slanted font",
+      "label": "textsl",
+      "matches": {
+        "FSL": true
+      }
+    },
+    {
+      "content": "\\circ",
+      "doc": "circ",
+      "label": "circ",
+      "matches": {
+        "@@": true
+      }
+    },
+    {
+      "content": "\\begin{figure}[${1:htbp}]\n\t\\centering\n\t${0:${TM_SELECTED_TEXT}}\n\t\\caption{${2:<caption>}}\\label{${3:<label>}}\n\\end{figure}",
+      "doc": "figure",
+      "label": "figure",
+      "matches": {
+        "BFI": true
+      }
+    },
+    {
+      "content": "^\\circ",
+      "doc": "superscript circ",
+      "label": "supcirc",
+      "matches": {
+        "@0": true
+      }
+    },
+    {
+      "content": "\\begin{frame}\n\t\\frametitle{${1:<title>}}\n\n\t${0:${TM_SELECTED_TEXT}}\n\n\\end{frame}",
+      "doc": "frame",
+      "label": "frame",
+      "matches": {
+        "BFR": true
+      }
+    },
+    {
+      "content": "\\paragraph{${1:${TM_SELECTED_TEXT}}}",
+      "doc": "paragraph",
+      "label": "paragraph",
+      "matches": {
+        "SPG": true
+      }
+    },
+    {
+      "content": "\\uppercase{${1:${TM_SELECTED_TEXT:text}}}",
+      "doc": "Make text uppercase (all caps)",
+      "label": "uppercase",
+      "matches": {
+        "FUC": true
+      }
+    },
+    {
+      "content": "\\epsilon",
+      "doc": "epsilon",
+      "label": "epsilon",
+      "matches": {
+        "@e": true
+      }
+    },
+    {
+      "content": "\\equiv",
+      "doc": "equiv symbol",
+      "label": "equiv",
+      "matches": {
+        "@=": true
+      }
+    },
+    {
+      "content": "\\lowercase{${1:${TM_SELECTED_TEXT:text}}}",
+      "doc": "Make text lowercase (no caps)",
+      "label": "lowercase",
+      "matches": {
+        "FLC": true
+      }
+    },
+    {
+      "content": "\\varepsilon",
+      "doc": "varepsilon",
+      "label": "varepsilon",
+      "matches": {
+        "@ve": true
+      }
+    },
+    {
+      "content": "\\textbf{${1:${TM_SELECTED_TEXT:text}}}",
+      "doc": "bold font",
+      "label": "textbf",
+      "matches": {
+        "FBF": true
+      }
+    },
+    {
+      "content": "\\leq",
+      "doc": "leq symbol",
+      "label": "leq",
+      "matches": {
+        "@<": true
+      }
+    },
+    {
+      "content": "\\varphi",
+      "doc": "varphi",
+      "label": "varphi",
+      "matches": {
+        "@vf": true
+      }
+    },
+    {
+      "content": "\\textsuperscript{${1:${TM_SELECTED_TEXT:text}}}",
+      "doc": "Make text a superscript",
+      "label": "textsuperscript",
+      "matches": {
+        "FSS": true
+      }
+    },
+    {
+      "content": "\\begin{align}\n\t${0:${TM_SELECTED_TEXT}}\n\\end{align}",
+      "doc": "align environment",
+      "label": "align",
+      "matches": {
+        "BAL": true
+      }
+    },
+    {
+      "content": "\\geq",
+      "doc": "geq symbol",
+      "label": "geq",
+      "matches": {
+        "@>": true
+      }
+    },
+    {
+      "content": "\\textsubscript{${1:${TM_SELECTED_TEXT:text}}}",
+      "doc": "Make text a superscript",
+      "label": "textsubscript",
+      "matches": {
+        "FBS": true
+      }
+    },
+    {
+      "content": "\\eta",
+      "doc": "eta",
+      "label": "eta",
+      "matches": {
+        "@h": true
+      }
+    },
+    {
+      "content": "\\times",
+      "doc": "times symbol",
+      "label": "times",
+      "matches": {
+        "@*": true
+      }
+    },
+    {
+      "content": "\\mathrm{${1:${TM_SELECTED_TEXT:text}}}",
+      "doc": "math roman font",
+      "label": "mathrm",
+      "matches": {
+        "MRM": true
+      }
+    },
+    {
+      "content": "\\iota",
+      "doc": "iota",
+      "label": "iota",
+      "matches": {
+        "@i": true
+      }
+    },
+    {
+      "content": "\\subparagraph{${1:${TM_SELECTED_TEXT}}}",
+      "doc": "subparagraph",
+      "label": "subparagraph",
+      "matches": {
+        "SSP": true
+      }
+    },
+    {
+      "content": "\\subsubsection{${1:${TM_SELECTED_TEXT}}}",
+      "doc": "subsubsection",
+      "label": "subsubsection",
+      "matches": {
+        "SS2": true
+      }
+    },
+    {
+      "content": "\\mathbf{${1:${TM_SELECTED_TEXT:text}}}",
+      "doc": "math bold font",
+      "label": "mathbf",
+      "matches": {
+        "MBF": true
+      }
+    },
+    {
+      "content": "\\Big|",
+      "doc": "Big |",
+      "label": "Big|",
+      "matches": {
+        "@|": true
+      }
+    },
+    {
+      "content": "\\underline{${1:${TM_SELECTED_TEXT:text}}}",
+      "doc": "Underline text",
+      "label": "underline",
+      "matches": {
+        "FUL": true
+      }
+    },
+    {
+      "content": "\\subsection{${1:${TM_SELECTED_TEXT}}}",
+      "doc": "subsection",
+      "label": "subsection",
+      "matches": {
+        "SSS": true
+      }
+    },
+    {
+      "content": "\\mathbb{${1:${TM_SELECTED_TEXT:text}}}",
+      "doc": "math blackboard bold font",
+      "label": "mathbb",
+      "matches": {
+        "MBB": true
+      }
+    },
+    {
+      "content": "\\bigcup",
+      "doc": "bigcup",
+      "label": "bigcup",
+      "matches": {
+        "@+": true
+      }
+    },
+    {
+      "content": "\\begin{equation}\n\t${0:${TM_SELECTED_TEXT}}\n\\end{equation}",
+      "doc": "equation environment",
+      "label": "equation",
+      "matches": {
+        "BEQ": true
+      }
+    },
+    {
+      "content": "\\begin{$1}\n\t${0:${TM_SELECTED_TEXT}}\n\\end{$1}",
+      "doc": "Wrap selection into an environment",
+      "label": "wrapEnv",
+      "matches": {
+        "\\begin{$1}\n\t${0:${TM_SELECTED_TEXT}}\n\\end{$1}": true
+      }
+    },
+    {
+      "content": "\\mathcal{${1:${TM_SELECTED_TEXT:text}}}",
+      "doc": "math caligraphic font",
+      "label": "mathcal",
+      "matches": {
+        "MCA": true
+      }
+    },
+    {
+      "content": "\\begin{split}\n\t${0:${TM_SELECTED_TEXT}}\n\\end{split}",
+      "doc": "split environment",
+      "label": "split",
+      "matches": {
+        "BSPL": true
+      }
+    },
+    {
+      "content": "\\left[ ${1:${TM_SELECTED_TEXT}} \\right]",
+      "doc": "left[ ... right]",
+      "label": "[",
+      "matches": {
+        "@[": true
+      }
+    },
+    {
+      "content": "\\nonumber",
+      "doc": "nonumber",
+      "label": "nonumber",
+      "matches": {
+        "@,": true
+      }
+    },
+    {
+      "content": "\\mathit{${1:${TM_SELECTED_TEXT:text}}}",
+      "doc": "math italic font",
+      "label": "mathit",
+      "matches": {
+        "MIT": true
+      }
+    },
+    {
+      "content": "\\left\\{ ${1:${TM_SELECTED_TEXT}} \\right\\\\\\}",
+      "doc": "left{ ... right}",
+      "label": "{",
+      "matches": {
+        "@{": true
+      }
+    },
+    {
+      "content": "\\vartheta",
+      "doc": "vartheta",
+      "label": "vartheta",
+      "matches": {
+        "@vq": true
+      }
+    },
+    {
+      "content": "\\mathtt{${1:${TM_SELECTED_TEXT:text}}}",
+      "doc": "math typewriter font",
+      "label": "mathtt",
+      "matches": {
+        "MTT": true
+      }
+    },
+    {
+      "content": "\\left( ${1:${TM_SELECTED_TEXT}} \\right)",
+      "doc": "left( ... right)",
+      "label": "(",
+      "matches": {
+        "@(": true
+      }
+    },
+    {
+      "content": "\\begin{equation*}\n\t${0:${TM_SELECTED_TEXT}}\n\\end{equation*}",
+      "doc": "equation* environment",
+      "label": "equation*",
+      "matches": {
+        "BSEQ": true
+      }
+    },
+    {
+      "content": "\\Omega",
+      "doc": "Omega",
+      "label": "Omega",
+      "matches": {
+        "@W": true
+      }
+    },
+    {
+      "content": "\\textsc{${1:${TM_SELECTED_TEXT:text}}}",
+      "doc": "smallcaps font",
+      "label": "textsc",
+      "matches": {
+        "FSC": true
+      }
+    },
+    {
+      "content": "\\sigma",
+      "doc": "sigma",
+      "label": "sigma",
+      "matches": {
+        "@s": true
+      }
+    },
+    {
+      "content": "\\texttt{${1:${TM_SELECTED_TEXT:text}}}",
+      "doc": "typewriter font",
+      "label": "texttt",
+      "matches": {
+        "FTT": true
+      }
+    },
+    {
+      "content": "\\chi",
+      "doc": "chi",
+      "label": "chi",
+      "matches": {
+        "@c": true
+      }
+    },
+    {
+      "content": "\\varsigma",
+      "doc": "varsigma",
+      "label": "varsigma",
+      "matches": {
+        "@vs": true
+      }
+    },
+    {
+      "content": "_{${1:${TM_SELECTED_TEXT}}}",
+      "doc": "subscript",
+      "label": "subscript",
+      "matches": {
+        "__": true
+      }
+    },
+    {
+      "content": "\\ddot{${1:${TM_SELECTED_TEXT}}}$0",
+      "doc": "ddot",
+      "label": "ddot",
+      "matches": {
+        "@:": true
+      }
+    },
+    {
+      "content": "^{${1:${TM_SELECTED_TEXT}}}",
+      "doc": "superscript",
+      "label": "superscript",
+      "matches": {
+        "**": true
+      }
+    },
+    {
+      "content": "\\emph{${1:${TM_SELECTED_TEXT:text}}}",
+      "doc": "emphasis font",
+      "label": "emph",
+      "matches": {
+        "FEM": true
+      }
+    },
+    {
+      "content": "\\begin{gather}\n\t${0:${TM_SELECTED_TEXT}}\n\\end{gather}",
+      "doc": "gather environment",
+      "label": "gather",
+      "matches": {
+        "BGA": true
+      }
+    },
+    {
+      "content": "\\upsilon",
+      "doc": "upsilon",
+      "label": "upsilon",
+      "matches": {
+        "@u": true
+      }
+    },
+    {
+      "content": "\\begin{table}[${1:htbp}]\n\t\\centering\\begin{tabular}{${4:<columns>}}\n\t\t${0:${TM_SELECTED_TEXT}}\n\t\\end{tabular}\n\t\\caption{${2:<caption>}}\\label{${3:<label>}}\n\\end{table}",
+      "doc": "table",
+      "label": "table",
+      "matches": {
+        "BTA": true
+      }
+    },
+    {
+      "content": "\\delta",
+      "doc": "delta",
+      "label": "delta",
+      "matches": {
+        "@d": true
+      }
+    },
+    {
+      "content": "\\begin{gather*}\n\t${0:${TM_SELECTED_TEXT}}\n\\end{gather*}",
+      "doc": "gather* environment",
+      "label": "gather*",
+      "matches": {
+        "BSGA": true
+      }
+    },
+    {
+      "content": "\\nu",
+      "doc": "nu",
+      "label": "nu",
+      "matches": {
+        "@n": true
+      }
+    },
+    {
+      "content": "\\Gamma",
+      "doc": "Gamma",
+      "label": "Gamma",
+      "matches": {
+        "@G": true
+      }
+    },
+    {
+      "content": "\\wedge",
+      "doc": "wedge",
+      "label": "wedge",
+      "matches": {
+        "@&": true
+      }
+    },
+    {
+      "content": "\\begin{multline}\n\t${0:${TM_SELECTED_TEXT}}\n\\end{multline}",
+      "doc": "multline environment",
+      "label": "multline",
+      "matches": {
+        "BMU": true
+      }
+    },
+    {
+      "content": "\\int_{$1}^{$2}$0",
+      "doc": "integral",
+      "label": "int",
+      "matches": {
+        "@I": true
+      }
+    },
+    {
+      "content": "\\alpha",
+      "doc": "alpha",
+      "label": "alpha",
+      "matches": {
+        "@a": true
+      }
+    },
+    {
+      "content": "\\rho",
+      "doc": "rho",
+      "label": "rho",
+      "matches": {
+        "@r": true
+      }
+    },
+    {
+      "content": "\\begin{multline*}\n\t${0:${TM_SELECTED_TEXT}}\n\\end{multline*}",
+      "doc": "multline* environment",
+      "label": "multline*",
+      "matches": {
+        "BSMU": true
+      }
+    },
+    {
+      "content": "\\psi",
+      "doc": "psi",
+      "label": "psi",
+      "matches": {
+        "@y": true
+      }
+    },
+    {
+      "content": "\\beta",
+      "doc": "beta",
+      "label": "beta",
+      "matches": {
+        "@b": true
+      }
+    },
+    {
+      "content": "\\xi",
+      "doc": "xi",
+      "label": "xi",
+      "matches": {
+        "@x": true
+      }
+    },
+    {
+      "content": "\\zeta",
+      "doc": "zeta",
+      "label": "zeta",
+      "matches": {
+        "@z": true
+      }
+    },
+    {
+      "content": "\\omega",
+      "doc": "omega",
+      "label": "omega",
+      "matches": {
+        "@o": true
+      }
+    },
+    {
+      "content": "\\tau",
+      "doc": "tau",
+      "label": "tau",
+      "matches": {
+        "@t": true
+      }
+    },
+    {
+      "content": "\\Delta",
+      "doc": "Delta",
+      "label": "Delta",
+      "matches": {
+        "@D": true
+      }
+    },
+    {
+      "content": "\\theta",
+      "doc": "theta",
+      "label": "theta",
+      "matches": {
+        "@q": true
+      }
+    },
+    {
+      "content": "\\item",
+      "doc": "\\item on a newline",
+      "label": "item",
+      "matches": {
+        "item": true
+      }
+    },
+    {
+      "content": "\\Phi",
+      "doc": "Phi",
+      "label": "Phi",
+      "matches": {
+        "@F": true
+      }
+    },
+    {
+      "content": "\\mu",
+      "doc": "mu",
+      "label": "mu",
+      "matches": {
+        "@m": true
+      }
+    },
+    {
+      "content": "\\kappa",
+      "doc": "kappa",
+      "label": "kappa",
+      "matches": {
+        "@k": true
+      }
+    },
+    {
+      "content": "\\begin{cases}\n\t${0:${TM_SELECTED_TEXT}}\n\\end{cases}",
+      "doc": "cases environment",
+      "label": "cases",
+      "matches": {
+        "BCAS": true
+      }
+    },
+    {
+      "content": "\\gamma",
+      "doc": "gamma",
+      "label": "gamma",
+      "matches": {
+        "@g": true
+      }
+    },
+    {
+      "content": "\\phi",
+      "doc": "phi",
+      "label": "phi",
+      "matches": {
+        "@f": true
+      }
+    },
+    {
+      "content": "\\Theta",
+      "doc": "Theta",
+      "label": "Theta",
+      "matches": {
+        "@Q": true
+      }
+    },
+    {
+      "content": "\\bigcap",
+      "doc": "bigcap",
+      "label": "bigcap",
+      "matches": {
+        "@-": true
+      }
+    },
+    {
+      "content": "\\begin{align*}\n\t${0:${TM_SELECTED_TEXT}}\n\\end{align*}",
+      "doc": "align* environment",
+      "label": "align*",
+      "matches": {
+        "BSAL": true
+      }
+    },
+    {
+      "content": "\\Lambda",
+      "doc": "Lambda",
+      "label": "Lambda",
+      "matches": {
+        "@L": true
+      }
+    },
+    {
+      "content": "\\begin{itemize}\n\t\\item ${0:${TM_SELECTED_TEXT}}\n\\end{itemize}",
+      "doc": "itemize environment",
+      "label": "itemize",
+      "matches": {
+        "BIT": true
+      }
+    },
+    {
+      "content": "\\pi",
+      "doc": "pi",
+      "label": "pi",
+      "matches": {
+        "@p": true
+      }
+    },
+    {
+      "content": "\\Xi",
+      "doc": "Xi",
+      "label": "Xi",
+      "matches": {
+        "@X": true
+      }
+    },
+    {
+      "content": "\\begin{tikzpicture}\n\t${0:${TM_SELECTED_TEXT}}\n\\end{tikzpicture}",
+      "doc": "tikzpicture",
+      "label": "tikzpicture",
+      "matches": {
+        "BTP": true
+      }
+    },
+    {
+      "content": "\\begin{enumerate}\n\t\\item ${0:${TM_SELECTED_TEXT}}\n\\end{enumerate}",
+      "doc": "enumerate environment",
+      "label": "enumerate",
+      "matches": {
+        "BEN": true
+      }
+    },
+    {
+      "content": "\\Psi",
+      "doc": "Psi",
+      "label": "Psi",
+      "matches": {
+        "@Y": true
+      }
+    },
+    {
+      "content": "\\textsf{${1:${TM_SELECTED_TEXT:text}}}",
+      "doc": "sans serif font",
+      "label": "textsf",
+      "matches": {
+        "FSF": true
+      }
+    },
+    {
+      "content": "\\Sigma",
+      "doc": "Sigma",
+      "label": "Sigma",
+      "matches": {
+        "@S": true
+      }
+    },
+    {
+      "content": "\\textit{${1:${TM_SELECTED_TEXT:text}}}",
+      "doc": "italic font",
+      "label": "textit",
+      "matches": {
+        "FIT": true
+      }
+    },
+    {
+      "content": "\\textnormal{${1:${TM_SELECTED_TEXT:text}}}",
+      "doc": "normal font",
+      "label": "textnormal",
+      "matches": {
+        "FNO": true
+      }
+    },
+    {
+      "content": "\\Upsilon",
+      "doc": "Upsilon",
+      "label": "Upsilon",
+      "matches": {
+        "@U": true
+      }
+    },
+    {
+      "content": "\\sqrt{${1:${TM_SELECTED_TEXT}}}$0",
+      "doc": "sqrt command",
+      "label": "sqrt",
+      "matches": {
+        "@2": true
+      }
+    }
+  ]
+}

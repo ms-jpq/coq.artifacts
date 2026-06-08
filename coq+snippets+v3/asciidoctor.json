@@ -1,0 +1,55 @@
+{
+  "extends": [
+    "asciidoc"
+  ],
+  "snippets": [
+    {
+      "content": ":source-highlighter: rouge$0",
+      "doc": "",
+      "label": "source-highlighter: rouge",
+      "matches": {
+        "highlight-rouge": true
+      }
+    },
+    {
+      "content": ":source-highlighter: rouge$0",
+      "doc": "",
+      "label": "source-highlighter: rouge",
+      "matches": {
+        "hirouge": true
+      }
+    },
+    {
+      "content": ":source-highlighter: pygments$0",
+      "doc": "",
+      "label": "source-highlighter: pygments",
+      "matches": {
+        "highlight-pygments": true
+      }
+    },
+    {
+      "content": ":source-highlighter: pygments$0",
+      "doc": "",
+      "label": "source-highlighter: pygments",
+      "matches": {
+        "hipygments": true
+      }
+    },
+    {
+      "content": ":source-highlighter: highlight.js$0",
+      "doc": "",
+      "label": "source-highlighter: highlight.js",
+      "matches": {
+        "highlight-highlight.js": true
+      }
+    },
+    {
+      "content": ":source-highlighter: highlight.js$0",
+      "doc": "",
+      "label": "source-highlighter: highlight.js",
+      "matches": {
+        "hihighlight.js": true
+      }
+    }
+  ]
+}

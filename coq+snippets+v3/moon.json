@@ -1,0 +1,53 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "print 'Hello world!'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "helloworld": true
+      }
+    },
+    {
+      "content": "[${0:TARGET} for ${1:x} in ${2:xs}]",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "map": true
+      }
+    },
+    {
+      "content": "moon.p ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "p": true
+      }
+    },
+    {
+      "content": "${1:f} = (${2:args}) ->\n  ${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defn": true
+      }
+    },
+    {
+      "content": "${1:f}: (${2:args}) =>\n  ${0:TARGET}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defm": true
+      }
+    },
+    {
+      "content": "${1:moon} = require '$1'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "require": true
+      }
+    }
+  ]
+}

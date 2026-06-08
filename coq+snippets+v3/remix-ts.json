@@ -1,0 +1,37 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "import { type LoaderFunction, json } from '@remix-run/node'\nimport { useLoaderData } from '@remix-run/react'\n\nexport const loader: LoaderFunction = async () => {\n\treturn json({ ok: true })\n}",
+      "doc": "Remix loader function",
+      "label": "Remix loader function",
+      "matches": {
+        "rxl": true
+      }
+    },
+    {
+      "content": "import { type LinksFunction } from '@remix-run/node'\n\nexport const links: LinksFunction = () => {\n\treturn [\n\t\t{\n\t\t}\n\t]\n}",
+      "doc": "Remix links function",
+      "label": "Remix links function",
+      "matches": {
+        "rxi": true
+      }
+    },
+    {
+      "content": "import { type ActionFunction, json } from '@remix-run/node'\n\nexport const action: ActionFunction = async ({ request }) => {\n\treturn json({ ok: true })\n}",
+      "doc": "Remix action function",
+      "label": "Remix action function",
+      "matches": {
+        "rxa": true
+      }
+    },
+    {
+      "content": "import { type MetaFunction } from '@remix-run/node'\n\nexport const meta: MetaFunction = () => {\n\treturn [\n\t\t{ title: ''},\n\t\t{ name: 'description', content: ''}\n\t]\n}",
+      "doc": "Remix meta function",
+      "label": "Remix meta function",
+      "matches": {
+        "rxm": true
+      }
+    }
+  ]
+}

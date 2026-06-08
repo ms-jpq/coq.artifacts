@@ -1,0 +1,21 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "use relm4::{\n    factory::{FactoryView, AsyncFactoryComponent},\n    gtk,\n    prelude::{DynamicIndex}, \n    AsyncFactorySender, loading_widgets::LoadingWidgets,\n};\n\npub struct FactoryModel {}\n\n#[derive(Debug)]\npub enum FactoryInput {}\n\n#[derive(Debug)]\npub enum FactoryOutput {}\n\npub struct FactoryInit {}\n\n#[relm4::factory(pub async)]\nimpl AsyncFactoryComponent for FactoryModel {\n    type ParentWidget = gtk::Box;\n    type ParentInput = ();\n    type Input = FactoryInput;\n    type Output = FactoryOutput;\n    type Init = FactoryInit;\n    type CommandOutput = ();\n\n    view! {\n        #[root]\n        gtk::Box {\n\n        }\n    }\n\n    fn init_loading_widgets(\n        root: &mut Self::Root,\n    ) -> Option<LoadingWidgets> {\n        relm4::view! {\n            #[local_ref]\n            root {\n                #[name(spinner)]\n                gtk::Spinner {\n                    start: ()\n                }\n            }\n        }\n        Some(LoadingWidgets::new(root, spinner))\n    }\n\n    async fn init_model(\n        init: Self::Init,\n        _index: &DynamicIndex,\n        _sender: AsyncFactorySender<Self>,\n    ) -> Self {\n        Self {\n        \n        }\n    }\n\n    fn init_widgets(\n        &mut self,\n        _index: &DynamicIndex,\n        root: &Self::Root,\n        _returned_widget: &<Self::ParentWidget as FactoryView>::ReturnedWidget,\n        sender: AsyncFactorySender<Self>,\n    ) -> Self::Widgets {\n        let widgets = view_output!();\n        widgets\n    }\n\n    async fn update(\n        &mut self,\n        message: Self::Input,\n        sender: AsyncFactorySender<Self>,\n    ) {\n        match message {}\n    }\n\n    fn output_to_parent_input(output: Self::Output) -> Option<Self::ParentInput> {\n        let output = match output {};\n        Some(output)\n    }\n}",
+      "doc": "Relm4 Async Factory Component",
+      "label": "Relm4 Async Factory Component",
+      "matches": {
+        "relm-async-factory": true
+      }
+    },
+    {
+      "content": "use relm4::{\n    factory::FactoryView,\n    gtk,\n    prelude::{DynamicIndex, FactoryComponent},\n    FactorySender,\n};\n\npub struct FactoryModel {}\n\n#[derive(Debug)]\npub enum FactoryInput {}\n\n#[derive(Debug)]\npub enum FactoryOutput {}\n\npub struct FactoryInit {}\n\n#[relm4::factory(pub)]\nimpl FactoryComponent for FactoryModel {\n    type ParentWidget = gtk::Box;\n    type ParentInput = ();\n    type Input = FactoryInput;\n    type Output = FactoryOutput;\n    type Init = FactoryInit;\n    type CommandOutput = ();\n\n    view! {\n        #[root]\n        gtk::Box {\n\n        }\n    }\n\n    fn init_model(\n        init: Self::Init,\n        index: &DynamicIndex,\n        sender: FactorySender<Self>,\n    ) -> Self {\n        Self {}\n    }\n\n    fn init_widgets(\n        &mut self,\n        _index: &DynamicIndex,\n        root: &Self::Root,\n        _returned_widget: &<Self::ParentWidget as FactoryView>::ReturnedWidget,\n        sender: FactorySender<Self>,\n    ) -> Self::Widgets {\n        let widgets = view_output!();\n        widgets\n    }\n\n    fn update(&mut self, message: Self::Input, sender: FactorySender<Self>) {\n        match message {}\n    }\n\n    fn output_to_parent_input(output: Self::Output) -> Option<Self::ParentInput> {\n        let output = match output {};\n        Some(output)\n    }\n}",
+      "doc": "Relm4 Factory Component",
+      "label": "Relm4 Factory Component",
+      "matches": {
+        "relm-factory": true
+      }
+    }
+  ]
+}

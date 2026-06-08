@@ -1,0 +1,2799 @@
+{
+  "extends": [
+    "chef",
+    "factories",
+    "gemfile",
+    "helpers",
+    "models",
+    "rails",
+    "rdoc",
+    "rspec",
+    "serializers"
+  ],
+  "snippets": [
+    {
+      "content": "context '${1:message}' do\n\t$0\nend",
+      "doc": "",
+      "label": "Insert context block",
+      "matches": {
+        "cont": true
+      }
+    },
+    {
+      "content": "before :${1:each} do\n\t$0\nend",
+      "doc": "",
+      "label": "Insert before block",
+      "matches": {
+        "bef": true
+      }
+    },
+    {
+      "content": "class ${1:ClassName}\n\t$0\nend",
+      "doc": "",
+      "label": "Class definition",
+      "matches": {
+        "class": true
+      }
+    },
+    {
+      "content": "let(:${1:object}) { $0 }",
+      "doc": "",
+      "label": "Insert let",
+      "matches": {
+        "let": true
+      }
+    },
+    {
+      "content": "let!(:${1:object}) { $0 }",
+      "doc": "",
+      "label": "Insert let!",
+      "matches": {
+        "let!": true
+      }
+    },
+    {
+      "content": "if ${1:test}\n\t$2\nelsif ${3:test}\n\t$0\nend",
+      "doc": "",
+      "label": "if elsif",
+      "matches": {
+        "ifei": true
+      }
+    },
+    {
+      "content": "subject(:${1:name}) { $0 }",
+      "doc": "",
+      "label": "Insert subject definition",
+      "matches": {
+        "subj": true
+      }
+    },
+    {
+      "content": "if ${1:test}\n\t$2\nelsif ${3:test}\n\t$4\nelse\n\t$0\nend",
+      "doc": "",
+      "label": "if elsif else",
+      "matches": {
+        "ifee": true
+      }
+    },
+    {
+      "content": "expect(${1:object}).to ${0}",
+      "doc": "",
+      "label": "Insert expect",
+      "matches": {
+        "exp": true
+      }
+    },
+    {
+      "content": "expect { ${1:object} }.to ${0}",
+      "doc": "",
+      "label": "Insert expect with block",
+      "matches": {
+        "expb": true
+      }
+    },
+    {
+      "content": "expect { ${1:object} }.to raise_error ${2:StandardError}",
+      "doc": "",
+      "label": "Insert expect with raise_error",
+      "matches": {
+        "experr": true
+      }
+    },
+    {
+      "content": "module ${1:ModuleName}\n\t$0\nend",
+      "doc": "",
+      "label": "Module definition",
+      "matches": {
+        "module": true
+      }
+    },
+    {
+      "content": "allow(${1:object}).to $0",
+      "doc": "",
+      "label": "Insert allow",
+      "matches": {
+        "allow": true
+      }
+    },
+    {
+      "content": "unless ${1:test}\n\t$0\nend",
+      "doc": "",
+      "label": "unless",
+      "matches": {
+        "unless": true
+      }
+    },
+    {
+      "content": "until ${1:test}\n\t$0\nend",
+      "doc": "",
+      "label": "until loop",
+      "matches": {
+        "until": true
+      }
+    },
+    {
+      "content": "def ${1:method_name}\n\t$0\nend",
+      "doc": "",
+      "label": "method definition",
+      "matches": {
+        "def": true
+      }
+    },
+    {
+      "content": "def self.${1:method_name}\n\t$0\nend",
+      "doc": "",
+      "label": "class method definition",
+      "matches": {
+        "defs": true
+      }
+    },
+    {
+      "content": "def initialize(${1:args})\n\t$0\nend",
+      "doc": "",
+      "label": "initialize method definition",
+      "matches": {
+        "definit": true
+      }
+    },
+    {
+      "content": "for ${1:value} in ${2:enumerable} do\n\t$0\nend",
+      "doc": "",
+      "label": "for loop",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "def method_missing(meth, *args, &blk)\n\t$0\nend",
+      "doc": "",
+      "label": "method_missing definition",
+      "matches": {
+        "defmm": true
+      }
+    },
+    {
+      "content": "while ${1:test}\n\t$0\nend",
+      "doc": "",
+      "label": "while loop",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "def_delegator :${1:@del_obj}, :${2:del_meth}, :${0:new_name}",
+      "doc": "",
+      "label": "delegator definition",
+      "matches": {
+        "defd": true
+      }
+    },
+    {
+      "content": "alias_method :${1:new_name}, :${0:old_name}",
+      "doc": "",
+      "label": "alias method definition",
+      "matches": {
+        "am": true
+      }
+    },
+    {
+      "content": "namespace :${1} do\n\tdesc \"${2}\"\n\ttask ${3}: :environment do\n\t\t${4}\n\tend\nend",
+      "doc": "Create a Rake Task",
+      "label": "Rake Task",
+      "matches": {
+        "rake": true
+      }
+    },
+    {
+      "content": "case ${1:test}\nwhen $2\n\t$3\nwhen $4\n\t$5\nelse\n\t$6\nend",
+      "doc": "",
+      "label": "case",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "do\n\t$0\nend",
+      "doc": "",
+      "label": "Insert do … end block",
+      "matches": {
+        "do": true
+      }
+    },
+    {
+      "content": "do |${1:variable}|\n\t$0\nend",
+      "doc": "",
+      "label": "Insert do |variable| … end block",
+      "matches": {
+        "dop": true
+      }
+    },
+    {
+      "content": "{ |${1:variable}| $2 }",
+      "doc": "",
+      "label": "Insert inline block with variable",
+      "matches": {
+        "b": true
+      }
+    },
+    {
+      "content": "# encoding: utf-8$0",
+      "doc": "",
+      "label": "Insert encoding comment",
+      "matches": {
+        "enc": true
+      }
+    },
+    {
+      "content": "# frozen_string_literal: true",
+      "doc": "",
+      "label": "Insert frozen literal string",
+      "matches": {
+        "frozen": true
+      }
+    },
+    {
+      "content": "require '${1}'$0",
+      "doc": "",
+      "label": "Insert require",
+      "matches": {
+        "req": true
+      }
+    },
+    {
+      "content": "require_relative '${1}'$0",
+      "doc": "",
+      "label": "Insert require_relative",
+      "matches": {
+        "reqr": true
+      }
+    },
+    {
+      "content": "attr_reader :${0:attr_names}",
+      "doc": "",
+      "label": "Insert attr_reader",
+      "matches": {
+        "r": true
+      }
+    },
+    {
+      "content": "attr_writer :${0:attr_names}",
+      "doc": "",
+      "label": "Insert attr_writer",
+      "matches": {
+        "w": true
+      }
+    },
+    {
+      "content": "attr_accessor :${0:attr_names}",
+      "doc": "",
+      "label": "Insert attr_accessor",
+      "matches": {
+        "rw": true
+      }
+    },
+    {
+      "content": "@${1:variable_name} ||= ${0:cached_value}",
+      "doc": "",
+      "label": "Insert inctance variable cache",
+      "matches": {
+        "ivc": true
+      }
+    },
+    {
+      "content": "each { |${1:e}| $0 }",
+      "doc": "",
+      "label": "Insert each with inline block",
+      "matches": {
+        "ea": true
+      }
+    },
+    {
+      "content": "each do |${1:e}|\n\t$0\nend",
+      "doc": "",
+      "label": "Insert each with multiline block",
+      "matches": {
+        "ead": true
+      }
+    },
+    {
+      "content": "each_with_index { |${1:e}, ${2:i}| $0 }",
+      "doc": "",
+      "label": "Insert each with index inline block",
+      "matches": {
+        "eawi": true
+      }
+    },
+    {
+      "content": "it '${1:spec_name}' do\n\t$0\nend",
+      "doc": "",
+      "label": "Insert it block",
+      "matches": {
+        "it": true
+      }
+    },
+    {
+      "content": "each_with_index do |${1:e}, ${2:i}|\n\t$0\nend",
+      "doc": "",
+      "label": "Insert each with index multiline block",
+      "matches": {
+        "eawid": true
+      }
+    },
+    {
+      "content": "reduce(${1:init}) { |${2:mem}, ${3:var}| $0 }",
+      "doc": "",
+      "label": "Insert reduce inline block",
+      "matches": {
+        "red": true
+      }
+    },
+    {
+      "content": "reduce(${1:init}) do |${2:mem}, ${3:var}|\n\t$0\nend",
+      "doc": "",
+      "label": "Insert reduce multiline block",
+      "matches": {
+        "redd": true
+      }
+    },
+    {
+      "content": "map { |${1:e}| $0 }",
+      "doc": "",
+      "label": "Insert map inline block",
+      "matches": {
+        "map": true
+      }
+    },
+    {
+      "content": "map do |${1:e}|\n\t$0\nend",
+      "doc": "",
+      "label": "Insert map multiline block",
+      "matches": {
+        "mapd": true
+      }
+    },
+    {
+      "content": "-> { $0 }",
+      "doc": "",
+      "label": "Insert lambda arrow",
+      "matches": {
+        "->": true
+      }
+    },
+    {
+      "content": "->(${1:args}) { $0 }",
+      "doc": "",
+      "label": "Insert lambda arrow with arguments",
+      "matches": {
+        "->a": true
+      }
+    },
+    {
+      "content": "${1:key}: ${2:value}",
+      "doc": "",
+      "label": "Insert key: value",
+      "matches": {
+        ":": true
+      }
+    },
+    {
+      "content": "require 'byebug'; byebug",
+      "doc": "",
+      "label": "Insert byebug call",
+      "matches": {
+        "bye": true
+      }
+    },
+    {
+      "content": "begin\n\t$1\nrescue ${2:StandardError} => ${3:exception}\n\t$4\nensure\n\t$0\nend",
+      "doc": "",
+      "label": "Exception block with ensure",
+      "matches": {
+        "begin ensure": true
+      }
+    },
+    {
+      "content": "require 'debug'; debugger",
+      "doc": "",
+      "label": "Insert debug call",
+      "matches": {
+        "debug": true
+      }
+    },
+    {
+      "content": "it_behaves_like '${0:shared examples name}'",
+      "doc": "",
+      "label": "Insert it_behaves_like",
+      "matches": {
+        "ibl": true
+      }
+    },
+    {
+      "content": "require 'pry'; binding.pry",
+      "doc": "",
+      "label": "Insert pry call",
+      "matches": {
+        "pry": true
+      }
+    },
+    {
+      "content": "begin\n\t$1\nrescue ${2:StandardError} => ${3:exception}\n\t$4\nelse\n\t$5\nensure\n\t$0\nend",
+      "doc": "",
+      "label": "Exception block with else and ensure",
+      "matches": {
+        "begin else": true
+      }
+    },
+    {
+      "content": "binding.irb",
+      "doc": "",
+      "label": "Insert irb call",
+      "matches": {
+        "irb": true
+      }
+    },
+    {
+      "content": "shared_examples '${0:shared examples name}'",
+      "doc": "",
+      "label": "Insert shared_examples",
+      "matches": {
+        "shared": true
+      }
+    },
+    {
+      "content": "require 'benchmark'\n\nputs Benchmark.measure { ${1:# benchmark code} }",
+      "doc": "",
+      "label": "Ruby Benchmark Measure",
+      "matches": {
+        "benchm": true
+      }
+    },
+    {
+      "content": "binding.break",
+      "doc": "",
+      "label": "Insert break call",
+      "matches": {
+        "break": true
+      }
+    },
+    {
+      "content": "loop do\n\t$0\nend",
+      "doc": "",
+      "label": "forever loop",
+      "matches": {
+        "loop": true
+      }
+    },
+    {
+      "content": "RSpec.describe ${1:described_class} do\n\t$0\nend",
+      "doc": "",
+      "label": "Insert RSpec.describe class",
+      "matches": {
+        "rdesc": true
+      }
+    },
+    {
+      "content": "require 'benchmark'\n\nn = ${1:50000}\nBenchmark.bm do |x|\n  x.report(\"${2:Task 1}\") { n.times { ${3:\"task 1\"} } }\n  x.report(\"${4:Task 2}\") { n.times { ${5:\"task 2\"} } }\nend",
+      "doc": "",
+      "label": "Ruby Benchmark BM",
+      "matches": {
+        "benchbm": true
+      }
+    },
+    {
+      "content": "if ${1:test}\n\t$0\nend",
+      "doc": "",
+      "label": "if",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "describe ${1:described_class} do\n\t$0\nend",
+      "doc": "",
+      "label": "Insert describe class",
+      "matches": {
+        "desc": true
+      }
+    },
+    {
+      "content": "if ${1:test}\n\t$2\nelse\n\t$0\nend",
+      "doc": "",
+      "label": "if else",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "describe '${1:#method}' do\n\t${0:pending 'Not implemented'}\nend",
+      "doc": "",
+      "label": "Insert describe block",
+      "matches": {
+        "descm": true
+      }
+    },
+    {
+      "content": "begin\n\t$1\nrescue ${2:StandardError} => ${3:exception}\n\t$0\nend",
+      "doc": "",
+      "label": "Exception block",
+      "matches": {
+        "begin": true
+      }
+    },
+    {
+      "content": "class ${1:ClassName}\n\tdef initialize(${2:args})\n\t\t$0\n\tend\nend",
+      "doc": "",
+      "label": "Class definition with initialize",
+      "matches": {
+        "class init": true
+      }
+    },
+    {
+      "content": "#!/usr/bin/env ruby\n${0}",
+      "doc": "",
+      "label": "#!/usr/bin/env ruby",
+      "matches": {
+        "#!": true
+      }
+    },
+    {
+      "content": "#!/usr/bin/env ruby\n${0}",
+      "doc": "",
+      "label": "#!/usr/bin/env ruby",
+      "matches": {
+        "shebang": true
+      }
+    },
+    {
+      "content": "if ${1:#:condition}\n  ${0:TARGET}\nend",
+      "doc": "",
+      "label": "if ... end",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "unless ${1:#:condition}\n  ${0:TARGET}\nend",
+      "doc": "",
+      "label": "unless ... end",
+      "matches": {
+        "unless": true
+      }
+    },
+    {
+      "content": "def ${1:#:method_name}\n  ${0:TARGET}\nend",
+      "doc": "",
+      "label": "def ... end",
+      "matches": {
+        "def": true
+      }
+    },
+    {
+      "content": "def ${1:#:method_name}\n  ${2:TARGET}\nrescue ${3:#:StandardError} => ${4:error}\n  ${0}\nend",
+      "doc": "",
+      "label": "def ... rescue ... end",
+      "matches": {
+        "defrescue": true
+      }
+    },
+    {
+      "content": "def ${1:#:method_name}\n  ${2:TARGET}\nrescue ${3:#:StandardError} => ${4:error}\n  ${0}\nend",
+      "doc": "",
+      "label": "def ... rescue ... end",
+      "matches": {
+        "defr": true
+      }
+    },
+    {
+      "content": "do\n  ${0:TARGET}\nend",
+      "doc": "",
+      "label": "do ... end",
+      "matches": {
+        "do": true
+      }
+    },
+    {
+      "content": "do |${1:#:var}|\n  ${0:TARGET}\nend",
+      "doc": "",
+      "label": "do |var| ... end",
+      "matches": {
+        "dovar": true
+      }
+    },
+    {
+      "content": "{\n  ${0:TARGET}\n}",
+      "doc": "",
+      "label": "{ ... }",
+      "matches": {
+        "block": true
+      }
+    },
+    {
+      "content": "{|${1:#:var}|\n  ${0:TARGET}\n}",
+      "doc": "",
+      "label": "{|var| ... }",
+      "matches": {
+        "blockvar": true
+      }
+    },
+    {
+      "content": "File.open(${1:#:filename}, '${2:#:mode}') do |${3:io}|\n  ${0:TARGET}\nend",
+      "doc": "",
+      "label": "File.open(filename) do ... end",
+      "matches": {
+        "fileopen": true
+      }
+    },
+    {
+      "content": "File.open(${1:#:filename}, '${2:#:mode}') do |${3:io}|\n  ${0:TARGET}\nend",
+      "doc": "",
+      "label": "File.open(filename) do ... end",
+      "matches": {
+        "open": true
+      }
+    },
+    {
+      "content": "end",
+      "doc": "",
+      "label": "=> end?",
+      "matches": {
+        "edn": true
+      }
+    },
+    {
+      "content": "# coding: utf-8\nrequire 'erb'\nputs ERB::Util.url_encode '${1}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "urlencode": true
+      }
+    },
+    {
+      "content": "# coding: utf-8\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "encoding": true
+      }
+    },
+    {
+      "content": "# coding: utf-8\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "enc": true
+      }
+    },
+    {
+      "content": "each do |${1:#:variable}|\n  ${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "each": true
+      }
+    },
+    {
+      "content": "each_byte {|${1:#:variable}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "each_byte": true
+      }
+    },
+    {
+      "content": "each_char {|${1:#:variable}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "each_char": true
+      }
+    },
+    {
+      "content": "each_index {|${1:#:variable}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "each_index": true
+      }
+    },
+    {
+      "content": "each_key {|${1:#:variable}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "each_key": true
+      }
+    },
+    {
+      "content": "each_line {|${1:#:variable}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "each_line": true
+      }
+    },
+    {
+      "content": "each_with_index {|${1:#:variable}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "each_with_index": true
+      }
+    },
+    {
+      "content": "each_pair {|${1:#:key}, ${2:value}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "each_pair": true
+      }
+    },
+    {
+      "content": "each_pair do |${1:key}, ${2:value}|\n  ${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "each_pair_do": true
+      }
+    },
+    {
+      "content": "map {|${1:#:variable}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "map": true
+      }
+    },
+    {
+      "content": "sort {|${1:x}, ${2:y}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sort": true
+      }
+    },
+    {
+      "content": "sort_by {|${1:#:variable}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sort_by": true
+      }
+    },
+    {
+      "content": "-> (${1:#:args}) { ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lambda": true
+      }
+    },
+    {
+      "content": "lambda {|${1:#:args}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lambda-keyword": true
+      }
+    },
+    {
+      "content": "if __FILE__ == \\$0\n  ${0:TARGET}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "main": true
+      }
+    },
+    {
+      "content": "File.dirname(File.expand_path(__FILE__))",
+      "doc": "",
+      "label": "File.dirname(...)",
+      "matches": {
+        "filedir-legacy-compatibility": true
+      }
+    },
+    {
+      "content": "File.dirname(File.expand_path(__FILE__))",
+      "doc": "",
+      "label": "File.dirname(...)",
+      "matches": {
+        "__dir__": true
+      }
+    },
+    {
+      "content": "Dir.glob(${1:'**/*'}) do |fname|\n  ${0:TARGET}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "glob": true
+      }
+    },
+    {
+      "content": "case ${1}\nwhen ${2}\n  ${3}\nelse\n  ${0}\nend",
+      "doc": "",
+      "label": "case ... when ... else ... end",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "# encoding: utf-8",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "enc": true
+      }
+    },
+    {
+      "content": "# frozen_string_literal: true",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "frozen": true
+      }
+    },
+    {
+      "content": "#!/usr/bin/env ruby",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "#!": true
+      }
+    },
+    {
+      "content": "=begin rdoc\n\t${0}\n=end",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "=b": true
+      }
+    },
+    {
+      "content": "protected\n\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "prot": true
+      }
+    },
+    {
+      "content": "private\n\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "priv": true
+      }
+    },
+    {
+      "content": ":yields: ${0:arguments}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "y": true
+      }
+    },
+    {
+      "content": "#!/usr/bin/env ruby -wKU",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rb": true
+      }
+    },
+    {
+      "content": "begin\n\t${0}\nrescue ${1:StandardError} => ${2:e}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "beg": true
+      }
+    },
+    {
+      "content": "require '${1}'",
+      "doc": "",
+      "label": "require",
+      "matches": {
+        "req": true
+      }
+    },
+    {
+      "content": "require_relative '${1}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "reqr": true
+      }
+    },
+    {
+      "content": "# =>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "#": true
+      }
+    },
+    {
+      "content": "case ${1:object}\nwhen $2\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "when $1\n\t${0:${VISUAL}}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "when": true
+      }
+    },
+    {
+      "content": "def ${1:method_name}\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "def": true
+      }
+    },
+    {
+      "content": "def ${1:method}\n\t@$1 ||= ${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defm": true
+      }
+    },
+    {
+      "content": "def test_${1:case_name}\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "deft": true
+      }
+    },
+    {
+      "content": "class Class\n\tdef descendants\n\t\tObjectSpace.each_object(::Class).select { |klass| klass < self }\n\tend\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "descendants": true
+      }
+    },
+    {
+      "content": "if $1\n\t${0:${VISUAL}}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "if $1\n\t${2:${VISUAL}}\nelse\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "elsif $1\n\t${0:${VISUAL}}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eif": true
+      }
+    },
+    {
+      "content": "if $1\n\t$2\nelsif $3\n\t$4\nelse\n\t$0\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ifee": true
+      }
+    },
+    {
+      "content": "unless $1\n\t${0:${VISUAL}}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "unless": true
+      }
+    },
+    {
+      "content": "unless $1\n\t$2\nelse\n\t$0\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "unlesse": true
+      }
+    },
+    {
+      "content": "unless $1\n\t$2\nelsif $3\n\t$4\nelse\n\t$0\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "unlesee": true
+      }
+    },
+    {
+      "content": "while $1\n\t${0:${VISUAL}}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "for ${1:e} in ${2:c}\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "until $1\n\t${0:${VISUAL}}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "until": true
+      }
+    },
+    {
+      "content": "class ${0:BlankSlate}\n\tinstance_methods.each { |meth| undef_method(meth) unless meth =~ /\\A__/ }\nend",
+      "doc": "",
+      "label": "class BlankSlate .. initialize .. end",
+      "matches": {
+        "blankslate": true
+      }
+    },
+    {
+      "content": "class << ${1:self}\n\t${0}\nend",
+      "doc": "",
+      "label": "class << self .. end",
+      "matches": {
+        "claself": true
+      }
+    },
+    {
+      "content": "attr_reader :${0:attr_names}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "r": true
+      }
+    },
+    {
+      "content": "attr_writer :${0:attr_names}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "w": true
+      }
+    },
+    {
+      "content": "attr_accessor :${0:attr_names}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rw": true
+      }
+    },
+    {
+      "content": "attr_protected :${0:attr_names}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "atp": true
+      }
+    },
+    {
+      "content": "attr_accessible :${0:attr_names}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ata": true
+      }
+    },
+    {
+      "content": "accepts_nested_attributes_for :${0:association}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ana": true
+      }
+    },
+    {
+      "content": "@${1:variable_name} ||= ${0:cached_value}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ivc": true
+      }
+    },
+    {
+      "content": "include Enumerable\n\ndef each(&block)\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Enum": true
+      }
+    },
+    {
+      "content": "include Comparable\n\ndef <=>(other)\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Comp": true
+      }
+    },
+    {
+      "content": "extend Forwardable",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Forw-": true
+      }
+    },
+    {
+      "content": "def self.${1:class_method_name}\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defs": true
+      }
+    },
+    {
+      "content": "def initialize(${1:args})\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "definit": true
+      }
+    },
+    {
+      "content": "def method_missing(meth, *args, &blk)\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defmm": true
+      }
+    },
+    {
+      "content": "def_delegator :${1:@del_obj}, :${2:del_meth}, :${0:new_name}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defd": true
+      }
+    },
+    {
+      "content": "def_delegators :${1:@del_obj}, :${0:del_methods}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defds": true
+      }
+    },
+    {
+      "content": "alias_method :${1:new_name}, :${0:old_name}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "am": true
+      }
+    },
+    {
+      "content": "if __FILE__ == \\$PROGRAM_NAME\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "app": true
+      }
+    },
+    {
+      "content": "if ARGV.${1}\n\tabort \"Usage: #{\\$PROGRAM_NAME} ${2:ARGS_GO_HERE}\"${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "usai": true
+      }
+    },
+    {
+      "content": "unless ARGV.${1}\n\tabort \"Usage: #{\\$PROGRAM_NAME} ${2:ARGS_GO_HERE}\"${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "usau": true
+      }
+    },
+    {
+      "content": "Array.new(${1:10}) { |${2:i}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "array": true
+      }
+    },
+    {
+      "content": "Hash.new { |${1:hash}, ${2:key}| $1[$2] = ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "hash": true
+      }
+    },
+    {
+      "content": "File.foreach(${1:'path/to/file'}) { |${2:line}| ${0} }",
+      "doc": "",
+      "label": "File.foreach() { |line| .. }",
+      "matches": {
+        "file": true
+      }
+    },
+    {
+      "content": "File.read(${1:'path/to/file'})",
+      "doc": "",
+      "label": "File.read()",
+      "matches": {
+        "file": true
+      }
+    },
+    {
+      "content": "Dir.glob(${1:'dir/glob/*'}) { |${2:file}| ${0} }",
+      "doc": "",
+      "label": "Dir.global() { |file| .. }",
+      "matches": {
+        "Dir": true
+      }
+    },
+    {
+      "content": "Dir[${1:'glob/**/*.rb'}]",
+      "doc": "",
+      "label": "Dir[\"..\"]",
+      "matches": {
+        "Dir": true
+      }
+    },
+    {
+      "content": "Filename.dirname(__FILE__)",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dir": true
+      }
+    },
+    {
+      "content": "delete_if { |${1:e}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "deli": true
+      }
+    },
+    {
+      "content": "fill(${1:range}) { |${2:i}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fil": true
+      }
+    },
+    {
+      "content": "reduce(Array.new) { |${1:arr}, ${2:a}| $1.push(*$2) }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "flao": true
+      }
+    },
+    {
+      "content": "zip(${1:enums}) { |${2:row}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "zip": true
+      }
+    },
+    {
+      "content": "downto(${1:0}) { |${2:n}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dow": true
+      }
+    },
+    {
+      "content": "step(${1:2}) { |${2:n}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ste": true
+      }
+    },
+    {
+      "content": "times { |${1:n}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tim": true
+      }
+    },
+    {
+      "content": "upto(${1:1.0/0.0}) { |${2:n}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "upt": true
+      }
+    },
+    {
+      "content": "loop { ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "loo": true
+      }
+    },
+    {
+      "content": "each { |${1:e}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ea": true
+      }
+    },
+    {
+      "content": "each do |${1:e}|\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ead": true
+      }
+    },
+    {
+      "content": "each_byte { |${1:byte}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eab": true
+      }
+    },
+    {
+      "content": "each_char { |${1:chr}| ${0} }",
+      "doc": "",
+      "label": "each_char { |chr| .. }",
+      "matches": {
+        "eac-": true
+      }
+    },
+    {
+      "content": "each_cons(${1:2}) { |${2:group}| ${0} }",
+      "doc": "",
+      "label": "each_cons(..) { |group| .. }",
+      "matches": {
+        "eac-": true
+      }
+    },
+    {
+      "content": "each_index { |${1:i}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eai": true
+      }
+    },
+    {
+      "content": "each_index do |${1:i}|\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eaid": true
+      }
+    },
+    {
+      "content": "each_key { |${1:key}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eak": true
+      }
+    },
+    {
+      "content": "each_key do |${1:key}|\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eakd": true
+      }
+    },
+    {
+      "content": "each_line { |${1:line}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eal": true
+      }
+    },
+    {
+      "content": "each_line do |${1:line}|\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eald": true
+      }
+    },
+    {
+      "content": "each_pair { |${1:name}, ${2:val}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eap": true
+      }
+    },
+    {
+      "content": "each_pair do |${1:name}, ${2:val}|\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eapd": true
+      }
+    },
+    {
+      "content": "each_slice(${1:2}) { |${2:group}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eas-": true
+      }
+    },
+    {
+      "content": "each_slice(${1:2}) do |${2:group}|\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "easd-": true
+      }
+    },
+    {
+      "content": "each_value { |${1:val}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eav": true
+      }
+    },
+    {
+      "content": "each_value do |${1:val}|\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eavd": true
+      }
+    },
+    {
+      "content": "each_with_index { |${1:e}, ${2:i}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eawi": true
+      }
+    },
+    {
+      "content": "each_with_index do |${1:e}, ${2:i}|\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eawid": true
+      }
+    },
+    {
+      "content": "each_with_object(${1:init}) { |${2:e}, ${3:var}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eawo": true
+      }
+    },
+    {
+      "content": "each_with_object(${1:init}) do |${2:e}, ${3:var}|\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eawod": true
+      }
+    },
+    {
+      "content": "reverse_each { |${1:e}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "reve": true
+      }
+    },
+    {
+      "content": "reverse_each do |${1:e}|\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "reved": true
+      }
+    },
+    {
+      "content": "inject(${1:init}) { |${2:mem}, ${3:var}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "inj": true
+      }
+    },
+    {
+      "content": "inject(${1:init}) do |${2:mem}, ${3:var}|\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "injd": true
+      }
+    },
+    {
+      "content": "reduce(${1:init}) { |${2:mem}, ${3:var}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "red": true
+      }
+    },
+    {
+      "content": "reduce(${1:init}) do |${2:mem}, ${3:var}|\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "redd": true
+      }
+    },
+    {
+      "content": "map { |${1:e}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "map": true
+      }
+    },
+    {
+      "content": "map do |${1:e}|\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mapd": true
+      }
+    },
+    {
+      "content": "enum_with_index.map { |${1:e}, ${2:i}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mapwi-": true
+      }
+    },
+    {
+      "content": "sort { |a, b| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sor": true
+      }
+    },
+    {
+      "content": "sort_by { |${1:e}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sorb": true
+      }
+    },
+    {
+      "content": "sort_by { rand }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ran": true
+      }
+    },
+    {
+      "content": "all? { |${1:e}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "all": true
+      }
+    },
+    {
+      "content": "any? { |${1:e}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "any": true
+      }
+    },
+    {
+      "content": "classify { |${1:e}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cl": true
+      }
+    },
+    {
+      "content": "collect { |${1:e}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "col": true
+      }
+    },
+    {
+      "content": "collect do |${1:e}|\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cold": true
+      }
+    },
+    {
+      "content": "detect { |${1:e}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "det": true
+      }
+    },
+    {
+      "content": "detect do |${1:e}|\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "detd": true
+      }
+    },
+    {
+      "content": "fetch(${1:name}) { |${2:key}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fet": true
+      }
+    },
+    {
+      "content": "find { |${1:e}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fin": true
+      }
+    },
+    {
+      "content": "find do |${1:e}|\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "find": true
+      }
+    },
+    {
+      "content": "find_all { |${1:e}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fina": true
+      }
+    },
+    {
+      "content": "find_all do |${1:e}|\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "finad": true
+      }
+    },
+    {
+      "content": "grep(${1:/pattern/}) { |${2:match}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "gre": true
+      }
+    },
+    {
+      "content": "select { |${1:line}| $1 !~ ${2:/pattern/} }${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "grepv": true
+      }
+    },
+    {
+      "content": "${1:g}sub(${2:/pattern/}) { |${3:match}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sub": true
+      }
+    },
+    {
+      "content": "scan(${1:/pattern/}) { |${2:match}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sca": true
+      }
+    },
+    {
+      "content": "scan(${1:/pattern/}) do |${2:match}|\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "scad": true
+      }
+    },
+    {
+      "content": "max { |a, b| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "max": true
+      }
+    },
+    {
+      "content": "min { |a, b| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "min": true
+      }
+    },
+    {
+      "content": "partition { |${1:e}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "par": true
+      }
+    },
+    {
+      "content": "partition do |${1:e}|\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pard": true
+      }
+    },
+    {
+      "content": "reject { |${1:e}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rej": true
+      }
+    },
+    {
+      "content": "reject do |${1:e}|\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rejd": true
+      }
+    },
+    {
+      "content": "select { |${1:e}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sel": true
+      }
+    },
+    {
+      "content": "select do |${1:e}|\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "seld": true
+      }
+    },
+    {
+      "content": "lambda { |${1:args}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lam": true
+      }
+    },
+    {
+      "content": "-> { ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "->": true
+      }
+    },
+    {
+      "content": "->(${1:args}) { ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "->a": true
+      }
+    },
+    {
+      "content": "do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "do": true
+      }
+    },
+    {
+      "content": "do |${1:v}|\n\t${2}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dov": true
+      }
+    },
+    {
+      "content": "${1:key}: ${2:'value'}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        ":": true
+      }
+    },
+    {
+      "content": "open('${1:path/or/url/or/pipe}', '${2:w}') { |${3:io}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ope": true
+      }
+    },
+    {
+      "content": "File.join(File.dirname(__FILE__), *['${1:rel path here}'])",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fpath": true
+      }
+    },
+    {
+      "content": "ARGF.each_line${1} do |${2:line}|\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "unif": true
+      }
+    },
+    {
+      "content": "require 'optparse'\n\noptions = { ${0:default: 'args'} }\n\nARGV.options do |opts|\n\topts.banner = \"Usage: #{File.basename(\\$PROGRAM_NAME)}\"\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "optp": true
+      }
+    },
+    {
+      "content": "opts.on('-${1:o}', '--${2:long-option-name}', ${3:String}, '${4:Option description.}') do |${5:opt}|\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "opt": true
+      }
+    },
+    {
+      "content": "require 'test/unit'\n\nrequire '${1:library_file_name}'\n\nclass Test${2:$1} < Test::Unit::TestCase\n\tdef test_${3:case_name}\n\t\t${0}\n\tend\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tc": true
+      }
+    },
+    {
+      "content": "require 'test/unit'\n\nrequire 'tc_${1:test_case_file}'\nrequire 'tc_${2:test_case_file}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ts": true
+      }
+    },
+    {
+      "content": "assert ${1:test}, '${2:Failure message.}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "as": true
+      }
+    },
+    {
+      "content": "assert_equal ${1:expected}, ${2:actual}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ase": true
+      }
+    },
+    {
+      "content": "assert_not_equal ${1:unexpected}, ${2:actual}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "asne": true
+      }
+    },
+    {
+      "content": "assert_in_delta ${1:expected_float}, ${2:actual_float}, ${3:2**-20}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "asid": true
+      }
+    },
+    {
+      "content": "assert_includes ${1:collection}, ${2:object}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "asi": true
+      }
+    },
+    {
+      "content": "assert_instance_of ${1:ExpectedClass}, ${2:actual_instance}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "asio": true
+      }
+    },
+    {
+      "content": "assert_kind_of ${1:ExpectedKind}, ${2:actual_instance}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "asko": true
+      }
+    },
+    {
+      "content": "assert_nil ${1:instance}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "asn": true
+      }
+    },
+    {
+      "content": "assert_not_nil ${1:instance}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "asnn": true
+      }
+    },
+    {
+      "content": "assert_match(/${1:expected_pattern}/, ${2:actual_string})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "asm": true
+      }
+    },
+    {
+      "content": "assert_no_match(/${1:unexpected_pattern}/, ${2:actual_string})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "asnm": true
+      }
+    },
+    {
+      "content": "assert_operator ${1:left}, :${2:operator}, ${3:right}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "aso": true
+      }
+    },
+    {
+      "content": "assert_raises(${1:StandardError}) { ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "asr": true
+      }
+    },
+    {
+      "content": "assert_raises ${1:StandardError} do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "asrd": true
+      }
+    },
+    {
+      "content": "assert_nothing_raised(${1:StandardError}) { ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "asnr": true
+      }
+    },
+    {
+      "content": "assert_nothing_raised ${1:StandardError} do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "asnrd": true
+      }
+    },
+    {
+      "content": "assert_respond_to ${1:object}, :${2:method}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "asrt": true
+      }
+    },
+    {
+      "content": "assert_same ${1:expected}, ${2:actual}",
+      "doc": "",
+      "label": "assert_same(..)",
+      "matches": {
+        "ass": true
+      }
+    },
+    {
+      "content": "assert_send [${1:object}, :${2:message}, ${3:args}]",
+      "doc": "",
+      "label": "assert_send(..)",
+      "matches": {
+        "asss": true
+      }
+    },
+    {
+      "content": "assert_not_same ${1:unexpected}, ${2:actual}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "asns": true
+      }
+    },
+    {
+      "content": "assert_throws :${1:expected}, -> { ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ast": true
+      }
+    },
+    {
+      "content": "assert_throws :${1:expected} do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "astd": true
+      }
+    },
+    {
+      "content": "assert_nothing_thrown { ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "asnt": true
+      }
+    },
+    {
+      "content": "assert_nothing_thrown do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "asntd": true
+      }
+    },
+    {
+      "content": "flunk '${1:Failure message.}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fl": true
+      }
+    },
+    {
+      "content": "refute ${1:test}, '${2:Failure message.}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rf": true
+      }
+    },
+    {
+      "content": "refute_equal ${1:unexpected}, ${2:actual}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rfe": true
+      }
+    },
+    {
+      "content": "refute_kind_of ${1:UnexpectedKind}, ${2:actual_instance}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rfko": true
+      }
+    },
+    {
+      "content": "refute_nil ${1:instance}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rfn": true
+      }
+    },
+    {
+      "content": "refute_operator ${1:left}, :${2:operator}, ${3:right}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rfo": true
+      }
+    },
+    {
+      "content": "refute_includes ${1:collection}, ${2:object}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rfi": true
+      }
+    },
+    {
+      "content": "refute_in_delta ${1:unexpected_float}, ${2:actual_float}, ${3:2**-20}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rfid": true
+      }
+    },
+    {
+      "content": "refute_instance_of ${1:UnexpectedClass}, ${2:actual_instance}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rfio": true
+      }
+    },
+    {
+      "content": "refute_same ${1:unexpected}, ${2:actual}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rfs": true
+      }
+    },
+    {
+      "content": "TESTS = ${1:10_000}\nBenchmark.bmbm do |results|\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bm-": true
+      }
+    },
+    {
+      "content": "results.report('${1:name}:') { TESTS.times { ${0} } }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rep": true
+      }
+    },
+    {
+      "content": "File.open('${1:path/to/file.dump}', 'wb') { |${2:file}| Marshal.dump(${3:obj}, $2) }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Md": true
+      }
+    },
+    {
+      "content": "File.open('${1:path/to/file.dump}', 'rb') { |${2:file}| Marshal.load($2) }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Ml": true
+      }
+    },
+    {
+      "content": "Marshal.load(Marshal.dump(${1:obj_to_copy}))",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "deec": true
+      }
+    },
+    {
+      "content": "PStore.new('${1:file_name.pstore}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "Pn-": true
+      }
+    },
+    {
+      "content": "transaction(${1:true}) { ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tra": true
+      }
+    },
+    {
+      "content": "REXML::Document.new(File.read('${1:path/to/file}'))",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "xml-": true
+      }
+    },
+    {
+      "content": "elements.each('${1://Xpath}') do |${2:node}|\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "xpa": true
+      }
+    },
+    {
+      "content": "split('::').inject(Object) { |par, const| par.const_get(const) }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "clafn": true
+      }
+    },
+    {
+      "content": "class << self; self end",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sinc": true
+      }
+    },
+    {
+      "content": "namespace :${1:`vim_snippets#Filename()`} do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "nam": true
+      }
+    },
+    {
+      "content": "desc '${1:Task description}'\ntask ${2:task_name: [:dependent, :tasks]} do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tas": true
+      }
+    },
+    {
+      "content": "{ |${1:var}| ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "b": true
+      }
+    },
+    {
+      "content": "begin\n\tfail 'A test exception.'\nrescue StandardError => e\n\tputs e.message\n\tputs e.backtrace.inspect\nelse\n\t# other exception\nensure\n\t# always executed\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "begin": true
+      }
+    },
+    {
+      "content": "require 'byebug'; byebug",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "debug": true
+      }
+    },
+    {
+      "content": "require 'debug'; debugger",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dbg": true
+      }
+    },
+    {
+      "content": "require 'debugger'; debugger",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "debug19": true
+      }
+    },
+    {
+      "content": "require 'ruby-debug'; debugger",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "debug18": true
+      }
+    },
+    {
+      "content": "require 'pry'; binding.pry",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pry": true
+      }
+    },
+    {
+      "content": "binding.irb",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "irb": true
+      }
+    },
+    {
+      "content": "strftime('${1:%Y-%m-%d %H:%M:%S %z}')${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "strf": true
+      }
+    },
+    {
+      "content": "must_be ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mb": true
+      }
+    },
+    {
+      "content": "wont_be ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wb": true
+      }
+    },
+    {
+      "content": "must_be_empty",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mbe": true
+      }
+    },
+    {
+      "content": "wont_be_empty",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wbe": true
+      }
+    },
+    {
+      "content": "must_be_instance_of ${0:Class}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mbio": true
+      }
+    },
+    {
+      "content": "wont_be_instance_of ${0:Class}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wbio": true
+      }
+    },
+    {
+      "content": "must_be_kind_of ${0:Class}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mbko": true
+      }
+    },
+    {
+      "content": "wont_be_kind_of ${0:Class}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wbko": true
+      }
+    },
+    {
+      "content": "must_be_nil",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mbn": true
+      }
+    },
+    {
+      "content": "wont_be_nil",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wbn": true
+      }
+    },
+    {
+      "content": "must_be_same_as ${0:other}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mbsa": true
+      }
+    },
+    {
+      "content": "wont_be_same_as ${0:other}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wbsa": true
+      }
+    },
+    {
+      "content": "-> { ${0} }.must_be_silent",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mbsi": true
+      }
+    },
+    {
+      "content": "must_be_within_delta ${1:0.1}, ${2:0.1}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mbwd": true
+      }
+    },
+    {
+      "content": "wont_be_within_delta ${1:0.1}, ${2:0.1}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wbwd": true
+      }
+    },
+    {
+      "content": "must_be_within_epsilon ${1:0.1}, ${2:0.1}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mbwe": true
+      }
+    },
+    {
+      "content": "wont_be_within_epsilon ${1:0.1}, ${2:0.1}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wbwe": true
+      }
+    },
+    {
+      "content": "must_equal ${0:other}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "me": true
+      }
+    },
+    {
+      "content": "wont_equal ${0:other}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "we": true
+      }
+    },
+    {
+      "content": "must_include ${0:what}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mi": true
+      }
+    },
+    {
+      "content": "wont_include ${0:what}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wi": true
+      }
+    },
+    {
+      "content": "must_match /${0:regex}/",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mm": true
+      }
+    },
+    {
+      "content": "wont_match /${0:regex}/",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wm": true
+      }
+    },
+    {
+      "content": "-> { ${1} }.must_output '${0}'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mout": true
+      }
+    },
+    {
+      "content": "-> { ${1} }.must_raise ${0:StandardError}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mra": true
+      }
+    },
+    {
+      "content": "must_respond_to :${0:method}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mrt": true
+      }
+    },
+    {
+      "content": "wont_respond_to :${0:method}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wrt": true
+      }
+    },
+    {
+      "content": "must_send [ ${1:what}, :${2:method}, ${3:args} ]",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "msend": true
+      }
+    },
+    {
+      "content": "-> { throw :${1:error} }.must_throw :${2:error}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mthrow": true
+      }
+    },
+    {
+      "content": "describe '${1:#method}' do\n\t${0:pending 'Not implemented'}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "descm": true
+      }
+    },
+    {
+      "content": "context '${1:message}' do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cont": true
+      }
+    },
+    {
+      "content": "before :${1:each} do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bef": true
+      }
+    },
+    {
+      "content": "after :${1:each} do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "aft": true
+      }
+    },
+    {
+      "content": "let(:${1:object}) { ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "let": true
+      }
+    },
+    {
+      "content": "let!(:${1:object}) { ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "let!": true
+      }
+    },
+    {
+      "content": "subject { ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "subj": true
+      }
+    },
+    {
+      "content": "subject.${0:method}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "s.": true
+      }
+    },
+    {
+      "content": "specify { subject.${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "spec": true
+      }
+    },
+    {
+      "content": "expect(${1:object}).to ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "exp": true
+      }
+    },
+    {
+      "content": "expect { ${1:object} }.to ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "expb": true
+      }
+    },
+    {
+      "content": "expect { ${1:object} }.to raise_error ${2:StandardError}, /${0:message_regex}/",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "experr": true
+      }
+    },
+    {
+      "content": "allow(${1:object}).to ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "allow": true
+      }
+    },
+    {
+      "content": "shared_examples ${0:'shared examples name'}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "shared": true
+      }
+    },
+    {
+      "content": "it_behaves_like ${0:'shared examples name'}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ibl": true
+      }
+    },
+    {
+      "content": "it '${1:spec_name}' do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "it": true
+      }
+    },
+    {
+      "content": "its(:${1:method}) { should ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "its": true
+      }
+    },
+    {
+      "content": "it { should ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "is": true
+      }
+    },
+    {
+      "content": "it { should_not ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "isn": true
+      }
+    },
+    {
+      "content": "it { expect(${1:object}).${2} ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "iexp": true
+      }
+    },
+    {
+      "content": "it { expect { ${1:object} }.${2} ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "iexpb": true
+      }
+    },
+    {
+      "content": "it { is_expected.to ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "iiexp": true
+      }
+    },
+    {
+      "content": "it { is_expected.not_to ${0} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "iiexpn": true
+      }
+    },
+    {
+      "content": "aggregate_failures '${1:message}' do\n\t${0}\nend",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "agg": true
+      }
+    }
+  ]
+}

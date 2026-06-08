@@ -1,0 +1,413 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "add_test(\n\t${1:test_myTest} ${1}\n)",
+      "doc": "Add the snippet for add_test()",
+      "label": "add_test()",
+      "matches": {
+        "adt": true
+      }
+    },
+    {
+      "content": "set(${1:variable} ${2:0})$3",
+      "doc": "Add the snippet to use set() for defining a variable",
+      "label": "set a variable",
+      "matches": {
+        "sv": true
+      }
+    },
+    {
+      "content": "include(${1:FetchContent})",
+      "doc": "Add the snippet for include()",
+      "label": "include()",
+      "matches": {
+        "inc": true
+      }
+    },
+    {
+      "content": "set(${1:variable} ${2:value} CACHE ${3|BOOL,FILEPATH,PATH,STRING|} \"${4:message} FORCE)$5",
+      "doc": "Add the snippet set() for cache entry",
+      "label": "set variable cache",
+      "matches": {
+        "sc": true
+      }
+    },
+    {
+      "content": "include(FetchContent)\nFetchContent_Declare(\n\t${1:repo_name}\n\tGIT_REPOSITORY ${2:repo_url}\n\tGIT_TAG ${3:tag}\n)\nFetchContent_MakeAvailable($1)",
+      "doc": "Add the snippet for FetchContent_Declare()",
+      "label": "FetchContent_Declare()",
+      "matches": {
+        "Fet": true
+      }
+    },
+    {
+      "content": "include_directories(${1:\\${PROJECT_SOURCE_DIR\\}})",
+      "doc": "Add the snippet include_directories() to set include directories",
+      "label": "include_directories()",
+      "matches": {
+        "i_d": true
+      }
+    },
+    {
+      "content": "option(${1:variable} \"${2:message}\" ${3|ON,OFF|})",
+      "doc": "Add the snippet for option()",
+      "label": "option()",
+      "matches": {
+        "opt": true
+      }
+    },
+    {
+      "content": "find_package(${1:OpenCV} REQUIRED)",
+      "doc": "Add the snippet find_package()",
+      "label": "find_package()",
+      "matches": {
+        "f_p": true
+      }
+    },
+    {
+      "content": "install(\n\t${1|FILES,TARGETS|} ${2:source_files}\n\tDESTINATION ${3:target_path}\n)",
+      "doc": "Add the snippet for install()",
+      "label": "install()",
+      "matches": {
+        "inst": true
+      }
+    },
+    {
+      "content": "add_subdirectory(${1:./src})",
+      "doc": "Add the snippet for add_subdirectory()",
+      "label": "add_subdirectory()",
+      "matches": {
+        "ads": true
+      }
+    },
+    {
+      "content": "if(${1:condition})\n\t${2:commands}\nendif()",
+      "doc": "Add the snippet if()",
+      "label": "if() ... endif()",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "elseif(${1:condition})\n\t${2:commands}",
+      "doc": "Add the snippet 'elseif()'",
+      "label": "else if()",
+      "matches": {
+        "elif": true
+      }
+    },
+    {
+      "content": "add_executable(\n\t${1:exe}\n\t${2:\\${SOURCES\\}}\n)",
+      "doc": "Add the snippet add_executable() to build source files as an exeutable file",
+      "label": "add_executable()",
+      "matches": {
+        "exe": true
+      }
+    },
+    {
+      "content": "include(FetchContent)\nset(gtest_force_shared_crt ON CACHE BOOL \"\" FORCE)\nset(INSTALL_GTEST OFF CACHE BOOL \"\" FORCE)\nFetchContent_Declare(\n\tgoogletest\n\tGIT_REPOSITORY https://github.com/google/googletest.git\n\tGIT_TAG ${1:v1.14.0}\n)\nFetchContent_MakeAvailable(googletest)",
+      "doc": "Add the snippet to use gtest",
+      "label": "Use googletest",
+      "matches": {
+        "gtest": true
+      }
+    },
+    {
+      "content": "project(${1:myProject})$2",
+      "doc": "Add the snippet for project()",
+      "label": "project()",
+      "matches": {
+        "prj": true
+      }
+    },
+    {
+      "content": "aux_source_directory(${1:./} ${2:SOURCES})",
+      "doc": "Add the snippet for aux_source_directory()",
+      "label": "aux_source_directory",
+      "matches": {
+        "aux": true
+      }
+    },
+    {
+      "content": "cmake_minimum_required(VERSION ${1:3.16})\nproject(${2:myProject})\n\nif(NOT CMAKE_BUILD_TYPE)\n\tset(default_build_type \"Debug\")\n\tmessage(STATUS \"Set the build type to `\\${default_build_type}` as none was specified.\")\n\tset(CMAKE_BUILD_TYPE \\${default_build_type} CACHE STRING \"Chooce the build type.\" FORCE)\n\tset_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS\n\t\"Debug\" \"Release\" \"MinSizeRel\" \"RelWithDebInfo\")\nendif()\nmessage(STATUS \"$2 Build Type: \\${CMAKE_BUILD_TYPE}\")\n\n# Set the version for $2\nset($2_Version_Major ${3:0})\nset($2_Version_Minor ${4:1})\nset($2_Version_Patch ${5:0})\nset($2_Version_Status \"${6:-dev}\")\nset(${7:PROJECT_VERSION}\n\t\"\\${$2_Version_Major}.\\${$2_Version_Minor}.\\${$2_Version_Patch}\\${$2_Version_Status}\"\n)\nmessage(STATUS \"\\${PROJECT_NAME} version: \\${PROJECT_VERSION}\")",
+      "doc": "Init 'CMakeLists.txt'.",
+      "label": "Init cmake",
+      "matches": {
+        "cmi": true
+      }
+    },
+    {
+      "content": "cmake_minimum_required(VERSION ${1:3.16})$2",
+      "doc": "Add the snippet for cmake_minimum_required()",
+      "label": "cmake_minimum_required()",
+      "matches": {
+        "cmr": true
+      }
+    },
+    {
+      "content": "else()\n\t${1:commands}",
+      "doc": "Add the snippet else()",
+      "label": "else()",
+      "matches": {
+        "else": true
+      }
+    },
+    {
+      "content": "set(CMAKE_CXX_STANDARD ${1:14})\nset(CMAKE_CXX_STANDARD_REQUIRED ON)",
+      "doc": "Add the snippet to set c++ standard",
+      "label": "Set c++ standard",
+      "matches": {
+        "cxx": true
+      }
+    },
+    {
+      "content": "if(${1:condition})\n\t${2:command1}\nelse()\n\t${3:command2}\nendif()",
+      "doc": "Add the snippet 'if() ... else() ... endif()'",
+      "label": "if() ... else() ... endif()",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "message(${1|STATUS,DEBUG,WARNING,SEND_ERROR,FATAL_ERROR|} \"${2:message}\")$3",
+      "doc": "Add the snippet for message()",
+      "label": "message()",
+      "matches": {
+        "msg": true
+      }
+    },
+    {
+      "content": "add_library(\n\t${1:myLib}\n\t${2|STATIC,SHARED,MODULE|}\n\t${3:\\${SOURCES\\}}\n)",
+      "doc": "Add the snippet add_library() to build source files as a library",
+      "label": "add_library()",
+      "matches": {
+        "lib": true
+      }
+    },
+    {
+      "content": "target_link_libraries(\n\t${1:myTarget}\n\t${2:myLib}\n)",
+      "doc": "Add the snippet target_link_libraries() to link libraries",
+      "label": "target_link_libraries()",
+      "matches": {
+        "tll": true
+      }
+    },
+    {
+      "content": "configure_file(\n\t${1:\\${PROJECT_SOURCE_DIR\\}/includes/version.h.in}\n\t${2:\\${PROJECT_SOURCE_DIR\\}/includes/version.h}\n\t@ONLY\n)",
+      "doc": "Add the snippet for configure_file()",
+      "label": "configure_file",
+      "matches": {
+        "conf": true
+      }
+    },
+    {
+      "content": "set(CMAKE_EXPORT_COMPILE_COMMANDS ON)",
+      "doc": "Add the snippet to generate 'compile_commands.json'",
+      "label": "export compile commands",
+      "matches": {
+        "ecc": true
+      }
+    },
+    {
+      "content": "target_include_directories(\n\t${1:myTarget}\n\t${2|PUBLIC,INTERFACE,PRIVATE|} ${3:\\${PROJECT_SOURCE_DIR\\}/includes}\n)",
+      "doc": "Add the snippet target_include_directories() to set the include directories for target",
+      "label": "target_include_directories()",
+      "matches": {
+        "tid": true
+      }
+    },
+    {
+      "content": "if(${1:#:condition})\n\t${0}\nendif()",
+      "doc": "",
+      "label": "if() endif()",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "if(${1:#:condition})\n\t${2}\nelse()\n\t${3}\nendif()",
+      "doc": "",
+      "label": "if() else() endif()",
+      "matches": {
+        "if_else": true
+      }
+    },
+    {
+      "content": "foreach(${1:item} ${2:items})\n\t${3}\nendforeach($1)",
+      "doc": "",
+      "label": "foreach() endforeach()",
+      "matches": {
+        "foreach": true
+      }
+    },
+    {
+      "content": "macro(${1:name} ${2:args})\n\t${3}\nendmacro($1)",
+      "doc": "",
+      "label": "macro() endmacro()",
+      "matches": {
+        "macro": true
+      }
+    },
+    {
+      "content": "function(${1:name} ${2:args})\n\t${3}\nendfunction($1)",
+      "doc": "",
+      "label": "function() endfunction()",
+      "matches": {
+        "function": true
+      }
+    },
+    {
+      "content": "message(\"${1}\")",
+      "doc": "",
+      "label": "message(\"...\")",
+      "matches": {
+        "message": true
+      }
+    },
+    {
+      "content": "message(STATUS \"${1}\")",
+      "doc": "",
+      "label": "message(STATUS \"...\")",
+      "matches": {
+        "status_message": true
+      }
+    },
+    {
+      "content": "message(WARNING \"${1}\")",
+      "doc": "",
+      "label": "message(WARNING \"...\")",
+      "matches": {
+        "warning_message": true
+      }
+    },
+    {
+      "content": "message(AUTHOR_WARNING \"${1}\")",
+      "doc": "",
+      "label": "message(AUTHOR_WARNING \"...\")",
+      "matches": {
+        "author_warning_message": true
+      }
+    },
+    {
+      "content": "message(SEND_ERROR \"${1}\")",
+      "doc": "",
+      "label": "message(SEND_ERROR \"...\")",
+      "matches": {
+        "send_error_message": true
+      }
+    },
+    {
+      "content": "message(FATAL_ERROR \"${1}\")",
+      "doc": "",
+      "label": "message(FATAL_ERROR \"...\")",
+      "matches": {
+        "fatal_error_message": true
+      }
+    },
+    {
+      "content": "while(${1:#:condition})\n\t${2}\nendwhile()",
+      "doc": "",
+      "label": "while() endwhile()",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "file(GLOB_RECURSE ${1:#:var} ${2:#:glob_paths})",
+      "doc": "",
+      "label": "file(GLOB_RECURSE ...)",
+      "matches": {
+        "file_GLOBE_RECURSE": true
+      }
+    },
+    {
+      "content": "project(${0:Name})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "proj": true
+      }
+    },
+    {
+      "content": "cmake_minimum_required(VERSION ${0:2.8.2})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "min": true
+      }
+    },
+    {
+      "content": "find_package(${1:library} ${0:REQUIRED})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "find": true
+      }
+    },
+    {
+      "content": "file(glob ${1:srcs} *.${0:cpp})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "glob": true
+      }
+    },
+    {
+      "content": "add_subdirectory(${0:src})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "subdir": true
+      }
+    },
+    {
+      "content": "target_link_libraries(${1:bin} ${0:somelib})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "link": true
+      }
+    },
+    {
+      "content": "add_executable(${1:bin})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bin": true
+      }
+    },
+    {
+      "content": "set(${1:var} ${0:val})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "set": true
+      }
+    },
+    {
+      "content": "add_dependencies(${1:target}\n\t${0:dep}\n)",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dep": true
+      }
+    },
+    {
+      "content": "set_target_properties(${1:target}\n\t${2:properties} ${3:compile_flags}\n\t${0:\"-O3 -Wall -pedantic\"}\n)",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "props": true
+      }
+    },
+    {
+      "content": "add_test(${1:ATestName} ${0:testCommand --options})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "test": true
+      }
+    }
+  ]
+}

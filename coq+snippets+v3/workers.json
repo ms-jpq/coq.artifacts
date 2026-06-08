@@ -1,0 +1,13 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "use relm4::{ComponentSender, Worker};\n\npub struct AsyncHandler;\n\n#[derive(Debug)]\npub enum AsyncHandlerInput {}\n\nimpl Worker for AsyncHandler {\n    type Init = ();\n    type Input = AsyncHandlerInput;\n    type Output = ();\n\n    fn init(_init: Self::Init, _sender: ComponentSender<Self>) -> Self {\n        Self\n    }\n\n    fn update(&mut self, msg: AsyncHandlerInput, sender: ComponentSender<Self>) {\n        match msg {}\n    }\n}",
+      "doc": "Relm4 Worker",
+      "label": "Relm4 Worker",
+      "matches": {
+        "relm-worker": true
+      }
+    }
+  ]
+}

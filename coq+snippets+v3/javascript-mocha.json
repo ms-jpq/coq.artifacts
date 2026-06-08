@@ -1,0 +1,85 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "describe('${1:}', function() {\n\t${0:${VISUAL}}\n});",
+      "doc": "",
+      "label": "describe('thing', function() { ... })",
+      "matches": {
+        "des": true
+      }
+    },
+    {
+      "content": "it('${1:}', function() {\n\t${0:${VISUAL}}\n});",
+      "doc": "",
+      "label": "it('should do', function() { ... })",
+      "matches": {
+        "it": true
+      }
+    },
+    {
+      "content": "xit('${1:}', function() {\n\t${0:${VISUAL}}\n});",
+      "doc": "",
+      "label": "xit('should do', function() { ... })",
+      "matches": {
+        "xit": true
+      }
+    },
+    {
+      "content": "before(function() {\n\t${0:${VISUAL}}\n});",
+      "doc": "",
+      "label": "before(function() { ... })",
+      "matches": {
+        "bef": true
+      }
+    },
+    {
+      "content": "beforeEach(function() {\n\t${0:${VISUAL}}\n});",
+      "doc": "",
+      "label": "beforeEach(function() { ... })",
+      "matches": {
+        "befe": true
+      }
+    },
+    {
+      "content": "after(function() {\n\t${0:${VISUAL}}\n});",
+      "doc": "",
+      "label": "after(function() { ... })",
+      "matches": {
+        "aft": true
+      }
+    },
+    {
+      "content": "afterEach(function() {\n\t${0:${VISUAL}}\n});",
+      "doc": "",
+      "label": "afterEach(function() { ... })",
+      "matches": {
+        "afte": true
+      }
+    },
+    {
+      "content": "expect(${1:})${0};",
+      "doc": "",
+      "label": "expect(...)",
+      "matches": {
+        "exp": true
+      }
+    },
+    {
+      "content": "expect(${1:}).to.equal(${0});",
+      "doc": "",
+      "label": "expect(...).to.equal(...)",
+      "matches": {
+        "expe": true
+      }
+    },
+    {
+      "content": "expect(${1:}).to.deep.equal(${0});",
+      "doc": "",
+      "label": "expect(...).to.deep.equal(...)",
+      "matches": {
+        "expd": true
+      }
+    }
+  ]
+}

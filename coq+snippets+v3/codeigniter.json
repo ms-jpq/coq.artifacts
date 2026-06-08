@@ -1,0 +1,293 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');\n\nclass ${1:ClassName} extends CI_Controller\n{\n\tfunction __construct()\n\t{\n\t\tparent::__construct();\n\t\t${2:// code...}\n\t}\n\n\tfunction ${3:index}()\n\t{\n\t\t${4:// code...}\n\t}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_controller": true
+      }
+    },
+    {
+      "content": "<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');\n\nclass ${1:ClassName_model} extends CI_Model\n{\n\tfunction __construct()\n\t{\n\t\tparent::__construct();\n\t\t${2:// code...}\n\t}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_model": true
+      }
+    },
+    {
+      "content": "<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');\n\nclass ${1:ClassName_model} extends CI_Model\n{\n\tprivate $table = '${2:table_name}';\n\n\tfunction __construct()\n\t{\n\t\tparent::__construct();\n\t\t${3:// code...}\n\t}\n\n\tpublic function create($data)\n\t{\n\t\tif($this->db->insert($this->table, $data))\n\t\t\treturn true;\n\t\telse\n\t\t\treturn false;\n\t}\n\n\tpublic function read($id)\n\t{\n\t\treturn $this->db->get_where($this->table, array('id', $id))->result();\n\t}\n\n\tpublic function update($id, $data)\n\t{\n\t\tif($this->db->update($this->table, $data, array('id' => $id)))\n\t\t\treturn true;\n\t\telse\n\t\t\treturn false;\n\t}\n\n\tpublic function delete($id)\n\t{\n\t\tif(is_array($id))\n\t\t{\n\t\t\t$this->db->trans_start();\n\t\t\tforeach($id as $elem)\n\t\t\t\t$this->db->delete($this->table, array('id' => $elem));\n\t\t\t$this->db->trans_complete();\n\t\t}\n\t\telse\n\t\t{\n\t\t\tif($this->db->delete($this->table, array('id' => $id)))\n\t\t\t\treturn true;\n\t\t\telse\n\t\t\t\treturn false;\n\t\t}\n\t}\n\n\tpublic function listRows($limit = null, $offset = 0)\n\t{\n\t\tif(!is_null($limit))\n\t\t\t$this->db->limit($limit, $offset);\n\t\treturn $this->db->get($this->table)->result();\n\t}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_model_crudl": true
+      }
+    },
+    {
+      "content": "$this->db->select(\"${1:id, ...}\");${2}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_db-select": true
+      }
+    },
+    {
+      "content": "$this->db->from(\"${1:table}\");${2}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_db-from": true
+      }
+    },
+    {
+      "content": "$this->db->join(\"${1:table}\", \"$2\", \"${3:type}\");${4}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_db-join": true
+      }
+    },
+    {
+      "content": "$this->db->where(\"${1:key}\", \"${2:value}\");${3}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_db-where": true
+      }
+    },
+    {
+      "content": "$this->db->or_where(\"${1:key}\", \"${2:value}\");${3}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_db-or_where": true
+      }
+    },
+    {
+      "content": "$this->db->get(\"${1:table}\", ${2:limit}, ${3:offset});${4}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_db-get": true
+      }
+    },
+    {
+      "content": "$this->db->delete(\"${1:table}\", \"${2:where}\");${3}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_db-delete": true
+      }
+    },
+    {
+      "content": "$this->input->post(\"${1:index}\");${2}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_input-post": true
+      }
+    },
+    {
+      "content": "$this->input->get(\"${1:index}\");${2}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_input-get": true
+      }
+    },
+    {
+      "content": "$this->input->cookie(\"${1:index}\");${2}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_input-cookie": true
+      }
+    },
+    {
+      "content": "$this->input->server(\"${1:index}\");${2}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_input-server": true
+      }
+    },
+    {
+      "content": "$this->input->user_agent();${1}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_input-user_agent": true
+      }
+    },
+    {
+      "content": "$this->input->is_ajax_request();${1}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_input-is_ajax_request": true
+      }
+    },
+    {
+      "content": "$this->input->is_cli_request();${1}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_input-is_cli_request": true
+      }
+    },
+    {
+      "content": "$this->form_validation->set_rules(\"${1:field}\", \"${2:label}\", \"${3:trim|required}\");${4}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_form_validation-set_rules": true
+      }
+    },
+    {
+      "content": "form_open(\"${1:action}\");${2}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_form_open": true
+      }
+    },
+    {
+      "content": "form_open_multipart(\"${1:action}\");${2}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_form_open_multipart": true
+      }
+    },
+    {
+      "content": "form_hidden(\"${1:name}\", \"${2:value}\");${3}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_form_hidden": true
+      }
+    },
+    {
+      "content": "form_input(\"${1:name}\", \"${2:value}\");${3}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_form_input": true
+      }
+    },
+    {
+      "content": "form_password(\"${1:name}\", \"${2:value}\");${3}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_form_password": true
+      }
+    },
+    {
+      "content": "form_upload(\"${1:name}\", \"${2:value}\");${3}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_form_upload": true
+      }
+    },
+    {
+      "content": "form_textarea(\"${1:name}\", \"${2:value}\");${3}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_form_textarea": true
+      }
+    },
+    {
+      "content": "form_checkbox(\"${1:name}\", \"${2:value}\");${3}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_form_checkbox": true
+      }
+    },
+    {
+      "content": "form_radio(\"${1:name}\", \"${2:value}\");${3}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_form_radio": true
+      }
+    },
+    {
+      "content": "form_submit(\"${1:name}\", \"${2:value}\");${3}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_form_submit": true
+      }
+    },
+    {
+      "content": "form_reset(\"${1:name}\", \"${2:value}\");${3}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_form_reset": true
+      }
+    },
+    {
+      "content": "form_button(\"${1:name}\", \"${2:value}\");${3}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_form_button": true
+      }
+    },
+    {
+      "content": "form_label(\"${1:label text}\", \"${2:id}\");${3}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_form_label": true
+      }
+    },
+    {
+      "content": "form_close();${1}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_form_close": true
+      }
+    },
+    {
+      "content": "validation_errors();${1}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_validation_errors": true
+      }
+    },
+    {
+      "content": "$this->session->userdata(\"${1:item}\");${2}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_session_userdata": true
+      }
+    },
+    {
+      "content": "$this->session->flashdata(\"${1:item}\");${2}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_session_flashdata": true
+      }
+    },
+    {
+      "content": "$this->session->set_flashdata(\"${1:item}\", \"${2:value}\");${3}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ci_session_set_flashdata": true
+      }
+    }
+  ]
+}

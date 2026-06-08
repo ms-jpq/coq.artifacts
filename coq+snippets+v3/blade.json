@@ -1,0 +1,189 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "Blade::render(${1:'Blade template string'}, ${2:\\$data});",
+      "doc": "Transform a raw Blade template string into valid HTML (Laravel 9.x)",
+      "label": "Blade-render",
+      "matches": {
+        "Blade::render": true
+      }
+    },
+    {
+      "content": "Blade::component('${1:package-name}', ${2:PackageNameComponent}::class);",
+      "doc": "Registering Package Components (AppServiceProvider boot method)",
+      "label": "Blade-component",
+      "matches": {
+        "Blade::component": true
+      }
+    },
+    {
+      "content": "Blade::renderComponent(new ${1:HelloComponent}(${2:\\$params}));",
+      "doc": "Render a given class component by passing the component instance to the method  (Laravel 9.x)",
+      "label": "Blade-renderComponent",
+      "matches": {
+        "Blade::renderComponent": true
+      }
+    },
+    {
+      "content": "Blade::include('${1:includes.input}', '${2:input}');",
+      "doc": "Aliasing Includes (AppServiceProvider boot method)",
+      "label": "Blade-include",
+      "matches": {
+        "Blade::include": true
+      }
+    },
+    {
+      "content": "@yield('${1}')",
+      "doc": "",
+      "label": "@yield",
+      "matches": {
+        "yl": true
+      }
+    },
+    {
+      "content": "@extends('${1}')",
+      "doc": "",
+      "label": "@extends",
+      "matches": {
+        "ext": true
+      }
+    },
+    {
+      "content": "@section('${1}', '${2}')",
+      "doc": "",
+      "label": "@section",
+      "matches": {
+        "sec": true
+      }
+    },
+    {
+      "content": "@section('${1:section name}')\n    ${2}\n@endsection",
+      "doc": "",
+      "label": "@section ... @endsection",
+      "matches": {
+        "section": true
+      }
+    },
+    {
+      "content": "@section('${1:section name}')\n    @parent\n\n    ${2}\n@endsection",
+      "doc": "",
+      "label": "@section @parent ... @endsection",
+      "matches": {
+        "section-parent": true
+      }
+    },
+    {
+      "content": "@component('${1}')\n    ${2}\n@endcomponent",
+      "doc": "",
+      "label": "@component ... @endcomponent",
+      "matches": {
+        "compo": true
+      }
+    },
+    {
+      "content": "@slot('${1}')\n    ${2}\n@endslot",
+      "doc": "",
+      "label": "@slot ... @endslot",
+      "matches": {
+        "slot": true
+      }
+    },
+    {
+      "content": "@if(${1:condition})\n   ${2}\n@endif",
+      "doc": "",
+      "label": "if ... endif",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "@if (${1:condition})\n   ${2}\n@elseif (${3:condition})\n   ${4}\n@else\n   ${5}\n@endif",
+      "doc": "",
+      "label": "if elseif else endif",
+      "matches": {
+        "ifelse": true
+      }
+    },
+    {
+      "content": "@unless (${1:condition})\n    ${2}\n@endunless",
+      "doc": "",
+      "label": "@unless ... @endunless",
+      "matches": {
+        "unless": true
+      }
+    },
+    {
+      "content": "@isset(${1})\n    ${2}\n@endisset",
+      "doc": "",
+      "label": "@isset ... @endisset",
+      "matches": {
+        "isset": true
+      }
+    },
+    {
+      "content": "@empty(${1})\n    ${2}\n@endempty",
+      "doc": "",
+      "label": "@empty ... @endempty",
+      "matches": {
+        "empty": true
+      }
+    },
+    {
+      "content": "@for ($i = 0; $i < ${1}; $i++)\n    ${2}\n@endfor",
+      "doc": "",
+      "label": "@for ... @endfor",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "@foreach (${1} as ${2})\n    ${3}\n@endforeach",
+      "doc": "",
+      "label": "@foreach ... @endforeach",
+      "matches": {
+        "foreach": true
+      }
+    },
+    {
+      "content": "@forelse (${1} as ${2})\n    ${3}\n@empty\n    ${4}\n@endforelse",
+      "doc": "",
+      "label": "@forelse ... @empty ... @endforeach",
+      "matches": {
+        "forelse": true
+      }
+    },
+    {
+      "content": "@while (${1})\n    ${2}\n@endwhile",
+      "doc": "",
+      "label": "@while ... @endwhile",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "{{-- ${1} --}}",
+      "doc": "",
+      "label": "{{-- comments --}}",
+      "matches": {
+        "comment": true
+      }
+    },
+    {
+      "content": "@php\n    ${1}\n@endphp",
+      "doc": "",
+      "label": "@php ... @endphp",
+      "matches": {
+        "php": true
+      }
+    },
+    {
+      "content": "@include('${1}')",
+      "doc": "",
+      "label": "@include",
+      "matches": {
+        "include": true
+      }
+    }
+  ]
+}

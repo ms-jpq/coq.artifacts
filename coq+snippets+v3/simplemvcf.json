@@ -1,0 +1,141 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "<?php\n\tnamespace Controllers;\n\tuse Core\\View;\n\tuse Core\\Controller;\n\n\tclass ${1:class_name} extends Controller\n\t{\n\t\tpublic function __construct()\n\t\t{\n\t\t\tparent::__construct();\n\t\t}\n\n\t\tpublic function index()\n\t\t{\n\t\t\t${2:}\n\t\t}\n\t}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sm_controller": true
+      }
+    },
+    {
+      "content": "<?php\n\tnamespace Models;\n\n\tuse Core\\Model;\n\n\tclass ${1:class_name} extends Model\n\t{\n\t\tfunction __construct()\n\t\t{\n\t\t\tparent::__construct();\n\t\t}\n\t}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sm_model": true
+      }
+    },
+    {
+      "content": "$this->db->select(${1:sql}, ${2:where});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sm_db_select": true
+      }
+    },
+    {
+      "content": "$this->db->insert(${1:table}, ${2:data});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sm_db_insert": true
+      }
+    },
+    {
+      "content": "$this->db->update(${1:table}, ${2:data}, ${3:where});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sm_db_update": true
+      }
+    },
+    {
+      "content": "$this->db->delete(${1:table}, ${2:where});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sm_db_delete": true
+      }
+    },
+    {
+      "content": "$this->db->delete(${1:table});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sm_db_truncate": true
+      }
+    },
+    {
+      "content": "Session::set(${1:key}, ${2:value});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sm_session_set": true
+      }
+    },
+    {
+      "content": "Session::get(${1:key});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sm_session_get": true
+      }
+    },
+    {
+      "content": "Session::pull(${1:key});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sm_session_pull": true
+      }
+    },
+    {
+      "content": "Session::id();",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sm_session_id": true
+      }
+    },
+    {
+      "content": "Session::set(${1:key});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sm_session_destroy": true
+      }
+    },
+    {
+      "content": "Session::display();",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sm_session_display": true
+      }
+    },
+    {
+      "content": "Url:redirect('${1:path}');",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sm_url_redirect": true
+      }
+    },
+    {
+      "content": "Url:previous();",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sm_url_previous": true
+      }
+    },
+    {
+      "content": "Url:templatePath();",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sm_url_templatepath": true
+      }
+    },
+    {
+      "content": "Url:autolink('${1:string}');",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sm_url_autolink": true
+      }
+    }
+  ]
+}

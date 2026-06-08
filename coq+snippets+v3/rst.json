@@ -1,0 +1,673 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n- [${5| ,x|}] ${6:text}\n- [${7| ,x|}] ${8:text}\n- [${9| ,x|}] ${10:text}\n${0}",
+      "doc": "Insert task list with 5 tasks",
+      "label": "Insert task list 5",
+      "matches": {
+        "task5": true
+      }
+    },
+    {
+      "content": "::\n $0",
+      "doc": "Insert code block",
+      "label": "Insert code block",
+      "matches": {
+        "codeblock": true
+      }
+    },
+    {
+      "content": "${0}\n------------",
+      "doc": "Add section",
+      "label": "section",
+      "matches": {
+        "-": true,
+        "section": true
+      }
+    },
+    {
+      "content": "- ${1:first}\n- ${2:second}\n- ${3:third}\n$0",
+      "doc": "Insert unordered list",
+      "label": "Insert unordered list",
+      "matches": {
+        "unordered list": true
+      }
+    },
+    {
+      "content": "1. ${1:first}\n2. ${2:second}\n3. ${3:third}\n$0",
+      "doc": "Insert ordered list",
+      "label": "Insert ordered list",
+      "matches": {
+        "ordered list": true
+      }
+    },
+    {
+      "content": "*${1}* $0",
+      "doc": "Insert italic text",
+      "label": "Insert emphasized text",
+      "matches": {
+        "emphasis": true,
+        "i": true,
+        "italic": true
+      }
+    },
+    {
+      "content": "<${1}> ${0}",
+      "doc": "Add urls",
+      "label": "URLS",
+      "matches": {
+        "u": true,
+        "url": true
+      }
+    },
+    {
+      "content": ".. image:: ${1:path}${0}",
+      "doc": "Add images",
+      "label": "Images",
+      "matches": {
+        "img": true
+      }
+    },
+    {
+      "content": "- [${1| ,x|}] ${2:text}\n${0}",
+      "doc": "Insert task list",
+      "label": "Insert task list",
+      "matches": {
+        "task": true
+      }
+    },
+    {
+      "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n${0}",
+      "doc": "Insert task list with 2 tasks",
+      "label": "Insert task list 2",
+      "matches": {
+        "task2": true
+      }
+    },
+    {
+      "content": "${1:text}_\n.. _${1:text} ${2:url}${0}",
+      "doc": "Add links",
+      "label": "Links",
+      "matches": {
+        "hyperlink": true,
+        "l": true,
+        "link": true
+      }
+    },
+    {
+      "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n- [${5| ,x|}] ${6:text}\n${0}",
+      "doc": "Insert task list with 3 tasks",
+      "label": "Insert task list 3",
+      "matches": {
+        "task3": true
+      }
+    },
+    {
+      "content": "${0}\n============================",
+      "doc": "Add title",
+      "label": "title",
+      "matches": {
+        "=": true,
+        "title": true
+      }
+    },
+    {
+      "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n- [${5| ,x|}] ${6:text}\n- [${7| ,x|}] ${8:text}\n${0}",
+      "doc": "Insert task list with 4 tasks",
+      "label": "Insert task list 4",
+      "matches": {
+        "task4": true
+      }
+    },
+    {
+      "content": "============================\n${0}\n============================",
+      "doc": "Add main title",
+      "label": "main title",
+      "matches": {
+        "=": true,
+        "main title": true
+      }
+    },
+    {
+      "content": "::\n\n  ${1}",
+      "doc": "Insert quoted text",
+      "label": "Insert quoted text",
+      "matches": {
+        "quote": true
+      }
+    },
+    {
+      "content": "----------",
+      "doc": "Insert transition rule",
+      "label": "Insert transition",
+      "matches": {
+        "horizontal rule": true,
+        "transition": true
+      }
+    },
+    {
+      "content": "**${1}** $0",
+      "doc": "Insert bold text",
+      "label": "Insert strong emphasized text",
+      "matches": {
+        "b": true,
+        "bold": true,
+        "strong emphasis": true
+      }
+    },
+    {
+      "content": "`${1}` $0",
+      "doc": "Insert code",
+      "label": "Insert code",
+      "matches": {
+        "code": true,
+        "literal": true
+      }
+    },
+    {
+      "content": "===========================\n${1:#:content_name}\n===========================\n\n.. contents:: contents_name\n\ntitle1\n====================================\n\nsubtitle1\n-----------------------------------\n\nsubtitle2\n-----------------------------------\n\nsubtitle3\n-----------------------------------\n\ntitle2\n====================================\n\nsubtitle1\n-----------------------------------\n\nsubtitle2\n-----------------------------------\n\nsubtitle3\n-----------------------------------\n\ntitle3\n====================================\n\nsubtitle1\n-----------------------------------\n\nsubtitle2\n-----------------------------------\n\nsubtitle3\n-----------------------------------",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "quickstart": true
+      }
+    },
+    {
+      "content": ".. contents:: ${1:#:contents_name}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "contnents": true
+      }
+    },
+    {
+      "content": "${1:#:title}\n====================================",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "title": true
+      }
+    },
+    {
+      "content": "${1:#:subtitle}\n-----------------------------------",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "subtitle": true
+      }
+    },
+    {
+      "content": ".. code-block:: ${1:#:filetype}\n\n${2:#:content}",
+      "doc": "",
+      "label": "code",
+      "matches": {
+        "code_block": true
+      }
+    },
+    {
+      "content": "\\`${1:#:link}\\`_",
+      "doc": "",
+      "label": "link_as_raw",
+      "matches": {
+        "link_raw": true
+      }
+    },
+    {
+      "content": "\\`${1:#:title} <${2:#:link}>\\`_",
+      "doc": "",
+      "label": "link_and_label",
+      "matches": {
+        "link_label": true
+      }
+    },
+    {
+      "content": "+------------------+------------+-----------------------+------------+\n|${1:#:cel} | | | |\n+==================+============+=======================+============+\n| | | | |\n+------------------+------------+-----------------------+------------+\n| | | | |\n+------------------+------------+-----------------------+------------+",
+      "doc": "",
+      "label": "grid_table",
+      "matches": {
+        "table_grid": true
+      }
+    },
+    {
+      "content": ":${1:#:text}:\n: :\n: :\n: :",
+      "doc": "",
+      "label": "simple_table",
+      "matches": {
+        "table_simple": true
+      }
+    },
+    {
+      "content": "-\n-\n-\n-",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "list": true
+      }
+    },
+    {
+      "content": "- ${1:#:text}\n-\n-\n-",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "nested_list": true
+      }
+    },
+    {
+      "content": "[#]",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "caption": true
+      }
+    },
+    {
+      "content": ".. image:: ${1:#:path}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "image": true
+      }
+    },
+    {
+      "content": "**${1:#:text}**",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "strong": true
+      }
+    },
+    {
+      "content": ".. toctree::\n\t:maxdepth: ${1:2}\n\n\t${2:#:FILES}",
+      "doc": "",
+      "label": "directive_toctree",
+      "matches": {
+        "toctree": true
+      }
+    },
+    {
+      "content": ":doc:\\`${1:#:PageName}\\` ${0:#:CURSOR}",
+      "doc": "",
+      "label": "link_to_doc",
+      "matches": {
+        "link_doc": true
+      }
+    },
+    {
+      "content": ".. code-block:: ${1:python}\n\n\t${1:#:TERGET}",
+      "doc": "",
+      "label": "syntax",
+      "matches": {
+        "syntax": true
+      }
+    },
+    {
+      "content": ".. _${1:#:NAME}:\n${2:#:CURSOR}",
+      "doc": "",
+      "label": "label",
+      "matches": {
+        "label": true
+      }
+    },
+    {
+      "content": ":ref:\\`${1:#:NAME}\\`\n${2:#:CURSOR}",
+      "doc": "",
+      "label": "role_ref",
+      "matches": {
+        "ref": true
+      }
+    },
+    {
+      "content": ".. contents::\n\t:depth: ${1:2}\n\t${2::local:}",
+      "doc": "",
+      "label": "directive_content",
+      "matches": {
+        "content": true
+      }
+    },
+    {
+      "content": ":guilabel:\\`${1:#:NAME}\\` ${0:#:CURSOR}",
+      "doc": "",
+      "label": "role_guilabel",
+      "matches": {
+        "guilabel": true
+      }
+    },
+    {
+      "content": ":menuselection:\\`${1:#:NAME} --> ${2:#:NAME}\\` ${0:#:CURSOR}",
+      "doc": "",
+      "label": "role_menuselection",
+      "matches": {
+        "menuselection": true
+      }
+    },
+    {
+      "content": ".. table:: ${1:#:TITLE}\n\t${0:#:CURSOR}",
+      "doc": "",
+      "label": "directive_table",
+      "matches": {
+        "table": true
+      }
+    },
+    {
+      "content": ".. csv-table:: ${1:#:TITLE}\n\t:header: \"${2:#:Header1}\", \"${3:#:Header2}\"${4:#:Headers}\n\n\t\"${5:#:Column1}\", \"${6:#:Column2}\"${0:#:CURSOR}",
+      "doc": "",
+      "label": "directive_csvtable",
+      "matches": {
+        "csvtable": true
+      }
+    },
+    {
+      "content": ".. ${1:#:NAME}:: ${0:#:CURSOR}",
+      "doc": "",
+      "label": "directive",
+      "matches": {
+        "directive": true
+      }
+    },
+    {
+      "content": ".. note:: ${0:#:CURSOR}",
+      "doc": "",
+      "label": "note",
+      "matches": {
+        "note": true
+      }
+    },
+    {
+      "content": ".. tip:: ${0:#:CURSOR}",
+      "doc": "",
+      "label": "tip",
+      "matches": {
+        "tip": true
+      }
+    },
+    {
+      "content": ".. warning:: ${0:#:CURSOR}",
+      "doc": "",
+      "label": "warning",
+      "matches": {
+        "warning": true
+      }
+    },
+    {
+      "content": ".. attention:: ${0:#:CURSOR}",
+      "doc": "",
+      "label": "attention",
+      "matches": {
+        "attention": true
+      }
+    },
+    {
+      "content": ".. caution:: ${0:#:CURSOR}",
+      "doc": "",
+      "label": "caution",
+      "matches": {
+        "caution": true
+      }
+    },
+    {
+      "content": ".. danger:: ${0:#:CURSOR}",
+      "doc": "",
+      "label": "danger",
+      "matches": {
+        "danger": true
+      }
+    },
+    {
+      "content": ".. error:: ${0:#:CURSOR}",
+      "doc": "",
+      "label": "error",
+      "matches": {
+        "error": true
+      }
+    },
+    {
+      "content": ".. hint:: ${0:#:CURSOR}",
+      "doc": "",
+      "label": "hint",
+      "matches": {
+        "hint": true
+      }
+    },
+    {
+      "content": ".. important:: ${0:#:CURSOR}",
+      "doc": "",
+      "label": "important",
+      "matches": {
+        "important": true
+      }
+    },
+    {
+      "content": ".. seealso:: ${0:#:CURSOR}",
+      "doc": "",
+      "label": "seealso",
+      "matches": {
+        "seealso": true
+      }
+    },
+    {
+      "content": ":${1:field name}: $0",
+      "doc": "",
+      "label": "",
+      "matches": {
+        ":": true
+      }
+    },
+    {
+      "content": "*${1:Emphasis}* ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "*": true
+      }
+    },
+    {
+      "content": "**${1:Strong emphasis}** ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "**": true
+      }
+    },
+    {
+      "content": "\\`${1:hyperlink-name}\\`_\n.. _\\`$1\\`: ${0:link-block}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "_": true
+      }
+    },
+    {
+      "content": "${1:Title}\n=====${2:=}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "=": true
+      }
+    },
+    {
+      "content": "${1:Title}\n-----${2:-}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "-": true
+      }
+    },
+    {
+      "content": ".. |${1:alias}| image:: ${0:img}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "img:": true
+      }
+    },
+    {
+      "content": ".. figure:: ${1:img}\n\t:alt: ${2:alter text}\n\n\t$0",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fig:": true
+      }
+    },
+    {
+      "content": ".. contents:: ${1:Table of Contents}\n\n\t${0:content}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "con:": true
+      }
+    },
+    {
+      "content": ".. code:: ${1:type}\n\n\t${0:write some code}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cod:": true
+      }
+    },
+    {
+      "content": ".. tip::\n\t${0:my tips}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tip:": true
+      }
+    },
+    {
+      "content": ".. note::\n\t${0:my notes}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "not:": true
+      }
+    },
+    {
+      "content": ".. warning::\n\t${0:attention!}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "war:": true
+      }
+    },
+    {
+      "content": ".. important::\n\t${0:this is importatnt}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "imp:": true
+      }
+    },
+    {
+      "content": ".. attention::\n\t${0:hey!}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "att:": true
+      }
+    },
+    {
+      "content": ".. danger::\n\t${0:ah!}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dan:": true
+      }
+    },
+    {
+      "content": ".. error::\n\t${0:Error occur}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "err:": true
+      }
+    },
+    {
+      "content": ".. caution::\n\t${0:Watch out!}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cau:": true
+      }
+    },
+    {
+      "content": ".. sidebar:: ${1:Title}\n\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sid:": true
+      }
+    },
+    {
+      "content": ".. todo::\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tod:": true
+      }
+    },
+    {
+      "content": ".. list-table:: ${1:Title}\n\t:header-rows: 1\n\t:stub-columns: 0\n\n\t* - ${0:R1C1}\n\t  - R1C2\n\t* - R2C1\n\t  - R2C2",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lis:": true
+      }
+    },
+    {
+      "content": ".. csv-table:: ${1:Title}\n\t:header-rows: 1\n\t:stub-columns: 0\n\n\t${0:R1C1}, R1C2\n\tR2C1, R2C2",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "csv:": true
+      }
+    },
+    {
+      "content": ".. toctree::\n\t:maxdepth: 2\n\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "toc:": true
+      }
+    },
+    {
+      "content": ":download:\\`${1:text} <${0:path}>\\`",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dow:": true
+      }
+    },
+    {
+      "content": ":ref:\\`${1:text} <${0:path}>\\`",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ref:": true
+      }
+    },
+    {
+      "content": ":doc:\\`${1:text} <${0:path}>\\`",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "doc:": true
+      }
+    },
+    {
+      "content": "\\ *${1:Emphasis}*\\ ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "*c": true
+      }
+    },
+    {
+      "content": "\\ **${1:Strong emphasis}**\\ ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "**c": true
+      }
+    }
+  ]
+}

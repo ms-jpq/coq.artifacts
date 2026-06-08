@@ -1,0 +1,13 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "`strftime(\"%Y/%m/%d\")` ${1:transaction}\n    ${2:account}    ${3:value}\n    ${0:account}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ent": true
+      }
+    }
+  ]
+}

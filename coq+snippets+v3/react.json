@@ -1,0 +1,1060 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "PropTypes.oneOf(['$0']),",
+      "doc": "Prop type limited to specific values by treating it as an enum",
+      "label": "propTypeEnum",
+      "matches": {
+        "pte": true
+      }
+    },
+    {
+      "content": "import { Component, PropTypes } from 'react'\n\nclass ${TM_FILENAME_BASE} extends Component {\n\tconstructor(props) {\n\t\tsuper(props)\n\n\t}\n\n\tcomponentWillMount () {\n\n\t}\n\n\tcomponentDidMount () {\n\n\t}\n\n\tcomponentWillReceiveProps (nextProps) {\n\n\t}\n\n\tshouldComponentUpdate (nextProps, nextState) {\n\n\t}\n\n\tcomponentWillUpdate (nextProps, nextState) {\n\n\t}\n\n\tcomponentDidUpdate (prevProps, prevState) {\n\n\t}\n\n\tcomponentWillUnmount () {\n\n\t}\n\n\trender () {\n\t\treturn (\n\t\t\t<div>\n\n\t\t\t</div>\n\t\t)\n\t}\n}\n\n${1}.propTypes = {\n\n}\n\nexport default ${1}",
+      "doc": "Creates a React component class with PropTypes and all lifecycle methods",
+      "label": "reactClassComponentWithMethods",
+      "matches": {
+        "rcfc": true
+      }
+    },
+    {
+      "content": "PropTypes.oneOf(['$0']).isRequired,",
+      "doc": "Prop type limited to specific values by treating it as an enum required",
+      "label": "propTypeEnumRequired",
+      "matches": {
+        "pter": true
+      }
+    },
+    {
+      "content": "const ${TM_FILENAME_BASE} = () => {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t)\n}\n\nexport default ${TM_FILENAME_BASE}",
+      "doc": "Creates a React function component without PropTypes",
+      "label": "reactFunctionComponent",
+      "matches": {
+        "rfc": true
+      }
+    },
+    {
+      "content": "PropTypes.oneOfType([\n\t$0\n]),",
+      "doc": "An object that could be one of many types",
+      "label": "propTypeOneOfType",
+      "matches": {
+        "ptet": true
+      }
+    },
+    {
+      "content": "const ${1:functionname} = () => {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t)\n}\n\nexport default ${1:functionname}",
+      "doc": "Creates a React function component with custom name",
+      "label": "reactFunctionComponentWithCustomName",
+      "matches": {
+        "rfcn": true
+      }
+    },
+    {
+      "content": "PropTypes.oneOfType([\n\t$0\n]).isRequired,",
+      "doc": "An object that could be one of many types required",
+      "label": "propTypeOneOfTypeRequired",
+      "matches": {
+        "ptetr": true
+      }
+    },
+    {
+      "content": "import { css } from '@emotion/core'\n\nexport const ${TM_FILENAME_BASE} = () => {\n\treturn (\n\t\t<div css={css``}>\n\t\t\t$0\n\t\t</div>\n\t)\n}",
+      "doc": "Creates a React functional component with emotion",
+      "label": "reactFunctionComponentWithEmotion",
+      "matches": {
+        "rfce": true
+      }
+    },
+    {
+      "content": "static getDerivedStateFromProps(nextProps, prevState) {\n\t$0\n}",
+      "doc": "Invoked after a component is instantiated as well as when it receives new props. It should return an object to update state, or null to indicate that the new props do not require any state updates.",
+      "label": "componentGetDerivedStateFromProps",
+      "matches": {
+        "cgd": true
+      }
+    },
+    {
+      "content": "PropTypes.arrayOf($0),",
+      "doc": "An array of a certain type",
+      "label": "propTypeArrayOf",
+      "matches": {
+        "ptao": true
+      }
+    },
+    {
+      "content": "import { PropTypes } from 'react'\n\nconst ${TM_FILENAME_BASE} = props => {\n\treturn (\n\t\t<div>\n\t\t\t\n\t\t</div>\n\t)\n}\n\n${1}.propTypes = {\n\t$0\n}\n\nexport default ${1}",
+      "doc": "Creates a React function component with PropTypes",
+      "label": "reactStatelessProps",
+      "matches": {
+        "rfcp": true
+      }
+    },
+    {
+      "content": "shouldComponentUpdate (nextProps, nextState) {\n\t$0\n}",
+      "doc": "Invoked before rendering when new props or state are being received.",
+      "label": "shouldComponentUpdate",
+      "matches": {
+        "scu": true
+      }
+    },
+    {
+      "content": "PropTypes.arrayOf($0).isRequired,",
+      "doc": "An array of a certain type required",
+      "label": "propTypeArrayOfRequired",
+      "matches": {
+        "ptaor": true
+      }
+    },
+    {
+      "content": "constructor (props) {\n\tsuper(props)\n\t$0\n}",
+      "doc": "Adds a default constructor for the class that contains props as arguments",
+      "label": "classConstructor",
+      "matches": {
+        "con": true
+      }
+    },
+    {
+      "content": "componentWillUpdate (nextProps, nextState) {\n\t$0\n}",
+      "doc": "Invoked immediately before rendering when new props or state are being received.",
+      "label": "componentWillUpdate",
+      "matches": {
+        "cwup": true
+      }
+    },
+    {
+      "content": "PropTypes.objectOf($0),",
+      "doc": "An object with property values of a certain type",
+      "label": "propTypeObjectOf",
+      "matches": {
+        "ptoo": true
+      }
+    },
+    {
+      "content": "constructor (props, context) {\n\tsuper(props, context)\n\t$0\n}",
+      "doc": "Adds a default constructor for the class that contains props and context as arguments",
+      "label": "classConstructorContext",
+      "matches": {
+        "conc": true
+      }
+    },
+    {
+      "content": "componentDidUpdate (prevProps, prevState) {\n\t$0\n}",
+      "doc": "Invoked immediately after the component's updates are flushed to the DOM.",
+      "label": "componentDidUpdate",
+      "matches": {
+        "cdup": true
+      }
+    },
+    {
+      "content": "PropTypes.objectOf($0).isRequired,",
+      "doc": "An object with property values of a certain type required",
+      "label": "propTypeObjectOfRequired",
+      "matches": {
+        "ptoor": true
+      }
+    },
+    {
+      "content": "componentWillMount () {\n\t$0\n}",
+      "doc": "Invoked once, both on the client and server, immediately before the initial rendering occurs",
+      "label": "componentWillMount",
+      "matches": {
+        "cwm": true
+      }
+    },
+    {
+      "content": "componentWillUnmount () {\n\t$0\n}",
+      "doc": "Invoked immediately before a component is unmounted from the DOM.",
+      "label": "componentWillUnmount",
+      "matches": {
+        "cwun": true
+      }
+    },
+    {
+      "content": "PropTypes.shape({\n\t$0\n}),",
+      "doc": "An object taking on a particular shape",
+      "label": "propTypeShape",
+      "matches": {
+        "ptsh": true
+      }
+    },
+    {
+      "content": "componentDidMount () {\n\t$0\n}",
+      "doc": "Invoked once, only on the client (not on the server), immediately after the initial rendering occurs.",
+      "label": "componentDidMount",
+      "matches": {
+        "cdm": true
+      }
+    },
+    {
+      "content": "render () {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t)\n}",
+      "doc": "When called, it should examine this.props and this.state and return a single child element.",
+      "label": "componentRender",
+      "matches": {
+        "ren": true
+      }
+    },
+    {
+      "content": "PropTypes.shape({\n\t$0\n}).isRequired,",
+      "doc": "An object taking on a particular shape required",
+      "label": "propTypeShapeRequired",
+      "matches": {
+        "ptshr": true
+      }
+    },
+    {
+      "content": "componentWillReceiveProps (nextProps) {\n\t$0\n}",
+      "doc": "Invoked when a component is receiving new props. This method is not called for the initial render.",
+      "label": "componentWillReceiveProps",
+      "matches": {
+        "cwr": true
+      }
+    },
+    {
+      "content": "this.setState($0)",
+      "doc": "Performs a shallow merge of nextState into current state",
+      "label": "componentSetStateObject",
+      "matches": {
+        "sst": true
+      }
+    },
+    {
+      "content": "this.setState((state, props) => { return { $0 }})",
+      "doc": "Performs a shallow merge of nextState into current state",
+      "label": "componentSetStateFunc",
+      "matches": {
+        "ssf": true
+      }
+    },
+    {
+      "content": "this.props.$0",
+      "doc": "Access component's props",
+      "label": "componentProps",
+      "matches": {
+        "tp": true
+      }
+    },
+    {
+      "content": "<${1:elementName}>\n\t$0\n</${1}>",
+      "doc": "an element",
+      "label": "jsx element",
+      "matches": {
+        "j": true
+      }
+    },
+    {
+      "content": "this.state.$0",
+      "doc": "Access component's state",
+      "label": "componentState",
+      "matches": {
+        "ts": true
+      }
+    },
+    {
+      "content": "<${1:elementName} />",
+      "doc": "an element self closed",
+      "label": "jsx element self closed",
+      "matches": {
+        "jc": true
+      }
+    },
+    {
+      "content": "$1.propTypes = {\n\t$2\n}",
+      "doc": "Creates empty propTypes declaration",
+      "label": "propTypes",
+      "matches": {
+        "rpt": true
+      }
+    },
+    {
+      "content": "{${1:array}.map((item) => <${2:elementName} key={item.id}>\n\t$0\n</${2}>)}",
+      "doc": "an element self closed",
+      "label": "jsx elements map",
+      "matches": {
+        "jm": true
+      }
+    },
+    {
+      "content": "PropTypes.array,",
+      "doc": "Array prop type",
+      "label": "propTypeArray",
+      "matches": {
+        "pta": true
+      }
+    },
+    {
+      "content": "{${1:array}.map((item) => {\n\treturn <${2:elementName} key={item.id}>\n\t$0\n</${2}>\n})}",
+      "doc": "an element self closed",
+      "label": "jsx elements map with return",
+      "matches": {
+        "jmr": true
+      }
+    },
+    {
+      "content": "<${1:elementName}>\n\t{$TM_SELECTED_TEXT}\n</${1}>",
+      "doc": "an element",
+      "label": "jsx element wrap selection",
+      "matches": {
+        "jsx wrap selection with element": true
+      }
+    },
+    {
+      "content": "PropTypes.bool,",
+      "doc": "Bool prop type",
+      "label": "propTypeBool",
+      "matches": {
+        "ptb": true
+      }
+    },
+    {
+      "content": "useEffect(() => {\n\t$1\n}, [${3:dependencies}])$0",
+      "doc": "React useEffect() hook",
+      "label": "useEffect",
+      "matches": {
+        "ue": true
+      }
+    },
+    {
+      "content": "PropTypes.bool.isRequired,",
+      "doc": "Bool prop type required",
+      "label": "propTypeBoolRequired",
+      "matches": {
+        "ptbr": true
+      }
+    },
+    {
+      "content": "useEffect(() => {\n\t$1\n\n\treturn () => {\n\t\t$2\n\t}\n}, [${3:dependencies}])$0",
+      "doc": "React useEffect() hook with return statement",
+      "label": "useEffect with return",
+      "matches": {
+        "uer": true
+      }
+    },
+    {
+      "content": "PropTypes.func,",
+      "doc": "Func prop type",
+      "label": "propTypeFunc",
+      "matches": {
+        "ptf": true
+      }
+    },
+    {
+      "content": "PropTypes.func.isRequired,",
+      "doc": "Func prop type required",
+      "label": "propTypeFuncRequired",
+      "matches": {
+        "ptfr": true
+      }
+    },
+    {
+      "content": "const $1 = useContext($2)$0",
+      "doc": "React useContext() hook",
+      "label": "useContext",
+      "matches": {
+        "uc": true
+      }
+    },
+    {
+      "content": "PropTypes.number,",
+      "doc": "Number prop type",
+      "label": "propTypeNumber",
+      "matches": {
+        "ptn": true
+      }
+    },
+    {
+      "content": "const ${1:memoizedCallback} = useCallback(\n\t() => {\n\t\t${2:doSomething}(${3:a}, ${4:b})\n\t},\n\t[${5:a}, ${6:b}],\n)$0",
+      "doc": "React useCallback() hook",
+      "label": "useCallback",
+      "matches": {
+        "ucb": true
+      }
+    },
+    {
+      "content": "PropTypes.number.isRequired,",
+      "doc": "Number prop type required",
+      "label": "propTypeNumberRequired",
+      "matches": {
+        "ptnr": true
+      }
+    },
+    {
+      "content": "PropTypes.object,",
+      "doc": "Object prop type",
+      "label": "propTypeObject",
+      "matches": {
+        "pto": true
+      }
+    },
+    {
+      "content": "PropTypes.object.isRequired,",
+      "doc": "Object prop type required",
+      "label": "propTypeObjectRequired",
+      "matches": {
+        "ptor": true
+      }
+    },
+    {
+      "content": "PropTypes.string,",
+      "doc": "String prop type",
+      "label": "propTypeString",
+      "matches": {
+        "pts": true
+      }
+    },
+    {
+      "content": "PropTypes.string.isRequired,",
+      "doc": "String prop type required",
+      "label": "propTypeStringRequired",
+      "matches": {
+        "ptsr": true
+      }
+    },
+    {
+      "content": "PropTypes.node,",
+      "doc": "Anything that can be rendered: numbers, strings, elements or an array",
+      "label": "propTypeNode",
+      "matches": {
+        "ptnd": true
+      }
+    },
+    {
+      "content": "PropTypes.node.isRequired,",
+      "doc": "Anything that can be rendered: numbers, strings, elements or an array required",
+      "label": "propTypeNodeRequired",
+      "matches": {
+        "ptndr": true
+      }
+    },
+    {
+      "content": "it('should $1', async () => {\n  $0\n})",
+      "doc": "Testing async `it` block",
+      "label": "itAsyncBlock",
+      "matches": {
+        "tita": true
+      }
+    },
+    {
+      "content": "const { ${1:name} } = this.props",
+      "doc": "",
+      "label": "destructuring of props",
+      "matches": {
+        "dp": true
+      }
+    },
+    {
+      "content": "PropTypes.element,",
+      "doc": "React element prop type",
+      "label": "propTypeElement",
+      "matches": {
+        "ptel": true
+      }
+    },
+    {
+      "content": "it('should $1', () => {\n  $0\n})",
+      "doc": "Testing `it` block",
+      "label": "itBlock",
+      "matches": {
+        "tit": true
+      }
+    },
+    {
+      "content": "const { ${1:name} } = this.state",
+      "doc": "",
+      "label": "destructuring of state",
+      "matches": {
+        "ds": true
+      }
+    },
+    {
+      "content": "test('should $1', () => {\n  $0\n})",
+      "doc": "Testing `test` block",
+      "label": "testBlock",
+      "matches": {
+        "test": true
+      }
+    },
+    {
+      "content": "PropTypes.element.isRequired,",
+      "doc": "React element prop type required",
+      "label": "propTypeElementRequired",
+      "matches": {
+        "ptelr": true
+      }
+    },
+    {
+      "content": "describe('$1', () => {\n  $0\n})",
+      "doc": "Testing `describe` block",
+      "label": "describeBlock",
+      "matches": {
+        "desc": true
+      }
+    },
+    {
+      "content": "const ${1:memoizedValue} = useMemo(() => ${2:computeExpensiveValue}(${3:a}, ${4:b}), [${5:a}, ${6:b}])$0",
+      "doc": "React useMemo() hook",
+      "label": "useMemo",
+      "matches": {
+        "ume": true
+      }
+    },
+    {
+      "content": "import { Component } from 'react'\n\nclass ${TM_FILENAME_BASE} extends Component {\n\trender () {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t)\n\t}\n}\n\nexport default ${1}",
+      "doc": "Creates a React component class",
+      "label": "reactClassComponent",
+      "matches": {
+        "rcc": true
+      }
+    },
+    {
+      "content": "PropTypes.instanceOf($0),",
+      "doc": "Is an instance of a class prop type",
+      "label": "propTypeInstanceOf",
+      "matches": {
+        "pti": true
+      }
+    },
+    {
+      "content": "const ${1:elName}El = useRef(null)$0",
+      "doc": "React useContext() hook",
+      "label": "useRef",
+      "matches": {
+        "ur": true
+      }
+    },
+    {
+      "content": "PropTypes.array.isRequired,",
+      "doc": "Array prop type required",
+      "label": "propTypeArrayRequired",
+      "matches": {
+        "ptar": true
+      }
+    },
+    {
+      "content": "class ${TM_FILENAME_BASE} extends Component {\n\trender () {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t)\n\t}\n}",
+      "doc": "Creates a React component class",
+      "label": "reactJustClassComponent",
+      "matches": {
+        "rcjc": true
+      }
+    },
+    {
+      "content": "PropTypes.instanceOf($0).isRequired,",
+      "doc": "Is an instance of a class prop type required",
+      "label": "propTypeInstanceOfRequired",
+      "matches": {
+        "ptir": true
+      }
+    },
+    {
+      "content": "if (!${1:condition}) {\n\treturn null\n}",
+      "doc": "",
+      "label": "if falsy return null",
+      "matches": {
+        "ifr": true
+      }
+    },
+    {
+      "content": "import { Component, PropTypes } from 'react'\n\nclass ${TM_FILENAME_BASE} extends Component {\n\trender () {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t)\n\t}\n}\n\n${1}.propTypes = {\n\n}\n\nexport default ${1}",
+      "doc": "Creates a React component class with PropTypes",
+      "label": "reactClassComponentPropTypes",
+      "matches": {
+        "rccp": true
+      }
+    },
+    {
+      "content": "import React, { Component } from 'react'",
+      "doc": "",
+      "label": "import-react-component",
+      "matches": {
+        "imrc": true,
+        "react import component": true
+      }
+    },
+    {
+      "content": "import React from 'react'\nimport PropTypes from 'prop-types'\n\nexport default (WrappedComponent) => {\n\tconst hocComponent = ({ ...props }) => <WrappedComponent {...props} />\n\n\thocComponent.propTypes = {\n\t}\n\n\treturn hocComponent\n}",
+      "doc": "",
+      "label": "react-hoc",
+      "matches": {
+        "hoc": true,
+        "react hoc": true
+      }
+    },
+    {
+      "content": "import React, { Component } from 'react'\nimport PropTypes from 'prop-types'",
+      "doc": "",
+      "label": "import-react-component-prop-types",
+      "matches": {
+        "imrcp": true,
+        "react import component proptypes": true
+      }
+    },
+    {
+      "content": "import React, { PureComponent } from 'react'\nimport PropTypes from 'prop-types'\n\nexport default class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}} extends PureComponent {\n\tstatic propTypes = {\n\n\t}\n\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t)\n\t}\n}",
+      "doc": "Creates a React component class with ES7 module system",
+      "label": "react-class-pure-component-proptypes",
+      "matches": {
+        "react component class pure with proptypes": true,
+        "rpcp": true
+      }
+    },
+    {
+      "content": "import React, { PureComponent } from 'react'",
+      "doc": "",
+      "label": "import-react-purecomponent",
+      "matches": {
+        "imrpc": true,
+        "react import purecomponent": true
+      }
+    },
+    {
+      "content": "import React, { memo } from 'react'\n\nexport default memo(function ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}}() {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t)\n})",
+      "doc": "Creates a React Memo Function Component with ES7 module system",
+      "label": "react-function-memo-component",
+      "matches": {
+        "react component function memo": true,
+        "rmc": true
+      }
+    },
+    {
+      "content": "componentWillMount() {\n\t$0\n}",
+      "doc": "DEPRECATED!!!. Invoked once, both on the client and server, immediately before the initial rendering occurs",
+      "label": "react-componentwillmount",
+      "matches": {
+        "cwm": true,
+        "react componentwillmount": true
+      }
+    },
+    {
+      "content": "import React, { PureComponent } from 'react'\nimport PropTypes from 'prop-types'",
+      "doc": "",
+      "label": "import-react-pure-component-prop-types",
+      "matches": {
+        "imrpcp": true,
+        "react import purecomponent proptypes": true
+      }
+    },
+    {
+      "content": "import React, { memo } from 'react'\nimport PropTypes from 'prop-types'\n\nconst ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}} = memo(function ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}}(props) {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t)\n})\n\n${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}}.propTypes = {\n\n}\n\nexport default ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}}",
+      "doc": "Creates a React Memo Function Component with ES7 module system with PropTypes",
+      "label": "react-function-memo-component-proptypes",
+      "matches": {
+        "react component function memo proptypes": true,
+        "rmcp": true
+      }
+    },
+    {
+      "content": "import React, { memo } from 'react'",
+      "doc": "",
+      "label": "import-react-memo",
+      "matches": {
+        "imrm": true,
+        "react import memo": true
+      }
+    },
+    {
+      "content": "componentDidMount() {\n\t$0\n}",
+      "doc": "Invoked once, only on the client (not on the server), immediately after the initial rendering occurs.",
+      "label": "react-componentdidmount",
+      "matches": {
+        "cdm": true,
+        "react componentdidmount": true
+      }
+    },
+    {
+      "content": "import React, { Component } from 'react'\nimport PropTypes from 'prop-types'\n\nexport default class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}} extends Component {\n\tstatic propTypes = {\n\t\t${2:prop}: ${3:PropTypes}\n\t}\n\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t)\n\t}\n}",
+      "doc": "Creates a React component class with PropTypes and ES7 module system",
+      "label": "react-class-component-proptypes",
+      "matches": {
+        "rccp": true,
+        "react component class proptypes": true
+      }
+    },
+    {
+      "content": "import React, { memo } from 'react'\nimport PropTypes from 'prop-types'",
+      "doc": "",
+      "label": "import-react-memo-prop-types",
+      "matches": {
+        "imrmp": true,
+        "react import memo proptypes": true
+      }
+    },
+    {
+      "content": "componentWillReceiveProps(nextProps) {\n\t$0\n}",
+      "doc": "DEPRECATED!!!. Invoked when a component is receiving new props. This method is not called for the initial render.",
+      "label": "react-componentwillreceiveprops",
+      "matches": {
+        "cwr": true,
+        "react componentwillreceiveprops": true
+      }
+    },
+    {
+      "content": "import React, { useState } from 'react'",
+      "doc": "",
+      "label": "import-react-usestate",
+      "matches": {
+        "imrs": true,
+        "react import usestate": true
+      }
+    },
+    {
+      "content": "shouldComponentUpdate(nextProps, nextState) {\n\t$0\n}",
+      "doc": "Invoked before rendering when new props or state are being received.",
+      "label": "react-shouldcomponentupdate",
+      "matches": {
+        "react shouldcomponentupdate": true,
+        "scu": true
+      }
+    },
+    {
+      "content": "import React, { useState, useEffect } from 'react'",
+      "doc": "",
+      "label": "import-react-usestate-useeffect",
+      "matches": {
+        "imrse": true,
+        "react import usestate useeffect": true
+      }
+    },
+    {
+      "content": "constructor(props) {\n\tsuper(props)\n\n\tthis.state = {\n\t\t $0\n\t}\n}",
+      "doc": "Adds a default constructor for it('', () => {})the class that contains props as arguments",
+      "label": "react-class-constructor",
+      "matches": {
+        "rconst": true,
+        "react class constructor": true
+      }
+    },
+    {
+      "content": "componentWillUpdate(nextProps, nextState) {\n\t$0\n}",
+      "doc": "DEPRECATED!!!. Invoked immediately before rendering when new props or state are being received.",
+      "label": "react-componentwillupdate",
+      "matches": {
+        "cwup": true,
+        "react componentwillupdate": true
+      }
+    },
+    {
+      "content": "import React, { Component } from 'react'\n\nexport default class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}} extends Component {\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t)\n\t}\n}",
+      "doc": "Creates a React component class with ES7 module system",
+      "label": "react-class-component",
+      "matches": {
+        "rcc": true,
+        "react component class": true
+      }
+    },
+    {
+      "content": "componentDidUpdate(prevProps, prevState) {\n\t$0\n}",
+      "doc": "Invoked immediately after the component's updates are flushed to the DOM.",
+      "label": "react-componentdidupdate",
+      "matches": {
+        "cdup": true,
+        "react componentdidupdate": true
+      }
+    },
+    {
+      "content": "useLayoutEffect(() => {\n\t${1:effect}\n\treturn () => {\n\t\t${2:cleanup}\n\t};\n}, [${3:input}])",
+      "doc": "",
+      "label": "react-uselayouteffect",
+      "matches": {
+        "react uselayouteffect": true,
+        "uselayouteffect": true
+      }
+    },
+    {
+      "content": "componentWillUnmount() {\n\t$0\n}",
+      "doc": "Invoked immediately before a component is unmounted from the DOM.",
+      "label": "react-componentwillunmount",
+      "matches": {
+        "cwun": true,
+        "react componentwillunmount": true
+      }
+    },
+    {
+      "content": "useMemo(() => ${1:function}, ${2:input})",
+      "doc": "",
+      "label": "react-usememo",
+      "matches": {
+        "react usememo": true,
+        "usememo": true
+      }
+    },
+    {
+      "content": "import React, { Component } from 'react'\n\nexport class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}} extends Component {\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t)\n\t}\n}\n\nexport default ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}}",
+      "doc": "Creates a React component class with ES7 module system",
+      "label": "react-class-export-component",
+      "matches": {
+        "rce": true,
+        "react component class export": true
+      }
+    },
+    {
+      "content": "static getDerivedStateFromProps(props, state) {\n\t${1}\n}",
+      "doc": "Invoked right before calling the render method, both on the initial mount and on subsequent updates.",
+      "label": "react-getderivedstatefromprops",
+      "matches": {
+        "gdsfp": true,
+        "react getderivedstatefromprops": true
+      }
+    },
+    {
+      "content": "useDebugValue(${1:value})",
+      "doc": "",
+      "label": "react-usedebugvalue",
+      "matches": {
+        "react usedebugvalue": true,
+        "usedebugvalue": true
+      }
+    },
+    {
+      "content": "const ${1:ref} = useRef(${2:initialValue})",
+      "doc": "",
+      "label": "react-useref",
+      "matches": {
+        "react useref": true,
+        "useref": true
+      }
+    },
+    {
+      "content": "import React from 'react'\n\nfunction ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}}() {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t)\n}\n\nexport default ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}}",
+      "doc": "Creates a React Functional Component with ES7 module system",
+      "label": "react-functional-export-component",
+      "matches": {
+        "react component functional export": true,
+        "rfce": true
+      }
+    },
+    {
+      "content": "useImperativeHandle(\n\t${1:ref},\n\t() => {\n\t\t${2:handler}\n\t},\n\t[${3:input}],\n)",
+      "doc": "",
+      "label": "react-useimperativehandle",
+      "matches": {
+        "react useimperativehandle": true,
+        "useimperativehandle": true
+      }
+    },
+    {
+      "content": "useCallback(\n\t() => {\n\t\t${1:callback}\n\t},\n\t[${2:input}],\n)",
+      "doc": "",
+      "label": "react-usecallback",
+      "matches": {
+        "react usecallback": true,
+        "usecallback": true
+      }
+    },
+    {
+      "content": "render() {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t)\n}",
+      "doc": "Basic render.",
+      "label": "react-component-render",
+      "matches": {
+        "react component render": true,
+        "ren": true
+      }
+    },
+    {
+      "content": "const ${1:context} = useContext(${2:contextValue})",
+      "doc": "",
+      "label": "react-usecontext",
+      "matches": {
+        "react usecontext": true,
+        "usecontext": true
+      }
+    },
+    {
+      "content": "useEffect(() => {\n\t${1:effect}\n\treturn () => {\n\t\t${2:cleanup}\n\t};\n}, [${3:input}])",
+      "doc": "",
+      "label": "react-useeffect",
+      "matches": {
+        "react useeffect": true,
+        "useeffect": true
+      }
+    },
+    {
+      "content": "const ${1:contextName} = React.createContext()",
+      "doc": "Create React context",
+      "label": "react-createcontext",
+      "matches": {
+        "rcontext": true,
+        "react createcontext": true
+      }
+    },
+    {
+      "content": "import React from 'react'\n\nexport default function ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}}() {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t)\n}",
+      "doc": "Creates a React Functional Component with ES7 module system",
+      "label": "react-functional-component",
+      "matches": {
+        "react component functional": true,
+        "rfc": true
+      }
+    },
+    {
+      "content": "import React, { Component } from 'react'\nimport PropTypes from 'prop-types'\nimport { connect } from 'react-redux'\n\nexport class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}} extends Component {\n\tstatic propTypes = {\n\t\t${2:prop}: ${3:PropTypes}\n\t}\n\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t)\n\t}\n}\n\nconst mapStateToProps = (state) => ({\n\t\n})\n\nconst mapDispatchToProps = {\n\t\n}\n\nexport default connect(mapStateToProps, mapDispatchToProps)(${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}})",
+      "doc": "Creates a React component class with PropTypes with connected redux and ES7 module system",
+      "label": "react-class-component-redux-proptypes",
+      "matches": {
+        "rcreduxp": true,
+        "react component class redux proptypes": true
+      }
+    },
+    {
+      "content": "this.${1:refName}Ref = React.createRef()",
+      "doc": "Create ref statement used inside constructor",
+      "label": "react-createref",
+      "matches": {
+        "cref": true,
+        "react createref": true
+      }
+    },
+    {
+      "content": "import React from 'react'\nimport PropTypes from 'prop-types'\n\nfunction ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}}(props) {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t)\n}\n\n${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}}.propTypes = {\n\n}\n\nexport default ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}}",
+      "doc": "Creates a React Functional Component with ES7 module system with PropTypes",
+      "label": "react-functional-component-with-proptypes",
+      "matches": {
+        "react component functional proptypes": true,
+        "rfcp": true
+      }
+    },
+    {
+      "content": "import React, { Component } from 'react'\nimport { connect } from 'react-redux'\n\nexport class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}} extends Component {\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t)\n\t}\n}\n\nconst mapStateToProps = (state) => ({\n\t\n})\n\nconst mapDispatchToProps = {\n\t\n}\n\nexport default connect(mapStateToProps, mapDispatchToProps)(${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}})",
+      "doc": "Creates a React component class with connected redux and ES7 module system",
+      "label": "react-class-component-redux",
+      "matches": {
+        "rcredux": true,
+        "react component class redux": true
+      }
+    },
+    {
+      "content": "const ref = React.createRef()",
+      "doc": "Forward ref statement used inside component",
+      "label": "react-forwardref",
+      "matches": {
+        "fref": true,
+        "react forwardref": true
+      }
+    },
+    {
+      "content": "import React from 'react'\n\nconst ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}} = () => {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t)\n}\n\nexport default ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}}",
+      "doc": "Creates a React Arrow Function Component with ES7 module system",
+      "label": "react-arrow-function-export-component",
+      "matches": {
+        "rafce": true,
+        "react component arrow function export": true
+      }
+    },
+    {
+      "content": "this.props.$0",
+      "doc": "Access component's props",
+      "label": "react-component-props",
+      "matches": {
+        "props": true,
+        "react component props": true
+      }
+    },
+    {
+      "content": "import React from 'react'",
+      "doc": "import React",
+      "label": "import-react",
+      "matches": {
+        "imr": true,
+        "react import": true
+      }
+    },
+    {
+      "content": "import React from 'react'\n\nexport const ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}} = () => {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t)\n}",
+      "doc": "Creates a React Arrow Function Component with ES7 module system",
+      "label": "react-arrow-function-component",
+      "matches": {
+        "rafc": true,
+        "react component arrow function": true
+      }
+    },
+    {
+      "content": "this.setState({$0})",
+      "doc": "Performs a shallow merge of nextState into current state",
+      "label": "react-component-set-state-object",
+      "matches": {
+        "react componentsetstateobject": true,
+        "sst": true
+      }
+    },
+    {
+      "content": "getSnapshotBeforeUpdate = (prevProps, prevState) => {\n\t$0\n}",
+      "doc": "Called right before mutations are made (e.g. before the DOM is updated)",
+      "label": "react-getsnapshotbeforeupdate",
+      "matches": {
+        "gsbu": true,
+        "react getsnapshotbeforeupdate": true
+      }
+    },
+    {
+      "content": "import React from 'react'\nimport PropTypes from 'prop-types'\n\nconst ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}} = props => {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t)\n}\n\n${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}}.propTypes = {\n\n}\n\nexport default ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}}",
+      "doc": "Creates a React Arrow Function Component with ES7 module system with PropTypes",
+      "label": "react-arrow-function-component-proptypes",
+      "matches": {
+        "rafcp": true,
+        "react component arrow function proptypes": true
+      }
+    },
+    {
+      "content": "this.setState((state, props) => { return { $0 }})",
+      "doc": "Performs a shallow merge of nextState into current state",
+      "label": "react-component-set-state-func",
+      "matches": {
+        "react component setstate func": true,
+        "ssf": true
+      }
+    },
+    {
+      "content": "state = {\n\t$1\n}",
+      "doc": "Creates empty state object. To be used in a constructor.",
+      "label": "react-empty-state",
+      "matches": {
+        "est": true,
+        "react empty state": true
+      }
+    },
+    {
+      "content": "import React, { Component } from 'react'\nimport PropTypes from 'prop-types'\n\nexport class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}} extends Component {\n\tstatic propTypes = {\n\n\t}\n\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t)\n\t}\n}\n\nexport default ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}}",
+      "doc": "Creates a React component class with ES7 module system",
+      "label": "react-class-export-component-proptypes",
+      "matches": {
+        "rcep": true,
+        "react component class export proptypes": true
+      }
+    },
+    {
+      "content": "import React, { PureComponent } from 'react'\n\nexport class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}} extends PureComponent {\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t)\n\t}\n}\n\nexport default ${1:$TM_FILENAME_BASE}",
+      "doc": "Creates a React pure component class with ES7 module system export",
+      "label": "react-class-export-pure-component",
+      "matches": {
+        "react component class export pure": true,
+        "rpce": true
+      }
+    },
+    {
+      "content": "this.state.$0",
+      "doc": "",
+      "label": "react-component-state",
+      "matches": {
+        "react component state": true,
+        "state": true
+      }
+    },
+    {
+      "content": "import React, { PureComponent } from 'react'\n\nexport default class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}} extends PureComponent {\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t)\n\t}\n}",
+      "doc": "Creates a React pure component class with ES7 module system",
+      "label": "react-class-pure-component",
+      "matches": {
+        "react component class pure": true,
+        "rpc": true
+      }
+    },
+    {
+      "content": "this.${1:methodName} = this.${1:methodName}.bind(this)$0",
+      "doc": "Binds this to a method",
+      "label": "react-bind-this",
+      "matches": {
+        "bnd": true,
+        "react bind this": true
+      }
+    }
+  ]
+}

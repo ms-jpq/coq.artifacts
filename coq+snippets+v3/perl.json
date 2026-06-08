@@ -1,0 +1,685 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "for (my \\$${1:loop var} = 0; \\$$1 < ${2:count}; \\$$1++) {\n\t${3:body}\n}",
+      "doc": "",
+      "label": "for loop",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "elsif ( ${1:condition} ) {\n\t${2:body}\n}",
+      "doc": "",
+      "label": "elsif statement",
+      "matches": {
+        "elsif": true
+      }
+    },
+    {
+      "content": "mkdir \"${1:dir}\" or die \"Cannot create directory '$1': \\$!\";",
+      "doc": "",
+      "label": "create a directory",
+      "matches": {
+        "mkdir": true
+      }
+    },
+    {
+      "content": "foreach my \\$${1:element} ( @${2:array} ) {\n\t${3:body}\n}",
+      "doc": "",
+      "label": "foreach loop",
+      "matches": {
+        "foreach": true
+      }
+    },
+    {
+      "content": "my @${1:array var} = split(/${2:delimiter pattern}/, \"${3:string}\");",
+      "doc": "",
+      "label": "split a string",
+      "matches": {
+        "split": true
+      }
+    },
+    {
+      "content": "while ( ${1:condition} ) {\n\t${2:body}\n}",
+      "doc": "",
+      "label": "while Loop",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "my \\$${1:string var} = join('${2:delimiter pattern}', @${3:array_var});",
+      "doc": "",
+      "label": "join array",
+      "matches": {
+        "join": true
+      }
+    },
+    {
+      "content": "if ( ${1:condition} ) {\n\t${2:body}\n}",
+      "doc": "",
+      "label": "if statement",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "use POSIX qw(strftime);\nmy $formatted = strftime('%Y-%m-%d %H:%M:%S', localtime($1));",
+      "doc": "",
+      "label": "format time",
+      "matches": {
+        "strftime": true
+      }
+    },
+    {
+      "content": "sub ${1:sub_name} {\n\t${2:body}\n}",
+      "doc": "",
+      "label": "subroutine",
+      "matches": {
+        "sub": true
+      }
+    },
+    {
+      "content": "################################################################################\n#\n# Author:      ${1:Author}\n# Date:        ${CURRENT_MONTH}/${CURRENT_DATE}/${CURRENT_YEAR}\n# Description: ${2:Description}\n#\n# Arguments:\n# * ${3:argument_name} - ${4:description}\n#\n################################################################################",
+      "doc": "",
+      "label": "Comment block for subroutine",
+      "matches": {
+        "documentation": true
+      }
+    },
+    {
+      "content": "use Try::Tiny;\n\ntry {\n\t${1:body}\n} catch {\n\tmy \\$catch_error = shift;\n\tprint \"Error: \\$catch_error\\n\";\n} finally {\n\tif (@_) {\n\t\tprint \"The try block died with error: @_\\n\"\n\t} else {\n\t\tprint \"The try ran successfully.\\n\"\n\t}\n};",
+      "doc": "",
+      "label": "try catch block",
+      "matches": {
+        "trycatch": true
+      }
+    },
+    {
+      "content": "if ( ${1:condition} ) {\n\t${2:body}\n} else {\n\t${3:body}\n}",
+      "doc": "",
+      "label": "if else statement",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "else {\n\t${1:body}\n}",
+      "doc": "",
+      "label": "else statement",
+      "matches": {
+        "else": true
+      }
+    },
+    {
+      "content": "unless ( ${1:condition} ) {\n\t${2:body}\n}",
+      "doc": "",
+      "label": "unless",
+      "matches": {
+        "unless": true
+      }
+    },
+    {
+      "content": "open(my \\$${1:fh}, '>', \"${2:file name}\") or die \"Cannot open file '$2' for writing: \\$!\";",
+      "doc": "",
+      "label": "open file to write",
+      "matches": {
+        "openw": true
+      }
+    },
+    {
+      "content": "print \"$1\\n\";",
+      "doc": "",
+      "label": "print statement",
+      "matches": {
+        "print": true
+      }
+    },
+    {
+      "content": "package ${1:ModuleName};\nuse strict;\nuse warnings;\n\nsub new {\n\tmy (\\$class, %args) = @_;\n\tmy \\$self = bless {%args}, \\$class;\n\treturn \\$self;\n}\n\n# Add more methods here\n$2\n\n1; # Return true to indicate successful module loading",
+      "doc": "",
+      "label": "perl module",
+      "matches": {
+        "module package": true
+      }
+    },
+    {
+      "content": "print \\$${1:fh} \"${2:string}\\n\";",
+      "doc": "",
+      "label": "print to file",
+      "matches": {
+        "file print": true
+      }
+    },
+    {
+      "content": "opendir(my \\$${1:dir}, '$2') or die \"Cannot open directory '$2': \\$!\";\nmy @files = readdir(\\$$1);\nclosedir(\\$$1);",
+      "doc": "",
+      "label": "read a directory",
+      "matches": {
+        "readdir": true
+      }
+    },
+    {
+      "content": "use File::Slurp;\n\nmy \\$${1:contents} = read_file(\"${2:file_path}\")",
+      "doc": "",
+      "label": "read file into a scalar",
+      "matches": {
+        "slurp": true
+      }
+    },
+    {
+      "content": "if ( ${1:condition} ) {\n\t${2:body}\n} elsif ( ${3:condition} ) {\n\t${3:body}\n}",
+      "doc": "",
+      "label": "if else if statement",
+      "matches": {
+        "iffe": true
+      }
+    },
+    {
+      "content": "do {\n\t${2:body}\n} while ( ${1:condition} );",
+      "doc": "",
+      "label": "do while Loop",
+      "matches": {
+        "dowhile": true
+      }
+    },
+    {
+      "content": "open(my \\$${1:fh}, '<', \"${2:file name}\") or die \"Cannot open file '$2' for reading: \\$!\";",
+      "doc": "",
+      "label": "open file to read",
+      "matches": {
+        "openr": true
+      }
+    },
+    {
+      "content": "#!/opt/local/bin/perl\n\nuse strict;\nuse warnings;\n${1}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "perl": true
+      }
+    },
+    {
+      "content": "sub ${1:#:function_name} {\n\t${2:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sub": true
+      }
+    },
+    {
+      "content": "if (${1:#:condition}) {\n\t${2:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "if (${1:#:condition}) {\n\t${2:TARGET}\n} else {\n\t${3:#:else...}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "if (${1:#:condition}) {\n\t${2:TARGET}\n} elsif (${3}) {\n\t${4:#:elsif...}\n} else {\n\t${5:#:else...}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ifee": true
+      }
+    },
+    {
+      "content": "${1:#:expression} if ${2:#:condition};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "xif": true
+      }
+    },
+    {
+      "content": "while (${1:#:condition}) {\n\t${2:TARGET}\n}",
+      "doc": "",
+      "label": "wh",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "${1:#:expression} while ${2:#:condition};",
+      "doc": "",
+      "label": "xwh",
+      "matches": {
+        "xwhile": true
+      }
+    },
+    {
+      "content": "for ${1} (${2:#:expression}){\n\t${3:TARGET}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fore": true
+      }
+    },
+    {
+      "content": "${1:#:expression} for @${2:#:array};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "xfor": true
+      }
+    },
+    {
+      "content": "unless (${1:condition}) {\n\t${2:TARGET}\n}",
+      "doc": "",
+      "label": "un",
+      "matches": {
+        "unless": true
+      }
+    },
+    {
+      "content": "${1:#:expression} unless ${2:#:condition};",
+      "doc": "",
+      "label": "xun",
+      "matches": {
+        "xunless": true
+      }
+    },
+    {
+      "content": "#!/usr/bin/env perl",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "#!": true
+      }
+    },
+    {
+      "content": "=>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        ".": true
+      }
+    },
+    {
+      "content": "sub ${1:function_name} {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sub": true
+      }
+    },
+    {
+      "content": "if (${1}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "if (${1}) {\n\t${2}\n}\nelse {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "if (${1}) {\n\t${2}\n}\nelsif (${3}) {\n\t${4:# elsif...}\n}\nelse {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ifee": true
+      }
+    },
+    {
+      "content": "elsif (${1}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eif": true
+      }
+    },
+    {
+      "content": "$1 if $0;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "xif": true
+      }
+    },
+    {
+      "content": "unless (${1}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "unless": true
+      }
+    },
+    {
+      "content": "$1 unless $0;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "xunless": true
+      }
+    },
+    {
+      "content": "while (${1}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "$1 while $0;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "xwh": true
+      }
+    },
+    {
+      "content": "$1 for @$0;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "xfor": true
+      }
+    },
+    {
+      "content": "$1 foreach @$0;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fore": true
+      }
+    },
+    {
+      "content": "package ${1:`expand('%:p:s?.*lib/??:r:gs?/?::?')`};\nuse strict;\nuse warnings;\n\n${0}\n\n1;\n\n__END__",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "package": true
+      }
+    },
+    {
+      "content": "package ${1:`expand('%:p:s?.*lib/??:r:gs?/?::?')`} ${2:0.99};\nuse v5.14;\nuse warnings;\n\n${0}\n\n1;\n\n__END__",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "packagev514": true
+      }
+    },
+    {
+      "content": "use Moose;\nuse namespace::autoclean;\n${1:#}BEGIN {extends '${2:ParentClass}'};\n\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "moose": true
+      }
+    },
+    {
+      "content": "use parent qw(${0:Parent Class});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "parent": true
+      }
+    },
+    {
+      "content": "use strict;\nuse warnings;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "strwar": true
+      }
+    },
+    {
+      "content": "## no critic\nour $VERSION = '${0:version}';\neval $VERSION;\n## use critic",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vers": true
+      }
+    },
+    {
+      "content": "use feature 'switch';",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "switch": true
+      }
+    },
+    {
+      "content": "sub {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "asub": true
+      }
+    },
+    {
+      "content": "BEGIN {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "begin": true
+      }
+    },
+    {
+      "content": "__PACKAGE__->${1:package_method}(${0:var})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pkgmv": true
+      }
+    },
+    {
+      "content": "__PACKAGE__->${0:package_method}()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pkgm": true
+      }
+    },
+    {
+      "content": "__PACKAGE__->get_${0:package_method}()",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pkget": true
+      }
+    },
+    {
+      "content": "__PACKAGE__->get_${1:package_method}(${0:var})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pkgetv": true
+      }
+    },
+    {
+      "content": "qr/\n     ${0:regex}\n/xms",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "qrx": true
+      }
+    },
+    {
+      "content": "qr/${0:regex}/x",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "qr/": true
+      }
+    },
+    {
+      "content": "when (${1:case}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "when": true
+      }
+    },
+    {
+      "content": "@{ ${1:hash}  }{ ${0:array} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "hslice": true
+      }
+    },
+    {
+      "content": "map {  ${0: body }    }  ${1: @array } ;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "map": true
+      }
+    },
+    {
+      "content": "=head1 NAME\n\n${1:ClassName} - ${2:ShortDesc}\n\n=head1 SYNOPSIS\n\n  use $1;\n\n  ${3:# synopsis...}\n\n=head1 DESCRIPTION\n\n${0:# longer description...}\n\n\n=head1 INTERFACE\n\n\n=head1 DEPENDENCIES\n\n\n=head1 SEE ALSO",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ppod": true
+      }
+    },
+    {
+      "content": "=head2 ${1:MethodName}\n\n${0:Summary....}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "psub": true
+      }
+    },
+    {
+      "content": "=head2 ${1:MethodName}\n\n${0:Summary...}\n\n\n=cut",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "psubi": true
+      }
+    },
+    {
+      "content": "=head2 $1\n\nSummary of $1\n\n=cut\n\nsub ${1:subroutine_name} {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "subpod": true
+      }
+    },
+    {
+      "content": "=over 2\n\n=item\nArguments\n\n\n=over 3\n\n=item\nC<${1:DataStructure}>\n\n  ${2:Sample}\n\n\n=back\n\n\n=item\nReturn\n\n=over 3\n\n\n=item\nC<${0:...return data}>\n\n\n=back\n\n\n=back",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "parg": true
+      }
+    },
+    {
+      "content": "has ${1:attribute} => (\n\tis\t    => '${2:ro|rw}',\n\tisa \t=> '${3:Str|Int|HashRef|ArrayRef|etc}',\n\tdefault => sub {\n\t\t${4:defaultvalue}\n\t},\n\t${0:# other attributes}\n);",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "has": true
+      }
+    },
+    {
+      "content": "use Test::More;\nuse Test::Deep; # (); # uncomment to stop prototype errors\nuse Test::Exception;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tuse": true
+      }
+    },
+    {
+      "content": "use lib qw{ ./t/lib };",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tlib": true
+      }
+    },
+    {
+      "content": "$ENV{TEST_METHOD} = '${0:regex}';",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tmeths": true
+      }
+    },
+    {
+      "content": "use ${0:test_class};\n$1->runtests();",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "trunner": true
+      }
+    },
+    {
+      "content": "sub t${1:number}_${2:test_case} :Test(${3:num_of_tests}) {\n\tmy $self = shift;\n\t${0}\n\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tsub": true
+      }
+    },
+    {
+      "content": "test ${1:test_name} => { description => '${2:Description of test.}'} => sub {\n\tmy ($self) = @_;\n\t${0}\n};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "trsub": true
+      }
+    },
+    {
+      "content": "sub prep${1:number}_${2:test_case} :Test(startup) {\n\tmy $self = shift;\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tprep": true
+      }
+    },
+    {
+      "content": "use Carp; # 'verbose';\n# cloak \"die\"\n# warn \"warning\"\n$SIG{'__DIE__'} = sub {\n\trequire Carp; Carp::confess\n};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "debug_trace": true
+      }
+    },
+    {
+      "content": "use Data::Dump qw(dump);\nwarn dump ${1:variable}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dump": true
+      }
+    },
+    {
+      "content": "use DDP;\np ${1:variable}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ddp": true
+      }
+    },
+    {
+      "content": "subtest '${1: test_name}' => sub {\n\t${2}\n};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "subtest": true
+      }
+    }
+  ]
+}

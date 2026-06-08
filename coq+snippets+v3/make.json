@@ -1,0 +1,77 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "ifeq (${1:cond0}, ${2:cond1})\n\t$0\nendif",
+      "doc": "if statement",
+      "label": "if statement",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "else\n\t$0",
+      "doc": "else",
+      "label": "else",
+      "matches": {
+        "el": true
+      }
+    },
+    {
+      "content": "ifeq (${1:cond0}, ${2:cond1})\n\t$3\nelse\n\t$4\nendif",
+      "doc": "if else statement",
+      "label": "if else statement",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "CFLAGS=-Wall -g ${0: -llua -lzeromq}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "CFLAGS": true
+      }
+    },
+    {
+      "content": "clean:\n  rm -f ${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "clean:": true
+      }
+    },
+    {
+      "content": "ifeq (${1:cond0}, ${2:cond1})\n\t${0:${VISUAL}}\nendif",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "ifeq (${1:cond0}, ${2:cond1})\n\t${3:${VISUAL}}\nelse\n\t${0}\nendif",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "else\n\t${0:${VISUAL}}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "el": true
+      }
+    },
+    {
+      "content": ".DEFAULT_GOAL := ${1}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "default": true
+      }
+    }
+  ]
+}

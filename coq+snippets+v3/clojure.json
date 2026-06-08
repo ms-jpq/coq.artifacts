@@ -1,0 +1,373 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "(defn ${1:name}\n\t\"${2:doc}\"\n\t[${3}]\n\t${0})",
+      "doc": "",
+      "label": "defn function \"...\" [...] ...",
+      "matches": {
+        "defn-doc": true
+      }
+    },
+    {
+      "content": "(try\n\t${1}\n\t(catch ${2:Exception} e ${3:nil}))",
+      "doc": "",
+      "label": "(try ... (catch ...",
+      "matches": {
+        "try": true
+      }
+    },
+    {
+      "content": "(dosync\n\t(ref-set ${1:ref} ${2:value}))",
+      "doc": "",
+      "label": "(dosync (ref-set ...",
+      "matches": {
+        "ref-set": true
+      }
+    },
+    {
+      "content": "(binding [*out* *err*]\n  (println ${0:TARGET}))",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "warn": true
+      }
+    },
+    {
+      "content": "(defrecord ${1:record} [${2:constructor-args}]\n  ${3:protocol} (${3:method} [${5}] ${6}))",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defrecord": true
+      }
+    },
+    {
+      "content": "(defrecord ${1:type} [${2:constructor-args}]\n  ${3:protocol} (${3:method} [${5}] ${6}))",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "deftype": true
+      }
+    },
+    {
+      "content": "(ns ${1:example}\n  (:require [clojure.core.match :as m]))\n; vim: set lispwords+=m/match :",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "require-core-match": true
+      }
+    },
+    {
+      "content": "(deftest ${1:a}-test\n  (testing \"${2:hello}\"\n    ${0:TARGET:(is (= 0 1))}))",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "deftest": true
+      }
+    },
+    {
+      "content": "(:require [clojure.core.strint :refer (<<)])",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "use-strint-in-ns": true
+      }
+    },
+    {
+      "content": "[org.clojars.hozumi/clj-glob \"0.1.2\"]\n(:require [org.satta.glob :as g])\n(g/glob \"${0:TARGET}\")",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dir-glob": true
+      }
+    },
+    {
+      "content": "(Thread/sleep ${1})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sleep": true
+      }
+    },
+    {
+      "content": "(defproject ${1:aaa} \"0.1-SNAPSHOT\"\n  :description \"FIXME: write description\"\n  :url \"https://github.com/${2}\"\n  :license {:name \"GNU GPL v3+\"\n            :url \"http://www.gnu.org/licenses/gpl-3.0.en.html\"}\n  :dependencies [[org.clojure/clojure \"1.7.0\"]]\n  :main ^:skip-aot ${3:aaa.core}\n  :target-path \"target/%s\"\n  :min-lein-version \"2.3.0\")",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defproejct": true
+      }
+    },
+    {
+      "content": "(let [bench-before (System/currentTimeMillis)]\n  ${1:TARGET}\n  (prn 'Took (- (System/currentTimeMillis) bench-before) 'msec))",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bench": true
+      }
+    },
+    {
+      "content": "@#'",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "private": true
+      }
+    },
+    {
+      "content": "(:members (clojure.reflect/refrect ${1}))",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "java-methods": true
+      }
+    },
+    {
+      "content": "(comment\n\t${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "comm": true
+      }
+    },
+    {
+      "content": "(condp ${1:pred} ${2:expr}\n\t${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "condp": true
+      }
+    },
+    {
+      "content": "(def ${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "def": true
+      }
+    },
+    {
+      "content": "(defmethod ${1:multifn} \"${2:doc-string}\" ${3:dispatch-val} [${4:args}]\n\t${0:code})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defm": true
+      }
+    },
+    {
+      "content": "(defmulti ${1:name} \"${2:doc-string}\" ${0:dispatch-fn})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defmm": true
+      }
+    },
+    {
+      "content": "(defmacro ${1:name} \"${2:doc-string}\" ${0:dispatch-fn})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defma": true
+      }
+    },
+    {
+      "content": "(defn ${1:name} \"${2:doc-string}\" [${3:arg-list}]\n\t${0:code})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defn": true
+      }
+    },
+    {
+      "content": "(defprotocol ${1:name}\n\t${0:code})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defp": true
+      }
+    },
+    {
+      "content": "(defrecord ${1:name} [${2:fields}]\n\t${3:protocol}\n\t${0:code})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defr": true
+      }
+    },
+    {
+      "content": "(deftest ${1:name}\n\t(is (= ${0:assertion})))",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "deft": true
+      }
+    },
+    {
+      "content": "(is (= ${1} ${0}))",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "is": true
+      }
+    },
+    {
+      "content": "(deftype ${1:Name} [${2:fields}]\n\t${3:Protocol}\n\t${0:code})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "defty": true
+      }
+    },
+    {
+      "content": "(doseq [${1:elem} ${2:coll}]\n\t${0:code})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "doseq": true
+      }
+    },
+    {
+      "content": "(fn [${1:arg-list}] ${0:code})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fn": true
+      }
+    },
+    {
+      "content": "(if ${1:test-expr}\n\t${2:then-expr}\n\t${0:else-expr})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "(if-let [${1:result} ${2:test-expr}]\n\t(${3:then-expr} $1)\n\t(${0:else-expr}))",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if-let": true
+      }
+    },
+    {
+      "content": "(:import [${1:package}])\n\t& {:keys [${1:keys}] :or {${0:defaults}}}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "imp": true
+      }
+    },
+    {
+      "content": "(let [${1:name} ${2:expr}]\n\t${0:code})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "let": true
+      }
+    },
+    {
+      "content": "(letfn [(${1:name}) [${2:args}]\n\t${0:code})])",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "letfn": true
+      }
+    },
+    {
+      "content": "(map ${1:func} ${0:coll})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "map": true
+      }
+    },
+    {
+      "content": "(map #(${1:lambda}) ${0:coll})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mapl": true
+      }
+    },
+    {
+      "content": "(${1:name} [${2:this} ${3:args}]\n\t${0:code})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "met": true
+      }
+    },
+    {
+      "content": "(ns ${0:name})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ns": true
+      }
+    },
+    {
+      "content": "(dotimes [_ 10]\n\t(time\n\t\t(dotimes [_ ${1:times}]\n\t\t\t${0:code})))",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dotimes": true
+      }
+    },
+    {
+      "content": "(${1:name} [${2:this} ${0:args}])",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pmethod": true
+      }
+    },
+    {
+      "content": "(:refer-clojure :exclude [${0}])",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "refer": true
+      }
+    },
+    {
+      "content": "(:require [${1:namespace} :as [${0}]])",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "require": true
+      }
+    },
+    {
+      "content": "(:use [${1:namespace} :only [${0}]])",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "use": true
+      }
+    },
+    {
+      "content": "(println ${0})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "print": true
+      }
+    },
+    {
+      "content": "(when ${1:test} $0)",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "when": true
+      }
+    },
+    {
+      "content": "(when-let [${1:result} ${2:test}]\n\t$0)",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "when-let": true
+      }
+    }
+  ]
+}

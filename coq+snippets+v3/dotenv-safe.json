@@ -1,0 +1,45 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "require('dotenv-safe').config();",
+      "doc": "As early as possible in your application, require and configure dotenv-safe. This will load environment variables from .env as usual, but will also read any variables defined in .env.example. If any variables are already defined in the environment before reading from .env, they will not be overwritten. If any variables are missing from the environment, a MissingEnvVarsError will be thrown, which lists the missing variables.",
+      "label": "dotenv-safe-require",
+      "matches": {
+        "dotenv-safe require": true
+      }
+    },
+    {
+      "content": "require('dotenv-safe').config({ encoding: '${1:latin1}' })",
+      "doc": "You may specify the encoding of your file containing environment variables.",
+      "label": "dotenv-safe-encoding",
+      "matches": {
+        "dotenv-safe encoding": true
+      }
+    },
+    {
+      "content": "require('dotenv-safe').config({ allowEmptyValues: ${1|true,false|} })",
+      "doc": "If a variable is defined in the example file and has an empty value in the environment, enabling this option will not throw an error after loading.",
+      "label": "dotenv-safe-allowemptyvalues",
+      "matches": {
+        "dotenv-safe allowemptyvalues": true
+      }
+    },
+    {
+      "content": "require('dotenv-safe').config({ path: '${1:/full/custom/path/to/your/env/vars}' })",
+      "doc": "You may specify a custom path if your file containing environment variables is located elsewhere.",
+      "label": "dotenv-safe-path",
+      "matches": {
+        "dotenv-safe path": true
+      }
+    },
+    {
+      "content": "require('dotenv-safe').config({ debug: ${1|true,false|} })",
+      "doc": "You may turn on logging to help debug why certain keys or values are not being set as you expect.",
+      "label": "dotenv-safe-debug",
+      "matches": {
+        "dotenv-safe debug": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "div(ng-repeat='${1} in ${2}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rep": true
+      }
+    },
+    {
+      "content": "div(ng-repeat='${1} in ${2}' | ${3})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "repf": true
+      }
+    },
+    {
+      "content": "div(ng-repeat='${1} in ${2}' track by $index)",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "repi": true
+      }
+    },
+    {
+      "content": "div(ng-hide='${1}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "hide": true
+      }
+    },
+    {
+      "content": "div(ng-show='${1}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "show": true
+      }
+    },
+    {
+      "content": "div(ng-if='${1}')",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    }
+  ]
+}

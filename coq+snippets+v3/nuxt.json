@@ -1,0 +1,93 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "<nuxt name=\"$1\">$2</nuxt>$0",
+      "doc": "",
+      "label": "nuxt-namedview",
+      "matches": {
+        "nuxt namedview": true
+      }
+    },
+    {
+      "content": "<nuxt-child $1/>$0",
+      "doc": "",
+      "label": "nuxt-child",
+      "matches": {
+        "nuxt child": true
+      }
+    },
+    {
+      "content": "asyncData ({isDev, route, store, env, params, query, req, res, redirect, error}) {\n\treturn { ${1:data} }\n\n},",
+      "doc": "Fetch and pre-render data on the server without using a store. The result from asyncData will be merged with data",
+      "label": "nuxt-async-data",
+      "matches": {
+        "nuxt asyncdata": true
+      }
+    },
+    {
+      "content": "middleware ({ store, redirect }) {\n\t${1:data}\n},",
+      "doc": "Set the middleware for a specific page of the application.",
+      "label": "nuxt-middleware",
+      "matches": {
+        "nuxt middleware": true
+      }
+    },
+    {
+      "content": "validate({ params, query, store }) {\n\t${1:data}\n},",
+      "doc": "Validate is called every time before navigating to a new route.",
+      "label": "nuxt-validate",
+      "matches": {
+        "nuxt validate": true
+      }
+    },
+    {
+      "content": "<nuxt-link :to=\"{\t${1|name,path|}: '${2:value}', ${3|params,query|}: {\t${4:key}: '${5:value}'\t}\t}\">$6</nuxt-link>$0",
+      "doc": "",
+      "label": "nuxt-namedlinkto",
+      "matches": {
+        "nuxt namedlinkto": true
+      }
+    },
+    {
+      "content": "nuxtServerInit ({ commit }, { req }) {\n\t${1:data}\n}",
+      "doc": "In universal mode, useful to fetch data on the server and give directly to the client-side.",
+      "label": "nuxt-serverinit",
+      "matches": {
+        "nuxt serverinit": true
+      }
+    },
+    {
+      "content": "head () {\n\treturn {\n\t\ttitle: '${1:title}',\n\t\tmeta: [\n\t\t\t{ hid: '${2:description}', name: '${3:description}', content: '${4:custom description}' }\n\t\t]\n\t}\n},",
+      "doc": "Use the head method to set the HTML Head tags for the current page",
+      "label": "nuxt-head",
+      "matches": {
+        "nuxt head": true
+      }
+    },
+    {
+      "content": "<nuxt>$1</nuxt>$0",
+      "doc": "",
+      "label": "nuxt-view",
+      "matches": {
+        "nuxt view": true
+      }
+    },
+    {
+      "content": "watchQuery (newQuery, oldQuery) {\n\t${1:data}\n},",
+      "doc": "Use the watchQuery key to set up a watcher for query strings.",
+      "label": "nuxt-watch-query",
+      "matches": {
+        "nuxt watchquery": true
+      }
+    },
+    {
+      "content": "<nuxt-link to=\"$1\">$2</nuxt-link>$0",
+      "doc": "",
+      "label": "nuxt-linkto",
+      "matches": {
+        "nuxt linkto": true
+      }
+    }
+  ]
+}

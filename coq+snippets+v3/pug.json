@@ -1,0 +1,6 @@
+{
+  "extends": [
+    "jade"
+  ],
+  "snippets": []
+}

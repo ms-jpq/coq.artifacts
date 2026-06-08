@@ -1,0 +1,325 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "o.. $1 $2",
+      "doc": "An object aggregates X number of other objects",
+      "label": "Dotted aggregation",
+      "matches": {
+        "ag": true
+      }
+    },
+    {
+      "content": "o-- $1 $2",
+      "doc": "An object aggregates X number of other objects",
+      "label": "Aggregation",
+      "matches": {
+        "ag": true
+      }
+    },
+    {
+      "content": "title $0",
+      "doc": "The document title",
+      "label": "Title",
+      "matches": {
+        "ti": true
+      }
+    },
+    {
+      "content": "<|.. $1",
+      "doc": "Arrow for object extends another object",
+      "label": "Dotted extension",
+      "matches": {
+        "dext": true
+      }
+    },
+    {
+      "content": "-down->",
+      "doc": "down arrow, format: box -down-> box 2 (it will point downwards to the box 2",
+      "label": "Arrow-down",
+      "matches": {
+        "down": true
+      }
+    },
+    {
+      "content": "@startuml\n $1\n@enduml",
+      "doc": "Inside $1 begin defining your diagram",
+      "label": "Start Uml Template",
+      "matches": {
+        "startuml": true
+      }
+    },
+    {
+      "content": "entity $0",
+      "doc": "Models an entity of the system",
+      "label": "Entity",
+      "matches": {
+        "ent": true
+      }
+    },
+    {
+      "content": "-left->",
+      "doc": "left arrow, format: box -left-> box 2 (it will point left towards the box 2",
+      "label": "Arrow-left",
+      "matches": {
+        "la": true
+      }
+    },
+    {
+      "content": "!define $1 $2",
+      "doc": "$1 is param name, $2 is param value",
+      "label": "Constant",
+      "matches": {
+        "const": true
+      }
+    },
+    {
+      "content": "@startuml\nAlice -> Bob\nBob -> Alice\n@enduml",
+      "doc": "Simple example to get started with PlantUML",
+      "label": "Example",
+      "matches": {
+        "example": true
+      }
+    },
+    {
+      "content": "-right->",
+      "doc": "Right arrow, format: box -right-> box 2 (it will point right towards the box 2",
+      "label": "Arrow-right",
+      "matches": {
+        "ra": true
+      }
+    },
+    {
+      "content": "<-- $1",
+      "doc": "Object A uses -> () <That is our use case notation to the left>",
+      "label": "Use Arrow (Right)",
+      "matches": {
+        "<": true
+      }
+    },
+    {
+      "content": "..> $1",
+      "doc": "Extend, Include",
+      "label": "Extend Arrow (left)",
+      "matches": {
+        "lext": true
+      }
+    },
+    {
+      "content": "-up->",
+      "doc": "Up arrow, format: box -up-> box 2 (it will point upwards to the box 2",
+      "label": "Arrow-up",
+      "matches": {
+        "up": true
+      }
+    },
+    {
+      "content": "<.. $1",
+      "doc": "Extend, Include",
+      "label": "Extend Arrow (Right)",
+      "matches": {
+        "rext": true
+      }
+    },
+    {
+      "content": "<|-- $1",
+      "doc": "Arrow for object extends another object",
+      "label": "Extension",
+      "matches": {
+        "ext": true
+      }
+    },
+    {
+      "content": "package $1 {\n$2\n}",
+      "doc": "Package UML structure",
+      "label": "Package",
+      "matches": {
+        "pa": true
+      }
+    },
+    {
+      "content": "frame $1",
+      "doc": "A frame of the components",
+      "label": "Frame",
+      "matches": {
+        "frame": true
+      }
+    },
+    {
+      "content": "object $1 {\n$2\n}",
+      "doc": "A default Object",
+      "label": "Object",
+      "matches": {
+        "ob": true
+      }
+    },
+    {
+      "content": "(*) -> $1",
+      "doc": "Model an initial starting point for the activity diagram",
+      "label": "Initial State activity",
+      "matches": {
+        "init-state": true
+      }
+    },
+    {
+      "content": "node $1",
+      "doc": "A cube modelling a node in the system",
+      "label": "Node",
+      "matches": {
+        "no": true
+      }
+    },
+    {
+      "content": "/'\n' $1\n'/",
+      "doc": "Places a block comment in the document",
+      "label": "Block comment",
+      "matches": {
+        "block": true
+      }
+    },
+    {
+      "content": "boundary $0",
+      "doc": "Model a boundary of the system",
+      "label": "Boundary",
+      "matches": {
+        "bound": true
+      }
+    },
+    {
+      "content": "note right : $0",
+      "doc": "A note that appears on the right",
+      "label": "Note right",
+      "matches": {
+        "note-rt": true
+      }
+    },
+    {
+      "content": "--> $1",
+      "doc": "Object A uses -> () <That is our use case notation to the left>",
+      "label": "Use Arrow (left)",
+      "matches": {
+        ">": true
+      }
+    },
+    {
+      "content": "cloud $1",
+      "doc": "Model the cloud servers",
+      "label": "Cloud",
+      "matches": {
+        "cl": true
+      }
+    },
+    {
+      "content": "[*] -->",
+      "doc": "Describe the initial state of objects",
+      "label": "State Initial",
+      "matches": {
+        "sinit": true
+      }
+    },
+    {
+      "content": "*.. $1",
+      "doc": "Model an object composition",
+      "label": "Dotted composition",
+      "matches": {
+        "dcom": true
+      }
+    },
+    {
+      "content": "folder $1",
+      "doc": "A folder for project organization",
+      "label": "Folder",
+      "matches": {
+        "fol": true
+      }
+    },
+    {
+      "content": "$1 -> $2",
+      "doc": "An arrow for the message sent on a Sequence diagram",
+      "label": "Sequence Message",
+      "matches": {
+        "mess": true
+      }
+    },
+    {
+      "content": "control $0",
+      "doc": "Models a loop back for control",
+      "label": "Control",
+      "matches": {
+        "ctrl": true
+      }
+    },
+    {
+      "content": "note left : $0",
+      "doc": "A note that appears on the left",
+      "label": "Note left",
+      "matches": {
+        "note-lf": true
+      }
+    },
+    {
+      "content": "database $0",
+      "doc": "Models a Database (depicted as a cylinder)",
+      "label": "Database",
+      "matches": {
+        "db": true
+      }
+    },
+    {
+      "content": "$1 <-- $2",
+      "doc": "An arrow for the message return on a Sequence diagram",
+      "label": "Sequence Return",
+      "matches": {
+        "ret": true
+      }
+    },
+    {
+      "content": "*-- $1",
+      "doc": "Model an object composition",
+      "label": "Composition",
+      "matches": {
+        "com": true
+      }
+    },
+    {
+      "content": "\"$1\"",
+      "doc": "Describe the activity being done",
+      "label": "Activity",
+      "matches": {
+        "act": true
+      }
+    },
+    {
+      "content": "--> [*]",
+      "doc": "Describe the final state of objects",
+      "label": "State Final",
+      "matches": {
+        "sfinal": true
+      }
+    },
+    {
+      "content": "class $1 {\n$2\n}",
+      "doc": "Class Object where fields are defined: \n  public (+)\n  private (-)\n  protected (#) \n  package (~).\n\nFunctions can also be named here ex:\n  +funcName()",
+      "label": "Class",
+      "matches": {
+        "cla": true
+      }
+    },
+    {
+      "content": "if $1 then\n->[ok] $2\nelse\n  -->[$3]\nendif",
+      "doc": "",
+      "label": "If-else",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "actor $0",
+      "doc": "An actor in the system",
+      "label": "Actor",
+      "matches": {
+        "act": true
+      }
+    }
+  ]
+}

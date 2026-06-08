@@ -1,0 +1,1677 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "/**\n *  ${1:Description}\n *\n *\t@author ${2:name}\n *\t@since  ${3:`strftime(\"%d/%m/%y %H:%M:%S\")`}\n */\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "doc": true
+      }
+    },
+    {
+      "content": "/**\n *\t${1:@private}$0\n */\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "docc": true
+      }
+    },
+    {
+      "content": "${1:public }class ${2:`fnamemodify(bufname(\"%\"),\":t:r\")`} ${3:extends}\n{\n\n\t//--------------------------------------\n\t//  CONSTRUCTOR\n\t//--------------------------------------\n\n\tpublic $2 (${4:arguments}) {\n\t\t${0:// expression}\n\t}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "class": true
+      }
+    },
+    {
+      "content": "/**\n *  ${1:Description}\n *\n *\t@author ${2:$TM_FULLNAME}\n *\t@since  ${3:`strftime(\"%d/%m/%y %H:%M:%S\")`}\n */\n\npackage ${0:package};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "package": true
+      }
+    },
+    {
+      "content": "${1:void/private/protected/public}${2: static} ${3:name}(${4}) {\n\t${5://if not void return null;}\n}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fun": true
+      }
+    },
+    {
+      "content": "${1:void }${2:name}(${3}) {\n\t${4://if not void return null;}\n}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fn": true
+      }
+    },
+    {
+      "content": "static final ${1:Object} ${2:VAR_NAM} = ${0};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "const": true
+      }
+    },
+    {
+      "content": "${1:private/public }${2:static }${3:String} ${4:str}${5: =}${0:value};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "var": true
+      }
+    },
+    {
+      "content": "${1:private/public }${2:Object} ${3:o}${4: = new }$2(${0});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "obj": true
+      }
+    },
+    {
+      "content": "while ($1) {\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "break ${1:label};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "break": true
+      }
+    },
+    {
+      "content": "case ${1:expression} :\n\t${0}\nbreak;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "default :\n\t${1}\nbreak;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "default": true
+      }
+    },
+    {
+      "content": "switch(${1:expression}) {\n\tcase '${3:case}':\n\t\t${4}\n\t\tbreak;\n\t${0}\n\tdefault:\n\t\t${2}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "switch": true
+      }
+    },
+    {
+      "content": "try {\n\t${0:${VISUAL}}\n} catch(${1:Exception} ${2:e}) {\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "try": true
+      }
+    },
+    {
+      "content": "try {\n\t${0:${VISUAL}}\n} catch(${1:Exception} ${2:e}) {\n} finally {\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tryf": true
+      }
+    },
+    {
+      "content": "throw new (\"${1:Exception()}\");",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "throw": true
+      }
+    },
+    {
+      "content": "? ${1:trueExpression} : ${2:falseExpression}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "?": true
+      }
+    },
+    {
+      "content": "if (${1:true}) {${0}}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "if (${1:true}) {${2}}\nelse{${0}}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "public ${1:String} get${2}() {\n\treturn ${0:fieldName};\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "get": true
+      }
+    },
+    {
+      "content": "public void set${1}(${0:String} new${1}) {\n\t${1:fieldName} = new${1};\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "set": true
+      }
+    },
+    {
+      "content": "println(\"${1:`fnamemodify(bufname(\"%\"),\":t:r\")`}::${2:method}() \"${3: +} ${0});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "println": true
+      }
+    },
+    {
+      "content": "println(\"${0}\");",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pr": true
+      }
+    },
+    {
+      "content": "void setup(){\n\t${1}\n}\n\nvoid draw(){\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "setup": true
+      }
+    },
+    {
+      "content": "import processing.opengl.*;\nimport javax.media.opengl.*;\n\nPGraphicsOpenGL pgl;\nGL gl;\n\nvoid setup(){\n\tsize( ${1:300}, ${2:300}, OPENGL );\n\tcolorMode( RGB, 1.0 );\n\thint( ENABLE_OPENGL_4X_SMOOTH );\n\tpgl = (PGraphicsOpenGL) g;\n\tgl = pgl.gl;\n\tgl.setSwapInterval(1);\n\tinitGL();\n\t${3}\n}\n\nvoid draw(){\n\tpgl.beginGL();\n\t\t${4}\n\tpgl.endGL();\n\tgetOpenGLErrors();\n}\n\nvoid initGL(){\n\t${0}\n}\n\nvoid getOpenGLErrors(){\n\tint error = gl.glGetError();\n\tswitch (error){\n\t\tcase 1280 :\n\t\t\tprintln(\"GL_INVALID_ENUM - An invalid enumerant was passed to an OpenGL command.\");\n\t\tbreak;\n\t\tcase 1282 :\n\t\t\tprintln(\"GL_INVALID_OPERATION - An OpenGL command was issued that was invalid or inappropriate for the current state.\");\n\t\tbreak;\n\t\tcase 1281 :\n\t\t\tprintln(\"GL_INVALID_VALUE - A value was passed to OpenGL that was outside the allowed range.\");\n\t\tbreak;\n\t\tcase 1285 :\n\t\t\tprintln(\"GL_OUT_OF_MEMORY - OpenGL was unable to allocate enough memory to process a command.\");\n\t\tbreak;\n\t\tcase 1283 :\n\t\t\tprintln(\"GL_STACK_OVERFLOW - A command caused an OpenGL stack to overflow.\");\n\t\tbreak;\n\t\tcase 1284 :\n\t\t\tprintln(\"GL_STACK_UNDERFLOW - A command caused an OpenGL stack to underflow.\");\n\t\tbreak;\n\t\tcase 32817 :\n\t\t\tprintln(\"GL_TABLE_TOO_LARGE\");\n\t\tbreak;\n\t}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "opengl": true
+      }
+    },
+    {
+      "content": "pgl.beginGL();\n\t${0}\npgl.endGL();",
+      "doc": "",
+      "label": "begin gl",
+      "matches": {
+        "gl": true
+      }
+    },
+    {
+      "content": "// specify the minimum swap interval for buffer swaps.\ngl.setSwapInterval(${0:interval});",
+      "doc": "",
+      "label": "gl swap interval",
+      "matches": {
+        "gl": true
+      }
+    },
+    {
+      "content": "// execute a display list\ngl.glCallList(${0:list});",
+      "doc": "",
+      "label": "gl call list",
+      "matches": {
+        "gl": true
+      }
+    },
+    {
+      "content": "// import java.nio.IntBuffer;\n// import java.nio.FloatBuffer;\n// import com.sun.opengl.util.BufferUtil;\n\n// You might need to create four buffers to store vertext data, normal data, texture coordinate data, and indices in vertex arrays\nIntBuffer bufferObjects = IntBuffer.allocate(${1:4});\ngl.glGenBuffers($1, bufferObjects);\n\nint vertexCount = ${2:3};\nint numCoordinates = ${0:3};\n// vertexCount * numCoordinates\nFloatBuffer vertices = BufferUtil.newFloatBuffer(vertexCount * numCoordinates);\nfloat[] v = {0.0f, 0.0f, 0.0f,\n\t\t\t\t\t\t 1.0f, 0.0f, 0.0f,\n\t\t\t\t\t\t 0.0f, 1.0f, 1.0f};\nvertices.put(v);\n\n// Bind the first buffer object ID for use with vertext array data\ngl.glBindBuffer(GL.GL_ARRAY_BUFFER, bufferObjects.get(0));\ngl.glBufferData(GL.GL_ARRAY_BUFFER, vertexCount * numCoordinates * BufferUtil.SIZEOF_FLOAT, vertices, GL.GL_STATIC_DRAW);",
+      "doc": "",
+      "label": "gl gen buffers",
+      "matches": {
+        "gl": true
+      }
+    },
+    {
+      "content": "${0:// A buffer ID of zero unbinds a buffer object}\ngl.glBindBuffer(GL.GL_ARRAY_BUFFER, ${1:0});",
+      "doc": "",
+      "label": "gl bind buffer",
+      "matches": {
+        "gl": true
+      }
+    },
+    {
+      "content": "${0:// Parameters are the same for glGenBuffers}\ngl.glDeleteBuffers(${1:4}, ${2:bufferObjects});",
+      "doc": "",
+      "label": "gl delete buffers",
+      "matches": {
+        "gl": true
+      }
+    },
+    {
+      "content": "// enable or disable writing into the depth buffer\ngl.glDepthMask(${0:flag});",
+      "doc": "",
+      "label": "gl depth mask",
+      "matches": {
+        "gl": true
+      }
+    },
+    {
+      "content": "// replaces the top of the active matrix stack with the identity matrix\ngl.glLoadIdentity();",
+      "doc": "",
+      "label": "gl load identity",
+      "matches": {
+        "gl": true
+      }
+    },
+    {
+      "content": "// set the current texture coordinates - 2 floats\ngl.glTexCoord2f(${1:0.0f}, ${0:0.0f});",
+      "doc": "",
+      "label": "gl tex coord 2f",
+      "matches": {
+        "gl": true
+      }
+    },
+    {
+      "content": "gl.glVertex2f(${1:0.0f}, ${0:0.0f});",
+      "doc": "",
+      "label": "gl vertex 2f",
+      "matches": {
+        "gl": true
+      }
+    },
+    {
+      "content": "gl.glVertex3f(${1:0.0f}, ${2:0.0f}, ${0:0.0f});",
+      "doc": "",
+      "label": "gl vertex 3f",
+      "matches": {
+        "gl": true
+      }
+    },
+    {
+      "content": "// multiply the current matrix by a translation matrix\ngl.glTranslatef(${1:x}, ${2:y}, ${0:z});",
+      "doc": "",
+      "label": "gl translate f",
+      "matches": {
+        "gl": true
+      }
+    },
+    {
+      "content": "// rotate, x-axis, y-axis, z-axiz\ngl.glRotatef(${1:angle}, ${2:x}, ${3:y}, ${0:z});",
+      "doc": "",
+      "label": "gl rotate f",
+      "matches": {
+        "gl": true
+      }
+    },
+    {
+      "content": "// multiply the current matrix by a general scaling matrix\ngl.glScalef(${1:x}, ${2:y}, ${0:z});",
+      "doc": "",
+      "label": "gl scale f",
+      "matches": {
+        "gl": true
+      }
+    },
+    {
+      "content": "gl.glColor4f(${1:red}, ${2:green}, ${3:blue}, ${0:alpha});",
+      "doc": "",
+      "label": "gl color 4f",
+      "matches": {
+        "gl": true
+      }
+    },
+    {
+      "content": "gl.glClearColor(${1:red}, ${2:green}, ${3:blue}, ${0:alpha});",
+      "doc": "",
+      "label": "gl clear color",
+      "matches": {
+        "gl": true
+      }
+    },
+    {
+      "content": "gl.glColor3f(${1:red}, ${2:green}, ${0:blue});",
+      "doc": "",
+      "label": "gl color 3f",
+      "matches": {
+        "gl": true
+      }
+    },
+    {
+      "content": "// spush and pop the current matrix stack\ngl.glPushMatrix();\n${0}\ngl.glPopMatrix();",
+      "doc": "",
+      "label": "gl push matrix",
+      "matches": {
+        "gl": true
+      }
+    },
+    {
+      "content": "gl.glGenLists(${0:1})",
+      "doc": "",
+      "label": "gl gen lists",
+      "matches": {
+        "gl": true
+      }
+    },
+    {
+      "content": "// Empties buffers. Call this when all previous issues commands completed\ngl.glFlush();\n${0}",
+      "doc": "",
+      "label": "gl flush",
+      "matches": {
+        "gl": true
+      }
+    },
+    {
+      "content": "println(gl.glGetError());",
+      "doc": "",
+      "label": "gl get error",
+      "matches": {
+        "gl": true
+      }
+    },
+    {
+      "content": "gl.glClear(${1:GL.GL_COLOR_BUFFER_BIT}${2: | }${0:GL.GL_DEPTH_BUFFER_BIT});",
+      "doc": "",
+      "label": "gl clear",
+      "matches": {
+        "gl": true
+      }
+    },
+    {
+      "content": "frameRate(${1:30});\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "frameRate": true
+      }
+    },
+    {
+      "content": "saveFrame(\"${1:filename-####}${0:.ext}\");",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "saveFrame": true
+      }
+    },
+    {
+      "content": "size(${1:200}, ${2:200}${0:, P3D});",
+      "doc": "",
+      "label": "normal",
+      "matches": {
+        "size": true
+      }
+    },
+    {
+      "content": "size(${1:200}, ${2:200}${0:, OPENGL});",
+      "doc": "",
+      "label": "opengl",
+      "matches": {
+        "size": true
+      }
+    },
+    {
+      "content": "color ${1:c}${2: = color(}${3:value1, }${4:value2, }${0:value3)};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "color": true
+      }
+    },
+    {
+      "content": "char ${1:m}${2: = \"}${0:char\"};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "char": true
+      }
+    },
+    {
+      "content": "float ${1:f}${2: = }${0:0.0f};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "float": true
+      }
+    },
+    {
+      "content": "int ${1:f}${2: = }${0:0};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "int": true
+      }
+    },
+    {
+      "content": "boolean ${1:b}${2: = }${0:true};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "boolean": true
+      }
+    },
+    {
+      "content": "byte ${1:b}${2: = }${0:127};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "byte": true
+      }
+    },
+    {
+      "content": "String ${1:str}${2: = \"}${0:CCCP\"};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "string": true
+      }
+    },
+    {
+      "content": "curve(${1:x1}, ${2:y1}, ${3:x2}, ${4:y2}, ${5:x3}, ${6:y3}, ${7:x4}, ${0:y4});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "curve": true
+      }
+    },
+    {
+      "content": "curve(${1:x1}, ${2:y1}, ${3:z1}, ${4:x2}, ${5:y2}, ${6:z2}, ${7:x3}, ${8:y3}, ${9:z3}, ${10:x4}, ${11:y4}, ${0:z4});",
+      "doc": "",
+      "label": "3D",
+      "matches": {
+        "curve": true
+      }
+    },
+    {
+      "content": "curveDetail(${0:detail});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "curveDetail": true
+      }
+    },
+    {
+      "content": "curvePoint(${1:a}, ${2:b}, ${3:c}, ${4:d}, ${0:t});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "curvePoint": true
+      }
+    },
+    {
+      "content": "curveTightness(${0:squishy});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "curveTightness": true
+      }
+    },
+    {
+      "content": "bezier(${1:x1}, ${2:y1}, ${3:cx1}, ${4:cy1}, ${5:cx2}, ${6:cy2}, ${7:x2}, ${0:y2});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bezier": true
+      }
+    },
+    {
+      "content": "bezier(${1:x1}, ${2:y1}, ${3:z1}, ${4:cx1}, ${5:cy1}, ${6:cz1}, ${7:cx2}, ${8:cy2}, ${9:cz2}, ${10:x2}, ${11:y2}, ${0:z2});",
+      "doc": "",
+      "label": "3D",
+      "matches": {
+        "bezier": true
+      }
+    },
+    {
+      "content": "bezierDetail(${0:detail});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bezierDetail": true
+      }
+    },
+    {
+      "content": "bezierTangent(${1:a}, ${2:b}, ${3:c}, ${4:d}, ${0:t});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bezierTangent": true
+      }
+    },
+    {
+      "content": "bezierPoint(${1:a}, ${2:b}, ${3:c}, ${4:d}, ${0:t});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bezierPoint": true
+      }
+    },
+    {
+      "content": "vertex(${1:x}, ${2:y}${3:, }${4:u}${5:, }${0:v});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "vertex": true
+      }
+    },
+    {
+      "content": "vertex(${1:x}, ${2:y}, ${3:z}${4:, }${5:u}${6:, }${0:v});",
+      "doc": "",
+      "label": "3D",
+      "matches": {
+        "vertex": true
+      }
+    },
+    {
+      "content": "bezierVertex(${1:cx1}, ${2:cy1}, ${3:cx2}, ${4:cy2}, ${5:x}, ${0:y});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bezierVertex": true
+      }
+    },
+    {
+      "content": "bezierVertex(${1:cx1}, ${2:cy1}, ${3:cz1}, ${4:cx2}, ${5:cy2}, ${6:cz2}, ${7:x}, ${8:y}, ${0:z});",
+      "doc": "",
+      "label": "3D",
+      "matches": {
+        "bezierVertex": true
+      }
+    },
+    {
+      "content": "curveVertex(${1:x}, ${0:y});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "curveVertex": true
+      }
+    },
+    {
+      "content": "curveVertex(${1:x}, ${2:y}, ${0:z});",
+      "doc": "",
+      "label": "3D",
+      "matches": {
+        "curveVertex": true
+      }
+    },
+    {
+      "content": "stroke(${1:value1}, ${2:value2}, ${3:value3}${4:, }${0:alpha});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "stroke": true
+      }
+    },
+    {
+      "content": "strokeWeight(${0:1});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "strokeWeight": true
+      }
+    },
+    {
+      "content": "void mouseDragged(){\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mouseDragged": true
+      }
+    },
+    {
+      "content": "void mouseMoved(){\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mouseMoved": true
+      }
+    },
+    {
+      "content": "void mouseReleased(){\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mouseReleased": true
+      }
+    },
+    {
+      "content": "void mousePressed(){\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mousePressed": true
+      }
+    },
+    {
+      "content": "void keyReleased(){\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "keyReleased": true
+      }
+    },
+    {
+      "content": "void keyTyped(){\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "keyTyped": true
+      }
+    },
+    {
+      "content": "void keyPressed(){\n\t${0}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "keyPressed": true
+      }
+    },
+    {
+      "content": "loadStrings(\"${0:filename}\");",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "loadStrings": true
+      }
+    },
+    {
+      "content": "saveStrings(${1:filename}, ${0:strings});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "saveStrings": true
+      }
+    },
+    {
+      "content": "loadBytes(\"${0:filename}\");",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "loadBytes": true
+      }
+    },
+    {
+      "content": "beginRecord(${1:renderer}, ${0:filename});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "beginRecord": true
+      }
+    },
+    {
+      "content": "saveBytes(${1:filename}, ${0:bytes});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "saveBytes": true
+      }
+    },
+    {
+      "content": "createWriter(${0:filename});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "createWriter": true
+      }
+    },
+    {
+      "content": "createReader(${0:filename});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "createReader": true
+      }
+    },
+    {
+      "content": "pushMatrix();\n${0:};\npopMatrix();",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pushMatrix": true
+      }
+    },
+    {
+      "content": "text(${1:data}, ${2:x}, ${3:y}${4:, }${0:z});",
+      "doc": "",
+      "label": "data",
+      "matches": {
+        "text": true
+      }
+    },
+    {
+      "content": "text(${1:stringdata}, ${2:x}, ${3:y}, ${4:width}, ${5:height}${6:, }${0:z});",
+      "doc": "",
+      "label": "stringdata",
+      "matches": {
+        "text": true
+      }
+    },
+    {
+      "content": "textSize(${0:size});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "textSize": true
+      }
+    },
+    {
+      "content": "textLeading(${0:size});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "textLeading": true
+      }
+    },
+    {
+      "content": "textWidth(${0:data});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "textWidth": true
+      }
+    },
+    {
+      "content": "PFont ${1:font};\n$1 = loadFont(\"${0:FFScala-32.vlw}\");",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "font": true
+      }
+    },
+    {
+      "content": "${1:font} = loadFont(\"${0:FFScala-32.vlw}\");",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "loadFont": true
+      }
+    },
+    {
+      "content": "textFont(${1:font}${2:, }${0:size});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "textFont": true
+      }
+    },
+    {
+      "content": "tan(${0:rad});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tan": true
+      }
+    },
+    {
+      "content": "atan(${0:rad});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "atan": true
+      }
+    },
+    {
+      "content": "atan2(${0:rad});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "atan2": true
+      }
+    },
+    {
+      "content": "sin(${0:rad});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sin": true
+      }
+    },
+    {
+      "content": "asin(${0:rad});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "asin": true
+      }
+    },
+    {
+      "content": "cos(${0:rad});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cos": true
+      }
+    },
+    {
+      "content": "acos(${0:rad});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "acos": true
+      }
+    },
+    {
+      "content": "degrees(${0:rad});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "degrees": true
+      }
+    },
+    {
+      "content": "radians(${0:deg});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "radians": true
+      }
+    },
+    {
+      "content": "randomSeed(${0:value});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "randomSseed": true
+      }
+    },
+    {
+      "content": "random(${1:value1}${2:, }${0:value2});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "random": true
+      }
+    },
+    {
+      "content": "pow(${1:num}, ${0:exponent});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pow": true
+      }
+    },
+    {
+      "content": "floor(${0:value});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "floor": true
+      }
+    },
+    {
+      "content": "sqrt(${0:value});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sqrt": true
+      }
+    },
+    {
+      "content": "abs(${0:value});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "abs": true
+      }
+    },
+    {
+      "content": "sq(${0:value});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sq": true
+      }
+    },
+    {
+      "content": "ceil(${0:value});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ceil": true
+      }
+    },
+    {
+      "content": "exp(${0:value});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "exp": true
+      }
+    },
+    {
+      "content": "round(${0:value}};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "round": true
+      }
+    },
+    {
+      "content": "min(${1:value1}, ${2:value2}${3:, }${0:value3});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "min": true
+      }
+    },
+    {
+      "content": "max(${1:value1}, ${2:value2}${3:, }${0:value3});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "max": true
+      }
+    },
+    {
+      "content": "max(${0:array});",
+      "doc": "",
+      "label": "array",
+      "matches": {
+        "max": true
+      }
+    },
+    {
+      "content": "min(${0:array});",
+      "doc": "",
+      "label": "array",
+      "matches": {
+        "min": true
+      }
+    },
+    {
+      "content": "log(${0:value});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "log": true
+      }
+    },
+    {
+      "content": "map(${1:value}, ${2:low1}, ${4:high1}, ${5:low2}, ${0:high2});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "map": true
+      }
+    },
+    {
+      "content": "norm(${1:value}, ${2:low}, ${0:high});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "norm": true
+      }
+    },
+    {
+      "content": "constrain(${1:value}, ${2:min}, ${0:max});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "constrain": true
+      }
+    },
+    {
+      "content": "mag(${1:a}, ${2:b}${3:, }${0:c});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mag": true
+      }
+    },
+    {
+      "content": "dist(${1:x1}, ${2:y1}, ${4:x2}, ${0:y2});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dist": true
+      }
+    },
+    {
+      "content": "dist(${1:x1}, ${2:y1}, ${3:z1}, ${4:x2}, ${5:y2}, ${0:z2});",
+      "doc": "",
+      "label": "3D",
+      "matches": {
+        "dist": true
+      }
+    },
+    {
+      "content": "noise(${1:x}${2:, }${3:y}${4:, }${0:z});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "noise": true
+      }
+    },
+    {
+      "content": "noiseDetail(${1:octaves}${2:, }${0:falloff});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "noiseDetail": true
+      }
+    },
+    {
+      "content": "noiseSeed(${0:x});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "noiseSeed": true
+      }
+    },
+    {
+      "content": "shininess(${0:shine});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "shininess": true
+      }
+    },
+    {
+      "content": "specular(${1:value1}, ${2:value2}, ${3:value3}${4:, }${0:alpha});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "specular": true
+      }
+    },
+    {
+      "content": "ambient(${1:value1}, ${2:value2}, ${0:value3});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ambient": true
+      }
+    },
+    {
+      "content": "emissive(${1:value1}, ${2:value2}, ${0:value3});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "emissive": true
+      }
+    },
+    {
+      "content": "directionalLight(${1:v1}, ${2:v2}, ${3:v3}, ${4:nx}, ${5:ny}, ${0:nz});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "diretionalLight": true
+      }
+    },
+    {
+      "content": "pointLight(${1:v1}, ${2:v2}, ${3:v3}, ${4:nx}, ${5:ny}, ${0:nz});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pointLight": true
+      }
+    },
+    {
+      "content": "lightFalloff(${1:constant}, ${2:linear}, ${0:quadratic});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lightFalloff": true
+      }
+    },
+    {
+      "content": "normal(${1:nx}, ${2:ny}, ${0:nz});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "normal": true
+      }
+    },
+    {
+      "content": "lightSpecular(${1:v1}, ${2:v2}, ${0:v3});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lightSpecular": true
+      }
+    },
+    {
+      "content": "spotLight(${1:v1}, ${2:v2}, ${3:v3}, ${4:x}, ${5:y}, ${6:z}, ${7:nx}, ${8:ny}, ${9:nz}, ${10:angle}, ${0:concentration});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "spotLight": true
+      }
+    },
+    {
+      "content": "camera(${1:eyeX}, ${2:eyeY}, ${3:eyeZ}, ${4:centerX}, ${5:centerY}, ${6:centerZ}, ${7:upX}, ${8:upY}, ${0:upZ});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "camera": true
+      }
+    },
+    {
+      "content": "ortho(${1:left}, ${2:right}, ${3:bottom}, ${4:top}, ${5:near}, ${0:far});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ortho": true
+      }
+    },
+    {
+      "content": "perspective(${1:fov}, ${2:aspect}, ${3:zNear}, ${0:zFar});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "perspective": true
+      }
+    },
+    {
+      "content": "frustrum(${1:left}, ${2:right}, ${3:bottom}, ${4:top}, ${5:near}, ${0:far});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "frustrum": true
+      }
+    },
+    {
+      "content": "rotate${1:X}(${0:angle});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rotate": true
+      }
+    },
+    {
+      "content": "translate(${1:x}, ${2:y}${3:, }${0:z});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "translate": true
+      }
+    },
+    {
+      "content": "scale(${0:size});",
+      "doc": "",
+      "label": "size",
+      "matches": {
+        "scale": true
+      }
+    },
+    {
+      "content": "scale(${1:x}, ${2:y}${3:, }${0:z});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "scale": true
+      }
+    },
+    {
+      "content": "${1:model/screen}${2:X}(${3:x}, ${4:y}, ${0:z});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "coord": true
+      }
+    },
+    {
+      "content": "brightness(${0:color});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "brightness": true
+      }
+    },
+    {
+      "content": "lerpColor(${1:c1}, ${2:c2}, ${0:amt});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lerpColor": true
+      }
+    },
+    {
+      "content": "saturation(${0:color});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "saturation": true
+      }
+    },
+    {
+      "content": "hue(${0:color});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "hue": true
+      }
+    },
+    {
+      "content": "alpha(${0:color});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "alpha": true
+      }
+    },
+    {
+      "content": "tint(${1:value1}, ${2:value2}, ${3:value3}${4:, }${0:alpha});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tint": true
+      }
+    },
+    {
+      "content": "set(${1:x}, ${2:y}, ${0:color/image});",
+      "doc": "",
+      "label": "pixel",
+      "matches": {
+        "set": true
+      }
+    },
+    {
+      "content": "pixels[${0:index}]",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pixels": true
+      }
+    },
+    {
+      "content": "get(${1:x}, ${2:y}${3:, }${4:width}${5:, }${0:height});",
+      "doc": "",
+      "label": "pixel",
+      "matches": {
+        "get": true
+      }
+    },
+    {
+      "content": "triangle(${1:x1}, ${2:y1}, ${3:x2}, ${4:y2}, ${5:x3}, ${0:y3});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "triangle": true
+      }
+    },
+    {
+      "content": "line(${1:x1}, ${2:y1}, ${3:x2}, ${0:y2});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "line": true
+      }
+    },
+    {
+      "content": "line(${1:x1}, ${2:y1}, ${3:z1}, ${4:x2}, ${5:y2}, ${0:z2});",
+      "doc": "",
+      "label": "3D",
+      "matches": {
+        "line": true
+      }
+    },
+    {
+      "content": "arc(${1:x}, ${2:y}, ${3:width}, ${4:height}, ${5:start}, ${0:stop});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "arc": true
+      }
+    },
+    {
+      "content": "point(${1:x}, ${2:y}${3:, }${0:z});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "point": true
+      }
+    },
+    {
+      "content": "quad(${1:x1}, ${2:y1}, ${3:x2}, ${4:y2}, ${5:x3}, ${6:y3}, ${7:x4}, ${0:y4});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "quad": true
+      }
+    },
+    {
+      "content": "ellipse(${1:x}, ${2:y}, ${3:width}, ${0:height});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ellipse": true
+      }
+    },
+    {
+      "content": "rect(${1:x}, ${2:y}, ${3:width}, ${0:height});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rect": true
+      }
+    },
+    {
+      "content": "box(${1:width}, ${2:height}, ${0:depth});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "box": true
+      }
+    },
+    {
+      "content": "sphere(${0:radius});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sphere": true
+      }
+    },
+    {
+      "content": "sphereDetail(${0:n});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sphereDetails": true
+      }
+    },
+    {
+      "content": "split(\"${1:str}\"${2: , }${0:delimiter});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "split": true
+      }
+    },
+    {
+      "content": "splitTokens(${1:str}${2:, }${0:tokens});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "splitTokens": true
+      }
+    },
+    {
+      "content": "join(${1:strgArray}${2: , }${0:seperator});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "join": true
+      }
+    },
+    {
+      "content": "shorten(${0:array});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "shorten": true
+      }
+    },
+    {
+      "content": "concat(${1:array1}, ${0:array2});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "concat": true
+      }
+    },
+    {
+      "content": "subset(${1:array}, ${0:offset});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "subset": true
+      }
+    },
+    {
+      "content": "append(${1:array}, ${0:element});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "append": true
+      }
+    },
+    {
+      "content": "reverse(${0:array});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "reverse": true
+      }
+    },
+    {
+      "content": "splice(${1:array}, ${2:value/array2}, ${0:index});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "splice": true
+      }
+    },
+    {
+      "content": "sort(${1:dataArray}${2:, }${0:count});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "sort": true
+      }
+    },
+    {
+      "content": "expand(${1:array}${2:, }${0:newSize});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "expand": true
+      }
+    },
+    {
+      "content": "arrayCopy(${1:src}, ${2:dest}, ${3:, }${0:length});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "arrayCopy": true
+      }
+    },
+    {
+      "content": "str(\"${0:str}\");",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "str": true
+      }
+    },
+    {
+      "content": "match(${1:str}, ${0:regexp});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "match": true
+      }
+    },
+    {
+      "content": "trim(${0:str});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "trim": true
+      }
+    },
+    {
+      "content": "nf(${2:value}, ${3:left}${4:, }${0:right});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "nf": true
+      }
+    },
+    {
+      "content": "nfs(${2:value}, ${3:left}${4:, }${0:right});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "nfs": true
+      }
+    },
+    {
+      "content": "nfp(${2:value}, ${3:left}${4:, }${0:right});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "nfp": true
+      }
+    },
+    {
+      "content": "nfc(${1:value}${2:, }${0:right});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "nfc": true
+      }
+    },
+    {
+      "content": "unbinary(\"${0:str}\"});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "unbinary": true
+      }
+    },
+    {
+      "content": "hex(${0:c});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "hexadecimal": true
+      }
+    },
+    {
+      "content": "unhex(${0:c});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "unhex": true
+      }
+    },
+    {
+      "content": "binary(${1:value}${2:, }${0:digits});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "binary": true
+      }
+    },
+    {
+      "content": "loadImage(${0:filename});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "loadImage": true
+      }
+    },
+    {
+      "content": "image(${1:img}, ${2:x}, ${3:y}${4:, }${5:width}${6:, }${0:height});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "image": true
+      }
+    },
+    {
+      "content": "copy(${1:srcImg}${2:, }${3:x}, ${4:y}, ${5:width}, ${6:height}, ${7:dx}, ${8:dy}, ${9:dwidth}, ${0:dheight});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "copy": true
+      }
+    },
+    {
+      "content": "background(${1:value1}, ${2:value2}, ${3:value3}${4:, }${0:alpha});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bg": true
+      }
+    },
+    {
+      "content": "PGraphics pg;\npg = createGraphics(${1:width}, ${2:height}${3:, }${0:applet});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pg": true
+      }
+    },
+    {
+      "content": "PImage(${1:width}, ${0:height});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pimage": true
+      }
+    },
+    {
+      "content": "fill(${1:value1}, ${2:value2}, ${3:value3}${4:, }${0:alpha});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fill": true
+      }
+    },
+    {
+      "content": "red(${0:color});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "red": true
+      }
+    },
+    {
+      "content": "green(${0:color});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "green": true
+      }
+    },
+    {
+      "content": "blue(${0:color});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "blue": true
+      }
+    },
+    {
+      "content": "status(${0:text});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "status": true
+      }
+    },
+    {
+      "content": "param(${0:s});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "param": true
+      }
+    },
+    {
+      "content": "link(${1:url}${2:, }${0:target});",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "link": true
+      }
+    },
+    {
+      "content": "@${1:param/return/private/public}  ${1:parameter}  ${0:description}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "@": true
+      }
+    }
+  ]
+}

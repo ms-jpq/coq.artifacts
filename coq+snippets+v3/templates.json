@@ -1,0 +1,13 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "use relm4::{gtk, WidgetTemplate};\n\n#[relm4::widget_template]\nimpl WidgetTemplate for Widget {\n    view! {\n        gtk::Box {\n            // Customize your widget\n        }\n    }\n}",
+      "doc": "Relm4 Widget Template",
+      "label": "Relm4 Widget Template",
+      "matches": {
+        "relm-template": true
+      }
+    }
+  ]
+}

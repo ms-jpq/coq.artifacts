@@ -1,0 +1,301 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "`strftime(\"%d %b %Y\")`${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "date_english": true
+      }
+    },
+    {
+      "content": "`strftime(\"%Y-%m-%dT%H:%M:%S\")`${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "datetime_iso8601": true
+      }
+    },
+    {
+      "content": "`strftime(\"%Y-%m-%dT%H:%M:%S\")`${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "df": true
+      }
+    },
+    {
+      "content": "`strftime(\"%Y-%m-%d\")`${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "date_iso8601": true
+      }
+    },
+    {
+      "content": "`strftime(\"%Y-%m-%d\")`${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dd": true
+      }
+    },
+    {
+      "content": "`strftime(\"%H:%M:%S\")`${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "time_colon": true
+      }
+    },
+    {
+      "content": "`strftime(\"%H:%M:%S\")`${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "dt": true
+      }
+    },
+    {
+      "content": "Last Modified: `strftime(\"%Y-%m-%dT%H:%M:%S\")`${0}",
+      "doc": "",
+      "label": "Last modified time",
+      "matches": {
+        "lastmod": true
+      }
+    },
+    {
+      "content": "Last Modified: `strftime(\"%Y-%m-%dT%H:%M:%S\")`${0}",
+      "doc": "",
+      "label": "Last modified time",
+      "matches": {
+        "lmod": true
+      }
+    },
+    {
+      "content": "`bufname('%') ==#'[Command Line]' ? expand('#') : expand('%')`${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "filename": true
+      }
+    },
+    {
+      "content": "`bufname('%') ==#'[Command Line]' ? expand('#') : expand('%')`${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fname": true
+      }
+    },
+    {
+      "content": "`substitute(bufname('%') ==#'[Command Line]' ? expand('#:p') : expand('%:p'), '//\\+', '/', 'g')`${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "path": true
+      }
+    },
+    {
+      "content": "`bufname('%') ==#'[Command Line]' ? expand('#:t:r:r:r') : expand('%:t:r:r:r')`${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "basename": true
+      }
+    },
+    {
+      "content": "`bufname('%') ==#'[Command Line]' ? expand('#:t:r:r:r') : expand('%:t:r:r:r')`${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "bname": true
+      }
+    },
+    {
+      "content": "Copyright `&enc[:2] == \"utf\" ? \"©\" : \"(c)\"` `strftime(\"%Y\")` ${1:`g:snips_author`}. All Rights Reserved.",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "c)": true
+      }
+    },
+    {
+      "content": "`strftime(\"%Y-%m-%d\")`",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "date": true
+      }
+    },
+    {
+      "content": "`strftime(\"%B %d, %Y\")`",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ddate": true
+      }
+    },
+    {
+      "content": "`strftime(\"%Y-%m-%dT%H:%M:%S\")`",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "diso": true
+      }
+    },
+    {
+      "content": "`strftime(\"%H:%M\")`",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "time": true
+      }
+    },
+    {
+      "content": "`strftime(\"%Y-%m-%d %H:%M\")`",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "datetime": true
+      }
+    },
+    {
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "lorem": true
+      }
+    },
+    {
+      "content": "${1:One line to give the program's name and a brief description.}\nCopyright `&enc[:2] == \"utf\" ? \"©\" : \"(c)\"` `strftime(\"%Y\")` ${2:`g:snips_author`}\n\nThis program is free software; you can redistribute it and/or modify\nit under the terms of the GNU General Public License as published by\nthe Free Software Foundation; either version 2 of the License, or\n(at your option) any later version.\n\nThis program is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the\nGNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License\nalong with this program; if not, see <http://www.gnu.org/licenses/>.\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "GPL2": true
+      }
+    },
+    {
+      "content": "${1:One line to give the program's name and a brief description.}\nCopyright `&enc[:2] == \"utf\" ? \"©\" : \"(c)\"` `strftime(\"%Y\")` ${2:`g:snips_author`}\n\nThis library is free software; you can redistribute it and/or modify\nit under the terms of the GNU Lesser General Public License as published\nby the Free Software Foundation; either version 2.1 of the License, or\n(at your option) any later version.\n\nThis library is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the\nGNU Lesser General Public License for more details.\n\nYou should have received a copy of the GNU Lesser General Public License\nalong with this library; if not, see <http://www.gnu.org/licenses/>.\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "LGPL2": true
+      }
+    },
+    {
+      "content": "${1:one line to give the program's name and a brief description.}\nCopyright `&enc[:2] == \"utf\" ? \"©\" : \"(c)\"` `strftime(\"%Y\")` ${2:`g:snips_author`}\n\nThis program is free software: you can redistribute it and/or modify\nit under the terms of the GNU General Public License as published by\nthe Free Software Foundation, either version 3 of the License, or\n(at your option) any later version.\n\nThis program is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License\nalong with this program.  If not, see <http://www.gnu.org/licenses/>.\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "GPL3": true
+      }
+    },
+    {
+      "content": "${1:One line to give the program's name and a brief description.}\nCopyright `&enc[:2] == \"utf\" ? \"©\" : \"(c)\"` `strftime(\"%Y\")` ${2:`g:snips_author`}\n\nThis library is free software; you can redistribute it and/or modify\nit under the terms of the GNU Lesser General Public License as published\nby the Free Software Foundation; either version 3 of the License, or\n(at your option) any later version.\n\nThis library is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the\nGNU Lesser General Public License for more details.\n\nYou should have received a copy of the GNU Lesser General Public License\nalong with this library; if not, see <http://www.gnu.org/licenses/>.\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "LGPL3": true
+      }
+    },
+    {
+      "content": "${1:one line to give the program's name and a brief description.}\nCopyright `&enc[:2] == \"utf\" ? \"©\" : \"(c)\"` `strftime(\"%Y\")` ${2:`g:snips_author`}\n\nThis program is free software: you can redistribute it and/or modify\nit under the terms of the GNU Affero General Public License as\npublished by the Free Software Foundation, either version 3 of the\nLicense, or (at your option) any later version.\n\nThis program is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU Affero General Public License for more details.\n\nYou should have received a copy of the GNU Affero General Public License\nalong with this program.  If not, see <http://www.gnu.org/licenses/>.\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "AGPL3": true
+      }
+    },
+    {
+      "content": "As a special exception, if other files instantiate generics from\nthis unit, or you link this unit with other files to produce an\nexecutable, this unit does not by itself cause the resulting\nexecutable to be covered by the GNU General Public License.\nThis exception does not however invalidate any other reasons why the\nexecutable file might be covered by the GNU Public License.\n\n${0}",
+      "doc": "",
+      "label": "linking exception",
+      "matches": {
+        "GMGPL": true
+      }
+    },
+    {
+      "content": "${1:one line to give the program's name and a brief description}\nCopyright `&enc[:2] == \"utf\" ? \"©\" : \"(c)\"` `strftime(\"%Y\")` ${2:`g:snips_author`}\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n1. Redistributions of source code must retain the above copyright\nnotice, this list of conditions and the following disclaimer.\n2. Redistributions in binary form must reproduce the above copyright\nnotice, this list of conditions and the following disclaimer in the\ndocumentation and/or other materials provided with the distribution.\n\nTHIS SOFTWARE IS PROVIDED BY $2 ''AS IS'' AND ANY\nEXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED\nWARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL $2 BE LIABLE FOR ANY\nDIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES\n(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;\nLOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND\nON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\nSOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\nThe views and conclusions contained in the software and documentation\nare those of the authors and should not be interpreted as representing\nofficial policies, either expressed or implied, of $2.\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "BSD2": true
+      }
+    },
+    {
+      "content": "${1:one line to give the program's name and a brief description}\nCopyright `&enc[:2] == \"utf\" ? \"©\" : \"(c)\"` `strftime(\"%Y\")` ${2:`g:snips_author`}\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n1. Redistributions of source code must retain the above copyright\nnotice, this list of conditions and the following disclaimer.\n2. Redistributions in binary form must reproduce the above copyright\nnotice, this list of conditions and the following disclaimer in the\ndocumentation and/or other materials provided with the distribution.\n3. Neither the name of the ${3:organization} nor the\nnames of its contributors may be used to endorse or promote products\nderived from this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY $2 ''AS IS'' AND ANY\nEXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED\nWARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL $2 BE LIABLE FOR ANY\nDIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES\n(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;\nLOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND\nON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\nSOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "BSD3": true
+      }
+    },
+    {
+      "content": "${1:one line to give the program's name and a brief description}\nCopyright `&enc[:2] == \"utf\" ? \"©\" : \"(c)\"` `strftime(\"%Y\")` ${2:`g:snips_author`}\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n1. Redistributions of source code must retain the above copyright\nnotice, this list of conditions and the following disclaimer.\n2. Redistributions in binary form must reproduce the above copyright\nnotice, this list of conditions and the following disclaimer in the\ndocumentation and/or other materials provided with the distribution.\n3. All advertising materials mentioning features or use of this software\nmust display the following acknowledgement:\nThis product includes software developed by the ${3:organization}.\n4. Neither the name of the $3 nor the\nnames of its contributors may be used to endorse or promote products\nderived from this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY $2 ''AS IS'' AND ANY\nEXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED\nWARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL $2 BE LIABLE FOR ANY\nDIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES\n(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;\nLOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND\nON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\nSOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "BSD4": true
+      }
+    },
+    {
+      "content": "${1:one line to give the program's name and a brief description}\nCopyright `&enc[:2] == \"utf\" ? \"©\" : \"(c)\"` `strftime(\"%Y\")` ${2:`g:snips_author`}\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the \"Software\"),\nto deal in the Software without restriction, including without limitation\nthe rights to use, copy, modify, merge, publish, distribute, sublicense,\nand/or sell copies of the Software, and to permit persons to whom the\nSoftware is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included\nin all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES\nOF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,\nDAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE\nOR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "MIT": true
+      }
+    },
+    {
+      "content": "${1:one line to give the program's name and a brief description}\nCopyright `strftime(\"%Y\")` ${2:`g:snips_author`}\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n\thttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "APACHE": true
+      }
+    },
+    {
+      "content": "${1:one line to give the program's name and a brief description}\nCopyright `strftime(\"%Y\")` ${2:`g:snips_author`}\n\nLicensed under the \"THE BEER-WARE LICENSE\" (Revision 42):\n$2 wrote this file. As long as you retain this notice you\ncan do whatever you want with this stuff. If we meet some day, and you think\nthis stuff is worth it, you can buy me a beer or coffee in return\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "BEERWARE": true
+      }
+    },
+    {
+      "content": "DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE\n\t\t\t\tVersion 2, December 2004\n\nCopyright `strftime(\"%Y\")` ${0:`g:snips_author`}\n\nEveryone is permitted to copy and distribute verbatim or modified\ncopies of this license document, and changing it is allowed as long\nas the name is changed.\n\n\t\tDO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE\nTERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION\n\n 0. You just DO WHAT THE FUCK YOU WANT TO.\n\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "WTFPL": true
+      }
+    },
+    {
+      "content": "This Source Code Form is subject to the terms of the Mozilla Public\nLicense, v. 2.0. If a copy of the MPL was not distributed with this\nfile, You can obtain one at http://mozilla.org/MPL/2.0/.\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "MPL2": true
+      }
+    },
+    {
+      "content": "${1:One line to give the program's name and a brief description.}\nCopyright `&enc[:2] == \"utf\" ? \"©\" : \"(c)\"` `strftime(\"%Y\")` ${2:`g:snips_author`}\n\nThis program  is free software: you can redistribute it and/or modify\nit under the terms of the GNU Affero General Public License as\npublished by the Free Software Foundation, either version 3 of the\nLicense, or (at your option) any later version.\n\nThis program is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU Affero General Public License for more details.\n\nYou should have received a copy of the GNU Affero General Public License\nalong with this program. If not, see <http://www.gnu.org/licenses/>.",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "AGPL": true
+      }
+    },
+    {
+      "content": "${1:one line to give the program's name and a brief description}\nCopyright `&enc[:2] == \"utf\" ? \"©\" : \"(c)\"` `strftime(\"%Y\")`, ${2:`g:snips_author`}\n\nPermission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ISC": true
+      }
+    }
+  ]
+}

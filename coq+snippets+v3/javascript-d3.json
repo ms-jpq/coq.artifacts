@@ -1,0 +1,69 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": ".attr(\"${1}\", ${2})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        ".attr": true
+      }
+    },
+    {
+      "content": ".style(\"${1}\", ${2})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        ".style": true
+      }
+    },
+    {
+      "content": "d3.svg.axis()\n  .orient(${1})\n  .scale(${2})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "axis": true
+      }
+    },
+    {
+      "content": "function(d) { ${1} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fd": true
+      }
+    },
+    {
+      "content": "function(d, i) { ${1} }",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fdi": true
+      }
+    },
+    {
+      "content": "var ${1:margin} = { top: ${2:10}, right: ${3:10}, bottom: ${4:10}, left: ${5:10} };\nvar ${6:width} = ${7:970} - $1.left - $1.right;\nvar ${8:height} = ${9:500} - $1.top - $1.bottom;\n\nvar ${10:svg} = d3.select(\"${11}\").append(\"svg\")\n  .attr(\"width\", $6 + $1.left + $1.right)\n  .attr(\"height\", $8 + $1.top + $1.bottom)\n    .append(\"g\")\n  .attr(\"transform\", \"translate(\" + $1.left + \",\" + $1.top + \")\")",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "marginconvention": true
+      }
+    },
+    {
+      "content": "d3.nest()\n  .key(${1})\n  .entries(${2})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "nest": true
+      }
+    },
+    {
+      "content": "d3.scale.linear()\n  .domain(${1})\n  .range(${2})",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "scale": true
+      }
+    }
+  ]
+}

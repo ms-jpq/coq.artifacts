@@ -1,0 +1,37 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "container",
+      "doc": "container => sm(640px), md(768px), lg(1024px), xl(1280px), 2xl(1536px) and use max-width overall",
+      "label": "container",
+      "matches": {
+        "container": true
+      }
+    },
+    {
+      "content": "@tailwind base;\n@tailwind components;\n@tailwind utilities;",
+      "doc": "An opinionated set of base styles for Tailwind projects.",
+      "label": "tailwind-base",
+      "matches": {
+        "tailwindBase": true
+      }
+    },
+    {
+      "content": "aspect-[$1] $0",
+      "doc": "aspect arbitrary values",
+      "label": "aspect-arbitrary",
+      "matches": {
+        "aspectArbitrary": true
+      }
+    },
+    {
+      "content": "aspect-${1|auto, square, video|}",
+      "doc": "aspect-ratio",
+      "label": "aspect-ratio",
+      "matches": {
+        "aspect-ratio": true
+      }
+    }
+  ]
+}

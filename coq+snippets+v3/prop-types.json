@@ -1,0 +1,292 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "PropTypes.string.isRequired,",
+      "doc": "String prop type required",
+      "label": "prop-type-string-required",
+      "matches": {
+        "prop-types string required": true,
+        "ptsr": true
+      }
+    },
+    {
+      "content": "PropTypes.oneOf(['$0']),",
+      "doc": "Prop type limited to specific values by treating it as an enum",
+      "label": "prop-type-enum",
+      "matches": {
+        "prop-types enum": true,
+        "pte": true
+      }
+    },
+    {
+      "content": "PropTypes.node,",
+      "doc": "Anything that can be rendered: numbers, strings, elements or an array",
+      "label": "prop-type-node",
+      "matches": {
+        "prop-types node": true,
+        "ptnd": true
+      }
+    },
+    {
+      "content": "PropTypes.arrayOf($0),",
+      "doc": "An array of a certain type",
+      "label": "prop-type-array-of",
+      "matches": {
+        "prop-types arrayof": true,
+        "ptao": true
+      }
+    },
+    {
+      "content": "PropTypes.node.isRequired,",
+      "doc": "Anything that can be rendered: numbers, strings, elements or an array required",
+      "label": "prop-type-node-required",
+      "matches": {
+        "prop-types node required": true,
+        "ptndr": true
+      }
+    },
+    {
+      "content": "PropTypes.arrayOf($0).isRequired,",
+      "doc": "An array of a certain type required",
+      "label": "prop-type-array-of-required",
+      "matches": {
+        "prop-types arrayof required": true,
+        "ptaor": true
+      }
+    },
+    {
+      "content": "PropTypes.element,",
+      "doc": "React element prop type",
+      "label": "prop-type-element",
+      "matches": {
+        "prop-types element": true,
+        "ptel": true
+      }
+    },
+    {
+      "content": "PropTypes.objectOf($0),",
+      "doc": "An object with property values of a certain type",
+      "label": "prop-type-object-of",
+      "matches": {
+        "prop-types objectof": true,
+        "ptoo": true
+      }
+    },
+    {
+      "content": "import PropTypes from 'prop-types'",
+      "doc": "",
+      "label": "prop-types-import",
+      "matches": {
+        "impt": true,
+        "prop-types import": true
+      }
+    },
+    {
+      "content": "PropTypes.objectOf($0).isRequired,",
+      "doc": "An object with property values of a certain type required",
+      "label": "prop-type-object-of-required",
+      "matches": {
+        "prop-types objectof required": true,
+        "ptoor": true
+      }
+    },
+    {
+      "content": "PropTypes.array,",
+      "doc": "Array prop type",
+      "label": "prop-type-array",
+      "matches": {
+        "prop-types array": true,
+        "pta": true
+      }
+    },
+    {
+      "content": "PropTypes.shape({\n\t$0\n}),",
+      "doc": "An object taking on a particular shape",
+      "label": "prop-type-shape",
+      "matches": {
+        "prop-types shape": true,
+        "ptsh": true
+      }
+    },
+    {
+      "content": "PropTypes.array.isRequired,",
+      "doc": "Array prop type required",
+      "label": "prop-type-array-required",
+      "matches": {
+        "prop-types array required": true,
+        "ptar": true
+      }
+    },
+    {
+      "content": "PropTypes.any,",
+      "doc": "Any prop type",
+      "label": "prop-type-any",
+      "matches": {
+        "prop-types any": true,
+        "ptany": true
+      }
+    },
+    {
+      "content": "PropTypes.bool,",
+      "doc": "Bool prop type",
+      "label": "prop-type-bool",
+      "matches": {
+        "prop-types bool": true,
+        "ptb": true
+      }
+    },
+    {
+      "content": "PropTypes.shape({\n\t$0\n}).isRequired,",
+      "doc": "An object taking on a particular shape required",
+      "label": "prop-type-shape-required",
+      "matches": {
+        "prop-types shape required": true,
+        "ptshr": true
+      }
+    },
+    {
+      "content": "PropTypes.bool.isRequired,",
+      "doc": "Bool prop type required",
+      "label": "prop-type-bool-required",
+      "matches": {
+        "prop-types bool required": true,
+        "ptbr": true
+      }
+    },
+    {
+      "content": "static propTypes = {\n$0\n}",
+      "doc": "",
+      "label": "prop-type-static",
+      "matches": {
+        "prop-types static": true,
+        "ptypes": true
+      }
+    },
+    {
+      "content": "PropTypes.func,",
+      "doc": "Func prop type",
+      "label": "prop-type-func",
+      "matches": {
+        "prop-types func": true,
+        "ptf": true
+      }
+    },
+    {
+      "content": "PropTypes.oneOfType([\n\t$0\n]).isRequired,",
+      "doc": "An object that could be one of many types required",
+      "label": "prop-type-one-of-type-required",
+      "matches": {
+        "prop-types oneoftype required": true,
+        "ptetr": true
+      }
+    },
+    {
+      "content": "PropTypes.func.isRequired,",
+      "doc": "Func prop type required",
+      "label": "prop-type-func-required",
+      "matches": {
+        "prop-types func required": true,
+        "ptfr": true
+      }
+    },
+    {
+      "content": "PropTypes.oneOfType([\n\t$0\n]),",
+      "doc": "An object that could be one of many types",
+      "label": "prop-type-one-of-type",
+      "matches": {
+        "prop-types oneoftype": true,
+        "ptet": true
+      }
+    },
+    {
+      "content": "PropTypes.number,",
+      "doc": "Number prop type",
+      "label": "prop-type-number",
+      "matches": {
+        "prop-types number": true,
+        "ptn": true
+      }
+    },
+    {
+      "content": "PropTypes.oneOf(['$0']).isRequired,",
+      "doc": "Prop type limited to specific values by treating it as an enum required",
+      "label": "prop-type-enum-required",
+      "matches": {
+        "prop-types enum required": true,
+        "pter": true
+      }
+    },
+    {
+      "content": "PropTypes.number.isRequired,",
+      "doc": "Number prop type required",
+      "label": "prop-type-number-required",
+      "matches": {
+        "prop-types number required": true,
+        "ptnr": true
+      }
+    },
+    {
+      "content": "${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}}.propTypes = {\n ${2:property}: ${3:PropTypes.node.isRequired},\n}",
+      "doc": "",
+      "label": "prop-type-init",
+      "matches": {
+        "prop-types init": true
+      }
+    },
+    {
+      "content": "PropTypes.object,",
+      "doc": "Object prop type",
+      "label": "prop-type-object",
+      "matches": {
+        "prop-types object": true,
+        "pto": true
+      }
+    },
+    {
+      "content": "PropTypes.instanceOf($0).isRequired,",
+      "doc": "Is an instance of a class prop type required",
+      "label": "prop-type-instance-of-required",
+      "matches": {
+        "prop-types instanceof required": true,
+        "ptir": true
+      }
+    },
+    {
+      "content": "PropTypes.object.isRequired,",
+      "doc": "Object prop type required",
+      "label": "prop-type-object-required",
+      "matches": {
+        "prop-types object required": true,
+        "ptor": true
+      }
+    },
+    {
+      "content": "PropTypes.instanceOf($0),",
+      "doc": "Is an instance of a class prop type",
+      "label": "prop-type-instance-of",
+      "matches": {
+        "prop-types instanceof": true,
+        "pti": true
+      }
+    },
+    {
+      "content": "PropTypes.string,",
+      "doc": "String prop type",
+      "label": "prop-type-string",
+      "matches": {
+        "prop-types string": true,
+        "pts": true
+      }
+    },
+    {
+      "content": "PropTypes.element.isRequired,",
+      "doc": "React element prop type required",
+      "label": "prop-type-element-required",
+      "matches": {
+        "prop-types element required": true,
+        "ptelr": true
+      }
+    }
+  ]
+}

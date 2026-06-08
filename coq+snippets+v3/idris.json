@@ -1,0 +1,93 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "import ${0:List}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "imp": true
+      }
+    },
+    {
+      "content": "${1:fn} : ${2:a} -> ${3:a}\n$1 ${4} =\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fn": true
+      }
+    },
+    {
+      "content": "${1:fn} : ${2:a} -> ${3:a}\n$1 ${4} =\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fn1": true
+      }
+    },
+    {
+      "content": "${1:fn} : ${2:a} -> ${3:a} -> ${4:a}\n$1 ${5} =\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fn2": true
+      }
+    },
+    {
+      "content": "${1:fn} : ${2:a} -> ${3:a} -> ${4:a} -> ${5:a}\n$1 ${6} =\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fn3": true
+      }
+    },
+    {
+      "content": "${1:fn} : ${2:a}\n$1 =\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "fn0": true
+      }
+    },
+    {
+      "content": "case ${1} of\n\t${2} =>\n\t\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "let\n\t${1} =\n\t\t${2}\nin\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "let": true
+      }
+    },
+    {
+      "content": "where\n\t${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "if ${1} then\n\t${2:${VISUAL}}\nelse\n\t${0}\n${0}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "(\\\\${1:_} => ${0})",
+      "doc": "",
+      "label": "Lambda function (\\x => ...)",
+      "matches": {
+        "\\": true
+      }
+    }
+  ]
+}

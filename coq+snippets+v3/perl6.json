@@ -1,0 +1,165 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "#!/usr/bin/env perl6",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "#!": true
+      }
+    },
+    {
+      "content": "=>",
+      "doc": "",
+      "label": "",
+      "matches": {
+        ".": true
+      }
+    },
+    {
+      "content": "if ${1} {\n\t${2}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "if ${1} {\n\t${2}\n}\nelse {\n\t${3}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "elsif ${1} {\n\t${2}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "eif": true
+      }
+    },
+    {
+      "content": "${1} if $2;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "xif": true
+      }
+    },
+    {
+      "content": "unless ${1} {\n\t${2}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "unless": true
+      }
+    },
+    {
+      "content": "${1} unless $2;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "xunless": true
+      }
+    },
+    {
+      "content": "$1 ?? ${2:value-if-true} !! ${3:value-if-false};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "tc": true
+      }
+    },
+    {
+      "content": "given ${1:$var} {\n  when $2 {\n\t  ${3:# code block ...}\n  }\n  ${4}\n  default {\n\t  ${5}\n  }\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "switch": true
+      }
+    },
+    {
+      "content": "for ${1:@array} -> ${2:$variable} {\n\t${3}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "while ${1} {\n\t${2}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "repeat {\n\t${1}\n} ${2:while|until} ${3};",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rp": true
+      }
+    },
+    {
+      "content": "${1:my} class ${2:ClassName} ${3:is|does Parent|Role}{\n\t${4}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "cl": true
+      }
+    },
+    {
+      "content": "method ${1:method_name}(${2:$attr}) {\n\t${3}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "mth": true
+      }
+    },
+    {
+      "content": "method ${1:!}${2:method_name}(${3:$attr}) {\n\t${4}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "pmth": true
+      }
+    },
+    {
+      "content": "submethod ${1:submethod_name}(${2:$attr}) {\n\t${3}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "smth": true
+      }
+    },
+    {
+      "content": "my ${1:$var} = \"${2:filename}\".IO.slurp;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "slurp": true
+      }
+    },
+    {
+      "content": "for \"${1:filename}\".IO.lines -> $line {\n\t${2}\n}",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "rfile": true
+      }
+    },
+    {
+      "content": "my $fh = open \"${1:filename}\", ${2::r|:w|:a};\n${3:# actions};\n$fh.close;",
+      "doc": "",
+      "label": "",
+      "matches": {
+        "open": true
+      }
+    }
+  ]
+}

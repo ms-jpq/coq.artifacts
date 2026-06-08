@@ -1,0 +1,109 @@
+{
+  "extends": [],
+  "snippets": [
+    {
+      "content": "cy.route('${1:METHOD}', '${2:url}', ${3:response});",
+      "doc": "Use cy.route() to manage the behavior of network requests.",
+      "label": "cypress-route",
+      "matches": {
+        "cypress route": true
+      }
+    },
+    {
+      "content": "cy.scrollTo(${1:x}, ${2:y});",
+      "doc": "Scroll to a position defined by the distance in pixels from window/element’s x and y or percentage of the window/element’s width and height.",
+      "label": "cypress-scroll-to-coordinates",
+      "matches": {
+        "cypress scroll to coordinates": true
+      }
+    },
+    {
+      "content": "cy.server();",
+      "doc": "Start a server to begin routing responses to cy.route() and to change the behavior of network requests.",
+      "label": "cypress-server",
+      "matches": {
+        "cypress server": true
+      }
+    },
+    {
+      "content": "cy.scrollTo('${1:position}');",
+      "doc": "Scroll to a specified position. Valid positions are topLeft, top, topRight, left, center, right, bottomLeft, bottom, and bottomRight.",
+      "label": "cypress-scroll-to-position",
+      "matches": {
+        "cypress scroll to position": true
+      }
+    },
+    {
+      "content": "cy.wait(${1:time});",
+      "doc": "Wait for a number of milliseconds or wait for an aliased resource to resolve before moving on to the next command.",
+      "label": "cypress-wait",
+      "matches": {
+        "cypress wait": true
+      }
+    },
+    {
+      "content": "cy.viewport(${1:width}, ${2:height});",
+      "doc": "Control the size of the screen for your application.",
+      "label": "cypress-viewport",
+      "matches": {
+        "cypress viewport": true
+      }
+    },
+    {
+      "content": "cy.get('${1:selector}');",
+      "doc": "Get one or more DOM elements by selector or alias",
+      "label": "cypress-get",
+      "matches": {
+        "cypress get": true
+      }
+    },
+    {
+      "content": "cy.visit('${1:url}');",
+      "doc": "Visit a remote URL",
+      "label": "cypress-visit",
+      "matches": {
+        "cypress visit": true
+      }
+    },
+    {
+      "content": "cy.clearCookies();",
+      "doc": "Clear all browser cookies for current domain and subdomain.",
+      "label": "cypress-cookies-clear-all",
+      "matches": {
+        "cypress cookies clear all": true
+      }
+    },
+    {
+      "content": "cy.viewport('${1:preset}');",
+      "doc": "Control the size of the screen for your application via presets. Preset supports the following options: ipad-2, ipad-mini, iphone-3, iphone-4, iphone-5, iphone-6, iphone-6+, iphone-x, iphone-xr, macbook-11, macbook-13, macbook-15, samsung-note9, samsung-s10",
+      "label": "cypress-viewport-preset",
+      "matches": {
+        "cypress viewport preset": true
+      }
+    },
+    {
+      "content": "cy.go('${1:direction}');",
+      "doc": "Navigate back or forward to the previous or next URL in the browser’s history.",
+      "label": "cypress-go",
+      "matches": {
+        "cypress go": true
+      }
+    },
+    {
+      "content": "cy.getCookies();",
+      "doc": "Get all of the browser cookies.",
+      "label": "cypress-cookies-get-all",
+      "matches": {
+        "cypress cookies get all": true
+      }
+    },
+    {
+      "content": "cy.request({\n\tmethod: '${1:METHOD}',\n\turl: '${2:url}',\n\tbody: ${3:body}\n});",
+      "doc": "Make an HTTP request.",
+      "label": "cypress-request",
+      "matches": {
+        "cypress request": true
+      }
+    }
+  ]
+}

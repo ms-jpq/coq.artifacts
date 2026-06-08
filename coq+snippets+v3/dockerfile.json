@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "docker_file"
+  ],
+  "snippets": [
+    {
+      "content": "# Client App\nFROM johnpapa/angular-cli as client-app\nLABEL authors=\"${1:John Papa}\"\nWORKDIR /usr/src/app\nCOPY [\"package.json\", \"npm-shrinkwrap.json*\", \"./\"]\nRUN npm install --silent\nCOPY . .\nRUN ng build --prod\n\n# Node server\nFROM ${2:node:12-alpine} as node-server\nWORKDIR /usr/src/app\nCOPY [\"package.json\", \"npm-shrinkwrap.json*\", \"./\"]\nRUN npm install --production --silent && mv node_modules ../\nCOPY ${3:server.js} .\nCOPY ${4:/server} /usr/src/app/server\n\n# Final image\nFROM ${2:node:12-alpine}\nWORKDIR /usr/src/app\nCOPY --from=node-server /usr/src /usr/src\nCOPY --from=client-app /usr/src/app/dist ./\nEXPOSE ${5:3000}\n# CMD [\"node\", \"server.js\"]\nCMD [\"npm\", \"start\"]\n$0",
+      "doc": "Multi-stage Node and Angular Dockerfile",
+      "label": "Multi-stage Node and Angular Dockerfile",
+      "matches": {
+        "docker-angular-node-multi-stage": true
+      }
+    }
+  ]
+}
