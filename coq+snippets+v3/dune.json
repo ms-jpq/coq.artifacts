@@ -2,19 +2,19 @@
   "extends": [],
   "snippets": [
     {
+      "content": "(executable\n (name $1)\n (public_name $2)\n (libraries $3))",
+      "doc": "Snippet for an executable stanza",
+      "label": "executable",
+      "matches": {
+        "executable": true
+      }
+    },
+    {
       "content": "(rule\n (alias $1)\n (deps $2)\n (targets $3)\n (action $4))",
       "doc": "Snippet for a rule stanza",
       "label": "rule",
       "matches": {
         "rule": true
-      }
-    },
-    {
-      "content": "(executables\n (names $1)\n (public_names $2)\n (libraries $3))",
-      "doc": "Snippet for an executables stanza",
-      "label": "executables",
-      "matches": {
-        "executables": true
       }
     },
     {
@@ -26,14 +26,6 @@
       }
     },
     {
-      "content": "(install\n (section $1)\n (files ($2.exe as $3)))",
-      "doc": "Snippet for an install stanza",
-      "label": "install",
-      "matches": {
-        "install": true
-      }
-    },
-    {
       "content": "(library\n (name $1)\n (public_name $2)\n (libraries $3))",
       "doc": "Snippet for a library stanza",
       "label": "library",
@@ -42,19 +34,27 @@
       }
     },
     {
-      "content": "(executable\n (name $1)\n (public_name $2)\n (libraries $3))",
-      "doc": "Snippet for an executable stanza",
-      "label": "executable",
-      "matches": {
-        "executable": true
-      }
-    },
-    {
       "content": "(env\n ($1 $2))",
       "doc": "Snippet for an env stanza",
       "label": "env",
       "matches": {
         "env": true
+      }
+    },
+    {
+      "content": "(executables\n (names $1)\n (public_names $2)\n (libraries $3))",
+      "doc": "Snippet for an executables stanza",
+      "label": "executables",
+      "matches": {
+        "executables": true
+      }
+    },
+    {
+      "content": "(install\n (section $1)\n (files ($2.exe as $3)))",
+      "doc": "Snippet for an install stanza",
+      "label": "install",
+      "matches": {
+        "install": true
       }
     }
   ]

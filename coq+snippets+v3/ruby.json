@@ -12,262 +12,6 @@
   ],
   "snippets": [
     {
-      "content": "context '${1:message}' do\n\t$0\nend",
-      "doc": "",
-      "label": "Insert context block",
-      "matches": {
-        "cont": true
-      }
-    },
-    {
-      "content": "before :${1:each} do\n\t$0\nend",
-      "doc": "",
-      "label": "Insert before block",
-      "matches": {
-        "bef": true
-      }
-    },
-    {
-      "content": "class ${1:ClassName}\n\t$0\nend",
-      "doc": "",
-      "label": "Class definition",
-      "matches": {
-        "class": true
-      }
-    },
-    {
-      "content": "let(:${1:object}) { $0 }",
-      "doc": "",
-      "label": "Insert let",
-      "matches": {
-        "let": true
-      }
-    },
-    {
-      "content": "let!(:${1:object}) { $0 }",
-      "doc": "",
-      "label": "Insert let!",
-      "matches": {
-        "let!": true
-      }
-    },
-    {
-      "content": "if ${1:test}\n\t$2\nelsif ${3:test}\n\t$0\nend",
-      "doc": "",
-      "label": "if elsif",
-      "matches": {
-        "ifei": true
-      }
-    },
-    {
-      "content": "subject(:${1:name}) { $0 }",
-      "doc": "",
-      "label": "Insert subject definition",
-      "matches": {
-        "subj": true
-      }
-    },
-    {
-      "content": "if ${1:test}\n\t$2\nelsif ${3:test}\n\t$4\nelse\n\t$0\nend",
-      "doc": "",
-      "label": "if elsif else",
-      "matches": {
-        "ifee": true
-      }
-    },
-    {
-      "content": "expect(${1:object}).to ${0}",
-      "doc": "",
-      "label": "Insert expect",
-      "matches": {
-        "exp": true
-      }
-    },
-    {
-      "content": "expect { ${1:object} }.to ${0}",
-      "doc": "",
-      "label": "Insert expect with block",
-      "matches": {
-        "expb": true
-      }
-    },
-    {
-      "content": "expect { ${1:object} }.to raise_error ${2:StandardError}",
-      "doc": "",
-      "label": "Insert expect with raise_error",
-      "matches": {
-        "experr": true
-      }
-    },
-    {
-      "content": "module ${1:ModuleName}\n\t$0\nend",
-      "doc": "",
-      "label": "Module definition",
-      "matches": {
-        "module": true
-      }
-    },
-    {
-      "content": "allow(${1:object}).to $0",
-      "doc": "",
-      "label": "Insert allow",
-      "matches": {
-        "allow": true
-      }
-    },
-    {
-      "content": "unless ${1:test}\n\t$0\nend",
-      "doc": "",
-      "label": "unless",
-      "matches": {
-        "unless": true
-      }
-    },
-    {
-      "content": "until ${1:test}\n\t$0\nend",
-      "doc": "",
-      "label": "until loop",
-      "matches": {
-        "until": true
-      }
-    },
-    {
-      "content": "def ${1:method_name}\n\t$0\nend",
-      "doc": "",
-      "label": "method definition",
-      "matches": {
-        "def": true
-      }
-    },
-    {
-      "content": "def self.${1:method_name}\n\t$0\nend",
-      "doc": "",
-      "label": "class method definition",
-      "matches": {
-        "defs": true
-      }
-    },
-    {
-      "content": "def initialize(${1:args})\n\t$0\nend",
-      "doc": "",
-      "label": "initialize method definition",
-      "matches": {
-        "definit": true
-      }
-    },
-    {
-      "content": "for ${1:value} in ${2:enumerable} do\n\t$0\nend",
-      "doc": "",
-      "label": "for loop",
-      "matches": {
-        "for": true
-      }
-    },
-    {
-      "content": "def method_missing(meth, *args, &blk)\n\t$0\nend",
-      "doc": "",
-      "label": "method_missing definition",
-      "matches": {
-        "defmm": true
-      }
-    },
-    {
-      "content": "while ${1:test}\n\t$0\nend",
-      "doc": "",
-      "label": "while loop",
-      "matches": {
-        "while": true
-      }
-    },
-    {
-      "content": "def_delegator :${1:@del_obj}, :${2:del_meth}, :${0:new_name}",
-      "doc": "",
-      "label": "delegator definition",
-      "matches": {
-        "defd": true
-      }
-    },
-    {
-      "content": "alias_method :${1:new_name}, :${0:old_name}",
-      "doc": "",
-      "label": "alias method definition",
-      "matches": {
-        "am": true
-      }
-    },
-    {
-      "content": "namespace :${1} do\n\tdesc \"${2}\"\n\ttask ${3}: :environment do\n\t\t${4}\n\tend\nend",
-      "doc": "Create a Rake Task",
-      "label": "Rake Task",
-      "matches": {
-        "rake": true
-      }
-    },
-    {
-      "content": "case ${1:test}\nwhen $2\n\t$3\nwhen $4\n\t$5\nelse\n\t$6\nend",
-      "doc": "",
-      "label": "case",
-      "matches": {
-        "case": true
-      }
-    },
-    {
-      "content": "do\n\t$0\nend",
-      "doc": "",
-      "label": "Insert do … end block",
-      "matches": {
-        "do": true
-      }
-    },
-    {
-      "content": "do |${1:variable}|\n\t$0\nend",
-      "doc": "",
-      "label": "Insert do |variable| … end block",
-      "matches": {
-        "dop": true
-      }
-    },
-    {
-      "content": "{ |${1:variable}| $2 }",
-      "doc": "",
-      "label": "Insert inline block with variable",
-      "matches": {
-        "b": true
-      }
-    },
-    {
-      "content": "# encoding: utf-8$0",
-      "doc": "",
-      "label": "Insert encoding comment",
-      "matches": {
-        "enc": true
-      }
-    },
-    {
-      "content": "# frozen_string_literal: true",
-      "doc": "",
-      "label": "Insert frozen literal string",
-      "matches": {
-        "frozen": true
-      }
-    },
-    {
-      "content": "require '${1}'$0",
-      "doc": "",
-      "label": "Insert require",
-      "matches": {
-        "req": true
-      }
-    },
-    {
-      "content": "require_relative '${1}'$0",
-      "doc": "",
-      "label": "Insert require_relative",
-      "matches": {
-        "reqr": true
-      }
-    },
-    {
       "content": "attr_reader :${0:attr_names}",
       "doc": "",
       "label": "Insert attr_reader",
@@ -308,11 +52,19 @@
       }
     },
     {
-      "content": "each do |${1:e}|\n\t$0\nend",
+      "content": "if ${1:test}\n\t$0\nend",
       "doc": "",
-      "label": "Insert each with multiline block",
+      "label": "if",
       "matches": {
-        "ead": true
+        "if": true
+      }
+    },
+    {
+      "content": "unless ${1:test}\n\t$0\nend",
+      "doc": "",
+      "label": "unless",
+      "matches": {
+        "unless": true
       }
     },
     {
@@ -321,14 +73,6 @@
       "label": "Insert each with index inline block",
       "matches": {
         "eawi": true
-      }
-    },
-    {
-      "content": "it '${1:spec_name}' do\n\t$0\nend",
-      "doc": "",
-      "label": "Insert it block",
-      "matches": {
-        "it": true
       }
     },
     {
@@ -404,27 +148,11 @@
       }
     },
     {
-      "content": "begin\n\t$1\nrescue ${2:StandardError} => ${3:exception}\n\t$4\nensure\n\t$0\nend",
-      "doc": "",
-      "label": "Exception block with ensure",
-      "matches": {
-        "begin ensure": true
-      }
-    },
-    {
       "content": "require 'debug'; debugger",
       "doc": "",
       "label": "Insert debug call",
       "matches": {
         "debug": true
-      }
-    },
-    {
-      "content": "it_behaves_like '${0:shared examples name}'",
-      "doc": "",
-      "label": "Insert it_behaves_like",
-      "matches": {
-        "ibl": true
       }
     },
     {
@@ -436,35 +164,11 @@
       }
     },
     {
-      "content": "begin\n\t$1\nrescue ${2:StandardError} => ${3:exception}\n\t$4\nelse\n\t$5\nensure\n\t$0\nend",
-      "doc": "",
-      "label": "Exception block with else and ensure",
-      "matches": {
-        "begin else": true
-      }
-    },
-    {
       "content": "binding.irb",
       "doc": "",
       "label": "Insert irb call",
       "matches": {
         "irb": true
-      }
-    },
-    {
-      "content": "shared_examples '${0:shared examples name}'",
-      "doc": "",
-      "label": "Insert shared_examples",
-      "matches": {
-        "shared": true
-      }
-    },
-    {
-      "content": "require 'benchmark'\n\nputs Benchmark.measure { ${1:# benchmark code} }",
-      "doc": "",
-      "label": "Ruby Benchmark Measure",
-      "matches": {
-        "benchm": true
       }
     },
     {
@@ -476,35 +180,11 @@
       }
     },
     {
-      "content": "loop do\n\t$0\nend",
-      "doc": "",
-      "label": "forever loop",
-      "matches": {
-        "loop": true
-      }
-    },
-    {
       "content": "RSpec.describe ${1:described_class} do\n\t$0\nend",
       "doc": "",
       "label": "Insert RSpec.describe class",
       "matches": {
         "rdesc": true
-      }
-    },
-    {
-      "content": "require 'benchmark'\n\nn = ${1:50000}\nBenchmark.bm do |x|\n  x.report(\"${2:Task 1}\") { n.times { ${3:\"task 1\"} } }\n  x.report(\"${4:Task 2}\") { n.times { ${5:\"task 2\"} } }\nend",
-      "doc": "",
-      "label": "Ruby Benchmark BM",
-      "matches": {
-        "benchbm": true
-      }
-    },
-    {
-      "content": "if ${1:test}\n\t$0\nend",
-      "doc": "",
-      "label": "if",
-      "matches": {
-        "if": true
       }
     },
     {
@@ -516,19 +196,19 @@
       }
     },
     {
-      "content": "if ${1:test}\n\t$2\nelse\n\t$0\nend",
-      "doc": "",
-      "label": "if else",
-      "matches": {
-        "ife": true
-      }
-    },
-    {
       "content": "describe '${1:#method}' do\n\t${0:pending 'Not implemented'}\nend",
       "doc": "",
       "label": "Insert describe block",
       "matches": {
         "descm": true
+      }
+    },
+    {
+      "content": "context '${1:message}' do\n\t$0\nend",
+      "doc": "",
+      "label": "Insert context block",
+      "matches": {
+        "cont": true
       }
     },
     {
@@ -540,11 +220,331 @@
       }
     },
     {
+      "content": "before :${1:each} do\n\t$0\nend",
+      "doc": "",
+      "label": "Insert before block",
+      "matches": {
+        "bef": true
+      }
+    },
+    {
+      "content": "let(:${1:object}) { $0 }",
+      "doc": "",
+      "label": "Insert let",
+      "matches": {
+        "let": true
+      }
+    },
+    {
+      "content": "begin\n\t$1\nrescue ${2:StandardError} => ${3:exception}\n\t$4\nensure\n\t$0\nend",
+      "doc": "",
+      "label": "Exception block with ensure",
+      "matches": {
+        "begin ensure": true
+      }
+    },
+    {
+      "content": "subject(:${1:name}) { $0 }",
+      "doc": "",
+      "label": "Insert subject definition",
+      "matches": {
+        "subj": true
+      }
+    },
+    {
+      "content": "begin\n\t$1\nrescue ${2:StandardError} => ${3:exception}\n\t$4\nelse\n\t$5\nensure\n\t$0\nend",
+      "doc": "",
+      "label": "Exception block with else and ensure",
+      "matches": {
+        "begin else": true
+      }
+    },
+    {
+      "content": "expect(${1:object}).to ${0}",
+      "doc": "",
+      "label": "Insert expect",
+      "matches": {
+        "exp": true
+      }
+    },
+    {
+      "content": "expect { ${1:object} }.to ${0}",
+      "doc": "",
+      "label": "Insert expect with block",
+      "matches": {
+        "expb": true
+      }
+    },
+    {
+      "content": "expect { ${1:object} }.to raise_error ${2:StandardError}",
+      "doc": "",
+      "label": "Insert expect with raise_error",
+      "matches": {
+        "experr": true
+      }
+    },
+    {
+      "content": "require 'benchmark'\n\nn = ${1:50000}\nBenchmark.bm do |x|\n  x.report(\"${2:Task 1}\") { n.times { ${3:\"task 1\"} } }\n  x.report(\"${4:Task 2}\") { n.times { ${5:\"task 2\"} } }\nend",
+      "doc": "",
+      "label": "Ruby Benchmark BM",
+      "matches": {
+        "benchbm": true
+      }
+    },
+    {
+      "content": "module ${1:ModuleName}\n\t$0\nend",
+      "doc": "",
+      "label": "Module definition",
+      "matches": {
+        "module": true
+      }
+    },
+    {
+      "content": "shared_examples '${0:shared examples name}'",
+      "doc": "",
+      "label": "Insert shared_examples",
+      "matches": {
+        "shared": true
+      }
+    },
+    {
+      "content": "until ${1:test}\n\t$0\nend",
+      "doc": "",
+      "label": "until loop",
+      "matches": {
+        "until": true
+      }
+    },
+    {
       "content": "class ${1:ClassName}\n\tdef initialize(${2:args})\n\t\t$0\n\tend\nend",
       "doc": "",
       "label": "Class definition with initialize",
       "matches": {
         "class init": true
+      }
+    },
+    {
+      "content": "it_behaves_like '${0:shared examples name}'",
+      "doc": "",
+      "label": "Insert it_behaves_like",
+      "matches": {
+        "ibl": true
+      }
+    },
+    {
+      "content": "def ${1:method_name}\n\t$0\nend",
+      "doc": "",
+      "label": "method definition",
+      "matches": {
+        "def": true
+      }
+    },
+    {
+      "content": "def self.${1:method_name}\n\t$0\nend",
+      "doc": "",
+      "label": "class method definition",
+      "matches": {
+        "defs": true
+      }
+    },
+    {
+      "content": "class ${1:ClassName}\n\t$0\nend",
+      "doc": "",
+      "label": "Class definition",
+      "matches": {
+        "class": true
+      }
+    },
+    {
+      "content": "def method_missing(meth, *args, &blk)\n\t$0\nend",
+      "doc": "",
+      "label": "method_missing definition",
+      "matches": {
+        "defmm": true
+      }
+    },
+    {
+      "content": "if ${1:test}\n\t$2\nelsif ${3:test}\n\t$0\nend",
+      "doc": "",
+      "label": "if elsif",
+      "matches": {
+        "ifei": true
+      }
+    },
+    {
+      "content": "def_delegator :${1:@del_obj}, :${2:del_meth}, :${0:new_name}",
+      "doc": "",
+      "label": "delegator definition",
+      "matches": {
+        "defd": true
+      }
+    },
+    {
+      "content": "if ${1:test}\n\t$2\nelsif ${3:test}\n\t$4\nelse\n\t$0\nend",
+      "doc": "",
+      "label": "if elsif else",
+      "matches": {
+        "ifee": true
+      }
+    },
+    {
+      "content": "alias_method :${1:new_name}, :${0:old_name}",
+      "doc": "",
+      "label": "alias method definition",
+      "matches": {
+        "am": true
+      }
+    },
+    {
+      "content": "namespace :${1} do\n\tdesc \"${2}\"\n\ttask ${3}: :environment do\n\t\t${4}\n\tend\nend",
+      "doc": "Create a Rake Task",
+      "label": "Rake Task",
+      "matches": {
+        "rake": true
+      }
+    },
+    {
+      "content": "while ${1:test}\n\t$0\nend",
+      "doc": "",
+      "label": "while loop",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "loop do\n\t$0\nend",
+      "doc": "",
+      "label": "forever loop",
+      "matches": {
+        "loop": true
+      }
+    },
+    {
+      "content": "do\n\t$0\nend",
+      "doc": "",
+      "label": "Insert do … end block",
+      "matches": {
+        "do": true
+      }
+    },
+    {
+      "content": "do |${1:variable}|\n\t$0\nend",
+      "doc": "",
+      "label": "Insert do |variable| … end block",
+      "matches": {
+        "dop": true
+      }
+    },
+    {
+      "content": "for ${1:value} in ${2:enumerable} do\n\t$0\nend",
+      "doc": "",
+      "label": "for loop",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "it '${1:spec_name}' do\n\t$0\nend",
+      "doc": "",
+      "label": "Insert it block",
+      "matches": {
+        "it": true
+      }
+    },
+    {
+      "content": "{ |${1:variable}| $2 }",
+      "doc": "",
+      "label": "Insert inline block with variable",
+      "matches": {
+        "b": true
+      }
+    },
+    {
+      "content": "allow(${1:object}).to $0",
+      "doc": "",
+      "label": "Insert allow",
+      "matches": {
+        "allow": true
+      }
+    },
+    {
+      "content": "# encoding: utf-8$0",
+      "doc": "",
+      "label": "Insert encoding comment",
+      "matches": {
+        "enc": true
+      }
+    },
+    {
+      "content": "require 'benchmark'\n\nputs Benchmark.measure { ${1:# benchmark code} }",
+      "doc": "",
+      "label": "Ruby Benchmark Measure",
+      "matches": {
+        "benchm": true
+      }
+    },
+    {
+      "content": "let!(:${1:object}) { $0 }",
+      "doc": "",
+      "label": "Insert let!",
+      "matches": {
+        "let!": true
+      }
+    },
+    {
+      "content": "# frozen_string_literal: true",
+      "doc": "",
+      "label": "Insert frozen literal string",
+      "matches": {
+        "frozen": true
+      }
+    },
+    {
+      "content": "if ${1:test}\n\t$2\nelse\n\t$0\nend",
+      "doc": "",
+      "label": "if else",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "each do |${1:e}|\n\t$0\nend",
+      "doc": "",
+      "label": "Insert each with multiline block",
+      "matches": {
+        "ead": true
+      }
+    },
+    {
+      "content": "require '${1}'$0",
+      "doc": "",
+      "label": "Insert require",
+      "matches": {
+        "req": true
+      }
+    },
+    {
+      "content": "def initialize(${1:args})\n\t$0\nend",
+      "doc": "",
+      "label": "initialize method definition",
+      "matches": {
+        "definit": true
+      }
+    },
+    {
+      "content": "require_relative '${1}'$0",
+      "doc": "",
+      "label": "Insert require_relative",
+      "matches": {
+        "reqr": true
+      }
+    },
+    {
+      "content": "case ${1:test}\nwhen $2\n\t$3\nwhen $4\n\t$5\nelse\n\t$6\nend",
+      "doc": "",
+      "label": "case",
+      "matches": {
+        "case": true
       }
     },
     {

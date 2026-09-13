@@ -2,51 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "(local ${1:name} ${2:value})",
-      "doc": "Create a variable with local",
-      "label": "local",
-      "matches": {
-        "local": true
-      }
-    },
-    {
       "content": "(fn ${1:name} [${2:params}]\n   )",
       "doc": "Create a function",
       "label": "fn",
       "matches": {
         "fn": true
-      }
-    },
-    {
-      "content": "(let [${1:tbl} {}\n\t${2:key1} ${3:key1_value}])",
-      "doc": "Declaring a table",
-      "label": "create a table",
-      "matches": {
-        "tbl": true
-      }
-    },
-    {
-      "content": "(while (${1:condition})\n($0))",
-      "doc": "Create a while loop",
-      "label": "while",
-      "matches": {
-        "while": true
-      }
-    },
-    {
-      "content": "(tset ${1:tbl} ${2:value})",
-      "doc": "Set a value in a table",
-      "label": "set table value",
-      "matches": {
-        "tset": true
-      }
-    },
-    {
-      "content": "(for [i 1 10]\n($0))",
-      "doc": "Create a for loop",
-      "label": "for",
-      "matches": {
-        "for": true
       }
     },
     {
@@ -58,11 +18,11 @@
       }
     },
     {
-      "content": "(global $0)",
-      "doc": "Create a global",
-      "label": "global",
+      "content": "(while (${1:condition})\n($0))",
+      "doc": "Create a while loop",
+      "label": "while",
       "matches": {
-        "global": true
+        "while": true
       }
     },
     {
@@ -74,11 +34,51 @@
       }
     },
     {
+      "content": "(for [i 1 10]\n($0))",
+      "doc": "Create a for loop",
+      "label": "for",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "(tset ${1:tbl} ${2:value})",
+      "doc": "Set a value in a table",
+      "label": "set table value",
+      "matches": {
+        "tset": true
+      }
+    },
+    {
+      "content": "(global $0)",
+      "doc": "Create a global",
+      "label": "global",
+      "matches": {
+        "global": true
+      }
+    },
+    {
+      "content": "(local ${1:name} ${2:value})",
+      "doc": "Create a variable with local",
+      "label": "local",
+      "matches": {
+        "local": true
+      }
+    },
+    {
       "content": "(require :${1:module})",
       "doc": "Require a module",
       "label": "require",
       "matches": {
         "require": true
+      }
+    },
+    {
+      "content": "(let [${1:tbl} {}\n\t${2:key1} ${3:key1_value}])",
+      "doc": "Declaring a table",
+      "label": "create a table",
+      "matches": {
+        "tbl": true
       }
     }
   ]

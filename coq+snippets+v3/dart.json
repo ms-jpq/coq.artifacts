@@ -5,19 +5,19 @@
   ],
   "snippets": [
     {
-      "content": "for (var ${1:item} in ${2:items}) {\n  $0\n}",
-      "doc": "Insert a for-in loop.",
-      "label": "for in",
+      "content": "void main(List<String> args) {\n  $0\n}",
+      "doc": "Insert a main function, used as an entry point.",
+      "label": "main",
       "matches": {
-        "fori": true
+        "main": true
       }
     },
     {
-      "content": "if ($1) {\n  $0\n} else {\n}",
-      "doc": "Insert an if statement with an else block.",
-      "label": "if else",
+      "content": "typedef ${1:Type} ${2:Name}(${3:params});",
+      "doc": "Insert a typedef.",
+      "label": "typedef",
       "matches": {
-        "ife": true
+        "typedef": true
       }
     },
     {
@@ -37,35 +37,19 @@
       }
     },
     {
-      "content": "group('$1', () {\n  $0\n});",
-      "doc": "Insert a test group block.",
-      "label": "group",
+      "content": "${3:void} ${1:name}(${2:args}) {\n  $0\n}",
+      "doc": "Insert a function definition.",
+      "label": "fun",
       "matches": {
-        "group": true
+        "fun": true
       }
     },
     {
-      "content": "class ${1:Name} {\n  $0\n}",
-      "doc": "Insert a class definition.",
-      "label": "class",
+      "content": "if ($1) {\n  $0\n} else {\n}",
+      "doc": "Insert an if statement with an else block.",
+      "label": "if else",
       "matches": {
-        "class": true
-      }
-    },
-    {
-      "content": "switch ($1) {\n  case $2:\n    $0\n    break;\n  default:\n}",
-      "doc": "Insert a switch statement.",
-      "label": "switch case",
-      "matches": {
-        "switch": true
-      }
-    },
-    {
-      "content": "typedef ${1:Type} ${2:Name}(${3:params});",
-      "doc": "Insert a typedef.",
-      "label": "typedef",
-      "matches": {
-        "typedef": true
+        "ife": true
       }
     },
     {
@@ -77,11 +61,11 @@
       }
     },
     {
-      "content": "void main(List<String> args) {\n  $0\n}",
-      "doc": "Insert a main function, used as an entry point.",
-      "label": "main",
+      "content": "do {\n  $0\n} while ($1);",
+      "doc": "Insert a do-while loop.",
+      "label": "do while",
       "matches": {
-        "main": true
+        "do": true
       }
     },
     {
@@ -93,19 +77,19 @@
       }
     },
     {
-      "content": "${3:void} ${1:name}(${2:args}) {\n  $0\n}",
-      "doc": "Insert a function definition.",
-      "label": "fun",
-      "matches": {
-        "fun": true
-      }
-    },
-    {
       "content": "test('$1', () {\n  $0\n});",
       "doc": "Insert a test block.",
       "label": "test",
       "matches": {
         "test": true
+      }
+    },
+    {
+      "content": "for (var ${1:item} in ${2:items}) {\n  $0\n}",
+      "doc": "Insert a for-in loop.",
+      "label": "for in",
+      "matches": {
+        "fori": true
       }
     },
     {
@@ -117,11 +101,27 @@
       }
     },
     {
-      "content": "do {\n  $0\n} while ($1);",
-      "doc": "Insert a do-while loop.",
-      "label": "do while",
+      "content": "class ${1:Name} {\n  $0\n}",
+      "doc": "Insert a class definition.",
+      "label": "class",
       "matches": {
-        "do": true
+        "class": true
+      }
+    },
+    {
+      "content": "group('$1', () {\n  $0\n});",
+      "doc": "Insert a test group block.",
+      "label": "group",
+      "matches": {
+        "group": true
+      }
+    },
+    {
+      "content": "switch ($1) {\n  case $2:\n    $0\n    break;\n  default:\n}",
+      "doc": "Insert a switch statement.",
+      "label": "switch case",
+      "matches": {
+        "switch": true
       }
     },
     {

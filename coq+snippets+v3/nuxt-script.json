@@ -2,6 +2,22 @@
   "extends": [],
   "snippets": [
     {
+      "content": "useHead({\n\t$0\n})",
+      "doc": "The useHead composable function allows you to manage your head tags in a programmatic and reactive way, powered by Unhead. If the data comes from a user or other untrusted source, we recommend you check out useHeadSafe",
+      "label": "useHead",
+      "matches": {
+        "useHead": true
+      }
+    },
+    {
+      "content": "navigateTo($0)",
+      "doc": "navigateTo is a router helper function that allows programmatically navigating users through your Nuxt application.",
+      "label": "navigateTo",
+      "matches": {
+        "navigateTo": true
+      }
+    },
+    {
       "content": "const ${1:route} = useRoute()\n\t$0",
       "doc": "The useRoute composable returns the current route and must be called in a setup function, plugin, or route middleware.",
       "label": "useState",
@@ -18,19 +34,19 @@
       }
     },
     {
+      "content": "addRouteMiddleware((to, from) => {\n\tif(to.path === '$1') {\n\t\treturn false\n\t})",
+      "doc": "Anonymous route middleware does not have a name. It takes a function as the first argument, making the second middleware argument redundant",
+      "label": "Anonymouse Route Middleware",
+      "matches": {
+        "addRouteMiddlewareAnonym": true
+      }
+    },
+    {
       "content": "const {${1:data},${2:pending},${3:error},${4:refresh}} = await useFetch('$5', {\n$0\n})",
       "doc": "This composable provides a convenient wrapper around useAsyncData and $fetch. It automatically generates a key based on URL and fetch options, provides type hints for request url based on server routes, and infers API response type.",
       "label": "useFetch",
       "matches": {
         "useFetch": true
-      }
-    },
-    {
-      "content": "useHead({\n\t$0\n})",
-      "doc": "The useHead composable function allows you to manage your head tags in a programmatic and reactive way, powered by Unhead. If the data comes from a user or other untrusted source, we recommend you check out useHeadSafe",
-      "label": "useHead",
-      "matches": {
-        "useHead": true
       }
     },
     {
@@ -42,19 +58,27 @@
       }
     },
     {
-      "content": "navigateTo($0)",
-      "doc": "navigateTo is a router helper function that allows programmatically navigating users through your Nuxt application.",
-      "label": "navigateTo",
+      "content": "addRouteMiddleware('${1:named-middleware}', () => {\n\t$0\n\t})",
+      "doc": "Named route middleware takes a string as the first argument and a function as the second. When defined in a plugin, it overrides any existing middleware of the same name located in the middleware/ directory",
+      "label": "Named Route Middleware",
       "matches": {
-        "navigateTo": true
+        "addRouteMiddlewareNamed": true
       }
     },
     {
-      "content": "addRouteMiddleware((to, from) => {\n\tif(to.path === '$1') {\n\t\treturn false\n\t})",
-      "doc": "Anonymous route middleware does not have a name. It takes a function as the first argument, making the second middleware argument redundant",
-      "label": "Anonymouse Route Middleware",
+      "content": "addRouteMiddleware('${1:global-middleware}', (to, from) => {\n\t$0\n},\n\t{global: true}\n)",
+      "doc": "Set an optional, third argument { global: true } to indicate whether the route middleware is global",
+      "label": "Global Route Middleware",
       "matches": {
-        "addRouteMiddlewareAnonym": true
+        "addRouteMiddlewareGlobal": true
+      }
+    },
+    {
+      "content": "const ${1:route} = useRoute()\n\t$0",
+      "doc": "The useRoute composable returns the current route and must be called in a setup function, plugin, or route middleware.",
+      "label": "useRoute",
+      "matches": {
+        "useRoute": true
       }
     },
     {
@@ -63,14 +87,6 @@
       "label": "useAppConfig",
       "matches": {
         "useAppConfig": true
-      }
-    },
-    {
-      "content": "addRouteMiddleware('${1:named-middleware}', () => {\n\t$0\n\t})",
-      "doc": "Named route middleware takes a string as the first argument and a function as the second. When defined in a plugin, it overrides any existing middleware of the same name located in the middleware/ directory",
-      "label": "Named Route Middleware",
-      "matches": {
-        "addRouteMiddlewareNamed": true
       }
     },
     {
@@ -90,19 +106,11 @@
       }
     },
     {
-      "content": "const ${1:route} = useRoute()\n\t$0",
-      "doc": "The useRoute composable returns the current route and must be called in a setup function, plugin, or route middleware.",
-      "label": "useRoute",
+      "content": "head () {\n\treturn {\n\t\ttitle: ${1:'Page Title'},\n\t\tmeta: [\n\t\t\t// hid is used as unique identifier. Do not use `vmid` for it as it will not work\n\t\t\t{ hid: 'description', name: 'description', content: ${2:'My custom description'} }\n\t\t]\n\t}\n},",
+      "doc": "Nuxt Head",
+      "label": "Nuxt Head",
       "matches": {
-        "useRoute": true
-      }
-    },
-    {
-      "content": "addRouteMiddleware('${1:global-middleware}', (to, from) => {\n\t$0\n},\n\t{global: true}\n)",
-      "doc": "Set an optional, third argument { global: true } to indicate whether the route middleware is global",
-      "label": "Global Route Middleware",
-      "matches": {
-        "addRouteMiddlewareGlobal": true
+        "nhead": true
       }
     },
     {
@@ -111,14 +119,6 @@
       "label": "Nuxt Fetch",
       "matches": {
         "nfetch": true
-      }
-    },
-    {
-      "content": "head () {\n\treturn {\n\t\ttitle: ${1:'Page Title'},\n\t\tmeta: [\n\t\t\t// hid is used as unique identifier. Do not use `vmid` for it as it will not work\n\t\t\t{ hid: 'description', name: 'description', content: ${2:'My custom description'} }\n\t\t]\n\t}\n},",
-      "doc": "Nuxt Head",
-      "label": "Nuxt Head",
-      "matches": {
-        "nhead": true
       }
     },
     {

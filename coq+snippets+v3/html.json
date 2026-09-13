@@ -10,22 +10,6 @@
   ],
   "snippets": [
     {
-      "content": "<header>\n\t$1\n</header>",
-      "doc": "HTML - Defines a header for a section of page",
-      "label": "header",
-      "matches": {
-        "header": true
-      }
-    },
-    {
-      "content": "<label for=\"$1\">$2</label>$3",
-      "doc": "HTML - Defines an inline window",
-      "label": "label",
-      "matches": {
-        "label": true
-      }
-    },
-    {
       "content": "<div>\n\t$1\n</div>",
       "doc": "HTML - Defines a section in a document",
       "label": "div",
@@ -34,11 +18,19 @@
       }
     },
     {
-      "content": "<section>\n\t$1\n</section>",
-      "doc": "HTML - Defines a section",
-      "label": "section",
+      "content": "<ol class=\"$1\" id=\"$2\">\n\t$3\n</ol>",
+      "doc": "HTML - Defines an ordered list",
+      "label": "ol.#",
       "matches": {
-        "section": true
+        "ol.#": true
+      }
+    },
+    {
+      "content": "<ol id=\"$1\">\n\t$2\n</ol>",
+      "doc": "HTML - Defines an ordered list",
+      "label": "ol#",
+      "matches": {
+        "ol#": true
       }
     },
     {
@@ -50,35 +42,43 @@
       }
     },
     {
-      "content": "<p>$1</p>$2",
-      "doc": "HTML - Defines a paragraph",
-      "label": "p",
+      "content": "<abbr title=\"$1\">$2</abbr>$3",
+      "doc": "HTML - Defines an abbreviation",
+      "label": "abbr",
       "matches": {
-        "p": true
+        "abbr": true
       }
     },
     {
-      "content": "<a href=\"$1\">$2</a>$3",
-      "doc": "HTML - Defines a hyperlink",
-      "label": "a",
+      "content": "<source src=\"$1\" type=\"$2\">$3",
+      "doc": "HTML - Defines media resource",
+      "label": "source",
       "matches": {
-        "a": true
+        "source": true
       }
     },
     {
-      "content": "<ol>\n\t$1\n</ol>",
+      "content": "<tfoot>\n\t$1\n</tfoot>",
+      "doc": "HTML - Defines a table footer",
+      "label": "tfoot",
+      "matches": {
+        "tfoot": true
+      }
+    },
+    {
+      "content": "<ol class=\"$1\">\n\t$2\n</ol>",
       "doc": "HTML - Defines an ordered list",
-      "label": "ol",
+      "label": "ol.",
       "matches": {
-        "ol": true
+        "ol.": true
       }
     },
     {
-      "content": "<dt>$1</dt>$2",
-      "doc": "HTML - Defines a definition term",
-      "label": "dt",
+      "content": "<param name=\"$1\" value=\"$2\">$3",
+      "doc": "HTML - Defines a parameter for an object",
+      "label": "param",
       "matches": {
-        "dt": true
+        "param": true
       }
     },
     {
@@ -90,11 +90,235 @@
       }
     },
     {
-      "content": "<em>$1</em>$2",
-      "doc": "HTML - Defines emphasized text",
-      "label": "em",
+      "content": "<embed src=\"$1\">$2",
+      "doc": "HTML - Defines external interactive content ot plugin",
+      "label": "embed",
       "matches": {
-        "em": true
+        "embed": true
+      }
+    },
+    {
+      "content": "<ul class=\"$1\" id=\"$2\">\n\t$3\n</ul>",
+      "doc": "HTML - Defines an unordered list",
+      "label": "ul.#",
+      "matches": {
+        "ul.#": true
+      }
+    },
+    {
+      "content": "<dt>$1</dt>$2",
+      "doc": "HTML - Defines a definition term",
+      "label": "dt",
+      "matches": {
+        "dt": true
+      }
+    },
+    {
+      "content": "<big>$1</big>$2",
+      "doc": "HTML - Used to make text bigger",
+      "label": "big",
+      "matches": {
+        "big": true
+      }
+    },
+    {
+      "content": "<main>\n\t$1\n</main>",
+      "doc": "HTML - Defines an image map",
+      "label": "main",
+      "matches": {
+        "main": true
+      }
+    },
+    {
+      "content": "<ul id=\"$1\">\n\t$2\n</ul>",
+      "doc": "HTML - Defines an unordered list",
+      "label": "ul#",
+      "matches": {
+        "ul#": true
+      }
+    },
+    {
+      "content": "<ul class=\"$1\">\n\t$2\n</ul>",
+      "doc": "HTML - Defines an unordered list",
+      "label": "ul.",
+      "matches": {
+        "ul.": true
+      }
+    },
+    {
+      "content": "<b>$1</b>$2",
+      "doc": "HTML - Defines bold text",
+      "label": "b",
+      "matches": {
+        "b": true
+      }
+    },
+    {
+      "content": "<p class=\"$1\" id=\"$2\">$3</p>",
+      "doc": "HTML - Defines a paragraph",
+      "label": "p.#",
+      "matches": {
+        "p.#": true
+      }
+    },
+    {
+      "content": "<time datetime=\"$1\">$2</time>$3",
+      "doc": "HTML - Defines a date/time",
+      "label": "time",
+      "matches": {
+        "time": true
+      }
+    },
+    {
+      "content": "<details>\n\t$1\n</details>",
+      "doc": "HTML - Defines details of an element",
+      "label": "details",
+      "matches": {
+        "details": true
+      }
+    },
+    {
+      "content": "<pre>$1</pre>",
+      "doc": "HTML - Defines preformatted text",
+      "label": "pre",
+      "matches": {
+        "pre": true
+      }
+    },
+    {
+      "content": "<table>\n\t$1\n</table>",
+      "doc": "HTML - Defines a table",
+      "label": "table",
+      "matches": {
+        "table": true
+      }
+    },
+    {
+      "content": "<col>$2",
+      "doc": "HTML - Defines attributes for table columns",
+      "label": "col",
+      "matches": {
+        "col": true
+      }
+    },
+    {
+      "content": "<p class=\"$1\">$2</p>",
+      "doc": "HTML - Defines a paragraph",
+      "label": "p.",
+      "matches": {
+        "p.": true
+      }
+    },
+    {
+      "content": "<!DOCTYPE html>\n<html lang=\"$1en\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t<meta name=\"viewport\" content=\"width=${2:device-width}, initial-scale=${3:1.0}\">\n\t<title>${5:Document}</title>\n</head>\n<body>\n\t${6}\n</body>\n</html>",
+      "doc": "HTML - Defines a template for a html5 document",
+      "label": "!",
+      "matches": {
+        "!": true
+      }
+    },
+    {
+      "content": "<thead>\n$1\n</thead>",
+      "doc": "HTML - Defines a table head",
+      "label": "thead",
+      "matches": {
+        "thead": true
+      }
+    },
+    {
+      "content": "<s>$1</s>$2",
+      "doc": "HTML - Used to define strikethrough text",
+      "label": "s",
+      "matches": {
+        "s": true
+      }
+    },
+    {
+      "content": "<div id=\"$1\">\n\t$2\n</div>",
+      "doc": "HTML - Defines a section in a document",
+      "label": "div#",
+      "matches": {
+        "div#": true
+      }
+    },
+    {
+      "content": "<track src=\"$1\" kind=\"$2\" srclang=\"$3\" label=\"$4\">$5",
+      "doc": "HTML - Defines a table row",
+      "label": "track",
+      "matches": {
+        "track": true
+      }
+    },
+    {
+      "content": "<var>$1</var>$2",
+      "doc": "HTML - Defines a variable",
+      "label": "var",
+      "matches": {
+        "var": true
+      }
+    },
+    {
+      "content": "<html>\n\t$0\n</html>",
+      "doc": "HTML - Defines an html document",
+      "label": "html",
+      "matches": {
+        "html": true
+      }
+    },
+    {
+      "content": "<i>$1</i>$2",
+      "doc": "HTML - Defines italic text",
+      "label": "i",
+      "matches": {
+        "i": true
+      }
+    },
+    {
+      "content": "<video width=\"$1\" height=\"$2\" controls>\n\t$3\n</video>",
+      "doc": "HTML - Defines a video",
+      "label": "video",
+      "matches": {
+        "video": true
+      }
+    },
+    {
+      "content": "<ul>\n\t$1\n</ul>",
+      "doc": "HTML - Defines an unordered list",
+      "label": "ul",
+      "matches": {
+        "ul": true
+      }
+    },
+    {
+      "content": "<u>$1</u>$2",
+      "doc": "HTML - Used to define underlined text",
+      "label": "u",
+      "matches": {
+        "u": true
+      }
+    },
+    {
+      "content": "<select>\n\t$1\n</select>",
+      "doc": "HTML - Defines a selectable list",
+      "label": "select",
+      "matches": {
+        "select": true
+      }
+    },
+    {
+      "content": "<div class=\"$1\">\n\t$2\n</div>",
+      "doc": "HTML - Defines a section in a document",
+      "label": "div.",
+      "matches": {
+        "div.": true
+      }
+    },
+    {
+      "content": "<progress value=\"$1\" max=\"$2\">$3</progress>$4",
+      "doc": "HTML - Defines progress of a task of any kind",
+      "label": "progress",
+      "matches": {
+        "progress": true
       }
     },
     {
@@ -114,747 +338,11 @@
       }
     },
     {
-      "content": "<embed src=\"$1\">$2",
-      "doc": "HTML - Defines external interactive content ot plugin",
-      "label": "embed",
-      "matches": {
-        "embed": true
-      }
-    },
-    {
-      "content": "<span>$1</span>$2",
-      "doc": "HTML - Defines a section in a document",
-      "label": "span",
-      "matches": {
-        "span": true
-      }
-    },
-    {
-      "content": "<command>$1</command>$2",
-      "doc": "HTML - Defines a command button [not supported]",
-      "label": "command",
-      "matches": {
-        "command": true
-      }
-    },
-    {
-      "content": "<fieldset>\n\t$1\n</fieldset>",
-      "doc": "HTML - Defines a fieldset",
-      "label": "fieldset",
-      "matches": {
-        "fieldset": true
-      }
-    },
-    {
-      "content": "<pre>$1</pre>",
-      "doc": "HTML - Defines preformatted text",
-      "label": "pre",
-      "matches": {
-        "pre": true
-      }
-    },
-    {
-      "content": "<ul class=\"$1\" id=\"$2\">\n\t$3\n</ul>",
-      "doc": "HTML - Defines an unordered list",
-      "label": "ul.#",
-      "matches": {
-        "ul.#": true
-      }
-    },
-    {
-      "content": "<address>\n$1\n</address>",
-      "doc": "HTML - Defines an address element",
-      "label": "address",
-      "matches": {
-        "address": true
-      }
-    },
-    {
-      "content": "<figcaption>$1</figcaption>$2",
-      "doc": "HTML - Defines a caption for a figure",
-      "label": "figcaption",
-      "matches": {
-        "figcaption": true
-      }
-    },
-    {
-      "content": "<bdi>$1</bdi>$2",
-      "doc": "HTML - Used to isolate text that is of unknown directionality",
-      "label": "bdi",
-      "matches": {
-        "bdi": true
-      }
-    },
-    {
-      "content": "<rp>$1</rp>$2",
-      "doc": "HTML - Used in ruby annotations to define what to show browsers that do not support the ruby element",
-      "label": "rp",
-      "matches": {
-        "rp": true
-      }
-    },
-    {
-      "content": "<area shape=\"$1\" coords=\"$2\" href=\"$3\" alt=\"$4\">$5",
-      "doc": "HTML - Defines an area inside an image map",
-      "label": "area",
-      "matches": {
-        "area": true
-      }
-    },
-    {
-      "content": "<sup>$1</sup>$2",
-      "doc": "HTML - Defines super-scripted text",
-      "label": "sup",
-      "matches": {
-        "sup": true
-      }
-    },
-    {
-      "content": "<form>\n\t$1\n</form>",
-      "doc": "HTML - Defines a form",
-      "label": "form",
-      "matches": {
-        "form": true
-      }
-    },
-    {
-      "content": "<article>\n\t$1\n</article>",
-      "doc": "HTML - Defines an article",
-      "label": "article",
-      "matches": {
-        "article": true
-      }
-    },
-    {
-      "content": "<footer>\n\t$1\n</footer>",
-      "doc": "HTML - Defines a footer for a section or page",
-      "label": "footer",
-      "matches": {
-        "footer": true
-      }
-    },
-    {
-      "content": "<details>\n\t$1\n</details>",
-      "doc": "HTML - Defines details of an element",
-      "label": "details",
-      "matches": {
-        "details": true
-      }
-    },
-    {
-      "content": "<del>$1</del>$2",
-      "doc": "HTML - Defines deleted text",
-      "label": "del",
-      "matches": {
-        "del": true
-      }
-    },
-    {
-      "content": "<s>$1</s>$2",
-      "doc": "HTML - Used to define strikethrough text",
-      "label": "s",
-      "matches": {
-        "s": true
-      }
-    },
-    {
-      "content": "<abbr title=\"$1\">$2</abbr>$3",
-      "doc": "HTML - Defines an abbreviation",
-      "label": "abbr",
-      "matches": {
-        "abbr": true
-      }
-    },
-    {
-      "content": "<p class=\"$1\">$2</p>",
-      "doc": "HTML - Defines a paragraph",
-      "label": "p.",
-      "matches": {
-        "p.": true
-      }
-    },
-    {
-      "content": "<tbody>\n\t$1\n</tbody>",
-      "doc": "HTML - Defines a table body",
-      "label": "tbody",
-      "matches": {
-        "tbody": true
-      }
-    },
-    {
-      "content": "<h1>$1</h1>$2",
-      "doc": "HTML - Defines header 1",
-      "label": "h1",
-      "matches": {
-        "h1": true
-      }
-    },
-    {
-      "content": "<body>\n\t$0\n</body>",
-      "doc": "HTML - Defines the body element",
-      "label": "body",
-      "matches": {
-        "body": true
-      }
-    },
-    {
-      "content": "<!DOCTYPE html>\n<html lang=\"${1:en}\">\n\t<head>\n\t\t<meta charset=\"UTF-8\">\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n\t\t<title>$2</title>\n\t\t<link href=\"${3:css/style.css}\" rel=\"stylesheet\">\n\t</head>\n\t<body>\n\t$0\n\t</body>\n</html>",
-      "doc": "HTML - Defines a template for a html5 document",
-      "label": "html5",
-      "matches": {
-        "html5": true
-      }
-    },
-    {
-      "content": "<b>$1</b>$2",
-      "doc": "HTML - Defines bold text",
-      "label": "b",
-      "matches": {
-        "b": true
-      }
-    },
-    {
-      "content": "<div id=\"$1\">\n\t$2\n</div>",
-      "doc": "HTML - Defines a section in a document",
-      "label": "div#",
-      "matches": {
-        "div#": true
-      }
-    },
-    {
-      "content": "<textarea rows=\"$1\" cols=\"$2\">$3</textarea>$4",
-      "doc": "HTML - Defines a text area",
-      "label": "textarea",
-      "matches": {
-        "textarea": true
-      }
-    },
-    {
-      "content": "<h3>$1</h3>$2",
-      "doc": "HTML - Defines header 3",
-      "label": "h3",
-      "matches": {
-        "h3": true
-      }
-    },
-    {
-      "content": "<div class=\"$1\">\n\t$2\n</div>",
-      "doc": "HTML - Defines a section in a document",
-      "label": "div.",
-      "matches": {
-        "div.": true
-      }
-    },
-    {
-      "content": "<tfoot>\n\t$1\n</tfoot>",
-      "doc": "HTML - Defines a table footer",
-      "label": "tfoot",
-      "matches": {
-        "tfoot": true
-      }
-    },
-    {
-      "content": "<h4>$1</h4>$2",
-      "doc": "HTML - Defines header 4",
-      "label": "h4",
-      "matches": {
-        "h4": true
-      }
-    },
-    {
-      "content": "<td>$1</td>$2",
-      "doc": "HTML - Defines a table cell",
-      "label": "td",
-      "matches": {
-        "td": true
-      }
-    },
-    {
-      "content": "<style>\n$1\n</style>",
-      "doc": "HTML - Defines a style definition",
-      "label": "style",
-      "matches": {
-        "style": true
-      }
-    },
-    {
-      "content": "<h5>$1</h5>$2",
-      "doc": "HTML - Defines header 5",
-      "label": "h5",
-      "matches": {
-        "h5": true
-      }
-    },
-    {
-      "content": "<var>$1</var>$2",
-      "doc": "HTML - Defines a variable",
-      "label": "var",
-      "matches": {
-        "var": true
-      }
-    },
-    {
-      "content": "<thead>\n$1\n</thead>",
-      "doc": "HTML - Defines a table head",
-      "label": "thead",
-      "matches": {
-        "thead": true
-      }
-    },
-    {
-      "content": "<i>$1</i>$2",
-      "doc": "HTML - Defines italic text",
-      "label": "i",
-      "matches": {
-        "i": true
-      }
-    },
-    {
-      "content": "<th>$1</th>$2",
-      "doc": "HTML - Defines a table header",
-      "label": "th",
-      "matches": {
-        "th": true
-      }
-    },
-    {
-      "content": "<big>$1</big>$2",
-      "doc": "HTML - Used to make text bigger",
-      "label": "big",
-      "matches": {
-        "big": true
-      }
-    },
-    {
-      "content": "<head>\n\t$1\n</head>",
-      "doc": "HTML - Defines information about the document",
-      "label": "head",
-      "matches": {
-        "head": true
-      }
-    },
-    {
-      "content": "<progress value=\"$1\" max=\"$2\">$3</progress>$4",
-      "doc": "HTML - Defines progress of a task of any kind",
-      "label": "progress",
-      "matches": {
-        "progress": true
-      }
-    },
-    {
-      "content": "<blockquote cite=\"$2\">\n\t$1\n</blockquote>",
-      "doc": "HTML - Defines a long quotation",
-      "label": "blockquote",
-      "matches": {
-        "blockquote": true
-      }
-    },
-    {
-      "content": "<title>$1</title>$2",
-      "doc": "HTML - Defines the document title",
-      "label": "title",
-      "matches": {
-        "title": true
-      }
-    },
-    {
-      "content": "<input type=\"$1\" name=\"$2\" value=\"$3\">$4",
-      "doc": "HTML - Defines an input field",
-      "label": "input",
-      "matches": {
-        "input": true
-      }
-    },
-    {
-      "content": "<hgroup>\n\t$1\n</hgroup>",
-      "doc": "HTML - Defines information about a section in a document",
-      "label": "hgroup",
-      "matches": {
-        "hgroup": true
-      }
-    },
-    {
-      "content": "<track src=\"$1\" kind=\"$2\" srclang=\"$3\" label=\"$4\">$5",
-      "doc": "HTML - Defines a table row",
-      "label": "track",
-      "matches": {
-        "track": true
-      }
-    },
-    {
-      "content": "<tr>$1</tr>$2",
-      "doc": "HTML - Defines a table row",
-      "label": "tr",
-      "matches": {
-        "tr": true
-      }
-    },
-    {
-      "content": "<br>",
-      "doc": "HTML - Inserts a single line break",
-      "label": "br",
-      "matches": {
-        "br": true
-      }
-    },
-    {
-      "content": "<hr>",
-      "doc": "HTML - Defines a horizontal rule",
-      "label": "hr",
-      "matches": {
-        "hr": true
-      }
-    },
-    {
-      "content": "<time datetime=\"$1\">$2</time>$3",
-      "doc": "HTML - Defines a date/time",
-      "label": "time",
-      "matches": {
-        "time": true
-      }
-    },
-    {
-      "content": "<button type=\"$1\">$2</button>$3",
-      "doc": "HTML - Defines a push button",
-      "label": "button",
-      "matches": {
-        "button": true
-      }
-    },
-    {
-      "content": "<ul>\n\t$1\n</ul>",
-      "doc": "HTML - Defines an unordered list",
-      "label": "ul",
-      "matches": {
-        "ul": true
-      }
-    },
-    {
-      "content": "<table>\n\t$1\n</table>",
-      "doc": "HTML - Defines a table",
-      "label": "table",
-      "matches": {
-        "table": true
-      }
-    },
-    {
-      "content": "<canvas id=\"$1\">$2</canvas>$3",
-      "doc": "HTML - Defines graphics",
-      "label": "canvas",
-      "matches": {
-        "canvas": true
-      }
-    },
-    {
-      "content": "<summary>$1</summary>$2",
-      "doc": "HTML - Defines a visible heading for the detail element [limited support]",
-      "label": "summary",
-      "matches": {
-        "summary": true
-      }
-    },
-    {
-      "content": "<sub>$1</sub>$2",
-      "doc": "HTML - Defines sub-scripted text",
-      "label": "sub",
-      "matches": {
-        "sub": true
-      }
-    },
-    {
-      "content": "<caption>$1</caption>$2",
-      "doc": "HTML - Defines a table caption",
-      "label": "caption",
-      "matches": {
-        "caption": true
-      }
-    },
-    {
-      "content": "<video width=\"$1\" height=\"$2\" controls>\n\t$3\n</video>",
-      "doc": "HTML - Defines a video",
-      "label": "video",
-      "matches": {
-        "video": true
-      }
-    },
-    {
-      "content": "<select>\n\t$1\n</select>",
-      "doc": "HTML - Defines a selectable list",
-      "label": "select",
-      "matches": {
-        "select": true
-      }
-    },
-    {
-      "content": "<cite>$1</cite>$2",
-      "doc": "HTML - Defines a citation",
-      "label": "cite",
-      "matches": {
-        "cite": true
-      }
-    },
-    {
-      "content": "<strong>$1</strong>$2",
-      "doc": "HTML - Defines strong text",
-      "label": "strong",
-      "matches": {
-        "strong": true
-      }
-    },
-    {
-      "content": "<source src=\"$1\" type=\"$2\">$3",
-      "doc": "HTML - Defines media resource",
-      "label": "source",
-      "matches": {
-        "source": true
-      }
-    },
-    {
-      "content": "<code>$1</code>$2",
-      "doc": "HTML - Defines computer code text",
-      "label": "code",
-      "matches": {
-        "code": true
-      }
-    },
-    {
-      "content": "<script>\n\t$1\n</script>",
-      "doc": "HTML - Defines a script",
-      "label": "script",
-      "matches": {
-        "script": true
-      }
-    },
-    {
-      "content": "<col>$2",
-      "doc": "HTML - Defines attributes for table columns",
-      "label": "col",
-      "matches": {
-        "col": true
-      }
-    },
-    {
-      "content": "<iframe src=\"$1\">$2</iframe>$3",
-      "doc": "HTML - Defines an inline sub window",
-      "label": "iframe",
-      "matches": {
-        "iframe": true
-      }
-    },
-    {
       "content": "<div class=\"$1\" id=\"$2\">\n\t$3\n</div>",
       "doc": "HTML - Defines a section in a document",
       "label": "div.#",
       "matches": {
         "div.#": true
-      }
-    },
-    {
-      "content": "<colgroup>\n\t$1\n</colgroup>",
-      "doc": "HTML - Defines group of table columns",
-      "label": "colgroup",
-      "matches": {
-        "colgroup": true
-      }
-    },
-    {
-      "content": "<img src=\"$1\" alt=\"$2\">$3",
-      "doc": "HTML - Defines an image",
-      "label": "img",
-      "matches": {
-        "img": true
-      }
-    },
-    {
-      "content": "<link rel=\"$1\" type=\"$2\" href=\"$3\">$4",
-      "doc": "HTML - Defines a resource reference",
-      "label": "link",
-      "matches": {
-        "link": true
-      }
-    },
-    {
-      "content": "<p id=\"$1\">$2</p>",
-      "doc": "HTML - Defines a paragraph",
-      "label": "p#",
-      "matches": {
-        "p#": true
-      }
-    },
-    {
-      "content": "<ruby>\n$1\n</ruby>",
-      "doc": "HTML - Defines ruby annotations",
-      "label": "ruby",
-      "matches": {
-        "ruby": true
-      }
-    },
-    {
-      "content": "<p class=\"$1\" id=\"$2\">$3</p>",
-      "doc": "HTML - Defines a paragraph",
-      "label": "p.#",
-      "matches": {
-        "p.#": true
-      }
-    },
-    {
-      "content": "<datalist>\n\t$1\n</datalist>",
-      "doc": "HTML - Defines a dropdown list",
-      "label": "datalist",
-      "matches": {
-        "datalist": true
-      }
-    },
-    {
-      "content": "<ul class=\"$1\">\n\t$2\n</ul>",
-      "doc": "HTML - Defines an unordered list",
-      "label": "ul.",
-      "matches": {
-        "ul.": true
-      }
-    },
-    {
-      "content": "<keygen name=\"$1\">$2",
-      "doc": "HTML - Defines a generated key in a form",
-      "label": "keygen",
-      "matches": {
-        "keygen": true
-      }
-    },
-    {
-      "content": "<ul id=\"$1\">\n\t$2\n</ul>",
-      "doc": "HTML - Defines an unordered list",
-      "label": "ul#",
-      "matches": {
-        "ul#": true
-      }
-    },
-    {
-      "content": "<dd>$1</dd>$2",
-      "doc": "HTML - Defines a definition description",
-      "label": "dd",
-      "matches": {
-        "dd": true
-      }
-    },
-    {
-      "content": "<kbd>$1</kbd>$2",
-      "doc": "HTML - Defines keyboard text",
-      "label": "kbd",
-      "matches": {
-        "kbd": true
-      }
-    },
-    {
-      "content": "<u>$1</u>$2",
-      "doc": "HTML - Used to define underlined text",
-      "label": "u",
-      "matches": {
-        "u": true
-      }
-    },
-    {
-      "content": "<ol class=\"$1\">\n\t$2\n</ol>",
-      "doc": "HTML - Defines an ordered list",
-      "label": "ol.",
-      "matches": {
-        "ol.": true
-      }
-    },
-    {
-      "content": "<option value=\"$1\">$2</option>$3",
-      "doc": "HTML - Defines an option in a drop-down list",
-      "label": "option",
-      "matches": {
-        "option": true
-      }
-    },
-    {
-      "content": "<ol id=\"$1\">\n\t$2\n</ol>",
-      "doc": "HTML - Defines an ordered list",
-      "label": "ol#",
-      "matches": {
-        "ol#": true
-      }
-    },
-    {
-      "content": "<legend>$1</legend>$2",
-      "doc": "HTML - Defines a title in a fieldset",
-      "label": "legend",
-      "matches": {
-        "legend": true
-      }
-    },
-    {
-      "content": "<ol class=\"$1\" id=\"$2\">\n\t$3\n</ol>",
-      "doc": "HTML - Defines an ordered list",
-      "label": "ol.#",
-      "matches": {
-        "ol.#": true
-      }
-    },
-    {
-      "content": "<output name=\"$1\" for=\"$2\">$3</output>$4",
-      "doc": "HTML - Defines some types of output",
-      "label": "output",
-      "matches": {
-        "output": true
-      }
-    },
-    {
-      "content": "<li>$1</li>$2",
-      "doc": "HTML - Defines a list item",
-      "label": "li",
-      "matches": {
-        "li": true
-      }
-    },
-    {
-      "content": "<optgroup>\n\t$1\n</optgroup>",
-      "doc": "HTML - Defines an option group",
-      "label": "optgroup",
-      "matches": {
-        "optgroup": true
-      }
-    },
-    {
-      "content": "<param name=\"$1\" value=\"$2\">$3",
-      "doc": "HTML - Defines a parameter for an object",
-      "label": "param",
-      "matches": {
-        "param": true
-      }
-    },
-    {
-      "content": "<h6>$1</h6>$2",
-      "doc": "HTML - Defines header 6",
-      "label": "h6",
-      "matches": {
-        "h6": true
-      }
-    },
-    {
-      "content": "<map name=\"$1\">\n\t$2\n</map>",
-      "doc": "HTML - Defines an image map",
-      "label": "map",
-      "matches": {
-        "map": true
-      }
-    },
-    {
-      "content": "<main>\n\t$1\n</main>",
-      "doc": "HTML - Defines an image map",
-      "label": "main",
-      "matches": {
-        "main": true
-      }
-    },
-    {
-      "content": "<noscript>\n$1\n</noscript>",
-      "doc": "HTML - Defines a noscript section",
-      "label": "noscript",
-      "matches": {
-        "noscript": true
       }
     },
     {
@@ -866,51 +354,123 @@
       }
     },
     {
-      "content": "<h2>$1</h2>$2",
-      "doc": "HTML - Defines header 2",
-      "label": "h2",
+      "content": "<em>$1</em>$2",
+      "doc": "HTML - Defines emphasized text",
+      "label": "em",
       "matches": {
-        "h2": true
+        "em": true
       }
     },
     {
-      "content": "<object width=\"$1\" height=\"$2\" data=\"$3\">$4</object>$5",
-      "doc": "HTML - Defines an embedded object",
-      "label": "object",
+      "content": "<title>$1</title>$2",
+      "doc": "HTML - Defines the document title",
+      "label": "title",
       "matches": {
-        "object": true
+        "title": true
       }
     },
     {
-      "content": "<q>$1</q>$2",
-      "doc": "HTML - Defines a short quotation",
-      "label": "q",
+      "content": "<p id=\"$1\">$2</p>",
+      "doc": "HTML - Defines a paragraph",
+      "label": "p#",
       "matches": {
-        "q": true
+        "p#": true
       }
     },
     {
-      "content": "<dfn>$1</dfn>$2",
-      "doc": "HTML - Defines a definition term",
-      "label": "dfn",
+      "content": "<th>$1</th>$2",
+      "doc": "HTML - Defines a table header",
+      "label": "th",
       "matches": {
-        "dfn": true
+        "th": true
       }
     },
     {
-      "content": "<mark>$1</mark>$2",
-      "doc": "HTML - Defines marked text",
-      "label": "mark",
+      "content": "<hgroup>\n\t$1\n</hgroup>",
+      "doc": "HTML - Defines information about a section in a document",
+      "label": "hgroup",
       "matches": {
-        "mark": true
+        "hgroup": true
       }
     },
     {
-      "content": "<base href=\"$1\" target=\"$2\">$3",
-      "doc": "HTML - Defines a base URL for all the links in a page",
-      "label": "base",
+      "content": "<tr>$1</tr>$2",
+      "doc": "HTML - Defines a table row",
+      "label": "tr",
       "matches": {
-        "base": true
+        "tr": true
+      }
+    },
+    {
+      "content": "<cite>$1</cite>$2",
+      "doc": "HTML - Defines a citation",
+      "label": "cite",
+      "matches": {
+        "cite": true
+      }
+    },
+    {
+      "content": "<textarea rows=\"$1\" cols=\"$2\">$3</textarea>$4",
+      "doc": "HTML - Defines a text area",
+      "label": "textarea",
+      "matches": {
+        "textarea": true
+      }
+    },
+    {
+      "content": "<area shape=\"$1\" coords=\"$2\" href=\"$3\" alt=\"$4\">$5",
+      "doc": "HTML - Defines an area inside an image map",
+      "label": "area",
+      "matches": {
+        "area": true
+      }
+    },
+    {
+      "content": "<td>$1</td>$2",
+      "doc": "HTML - Defines a table cell",
+      "label": "td",
+      "matches": {
+        "td": true
+      }
+    },
+    {
+      "content": "<noscript>\n$1\n</noscript>",
+      "doc": "HTML - Defines a noscript section",
+      "label": "noscript",
+      "matches": {
+        "noscript": true
+      }
+    },
+    {
+      "content": "<article>\n\t$1\n</article>",
+      "doc": "HTML - Defines an article",
+      "label": "article",
+      "matches": {
+        "article": true
+      }
+    },
+    {
+      "content": "<!DOCTYPE html>\n<html lang=\"${1:en}\">\n\t<head>\n\t\t<meta charset=\"UTF-8\">\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n\t\t<title>$2</title>\n\t\t<link href=\"${3:css/style.css}\" rel=\"stylesheet\">\n\t</head>\n\t<body>\n\t$0\n\t</body>\n</html>",
+      "doc": "HTML - Defines a template for a html5 document",
+      "label": "html5",
+      "matches": {
+        "html5": true
+      }
+    },
+    {
+      "content": "<bdi>$1</bdi>$2",
+      "doc": "HTML - Used to isolate text that is of unknown directionality",
+      "label": "bdi",
+      "matches": {
+        "bdi": true
+      }
+    },
+    {
+      "content": "<code>$1</code>$2",
+      "doc": "HTML - Defines computer code text",
+      "label": "code",
+      "matches": {
+        "code": true
       }
     },
     {
@@ -922,19 +482,27 @@
       }
     },
     {
-      "content": "<menu>\n\t$1\n</menu>",
-      "doc": "HTML - Defines a menu list",
-      "label": "menu",
+      "content": "<ol>\n\t$1\n</ol>",
+      "doc": "HTML - Defines an ordered list",
+      "label": "ol",
       "matches": {
-        "menu": true
+        "ol": true
       }
     },
     {
-      "content": "<rt>$1</rt>$2",
-      "doc": "HTML - Defines explanation to ruby annotations",
-      "label": "rt",
+      "content": "<summary>$1</summary>$2",
+      "doc": "HTML - Defines a visible heading for the detail element [limited support]",
+      "label": "summary",
       "matches": {
-        "rt": true
+        "summary": true
+      }
+    },
+    {
+      "content": "<del>$1</del>$2",
+      "doc": "HTML - Defines deleted text",
+      "label": "del",
+      "matches": {
+        "del": true
       }
     },
     {
@@ -946,27 +514,83 @@
       }
     },
     {
-      "content": "<html>\n\t$0\n</html>",
-      "doc": "HTML - Defines an html document",
-      "label": "html",
+      "content": "<optgroup>\n\t$1\n</optgroup>",
+      "doc": "HTML - Defines an option group",
+      "label": "optgroup",
       "matches": {
-        "html": true
+        "optgroup": true
       }
     },
     {
-      "content": "<menuitem>$1</menuitem>$2",
-      "doc": "HTML - Defines a menu item [firefox only]",
-      "label": "menuitem",
+      "content": "<p>$1</p>$2",
+      "doc": "HTML - Defines a paragraph",
+      "label": "p",
       "matches": {
-        "menuitem": true
+        "p": true
       }
     },
     {
-      "content": "<figure>\n\t$1\n</figure>",
-      "doc": "HTML - Defines a group of media content, and their caption",
-      "label": "figure",
+      "content": "<h3>$1</h3>$2",
+      "doc": "HTML - Defines header 3",
+      "label": "h3",
       "matches": {
-        "figure": true
+        "h3": true
+      }
+    },
+    {
+      "content": "<style>\n$1\n</style>",
+      "doc": "HTML - Defines a style definition",
+      "label": "style",
+      "matches": {
+        "style": true
+      }
+    },
+    {
+      "content": "<iframe src=\"$1\">$2</iframe>$3",
+      "doc": "HTML - Defines an inline sub window",
+      "label": "iframe",
+      "matches": {
+        "iframe": true
+      }
+    },
+    {
+      "content": "<figcaption>$1</figcaption>$2",
+      "doc": "HTML - Defines a caption for a figure",
+      "label": "figcaption",
+      "matches": {
+        "figcaption": true
+      }
+    },
+    {
+      "content": "<h1>$1</h1>$2",
+      "doc": "HTML - Defines header 1",
+      "label": "h1",
+      "matches": {
+        "h1": true
+      }
+    },
+    {
+      "content": "<link rel=\"$1\" type=\"$2\" href=\"$3\">$4",
+      "doc": "HTML - Defines a resource reference",
+      "label": "link",
+      "matches": {
+        "link": true
+      }
+    },
+    {
+      "content": "<rt>$1</rt>$2",
+      "doc": "HTML - Defines explanation to ruby annotations",
+      "label": "rt",
+      "matches": {
+        "rt": true
+      }
+    },
+    {
+      "content": "<section>\n\t$1\n</section>",
+      "doc": "HTML - Defines a section",
+      "label": "section",
+      "matches": {
+        "section": true
       }
     },
     {
@@ -978,19 +602,27 @@
       }
     },
     {
-      "content": "<meta name=\"$1\" content=\"$2\">$3",
-      "doc": "HTML - Defines meta information",
-      "label": "meta",
+      "content": "<command>$1</command>$2",
+      "doc": "HTML - Defines a command button [not supported]",
+      "label": "command",
       "matches": {
-        "meta": true
+        "command": true
       }
     },
     {
-      "content": "<dialog>$1</dialog>$2",
-      "doc": "HTML - Defines a dialog (conversation)",
-      "label": "dialog",
+      "content": "<script>\n\t$1\n</script>",
+      "doc": "HTML - Defines a script",
+      "label": "script",
       "matches": {
-        "dialog": true
+        "script": true
+      }
+    },
+    {
+      "content": "<keygen name=\"$1\">$2",
+      "doc": "HTML - Defines a generated key in a form",
+      "label": "keygen",
+      "matches": {
+        "keygen": true
       }
     },
     {
@@ -1002,6 +634,150 @@
       }
     },
     {
+      "content": "<ruby>\n$1\n</ruby>",
+      "doc": "HTML - Defines ruby annotations",
+      "label": "ruby",
+      "matches": {
+        "ruby": true
+      }
+    },
+    {
+      "content": "<kbd>$1</kbd>$2",
+      "doc": "HTML - Defines keyboard text",
+      "label": "kbd",
+      "matches": {
+        "kbd": true
+      }
+    },
+    {
+      "content": "<blockquote cite=\"$2\">\n\t$1\n</blockquote>",
+      "doc": "HTML - Defines a long quotation",
+      "label": "blockquote",
+      "matches": {
+        "blockquote": true
+      }
+    },
+    {
+      "content": "<h2>$1</h2>$2",
+      "doc": "HTML - Defines header 2",
+      "label": "h2",
+      "matches": {
+        "h2": true
+      }
+    },
+    {
+      "content": "<rp>$1</rp>$2",
+      "doc": "HTML - Used in ruby annotations to define what to show browsers that do not support the ruby element",
+      "label": "rp",
+      "matches": {
+        "rp": true
+      }
+    },
+    {
+      "content": "<option value=\"$1\">$2</option>$3",
+      "doc": "HTML - Defines an option in a drop-down list",
+      "label": "option",
+      "matches": {
+        "option": true
+      }
+    },
+    {
+      "content": "<legend>$1</legend>$2",
+      "doc": "HTML - Defines a title in a fieldset",
+      "label": "legend",
+      "matches": {
+        "legend": true
+      }
+    },
+    {
+      "content": "<br>",
+      "doc": "HTML - Inserts a single line break",
+      "label": "br",
+      "matches": {
+        "br": true
+      }
+    },
+    {
+      "content": "<sup>$1</sup>$2",
+      "doc": "HTML - Defines super-scripted text",
+      "label": "sup",
+      "matches": {
+        "sup": true
+      }
+    },
+    {
+      "content": "<li>$1</li>$2",
+      "doc": "HTML - Defines a list item",
+      "label": "li",
+      "matches": {
+        "li": true
+      }
+    },
+    {
+      "content": "<button type=\"$1\">$2</button>$3",
+      "doc": "HTML - Defines a push button",
+      "label": "button",
+      "matches": {
+        "button": true
+      }
+    },
+    {
+      "content": "<h4>$1</h4>$2",
+      "doc": "HTML - Defines header 4",
+      "label": "h4",
+      "matches": {
+        "h4": true
+      }
+    },
+    {
+      "content": "<menu>\n\t$1\n</menu>",
+      "doc": "HTML - Defines a menu list",
+      "label": "menu",
+      "matches": {
+        "menu": true
+      }
+    },
+    {
+      "content": "<canvas id=\"$1\">$2</canvas>$3",
+      "doc": "HTML - Defines graphics",
+      "label": "canvas",
+      "matches": {
+        "canvas": true
+      }
+    },
+    {
+      "content": "<q>$1</q>$2",
+      "doc": "HTML - Defines a short quotation",
+      "label": "q",
+      "matches": {
+        "q": true
+      }
+    },
+    {
+      "content": "<h5>$1</h5>$2",
+      "doc": "HTML - Defines header 5",
+      "label": "h5",
+      "matches": {
+        "h5": true
+      }
+    },
+    {
+      "content": "<caption>$1</caption>$2",
+      "doc": "HTML - Defines a table caption",
+      "label": "caption",
+      "matches": {
+        "caption": true
+      }
+    },
+    {
+      "content": "<object width=\"$1\" height=\"$2\" data=\"$3\">$4</object>$5",
+      "doc": "HTML - Defines an embedded object",
+      "label": "object",
+      "matches": {
+        "object": true
+      }
+    },
+    {
       "content": "<meter value=\"$1\">$2</meter>$3",
       "doc": "HTML - Defines measurement within a predefined range",
       "label": "meter",
@@ -1010,27 +786,235 @@
       }
     },
     {
-      "content": "<!DOCTYPE html>\n<html lang=\"$1en\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t<meta name=\"viewport\" content=\"width=${2:device-width}, initial-scale=${3:1.0}\">\n\t<title>${5:Document}</title>\n</head>\n<body>\n\t${6}\n</body>\n</html>",
-      "doc": "HTML - Defines a template for a html5 document",
-      "label": "!",
+      "content": "<h6>$1</h6>$2",
+      "doc": "HTML - Defines header 6",
+      "label": "h6",
       "matches": {
-        "!": true
+        "h6": true
       }
     },
     {
-      "content": "[routerLink]=\"['${1:routePath}', ${2:routeParameterValue}]\"\nrouterLinkActive=\"${3:router-link-active}\"$0",
-      "doc": "Angular routerLink with a route parameter",
-      "label": "ngRouterLinkWithParameter",
+      "content": "<meta name=\"$1\" content=\"$2\">$3",
+      "doc": "HTML - Defines meta information",
+      "label": "meta",
       "matches": {
-        "a-routerLink-param": true
+        "meta": true
       }
     },
     {
-      "content": "[formGroup]=\"${1:form}\"",
-      "doc": "Angular formGroup",
-      "label": "ngFormGroup",
+      "content": "<map name=\"$1\">\n\t$2\n</map>",
+      "doc": "HTML - Defines an image map",
+      "label": "map",
       "matches": {
-        "a-formGroup": true
+        "map": true
+      }
+    },
+    {
+      "content": "<label for=\"$1\">$2</label>$3",
+      "doc": "HTML - Defines an inline window",
+      "label": "label",
+      "matches": {
+        "label": true
+      }
+    },
+    {
+      "content": "<output name=\"$1\" for=\"$2\">$3</output>$4",
+      "doc": "HTML - Defines some types of output",
+      "label": "output",
+      "matches": {
+        "output": true
+      }
+    },
+    {
+      "content": "<mark>$1</mark>$2",
+      "doc": "HTML - Defines marked text",
+      "label": "mark",
+      "matches": {
+        "mark": true
+      }
+    },
+    {
+      "content": "<colgroup>\n\t$1\n</colgroup>",
+      "doc": "HTML - Defines group of table columns",
+      "label": "colgroup",
+      "matches": {
+        "colgroup": true
+      }
+    },
+    {
+      "content": "<menuitem>$1</menuitem>$2",
+      "doc": "HTML - Defines a menu item [firefox only]",
+      "label": "menuitem",
+      "matches": {
+        "menuitem": true
+      }
+    },
+    {
+      "content": "<input type=\"$1\" name=\"$2\" value=\"$3\">$4",
+      "doc": "HTML - Defines an input field",
+      "label": "input",
+      "matches": {
+        "input": true
+      }
+    },
+    {
+      "content": "<footer>\n\t$1\n</footer>",
+      "doc": "HTML - Defines a footer for a section or page",
+      "label": "footer",
+      "matches": {
+        "footer": true
+      }
+    },
+    {
+      "content": "<body>\n\t$0\n</body>",
+      "doc": "HTML - Defines the body element",
+      "label": "body",
+      "matches": {
+        "body": true
+      }
+    },
+    {
+      "content": "<span>$1</span>$2",
+      "doc": "HTML - Defines a section in a document",
+      "label": "span",
+      "matches": {
+        "span": true
+      }
+    },
+    {
+      "content": "<datalist>\n\t$1\n</datalist>",
+      "doc": "HTML - Defines a dropdown list",
+      "label": "datalist",
+      "matches": {
+        "datalist": true
+      }
+    },
+    {
+      "content": "<strong>$1</strong>$2",
+      "doc": "HTML - Defines strong text",
+      "label": "strong",
+      "matches": {
+        "strong": true
+      }
+    },
+    {
+      "content": "<address>\n$1\n</address>",
+      "doc": "HTML - Defines an address element",
+      "label": "address",
+      "matches": {
+        "address": true
+      }
+    },
+    {
+      "content": "<fieldset>\n\t$1\n</fieldset>",
+      "doc": "HTML - Defines a fieldset",
+      "label": "fieldset",
+      "matches": {
+        "fieldset": true
+      }
+    },
+    {
+      "content": "<dd>$1</dd>$2",
+      "doc": "HTML - Defines a definition description",
+      "label": "dd",
+      "matches": {
+        "dd": true
+      }
+    },
+    {
+      "content": "<header>\n\t$1\n</header>",
+      "doc": "HTML - Defines a header for a section of page",
+      "label": "header",
+      "matches": {
+        "header": true
+      }
+    },
+    {
+      "content": "<figure>\n\t$1\n</figure>",
+      "doc": "HTML - Defines a group of media content, and their caption",
+      "label": "figure",
+      "matches": {
+        "figure": true
+      }
+    },
+    {
+      "content": "<head>\n\t$1\n</head>",
+      "doc": "HTML - Defines information about the document",
+      "label": "head",
+      "matches": {
+        "head": true
+      }
+    },
+    {
+      "content": "<img src=\"$1\" alt=\"$2\">$3",
+      "doc": "HTML - Defines an image",
+      "label": "img",
+      "matches": {
+        "img": true
+      }
+    },
+    {
+      "content": "<form>\n\t$1\n</form>",
+      "doc": "HTML - Defines a form",
+      "label": "form",
+      "matches": {
+        "form": true
+      }
+    },
+    {
+      "content": "<sub>$1</sub>$2",
+      "doc": "HTML - Defines sub-scripted text",
+      "label": "sub",
+      "matches": {
+        "sub": true
+      }
+    },
+    {
+      "content": "<base href=\"$1\" target=\"$2\">$3",
+      "doc": "HTML - Defines a base URL for all the links in a page",
+      "label": "base",
+      "matches": {
+        "base": true
+      }
+    },
+    {
+      "content": "<dialog>$1</dialog>$2",
+      "doc": "HTML - Defines a dialog (conversation)",
+      "label": "dialog",
+      "matches": {
+        "dialog": true
+      }
+    },
+    {
+      "content": "<hr>",
+      "doc": "HTML - Defines a horizontal rule",
+      "label": "hr",
+      "matches": {
+        "hr": true
+      }
+    },
+    {
+      "content": "<a href=\"$1\">$2</a>$3",
+      "doc": "HTML - Defines a hyperlink",
+      "label": "a",
+      "matches": {
+        "a": true
+      }
+    },
+    {
+      "content": "<dfn>$1</dfn>$2",
+      "doc": "HTML - Defines a definition term",
+      "label": "dfn",
+      "matches": {
+        "dfn": true
+      }
+    },
+    {
+      "content": "<tbody>\n\t$1\n</tbody>",
+      "doc": "HTML - Defines a table body",
+      "label": "tbody",
+      "matches": {
+        "tbody": true
       }
     },
     {
@@ -1042,91 +1026,11 @@
       }
     },
     {
-      "content": "[ngClass]=\"{${1:cssClass}: ${2:expression}}\"",
-      "doc": "Angular ngClass",
-      "label": "ngClass",
-      "matches": {
-        "a-ngClass": true
-      }
-    },
-    {
-      "content": "<button type=\"submit\" [disabled]=\"!${1:form}.form.valid\">\n\tSave\n</button>",
-      "doc": "Angular form submit",
-      "label": "ngFormSubmit",
-      "matches": {
-        "a-form-submit": true
-      }
-    },
-    {
-      "content": "<ng-content select=\"${0:selector}\"></ng-content>",
-      "doc": "Angular ng-content",
-      "label": "ng-content",
-      "matches": {
-        "a-ng-content": true
-      }
-    },
-    {
-      "content": "<ng-template [ngTemplateOutlet]=\"${1:outlet}\" [ngOutletContext]=\"${2:context}\"></ng-template>",
-      "doc": "Angular ng-template",
-      "label": "ng-template",
-      "matches": {
-        "a-ng-template": true
-      }
-    },
-    {
       "content": "*ngFor=\"let ${1:item} of ${2:list}; trackBy:${1:item}.id\"${0}",
       "doc": "Angular *ngFor with trackBy",
       "label": "ngFor with trackBy",
       "matches": {
         "a-ngFor-trackBy": true
-      }
-    },
-    {
-      "content": "<ng-container $0></ng-container>",
-      "doc": "Angular ng-container",
-      "label": "ng-container",
-      "matches": {
-        "a-ng-container": true
-      }
-    },
-    {
-      "content": "*ngIf=\"${1:expression}\"",
-      "doc": "Angular *ngIf",
-      "label": "ngIf",
-      "matches": {
-        "a-ngIf": true
-      }
-    },
-    {
-      "content": "<pre>{{${1:model} | async | json}}</pre>$0",
-      "doc": "Angular pre debug | async | json",
-      "label": "pre w/ async json",
-      "matches": {
-        "a-preja": true
-      }
-    },
-    {
-      "content": "*ngFor=\"let ${1:item} of ${2:stream} | async as ${3:list}\"${0}",
-      "doc": "Angular *ngForAsync",
-      "label": "ngForAsync",
-      "matches": {
-        "a-ngForAsync": true
-      }
-    },
-    {
-      "content": "<pre>{{${1:model} | json}}</pre>$0",
-      "doc": "Angular pre debug | json",
-      "label": "pre w/ json",
-      "matches": {
-        "a-prej": true
-      }
-    },
-    {
-      "content": "*ngIf=\"${1:expression};else ${2:templateName}\"",
-      "doc": "Angular *ngIfElse",
-      "label": "ngIfElse",
-      "matches": {
-        "a-ngIfElse": true
       }
     },
     {
@@ -1138,6 +1042,30 @@
       }
     },
     {
+      "content": "*ngIf=\"${1:expression}\"",
+      "doc": "Angular *ngIf",
+      "label": "ngIf",
+      "matches": {
+        "a-ngIf": true
+      }
+    },
+    {
+      "content": "*ngFor=\"let ${1:item} of ${2:stream} | async as ${3:list}\"${0}",
+      "doc": "Angular *ngForAsync",
+      "label": "ngForAsync",
+      "matches": {
+        "a-ngForAsync": true
+      }
+    },
+    {
+      "content": "*ngIf=\"${1:expression};else ${2:templateName}\"",
+      "doc": "Angular *ngIfElse",
+      "label": "ngIfElse",
+      "matches": {
+        "a-ngIfElse": true
+      }
+    },
+    {
       "content": "<form (ngSubmit)=\"onSubmit()\" #${1:form}=\"ngForm\">\n</form>",
       "doc": "Form with ngSubmit and form attributes",
       "label": "ngForm",
@@ -1146,11 +1074,11 @@
       }
     },
     {
-      "content": "[ngStyle]=\"{${1:style}: ${2:expression}}\"",
-      "doc": "Angular ngStyle",
-      "label": "ngStyle",
+      "content": "<pre>{{${1:model} | json}}</pre>$0",
+      "doc": "Angular pre debug | json",
+      "label": "pre w/ json",
       "matches": {
-        "a-ngStyle": true
+        "a-prej": true
       }
     },
     {
@@ -1162,27 +1090,11 @@
       }
     },
     {
-      "content": "<select [(ngModel)]=\"${1:model}\">\n\t<option *ngFor=\"let ${2:item} of ${3:list}\" [value]=\"${2:item}\">{{${2:item}}}</option>\n</select>",
-      "doc": "<select> control with ngModel",
-      "label": "ngSelect",
-      "matches": {
-        "a-select": true
-      }
-    },
-    {
       "content": "formArrayName=\"${1:control}\"",
       "doc": "Angular formArrayName",
       "label": "ngFormArrayName",
       "matches": {
         "a-formArrayName": true
-      }
-    },
-    {
-      "content": "*ngFor=\"let ${1:item} of ${2:list}\"${0}",
-      "doc": "Angular *ngFor",
-      "label": "ngFor",
-      "matches": {
-        "a-ngFor": true
       }
     },
     {
@@ -1194,11 +1106,11 @@
       }
     },
     {
-      "content": "[class]=\"${1:expression}\"",
-      "doc": "Angular [class] binding",
-      "label": "class",
+      "content": "<ng-content select=\"${0:selector}\"></ng-content>",
+      "doc": "Angular ng-content",
+      "label": "ng-content",
       "matches": {
-        "a-class": true
+        "a-ng-content": true
       }
     },
     {
@@ -1210,6 +1122,62 @@
       }
     },
     {
+      "content": "<ng-template [ngTemplateOutlet]=\"${1:outlet}\" [ngOutletContext]=\"${2:context}\"></ng-template>",
+      "doc": "Angular ng-template",
+      "label": "ng-template",
+      "matches": {
+        "a-ng-template": true
+      }
+    },
+    {
+      "content": "[routerLink]=\"['${1:routePath}', ${2:routeParameterValue}]\"\nrouterLinkActive=\"${3:router-link-active}\"$0",
+      "doc": "Angular routerLink with a route parameter",
+      "label": "ngRouterLinkWithParameter",
+      "matches": {
+        "a-routerLink-param": true
+      }
+    },
+    {
+      "content": "<ng-container $0></ng-container>",
+      "doc": "Angular ng-container",
+      "label": "ng-container",
+      "matches": {
+        "a-ng-container": true
+      }
+    },
+    {
+      "content": "[formGroup]=\"${1:form}\"",
+      "doc": "Angular formGroup",
+      "label": "ngFormGroup",
+      "matches": {
+        "a-formGroup": true
+      }
+    },
+    {
+      "content": "<pre>{{${1:model} | async | json}}</pre>$0",
+      "doc": "Angular pre debug | async | json",
+      "label": "pre w/ async json",
+      "matches": {
+        "a-preja": true
+      }
+    },
+    {
+      "content": "[ngStyle]=\"{${1:style}: ${2:expression}}\"",
+      "doc": "Angular ngStyle",
+      "label": "ngStyle",
+      "matches": {
+        "a-ngStyle": true
+      }
+    },
+    {
+      "content": "[ngClass]=\"{${1:cssClass}: ${2:expression}}\"",
+      "doc": "Angular ngClass",
+      "label": "ngClass",
+      "matches": {
+        "a-ngClass": true
+      }
+    },
+    {
       "content": "[formGroupName]=\"${1:name}\"",
       "doc": "Angular formGroupName",
       "label": "ngFormGroupName",
@@ -1218,27 +1186,35 @@
       }
     },
     {
-      "content": "tag=\"$1\"$0",
-      "doc": "tag=''",
-      "label": "tag",
+      "content": "<select [(ngModel)]=\"${1:model}\">\n\t<option *ngFor=\"let ${2:item} of ${3:list}\" [value]=\"${2:item}\">{{${2:item}}}</option>\n</select>",
+      "doc": "<select> control with ngModel",
+      "label": "ngSelect",
       "matches": {
-        "tag": true
+        "a-select": true
       }
     },
     {
-      "content": "v-for=\"(${1:item}, ${2:index}) in ${3:items}\" :key=\"${4:index}\"",
-      "doc": "Expects: Array | Object | number | string",
-      "label": "v-for",
+      "content": "[class]=\"${1:expression}\"",
+      "doc": "Angular [class] binding",
+      "label": "class",
       "matches": {
-        "vFor": true
+        "a-class": true
       }
     },
     {
-      "content": "<Teleport to=\"$1\">\n$0\n</Teleport>",
-      "doc": "<Teleport> is a built-in component that allows us to 'teleport' a part of a component's template into a DOM node that exists outside the DOM hierarchy of that component.",
-      "label": "teleport",
+      "content": "*ngFor=\"let ${1:item} of ${2:list}\"${0}",
+      "doc": "Angular *ngFor",
+      "label": "ngFor",
       "matches": {
-        "teleport": true
+        "a-ngFor": true
+      }
+    },
+    {
+      "content": "<button type=\"submit\" [disabled]=\"!${1:form}.form.valid\">\n\tSave\n</button>",
+      "doc": "Angular form submit",
+      "label": "ngFormSubmit",
+      "matches": {
+        "a-form-submit": true
       }
     },
     {
@@ -1250,19 +1226,11 @@
       }
     },
     {
-      "content": "<Suspense>\n$0\n</Suspense>",
-      "doc": "<Suspense> will render its default slot content in memory. If any async dependencies are encountered during the process, it will enter a pending state.",
-      "label": "suspense",
+      "content": "<keep-alive$1>\n$2\n</keep-alive>$0",
+      "doc": "keep-alive element",
+      "label": "keep-alive",
       "matches": {
-        "suspense": true
-      }
-    },
-    {
-      "content": ":key=\"${1:key}\"",
-      "doc": "Expects: string. Children of the same common parent must have unique keys. Duplicate keys will cause render errors.",
-      "label": "key",
-      "matches": {
-        "key": true
+        "keepAlive": true
       }
     },
     {
@@ -1274,94 +1242,6 @@
       }
     },
     {
-      "content": "<router-view>$1</router-view>$0",
-      "doc": "router-view element",
-      "label": "routerView",
-      "matches": {
-        "routerView": true
-      }
-    },
-    {
-      "content": "to=\"$1\"$0",
-      "doc": "to=''",
-      "label": "to",
-      "matches": {
-        "to": true
-      }
-    },
-    {
-      "content": "<router-link to=\"$1\">$2</router-link>$0",
-      "doc": "<router-link to=''></router-link>. router-link element",
-      "label": "routerLinkTo",
-      "matches": {
-        "routerLinkTo": true
-      }
-    },
-    {
-      "content": "v-model=\"${1:something}\"",
-      "doc": "Expects: varies based on value of form inputs element or output of components",
-      "label": "v-model",
-      "matches": {
-        "vModel": true
-      }
-    },
-    {
-      "content": "<slot$1>$2</slot>$0",
-      "doc": "<slot></slot>. Expects: string. Used on content inserted into child components to indicate which named slot the content belongs to.",
-      "label": "slotE",
-      "matches": {
-        "slotE": true
-      }
-    },
-    {
-      "content": "<transition-group$1>\n$2\n</transition-group>",
-      "doc": "transition-group element",
-      "label": "transition-group",
-      "matches": {
-        "transitionGroup": true
-      }
-    },
-    {
-      "content": "ref=\"${1:reference}\"$0",
-      "doc": "Expects: string. ref is used to register a reference to an element or a child component. The reference will be registered under the parent component’s $refs object. If used on a plain DOM element, the reference will be that element; if used on a child component, the reference will be component instance.",
-      "label": "ref",
-      "matches": {
-        "ref": true
-      }
-    },
-    {
-      "content": "#{$1:nameSlot}=\"${2}\"",
-      "doc": "Expects: JavaScript expression that is valid in a function argument position (supports destructuring in supported environments). Optional - only needed if expecting props to be passed to the slot.",
-      "label": "v-slot",
-      "matches": {
-        "vSlot": true
-      }
-    },
-    {
-      "content": "<component :is=\"${1:componentId}\"></component>$0",
-      "doc": "component element",
-      "label": "component",
-      "matches": {
-        "component": true
-      }
-    },
-    {
-      "content": "<keep-alive$1>\n$2\n</keep-alive>$0",
-      "doc": "keep-alive element",
-      "label": "keep-alive",
-      "matches": {
-        "keepAlive": true
-      }
-    },
-    {
-      "content": "<transition$1>\n$2\n</transition>$0",
-      "doc": "transition element",
-      "label": "transition",
-      "matches": {
-        "transition": true
-      }
-    },
-    {
       "content": "v-if=\"${1:condition}\"",
       "doc": "Expects: any",
       "label": "v-if",
@@ -1370,59 +1250,19 @@
       }
     },
     {
-      "content": "<router-link $1>$2</router-link>$0",
-      "doc": "router-link element",
-      "label": "routerLink",
+      "content": "<Teleport to=\"$1\">\n$0\n</Teleport>",
+      "doc": "<Teleport> is a built-in component that allows us to 'teleport' a part of a component's template into a DOM node that exists outside the DOM hierarchy of that component.",
+      "label": "teleport",
       "matches": {
-        "routerLink": true
+        "teleport": true
       }
     },
     {
-      "content": "v-else",
-      "doc": "Does not expect expression. previous sibling element must have v-if or v-else-if.",
-      "label": "v-else",
+      "content": ":key=\"${1:key}\"",
+      "doc": "Expects: string. Children of the same common parent must have unique keys. Duplicate keys will cause render errors.",
+      "label": "key",
       "matches": {
-        "vElse": true
-      }
-    },
-    {
-      "content": "v-cloak",
-      "doc": "Does not expect expression",
-      "label": "v-cloak",
-      "matches": {
-        "vCloak": true
-      }
-    },
-    {
-      "content": "v-show=\"${1:condition}\"",
-      "doc": "Expects: any",
-      "label": "v-show",
-      "matches": {
-        "vShow": true
-      }
-    },
-    {
-      "content": "v-once",
-      "doc": "Does not expect expression",
-      "label": "v-once",
-      "matches": {
-        "vOnce": true
-      }
-    },
-    {
-      "content": "<template>\n\t<${1:div}$2>\n\t\t$0\n\t</${1:div}>\n</template>",
-      "doc": "template element",
-      "label": "template",
-      "matches": {
-        "template": true
-      }
-    },
-    {
-      "content": "v-else-if=\"${1:condition}\"",
-      "doc": "Expects: any. previous sibling element must have v-if or v-else-if.",
-      "label": "v-else-if",
-      "matches": {
-        "vElseIf": true
+        "key": true
       }
     },
     {
@@ -1434,11 +1274,139 @@
       }
     },
     {
-      "content": ":{$1}=\"${2}\"",
-      "doc": "Expects: any (with argument) | Object (without argument)",
-      "label": "v-bind-shorthand",
+      "content": "<transition$1>\n$2\n</transition>$0",
+      "doc": "transition element",
+      "label": "transition",
       "matches": {
-        "vBind": true
+        "transition": true
+      }
+    },
+    {
+      "content": "<template>\n\t<${1:div}$2>\n\t\t$0\n\t</${1:div}>\n</template>",
+      "doc": "template element",
+      "label": "template",
+      "matches": {
+        "template": true
+      }
+    },
+    {
+      "content": "<transition-group$1>\n$2\n</transition-group>",
+      "doc": "transition-group element",
+      "label": "transition-group",
+      "matches": {
+        "transitionGroup": true
+      }
+    },
+    {
+      "content": "#{$1:nameSlot}=\"${2}\"",
+      "doc": "Expects: JavaScript expression that is valid in a function argument position (supports destructuring in supported environments). Optional - only needed if expecting props to be passed to the slot.",
+      "label": "v-slot",
+      "matches": {
+        "vSlot": true
+      }
+    },
+    {
+      "content": "<router-view>$1</router-view>$0",
+      "doc": "router-view element",
+      "label": "routerView",
+      "matches": {
+        "routerView": true
+      }
+    },
+    {
+      "content": "v-model=\"${1:something}\"",
+      "doc": "Expects: varies based on value of form inputs element or output of components",
+      "label": "v-model",
+      "matches": {
+        "vModel": true
+      }
+    },
+    {
+      "content": "to=\"$1\"$0",
+      "doc": "to=''",
+      "label": "to",
+      "matches": {
+        "to": true
+      }
+    },
+    {
+      "content": "v-pre",
+      "doc": "Does not expect expression",
+      "label": "v-pre",
+      "matches": {
+        "vPre": true
+      }
+    },
+    {
+      "content": "<router-link to=\"$1\">$2</router-link>$0",
+      "doc": "<router-link to=''></router-link>. router-link element",
+      "label": "routerLinkTo",
+      "matches": {
+        "routerLinkTo": true
+      }
+    },
+    {
+      "content": "ref=\"${1:reference}\"$0",
+      "doc": "Expects: string. ref is used to register a reference to an element or a child component. The reference will be registered under the parent component’s $refs object. If used on a plain DOM element, the reference will be that element; if used on a child component, the reference will be component instance.",
+      "label": "ref",
+      "matches": {
+        "ref": true
+      }
+    },
+    {
+      "content": "v-cloak",
+      "doc": "Does not expect expression",
+      "label": "v-cloak",
+      "matches": {
+        "vCloak": true
+      }
+    },
+    {
+      "content": "<router-link $1>$2</router-link>$0",
+      "doc": "router-link element",
+      "label": "routerLink",
+      "matches": {
+        "routerLink": true
+      }
+    },
+    {
+      "content": "v-once",
+      "doc": "Does not expect expression",
+      "label": "v-once",
+      "matches": {
+        "vOnce": true
+      }
+    },
+    {
+      "content": "v-else-if=\"${1:condition}\"",
+      "doc": "Expects: any. previous sibling element must have v-if or v-else-if.",
+      "label": "v-else-if",
+      "matches": {
+        "vElseIf": true
+      }
+    },
+    {
+      "content": "<component :is=\"${1:componentId}\"></component>$0",
+      "doc": "component element",
+      "label": "component",
+      "matches": {
+        "component": true
+      }
+    },
+    {
+      "content": "<slot$1>$2</slot>$0",
+      "doc": "<slot></slot>. Expects: string. Used on content inserted into child components to indicate which named slot the content belongs to.",
+      "label": "slotE",
+      "matches": {
+        "slotE": true
+      }
+    },
+    {
+      "content": "<Suspense>\n$0\n</Suspense>",
+      "doc": "<Suspense> will render its default slot content in memory. If any async dependencies are encountered during the process, it will enter a pending state.",
+      "label": "suspense",
+      "matches": {
+        "suspense": true
       }
     },
     {
@@ -1458,27 +1426,43 @@
       }
     },
     {
-      "content": "v-pre",
-      "doc": "Does not expect expression",
-      "label": "v-pre",
+      "content": "v-show=\"${1:condition}\"",
+      "doc": "Expects: any",
+      "label": "v-show",
       "matches": {
-        "vPre": true
+        "vShow": true
       }
     },
     {
-      "content": "[routerLink]=\"['${1:routePath}', ${2:routeParameterValue}]\"\nrouterLinkActive=\"${3:router-link-active}\"$0",
-      "doc": "Angular routerLink with a route parameter",
-      "label": "ngRouterLinkWithParameter",
+      "content": ":{$1}=\"${2}\"",
+      "doc": "Expects: any (with argument) | Object (without argument)",
+      "label": "v-bind-shorthand",
       "matches": {
-        "a-routerLink-param": true
+        "vBind": true
       }
     },
     {
-      "content": "[formGroup]=\"${1:form}\"",
-      "doc": "Angular formGroup",
-      "label": "ngFormGroup",
+      "content": "v-for=\"(${1:item}, ${2:index}) in ${3:items}\" :key=\"${4:index}\"",
+      "doc": "Expects: Array | Object | number | string",
+      "label": "v-for",
       "matches": {
-        "a-formGroup": true
+        "vFor": true
+      }
+    },
+    {
+      "content": "tag=\"$1\"$0",
+      "doc": "tag=''",
+      "label": "tag",
+      "matches": {
+        "tag": true
+      }
+    },
+    {
+      "content": "v-else",
+      "doc": "Does not expect expression. previous sibling element must have v-if or v-else-if.",
+      "label": "v-else",
+      "matches": {
+        "vElse": true
       }
     },
     {
@@ -1490,31 +1474,7 @@
       }
     },
     {
-      "content": "[ngClass]=\"{${1:cssClass}: ${2:expression}}\"",
-      "doc": "Angular ngClass",
-      "label": "ngClass",
-      "matches": {
-        "a-ngClass": true
-      }
-    },
-    {
-      "content": "<button type=\"submit\" [disabled]=\"!${1:form}.form.valid\">\n\tSave\n</button>",
-      "doc": "Angular form submit",
-      "label": "ngFormSubmit",
-      "matches": {
-        "a-form-submit": true
-      }
-    },
-    {
-      "content": "<ng-content select=\"[${0:selector}]\"></ng-content>",
-      "doc": "Angular ng-content",
-      "label": "ng-content",
-      "matches": {
-        "a-ng-content": true
-      }
-    },
-    {
-      "content": "*ngFor=\"let ${1:item} of ${2:list}; trackBy:${1:trackByFnName}\"${0}",
+      "content": "*ngFor=\"let ${1:item} of ${2:list}; trackBy:${3:trackByFnName}\"${0}",
       "doc": "Angular *ngFor with trackBy",
       "label": "ngFor with trackBy",
       "matches": {
@@ -1522,11 +1482,11 @@
       }
     },
     {
-      "content": "<ng-container $0></ng-container>",
-      "doc": "Angular ng-container",
-      "label": "ng-container",
+      "content": "@if (${1:expression}) {\n\t${0}\n}",
+      "doc": "Angular @if control-flow block",
+      "label": "@if block",
       "matches": {
-        "a-ng-container": true
+        "a-if": true
       }
     },
     {
@@ -1538,27 +1498,11 @@
       }
     },
     {
-      "content": "<pre>{{${1:model} | async | json}}</pre>$0",
-      "doc": "Angular pre debug | async | json",
-      "label": "pre w/ async json",
-      "matches": {
-        "a-preja": true
-      }
-    },
-    {
       "content": "*ngFor=\"let ${1:item} of ${2:stream} | async as ${3:list}\"${0}",
       "doc": "Angular *ngForAsync",
       "label": "ngForAsync",
       "matches": {
         "a-ngForAsync": true
-      }
-    },
-    {
-      "content": "<pre>{{${1:model} | json}}</pre>$0",
-      "doc": "Angular pre debug | json",
-      "label": "pre w/ json",
-      "matches": {
-        "a-prej": true
       }
     },
     {
@@ -1570,14 +1514,6 @@
       }
     },
     {
-      "content": "<div [ngSwitch]=\"${1:conditionExpression}\">\n\t<div *ngSwitchCase=\"${2:expression}\">${3:output}</div>\n\t<div *ngSwitchDefault>${4:output2}</div>\n</div>",
-      "doc": "Angular ngSwitch",
-      "label": "ngSwitch",
-      "matches": {
-        "a-ngSwitch": true
-      }
-    },
-    {
       "content": "<form (ngSubmit)=\"onSubmit()\" #${1:form}=\"ngForm\">\n</form>",
       "doc": "Form with ngSubmit and form attributes",
       "label": "ngForm",
@@ -1586,11 +1522,11 @@
       }
     },
     {
-      "content": "[ngStyle]=\"{${1:style}: ${2:expression}}\"",
-      "doc": "Angular ngStyle",
-      "label": "ngStyle",
+      "content": "<pre>{{${1:model} | json}}</pre>$0",
+      "doc": "Angular pre debug | json",
+      "label": "pre w/ json",
       "matches": {
-        "a-ngStyle": true
+        "a-prej": true
       }
     },
     {
@@ -1602,14 +1538,6 @@
       }
     },
     {
-      "content": "<select [(ngModel)]=\"${1:model}\">\n\t<option *ngFor=\"let ${2:item} of ${3:list}\" [value]=\"${2:item}\">{{${2:item}}}</option>\n</select>",
-      "doc": "<select> control with ngModel",
-      "label": "ngSelect",
-      "matches": {
-        "a-select": true
-      }
-    },
-    {
       "content": "formArrayName=\"${1:control}\"",
       "doc": "Angular formArrayName",
       "label": "ngFormArrayName",
@@ -1618,11 +1546,11 @@
       }
     },
     {
-      "content": "*ngFor=\"let ${1:item} of ${2:list}\"${0}",
-      "doc": "Angular *ngFor",
-      "label": "ngFor",
+      "content": "<ng-content select=\"[${0:selector}]\"></ng-content>",
+      "doc": "Angular ng-content",
+      "label": "ng-content",
       "matches": {
-        "a-ngFor": true
+        "a-ng-content": true
       }
     },
     {
@@ -1634,11 +1562,11 @@
       }
     },
     {
-      "content": "[class]=\"${1:expression}\"",
-      "doc": "Angular [class] binding",
-      "label": "class",
+      "content": "<ng-container $0></ng-container>",
+      "doc": "Angular ng-container",
+      "label": "ng-container",
       "matches": {
-        "a-class": true
+        "a-ng-container": true
       }
     },
     {
@@ -1650,11 +1578,99 @@
       }
     },
     {
+      "content": "<pre>{{${1:model} | async | json}}</pre>$0",
+      "doc": "Angular pre debug | async | json",
+      "label": "pre w/ async json",
+      "matches": {
+        "a-preja": true
+      }
+    },
+    {
+      "content": "[routerLink]=\"['${1:routePath}', ${2:routeParameterValue}]\"\nrouterLinkActive=\"${3:router-link-active}\"$0",
+      "doc": "Angular routerLink with a route parameter",
+      "label": "ngRouterLinkWithParameter",
+      "matches": {
+        "a-routerLink-param": true
+      }
+    },
+    {
+      "content": "@for (${1:item} of ${2:items}; track ${3:item.id}) {\n\t${0}\n}",
+      "doc": "Angular @for control-flow block",
+      "label": "@for block",
+      "matches": {
+        "a-for": true
+      }
+    },
+    {
+      "content": "[formGroup]=\"${1:form}\"",
+      "doc": "Angular formGroup",
+      "label": "ngFormGroup",
+      "matches": {
+        "a-formGroup": true
+      }
+    },
+    {
+      "content": "<div [ngSwitch]=\"${1:conditionExpression}\">\n\t<div *ngSwitchCase=\"${2:expression}\">${3:output}</div>\n\t<div *ngSwitchDefault>${4:output2}</div>\n</div>",
+      "doc": "Angular ngSwitch",
+      "label": "ngSwitch",
+      "matches": {
+        "a-ngSwitch": true
+      }
+    },
+    {
+      "content": "[ngStyle]=\"{${1:style}: ${2:expression}}\"",
+      "doc": "Angular ngStyle",
+      "label": "ngStyle",
+      "matches": {
+        "a-ngStyle": true
+      }
+    },
+    {
+      "content": "[ngClass]=\"{${1:cssClass}: ${2:expression}}\"",
+      "doc": "Angular ngClass",
+      "label": "ngClass",
+      "matches": {
+        "a-ngClass": true
+      }
+    },
+    {
       "content": "[formGroupName]=\"${1:name}\"",
       "doc": "Angular formGroupName",
       "label": "ngFormGroupName",
       "matches": {
         "a-formGroupName": true
+      }
+    },
+    {
+      "content": "<select [(ngModel)]=\"${1:model}\">\n\t<option *ngFor=\"let ${2:item} of ${3:list}\" [value]=\"${2:item}\">{{${2:item}}}</option>\n</select>",
+      "doc": "<select> control with ngModel",
+      "label": "ngSelect",
+      "matches": {
+        "a-select": true
+      }
+    },
+    {
+      "content": "[class]=\"${1:expression}\"",
+      "doc": "Angular [class] binding",
+      "label": "class",
+      "matches": {
+        "a-class": true
+      }
+    },
+    {
+      "content": "*ngFor=\"let ${1:item} of ${2:list}\"${0}",
+      "doc": "Angular *ngFor",
+      "label": "ngFor",
+      "matches": {
+        "a-ngFor": true
+      }
+    },
+    {
+      "content": "<button type=\"submit\" [disabled]=\"!${1:form}.form.valid\">\n\tSave\n</button>",
+      "doc": "Angular form submit",
+      "label": "ngFormSubmit",
+      "matches": {
+        "a-form-submit": true
       }
     },
     {

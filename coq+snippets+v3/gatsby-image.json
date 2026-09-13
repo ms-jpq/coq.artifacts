@@ -2,6 +2,14 @@
   "extends": [],
   "snippets": [
     {
+      "content": "import ${1:Img} from 'gatsby-image';",
+      "doc": "",
+      "label": "gatsby-image-import",
+      "matches": {
+        "gatsby-image import": true
+      }
+    },
+    {
       "content": "import ${1:Img} from \"gatsby-image/withIEPolyfill\"",
       "doc": "",
       "label": "gatsby-image-import-withiepolyfill",
@@ -23,14 +31,6 @@
       "label": "gatsby-image-usestaticquery-fixed",
       "matches": {
         "gatsby-image usestaticquery fixed": true
-      }
-    },
-    {
-      "content": "import ${1:Img} from 'gatsby-image';",
-      "doc": "",
-      "label": "gatsby-image-import",
-      "matches": {
-        "gatsby-image import": true
       }
     }
   ]

@@ -2,11 +2,27 @@
   "extends": [],
   "snippets": [
     {
+      "content": "urlpatterns = [\n\t$0\n]",
+      "doc": "",
+      "label": "urlpatterns",
+      "matches": {
+        "urlpatterns": true
+      }
+    },
+    {
       "content": "from django.urls import ${1|reverse,reverse_lazy,resolve,get_script_prefix|}",
       "doc": "Utility functions for use in URLconfs.",
       "label": "urls (≥1.10 & ≤1.11)",
       "matches": {
         "iurls": true
+      }
+    },
+    {
+      "content": "from django.conf.urls import ${1|static,url,include,handler400,handler403,handler404,handler500|}",
+      "doc": "Utility functions for use in URLconfs.",
+      "label": "conf.urls (≤1.11)",
+      "matches": {
+        "iconf_urls": true
       }
     },
     {
@@ -18,27 +34,11 @@
       }
     },
     {
-      "content": "urlpatterns = [\n\t$0\n]",
-      "doc": "",
-      "label": "urlpatterns",
-      "matches": {
-        "urlpatterns": true
-      }
-    },
-    {
       "content": "from django.urls import ${1|path,re_path,include,reverse,reverse_lazy,register_converter|}",
       "doc": "Utility functions for use in URLconfs.",
       "label": "urls (≥2.0)",
       "matches": {
         "iurls": true
-      }
-    },
-    {
-      "content": "from django.core.urlresolvers import ${1|reverse,reverse_lazy,resolve,get_script_prefix|}",
-      "doc": "*Deprecated since version 1.10*\n\nUtility functions.",
-      "label": "urlresolvers",
-      "matches": {
-        "iurlresolvers": true
       }
     },
     {
@@ -50,19 +50,19 @@
       }
     },
     {
+      "content": "from django.core.urlresolvers import ${1|reverse,reverse_lazy,resolve,get_script_prefix|}",
+      "doc": "*Deprecated since version 1.10*\n\nUtility functions.",
+      "label": "urlresolvers",
+      "matches": {
+        "iurlresolvers": true
+      }
+    },
+    {
       "content": "path('${1:ROUTE}/', ${2:VIEW}${3:.as_view()}, name='$4'),",
       "doc": "path(route, view, kwargs=None, name=None)",
       "label": "path_inline",
       "matches": {
         "path_inline": true
-      }
-    },
-    {
-      "content": "from django.conf.urls import ${1|static,url,include,handler400,handler403,handler404,handler500|}",
-      "doc": "Utility functions for use in URLconfs.",
-      "label": "conf.urls (≤1.11)",
-      "matches": {
-        "iconf_urls": true
       }
     }
   ]

@@ -2,6 +2,22 @@
   "extends": [],
   "snippets": [
     {
+      "content": "${1:x} <- ${2:undefined}$0",
+      "doc": "Monadic get",
+      "label": "get",
+      "matches": {
+        "get": true
+      }
+    },
+    {
+      "content": "import qualified ${1:module} as ${2:name}",
+      "doc": "Qualified import",
+      "label": "import_qualified",
+      "matches": {
+        "import qual": true
+      }
+    },
+    {
       "content": "instance ${1:Class} ${2:Data} where\n\t${3:f} = ${4:undefined}$0",
       "doc": "typeclass instance",
       "label": "instance",
@@ -10,44 +26,11 @@
       }
     },
     {
-      "content": "if ${1:condition} then ${2:undefined} else ${3:undefined}$0,",
-      "doc": "If inline",
-      "label": "if_inline",
+      "content": "if ${1:condition}\n\tthen ${2:undefined}\n\telse ${3:undefined}$0",
+      "doc": "If block",
+      "label": "if",
       "matches": {
-        "if inline": true
-      }
-    },
-    {
-      "content": "\\\\${1:x} -> ${2:undefined}$0",
-      "doc": "lambda function",
-      "label": "lambda",
-      "matches": {
-        "\\": true,
-        "lambda": true
-      }
-    },
-    {
-      "content": "{-# OPTIONS_GHC ${1:opt} #-}$0",
-      "doc": "GHC options pragma",
-      "label": "opt pragma",
-      "matches": {
-        "opt": true
-      }
-    },
-    {
-      "content": "case ${1:expression} of\n\t${2:case1} -> ${3:result}\n\t${4:case2} -> ${5:result}$0",
-      "doc": "Case statement",
-      "label": "case",
-      "matches": {
-        "case": true
-      }
-    },
-    {
-      "content": "{-# LANGUAGE ${1:extension} #-}$0",
-      "doc": "Language extension pragma",
-      "label": "pragma",
-      "matches": {
-        "lang": true
+        "if simple": true
       }
     },
     {
@@ -60,27 +43,12 @@
       }
     },
     {
-      "content": "module Main where\n\n\nmain :: IO ()\nmain = do\n\t${1:undefined}$0\nreturn ()",
-      "doc": "main module",
-      "label": "main",
+      "content": "\\\\${1:x} -> ${2:undefined}$0",
+      "doc": "lambda function",
+      "label": "lambda",
       "matches": {
-        "main": true
-      }
-    },
-    {
-      "content": "${1:x} <- ${2:undefined}$0",
-      "doc": "Monadic get",
-      "label": "get",
-      "matches": {
-        "get": true
-      }
-    },
-    {
-      "content": "let ${1:x} = ${2:undefined}$0",
-      "doc": "let statement",
-      "label": "let",
-      "matches": {
-        "let": true
+        "\\": true,
+        "lambda": true
       }
     },
     {
@@ -94,19 +62,51 @@
       }
     },
     {
-      "content": "import qualified ${1:module} as ${2:name}",
-      "doc": "Qualified import",
-      "label": "import_qualified",
+      "content": "{-# LANGUAGE ${1:extension} #-}$0",
+      "doc": "Language extension pragma",
+      "label": "pragma",
       "matches": {
-        "import qual": true
+        "lang": true
       }
     },
     {
-      "content": "if ${1:condition}\n\tthen ${2:undefined}\n\telse ${3:undefined}$0",
-      "doc": "If block",
-      "label": "if",
+      "content": "let ${1:x} = ${2:undefined}$0",
+      "doc": "let statement",
+      "label": "let",
       "matches": {
-        "if simple": true
+        "let": true
+      }
+    },
+    {
+      "content": "if ${1:condition} then ${2:undefined} else ${3:undefined}$0,",
+      "doc": "If inline",
+      "label": "if_inline",
+      "matches": {
+        "if inline": true
+      }
+    },
+    {
+      "content": "{-# OPTIONS_GHC ${1:opt} #-}$0",
+      "doc": "GHC options pragma",
+      "label": "opt pragma",
+      "matches": {
+        "opt": true
+      }
+    },
+    {
+      "content": "module Main where\n\n\nmain :: IO ()\nmain = do\n\t${1:undefined}$0\nreturn ()",
+      "doc": "main module",
+      "label": "main",
+      "matches": {
+        "main": true
+      }
+    },
+    {
+      "content": "case ${1:expression} of\n\t${2:case1} -> ${3:result}\n\t${4:case2} -> ${5:result}$0",
+      "doc": "Case statement",
+      "label": "case",
+      "matches": {
+        "case": true
       }
     },
     {

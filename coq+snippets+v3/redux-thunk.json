@@ -2,19 +2,19 @@
   "extends": [],
   "snippets": [
     {
-      "content": "import thunk from 'redux-thunk'",
-      "doc": "Import thunk from redux-thunk",
-      "label": "redux-thunk-import",
-      "matches": {
-        "redux-thunk import": true
-      }
-    },
-    {
       "content": "import { createStore, applyMiddleware } from 'redux';\nimport thunk from 'redux-thunk';\nimport ${1:rootReducer} from '${1:./reducers/index}';\n\nconst store = createStore(\n  ${1:rootReducer},\n  applyMiddleware(thunk)\n);",
       "doc": "Create store with thunk template",
       "label": "redux-thunk-store",
       "matches": {
         "redux-thunk createstore": true
+      }
+    },
+    {
+      "content": "import thunk from 'redux-thunk'",
+      "doc": "Import thunk from redux-thunk",
+      "label": "redux-thunk-import",
+      "matches": {
+        "redux-thunk import": true
       }
     }
   ]

@@ -2,19 +2,19 @@
   "extends": [],
   "snippets": [
     {
-      "content": "{\n\t\"type\": \"npm\",\n\t\"script\": \"${1:start}\",\n\t\"isBackground\": true,\n\t\"presentation\": {\n\t\t\"focus\": true,\n\t\t\"panel\": \"dedicated\"\n\t},\n\t\"group\": {\n\t\t\"kind\": \"build\",\n\t\t\"isDefault\": true\n\t},\n\t\"problemMatcher\": {\n\t\t\"owner\": \"typescript\",\n\t\t\"source\": \"ts\",\n\t\t\"applyTo\": \"closedDocuments\",\n\t\t\"fileLocation\": [\"relative\", \"\\${cwd\\}\"],\n\t\t\"pattern\": \"\\$tsc\",\n\t\t\"background\": {\n\t\t\t\"activeOnStart\": true,\n\t\t\t\"beginsPattern\": {\n\t\t\t\t\"regexp\": \"(.*?)\"\n\t\t\t},\n\t\t\t\"endsPattern\": {\n\t\t\t\t\"regexp\": \"Compiled |Failed to compile.\"\n\t\t\t}\n\t\t}\n\t}\n}",
-      "doc": "",
-      "label": "Create task to start Angular",
-      "matches": {
-        "a-task-start": true
-      }
-    },
-    {
       "content": "{\n\t\"name\": \"Launch Angular\",\n\t\"type\": \"${1:chrome}\",\n\t\"request\": \"launch\",\n\t\"preLaunchTask\": \"${2:npm: start}\",\n\t\"url\": \"http://localhost:${3:4200}/\",\n\t\"webRoot\": \"${4:\\${workspaceFolder\\}}\"\n}",
       "doc": "",
       "label": "Create launch config for Chrome",
       "matches": {
         "a-launch-chrome": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"npm\",\n\t\"script\": \"${1:start}\",\n\t\"isBackground\": true,\n\t\"presentation\": {\n\t\t\"focus\": true,\n\t\t\"panel\": \"dedicated\"\n\t},\n\t\"group\": {\n\t\t\"kind\": \"build\",\n\t\t\"isDefault\": true\n\t},\n\t\"problemMatcher\": {\n\t\t\"owner\": \"typescript\",\n\t\t\"source\": \"ts\",\n\t\t\"applyTo\": \"closedDocuments\",\n\t\t\"fileLocation\": [\"relative\", \"\\${cwd\\}\"],\n\t\t\"pattern\": \"\\$tsc\",\n\t\t\"background\": {\n\t\t\t\"activeOnStart\": true,\n\t\t\t\"beginsPattern\": {\n\t\t\t\t\"regexp\": \"(.*?)\"\n\t\t\t},\n\t\t\t\"endsPattern\": {\n\t\t\t\t\"regexp\": \"Compiled |Failed to compile.\"\n\t\t\t}\n\t\t}\n\t}\n}",
+      "doc": "",
+      "label": "Create task to start Angular",
+      "matches": {
+        "a-task-start": true
       }
     },
     {
@@ -26,24 +26,24 @@
       }
     },
     {
-      "content": "{\n\t\"type\": \"npm\",\n\t\"script\": \"${1:start}\",\n\t\"isBackground\": true,\n\t\"presentation\": {\n\t\t\"focus\": true,\n\t\t\"panel\": \"dedicated\"\n\t},\n\t\"group\": {\n\t\t\"kind\": \"build\",\n\t\t\"isDefault\": true\n\t},\n\t\"problemMatcher\": {\n\t\t\"owner\": \"typescript\",\n\t\t\"source\": \"ts\",\n\t\t\"applyTo\": \"closedDocuments\",\n\t\t\"fileLocation\": [\"relative\", \"\\${cwd\\}\"],\n\t\t\"pattern\": \"\\$tsc\",\n\t\t\"background\": {\n\t\t\t\"activeOnStart\": true,\n\t\t\t\"beginsPattern\": {\n\t\t\t\t\"regexp\": \"(.*?)\"\n\t\t\t},\n\t\t\t\"endsPattern\": {\n\t\t\t\t\"regexp\": \"Compiled |Failed to compile.\"\n\t\t\t}\n\t\t}\n\t}\n}",
-      "doc": "",
-      "label": "Create task to start Angular",
-      "matches": {
-        "a-task-start": true
-      }
-    },
-    {
       "content": "{\n\t\"name\": \"Launch Angular\",\n\t\"type\": \"${1:chrome}\",\n\t\"request\": \"launch\",\n\t\"preLaunchTask\": \"${2:npm: start}\",\n\t\"url\": \"http://localhost:${3:4200}/\",\n\t\"webRoot\": \"${4:\\${workspaceFolder\\}}\"\n}",
-      "doc": "",
+      "doc": "Launch/debug configuration for VS Code for Chrome",
       "label": "Create launch config for Chrome",
       "matches": {
         "a-launch-chrome": true
       }
     },
     {
+      "content": "{\n\t\"type\": \"npm\",\n\t\"script\": \"${1:start}\",\n\t\"isBackground\": true,\n\t\"presentation\": {\n\t\t\"focus\": true,\n\t\t\"panel\": \"dedicated\"\n\t},\n\t\"group\": {\n\t\t\"kind\": \"build\",\n\t\t\"isDefault\": true\n\t},\n\t\"problemMatcher\": {\n\t\t\"owner\": \"typescript\",\n\t\t\"source\": \"ts\",\n\t\t\"applyTo\": \"closedDocuments\",\n\t\t\"fileLocation\": [\"relative\", \"\\${cwd\\}\"],\n\t\t\"pattern\": \"\\$tsc\",\n\t\t\"background\": {\n\t\t\t\"activeOnStart\": true,\n\t\t\t\"beginsPattern\": {\n\t\t\t\t\"regexp\": \"(.*?)\"\n\t\t\t},\n\t\t\t\"endsPattern\": {\n\t\t\t\t\"regexp\": \"Compiled |Failed to compile.\"\n\t\t\t}\n\t\t}\n\t}\n}",
+      "doc": "Create a task to start Angular for VS Code",
+      "label": "Create task to start Angular",
+      "matches": {
+        "a-task-start": true
+      }
+    },
+    {
       "content": "{\n\t\"name\": \"Launch Angular\",\n\t\"type\": \"${1:edge}\",\n\t\"version\": \"${2:dev}\",\n\t\"request\": \"launch\",\n\t\"preLaunchTask\": \"${3:npm: start}\",\n\t\"url\": \"http://localhost:${4:4200}/\",\n\t\"webRoot\": \"${5:\\${workspaceFolder\\}}\"\n}",
-      "doc": "",
+      "doc": "Launch/debug configuration for VS Code for Edge",
       "label": "Create launch config for Edge",
       "matches": {
         "a-launch-edge": true

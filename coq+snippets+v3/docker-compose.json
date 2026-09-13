@@ -2,54 +2,6 @@
   "extends": [],
   "snippets": [
     {
-      "content": "user: ${1:value}",
-      "doc": "",
-      "label": "User",
-      "matches": {
-        "us": true
-      }
-    },
-    {
-      "content": "working_dir: ${1:dir}",
-      "doc": "",
-      "label": "Working Directory",
-      "matches": {
-        "wo": true
-      }
-    },
-    {
-      "content": "read_only: ${1:boolean}",
-      "doc": "",
-      "label": "Read Only",
-      "matches": {
-        "rea": true
-      }
-    },
-    {
-      "content": "shm_size: ${1:value}",
-      "doc": "",
-      "label": "SHM Size",
-      "matches": {
-        "sh": true
-      }
-    },
-    {
-      "content": "stdin_open: ${1:boolean}",
-      "doc": "",
-      "label": "Stdin Open",
-      "matches": {
-        "std": true
-      }
-    },
-    {
-      "content": "tty: ${1:boolean}",
-      "doc": "",
-      "label": "TTY",
-      "matches": {
-        "tt": true
-      }
-    },
-    {
       "content": "driver: ${1:value}",
       "doc": "",
       "label": "Driver",
@@ -90,27 +42,11 @@
       }
     },
     {
-      "content": "expose:\n\t\t- ${1:port}",
+      "content": "dockerfile: ${1:file}",
       "doc": "",
-      "label": "Expose",
+      "label": "Dockerfile",
       "matches": {
-        "exp": true
-      }
-    },
-    {
-      "content": "extends:\n\t\tfile: ${1:file}\n\t\tservice: ${2:name}",
-      "doc": "",
-      "label": "Extends",
-      "matches": {
-        "exten": true
-      }
-    },
-    {
-      "content": "extra_hosts:\n\t\t- ${1:host}:${2:ip}",
-      "doc": "",
-      "label": "Extra Hosts",
-      "matches": {
-        "extr": true
+        "doc": true
       }
     },
     {
@@ -122,11 +58,11 @@
       }
     },
     {
-      "content": "dockerfile: ${1:file}",
+      "content": "version: '${1:3}'",
       "doc": "",
-      "label": "Dockerfile",
+      "label": "Version",
       "matches": {
-        "doc": true
+        "ver": true
       }
     },
     {
@@ -138,27 +74,11 @@
       }
     },
     {
-      "content": "labels:\n\t\t${1:dns}: ${2:label}",
-      "doc": "",
-      "label": "Labels",
-      "matches": {
-        "la": true
-      }
-    },
-    {
       "content": "volume_driver: ${1:driver}",
       "doc": "",
       "label": "Volume Driver",
       "matches": {
         "volume_": true
-      }
-    },
-    {
-      "content": "links:\n\t\t- ${1:name}",
-      "doc": "",
-      "label": "Links",
-      "matches": {
-        "links": true
       }
     },
     {
@@ -170,11 +90,11 @@
       }
     },
     {
-      "content": "logging:\n\t\tdriver: ${1:driver}\n\t\toptions:\n\t\t\t${2:value}",
+      "content": "cgroup_parent: ${1:cgroup}",
       "doc": "",
-      "label": "Logging",
+      "label": "cgroup_parent",
       "matches": {
-        "logg": true
+        "cgr": true
       }
     },
     {
@@ -186,6 +106,14 @@
       }
     },
     {
+      "content": "container_name: ${1:name}",
+      "doc": "",
+      "label": "Container Name",
+      "matches": {
+        "conta": true
+      }
+    },
+    {
       "content": "services:\n\t\t${1:name}",
       "doc": "",
       "label": "Services",
@@ -194,11 +122,19 @@
       }
     },
     {
-      "content": "log_driver: ${1:driver}",
+      "content": "devices:\n\t\t- ${1:value}",
       "doc": "",
-      "label": "Log Driver",
+      "label": "Devices",
       "matches": {
-        "log_d": true
+        "dev": true
+      }
+    },
+    {
+      "content": "dns:\n\t\t- ${1:ip}",
+      "doc": "",
+      "label": "DNS",
+      "matches": {
+        "dn": true
       }
     },
     {
@@ -210,11 +146,11 @@
       }
     },
     {
-      "content": "net: ${1:value}",
+      "content": "dns_search:\n\t\t- ${1:ip}",
       "doc": "",
-      "label": "Net",
+      "label": "DNS Search",
       "matches": {
-        "net": true
+        "dns_": true
       }
     },
     {
@@ -226,19 +162,11 @@
       }
     },
     {
-      "content": "network_mode: ${1:value}",
+      "content": "tmpfs:\n\t\t- ${1:dir}",
       "doc": "",
-      "label": "Network Mode",
+      "label": "tmpfs",
       "matches": {
-        "network_": true
-      }
-    },
-    {
-      "content": "networks:\n\t\t- ${1:value}",
-      "doc": "",
-      "label": "Networks",
-      "matches": {
-        "networks": true
+        "tm": true
       }
     },
     {
@@ -258,6 +186,14 @@
       }
     },
     {
+      "content": "env_file:\n\t\t- ${1:file}",
+      "doc": "",
+      "label": "Env File",
+      "matches": {
+        "env_": true
+      }
+    },
+    {
       "content": "environment:\n\t\t${1:name}: ${2:value}",
       "doc": "",
       "label": "Environment",
@@ -266,11 +202,11 @@
       }
     },
     {
-      "content": "link_local_ips:\n\t\t- ${1:ip}",
+      "content": "expose:\n\t\t- ${1:port}",
       "doc": "",
-      "label": "Link Local IPs",
+      "label": "Expose",
       "matches": {
-        "link_": true
+        "exp": true
       }
     },
     {
@@ -282,211 +218,11 @@
       }
     },
     {
-      "content": "pid: ${1:host}",
+      "content": "log_driver: ${1:driver}",
       "doc": "",
-      "label": "PID",
+      "label": "Log Driver",
       "matches": {
-        "pi": true
-      }
-    },
-    {
-      "content": "cap_add:\n\t\t- ${1:value}",
-      "doc": "",
-      "label": "Cap Add",
-      "matches": {
-        "cap_a": true
-      }
-    },
-    {
-      "content": "ports:\n\t\t- ${1:value}",
-      "doc": "",
-      "label": "Ports",
-      "matches": {
-        "po": true
-      }
-    },
-    {
-      "content": "cap_drop:\n\t\t- ${1:value}",
-      "doc": "",
-      "label": "Cap Drop",
-      "matches": {
-        "cap_d": true
-      }
-    },
-    {
-      "content": "stop_signal: ${1:signal}",
-      "doc": "",
-      "label": "Stop Signal",
-      "matches": {
-        "sto": true
-      }
-    },
-    {
-      "content": "cgroup_parent: ${1:cgroup}",
-      "doc": "",
-      "label": "cgroup_parent",
-      "matches": {
-        "cgr": true
-      }
-    },
-    {
-      "content": "ulimits:\n\t\t${1:value}",
-      "doc": "",
-      "label": "Ulimits",
-      "matches": {
-        "ul": true
-      }
-    },
-    {
-      "content": "container_name: ${1:name}",
-      "doc": "",
-      "label": "Container Name",
-      "matches": {
-        "conta": true
-      }
-    },
-    {
-      "content": "cpu_shares: ${1:value}",
-      "doc": "",
-      "label": "CPU Shares",
-      "matches": {
-        "cpu_s": true
-      }
-    },
-    {
-      "content": "devices:\n\t\t- ${1:value}",
-      "doc": "",
-      "label": "Devices",
-      "matches": {
-        "dev": true
-      }
-    },
-    {
-      "content": "cpu_quota: ${1:value}",
-      "doc": "",
-      "label": "CPU Quota",
-      "matches": {
-        "cpu_q": true
-      }
-    },
-    {
-      "content": "dns:\n\t\t- ${1:ip}",
-      "doc": "",
-      "label": "DNS",
-      "matches": {
-        "dn": true
-      }
-    },
-    {
-      "content": "cpuset: ${1:value}",
-      "doc": "",
-      "label": "CPU Set",
-      "matches": {
-        "cpus": true
-      }
-    },
-    {
-      "content": "dns_search:\n\t\t- ${1:ip}",
-      "doc": "",
-      "label": "DNS Search",
-      "matches": {
-        "dns_": true
-      }
-    },
-    {
-      "content": "domainname: ${1:name}",
-      "doc": "",
-      "label": "Domain Name",
-      "matches": {
-        "dom": true
-      }
-    },
-    {
-      "content": "tmpfs:\n\t\t- ${1:dir}",
-      "doc": "",
-      "label": "tmpfs",
-      "matches": {
-        "tm": true
-      }
-    },
-    {
-      "content": "hostname: ${1:name}",
-      "doc": "",
-      "label": "Hostname",
-      "matches": {
-        "ho": true
-      }
-    },
-    {
-      "content": "entrypoint: ${1:command}",
-      "doc": "",
-      "label": "Entrypoint",
-      "matches": {
-        "ent": true
-      }
-    },
-    {
-      "content": "ipc: ${1:host}",
-      "doc": "",
-      "label": "IPC",
-      "matches": {
-        "ipc": true
-      }
-    },
-    {
-      "content": "env_file:\n\t\t- ${1:file}",
-      "doc": "",
-      "label": "Env File",
-      "matches": {
-        "env_": true
-      }
-    },
-    {
-      "content": "mem_limit: ${1:value}",
-      "doc": "",
-      "label": "Memory Limit",
-      "matches": {
-        "mem_": true
-      }
-    },
-    {
-      "content": "image: ${1:image}",
-      "doc": "",
-      "label": "Image",
-      "matches": {
-        "im": true
-      }
-    },
-    {
-      "content": "memswap_limit: ${1:value}",
-      "doc": "",
-      "label": "Mem swap Limit",
-      "matches": {
-        "mems": true
-      }
-    },
-    {
-      "content": "group_add:\n\t\t- ${1:name}",
-      "doc": "",
-      "label": "Group Add",
-      "matches": {
-        "gr": true
-      }
-    },
-    {
-      "content": "version: '${1:3}'",
-      "doc": "",
-      "label": "Version",
-      "matches": {
-        "ver": true
-      }
-    },
-    {
-      "content": "privileged: ${1:boolean}",
-      "doc": "",
-      "label": "Privileged",
-      "matches": {
-        "pr": true
+        "log_d": true
       }
     },
     {
@@ -498,19 +234,67 @@
       }
     },
     {
-      "content": "oom_score_adj: ${1:value}",
+      "content": "extra_hosts:\n\t\t- ${1:host}:${2:ip}",
       "doc": "",
-      "label": "OOM Score Adj",
+      "label": "Extra Hosts",
       "matches": {
-        "oom": true
+        "extr": true
       }
     },
     {
-      "content": "ipv4_address: ${1:ip}",
+      "content": "net: ${1:value}",
       "doc": "",
-      "label": "Ipv4 Address",
+      "label": "Net",
       "matches": {
-        "ipv4": true
+        "net": true
+      }
+    },
+    {
+      "content": "network_mode: ${1:value}",
+      "doc": "",
+      "label": "Network Mode",
+      "matches": {
+        "network_": true
+      }
+    },
+    {
+      "content": "group_add:\n\t\t- ${1:name}",
+      "doc": "",
+      "label": "Group Add",
+      "matches": {
+        "gr": true
+      }
+    },
+    {
+      "content": "networks:\n\t\t- ${1:value}",
+      "doc": "",
+      "label": "Networks",
+      "matches": {
+        "networks": true
+      }
+    },
+    {
+      "content": "image: ${1:image}",
+      "doc": "",
+      "label": "Image",
+      "matches": {
+        "im": true
+      }
+    },
+    {
+      "content": "labels:\n\t\t${1:dns}: ${2:label}",
+      "doc": "",
+      "label": "Labels",
+      "matches": {
+        "la": true
+      }
+    },
+    {
+      "content": "cpuset: ${1:value}",
+      "doc": "",
+      "label": "CPU Set",
+      "matches": {
+        "cpus": true
       }
     },
     {
@@ -522,11 +306,51 @@
       }
     },
     {
-      "content": "restart: ${1:value}",
+      "content": "logging:\n\t\tdriver: ${1:driver}\n\t\toptions:\n\t\t\t${2:value}",
       "doc": "",
-      "label": "Restart",
+      "label": "Logging",
       "matches": {
-        "res": true
+        "logg": true
+      }
+    },
+    {
+      "content": "domainname: ${1:name}",
+      "doc": "",
+      "label": "Domain Name",
+      "matches": {
+        "dom": true
+      }
+    },
+    {
+      "content": "link_local_ips:\n\t\t- ${1:ip}",
+      "doc": "",
+      "label": "Link Local IPs",
+      "matches": {
+        "link_": true
+      }
+    },
+    {
+      "content": "hostname: ${1:name}",
+      "doc": "",
+      "label": "Hostname",
+      "matches": {
+        "ho": true
+      }
+    },
+    {
+      "content": "pid: ${1:host}",
+      "doc": "",
+      "label": "PID",
+      "matches": {
+        "pi": true
+      }
+    },
+    {
+      "content": "ports:\n\t\t- ${1:value}",
+      "doc": "",
+      "label": "Ports",
+      "matches": {
+        "po": true
       }
     },
     {
@@ -535,6 +359,182 @@
       "label": "Security Opt",
       "matches": {
         "sec": true
+      }
+    },
+    {
+      "content": "mem_limit: ${1:value}",
+      "doc": "",
+      "label": "Memory Limit",
+      "matches": {
+        "mem_": true
+      }
+    },
+    {
+      "content": "stop_signal: ${1:signal}",
+      "doc": "",
+      "label": "Stop Signal",
+      "matches": {
+        "sto": true
+      }
+    },
+    {
+      "content": "memswap_limit: ${1:value}",
+      "doc": "",
+      "label": "Mem swap Limit",
+      "matches": {
+        "mems": true
+      }
+    },
+    {
+      "content": "cpu_shares: ${1:value}",
+      "doc": "",
+      "label": "CPU Shares",
+      "matches": {
+        "cpu_s": true
+      }
+    },
+    {
+      "content": "privileged: ${1:boolean}",
+      "doc": "",
+      "label": "Privileged",
+      "matches": {
+        "pr": true
+      }
+    },
+    {
+      "content": "oom_score_adj: ${1:value}",
+      "doc": "",
+      "label": "OOM Score Adj",
+      "matches": {
+        "oom": true
+      }
+    },
+    {
+      "content": "restart: ${1:value}",
+      "doc": "",
+      "label": "Restart",
+      "matches": {
+        "res": true
+      }
+    },
+    {
+      "content": "extends:\n\t\tfile: ${1:file}\n\t\tservice: ${2:name}",
+      "doc": "",
+      "label": "Extends",
+      "matches": {
+        "exten": true
+      }
+    },
+    {
+      "content": "user: ${1:value}",
+      "doc": "",
+      "label": "User",
+      "matches": {
+        "us": true
+      }
+    },
+    {
+      "content": "entrypoint: ${1:command}",
+      "doc": "",
+      "label": "Entrypoint",
+      "matches": {
+        "ent": true
+      }
+    },
+    {
+      "content": "working_dir: ${1:dir}",
+      "doc": "",
+      "label": "Working Directory",
+      "matches": {
+        "wo": true
+      }
+    },
+    {
+      "content": "cpu_quota: ${1:value}",
+      "doc": "",
+      "label": "CPU Quota",
+      "matches": {
+        "cpu_q": true
+      }
+    },
+    {
+      "content": "read_only: ${1:boolean}",
+      "doc": "",
+      "label": "Read Only",
+      "matches": {
+        "rea": true
+      }
+    },
+    {
+      "content": "links:\n\t\t- ${1:name}",
+      "doc": "",
+      "label": "Links",
+      "matches": {
+        "links": true
+      }
+    },
+    {
+      "content": "ipv4_address: ${1:ip}",
+      "doc": "",
+      "label": "Ipv4 Address",
+      "matches": {
+        "ipv4": true
+      }
+    },
+    {
+      "content": "shm_size: ${1:value}",
+      "doc": "",
+      "label": "SHM Size",
+      "matches": {
+        "sh": true
+      }
+    },
+    {
+      "content": "cap_drop:\n\t\t- ${1:value}",
+      "doc": "",
+      "label": "Cap Drop",
+      "matches": {
+        "cap_d": true
+      }
+    },
+    {
+      "content": "stdin_open: ${1:boolean}",
+      "doc": "",
+      "label": "Stdin Open",
+      "matches": {
+        "std": true
+      }
+    },
+    {
+      "content": "cap_add:\n\t\t- ${1:value}",
+      "doc": "",
+      "label": "Cap Add",
+      "matches": {
+        "cap_a": true
+      }
+    },
+    {
+      "content": "tty: ${1:boolean}",
+      "doc": "",
+      "label": "TTY",
+      "matches": {
+        "tt": true
+      }
+    },
+    {
+      "content": "ulimits:\n\t\t${1:value}",
+      "doc": "",
+      "label": "Ulimits",
+      "matches": {
+        "ul": true
+      }
+    },
+    {
+      "content": "ipc: ${1:host}",
+      "doc": "",
+      "label": "IPC",
+      "matches": {
+        "ipc": true
       }
     }
   ]

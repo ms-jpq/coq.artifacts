@@ -2,11 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "@param ${1:name} ${2:type} ${3:Parameter description.}$0",
-      "doc": "Describe function parameters. It requires the name of the parameter and its description.",
-      "label": "@param",
+      "content": "@return ${1:type} ${2:Description of the returned object.}$0",
+      "doc": "Describe a returning value of the function. Since Lua can return multiple values, this tag should appear more than once.",
+      "label": "@return",
       "matches": {
-        "@param": true
+        "@return": true
       }
     },
     {
@@ -18,43 +18,11 @@
       }
     },
     {
-      "content": "@release ${1:text}$0",
-      "doc": "Free format string to describe the module or file release.",
-      "label": "@release",
+      "content": "--- ${1:A one-line summary.}\n-- ${2:Description.}$0\n-- @param ${5:name} ${6:type} ${7:Parameter description.}\n-- @return ${3:type} ${4: Description of the returned object.}\n-- @usage ${8:Example about how to use it.}",
+      "doc": "A lua comment with short summary, description, parameters, return, and example.",
+      "label": "comment",
       "matches": {
-        "@release": true
-      }
-    },
-    {
-      "content": "--- ${1:A one-line summary.}\n-- ${2:Description.}$0",
-      "doc": "A simple lua comment with short summary and description. Useful when you prefer to add the tags manually on functions.",
-      "label": "comment_simple",
-      "matches": {
-        "--": true
-      }
-    },
-    {
-      "content": "@return ${1:type} ${2:Description of the returned object.}$0",
-      "doc": "Describe a returning value of the function. Since Lua can return multiple values, this tag should appear more than once.",
-      "label": "@return",
-      "matches": {
-        "@return": true
-      }
-    },
-    {
-      "content": "@author ${1:text.}$0",
-      "doc": "An author of the module or file.",
-      "label": "@author",
-      "matches": {
-        "@author": true
-      }
-    },
-    {
-      "content": "@see ${1:name of a function or table}$0",
-      "doc": "Refers to other descriptions of functions or tables.",
-      "label": "@see",
-      "matches": {
-        "@see": true
+        "---": true
       }
     },
     {
@@ -66,6 +34,22 @@
       }
     },
     {
+      "content": "@description ${1:text}$0",
+      "doc": "The description of the function or table. This is usually infered automatically.",
+      "label": "@description",
+      "matches": {
+        "@description": true
+      }
+    },
+    {
+      "content": "@author ${1:text.}$0",
+      "doc": "An author of the module or file.",
+      "label": "@author",
+      "matches": {
+        "@author": true
+      }
+    },
+    {
       "content": "@class ${1:name}$0",
       "doc": "If LuaDoc cannot infer the type of documentation (function, table or module definition), the programmer can specify it explicitly.",
       "label": "@class",
@@ -74,11 +58,19 @@
       }
     },
     {
-      "content": "--- ${1:A one-line summary.}\n-- ${2:Description.}$0\n-- @param ${5:name} ${6:type} ${7:Parameter description.}\n-- @return ${3:type} ${4: Description of the returned object.}\n-- @usage ${8:Example about how to use it.}",
-      "doc": "A lua comment with short summary, description, parameters, return, and example.",
-      "label": "comment",
+      "content": "@see ${1:name of a function or table}$0",
+      "doc": "Refers to other descriptions of functions or tables.",
+      "label": "@see",
       "matches": {
-        "---": true
+        "@see": true
+      }
+    },
+    {
+      "content": "--- ${1:A one-line summary.}\n-- ${2:Description.}$0",
+      "doc": "A simple lua comment with short summary and description. Useful when you prefer to add the tags manually on functions.",
+      "label": "comment_simple",
+      "matches": {
+        "--": true
       }
     },
     {
@@ -90,11 +82,19 @@
       }
     },
     {
-      "content": "@description ${1:text}$0",
-      "doc": "The description of the function or table. This is usually infered automatically.",
-      "label": "@description",
+      "content": "@release ${1:text}$0",
+      "doc": "Free format string to describe the module or file release.",
+      "label": "@release",
       "matches": {
-        "@description": true
+        "@release": true
+      }
+    },
+    {
+      "content": "@param ${1:name} ${2:type} ${3:Parameter description.}$0",
+      "doc": "Describe function parameters. It requires the name of the parameter and its description.",
+      "label": "@param",
+      "matches": {
+        "@param": true
       }
     }
   ]

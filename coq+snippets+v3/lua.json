@@ -4,14 +4,6 @@
   ],
   "snippets": [
     {
-      "content": "local ${0}",
-      "doc": "Declare a variable",
-      "label": "local",
-      "matches": {
-        "l": true
-      }
-    },
-    {
       "content": "local function ${1:name}($2)\n\t${0}\nend",
       "doc": "Define a local function",
       "label": "local-function",
@@ -20,27 +12,19 @@
       }
     },
     {
-      "content": "require(${1:module})",
-      "doc": "Require module",
-      "label": "require",
+      "content": "local ${1:name} = function($2)\n\t${0}\nend",
+      "doc": "Assign a function to a local variable",
+      "label": "local-assign-function",
       "matches": {
-        "req": true
+        "lf=": true
       }
     },
     {
-      "content": "return $0",
-      "doc": "Return value",
-      "label": "return",
+      "content": "elseif ${1:true} then\n\t$0",
+      "doc": "",
+      "label": "elseif",
       "matches": {
-        "rt": true
-      }
-    },
-    {
-      "content": "${1:M} = {}\n\n$1.${2:new} = function($3)\n\t${6}\nend",
-      "doc": "Create a class",
-      "label": "class",
-      "matches": {
-        "cl": true
+        "elseif": true
       }
     },
     {
@@ -52,11 +36,19 @@
       }
     },
     {
-      "content": "function($1)\n\t${0}\nend",
-      "doc": "Create an anonymous function",
-      "label": "anonymous-function",
+      "content": "function ${1:name}($2)\n\t${0}\nend",
+      "doc": "Define a function",
+      "label": "function",
       "matches": {
-        "f)": true
+        "fu": true
+      }
+    },
+    {
+      "content": "if ${1:true} then\n\t$0\nend",
+      "doc": "",
+      "label": "if",
+      "matches": {
+        "if": true
       }
     },
     {
@@ -68,11 +60,11 @@
       }
     },
     {
-      "content": "${1:name} = function($2)\n\t${0}\nend,",
-      "doc": "Assign a function to a table key",
-      "label": "member-function",
+      "content": "local ${0}",
+      "doc": "Declare a variable",
+      "label": "local",
       "matches": {
-        "f,": true
+        "l": true
       }
     },
     {
@@ -84,6 +76,14 @@
       }
     },
     {
+      "content": "${1:name} = function($2)\n\t${0}\nend,",
+      "doc": "Assign a function to a table key",
+      "label": "member-function",
+      "matches": {
+        "fm": true
+      }
+    },
+    {
       "content": "function self:${1:methodName}($2)\n\t$0\nend",
       "doc": "",
       "label": "self",
@@ -92,19 +92,19 @@
       }
     },
     {
+      "content": "return $0",
+      "doc": "Return value",
+      "label": "return",
+      "matches": {
+        "rt": true
+      }
+    },
+    {
       "content": "local f = io.open(${1:${2:filename}}, \"${3:r}\")\n\nwhile true do\n\tline = f:read()\n\tif line == nil then break end\n\n\t${0}\nend",
       "doc": "Read file line by line",
       "label": "forline",
       "matches": {
         "forline": true
-      }
-    },
-    {
-      "content": "local ${1:name} = function($2)\n\t${0}\nend",
-      "doc": "Assign a function to a local variable",
-      "label": "local-assign-function",
-      "matches": {
-        "lf=": true
       }
     },
     {
@@ -124,19 +124,19 @@
       }
     },
     {
-      "content": "local ${1:varName} = ${0:value}",
-      "doc": "Define a variable",
-      "label": "assigment",
-      "matches": {
-        "ll": true
-      }
-    },
-    {
       "content": "while ${1:true} do\n\t$0\nend",
       "doc": "",
       "label": "while",
       "matches": {
         "while": true
+      }
+    },
+    {
+      "content": "local ${1:varName} = ${2:value}",
+      "doc": "Define a variable",
+      "label": "assigment",
+      "matches": {
+        "ll": true
       }
     },
     {
@@ -148,27 +148,27 @@
       }
     },
     {
-      "content": "elseif ${1:true} then\n\t$0",
-      "doc": "",
-      "label": "elseif",
+      "content": "function($1)\n\t${0}\nend",
+      "doc": "Create an anonymous function",
+      "label": "anonymous-function",
       "matches": {
-        "elseif": true
+        "fa": true
       }
     },
     {
-      "content": "for $1 do\n\t$0\nend",
-      "doc": "for statement",
-      "label": "for",
+      "content": "require(${1:module})",
+      "doc": "Require module",
+      "label": "require",
       "matches": {
-        "for": true
+        "req": true
       }
     },
     {
-      "content": "function ${1:name}($2)\n\t${0}\nend",
-      "doc": "Define a function",
-      "label": "function",
+      "content": "local ${1:module} = require(\"${2:$1}\")$0",
+      "doc": "Require module as a variable",
+      "label": "locreq",
       "matches": {
-        "fu": true
+        "lreq": true
       }
     },
     {
@@ -180,19 +180,19 @@
       }
     },
     {
-      "content": "if ${1:true} then\n\t$0\nend",
-      "doc": "",
-      "label": "if",
+      "content": "for $1 do\n\t$0\nend",
+      "doc": "for statement",
+      "label": "for",
       "matches": {
-        "if": true
+        "for": true
       }
     },
     {
-      "content": "local ${1:module} = require(\"${2:$1}\")$0",
-      "doc": "Require module as a variable",
-      "label": "locreq",
+      "content": "${1:M} = {}\n\n$1.${2:new} = function($3)\n\t${6}\nend",
+      "doc": "Create a class",
+      "label": "class",
       "matches": {
-        "lreq": true
+        "cl": true
       }
     },
     {

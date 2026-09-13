@@ -2,11 +2,83 @@
   "extends": [],
   "snippets": [
     {
-      "content": "expect(${1:subject}).to be_a_kind_of(${2:klass})$0",
-      "doc": "Type matcher\nReturns true if type is in obj's\nclass hierarchy or is a module and\nis included in a class in obj's \nclass hierarchy.",
-      "label": "rspec_expect_be_a_kind_of",
+      "content": "describe '${1:}' do\n  ${2:}$0\nend",
+      "doc": "RSpec describe case",
+      "label": "rspec_describe",
       "matches": {
-        "expbko": true
+        "des": true
+      }
+    },
+    {
+      "content": "after(${1|:all,:each,:suite,:context,:example|}) do\n  ${2:}$0\nend",
+      "doc": "After hook\nRuns once after all of the examples\nin a group",
+      "label": "rspec_after",
+      "matches": {
+        "aft": true
+      }
+    },
+    {
+      "content": "context 'when ${1:some case}' do\n  ${2:}$0\nend",
+      "doc": "RSpec context case",
+      "label": "rspec_context",
+      "matches": {
+        "con": true
+      }
+    },
+    {
+      "content": "expect(${1:subject}).to have_attributes(${2:hash})$0",
+      "doc": "Used to specify that an object's\nattributes match the expected\nattributes",
+      "label": "rspec_expect_have_attributes",
+      "matches": {
+        "exphat": true
+      }
+    },
+    {
+      "content": "let(:${1:object}) { $0 }",
+      "doc": "Use `let` to define memoized helper method",
+      "label": "rspec_let",
+      "matches": {
+        "let": true
+      }
+    },
+    {
+      "content": "expect(${1:subject}).to eq(${2:value})$0",
+      "doc": "Equality matcher\ncompare using eq (==)",
+      "label": "rspec_expect_eq",
+      "matches": {
+        "expeq": true
+      }
+    },
+    {
+      "content": "let!(:${1:object}) { $0 }",
+      "doc": "Use `let!` to define a memoized\nhelper method that is called\nin a `before` hook",
+      "label": "rspec_let!",
+      "matches": {
+        "letb": true
+      }
+    },
+    {
+      "content": "expect { ${1:action} }.to raise_error(${2:Error})$0",
+      "doc": "Used to specify that a block of code\nraises an error.\nScenarios\nexpect any error\nexpect specific error\nmatch message with a string\nmatch message with a regexp\nmatching message with `with_message`\nmatch class + message with string\nmatch class + message with regexp\nset expectations on error object passed to block\nexpect no error at all",
+      "label": "rspec_expect_raise",
+      "matches": {
+        "expraise": true
+      }
+    },
+    {
+      "content": "expect(${1:subject}).to eql(${2:value})$0",
+      "doc": "Equality matcher\ncompare using eql (eql?)",
+      "label": "rspec_expect_eql",
+      "matches": {
+        "expeql": true
+      }
+    },
+    {
+      "content": "it { is_expected.to ${1:matcher} }$0",
+      "doc": "RSpec supports a one-liner syntax\nfor setting an expectation on the\nsubject",
+      "label": "rspec_is_expected",
+      "matches": {
+        "itie": true
       }
     },
     {
@@ -15,6 +87,62 @@
       "label": "rspec_it",
       "matches": {
         "it": true
+      }
+    },
+    {
+      "content": "expect(${1:subject}).to equal(${2:value})$0",
+      "doc": "Equality matcher\ncompare using equal (equal?)",
+      "label": "rspec_expect_equal",
+      "matches": {
+        "expequal": true
+      }
+    },
+    {
+      "content": "subject(:${1:subject}) { ${2:} }$0",
+      "doc": "Explicit subject\nDefines a memoized helper method",
+      "label": "rspec_subject",
+      "matches": {
+        "subject": true
+      }
+    },
+    {
+      "content": "expect(${1:enumerable}).to all( ${2:matcher} )$0",
+      "doc": "Used to specify that a collection's\nobjects all pass an expected\nmatcher. This works on any\nenumerable object.",
+      "label": "rspec_expect_all",
+      "matches": {
+        "expall": true
+      }
+    },
+    {
+      "content": "subject(:${1:subject}) { ${2:${TM_DIRECTORY/(?:(?:\\~?\\/.*\\/)|_)([A-Za-z0-9]+)?/${1:/capitalize}/g}}::${3:${TM_FILENAME_BASE/(?:^|_)([A-Za-z0-9]+)(?:_spec)?/${1:/capitalize}/g}}.new }$0",
+      "doc": "subject(:subject) { described_class.new }",
+      "label": "rspec_described_class",
+      "matches": {
+        "subjectcls": true
+      }
+    },
+    {
+      "content": "expect(${1:subject}).to satisfy { |${2:obj}| ${3:expression} }$0",
+      "doc": "The satisfy matcher is extremely\nflexible and can handle almost\nanything you want to specify.\nIt passes if the block you provide\nreturns true",
+      "label": "rspec_expect_satisfy",
+      "matches": {
+        "expsat": true
+      }
+    },
+    {
+      "content": "expect(${1:subject}).to include(${2:element})$0",
+      "doc": "Use the include matcher to specify\nthat a collection includes one or\nmore expected objects.\nThis works on any object that \nresponds to #include? \nScenarios: Array, String, Hash",
+      "label": "rspec_expect_include",
+      "matches": {
+        "expinclude": true
+      }
+    },
+    {
+      "content": "expect(${1:subject}).to be_a_kind_of(${2:klass})$0",
+      "doc": "Type matcher\nReturns true if type is in obj's\nclass hierarchy or is a module and\nis included in a class in obj's \nclass hierarchy.",
+      "label": "rspec_expect_be_a_kind_of",
+      "matches": {
+        "expbko": true
       }
     },
     {
@@ -58,14 +186,6 @@
       }
     },
     {
-      "content": "after(${1|:all,:each,:suite,:context,:example|}) do\n  ${2:}$0\nend",
-      "doc": "After hook\nRuns once after all of the examples\nin a group",
-      "label": "rspec_after",
-      "matches": {
-        "aft": true
-      }
-    },
-    {
       "content": "expect(${1:subject}).to exist$0",
       "doc": "The exist matcher is used to specify\nthat something exists\n(#exist? or #exists?)",
       "label": "rspec_expect_exist",
@@ -87,6 +207,22 @@
       "label": "rspec_around",
       "matches": {
         "aro": true
+      }
+    },
+    {
+      "content": "expect(${1:subject}).to be_${2|truthy,falsey,nil|}$0",
+      "doc": "Scenarios:\nbe_truthy matcher\nbe_falsey matcher\nbe_nil matcher",
+      "label": "rspec_expect_be_",
+      "matches": {
+        "expbpm": true
+      }
+    },
+    {
+      "content": "expect(${1:subject}).to start_with(${2:value})$0",
+      "doc": "Used to specify that a string or\narray starts with the expected\ncharacters or elements\nScenarios: Array, String",
+      "label": "rspec_expect_start_with",
+      "matches": {
+        "expstw": true
       }
     },
     {
@@ -114,147 +250,11 @@
       }
     },
     {
-      "content": "it { is_expected.to ${1:matcher} }$0",
-      "doc": "RSpec supports a one-liner syntax\nfor setting an expectation on the\nsubject",
-      "label": "rspec_is_expected",
-      "matches": {
-        "itie": true
-      }
-    },
-    {
-      "content": "expect(${1:subject}).to be_${2|truthy,falsey,nil|}$0",
-      "doc": "Scenarios:\nbe_truthy matcher\nbe_falsey matcher\nbe_nil matcher",
-      "label": "rspec_expect_be_",
-      "matches": {
-        "expbpm": true
-      }
-    },
-    {
-      "content": "subject(:${1:subject}) { ${2:} }$0",
-      "doc": "Explicit subject\nDefines a memoized helper method",
-      "label": "rspec_subject",
-      "matches": {
-        "subject": true
-      }
-    },
-    {
-      "content": "expect(${1:subject}).to have_attributes(${2:hash})$0",
-      "doc": "Used to specify that an object's\nattributes match the expected\nattributes",
-      "label": "rspec_expect_have_attributes",
-      "matches": {
-        "exphat": true
-      }
-    },
-    {
-      "content": "expect(${1:subject}).to eq(${2:value})$0",
-      "doc": "Equality matcher\ncompare using eq (==)",
-      "label": "rspec_expect_eq",
-      "matches": {
-        "expeq": true
-      }
-    },
-    {
-      "content": "subject(:${1:subject}) { ${2:${TM_DIRECTORY/(?:(?:\\~?\\/.*\\/)|_)([A-Za-z0-9]+)?/${1:/capitalize}/g}}::${3:${TM_FILENAME_BASE/(?:^|_)([A-Za-z0-9]+)(?:_spec)?/${1:/capitalize}/g}}.new }$0",
-      "doc": "subject(:subject) { described_class.new }",
-      "label": "rspec_described_class",
-      "matches": {
-        "subjectcls": true
-      }
-    },
-    {
-      "content": "expect { ${1:action} }.to raise_error(${2:Error})$0",
-      "doc": "Used to specify that a block of code\nraises an error.\nScenarios\nexpect any error\nexpect specific error\nmatch message with a string\nmatch message with a regexp\nmatching message with `with_message`\nmatch class + message with string\nmatch class + message with regexp\nset expectations on error object passed to block\nexpect no error at all",
-      "label": "rspec_expect_raise",
-      "matches": {
-        "expraise": true
-      }
-    },
-    {
-      "content": "expect(${1:subject}).to eql(${2:value})$0",
-      "doc": "Equality matcher\ncompare using eql (eql?)",
-      "label": "rspec_expect_eql",
-      "matches": {
-        "expeql": true
-      }
-    },
-    {
-      "content": "expect(${1:subject}).to equal(${2:value})$0",
-      "doc": "Equality matcher\ncompare using equal (equal?)",
-      "label": "rspec_expect_equal",
-      "matches": {
-        "expequal": true
-      }
-    },
-    {
       "content": "# frozen_string_literal: true\n\nrequire 'spec_helper'\nrequire 'rails_helper'\n\nRSpec.describe ${1:${TM_DIRECTORY/(?:(?:\\~?\\/.*\\/)|_)([A-Za-z0-9]+)?/${1:/capitalize}/g}}::${2:${TM_FILENAME_BASE/(?:^|_)([A-Za-z0-9]+)(?:_spec)?/${1:/capitalize}/g}} do\n  $0\nend",
       "doc": "RSpec test skeleton",
       "label": "rspec_spec_skeleton",
       "matches": {
         "rspec": true
-      }
-    },
-    {
-      "content": "describe '${1:}' do\n  ${2:}$0\nend",
-      "doc": "RSpec describe case",
-      "label": "rspec_describe",
-      "matches": {
-        "des": true
-      }
-    },
-    {
-      "content": "context 'when ${1:some case}' do\n  ${2:}$0\nend",
-      "doc": "RSpec context case",
-      "label": "rspec_context",
-      "matches": {
-        "con": true
-      }
-    },
-    {
-      "content": "expect(${1:subject}).to satisfy { |${2:obj}| ${3:expression} }$0",
-      "doc": "The satisfy matcher is extremely\nflexible and can handle almost\nanything you want to specify.\nIt passes if the block you provide\nreturns true",
-      "label": "rspec_expect_satisfy",
-      "matches": {
-        "expsat": true
-      }
-    },
-    {
-      "content": "expect(${1:subject}).to include(${2:element})$0",
-      "doc": "Use the include matcher to specify\nthat a collection includes one or\nmore expected objects.\nThis works on any object that \nresponds to #include? \nScenarios: Array, String, Hash",
-      "label": "rspec_expect_include",
-      "matches": {
-        "expinclude": true
-      }
-    },
-    {
-      "content": "let!(:${1:object}) { $0 }",
-      "doc": "Use `let!` to define a memoized\nhelper method that is called\nin a `before` hook",
-      "label": "rspec_let!",
-      "matches": {
-        "letb": true
-      }
-    },
-    {
-      "content": "expect(${1:enumerable}).to all( ${2:matcher} )$0",
-      "doc": "Used to specify that a collection's\nobjects all pass an expected\nmatcher. This works on any\nenumerable object.",
-      "label": "rspec_expect_all",
-      "matches": {
-        "expall": true
-      }
-    },
-    {
-      "content": "let(:${1:object}) { $0 }",
-      "doc": "Use `let` to define memoized helper method",
-      "label": "rspec_let",
-      "matches": {
-        "let": true
-      }
-    },
-    {
-      "content": "expect(${1:subject}).to start_with(${2:value})$0",
-      "doc": "Used to specify that a string or\narray starts with the expected\ncharacters or elements\nScenarios: Array, String",
-      "label": "rspec_expect_start_with",
-      "matches": {
-        "expstw": true
       }
     }
   ]

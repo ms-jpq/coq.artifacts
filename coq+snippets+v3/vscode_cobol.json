@@ -2,55 +2,6 @@
   "extends": [],
   "snippets": [
     {
-      "content": "function numval-c(${1:string},${2:currency-symbol}${3:,ANYCASE})$0",
-      "doc": "corresponding numeric value for string, case-sensitive if ANYCASE not given",
-      "label": "function-numval-c",
-      "matches": {
-        "function numval-c": true
-      }
-    },
-    {
-      "content": "function numval-f(${1:string})$0",
-      "doc": "corresponding numeric value for floating-point-string",
-      "label": "function-numval-f",
-      "matches": {
-        "function numval-f": true
-      }
-    },
-    {
-      "content": "function ord(${1:char},${2:...})$0",
-      "doc": "ordinal position in the program character set corresponding to char",
-      "label": "function-ord",
-      "matches": {
-        "function ord": true
-      }
-    },
-    {
-      "content": "function ord-max(${1:char},${2:...})$0",
-      "doc": "max. ordinal position in the program character set corresponding to list of chars",
-      "label": "function-ord-max",
-      "matches": {
-        "function ord-max": true
-      }
-    },
-    {
-      "content": "FUNCTION UPPER-CASE(${1:string})$0",
-      "doc": "character string that contains string with any lowercase letters replaced by their corresponding uppercase letters",
-      "label": "FUNCTION-UPPER-CASE",
-      "matches": {
-        "FU": true,
-        "FUNCTION UPPER-CASE": true
-      }
-    },
-    {
-      "content": "function ord-min(${1:char},${2:...})$0",
-      "doc": "min. ordinal position in the program character set corresponding to list of chars",
-      "label": "function-ord-min",
-      "matches": {
-        "function ord-min": true
-      }
-    },
-    {
       "content": "FUNCTION VARIANCE(${1:number},${2:...})$0",
       "doc": "statistical variance of the specified list of number argument",
       "label": "FUNCTION-VARIANCE",
@@ -59,61 +10,52 @@
       }
     },
     {
-      "content": "accept ${1:variable}\n$0",
-      "doc": "",
-      "label": "accept",
+      "content": "function cos(${1:angle})$0",
+      "doc": "function trigonometric cosine of angle",
+      "label": "function-cos",
       "matches": {
-        "accept": true
+        "function cos": true
       }
     },
     {
-      "content": "FUNCTION YEAR-TO-YYYY(${1:yy},${2:[yy-cutoff, default: 50},${3:yy-execution-time, default: now})$0",
+      "content": "function currency-symbol()$0",
+      "doc": "function currency symbol character currently in effect for the locale under which the program is running",
+      "label": "function-currency-symbol",
+      "matches": {
+        "function currency-symbol": true
+      }
+    },
+    {
+      "content": "$1-EP SECTON.\nENTRY \"$1\".\n    $0\t\n    GOBACK.",
+      "doc": "ENTRY statement",
+      "label": "ENTRY",
+      "matches": {
+        "ENTRY": true,
+        "GB": true
+      }
+    },
+    {
+      "content": "function variance(${1:number},${2:...})$0",
+      "doc": "statistical variance of the specified list of number argument",
+      "label": "function-variance",
+      "matches": {
+        "function variance": true
+      }
+    },
+    {
+      "content": "CANCEL \"$1\"\n$0",
+      "doc": "CANCEL literal",
+      "label": "CANCEL",
+      "matches": {
+        "CANCEL": true
+      }
+    },
+    {
+      "content": "function year-to-yyyy(${1:yy},${2:[yy-cutoff, default: 50},${3:yy-execution-time, default: now})$0",
       "doc": "convert yy to yyyy with optional yy-cutoff to delineate centuries",
-      "label": "FUNCTION-YEAR-TO-YYYY",
+      "label": "function-year-to-yyyy",
       "matches": {
-        "FUNCTION YEAR-TO-YYYY": true,
-        "FY": true
-      }
-    },
-    {
-      "content": "function present-value(${1:discount-rate},${2:amount},${3:...})$0",
-      "doc": "approximation of the present value of a series of future period-end amount",
-      "label": "function-present-value",
-      "matches": {
-        "function present-value": true
-      }
-    },
-    {
-      "content": "CALL \"$1\" USING\n    BY ${2|VALUE,REFERENCE,CONTENT|} ${3:IDENTIFER}\n    RETURNING ${4:RETURN-CODE}\nEND-CALL\n$0",
-      "doc": "CALL literal",
-      "label": "CALL",
-      "matches": {
-        "CALL": true
-      }
-    },
-    {
-      "content": "function random(${1:seed})$0",
-      "doc": "pseudo-random number 0> <1 from a rectangular distribution with optional seed",
-      "label": "function-random",
-      "matches": {
-        "function random": true
-      }
-    },
-    {
-      "content": "if ${1:condition}\n   $0\nend-if",
-      "doc": "",
-      "label": "if",
-      "matches": {
-        "ie": true,
-        "if": true
-      }
-    },
-    {
-      "content": "function range(${1:argument},${2:...})$0",
-      "doc": "value of the maximum argument minus the value of the minimum argument",
-      "label": "function-range",
-      "matches": {
-        "function range": true
+        "function year-to-yyyy": true
       }
     },
     {
@@ -126,195 +68,231 @@
       }
     },
     {
-      "content": "function rem(${1:number},${2:divisor})$0",
-      "doc": "remainder of number divided by divisor",
-      "label": "function-rem",
+      "content": "string ${1:item1} delimited by size\n       ${2:item2} delimited by size\n       into ${3:result}\nend-string\n$0",
+      "doc": "string delimited by size",
+      "label": "string",
       "matches": {
-        "function rem": true
+        "string": true
       }
     },
     {
-      "content": "EXIT PROGRAM RETURNING ${1:item}",
-      "doc": "EXIT PROGRAM",
-      "label": "EXIT PROGRAM",
+      "content": "function formatted-datetime(${1:date-and-time-format},${2:integer-date},${3:standard-numeric-time},${4:offset_or_system_offset})$0",
+      "doc": "function formatted-datetime",
+      "label": "function-formatted-datetime",
       "matches": {
-        "EP": true,
-        "EXIT": true
+        "function formatted-datetime": true
       }
     },
     {
-      "content": "function reverse(${1:string})$0",
-      "doc": "reverse representation with same length of string",
-      "label": "function-reverse",
+      "content": "evaluate $1\n    when $2\n       $0\n    when other\n       continue\nend-evaluate",
+      "doc": "evaluate",
+      "label": "evaluate",
       "matches": {
-        "function reverse": true
+        "ee": true,
+        "evaluate": true
       }
     },
     {
-      "content": "\\$set dialect\"${2|ans85,bs2000,bs2000-offload,cob370,cob371,cob372,mf,mvs,os390,osvs,vsc21,vsc22,vsc23,vsc24|}\"\n$0",
+      "content": "function formatted-time(${1:time-format},${2:standard-numeric-time},${3:offset_or_system_offset})$0",
+      "doc": "function formatted-time",
+      "label": "Function-formatted-time",
+      "matches": {
+        "function formatted-time": true
+      }
+    },
+    {
+      "content": "FUNCTION ABS(${1:number})$0",
+      "doc": "function absolute value of number",
+      "label": "FUNCTION-ABS",
+      "matches": {
+        "FUNCTION ABS": true
+      }
+    },
+    {
+      "content": "FUNCTION ACOS(${1:cosine})$0",
+      "doc": "function trigonometric arc-cosine, or inverse cosine, of cosine",
+      "label": "FUNCTION-ACOS",
+      "matches": {
+        "FUNCTION ACOS": true
+      }
+    },
+    {
+      "content": "function highest-algebraic(${1:numeric-identifier})$0",
+      "doc": "highest value that could possibly be stored in the specified numeric-identifier",
+      "label": "function-highest-algebraic",
+      "matches": {
+        "function highest-algebraic": true
+      }
+    },
+    {
+      "content": "FUNCTION ANNUITY(${1:interest-rate},${2:number-of-periods})$0",
+      "doc": "function annuity",
+      "label": "FUNCTION-ANNUITY",
+      "matches": {
+        "FUNCTION ANNUITY": true
+      }
+    },
+    {
+      "content": "01 ${2:_prop} ${3:binary-long} private.\nmethod-id. get property #${1:Prop}.\nprocedure division returning ret as ${3:binary-long}.\n    set ret to ${2:_prop}\nend method.\nmethod-id. set property #${1:Prop}.\nprocedure division using by value val as ${3:binary-long}.\n    set ${2:_prop} to 0\nend method.",
+      "doc": "set/get property",
+      "label": "property",
+      "matches": {
+        "property": true
+      }
+    },
+    {
+      "content": "FUNCTION ASIN(${1:sine})$0",
+      "doc": "function trigonometric arc-sine, or inverse sine, of sine",
+      "label": "FUNCTION-ASIN",
+      "matches": {
+        "FUNCTION ASIN": true
+      }
+    },
+    {
+      "content": "exec sql include sqlca end-exec.",
+      "doc": "exec sql include",
+      "label": "exec-sql",
+      "matches": {
+        "exec": true
+      }
+    },
+    {
+      "content": "dunction integer-of-boolean(${1:boolean-item})$0",
+      "doc": "numeric value of boolean-item",
+      "label": "function-integer-of-boolean",
+      "matches": {
+        "function integer-of-boolean": true
+      }
+    },
+    {
+      "content": "exec sql begin declare section end-exec.\n$0\nexec sql end declare section end-exec.",
+      "doc": "exec sql declare",
+      "label": "exec-sql-begin",
+      "matches": {
+        "exec": true
+      }
+    },
+    {
+      "content": "FUNCTION BOOLEAN-OF-INTEGER(${1:integer},${2:length})$0",
+      "doc": "function boolean item of usage bit representing the binary value of integer; with the given length",
+      "label": "FUNCTION-BOOLEAN-OF-INTEGER",
+      "matches": {
+        "FUNCTION BOOLEAN-OF-INTEGER": true
+      }
+    },
+    {
+      "content": "function integer-of-date(${1:yyyymmdd})$0",
+      "doc": "converts yyyymmdd to an internal integer-date",
+      "label": "function-integer-of-date",
+      "matches": {
+        "function integer-of-date": true
+      }
+    },
+    {
+      "content": "FUNCTION BYTE-LENGTH(${1:integer})$0",
+      "doc": "function byte-length (in bytes) of item",
+      "label": "FUNCTION-BYTE-LENGTH",
+      "matches": {
+        "FUNCTION BYTE-LENGTH": true
+      }
+    },
+    {
+      "content": "function integer-of-day(${1:yyyymmdd})$0",
+      "doc": "converts yyyymmdd to an internal integer-day",
+      "label": "function-integer-of-day",
+      "matches": {
+        "function integer-of-day": true
+      }
+    },
+    {
+      "content": "IF ${1:CONDITION}\n   $0\nEND-IF",
       "doc": "",
-      "label": "dialect",
+      "label": "IF",
       "matches": {
-        "$set": true
+        "IF": true,
+        "ie": true
       }
     },
     {
-      "content": "add ${1:a} to ${2:b} giving ${3:c}",
-      "doc": "Add a to b giving c",
-      "label": "add",
-      "matches": {
-        "add": true
-      }
-    },
-    {
-      "content": "function seconds-from-formatted-time(${1:format},${2:time})$0",
-      "doc": "decode time according to format (a time format or a combined date and time format)",
-      "label": "function-seconds-from-formatted-time",
-      "matches": {
-        "function seconds-from-formatted-time": true
-      }
-    },
-    {
-      "content": "\\$set sourceformat\"${2|free,variable,fixed|}\"\n$0",
+      "content": "accept ${1:variable}\n$0",
       "doc": "",
-      "label": "sourceformat",
+      "label": "accept",
       "matches": {
-        "$set": true
+        "accept": true
       }
     },
     {
-      "content": "IDENTIFICATION DIVISION.\n$0",
+      "content": "IF ${1:CONDITION}\n   $0\nELSE\n   \nEND-IF",
       "doc": "",
-      "label": "IDENTIFICATION DIVISION",
+      "label": "IF ELSE",
       "matches": {
-        "ID": true,
-        "IDENTIFICATION DIVISION": true
+        "IEE": true,
+        "IF": true
       }
     },
     {
-      "content": "function seconds-past-midnight()$0",
-      "doc": "current time of day expressed as the total number of elapsed seconds since midnight",
-      "label": "function-seconds-past-midnight",
+      "content": "FUNCTION COMBINED-DATETIME(${1:integer-date},${2:standard-numeric-time})$0",
+      "doc": "function combines integer-date and standard-numeric-time into a single numeric item from which both date and time components can be derived",
+      "label": "FUNCTION-COMBINED-DATETIME",
       "matches": {
-        "function seconds-past-midnight": true
+        "FUNCTION COMBINED-DATETIME": true
       }
     },
     {
-      "content": "identification division.\n$0",
+      "content": "inspect $1 converting '${2:ABCDEFGHIJKLMNOPQRSTUVWXYZ}' to '${3:abcdefghijklmnopqrstuvwxyz}'",
+      "doc": "inspect converting",
+      "label": "inspect converting",
+      "matches": {
+        "inspect": true
+      }
+    },
+    {
+      "content": "if ${1:condition}\n   $0\nelse\n   \nend-if",
       "doc": "",
-      "label": "identification division",
+      "label": "if else",
       "matches": {
-        "id": true,
-        "identification division": true
+        "iee": true,
+        "if": true
       }
     },
     {
-      "content": "function sign(${1:number})$0",
-      "doc": "sign representation of number as -1, 0, 1",
-      "label": "function-sign",
+      "content": "INSPECT $1 CONVERTING '${2:ABCDEFGHIJKLMNOPQRSTUVWXYZ}' to '${3:abcdefghijklmnopqrstuvwxyz}'",
+      "doc": "INSPECT CONVERTING",
+      "label": "INSPECT CONVERTING",
       "matches": {
-        "function sign": true
+        "INSPECT": true
       }
     },
     {
-      "content": "ENVIRONMENT DIVISION.\n$0",
-      "doc": "",
-      "label": "ENVIRONMENT DIVISION",
+      "content": "FUNCTION COS(${1:angle})$0",
+      "doc": "function trigonometric cosine of angle",
+      "label": "FUNCTION-COS",
       "matches": {
-        "ED": true,
-        "ENVIRONMENT DIVISION": true
+        "FUNCTION COS": true
       }
     },
     {
-      "content": "function sin(${1:angle})$0",
-      "doc": "trigonometric sine of the specified angle",
-      "label": "function-sin",
+      "content": "inspect $1 replacing all ${2|spaces,zero|} by '${3}'",
+      "doc": "inspect replacing",
+      "label": "inspect replacing",
       "matches": {
-        "function sin": true
+        "inspect": true
       }
     },
     {
-      "content": "$1-ep section.\nentry \"$1\".\n    $0\t\n    goback.",
-      "doc": "entry statement",
-      "label": "entry",
+      "content": "FUNCTION CURRENCY-SYMBOL()$0",
+      "doc": "function currency symbol character currently in effect for the locale under which the program is running",
+      "label": "FUNCTION-CURRENCY-SYMBOL",
       "matches": {
-        "eg": true,
-        "entry": true
+        "FUNCTION CURRENCY-SYMBOL": true
       }
     },
     {
-      "content": "DATA DIVISION.\n$0",
-      "doc": "",
-      "label": "DATA DIVISION",
+      "content": "INSPECT $1 REPLACING ALL ${2|SPACES,ZERO|} BY '${3}'",
+      "doc": "INSPECT REPLACING",
+      "label": "INSPECT REPLACING",
       "matches": {
-        "DATA DIVISION": true,
-        "DD": true
-      }
-    },
-    {
-      "content": "function sqrt(${1:number})$0",
-      "doc": "aproximation of the square root of number",
-      "label": "function-sqrt",
-      "matches": {
-        "function sqrt": true
-      }
-    },
-    {
-      "content": "program-id. ${1:${TM_FILENAME/(.*)\\..+$/$1/}}.\n       procedure division.\n           $0\n           goback.\n\n       end program $1.",
-      "doc": "Minimum template",
-      "label": "Minimum program",
-      "matches": {
-        "program-id": true
-      }
-    },
-    {
-      "content": "END PROGRAM ${1:${TM_FILENAME/(.*)\\..+$/$1/}}.",
-      "doc": "END PROGRAM prg.",
-      "label": "END PROGRAM",
-      "matches": {
-        "END PROGRAM": true
-      }
-    },
-    {
-      "content": "function tan(${1:angle})$0",
-      "doc": "trigonometric tangent of the specified angle",
-      "label": "function-tan",
-      "matches": {
-        "function tan": true
-      }
-    },
-    {
-      "content": "end program ${1:${TM_FILENAME/(.*)\\..+$/$1/}}.",
-      "doc": "end program ${1:${TM_FILENAME/(.*)\\..+$/$1/}}.",
-      "label": "end program",
-      "matches": {
-        "end program": true
-      }
-    },
-    {
-      "content": "working-storage section.\n$0",
-      "doc": "",
-      "label": "working-storage section",
-      "matches": {
-        "working-storage": true,
-        "ws": true
-      }
-    },
-    {
-      "content": "function upper-case(${1:string})$0",
-      "doc": "character string that contains string with any lowercase letters replaced by their corresponding uppercase letters",
-      "label": "function-upper-case",
-      "matches": {
-        "function upper-case": true
-      }
-    },
-    {
-      "content": "local-storage section.\n$0",
-      "doc": "",
-      "label": "local-storage section",
-      "matches": {
-        "local-storage": true,
-        "ls": true
+        "INSPECT": true
       }
     },
     {
@@ -327,11 +305,11 @@
       }
     },
     {
-      "content": "function variance(${1:number},${2:...})$0",
-      "doc": "statistical variance of the specified list of number argument",
-      "label": "function-variance",
+      "content": "*>> <summary>method main</summary>\nmethod-id main public static.\nprocedure division using\n           by value args as string occurs any.\n    $0\nend method.",
+      "doc": "method-id (main)",
+      "label": "main method-id",
       "matches": {
-        "function variance": true
+        "main": true
       }
     },
     {
@@ -344,31 +322,6 @@
       }
     },
     {
-      "content": "|...+.*..1....+....2....+....3....+....4....+....5....+....6....+....7..",
-      "doc": "",
-      "label": "ruler",
-      "matches": {
-        "ruler": true
-      }
-    },
-    {
-      "content": "function year-to-yyyy(${1:yy},${2:[yy-cutoff, default: 50},${3:yy-execution-time, default: now})$0",
-      "doc": "convert yy to yyyy with optional yy-cutoff to delineate centuries",
-      "label": "function-year-to-yyyy",
-      "matches": {
-        "function year-to-yyyy": true
-      }
-    },
-    {
-      "content": "PROGRAM-ID. ${1:${TM_FILENAME/(.*)\\..+$/${1:/upcase}/}}.\n$0",
-      "doc": "",
-      "label": "PROGRAM-ID",
-      "matches": {
-        "PI": true,
-        "PROGRAM-ID. PRG.": true
-      }
-    },
-    {
       "content": "perform ${1:paragraph-name} ${2:value-1} times",
       "doc": "perform paragraph x times",
       "label": "perform",
@@ -378,19 +331,12 @@
       }
     },
     {
-      "content": "SUBTRACT ${1:a} FROM ${2:b} GIVING ${3:c}",
-      "doc": "SUBTRACT a FROM b GIVING c",
-      "label": "SUBTRACT",
+      "content": "*>> <summary>method $1</summary>\nmethod-id $1.\nprocedure division.\n    $0\nend method.",
+      "doc": "method-id",
+      "label": "method-id",
       "matches": {
-        "SUBTRACT": true
-      }
-    },
-    {
-      "content": "<exception cref=\"${1:member}\">${2:description}</exception>\n*>> $0",
-      "doc": "",
-      "label": "<exception",
-      "matches": {
-        "<exception": true
+        "method-id": true,
+        "mi": true
       }
     },
     {
@@ -403,69 +349,11 @@
       }
     },
     {
-      "content": "try\n$2\ncatch ${1:Exception}\n$0\nend-try",
-      "doc": "try catch",
-      "label": "try",
-      "matches": {
-        "try": true
-      }
-    },
-    {
-      "content": "<returns>${1:description}</returns>\n*>> $0",
+      "content": "|...+.*..1....+....2....+....3....+....4....+....5....+....6....+....7..",
       "doc": "",
-      "label": "<returns>",
+      "label": "ruler",
       "matches": {
-        "<returns>": true
-      }
-    },
-    {
-      "content": "<param name=\"${1:Int}\">${2}</param>\n*>> $0",
-      "doc": "",
-      "label": "<param",
-      "matches": {
-        "<param>": true
-      }
-    },
-    {
-      "content": "FUNCTION ABS(${1:number})$0",
-      "doc": "function absolute value of number",
-      "label": "FUNCTION-ABS",
-      "matches": {
-        "FUNCTION ABS": true
-      }
-    },
-    {
-      "content": "valuetype-id $1 ${2:public}.\n01 item string ${2:public}.\n\nmethod-id new ${2:public}.\nprocedure division.\n   $0\nend method.\n\nend valuetype.",
-      "doc": "valuetype",
-      "label": "valuetype",
-      "matches": {
-        "valuetype-id": true,
-        "vi": true
-      }
-    },
-    {
-      "content": "*>> <summary>${1:XX is a method in the YY class.}\n*>> <para>${2}</para>\n*>> $0\n*>> </summary>",
-      "doc": "",
-      "label": "*>> <summary",
-      "matches": {
-        "*>> <summary": true
-      }
-    },
-    {
-      "content": "FUNCTION ACOS(${1:cosine})$0",
-      "doc": "function trigonometric arc-cosine, or inverse cosine, of cosine",
-      "label": "FUNCTION-ACOS",
-      "matches": {
-        "FUNCTION ACOS": true
-      }
-    },
-    {
-      "content": "program-id. ${1:${TM_FILENAME/(.*)\\..+$/$1/}}.\n$0",
-      "doc": "",
-      "label": "program-id",
-      "matches": {
-        "pi": true,
-        "program-id. prg.": true
+        "ruler": true
       }
     },
     {
@@ -477,11 +365,52 @@
       }
     },
     {
-      "content": "FUNCTION ANNUITY(${1:interest-rate},${2:number-of-periods})$0",
-      "doc": "function annuity",
-      "label": "FUNCTION-ANNUITY",
+      "content": "perform ${1}\n\t${2}\nend-perform\n${0}",
+      "doc": "perform .. end-perform",
+      "label": "perform-end-perform",
       "matches": {
-        "FUNCTION ANNUITY": true
+        "pe": true,
+        "perform": true
+      }
+    },
+    {
+      "content": "call \"$1\" using\n    by ${2|value,reference,content|} ${3:identifer}\n    returning ${4:return-code}\nend-call\n$0",
+      "doc": "CALL literal",
+      "label": "call",
+      "matches": {
+        "call": true
+      }
+    },
+    {
+      "content": "<exception cref=\"${1:member}\">${2:description}</exception>\n*>> $0",
+      "doc": "",
+      "label": "<exception",
+      "matches": {
+        "<exception": true
+      }
+    },
+    {
+      "content": "FUNCTION CURRENT-DATE(${1:date-and-time-format})$0",
+      "doc": "function current date and time as 21-character value",
+      "label": "FUNCTION-CURRENT-DATE",
+      "matches": {
+        "FUNCTION CURRENT-DATE": true
+      }
+    },
+    {
+      "content": "\\$set dialect\"${2|ans85,bs2000,bs2000-offload,cob370,cob371,cob372,mf,mvs,os390,osvs,vsc21,vsc22,vsc23,vsc24|}\"\n$0",
+      "doc": "",
+      "label": "dialect",
+      "matches": {
+        "$set": true
+      }
+    },
+    {
+      "content": "*>> <summary>${1:XX is a method in the YY class.}\n*>> <para>${2}</para>\n*>> $0\n*>> </summary>",
+      "doc": "",
+      "label": "*>> <summary",
+      "matches": {
+        "*>> <summary": true
       }
     },
     {
@@ -494,28 +423,21 @@
       }
     },
     {
-      "content": "display \"$0\"",
-      "doc": "display literal",
-      "label": "display",
-      "matches": {
-        "display": true
-      }
-    },
-    {
-      "content": "FUNCTION ASIN(${1:sine})$0",
-      "doc": "function trigonometric arc-sine, or inverse sine, of sine",
-      "label": "FUNCTION-ASIN",
-      "matches": {
-        "FUNCTION ASIN": true
-      }
-    },
-    {
-      "content": "procedure division.\n$0",
+      "content": "program-id. ${1:${TM_FILENAME/(.*)\\..+$/$1/}}.\n$0",
       "doc": "",
-      "label": "procedure division",
+      "label": "program-id",
       "matches": {
-        "pd": true,
-        "procedure division": true
+        "pi": true,
+        "program-id. prg.": true
+      }
+    },
+    {
+      "content": "PROGRAM-ID. ${1:${TM_FILENAME/(.*)\\..+$/${1:/upcase}/}}.\n$0",
+      "doc": "",
+      "label": "PROGRAM-ID",
+      "matches": {
+        "PI": true,
+        "PROGRAM-ID. PRG.": true
       }
     },
     {
@@ -528,36 +450,11 @@
       }
     },
     {
-      "content": "FUNCTION ATAN(${1:tangent})$0",
-      "doc": "function trigonometric arc-tangent, or inverse tangent, of tangent",
-      "label": "FUNCTION-ATAN",
+      "content": "FUNCTION RANDOM(${1:seed})$0",
+      "doc": "pseudo-random number 0> <1 from a rectangular distribution with optional seed",
+      "label": "FUNCTION-RANDOM",
       "matches": {
-        "FUNCTION ATAN": true
-      }
-    },
-    {
-      "content": "PROCEDURE DIVISION.\n$0",
-      "doc": "",
-      "label": "PROCEDURE DIVISION",
-      "matches": {
-        "PD": true,
-        "PROCEDURE DIVISION": true
-      }
-    },
-    {
-      "content": "$1 section.\n   $TM_SELECTED_TEXT\n$1-end section.\n   exit section.",
-      "doc": "select-tosection",
-      "label": "select-to-section",
-      "matches": {
-        "perform": true
-      }
-    },
-    {
-      "content": "FUNCTION BOOLEAN-OF-INTEGER(${1:integer},${2:length})$0",
-      "doc": "function boolean item of usage bit representing the binary value of integer; with the given length",
-      "label": "FUNCTION-BOOLEAN-OF-INTEGER",
-      "matches": {
-        "FUNCTION BOOLEAN-OF-INTEGER": true
+        "FUNCTION RANDOM": true
       }
     },
     {
@@ -571,6 +468,32 @@
       }
     },
     {
+      "content": "LINKAGE SECTION.\n$0",
+      "doc": "",
+      "label": "LINKAGE SECTION ",
+      "matches": {
+        "LINKAGE SECTION": true,
+        "LKS": true,
+        "LS": true
+      }
+    },
+    {
+      "content": "function current-date(${1:date-and-time-format})$0",
+      "doc": "function current date and time as 21-character value",
+      "label": "function-current-date",
+      "matches": {
+        "function current-date": true
+      }
+    },
+    {
+      "content": "ADD ${1:a} TO ${2:b} GIVING ${3:c}",
+      "doc": "Add a to b giving c",
+      "label": "ADD",
+      "matches": {
+        "ADD": true
+      }
+    },
+    {
       "content": "PERFORM ${1:paragraph-name} VARYING ${2:field-1}\n FROM ${3:value-1} BY ${4:value-2}\n UNTIL ${5:condition}\n$0",
       "doc": "INLINE PERFORM VARYING",
       "label": "PERFORM VARYING",
@@ -580,21 +503,11 @@
       }
     },
     {
-      "content": "FUNCTION BYTE-LENGTH(${1:integer})$0",
-      "doc": "function byte-length (in bytes) of item",
-      "label": "FUNCTION-BYTE-LENGTH",
+      "content": "function integer-part(${1:number})$0",
+      "doc": "portion of number that occurs to the left of the decimal point",
+      "label": "function-integer-part",
       "matches": {
-        "FUNCTION BYTE-LENGTH": true
-      }
-    },
-    {
-      "content": "LINKAGE SECTION.\n$0",
-      "doc": "",
-      "label": "LINKAGE SECTION ",
-      "matches": {
-        "LINKAGE SECTION": true,
-        "LKS": true,
-        "LS": true
+        "function integer-part": true
       }
     },
     {
@@ -607,20 +520,27 @@
       }
     },
     {
-      "content": "FUNCTION CHAR(${1:integer})$0",
-      "doc": "function character in the ordinal position specified by integer, from the current alphanumeric collating sequence",
-      "label": "FUNCTION-CHAR",
+      "content": "ACCEPT ${1:variable}\n$0",
+      "doc": "",
+      "label": "ACCEPT",
       "matches": {
-        "FUNCTION CHAR": true
+        "ACCEPT": true
       }
     },
     {
-      "content": "data division.\n$0",
-      "doc": "",
-      "label": "data division",
+      "content": "$1 section.\n   $TM_SELECTED_TEXT\n$1-end section.\n   exit section.",
+      "doc": "select-tosection",
+      "label": "select-to-section",
       "matches": {
-        "data division": true,
-        "dd": true
+        "perform": true
+      }
+    },
+    {
+      "content": "accept ${1:variable} ${2|from date,from day,from day-of-week,time|}\n$0",
+      "doc": "accept from date/day/week/time",
+      "label": "accept from",
+      "matches": {
+        "accept": true
       }
     },
     {
@@ -632,19 +552,77 @@
       }
     },
     {
-      "content": "FUNCTION CHAR-NATIONAL(${1:integer})$0",
-      "doc": "function character in the ordinal position specified by &lt;integer&gt; from the current national collating sequence",
-      "label": "FUNCTION-CHAR-NATIONAL",
+      "content": "FUNCTION FORMATTED-DATE(${1:date-format},${2:integer-date})$0",
+      "doc": "function formatted-date",
+      "label": "FUNCTION-FORMATTED-DATE",
       "matches": {
-        "FUNCTION CHAR-NATIONAL": true
+        "FUNCTION FORMATTED-DATE": true
       }
     },
     {
-      "content": "STRING ${1:item1} DELIMITED BY SIZE\n       ${2:item2} DELIMITED BY SIZE\n       INTO ${3:result}\nEND-STRING\n$0",
-      "doc": "string delimited by size",
-      "label": "STRING",
+      "content": "ACCEPT ${1:variable} ${2|FROM DATE,FROM DAY,FROM DAY-OF-WEEK,TIME|}\n$0",
+      "doc": "ACCEPT FROM DATE/DAY/WEEK/TIME",
+      "label": "ACCEPT FROM",
       "matches": {
-        "STRING": true
+        "ACCEPT": true
+      }
+    },
+    {
+      "content": "if ${1:condition}\n   $0\nend-if",
+      "doc": "",
+      "label": "if",
+      "matches": {
+        "ie": true,
+        "if": true
+      }
+    },
+    {
+      "content": "FUNCTION FORMATTED-DATETIME(${1:date-and-time-format},${2:integer-date},${3:standard-numeric-time},${4:offset_or_system_offset})$0",
+      "doc": "function formatted-datetime",
+      "label": "FUNCTION-FORMATTED-DATETIME",
+      "matches": {
+        "FUNCTION FORMATTED-DATETIME": true
+      }
+    },
+    {
+      "content": "class-id $1 ${3|public,private|}.\n\n       method-id new public.\n       procedure division.\n           $0\n           exit method.\n       end method.\n\n       end class.",
+      "doc": "class with ctor",
+      "label": "class-id",
+      "matches": {
+        "class-id": true
+      }
+    },
+    {
+      "content": "ENVIRONMENT DIVISION.\n$0",
+      "doc": "",
+      "label": "ENVIRONMENT DIVISION",
+      "matches": {
+        "ED": true,
+        "ENVIRONMENT DIVISION": true
+      }
+    },
+    {
+      "content": "function formatted-time(${1:time-format},${2:standard-numeric-time},${3:offset_or_system_offset})$0",
+      "doc": "function formatted-time",
+      "label": "function-formatted-time",
+      "matches": {
+        "function formatted-time": true
+      }
+    },
+    {
+      "content": "FUNCTION FRACTION-PART(${1:number})$0",
+      "doc": "portion of number that occurs to the right of the decimal point",
+      "label": "FUNCTION-FRACTION-PART",
+      "matches": {
+        "FUNCTION FRACTION-PART": true
+      }
+    },
+    {
+      "content": "function length(${1:item})$0",
+      "doc": "returns the length (in character positions) of the specified item",
+      "label": "function-length",
+      "matches": {
+        "function length": true
       }
     },
     {
@@ -657,182 +635,6 @@
       }
     },
     {
-      "content": "FUNCTION COMBINED-DATETIME(${1:integer-date},${2:standard-numeric-time})$0",
-      "doc": "function combines integer-date and standard-numeric-time into a single numeric item from which both date and time components can be derived",
-      "label": "FUNCTION-COMBINED-DATETIME",
-      "matches": {
-        "FUNCTION COMBINED-DATETIME": true
-      }
-    },
-    {
-      "content": "CANCEL \"$1\"\n$0",
-      "doc": "CANCEL literal",
-      "label": "CANCEL",
-      "matches": {
-        "CANCEL": true
-      }
-    },
-    {
-      "content": "cancel \"$1\"\n$0",
-      "doc": "CANCEL literal",
-      "label": "cancel",
-      "matches": {
-        "cancel": true
-      }
-    },
-    {
-      "content": "function abs(${1:number})$0",
-      "doc": "function absolute value of number",
-      "label": "function-abs",
-      "matches": {
-        "function abs": true
-      }
-    },
-    {
-      "content": "FUNCTION COS(${1:angle})$0",
-      "doc": "function trigonometric cosine of angle",
-      "label": "FUNCTION-COS",
-      "matches": {
-        "FUNCTION COS": true
-      }
-    },
-    {
-      "content": "FUNCTION LOG10(${1:number})$0",
-      "doc": "format base 10 logarithm of number",
-      "label": "FUNCTION-LOG10",
-      "matches": {
-        "FUNCTION LOG10": true
-      }
-    },
-    {
-      "content": "FUNCTION MEAN(${1:number},${2:...})$0",
-      "doc": "statistical mean value of the specified list of numbers",
-      "label": "FUNCTION-MEAN",
-      "matches": {
-        "FUNCTION MEAN": true
-      }
-    },
-    {
-      "content": "function acos(${1:cosine})$0",
-      "doc": "function trigonometric arc-cosine, or inverse cosine, of cosine",
-      "label": "function-acos",
-      "matches": {
-        "function acos": true
-      }
-    },
-    {
-      "content": "FUNCTION LOWERCASE(${1:string})$0",
-      "doc": "character string that contains string with any uppercase letters replaced by their corresponding lowercase letters",
-      "label": "FUNCTION-LOWERCASE",
-      "matches": {
-        "FUNCTION LOWERCASE": true
-      }
-    },
-    {
-      "content": "FUNCTION MEDIAN(${1:number},${2:...})$0",
-      "doc": "statistical median value of the specified list of numbers",
-      "label": "FUNCTION-MEDIAN",
-      "matches": {
-        "FUNCTION MEDIAN": true
-      }
-    },
-    {
-      "content": "FUNCTION CURRENT-DATE(${1:date-and-time-format})$0",
-      "doc": "function current date and time as 21-character value",
-      "label": "FUNCTION-CURRENT-DATE",
-      "matches": {
-        "FUNCTION CURRENT-DATE": true
-      }
-    },
-    {
-      "content": "function annuity(${1:interest-rate},${2:number-of-periods})$0",
-      "doc": "function annuity",
-      "label": "function-annuity",
-      "matches": {
-        "function annuity": true
-      }
-    },
-    {
-      "content": "FUNCTION MIDRANGE(${1:number},${2:...})$0",
-      "doc": "statistical midrange value of the specified list of numbers",
-      "label": "FUNCTION-MIDRANGE",
-      "matches": {
-        "FUNCTION MIDRANGE": true
-      }
-    },
-    {
-      "content": "FUNCTION FORMATTED-DATE(${1:date-format},${2:integer-date})$0",
-      "doc": "function formatted-date",
-      "label": "FUNCTION-FORMATTED-DATE",
-      "matches": {
-        "FUNCTION FORMATTED-DATE": true
-      }
-    },
-    {
-      "content": "function asin(${1:sine})$0",
-      "doc": "function trigonometric arc-sine, or inverse sine, of sine",
-      "label": "function-asin",
-      "matches": {
-        "function asin": true
-      }
-    },
-    {
-      "content": "FUNCTION MIN(${1:number},${2:...})$0",
-      "doc": "statistical min value of the specified list of numbers",
-      "label": "FUNCTION-MIN",
-      "matches": {
-        "FUNCTION MIN": true
-      }
-    },
-    {
-      "content": "FUNCTION FORMATTED-DATETIME(${1:date-and-time-format},${2:integer-date},${3:standard-numeric-time},${4:offset_or_system_offset})$0",
-      "doc": "function formatted-datetime",
-      "label": "FUNCTION-FORMATTED-DATETIME",
-      "matches": {
-        "FUNCTION FORMATTED-DATETIME": true
-      }
-    },
-    {
-      "content": "FUNCTION SIN(${1:angle})$0",
-      "doc": "trigonometric sine of the specified angle",
-      "label": "FUNCTION-SIN",
-      "matches": {
-        "FUNCTION SIN": true
-      }
-    },
-    {
-      "content": "COPY \"${1:SUBPROG.CPY}\"\n    REPLACING ==${2:()}== BY ==${3:lnk-}==.",
-      "doc": "COPY REPLACING",
-      "label": "COPY",
-      "matches": {
-        "COPY": true
-      }
-    },
-    {
-      "content": "FUNCTION FRACTION-PART(${1:number})$0",
-      "doc": "portion of number that occurs to the right of the decimal point",
-      "label": "FUNCTION-FRACTION-PART",
-      "matches": {
-        "FUNCTION FRACTION-PART": true
-      }
-    },
-    {
-      "content": "FUNCTION MONETARY-DECIMAL-POINT()$0",
-      "doc": "character used to separate the integer portion from the fractional part of a monetary currency value according to the current locale",
-      "label": "FUNCTION-MONETARY-DECIMAL-POINT",
-      "matches": {
-        "FUNCTION MONETARY-DECIMAL-POINT": true
-      }
-    },
-    {
-      "content": "function boolean-of-integer(${1:integer},${2:length})$0",
-      "doc": "function boolean item of usage bit representing the binary value of integer; with the given length",
-      "label": "function-boolean-of-integer",
-      "matches": {
-        "function boolean-of-integer": true
-      }
-    },
-    {
       "content": "FUNCTION HIGHEST-ALGEBRAIC(${1:numeric-identifier})$0",
       "doc": "highest value that could possibly be stored in the specified numeric-identifier",
       "label": "FUNCTION-HIGHEST-ALGEBRAIC",
@@ -841,67 +643,70 @@
       }
     },
     {
-      "content": "FUNCTION MONETARY-THOUSANDS-SEPARATOR()$0",
-      "doc": "character used to separate the thousands digit groupings in a monetary currency value according to the current locale",
-      "label": "FUNCTION-MONETARY-THOUSANDS-SEPARATOR",
+      "content": "identification division.\n$0",
+      "doc": "",
+      "label": "identification division",
       "matches": {
-        "FUNCTION MONETARY-THOUSANDS-SEPARATOR": true
+        "id": true,
+        "identification division": true
       }
     },
     {
-      "content": "ADD ${1:a} TO ${2:b} GIVING ${3:c}",
-      "doc": "Add a to b giving c",
-      "label": "ADD",
+      "content": "function length-an(${1:item})$0",
+      "doc": "returns the length (in bytes) of the specified item;",
+      "label": "function-length-an",
       "matches": {
-        "ADD": true
+        "function length-an": true
       }
     },
     {
-      "content": "function byte-length(${1:integer})$0",
-      "doc": "function byte-length (in bytes) of item",
-      "label": "function-byte-length",
+      "content": "FUNCTION INTEGER(${1:number})$0",
+      "doc": "greatest integer value that is less than or equal to number",
+      "label": "FUNCTION-INTEGER",
       "matches": {
-        "function byte-length": true
+        "FUNCTION INTEGER": true
       }
     },
     {
-      "content": "FUNCTION NATIONAL-OF(${1:alphanumeric-string},${2:replacement-char})$0",
-      "doc": "convert alphanumeric-string to the national coded character set representation",
-      "label": "FUNCTION-NATIONAL-OF",
+      "content": "IDENTIFICATION DIVISION.\n$0",
+      "doc": "",
+      "label": "IDENTIFICATION DIVISION",
       "matches": {
-        "FUNCTION NATIONAL-OF": true
+        "ID": true,
+        "IDENTIFICATION DIVISION": true
       }
     },
     {
-      "content": "FUNCTION SIGN(${1:number})$0",
-      "doc": "sign representation of number as -1, 0, 1",
-      "label": "FUNCTION-SIGN",
+      "content": "\\$set sourceformat\"${2|free,variable,fixed|}\"\n$0",
+      "doc": "",
+      "label": "sourceformat",
       "matches": {
-        "FUNCTION SIGN": true
+        "$set": true
       }
     },
     {
-      "content": "FUNCTION INTEGER-OF-BOOLEAN(${1:boolean-item})$0",
-      "doc": "numeric value of boolean-item",
-      "label": "FUNCTION-INTEGER-OF-BOOLEAN",
+      "content": "function locale-compare(${1:argument1},${2:argument2},${3:locale-optional})$0",
+      "doc": "character '=' or '<' or '>' indicating the result of comparing argument1 and argument2 using a culturall",
+      "label": "function-locale-compare",
       "matches": {
-        "FUNCTION INTEGER-OF-BOOLEAN": true
+        "function locale-compare": true
       }
     },
     {
-      "content": "function char(${1:integer})$0",
-      "doc": "function character in the ordinal position specified by integer, from the current alphanumeric collating sequence",
-      "label": "function-char",
+      "content": "<returns>${1:description}</returns>\n*>> $0",
+      "doc": "",
+      "label": "<returns>",
       "matches": {
-        "function char": true
+        "<returns>": true
       }
     },
     {
-      "content": "FUNCTION SECONDS-PAST-MIDNIGHT()$0",
-      "doc": "current time of day expressed as the total number of elapsed seconds since midnight",
-      "label": "FUNCTION-SECONDS-PAST-MIDNIGHT",
+      "content": "EXIT PROGRAM RETURNING ${1:item}",
+      "doc": "EXIT PROGRAM",
+      "label": "EXIT PROGRAM",
       "matches": {
-        "FUNCTION SECONDS-PAST-MIDNIGHT": true
+        "EP": true,
+        "EXIT": true
       }
     },
     {
@@ -913,322 +718,6 @@
       }
     },
     {
-      "content": "FUNCTION NUMVAL(${1:string})$0",
-      "doc": "corresponding numeric value for string",
-      "label": "FUNCTION-NUMVAL",
-      "matches": {
-        "FUNCTION NUMVAL": true
-      }
-    },
-    {
-      "content": "function char-national(${1:integer})$0",
-      "doc": "function character in the ordinal position specified by &lt;integer&gt; from the current national collating sequence",
-      "label": "function-char-national",
-      "matches": {
-        "function char-national": true
-      }
-    },
-    {
-      "content": "FUNCTION INTEGER-OF-DAY(${1:yyyymmdd})$0",
-      "doc": "converts yyyymmdd to an internal integer-day",
-      "label": "FUNCTION-INTEGER-OF-DAY",
-      "matches": {
-        "FUNCTION INTEGER-OF-DAY": true
-      }
-    },
-    {
-      "content": "FUNCTION NUMVAL-C(${1:string},${2:currency-symbol}${3:,ANYCASE})$0",
-      "doc": "corresponding numeric value for string, case-sensitive if ANYCASE not given",
-      "label": "FUNCTION-NUMVAL-C",
-      "matches": {
-        "FUNCTION NUMVAL-C": true
-      }
-    },
-    {
-      "content": "FUNCTION MOD(${1:value},${2:modulus})$0",
-      "doc": "remainder from the division of value by modulus",
-      "label": "FUNCTION-MOD",
-      "matches": {
-        "FUNCTION MOD": true
-      }
-    },
-    {
-      "content": "function combined-datetime(${1:integer-date},${2:standard-numeric-time})$0",
-      "doc": "function combines integer-date and standard-numeric-time into a single numeric item from which both date and time components can be derived",
-      "label": "function-combined-datetime",
-      "matches": {
-        "function combined-datetime": true
-      }
-    },
-    {
-      "content": "FUNCTION NUMVAL-F(${1:string})$0",
-      "doc": "corresponding numeric value for floating-point-string",
-      "label": "FUNCTION-NUMVAL-F",
-      "matches": {
-        "FUNCTION NUMVAL-F": true
-      }
-    },
-    {
-      "content": "FUNCTION REVERSE(${1:string})$0",
-      "doc": "reverse representation with same length of string",
-      "label": "FUNCTION-REVERSE",
-      "matches": {
-        "FUNCTION REVERSE": true
-      }
-    },
-    {
-      "content": "copy \"${1:subprog.cpy}\"\n    replacing ==${2:()}== by ==${3:lnk-}==.",
-      "doc": "Copy replacing",
-      "label": "copy",
-      "matches": {
-        "copy": true
-      }
-    },
-    {
-      "content": "function concatenate(${1:string1},${2:string2})$0",
-      "doc": "function concatenates the string1.. string2 into a single string result",
-      "label": "function-concatenate",
-      "matches": {
-        "function concatenate": true
-      }
-    },
-    {
-      "content": "FUNCTION REM(${1:number},${2:divisor})$0",
-      "doc": "remainder of number divided by divisor",
-      "label": "FUNCTION-REM",
-      "matches": {
-        "FUNCTION REM": true
-      }
-    },
-    {
-      "content": "FUNCTION LENGTH(${1:item})$0",
-      "doc": "returns the length (in character positions) of the specified item",
-      "label": "FUNCTION-LENGTH",
-      "matches": {
-        "FUNCTION LENGTH": true
-      }
-    },
-    {
-      "content": "FUNCTION ORD-MAX(${1:char},${2:...})$0",
-      "doc": "max. ordinal position in the program character set corresponding to list of chars",
-      "label": "FUNCTION-ORD-MAX",
-      "matches": {
-        "FUNCTION ORD-MAX": true
-      }
-    },
-    {
-      "content": "function cos(${1:angle})$0",
-      "doc": "function trigonometric cosine of angle",
-      "label": "function-cos",
-      "matches": {
-        "function cos": true
-      }
-    },
-    {
-      "content": "FUNCTION LENGTH-AN(${1:item})$0",
-      "doc": "returns the length (in bytes) of the specified item;",
-      "label": "FUNCTION-LENGTH-AN",
-      "matches": {
-        "FUNCTION LENGTH-AN": true
-      }
-    },
-    {
-      "content": "FUNCTION ORD-MIN(${1:char},${2:...})$0",
-      "doc": "min. ordinal position in the program character set corresponding to list of chars",
-      "label": "FUNCTION-ORD-MIN",
-      "matches": {
-        "FUNCTION ORD-MIN": true
-      }
-    },
-    {
-      "content": "exec sql include sqlca end-exec.",
-      "doc": "exec sql include",
-      "label": "exec-sql",
-      "matches": {
-        "exec": true
-      }
-    },
-    {
-      "content": "FUNCTION PI()$0",
-      "doc": "pi",
-      "label": "FUNCTION-PI",
-      "matches": {
-        "FUNCTION PI": true,
-        "PI": true
-      }
-    },
-    {
-      "content": "FUNCTION RANGE(${1:argument},${2:...})$0",
-      "doc": "value of the maximum argument minus the value of the minimum argument",
-      "label": "FUNCTION-RANGE",
-      "matches": {
-        "FUNCTION RANGE": true
-      }
-    },
-    {
-      "content": "FUNCTION LOCALE-DATE(${1:yyyymmdd},${2:locale-optional})$0",
-      "doc": "format yyyymmd; according to locale",
-      "label": "FUNCTION-LOCALE-DATE",
-      "matches": {
-        "FUNCTION LOCALE-DATE": true
-      }
-    },
-    {
-      "content": "exec sql begin declare section end-exec.\n$0\nexec sql end declare section end-exec.",
-      "doc": "exec sql declare",
-      "label": "exec-sql-begin",
-      "matches": {
-        "exec": true
-      }
-    },
-    {
-      "content": "FUNCTION PRESENT-VALUE(${1:discount-rate},${2:amount},${3:...})$0",
-      "doc": "approximation of the present value of a series of future period-end amount",
-      "label": "FUNCTION-PRESENT-VALUE",
-      "matches": {
-        "FUNCTION PRESENT-VALUE": true
-      }
-    },
-    {
-      "content": "FUNCTION LOCALE-TIME(${1:yyyymmdd},${2:locale-optional})$0",
-      "doc": "format time; according to locale",
-      "label": "FUNCTION-LOCALE-TIME",
-      "matches": {
-        "FUNCTION LOCALE-TIME": true
-      }
-    },
-    {
-      "content": "FUNCTION RANDOM(${1:seed})$0",
-      "doc": "pseudo-random number 0> <1 from a rectangular distribution with optional seed",
-      "label": "FUNCTION-RANDOM",
-      "matches": {
-        "FUNCTION RANDOM": true
-      }
-    },
-    {
-      "content": "function formatted-date(${1:date-format},${2:integer-date})$0",
-      "doc": "function formatted-date",
-      "label": "function-formatted-date",
-      "matches": {
-        "function formatted-date": true
-      }
-    },
-    {
-      "content": "FUNCTION ORD(${1:char},${2:...})$0",
-      "doc": "ordinal position in the program character set corresponding to char",
-      "label": "FUNCTION-ORD",
-      "matches": {
-        "FUNCTION ORD": true
-      }
-    },
-    {
-      "content": "FUNCTION NUMERIC-THOUSANDS-SEPARATOR()$0",
-      "doc": "character used to separate the thousands digit groupings in a numeric value according to the current locale",
-      "label": "FUNCTION-NUMERIC-THOUSANDS-SEPARATOR",
-      "matches": {
-        "FUNCTION NUMERIC-THOUSANDS-SEPARATOR": true
-      }
-    },
-    {
-      "content": "ACCEPT ${1:variable}\n$0",
-      "doc": "",
-      "label": "ACCEPT",
-      "matches": {
-        "ACCEPT": true
-      }
-    },
-    {
-      "content": "IF ${1:CONDITION}\n   $0\nEND-IF",
-      "doc": "",
-      "label": "IF",
-      "matches": {
-        "IF": true,
-        "ie": true
-      }
-    },
-    {
-      "content": "accept ${1:variable} ${2|from date,from day,from day-of-week,time|}\n$0",
-      "doc": "accept from date/day/week/time",
-      "label": "accept from",
-      "matches": {
-        "accept": true
-      }
-    },
-    {
-      "content": "function formatted-time(${1:time-format},${2:standard-numeric-time},${3:offset_or_system_offset})$0",
-      "doc": "function formatted-time",
-      "label": "Function-formatted-time",
-      "matches": {
-        "function formatted-time": true
-      }
-    },
-    {
-      "content": "if ${1:condition}\n   $0\nelse\n   \nend-if",
-      "doc": "",
-      "label": "if else",
-      "matches": {
-        "iee": true,
-        "if": true
-      }
-    },
-    {
-      "content": "ACCEPT ${1:variable} ${2|FROM DATE,FROM DAY,FROM DAY-OF-WEEK,TIME|}\n$0",
-      "doc": "ACCEPT FROM DATE/DAY/WEEK/TIME",
-      "label": "ACCEPT FROM",
-      "matches": {
-        "ACCEPT": true
-      }
-    },
-    {
-      "content": "function fraction-part(${1:number})$0",
-      "doc": "portion of number that occurs to the right of the decimal point",
-      "label": "function-fraction-part",
-      "matches": {
-        "function fraction-part": true
-      }
-    },
-    {
-      "content": "IF ${1:CONDITION}\n   $0\nELSE\n   \nEND-IF",
-      "doc": "",
-      "label": "IF ELSE",
-      "matches": {
-        "IEE": true,
-        "IF": true
-      }
-    },
-    {
-      "content": "class-id $1 ${3|public,private|}.\n\n       method-id new public.\n       procedure division.\n           $0\n           exit method.\n       end method.\n\n       end class.",
-      "doc": "class with ctor",
-      "label": "class-id",
-      "matches": {
-        "class-id": true
-      }
-    },
-    {
-      "content": "FUNCTION SECONDS-FROM-FORMATTED-TIME(${1:format},${2:time})$0",
-      "doc": "decode time according to format (a time format or a combined date and time format)",
-      "label": "FUNCTION-SECONDS-FROM-FORMATTED-TIME",
-      "matches": {
-        "FUNCTION SECONDS-FROM-FORMATTED-TIME": true
-      }
-    },
-    {
-      "content": "inspect $1 converting '${2:ABCDEFGHIJKLMNOPQRSTUVWXYZ}' to '${3:abcdefghijklmnopqrstuvwxyz}'",
-      "doc": "inspect converting",
-      "label": "inspect converting",
-      "matches": {
-        "inspect": true
-      }
-    },
-    {
-      "content": "FUNCTION MAX(${1:number},${2:...})$0",
-      "doc": "Alphanumeric/Index/Integer/National/Numeric maximum value from the specified list of numbers",
-      "label": "FUNCTION-MAX",
-      "matches": {
-        "FUNCTION MAX": true
-      }
-    },
-    {
       "content": "function locale-date(${1:yyyymmdd},${2:locale-optional})$0",
       "doc": "format yyyymmd; according to locale",
       "label": "function-locale-date",
@@ -1237,99 +726,19 @@
       }
     },
     {
-      "content": "FUNCTION LOWEST-ALGEBRAIC(${1:numeric-identifier})$0",
-      "doc": "lowest value that could possibly be stored in the specified numeric-identifier",
-      "label": "FUNCTION-LOWEST-ALGEBRAIC",
+      "content": "cancel \"$1\"\n$0",
+      "doc": "CANCEL literal",
+      "label": "cancel",
       "matches": {
-        "FUNCTION LOWEST-ALGEBRAIC": true
+        "cancel": true
       }
     },
     {
-      "content": "function integer(${1:number})$0",
-      "doc": "greatest integer value that is less than or equal to number",
-      "label": "function-integer",
+      "content": "CALL \"$1\" USING\n    BY ${2|VALUE,REFERENCE,CONTENT|} ${3:IDENTIFER}\n    RETURNING ${4:RETURN-CODE}\nEND-CALL\n$0",
+      "doc": "CALL literal",
+      "label": "CALL",
       "matches": {
-        "function integer": true
-      }
-    },
-    {
-      "content": "inspect $1 replacing all ${2|spaces,zero|} by '${3}'",
-      "doc": "inspect replacing",
-      "label": "inspect replacing",
-      "matches": {
-        "inspect": true
-      }
-    },
-    {
-      "content": "function locale-time(${1:yyyymmdd},${2:locale-optional})$0",
-      "doc": "format time; according to locale",
-      "label": "function-locale-time",
-      "matches": {
-        "function locale-time": true
-      }
-    },
-    {
-      "content": "INSPECT $1 REPLACING ALL ${2|SPACES,ZERO|} BY '${3}'",
-      "doc": "INSPECT REPLACING",
-      "label": "INSPECT REPLACING",
-      "matches": {
-        "INSPECT": true
-      }
-    },
-    {
-      "content": "dunction integer-of-boolean(${1:boolean-item})$0",
-      "doc": "numeric value of boolean-item",
-      "label": "function-integer-of-boolean",
-      "matches": {
-        "function integer-of-boolean": true
-      }
-    },
-    {
-      "content": "function locale-time-from-seconds(${1:integer-time},${2:locale-optional})$0",
-      "doc": "format integer-time (internal-format) according to locale",
-      "label": "function-locale-time-from-seconds",
-      "matches": {
-        "function locale-time-from-seconds": true
-      }
-    },
-    {
-      "content": "FS\nFUNCTION SQRT(${1:number})$0",
-      "doc": "aproximation of the square root of number",
-      "label": "FUNCTION-SQRT",
-      "matches": {
-        "FUNCTION SQRT": true
-      }
-    },
-    {
-      "content": "function integer-of-date(${1:yyyymmdd})$0",
-      "doc": "converts yyyymmdd to an internal integer-date",
-      "label": "function-integer-of-date",
-      "matches": {
-        "function integer-of-date": true
-      }
-    },
-    {
-      "content": "function log(${1:number})$0",
-      "doc": "format base e logarithm of number",
-      "label": "function-log",
-      "matches": {
-        "function log": true
-      }
-    },
-    {
-      "content": "FT\nFUNCTION TAN(${1:angle})$0",
-      "doc": "trigonometric tangent of the specified angle",
-      "label": "FUNCTION-TAN",
-      "matches": {
-        "FUNCTION TAN": true
-      }
-    },
-    {
-      "content": "*>> <summary>method main</summary>\nmethod-id main public static.\nprocedure division using\n           by value args as string occurs any.\n    $0\nend method.",
-      "doc": "method-id (main)",
-      "label": "main method-id",
-      "matches": {
-        "main": true
+        "CALL": true
       }
     },
     {
@@ -1342,109 +751,103 @@
       }
     },
     {
+      "content": "FUNCTION INTEGER-OF-FORMATTED-DATE(${1:format},${2:date})$0",
+      "doc": "converts date in specified format to an internal integer",
+      "label": "FUNCTION-INTEGER-OF-FORMATTED-DATE",
+      "matches": {
+        "FUNCTION INTEGER-OF-FORMATTED-DATE": true
+      }
+    },
+    {
+      "content": "FUNCTION YEAR-TO-YYYY(${1:yy},${2:[yy-cutoff, default: 50},${3:yy-execution-time, default: now})$0",
+      "doc": "convert yy to yyyy with optional yy-cutoff to delineate centuries",
+      "label": "FUNCTION-YEAR-TO-YYYY",
+      "matches": {
+        "FUNCTION YEAR-TO-YYYY": true,
+        "FY": true
+      }
+    },
+    {
+      "content": "DATA DIVISION.\n$0",
+      "doc": "",
+      "label": "DATA DIVISION",
+      "matches": {
+        "DATA DIVISION": true,
+        "DD": true
+      }
+    },
+    {
+      "content": "function locale-time-from-seconds(${1:integer-time},${2:locale-optional})$0",
+      "doc": "format integer-time (internal-format) according to locale",
+      "label": "function-locale-time-from-seconds",
+      "matches": {
+        "function locale-time-from-seconds": true
+      }
+    },
+    {
+      "content": "function tan(${1:angle})$0",
+      "doc": "trigonometric tangent of the specified angle",
+      "label": "function-tan",
+      "matches": {
+        "function tan": true
+      }
+    },
+    {
+      "content": "data division.\n$0",
+      "doc": "",
+      "label": "data division",
+      "matches": {
+        "data division": true,
+        "dd": true
+      }
+    },
+    {
+      "content": "FUNCTION LENGTH(${1:item})$0",
+      "doc": "returns the length (in character positions) of the specified item",
+      "label": "FUNCTION-LENGTH",
+      "matches": {
+        "FUNCTION LENGTH": true
+      }
+    },
+    {
+      "content": "function log(${1:number})$0",
+      "doc": "format base e logarithm of number",
+      "label": "function-log",
+      "matches": {
+        "function log": true
+      }
+    },
+    {
+      "content": "EVALUATE $1\n    WHEN $2\n       $0\n    WHEN OTHER\n       CONTINUE\nEND-EVALUATE",
+      "doc": "EVALUATE",
+      "label": "EVALUATE",
+      "matches": {
+        "EVALUATE": true
+      }
+    },
+    {
+      "content": "FUNCTION LENGTH-AN(${1:item})$0",
+      "doc": "returns the length (in bytes) of the specified item;",
+      "label": "FUNCTION-LENGTH-AN",
+      "matches": {
+        "FUNCTION LENGTH-AN": true
+      }
+    },
+    {
+      "content": "working-storage section.\n$0",
+      "doc": "",
+      "label": "working-storage section",
+      "matches": {
+        "working-storage": true,
+        "ws": true
+      }
+    },
+    {
       "content": "function log10(${1:number})$0",
       "doc": "format base 10 logarithm of number",
       "label": "function-log10",
       "matches": {
         "function log10": true
-      }
-    },
-    {
-      "content": "FUNCTION LOG(${1:number})$0",
-      "doc": "format base e logarithm of number",
-      "label": "FUNCTION-LOG",
-      "matches": {
-        "FUNCTION LOG": true
-      }
-    },
-    {
-      "content": "function integer-of-formatted-date(${1:format},${2:date})$0",
-      "doc": "converts date in specified format to an internal integer",
-      "label": "function-integer-of-formatted-date",
-      "matches": {
-        "function integer-of-formatted-date": true
-      }
-    },
-    {
-      "content": "delimited by space",
-      "doc": "delimited by size (string)",
-      "label": "delimited_space",
-      "matches": {
-        "delimited by space": true,
-        "ds": true
-      }
-    },
-    {
-      "content": "function lowercase(${1:string})$0",
-      "doc": "character string that contains string with any uppercase letters replaced by their corresponding lowercase letters",
-      "label": "function-lowercase",
-      "matches": {
-        "function lowercase": true
-      }
-    },
-    {
-      "content": "DELIMITED BY SPACE",
-      "doc": "DELIMITED BY SPACE (string)",
-      "label": "DELIMITED_SPACE",
-      "matches": {
-        "DELIMITED BY SPACE": true,
-        "DS": true
-      }
-    },
-    {
-      "content": "call \"$1\" using\n    by ${2|value,reference,content|} ${3:identifer}\n    returning ${4:return-code}\nend-call\n$0",
-      "doc": "CALL literal",
-      "label": "call",
-      "matches": {
-        "call": true
-      }
-    },
-    {
-      "content": "FUNCTION LOCALE-TIME-FROM-SECONDS(${1:integer-time},${2:locale-optional})$0",
-      "doc": "format integer-time (internal-format) according to locale",
-      "label": "FUNCTION-LOCALE-TIME-FROM-SECONDS",
-      "matches": {
-        "FUNCTION LOCALE-TIME-FROM-SECONDS": true
-      }
-    },
-    {
-      "content": "function lowest-algebraic(${1:numeric-identifier})$0",
-      "doc": "lowest value that could possibly be stored in the specified numeric-identifier",
-      "label": "function-lowest-algebraic",
-      "matches": {
-        "function lowest-algebraic": true
-      }
-    },
-    {
-      "content": "function length(${1:item})$0",
-      "doc": "returns the length (in character positions) of the specified item",
-      "label": "function-length",
-      "matches": {
-        "function length": true
-      }
-    },
-    {
-      "content": "program-id. MFUT_${1:${TM_FILENAME_BASE/MFUT[_](.*)/$1/}}.\n       working-storage section.\n       copy \"mfunit.cpy\".\n\n       01 test-fail-count     binary-long value 0.\n\n       *> Testcase     : $1\n       *>  Description : $2\n       procedure division.\n           $0\n           if 1 not equal 1\n               display \"Odd... 1 not equal 1?\"\n               add 1 to test-fail-count\n           end-if\n\n           if test-fail-count not equal 0\n               call \"MFU_ASSERT_FAIL_Z\" using\n                    by reference z\"$1 has failed\"\n               end-call\n           end-if\n\n           goback returning test-fail-count.\n\n       *> Startup for testcase $1\n       entry \"MFUS_$1\".\n           *> Open any files\n           goback.\n\n       *> Teardown for testcase $1\n       entry \"MFUE_$1\".\n           *> Close any files/delete any temp files\n           goback.\n\n       *> Metadata for testcase $1\n       entry \"MFUM_$1\".\n           move \"$2\" to MFU-MD-TESTCASE-DESCRIPTION\n           goback.\n       end program.",
-      "doc": "MFUNIT skelton program",
-      "label": "MFUnit Test",
-      "matches": {
-        "mfu,program-id": true
-      }
-    },
-    {
-      "content": "function max(${1:number},${2:...})$0",
-      "doc": "Alphanumeric/Index/Integer/National/Numeric maximum value from the specified list of numbers",
-      "label": "function-max",
-      "matches": {
-        "function max": true
-      }
-    },
-    {
-      "content": "function length-an(${1:item})$0",
-      "doc": "returns the length (in bytes) of the specified item;",
-      "label": "function-length-an",
-      "matches": {
-        "function length-an": true
       }
     },
     {
@@ -1456,35 +859,150 @@
       }
     },
     {
-      "content": "function mean(${1:number},${2:...})$0",
-      "doc": "statistical mean value of the specified list of numbers",
-      "label": "function-mean",
+      "content": "FUNCTION SECONDS-PAST-MIDNIGHT()$0",
+      "doc": "current time of day expressed as the total number of elapsed seconds since midnight",
+      "label": "FUNCTION-SECONDS-PAST-MIDNIGHT",
       "matches": {
-        "function mean": true
+        "FUNCTION SECONDS-PAST-MIDNIGHT": true
       }
     },
     {
-      "content": "FUNCTION INTEGER-PART(${1:number})$0",
-      "doc": "portion of number that occurs to the left of the decimal point",
-      "label": "FUNCTION-INTEGER-PART",
+      "content": "local-storage section.\n$0",
+      "doc": "",
+      "label": "local-storage section",
       "matches": {
-        "FUNCTION INTEGER-PART": true
+        "local-storage": true,
+        "ls": true
       }
     },
     {
-      "content": "FUNCTION INTEGER-OF-FORMATTED-DATE(${1:format},${2:date})$0",
-      "doc": "converts date in specified format to an internal integer",
-      "label": "FUNCTION-INTEGER-OF-FORMATTED-DATE",
+      "content": "function lowercase(${1:string})$0",
+      "doc": "character string that contains string with any uppercase letters replaced by their corresponding lowercase letters",
+      "label": "function-lowercase",
       "matches": {
-        "FUNCTION INTEGER-OF-FORMATTED-DATE": true
+        "function lowercase": true
       }
     },
     {
-      "content": "FUNCTION INTEGER(${1:number})$0",
-      "doc": "greatest integer value that is less than or equal to number",
-      "label": "FUNCTION-INTEGER",
+      "content": "function boolean-of-integer(${1:integer},${2:length})$0",
+      "doc": "function boolean item of usage bit representing the binary value of integer; with the given length",
+      "label": "function-boolean-of-integer",
       "matches": {
-        "FUNCTION INTEGER": true
+        "function boolean-of-integer": true
+      }
+    },
+    {
+      "content": "function char-national(${1:integer})$0",
+      "doc": "function character in the ordinal position specified by &lt;integer&gt; from the current national collating sequence",
+      "label": "function-char-national",
+      "matches": {
+        "function char-national": true
+      }
+    },
+    {
+      "content": "FUNCTION LOCALE-TIME(${1:yyyymmdd},${2:locale-optional})$0",
+      "doc": "format time; according to locale",
+      "label": "FUNCTION-LOCALE-TIME",
+      "matches": {
+        "FUNCTION LOCALE-TIME": true
+      }
+    },
+    {
+      "content": "function lowest-algebraic(${1:numeric-identifier})$0",
+      "doc": "lowest value that could possibly be stored in the specified numeric-identifier",
+      "label": "function-lowest-algebraic",
+      "matches": {
+        "function lowest-algebraic": true
+      }
+    },
+    {
+      "content": "add ${1:a} to ${2:b} giving ${3:c}",
+      "doc": "Add a to b giving c",
+      "label": "add",
+      "matches": {
+        "add": true
+      }
+    },
+    {
+      "content": "FUNCTION LOCALE-TIME-FROM-SECONDS(${1:integer-time},${2:locale-optional})$0",
+      "doc": "format integer-time (internal-format) according to locale",
+      "label": "FUNCTION-LOCALE-TIME-FROM-SECONDS",
+      "matches": {
+        "FUNCTION LOCALE-TIME-FROM-SECONDS": true
+      }
+    },
+    {
+      "content": "program-id. ${1:${TM_FILENAME/(.*)\\..+$/$1/}}.\n       procedure division.\n           $0\n           goback.\n\n       end program $1.",
+      "doc": "Minimum template",
+      "label": "Minimum program",
+      "matches": {
+        "program-id": true
+      }
+    },
+    {
+      "content": "function max(${1:number},${2:...})$0",
+      "doc": "Alphanumeric/Index/Integer/National/Numeric maximum value from the specified list of numbers",
+      "label": "function-max",
+      "matches": {
+        "function max": true
+      }
+    },
+    {
+      "content": "END PROGRAM ${1:${TM_FILENAME/(.*)\\..+$/$1/}}.",
+      "doc": "END PROGRAM prg.",
+      "label": "END PROGRAM",
+      "matches": {
+        "END PROGRAM": true
+      }
+    },
+    {
+      "content": "FUNCTION RANGE(${1:argument},${2:...})$0",
+      "doc": "value of the maximum argument minus the value of the minimum argument",
+      "label": "FUNCTION-RANGE",
+      "matches": {
+        "FUNCTION RANGE": true
+      }
+    },
+    {
+      "content": "PROCEDURE DIVISION.\n$0",
+      "doc": "",
+      "label": "PROCEDURE DIVISION",
+      "matches": {
+        "PD": true,
+        "PROCEDURE DIVISION": true
+      }
+    },
+    {
+      "content": "end program ${1:${TM_FILENAME/(.*)\\..+$/$1/}}.",
+      "doc": "end program ${1:${TM_FILENAME/(.*)\\..+$/$1/}}.",
+      "label": "end program",
+      "matches": {
+        "end program": true
+      }
+    },
+    {
+      "content": "function national-of(${1:alphanumeric-string},${2:replacement-char})$0",
+      "doc": "convert alphanumeric-string to the national coded character set representation",
+      "label": "function-national-of",
+      "matches": {
+        "function national-of": true
+      }
+    },
+    {
+      "content": "procedure division.\n$0",
+      "doc": "",
+      "label": "procedure division",
+      "matches": {
+        "pd": true,
+        "procedure division": true
+      }
+    },
+    {
+      "content": "FUNCTION LOWERCASE(${1:string})$0",
+      "doc": "character string that contains string with any uppercase letters replaced by their corresponding lowercase letters",
+      "label": "FUNCTION-LOWERCASE",
+      "matches": {
+        "FUNCTION LOWERCASE": true
       }
     },
     {
@@ -1496,28 +1014,19 @@
       }
     },
     {
-      "content": "function formatted-time(${1:time-format},${2:standard-numeric-time},${3:offset_or_system_offset})$0",
-      "doc": "function formatted-time",
-      "label": "function-formatted-time",
+      "content": "FUNCTION LOWEST-ALGEBRAIC(${1:numeric-identifier})$0",
+      "doc": "lowest value that could possibly be stored in the specified numeric-identifier",
+      "label": "FUNCTION-LOWEST-ALGEBRAIC",
       "matches": {
-        "function formatted-time": true
+        "FUNCTION LOWEST-ALGEBRAIC": true
       }
     },
     {
-      "content": "FUNCTION CURRENCY-SYMBOL()$0",
-      "doc": "function currency symbol character currently in effect for the locale under which the program is running",
-      "label": "FUNCTION-CURRENCY-SYMBOL",
+      "content": "try\n$2\ncatch ${1:Exception}\n$0\nend-try",
+      "doc": "try catch",
+      "label": "try",
       "matches": {
-        "FUNCTION CURRENCY-SYMBOL": true
-      }
-    },
-    {
-      "content": "$1-EP SECTON.\nENTRY \"$1\".\n    $0\t\n    GOBACK.",
-      "doc": "ENTRY statement",
-      "label": "ENTRY",
-      "matches": {
-        "ENTRY": true,
-        "GB": true
+        "try": true
       }
     },
     {
@@ -1529,11 +1038,11 @@
       }
     },
     {
-      "content": "function concatenate(${1:string1},${2:string2})$0",
-      "doc": "function concatenates the string1.. string2 into a single string result",
-      "label": "FUNCTION-CONCATENATE",
+      "content": "FUNCTION MAX(${1:number},${2:...})$0",
+      "doc": "Alphanumeric/Index/Integer/National/Numeric maximum value from the specified list of numbers",
+      "label": "FUNCTION-MAX",
       "matches": {
-        "function concatenate": true
+        "FUNCTION MAX": true
       }
     },
     {
@@ -1545,12 +1054,11 @@
       }
     },
     {
-      "content": "*>> <summary>method $1</summary>\nmethod-id $1.\nprocedure division.\n    $0\nend method.",
-      "doc": "method-id",
-      "label": "method-id",
+      "content": "FUNCTION ORD(${1:char},${2:...})$0",
+      "doc": "ordinal position in the program character set corresponding to char",
+      "label": "FUNCTION-ORD",
       "matches": {
-        "method-id": true,
-        "mi": true
+        "FUNCTION ORD": true
       }
     },
     {
@@ -1562,28 +1070,27 @@
       }
     },
     {
-      "content": "*>> <summary>enum-id $1</summary>\nenum-id. $1 as \"Status\".\n    78 ${2:Item}  value ${3:1}.\nend enum $1.",
-      "doc": "enum-id",
-      "label": "enum-id",
+      "content": "SUBTRACT ${1:a} FROM ${2:b} GIVING ${3:c}",
+      "doc": "SUBTRACT a FROM b GIVING c",
+      "label": "SUBTRACT",
       "matches": {
-        "ei": true,
-        "enum-id": true
+        "SUBTRACT": true
       }
     },
     {
-      "content": "program-id. ${1:${TM_FILENAME/(.*)\\..+$/$1/}}.\n\n       environment division.\n       configuration section.\n\n       data division.\n       working-storage section.\n\n       procedure division.\n           $0\n           goback.\n\n       end program $1.",
-      "doc": "Small template for program",
-      "label": "Skelton program",
+      "content": "<param name=\"${1:Int}\">${2}</param>\n*>> $0",
+      "doc": "",
+      "label": "<param",
       "matches": {
-        "program-id": true
+        "<param>": true
       }
     },
     {
-      "content": "function integer-of-day(${1:yyyymmdd})$0",
-      "doc": "converts yyyymmdd to an internal integer-day",
-      "label": "function-integer-of-day",
+      "content": "FUNCTION MEDIAN(${1:number},${2:...})$0",
+      "doc": "statistical median value of the specified list of numbers",
+      "label": "FUNCTION-MEDIAN",
       "matches": {
-        "function integer-of-day": true
+        "FUNCTION MEDIAN": true
       }
     },
     {
@@ -1595,28 +1102,29 @@
       }
     },
     {
-      "content": "DISPLAY \"$0\"",
-      "doc": "DISPLAY literal",
-      "label": "DISPLAY",
+      "content": "$1-ep section.\nentry \"$1\".\n    $0\t\n    goback.",
+      "doc": "entry statement",
+      "label": "entry",
       "matches": {
-        "DISPLAY": true
+        "eg": true,
+        "entry": true
       }
     },
     {
-      "content": "function currency-symbol()$0",
-      "doc": "function currency symbol character currently in effect for the locale under which the program is running",
-      "label": "function-currency-symbol",
+      "content": "FUNCTION MIDRANGE(${1:number},${2:...})$0",
+      "doc": "statistical midrange value of the specified list of numbers",
+      "label": "FUNCTION-MIDRANGE",
       "matches": {
-        "function currency-symbol": true
+        "FUNCTION MIDRANGE": true
       }
     },
     {
-      "content": "evaluate $1\n    when $2\n       $0\n    when other\n       continue\nend-evaluate",
-      "doc": "evaluate",
-      "label": "evaluate",
+      "content": "valuetype-id $1 ${2:public}.\n01 item string ${2:public}.\n\nmethod-id new ${2:public}.\nprocedure division.\n   $0\nend method.\n\nend valuetype.",
+      "doc": "valuetype",
+      "label": "valuetype",
       "matches": {
-        "ee": true,
-        "evaluate": true
+        "valuetype-id": true,
+        "vi": true
       }
     },
     {
@@ -1625,6 +1133,262 @@
       "label": "function-monetary-decimal-point",
       "matches": {
         "function monetary-decimal-point": true
+      }
+    },
+    {
+      "content": "FUNCTION MIN(${1:number},${2:...})$0",
+      "doc": "statistical min value of the specified list of numbers",
+      "label": "FUNCTION-MIN",
+      "matches": {
+        "FUNCTION MIN": true
+      }
+    },
+    {
+      "content": "FUNCTION INTEGER-OF-DAY(${1:yyyymmdd})$0",
+      "doc": "converts yyyymmdd to an internal integer-day",
+      "label": "FUNCTION-INTEGER-OF-DAY",
+      "matches": {
+        "FUNCTION INTEGER-OF-DAY": true
+      }
+    },
+    {
+      "content": "FUNCTION LOCALE-DATE(${1:yyyymmdd},${2:locale-optional})$0",
+      "doc": "format yyyymmd; according to locale",
+      "label": "FUNCTION-LOCALE-DATE",
+      "matches": {
+        "FUNCTION LOCALE-DATE": true
+      }
+    },
+    {
+      "content": "function monetary-thousands-separator()$0",
+      "doc": "character used to separate the thousands digit groupings in a monetary currency value according to the current locale",
+      "label": "function-monetary-thousands-separator",
+      "matches": {
+        "function monetary-thousands-separator": true
+      }
+    },
+    {
+      "content": "FUNCTION NUMERIC-THOUSANDS-SEPARATOR()$0",
+      "doc": "character used to separate the thousands digit groupings in a numeric value according to the current locale",
+      "label": "FUNCTION-NUMERIC-THOUSANDS-SEPARATOR",
+      "matches": {
+        "FUNCTION NUMERIC-THOUSANDS-SEPARATOR": true
+      }
+    },
+    {
+      "content": "FUNCTION NATIONAL-OF(${1:alphanumeric-string},${2:replacement-char})$0",
+      "doc": "convert alphanumeric-string to the national coded character set representation",
+      "label": "FUNCTION-NATIONAL-OF",
+      "matches": {
+        "FUNCTION NATIONAL-OF": true
+      }
+    },
+    {
+      "content": "program-id. ${1:${TM_FILENAME/(.*)\\..+$/$1/}}.\n\n       environment division.\n       configuration section.\n\n       data division.\n       working-storage section.\n\n       procedure division.\n           $0\n           goback.\n\n       end program $1.",
+      "doc": "Small template for program",
+      "label": "Skelton program",
+      "matches": {
+        "program-id": true
+      }
+    },
+    {
+      "content": "DISPLAY \"$0\"",
+      "doc": "DISPLAY literal",
+      "label": "DISPLAY",
+      "matches": {
+        "DISPLAY": true
+      }
+    },
+    {
+      "content": "FUNCTION MONETARY-DECIMAL-POINT()$0",
+      "doc": "character used to separate the integer portion from the fractional part of a monetary currency value according to the current locale",
+      "label": "FUNCTION-MONETARY-DECIMAL-POINT",
+      "matches": {
+        "FUNCTION MONETARY-DECIMAL-POINT": true
+      }
+    },
+    {
+      "content": "FUNCTION MONETARY-THOUSANDS-SEPARATOR()$0",
+      "doc": "character used to separate the thousands digit groupings in a monetary currency value according to the current locale",
+      "label": "FUNCTION-MONETARY-THOUSANDS-SEPARATOR",
+      "matches": {
+        "FUNCTION MONETARY-THOUSANDS-SEPARATOR": true
+      }
+    },
+    {
+      "content": "FUNCTION MOD(${1:value},${2:modulus})$0",
+      "doc": "remainder from the division of value by modulus",
+      "label": "FUNCTION-MOD",
+      "matches": {
+        "FUNCTION MOD": true
+      }
+    },
+    {
+      "content": "function numeric-thousands-separator()$0",
+      "doc": "character used to separate the thousands digit groupings in a numeric value according to the current locale",
+      "label": "function-numeric-thousands-separator",
+      "matches": {
+        "function numeric-thousands-separator": true
+      }
+    },
+    {
+      "content": "copy \"${1:subprog.cpy}\"\n    replacing ==${2:()}== by ==${3:lnk-}==.",
+      "doc": "Copy replacing",
+      "label": "copy",
+      "matches": {
+        "copy": true
+      }
+    },
+    {
+      "content": "FUNCTION MEAN(${1:number},${2:...})$0",
+      "doc": "statistical mean value of the specified list of numbers",
+      "label": "FUNCTION-MEAN",
+      "matches": {
+        "FUNCTION MEAN": true
+      }
+    },
+    {
+      "content": "FUNCTION LOG10(${1:number})$0",
+      "doc": "format base 10 logarithm of number",
+      "label": "FUNCTION-LOG10",
+      "matches": {
+        "FUNCTION LOG10": true
+      }
+    },
+    {
+      "content": "function numval(${1:string})$0",
+      "doc": "corresponding numeric value for string",
+      "label": "function-numval",
+      "matches": {
+        "function numval": true
+      }
+    },
+    {
+      "content": "FUNCTION LOG(${1:number})$0",
+      "doc": "format base e logarithm of number",
+      "label": "FUNCTION-LOG",
+      "matches": {
+        "FUNCTION LOG": true
+      }
+    },
+    {
+      "content": "display \"$0\"",
+      "doc": "display literal",
+      "label": "display",
+      "matches": {
+        "display": true
+      }
+    },
+    {
+      "content": "FUNCTION NUMVAL(${1:string})$0",
+      "doc": "corresponding numeric value for string",
+      "label": "FUNCTION-NUMVAL",
+      "matches": {
+        "FUNCTION NUMVAL": true
+      }
+    },
+    {
+      "content": "function numval-c(${1:string},${2:currency-symbol}${3:,ANYCASE})$0",
+      "doc": "corresponding numeric value for string, case-sensitive if ANYCASE not given",
+      "label": "function-numval-c",
+      "matches": {
+        "function numval-c": true
+      }
+    },
+    {
+      "content": "FUNCTION INTEGER-PART(${1:number})$0",
+      "doc": "portion of number that occurs to the left of the decimal point",
+      "label": "FUNCTION-INTEGER-PART",
+      "matches": {
+        "FUNCTION INTEGER-PART": true
+      }
+    },
+    {
+      "content": "FUNCTION NUMVAL-C(${1:string},${2:currency-symbol}${3:,ANYCASE})$0",
+      "doc": "corresponding numeric value for string, case-sensitive if ANYCASE not given",
+      "label": "FUNCTION-NUMVAL-C",
+      "matches": {
+        "FUNCTION NUMVAL-C": true
+      }
+    },
+    {
+      "content": "FUNCTION INTEGER-OF-BOOLEAN(${1:boolean-item})$0",
+      "doc": "numeric value of boolean-item",
+      "label": "FUNCTION-INTEGER-OF-BOOLEAN",
+      "matches": {
+        "FUNCTION INTEGER-OF-BOOLEAN": true
+      }
+    },
+    {
+      "content": "function numval-f(${1:string})$0",
+      "doc": "corresponding numeric value for floating-point-string",
+      "label": "function-numval-f",
+      "matches": {
+        "function numval-f": true
+      }
+    },
+    {
+      "content": "FUNCTION NUMVAL-F(${1:string})$0",
+      "doc": "corresponding numeric value for floating-point-string",
+      "label": "FUNCTION-NUMVAL-F",
+      "matches": {
+        "FUNCTION NUMVAL-F": true
+      }
+    },
+    {
+      "content": "function concatenate(${1:string1},${2:string2})$0",
+      "doc": "function concatenates the string1.. string2 into a single string result",
+      "label": "FUNCTION-CONCATENATE",
+      "matches": {
+        "function concatenate": true
+      }
+    },
+    {
+      "content": "FUNCTION CHAR-NATIONAL(${1:integer})$0",
+      "doc": "function character in the ordinal position specified by &lt;integer&gt; from the current national collating sequence",
+      "label": "FUNCTION-CHAR-NATIONAL",
+      "matches": {
+        "FUNCTION CHAR-NATIONAL": true
+      }
+    },
+    {
+      "content": "function ord(${1:char},${2:...})$0",
+      "doc": "ordinal position in the program character set corresponding to char",
+      "label": "function-ord",
+      "matches": {
+        "function ord": true
+      }
+    },
+    {
+      "content": "FUNCTION CHAR(${1:integer})$0",
+      "doc": "function character in the ordinal position specified by integer, from the current alphanumeric collating sequence",
+      "label": "FUNCTION-CHAR",
+      "matches": {
+        "FUNCTION CHAR": true
+      }
+    },
+    {
+      "content": "FUNCTION ATAN(${1:tangent})$0",
+      "doc": "function trigonometric arc-tangent, or inverse tangent, of tangent",
+      "label": "FUNCTION-ATAN",
+      "matches": {
+        "FUNCTION ATAN": true
+      }
+    },
+    {
+      "content": "FUNCTION ORD-MAX(${1:char},${2:...})$0",
+      "doc": "max. ordinal position in the program character set corresponding to list of chars",
+      "label": "FUNCTION-ORD-MAX",
+      "matches": {
+        "FUNCTION ORD-MAX": true
+      }
+    },
+    {
+      "content": "function ord-max(${1:char},${2:...})$0",
+      "doc": "max. ordinal position in the program character set corresponding to list of chars",
+      "label": "function-ord-max",
+      "matches": {
+        "function ord-max": true
       }
     },
     {
@@ -1637,11 +1401,101 @@
       }
     },
     {
-      "content": "INSPECT $1 CONVERTING '${2:ABCDEFGHIJKLMNOPQRSTUVWXYZ}' to '${3:abcdefghijklmnopqrstuvwxyz}'",
-      "doc": "INSPECT CONVERTING",
-      "label": "INSPECT CONVERTING",
+      "content": "FUNCTION ORD-MIN(${1:char},${2:...})$0",
+      "doc": "min. ordinal position in the program character set corresponding to list of chars",
+      "label": "FUNCTION-ORD-MIN",
       "matches": {
-        "INSPECT": true
+        "FUNCTION ORD-MIN": true
+      }
+    },
+    {
+      "content": "STRING ${1:item1} DELIMITED BY SIZE\n       ${2:item2} DELIMITED BY SIZE\n       INTO ${3:result}\nEND-STRING\n$0",
+      "doc": "string delimited by size",
+      "label": "STRING",
+      "matches": {
+        "STRING": true
+      }
+    },
+    {
+      "content": "function ord-min(${1:char},${2:...})$0",
+      "doc": "min. ordinal position in the program character set corresponding to list of chars",
+      "label": "function-ord-min",
+      "matches": {
+        "function ord-min": true
+      }
+    },
+    {
+      "content": "FUNCTION PI()$0",
+      "doc": "pi",
+      "label": "FUNCTION-PI",
+      "matches": {
+        "FUNCTION PI": true,
+        "PI": true
+      }
+    },
+    {
+      "content": "COPY \"${1:SUBPROG.CPY}\"\n    REPLACING ==${2:()}== BY ==${3:lnk-}==.",
+      "doc": "COPY REPLACING",
+      "label": "COPY",
+      "matches": {
+        "COPY": true
+      }
+    },
+    {
+      "content": "DELIMITED BY SPACE",
+      "doc": "DELIMITED BY SPACE (string)",
+      "label": "DELIMITED_SPACE",
+      "matches": {
+        "DELIMITED BY SPACE": true,
+        "DS": true
+      }
+    },
+    {
+      "content": "function pi()$0",
+      "doc": "pi",
+      "label": "function-pi",
+      "matches": {
+        "function pi": true
+      }
+    },
+    {
+      "content": "FUNCTION PRESENT-VALUE(${1:discount-rate},${2:amount},${3:...})$0",
+      "doc": "approximation of the present value of a series of future period-end amount",
+      "label": "FUNCTION-PRESENT-VALUE",
+      "matches": {
+        "FUNCTION PRESENT-VALUE": true
+      }
+    },
+    {
+      "content": "function char(${1:integer})$0",
+      "doc": "function character in the ordinal position specified by integer, from the current alphanumeric collating sequence",
+      "label": "function-char",
+      "matches": {
+        "function char": true
+      }
+    },
+    {
+      "content": "function present-value(${1:discount-rate},${2:amount},${3:...})$0",
+      "doc": "approximation of the present value of a series of future period-end amount",
+      "label": "function-present-value",
+      "matches": {
+        "function present-value": true
+      }
+    },
+    {
+      "content": "function acos(${1:cosine})$0",
+      "doc": "function trigonometric arc-cosine, or inverse cosine, of cosine",
+      "label": "function-acos",
+      "matches": {
+        "function acos": true
+      }
+    },
+    {
+      "content": "program-id. MFUT_${1:${TM_FILENAME_BASE/MFUT[_](.*)/$1/}}.\n       working-storage section.\n       copy \"mfunit.cpy\".\n\n       01 test-fail-count     binary-long value 0.\n\n       *> Testcase     : $1\n       *>  Description : $2\n       procedure division.\n           $0\n           if 1 not equal 1\n               display \"Odd... 1 not equal 1?\"\n               add 1 to test-fail-count\n           end-if\n\n           if test-fail-count not equal 0\n               call \"MFU_ASSERT_FAIL_Z\" using\n                    by reference z\"$1 has failed\"\n               end-call\n           end-if\n\n           goback returning test-fail-count.\n\n       *> Startup for testcase $1\n       entry \"MFUS_$1\".\n           *> Open any files\n           goback.\n\n       *> Teardown for testcase $1\n       entry \"MFUE_$1\".\n           *> Close any files/delete any temp files\n           goback.\n\n       *> Metadata for testcase $1\n       entry \"MFUM_$1\".\n           move \"$2\" to MFU-MD-TESTCASE-DESCRIPTION\n           goback.\n       end program.",
+      "doc": "MFUNIT skelton program",
+      "label": "MFUnit Test",
+      "matches": {
+        "mfu,program-id": true
       }
     },
     {
@@ -1653,116 +1507,262 @@
       }
     },
     {
-      "content": "function monetary-thousands-separator()$0",
-      "doc": "character used to separate the thousands digit groupings in a monetary currency value according to the current locale",
-      "label": "function-monetary-thousands-separator",
+      "content": "function random(${1:seed})$0",
+      "doc": "pseudo-random number 0> <1 from a rectangular distribution with optional seed",
+      "label": "function-random",
       "matches": {
-        "function monetary-thousands-separator": true
+        "function random": true
       }
     },
     {
-      "content": "function formatted-datetime(${1:date-and-time-format},${2:integer-date},${3:standard-numeric-time},${4:offset_or_system_offset})$0",
-      "doc": "function formatted-datetime",
-      "label": "function-formatted-datetime",
+      "content": "function annuity(${1:interest-rate},${2:number-of-periods})$0",
+      "doc": "function annuity",
+      "label": "function-annuity",
       "matches": {
-        "function formatted-datetime": true
+        "function annuity": true
       }
     },
     {
-      "content": "function highest-algebraic(${1:numeric-identifier})$0",
-      "doc": "highest value that could possibly be stored in the specified numeric-identifier",
-      "label": "function-highest-algebraic",
+      "content": "function byte-length(${1:integer})$0",
+      "doc": "function byte-length (in bytes) of item",
+      "label": "function-byte-length",
       "matches": {
-        "function highest-algebraic": true
+        "function byte-length": true
       }
     },
     {
-      "content": "EVALUATE $1\n    WHEN $2\n       $0\n    WHEN OTHER\n       CONTINUE\nEND-EVALUATE",
-      "doc": "EVALUATE",
-      "label": "EVALUATE",
+      "content": "FUNCTION REM(${1:number},${2:divisor})$0",
+      "doc": "remainder of number divided by divisor",
+      "label": "FUNCTION-REM",
       "matches": {
-        "EVALUATE": true
+        "FUNCTION REM": true
       }
     },
     {
-      "content": "function national-of(${1:alphanumeric-string},${2:replacement-char})$0",
-      "doc": "convert alphanumeric-string to the national coded character set representation",
-      "label": "function-national-of",
+      "content": "function range(${1:argument},${2:...})$0",
+      "doc": "value of the maximum argument minus the value of the minimum argument",
+      "label": "function-range",
       "matches": {
-        "function national-of": true
+        "function range": true
       }
     },
     {
-      "content": "function integer-part(${1:number})$0",
-      "doc": "portion of number that occurs to the left of the decimal point",
-      "label": "function-integer-part",
+      "content": "function combined-datetime(${1:integer-date},${2:standard-numeric-time})$0",
+      "doc": "function combines integer-date and standard-numeric-time into a single numeric item from which both date and time components can be derived",
+      "label": "function-combined-datetime",
       "matches": {
-        "function integer-part": true
+        "function combined-datetime": true
       }
     },
     {
-      "content": "function locale-compare(${1:argument1},${2:argument2},${3:locale-optional})$0",
-      "doc": "character '=' or '<' or '>' indicating the result of comparing argument1 and argument2 using a culturall",
-      "label": "function-locale-compare",
+      "content": "FUNCTION REVERSE(${1:string})$0",
+      "doc": "reverse representation with same length of string",
+      "label": "FUNCTION-REVERSE",
       "matches": {
-        "function locale-compare": true
+        "FUNCTION REVERSE": true
       }
     },
     {
-      "content": "perform ${1}\n\t${2}\nend-perform\n${0}",
-      "doc": "perform .. end-perform",
-      "label": "perform-end-perform",
+      "content": "function concatenate(${1:string1},${2:string2})$0",
+      "doc": "function concatenates the string1.. string2 into a single string result",
+      "label": "function-concatenate",
       "matches": {
-        "pe": true,
-        "perform": true
+        "function concatenate": true
       }
     },
     {
-      "content": "function numeric-thousands-separator()$0",
-      "doc": "character used to separate the thousands digit groupings in a numeric value according to the current locale",
-      "label": "function-numeric-thousands-separator",
+      "content": "function rem(${1:number},${2:divisor})$0",
+      "doc": "remainder of number divided by divisor",
+      "label": "function-rem",
       "matches": {
-        "function numeric-thousands-separator": true
+        "function rem": true
       }
     },
     {
-      "content": "01 ${2:_prop} ${3:binary-long} private.\nmethod-id. get property #${1:Prop}.\nprocedure division returning ret as ${3:binary-long}.\n    set ret to ${2:_prop}\nend method.\nmethod-id. set property #${1:Prop}.\nprocedure division using by value val as ${3:binary-long}.\n    set ${2:_prop} to 0\nend method.",
-      "doc": "set/get property",
-      "label": "property",
+      "content": "FUNCTION SECONDS-FROM-FORMATTED-TIME(${1:format},${2:time})$0",
+      "doc": "decode time according to format (a time format or a combined date and time format)",
+      "label": "FUNCTION-SECONDS-FROM-FORMATTED-TIME",
       "matches": {
-        "property": true
+        "FUNCTION SECONDS-FROM-FORMATTED-TIME": true
       }
     },
     {
-      "content": "function current-date(${1:date-and-time-format})$0",
-      "doc": "function current date and time as 21-character value",
-      "label": "function-current-date",
+      "content": "function formatted-date(${1:date-format},${2:integer-date})$0",
+      "doc": "function formatted-date",
+      "label": "function-formatted-date",
       "matches": {
-        "function current-date": true
+        "function formatted-date": true
       }
     },
     {
-      "content": "string ${1:item1} delimited by size\n       ${2:item2} delimited by size\n       into ${3:result}\nend-string\n$0",
-      "doc": "string delimited by size",
-      "label": "string",
+      "content": "function asin(${1:sine})$0",
+      "doc": "function trigonometric arc-sine, or inverse sine, of sine",
+      "label": "function-asin",
       "matches": {
-        "string": true
+        "function asin": true
       }
     },
     {
-      "content": "function numval(${1:string})$0",
-      "doc": "corresponding numeric value for string",
-      "label": "function-numval",
+      "content": "function reverse(${1:string})$0",
+      "doc": "reverse representation with same length of string",
+      "label": "function-reverse",
       "matches": {
-        "function numval": true
+        "function reverse": true
       }
     },
     {
-      "content": "function pi()$0",
-      "doc": "pi",
-      "label": "function-pi",
+      "content": "function integer(${1:number})$0",
+      "doc": "greatest integer value that is less than or equal to number",
+      "label": "function-integer",
       "matches": {
-        "function pi": true
+        "function integer": true
+      }
+    },
+    {
+      "content": "function integer-of-formatted-date(${1:format},${2:date})$0",
+      "doc": "converts date in specified format to an internal integer",
+      "label": "function-integer-of-formatted-date",
+      "matches": {
+        "function integer-of-formatted-date": true
+      }
+    },
+    {
+      "content": "FUNCTION SIGN(${1:number})$0",
+      "doc": "sign representation of number as -1, 0, 1",
+      "label": "FUNCTION-SIGN",
+      "matches": {
+        "FUNCTION SIGN": true
+      }
+    },
+    {
+      "content": "function seconds-from-formatted-time(${1:format},${2:time})$0",
+      "doc": "decode time according to format (a time format or a combined date and time format)",
+      "label": "function-seconds-from-formatted-time",
+      "matches": {
+        "function seconds-from-formatted-time": true
+      }
+    },
+    {
+      "content": "function abs(${1:number})$0",
+      "doc": "function absolute value of number",
+      "label": "function-abs",
+      "matches": {
+        "function abs": true
+      }
+    },
+    {
+      "content": "FUNCTION SIN(${1:angle})$0",
+      "doc": "trigonometric sine of the specified angle",
+      "label": "FUNCTION-SIN",
+      "matches": {
+        "FUNCTION SIN": true
+      }
+    },
+    {
+      "content": "function mean(${1:number},${2:...})$0",
+      "doc": "statistical mean value of the specified list of numbers",
+      "label": "function-mean",
+      "matches": {
+        "function mean": true
+      }
+    },
+    {
+      "content": "function seconds-past-midnight()$0",
+      "doc": "current time of day expressed as the total number of elapsed seconds since midnight",
+      "label": "function-seconds-past-midnight",
+      "matches": {
+        "function seconds-past-midnight": true
+      }
+    },
+    {
+      "content": "FS\nFUNCTION SQRT(${1:number})$0",
+      "doc": "aproximation of the square root of number",
+      "label": "FUNCTION-SQRT",
+      "matches": {
+        "FUNCTION SQRT": true
+      }
+    },
+    {
+      "content": "delimited by space",
+      "doc": "delimited by size (string)",
+      "label": "delimited_space",
+      "matches": {
+        "delimited by space": true,
+        "ds": true
+      }
+    },
+    {
+      "content": "function fraction-part(${1:number})$0",
+      "doc": "portion of number that occurs to the right of the decimal point",
+      "label": "function-fraction-part",
+      "matches": {
+        "function fraction-part": true
+      }
+    },
+    {
+      "content": "function sign(${1:number})$0",
+      "doc": "sign representation of number as -1, 0, 1",
+      "label": "function-sign",
+      "matches": {
+        "function sign": true
+      }
+    },
+    {
+      "content": "FT\nFUNCTION TAN(${1:angle})$0",
+      "doc": "trigonometric tangent of the specified angle",
+      "label": "FUNCTION-TAN",
+      "matches": {
+        "FUNCTION TAN": true
+      }
+    },
+    {
+      "content": "*>> <summary>enum-id $1</summary>\nenum-id. $1 as \"Status\".\n    78 ${2:Item}  value ${3:1}.\nend enum $1.",
+      "doc": "enum-id",
+      "label": "enum-id",
+      "matches": {
+        "ei": true,
+        "enum-id": true
+      }
+    },
+    {
+      "content": "function sqrt(${1:number})$0",
+      "doc": "aproximation of the square root of number",
+      "label": "function-sqrt",
+      "matches": {
+        "function sqrt": true
+      }
+    },
+    {
+      "content": "function sin(${1:angle})$0",
+      "doc": "trigonometric sine of the specified angle",
+      "label": "function-sin",
+      "matches": {
+        "function sin": true
+      }
+    },
+    {
+      "content": "FUNCTION UPPER-CASE(${1:string})$0",
+      "doc": "character string that contains string with any lowercase letters replaced by their corresponding uppercase letters",
+      "label": "FUNCTION-UPPER-CASE",
+      "matches": {
+        "FU": true,
+        "FUNCTION UPPER-CASE": true
+      }
+    },
+    {
+      "content": "function upper-case(${1:string})$0",
+      "doc": "character string that contains string with any lowercase letters replaced by their corresponding uppercase letters",
+      "label": "function-upper-case",
+      "matches": {
+        "function upper-case": true
+      }
+    },
+    {
+      "content": "function locale-time(${1:yyyymmdd},${2:locale-optional})$0",
+      "doc": "format time; according to locale",
+      "label": "function-locale-time",
+      "matches": {
+        "function locale-time": true
       }
     }
   ]

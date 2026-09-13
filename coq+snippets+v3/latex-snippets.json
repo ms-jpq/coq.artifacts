@@ -2,35 +2,19 @@
   "extends": [],
   "snippets": [
     {
-      "content": "\\begin{split}\n\t$0\n\\end{split}",
-      "doc": "Split",
-      "label": "Split",
+      "content": "\\begin{gather}\n\t$0\n\\end{gather}",
+      "doc": "Gather(ed)",
+      "label": "Gather(ed)",
       "matches": {
-        "spl": true
+        "gat": true
       }
     },
     {
-      "content": "\\begin{table*}\n\t\\caption{$1}\\label{tab:$2}\n\t\\begin{tabular}{${3:ccl}}\n\t\t\\toprule\n\t\t$4\n\t\ta & b & c \\\\\\\\\n\t\t\\midrule\n\t\td & e & f \\\\\\\\\n\t\t\\bottomrule\n\t\\end{tabular}\n\\end{table*}\n$0",
-      "doc": "Add a table (ACM)",
-      "label": "Table:ACM:*",
+      "content": "\\begin{figure}\n\t\\includegraphics[width=0.45\\textwidth]{figures/$1}\n\t\\caption{$2}\\label{fig:$3}\n\\end{figure}\n$0",
+      "doc": "Add a figure (ACM)",
+      "label": "Figure:ACM",
       "matches": {
-        "table:acm:*": true
-      }
-    },
-    {
-      "content": "\\begin{definition}\n\t$1\n\t\\begin{displaymath}\n\t\t$2\n\t\\end{displaymath}\n\t$3\n\\end{definition}\n$0",
-      "doc": "Add a definition",
-      "label": "Definition",
-      "matches": {
-        "definition": true
-      }
-    },
-    {
-      "content": "\\\\begin{enumerate}\n\t\\item $0\n\\\\end{enumerate}",
-      "doc": "Add a enumerate",
-      "label": "Enumerate",
-      "matches": {
-        "enumerate": true
+        "figure:acm": true
       }
     },
     {
@@ -42,59 +26,43 @@
       }
     },
     {
-      "content": "\\begin{compactitem}\n\t\\item $1\n\\end{compactitem}\n$0",
-      "doc": "Add a compactitem (from package paralist)",
-      "label": "Compactitem",
+      "content": "\\begin{definition}\n\t$1\n\t\\begin{displaymath}\n\t\t$2\n\t\\end{displaymath}\n\t$3\n\\end{definition}\n$0",
+      "doc": "Add a definition",
+      "label": "Definition",
       "matches": {
-        "compactitem": true
+        "definition": true
       }
     },
     {
-      "content": "${1:Table}~\\ref{tab:$2}$0",
-      "doc": "Table Reference",
-      "label": "Table:Ref",
+      "content": "\\begin{figure*}\n\t\\includegraphics[width=0.45\\textwidth]{figures/$1}\n\t\\caption{$2}\\label{fig:$3}\n\\end{figure*}\n$0",
+      "doc": "Add a figure (ACM)",
+      "label": "Figure:ACM:*",
       "matches": {
-        "table:ref": true
+        "figure:acm:*": true
       }
     },
     {
-      "content": "\\cite{$1}$0",
-      "doc": "Add a cite",
-      "label": "Cite",
+      "content": "\\begin{${1:p/b/v/V/B/small}matrix}\n\t$0\n\\end{${1:p/b/v/V/B/small}matrix}",
+      "doc": "Matrix",
+      "label": "Matrix",
       "matches": {
-        "cite": true
+        "mat": true
       }
     },
     {
-      "content": "\\null\\thispagestyle{empty}\n\\newpage\n$0",
-      "doc": "Add a empty page",
-      "label": "EmptyPage",
+      "content": "\\begin{proof}\n\t$1\n\t\\begin{displaymath}\n\t\t$2\n\t\\end{displaymath}\n\t$3\n\\end{proof}\n$0",
+      "doc": "Add a proof",
+      "label": "Proof",
       "matches": {
-        "empty": true
+        "proof": true
       }
     },
     {
-      "content": "${1:Algorithm}~\\ref{algo:$2}$0",
-      "doc": "",
-      "label": "Algorithm:Ref",
+      "content": "${1:page}~\\pageref{$2}$0",
+      "doc": "Page",
+      "label": "Page",
       "matches": {
-        "algo:ref": true
-      }
-    },
-    {
-      "content": "\\State $1",
-      "doc": "",
-      "label": "Algorithm:State",
-      "matches": {
-        "state": true
-      }
-    },
-    {
-      "content": "\\begin{figure}\n\t\\begin{center}\n\t\t\\includegraphics[width=0.95\\textwidth]{figures/$1}\n\t\\end{center}\n\t\\caption{$3}\\label{fig:$4}\n\\end{figure}\n$0",
-      "doc": "Add a figure",
-      "label": "Figure",
-      "matches": {
-        "figure": true
+        "page": true
       }
     },
     {
@@ -106,19 +74,11 @@
       }
     },
     {
-      "content": "\\If{$1}\n\\ElsIf{$2}\n\\Else\n\\EndIf",
-      "doc": "",
-      "label": "Algorithm:If",
+      "content": "${1:Section}~\\ref{sec:$2}$0",
+      "doc": "Section Reference",
+      "label": "Section:Ref",
       "matches": {
-        "if": true
-      }
-    },
-    {
-      "content": "%#Region $0",
-      "doc": "Folding Region Start",
-      "label": "Region Start",
-      "matches": {
-        "#region": true
+        "section:ref": true
       }
     },
     {
@@ -130,6 +90,94 @@
       }
     },
     {
+      "content": "\\begin{split}\n\t$0\n\\end{split}",
+      "doc": "Split",
+      "label": "Split",
+      "matches": {
+        "spl": true
+      }
+    },
+    {
+      "content": "\\null\\thispagestyle{empty}\n\\newpage\n$0",
+      "doc": "Add a empty page",
+      "label": "EmptyPage",
+      "matches": {
+        "empty": true
+      }
+    },
+    {
+      "content": "\\cite{$1}$0",
+      "doc": "Add a cite",
+      "label": "Cite",
+      "matches": {
+        "cite": true
+      }
+    },
+    {
+      "content": "\\\\begin{description}\n\t\\item[$1] $0\n\\\\end{description}",
+      "doc": "Description",
+      "label": "Description",
+      "matches": {
+        "desc": true
+      }
+    },
+    {
+      "content": "\\begin{compactitem}\n\t\\item $1\n\\end{compactitem}\n$0",
+      "doc": "Add a compactitem (from package paralist)",
+      "label": "Compactitem",
+      "matches": {
+        "compactitem": true
+      }
+    },
+    {
+      "content": "\\State $1",
+      "doc": "",
+      "label": "Algorithm:State",
+      "matches": {
+        "state": true
+      }
+    },
+    {
+      "content": "\\begin{math}\n\t$1\n\\end{math}\n$0",
+      "doc": "Add a Math",
+      "label": "Math",
+      "matches": {
+        "math": true
+      }
+    },
+    {
+      "content": "\\\\begin{enumerate}\n\t\\item $0\n\\\\end{enumerate}",
+      "doc": "Add a enumerate",
+      "label": "Enumerate",
+      "matches": {
+        "enumerate": true
+      }
+    },
+    {
+      "content": "\\If{$1}\n\\ElsIf{$2}\n\\Else\n\\EndIf",
+      "doc": "",
+      "label": "Algorithm:If",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "\\begin{table*}\n\t\\caption{$1}\\label{tab:$2}\n\t\\begin{tabular}{${3:ccl}}\n\t\t\\toprule\n\t\t$4\n\t\ta & b & c \\\\\\\\\n\t\t\\midrule\n\t\td & e & f \\\\\\\\\n\t\t\\bottomrule\n\t\\end{tabular}\n\\end{table*}\n$0",
+      "doc": "Add a table (ACM)",
+      "label": "Table:ACM:*",
+      "matches": {
+        "table:acm:*": true
+      }
+    },
+    {
+      "content": "\\\\begin{itemize}\n\t\\item $0\n\\\\end{itemize}",
+      "doc": "Itemize",
+      "label": "Itemize",
+      "matches": {
+        "item": true
+      }
+    },
+    {
       "content": "\\begin{table}\n\t\\caption{$1}\\label{tab:$2}\n\t\\begin{tabular}{${3:ccl}}\n\t\t\\toprule\n\t\t$4\n\t\ta & b & c \\\\\\\\\n\t\t\\midrule\n\t\td & e & f \\\\\\\\\n\t\t\\bottomrule\n\t\\end{tabular}\n\\end{table}\n$0",
       "doc": "Add a table (ACM)",
       "label": "Table:ACM",
@@ -138,11 +186,91 @@
       }
     },
     {
+      "content": "${1:Table}~\\ref{tab:$2}$0",
+      "doc": "Table Reference",
+      "label": "Table:Ref",
+      "matches": {
+        "table:ref": true
+      }
+    },
+    {
+      "content": "\\begin{table}\n\t\\caption{$1}\\label{tab:$2}\n\t\\begin{center}\n\t\t\\begin{tabular}[c]{l|l}\n\t\t\t\\hline\n\t\t\t\\multicolumn{1}{c|}{\\textbf{$3}} & \n\t\t\t\\multicolumn{1}{c}{\\textbf{$4}} \\\\\\\\\n\t\t\t\\hline\n\t\t\ta & b \\\\\\\\\n\t\t\tc & d \\\\\\\\\n\t\t\t$5\n\t\t\t\\hline\n\t\t\\end{tabular}\n\t\\end{center}\n\\end{table}\n$0",
+      "doc": "Add a table",
+      "label": "Table",
+      "matches": {
+        "table": true
+      }
+    },
+    {
       "content": "\\For{i=0:$1}\n\t\\State $0\n\\EndFor",
       "doc": "",
       "label": "Algorithm:For",
       "matches": {
         "for": true
+      }
+    },
+    {
+      "content": "\\begin{equation}\n\t$0\n\t\\label{eq:$1}\n\\end{equation}",
+      "doc": "Add a Equation",
+      "label": "Equation",
+      "matches": {
+        "equation": true
+      }
+    },
+    {
+      "content": "${1:Figure}~\\ref{fig:$2}$0",
+      "doc": "Ref for Figure",
+      "label": "Figure:Ref",
+      "matches": {
+        "figure:ref": true
+      }
+    },
+    {
+      "content": "\\While{$1}\n\t\\State $0\n\\EndWhile",
+      "doc": "",
+      "label": "Algorithm:While",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "\\begin{theorem}\n\t$1\n\t\\begin{displaymath}\n\t\t$2\n\t\\end{displaymath}\n\t$3\n\\end{theorem}\n$0",
+      "doc": "Add a theorem",
+      "label": "Theorem",
+      "matches": {
+        "theorem": true
+      }
+    },
+    {
+      "content": "${1:Algorithm}~\\ref{algo:$2}$0",
+      "doc": "",
+      "label": "Algorithm:Ref",
+      "matches": {
+        "algo:ref": true
+      }
+    },
+    {
+      "content": "%#Region $0",
+      "doc": "Folding Region Start",
+      "label": "Region Start",
+      "matches": {
+        "#region": true
+      }
+    },
+    {
+      "content": "\\begin{displaymath}\n\t$1\n\\end{displaymath}\n$0",
+      "doc": "Display Math",
+      "label": "DisplayMath",
+      "matches": {
+        "displaymath": true
+      }
+    },
+    {
+      "content": "\\begin{figure}\n\t\\begin{center}\n\t\t\\includegraphics[width=0.95\\textwidth]{figures/$1}\n\t\\end{center}\n\t\\caption{$3}\\label{fig:$4}\n\\end{figure}\n$0",
+      "doc": "Add a figure",
+      "label": "Figure",
+      "matches": {
+        "figure": true
       }
     },
     {
@@ -159,134 +287,6 @@
       "label": "Listing:Ref",
       "matches": {
         "listing:ref": true
-      }
-    },
-    {
-      "content": "\\begin{figure}\n\t\\includegraphics[width=0.45\\textwidth]{figures/$1}\n\t\\caption{$2}\\label{fig:$3}\n\\end{figure}\n$0",
-      "doc": "Add a figure (ACM)",
-      "label": "Figure:ACM",
-      "matches": {
-        "figure:acm": true
-      }
-    },
-    {
-      "content": "\\begin{figure*}\n\t\\includegraphics[width=0.45\\textwidth]{figures/$1}\n\t\\caption{$2}\\label{fig:$3}\n\\end{figure*}\n$0",
-      "doc": "Add a figure (ACM)",
-      "label": "Figure:ACM:*",
-      "matches": {
-        "figure:acm:*": true
-      }
-    },
-    {
-      "content": "\\While{$1}\n\t\\State $0\n\\EndWhile",
-      "doc": "",
-      "label": "Algorithm:While",
-      "matches": {
-        "while": true
-      }
-    },
-    {
-      "content": "\\\\begin{itemize}\n\t\\item $0\n\\\\end{itemize}",
-      "doc": "Itemize",
-      "label": "Itemize",
-      "matches": {
-        "item": true
-      }
-    },
-    {
-      "content": "\\begin{table}\n\t\\caption{$1}\\label{tab:$2}\n\t\\begin{center}\n\t\t\\begin{tabular}[c]{l|l}\n\t\t\t\\hline\n\t\t\t\\multicolumn{1}{c|}{\\textbf{$3}} & \n\t\t\t\\multicolumn{1}{c}{\\textbf{$4}} \\\\\\\\\n\t\t\t\\hline\n\t\t\ta & b \\\\\\\\\n\t\t\tc & d \\\\\\\\\n\t\t\t$5\n\t\t\t\\hline\n\t\t\\end{tabular}\n\t\\end{center}\n\\end{table}\n$0",
-      "doc": "Add a table",
-      "label": "Table",
-      "matches": {
-        "table": true
-      }
-    },
-    {
-      "content": "${1:page}~\\pageref{$2}$0",
-      "doc": "Page",
-      "label": "Page",
-      "matches": {
-        "page": true
-      }
-    },
-    {
-      "content": "\\begin{${1:p/b/v/V/B/small}matrix}\n\t$0\n\\end{${1:p/b/v/V/B/small}matrix}",
-      "doc": "Matrix",
-      "label": "Matrix",
-      "matches": {
-        "mat": true
-      }
-    },
-    {
-      "content": "\\begin{gather}\n\t$0\n\\end{gather}",
-      "doc": "Gather(ed)",
-      "label": "Gather(ed)",
-      "matches": {
-        "gat": true
-      }
-    },
-    {
-      "content": "\\begin{displaymath}\n\t$1\n\\end{displaymath}\n$0",
-      "doc": "Display Math",
-      "label": "DisplayMath",
-      "matches": {
-        "displaymath": true
-      }
-    },
-    {
-      "content": "\\\\begin{description}\n\t\\item[$1] $0\n\\\\end{description}",
-      "doc": "Description",
-      "label": "Description",
-      "matches": {
-        "desc": true
-      }
-    },
-    {
-      "content": "${1:Figure}~\\ref{fig:$2}$0",
-      "doc": "Ref for Figure",
-      "label": "Figure:Ref",
-      "matches": {
-        "figure:ref": true
-      }
-    },
-    {
-      "content": "\\begin{theorem}\n\t$1\n\t\\begin{displaymath}\n\t\t$2\n\t\\end{displaymath}\n\t$3\n\\end{theorem}\n$0",
-      "doc": "Add a theorem",
-      "label": "Theorem",
-      "matches": {
-        "theorem": true
-      }
-    },
-    {
-      "content": "\\begin{equation}\n\t$0\n\t\\label{eq:$1}\n\\end{equation}",
-      "doc": "Add a Equation",
-      "label": "Equation",
-      "matches": {
-        "equation": true
-      }
-    },
-    {
-      "content": "\\begin{math}\n\t$1\n\\end{math}\n$0",
-      "doc": "Add a Math",
-      "label": "Math",
-      "matches": {
-        "math": true
-      }
-    },
-    {
-      "content": "\\begin{proof}\n\t$1\n\t\\begin{displaymath}\n\t\t$2\n\t\\end{displaymath}\n\t$3\n\\end{proof}\n$0",
-      "doc": "Add a proof",
-      "label": "Proof",
-      "matches": {
-        "proof": true
-      }
-    },
-    {
-      "content": "${1:Section}~\\ref{sec:$2}$0",
-      "doc": "Section Reference",
-      "label": "Section:Ref",
-      "matches": {
-        "section:ref": true
       }
     }
   ]

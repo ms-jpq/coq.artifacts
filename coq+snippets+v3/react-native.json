@@ -2,91 +2,19 @@
   "extends": [],
   "snippets": [
     {
-      "content": "marginBottom: ${1},",
-      "doc": "marginBottom",
-      "label": "marginBottom",
-      "matches": {
-        "mar": true
-      }
-    },
-    {
-      "content": "marginHorizontal: '${1}',",
-      "doc": "marginHorizontal",
-      "label": "marginHorizontal",
-      "matches": {
-        "mar": true
-      }
-    },
-    {
-      "content": "marginLeft: ${1},",
-      "doc": "marginLeft",
-      "label": "marginLeft",
-      "matches": {
-        "mar": true
-      }
-    },
-    {
-      "content": "marginRight: ${1},",
-      "doc": "marginRight",
-      "label": "marginRight",
-      "matches": {
-        "mar": true
-      }
-    },
-    {
-      "content": "import { View } from 'react-native';\n\n// import { Container } from './styles';\n\nconst ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}} = () => <View />;\n\nexport default ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}};",
-      "doc": "Create React Native Stateless Component",
-      "label": "statelessComponent",
-      "matches": {
-        "rnsc": true
-      }
-    },
-    {
-      "content": "marginVertical: '${1}',",
-      "doc": "marginVertical",
-      "label": "marginVertical",
-      "matches": {
-        "mar": true
-      }
-    },
-    {
-      "content": "maxHeight: ${1},",
-      "doc": "maxHeight",
-      "label": "maxHeight",
-      "matches": {
-        "max": true
-      }
-    },
-    {
-      "content": "import { View } from 'react-native';\n\n// import { Container } from './styles';\n\nexport default function ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}}() {\n  return (\n    <View />\n  );\n}",
-      "doc": "Create React Native Functional Component",
-      "label": "componentFunctional",
-      "matches": {
-        "rnfc": true
-      }
-    },
-    {
-      "content": "maxWidth: ${1},",
-      "doc": "maxWidth",
-      "label": "maxWidth",
-      "matches": {
-        "max": true
-      }
-    },
-    {
-      "content": "minHeight: ${1},",
-      "doc": "minHeight",
-      "label": "minHeight",
-      "matches": {
-        "min": true
-      }
-    },
-    {
       "content": "minWidth: ${1},",
       "doc": "minWidth",
       "label": "minWidth",
       "matches": {
         "min": true
+      }
+    },
+    {
+      "content": "overflow: '${1}',",
+      "doc": "overflow",
+      "label": "overflow",
+      "matches": {
+        "over": true
       }
     },
     {
@@ -103,14 +31,6 @@
       "label": "padding",
       "matches": {
         "padding": true
-      }
-    },
-    {
-      "content": "import styled from 'styled-components/native';\n\nexport const ${1:Container} = styled.${2:View}`\n  ${3}\n`;",
-      "doc": "Create React Native Styled Components file",
-      "label": "styles",
-      "matches": {
-        "styled-rn": true
       }
     },
     {
@@ -170,27 +90,11 @@
       }
     },
     {
-      "content": "width: ${1},",
-      "doc": "width",
-      "label": "width",
-      "matches": {
-        "w": true
-      }
-    },
-    {
       "content": "right: ${1},",
       "doc": "right",
       "label": "right",
       "matches": {
         "ri": true
-      }
-    },
-    {
-      "content": "top: ${1},",
-      "doc": "top",
-      "label": "top",
-      "matches": {
-        "top": true
       }
     },
     {
@@ -207,6 +111,14 @@
       "label": "alignItems",
       "matches": {
         "align": true
+      }
+    },
+    {
+      "content": "zIndex: ${1},",
+      "doc": "zIndex",
+      "label": "zIndex",
+      "matches": {
+        "z": true
       }
     },
     {
@@ -234,19 +146,19 @@
       }
     },
     {
+      "content": "//#region ${1}\n${2}\n//#endregion",
+      "doc": "Create region",
+      "label": "region",
+      "matches": {
+        "region": true
+      }
+    },
+    {
       "content": "borderBottomWidth: ${1},",
       "doc": "borderBottomWidth",
       "label": "borderBottomWidth",
       "matches": {
         "bor": true
-      }
-    },
-    {
-      "content": "//#region ${1}\n${2}\n//#endregion",
-      "doc": "Create region",
-      "label": "regionStartEnd",
-      "matches": {
-        "#regionStartEnd": true
       }
     },
     {
@@ -370,6 +282,14 @@
       }
     },
     {
+      "content": "display: '${1:none}',",
+      "doc": "display",
+      "label": "display",
+      "matches": {
+        "di": true
+      }
+    },
+    {
       "content": "opacity: ${1},",
       "doc": "opacity",
       "label": "opacity",
@@ -383,6 +303,14 @@
       "label": "shadowColor",
       "matches": {
         "sha": true
+      }
+    },
+    {
+      "content": "import axios from 'axios';\n\nconst api = axios.create({\n  baseURL: ${1},\n});\n\nexport default api;",
+      "doc": "Create Axios Configuration file",
+      "label": "api",
+      "matches": {
+        "api": true
       }
     },
     {
@@ -458,27 +386,11 @@
       }
     },
     {
-      "content": "//#region ${1}\n${2}\n//#endregion",
-      "doc": "Create region",
-      "label": "region",
-      "matches": {
-        "region": true
-      }
-    },
-    {
       "content": "flexWrap: '${1}',",
       "doc": "flexWrap",
       "label": "flexWrap",
       "matches": {
         "flex": true
-      }
-    },
-    {
-      "content": "import axios from 'axios';\n\nconst api = axios.create({\n  baseURL: ${1},\n});\n\nexport default api;",
-      "doc": "Create Axios Configuration file",
-      "label": "api",
-      "matches": {
-        "api": true
       }
     },
     {
@@ -490,35 +402,11 @@
       }
     },
     {
-      "content": "zIndex: ${1},",
-      "doc": "zIndex",
-      "label": "zIndex",
-      "matches": {
-        "z": true
-      }
-    },
-    {
-      "content": "position: ${1},",
-      "doc": "position",
-      "label": "position",
-      "matches": {
-        "pos": true
-      }
-    },
-    {
       "content": "fontStyle: '${1:normal}',",
       "doc": "fontStyle",
       "label": "fontStyle",
       "matches": {
         "fo": true
-      }
-    },
-    {
-      "content": "overflow: '${1}',",
-      "doc": "overflow",
-      "label": "overflow",
-      "matches": {
-        "over": true
       }
     },
     {
@@ -530,35 +418,11 @@
       }
     },
     {
-      "content": "import { Component } from 'react';\n\nimport { View } from 'react-native';\n\n// import { Container } from './styles';\n\nexport default class ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}} extends Component {\n  render() {\n    return <View />;\n  }\n}",
-      "doc": "Create React Native Stateful Component",
-      "label": "statefulComponent",
-      "matches": {
-        "rnc": true
-      }
-    },
-    {
       "content": "fontWeight: '${1:normal}',",
       "doc": "fontWeight",
       "label": "fontWeight",
       "matches": {
         "fo": true
-      }
-    },
-    {
-      "content": "display: '${1:none}',",
-      "doc": "display",
-      "label": "display",
-      "matches": {
-        "di": true
-      }
-    },
-    {
-      "content": "import { Component } from 'react';\n\nimport { View } from 'react-native';\n\nimport { bindActionCreators } from 'redux';\nimport { connect } from 'react-redux';\n\n// import { Container } from './styles';\n\nclass ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}} extends Component {\n  render() {\n    return <View />;\n  }\n}\n\nconst mapStateToProps = state => ({});\n\n// const mapDispatchToProps = dispatch =>\n//   bindActionCreators(Actions, dispatch);\n\nexport default connect(\n  mapStateToProps,\n  // mapDispatchToProps\n)(${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}});",
-      "doc": "Create React Native Stateful Redux Component",
-      "label": "statefulReduxComponent",
-      "matches": {
-        "rnrc": true
       }
     },
     {
@@ -570,14 +434,6 @@
       }
     },
     {
-      "content": "height: ${1},",
-      "doc": "height",
-      "label": "height",
-      "matches": {
-        "h": true
-      }
-    },
-    {
       "content": "margin: '${1}',",
       "doc": "margin",
       "label": "margin",
@@ -586,11 +442,155 @@
       }
     },
     {
+      "content": "//#region ${1}\n${2}\n//#endregion",
+      "doc": "Create region",
+      "label": "regionStartEnd",
+      "matches": {
+        "#regionStartEnd": true
+      }
+    },
+    {
+      "content": "marginBottom: ${1},",
+      "doc": "marginBottom",
+      "label": "marginBottom",
+      "matches": {
+        "mar": true
+      }
+    },
+    {
+      "content": "width: ${1},",
+      "doc": "width",
+      "label": "width",
+      "matches": {
+        "w": true
+      }
+    },
+    {
+      "content": "marginHorizontal: '${1}',",
+      "doc": "marginHorizontal",
+      "label": "marginHorizontal",
+      "matches": {
+        "mar": true
+      }
+    },
+    {
+      "content": "top: ${1},",
+      "doc": "top",
+      "label": "top",
+      "matches": {
+        "top": true
+      }
+    },
+    {
+      "content": "marginLeft: ${1},",
+      "doc": "marginLeft",
+      "label": "marginLeft",
+      "matches": {
+        "mar": true
+      }
+    },
+    {
+      "content": "height: ${1},",
+      "doc": "height",
+      "label": "height",
+      "matches": {
+        "h": true
+      }
+    },
+    {
+      "content": "marginRight: ${1},",
+      "doc": "marginRight",
+      "label": "marginRight",
+      "matches": {
+        "mar": true
+      }
+    },
+    {
+      "content": "position: ${1},",
+      "doc": "position",
+      "label": "position",
+      "matches": {
+        "pos": true
+      }
+    },
+    {
       "content": "marginTop: ${1},",
       "doc": "marginTop",
       "label": "marginTop",
       "matches": {
         "mar": true
+      }
+    },
+    {
+      "content": "import styled from 'styled-components/native';\n\nexport const ${1:Container} = styled.${2:View}`\n  ${3}\n`;",
+      "doc": "Create React Native Styled Components file",
+      "label": "styles",
+      "matches": {
+        "styled-rn": true
+      }
+    },
+    {
+      "content": "marginVertical: '${1}',",
+      "doc": "marginVertical",
+      "label": "marginVertical",
+      "matches": {
+        "mar": true
+      }
+    },
+    {
+      "content": "import { View } from 'react-native';\n\n// import { Container } from './styles';\n\nconst ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}} = () => <View />;\n\nexport default ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}};",
+      "doc": "Create React Native Stateless Component",
+      "label": "statelessComponent",
+      "matches": {
+        "rnsc": true
+      }
+    },
+    {
+      "content": "maxHeight: ${1},",
+      "doc": "maxHeight",
+      "label": "maxHeight",
+      "matches": {
+        "max": true
+      }
+    },
+    {
+      "content": "import { Component } from 'react';\n\nimport { View } from 'react-native';\n\nimport { bindActionCreators } from 'redux';\nimport { connect } from 'react-redux';\n\n// import { Container } from './styles';\n\nclass ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}} extends Component {\n  render() {\n    return <View />;\n  }\n}\n\nconst mapStateToProps = state => ({});\n\n// const mapDispatchToProps = dispatch =>\n//   bindActionCreators(Actions, dispatch);\n\nexport default connect(\n  mapStateToProps,\n  // mapDispatchToProps\n)(${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}});",
+      "doc": "Create React Native Stateful Redux Component",
+      "label": "statefulReduxComponent",
+      "matches": {
+        "rnrc": true
+      }
+    },
+    {
+      "content": "maxWidth: ${1},",
+      "doc": "maxWidth",
+      "label": "maxWidth",
+      "matches": {
+        "max": true
+      }
+    },
+    {
+      "content": "import { View } from 'react-native';\n\n// import { Container } from './styles';\n\nexport default function ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}}() {\n  return (\n    <View />\n  );\n}",
+      "doc": "Create React Native Functional Component",
+      "label": "componentFunctional",
+      "matches": {
+        "rnfc": true
+      }
+    },
+    {
+      "content": "minHeight: ${1},",
+      "doc": "minHeight",
+      "label": "minHeight",
+      "matches": {
+        "min": true
+      }
+    },
+    {
+      "content": "import { Component } from 'react';\n\nimport { View } from 'react-native';\n\n// import { Container } from './styles';\n\nexport default class ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}} extends Component {\n  render() {\n    return <View />;\n  }\n}",
+      "doc": "Create React Native Stateful Component",
+      "label": "statefulComponent",
+      "matches": {
+        "rnc": true
       }
     }
   ]

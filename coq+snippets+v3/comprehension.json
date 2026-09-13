@@ -2,6 +2,22 @@
   "extends": [],
   "snippets": [
     {
+      "content": "[${3:value} for ${2:value} in ${1:iterable}]$0",
+      "doc": "List comprehension for creating a list based on existing lists.",
+      "label": "List comprehension",
+      "matches": {
+        "lc": true
+      }
+    },
+    {
+      "content": "[${3:value} if ${4:condition} else ${5:condition} for ${2:value} in ${1:iterable}]$0",
+      "doc": "List comprehension for creating a list based on existing lists, with conditional if-else statement.",
+      "label": "List comprehension if else",
+      "matches": {
+        "lcie": true
+      }
+    },
+    {
       "content": "{${3:value} for ${2:value} in ${1:iterable} if ${4:condition}}$0",
       "doc": "Create a set based on existing iterables, with condition if statement.",
       "label": "Set Comprehension if filter",
@@ -15,14 +31,6 @@
       "label": "List comprehension if filter",
       "matches": {
         "lci": true
-      }
-    },
-    {
-      "content": "(${3:key} for ${2:value} in ${1:iterable})$0",
-      "doc": "Create a generator based on existing iterables.",
-      "label": "Generator comprehension",
-      "matches": {
-        "gc": true
       }
     },
     {
@@ -42,19 +50,11 @@
       }
     },
     {
-      "content": "{${4:key}: ${5:value} for ${2:key}, ${3:value} in ${1:iterable} if ${6:condition}}$0",
-      "doc": "Handy and faster way to create dictionaries based on existing dictionaries, with conditional if statement.",
-      "label": "Dictionary comprehension if filter",
+      "content": "(${3:key} for ${2:value} in ${1:iterable})$0",
+      "doc": "Create a generator based on existing iterables.",
+      "label": "Generator comprehension",
       "matches": {
-        "dci": true
-      }
-    },
-    {
-      "content": "[${3:value} for ${2:value} in ${1:iterable}]$0",
-      "doc": "List comprehension for creating a list based on existing lists.",
-      "label": "List comprehension",
-      "matches": {
-        "lc": true
+        "gc": true
       }
     },
     {
@@ -66,11 +66,11 @@
       }
     },
     {
-      "content": "[${3:value} if ${4:condition} else ${5:condition} for ${2:value} in ${1:iterable}]$0",
-      "doc": "List comprehension for creating a list based on existing lists, with conditional if-else statement.",
-      "label": "List comprehension if else",
+      "content": "{${4:key}: ${5:value} for ${2:key}, ${3:value} in ${1:iterable} if ${6:condition}}$0",
+      "doc": "Handy and faster way to create dictionaries based on existing dictionaries, with conditional if statement.",
+      "label": "Dictionary comprehension if filter",
       "matches": {
-        "lcie": true
+        "dci": true
       }
     }
   ]

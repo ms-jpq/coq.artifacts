@@ -2,11 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "<% if ${1:truevalue} %>\n  $2\n<% else %>\n  $3\n<% end %>",
-      "doc": "if .. else .. end",
-      "label": "ife",
+      "content": "<% unless ${1:falsevalue} %>\n  $2\n<% else %>\n  $3\n<% end %>",
+      "doc": "unless .. end",
+      "label": "unlesse",
       "matches": {
-        "ife": true
+        "unlesse": true
       }
     },
     {
@@ -16,47 +16,6 @@
       "matches": {
         "=": true,
         "pe": true
-      }
-    },
-    {
-      "content": "<% $1 %>",
-      "doc": "erb exec block",
-      "label": "exec",
-      "matches": {
-        "%": true,
-        "er": true
-      }
-    },
-    {
-      "content": "<% unless ${1:falsevalue} %>\n  $2\n<% end %>",
-      "doc": "unless .. end",
-      "label": "unless",
-      "matches": {
-        "unless": true
-      }
-    },
-    {
-      "content": "<% elsif ${1:truevalue} %>",
-      "doc": "elsif",
-      "label": "elsif",
-      "matches": {
-        "elsif": true
-      }
-    },
-    {
-      "content": "<%= link_to $1, $2 %>",
-      "doc": "link_to helper",
-      "label": "link_to",
-      "matches": {
-        "lt": true
-      }
-    },
-    {
-      "content": "<% ${1:items}.each do |${2:item}| %>\n  $3\n<% end %>",
-      "doc": "each do",
-      "label": "each",
-      "matches": {
-        "each": true
       }
     },
     {
@@ -84,6 +43,30 @@
       }
     },
     {
+      "content": "<%= link_to $1, $2 %>",
+      "doc": "link_to helper",
+      "label": "link_to",
+      "matches": {
+        "lt": true
+      }
+    },
+    {
+      "content": "<% elsif ${1:truevalue} %>",
+      "doc": "elsif",
+      "label": "elsif",
+      "matches": {
+        "elsif": true
+      }
+    },
+    {
+      "content": "<% if ${1:truevalue} %>\n  $2\n<% else %>\n  $3\n<% end %>",
+      "doc": "if .. else .. end",
+      "label": "ife",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
       "content": "<% if ${1:truevalue} %>\n  $2\n<% end %>",
       "doc": "if .. end",
       "label": "if",
@@ -92,11 +75,28 @@
       }
     },
     {
-      "content": "<% unless ${1:falsevalue} %>\n  $2\n<% else %>\n  $3\n<% end %>",
-      "doc": "unless .. end",
-      "label": "unlesse",
+      "content": "<% $1 %>",
+      "doc": "erb exec block",
+      "label": "exec",
       "matches": {
-        "unlesse": true
+        "%": true,
+        "er": true
+      }
+    },
+    {
+      "content": "<% unless ${1:falsevalue} %>\n  $2\n<% end %>",
+      "doc": "unless .. end",
+      "label": "unless",
+      "matches": {
+        "unless": true
+      }
+    },
+    {
+      "content": "<% ${1:items}.each do |${2:item}| %>\n  $3\n<% end %>",
+      "doc": "each do",
+      "label": "each",
+      "matches": {
+        "each": true
       }
     }
   ]

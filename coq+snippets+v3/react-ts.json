@@ -2,11 +2,163 @@
   "extends": [],
   "snippets": [
     {
-      "content": "PropTypes.oneOf(['$0']),",
-      "doc": "Prop type limited to specific values by treating it as an enum",
-      "label": "propTypeEnum",
+      "content": "PropTypes.func,",
+      "doc": "Func prop type",
+      "label": "propTypeFunc",
       "matches": {
-        "pte": true
+        "ptf": true
+      }
+    },
+    {
+      "content": "{${1:array}.map((item) => {\n\treturn <${2:elementName} key={item.id}>\n\t$0\n</${2}>\n})}",
+      "doc": "an element self closed",
+      "label": "jsx elements map with return",
+      "matches": {
+        "jmr": true
+      }
+    },
+    {
+      "content": "PropTypes.func.isRequired,",
+      "doc": "Func prop type required",
+      "label": "propTypeFuncRequired",
+      "matches": {
+        "ptfr": true
+      }
+    },
+    {
+      "content": "<${1:elementName}>\n\t{$TM_SELECTED_TEXT}\n</${1}>",
+      "doc": "an element",
+      "label": "jsx element wrap selection",
+      "matches": {
+        "jsx wrap selection with element": true
+      }
+    },
+    {
+      "content": "PropTypes.number,",
+      "doc": "Number prop type",
+      "label": "propTypeNumber",
+      "matches": {
+        "ptn": true
+      }
+    },
+    {
+      "content": "it('should $1', () => {\n  $0\n})",
+      "doc": "Testing `it` block",
+      "label": "itBlock",
+      "matches": {
+        "tit": true
+      }
+    },
+    {
+      "content": "PropTypes.number.isRequired,",
+      "doc": "Number prop type required",
+      "label": "propTypeNumberRequired",
+      "matches": {
+        "ptnr": true
+      }
+    },
+    {
+      "content": "useEffect(() => {\n\t$1\n}, [${3:dependencies}])$0",
+      "doc": "React useEffect() hook",
+      "label": "useEffect",
+      "matches": {
+        "ue": true
+      }
+    },
+    {
+      "content": "it('should $1', async () => {\n  $0\n})",
+      "doc": "Testing async `it` block",
+      "label": "itAsyncBlock",
+      "matches": {
+        "tita": true
+      }
+    },
+    {
+      "content": "PropTypes.object,",
+      "doc": "Object prop type",
+      "label": "propTypeObject",
+      "matches": {
+        "pto": true
+      }
+    },
+    {
+      "content": "useEffect(() => {\n\t$1\n\n\treturn () => {\n\t\t$2\n\t}\n}, [${3:dependencies}])$0",
+      "doc": "React useEffect() hook with a cleanup function",
+      "label": "useEffect with cleanup",
+      "matches": {
+        "uec": true
+      }
+    },
+    {
+      "content": "PropTypes.object.isRequired,",
+      "doc": "Object prop type required",
+      "label": "propTypeObjectRequired",
+      "matches": {
+        "ptor": true
+      }
+    },
+    {
+      "content": "export const $1 = createContext<$2>(\n\t(null as any) as $2\n)",
+      "doc": "creates a react context",
+      "label": "createContext",
+      "matches": {
+        "cc": true
+      }
+    },
+    {
+      "content": "const { ${1:name} } = this.state",
+      "doc": "",
+      "label": "destructuring of state",
+      "matches": {
+        "ds": true
+      }
+    },
+    {
+      "content": "const $1 = useContext($2)$0",
+      "doc": "React useContext() hook",
+      "label": "useContext",
+      "matches": {
+        "uc": true
+      }
+    },
+    {
+      "content": "import { Component } from 'react'\n\nclass ${TM_FILENAME_BASE} extends Component {\n\trender () {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t)\n\t}\n}\n\nexport default ${1}",
+      "doc": "Creates a React component class",
+      "label": "reactClassComponent",
+      "matches": {
+        "rcc": true
+      }
+    },
+    {
+      "content": "const ${1:elName}El = useRef(null)$0",
+      "doc": "React useRef() hook",
+      "label": "useRef",
+      "matches": {
+        "ur": true
+      }
+    },
+    {
+      "content": "PropTypes.node,",
+      "doc": "Anything that can be rendered: numbers, strings, elements or an array",
+      "label": "propTypeNode",
+      "matches": {
+        "ptnd": true
+      }
+    },
+    {
+      "content": "class ${TM_FILENAME_BASE} extends Component {\n\trender () {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t)\n\t}\n}",
+      "doc": "Creates a React component class",
+      "label": "reactJustClassComponent",
+      "matches": {
+        "rcjc": true
+      }
+    },
+    {
+      "content": "import { Component, PropTypes } from 'react'\n\nclass ${TM_FILENAME_BASE} extends Component {\n\trender () {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t)\n\t}\n}\n\n${1}.propTypes = {\n\n}\n\nexport default ${1}",
+      "doc": "Creates a React component class with PropTypes",
+      "label": "reactClassComponentPropTypes",
+      "matches": {
+        "rccp": true
       }
     },
     {
@@ -18,6 +170,54 @@
       }
     },
     {
+      "content": "PropTypes.element.isRequired,",
+      "doc": "React element prop type required",
+      "label": "propTypeElementRequired",
+      "matches": {
+        "ptelr": true
+      }
+    },
+    {
+      "content": "PropTypes.instanceOf($0),",
+      "doc": "Is an instance of a class prop type",
+      "label": "propTypeInstanceOf",
+      "matches": {
+        "pti": true
+      }
+    },
+    {
+      "content": "PropTypes.instanceOf($0).isRequired,",
+      "doc": "Is an instance of a class prop type required",
+      "label": "propTypeInstanceOfRequired",
+      "matches": {
+        "ptir": true
+      }
+    },
+    {
+      "content": "constructor (props, context) {\n\tsuper(props, context)\n\t$0\n}",
+      "doc": "Adds a default constructor for the class that contains props and context as arguments",
+      "label": "classConstructorContext",
+      "matches": {
+        "conc": true
+      }
+    },
+    {
+      "content": "PropTypes.oneOf(['$0']),",
+      "doc": "Prop type limited to specific values by treating it as an enum",
+      "label": "propTypeEnum",
+      "matches": {
+        "pte": true
+      }
+    },
+    {
+      "content": "componentWillMount () {\n\t$0\n}",
+      "doc": "Invoked once, both on the client and server, immediately before the initial rendering occurs",
+      "label": "componentWillMount",
+      "matches": {
+        "cwm": true
+      }
+    },
+    {
       "content": "PropTypes.oneOf(['$0']).isRequired,",
       "doc": "Prop type limited to specific values by treating it as an enum required",
       "label": "propTypeEnumRequired",
@@ -26,11 +226,11 @@
       }
     },
     {
-      "content": "export const ${TM_FILENAME_BASE} = (props : {}) => {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t)\n}",
-      "doc": "Creates a React functional component without PropTypes",
-      "label": "reactFunctionComponent",
+      "content": "componentDidMount () {\n\t$0\n}",
+      "doc": "Invoked once, only on the client (not on the server), immediately after the initial rendering occurs.",
+      "label": "componentDidMount",
       "matches": {
-        "rfc": true
+        "cdm": true
       }
     },
     {
@@ -42,19 +242,19 @@
       }
     },
     {
+      "content": "componentWillReceiveProps (nextProps) {\n\t$0\n}",
+      "doc": "Invoked when a component is receiving new props. This method is not called for the initial render.",
+      "label": "componentWillReceiveProps",
+      "matches": {
+        "cwr": true
+      }
+    },
+    {
       "content": "PropTypes.oneOfType([\n\t$0\n]).isRequired,",
       "doc": "An object that could be one of many types required",
       "label": "propTypeOneOfTypeRequired",
       "matches": {
         "ptetr": true
-      }
-    },
-    {
-      "content": "import { css } from '@emotion/core'\nexport const ${TM_FILENAME_BASE} = (props: {}) => {\n\treturn (\n\t\t<div css={css``}>\n\t\t\t$0\n\t\t</div>\n\t)\n}",
-      "doc": "Creates a React functional component with emotion import",
-      "label": "reactFunctionComponentWithEmotion",
-      "matches": {
-        "rfce": true
       }
     },
     {
@@ -90,14 +290,6 @@
       }
     },
     {
-      "content": "constructor (props) {\n\tsuper(props)\n\t$0\n}",
-      "doc": "Adds a default constructor for the class that contains props as arguments",
-      "label": "classConstructor",
-      "matches": {
-        "con": true
-      }
-    },
-    {
       "content": "componentWillUpdate (nextProps, nextState) {\n\t$0\n}",
       "doc": "Invoked immediately before rendering when new props or state are being received.",
       "label": "componentWillUpdate",
@@ -111,14 +303,6 @@
       "label": "propTypeObjectOf",
       "matches": {
         "ptoo": true
-      }
-    },
-    {
-      "content": "constructor (props, context) {\n\tsuper(props, context)\n\t$0\n}",
-      "doc": "Adds a default constructor for the class that contains props and context as arguments",
-      "label": "classConstructorContext",
-      "matches": {
-        "conc": true
       }
     },
     {
@@ -138,14 +322,6 @@
       }
     },
     {
-      "content": "componentWillMount () {\n\t$0\n}",
-      "doc": "Invoked once, both on the client and server, immediately before the initial rendering occurs",
-      "label": "componentWillMount",
-      "matches": {
-        "cwm": true
-      }
-    },
-    {
       "content": "componentWillUnmount () {\n\t$0\n}",
       "doc": "Invoked immediately before a component is unmounted from the DOM.",
       "label": "componentWillUnmount",
@@ -159,14 +335,6 @@
       "label": "propTypeShape",
       "matches": {
         "ptsh": true
-      }
-    },
-    {
-      "content": "componentDidMount () {\n\t$0\n}",
-      "doc": "Invoked once, only on the client (not on the server), immediately after the initial rendering occurs.",
-      "label": "componentDidMount",
-      "matches": {
-        "cdm": true
       }
     },
     {
@@ -186,35 +354,11 @@
       }
     },
     {
-      "content": "componentWillReceiveProps (nextProps) {\n\t$0\n}",
-      "doc": "Invoked when a component is receiving new props. This method is not called for the initial render.",
-      "label": "componentWillReceiveProps",
-      "matches": {
-        "cwr": true
-      }
-    },
-    {
       "content": "this.setState($0)",
       "doc": "Performs a shallow merge of nextState into current state",
       "label": "componentSetStateObject",
       "matches": {
         "sst": true
-      }
-    },
-    {
-      "content": "this.setState((state, props) => { return { $0 }})",
-      "doc": "Performs a shallow merge of nextState into current state",
-      "label": "componentSetStateFunc",
-      "matches": {
-        "ssf": true
-      }
-    },
-    {
-      "content": "this.props.$0",
-      "doc": "Access component's props",
-      "label": "componentProps",
-      "matches": {
-        "tp": true
       }
     },
     {
@@ -226,11 +370,11 @@
       }
     },
     {
-      "content": "this.state.$0",
-      "doc": "Access component's state",
-      "label": "componentState",
+      "content": "this.setState((state, props) => { return { $0 }})",
+      "doc": "Performs a shallow merge of nextState into current state",
+      "label": "componentSetStateFunc",
       "matches": {
-        "ts": true
+        "ssf": true
       }
     },
     {
@@ -242,11 +386,11 @@
       }
     },
     {
-      "content": "$1.propTypes = {\n\t$2\n}",
-      "doc": "Creates empty propTypes declaration",
-      "label": "propTypes",
+      "content": "this.props.$0",
+      "doc": "Access component's props",
+      "label": "componentProps",
       "matches": {
-        "rpt": true
+        "tp": true
       }
     },
     {
@@ -258,91 +402,51 @@
       }
     },
     {
-      "content": "PropTypes.array,",
-      "doc": "Array prop type",
-      "label": "propTypeArray",
+      "content": "this.state.$0",
+      "doc": "Access component's state",
+      "label": "componentState",
       "matches": {
-        "pta": true
+        "ts": true
       }
     },
     {
-      "content": "{${1:array}.map((item) => {\n\treturn <${2:elementName} key={item.id}>\n\t$0\n</${2}>\n})}",
-      "doc": "an element self closed",
-      "label": "jsx elements map with return",
+      "content": "test('should $1', () => {\n  $0\n})",
+      "doc": "Testing `test` block",
+      "label": "testBlock",
       "matches": {
-        "jmr": true
+        "test": true
       }
     },
     {
-      "content": "<${1:elementName}>\n\t{$TM_SELECTED_TEXT}\n</${1}>",
-      "doc": "an element",
-      "label": "jsx element wrap selection",
+      "content": "describe('$1', () => {\n  $0\n})",
+      "doc": "Testing `describe` block",
+      "label": "describeBlock",
       "matches": {
-        "jsx wrap selection with element": true
+        "desc": true
       }
     },
     {
-      "content": "PropTypes.bool,",
-      "doc": "Bool prop type",
-      "label": "propTypeBool",
+      "content": "$1.propTypes = {\n\t$2\n}",
+      "doc": "Creates empty propTypes declaration",
+      "label": "propTypes",
       "matches": {
-        "ptb": true
+        "rpt": true
       }
     },
     {
-      "content": "useEffect(() => {\n\t$1\n}, [${3:dependencies}])$0",
-      "doc": "React useEffect() hook",
-      "label": "useEffect",
+      "content": "export const ${TM_FILENAME_BASE} = () => {\n\t$0\n}",
+      "doc": "Create React Hook using File name",
+      "label": "createReactHookWithName",
       "matches": {
-        "ue": true
+        "crhn": true
       }
     },
     {
-      "content": "PropTypes.bool.isRequired,",
-      "doc": "Bool prop type required",
-      "label": "propTypeBoolRequired",
+      "content": "export const use$0 = () => {\n\n}",
+      "doc": "Create React Hook",
+      "label": "createReactHook",
       "matches": {
-        "ptbr": true
-      }
-    },
-    {
-      "content": "PropTypes.func,",
-      "doc": "Func prop type",
-      "label": "propTypeFunc",
-      "matches": {
-        "ptf": true
-      }
-    },
-    {
-      "content": "export const $1 = createContext<$2>(\n\t(null as any) as $2\n)",
-      "doc": "creates a react context",
-      "label": "createContext",
-      "matches": {
-        "cc": true
-      }
-    },
-    {
-      "content": "PropTypes.func.isRequired,",
-      "doc": "Func prop type required",
-      "label": "propTypeFuncRequired",
-      "matches": {
-        "ptfr": true
-      }
-    },
-    {
-      "content": "const $1 = useContext($2)$0",
-      "doc": "React useContext() hook",
-      "label": "useContext",
-      "matches": {
-        "uc": true
-      }
-    },
-    {
-      "content": "const ${1:elName}El = useRef(null)$0",
-      "doc": "React useRef() hook",
-      "label": "useRef",
-      "matches": {
-        "ur": true
+        "crh": true
       }
     },
     {
@@ -354,83 +458,19 @@
       }
     },
     {
-      "content": "PropTypes.number.isRequired,",
-      "doc": "Number prop type required",
-      "label": "propTypeNumberRequired",
+      "content": "PropTypes.array,",
+      "doc": "Array prop type",
+      "label": "propTypeArray",
       "matches": {
-        "ptnr": true
+        "pta": true
       }
     },
     {
-      "content": "PropTypes.object,",
-      "doc": "Object prop type",
-      "label": "propTypeObject",
+      "content": "const ${1:memoizedValue} = useMemo(() => ${2:computeExpensiveValue}(${3:a}, ${4:b}), [${5:a}, ${6:b}])$0",
+      "doc": "React useMemo() hook",
+      "label": "useMemo",
       "matches": {
-        "pto": true
-      }
-    },
-    {
-      "content": "PropTypes.object.isRequired,",
-      "doc": "Object prop type required",
-      "label": "propTypeObjectRequired",
-      "matches": {
-        "ptor": true
-      }
-    },
-    {
-      "content": "PropTypes.string,",
-      "doc": "String prop type",
-      "label": "propTypeString",
-      "matches": {
-        "pts": true
-      }
-    },
-    {
-      "content": "useEffect(() => {\n\t$1\n\n\treturn () => {\n\t\t$2\n\t}\n}, [${3:dependencies}])$0",
-      "doc": "React useEffect() hook with a cleanup function",
-      "label": "useEffect with cleanup",
-      "matches": {
-        "uec": true
-      }
-    },
-    {
-      "content": "PropTypes.string.isRequired,",
-      "doc": "String prop type required",
-      "label": "propTypeStringRequired",
-      "matches": {
-        "ptsr": true
-      }
-    },
-    {
-      "content": "PropTypes.node,",
-      "doc": "Anything that can be rendered: numbers, strings, elements or an array",
-      "label": "propTypeNode",
-      "matches": {
-        "ptnd": true
-      }
-    },
-    {
-      "content": "PropTypes.node.isRequired,",
-      "doc": "Anything that can be rendered: numbers, strings, elements or an array required",
-      "label": "propTypeNodeRequired",
-      "matches": {
-        "ptndr": true
-      }
-    },
-    {
-      "content": "it('should $1', async () => {\n  $0\n})",
-      "doc": "Testing async `it` block",
-      "label": "itAsyncBlock",
-      "matches": {
-        "tita": true
-      }
-    },
-    {
-      "content": "it('should $1', () => {\n  $0\n})",
-      "doc": "Testing `it` block",
-      "label": "itBlock",
-      "matches": {
-        "tit": true
+        "ume": true
       }
     },
     {
@@ -450,102 +490,6 @@
       }
     },
     {
-      "content": "export const use$0 = () => {\n\n}",
-      "doc": "Create React Hook",
-      "label": "createReactHook",
-      "matches": {
-        "crh": true
-      }
-    },
-    {
-      "content": "const { ${1:name} } = this.state",
-      "doc": "",
-      "label": "destructuring of state",
-      "matches": {
-        "ds": true
-      }
-    },
-    {
-      "content": "test('should $1', () => {\n  $0\n})",
-      "doc": "Testing `test` block",
-      "label": "testBlock",
-      "matches": {
-        "test": true
-      }
-    },
-    {
-      "content": "PropTypes.element.isRequired,",
-      "doc": "React element prop type required",
-      "label": "propTypeElementRequired",
-      "matches": {
-        "ptelr": true
-      }
-    },
-    {
-      "content": "export const ${TM_FILENAME_BASE} = () => {\n\t$0\n}",
-      "doc": "Create React Hook using File name",
-      "label": "createReactHookWithName",
-      "matches": {
-        "crhn": true
-      }
-    },
-    {
-      "content": "describe('$1', () => {\n  $0\n})",
-      "doc": "Testing `describe` block",
-      "label": "describeBlock",
-      "matches": {
-        "desc": true
-      }
-    },
-    {
-      "content": "import { Component } from 'react'\n\nclass ${TM_FILENAME_BASE} extends Component {\n\trender () {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t)\n\t}\n}\n\nexport default ${1}",
-      "doc": "Creates a React component class",
-      "label": "reactClassComponent",
-      "matches": {
-        "rcc": true
-      }
-    },
-    {
-      "content": "PropTypes.instanceOf($0),",
-      "doc": "Is an instance of a class prop type",
-      "label": "propTypeInstanceOf",
-      "matches": {
-        "pti": true
-      }
-    },
-    {
-      "content": "const ${1:memoizedValue} = useMemo(() => ${2:computeExpensiveValue}(${3:a}, ${4:b}), [${5:a}, ${6:b}])$0",
-      "doc": "React useMemo() hook",
-      "label": "useMemo",
-      "matches": {
-        "ume": true
-      }
-    },
-    {
-      "content": "PropTypes.number,",
-      "doc": "Number prop type",
-      "label": "propTypeNumber",
-      "matches": {
-        "ptn": true
-      }
-    },
-    {
-      "content": "class ${TM_FILENAME_BASE} extends Component {\n\trender () {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t)\n\t}\n}",
-      "doc": "Creates a React component class",
-      "label": "reactJustClassComponent",
-      "matches": {
-        "rcjc": true
-      }
-    },
-    {
-      "content": "PropTypes.instanceOf($0).isRequired,",
-      "doc": "Is an instance of a class prop type required",
-      "label": "propTypeInstanceOfRequired",
-      "matches": {
-        "ptir": true
-      }
-    },
-    {
       "content": "PropTypes.array.isRequired,",
       "doc": "Array prop type required",
       "label": "propTypeArrayRequired",
@@ -554,11 +498,67 @@
       }
     },
     {
-      "content": "import { Component, PropTypes } from 'react'\n\nclass ${TM_FILENAME_BASE} extends Component {\n\trender () {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t)\n\t}\n}\n\n${1}.propTypes = {\n\n}\n\nexport default ${1}",
-      "doc": "Creates a React component class with PropTypes",
-      "label": "reactClassComponentPropTypes",
+      "content": "constructor (props) {\n\tsuper(props)\n\t$0\n}",
+      "doc": "Adds a default constructor for the class that contains props as arguments",
+      "label": "classConstructor",
       "matches": {
-        "rccp": true
+        "con": true
+      }
+    },
+    {
+      "content": "PropTypes.string,",
+      "doc": "String prop type",
+      "label": "propTypeString",
+      "matches": {
+        "pts": true
+      }
+    },
+    {
+      "content": "PropTypes.node.isRequired,",
+      "doc": "Anything that can be rendered: numbers, strings, elements or an array required",
+      "label": "propTypeNodeRequired",
+      "matches": {
+        "ptndr": true
+      }
+    },
+    {
+      "content": "PropTypes.bool,",
+      "doc": "Bool prop type",
+      "label": "propTypeBool",
+      "matches": {
+        "ptb": true
+      }
+    },
+    {
+      "content": "import { css } from '@emotion/core'\nexport const ${TM_FILENAME_BASE} = (props: {}) => {\n\treturn (\n\t\t<div css={css``}>\n\t\t\t$0\n\t\t</div>\n\t)\n}",
+      "doc": "Creates a React functional component with emotion import",
+      "label": "reactFunctionComponentWithEmotion",
+      "matches": {
+        "rfce": true
+      }
+    },
+    {
+      "content": "export const ${TM_FILENAME_BASE} = (props : {}) => {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t)\n}",
+      "doc": "Creates a React functional component without PropTypes",
+      "label": "reactFunctionComponent",
+      "matches": {
+        "rfc": true
+      }
+    },
+    {
+      "content": "PropTypes.string.isRequired,",
+      "doc": "String prop type required",
+      "label": "propTypeStringRequired",
+      "matches": {
+        "ptsr": true
+      }
+    },
+    {
+      "content": "PropTypes.bool.isRequired,",
+      "doc": "Bool prop type required",
+      "label": "propTypeBoolRequired",
+      "matches": {
+        "ptbr": true
       }
     }
   ]

@@ -2,42 +2,6 @@
   "extends": [],
   "snippets": [
     {
-      "content": "const ${1} = styled.${2}`\n  ${3}\n`;",
-      "doc": "Styled-Component",
-      "label": "styled-components-styled-component",
-      "matches": {
-        "sc": true,
-        "styled-components component": true
-      }
-    },
-    {
-      "content": "<ThemeProvider theme={${1}}>\n  ${2}\n</ThemeProvider>",
-      "doc": "ThemeProvider",
-      "label": "styled-components-theme-provider",
-      "matches": {
-        "styled-components themeprovider": true,
-        "themeprovider": true
-      }
-    },
-    {
-      "content": "export const ${1} = styled.${2}`\n  ${3}\n`;",
-      "doc": "Export styled-component",
-      "label": "styled-components-export-styled-component",
-      "matches": {
-        "exsc": true,
-        "styled-components export component": true
-      }
-    },
-    {
-      "content": "// Define what props.theme will look like\nconst theme = {\n  ${1}: '${2}'\n};",
-      "doc": "styled-component theme",
-      "label": "styled-components-styled-component-theme",
-      "matches": {
-        "sct": true,
-        "styled-components theme": true
-      }
-    },
-    {
       "content": "import styled from 'styled-components';",
       "doc": "import styled from 'styled-components'",
       "label": "styled-components-import-styled-from-styled-components",
@@ -56,12 +20,12 @@
       }
     },
     {
-      "content": "const ${1} = styled.${2}.attrs({\n  ${3}: ${4}\n})`\n  ${5}\n`;",
-      "doc": "Styled-Component with attributes",
-      "label": "styled-components-styled-component-with-attributes",
+      "content": "// Define what props.theme will look like\nconst theme = {\n  ${1}: '${2}'\n};",
+      "doc": "styled-component theme",
+      "label": "styled-components-styled-component-theme",
       "matches": {
-        "scattrs": true,
-        "styled-components component with attributes": true
+        "sct": true,
+        "styled-components theme": true
       }
     },
     {
@@ -83,6 +47,15 @@
       }
     },
     {
+      "content": "const ${1} = styled.${2}.attrs({\n  ${3}: ${4}\n})`\n  ${5}\n`;",
+      "doc": "Styled-Component with attributes",
+      "label": "styled-components-styled-component-with-attributes",
+      "matches": {
+        "scattrs": true,
+        "styled-components component with attributes": true
+      }
+    },
+    {
       "content": "import { createGlobalStyle } from 'styled-components';",
       "doc": "import { createGlobalStyle } from 'styled-components'",
       "label": "styled-components-import-create-global-style-from-styled-components",
@@ -98,6 +71,15 @@
       "matches": {
         "scc": true,
         "styled-components component from existing": true
+      }
+    },
+    {
+      "content": "export const ${1} = styled.${2}.attrs({\n  ${3}: ${4}\n})`\n  ${5}\n`;",
+      "doc": "Export styled-component with attributes",
+      "label": "styled-components-export-styled-component-with-attributes",
+      "matches": {
+        "exscattrs": true,
+        "styled-components export component with attributes": true
       }
     },
     {
@@ -137,12 +119,30 @@
       }
     },
     {
-      "content": "export const ${1} = styled.${2}.attrs({\n  ${3}: ${4}\n})`\n  ${5}\n`;",
-      "doc": "Export styled-component with attributes",
-      "label": "styled-components-export-styled-component-with-attributes",
+      "content": "const ${1} = styled.${2}`\n  ${3}\n`;",
+      "doc": "Styled-Component",
+      "label": "styled-components-styled-component",
       "matches": {
-        "exscattrs": true,
-        "styled-components export component with attributes": true
+        "sc": true,
+        "styled-components component": true
+      }
+    },
+    {
+      "content": "<ThemeProvider theme={${1}}>\n  ${2}\n</ThemeProvider>",
+      "doc": "ThemeProvider",
+      "label": "styled-components-theme-provider",
+      "matches": {
+        "styled-components themeprovider": true,
+        "themeprovider": true
+      }
+    },
+    {
+      "content": "export const ${1} = styled.${2}`\n  ${3}\n`;",
+      "doc": "Export styled-component",
+      "label": "styled-components-export-styled-component",
+      "matches": {
+        "exsc": true,
+        "styled-components export component": true
       }
     }
   ]

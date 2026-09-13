@@ -2,83 +2,19 @@
   "extends": [],
   "snippets": [
     {
-      "content": "@can('${1:ability}', ${2:args})\n  $3\n@end",
-      "doc": "Edge: can tag from @adonisjs/bouncer allows you write conditionals around the bouncer permissions.",
-      "label": "edge: Bouncer can guard",
+      "content": "@includeIf(${1:condition}, '${2:name}')",
+      "doc": "Edge: includeif tag to include a partial conditionally. The first argument is the condition to evaluate before including the partial.",
+      "label": "edge: Include conditional partial",
       "matches": {
-        "@can": true
+        "@includeIf": true
       }
     },
     {
-      "content": "await driveSignedUrl('${1:location}'${2:, 'optionalDiskName'})",
-      "doc": "Get signed URL to a file using AdonisJS drive",
-      "label": "edge: driveSignedUrl",
+      "content": "@layout('${1:name}')",
+      "doc": "Edge: layout tag allows you define the layout template for the current template.",
+      "label": "edge: Layout",
       "matches": {
-        "driveSignedUrl": true
-      }
-    },
-    {
-      "content": "@cannot('${1:ability}', ${2:args})\n  $3\n@end",
-      "doc": "Edge: cannot tag from @adonisjs/bouncer allows you write conditionals around the bouncer permissions.",
-      "label": "edge: Bouncer cannot guard",
-      "matches": {
-        "@cannot": true
-      }
-    },
-    {
-      "content": "await driveUrl('${1:location}'${2:, 'optionalDiskName'})",
-      "doc": "Get URL to a file using AdonisJS drive",
-      "label": "edge: driveUrl",
-      "matches": {
-        "driveUrl": true
-      }
-    },
-    {
-      "content": "await bouncer.allows('${1:ability}')",
-      "doc": "Edge: Reference to the ctx.bouncer instance",
-      "label": "edge: Bouncer ctx.bouncer instance",
-      "matches": {
-        "bouncer.allows()": true
-      }
-    },
-    {
-      "content": "{{ $1 }}",
-      "doc": "Edge: block tag",
-      "label": "edge: Block",
-      "matches": {
-        "block": true
-      }
-    },
-    {
-      "content": "@debugger",
-      "doc": "Edge: debugger tag is an inline tag. It drops the debugger keyword to the template output. You can use the chrome devtools to debug the compiled templates.",
-      "label": "edge: Debugger",
-      "matches": {
-        "@debugger": true
-      }
-    },
-    {
-      "content": "{{-- $1 --}}",
-      "doc": "Edge: comment tag",
-      "label": "edge: Comment",
-      "matches": {
-        "comment": true
-      }
-    },
-    {
-      "content": "@set('$1', $2)",
-      "doc": "Edge: set tag is an inline tag. That allows you to define local variables within the template scope or mutate the value of an existing variable.",
-      "label": "edge: Define local variable",
-      "matches": {
-        "@set": true
-      }
-    },
-    {
-      "content": "@if($1)\n  $2\n@end",
-      "doc": "Edge: if tag accepts the expression to evaluate as the only argument.",
-      "label": "edge: Conditional",
-      "matches": {
-        "@if": true
+        "@layout": true
       }
     },
     {
@@ -90,11 +26,11 @@
       }
     },
     {
-      "content": "flashMessages.get('$1', $2)",
-      "doc": "Get flash message value",
-      "label": "edge: flashMessages.get",
+      "content": "@section('${1:name}')\n  $2\n@end",
+      "doc": "Edge: section tag use the layout must define all the markup inside the sections exported by the layout",
+      "label": "edge: Section block",
       "matches": {
-        "flashMessages.get": true
+        "@section": true
       }
     },
     {
@@ -106,11 +42,11 @@
       }
     },
     {
-      "content": "flashMessages.has('$1')",
-      "doc": "Check if a flash message exists",
-      "label": "edge: flashMessages.has",
+      "content": "signedRoute('${1:routeName}', ${2:[args]})",
+      "doc": "Make signed URL for a route",
+      "label": "edge: signedRoute",
       "matches": {
-        "flashMessages.has": true
+        "signedRoute": true
       }
     },
     {
@@ -119,22 +55,6 @@
       "label": "edge: app",
       "matches": {
         "app": true
-      }
-    },
-    {
-      "content": "app.nodeEnvironment",
-      "doc": "Get current node environment",
-      "label": "edge: app.nodeEnvironment",
-      "matches": {
-        "app.nodeEnvironment": true
-      }
-    },
-    {
-      "content": "inspect($1)",
-      "doc": "inspect global helper to inspect a value or the entire state of the template. The helper method can pretty print the following JavaScript primitives.",
-      "label": "edge: inspect",
-      "matches": {
-        "inspect": true
       }
     },
     {
@@ -154,6 +74,22 @@
       }
     },
     {
+      "content": "@cannot('${1:ability}', ${2:args})\n  $3\n@end",
+      "doc": "Edge: cannot tag from @adonisjs/bouncer allows you write conditionals around the bouncer permissions.",
+      "label": "edge: Bouncer cannot guard",
+      "matches": {
+        "@cannot": true
+      }
+    },
+    {
+      "content": "toBytes(${1:'1MB'})",
+      "doc": "Convert human readable expression to bytes",
+      "label": "edge: toBytes",
+      "matches": {
+        "toBytes": true
+      }
+    },
+    {
       "content": "auth.user",
       "doc": "Get auth user",
       "label": "edge: auth.user",
@@ -162,19 +98,27 @@
       }
     },
     {
-      "content": "ordinalize(${1:value})",
-      "doc": "Ordinalize a string or a number value",
-      "label": "edge: ordinalize",
+      "content": "await bouncer.allows('${1:ability}')",
+      "doc": "Edge: Reference to the ctx.bouncer instance",
+      "label": "edge: Bouncer ctx.bouncer instance",
       "matches": {
-        "ordinalize": true
+        "bouncer.allows()": true
       }
     },
     {
-      "content": "pluralize(${1:value}${2:, optionalCount})",
-      "doc": "Pluralize a word",
-      "label": "edge: pluralize",
+      "content": "@debugger",
+      "doc": "Edge: debugger tag is an inline tag. It drops the debugger keyword to the template output. You can use the chrome devtools to debug the compiled templates.",
+      "label": "edge: Debugger",
       "matches": {
-        "pluralize": true
+        "@debugger": true
+      }
+    },
+    {
+      "content": "@set('$1', $2)",
+      "doc": "Edge: set tag is an inline tag. That allows you to define local variables within the template scope or mutate the value of an existing variable.",
+      "label": "edge: Define local variable",
+      "matches": {
+        "@set": true
       }
     },
     {
@@ -186,11 +130,19 @@
       }
     },
     {
-      "content": "prettyBytes(${1:1024})",
-      "doc": "Pretty print bytes to human readable string",
-      "label": "edge: prettyBytes",
+      "content": "cspNonce",
+      "doc": "Use csp nonce on script tag",
+      "label": "edge: cspNonce",
       "matches": {
-        "prettyBytes": true
+        "cspNonce": true
+      }
+    },
+    {
+      "content": "{{ i18n.locale }}",
+      "doc": "An instance of i18n for the default locale is shared with the templates as a global property",
+      "label": "edge: i18n.locale",
+      "matches": {
+        "i18n.locale": true
       }
     },
     {
@@ -202,27 +154,123 @@
       }
     },
     {
-      "content": "prettyMs(${1:60000})",
-      "doc": "Pretty print milliseconds to human readable string",
-      "label": "edge: prettyMs",
+      "content": "{{ i18n.formatNumber(${1:value}) }}",
+      "doc": "An instance of i18n and set formatNumber",
+      "label": "edge: i18n.formatNumber()",
       "matches": {
-        "prettyMs": true
+        "i18n.formatNumber()": true
       }
     },
     {
-      "content": "\\$props.serialize(${1:optionalObjectToMerge})",
-      "doc": "Serialize component props to HTML attributes",
-      "label": "edge: props.serialize",
+      "content": "{{ csrfToken }}",
+      "doc": "Add inline csrf token as content",
+      "label": "edge: csrfToken",
       "matches": {
-        "psl": true
+        "csrfToken": true
       }
     },
     {
-      "content": "\\$props.serializeExcept([$1], ${2:optionalObjectToMerge})",
-      "doc": "Serialize selected component props to HTML attributes",
-      "label": "edge: props.serializeExcept",
+      "content": "t('${1:value}')",
+      "doc": "The t helper is an alias for the i18n.formatMessage method",
+      "label": "edge: t",
       "matches": {
-        "psle": true
+        "t": true
+      }
+    },
+    {
+      "content": "{{ getDefaultLocale() }}",
+      "doc": "Returns the default locale for the application",
+      "label": "edge: getDefaultLocale",
+      "matches": {
+        "getDefaultLocale()": true
+      }
+    },
+    {
+      "content": "{{ getSupportedLocales() }}",
+      "doc": "Returns an array of the supported locales",
+      "label": "edge: getSupportedLocales",
+      "matches": {
+        "getSupportedLocales()": true
+      }
+    },
+    {
+      "content": "await driveSignedUrl('${1:location}'${2:, 'optionalDiskName'})",
+      "doc": "Get signed URL to a file using AdonisJS drive",
+      "label": "edge: driveSignedUrl",
+      "matches": {
+        "driveSignedUrl": true
+      }
+    },
+    {
+      "content": "await driveUrl('${1:location}'${2:, 'optionalDiskName'})",
+      "doc": "Get URL to a file using AdonisJS drive",
+      "label": "edge: driveUrl",
+      "matches": {
+        "driveUrl": true
+      }
+    },
+    {
+      "content": "env('${1:key}')",
+      "doc": "Get environment variable value",
+      "label": "edge: env",
+      "matches": {
+        "env": true
+      }
+    },
+    {
+      "content": "excerpt(${1:value}, ${2:100})",
+      "doc": "Generate plain text excerpt and truncate after given characters count",
+      "label": "edge: excerpt",
+      "matches": {
+        "excerpt": true
+      }
+    },
+    {
+      "content": "{{ $1 }}",
+      "doc": "Edge: block tag",
+      "label": "edge: Block",
+      "matches": {
+        "block": true
+      }
+    },
+    {
+      "content": "inspect(flashMessages.all())",
+      "doc": "Inspect all messages",
+      "label": "edge: flashMessages.all",
+      "matches": {
+        "inspect(flashMessages.all())": true
+      }
+    },
+    {
+      "content": "{{-- $1 --}}",
+      "doc": "Edge: comment tag",
+      "label": "edge: Comment",
+      "matches": {
+        "comment": true
+      }
+    },
+    {
+      "content": "flashMessages.get('$1', $2)",
+      "doc": "Get flash message value",
+      "label": "edge: flashMessages.get",
+      "matches": {
+        "flashMessages.get": true
+      }
+    },
+    {
+      "content": "@if($1)\n  $2\n@end",
+      "doc": "Edge: if tag accepts the expression to evaluate as the only argument.",
+      "label": "edge: Conditional",
+      "matches": {
+        "@if": true
+      }
+    },
+    {
+      "content": "flashMessages.has('$1')",
+      "doc": "Check if a flash message exists",
+      "label": "edge: flashMessages.has",
+      "matches": {
+        "flashMessages.has": true
       }
     },
     {
@@ -234,19 +282,11 @@
       }
     },
     {
-      "content": "\\$props.serializeOnly([$1], ${2:optionalObjectToMerge})",
-      "doc": "Serialize selected component props to HTML attributes",
-      "label": "edge: props.serializeOnly",
+      "content": "inspect($1)",
+      "doc": "inspect global helper to inspect a value or the entire state of the template. The helper method can pretty print the following JavaScript primitives.",
+      "label": "edge: inspect",
       "matches": {
-        "pslo": true
-      }
-    },
-    {
-      "content": "route('${1:routeName}', ${2:[args]})",
-      "doc": "Make URL for a route",
-      "label": "edge: route",
-      "matches": {
-        "route": true
+        "inspect": true
       }
     },
     {
@@ -266,19 +306,19 @@
       }
     },
     {
+      "content": "ordinalize(${1:value})",
+      "doc": "Ordinalize a string or a number value",
+      "label": "edge: ordinalize",
+      "matches": {
+        "ordinalize": true
+      }
+    },
+    {
       "content": "@each(${1:key}, ${2:value} in ${3:object})\n  $3\n@end",
       "doc": "Edge: each index tag with key value",
       "label": "edge: for each loop with index",
       "matches": {
         "@each-index": true
-      }
-    },
-    {
-      "content": "signedRoute('${1:routeName}', ${2:[args]})",
-      "doc": "Make signed URL for a route",
-      "label": "edge: signedRoute",
-      "matches": {
-        "signedRoute": true
       }
     },
     {
@@ -290,67 +330,11 @@
       }
     },
     {
-      "content": "@component('${1:name}')\n  $2\n@end",
-      "doc": "Edge: component tag allows you to use an Edge template as a component.",
-      "label": "edge: Component with body",
+      "content": "pluralize(${1:value}${2:, optionalCount})",
+      "doc": "Pluralize a word",
+      "label": "edge: pluralize",
       "matches": {
-        "@component": true
-      }
-    },
-    {
-      "content": "@!component('${1:name}')",
-      "doc": "Edge: inline component tag allows you to use an Edge template as a component.",
-      "label": "edge: Inline component",
-      "matches": {
-        "@!component": true
-      }
-    },
-    {
-      "content": "toBytes(${1:'1MB'})",
-      "doc": "Convert human readable expression to bytes",
-      "label": "edge: toBytes",
-      "matches": {
-        "toBytes": true
-      }
-    },
-    {
-      "content": "@slot('${1:name}')\n  $2\n@end",
-      "doc": "Edge: slot tag allows you define the markup for the named slots. It accepts the slot name as the first argument and can also receive additional arguments from the component template.",
-      "label": "edge: Component slot",
-      "matches": {
-        "@slot": true
-      }
-    },
-    {
-      "content": "toMs(${1:'1min'})",
-      "doc": "Convert human readable expression to milliseconds",
-      "label": "edge: toMs",
-      "matches": {
-        "toMs": true
-      }
-    },
-    {
-      "content": "@inject('${1:values}')",
-      "doc": "Edge: inject tag allows the component template to inject data into the component tree. The tag accepts an object as the only argument.",
-      "label": "edge: Inject",
-      "matches": {
-        "@inject": true
-      }
-    },
-    {
-      "content": "toSentence([${1:'car'}, ${2: 'truck'}, ${3: 'van'}], { separator: ', ', lastSeparator: ', or ' })",
-      "doc": "Convert an array to a sentence",
-      "label": "edge: toSentence",
-      "matches": {
-        "toSentence": true
-      }
-    },
-    {
-      "content": "@include('${1:name}')",
-      "doc": "Edge: include tag allows you include a partial to a given template",
-      "label": "edge: Include partial",
-      "matches": {
-        "@include": true
+        "pluralize": true
       }
     },
     {
@@ -362,67 +346,115 @@
       }
     },
     {
-      "content": "@includeIf(${1:condition}, '${2:name}')",
-      "doc": "Edge: includeif tag to include a partial conditionally. The first argument is the condition to evaluate before including the partial.",
-      "label": "edge: Include conditional partial",
+      "content": "toSentence([${1:'car'}, ${2: 'truck'}, ${3: 'van'}], { separator: ', ', lastSeparator: ', or ' })",
+      "doc": "Convert an array to a sentence",
+      "label": "edge: toSentence",
       "matches": {
-        "@includeIf": true
+        "toSentence": true
       }
     },
     {
-      "content": "{{ i18n.locale }}",
-      "doc": "An instance of i18n for the default locale is shared with the templates as a global property",
-      "label": "edge: i18n.locale",
+      "content": "@component('${1:name}')\n  $2\n@end",
+      "doc": "Edge: component tag allows you to use an Edge template as a component.",
+      "label": "edge: Component with body",
       "matches": {
-        "i18n.locale": true
+        "@component": true
       }
     },
     {
-      "content": "inspect(flashMessages.all())",
-      "doc": "Inspect all messages",
-      "label": "edge: flashMessages.all",
+      "content": "prettyBytes(${1:1024})",
+      "doc": "Pretty print bytes to human readable string",
+      "label": "edge: prettyBytes",
       "matches": {
-        "inspect(flashMessages.all())": true
+        "prettyBytes": true
       }
     },
     {
-      "content": "@layout('${1:name}')",
-      "doc": "Edge: layout tag allows you define the layout template for the current template.",
-      "label": "edge: Layout",
+      "content": "toMs(${1:'1min'})",
+      "doc": "Convert human readable expression to milliseconds",
+      "label": "edge: toMs",
       "matches": {
-        "@layout": true
+        "toMs": true
       }
     },
     {
-      "content": "{{ csrfToken }}",
-      "doc": "Add inline csrf token as content",
-      "label": "edge: csrfToken",
+      "content": "@include('${1:name}')",
+      "doc": "Edge: include tag allows you include a partial to a given template",
+      "label": "edge: Include partial",
       "matches": {
-        "csrfToken": true
+        "@include": true
       }
     },
     {
-      "content": "{{ i18n.formatNumber(${1:value}) }}",
-      "doc": "An instance of i18n and set formatNumber",
-      "label": "edge: i18n.formatNumber()",
+      "content": "@!component('${1:name}')",
+      "doc": "Edge: inline component tag allows you to use an Edge template as a component.",
+      "label": "edge: Inline component",
       "matches": {
-        "i18n.formatNumber()": true
+        "@!component": true
       }
     },
     {
-      "content": "cspNonce",
-      "doc": "Use csp nonce on script tag",
-      "label": "edge: cspNonce",
+      "content": "prettyMs(${1:60000})",
+      "doc": "Pretty print milliseconds to human readable string",
+      "label": "edge: prettyMs",
       "matches": {
-        "cspNonce": true
+        "prettyMs": true
       }
     },
     {
-      "content": "@section('${1:name}')\n  $2\n@end",
-      "doc": "Edge: section tag use the layout must define all the markup inside the sections exported by the layout",
-      "label": "edge: Section block",
+      "content": "app.nodeEnvironment",
+      "doc": "Get current node environment",
+      "label": "edge: app.nodeEnvironment",
       "matches": {
-        "@section": true
+        "app.nodeEnvironment": true
+      }
+    },
+    {
+      "content": "@inject('${1:values}')",
+      "doc": "Edge: inject tag allows the component template to inject data into the component tree. The tag accepts an object as the only argument.",
+      "label": "edge: Inject",
+      "matches": {
+        "@inject": true
+      }
+    },
+    {
+      "content": "@slot('${1:name}')\n  $2\n@end",
+      "doc": "Edge: slot tag allows you define the markup for the named slots. It accepts the slot name as the first argument and can also receive additional arguments from the component template.",
+      "label": "edge: Component slot",
+      "matches": {
+        "@slot": true
+      }
+    },
+    {
+      "content": "\\$props.serialize(${1:optionalObjectToMerge})",
+      "doc": "Serialize component props to HTML attributes",
+      "label": "edge: props.serialize",
+      "matches": {
+        "psl": true
+      }
+    },
+    {
+      "content": "@can('${1:ability}', ${2:args})\n  $3\n@end",
+      "doc": "Edge: can tag from @adonisjs/bouncer allows you write conditionals around the bouncer permissions.",
+      "label": "edge: Bouncer can guard",
+      "matches": {
+        "@can": true
+      }
+    },
+    {
+      "content": "\\$props.serializeExcept([$1], ${2:optionalObjectToMerge})",
+      "doc": "Serialize selected component props to HTML attributes",
+      "label": "edge: props.serializeExcept",
+      "matches": {
+        "psle": true
+      }
+    },
+    {
+      "content": "route('${1:routeName}', ${2:[args]})",
+      "doc": "Make URL for a route",
+      "label": "edge: route",
+      "matches": {
+        "route": true
       }
     },
     {
@@ -434,14 +466,6 @@
       }
     },
     {
-      "content": "t('${1:value}')",
-      "doc": "The t helper is an alias for the i18n.formatMessage method",
-      "label": "edge: t",
-      "matches": {
-        "t": true
-      }
-    },
-    {
       "content": "@!section('${1:name}')",
       "doc": "Edge: section inline tag use the layout must define all the markup inside the sections exported by the layout",
       "label": "edge: Inline section",
@@ -450,35 +474,11 @@
       }
     },
     {
-      "content": "{{ getDefaultLocale() }}",
-      "doc": "Returns the default locale for the application",
-      "label": "edge: getDefaultLocale",
+      "content": "\\$props.serializeOnly([$1], ${2:optionalObjectToMerge})",
+      "doc": "Serialize selected component props to HTML attributes",
+      "label": "edge: props.serializeOnly",
       "matches": {
-        "getDefaultLocale()": true
-      }
-    },
-    {
-      "content": "excerpt(${1:value}, ${2:100})",
-      "doc": "Generate plain text excerpt and truncate after given characters count",
-      "label": "edge: excerpt",
-      "matches": {
-        "excerpt": true
-      }
-    },
-    {
-      "content": "env('${1:key}')",
-      "doc": "Get environment variable value",
-      "label": "edge: env",
-      "matches": {
-        "env": true
-      }
-    },
-    {
-      "content": "{{ getSupportedLocales() }}",
-      "doc": "Returns an array of the supported locales",
-      "label": "edge: getSupportedLocales",
-      "matches": {
-        "getSupportedLocales()": true
+        "pslo": true
       }
     }
   ]

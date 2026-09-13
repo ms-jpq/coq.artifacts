@@ -29,11 +29,59 @@
   ],
   "snippets": [
     {
-      "content": "it('${1:description}', async () => {\n\t${0}\n})",
+      "content": "else {\n\t${0}\n}",
       "doc": "",
-      "label": "it asynchronous",
+      "label": "else statement",
       "matches": {
-        "it": true
+        "el": true
+      }
+    },
+    {
+      "content": "else if (${1:condition}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "else if statement",
+      "matches": {
+        "ei": true
+      }
+    },
+    {
+      "content": "let ${1:array}Index = ${1:array}.length\nwhile (${1:array}Index--) {\n\t${0}\n}",
+      "doc": "",
+      "label": "while iteration decrementing",
+      "matches": {
+        "wid": true
+      }
+    },
+    {
+      "content": "${1:promise}.catch(error => {\n\t${0}\n})",
+      "doc": "",
+      "label": "Promise.catch",
+      "matches": {
+        "pc": true
+      }
+    },
+    {
+      "content": "describe('${1:description}', () => {\n\t${0}\n})",
+      "doc": "",
+      "label": "describe",
+      "matches": {
+        "desc": true
+      }
+    },
+    {
+      "content": "try {\n\t${0}\n} catch (${1:err}) {\n\t\n}",
+      "doc": "",
+      "label": "try/catch",
+      "matches": {
+        "tc": true
+      }
+    },
+    {
+      "content": "describe('${TM_FILENAME_BASE}', () => {\n\t${0}\n})",
+      "doc": "",
+      "label": "describe top level",
+      "matches": {
+        "dt": true
       }
     },
     {
@@ -45,6 +93,14 @@
       }
     },
     {
+      "content": "it('${1:description}', async () => {\n\t${0}\n})",
+      "doc": "",
+      "label": "it asynchronous",
+      "matches": {
+        "it": true
+      }
+    },
+    {
       "content": "it.todo('${1:description}')",
       "doc": "",
       "label": "it.todo",
@@ -53,11 +109,19 @@
       }
     },
     {
-      "content": "try {\n\t${0}\n} catch (${1:err}) {\n\t\n} finally {\n\t\n}",
+      "content": "return ${0}",
       "doc": "",
-      "label": "try/catch/finally",
+      "label": "return",
       "matches": {
-        "tcf": true
+        "r": true
+      }
+    },
+    {
+      "content": "function ${1:name} (${2:arguments}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "named function",
+      "matches": {
+        "fn": true
       }
     },
     {
@@ -69,11 +133,11 @@
       }
     },
     {
-      "content": "function (${1:arguments}) {${0}}",
+      "content": "async function (${1:arguments}) {\n\t${0}\n}",
       "doc": "",
-      "label": "anonymous function",
+      "label": "async function",
       "matches": {
-        "fan": true
+        "asf": true
       }
     },
     {
@@ -85,22 +149,6 @@
       }
     },
     {
-      "content": "before(async () => {\n\t${0}\n})",
-      "doc": "",
-      "label": "before",
-      "matches": {
-        "bf": true
-      }
-    },
-    {
-      "content": "beforeAll(async () => {\n\t${0}\n})",
-      "doc": "",
-      "label": "beforeAll",
-      "matches": {
-        "ba": true
-      }
-    },
-    {
       "content": "async (${1:arguments}) => {\n\t${0}\n}",
       "doc": "",
       "label": "async arrow function",
@@ -109,19 +157,11 @@
       }
     },
     {
-      "content": "yield ${0}",
+      "content": "before(async () => {\n\t${0}\n})",
       "doc": "",
-      "label": "yield",
+      "label": "before",
       "matches": {
-        "y": true
-      }
-    },
-    {
-      "content": "beforeEach(async () => {\n\t${0}\n})",
-      "doc": "",
-      "label": "beforeEach",
-      "matches": {
-        "bfe": true
+        "bf": true
       }
     },
     {
@@ -133,11 +173,11 @@
       }
     },
     {
-      "content": "after(() => {\n\t${0}\n})",
+      "content": "beforeAll(async () => {\n\t${0}\n})",
       "doc": "",
-      "label": "after",
+      "label": "beforeAll",
       "matches": {
-        "aft": true
+        "ba": true
       }
     },
     {
@@ -149,11 +189,11 @@
       }
     },
     {
-      "content": "afterEach(() => {\n\t${0}\n})",
+      "content": "beforeEach(async () => {\n\t${0}\n})",
       "doc": "",
-      "label": "afterEach",
+      "label": "beforeEach",
       "matches": {
-        "afe": true
+        "bfe": true
       }
     },
     {
@@ -165,19 +205,27 @@
       }
     },
     {
-      "content": "const ${1:module} = require('${1:module}')",
+      "content": "await ${0}",
       "doc": "",
-      "label": "const module = require('module')",
+      "label": "await",
       "matches": {
-        "cr": true
+        "a": true
       }
     },
     {
-      "content": "exports.${1:member} = ${2:value}",
+      "content": "({${1:arguments}}) => ${2:statement}",
       "doc": "",
-      "label": "exports.member",
+      "label": "arrow function with destructuring",
       "matches": {
-        "em": true
+        "fd": true
+      }
+    },
+    {
+      "content": "${1:el}.setAttribute('${2:attr}', ${3:value})",
+      "doc": "",
+      "label": "setAttribute",
+      "matches": {
+        "hesa": true
       }
     },
     {
@@ -189,27 +237,19 @@
       }
     },
     {
-      "content": "module.exports = ${1:name}",
+      "content": "${1:el}.appendChild(${2:elem})",
       "doc": "",
-      "label": "module.exports",
+      "label": "appendChild",
       "matches": {
-        "me": true
+        "heac": true
       }
     },
     {
-      "content": "(${1:arguments}) => {\n\t${0}\n}",
+      "content": "const ${1:module} = require('${1:module}')",
       "doc": "",
-      "label": "arrow function with body",
+      "label": "const module = require('module')",
       "matches": {
-        "f": true
-      }
-    },
-    {
-      "content": "class ${1:name} {\n\tconstructor (${2:arguments}) {\n\t\t${0}\n\t}\n}\n\nmodule.exports = ${1:name}",
-      "doc": "",
-      "label": "module as class",
-      "matches": {
-        "mec": true
+        "cr": true
       }
     },
     {
@@ -221,11 +261,11 @@
       }
     },
     {
-      "content": "${1:emitter}.on('${2:event}', (${3:arguments}) => {\n\t${0}\n})",
+      "content": "exports.${1:member} = ${2:value}",
       "doc": "",
-      "label": "event handler",
+      "label": "exports.member",
       "matches": {
-        "on": true
+        "em": true
       }
     },
     {
@@ -237,11 +277,11 @@
       }
     },
     {
-      "content": "ev.preventDefault()\nev.stopPropagation()\nreturn false",
+      "content": "${1:iterable}.forEach((${2:item}) => {\n\t${0}\n})",
       "doc": "",
-      "label": "dom event cancel default and propagation",
+      "label": "forEach loop",
       "matches": {
-        "evc": true
+        "fe": true
       }
     },
     {
@@ -253,43 +293,51 @@
       }
     },
     {
-      "content": "${1:document}.addEventListener('${2:event}', ${3:ev} => {\n\t${0}\n})",
+      "content": "${1:iterable}.reduce((${2:previous}, ${3:current}) => {\n\t${0}\n}${4:, initial})",
       "doc": "",
-      "label": "addEventListener",
+      "label": "reduce",
       "matches": {
-        "ae": true
+        "reduce": true
       }
     },
     {
-      "content": "console.log(${0})",
+      "content": "${1:emitter}.on('${2:event}', (${3:arguments}) => {\n\t${0}\n})",
       "doc": "",
-      "label": "console.log",
+      "label": "event handler",
       "matches": {
-        "cl": true
+        "on": true
       }
     },
     {
-      "content": "${1:document}.removeEventListener('${2:event}', ${3:listener})",
-      "doc": "",
-      "label": "removeEventListener",
+      "content": "setDate($1)\n$0",
+      "doc": "The setDate() method changes the day of the month of a given Date instance, based on local time.",
+      "label": "setDate",
       "matches": {
-        "rel": true
+        "setDate": true
       }
     },
     {
-      "content": "console.log('${1}:', ${1})",
+      "content": "let ${1:name}",
       "doc": "",
-      "label": "console.log a variable",
+      "label": "let statement",
       "matches": {
-        "cv": true
+        "l": true
       }
     },
     {
-      "content": "${1:document}.getElementById('${2:id}')",
+      "content": "${1:iterable}.every((${2:item}) => {\n\t${0}\n})",
       "doc": "",
-      "label": "getElementById",
+      "label": "every",
       "matches": {
-        "gi": true
+        "every": true
+      }
+    },
+    {
+      "content": "${1:iterable}.some((${2:item}) => {\n\t${0}\n})",
+      "doc": "",
+      "label": "some",
+      "matches": {
+        "some": true
       }
     },
     {
@@ -301,11 +349,19 @@
       }
     },
     {
-      "content": "Array.from(${1:document}.getElementsByClassName('${2:class}'))",
+      "content": "var ${1:name}",
       "doc": "",
-      "label": "getElementsByClassName",
+      "label": "var statement",
       "matches": {
-        "gc": true
+        "v": true
+      }
+    },
+    {
+      "content": "${1:document}.removeEventListener('${2:event}', ${3:listener})",
+      "doc": "",
+      "label": "removeEventListener",
+      "matches": {
+        "rel": true
       }
     },
     {
@@ -317,14 +373,6 @@
       }
     },
     {
-      "content": "Array.from(${1:document}.getElementsByTagName('${2:tag}'))",
-      "doc": "",
-      "label": "getElementsByTagName",
-      "matches": {
-        "gt": true
-      }
-    },
-    {
       "content": "console.dir('${1}:', ${1})",
       "doc": "",
       "label": "console.dir",
@@ -333,27 +381,19 @@
       }
     },
     {
-      "content": "${1:document}.querySelector('${2:selector}')",
+      "content": "const { ${2:prop} } = ${1:value}",
       "doc": "",
-      "label": "querySelector",
+      "label": "const statement from destructuring",
       "matches": {
-        "qs": true
+        "cd": true
       }
     },
     {
-      "content": "constructor () {\n\t${0}\n}",
+      "content": "Array.from(${1:document}.getElementsByClassName('${2:class}'))",
       "doc": "",
-      "label": "constructor",
+      "label": "getElementsByClassName",
       "matches": {
-        "cn": true
-      }
-    },
-    {
-      "content": "Array.from(${1:document}.querySelectorAll('${2:selector}'))",
-      "doc": "",
-      "label": "querySelectorAll",
-      "matches": {
-        "qsa": true
+        "gc": true
       }
     },
     {
@@ -365,11 +405,11 @@
       }
     },
     {
-      "content": "${1:document}.createDocumentFragment(${2:elem})",
+      "content": "Array.from(${1:document}.getElementsByTagName('${2:tag}'))",
       "doc": "",
-      "label": "createDocumentFragment",
+      "label": "getElementsByTagName",
       "matches": {
-        "cdf": true
+        "gt": true
       }
     },
     {
@@ -381,6 +421,14 @@
       }
     },
     {
+      "content": "${1:document}.querySelector('${2:selector}')",
+      "doc": "",
+      "label": "querySelector",
+      "matches": {
+        "qs": true
+      }
+    },
+    {
       "content": "JSON.parse($0)",
       "doc": "",
       "label": "JSON.parse()",
@@ -389,19 +437,11 @@
       }
     },
     {
-      "content": "split($1)\n$0",
-      "doc": "The split() method takes a pattern and divides a String into an ordered list of substrings by searching for the pattern, puts these substrings into an array, and returns the array.",
-      "label": "split",
-      "matches": {
-        "split": true
-      }
-    },
-    {
-      "content": "${1:el}.classList.remove('${2:class}')",
+      "content": "Array.from(${1:document}.querySelectorAll('${2:selector}'))",
       "doc": "",
-      "label": "classList.remove",
+      "label": "querySelectorAll",
       "matches": {
-        "heclr": true
+        "qsa": true
       }
     },
     {
@@ -413,11 +453,27 @@
       }
     },
     {
+      "content": "${1:document}.createDocumentFragment(${2:elem})",
+      "doc": "",
+      "label": "createDocumentFragment",
+      "matches": {
+        "cdf": true
+      }
+    },
+    {
       "content": "set ${1:property} (${2:value}) {\n\t${0}\n}",
       "doc": "",
       "label": "setter",
       "matches": {
         "set": true
+      }
+    },
+    {
+      "content": "${1:document}.createElement(${2:elem})",
+      "doc": "",
+      "label": "createElement",
+      "matches": {
+        "cel": true
       }
     },
     {
@@ -429,11 +485,11 @@
       }
     },
     {
-      "content": "${1:el}.getAttribute('${2:attr}')",
+      "content": "${1:el}.classList.add('${2:class}')",
       "doc": "",
-      "label": "getAttribute",
+      "label": "classList.add",
       "matches": {
-        "hega": true
+        "hecla": true
       }
     },
     {
@@ -453,6 +509,22 @@
       }
     },
     {
+      "content": "() => {\n\t{$TM_SELECTED_TEXT}\n}",
+      "doc": "wraps text in arrow function",
+      "label": "wrap selection in arrow function",
+      "matches": {
+        "wrap selection in arrow function": true
+      }
+    },
+    {
+      "content": "while (${1:condition}) {\n\t$0\n}",
+      "doc": "While Statement",
+      "label": "While Statement",
+      "matches": {
+        "while": true
+      }
+    },
+    {
       "content": "Object.create(${1:obj})",
       "doc": "",
       "label": "Object.create",
@@ -461,11 +533,11 @@
       }
     },
     {
-      "content": "reverse()\n$0",
-      "doc": "The reverse() method reverses an array in place and returns the reference to the same array, the first array element now becoming the last, and the last array element becoming the first. In other words, elements order in the array will be turned towards the direction opposite to that previously stated.",
-      "label": "reverse",
+      "content": "async () => {\n\t{$TM_SELECTED_TEXT}\n}",
+      "doc": "wraps text in arrow function",
+      "label": "wrap selection in async arrow function",
       "matches": {
-        "reverse": true
+        "wrap selection in async arrow function": true
       }
     },
     {
@@ -477,27 +549,11 @@
       }
     },
     {
-      "content": "${1:iterable}.find((${2:item}) => {\n\t${0}\n})",
-      "doc": "",
-      "label": "find",
-      "matches": {
-        "find": true
-      }
-    },
-    {
       "content": "${1:cond} ? ${2:true} : ${3:false}",
       "doc": "",
       "label": "ternary",
       "matches": {
         "te": true
-      }
-    },
-    {
-      "content": "import { $0 } from \"${1:module}\"",
-      "doc": "Import external module.",
-      "label": "Import external module.",
-      "matches": {
-        "import statement": true
       }
     },
     {
@@ -509,19 +565,19 @@
       }
     },
     {
+      "content": "${1:array}.forEach(${2:element} => {\n\t$0\n})",
+      "doc": "For-Each Loop",
+      "label": "For-Each Loop",
+      "matches": {
+        "foreach": true
+      }
+    },
+    {
       "content": "Object.defineProperty(${1:dest}, '${2:prop}', {\n\t${0}\n})",
       "doc": "",
       "label": "Object.defineProperty",
       "matches": {
         "od": true
-      }
-    },
-    {
-      "content": "${1:iterable}.reduce((${2:previous}, ${3:current}) => {\n\t${0}\n}${4:, initial})",
-      "doc": "",
-      "label": "reduce",
-      "matches": {
-        "reduce": true
       }
     },
     {
@@ -533,22 +589,6 @@
       }
     },
     {
-      "content": "console.warn($1)\n$0",
-      "doc": "Log warning to the console",
-      "label": "Log warning to console",
-      "matches": {
-        "warn": true
-      }
-    },
-    {
-      "content": "${1:iterable}.every((${2:item}) => {\n\t${0}\n})",
-      "doc": "",
-      "label": "every",
-      "matches": {
-        "every": true
-      }
-    },
-    {
       "content": "Object.values(${1:obj})",
       "doc": "",
       "label": "Object.values",
@@ -557,243 +597,11 @@
       }
     },
     {
-      "content": "${1:iterable}.some((${2:item}) => {\n\t${0}\n})",
+      "content": "Object.entries(${1:obj})",
       "doc": "",
-      "label": "some",
+      "label": "Object.entries",
       "matches": {
-        "some": true
-      }
-    },
-    {
-      "content": "var ${1:name}",
-      "doc": "",
-      "label": "var statement",
-      "matches": {
-        "v": true
-      }
-    },
-    {
-      "content": "var ${1:name} = ${2:value}",
-      "doc": "",
-      "label": "var assignment",
-      "matches": {
-        "va": true
-      }
-    },
-    {
-      "content": "let ${1:name}",
-      "doc": "",
-      "label": "let statement",
-      "matches": {
-        "l": true
-      }
-    },
-    {
-      "content": "const ${1:name}",
-      "doc": "",
-      "label": "const statement",
-      "matches": {
-        "c": true
-      }
-    },
-    {
-      "content": "const { ${2:prop} } = ${1:value}",
-      "doc": "",
-      "label": "const statement from destructuring",
-      "matches": {
-        "cd": true
-      }
-    },
-    {
-      "content": "return null",
-      "doc": "",
-      "label": "return null",
-      "matches": {
-        "rn": true
-      }
-    },
-    {
-      "content": "const [ ${2:prop} ] = ${1:value}",
-      "doc": "",
-      "label": "const statement from array destructuring",
-      "matches": {
-        "cad": true
-      }
-    },
-    {
-      "content": "${1:method} (${2:arguments}) {\n\t${0}\n}",
-      "doc": "",
-      "label": "method",
-      "matches": {
-        "m": true
-      }
-    },
-    {
-      "content": "const { ${1:name} } = await ${2:value}",
-      "doc": "",
-      "label": "const destructuring assignment awaited",
-      "matches": {
-        "cda": true
-      }
-    },
-    {
-      "content": "() => {\n\t{$TM_SELECTED_TEXT}\n}",
-      "doc": "wraps text in arrow function",
-      "label": "wrap selection in arrow function",
-      "matches": {
-        "wrap selection in arrow function": true
-      }
-    },
-    {
-      "content": "const ${1:name} = (${2:arguments}) => {\n\treturn ${0}\n}",
-      "doc": "",
-      "label": "const arrow function assignment",
-      "matches": {
-        "cf": true
-      }
-    },
-    {
-      "content": "let ${1:name} = await ${2:value}",
-      "doc": "",
-      "label": "let assignment awaited",
-      "matches": {
-        "la": true
-      }
-    },
-    {
-      "content": "const ${1:name} = yield ${2:value}",
-      "doc": "",
-      "label": "const assignment yielded",
-      "matches": {
-        "cy": true
-      }
-    },
-    {
-      "content": "let ${1:name} = yield ${2:value}",
-      "doc": "",
-      "label": "let assignment yielded",
-      "matches": {
-        "ly": true
-      }
-    },
-    {
-      "content": "const ${1:name} = {\n\t${0}\n}",
-      "doc": "",
-      "label": "const object",
-      "matches": {
-        "co": true
-      }
-    },
-    {
-      "content": "const ${1:name} = [\n\t${0}\n]",
-      "doc": "",
-      "label": "const array",
-      "matches": {
-        "car": true
-      }
-    },
-    {
-      "content": "setDate($1)\n$0",
-      "doc": "The setDate() method changes the day of the month of a given Date instance, based on local time.",
-      "label": "setDate",
-      "matches": {
-        "setDate": true
-      }
-    },
-    {
-      "content": "${1:el}.classList.add('${2:class}')",
-      "doc": "",
-      "label": "classList.add",
-      "matches": {
-        "hecla": true
-      }
-    },
-    {
-      "content": "Array.from({ length: ${1:length} }, (v, k) => k + 1)",
-      "doc": "",
-      "label": "generate array of integers starting with 1",
-      "matches": {
-        "gari": true
-      }
-    },
-    {
-      "content": "toDateString()\n$0",
-      "doc": "",
-      "label": "toDateString",
-      "matches": {
-        "toDateString": true
-      }
-    },
-    {
-      "content": "${1:el}.appendChild(${2:elem})",
-      "doc": "",
-      "label": "appendChild",
-      "matches": {
-        "heac": true
-      }
-    },
-    {
-      "content": "[...Array(${1:length}).keys()]",
-      "doc": "",
-      "label": "generate array of integers starting with 0",
-      "matches": {
-        "gari0": true
-      }
-    },
-    {
-      "content": "${1:el}.removeChild(${2:elem})",
-      "doc": "",
-      "label": "removeChild",
-      "matches": {
-        "herc": true
-      }
-    },
-    {
-      "content": "sort($1)\n$0",
-      "doc": "The sort() method sorts the elements of an array in place and returns the reference to the same array, now sorted. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.",
-      "label": "sort",
-      "matches": {
-        "sort": true
-      }
-    },
-    {
-      "content": "push($1)\n$0",
-      "doc": "The push() method adds one or more elements to the end of an array and returns the new length of the array.",
-      "label": "push",
-      "matches": {
-        "push": true
-      }
-    },
-    {
-      "content": "innerText",
-      "doc": "The innerText property of the HTMLElement interface represents the rendered text content of a node and its descendants.",
-      "label": "innerText",
-      "matches": {
-        "innerText": true
-      }
-    },
-    {
-      "content": "export ${1:member}",
-      "doc": "",
-      "label": "module export",
-      "matches": {
-        "e": true
-      }
-    },
-    {
-      "content": "blur()",
-      "doc": "",
-      "label": "blur",
-      "matches": {
-        "blur": true
-      }
-    },
-    {
-      "content": "export const ${1:member} = ${2:value}",
-      "doc": "",
-      "label": "module export const",
-      "matches": {
-        "ec": true
+        "oe": true
       }
     },
     {
@@ -805,214 +613,6 @@
       }
     },
     {
-      "content": "export function ${1:member} (${2:arguments}) {\n\t${0}\n}",
-      "doc": "",
-      "label": "export named function",
-      "matches": {
-        "ef": true
-      }
-    },
-    {
-      "content": "values($1)\n$0",
-      "doc": "The Object.values() method returns an array of a given object's own enumerable string-keyed property values.",
-      "label": "values",
-      "matches": {
-        "values": true
-      }
-    },
-    {
-      "content": "export default ${1:member}",
-      "doc": "",
-      "label": "module default export",
-      "matches": {
-        "ed": true
-      }
-    },
-    {
-      "content": "setImmediate(() => {\n\t${0}\n})",
-      "doc": "",
-      "label": "setImmediate",
-      "matches": {
-        "sim": true
-      }
-    },
-    {
-      "content": "const ${1:name} = await ${2:value}",
-      "doc": "",
-      "label": "const assignment awaited",
-      "matches": {
-        "ca": true
-      }
-    },
-    {
-      "content": "${1:iterable}.map((${2:item}) => {\n\t${0}\n})",
-      "doc": "",
-      "label": "map",
-      "matches": {
-        "map": true
-      }
-    },
-    {
-      "content": "await Promise.all(${1:value})",
-      "doc": "",
-      "label": "await Promise.all",
-      "matches": {
-        "apa": true
-      }
-    },
-    {
-      "content": "call($1)\n$0",
-      "doc": "The call() method calls the function with a given this value and arguments provided individually.",
-      "label": "call",
-      "matches": {
-        "call": true
-      }
-    },
-    {
-      "content": "bind($1)\n$0",
-      "doc": "The bind() method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.",
-      "label": "bind",
-      "matches": {
-        "bind": true
-      }
-    },
-    {
-      "content": "const [${0}] = await Promise.all(${1:value})",
-      "doc": "",
-      "label": "await Promise.all with destructuring",
-      "matches": {
-        "apad": true
-      }
-    },
-    {
-      "content": "setInterval(() => {\n\t$0\n}, ${1:interval})",
-      "doc": "Set Interval Function",
-      "label": "Set Interval Function",
-      "matches": {
-        "setinterval": true
-      }
-    },
-    {
-      "content": "apply($1)\n$0",
-      "doc": "The apply() method calls the specified function with a given this value, and arguments provided as an array (or an array-like object).",
-      "label": "apply",
-      "matches": {
-        "apply": true
-      }
-    },
-    {
-      "content": "toLocaleString($1)\n$0",
-      "doc": "The toLocaleString() method returns a string with a language-sensitive representation of this number. In implementations with Intl.NumberFormat API support, this method simply calls Intl.NumberFormat.",
-      "label": "toLocaleString",
-      "matches": {
-        "toLocaleString": true
-      }
-    },
-    {
-      "content": "toFixed($1)\n$0",
-      "doc": "The toFixed() method formats a number using fixed-point notation.",
-      "label": "toFixed",
-      "matches": {
-        "toFixed": true
-      }
-    },
-    {
-      "content": "parseInt($1)\n$0",
-      "doc": "The Number.parseInt() method parses a string argument and returns an integer of the specified radix or base.",
-      "label": "parseInt",
-      "matches": {
-        "parseInt": true
-      }
-    },
-    {
-      "content": "define([\n\t'require',\n\t'${1:dependency}'\n], function(require, ${2:factory}) {\n\t'use strict'\n\t$0\n})",
-      "doc": "define module",
-      "label": "define module",
-      "matches": {
-        "define": true
-      }
-    },
-    {
-      "content": "return {\n\t${0}\n}",
-      "doc": "",
-      "label": "return new object",
-      "matches": {
-        "ro": true
-      }
-    },
-    {
-      "content": "async function (${1:arguments}) {\n\t${0}\n}",
-      "doc": "",
-      "label": "async function",
-      "matches": {
-        "asf": true
-      }
-    },
-    {
-      "content": "valueOf()",
-      "doc": "The valueOf() method returns the primitive value of a String object.",
-      "label": "valueOf",
-      "matches": {
-        "valueOf": true
-      }
-    },
-    {
-      "content": "//#endregion",
-      "doc": "Folding Region End",
-      "label": "Region End",
-      "matches": {
-        "#endregion": true
-      }
-    },
-    {
-      "content": "endsWith($1)\n$0",
-      "doc": "The endsWith() method determines whether a string ends with the characters of a specified string, returning true or false as appropriate.",
-      "label": "endsWith",
-      "matches": {
-        "endsWith": true
-      }
-    },
-    {
-      "content": "match($1)\n$0",
-      "doc": "The match() method retrieves the result of matching a string against a regular expression.",
-      "label": "match",
-      "matches": {
-        "match": true
-      }
-    },
-    {
-      "content": "class ${1:name} {\n\tconstructor (${2:arguments}) {\n\t\t${0}\n\t}\n}",
-      "doc": "",
-      "label": "class",
-      "matches": {
-        "cs": true
-      }
-    },
-    {
-      "content": "fromCharCode($1)\n$0",
-      "doc": "The static String.fromCharCode() method returns a string created from the specified sequence of UTF-16 code units.",
-      "label": "fromCharCode",
-      "matches": {
-        "fromCharCode": true
-      }
-    },
-    {
-      "content": "${1:promise}.then((${2:value}) => {\n\t${0}\n})",
-      "doc": "",
-      "label": "Promise.then",
-      "matches": {
-        "pt": true
-      }
-    },
-    {
-      "content": "describe('${TM_FILENAME_BASE}', () => {\n\t${0}\n})",
-      "doc": "",
-      "label": "describe top level",
-      "matches": {
-        "dt": true
-      }
-    },
-    {
       "content": "includes($1)\n$0",
       "doc": "The includes() method performs a case-sensitive search to determine whether one string may be found within another string, returning true or false as appropriate.",
       "label": "includes",
@@ -1021,83 +621,11 @@
       }
     },
     {
-      "content": "toLocaleLowerCase($1)\n$0",
-      "doc": "The toLocaleLowerCase() method returns the calling string value converted to lower case, according to any locale-specific case mappings.",
-      "label": "toLocaleLowerCase",
+      "content": "try {\n\t$0\n} catch (${1:error}) {\n\t\n}",
+      "doc": "Try-Catch Statement",
+      "label": "Try-Catch Statement",
       "matches": {
-        "toLocaleLowerCase": true
-      }
-    },
-    {
-      "content": "return [\n\t${0}\n]",
-      "doc": "",
-      "label": "return new array",
-      "matches": {
-        "ra": true
-      }
-    },
-    {
-      "content": "indexOf($1)\n$0",
-      "doc": "The indexOf() method, given one argument: a substring to search for, searches the entire calling string, and returns the index of the first occurrence of the specified substring. Given a second argument: a number, the method returns the first occurrence of the specified substring at an index greater than or equal to the specified number.",
-      "label": "indexOf",
-      "matches": {
-        "indexOf": true
-      }
-    },
-    {
-      "content": "startsWith($1)\n$0",
-      "doc": "The startsWith() method determines whether a string begins with the characters of a specified string, returning true or false as appropriate.",
-      "label": "startsWith",
-      "matches": {
-        "startsWith": true
-      }
-    },
-    {
-      "content": "await ${0}",
-      "doc": "",
-      "label": "await",
-      "matches": {
-        "a": true
-      }
-    },
-    {
-      "content": "lastIndexOf($1)\n$0",
-      "doc": "The lastIndexOf() method, given one argument: a substring to search for, searches the entire calling string, and returns the index of the last occurrence of the specified substring. Given a second argument: a number, the method returns the last occurrence of the specified substring at an index less than or equal to the specified number.",
-      "label": "lastIndexOf",
-      "matches": {
-        "lastIndexOf": true
-      }
-    },
-    {
-      "content": "slice($1)\n$0",
-      "doc": "The slice() method extracts a section of a string and returns it as a new string, without modifying the original string.",
-      "label": "slice",
-      "matches": {
-        "slice": true
-      }
-    },
-    {
-      "content": "return (${1:arguments}) => ${2:statement}",
-      "doc": "",
-      "label": "return arrow function",
-      "matches": {
-        "rf": true
-      }
-    },
-    {
-      "content": "localeCompare($1)\n$0",
-      "doc": "The localeCompare() method returns a number indicating whether a reference string comes before, or after, or is the same as the given string in sort order. In implementations with Intl.Collator API support, this method simply calls Intl.Collator.",
-      "label": "localeCompare",
-      "matches": {
-        "localeCompare": true
-      }
-    },
-    {
-      "content": "${1:el}.removeAttribute('${2:attr}')",
-      "doc": "",
-      "label": "removeAttribute",
-      "matches": {
-        "hera": true
+        "trycatch": true
       }
     },
     {
@@ -1109,19 +637,35 @@
       }
     },
     {
-      "content": "repeat($1)\n$0",
-      "doc": "The repeat() method constructs and returns a new string which contains the specified number of copies of the string on which it was called, concatenated together.",
-      "label": "repeat",
+      "content": "localeCompare($1)\n$0",
+      "doc": "The localeCompare() method returns a number indicating whether a reference string comes before, or after, or is the same as the given string in sort order. In implementations with Intl.Collator API support, this method simply calls Intl.Collator.",
+      "label": "localeCompare",
       "matches": {
-        "repeat": true
+        "localeCompare": true
       }
     },
     {
-      "content": "normalize($1)\n$0",
-      "doc": "The normalize() method returns the Unicode Normalization Form of the string.",
-      "label": "normalize",
+      "content": "//#region $0",
+      "doc": "Folding Region Start",
+      "label": "Region Start",
       "matches": {
-        "normalize": true
+        "#region": true
+      }
+    },
+    {
+      "content": "reverse()\n$0",
+      "doc": "The reverse() method reverses an array in place and returns the reference to the same array, the first array element now becoming the last, and the last array element becoming the first. In other words, elements order in the array will be turned towards the direction opposite to that previously stated.",
+      "label": "reverse",
+      "matches": {
+        "reverse": true
+      }
+    },
+    {
+      "content": "//#endregion",
+      "doc": "Folding Region End",
+      "label": "Region End",
+      "matches": {
+        "#endregion": true
       }
     },
     {
@@ -1133,11 +677,267 @@
       }
     },
     {
-      "content": "for (let ${1:index} = 0; ${1:index} < ${2:array}.length; ${1:index}++) {\n\tconst ${3:element} = ${2:array}[${1:index}]\n\t$0\n}",
-      "doc": "For Loop",
-      "label": "For Loop",
+      "content": "${1:iterable}.find((${2:item}) => {\n\t${0}\n})",
+      "doc": "",
+      "label": "find",
       "matches": {
-        "for": true
+        "find": true
+      }
+    },
+    {
+      "content": "match($1)\n$0",
+      "doc": "The match() method retrieves the result of matching a string against a regular expression.",
+      "label": "match",
+      "matches": {
+        "match": true
+      }
+    },
+    {
+      "content": "setTime($1)\n$0",
+      "doc": "The setTime() method sets the Date object to the time represented by a number of milliseconds since January 1, 1970, 00:00:00 UTC.",
+      "label": "setTime",
+      "matches": {
+        "setTime": true
+      }
+    },
+    {
+      "content": "const ${1:name}",
+      "doc": "",
+      "label": "const statement",
+      "matches": {
+        "c": true
+      }
+    },
+    {
+      "content": "var ${1:name} = ${2:value}",
+      "doc": "",
+      "label": "var assignment",
+      "matches": {
+        "va": true
+      }
+    },
+    {
+      "content": "replace($1, $2)\n$0",
+      "doc": "The replace() method returns a new string with one, some, or all matches of a pattern replaced by a replacement. The pattern can be a string or a RegExp, and the replacement can be a string or a function called for each match. If pattern is a string, only the first occurrence will be replaced. The original string is left unchanged.",
+      "label": "replace",
+      "matches": {
+        "replace": true
+      }
+    },
+    {
+      "content": "class ${1:name} {\n\tconstructor (${2:arguments}) {\n\t\t${0}\n\t}\n}\n\nmodule.exports = ${1:name}",
+      "doc": "",
+      "label": "module as class",
+      "matches": {
+        "mec": true
+      }
+    },
+    {
+      "content": "sort($1)\n$0",
+      "doc": "The sort() method sorts the elements of an array in place and returns the reference to the same array, now sorted. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.",
+      "label": "sort",
+      "matches": {
+        "sort": true
+      }
+    },
+    {
+      "content": "replaceAll($1, $2)\n$0",
+      "doc": "The replaceAll() method returns a new string with all matches of a pattern replaced by a replacement. The pattern can be a string or a RegExp, and the replacement can be a string or a function to be called for each match. The original string is left unchanged.",
+      "label": "replaceAll",
+      "matches": {
+        "replaceAll": true
+      }
+    },
+    {
+      "content": "class ${1:name} {\n\tconstructor (${2:arguments}) {\n\t\t${0}\n\t}\n}",
+      "doc": "",
+      "label": "class",
+      "matches": {
+        "cs": true
+      }
+    },
+    {
+      "content": "call($1)\n$0",
+      "doc": "The call() method calls the function with a given this value and arguments provided individually.",
+      "label": "call",
+      "matches": {
+        "call": true
+      }
+    },
+    {
+      "content": "search($1)\n$0",
+      "doc": "The search() method executes a search for a match between a regular expression and this String object.",
+      "label": "search",
+      "matches": {
+        "search": true
+      }
+    },
+    {
+      "content": "innerText",
+      "doc": "The innerText property of the HTMLElement interface represents the rendered text content of a node and its descendants.",
+      "label": "innerText",
+      "matches": {
+        "innerText": true
+      }
+    },
+    {
+      "content": "blur()",
+      "doc": "",
+      "label": "blur",
+      "matches": {
+        "blur": true
+      }
+    },
+    {
+      "content": "slice($1)\n$0",
+      "doc": "The slice() method extracts a section of a string and returns it as a new string, without modifying the original string.",
+      "label": "slice",
+      "matches": {
+        "slice": true
+      }
+    },
+    {
+      "content": "entries($1)\n$0",
+      "doc": "The Object.entries() method returns an array of a given object's own enumerable string-keyed property key-value pairs.",
+      "label": "entries",
+      "matches": {
+        "entries": true
+      }
+    },
+    {
+      "content": "define([\n\t'require',\n\t'${1:dependency}'\n], function(require, ${2:factory}) {\n\t'use strict'\n\t$0\n})",
+      "doc": "define module",
+      "label": "define module",
+      "matches": {
+        "define": true
+      }
+    },
+    {
+      "content": "push($1)\n$0",
+      "doc": "The push() method adds one or more elements to the end of an array and returns the new length of the array.",
+      "label": "push",
+      "matches": {
+        "push": true
+      }
+    },
+    {
+      "content": "startsWith($1)\n$0",
+      "doc": "The startsWith() method determines whether a string begins with the characters of a specified string, returning true or false as appropriate.",
+      "label": "startsWith",
+      "matches": {
+        "startsWith": true
+      }
+    },
+    {
+      "content": "bind($1)\n$0",
+      "doc": "The bind() method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.",
+      "label": "bind",
+      "matches": {
+        "bind": true
+      }
+    },
+    {
+      "content": "for await (const ${1:iterator} of ${2:object}) {\n\t$0\n}",
+      "doc": "For-Await-Of Loop",
+      "label": "For-Await-Of Loop",
+      "matches": {
+        "forawaitof": true
+      }
+    },
+    {
+      "content": "substring($1)\n$0",
+      "doc": "The substring() method returns the part of the string between the start and end indexes, or to the end of the string.",
+      "label": "substring",
+      "matches": {
+        "substring": true
+      }
+    },
+    {
+      "content": "if (${1:condition}) {\n\t$0\n}",
+      "doc": "If Statement",
+      "label": "If Statement",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "toFixed($1)\n$0",
+      "doc": "The toFixed() method formats a number using fixed-point notation.",
+      "label": "toFixed",
+      "matches": {
+        "toFixed": true
+      }
+    },
+    {
+      "content": "toLocaleLowerCase($1)\n$0",
+      "doc": "The toLocaleLowerCase() method returns the calling string value converted to lower case, according to any locale-specific case mappings.",
+      "label": "toLocaleLowerCase",
+      "matches": {
+        "toLocaleLowerCase": true
+      }
+    },
+    {
+      "content": "parseInt($1)\n$0",
+      "doc": "The Number.parseInt() method parses a string argument and returns an integer of the specified radix or base.",
+      "label": "parseInt",
+      "matches": {
+        "parseInt": true
+      }
+    },
+    {
+      "content": "isNaN($1)\n$0",
+      "doc": "The Number.isNaN() method determines whether the passed value is the number value NaN, and returns false if the input is not of the Number type. It is a more robust version of the original, global isNaN() function.",
+      "label": "isNaN",
+      "matches": {
+        "isNaN": true
+      }
+    },
+    {
+      "content": "toLocaleUpperCase($1)\n$0",
+      "doc": "The toLocaleUpperCase() method returns the calling string value converted to upper case, according to any locale-specific case mappings.",
+      "label": "toLocaleUpperCase",
+      "matches": {
+        "toLocaleUpperCase": true
+      }
+    },
+    {
+      "content": "parseFloat($1)\n$0",
+      "doc": "The Number.parseFloat() method parses an argument and returns a floating point number. If a number cannot be parsed from the argument, it returns NaN.",
+      "label": "parseFloat",
+      "matches": {
+        "parseFloat": true
+      }
+    },
+    {
+      "content": "endsWith($1)\n$0",
+      "doc": "The endsWith() method determines whether a string ends with the characters of a specified string, returning true or false as appropriate.",
+      "label": "endsWith",
+      "matches": {
+        "endsWith": true
+      }
+    },
+    {
+      "content": "toLowerCase()",
+      "doc": "The toLowerCase() method returns the calling string value converted to lower case.",
+      "label": "toLowerCase",
+      "matches": {
+        "toLowerCase": true
+      }
+    },
+    {
+      "content": "${1:method} (${2:arguments}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "method",
+      "matches": {
+        "m": true
+      }
+    },
+    {
+      "content": "lastIndexOf($1)\n$0",
+      "doc": "The lastIndexOf() method, given one argument: a substring to search for, searches the entire calling string, and returns the index of the last occurrence of the specified substring. Given a second argument: a number, the method returns the last occurrence of the specified substring at an index less than or equal to the specified number.",
+      "label": "lastIndexOf",
+      "matches": {
+        "lastIndexOf": true
       }
     },
     {
@@ -1146,6 +946,78 @@
       "label": "toString",
       "matches": {
         "toString": true
+      }
+    },
+    {
+      "content": "values($1)\n$0",
+      "doc": "The Object.values() method returns an array of a given object's own enumerable string-keyed property values.",
+      "label": "values",
+      "matches": {
+        "values": true
+      }
+    },
+    {
+      "content": "console.warn($1)\n$0",
+      "doc": "Log warning to the console",
+      "label": "Log warning to console",
+      "matches": {
+        "warn": true
+      }
+    },
+    {
+      "content": "toUpperCase()",
+      "doc": "The toUpperCase() method returns the calling string value converted to uppercase (the value will be converted to a string if it isn't one).",
+      "label": "toUpperCase",
+      "matches": {
+        "toUpperCase": true
+      }
+    },
+    {
+      "content": "repeat($1)\n$0",
+      "doc": "The repeat() method constructs and returns a new string which contains the specified number of copies of the string on which it was called, concatenated together.",
+      "label": "repeat",
+      "matches": {
+        "repeat": true
+      }
+    },
+    {
+      "content": "return ${0:this}",
+      "doc": "",
+      "label": "return this",
+      "matches": {
+        "rt": true
+      }
+    },
+    {
+      "content": "valueOf()",
+      "doc": "The valueOf() method returns the primitive value of a String object.",
+      "label": "valueOf",
+      "matches": {
+        "valueOf": true
+      }
+    },
+    {
+      "content": "indexOf($1)\n$0",
+      "doc": "The indexOf() method, given one argument: a substring to search for, searches the entire calling string, and returns the index of the first occurrence of the specified substring. Given a second argument: a number, the method returns the first occurrence of the specified substring at an index greater than or equal to the specified number.",
+      "label": "indexOf",
+      "matches": {
+        "indexOf": true
+      }
+    },
+    {
+      "content": "fromCharCode($1)\n$0",
+      "doc": "The static String.fromCharCode() method returns a string created from the specified sequence of UTF-16 code units.",
+      "label": "fromCharCode",
+      "matches": {
+        "fromCharCode": true
+      }
+    },
+    {
+      "content": "isFinite($1)\n$0",
+      "doc": "The Number.isFinite() method determines whether the passed value is a finite number — that is, it checks that a given value is a number, and the number is neither positive Infinity, negative Infinity, nor NaN.",
+      "label": "isFinite",
+      "matches": {
+        "isFinite": true
       }
     },
     {
@@ -1165,227 +1037,43 @@
       }
     },
     {
-      "content": "toUpperCase()",
-      "doc": "The toUpperCase() method returns the calling string value converted to uppercase (the value will be converted to a string if it isn't one).",
-      "label": "toUpperCase",
-      "matches": {
-        "toUpperCase": true
-      }
-    },
-    {
-      "content": "//#region $0",
-      "doc": "Folding Region Start",
-      "label": "Region Start",
-      "matches": {
-        "#region": true
-      }
-    },
-    {
-      "content": "replace($1, $2)\n$0",
-      "doc": "The replace() method returns a new string with one, some, or all matches of a pattern replaced by a replacement. The pattern can be a string or a RegExp, and the replacement can be a string or a function called for each match. If pattern is a string, only the first occurrence will be replaced. The original string is left unchanged.",
-      "label": "replace",
-      "matches": {
-        "replace": true
-      }
-    },
-    {
-      "content": "for (const ${1:key} in ${2:object}) {\n\tif (${2:object}.hasOwnProperty(${1:key})) {\n\t\tconst ${3:element} = ${2:object}[${1:key}]\n\t\t$0\n\t}\n}",
-      "doc": "For-In Loop",
-      "label": "For-In Loop",
-      "matches": {
-        "forin": true
-      }
-    },
-    {
-      "content": "require('${1:module}')",
+      "content": "const [ ${2:prop} ] = ${1:value}",
       "doc": "",
-      "label": "require",
+      "label": "const statement from array destructuring",
       "matches": {
-        "rq": true
+        "cad": true
       }
     },
     {
-      "content": "replaceAll($1, $2)\n$0",
-      "doc": "The replaceAll() method returns a new string with all matches of a pattern replaced by a replacement. The pattern can be a string or a RegExp, and the replacement can be a string or a function to be called for each match. The original string is left unchanged.",
-      "label": "replaceAll",
+      "content": "split($1)\n$0",
+      "doc": "The split() method takes a pattern and divides a String into an ordered list of substrings by searching for the pattern, puts these substrings into an array, and returns the array.",
+      "label": "split",
       "matches": {
-        "replaceAll": true
+        "split": true
       }
     },
     {
-      "content": "isFinite($1)\n$0",
-      "doc": "The Number.isFinite() method determines whether the passed value is a finite number — that is, it checks that a given value is a number, and the number is neither positive Infinity, negative Infinity, nor NaN.",
-      "label": "isFinite",
+      "content": "import { $0 } from \"${1:module}\"",
+      "doc": "Import external module.",
+      "label": "Import external module.",
       "matches": {
-        "isFinite": true
+        "import statement": true
       }
     },
     {
-      "content": "for (const ${1:iterator} of ${2:object}) {\n\t$0\n}",
-      "doc": "For-Of Loop",
-      "label": "For-Of Loop",
-      "matches": {
-        "forof": true
-      }
-    },
-    {
-      "content": "search($1)\n$0",
-      "doc": "The search() method executes a search for a match between a regular expression and this String object.",
-      "label": "search",
-      "matches": {
-        "search": true
-      }
-    },
-    {
-      "content": "parseFloat($1)\n$0",
-      "doc": "The Number.parseFloat() method parses an argument and returns a floating point number. If a number cannot be parsed from the argument, it returns NaN.",
-      "label": "parseFloat",
-      "matches": {
-        "parseFloat": true
-      }
-    },
-    {
-      "content": "for await (const ${1:iterator} of ${2:object}) {\n\t$0\n}",
-      "doc": "For-Await-Of Loop",
-      "label": "For-Await-Of Loop",
-      "matches": {
-        "forawaitof": true
-      }
-    },
-    {
-      "content": "return new Promise((resolve, reject) => {\n\t${0}\n})",
+      "content": "const ${1:name} = await ${2:value}",
       "doc": "",
-      "label": "return promise",
+      "label": "const assignment awaited",
       "matches": {
-        "rp": true
+        "ca": true
       }
     },
     {
-      "content": "isNaN($1)\n$0",
-      "doc": "The Number.isNaN() method determines whether the passed value is the number value NaN, and returns false if the input is not of the Number type. It is a more robust version of the original, global isNaN() function.",
-      "label": "isNaN",
+      "content": "setInterval(() => {\n\t$0\n}, ${1:interval})",
+      "doc": "Set Interval Function",
+      "label": "Set Interval Function",
       "matches": {
-        "isNaN": true
-      }
-    },
-    {
-      "content": "function ${1:name}(${2:params}) {\n\t$0\n}",
-      "doc": "Function Statement",
-      "label": "Function Statement",
-      "matches": {
-        "function": true
-      }
-    },
-    {
-      "content": "${1:array}.forEach(${2:element} => {\n\t$0\n})",
-      "doc": "For-Each Loop",
-      "label": "For-Each Loop",
-      "matches": {
-        "foreach": true
-      }
-    },
-    {
-      "content": "if (${1:condition}) {\n\t$0\n}",
-      "doc": "If Statement",
-      "label": "If Statement",
-      "matches": {
-        "if": true
-      }
-    },
-    {
-      "content": "async () => {\n\t{$TM_SELECTED_TEXT}\n}",
-      "doc": "wraps text in arrow function",
-      "label": "wrap selection in async arrow function",
-      "matches": {
-        "wrap selection in async arrow function": true
-      }
-    },
-    {
-      "content": "if (${1:condition}) {\n\t$2\n} else {\n\t$0\n}",
-      "doc": "If-Else Statement",
-      "label": "If-Else Statement",
-      "matches": {
-        "ifelse": true
-      }
-    },
-    {
-      "content": "substring($1)\n$0",
-      "doc": "The substring() method returns the part of the string between the start and end indexes, or to the end of the string.",
-      "label": "substring",
-      "matches": {
-        "substring": true
-      }
-    },
-    {
-      "content": "const ${1:name} = new ${2:type}(${3:arguments});$0",
-      "doc": "New Statement",
-      "label": "New Statement",
-      "matches": {
-        "new": true
-      }
-    },
-    {
-      "content": "return ${0:this}",
-      "doc": "",
-      "label": "return this",
-      "matches": {
-        "rt": true
-      }
-    },
-    {
-      "content": "switch (${1:key}) {\n\tcase ${2:value}:\n\t\t$0\n\t\tbreak\n\n\tdefault:\n\t\tbreak\n}",
-      "doc": "Switch Statement",
-      "label": "Switch Statement",
-      "matches": {
-        "switch": true
-      }
-    },
-    {
-      "content": "return ${0}",
-      "doc": "",
-      "label": "return",
-      "matches": {
-        "r": true
-      }
-    },
-    {
-      "content": "Object.entries(${1:obj})",
-      "doc": "",
-      "label": "Object.entries",
-      "matches": {
-        "oe": true
-      }
-    },
-    {
-      "content": "toLocaleUpperCase($1)\n$0",
-      "doc": "The toLocaleUpperCase() method returns the calling string value converted to upper case, according to any locale-specific case mappings.",
-      "label": "toLocaleUpperCase",
-      "matches": {
-        "toLocaleUpperCase": true
-      }
-    },
-    {
-      "content": "({${1:arguments}}) => ${2:statement}",
-      "doc": "",
-      "label": "arrow function with destructuring",
-      "matches": {
-        "fd": true
-      }
-    },
-    {
-      "content": "while (${1:condition}) {\n\t$0\n}",
-      "doc": "While Statement",
-      "label": "While Statement",
-      "matches": {
-        "while": true
-      }
-    },
-    {
-      "content": "toLowerCase()",
-      "doc": "The toLowerCase() method returns the calling string value converted to lower case.",
-      "label": "toLowerCase",
-      "matches": {
-        "toLowerCase": true
+        "setinterval": true
       }
     },
     {
@@ -1397,19 +1085,131 @@
       }
     },
     {
-      "content": "function ${1:name} (${2:arguments}) {\n\t${0}\n}",
+      "content": "const { ${1:name} } = await ${2:value}",
       "doc": "",
-      "label": "named function",
+      "label": "const destructuring assignment awaited",
       "matches": {
-        "fn": true
+        "cda": true
       }
     },
     {
-      "content": "Promise",
-      "doc": "",
-      "label": "Promise",
+      "content": "switch (${1:key}) {\n\tcase ${2:value}:\n\t\t$0\n\t\tbreak\n\n\tdefault:\n\t\tbreak\n}",
+      "doc": "Switch Statement",
+      "label": "Switch Statement",
       "matches": {
-        "p": true
+        "switch": true
+      }
+    },
+    {
+      "content": "const ${1:name} = new ${2:type}(${3:arguments});$0",
+      "doc": "New Statement",
+      "label": "New Statement",
+      "matches": {
+        "new": true
+      }
+    },
+    {
+      "content": "const ${1:name} = (${2:arguments}) => {\n\treturn ${0}\n}",
+      "doc": "",
+      "label": "const arrow function assignment",
+      "matches": {
+        "cf": true
+      }
+    },
+    {
+      "content": "if (${1:condition}) {\n\t$2\n} else {\n\t$0\n}",
+      "doc": "If-Else Statement",
+      "label": "If-Else Statement",
+      "matches": {
+        "ifelse": true
+      }
+    },
+    {
+      "content": "let ${1:name} = await ${2:value}",
+      "doc": "",
+      "label": "let assignment awaited",
+      "matches": {
+        "la": true
+      }
+    },
+    {
+      "content": "toLocaleString($1)\n$0",
+      "doc": "The toLocaleString() method returns a string with a language-sensitive representation of this number. In implementations with Intl.NumberFormat API support, this method simply calls Intl.NumberFormat.",
+      "label": "toLocaleString",
+      "matches": {
+        "toLocaleString": true
+      }
+    },
+    {
+      "content": "const ${1:name} = yield ${2:value}",
+      "doc": "",
+      "label": "const assignment yielded",
+      "matches": {
+        "cy": true
+      }
+    },
+    {
+      "content": "function ${1:name}(${2:params}) {\n\t$0\n}",
+      "doc": "Function Statement",
+      "label": "Function Statement",
+      "matches": {
+        "function": true
+      }
+    },
+    {
+      "content": "apply($1)\n$0",
+      "doc": "The apply() method calls the specified function with a given this value, and arguments provided as an array (or an array-like object).",
+      "label": "apply",
+      "matches": {
+        "apply": true
+      }
+    },
+    {
+      "content": "let ${1:name} = yield ${2:value}",
+      "doc": "",
+      "label": "let assignment yielded",
+      "matches": {
+        "ly": true
+      }
+    },
+    {
+      "content": "for (const ${1:iterator} of ${2:object}) {\n\t$0\n}",
+      "doc": "For-Of Loop",
+      "label": "For-Of Loop",
+      "matches": {
+        "forof": true
+      }
+    },
+    {
+      "content": "const ${1:name} = {\n\t${0}\n}",
+      "doc": "",
+      "label": "const object",
+      "matches": {
+        "co": true
+      }
+    },
+    {
+      "content": "for (const ${1:key} in ${2:object}) {\n\tif (${2:object}.hasOwnProperty(${1:key})) {\n\t\tconst ${3:element} = ${2:object}[${1:key}]\n\t\t$0\n\t}\n}",
+      "doc": "For-In Loop",
+      "label": "For-In Loop",
+      "matches": {
+        "forin": true
+      }
+    },
+    {
+      "content": "for (let ${1:index} = 0; ${1:index} < ${2:array}.length; ${1:index}++) {\n\tconst ${3:element} = ${2:array}[${1:index}]\n\t$0\n}",
+      "doc": "For Loop",
+      "label": "For Loop",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "setImmediate(() => {\n\t${0}\n})",
+      "doc": "",
+      "label": "setImmediate",
+      "matches": {
+        "sim": true
       }
     },
     {
@@ -1421,35 +1221,59 @@
       }
     },
     {
-      "content": "try {\n\t$0\n} catch (${1:error}) {\n\t\n}",
-      "doc": "Try-Catch Statement",
-      "label": "Try-Catch Statement",
-      "matches": {
-        "trycatch": true
-      }
-    },
-    {
-      "content": "entries($1)\n$0",
-      "doc": "The Object.entries() method returns an array of a given object's own enumerable string-keyed property key-value pairs.",
-      "label": "entries",
-      "matches": {
-        "entries": true
-      }
-    },
-    {
-      "content": "Promise.all(${1:value})",
+      "content": "return new Promise((resolve, reject) => {\n\t${0}\n})",
       "doc": "",
-      "label": "Promise.all",
+      "label": "return promise",
       "matches": {
-        "pa": true
+        "rp": true
       }
     },
     {
-      "content": "Promise.reject(${1:value})",
+      "content": "await Promise.all(${1:value})",
       "doc": "",
-      "label": "Promise.reject",
+      "label": "await Promise.all",
       "matches": {
-        "prj": true
+        "apa": true
+      }
+    },
+    {
+      "content": "return [\n\t${0}\n]",
+      "doc": "",
+      "label": "return new array",
+      "matches": {
+        "ra": true
+      }
+    },
+    {
+      "content": "return {\n\t${0}\n}",
+      "doc": "",
+      "label": "return new object",
+      "matches": {
+        "ro": true
+      }
+    },
+    {
+      "content": "const [${0}] = await Promise.all(${1:value})",
+      "doc": "",
+      "label": "await Promise.all with destructuring",
+      "matches": {
+        "apad": true
+      }
+    },
+    {
+      "content": "return null",
+      "doc": "",
+      "label": "return null",
+      "matches": {
+        "rn": true
+      }
+    },
+    {
+      "content": "normalize($1)\n$0",
+      "doc": "The normalize() method returns the Unicode Normalization Form of the string.",
+      "label": "normalize",
+      "matches": {
+        "normalize": true
       }
     },
     {
@@ -1461,14 +1285,6 @@
       }
     },
     {
-      "content": "export default function ${1:name} (${2:arguments}) {\n\t${0}\n}",
-      "doc": "",
-      "label": "module default export function",
-      "matches": {
-        "edf": true
-      }
-    },
-    {
       "content": "class ${1:name} extends ${2:base} {\n\tconstructor (${3:arguments}) {\n\t\tsuper(${3:arguments})\n\t\t${0}\n\t}\n}",
       "doc": "",
       "label": "class extends",
@@ -1477,27 +1293,35 @@
       }
     },
     {
-      "content": "import ${2:*} from '${1:module}'",
+      "content": "yield ${0}",
       "doc": "",
-      "label": "import module",
+      "label": "yield",
       "matches": {
-        "im": true
+        "y": true
       }
     },
     {
-      "content": "${1:iterable}.filter((${2:item}) => {\n\t${0}\n})",
+      "content": "export ${1:member}",
       "doc": "",
-      "label": "filter",
+      "label": "module export",
       "matches": {
-        "filter": true
+        "e": true
       }
     },
     {
-      "content": "import ${2:*} as ${3:name} from '${1:module}'",
+      "content": "return (${1:arguments}) => ${2:statement}",
       "doc": "",
-      "label": "import module as",
+      "label": "return arrow function",
       "matches": {
-        "ia": true
+        "rf": true
+      }
+    },
+    {
+      "content": "export const ${1:member} = ${2:value}",
+      "doc": "",
+      "label": "module export const",
+      "matches": {
+        "ec": true
       }
     },
     {
@@ -1509,19 +1333,11 @@
       }
     },
     {
-      "content": "await new Promise((r) => setTimeout(r, ${0}))",
+      "content": "${1:el}.classList.toggle('${2:class}')",
       "doc": "",
-      "label": "await sleep",
+      "label": "classList.toggle",
       "matches": {
-        "ast": true
-      }
-    },
-    {
-      "content": "import {$2} from '${1:module}'",
-      "doc": "",
-      "label": "import module destructured",
-      "matches": {
-        "id": true
+        "hect": true
       }
     },
     {
@@ -1533,35 +1349,19 @@
       }
     },
     {
-      "content": "typeof ${1:source} === '${2:undefined}'",
+      "content": "Promise.all(${1:value})",
       "doc": "",
-      "label": "typeof",
+      "label": "Promise.all",
       "matches": {
-        "to": true
+        "pa": true
       }
     },
     {
-      "content": "${1:iterable}.forEach((${2:item}) => {\n\t${0}\n})",
+      "content": "await new Promise((r) => setTimeout(r, ${0}))",
       "doc": "",
-      "label": "forEach loop",
+      "label": "await sleep",
       "matches": {
-        "fe": true
-      }
-    },
-    {
-      "content": "this.",
-      "doc": "",
-      "label": "this",
-      "matches": {
-        "t": true
-      }
-    },
-    {
-      "content": "Promise.resolve(${1:value})",
-      "doc": "",
-      "label": "Promise.resolve",
-      "matches": {
-        "prs": true
+        "ast": true
       }
     },
     {
@@ -1573,19 +1373,19 @@
       }
     },
     {
-      "content": "${1:source} instanceof ${2:Object}",
+      "content": "Promise.resolve(${1:value})",
       "doc": "",
-      "label": "instanceof",
+      "label": "Promise.resolve",
       "matches": {
-        "iof": true
+        "prs": true
       }
     },
     {
-      "content": "let ${0} \n if (${2:condition}) {\n\t${1}\n}",
+      "content": "function (${1:arguments}) {${0}}",
       "doc": "",
-      "label": "let and if statement",
+      "label": "anonymous function",
       "matches": {
-        "lif": true
+        "fan": true
       }
     },
     {
@@ -1597,19 +1397,35 @@
       }
     },
     {
-      "content": "${1:el}.setAttribute('${2:attr}', ${3:value})",
+      "content": "Promise.reject(${1:value})",
       "doc": "",
-      "label": "setAttribute",
+      "label": "Promise.reject",
       "matches": {
-        "hesa": true
+        "prj": true
       }
     },
     {
-      "content": "else {\n\t${0}\n}",
+      "content": "afterEach(() => {\n\t${0}\n})",
       "doc": "",
-      "label": "else statement",
+      "label": "afterEach",
       "matches": {
-        "el": true
+        "afe": true
+      }
+    },
+    {
+      "content": "toDateString()\n$0",
+      "doc": "",
+      "label": "toDateString",
+      "matches": {
+        "toDateString": true
+      }
+    },
+    {
+      "content": "Promise",
+      "doc": "",
+      "label": "Promise",
+      "matches": {
+        "p": true
       }
     },
     {
@@ -1621,43 +1437,171 @@
       }
     },
     {
-      "content": "else if (${1:condition}) {\n\t${0}\n}",
+      "content": "${1:el}.getAttribute('${2:attr}')",
       "doc": "",
-      "label": "else if statement",
+      "label": "getAttribute",
       "matches": {
-        "ei": true
+        "hega": true
       }
     },
     {
-      "content": "setTime($1)\n$0",
-      "doc": "The setTime() method sets the Date object to the time represented by a number of milliseconds since January 1, 1970, 00:00:00 UTC.",
-      "label": "setTime",
+      "content": "console.log(${0})",
+      "doc": "",
+      "label": "console.log",
       "matches": {
-        "setTime": true
+        "cl": true
       }
     },
     {
-      "content": "let ${1:array}Index = ${1:array}.length\nwhile (${1:array}Index--) {\n\t${0}\n}",
+      "content": "${1:promise}.then((${2:value}) => {\n\t${0}\n})",
       "doc": "",
-      "label": "while iteration decrementing",
+      "label": "Promise.then",
       "matches": {
-        "wid": true
+        "pt": true
       }
     },
     {
-      "content": "${1:el}.classList.toggle('${2:class}')",
+      "content": "module.exports = ${1:name}",
       "doc": "",
-      "label": "classList.toggle",
+      "label": "module.exports",
       "matches": {
-        "hect": true
+        "me": true
       }
     },
     {
-      "content": "${1:promise}.catch(error => {\n\t${0}\n})",
+      "content": "${1:iterable}.filter((${2:item}) => {\n\t${0}\n})",
       "doc": "",
-      "label": "Promise.catch",
+      "label": "filter",
       "matches": {
-        "pc": true
+        "filter": true
+      }
+    },
+    {
+      "content": "ev.preventDefault()\nev.stopPropagation()\nreturn false",
+      "doc": "",
+      "label": "dom event cancel default and propagation",
+      "matches": {
+        "evc": true
+      }
+    },
+    {
+      "content": "${1:iterable}.map((${2:item}) => {\n\t${0}\n})",
+      "doc": "",
+      "label": "map",
+      "matches": {
+        "map": true
+      }
+    },
+    {
+      "content": "${1:document}.addEventListener('${2:event}', ${3:ev} => {\n\t${0}\n})",
+      "doc": "",
+      "label": "addEventListener",
+      "matches": {
+        "ae": true
+      }
+    },
+    {
+      "content": "require('${1:module}')",
+      "doc": "",
+      "label": "require",
+      "matches": {
+        "rq": true
+      }
+    },
+    {
+      "content": "${1:document}.getElementById('${2:id}')",
+      "doc": "",
+      "label": "getElementById",
+      "matches": {
+        "gi": true
+      }
+    },
+    {
+      "content": "export function ${1:member} (${2:arguments}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "export named function",
+      "matches": {
+        "ef": true
+      }
+    },
+    {
+      "content": "[...Array(${1:length}).keys()]",
+      "doc": "",
+      "label": "generate array of integers starting with 0",
+      "matches": {
+        "gari0": true
+      }
+    },
+    {
+      "content": "Array.from({ length: ${1:length} }, (v, k) => k + 1)",
+      "doc": "",
+      "label": "generate array of integers starting with 1",
+      "matches": {
+        "gari": true
+      }
+    },
+    {
+      "content": "export default ${1:member}",
+      "doc": "",
+      "label": "module default export",
+      "matches": {
+        "ed": true
+      }
+    },
+    {
+      "content": "const ${1:name} = [\n\t${0}\n]",
+      "doc": "",
+      "label": "const array",
+      "matches": {
+        "car": true
+      }
+    },
+    {
+      "content": "after(() => {\n\t${0}\n})",
+      "doc": "",
+      "label": "after",
+      "matches": {
+        "aft": true
+      }
+    },
+    {
+      "content": "export default function ${1:name} (${2:arguments}) {\n\t${0}\n}",
+      "doc": "",
+      "label": "module default export function",
+      "matches": {
+        "edf": true
+      }
+    },
+    {
+      "content": "${1:el}.removeAttribute('${2:attr}')",
+      "doc": "",
+      "label": "removeAttribute",
+      "matches": {
+        "hera": true
+      }
+    },
+    {
+      "content": "import ${2:*} from '${1:module}'",
+      "doc": "",
+      "label": "import module",
+      "matches": {
+        "im": true
+      }
+    },
+    {
+      "content": "${1:el}.classList.remove('${2:class}')",
+      "doc": "",
+      "label": "classList.remove",
+      "matches": {
+        "heclr": true
+      }
+    },
+    {
+      "content": "import ${2:*} as ${3:name} from '${1:module}'",
+      "doc": "",
+      "label": "import module as",
+      "matches": {
+        "ia": true
       }
     },
     {
@@ -1669,27 +1613,19 @@
       }
     },
     {
-      "content": "describe('${1:description}', () => {\n\t${0}\n})",
+      "content": "(${1:arguments}) => {\n\t${0}\n}",
       "doc": "",
-      "label": "describe",
+      "label": "arrow function with body",
       "matches": {
-        "desc": true
+        "f": true
       }
     },
     {
-      "content": "${1:document}.createElement(${2:elem})",
+      "content": "import {$2} from '${1:module}'",
       "doc": "",
-      "label": "createElement",
+      "label": "import module destructured",
       "matches": {
-        "cel": true
-      }
-    },
-    {
-      "content": "try {\n\t${0}\n} catch (${1:err}) {\n\t\n}",
-      "doc": "",
-      "label": "try/catch",
-      "matches": {
-        "tc": true
+        "id": true
       }
     },
     {
@@ -1698,6 +1634,70 @@
       "label": "console.log with log",
       "matches": {
         "log": true
+      }
+    },
+    {
+      "content": "typeof ${1:source} === '${2:undefined}'",
+      "doc": "",
+      "label": "typeof",
+      "matches": {
+        "to": true
+      }
+    },
+    {
+      "content": "console.log('${1}:', ${1})",
+      "doc": "",
+      "label": "console.log a variable",
+      "matches": {
+        "cv": true
+      }
+    },
+    {
+      "content": "this.",
+      "doc": "",
+      "label": "this",
+      "matches": {
+        "t": true
+      }
+    },
+    {
+      "content": "${1:source} instanceof ${2:Object}",
+      "doc": "",
+      "label": "instanceof",
+      "matches": {
+        "iof": true
+      }
+    },
+    {
+      "content": "${1:el}.removeChild(${2:elem})",
+      "doc": "",
+      "label": "removeChild",
+      "matches": {
+        "herc": true
+      }
+    },
+    {
+      "content": "constructor () {\n\t${0}\n}",
+      "doc": "",
+      "label": "constructor",
+      "matches": {
+        "cn": true
+      }
+    },
+    {
+      "content": "let ${0} \n if (${2:condition}) {\n\t${1}\n}",
+      "doc": "",
+      "label": "let and if statement",
+      "matches": {
+        "lif": true
+      }
+    },
+    {
+      "content": "try {\n\t${0}\n} catch (${1:err}) {\n\t\n} finally {\n\t\n}",
+      "doc": "",
+      "label": "try/catch/finally",
+      "matches": {
+        "tcf": true
       }
     },
     {

@@ -2,59 +2,27 @@
   "extends": [],
   "snippets": [
     {
-      "content": "for (my \\$${1:loop var} = 0; \\$$1 < ${2:count}; \\$$1++) {\n\t${3:body}\n}",
+      "content": "else {\n\t${1:body}\n}",
       "doc": "",
-      "label": "for loop",
+      "label": "else statement",
       "matches": {
-        "for": true
+        "else": true
       }
     },
     {
-      "content": "elsif ( ${1:condition} ) {\n\t${2:body}\n}",
+      "content": "print \"$1\\n\";",
       "doc": "",
-      "label": "elsif statement",
+      "label": "print statement",
       "matches": {
-        "elsif": true
+        "print": true
       }
     },
     {
-      "content": "mkdir \"${1:dir}\" or die \"Cannot create directory '$1': \\$!\";",
+      "content": "open(my \\$${1:fh}, '>', \"${2:file name}\") or die \"Cannot open file '$2' for writing: \\$!\";",
       "doc": "",
-      "label": "create a directory",
+      "label": "open file to write",
       "matches": {
-        "mkdir": true
-      }
-    },
-    {
-      "content": "foreach my \\$${1:element} ( @${2:array} ) {\n\t${3:body}\n}",
-      "doc": "",
-      "label": "foreach loop",
-      "matches": {
-        "foreach": true
-      }
-    },
-    {
-      "content": "my @${1:array var} = split(/${2:delimiter pattern}/, \"${3:string}\");",
-      "doc": "",
-      "label": "split a string",
-      "matches": {
-        "split": true
-      }
-    },
-    {
-      "content": "while ( ${1:condition} ) {\n\t${2:body}\n}",
-      "doc": "",
-      "label": "while Loop",
-      "matches": {
-        "while": true
-      }
-    },
-    {
-      "content": "my \\$${1:string var} = join('${2:delimiter pattern}', @${3:array_var});",
-      "doc": "",
-      "label": "join array",
-      "matches": {
-        "join": true
+        "openw": true
       }
     },
     {
@@ -66,6 +34,94 @@
       }
     },
     {
+      "content": "print \\$${1:fh} \"${2:string}\\n\";",
+      "doc": "",
+      "label": "print to file",
+      "matches": {
+        "file print": true
+      }
+    },
+    {
+      "content": "use File::Slurp;\n\nmy \\$${1:contents} = read_file(\"${2:file_path}\")",
+      "doc": "",
+      "label": "read file into a scalar",
+      "matches": {
+        "slurp": true
+      }
+    },
+    {
+      "content": "elsif ( ${1:condition} ) {\n\t${2:body}\n}",
+      "doc": "",
+      "label": "elsif statement",
+      "matches": {
+        "elsif": true
+      }
+    },
+    {
+      "content": "unless ( ${1:condition} ) {\n\t${2:body}\n}",
+      "doc": "",
+      "label": "unless",
+      "matches": {
+        "unless": true
+      }
+    },
+    {
+      "content": "for (my \\$${1:loop var} = 0; \\$$1 < ${2:count}; \\$$1++) {\n\t${3:body}\n}",
+      "doc": "",
+      "label": "for loop",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "foreach my \\$${1:element} ( @${2:array} ) {\n\t${3:body}\n}",
+      "doc": "",
+      "label": "foreach loop",
+      "matches": {
+        "foreach": true
+      }
+    },
+    {
+      "content": "package ${1:ModuleName};\nuse strict;\nuse warnings;\n\nsub new {\n\tmy (\\$class, %args) = @_;\n\tmy \\$self = bless {%args}, \\$class;\n\treturn \\$self;\n}\n\n# Add more methods here\n$2\n\n1; # Return true to indicate successful module loading",
+      "doc": "",
+      "label": "perl module",
+      "matches": {
+        "module package": true
+      }
+    },
+    {
+      "content": "while ( ${1:condition} ) {\n\t${2:body}\n}",
+      "doc": "",
+      "label": "while Loop",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "mkdir \"${1:dir}\" or die \"Cannot create directory '$1': \\$!\";",
+      "doc": "",
+      "label": "create a directory",
+      "matches": {
+        "mkdir": true
+      }
+    },
+    {
+      "content": "do {\n\t${2:body}\n} while ( ${1:condition} );",
+      "doc": "",
+      "label": "do while Loop",
+      "matches": {
+        "dowhile": true
+      }
+    },
+    {
+      "content": "my \\$${1:string var} = join('${2:delimiter pattern}', @${3:array_var});",
+      "doc": "",
+      "label": "join array",
+      "matches": {
+        "join": true
+      }
+    },
+    {
       "content": "use POSIX qw(strftime);\nmy $formatted = strftime('%Y-%m-%d %H:%M:%S', localtime($1));",
       "doc": "",
       "label": "format time",
@@ -74,11 +130,19 @@
       }
     },
     {
-      "content": "sub ${1:sub_name} {\n\t${2:body}\n}",
+      "content": "if ( ${1:condition} ) {\n\t${2:body}\n} else {\n\t${3:body}\n}",
       "doc": "",
-      "label": "subroutine",
+      "label": "if else statement",
       "matches": {
-        "sub": true
+        "ife": true
+      }
+    },
+    {
+      "content": "my @${1:array var} = split(/${2:delimiter pattern}/, \"${3:string}\");",
+      "doc": "",
+      "label": "split a string",
+      "matches": {
+        "split": true
       }
     },
     {
@@ -98,62 +162,6 @@
       }
     },
     {
-      "content": "if ( ${1:condition} ) {\n\t${2:body}\n} else {\n\t${3:body}\n}",
-      "doc": "",
-      "label": "if else statement",
-      "matches": {
-        "ife": true
-      }
-    },
-    {
-      "content": "else {\n\t${1:body}\n}",
-      "doc": "",
-      "label": "else statement",
-      "matches": {
-        "else": true
-      }
-    },
-    {
-      "content": "unless ( ${1:condition} ) {\n\t${2:body}\n}",
-      "doc": "",
-      "label": "unless",
-      "matches": {
-        "unless": true
-      }
-    },
-    {
-      "content": "open(my \\$${1:fh}, '>', \"${2:file name}\") or die \"Cannot open file '$2' for writing: \\$!\";",
-      "doc": "",
-      "label": "open file to write",
-      "matches": {
-        "openw": true
-      }
-    },
-    {
-      "content": "print \"$1\\n\";",
-      "doc": "",
-      "label": "print statement",
-      "matches": {
-        "print": true
-      }
-    },
-    {
-      "content": "package ${1:ModuleName};\nuse strict;\nuse warnings;\n\nsub new {\n\tmy (\\$class, %args) = @_;\n\tmy \\$self = bless {%args}, \\$class;\n\treturn \\$self;\n}\n\n# Add more methods here\n$2\n\n1; # Return true to indicate successful module loading",
-      "doc": "",
-      "label": "perl module",
-      "matches": {
-        "module package": true
-      }
-    },
-    {
-      "content": "print \\$${1:fh} \"${2:string}\\n\";",
-      "doc": "",
-      "label": "print to file",
-      "matches": {
-        "file print": true
-      }
-    },
-    {
       "content": "opendir(my \\$${1:dir}, '$2') or die \"Cannot open directory '$2': \\$!\";\nmy @files = readdir(\\$$1);\nclosedir(\\$$1);",
       "doc": "",
       "label": "read a directory",
@@ -162,27 +170,11 @@
       }
     },
     {
-      "content": "use File::Slurp;\n\nmy \\$${1:contents} = read_file(\"${2:file_path}\")",
+      "content": "sub ${1:sub_name} {\n\t${2:body}\n}",
       "doc": "",
-      "label": "read file into a scalar",
+      "label": "subroutine",
       "matches": {
-        "slurp": true
-      }
-    },
-    {
-      "content": "if ( ${1:condition} ) {\n\t${2:body}\n} elsif ( ${3:condition} ) {\n\t${3:body}\n}",
-      "doc": "",
-      "label": "if else if statement",
-      "matches": {
-        "iffe": true
-      }
-    },
-    {
-      "content": "do {\n\t${2:body}\n} while ( ${1:condition} );",
-      "doc": "",
-      "label": "do while Loop",
-      "matches": {
-        "dowhile": true
+        "sub": true
       }
     },
     {
@@ -191,6 +183,14 @@
       "label": "open file to read",
       "matches": {
         "openr": true
+      }
+    },
+    {
+      "content": "if ( ${1:condition} ) {\n\t${2:body}\n} elsif ( ${3:condition} ) {\n\t${4:body}\n}",
+      "doc": "",
+      "label": "if else if statement",
+      "matches": {
+        "iffe": true
       }
     },
     {

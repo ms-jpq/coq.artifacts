@@ -2,11 +2,27 @@
   "extends": [],
   "snippets": [
     {
-      "content": "object ${1:ObjectName} {\n\tdef main(args: Array[String]): Unit = {\n\t\t${2:println(\"Hello, world!\")}\n\t}\n}",
-      "doc": "Object with main method",
-      "label": "main_object",
+      "content": "${1:x} match {\n\tcase ${2:0} => ${3:\"zero\"}\n\tcase ${4:1} => ${5:\"one\"}\n}",
+      "doc": "Branch based on conditions using pattern matching",
+      "label": "match",
       "matches": {
-        "obj_main": true
+        "match": true
+      }
+    },
+    {
+      "content": "def ${1:methodName}(${2:argName}: ${3:ArgType}): ${4:ReturnType} = ${5:println(\"Hello, world!\")}",
+      "doc": "Method as one-liner",
+      "label": "def_short",
+      "matches": {
+        "def_short": true
+      }
+    },
+    {
+      "content": "object ${1:ObjectName} {\n\t${2:println(\"Hello, world!\")}\n}",
+      "doc": "Object",
+      "label": "object",
+      "matches": {
+        "object": true
       }
     },
     {
@@ -18,11 +34,27 @@
       }
     },
     {
-      "content": "${1:x} match {\n\tcase ${2:0} => ${3:\"zero\"}\n\tcase ${4:1} => ${5:\"one\"}\n}",
-      "doc": "Branch based on conditions using pattern matching",
-      "label": "match",
+      "content": "def ${1:methodName}(${2:argName}: ${3:ArgType}): ${4:ReturnType} = {\n\t${5:println(\"Hello, world!\")}\n}",
+      "doc": "Method",
+      "label": "def",
       "matches": {
-        "match": true
+        "def": true
+      }
+    },
+    {
+      "content": "object ${1:ObjectName} {\n\tdef main(args: Array[String]): Unit = {\n\t\t${2:println(\"Hello, world!\")}\n\t}\n}",
+      "doc": "Object with main method",
+      "label": "main_object",
+      "matches": {
+        "obj_main": true
+      }
+    },
+    {
+      "content": "trait ${1:TraitName} {\n\t${2:}\n}",
+      "doc": "Trait",
+      "label": "trait",
+      "matches": {
+        "trait": true
       }
     },
     {
@@ -58,43 +90,11 @@
       }
     },
     {
-      "content": "def ${1:methodName}(${2:argName}: ${3:ArgType}): ${4:ReturnType} = ${5:println(\"Hello, world!\")}",
-      "doc": "Method as one-liner",
-      "label": "def_short",
-      "matches": {
-        "def_short": true
-      }
-    },
-    {
-      "content": "def ${1:methodName}(${2:argName}: ${3:ArgType}): ${4:ReturnType} = {\n\t${5:println(\"Hello, world!\")}\n}",
-      "doc": "Method",
-      "label": "def",
-      "matches": {
-        "def": true
-      }
-    },
-    {
       "content": "case class ${1:CaseClassName}(${2:argName}: ${3:ArgType})",
       "doc": "Case class",
       "label": "case_class",
       "matches": {
         "case_class": true
-      }
-    },
-    {
-      "content": "object ${1:ObjectName} {\n\t${2:println(\"Hello, world!\")}\n}",
-      "doc": "Object",
-      "label": "object",
-      "matches": {
-        "object": true
-      }
-    },
-    {
-      "content": "trait ${1:TraitName} {\n\t${2:}\n}",
-      "doc": "Trait",
-      "label": "trait",
-      "matches": {
-        "trait": true
       }
     },
     {

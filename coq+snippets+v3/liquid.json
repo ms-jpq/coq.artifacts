@@ -2,35 +2,19 @@
   "extends": [],
   "snippets": [
     {
-      "content": "{\n\t\"type\": \"checkbox\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"default\": ${3|false,true|},\n\t\"info\": \"$4\"\n},$5",
-      "doc": "",
-      "label": "Shopify Schema checkbox",
+      "content": "{% javascript %}\n\t$4\n{% endjavascript %}",
+      "doc": "Javascript tag: javascript",
+      "label": "Tag javascript",
       "matches": {
-        "_checkbox": true
+        "javascript": true
       }
     },
     {
-      "content": "{\n\t\"type\": \"header\",\n\t\"content\": \"$1\",\n\t\"info\": \"$2\"\n},$3",
-      "doc": "",
-      "label": "Shopify Schema header",
+      "content": "{% schema %}\n\t{\n\t\t$1\n\t}\n{% endschema %}",
+      "doc": "Schema tag: schema",
+      "label": "Tag schema",
       "matches": {
-        "_header": true
-      }
-    },
-    {
-      "content": "| join: '${1:, }'",
-      "doc": "Array filter: join",
-      "label": "Filter join",
-      "matches": {
-        "join": true
-      }
-    },
-    {
-      "content": "{\n\t\"type\": \"article\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"info\": \"$3\"\n},$4",
-      "doc": "",
-      "label": "Shopify Schema article",
-      "matches": {
-        "_article": true
+        "schema": true
       }
     },
     {
@@ -42,91 +26,19 @@
       }
     },
     {
-      "content": "{% stylesheet %}\n\t$1\n{% endstylesheet %}",
-      "doc": "Stylesheet tag: stylesheet",
-      "label": "Tag stylesheet",
+      "content": "{%- capture ${1:variable} -%}$2{%- endcapture -%}",
+      "doc": "Variable tag: capture, whitespaced",
+      "label": "Tag capture, whitespaced",
       "matches": {
-        "stylesheet": true
+        "capture-": true
       }
     },
     {
-      "content": "| money_without_trailing_zeros",
-      "doc": "Money filter: money without trailing zeros",
-      "label": "Filter money without trailing zeros",
+      "content": "{% tablerow ${1:item} in ${2:collection} cols: ${3:2} %}\n\t$4\n{% endtablerow %}",
+      "doc": "Iteration tag: tablerow",
+      "label": "Tag tablerow",
       "matches": {
-        "money_without_trailing_zeros": true
-      }
-    },
-    {
-      "content": "{\n\t\"type\": \"richtext\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"default\": \"<p>$3</p>\"\n},$4",
-      "doc": "",
-      "label": "Shopify Schema richtext",
-      "matches": {
-        "_richtext": true
-      }
-    },
-    {
-      "content": "| last",
-      "doc": "Array filter: last",
-      "label": "Filter last",
-      "matches": {
-        "last": true
-      }
-    },
-    {
-      "content": "{\n\t\"type\": \"video_url\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"accept\": [$7\"youtube\", \"vimeo\"],\n\t\"default\": \"$3\",\n\t\"info\": \"$4\",\n\t\"placeholder\": \"$5\"\n},$6",
-      "doc": "",
-      "label": "Shopify Schema video",
-      "matches": {
-        "_video": true
-      }
-    },
-    {
-      "content": "{% stylesheet '${1:scss}' %}\n\t$2\n{% endstylesheet %}",
-      "doc": "Stylesheet tag: stylesheet for scss",
-      "label": "Tag stylesheet for scss",
-      "matches": {
-        "stylesheet_scss": true
-      }
-    },
-    {
-      "content": "| map: '${1:key}'",
-      "doc": "Array filter: map",
-      "label": "Filter map",
-      "matches": {
-        "map": true
-      }
-    },
-    {
-      "content": "{\n\t\"type\": \"url\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"info\": \"$3\"\n},$4",
-      "doc": "",
-      "label": "Shopify Schema url dropdown",
-      "matches": {
-        "_url": true
-      }
-    },
-    {
-      "content": "{\n\t\"type\": \"link_list\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"info\": \"$3\"\n},$4",
-      "doc": "",
-      "label": "Shopify Schema link list dropdown",
-      "matches": {
-        "_link_list": true
-      }
-    },
-    {
-      "content": "{% javascript %}\n\t$4\n{% endjavascript %}",
-      "doc": "Javascript tag: javascript",
-      "label": "Tag javascript",
-      "matches": {
-        "javascript": true
-      }
-    },
-    {
-      "content": "| camelcase",
-      "doc": "String filter: camelcase",
-      "label": "Filter camelcase",
-      "matches": {
-        "camelcase": true
+        "tablerow": true
       }
     },
     {
@@ -138,91 +50,27 @@
       }
     },
     {
-      "content": "| sort: '${1:key}'",
-      "doc": "Array filter: sort",
-      "label": "Filter sort",
-      "matches": {
-        "sort": true
-      }
-    },
-    {
-      "content": "{%- comment -%}$1{%- endcomment -%}",
-      "doc": "Comment tag: comment, whitespaced",
-      "label": "Tag comment, whitespaced",
-      "matches": {
-        "comment-": true
-      }
-    },
-    {
-      "content": "{\n\t\"type\": \"html\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"default\": \"<div>$3</div>\"\n},$4",
+      "content": "{\n\t\"type\": \"header\",\n\t\"content\": \"$1\",\n\t\"info\": \"$2\"\n},$3",
       "doc": "",
-      "label": "Shopify Schema html",
+      "label": "Shopify Schema header",
       "matches": {
-        "_html": true
+        "_header": true
       }
     },
     {
-      "content": "| uniq",
-      "doc": "Array filter: uniq",
-      "label": "Filter uniq",
+      "content": "{% stylesheet %}\n\t$1\n{% endstylesheet %}",
+      "doc": "Stylesheet tag: stylesheet",
+      "label": "Tag stylesheet",
       "matches": {
-        "uniq": true
+        "stylesheet": true
       }
     },
     {
-      "content": "{%- capture ${1:variable} -%}$2{%- endcapture -%}",
-      "doc": "Variable tag: capture, whitespaced",
-      "label": "Tag capture, whitespaced",
+      "content": "| concat: ${1:array}",
+      "doc": "Array filter: concat",
+      "label": "Filter concat",
       "matches": {
-        "capture-": true
-      }
-    },
-    {
-      "content": "{%- if ${1:condition} -%}\n\t$2\n{%- endif -%}",
-      "doc": "Control flow tag: if, whitespaced",
-      "label": "Tag if, whitespaced",
-      "matches": {
-        "if-": true
-      }
-    },
-    {
-      "content": "| ceil",
-      "doc": "Math filter: ceil",
-      "label": "Filter ceil",
-      "matches": {
-        "ceil": true
-      }
-    },
-    {
-      "content": "{\n\t\"type\": \"collection\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"info\": \"$3\"\n},$4",
-      "doc": "",
-      "label": "Shopify Schema collections dropdown",
-      "matches": {
-        "_collections": true
-      }
-    },
-    {
-      "content": "{\n\t\"type\": \"font_picker\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"info\": \"$3\",\n\t\"default\": \"${4|Abel,Abril Fatface,Agmena,Akko,Alegreya,Alegreya Sans,Alfie,Americana,Amiri,Anonymous Pro,Antique Olive,Arapey,Archivo Narrow,Arimo,Armata,Arvo,Asap,Assistant,Asul,Avenir Next,Avenir Next Rounded,Azbuka,Basic Commercial,Basic Commercial Soft Rounded,Baskerville No 2,Bauer Bodoni,Beefcakes,Bembo Book,Bernhard Modern,Bio Rhyme,Bitter,Bodoni Poster,Burlingame,Cabin,Cachet,Cardamon,Cardo,Carter Sans,Caslon Bold,Caslon Old Face,Catamaran,Centaur,Century Gothic,Chivo,Chong Modern,Claire News,Cooper BT,Courier New,Crimson Text,DIN Neuzeit Grotesk,DIN Next,DIN Next Slab,Daytona,Domine,Dosis,Electra,Eurostile Next,FF Meta,FF Meta Serif,FF Tisa,FF Tisa Sans,FF Unit,FF Unit Rounded,FF Unit Slab,Fette Gotisch,Fira Sans,Fjalla One,Friz Quadrata,Frutiger Serif,Futura,Garamond,Geometric 415,Georgia Pro,Gill Sans Nova,Glegoo,Goudy Old Style,Harmonia Sans,Helvetica,Humanist 521,IBM Plex Sans,ITC Avant Garde Gothic,ITC Benguiat,ITC Berkeley Old Style,ITC Bodoni Seventytwo,ITC Bodoni Twelve,ITC Caslon No 224,ITC Charter,ITC Cheltenham,ITC Clearface,ITC Conduit,ITC Esprit,ITC Founders Caslon,ITC Franklin Gothic,ITC Galliard,ITC Gamma,ITC Goudy Sans,ITC Johnston,ITC Mendoza Roman,ITC Modern No 216,ITC New Baskerville,ITC New Esprit,ITC New Veljovic,ITC Novarese,ITC Officina Sans,ITC Officina Serif,ITC Stepp,ITC Stone Humanist,ITC Stone Informal,ITC Stone Sans II,ITC Stone Serif,ITC Tapioca,Inconsolata,Joanna Nova,Joanna Sans Nova,Josefin Sans,Josefin Slab,Kairos,Kalam,Karla,Kreon,Lato,Laurentian,Libelle,Libre Baskerville,Libre Franklin,Linotype Didot,Linotype Gianotten,Linotype Really,Linotype Syntax Serif,Lobster,Lobster Two,Lora,Lucia,Lucida Grande,Luthersche Fraktur,Madera,Malabar,Mariposa Sans,Maven Pro,Megrim,Melior,Memphis,Memphis Soft Rounded,Mentor Sans,Merriweather Sans,Metro Nova,Modern No 20,Monaco,Monotype Baskerville,Monotype Bodoni,Monotype Century Old Style,Monotype Goudy,Monotype Goudy Modern,Monotype Italian Old Style,Monotype New Clarendon,Monotype News Gothic,Monotype Sabon,Montserrat,Mouse Memoirs,Muli,Mundo Sans,Neo Sans,Neue Aachen,Neue Frutiger 1450,Neue Haas Unica,Neue Swift,Neuton,Neuzeit Office,Neuzeit Office Soft Rounded,Neuzeit S,New Century Schoolbook,News 702,News 705,News Cycle,News Gothic No 2,News Plantin,Nobile,Noticia Text,Noto Serif,Nunito,Nunito Sans,Old Standard TT,Open Sans,Open Sans Condensed,Optima nova,Oswald,Ovo,Oxygen,PMN Caecilia,PT Mono,PT Sans,PT Sans Narrow,PT Serif,Pacifico,Palatino,Parma,Perpetua,Plantin,Playfair Display,Poppins,Prata,Prompt,Quantico,Quattrocento,Quattrocento Sans,Questrial,Quicksand,Quire Sans,Rajdhani,Raleway,Really No 2,Righteous,Roboto,Roboto Condensed,Roboto Mono,Roboto Slab,Rockwell,Rubik,Sabon Next,Sackers Square Gothic,Sagrantino,Scene,Scherzo,Shadows Into Light,Slate,Soho,Soho Gothic,Source Code Pro,Source Sans Pro,Stempel Schneidler,Swiss 721,Swiss 721 Rounded,Tenor Sans,Tiemann,Times New Roman,Tinos,Titillium Web,Trade Gothic,Trade Gothic Next,Trebuchet MS,Twentieth Century,Ubuntu,Unica One,Univers Next,Univers Next Typewriter,Unna,Vala,Varela,Varela Round,Verdana Pro,Volkhov,Vollkorn,Waza,Wola,Work Sans,Ysobel|}\"\n},$5",
-      "doc": "",
-      "label": "Shopify Schema font picker",
-      "matches": {
-        "_font": true
-      }
-    },
-    {
-      "content": "| divided_by: ${1:2}",
-      "doc": "Math filter: divided by",
-      "label": "Filter divided by",
-      "matches": {
-        "divided_by": true
-      }
-    },
-    {
-      "content": "{%- else -%}",
-      "doc": "Control flow tag: else, whitespaced",
-      "label": "Tag else, whitespaced",
-      "matches": {
-        "else-": true
+        "concat": true
       }
     },
     {
@@ -234,19 +82,195 @@
       }
     },
     {
-      "content": "{\n\t\"type\": \"range\",\n\t\"id\": \"$1\",\n\t\"min\": \"$2\",\n\t\"max\": \"$3\",\n\t\"step\": \"$4\",\n\t\"unit\": \"$5\",\n\t\"label\": \"$6\",\n\t\"default\": \"$7\"\n},$8",
-      "doc": "",
-      "label": "Shopify Schema range",
+      "content": "| sort: '${1:key}'",
+      "doc": "Array filter: sort",
+      "label": "Filter sort",
       "matches": {
-        "_range": true
+        "sort": true
       }
     },
     {
-      "content": "{%- elsif ${1:condition} -%}",
-      "doc": "Control flow tag: elsif, whitespaced",
-      "label": "Tag elsif, whitespaced",
+      "content": "{\n\t\"type\": \"url\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"info\": \"$3\"\n},$4",
+      "doc": "",
+      "label": "Shopify Schema url dropdown",
       "matches": {
-        "elsif-": true
+        "_url": true
+      }
+    },
+    {
+      "content": "{% stylesheet '${1:scss}' %}\n\t$2\n{% endstylesheet %}",
+      "doc": "Stylesheet tag: stylesheet for scss",
+      "label": "Tag stylesheet for scss",
+      "matches": {
+        "stylesheet_scss": true
+      }
+    },
+    {
+      "content": "| uniq",
+      "doc": "Array filter: uniq",
+      "label": "Filter uniq",
+      "matches": {
+        "uniq": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"video_url\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"accept\": [$7\"youtube\", \"vimeo\"],\n\t\"default\": \"$3\",\n\t\"info\": \"$4\",\n\t\"placeholder\": \"$5\"\n},$6",
+      "doc": "",
+      "label": "Shopify Schema video",
+      "matches": {
+        "_video": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"collection\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"info\": \"$3\"\n},$4",
+      "doc": "",
+      "label": "Shopify Schema collections dropdown",
+      "matches": {
+        "_collections": true
+      }
+    },
+    {
+      "content": "| img_tag",
+      "doc": "HTML filter: img tag",
+      "label": "Filter img tag",
+      "matches": {
+        "img_tag": true
+      }
+    },
+    {
+      "content": "| ceil",
+      "doc": "Math filter: ceil",
+      "label": "Filter ceil",
+      "matches": {
+        "ceil": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"richtext\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"default\": \"<p>$3</p>\"\n},$4",
+      "doc": "",
+      "label": "Shopify Schema richtext",
+      "matches": {
+        "_richtext": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"link_list\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"info\": \"$3\"\n},$4",
+      "doc": "",
+      "label": "Shopify Schema link list dropdown",
+      "matches": {
+        "_link_list": true
+      }
+    },
+    {
+      "content": "| divided_by: ${1:2}",
+      "doc": "Math filter: divided by",
+      "label": "Filter divided by",
+      "matches": {
+        "divided_by": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"product\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"info\": \"$3\"\n},$4",
+      "doc": "",
+      "label": "Shopify Schema product dropdown",
+      "matches": {
+        "_product": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"html\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"default\": \"<div>$3</div>\"\n},$4",
+      "doc": "",
+      "label": "Shopify Schema html",
+      "matches": {
+        "_html": true
+      }
+    },
+    {
+      "content": "{% render '${1:snippet}', ${2:variable}: ${3:value} %}",
+      "doc": "Theme tag: render with parameters",
+      "label": "Tag render with parameters",
+      "matches": {
+        "renderwith": true
+      }
+    },
+    {
+      "content": "| script_tag",
+      "doc": "HTML filter: script tag",
+      "label": "Filter script tag",
+      "matches": {
+        "script_tag": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"font_picker\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"info\": \"$3\",\n\t\"default\": \"${4|Abel,Abril Fatface,Agmena,Akko,Alegreya,Alegreya Sans,Alfie,Americana,Amiri,Anonymous Pro,Antique Olive,Arapey,Archivo Narrow,Arimo,Armata,Arvo,Asap,Assistant,Asul,Avenir Next,Avenir Next Rounded,Azbuka,Basic Commercial,Basic Commercial Soft Rounded,Baskerville No 2,Bauer Bodoni,Beefcakes,Bembo Book,Bernhard Modern,Bio Rhyme,Bitter,Bodoni Poster,Burlingame,Cabin,Cachet,Cardamon,Cardo,Carter Sans,Caslon Bold,Caslon Old Face,Catamaran,Centaur,Century Gothic,Chivo,Chong Modern,Claire News,Cooper BT,Courier New,Crimson Text,DIN Neuzeit Grotesk,DIN Next,DIN Next Slab,Daytona,Domine,Dosis,Electra,Eurostile Next,FF Meta,FF Meta Serif,FF Tisa,FF Tisa Sans,FF Unit,FF Unit Rounded,FF Unit Slab,Fette Gotisch,Fira Sans,Fjalla One,Friz Quadrata,Frutiger Serif,Futura,Garamond,Geometric 415,Georgia Pro,Gill Sans Nova,Glegoo,Goudy Old Style,Harmonia Sans,Helvetica,Humanist 521,IBM Plex Sans,ITC Avant Garde Gothic,ITC Benguiat,ITC Berkeley Old Style,ITC Bodoni Seventytwo,ITC Bodoni Twelve,ITC Caslon No 224,ITC Charter,ITC Cheltenham,ITC Clearface,ITC Conduit,ITC Esprit,ITC Founders Caslon,ITC Franklin Gothic,ITC Galliard,ITC Gamma,ITC Goudy Sans,ITC Johnston,ITC Mendoza Roman,ITC Modern No 216,ITC New Baskerville,ITC New Esprit,ITC New Veljovic,ITC Novarese,ITC Officina Sans,ITC Officina Serif,ITC Stepp,ITC Stone Humanist,ITC Stone Informal,ITC Stone Sans II,ITC Stone Serif,ITC Tapioca,Inconsolata,Joanna Nova,Joanna Sans Nova,Josefin Sans,Josefin Slab,Kairos,Kalam,Karla,Kreon,Lato,Laurentian,Libelle,Libre Baskerville,Libre Franklin,Linotype Didot,Linotype Gianotten,Linotype Really,Linotype Syntax Serif,Lobster,Lobster Two,Lora,Lucia,Lucida Grande,Luthersche Fraktur,Madera,Malabar,Mariposa Sans,Maven Pro,Megrim,Melior,Memphis,Memphis Soft Rounded,Mentor Sans,Merriweather Sans,Metro Nova,Modern No 20,Monaco,Monotype Baskerville,Monotype Bodoni,Monotype Century Old Style,Monotype Goudy,Monotype Goudy Modern,Monotype Italian Old Style,Monotype New Clarendon,Monotype News Gothic,Monotype Sabon,Montserrat,Mouse Memoirs,Muli,Mundo Sans,Neo Sans,Neue Aachen,Neue Frutiger 1450,Neue Haas Unica,Neue Swift,Neuton,Neuzeit Office,Neuzeit Office Soft Rounded,Neuzeit S,New Century Schoolbook,News 702,News 705,News Cycle,News Gothic No 2,News Plantin,Nobile,Noticia Text,Noto Serif,Nunito,Nunito Sans,Old Standard TT,Open Sans,Open Sans Condensed,Optima nova,Oswald,Ovo,Oxygen,PMN Caecilia,PT Mono,PT Sans,PT Sans Narrow,PT Serif,Pacifico,Palatino,Parma,Perpetua,Plantin,Playfair Display,Poppins,Prata,Prompt,Quantico,Quattrocento,Quattrocento Sans,Questrial,Quicksand,Quire Sans,Rajdhani,Raleway,Really No 2,Righteous,Roboto,Roboto Condensed,Roboto Mono,Roboto Slab,Rockwell,Rubik,Sabon Next,Sackers Square Gothic,Sagrantino,Scene,Scherzo,Shadows Into Light,Slate,Soho,Soho Gothic,Source Code Pro,Source Sans Pro,Stempel Schneidler,Swiss 721,Swiss 721 Rounded,Tenor Sans,Tiemann,Times New Roman,Tinos,Titillium Web,Trade Gothic,Trade Gothic Next,Trebuchet MS,Twentieth Century,Ubuntu,Unica One,Univers Next,Univers Next Typewriter,Unna,Vala,Varela,Varela Round,Verdana Pro,Volkhov,Vollkorn,Waza,Wola,Work Sans,Ysobel|}\"\n},$5",
+      "doc": "",
+      "label": "Shopify Schema font picker",
+      "matches": {
+        "_font": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"article\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"info\": \"$3\"\n},$4",
+      "doc": "",
+      "label": "Shopify Schema article",
+      "matches": {
+        "_article": true
+      }
+    },
+    {
+      "content": "{% section '${1:snippet}' %}",
+      "doc": "Theme tag: section",
+      "label": "Tag section",
+      "matches": {
+        "section": true
+      }
+    },
+    {
+      "content": "| stylesheet_tag",
+      "doc": "HTML filter: stylesheet tag",
+      "label": "Filter stylesheet tag",
+      "matches": {
+        "stylesheet_tag": true
+      }
+    },
+    {
+      "content": "{%- else -%}",
+      "doc": "Control flow tag: else, whitespaced",
+      "label": "Tag else, whitespaced",
+      "matches": {
+        "else-": true
+      }
+    },
+    {
+      "content": "{% include '${1:snippet}' %}",
+      "doc": "Theme tag: include",
+      "label": "Tag include",
+      "matches": {
+        "include": true
+      }
+    },
+    {
+      "content": "| modulo: ${1:2}",
+      "doc": "Math filter: modulo",
+      "label": "Filter modulo",
+      "matches": {
+        "modulo": true
+      }
+    },
+    {
+      "content": "| abs",
+      "doc": "Math filter: abs",
+      "label": "Filter abs",
+      "matches": {
+        "abs": true
+      }
+    },
+    {
+      "content": "{% layout '${1:layout}' %}",
+      "doc": "Theme tag: layout",
+      "label": "Tag layout",
+      "matches": {
+        "layout": true
       }
     },
     {
@@ -258,19 +282,11 @@
       }
     },
     {
-      "content": "| url_escape",
-      "doc": "String filter: url escape",
-      "label": "Filter url escape",
+      "content": "| plus: ${1:1}",
+      "doc": "Math filter: plus",
+      "label": "Filter plus",
       "matches": {
-        "url_escape": true
-      }
-    },
-    {
-      "content": "| minus: ${1:1}",
-      "doc": "Math filter: minus",
-      "label": "Filter minus",
-      "matches": {
-        "minus": true
+        "plus": true
       }
     },
     {
@@ -290,358 +306,6 @@
       }
     },
     {
-      "content": "| url_param_escape",
-      "doc": "String filter: url param escape",
-      "label": "Filter url param escape",
-      "matches": {
-        "url_param_escape": true
-      }
-    },
-    {
-      "content": "{%- unless ${1:condition} -%}\n\t$2\n{%- endunless -%}",
-      "doc": "Control flow tag: unless, whitespaced",
-      "label": "Tag unless, whitespaced",
-      "matches": {
-        "unless-": true
-      }
-    },
-    {
-      "content": "| pluralize: '${1:item}', '${2:items}'",
-      "doc": "String filter: pluralize",
-      "label": "Filter pluralize",
-      "matches": {
-        "pluralize": true
-      }
-    },
-    {
-      "content": "{\n\t\"type\": \"image_picker\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\"\n},$3",
-      "doc": "",
-      "label": "Shopify Schema image picker",
-      "matches": {
-        "_image_picker": true
-      }
-    },
-    {
-      "content": "| asset_url",
-      "doc": "URL filter: asset url",
-      "label": "Filter asset url",
-      "matches": {
-        "asset_url": true
-      }
-    },
-    {
-      "content": "| plus: ${1:1}",
-      "doc": "Math filter: plus",
-      "label": "Filter plus",
-      "matches": {
-        "plus": true
-      }
-    },
-    {
-      "content": "{\n\t\"type\": \"textarea\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"default\": \"$3\",\n\t\"info\": \"$4\",\n\t\"placeholder\": \"$5\"\n},$6",
-      "doc": "",
-      "label": "Shopify Schema textarea",
-      "matches": {
-        "_textarea": true
-      }
-    },
-    {
-      "content": "| lstrip",
-      "doc": "String filter: lstrip",
-      "label": "Filter lstrip",
-      "matches": {
-        "lstrip": true
-      }
-    },
-    {
-      "content": "| asset_img_url: '${1:medium}'",
-      "doc": "URL filter: asset img url",
-      "label": "Filter asset img url",
-      "matches": {
-        "asset_img_url": true
-      }
-    },
-    {
-      "content": "| round: ${1:0}",
-      "doc": "Math filter: round",
-      "label": "Filter round",
-      "matches": {
-        "round": true
-      }
-    },
-    {
-      "content": "| strip_newlines",
-      "doc": "String filter: strip newlines",
-      "label": "Filter strip newlines",
-      "matches": {
-        "strip_newlines": true
-      }
-    },
-    {
-      "content": "{% schema %}\n\t{\n\t\t\"name\": \"$1\",\n\t\t\"class\": \"$2\",\n\t\t\"settings\": [\n\t\t$3\n\t\t]\n\t}\n{% endschema %}",
-      "doc": "",
-      "label": "Shopify Schema",
-      "matches": {
-        "_schema": true
-      }
-    },
-    {
-      "content": "| img_url: '${1:medium}'",
-      "doc": "URL filter: img url",
-      "label": "Filter img url",
-      "matches": {
-        "img_url": true
-      }
-    },
-    {
-      "content": "| times: ${1:1}",
-      "doc": "Math filter: times",
-      "label": "Filter times",
-      "matches": {
-        "times": true
-      }
-    },
-    {
-      "content": "{% else %}",
-      "doc": "Control flow tag: else",
-      "label": "Tag else",
-      "matches": {
-        "else": true
-      }
-    },
-    {
-      "content": "| url_encode",
-      "doc": "String filter: url encode",
-      "label": "Filter url encode",
-      "matches": {
-        "url_encode": true
-      }
-    },
-    {
-      "content": "{%- case ${1:variable} -%}\n\t{%- when ${2:condition} -%}\n\t\t$3\n\t{%- else -%}\n\t\t$4\n{%- endcase -%}",
-      "doc": "Control flow tag: case, whitespaced",
-      "label": "Tag case, whitespaced",
-      "matches": {
-        "case-": true
-      }
-    },
-    {
-      "content": "{% elsif ${1:condition} %}",
-      "doc": "Control flow tag: elsif",
-      "label": "Tag elsif",
-      "matches": {
-        "elsif": true
-      }
-    },
-    {
-      "content": "| upcase",
-      "doc": "String filter: upcase",
-      "label": "Filter upcase",
-      "matches": {
-        "upcase": true
-      }
-    },
-    {
-      "content": "| strip",
-      "doc": "String filter: strip",
-      "label": "Filter strip",
-      "matches": {
-        "strip": true
-      }
-    },
-    {
-      "content": "| capitalize",
-      "doc": "String filter: capitalize",
-      "label": "Filter capitalize",
-      "matches": {
-        "capitalize": true
-      }
-    },
-    {
-      "content": "| truncate: ${1:20}, '${2:...}'",
-      "doc": "String filter: truncate",
-      "label": "Filter truncate",
-      "matches": {
-        "truncate": true
-      }
-    },
-    {
-      "content": "\"blocks\": [\n\t{\n\t\t\"type\": \"$1\",\n\t\t\"name\": \"$2\",\n\t\t\"settings\": [\n\t\t\t$3\n\t\t]\n\t},$4\n]",
-      "doc": "",
-      "label": "Shopify Schema blocks",
-      "matches": {
-        "_blocks": true
-      }
-    },
-    {
-      "content": "{%- when ${1:condition} -%}\n$0",
-      "doc": "Control flow tag: when, whitespaced",
-      "label": "Tag when, whitespaced",
-      "matches": {
-        "when-": true
-      }
-    },
-    {
-      "content": "| downcase",
-      "doc": "String filter: downcase",
-      "label": "Filter downcase",
-      "matches": {
-        "downcase": true
-      }
-    },
-    {
-      "content": "{% cycle '${1:group name}': '${2:odd}', '${3:even}' %}",
-      "doc": "Iteration tag: cycle group",
-      "label": "Tag cycle group",
-      "matches": {
-        "cyclegroup": true
-      }
-    },
-    {
-      "content": "| rstrip",
-      "doc": "String filter: rstrip",
-      "label": "Filter rstrip",
-      "matches": {
-        "rstrip": true
-      }
-    },
-    {
-      "content": "{%- cycle '${1:odd}', '${2:even}' -%}",
-      "doc": "Iteration tag: cycle, whitespaced",
-      "label": "Tag cycle, whitespaced",
-      "matches": {
-        "cycle-": true
-      }
-    },
-    {
-      "content": "| escape",
-      "doc": "String filter: escape",
-      "label": "Filter escape",
-      "matches": {
-        "escape": true
-      }
-    },
-    {
-      "content": "{\n\t\"type\": \"text\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"default\": \"$3\",\n\t\"info\": \"$4\",\n\t\"placeholder\": \"$5\"\n},$6",
-      "doc": "",
-      "label": "Shopify Schema text",
-      "matches": {
-        "_text": true
-      }
-    },
-    {
-      "content": "| truncatewords: ${1:5}, '${2:...}'",
-      "doc": "String filter: truncatewords",
-      "label": "Filter truncatewords",
-      "matches": {
-        "truncatewords": true
-      }
-    },
-    {
-      "content": "{% assign ${1:variable} = ${2:value} %}",
-      "doc": "Variable tag: assign",
-      "label": "Tag assign",
-      "matches": {
-        "assign": true
-      }
-    },
-    {
-      "content": "| first",
-      "doc": "Array filter: first",
-      "label": "Filter first",
-      "matches": {
-        "first": true
-      }
-    },
-    {
-      "content": "| money_without_currency",
-      "doc": "Money filter: money without currency",
-      "label": "Filter money without currency",
-      "matches": {
-        "money_without_currency": true
-      }
-    },
-    {
-      "content": "| prepend: '${1:string}'",
-      "doc": "String filter: prepend",
-      "label": "Filter prepend",
-      "matches": {
-        "prepend": true
-      }
-    },
-    {
-      "content": "{% break %}",
-      "doc": "Iteration tag: break",
-      "label": "Tag break",
-      "matches": {
-        "break": true
-      }
-    },
-    {
-      "content": "| handleize",
-      "doc": "String filter: handleize",
-      "label": "Filter handleize",
-      "matches": {
-        "handleize": true
-      }
-    },
-    {
-      "content": "| remove: '${1:string}'",
-      "doc": "String filter: remove",
-      "label": "Filter remove",
-      "matches": {
-        "remove": true
-      }
-    },
-    {
-      "content": "{% capture ${1:variable} %}$2{% endcapture %}",
-      "doc": "Variable tag: capture",
-      "label": "Tag capture",
-      "matches": {
-        "capture": true
-      }
-    },
-    {
-      "content": "{% if ${1:condition} %}\n\t$2\n{% else %}\n\t$3\n{% endif %}",
-      "doc": "Control flow tag: if else",
-      "label": "Tag if else",
-      "matches": {
-        "ifelse": true
-      }
-    },
-    {
-      "content": "{%- continue -%}",
-      "doc": "Iteration tag: continue, whitespaced",
-      "label": "Tag continue, whitespaced",
-      "matches": {
-        "continue-": true
-      }
-    },
-    {
-      "content": "{% case ${1:variable} %}\n\t{% when ${2:condition} %}\n\t\t$3\n\t{% else %}\n\t\t$4\n{% endcase %}",
-      "doc": "Control flow tag: case",
-      "label": "Tag case",
-      "matches": {
-        "case": true
-      }
-    },
-    {
-      "content": "| newline_to_br",
-      "doc": "String filter: newline to br",
-      "label": "Filter newline to br",
-      "matches": {
-        "newline_to_br": true
-      }
-    },
-    {
-      "content": "{%- tablerow ${1:item} in ${2:collection} cols: ${3:2} -%}\n\t$4\n{%- endtablerow -%}",
-      "doc": "Iteration tag: tablerow, whitespaced",
-      "label": "Tag tablerow, whitespaced",
-      "matches": {
-        "tablerow-": true
-      }
-    },
-    {
       "content": "| replace: '${1:target}', '${2:replace}'",
       "doc": "String filter: replace",
       "label": "Filter replace",
@@ -650,355 +314,11 @@
       }
     },
     {
-      "content": "| remove_first: '${1:string}'",
-      "doc": "String filter: remove first",
-      "label": "Filter remove first",
+      "content": "{%- unless ${1:condition} -%}\n\t$2\n{%- endunless -%}",
+      "doc": "Control flow tag: unless, whitespaced",
+      "label": "Tag unless, whitespaced",
       "matches": {
-        "remove_first": true
-      }
-    },
-    {
-      "content": "{\n\t\"type\": \"radio\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"options\": [\n\t\t{ \"value\": \"$6\", \"label\": \"$7\" }\n\t],\n\t\"default\": \"$3\",\n\t\"info\": \"$4\"\n},$5",
-      "doc": "",
-      "label": "Shopify Schema radio",
-      "matches": {
-        "_radio": true
-      }
-    },
-    {
-      "content": "| replace_first: '${1:target}', '${2:replace}'",
-      "doc": "String filter: replace first",
-      "label": "Filter replace first",
-      "matches": {
-        "replace_first": true
-      }
-    },
-    {
-      "content": "{%- assign ${1:variable} = ${2:value} -%}",
-      "doc": "Variable tag: assign, whitespaced",
-      "label": "Tag assign, whitespaced",
-      "matches": {
-        "assign-": true
-      }
-    },
-    {
-      "content": "{% tablerow ${1:item} in ${2:collection} cols: ${3:2} %}\n\t$4\n{% endtablerow %}",
-      "doc": "Iteration tag: tablerow",
-      "label": "Tag tablerow",
-      "matches": {
-        "tablerow": true
-      }
-    },
-    {
-      "content": "| md5",
-      "doc": "String filter: md5",
-      "label": "Filter md5",
-      "matches": {
-        "md5": true
-      }
-    },
-    {
-      "content": "| slice: ${1:0}, ${2:5}",
-      "doc": "String filter: slice",
-      "label": "Filter slice",
-      "matches": {
-        "slice": true
-      }
-    },
-    {
-      "content": "{% include '${1:snippet}' %}",
-      "doc": "Theme tag: include",
-      "label": "Tag include",
-      "matches": {
-        "include": true
-      }
-    },
-    {
-      "content": "| append: '${1:string}'",
-      "doc": "String filter: append",
-      "label": "Filter append",
-      "matches": {
-        "append": true
-      }
-    },
-    {
-      "content": "| slice: ${1:at}",
-      "doc": "String filter: slice with single parameter",
-      "label": "Filter slice single character",
-      "matches": {
-        "slice_single": true
-      }
-    },
-    {
-      "content": "{% continue %}",
-      "doc": "Iteration tag: continue",
-      "label": "Tag continue",
-      "matches": {
-        "continue": true
-      }
-    },
-    {
-      "content": "| money_with_currency",
-      "doc": "Money filter: money with currency",
-      "label": "Filter money with currency",
-      "matches": {
-        "money_with_currency": true
-      }
-    },
-    {
-      "content": "| concat: ${1:array}",
-      "doc": "Array filter: concat",
-      "label": "Filter concat",
-      "matches": {
-        "concat": true
-      }
-    },
-    {
-      "content": "| split: '${1:,}'",
-      "doc": "String filter: split",
-      "label": "Filter split",
-      "matches": {
-        "split": true
-      }
-    },
-    {
-      "content": "{% cycle '${1:odd}', '${2:even}' %}",
-      "doc": "Iteration tag: cycle",
-      "label": "Tag cycle",
-      "matches": {
-        "cycle": true
-      }
-    },
-    {
-      "content": "| modulo: ${1:2}",
-      "doc": "Math filter: modulo",
-      "label": "Filter modulo",
-      "matches": {
-        "modulo": true
-      }
-    },
-    {
-      "content": "| reverse",
-      "doc": "Array filter or String filter: reverse",
-      "label": "Filter reverse",
-      "matches": {
-        "reverse": true
-      }
-    },
-    {
-      "content": "| floor",
-      "doc": "Math filter: floor",
-      "label": "Filter floor",
-      "matches": {
-        "floor": true
-      }
-    },
-    {
-      "content": "| size",
-      "doc": "Array filter: size",
-      "label": "Filter size",
-      "matches": {
-        "size": true
-      }
-    },
-    {
-      "content": "{% when ${1:condition} %}\n$0",
-      "doc": "Control flow tag: when",
-      "label": "Tag when",
-      "matches": {
-        "when": true
-      }
-    },
-    {
-      "content": "| img_tag",
-      "doc": "HTML filter: img tag",
-      "label": "Filter img tag",
-      "matches": {
-        "img_tag": true
-      }
-    },
-    {
-      "content": "{% unless ${1:condition} %}\n\t$2\n{% endunless %}",
-      "doc": "Control flow tag: unless",
-      "label": "Tag unless",
-      "matches": {
-        "unless": true
-      }
-    },
-    {
-      "content": "{% if ${1:condition} %}\n\t$2\n{% endif %}",
-      "doc": "Control flow tag: if",
-      "label": "Tag if",
-      "matches": {
-        "if": true
-      }
-    },
-    {
-      "content": "{% render '${1:snippet}', ${2:variable}: ${3:value} %}",
-      "doc": "Theme tag: render with parameters",
-      "label": "Tag render with parameters",
-      "matches": {
-        "renderwith": true
-      }
-    },
-    {
-      "content": "| img_tag: '${1:alt}', '${2:class}'",
-      "doc": "HTML filter: img tag with parameters",
-      "label": "Filter img tag with parameters",
-      "matches": {
-        "img_tag_param": true
-      }
-    },
-    {
-      "content": "{% decrement ${1:variable} %}",
-      "doc": "Variable tag: decrement",
-      "label": "Tag decrement",
-      "matches": {
-        "decrement": true
-      }
-    },
-    {
-      "content": "| strip_html",
-      "doc": "String filter: strip html",
-      "label": "Filter strip html",
-      "matches": {
-        "strip_html": true
-      }
-    },
-    {
-      "content": "{% section '${1:snippet}' %}",
-      "doc": "Theme tag: section",
-      "label": "Tag section",
-      "matches": {
-        "section": true
-      }
-    },
-    {
-      "content": "| script_tag",
-      "doc": "HTML filter: script tag",
-      "label": "Filter script tag",
-      "matches": {
-        "script_tag": true
-      }
-    },
-    {
-      "content": "{% for ${1:item} in ${2:collection} %}\n\t$3\n{% endfor %}",
-      "doc": "Iteration tag: for",
-      "label": "Tag for",
-      "matches": {
-        "for": true
-      }
-    },
-    {
-      "content": "limit: ${1:5}",
-      "doc": "For loops option",
-      "label": "Tag Option limit",
-      "matches": {
-        "limit": true
-      }
-    },
-    {
-      "content": "{%- cycle '${1:group name}': '${2:odd}', '${3:even}' -%}",
-      "doc": "Iteration tag: cycle group, whitespaced",
-      "label": "Tag cycle group, whitespaced",
-      "matches": {
-        "cyclegroup-": true
-      }
-    },
-    {
-      "content": "| stylesheet_tag",
-      "doc": "HTML filter: stylesheet tag",
-      "label": "Filter stylesheet tag",
-      "matches": {
-        "stylesheet_tag": true
-      }
-    },
-    {
-      "content": "offset: ${1:0}",
-      "doc": "For loops option",
-      "label": "Tag Option offset",
-      "matches": {
-        "offset": true
-      }
-    },
-    {
-      "content": "{% increment ${1:variable} %}",
-      "doc": "Variable tag: increment",
-      "label": "Tag increment",
-      "matches": {
-        "increment": true
-      }
-    },
-    {
-      "content": "{% layout '${1:layout}' %}",
-      "doc": "Theme tag: layout",
-      "label": "Tag layout",
-      "matches": {
-        "layout": true
-      }
-    },
-    {
-      "content": "| abs",
-      "doc": "Math filter: abs",
-      "label": "Filter abs",
-      "matches": {
-        "abs": true
-      }
-    },
-    {
-      "content": "{% layout none %}",
-      "doc": "Theme tag: layout none",
-      "label": "Tag no layout",
-      "matches": {
-        "layoutnone": true
-      }
-    },
-    {
-      "content": "{% raw %}$1{% endraw %}",
-      "doc": "Theme tag: raw",
-      "label": "Tag raw",
-      "matches": {
-        "raw": true
-      }
-    },
-    {
-      "content": "reversed",
-      "doc": "For loops option",
-      "label": "Tag Option reversed",
-      "matches": {
-        "reversed": true
-      }
-    },
-    {
-      "content": "{% paginate ${1:collection.products} by ${2:12} %}\n\t{% for ${3:product} in ${1:collection.products} %}\n\t\t$4\n\t{% endfor %}\n{% endpaginate %}",
-      "doc": "Theme tag: paginate",
-      "label": "Tag paginate",
-      "matches": {
-        "paginate": true
-      }
-    },
-    {
-      "content": "{% render '${1:snippet}' %}",
-      "doc": "Theme tag: render",
-      "label": "Tag render",
-      "matches": {
-        "render": true
-      }
-    },
-    {
-      "content": "{%- for ${1:item} in ${2:collection} -%}\n\t$3\n{%- endfor -%}",
-      "doc": "Iteration tag: for, whitespaced",
-      "label": "Tag for, whitespaced",
-      "matches": {
-        "for-": true
-      }
-    },
-    {
-      "content": "{\n\t\"type\": \"product\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"info\": \"$3\"\n},$4",
-      "doc": "",
-      "label": "Shopify Schema product dropdown",
-      "matches": {
-        "_product": true
+        "unless-": true
       }
     },
     {
@@ -1018,11 +338,691 @@
       }
     },
     {
-      "content": "{% schema %}\n\t{\n\t\t$1\n\t}\n{% endschema %}",
-      "doc": "Schema tag: schema",
-      "label": "Tag schema",
+      "content": "| times: ${1:1}",
+      "doc": "Math filter: times",
+      "label": "Filter times",
       "matches": {
-        "schema": true
+        "times": true
+      }
+    },
+    {
+      "content": "{%- if ${1:condition} -%}\n\t$2\n{%- endif -%}",
+      "doc": "Control flow tag: if, whitespaced",
+      "label": "Tag if, whitespaced",
+      "matches": {
+        "if-": true
+      }
+    },
+    {
+      "content": "{%- case ${1:variable} -%}\n\t{%- when ${2:condition} -%}\n\t\t$3\n\t{%- else -%}\n\t\t$4\n{%- endcase -%}",
+      "doc": "Control flow tag: case, whitespaced",
+      "label": "Tag case, whitespaced",
+      "matches": {
+        "case-": true
+      }
+    },
+    {
+      "content": "| money_with_currency",
+      "doc": "Money filter: money with currency",
+      "label": "Filter money with currency",
+      "matches": {
+        "money_with_currency": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"text\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"default\": \"$3\",\n\t\"info\": \"$4\",\n\t\"placeholder\": \"$5\"\n},$6",
+      "doc": "",
+      "label": "Shopify Schema text",
+      "matches": {
+        "_text": true
+      }
+    },
+    {
+      "content": "| url_escape",
+      "doc": "String filter: url escape",
+      "label": "Filter url escape",
+      "matches": {
+        "url_escape": true
+      }
+    },
+    {
+      "content": "| capitalize",
+      "doc": "String filter: capitalize",
+      "label": "Filter capitalize",
+      "matches": {
+        "capitalize": true
+      }
+    },
+    {
+      "content": "| money_without_trailing_zeros",
+      "doc": "Money filter: money without trailing zeros",
+      "label": "Filter money without trailing zeros",
+      "matches": {
+        "money_without_trailing_zeros": true
+      }
+    },
+    {
+      "content": "| last",
+      "doc": "Array filter: last",
+      "label": "Filter last",
+      "matches": {
+        "last": true
+      }
+    },
+    {
+      "content": "{%- when ${1:condition} -%}\n$0",
+      "doc": "Control flow tag: when, whitespaced",
+      "label": "Tag when, whitespaced",
+      "matches": {
+        "when-": true
+      }
+    },
+    {
+      "content": "| downcase",
+      "doc": "String filter: downcase",
+      "label": "Filter downcase",
+      "matches": {
+        "downcase": true
+      }
+    },
+    {
+      "content": "| money_without_currency",
+      "doc": "Money filter: money without currency",
+      "label": "Filter money without currency",
+      "matches": {
+        "money_without_currency": true
+      }
+    },
+    {
+      "content": "| img_url: '${1:medium}'",
+      "doc": "URL filter: img url",
+      "label": "Filter img url",
+      "matches": {
+        "img_url": true
+      }
+    },
+    {
+      "content": "{%- comment -%}$1{%- endcomment -%}",
+      "doc": "Comment tag: comment, whitespaced",
+      "label": "Tag comment, whitespaced",
+      "matches": {
+        "comment-": true
+      }
+    },
+    {
+      "content": "| escape",
+      "doc": "String filter: escape",
+      "label": "Filter escape",
+      "matches": {
+        "escape": true
+      }
+    },
+    {
+      "content": "| asset_url",
+      "doc": "URL filter: asset url",
+      "label": "Filter asset url",
+      "matches": {
+        "asset_url": true
+      }
+    },
+    {
+      "content": "| camelcase",
+      "doc": "String filter: camelcase",
+      "label": "Filter camelcase",
+      "matches": {
+        "camelcase": true
+      }
+    },
+    {
+      "content": "| url_param_escape",
+      "doc": "String filter: url param escape",
+      "label": "Filter url param escape",
+      "matches": {
+        "url_param_escape": true
+      }
+    },
+    {
+      "content": "{% assign ${1:variable} = ${2:value} %}",
+      "doc": "Variable tag: assign",
+      "label": "Tag assign",
+      "matches": {
+        "assign": true
+      }
+    },
+    {
+      "content": "\"blocks\": [\n\t{\n\t\t\"type\": \"$1\",\n\t\t\"name\": \"$2\",\n\t\t\"settings\": [\n\t\t\t$3\n\t\t]\n\t},$4\n]",
+      "doc": "",
+      "label": "Shopify Schema blocks",
+      "matches": {
+        "_blocks": true
+      }
+    },
+    {
+      "content": "| prepend: '${1:string}'",
+      "doc": "String filter: prepend",
+      "label": "Filter prepend",
+      "matches": {
+        "prepend": true
+      }
+    },
+    {
+      "content": "| url_encode",
+      "doc": "String filter: url encode",
+      "label": "Filter url encode",
+      "matches": {
+        "url_encode": true
+      }
+    },
+    {
+      "content": "{% break %}",
+      "doc": "Iteration tag: break",
+      "label": "Tag break",
+      "matches": {
+        "break": true
+      }
+    },
+    {
+      "content": "| handleize",
+      "doc": "String filter: handleize",
+      "label": "Filter handleize",
+      "matches": {
+        "handleize": true
+      }
+    },
+    {
+      "content": "| upcase",
+      "doc": "String filter: upcase",
+      "label": "Filter upcase",
+      "matches": {
+        "upcase": true
+      }
+    },
+    {
+      "content": "{% capture ${1:variable} %}$2{% endcapture %}",
+      "doc": "Variable tag: capture",
+      "label": "Tag capture",
+      "matches": {
+        "capture": true
+      }
+    },
+    {
+      "content": "| remove_first: '${1:string}'",
+      "doc": "String filter: remove first",
+      "label": "Filter remove first",
+      "matches": {
+        "remove_first": true
+      }
+    },
+    {
+      "content": "| md5",
+      "doc": "String filter: md5",
+      "label": "Filter md5",
+      "matches": {
+        "md5": true
+      }
+    },
+    {
+      "content": "{% case ${1:variable} %}\n\t{% when ${2:condition} %}\n\t\t$3\n\t{% else %}\n\t\t$4\n{% endcase %}",
+      "doc": "Control flow tag: case",
+      "label": "Tag case",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "| truncatewords: ${1:5}, '${2:...}'",
+      "doc": "String filter: truncatewords",
+      "label": "Filter truncatewords",
+      "matches": {
+        "truncatewords": true
+      }
+    },
+    {
+      "content": "| newline_to_br",
+      "doc": "String filter: newline to br",
+      "label": "Filter newline to br",
+      "matches": {
+        "newline_to_br": true
+      }
+    },
+    {
+      "content": "| truncate: ${1:20}, '${2:...}'",
+      "doc": "String filter: truncate",
+      "label": "Filter truncate",
+      "matches": {
+        "truncate": true
+      }
+    },
+    {
+      "content": "{% layout none %}",
+      "doc": "Theme tag: layout none",
+      "label": "Tag no layout",
+      "matches": {
+        "layoutnone": true
+      }
+    },
+    {
+      "content": "| replace_first: '${1:target}', '${2:replace}'",
+      "doc": "String filter: replace first",
+      "label": "Filter replace first",
+      "matches": {
+        "replace_first": true
+      }
+    },
+    {
+      "content": "| pluralize: '${1:item}', '${2:items}'",
+      "doc": "String filter: pluralize",
+      "label": "Filter pluralize",
+      "matches": {
+        "pluralize": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"textarea\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"default\": \"$3\",\n\t\"info\": \"$4\",\n\t\"placeholder\": \"$5\"\n},$6",
+      "doc": "",
+      "label": "Shopify Schema textarea",
+      "matches": {
+        "_textarea": true
+      }
+    },
+    {
+      "content": "{% cycle '${1:group name}': '${2:odd}', '${3:even}' %}",
+      "doc": "Iteration tag: cycle group",
+      "label": "Tag cycle group",
+      "matches": {
+        "cyclegroup": true
+      }
+    },
+    {
+      "content": "| slice: ${1:0}, ${2:5}",
+      "doc": "String filter: slice",
+      "label": "Filter slice",
+      "matches": {
+        "slice": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"image_picker\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\"\n},$3",
+      "doc": "",
+      "label": "Shopify Schema image picker",
+      "matches": {
+        "_image_picker": true
+      }
+    },
+    {
+      "content": "| round: ${1:0}",
+      "doc": "Math filter: round",
+      "label": "Filter round",
+      "matches": {
+        "round": true
+      }
+    },
+    {
+      "content": "| slice: ${1:at}",
+      "doc": "String filter: slice with single parameter",
+      "label": "Filter slice single character",
+      "matches": {
+        "slice_single": true
+      }
+    },
+    {
+      "content": "| remove: '${1:string}'",
+      "doc": "String filter: remove",
+      "label": "Filter remove",
+      "matches": {
+        "remove": true
+      }
+    },
+    {
+      "content": "{% continue %}",
+      "doc": "Iteration tag: continue",
+      "label": "Tag continue",
+      "matches": {
+        "continue": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"radio\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"options\": [\n\t\t{ \"value\": \"$6\", \"label\": \"$7\" }\n\t],\n\t\"default\": \"$3\",\n\t\"info\": \"$4\"\n},$5",
+      "doc": "",
+      "label": "Shopify Schema radio",
+      "matches": {
+        "_radio": true
+      }
+    },
+    {
+      "content": "| split: '${1:,}'",
+      "doc": "String filter: split",
+      "label": "Filter split",
+      "matches": {
+        "split": true
+      }
+    },
+    {
+      "content": "{% cycle '${1:odd}', '${2:even}' %}",
+      "doc": "Iteration tag: cycle",
+      "label": "Tag cycle",
+      "matches": {
+        "cycle": true
+      }
+    },
+    {
+      "content": "| append: '${1:string}'",
+      "doc": "String filter: append",
+      "label": "Filter append",
+      "matches": {
+        "append": true
+      }
+    },
+    {
+      "content": "| strip",
+      "doc": "String filter: strip",
+      "label": "Filter strip",
+      "matches": {
+        "strip": true
+      }
+    },
+    {
+      "content": "| minus: ${1:1}",
+      "doc": "Math filter: minus",
+      "label": "Filter minus",
+      "matches": {
+        "minus": true
+      }
+    },
+    {
+      "content": "| floor",
+      "doc": "Math filter: floor",
+      "label": "Filter floor",
+      "matches": {
+        "floor": true
+      }
+    },
+    {
+      "content": "| img_tag: '${1:alt}', '${2:class}'",
+      "doc": "HTML filter: img tag with parameters",
+      "label": "Filter img tag with parameters",
+      "matches": {
+        "img_tag_param": true
+      }
+    },
+    {
+      "content": "| lstrip",
+      "doc": "String filter: lstrip",
+      "label": "Filter lstrip",
+      "matches": {
+        "lstrip": true
+      }
+    },
+    {
+      "content": "{% if ${1:condition} %}\n\t$2\n{% endif %}",
+      "doc": "Control flow tag: if",
+      "label": "Tag if",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "{% paginate ${1:collection.products} by ${2:12} %}\n\t{% for ${3:product} in ${1:collection.products} %}\n\t\t$4\n\t{% endfor %}\n{% endpaginate %}",
+      "doc": "Theme tag: paginate",
+      "label": "Tag paginate",
+      "matches": {
+        "paginate": true
+      }
+    },
+    {
+      "content": "| rstrip",
+      "doc": "String filter: rstrip",
+      "label": "Filter rstrip",
+      "matches": {
+        "rstrip": true
+      }
+    },
+    {
+      "content": "{% unless ${1:condition} %}\n\t$2\n{% endunless %}",
+      "doc": "Control flow tag: unless",
+      "label": "Tag unless",
+      "matches": {
+        "unless": true
+      }
+    },
+    {
+      "content": "{% decrement ${1:variable} %}",
+      "doc": "Variable tag: decrement",
+      "label": "Tag decrement",
+      "matches": {
+        "decrement": true
+      }
+    },
+    {
+      "content": "| strip_html",
+      "doc": "String filter: strip html",
+      "label": "Filter strip html",
+      "matches": {
+        "strip_html": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"checkbox\",\n\t\"id\": \"$1\",\n\t\"label\": \"$2\",\n\t\"default\": ${3|false,true|},\n\t\"info\": \"$4\"\n},$5",
+      "doc": "",
+      "label": "Shopify Schema checkbox",
+      "matches": {
+        "_checkbox": true
+      }
+    },
+    {
+      "content": "{% when ${1:condition} %}\n$0",
+      "doc": "Control flow tag: when",
+      "label": "Tag when",
+      "matches": {
+        "when": true
+      }
+    },
+    {
+      "content": "{% for ${1:item} in ${2:collection} %}\n\t$3\n{% endfor %}",
+      "doc": "Iteration tag: for",
+      "label": "Tag for",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "| strip_newlines",
+      "doc": "String filter: strip newlines",
+      "label": "Filter strip newlines",
+      "matches": {
+        "strip_newlines": true
+      }
+    },
+    {
+      "content": "{\n\t\"type\": \"range\",\n\t\"id\": \"$1\",\n\t\"min\": \"$2\",\n\t\"max\": \"$3\",\n\t\"step\": \"$4\",\n\t\"unit\": \"$5\",\n\t\"label\": \"$6\",\n\t\"default\": \"$7\"\n},$8",
+      "doc": "",
+      "label": "Shopify Schema range",
+      "matches": {
+        "_range": true
+      }
+    },
+    {
+      "content": "limit: ${1:5}",
+      "doc": "For loops option",
+      "label": "Tag Option limit",
+      "matches": {
+        "limit": true
+      }
+    },
+    {
+      "content": "{%- cycle '${1:odd}', '${2:even}' -%}",
+      "doc": "Iteration tag: cycle, whitespaced",
+      "label": "Tag cycle, whitespaced",
+      "matches": {
+        "cycle-": true
+      }
+    },
+    {
+      "content": "{% increment ${1:variable} %}",
+      "doc": "Variable tag: increment",
+      "label": "Tag increment",
+      "matches": {
+        "increment": true
+      }
+    },
+    {
+      "content": "offset: ${1:0}",
+      "doc": "For loops option",
+      "label": "Tag Option offset",
+      "matches": {
+        "offset": true
+      }
+    },
+    {
+      "content": "| asset_img_url: '${1:medium}'",
+      "doc": "URL filter: asset img url",
+      "label": "Filter asset img url",
+      "matches": {
+        "asset_img_url": true
+      }
+    },
+    {
+      "content": "{%- cycle '${1:group name}': '${2:odd}', '${3:even}' -%}",
+      "doc": "Iteration tag: cycle group, whitespaced",
+      "label": "Tag cycle group, whitespaced",
+      "matches": {
+        "cyclegroup-": true
+      }
+    },
+    {
+      "content": "reversed",
+      "doc": "For loops option",
+      "label": "Tag Option reversed",
+      "matches": {
+        "reversed": true
+      }
+    },
+    {
+      "content": "{%- elsif ${1:condition} -%}",
+      "doc": "Control flow tag: elsif, whitespaced",
+      "label": "Tag elsif, whitespaced",
+      "matches": {
+        "elsif-": true
+      }
+    },
+    {
+      "content": "{% raw %}$1{% endraw %}",
+      "doc": "Theme tag: raw",
+      "label": "Tag raw",
+      "matches": {
+        "raw": true
+      }
+    },
+    {
+      "content": "{%- for ${1:item} in ${2:collection} -%}\n\t$3\n{%- endfor -%}",
+      "doc": "Iteration tag: for, whitespaced",
+      "label": "Tag for, whitespaced",
+      "matches": {
+        "for-": true
+      }
+    },
+    {
+      "content": "{% else %}",
+      "doc": "Control flow tag: else",
+      "label": "Tag else",
+      "matches": {
+        "else": true
+      }
+    },
+    {
+      "content": "{% render '${1:snippet}' %}",
+      "doc": "Theme tag: render",
+      "label": "Tag render",
+      "matches": {
+        "render": true
+      }
+    },
+    {
+      "content": "{% schema %}\n\t{\n\t\t\"name\": \"$1\",\n\t\t\"class\": \"$2\",\n\t\t\"settings\": [\n\t\t$3\n\t\t]\n\t}\n{% endschema %}",
+      "doc": "",
+      "label": "Shopify Schema",
+      "matches": {
+        "_schema": true
+      }
+    },
+    {
+      "content": "{% elsif ${1:condition} %}",
+      "doc": "Control flow tag: elsif",
+      "label": "Tag elsif",
+      "matches": {
+        "elsif": true
+      }
+    },
+    {
+      "content": "{%- continue -%}",
+      "doc": "Iteration tag: continue, whitespaced",
+      "label": "Tag continue, whitespaced",
+      "matches": {
+        "continue-": true
+      }
+    },
+    {
+      "content": "| map: '${1:key}'",
+      "doc": "Array filter: map",
+      "label": "Filter map",
+      "matches": {
+        "map": true
+      }
+    },
+    {
+      "content": "{% if ${1:condition} %}\n\t$2\n{% else %}\n\t$3\n{% endif %}",
+      "doc": "Control flow tag: if else",
+      "label": "Tag if else",
+      "matches": {
+        "ifelse": true
+      }
+    },
+    {
+      "content": "{%- tablerow ${1:item} in ${2:collection} cols: ${3:2} -%}\n\t$4\n{%- endtablerow -%}",
+      "doc": "Iteration tag: tablerow, whitespaced",
+      "label": "Tag tablerow, whitespaced",
+      "matches": {
+        "tablerow-": true
+      }
+    },
+    {
+      "content": "| join: '${1:, }'",
+      "doc": "Array filter: join",
+      "label": "Filter join",
+      "matches": {
+        "join": true
+      }
+    },
+    {
+      "content": "| reverse",
+      "doc": "Array filter or String filter: reverse",
+      "label": "Filter reverse",
+      "matches": {
+        "reverse": true
+      }
+    },
+    {
+      "content": "| size",
+      "doc": "Array filter: size",
+      "label": "Filter size",
+      "matches": {
+        "size": true
+      }
+    },
+    {
+      "content": "| first",
+      "doc": "Array filter: first",
+      "label": "Filter first",
+      "matches": {
+        "first": true
+      }
+    },
+    {
+      "content": "{%- assign ${1:variable} = ${2:value} -%}",
+      "doc": "Variable tag: assign, whitespaced",
+      "label": "Tag assign, whitespaced",
+      "matches": {
+        "assign-": true
       }
     },
     {

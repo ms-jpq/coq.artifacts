@@ -2,35 +2,19 @@
   "extends": [],
   "snippets": [
     {
-      "content": "# https://kubernetes.io/docs/concepts/services-networking/ingress/\napiVersion: networking.k8s.io/v1\nkind: Ingress\nmetadata:\n  name: ${1:example-ingress}\n  namespace: ${2:default}\n  # https://kubernetes.github.io/ingress-nginx/examples/rewrite/\n  annotations:\n    nginx.ingress.kubernetes.io/rewrite-target: /\\$1\nspec:\n  rules:\n  - host: ${3:example.foo.com}\n    http:\n      paths:\n      - path: ${4:/api/(.*)}\n        pathType: Prefix\n        backend:\n          service:\n            name: ${5:service1}\n            port:\n              number: ${6:80}\n---\n$0",
-      "doc": "k8s Ingress with Rewrite rule",
-      "label": "k8s Ingress with Rewrite rule",
+      "content": "# https://kubernetes.io/docs/tasks/administer-cluster/namespaces/\napiVersion: v1\nkind: Namespace\nmetadata:\n  name: ${1:default}\n---\n$0",
+      "doc": "k8s Namespace",
+      "label": "k8s Namespace",
       "matches": {
-        "k-ingress-rewrite": true
+        "k-namespace": true
       }
     },
     {
-      "content": "# https://kubernetes.io/docs/concepts/configuration/configmap/\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: ${1:myconfig}\n  namespace: ${2:default}\ndata:\n  ${3:key}: ${4:value}\n---\n$0",
-      "doc": "k8s ConfigMap",
-      "label": "k8s ConfigMap",
+      "content": "# https://kubectl.docs.kubernetes.io/references/kustomize/kustomization/\napiVersion: kustomize.config.k8s.io/v1beta1\nkind: Kustomization\nmetadata:\n  namespace: ${1:default} # this will set the namespace for all KRM objects mentioned in this kustomize file\n# resources:\n# - ...\n# generators:\n# - ...\n# transformers:\n# - ...\n# validators:\n# - ...\n$0",
+      "doc": "k8s Kustomization File",
+      "label": "k8s Kustomization File",
       "matches": {
-        "k-configmap": true
-      }
-    },
-    {
-      "content": "# https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/\napiVersion: batch/v1\nkind: CronJob\nmetadata:\n  name: ${1:cronjobname}\n  namespace: ${2:default}\nspec:\n  schedule: \"${3:*/1 * * * *}\"\n  jobTemplate:\n    spec:\n      template:\n        spec:\n          containers:\n          - name: ${4:jobname}\n            image: ${5:busybox}\n            args: ['/bin/sh', '-c', '${6:date; echo Hello from the Kubernetes cluster}']\n          restartPolicy: OnFailure\n---\n$0",
-      "doc": "k8s CronJob",
-      "label": "k8s CronJob",
-      "matches": {
-        "k-cronjob": true
-      }
-    },
-    {
-      "content": "# https://kubernetes.io/docs/concepts/workloads/controllers/job/\napiVersion: batch/v1\nkind: Job\nmetadata:\n  name: ${1:myjob}\n  namespace: ${2:default}\n  labels:\n    app: ${1:myjob}\nspec:\n  template:\n    metadata:\n      name: ${1:myjob}\n      labels:\n        app: ${1:myjob}\n    spec:\n      containers:\n      - name: ${1:myjob}\n        image: ${3:python:3.7.6-alpine3.10}\n        command: ['sh', '-c', '${4:python3 manage.py makemigrations && python3 manage.py migrate}']\n        env:\n        - name: ENV_NAME\n          value: ENV_VALUE\n        volumeMounts:\n        - name: localtime\n          mountPath: /etc/localtime\n      volumes:\n      - name: localtime\n        hostPath:\n          path: /usr/share/zoneinfo/Asia/Taipei\n      restartPolicy: OnFailure\n      dnsPolicy: ClusterFirst\n---\n$0",
-      "doc": "k8s Job",
-      "label": "k8s Job",
-      "matches": {
-        "k-job": true
+        "k-kustomization": true
       }
     },
     {
@@ -58,11 +42,27 @@
       }
     },
     {
+      "content": "# https://kubectl.docs.kubernetes.io/references/kustomize/builtins/#_helmchartinflationgenerator_\napiVersion: builtin\nkind: HelmChartInflationGenerator\nmetadata:\n  name: ${1:my-chart-generator} # Name of this generator\nname: ${3:chart-name} # Name of the chart you want to use\nnamespace: ${4:default}\nrepo: ${5:https://charts.example.com/}\nversion: ${6:1.0.0}\nreleaseName: ${7:my-release}\nvaluesFile: ${8:values.yaml}\n---\n$0",
+      "doc": "k8s Helm Chart Inflation Generator",
+      "label": "k8s Helm Chart Inflation Generator",
+      "matches": {
+        "k-helm-generator-file": true
+      }
+    },
+    {
       "content": "# https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/\napiVersion: apps/v1\nkind: DaemonSet\nmetadata:\n  name: ${1:myapp}\n  namespace: ${2:default}\n  labels:\n    app: ${1:myapp}\nspec:\n  selector:\n    matchLabels:\n      app: ${1:myapp}\n  template:\n    metadata:\n      annotations:\n        kubectl.kubernetes.io/default-container:  ${1:myapp}\n      labels:\n        app: ${1:myapp}\n    spec:\n      tolerations:\n      # this toleration is to have the daemonset runnable on master nodes\n      # remove it if your masters can't run pods\n      - key: node-role.kubernetes.io/master\n        effect: NoSchedule\n      containers:\n      - name: ${1:myapp}\n        image: ${3:debian}\n        resources:\n          limits:\n            memory: 200Mi\n          requests:\n            cpu: 100m\n            memory: 200Mi\n        volumeMounts:\n        - name: localtime\n          mountPath: /etc/localtime\n      terminationGracePeriodSeconds: 30\n      volumes:\n      - name: localtime\n        hostPath:\n          path: /usr/share/zoneinfo/Asia/Taipei\n---\n$0",
       "doc": "k8s DaemonSet",
       "label": "k8s DaemonSet",
       "matches": {
         "k-daemonset": true
+      }
+    },
+    {
+      "content": "# https://kubernetes.io/docs/concepts/services-networking/ingress/#tls\napiVersion: v1\nkind: Secret\nmetadata:\n  name: ${1:testsecret-tls}\n  namespace: ${2:default}\ntype: kubernetes.io/tls\n# The TLS secret must contain keys named 'tls.crt' and 'tls.key' that contain the certificate and private key to use for TLS.\ndata:\n  tls.crt: base64 encoded cert\n  tls.key: base64 encoded key\n\n---\napiVersion: networking.k8s.io/v1\nkind: Ingress\nmetadata:\n  name: ${3:tls-example-ingress}\n  namespace: ${2:default}\nspec:\n  tls:\n  - hosts:\n      - ${4:https-example.foo.com}\n    secretName: ${1:testsecret-tls}\n  rules:\n  - host: ${4:https-example.foo.com}\n    http:\n      paths:\n      - path: /${5}\n        pathType: Prefix\n        backend:\n          service:\n            name: ${6:service1}\n            port:\n              number: ${7:80}\n---\n$0",
+      "doc": "k8s Ingress with TLS",
+      "label": "k8s Ingress with TLS",
+      "matches": {
+        "k-ingress-tls": true
       }
     },
     {
@@ -74,7 +74,31 @@
       }
     },
     {
-      "content": "# https://kubernetes.io/docs/concepts/workloads/pods/\napiVersion: v1\nkind: Pod\nmetadata:\n  name: \"${1:myapp}\"\n  namespace: ${2:default}\n  labels:\n    annotations:\n      kubectl.kubernetes.io/default-container:  ${1:myapp}\n    app: \"${1:myapp}\"\nspec:\n  containers:\n  - name: ${1:myapp}\n    image: \"${3:debian-slim:latest}\"\n    resources:\n      limits:\n        cpu: 200m\n        memory: 500Mi\n      requests:\n        cpu: 100m\n        memory: 200Mi\n    env:\n    - name: DB_HOST\n      valueFrom:\n        configMapKeyRef:\n          name: myapp\n          key: DB_HOST\n    ports:\n    - containerPort: ${4:80}\n      name: http\n    volumeMounts:\n    - name: localtime\n      mountPath: /etc/localtime\n  volumes:\n    - name: localtime\n      hostPath:\n        path: /usr/share/zoneinfo/Asia/Taipei\n  restartPolicy: Always\n---\n$0",
+      "content": "# https://kubernetes.io/docs/concepts/services-networking/ingress/\napiVersion: networking.k8s.io/v1\nkind: Ingress\nmetadata:\n  name: ${1:example-ingress}\n  namespace: ${2:default}\n  # https://kubernetes.github.io/ingress-nginx/examples/rewrite/\n  annotations:\n    nginx.ingress.kubernetes.io/rewrite-target: /\\$1\nspec:\n  rules:\n  - host: ${3:example.foo.com}\n    http:\n      paths:\n      - path: ${4:/api/(.*)}\n        pathType: Prefix\n        backend:\n          service:\n            name: ${5:service1}\n            port:\n              number: ${6:80}\n---\n$0",
+      "doc": "k8s Ingress with Rewrite rule",
+      "label": "k8s Ingress with Rewrite rule",
+      "matches": {
+        "k-ingress-rewrite": true
+      }
+    },
+    {
+      "content": "# https://kubernetes.io/docs/concepts/workloads/controllers/job/\napiVersion: batch/v1\nkind: Job\nmetadata:\n  name: ${1:myjob}\n  namespace: ${2:default}\n  labels:\n    app: ${1:myjob}\nspec:\n  template:\n    metadata:\n      name: ${1:myjob}\n      labels:\n        app: ${1:myjob}\n    spec:\n      containers:\n      - name: ${1:myjob}\n        image: ${3:python:3.7.6-alpine3.10}\n        command: ['sh', '-c', '${4:python3 manage.py makemigrations && python3 manage.py migrate}']\n        env:\n        - name: ENV_NAME\n          value: ENV_VALUE\n        volumeMounts:\n        - name: localtime\n          mountPath: /etc/localtime\n      volumes:\n      - name: localtime\n        hostPath:\n          path: /usr/share/zoneinfo/Asia/Taipei\n      restartPolicy: OnFailure\n      dnsPolicy: ClusterFirst\n---\n$0",
+      "doc": "k8s Job",
+      "label": "k8s Job",
+      "matches": {
+        "k-job": true
+      }
+    },
+    {
+      "content": "# https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/\napiVersion: batch/v1\nkind: CronJob\nmetadata:\n  name: ${1:cronjobname}\n  namespace: ${2:default}\nspec:\n  schedule: \"${3:*/1 * * * *}\"\n  jobTemplate:\n    spec:\n      template:\n        spec:\n          containers:\n          - name: ${4:jobname}\n            image: ${5:busybox}\n            args: ['/bin/sh', '-c', '${6:date; echo Hello from the Kubernetes cluster}']\n          restartPolicy: OnFailure\n---\n$0",
+      "doc": "k8s CronJob",
+      "label": "k8s CronJob",
+      "matches": {
+        "k-cronjob": true
+      }
+    },
+    {
+      "content": "# https://kubernetes.io/docs/concepts/workloads/pods/\napiVersion: v1\nkind: Pod\nmetadata:\n  name: \"${1:myapp}\"\n  namespace: ${2:default}\n  annotations:\n    kubectl.kubernetes.io/default-container:  ${1:myapp}\n  labels:\n    app: \"${1:myapp}\"\nspec:\n  containers:\n  - name: ${1:myapp}\n    image: \"${3:debian:stable-slim}\"\n    resources:\n      limits:\n        cpu: 200m\n        memory: 500Mi\n      requests:\n        cpu: 100m\n        memory: 200Mi\n    env:\n    - name: DB_HOST\n      valueFrom:\n        configMapKeyRef:\n          name: myapp\n          key: DB_HOST\n    ports:\n    - containerPort: ${4:80}\n      name: http\n    volumeMounts:\n    - name: localtime\n      mountPath: /etc/localtime\n  volumes:\n    - name: localtime\n      hostPath:\n        path: /usr/share/zoneinfo/Asia/Taipei\n  restartPolicy: Always\n---\n$0",
       "doc": "k8s Pod",
       "label": "k8s Pod",
       "matches": {
@@ -82,11 +106,11 @@
       }
     },
     {
-      "content": "# https://kubernetes.io/docs/concepts/services-networking/ingress/#tls\napiVersion: v1\nkind: Secret\nmetadata:\n  name: ${1:testsecret-tls}\n  namespace: ${2:default}\ntype: kubernetes.io/tls\n# The TLS secret must contain keys named 'tls.crt' and 'tls.key' that contain the certificate and private key to use for TLS.\ndata:\n  tls.crt: base64 encoded cert\n  tls.key: base64 encoded key\n\n---\napiVersion: networking.k8s.io/v1\nkind: Ingress\nmetadata:\n  name: ${3:tls-example-ingress}\n  namespace: ${2:default}\nspec:\n  tls:\n  - hosts:\n      - ${4:https-example.foo.com}\n    secretName: ${1:testsecret-tls}\n  rules:\n  - host: ${4:https-example.foo.com}\n    http:\n      paths:\n      - path: /${5}\n        pathType: Prefix\n        backend:\n          service:\n            name: ${6:service1}\n            port:\n              number: ${7:80}\n---\n$0",
-      "doc": "k8s Ingress with TLS",
-      "label": "k8s Ingress with TLS",
+      "content": "# https://kubernetes.io/docs/concepts/configuration/configmap/\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: ${1:myconfig}\n  namespace: ${2:default}\ndata:\n  ${3:key}: ${4:value}\n---\n$0",
+      "doc": "k8s ConfigMap",
+      "label": "k8s ConfigMap",
       "matches": {
-        "k-ingress-tls": true
+        "k-configmap": true
       }
     },
     {

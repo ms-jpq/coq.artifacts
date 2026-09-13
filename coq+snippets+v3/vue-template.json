@@ -2,83 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "<${1:div} :class=\"{ ${2:className}: ${3:data} }\"></${1:div}>",
-      "doc": "vue class binding",
-      "label": "Vue Class Binding",
+      "content": "@change=\"${1:foo} = $event\"",
+      "doc": "Vue Emit to Parent Component",
+      "label": "Vue Emit to Parent",
       "matches": {
-        "vclass": true
-      }
-    },
-    {
-      "content": "<${1:div} v-for=\"${2:item} in ${2:item}s\" :key=\"${2:item}.id\">\n\t{{ ${2:item} }}\n</${1:div}>",
-      "doc": "vfor statement",
-      "label": "Vue v-for",
-      "matches": {
-        "vfor": true
-      }
-    },
-    {
-      "content": "<router-link :to=\"{name: '${1:name}'}\">${2:LinkTitle}</router-link>",
-      "doc": "Named routing link",
-      "label": "Vue Named Routing Link",
-      "matches": {
-        "vroutename": true
-      }
-    },
-    {
-      "content": "<${1:div} :class=\"[${2:classNameA}, ${3:classNameB}]\"></${1:div}>",
-      "doc": "vue class binding",
-      "label": "Vue Class Binding Object",
-      "matches": {
-        "vclass-obj": true
-      }
-    },
-    {
-      "content": "<input v-model=\"${1:data}\" type=\"text\" />",
-      "doc": "v-model directive",
-      "label": "Vue v-model Directive",
-      "matches": {
-        "vmodel": true
-      }
-    },
-    {
-      "content": "<${1:div} :class=\"[${2:classNameA}, {${3:classNameB} : ${4:condition}}]\"></${1:div}>",
-      "doc": "vue multiple conditional class bindings",
-      "label": "Vue Multiple Conditional Class Bindings",
-      "matches": {
-        "vclass-obj-mult": true
-      }
-    },
-    {
-      "content": "<input v-model.number=\"${1:numData}\" type=\"number\" step=\"1\" />",
-      "doc": "v-model directive number input",
-      "label": "Vue v-model Number Directive",
-      "matches": {
-        "vmodel-num": true
-      }
-    },
-    {
-      "content": "<transition\n\tmode=\"out-in\"\n\t@before-enter=\"beforeEnter\"\n\t@enter=\"enter\"\n\n\t@before-leave=\"beforeLeave\"\n\t@leave=\"leave\"\n\t:css=\"false\">\n\n</transition>",
-      "doc": "transition component js hooks",
-      "label": "Vue Transition Component with JavaScript Hooks",
-      "matches": {
-        "vanim": true
-      }
-    },
-    {
-      "content": "@click=\"${1:handler}(${2:arg}, $event)\"",
-      "doc": "v-on click handler with arguments",
-      "label": "Vue v-on Shortcut Directive",
-      "matches": {
-        "von": true
-      }
-    },
-    {
-      "content": "<${1:component} :${1:propName}=\"${0}\"></${1:component}>",
-      "doc": "component element with props",
-      "label": "Vue Component with Props Binding",
-      "matches": {
-        "vel-props": true
+        "vemit-parent": true
       }
     },
     {
@@ -98,19 +26,35 @@
       }
     },
     {
+      "content": "<transition\n\tmode=\"out-in\"\n\t@before-enter=\"beforeEnter\"\n\t@enter=\"enter\"\n\n\t@before-leave=\"beforeLeave\"\n\t@leave=\"leave\"\n\t:css=\"false\">\n\n</transition>",
+      "doc": "transition component js hooks",
+      "label": "Vue Transition Component with JavaScript Hooks",
+      "matches": {
+        "vanim": true
+      }
+    },
+    {
+      "content": "<img :src=\"'/path/to/images/' + ${1:fileName}\" alt=\"${2:altText}\"/>",
+      "doc": "image source binding",
+      "label": "Vue Image Source Binding",
+      "matches": {
+        "vsrc": true
+      }
+    },
+    {
+      "content": "<router-link :to=\"{name: '${1:name}'}\">${2:LinkTitle}</router-link>",
+      "doc": "Named routing link",
+      "label": "Vue Named Routing Link",
+      "matches": {
+        "vroutename": true
+      }
+    },
+    {
       "content": "<${1:div} :style=\"{ fontSize: ${2:data} + 'px' }\"></${1:div}>",
       "doc": "vue inline style binding",
       "label": "Vue Style Binding",
       "matches": {
         "vstyle": true
-      }
-    },
-    {
-      "content": "<router-link to=\"${1:path}\">${2:LinkTitle}</router-link>",
-      "doc": "Path routing link",
-      "label": "Vue Path Routing Link",
-      "matches": {
-        "vroutepath": true
       }
     },
     {
@@ -130,11 +74,59 @@
       }
     },
     {
-      "content": "@change=\"${1:foo} = $event\"",
-      "doc": "Vue Emit to Parent Component",
-      "label": "Vue Emit to Parent",
+      "content": "<${1:div} v-for=\"${2:item} in ${2:item}s\" :key=\"${2:item}.id\">\n\t{{ ${2:item} }}\n</${1:div}>",
+      "doc": "vfor statement",
+      "label": "Vue v-for",
       "matches": {
-        "vemit-parent": true
+        "vfor": true
+      }
+    },
+    {
+      "content": "<${1:div} :class=\"{ ${2:className}: ${3:data} }\"></${1:div}>",
+      "doc": "vue class binding",
+      "label": "Vue Class Binding",
+      "matches": {
+        "vclass": true
+      }
+    },
+    {
+      "content": "<input v-model=\"${1:data}\" type=\"text\" />",
+      "doc": "v-model directive",
+      "label": "Vue v-model Directive",
+      "matches": {
+        "vmodel": true
+      }
+    },
+    {
+      "content": "<${1:div} :class=\"[${2:classNameA}, ${3:classNameB}]\"></${1:div}>",
+      "doc": "vue class binding",
+      "label": "Vue Class Binding Object",
+      "matches": {
+        "vclass-obj": true
+      }
+    },
+    {
+      "content": "<input v-model.number=\"${1:numData}\" type=\"number\" step=\"1\" />",
+      "doc": "v-model directive number input",
+      "label": "Vue v-model Number Directive",
+      "matches": {
+        "vmodel-num": true
+      }
+    },
+    {
+      "content": "<${1:div} :class=\"[${2:classNameA}, {${3:classNameB} : ${4:condition}}]\"></${1:div}>",
+      "doc": "vue multiple conditional class bindings",
+      "label": "Vue Multiple Conditional Class Bindings",
+      "matches": {
+        "vclass-obj-mult": true
+      }
+    },
+    {
+      "content": "@click=\"${1:handler}(${2:arg}, $event)\"",
+      "doc": "v-on click handler with arguments",
+      "label": "Vue v-on Shortcut Directive",
+      "matches": {
+        "von": true
       }
     },
     {
@@ -146,11 +138,19 @@
       }
     },
     {
-      "content": "<img :src=\"'/path/to/images/' + ${1:fileName}\" alt=\"${2:altText}\"/>",
-      "doc": "image source binding",
-      "label": "Vue Image Source Binding",
+      "content": "<${1:component} :${1:propName}=\"${0}\"></${1:component}>",
+      "doc": "component element with props",
+      "label": "Vue Component with Props Binding",
       "matches": {
-        "vsrc": true
+        "vel-props": true
+      }
+    },
+    {
+      "content": "<router-link to=\"${1:path}\">${2:LinkTitle}</router-link>",
+      "doc": "Path routing link",
+      "label": "Vue Path Routing Link",
+      "matches": {
+        "vroutepath": true
       }
     }
   ]

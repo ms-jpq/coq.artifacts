@@ -2,390 +2,12 @@
   "extends": [],
   "snippets": [
     {
-      "content": "expect.hasAssertions();$0",
-      "doc": "expects the test to make at least one assertion (useful for async)",
-      "label": "jest-expect-hasassertions",
-      "matches": {
-        "expha": true,
-        "jest expect hasassertions": true
-      }
-    },
-    {
-      "content": "expect($1).toBeGreaterThan($0);",
-      "doc": "expects the argument is greater than or equal",
-      "label": "jest-tobegreaterthan",
-      "matches": {
-        "jest expect tobegreaterthan": true,
-        "tbgt": true
-      }
-    },
-    {
-      "content": "expect($1).toHaveBeenLastCalledWith($0);",
-      "doc": "returns true if the spy has been last called with",
-      "label": "jest-tohavebeenlastcalledwith",
-      "matches": {
-        "jest expect tohavebeenlastcalledwith": true,
-        "thblcw": true
-      }
-    },
-    {
-      "content": "jest.fn($0)",
-      "doc": "creates jest.fn()",
-      "label": "jest-jest-fn",
-      "matches": {
-        "jest fn": true,
-        "jfn": true
-      }
-    },
-    {
-      "content": "expect($1).rejects$0",
-      "doc": "expect promise rejects to",
-      "label": "jest-expect-rejects",
-      "matches": {
-        "exprj": true,
-        "jest expect rejects": true
-      }
-    },
-    {
-      "content": "expect($1).toBeGreaterThanOrEqual($0);",
-      "doc": "expects the argument is greater than",
-      "label": "jest-tobegreaterthanorequal",
-      "matches": {
-        "jest expect tobegreaterthanorequal": true,
-        "tbgte": true
-      }
-    },
-    {
-      "content": "expect($1).toHaveLength($0);",
-      "doc": "expects the object to have length",
-      "label": "jest-tohavelength",
-      "matches": {
-        "jest expect tohavelength": true,
-        "thl": true
-      }
-    },
-    {
-      "content": "describe('${1:Name of the group}', () => {\n\n\tlet ${2:cut};\n\n\tbeforeEach(() => {\n\t\t$2 = $3;\n\t});\n\n\ttest('${1:should }', () => {\n\t\texpect($2).toBe($0);\n\t});\n\n});",
-      "doc": "creates a template to test a class under test",
-      "label": "jest-template-cut",
-      "matches": {
-        "cut": true,
-        "jest template cut": true
-      }
-    },
-    {
-      "content": "expect($1).resolves$0",
-      "doc": "expect promise resolves to",
-      "label": "jest-expect-resolves",
-      "matches": {
-        "expr": true,
-        "jest expect resolves": true
-      }
-    },
-    {
-      "content": "expect($1).toBeInstanceOf($0);",
-      "doc": "expects the argument is less than",
-      "label": "jest-tobeinstanceof",
-      "matches": {
-        "jest expect tobeinstanceof": true,
-        "tbi": true
-      }
-    },
-    {
-      "content": "expect($1).toHaveProperty(${2:keyPath}, ${3:value});$0",
-      "doc": "returns true if the argument matches the second object",
-      "label": "jest-tohaveproperty",
-      "matches": {
-        "jest expect tohaveproperty": true,
-        "thp": true
-      }
-    },
-    {
-      "content": "it('${1:should }', () => {\n\t$0\n});",
-      "doc": "creates an it block",
-      "label": "jest-it",
-      "matches": {
-        "it": true,
-        "jest it": true
-      }
-    },
-    {
-      "content": "afterAll(() => {\n\t$0\n});",
-      "doc": "afterAll function is called once after all specs",
-      "label": "jest-afterall",
-      "matches": {
-        "aa": true,
-        "jest afterall": true
-      }
-    },
-    {
-      "content": "expect($1).toBeLessThan($0);",
-      "doc": "expects the argument is less than",
-      "label": "jest-tobelessthan",
-      "matches": {
-        "jest expect tobelessthan": true,
-        "tblt": true
-      }
-    },
-    {
-      "content": "it.each([${1:[1, 2], [2, 4]}])(\n\t'${2:double(%d)}',\n\t(${3:input, expected}) => {\n\t\t${0:expect(double(input)).toBe(expected);}\n\t}\n);",
-      "doc": "creates an it block with different test data sets",
-      "label": "jest-it-each",
-      "matches": {
-        "ite": true,
-        "jest it each": true
-      }
-    },
-    {
-      "content": "afterEach(() => {\n\t$0\n});",
-      "doc": "afterEach function is called once after each spec",
-      "label": "jest-aftereach",
-      "matches": {
-        "ae": true,
-        "jest aftereach": true
-      }
-    },
-    {
-      "content": "expect($1).toBeLessThanOrEqual($0);",
-      "doc": "expects the argument is less than or equal",
-      "label": "jest-tobelessthanorequal",
-      "matches": {
-        "jest expect tobelessthanorequal": true,
-        "tblte": true
-      }
-    },
-    {
-      "content": "expect($1).toMatchInlineSnapshot($0);",
-      "doc": "returns true if the argument matches the most recent inline snapshot",
-      "label": "jest-tomatchinlinesnapshot",
-      "matches": {
-        "jest expect tomatchinlinesnapshot": true,
-        "tmis": true
-      }
-    },
-    {
-      "content": "test.each([${1:[1, 2], [2, 4]}])(\n\t'${2:double(%d)}',\n\t(${3:input, expected}) => {\n\t\t${0:expect(double(input)).toBe(expected);}\n\t}\n);",
-      "doc": "creates an test block with different test data sets",
-      "label": "jest-test-each",
-      "matches": {
-        "jest test each": true,
-        "teste": true
-      }
-    },
-    {
       "content": "it.only('${1:should }', () => {\n\t$0\n});",
       "doc": "creates an it block that runs only",
       "label": "jest-it-only",
       "matches": {
         "ito": true,
         "jest it only": true
-      }
-    },
-    {
-      "content": "expect($1).toBeNull();$0",
-      "doc": "expects the argument is null",
-      "label": "jest-tobenull",
-      "matches": {
-        "jest expect tobenull": true,
-        "tbn": true
-      }
-    },
-    {
-      "content": "beforeEach(() => {\n\t$0\n});",
-      "doc": "beforeEach function is called once before each spec",
-      "label": "jest-beforeeach",
-      "matches": {
-        "be": true,
-        "jest beforeeach": true
-      }
-    },
-    {
-      "content": "test.only('${1:should }', () => {\n\t$0\n});",
-      "doc": "creates a test block  that runs only",
-      "label": "jest-test-only",
-      "matches": {
-        "jest test only": true,
-        "testo": true
-      }
-    },
-    {
-      "content": "it.skip('${1:should }', () => {\n\t$0\n});",
-      "doc": "creates an it block that will be skipped",
-      "label": "jest-it-skip",
-      "matches": {
-        "its": true,
-        "jest it skip": true
-      }
-    },
-    {
-      "content": "expect($1).toBeTruthy();$0",
-      "doc": "expects the argument is truthy",
-      "label": "jest-tobetruthy",
-      "matches": {
-        "jest expect tobetruthy": true,
-        "tbt": true
-      }
-    },
-    {
-      "content": "describe('${1:Name of the group}', () => {\n\t$0\n});",
-      "doc": "creates a describe block",
-      "label": "jest-describe",
-      "matches": {
-        "desc": true,
-        "jest describe": true
-      }
-    },
-    {
-      "content": "test.skip('${1:should }', () => {\n\t$0\n});",
-      "doc": "creates a test block that will be skipped",
-      "label": "jest-test-skip",
-      "matches": {
-        "jest test skip": true,
-        "tests": true
-      }
-    },
-    {
-      "content": "expect($1).toBeUndefined();$0",
-      "doc": "expects the argument is undefined",
-      "label": "jest-tobeundefined",
-      "matches": {
-        "jest expect tobeundefined": true,
-        "tbu": true
-      }
-    },
-    {
-      "content": "describe.each([${1:[1, 2], [2, 4]}])(\n\t'${2:double(%d)}',\n\t(${3:input, expected}) => {\n\t\ttest(`returns \\${expected}`, () => {\n\t\t\t${4:expect(double(input)).toBe(expected);}\n\t\t});\n\t}\n);",
-      "doc": "creates a describe block with different test data sets",
-      "label": "jest-describe-each",
-      "matches": {
-        "desce": true,
-        "jest describe each": true
-      }
-    },
-    {
-      "content": "expect($1).toStrictEqual($0);",
-      "doc": "expects the first argument to be strictly equal with the second one",
-      "label": "jest-tostrictequal",
-      "matches": {
-        "jest expect tostrictequal": true,
-        "tse": true
-      }
-    },
-    {
-      "content": "expect(() => {\n\t$0\n}).toThrowErrorMatchingInlineSnapshot();",
-      "doc": "expects that the method will throw an error matching the inline snapshot",
-      "label": "jest-tothrowerrormatchinginlinesnapshot",
-      "matches": {
-        "jest expect tothrowerrormatchinginlinesnapshot": true,
-        "ttemis": true
-      }
-    },
-    {
-      "content": "test.todo('${1:should }');",
-      "doc": "creates a test placeholder",
-      "label": "jest-test-todo",
-      "matches": {
-        "jest test todo": true,
-        "testt": true
-      }
-    },
-    {
-      "content": "expect(() => {\n\t$0\n}).toThrowError($1);",
-      "doc": "expects that the method will throw an error",
-      "label": "jest-tothrowerror",
-      "matches": {
-        "jest expect tothrowerror": true,
-        "tte": true
-      }
-    },
-    {
-      "content": "expect(${1:list}).toContain($0);",
-      "doc": "expects the list contains the item (===)",
-      "label": "jest-tocontain",
-      "matches": {
-        "jest expect tocontain": true,
-        "tc": true
-      }
-    },
-    {
-      "content": "expect(() => {\n\t$0\n}).toThrow($1);",
-      "doc": "expects that the method will throw an error",
-      "label": "jest-tothrow",
-      "matches": {
-        "jest expect tothrow": true,
-        "tt": true
-      }
-    },
-    {
-      "content": "test('${1:should }', async () => {\n\t$0\n});",
-      "doc": "creates an test block with async callback function",
-      "label": "jest-test-async",
-      "matches": {
-        "jest test async": true,
-        "testa": true
-      }
-    },
-    {
-      "content": "expect($1).toMatchSnapshot($0);",
-      "doc": "returns true if the argument matches the most recent snapshot",
-      "label": "jest-tomatchsnapshot",
-      "matches": {
-        "jest expect tomatchsnapshot": true,
-        "tms": true
-      }
-    },
-    {
-      "content": "expect(${1:list}).toContainEqual($0);",
-      "doc": "expects the list contains the item (equals)",
-      "label": "jest-tocontainequal",
-      "matches": {
-        "jest expect tocontainequal": true,
-        "tce": true
-      }
-    },
-    {
-      "content": "describe.only('${1:Name of the group}', () => {\n\t$0\n});",
-      "doc": "creates a describe block that runs only",
-      "label": "jest-describe-only",
-      "matches": {
-        "desco": true,
-        "jest describe only": true
-      }
-    },
-    {
-      "content": "expect($1).toBe($0);",
-      "doc": "expects the first argument to be equal with the second one",
-      "label": "jest-tobe",
-      "matches": {
-        "jest expect tobe": true,
-        "tb": true
-      }
-    },
-    {
-      "content": "expect($1).toMatchObject($0);",
-      "doc": "returns true if the argument matches the second object",
-      "label": "jest-tomatchobject",
-      "matches": {
-        "jest expect tomatchobject": true,
-        "tmo": true
-      }
-    },
-    {
-      "content": "expect($1).toMatch($0);",
-      "doc": "returns true if the argument matches the second value",
-      "label": "jest-tomatch",
-      "matches": {
-        "jest expect tomatch": true,
-        "tm": true
-      }
-    },
-    {
-      "content": "expect($1).toEqual($0);",
-      "doc": "expects the first argument to be equal with the second one",
-      "label": "jest-toequal",
-      "matches": {
-        "jest expect toequal": true,
-        "te": true
       }
     },
     {
@@ -398,15 +20,6 @@
       }
     },
     {
-      "content": "test('${1:should }', () => {\n\t$0\n});",
-      "doc": "creates a test block",
-      "label": "jest-test",
-      "matches": {
-        "jest test": true,
-        "test": true
-      }
-    },
-    {
       "content": "expect($1).toHaveBeenCalled();$0",
       "doc": "returns true if the spy was called",
       "label": "jest-tohavebeencalled",
@@ -416,21 +29,12 @@
       }
     },
     {
-      "content": "expect.assertions($0);",
-      "doc": "expects the test to make the indicated number of assertions (useful for async)",
-      "label": "jest-expect-assertions",
+      "content": "it.skip('${1:should }', () => {\n\t$0\n});",
+      "doc": "creates an it block that will be skipped",
+      "label": "jest-it-skip",
       "matches": {
-        "expas": true,
-        "jest expect assertions": true
-      }
-    },
-    {
-      "content": "expect(() => {\n\t$0\n}).toThrowErrorMatchingSnapshot();",
-      "doc": "expects that the method will throw an error mathing the snapshpot",
-      "label": "jest-tothrowerrormatchingsnapshot",
-      "matches": {
-        "jest expect tothrowerrormatchingsnapshot": true,
-        "ttems": true
+        "its": true,
+        "jest it skip": true
       }
     },
     {
@@ -443,30 +47,12 @@
       }
     },
     {
-      "content": "beforeAll(() => {\n\t$0\n});",
-      "doc": "beforeAll function is called once before all specs",
-      "label": "jest-beforeall",
-      "matches": {
-        "ba": true,
-        "jest beforeall": true
-      }
-    },
-    {
       "content": "expect($1).toHaveBeenCalledTimes($0);",
       "doc": "returns true if the spy has been called given times",
       "label": "jest-tohavebeencalledtimes",
       "matches": {
         "jest expect tohavebeencalledtimes": true,
         "thbct": true
-      }
-    },
-    {
-      "content": "expect($0)",
-      "doc": "expect actual value",
-      "label": "jest-expect",
-      "matches": {
-        "exp": true,
-        "jest expect": true
       }
     },
     {
@@ -488,12 +74,174 @@
       }
     },
     {
+      "content": "it('${1:should }', async () => {\n\t$0\n});",
+      "doc": "creates an it block with async callback function",
+      "label": "jest-it-async",
+      "matches": {
+        "ita": true,
+        "jest it async": true
+      }
+    },
+    {
+      "content": "expect($1).toBeNull();$0",
+      "doc": "expects the argument is null",
+      "label": "jest-tobenull",
+      "matches": {
+        "jest expect tobenull": true,
+        "tbn": true
+      }
+    },
+    {
+      "content": "expect(() => {\n\t$0\n}).toThrowError($1);",
+      "doc": "expects that the method will throw an error",
+      "label": "jest-tothrowerror",
+      "matches": {
+        "jest expect tothrowerror": true,
+        "tte": true
+      }
+    },
+    {
+      "content": "expect($1).toBeGreaterThan($0);",
+      "doc": "expects the argument is greater than or equal",
+      "label": "jest-tobegreaterthan",
+      "matches": {
+        "jest expect tobegreaterthan": true,
+        "tbgt": true
+      }
+    },
+    {
+      "content": "expect(() => {\n\t$0\n}).toThrowErrorMatchingInlineSnapshot();",
+      "doc": "expects that the method will throw an error matching the inline snapshot",
+      "label": "jest-tothrowerrormatchinginlinesnapshot",
+      "matches": {
+        "jest expect tothrowerrormatchinginlinesnapshot": true,
+        "ttemis": true
+      }
+    },
+    {
+      "content": "jest.fn($0)",
+      "doc": "creates jest.fn()",
+      "label": "jest-jest-fn",
+      "matches": {
+        "jest fn": true,
+        "jfn": true
+      }
+    },
+    {
+      "content": "expect(() => {\n\t$0\n}).toThrow($1);",
+      "doc": "expects that the method will throw an error",
+      "label": "jest-tothrow",
+      "matches": {
+        "jest expect tothrow": true,
+        "tt": true
+      }
+    },
+    {
+      "content": "expect($1).toStrictEqual($0);",
+      "doc": "expects the first argument to be strictly equal with the second one",
+      "label": "jest-tostrictequal",
+      "matches": {
+        "jest expect tostrictequal": true,
+        "tse": true
+      }
+    },
+    {
+      "content": "describe.only('${1:Name of the group}', () => {\n\t$0\n});",
+      "doc": "creates a describe block that runs only",
+      "label": "jest-describe-only",
+      "matches": {
+        "desco": true,
+        "jest describe only": true
+      }
+    },
+    {
+      "content": "expect(() => {\n\t$0\n}).toThrowErrorMatchingSnapshot();",
+      "doc": "expects that the method will throw an error mathing the snapshpot",
+      "label": "jest-tothrowerrormatchingsnapshot",
+      "matches": {
+        "jest expect tothrowerrormatchingsnapshot": true,
+        "ttems": true
+      }
+    },
+    {
+      "content": "describe('${1:Name of the group}', () => {\n\n\tlet ${2:cut};\n\n\tbeforeEach(() => {\n\t\t$2 = $3;\n\t});\n\n\ttest('${1:should }', () => {\n\t\texpect($2).toBe($0);\n\t});\n\n});",
+      "doc": "creates a template to test a class under test",
+      "label": "jest-template-cut",
+      "matches": {
+        "cut": true,
+        "jest template cut": true
+      }
+    },
+    {
+      "content": "expect($1).toMatchObject($0);",
+      "doc": "returns true if the argument matches the second object",
+      "label": "jest-tomatchobject",
+      "matches": {
+        "jest expect tomatchobject": true,
+        "tmo": true
+      }
+    },
+    {
+      "content": "expect($1).toMatchInlineSnapshot($0);",
+      "doc": "returns true if the argument matches the most recent inline snapshot",
+      "label": "jest-tomatchinlinesnapshot",
+      "matches": {
+        "jest expect tomatchinlinesnapshot": true,
+        "tmis": true
+      }
+    },
+    {
       "content": "describe.skip('${1:Name of the group}', () => {\n\t$0\n});",
       "doc": "creates a describe block that will be skipped",
       "label": "jest-describe-skip",
       "matches": {
         "descs": true,
         "jest describe skip": true
+      }
+    },
+    {
+      "content": "expect($1).toMatch($0);",
+      "doc": "returns true if the argument matches the second value",
+      "label": "jest-tomatch",
+      "matches": {
+        "jest expect tomatch": true,
+        "tm": true
+      }
+    },
+    {
+      "content": "expect($1).toHaveProperty(${2:keyPath}, ${3:value});$0",
+      "doc": "returns true if the argument matches the second object",
+      "label": "jest-tohaveproperty",
+      "matches": {
+        "jest expect tohaveproperty": true,
+        "thp": true
+      }
+    },
+    {
+      "content": "expect($1).toHaveLength($0);",
+      "doc": "expects the object to have length",
+      "label": "jest-tohavelength",
+      "matches": {
+        "jest expect tohavelength": true,
+        "thl": true
+      }
+    },
+    {
+      "content": "expect($1).toHaveBeenLastCalledWith($0);",
+      "doc": "returns true if the spy has been last called with",
+      "label": "jest-tohavebeenlastcalledwith",
+      "matches": {
+        "jest expect tohavebeenlastcalledwith": true,
+        "thblcw": true
+      }
+    },
+    {
+      "content": "expect($0)",
+      "doc": "expect actual value",
+      "label": "jest-expect",
+      "matches": {
+        "exp": true,
+        "jest expect": true
       }
     },
     {
@@ -506,12 +254,264 @@
       }
     },
     {
-      "content": "it('${1:should }', async () => {\n\t$0\n});",
-      "doc": "creates an it block with async callback function",
-      "label": "jest-it-async",
+      "content": "test('${1:should }', () => {\n\t$0\n});",
+      "doc": "creates a test block",
+      "label": "jest-test",
       "matches": {
-        "ita": true,
-        "jest it async": true
+        "jest test": true,
+        "test": true
+      }
+    },
+    {
+      "content": "expect($1).toEqual($0);",
+      "doc": "expects the first argument to be equal with the second one",
+      "label": "jest-toequal",
+      "matches": {
+        "jest expect toequal": true,
+        "te": true
+      }
+    },
+    {
+      "content": "expect.assertions($0);",
+      "doc": "expects the test to make the indicated number of assertions (useful for async)",
+      "label": "jest-expect-assertions",
+      "matches": {
+        "expas": true,
+        "jest expect assertions": true
+      }
+    },
+    {
+      "content": "expect(${1:list}).toContainEqual($0);",
+      "doc": "expects the list contains the item (equals)",
+      "label": "jest-tocontainequal",
+      "matches": {
+        "jest expect tocontainequal": true,
+        "tce": true
+      }
+    },
+    {
+      "content": "test.each([${1:[1, 2], [2, 4]}])(\n\t'${2:double(%d)}',\n\t(${3:input, expected}) => {\n\t\t${0:expect(double(input)).toBe(expected);}\n\t}\n);",
+      "doc": "creates an test block with different test data sets",
+      "label": "jest-test-each",
+      "matches": {
+        "jest test each": true,
+        "teste": true
+      }
+    },
+    {
+      "content": "expect(${1:list}).toContain($0);",
+      "doc": "expects the list contains the item (===)",
+      "label": "jest-tocontain",
+      "matches": {
+        "jest expect tocontain": true,
+        "tc": true
+      }
+    },
+    {
+      "content": "afterAll(() => {\n\t$0\n});",
+      "doc": "afterAll function is called once after all specs",
+      "label": "jest-afterall",
+      "matches": {
+        "aa": true,
+        "jest afterall": true
+      }
+    },
+    {
+      "content": "expect.hasAssertions();$0",
+      "doc": "expects the test to make at least one assertion (useful for async)",
+      "label": "jest-expect-hasassertions",
+      "matches": {
+        "expha": true,
+        "jest expect hasassertions": true
+      }
+    },
+    {
+      "content": "expect($1).toBeUndefined();$0",
+      "doc": "expects the argument is undefined",
+      "label": "jest-tobeundefined",
+      "matches": {
+        "jest expect tobeundefined": true,
+        "tbu": true
+      }
+    },
+    {
+      "content": "test.only('${1:should }', () => {\n\t$0\n});",
+      "doc": "creates a test block  that runs only",
+      "label": "jest-test-only",
+      "matches": {
+        "jest test only": true,
+        "testo": true
+      }
+    },
+    {
+      "content": "afterEach(() => {\n\t$0\n});",
+      "doc": "afterEach function is called once after each spec",
+      "label": "jest-aftereach",
+      "matches": {
+        "ae": true,
+        "jest aftereach": true
+      }
+    },
+    {
+      "content": "expect($1).toBeTruthy();$0",
+      "doc": "expects the argument is truthy",
+      "label": "jest-tobetruthy",
+      "matches": {
+        "jest expect tobetruthy": true,
+        "tbt": true
+      }
+    },
+    {
+      "content": "expect($1).rejects$0",
+      "doc": "expect promise rejects to",
+      "label": "jest-expect-rejects",
+      "matches": {
+        "exprj": true,
+        "jest expect rejects": true
+      }
+    },
+    {
+      "content": "expect($1).toMatchSnapshot($0);",
+      "doc": "returns true if the argument matches the most recent snapshot",
+      "label": "jest-tomatchsnapshot",
+      "matches": {
+        "jest expect tomatchsnapshot": true,
+        "tms": true
+      }
+    },
+    {
+      "content": "beforeAll(() => {\n\t$0\n});",
+      "doc": "beforeAll function is called once before all specs",
+      "label": "jest-beforeall",
+      "matches": {
+        "ba": true,
+        "jest beforeall": true
+      }
+    },
+    {
+      "content": "expect($1).toBeLessThanOrEqual($0);",
+      "doc": "expects the argument is less than or equal",
+      "label": "jest-tobelessthanorequal",
+      "matches": {
+        "jest expect tobelessthanorequal": true,
+        "tblte": true
+      }
+    },
+    {
+      "content": "expect($1).toBeLessThan($0);",
+      "doc": "expects the argument is less than",
+      "label": "jest-tobelessthan",
+      "matches": {
+        "jest expect tobelessthan": true,
+        "tblt": true
+      }
+    },
+    {
+      "content": "expect($1).resolves$0",
+      "doc": "expect promise resolves to",
+      "label": "jest-expect-resolves",
+      "matches": {
+        "expr": true,
+        "jest expect resolves": true
+      }
+    },
+    {
+      "content": "beforeEach(() => {\n\t$0\n});",
+      "doc": "beforeEach function is called once before each spec",
+      "label": "jest-beforeeach",
+      "matches": {
+        "be": true,
+        "jest beforeeach": true
+      }
+    },
+    {
+      "content": "test.todo('${1:should }');",
+      "doc": "creates a test placeholder",
+      "label": "jest-test-todo",
+      "matches": {
+        "jest test todo": true,
+        "testt": true
+      }
+    },
+    {
+      "content": "expect($1).toBeInstanceOf($0);",
+      "doc": "expects the argument is less than",
+      "label": "jest-tobeinstanceof",
+      "matches": {
+        "jest expect tobeinstanceof": true,
+        "tbi": true
+      }
+    },
+    {
+      "content": "it('${1:should }', () => {\n\t$0\n});",
+      "doc": "creates an it block",
+      "label": "jest-it",
+      "matches": {
+        "it": true,
+        "jest it": true
+      }
+    },
+    {
+      "content": "describe('${1:Name of the group}', () => {\n\t$0\n});",
+      "doc": "creates a describe block",
+      "label": "jest-describe",
+      "matches": {
+        "desc": true,
+        "jest describe": true
+      }
+    },
+    {
+      "content": "test('${1:should }', async () => {\n\t$0\n});",
+      "doc": "creates an test block with async callback function",
+      "label": "jest-test-async",
+      "matches": {
+        "jest test async": true,
+        "testa": true
+      }
+    },
+    {
+      "content": "expect($1).toBeGreaterThanOrEqual($0);",
+      "doc": "expects the argument is greater than",
+      "label": "jest-tobegreaterthanorequal",
+      "matches": {
+        "jest expect tobegreaterthanorequal": true,
+        "tbgte": true
+      }
+    },
+    {
+      "content": "it.each([${1:[1, 2], [2, 4]}])(\n\t'${2:double(%d)}',\n\t(${3:input, expected}) => {\n\t\t${0:expect(double(input)).toBe(expected);}\n\t}\n);",
+      "doc": "creates an it block with different test data sets",
+      "label": "jest-it-each",
+      "matches": {
+        "ite": true,
+        "jest it each": true
+      }
+    },
+    {
+      "content": "describe.each([${1:[1, 2], [2, 4]}])(\n\t'${2:double(%d)}',\n\t(${3:input, expected}) => {\n\t\ttest(`returns \\${expected}`, () => {\n\t\t\t${4:expect(double(input)).toBe(expected);}\n\t\t});\n\t}\n);",
+      "doc": "creates a describe block with different test data sets",
+      "label": "jest-describe-each",
+      "matches": {
+        "desce": true,
+        "jest describe each": true
+      }
+    },
+    {
+      "content": "expect($1).toBe($0);",
+      "doc": "expects the first argument to be equal with the second one",
+      "label": "jest-tobe",
+      "matches": {
+        "jest expect tobe": true,
+        "tb": true
+      }
+    },
+    {
+      "content": "test.skip('${1:should }', () => {\n\t$0\n});",
+      "doc": "creates a test block that will be skipped",
+      "label": "jest-test-skip",
+      "matches": {
+        "jest test skip": true,
+        "tests": true
       }
     }
   ]

@@ -10,6 +10,14 @@
       }
     },
     {
+      "content": "require('dotenv').config({ path: '${1:/full/custom/path/to/your/env/vars}' })",
+      "doc": "You may specify a custom path if your file containing environment variables is located elsewhere.",
+      "label": "dotenv-path",
+      "matches": {
+        "dotenv path": true
+      }
+    },
+    {
       "content": "require('dotenv').config({ encoding: '${1:latin1}' })",
       "doc": "You may specify the encoding of your file containing environment variables.",
       "label": "dotenv-encoding",
@@ -23,14 +31,6 @@
       "label": "dotenv-require",
       "matches": {
         "dotenv require": true
-      }
-    },
-    {
-      "content": "require('dotenv').config({ path: '${1:/full/custom/path/to/your/env/vars}' })",
-      "doc": "You may specify a custom path if your file containing environment variables is located elsewhere.",
-      "label": "dotenv-path",
-      "matches": {
-        "dotenv path": true
       }
     }
   ]

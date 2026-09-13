@@ -2,51 +2,19 @@
   "extends": [],
   "snippets": [
     {
-      "content": "dict create ${0:?key value key value ...?}",
-      "doc": "Return a new dictionary that contains each of the key/value mappings listed as arguments (keys and values alternating, with each key being followed by its associated value.)",
-      "label": "Create a dict",
-      "matches": {
-        "dict create": true
-      }
-    },
-    {
-      "content": "lreverse \"${0:list}\"",
-      "doc": "The lreverse command returns a list that has the same elements as its input list, list, except with the elements in the reverse order.",
-      "label": "Reverse the order of a list",
-      "matches": {
-        "lreverse": true
-      }
-    },
-    {
-      "content": "lsearch ${1:?options?} \"${2:list}\" {${0:pattern}}",
-      "doc": "This command searches the elements of list to see if one of them matches pattern. If so, the command returns the index of the first matching element (unless the options -all or -inline are specified.) If not, the command returns -1 or (if options -all or -inline are specified) the empty string.",
-      "label": "Search a list for an element",
-      "matches": {
-        "lsearch": true
-      }
-    },
-    {
-      "content": "lset ${1:varName} ${2:?index ...?} {${0:newValue}}",
-      "doc": "The lset command accepts a parameter, varName, which it interprets as the name of a variable containing a Tcl list. It also accepts zero or more indices into the list. The indices may be presented either consecutively on the command line, or grouped in a Tcl list and presented as a single argument. Finally, it accepts a new value for an element of varName.",
-      "label": "Change an element in a list",
-      "matches": {
-        "lset": true
-      }
-    },
-    {
-      "content": "lsort ${1:?options?} \"${0:list}\"",
-      "doc": "This command sorts the elements of list, returning a new list in sorted order.",
-      "label": "Sort the elements of a list",
-      "matches": {
-        "lsort": true
-      }
-    },
-    {
       "content": "open ${1:fileName} ${2:access} ${0:permissions}",
       "doc": "open a file channel",
       "label": "Open a file-based or command pipeline channel",
       "matches": {
         "open": true
+      }
+    },
+    {
+      "content": "dict create ${0:?key value key value ...?}",
+      "doc": "Return a new dictionary that contains each of the key/value mappings listed as arguments (keys and values alternating, with each key being followed by its associated value.)",
+      "label": "Create a dict",
+      "matches": {
+        "dict create": true
       }
     },
     {
@@ -58,166 +26,6 @@
       }
     },
     {
-      "content": "proc ${1:name} {${2:args}} {\n\t${0:body}\n}",
-      "doc": "The proc command creates a new Tcl procedure named name, replacing any existing command or procedure there may have been by that name. Whenever the new command is invoked, the contents of body will be executed by the Tcl interpreter.",
-      "label": "Create a Tcl procedure",
-      "matches": {
-        "proc": true
-      }
-    },
-    {
-      "content": "file copy ${1:-force} ${2:--} ${3:source} ${0:target}",
-      "doc": "This command makes a copy of the file or directory source under the pathname target. If target is an existing directory, then multiple source files can be specified. In this case, the commmand makes a copy inside targetDir of each source file listed. If a directory is specified as a source, then the contents of the directory will be recursively copied into targetDir. Existing files will not be overwritten unless the -force option is specified (when Tcl will also attempt to adjust permissions on the destination file or directory if that is necessary to allow the copy to proceed). -- marks the end of switches; the argument following the -- will be treated as a source even if it starts with a -.",
-      "label": "Copy file",
-      "matches": {
-        "file copy": true
-      }
-    },
-    {
-      "content": "puts ${1:-nonewline} ${2:?channelId?} \"${0:string}\"",
-      "doc": "Writes the characters given by string to the channel give by channelId",
-      "label": "Write to a channel",
-      "matches": {
-        "puts": true
-      }
-    },
-    {
-      "content": "file delete ${1:-force} ${2:--} ${3:source} ${0:target}",
-      "doc": "Removes the file or directory specified by each pathname argument. Non-empty directories will be removed only if the -force option is specified. -- marks the end of switches; the argument following the -- will be treated as a source even if it starts with a -.",
-      "label": "Delete file",
-      "matches": {
-        "file delete": true
-      }
-    },
-    {
-      "content": "regexp ${1:?switches?} {${2:exp}} ${3:string} ${4:?matchVar?} ${0:?subMatchVar subMatchVar ...?}",
-      "doc": "Determines whether the regular expression exp matches part or all of string and returns 1 if it does, 0 if it does not, unless -inline is specified",
-      "label": "Match a regular expression against a string",
-      "matches": {
-        "regexp": true
-      }
-    },
-    {
-      "content": "file dirname ${0:name}",
-      "doc": "Returns a name comprised of all of the path components in name excluding the last element. If name is a relative file name and only contains one path element, then returns “.”. If name refers to a root directory, then the root directory is returned.",
-      "label": "Get the directory name",
-      "matches": {
-        "file dirname": true
-      }
-    },
-    {
-      "content": "regsub ${1:?switches?} {${2:exp}} ${3:string} {${4:subSpec}} ${0:?varName?}",
-      "doc": "This command matches the regular expression exp against string, and either copies string to the variable whose name is given by varName or returns string if varName is not present.",
-      "label": "Perform substitutions based on regular expression pattern matching",
-      "matches": {
-        "regsub": true
-      }
-    },
-    {
-      "content": "file exists ${0:name}",
-      "doc": "Returns 1 if file name exists and the current user has search privileges for the directories leading to it, 0 otherwise.",
-      "label": "File existence",
-      "matches": {
-        "file exists": true
-      }
-    },
-    {
-      "content": "rename ${1:oldName} ${0:newName}",
-      "doc": "Rename the command that used to be called oldName so that it is now called newName. If newName is an empty string then oldName is deleted.",
-      "label": "Rename or delete a command",
-      "matches": {
-        "rename": true
-      }
-    },
-    {
-      "content": "file join ${1:name} ${0:?name ...?}",
-      "doc": "Takes one or more file names and combines them, using the correct path separator for the current platform. If a particular name is relative, then it will be joined to the previous file name argument. Otherwise, any earlier arguments will be discarded, and joining will proceed from the current argument.",
-      "label": "Combine file names",
-      "matches": {
-        "file join": true
-      }
-    },
-    {
-      "content": "switch ${1:?options?} ${2:string} {\n\t${3:pattern1} {${0:expr1}}\n\tdefault {${4:default expr}}\n}",
-      "doc": "Returns the value of variable varName. If value is specified, then set the value of varName to value, creating a new variable if one does not already exist, and return its value.",
-      "label": "Evaluate one of several scripts, depending on a given value",
-      "matches": {
-        "switch": true
-      }
-    },
-    {
-      "content": "file mkdir ${0:dir ...}",
-      "doc": "Creates each directory specified. For each pathname dir specified, this command will create all non-existing parent directories as well as dir itself. If an existing directory is specified, then no action is taken and no error is returned. Trying to overwrite an existing file with a directory will result in an error. Arguments are processed in the order specified, halting at the first error, if any.",
-      "label": "Create a directory",
-      "matches": {
-        "file mkdir": true
-      }
-    },
-    {
-      "content": "unset ${1:-nocomplain} ${2:--} ${0:?name name name ...?}",
-      "doc": "This command removes one or more variables. Each name is a variable name, specified in any of the ways acceptable to the set command. If a name refers to an element of an array then that element is removed without affecting the rest of the array. If a name consists of an array name with no parenthesized index, then the entire array is deleted. The unset command returns an empty string as result. If -nocomplain is specified as the first argument, any possible errors are suppressed. The option may not be abbreviated, in order to disambiguate it from possible variable names. The option -- indicates the end of the options, and should be used if you wish to remove a variable with the same name as any of the options.",
-      "label": "Delete variables",
-      "matches": {
-        "unset": true
-      }
-    },
-    {
-      "content": "file tail ${0:name}",
-      "doc": "Returns all of the characters in the last filesystem component of name. Any trailing directory separator in name is ignored. If name contains no separators then returns name. So, file tail a/b, file tail a/b/ and file tail b all return b.",
-      "label": "Get last filesystem component name",
-      "matches": {
-        "file tail": true
-      }
-    },
-    {
-      "content": "while {${1:test}} {\n\t${0:body}\n}",
-      "doc": "Evaluate test as an expression and if true, execute body until test evaluates to false or break is encountered.",
-      "label": "'While' loop",
-      "matches": {
-        "while": true
-      }
-    },
-    {
-      "content": "file type ${0:name}",
-      "doc": "Returns a string giving the type of file name, which will be one of file, directory, characterSpecial, blockSpecial, fifo, link, or socket.",
-      "label": "Get file type",
-      "matches": {
-        "file type": true
-      }
-    },
-    {
-      "content": "################################################################################\n#\n# Author:      ${1:Author}\n# Date:        ${CURRENT_MONTH}/${CURRENT_DATE}/${CURRENT_YEAR}\n# Description: ${2:Description}\n#\n# Arguments:\n# * ${3:`argument_name`} - ${0: description.}\n#\n################################################################################",
-      "doc": "Documentation template for a TCL proc.",
-      "label": "Comment block for procedure",
-      "matches": {
-        "#proc documentation": true
-      }
-    },
-    {
-      "content": "foreach ${1:varName} \"${2:list}\" {\n\t${0:body}\n}",
-      "doc": "The foreach command implements a loop where the loop variable(s) take on values from one or more lists. In the simplest case there is one loop variable, varname, and one list, list, that is a list of values to assign to varname. The body argument is a Tcl script. For each element of list (in order from first to last), foreach assigns the contents of the element to varname as if the lindex command had been used to extract the element, then calls the Tcl interpreter to execute body.",
-      "label": "Iterate over all elements in one or more lists",
-      "matches": {
-        "foreach": true
-      }
-    },
-    {
-      "content": "append ${1:varName} ${0:value}",
-      "doc": "Append all of the value arguments to the current value of variable varName. If varName does not exist, it is given a value equal to the concatenation of all the value arguments. The result of this command is the new value stored in variable varName.",
-      "label": "Append to variable",
-      "matches": {
-        "append": true
-      }
-    },
-    {
-      "content": "apply ${1:function} ${0:?arg1 arg2 ...?}",
-      "doc": "The command apply applies the function func to the arguments arg1 arg2 ... and returns the result.",
-      "label": "Apply an anonymous function",
-      "matches": {
-        "apply": true
-      }
-    },
-    {
       "content": "dict exists ${1:dictionaryValue} ${2:key} ${0:?key ...?}",
       "doc": "This returns a boolean value indicating whether the given key (or path of keys through a set of nested dictionaries) exists in the given dictionary value. This returns a true value exactly when dict get on that path will succeed.",
       "label": "Dict key existence",
@@ -226,11 +34,11 @@
       }
     },
     {
-      "content": "array ${1:option} ${2:arrayName} ${0:?arg arg ...?}",
-      "doc": "This command performs one of several operations on the variable given by arrayName. Unless otherwise specified for individual commands, arrayName must be the name of an existing array variable. The option argument determines what action is carried out by the command.",
-      "label": "Manipulate array variables",
+      "content": "proc ${1:name} {${2:args}} {\n\t${0:body}\n}",
+      "doc": "The proc command creates a new Tcl procedure named name, replacing any existing command or procedure there may have been by that name. Whenever the new command is invoked, the contents of body will be executed by the Tcl interpreter.",
+      "label": "Create a Tcl procedure",
       "matches": {
-        "array": true
+        "proc": true
       }
     },
     {
@@ -242,19 +50,11 @@
       }
     },
     {
-      "content": "array names ${1:arrayName} ${2:?mode?} ${0:?pattern?}",
-      "doc": "Returns a list containing the names of all of the elements in the array that match pattern. Mode may be one of -exact, -glob, or -regexp. If specified, mode designates which matching rules to use to match pattern against the names of the elements in the array. If not specified, mode defaults to -glob. If pattern is omitted then the command returns all of the element names in the array. If there are no (matching) elements in the array, or if arrayName is not the name of an array variable, then an empty string is returned.",
-      "label": "Get array names",
+      "content": "puts ${1:-nonewline} ${2:?channelId?} \"${0:string}\"",
+      "doc": "Writes the characters given by string to the channel give by channelId",
+      "label": "Write to a channel",
       "matches": {
-        "array names": true
-      }
-    },
-    {
-      "content": "if {${1:expr1}} {\n\t$2\n} elseif {${3:expr2}} {\n\t$4\n} else {\n\t$0\n}",
-      "doc": "if elseif else statement",
-      "label": "Execute scripts conditionally - if elseif else",
-      "matches": {
-        "iffe": true
+        "puts": true
       }
     },
     {
@@ -266,19 +66,11 @@
       }
     },
     {
-      "content": "array get ${1:arrayName} ${0:?pattern?}",
-      "doc": "Returns a list containing pairs of elements. The first element in each pair is the name of an element in arrayName and the second element of each pair is the value of the array element. The order of the pairs is undefined. If pattern is not specified, then all of the elements of the array are included in the result. If pattern is specified, then only those elements whose names match pattern (using the matching rules of string match) are included. If arrayName is not the name of an array variable, or if the array contains no elements, then an empty list is returned. If traces on the array modify the list of elements, the elements returned are those that exist both before and after the call to array get.",
-      "label": "Get array elements",
+      "content": "regsub ${1:?switches?} {${2:exp}} ${3:string} {${4:subSpec}} ${0:?varName?}",
+      "doc": "This command matches the regular expression exp against string, and either copies string to the variable whose name is given by varName or returns string if varName is not present.",
+      "label": "Perform substitutions based on regular expression pattern matching",
       "matches": {
-        "array get": true
-      }
-    },
-    {
-      "content": "else {\n\t$0\n}",
-      "doc": "else statement",
-      "label": "Execute scripts conditionally - else",
-      "matches": {
-        "else": true
+        "regsub": true
       }
     },
     {
@@ -290,11 +82,11 @@
       }
     },
     {
-      "content": "array set ${1:arrayName} \"${0:list}\"",
-      "doc": "Sets the values of one or more elements in arrayName. list must have a form like that returned by array get, consisting of an even number of elements. Each odd-numbered element in list is treated as an element name within arrayName, and the following element in list is used as a new value for that array element. If the variable arrayName does not already exist and list is empty, arrayName is created with an empty array value.",
-      "label": "Set array values",
+      "content": "rename ${1:oldName} ${0:newName}",
+      "doc": "Rename the command that used to be called oldName so that it is now called newName. If newName is an empty string then oldName is deleted.",
+      "label": "Rename or delete a command",
       "matches": {
-        "array set": true
+        "rename": true
       }
     },
     {
@@ -306,11 +98,11 @@
       }
     },
     {
-      "content": "array unset ${1:arrayName} ${0:?pattern?}",
-      "doc": "Unsets all of the elements in the array that match pattern (using the matching rules of string match). If arrayName is not the name of an array variable or there are no matching elements in the array, no error will be raised. If pattern is omitted and arrayName is an array variable, then the command unsets the entire array. The command always returns an empty string.",
-      "label": "Unset array elements",
+      "content": "set ${1:varName} ${0:value}",
+      "doc": "Returns the value of variable varName. If value is specified, then set the value of varName to value, creating a new variable if one does not already exist, and return its value.",
+      "label": "Read and write variables",
       "matches": {
-        "array unset": true
+        "set": true
       }
     },
     {
@@ -322,19 +114,11 @@
       }
     },
     {
-      "content": "array exists ${0:arrayName}",
-      "doc": "Returns 1 if arrayName is an array variable, 0 if there is no variable by that name or if it is a scalar variable.",
-      "label": "Existence of array",
+      "content": "switch ${1:?options?} ${2:string} {\n\t${3:pattern1} {${0:expr1}}\n\tdefault {${4:default expr}}\n}",
+      "doc": "Returns the value of variable varName. If value is specified, then set the value of varName to value, creating a new variable if one does not already exist, and return its value.",
+      "label": "Evaluate one of several scripts, depending on a given value",
       "matches": {
-        "array exists": true
-      }
-    },
-    {
-      "content": "lappend ${1:varName} ${0:?value value value ...?}",
-      "doc": "This command treats the variable given by varName as a list and appends each of the value arguments to that list as a separate element, with spaces between elements. If varName does not exist, it is created as a list with elements given by the value arguments.",
-      "label": "Append list of elements onto a variable",
-      "matches": {
-        "lappend": true
+        "switch": true
       }
     },
     {
@@ -346,27 +130,11 @@
       }
     },
     {
-      "content": "catch {${1:script}} ${2:?resultVarName?} ${0:?optionsVarName?}",
-      "doc": "The catch command may be used to prevent errors from aborting command interpretation. It calls the Tcl interpreter recursively to execute script, and always returns without raising an error, regardless of any errors that might occur while executing script.",
-      "label": "Evaluate script and trap exceptional returns",
+      "content": "unset ${1:-nocomplain} ${2:--} ${0:?name name name ...?}",
+      "doc": "This command removes one or more variables. Each name is a variable name, specified in any of the ways acceptable to the set command. If a name refers to an element of an array then that element is removed without affecting the rest of the array. If a name consists of an array name with no parenthesized index, then the entire array is deleted. The unset command returns an empty string as result. If -nocomplain is specified as the first argument, any possible errors are suppressed. The option may not be abbreviated, in order to disambiguate it from possible variable names. The option -- indicates the end of the options, and should be used if you wish to remove a variable with the same name as any of the options.",
+      "label": "Delete variables",
       "matches": {
-        "catch": true
-      }
-    },
-    {
-      "content": "set ${1:varName} ${0:value}",
-      "doc": "Returns the value of variable varName. If value is specified, then set the value of varName to value, creating a new variable if one does not already exist, and return its value.",
-      "label": "Read and write variables",
-      "matches": {
-        "set": true
-      }
-    },
-    {
-      "content": "lassign \"${1:list}\" ${0:?varName ...?}",
-      "doc": "This command treats the value list as a list and assigns successive elements from that list to the variables given by the varName arguments in order. If there are more variable names than list elements, the remaining variables are set to the empty string. If there are more list elements than variables, a list of unassigned elements is returned.",
-      "label": "Assign list elements to variables",
-      "matches": {
-        "lassign": true
+        "unset": true
       }
     },
     {
@@ -378,67 +146,27 @@
       }
     },
     {
-      "content": "cd ${0:dirName}",
-      "doc": "Change the current working directory to dirName, or to the home directory (as specified in the HOME environment variable) if dirName is not given. Returns an empty string. Note that the current working directory is a per-process resource; the cd command changes the working directory for all interpreters and (in a threaded environment) all threads.",
-      "label": "Change working directory",
+      "content": "while {${1:test}} {\n\t${0:body}\n}",
+      "doc": "Evaluate test as an expression and if true, execute body until test evaluates to false or break is encountered.",
+      "label": "'While' loop",
       "matches": {
-        "cd": true
+        "while": true
       }
     },
     {
-      "content": "after ${1:time in ms} ${0:?script script ...?}",
-      "doc": "This command is used to delay execution of the program or to execute a command in background sometime in the future.",
-      "label": "Executes a command after a time delay",
+      "content": "eval ${1:arg} ${0:?arg?}",
+      "doc": "Eval takes one or more arguments, which together comprise a Tcl script containing one or more commands. It concatenates all its arguments in the same fashion as the concat command, passes the concatenated string to the Tcl interpreter recursively, and returns the result of that evaluation (or any error generated by it). Note that the list command quotes sequences of words in such a way that they are not further expanded by the eval command.",
+      "label": "Evaluate a Tcl script",
       "matches": {
-        "after": true
+        "eval": true
       }
     },
     {
-      "content": "lindex \"${1:list}\" ${0:?index ...?}",
-      "doc": "The lindex command accepts a parameter, list, which it treats as a Tcl list. It also accepts zero or more indices into the list. The indices may be presented either consecutively on the command line, or grouped in a Tcl list and presented as a single argument. If additional index arguments are supplied, then each argument is used in turn to select an element from the previous indexing operation, allowing the script to select elements from sublists.",
-      "label": "Retrieve an element from a list",
+      "content": "################################################################################\n#\n# Author:      ${1:Author}\n# Date:        ${CURRENT_MONTH}/${CURRENT_DATE}/${CURRENT_YEAR}\n# Description: ${2:Description}\n#\n# Arguments:\n# * ${3:`argument_name`} - ${0: description.}\n#\n################################################################################",
+      "doc": "Documentation template for a TCL proc.",
+      "label": "Comment block for procedure",
       "matches": {
-        "lindex": true
-      }
-    },
-    {
-      "content": "clock ${0:subCommand}",
-      "doc": "The clock command performs several operations that obtain and manipulate values that represent times. Subcommands could be one of add, clicks, format, microseconds, milliseconds, scan, seconds.",
-      "label": "Obtain and manipulate dates and times",
-      "matches": {
-        "clock": true
-      }
-    },
-    {
-      "content": "clock format ${1:timeVal} ${0:?option value...?}",
-      "doc": "The clock format command produces times for display to a user or writing to an external medium. The command accepts times that are expressed in seconds from the epoch time of 1 January 1970, 00:00 UTC, as returned by clock seconds, clock scan, clock add, file atime or file mtime.",
-      "label": "Return formatted clock string",
-      "matches": {
-        "clock format": true
-      }
-    },
-    {
-      "content": "elseif {${1:expr}} {\n\t$2\n} else {\n\t$0\n}",
-      "doc": "elseif statement",
-      "label": "Execute scripts conditionally - elseif",
-      "matches": {
-        "elseif": true
-      }
-    },
-    {
-      "content": "linsert \"${1:list}\" ${1:index} ${0:element element ...}",
-      "doc": "This command produces a new list from list by inserting all of the element arguments just before the index'th element of list. Each element argument will become a separate element of the new list. If index is less than or equal to zero, then the new elements are inserted at the beginning of the list. If index is greater or equal to the length of list, it is as if it was end.",
-      "label": "Insert elements into a list",
-      "matches": {
-        "linsert": true
-      }
-    },
-    {
-      "content": "if {${1:expr}} {\n\t$2\n} else {\n\t$0\n}",
-      "doc": "if else statement",
-      "label": "Execute scripts conditionally - if else",
-      "matches": {
-        "ife": true
+        "#proc documentation": true
       }
     },
     {
@@ -458,22 +186,6 @@
       }
     },
     {
-      "content": "list ${0:?arg arg ...?}",
-      "doc": "This command returns a list comprised of all the args, or an empty string if no args are specified. Braces and backslashes get added as necessary, so that the lindex command may be used on the result to re-extract the original arguments, and also so that eval may be used to execute the resulting list, with arg1 comprising the command's name and the other args comprising its arguments.",
-      "label": "Create a list",
-      "matches": {
-        "list": true
-      }
-    },
-    {
-      "content": "clock microseconds",
-      "doc": "Returns the current time as an integer number of microseconds.",
-      "label": "Current time in microseconds",
-      "matches": {
-        "clock microseconds": true
-      }
-    },
-    {
       "content": "file attributes ${1:name} ${0:?option value option value?}",
       "doc": "This subcommand returns or sets platform-specific values associated with a file. If no option is provided, a list of the platform-specific options and their values are returned. If the name of a single option is provided, the value for the given option is returned. When an options are specified with values, they are set on the file.",
       "label": "Get/Set file attributes",
@@ -482,19 +194,131 @@
       }
     },
     {
-      "content": "llength \"${0:list}\"",
-      "doc": "Treats list as a list and returns a decimal string giving the number of elements in it.",
-      "label": "Count the number of elements in a list",
+      "content": "file copy ${1:-force} ${2:--} ${3:source} ${0:target}",
+      "doc": "This command makes a copy of the file or directory source under the pathname target. If target is an existing directory, then multiple source files can be specified. In this case, the commmand makes a copy inside targetDir of each source file listed. If a directory is specified as a source, then the contents of the directory will be recursively copied into targetDir. Existing files will not be overwritten unless the -force option is specified (when Tcl will also attempt to adjust permissions on the destination file or directory if that is necessary to allow the copy to proceed). -- marks the end of switches; the argument following the -- will be treated as a source even if it starts with a -.",
+      "label": "Copy file",
       "matches": {
-        "llength": true
+        "file copy": true
       }
     },
     {
-      "content": "clock milliseconds",
-      "doc": "Returns the current time as an integer number of milliseconds.",
-      "label": "Current time in milliseconds",
+      "content": "file delete ${1:-force} ${2:--} ${3:source} ${0:target}",
+      "doc": "Removes the file or directory specified by each pathname argument. Non-empty directories will be removed only if the -force option is specified. -- marks the end of switches; the argument following the -- will be treated as a source even if it starts with a -.",
+      "label": "Delete file",
       "matches": {
-        "clock milliseconds": true
+        "file delete": true
+      }
+    },
+    {
+      "content": "file dirname ${0:name}",
+      "doc": "Returns a name comprised of all of the path components in name excluding the last element. If name is a relative file name and only contains one path element, then returns “.”. If name refers to a root directory, then the root directory is returned.",
+      "label": "Get the directory name",
+      "matches": {
+        "file dirname": true
+      }
+    },
+    {
+      "content": "file exists ${0:name}",
+      "doc": "Returns 1 if file name exists and the current user has search privileges for the directories leading to it, 0 otherwise.",
+      "label": "File existence",
+      "matches": {
+        "file exists": true
+      }
+    },
+    {
+      "content": "after ${1:time in ms} ${0:?script script ...?}",
+      "doc": "This command is used to delay execution of the program or to execute a command in background sometime in the future.",
+      "label": "Executes a command after a time delay",
+      "matches": {
+        "after": true
+      }
+    },
+    {
+      "content": "file join ${1:name} ${0:?name ...?}",
+      "doc": "Takes one or more file names and combines them, using the correct path separator for the current platform. If a particular name is relative, then it will be joined to the previous file name argument. Otherwise, any earlier arguments will be discarded, and joining will proceed from the current argument.",
+      "label": "Combine file names",
+      "matches": {
+        "file join": true
+      }
+    },
+    {
+      "content": "append ${1:varName} ${0:value}",
+      "doc": "Append all of the value arguments to the current value of variable varName. If varName does not exist, it is given a value equal to the concatenation of all the value arguments. The result of this command is the new value stored in variable varName.",
+      "label": "Append to variable",
+      "matches": {
+        "append": true
+      }
+    },
+    {
+      "content": "apply ${1:function} ${0:?arg1 arg2 ...?}",
+      "doc": "The command apply applies the function func to the arguments arg1 arg2 ... and returns the result.",
+      "label": "Apply an anonymous function",
+      "matches": {
+        "apply": true
+      }
+    },
+    {
+      "content": "array ${1:option} ${2:arrayName} ${0:?arg arg ...?}",
+      "doc": "This command performs one of several operations on the variable given by arrayName. Unless otherwise specified for individual commands, arrayName must be the name of an existing array variable. The option argument determines what action is carried out by the command.",
+      "label": "Manipulate array variables",
+      "matches": {
+        "array": true
+      }
+    },
+    {
+      "content": "file tail ${0:name}",
+      "doc": "Returns all of the characters in the last filesystem component of name. Any trailing directory separator in name is ignored. If name contains no separators then returns name. So, file tail a/b, file tail a/b/ and file tail b all return b.",
+      "label": "Get last filesystem component name",
+      "matches": {
+        "file tail": true
+      }
+    },
+    {
+      "content": "array names ${1:arrayName} ${2:?mode?} ${0:?pattern?}",
+      "doc": "Returns a list containing the names of all of the elements in the array that match pattern. Mode may be one of -exact, -glob, or -regexp. If specified, mode designates which matching rules to use to match pattern against the names of the elements in the array. If not specified, mode defaults to -glob. If pattern is omitted then the command returns all of the element names in the array. If there are no (matching) elements in the array, or if arrayName is not the name of an array variable, then an empty string is returned.",
+      "label": "Get array names",
+      "matches": {
+        "array names": true
+      }
+    },
+    {
+      "content": "file type ${0:name}",
+      "doc": "Returns a string giving the type of file name, which will be one of file, directory, characterSpecial, blockSpecial, fifo, link, or socket.",
+      "label": "Get file type",
+      "matches": {
+        "file type": true
+      }
+    },
+    {
+      "content": "array get ${1:arrayName} ${0:?pattern?}",
+      "doc": "Returns a list containing pairs of elements. The first element in each pair is the name of an element in arrayName and the second element of each pair is the value of the array element. The order of the pairs is undefined. If pattern is not specified, then all of the elements of the array are included in the result. If pattern is specified, then only those elements whose names match pattern (using the matching rules of string match) are included. If arrayName is not the name of an array variable, or if the array contains no elements, then an empty list is returned. If traces on the array modify the list of elements, the elements returned are those that exist both before and after the call to array get.",
+      "label": "Get array elements",
+      "matches": {
+        "array get": true
+      }
+    },
+    {
+      "content": "array set ${1:arrayName} \"${0:list}\"",
+      "doc": "Sets the values of one or more elements in arrayName. list must have a form like that returned by array get, consisting of an even number of elements. Each odd-numbered element in list is treated as an element name within arrayName, and the following element in list is used as a new value for that array element. If the variable arrayName does not already exist and list is empty, arrayName is created with an empty array value.",
+      "label": "Set array values",
+      "matches": {
+        "array set": true
+      }
+    },
+    {
+      "content": "foreach ${1:varName} \"${2:list}\" {\n\t${0:body}\n}",
+      "doc": "The foreach command implements a loop where the loop variable(s) take on values from one or more lists. In the simplest case there is one loop variable, varname, and one list, list, that is a list of values to assign to varname. The body argument is a Tcl script. For each element of list (in order from first to last), foreach assigns the contents of the element to varname as if the lindex command had been used to extract the element, then calls the Tcl interpreter to execute body.",
+      "label": "Iterate over all elements in one or more lists",
+      "matches": {
+        "foreach": true
+      }
+    },
+    {
+      "content": "array unset ${1:arrayName} ${0:?pattern?}",
+      "doc": "Unsets all of the elements in the array that match pattern (using the matching rules of string match). If arrayName is not the name of an array variable or there are no matching elements in the array, no error will be raised. If pattern is omitted and arrayName is an array variable, then the command unsets the entire array. The command always returns an empty string.",
+      "label": "Unset array elements",
+      "matches": {
+        "array unset": true
       }
     },
     {
@@ -506,19 +330,11 @@
       }
     },
     {
-      "content": "clock seconds",
-      "doc": "Returns the current time as an integer number of seconds.",
-      "label": "Current time in seconds",
+      "content": "list ${0:?arg arg ...?}",
+      "doc": "This command returns a list comprised of all the args, or an empty string if no args are specified. Braces and backslashes get added as necessary, so that the lindex command may be used on the result to re-extract the original arguments, and also so that eval may be used to execute the resulting list, with arg1 comprising the command's name and the other args comprising its arguments.",
+      "label": "Create a list",
       "matches": {
-        "clock seconds": true
-      }
-    },
-    {
-      "content": "lmap ${1:varName} \"${2:list}\" {${0:body}}",
-      "doc": "The lmap command implements a loop where the loop variable(s) take on values from one or more lists, and the loop returns a list of results collected from each iteration. 'varName' is the loop variable, and 'list' is a list of values to assign to varname and the 'body' argument is a Tcl script. For each element of list (in order from first to last), lmap assigns the contents of the element to varname as if the lindex command had been used to extract the element, then calls the Tcl interpreter to execute body. If execution of the body completes normally then the result of the body is appended to an accumulator list. lmap returns the accumulator list.",
-      "label": "Iterate over all elements in one or more lists and collect results",
-      "matches": {
-        "lmap": true
+        "list": true
       }
     },
     {
@@ -530,11 +346,11 @@
       }
     },
     {
-      "content": "close ${1:channelId} ${0:?r(ead)|w(rite)?}",
-      "doc": "Closes or half-closes the channel given by channelId. ChannelId must be an identifier for an open channel such as a Tcl standard channel (stdin, stdout, or stderr), the return value from an invocation of open or socket, or the result of a channel creation command provided by a Tcl extension.",
-      "label": "Close an open channel",
+      "content": "llength \"${0:list}\"",
+      "doc": "Treats list as a list and returns a decimal string giving the number of elements in it.",
+      "label": "Count the number of elements in a list",
       "matches": {
-        "close": true
+        "llength": true
       }
     },
     {
@@ -546,6 +362,46 @@
       }
     },
     {
+      "content": "catch {${1:script}} ${2:?resultVarName?} ${0:?optionsVarName?}",
+      "doc": "The catch command may be used to prevent errors from aborting command interpretation. It calls the Tcl interpreter recursively to execute script, and always returns without raising an error, regardless of any errors that might occur while executing script.",
+      "label": "Evaluate script and trap exceptional returns",
+      "matches": {
+        "catch": true
+      }
+    },
+    {
+      "content": "lmap ${1:varName} \"${2:list}\" {${0:body}}",
+      "doc": "The lmap command implements a loop where the loop variable(s) take on values from one or more lists, and the loop returns a list of results collected from each iteration. 'varName' is the loop variable, and 'list' is a list of values to assign to varname and the 'body' argument is a Tcl script. For each element of list (in order from first to last), lmap assigns the contents of the element to varname as if the lindex command had been used to extract the element, then calls the Tcl interpreter to execute body. If execution of the body completes normally then the result of the body is appended to an accumulator list. lmap returns the accumulator list.",
+      "label": "Iterate over all elements in one or more lists and collect results",
+      "matches": {
+        "lmap": true
+      }
+    },
+    {
+      "content": "regexp ${1:?switches?} {${2:exp}} ${3:string} ${4:?matchVar?} ${0:?subMatchVar subMatchVar ...?}",
+      "doc": "Determines whether the regular expression exp matches part or all of string and returns 1 if it does, 0 if it does not, unless -inline is specified",
+      "label": "Match a regular expression against a string",
+      "matches": {
+        "regexp": true
+      }
+    },
+    {
+      "content": "if {${1:expr1}} {\n\t$2\n} elseif {${3:expr2}} {\n\t$4\n} else {\n\t$0\n}",
+      "doc": "if elseif else statement",
+      "label": "Execute scripts conditionally - if elseif else",
+      "matches": {
+        "iffe": true
+      }
+    },
+    {
+      "content": "cd ${0:dirName}",
+      "doc": "Change the current working directory to dirName, or to the home directory (as specified in the HOME environment variable) if dirName is not given. Returns an empty string. Note that the current working directory is a per-process resource; the cd command changes the working directory for all interpreters and (in a threaded environment) all threads.",
+      "label": "Change working directory",
+      "matches": {
+        "cd": true
+      }
+    },
+    {
       "content": "list \"${1:list}\" ${2:first} {${0:last}}",
       "doc": "This command will return a new list consisting of elements first through last, inclusive. The index values first and last are interpreted the same as index values for the command string index, supporting simple index arithmetic and indices relative to the end of the list.",
       "label": "Return one or more adjacent elements from a list",
@@ -554,19 +410,19 @@
       }
     },
     {
-      "content": "concat ${0:?arg arg ...?}",
-      "doc": "This command joins each of its arguments together with spaces after trimming leading and trailing white-space from each of them. If all of the arguments are lists, this has the same effect as concatenating them into a single list. Arguments that are empty (after trimming) are ignored entirely. It permits any number of arguments; if no args are supplied, the result is an empty string.",
-      "label": "Join lists together",
+      "content": "array exists ${0:arrayName}",
+      "doc": "Returns 1 if arrayName is an array variable, 0 if there is no variable by that name or if it is a scalar variable.",
+      "label": "Existence of array",
       "matches": {
-        "concat": true
+        "array exists": true
       }
     },
     {
-      "content": "eval ${1:arg} ${0:?arg?}",
-      "doc": "Eval takes one or more arguments, which together comprise a Tcl script containing one or more commands. It concatenates all its arguments in the same fashion as the concat command, passes the concatenated string to the Tcl interpreter recursively, and returns the result of that evaluation (or any error generated by it). Note that the list command quotes sequences of words in such a way that they are not further expanded by the eval command.",
-      "label": "Evaluate a Tcl script",
+      "content": "clock ${0:subCommand}",
+      "doc": "The clock command performs several operations that obtain and manipulate values that represent times. Subcommands could be one of add, clicks, format, microseconds, milliseconds, scan, seconds.",
+      "label": "Obtain and manipulate dates and times",
       "matches": {
-        "eval": true
+        "clock": true
       }
     },
     {
@@ -578,19 +434,35 @@
       }
     },
     {
-      "content": "dict ${1:option} ${2:arg} ${0:?arg ...?}",
-      "doc": "Performs one of several operations on dictionary values or variables containing dictionary values",
-      "label": "Manipulate dictionaries",
+      "content": "linsert \"${1:list}\" ${1:index} ${0:element element ...}",
+      "doc": "This command produces a new list from list by inserting all of the element arguments just before the index'th element of list. Each element argument will become a separate element of the new list. If index is less than or equal to zero, then the new elements are inserted at the beginning of the list. If index is greater or equal to the length of list, it is as if it was end.",
+      "label": "Insert elements into a list",
       "matches": {
-        "dict": true
+        "linsert": true
       }
     },
     {
-      "content": "join \"${1:list}\" ${0:?joinString?}",
-      "doc": "The list argument must be a valid Tcl list. This command returns the string formed by joining all of the elements of list together with joinString separating each adjacent pair of elements. The joinString argument defaults to a space character.",
-      "label": "Create a string by joining together list of elements",
+      "content": "elseif {${1:expr}} {\n\t$2\n} else {\n\t$0\n}",
+      "doc": "elseif statement",
+      "label": "Execute scripts conditionally - elseif",
       "matches": {
-        "join": true
+        "elseif": true
+      }
+    },
+    {
+      "content": "lassign \"${1:list}\" ${0:?varName ...?}",
+      "doc": "This command treats the value list as a list and assigns successive elements from that list to the variables given by the varName arguments in order. If there are more variable names than list elements, the remaining variables are set to the empty string. If there are more list elements than variables, a list of unassigned elements is returned.",
+      "label": "Assign list elements to variables",
+      "matches": {
+        "lassign": true
+      }
+    },
+    {
+      "content": "lreplace \"${1:list}\" ${2:first} ${3:last} {${0:?element element ...?}}",
+      "doc": "lreplace returns a new list formed by replacing zero or more elements of list with the element arguments. first and last are index values specifying the first and last elements of the range to replace. The index values first and last are interpreted the same as index values for the command string index, supporting simple index arithmetic and indices relative to the end of the list.",
+      "label": "Replace elements in a list with new elements",
+      "matches": {
+        "lreplace": true
       }
     },
     {
@@ -602,11 +474,139 @@
       }
     },
     {
-      "content": "lreplace \"${1:list}\" ${2:first} ${3:last} {${0:?element element ...?}}",
-      "doc": "lreplace returns a new list formed by replacing zero or more elements of list with the element arguments. first and last are index values specifying the first and last elements of the range to replace. The index values first and last are interpreted the same as index values for the command string index, supporting simple index arithmetic and indices relative to the end of the list.",
-      "label": "Replace elements in a list with new elements",
+      "content": "clock microseconds",
+      "doc": "Returns the current time as an integer number of microseconds.",
+      "label": "Current time in microseconds",
       "matches": {
-        "lreplace": true
+        "clock microseconds": true
+      }
+    },
+    {
+      "content": "clock format ${1:timeVal} ${0:?option value...?}",
+      "doc": "The clock format command produces times for display to a user or writing to an external medium. The command accepts times that are expressed in seconds from the epoch time of 1 January 1970, 00:00 UTC, as returned by clock seconds, clock scan, clock add, file atime or file mtime.",
+      "label": "Return formatted clock string",
+      "matches": {
+        "clock format": true
+      }
+    },
+    {
+      "content": "lreverse \"${0:list}\"",
+      "doc": "The lreverse command returns a list that has the same elements as its input list, list, except with the elements in the reverse order.",
+      "label": "Reverse the order of a list",
+      "matches": {
+        "lreverse": true
+      }
+    },
+    {
+      "content": "join \"${1:list}\" ${0:?joinString?}",
+      "doc": "The list argument must be a valid Tcl list. This command returns the string formed by joining all of the elements of list together with joinString separating each adjacent pair of elements. The joinString argument defaults to a space character.",
+      "label": "Create a string by joining together list of elements",
+      "matches": {
+        "join": true
+      }
+    },
+    {
+      "content": "if {${1:expr}} {\n\t$2\n} else {\n\t$0\n}",
+      "doc": "if else statement",
+      "label": "Execute scripts conditionally - if else",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "file mkdir ${0:dir ...}",
+      "doc": "Creates each directory specified. For each pathname dir specified, this command will create all non-existing parent directories as well as dir itself. If an existing directory is specified, then no action is taken and no error is returned. Trying to overwrite an existing file with a directory will result in an error. Arguments are processed in the order specified, halting at the first error, if any.",
+      "label": "Create a directory",
+      "matches": {
+        "file mkdir": true
+      }
+    },
+    {
+      "content": "lsearch ${1:?options?} \"${2:list}\" {${0:pattern}}",
+      "doc": "This command searches the elements of list to see if one of them matches pattern. If so, the command returns the index of the first matching element (unless the options -all or -inline are specified.) If not, the command returns -1 or (if options -all or -inline are specified) the empty string.",
+      "label": "Search a list for an element",
+      "matches": {
+        "lsearch": true
+      }
+    },
+    {
+      "content": "clock seconds",
+      "doc": "Returns the current time as an integer number of seconds.",
+      "label": "Current time in seconds",
+      "matches": {
+        "clock seconds": true
+      }
+    },
+    {
+      "content": "clock milliseconds",
+      "doc": "Returns the current time as an integer number of milliseconds.",
+      "label": "Current time in milliseconds",
+      "matches": {
+        "clock milliseconds": true
+      }
+    },
+    {
+      "content": "close ${1:channelId} ${0:?r(ead)|w(rite)?}",
+      "doc": "Closes or half-closes the channel given by channelId. ChannelId must be an identifier for an open channel such as a Tcl standard channel (stdin, stdout, or stderr), the return value from an invocation of open or socket, or the result of a channel creation command provided by a Tcl extension.",
+      "label": "Close an open channel",
+      "matches": {
+        "close": true
+      }
+    },
+    {
+      "content": "lset ${1:varName} ${2:?index ...?} {${0:newValue}}",
+      "doc": "The lset command accepts a parameter, varName, which it interprets as the name of a variable containing a Tcl list. It also accepts zero or more indices into the list. The indices may be presented either consecutively on the command line, or grouped in a Tcl list and presented as a single argument. Finally, it accepts a new value for an element of varName.",
+      "label": "Change an element in a list",
+      "matches": {
+        "lset": true
+      }
+    },
+    {
+      "content": "else {\n\t$0\n}",
+      "doc": "else statement",
+      "label": "Execute scripts conditionally - else",
+      "matches": {
+        "else": true
+      }
+    },
+    {
+      "content": "concat ${0:?arg arg ...?}",
+      "doc": "This command joins each of its arguments together with spaces after trimming leading and trailing white-space from each of them. If all of the arguments are lists, this has the same effect as concatenating them into a single list. Arguments that are empty (after trimming) are ignored entirely. It permits any number of arguments; if no args are supplied, the result is an empty string.",
+      "label": "Join lists together",
+      "matches": {
+        "concat": true
+      }
+    },
+    {
+      "content": "lindex \"${1:list}\" ${0:?index ...?}",
+      "doc": "The lindex command accepts a parameter, list, which it treats as a Tcl list. It also accepts zero or more indices into the list. The indices may be presented either consecutively on the command line, or grouped in a Tcl list and presented as a single argument. If additional index arguments are supplied, then each argument is used in turn to select an element from the previous indexing operation, allowing the script to select elements from sublists.",
+      "label": "Retrieve an element from a list",
+      "matches": {
+        "lindex": true
+      }
+    },
+    {
+      "content": "lsort ${1:?options?} \"${0:list}\"",
+      "doc": "This command sorts the elements of list, returning a new list in sorted order.",
+      "label": "Sort the elements of a list",
+      "matches": {
+        "lsort": true
+      }
+    },
+    {
+      "content": "dict ${1:option} ${2:arg} ${0:?arg ...?}",
+      "doc": "Performs one of several operations on dictionary values or variables containing dictionary values",
+      "label": "Manipulate dictionaries",
+      "matches": {
+        "dict": true
+      }
+    },
+    {
+      "content": "lappend ${1:varName} ${0:?value value value ...?}",
+      "doc": "This command treats the variable given by varName as a list and appends each of the value arguments to that list as a separate element, with spaces between elements. If varName does not exist, it is created as a list with elements given by the value arguments.",
+      "label": "Append list of elements onto a variable",
+      "matches": {
+        "lappend": true
       }
     },
     {

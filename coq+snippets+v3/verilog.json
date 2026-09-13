@@ -2,43 +2,19 @@
   "extends": [],
   "snippets": [
     {
-      "content": "typedef enum ${2:logic[15:0]} \n{\n\n${3:REG = 16'h0000}\n\n} ${1:my_dest_t};",
-      "doc": "Typedef enum",
-      "label": "typedef enum",
+      "content": "else if (${1}) begin\n\n${0}\n\nend",
+      "doc": "else-if statement",
+      "label": "else-if",
       "matches": {
-        "tde": true
+        "eif": true
       }
     },
     {
-      "content": "forever begin\n\t${0}\nend",
-      "doc": "Forever loop",
-      "label": "forever",
+      "content": "else begin\n\n${0}\n\nend",
+      "doc": "else-if statement",
+      "label": "else",
       "matches": {
-        "forev": true
-      }
-    },
-    {
-      "content": "if (${1}) begin\n\n\t${2}\n\nend\n\nelse begin\n\n\t${3}\n\nend",
-      "doc": "If-else statement",
-      "label": "if-else",
-      "matches": {
-        "ife": true
-      }
-    },
-    {
-      "content": "whlie (${1}) begin\n\t${0}\nend",
-      "doc": "While loop",
-      "label": "while",
-      "matches": {
-        "wh": true
-      }
-    },
-    {
-      "content": "initial begin\n\t${0}\nend",
-      "doc": "Initial Begin",
-      "label": "Initial Begin",
-      "matches": {
-        "ini": true
+        "el": true
       }
     },
     {
@@ -50,11 +26,19 @@
       }
     },
     {
-      "content": "typedef struct packed {\n\n\tint ${2:data};\n\n${1:name}",
-      "doc": "Typedef struct packed",
-      "label": "typedef struct packed",
+      "content": "function ${1:void} ${2:name}(${3});\n\n\t${0}\nendfunction: $2",
+      "doc": "Function snippet",
+      "label": "function",
       "matches": {
-        "tdsp": true
+        "fun": true
+      }
+    },
+    {
+      "content": "if (${1}) begin\n\n${0}\n\nend",
+      "doc": "If statement",
+      "label": "if",
+      "matches": {
+        "if": true
       }
     },
     {
@@ -74,11 +58,51 @@
       }
     },
     {
+      "content": "task ${1:name}(${2});\n\n\t${0}\n\nendtask: $1",
+      "doc": "Task snippet",
+      "label": "task",
+      "matches": {
+        "task": true
+      }
+    },
+    {
+      "content": "typedef struct packed {\n\n\tint ${2:data};\n\n${1:name}",
+      "doc": "Typedef struct packed",
+      "label": "typedef struct packed",
+      "matches": {
+        "tdsp": true
+      }
+    },
+    {
       "content": "always @(${1:Sensitive list}) begin\n\n\t${0}\n\nend",
       "doc": "Always block",
       "label": "always block",
       "matches": {
         "al": true
+      }
+    },
+    {
+      "content": "whlie (${1}) begin\n\t${0}\nend",
+      "doc": "While loop",
+      "label": "while",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "typedef enum ${2:logic[15:0]} \n{\n\n${3:REG = 16'h0000}\n\n} ${1:my_dest_t};",
+      "doc": "Typedef enum",
+      "label": "typedef enum",
+      "matches": {
+        "tde": true
+      }
+    },
+    {
+      "content": "initial begin\n\t${0}\nend",
+      "doc": "Initial Begin",
+      "label": "Initial Begin",
+      "matches": {
+        "ini": true
       }
     },
     {
@@ -90,14 +114,6 @@
       }
     },
     {
-      "content": "else if (${1}) begin\n\n${0}\n\nend",
-      "doc": "else-if statement",
-      "label": "else-if",
-      "matches": {
-        "eif": true
-      }
-    },
-    {
       "content": "for (int ${2:i} = 0; $2 < ${1:count}; $2${3:++}) begin\n\n\t${4}\n\nend",
       "doc": "For loop",
       "label": "for",
@@ -106,35 +122,19 @@
       }
     },
     {
-      "content": "function ${1:void} ${2:name}(${3});\n\n\t${0}\nendfunction: $2",
-      "doc": "Function snippet",
-      "label": "function",
+      "content": "if (${1}) begin\n\n\t${2}\n\nend\n\nelse begin\n\n\t${3}\n\nend",
+      "doc": "If-else statement",
+      "label": "if-else",
       "matches": {
-        "fun": true
+        "ife": true
       }
     },
     {
-      "content": "else begin\n\n${0}\n\nend",
-      "doc": "else-if statement",
-      "label": "else",
+      "content": "forever begin\n\t${0}\nend",
+      "doc": "Forever loop",
+      "label": "forever",
       "matches": {
-        "el": true
-      }
-    },
-    {
-      "content": "if (${1}) begin\n\n${0}\n\nend",
-      "doc": "If statement",
-      "label": "if",
-      "matches": {
-        "if": true
-      }
-    },
-    {
-      "content": "task ${1:name}(${2});\n\n\t${0}\n\nendtask: $1",
-      "doc": "Task snippet",
-      "label": "task",
-      "matches": {
-        "task": true
+        "forev": true
       }
     },
     {

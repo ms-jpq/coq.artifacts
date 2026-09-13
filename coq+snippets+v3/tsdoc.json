@@ -2,83 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "@event$0",
-      "doc": "The @event tag is used to mark a reflection as belonging in the \"Events\" group. It is equivalent to specifying @group Events in the comment.",
-      "label": "event",
-      "matches": {
-        "@event": true
-      }
-    },
-    {
-      "content": "@readonly$0",
-      "doc": "The @readonly tag indicates that a reflection should be documented as non-writable, even if writable according to TypeScript.",
-      "label": "readonly",
-      "matches": {
-        "@readonly": true
-      }
-    },
-    {
-      "content": "@deprecated$0",
-      "doc": "nThe @deprecated tag indicates that a declaration should not be used and may be removed in a future release.",
-      "label": "deprecated",
-      "matches": {
-        "@deprecated": true
-      }
-    },
-    {
-      "content": "@throws$0",
-      "doc": "The @throws tag can be used to document an exception that can be thrown by a function or method.",
-      "label": "throws",
-      "matches": {
-        "@throws": true
-      }
-    },
-    {
       "content": "@typeParam$0",
       "doc": "The @typeParam tag is used to document a type parameter of a function, method, class, interface or type alias. TypeDoc recognizes the @template tag as an alias of @typeParam.",
       "label": "typeParam",
       "matches": {
         "@typeParam": true
-      }
-    },
-    {
-      "content": "@overload$0",
-      "doc": "The @overload tag is recognized for use in JavaScript projects which can use it to declare overloads since TypeScript 5.0. It is automatically removed from the rendered documentation with the --excludeTags option.",
-      "label": "overload",
-      "matches": {
-        "@overload": true
-      }
-    },
-    {
-      "content": "@virtual$0",
-      "doc": "TypeDoc parses the @virtual tag for compatibility with TSDoc, but does not attach any meaning to it's use.",
-      "label": "virtual",
-      "matches": {
-        "@virtual": true
-      }
-    },
-    {
-      "content": "@override$0",
-      "doc": "TypeDoc parses the @override tag for compatibility with TSDoc, but does not attach any meaning to it's use.",
-      "label": "override",
-      "matches": {
-        "@override": true
-      }
-    },
-    {
-      "content": "@link$0",
-      "doc": "The @link tag is used to refer to another documented declaration. The tag has the form of {@link myDeclaration}.",
-      "label": "link",
-      "matches": {
-        "@link": true
-      }
-    },
-    {
-      "content": "@packageDocumentation$0",
-      "doc": "The @packageDocumentation tag is used to mark a comment as referring to a file rather than the declaration following it. The TypeDoc specific @module tag can be used for the same purpose when semantically clearer.",
-      "label": "packageDocumentation",
-      "matches": {
-        "@packageDocumentation": true
       }
     },
     {
@@ -90,11 +18,11 @@
       }
     },
     {
-      "content": "@private$0",
-      "doc": "This tag should generally not be used and may be removed in a future release. The @private tag overrides the visibility of a reflection to be private.",
-      "label": "private",
+      "content": "@virtual$0",
+      "doc": "TypeDoc parses the @virtual tag for compatibility with TSDoc, but does not attach any meaning to it's use.",
+      "label": "virtual",
       "matches": {
-        "@private": true
+        "@virtual": true
       }
     },
     {
@@ -106,51 +34,11 @@
       }
     },
     {
-      "content": "@privateRemarks$0",
-      "doc": "The @privateRemarks tag can be used to include documentation text that should not be included in the generated API reference.",
-      "label": "privateRemarks",
+      "content": "@link$0",
+      "doc": "The @link tag is used to refer to another documented declaration. The tag has the form of {@link myDeclaration}.",
+      "label": "link",
       "matches": {
-        "@privateRemarks": true
-      }
-    },
-    {
-      "content": "@beta$0",
-      "doc": "This tag can be used to indicate that the associated member is intended to eventually be used by third-party developers but is not yet stable enough to conform to semantic versioning requirements.",
-      "label": "beta",
-      "matches": {
-        "@beta": true
-      }
-    },
-    {
-      "content": "@category$0",
-      "doc": "The @category tag can be used to place several related API items under a common header when listed in a page's index. It may be specified multiple times to list a reflection under several headings.",
-      "label": "category",
-      "matches": {
-        "@category": true
-      }
-    },
-    {
-      "content": "@param$0",
-      "doc": "The @param tag is used to document a parameter of a function or method.",
-      "label": "param",
-      "matches": {
-        "@param": true
-      }
-    },
-    {
-      "content": "@defaultValue$0",
-      "doc": "The @defaultValue tag can be used to document the default value for an accessor or property.",
-      "label": "defaultValue",
-      "matches": {
-        "@defaultValue": true
-      }
-    },
-    {
-      "content": "@public$0",
-      "doc": "This tag should generally not be used. The @public tag overrides the visibility of a reflection to be public. This does not strictly conform to the TSDoc specification, which treats member visibility and release visibility separately.",
-      "label": "public",
-      "matches": {
-        "@public": true
+        "@link": true
       }
     },
     {
@@ -162,11 +50,19 @@
       }
     },
     {
-      "content": "@see$0",
-      "doc": "The @see tag can be used to create a list of references for other resources related to this export.",
-      "label": "see",
+      "content": "@experimental$0",
+      "doc": "This tag can be used to indicate that the associated member is intended to eventually be used by third-party developers but is not yet stable enough to conform to semantic versioning requirements.",
+      "label": "experimental",
       "matches": {
-        "@see": true
+        "@experimental": true
+      }
+    },
+    {
+      "content": "@private$0",
+      "doc": "This tag should generally not be used and may be removed in a future release. The @private tag overrides the visibility of a reflection to be private.",
+      "label": "private",
+      "matches": {
+        "@private": true
       }
     },
     {
@@ -178,43 +74,19 @@
       }
     },
     {
-      "content": "@internal$0",
-      "doc": "The @internal tag indicates that a reflection is not intended to be used by API consumers. API items annotated with @internal may be removed from the generated documentation by specifying the --excludeInternal option.",
-      "label": "internal",
+      "content": "@privateRemarks$0",
+      "doc": "The @privateRemarks tag can be used to include documentation text that should not be included in the generated API reference.",
+      "label": "privateRemarks",
       "matches": {
-        "@internal": true
+        "@privateRemarks": true
       }
     },
     {
-      "content": "@satisfies$0",
-      "doc": "This tag is recognized for parity with TypeScript 5.0's @satisfies Support in JSDoc.",
-      "label": "satisfies",
+      "content": "@protected$0",
+      "doc": "This tag should generally not be used and may be removed in a future release. The @protected tag overrides the visibility of a reflection to be protected.",
+      "label": "protected",
       "matches": {
-        "@satisfies": true
-      }
-    },
-    {
-      "content": "@experimental$0",
-      "doc": "This tag can be used to indicate that the associated member is intended to eventually be used by third-party developers but is not yet stable enough to conform to semantic versioning requirements.",
-      "label": "experimental",
-      "matches": {
-        "@experimental": true
-      }
-    },
-    {
-      "content": "@remarks$0",
-      "doc": "The @remarks tag can be used to separate the summary section of a documentation content from additional detailed information. At most one @remarks block is permitted in a comment. Unlike most tags, the @remarks tag will be copied if {@inheritDoc} is used in a comment.",
-      "label": "remarks",
-      "matches": {
-        "@remarks": true
-      }
-    },
-    {
-      "content": "@interface$0",
-      "doc": "If present on a type alias, will cause it to be converted as an interface. This will result in all \"dynamic\" properties being expanded to real properties.",
-      "label": "interface",
-      "matches": {
-        "@interface": true
+        "@protected": true
       }
     },
     {
@@ -234,30 +106,6 @@
       }
     },
     {
-      "content": "@returns$0",
-      "doc": "The @returns tag can be used to document the return value of a function. At most one @returns tag should be present in a comment.",
-      "label": "returns",
-      "matches": {
-        "@returns": true
-      }
-    },
-    {
-      "content": "@ignore$0",
-      "doc": "Reflections marked with the @hidden tag will be removed from the documentation. It is equivalent to the @ignore JSDoc tag.",
-      "label": "ignore",
-      "matches": {
-        "@ignore": true
-      }
-    },
-    {
-      "content": "@property$0",
-      "doc": "The @property (or @prop) tag can be used to add a comment to a child of the current reflection. It is intended for use with the @namespace and @interface tags which might not have convenient places to include comments for each member.",
-      "label": "property",
-      "matches": {
-        "@property": true
-      }
-    },
-    {
       "content": "@example\n* ```\n* ${1:write me later.}$0\n* ```",
       "doc": "The example tag indicates that the following text is an example of how to use the function.",
       "label": "example",
@@ -266,11 +114,19 @@
       }
     },
     {
-      "content": "@inheritDoc$0",
-      "doc": "The @inheritDoc tag is used to create a reflection's documentation by copying it from another reflection. The tag has the form {@inheritDoc ref} where ref is a declaration reference.",
-      "label": "inheritDoc",
+      "content": "@event$0",
+      "doc": "The @event tag is used to mark a reflection as belonging in the \"Events\" group. It is equivalent to specifying @group Events in the comment.",
+      "label": "event",
       "matches": {
-        "@inheritDoc": true
+        "@event": true
+      }
+    },
+    {
+      "content": "@public$0",
+      "doc": "This tag should generally not be used. The @public tag overrides the visibility of a reflection to be public. This does not strictly conform to the TSDoc specification, which treats member visibility and release visibility separately.",
+      "label": "public",
+      "matches": {
+        "@public": true
       }
     },
     {
@@ -282,11 +138,35 @@
       }
     },
     {
-      "content": "@module$0",
-      "doc": "The @module tag is used to mark a comment as referring to a file rather than the declaration following it. It may optionally be used to rename a module whose name TypeDoc guesses incorrectly.",
-      "label": "module",
+      "content": "@remarks$0",
+      "doc": "The @remarks tag can be used to separate the summary section of a documentation content from additional detailed information. At most one @remarks block is permitted in a comment. Unlike most tags, the @remarks tag will be copied if {@inheritDoc} is used in a comment.",
+      "label": "remarks",
       "matches": {
-        "@module": true
+        "@remarks": true
+      }
+    },
+    {
+      "content": "@readonly$0",
+      "doc": "The @readonly tag indicates that a reflection should be documented as non-writable, even if writable according to TypeScript.",
+      "label": "readonly",
+      "matches": {
+        "@readonly": true
+      }
+    },
+    {
+      "content": "@throws$0",
+      "doc": "The @throws tag can be used to document an exception that can be thrown by a function or method.",
+      "label": "throws",
+      "matches": {
+        "@throws": true
+      }
+    },
+    {
+      "content": "@returns$0",
+      "doc": "The @returns tag can be used to document the return value of a function. At most one @returns tag should be present in a comment.",
+      "label": "returns",
+      "matches": {
+        "@returns": true
       }
     },
     {
@@ -298,6 +178,54 @@
       }
     },
     {
+      "content": "@beta$0",
+      "doc": "This tag can be used to indicate that the associated member is intended to eventually be used by third-party developers but is not yet stable enough to conform to semantic versioning requirements.",
+      "label": "beta",
+      "matches": {
+        "@beta": true
+      }
+    },
+    {
+      "content": "@property$0",
+      "doc": "The @property (or @prop) tag can be used to add a comment to a child of the current reflection. It is intended for use with the @namespace and @interface tags which might not have convenient places to include comments for each member.",
+      "label": "property",
+      "matches": {
+        "@property": true
+      }
+    },
+    {
+      "content": "@satisfies$0",
+      "doc": "This tag is recognized for parity with TypeScript 5.0's @satisfies Support in JSDoc.",
+      "label": "satisfies",
+      "matches": {
+        "@satisfies": true
+      }
+    },
+    {
+      "content": "@internal$0",
+      "doc": "The @internal tag indicates that a reflection is not intended to be used by API consumers. API items annotated with @internal may be removed from the generated documentation by specifying the --excludeInternal option.",
+      "label": "internal",
+      "matches": {
+        "@internal": true
+      }
+    },
+    {
+      "content": "@inheritDoc$0",
+      "doc": "The @inheritDoc tag is used to create a reflection's documentation by copying it from another reflection. The tag has the form {@inheritDoc ref} where ref is a declaration reference.",
+      "label": "inheritDoc",
+      "matches": {
+        "@inheritDoc": true
+      }
+    },
+    {
+      "content": "@interface$0",
+      "doc": "If present on a type alias, will cause it to be converted as an interface. This will result in all \"dynamic\" properties being expanded to real properties.",
+      "label": "interface",
+      "matches": {
+        "@interface": true
+      }
+    },
+    {
       "content": "@sealed$0",
       "doc": "TypeDoc parses the @sealed tag for compatibility with TSDoc, but does not attach any meaning to it's use.",
       "label": "sealed",
@@ -306,11 +234,83 @@
       }
     },
     {
-      "content": "@protected$0",
-      "doc": "This tag should generally not be used and may be removed in a future release. The @protected tag overrides the visibility of a reflection to be protected.",
-      "label": "protected",
+      "content": "@defaultValue$0",
+      "doc": "The @defaultValue tag can be used to document the default value for an accessor or property.",
+      "label": "defaultValue",
       "matches": {
-        "@protected": true
+        "@defaultValue": true
+      }
+    },
+    {
+      "content": "@category$0",
+      "doc": "The @category tag can be used to place several related API items under a common header when listed in a page's index. It may be specified multiple times to list a reflection under several headings.",
+      "label": "category",
+      "matches": {
+        "@category": true
+      }
+    },
+    {
+      "content": "@module$0",
+      "doc": "The @module tag is used to mark a comment as referring to a file rather than the declaration following it. It may optionally be used to rename a module whose name TypeDoc guesses incorrectly.",
+      "label": "module",
+      "matches": {
+        "@module": true
+      }
+    },
+    {
+      "content": "@see$0",
+      "doc": "The @see tag can be used to create a list of references for other resources related to this export.",
+      "label": "see",
+      "matches": {
+        "@see": true
+      }
+    },
+    {
+      "content": "@override$0",
+      "doc": "TypeDoc parses the @override tag for compatibility with TSDoc, but does not attach any meaning to it's use.",
+      "label": "override",
+      "matches": {
+        "@override": true
+      }
+    },
+    {
+      "content": "@param$0",
+      "doc": "The @param tag is used to document a parameter of a function or method.",
+      "label": "param",
+      "matches": {
+        "@param": true
+      }
+    },
+    {
+      "content": "@deprecated$0",
+      "doc": "nThe @deprecated tag indicates that a declaration should not be used and may be removed in a future release.",
+      "label": "deprecated",
+      "matches": {
+        "@deprecated": true
+      }
+    },
+    {
+      "content": "@packageDocumentation$0",
+      "doc": "The @packageDocumentation tag is used to mark a comment as referring to a file rather than the declaration following it. The TypeDoc specific @module tag can be used for the same purpose when semantically clearer.",
+      "label": "packageDocumentation",
+      "matches": {
+        "@packageDocumentation": true
+      }
+    },
+    {
+      "content": "@ignore$0",
+      "doc": "Reflections marked with the @hidden tag will be removed from the documentation. It is equivalent to the @ignore JSDoc tag.",
+      "label": "ignore",
+      "matches": {
+        "@ignore": true
+      }
+    },
+    {
+      "content": "@overload$0",
+      "doc": "The @overload tag is recognized for use in JavaScript projects which can use it to declare overloads since TypeScript 5.0. It is automatically removed from the rendered documentation with the --excludeTags option.",
+      "label": "overload",
+      "matches": {
+        "@overload": true
       }
     }
   ]

@@ -2,6 +2,15 @@
   "extends": [],
   "snippets": [
     {
+      "content": "const dispatch = useDispatch();",
+      "doc": "Redux useDispatch() hook",
+      "label": "redux-usedispatch-hook",
+      "matches": {
+        "redux usedispatch": true,
+        "rxusdh": true
+      }
+    },
+    {
       "content": "const ${1:actionCreatorName} = ${2:payload} => {\n  return {\n    type: '${3:ACTION_TYPE}',\n    payload: ${2:payload},\n  };\n};",
       "doc": "Redux action template",
       "label": "redux-action",
@@ -20,6 +29,15 @@
       }
     },
     {
+      "content": "const $1 = $2 => dispatch($3);",
+      "doc": "Redux dispatch hook",
+      "label": "redux-dispatch-hook",
+      "matches": {
+        "redux dispatch": true,
+        "rxd": true
+      }
+    },
+    {
       "content": "import { useSelector, useDispatch } from 'react-redux';",
       "doc": "Import Redux hooks (useSelector, useDispatch)",
       "label": "redux-import-hooks",
@@ -29,12 +47,11 @@
       }
     },
     {
-      "content": "const initialState = {\n\n}\n\nexport default (state = initialState, { type, payload }) => {\n\tswitch (type) {\n\n\tcase ${1:typeName}:\n\t\treturn { ...state, ...payload }\n\n\tdefault:\n\t\treturn state\n\t}\n}",
-      "doc": "Redux reducer template",
-      "label": "redux-reducer",
+      "content": "import { connect } from 'react-redux'",
+      "doc": "Import connect from Redux",
+      "label": "redux-import-connect",
       "matches": {
-        "redux reducer": true,
-        "rxreducer": true
+        "redux import connect": true
       }
     },
     {
@@ -47,23 +64,6 @@
       }
     },
     {
-      "content": "import { connect } from 'react-redux'",
-      "doc": "Import connect from Redux",
-      "label": "redux-import-connect",
-      "matches": {
-        "redux import connect": true
-      }
-    },
-    {
-      "content": "const $1 = $2 => dispatch($3);",
-      "doc": "Redux dispatch hook",
-      "label": "redux-dispatch-hook",
-      "matches": {
-        "redux dispatch": true,
-        "rxd": true
-      }
-    },
-    {
       "content": "const mapStateToProps = (state) => ({\n\t${1}\n})\n\nconst mapDispatchToProps = {\n\t\n}",
       "doc": "Creates mapStateToProps function.",
       "label": "redux-map-to-props",
@@ -72,12 +72,12 @@
       }
     },
     {
-      "content": "const dispatch = useDispatch();",
-      "doc": "Redux useDispatch() hook",
-      "label": "redux-usedispatch-hook",
+      "content": "const initialState = {\n\n}\n\nexport default (state = initialState, { type, payload }) => {\n\tswitch (type) {\n\n\tcase ${1:typeName}:\n\t\treturn { ...state, ...payload }\n\n\tdefault:\n\t\treturn state\n\t}\n}",
+      "doc": "Redux reducer template",
+      "label": "redux-reducer",
       "matches": {
-        "redux usedispatch": true,
-        "rxusdh": true
+        "redux reducer": true,
+        "rxreducer": true
       }
     }
   ]

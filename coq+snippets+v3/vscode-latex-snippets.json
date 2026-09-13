@@ -2,75 +2,12 @@
   "extends": [],
   "snippets": [
     {
-      "content": "\\begin{problem}[${1:name of the problem}]\n\t$0\n\\end{problem}",
-      "doc": "Insert a problem, whose style is already defined in the template. The serial number is automatically generated according to the section.",
-      "label": "Problem",
+      "content": "\\addplot [\n\tdomain=0:2*3.14159265,\n\tsamples=70,\n\tcolor=${4:blue},\n\t]\n\t({${1:r}*cos(t)+${2:a}},{${1:r}*sin(t)+${3:b}});\n\\addlegendentry{\\$(x-${2:a})^2+(y-${3:b})^2=${1:r}^2\\$}$0",
+      "doc": "Plot a 2D Circle in the 2D graph environment, noted that this can also be used in the 3D environment.",
+      "label": "Plot Circle 2D",
       "matches": {
-        "\\problem": true,
-        "problem": true
-      }
-    },
-    {
-      "content": "\\addplot+[smooth]\ncoordinates\n{\n${1:seperate the coordinates with spaces}\n};$0",
-      "doc": "Plot a Smooth Curve by point set (2D).",
-      "label": "Plot Smooth Curve By Point Set",
-      "matches": {
-        "\\plotsmoothcurvebypointset": true,
-        "plotsmoothcurvebypointset": true
-      }
-    },
-    {
-      "content": "\\indent",
-      "doc": "The equivalent of \"\\t\", also known as \"Tab\"",
-      "label": "Indent",
-      "matches": {
-        "\\tab": true,
-        "tab": true
-      }
-    },
-    {
-      "content": "\\displaystyle\\sum_{$1}^{$2}$3",
-      "doc": "Insert a large summation notation.",
-      "label": "Large Summation",
-      "matches": {
-        "\\sumlarge": true,
-        "sumlarge": true
-      }
-    },
-    {
-      "content": "\\begin{tikzpicture}\n\\begin{axis}[\nlegend pos=outer north east,\ntitle=${1:Example},\naxis lines =${2| box, left, middle, center, right, none|},\ncolormap/${3|hot,hot2,jet,blackwhite,bluered,cool,greenyellow,redyellow,violet|},\nxlabel = \\$x\\$,\nylabel = \\$y\\$,\nzlabel = \\$z\\$,\nvariable = t,\ntrig format plots = rad,\n]\n$4\n\\end{axis}\n\\end{tikzpicture}$0",
-      "doc": "Create a 3DPlot Environment of pgfplots. The style declarations are already included in the snippet.",
-      "label": "Create 3D Plot Environment",
-      "matches": {
-        "\\plotenvironment3d": true,
-        "plotenvironment3d": true
-      }
-    },
-    {
-      "content": "\\sum_{$1}^{$2}$3",
-      "doc": "Insert an inline summation notation, (only in the cases when the environment is inline math environment).",
-      "label": "Inline Summation",
-      "matches": {
-        "\\suminline": true,
-        "suminline": true
-      }
-    },
-    {
-      "content": "\\begin{proof}[Proof ${1:Other Information}]\n\t$0\n\\end{proof}",
-      "doc": "Insert a proof, whose style is already defined in the template. The serial number is automatically generated according to the section.",
-      "label": "Proof",
-      "matches": {
-        "\\proof": true,
-        "proof": true
-      }
-    },
-    {
-      "content": "\\addplot3[\n\t${1|surf,mesh|},\n\tsamples=50,\n]\n{${2:x^2+y^2}};\n\\addlegendentry{\\$${3:x}\\$}$0",
-      "doc": "Plot a 3D Graph in the 3D graph environment created.",
-      "label": "Plot 3D Graph",
-      "matches": {
-        "\\plotgraph3d": true,
-        "plotgraph3d": true
+        "\\plotcircle2d": true,
+        "plotcircle2d": true
       }
     },
     {
@@ -83,30 +20,30 @@
       }
     },
     {
-      "content": "\\displaystyle\\int_{$1}^{$2}$3",
-      "doc": "Insert large integral notation.",
-      "label": "Large Integral",
+      "content": "%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Define Article %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\\documentclass{article}\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Using Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\\usepackage{geometry}\n\\usepackage{graphicx}\n\\usepackage{amssymb}\n\\usepackage{amsmath}\n\\usepackage{amsthm}\n\\usepackage{empheq}\n\\usepackage{mdframed}\n\\usepackage{booktabs}\n\\usepackage{lipsum}\n\\usepackage{graphicx}\n\\usepackage{color}\n\\usepackage{psfrag}\n\\usepackage{pgfplots}\n\\usepackage{bm}\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n${3:% Other Settings}\n\n%%%%%%%%%%%%%%%%%%%%%%%%%% Page Setting %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\\geometry{a4paper}\n\n%%%%%%%%%%%%%%%%%%%%%%%%%% Define some useful colors %%%%%%%%%%%%%%%%%%%%%%%%%%\n\\definecolor{ocre}{RGB}{243,102,25}\n\\definecolor{mygray}{RGB}{243,243,244}\n\\definecolor{deepGreen}{RGB}{26,111,0}\n\\definecolor{shallowGreen}{RGB}{235,255,255}\n\\definecolor{deepBlue}{RGB}{61,124,222}\n\\definecolor{shallowBlue}{RGB}{235,249,255}\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n%%%%%%%%%%%%%%%%%%%%%%%%%% Define an orangebox command %%%%%%%%%%%%%%%%%%%%%%%%\n\\newcommand\\orangebox[1]{\\fcolorbox{ocre}{mygray}{\\hspace{1em}#1\\hspace{1em}}}\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n%%%%%%%%%%%%%%%%%%%%%%%%%%%% English Environments %%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\\newtheoremstyle{mytheoremstyle}{3pt}{3pt}{\\normalfont}{0cm}{\\rmfamily\\bfseries}{}{1em}{{\\color{black}\\thmname{#1}~\\thmnumber{#2}}\\thmnote{\\,--\\,#3}}\n\\newtheoremstyle{myproblemstyle}{3pt}{3pt}{\\normalfont}{0cm}{\\rmfamily\\bfseries}{}{1em}{{\\color{black}\\thmname{#1}~\\thmnumber{#2}}\\thmnote{\\,--\\,#3}}\n\\theoremstyle{mytheoremstyle}\n\\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowGreen,linecolor=deepGreen,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{theorem}{Theorem}[section]\n\\theoremstyle{mytheoremstyle}\n\\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowBlue,linecolor=deepBlue,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{definition}{Definition}[section]\n\\theoremstyle{myproblemstyle}\n\\newmdtheoremenv[linecolor=black,leftmargin=0pt,innerleftmargin=10pt,innerrightmargin=10pt,]{problem}{Problem}[section]\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Plotting Settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\\usepgfplotslibrary{colorbrewer}\n\\pgfplotsset{width=8cm,compat=1.9}\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title & Author %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\\title{${1:Title}}\n\\author{${2:Haoyun Qin}}\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n\\begin{document}\n    \\maketitle\n    $0\n\\end{document}",
+      "doc": "Use the default template which includes a variety of packages and declared-commands. The template will also automatically generate the title and author, as well as date, and will formate the document.",
+      "label": "Template",
       "matches": {
-        "\\integrallarge": true,
-        "integrallarge": true
+        "\\template": true,
+        "template": true
       }
     },
     {
-      "content": "\\addplot [\n\tdomain=${1:-10}:${2:10},\n\tsamples=70,\n\tcolor=${3:blue},\n\t]\n\t{${4:x^2 + 2*x + 1}};\n\\addlegendentry{\\$${5:x^2 + 2x + 1}\\$}\n$0",
-      "doc": "Plot a 2D Graph in the 2D graph environment, noted that this can also be used in the 3D environment.",
-      "label": "Plot 2D Graph",
+      "content": "\\addplot [\n\tdomain=${4:x1}:${5:x2},\n\tsamples=70,\n\tcolor=${3:blue},\n\t]\n\t{${1:a}*x+${2:b}};\n\\addlegendentry{\\$ y=${1:a}x+${2:b}\\$}$0",
+      "doc": "Plot a 2D Line in the 2D graph environment, noted that this can also be used in the 3D environment.",
+      "label": "Plot Line 2D",
       "matches": {
-        "\\plotgraph2d": true,
-        "plotgraph2d": true
+        "\\plotline2d": true,
+        "plotline2d": true
       }
     },
     {
-      "content": "\\int_{$1}^{$2}$3",
-      "doc": "Insert inline integral notation, (only in the cases when the environment is inline math environment).",
-      "label": "Inline Integral",
+      "content": "\\begin{proof}[Proof ${1:Other Information}]\n\t$0\n\\end{proof}",
+      "doc": "Insert a proof, whose style is already defined in the template. The serial number is automatically generated according to the section.",
+      "label": "Proof",
       "matches": {
-        "\\integralinline": true,
-        "integralinline": true
+        "\\proof": true,
+        "proof": true
       }
     },
     {
@@ -119,21 +56,12 @@
       }
     },
     {
-      "content": "\\frac{$1}{$2}$0",
-      "doc": "Insert inline fraction notation, (only in the cases when the environment is inline math environment).",
-      "label": "Inline Fraction",
+      "content": "\\addplot [\n\tdomain=0:2*3.14159265,\n\tsamples=70,\n\tcolor=${5:blue},\n\t]\n\t({${1:a}*cos(t)+${3:x}},{${2:b}*sin(t)+${4:y}});\n\\addlegendentry{\\$\\frac{(x-${3:x})^2}{${1:a}^2}+\\frac{(y-${4:y})^2}{${2:b}^2}=1\\$}$0",
+      "doc": "Plot a 2D Ellipse in the 2D graph environment, noted that this can also be used in the 3D environment.",
+      "label": "Plot Ellipse 2D",
       "matches": {
-        "\\fractioninline": true,
-        "fractioninline": true
-      }
-    },
-    {
-      "content": "\\noindent\\textbf{$1} $0",
-      "doc": "Insert problem solving index format.",
-      "label": "Insert Problem Solving Index",
-      "matches": {
-        "\\problemindex": true,
-        "problemindex": true
+        "\\plotellipse2d": true,
+        "plotellipse2d": true
       }
     },
     {
@@ -146,21 +74,12 @@
       }
     },
     {
-      "content": "\\displaystyle\\frac{$1}{$2}$0",
-      "doc": "Insert large fraction notation",
-      "label": "Large Fraction",
+      "content": "\\displaystyle\\int_{$1}^{$2}$3",
+      "doc": "Insert large integral notation.",
+      "label": "Large Integral",
       "matches": {
-        "\\fractionlarge": true,
-        "fractionlarge": true
-      }
-    },
-    {
-      "content": "\\addplot [\n\tdomain=0:2*3.14159265,\n\tsamples=70,\n\tcolor=${4:blue},\n\t]\n\t({${1:r}*cos(t)+${2:a}},{${1:r}*sin(t)+${3:b}});\n\\addlegendentry{\\$(x-${2:a})^2+(y-${3:b})^2=${1:r}^2\\$}$0",
-      "doc": "Plot a 2D Circle in the 2D graph environment, noted that this can also be used in the 3D environment.",
-      "label": "Plot Circle 2D",
-      "matches": {
-        "\\plotcircle2d": true,
-        "plotcircle2d": true
+        "\\integrallarge": true,
+        "integrallarge": true
       }
     },
     {
@@ -174,12 +93,12 @@
       }
     },
     {
-      "content": "\\begin{tikzpicture}\n\\begin{axis}[\nlegend pos=outer north east,\ntitle=${1:Example},\naxis lines =${2| box, left, middle, center, right, none|},\nxlabel = \\$x\\$,\nylabel = \\$y\\$,\nvariable = t,\ntrig format plots = rad,\n]\n$3\n\\end{axis}\n\\end{tikzpicture}$0",
-      "doc": "Create a 2DPlot Environment of pgfplots. The style declarations are already included in the snippet.",
-      "label": "Create 2D Plot environment",
+      "content": "\\addplot [\n\tdomain=${4:x1}:${5:x2},\n\tsamples=70,\n\tcolor=${6:blue},\n\t]\n\t{${1:a}*(x-${2:m})*(x-${2:m})+${3:b}};\n\\addlegendentry{\\$ y=${1:a}(x-${2:m})^2+${3:b}\\$}$0",
+      "doc": "Plot a 2D graph of a quadratic function in the 2D graph environment by the given extrema, noted that this can also be used in the 3D environment.",
+      "label": "Plot Quadratic Function 2D by Point",
       "matches": {
-        "\\plotenvironment2d": true,
-        "plotenvironment2d": true
+        "\\plotquadraticfunction2dbypoint": true,
+        "plotquadraticfunction2dbypoint": true
       }
     },
     {
@@ -193,41 +112,30 @@
       }
     },
     {
-      "content": "\\addplot [\n\tdomain=${4:x1}:${5:x2},\n\tsamples=70,\n\tcolor=${3:blue},\n\t]\n\t{${1:a}*x+${2:b}};\n\\addlegendentry{\\$ y=${1:a}x+${2:b}\\$}$0",
-      "doc": "Plot a 2D Line in the 2D graph environment, noted that this can also be used in the 3D environment.",
-      "label": "Plot Line 2D",
+      "content": "\\frac{$1}{$2}$0",
+      "doc": "Insert inline fraction notation, (only in the cases when the environment is inline math environment).",
+      "label": "Inline Fraction",
       "matches": {
-        "\\plotline2d": true,
-        "plotline2d": true
+        "\\fractioninline": true,
+        "fractioninline": true
       }
     },
     {
-      "content": "\\begin{itemize}\n\t\\item $1\n\\end{itemize}$0",
-      "doc": "",
-      "label": "Itemize",
+      "content": "\\addplot+[smooth]\ncoordinates\n{\n${1:seperate the coordinates with spaces}\n};$0",
+      "doc": "Plot a Smooth Curve by point set (2D).",
+      "label": "Plot Smooth Curve By Point Set",
       "matches": {
-        "-": true,
-        "\\itemize": true,
-        "itemize": true
+        "\\plotsmoothcurvebypointset": true,
+        "plotsmoothcurvebypointset": true
       }
     },
     {
-      "content": "\\textit{$1}$0",
-      "doc": "Insert italic text.",
-      "label": "Italic Text",
+      "content": "\\displaystyle\\frac{$1}{$2}$0",
+      "doc": "Insert large fraction notation",
+      "label": "Large Fraction",
       "matches": {
-        "*": true,
-        "\\italic": true,
-        "italic": true
-      }
-    },
-    {
-      "content": "\\addplot [\n\tdomain=0:2*3.14159265,\n\tsamples=70,\n\tcolor=${5:blue},\n\t]\n\t({${1:a}*cos(t)+${3:x}},{${2:b}*sin(t)+${4:y}});\n\\addlegendentry{\\$\\frac{(x-${3:x})^2}{${1:a}^2}+\\frac{(y-${4:y})^2}{${2:b}^2}=1\\$}$0",
-      "doc": "Plot a 2D Ellipse in the 2D graph environment, noted that this can also be used in the 3D environment.",
-      "label": "Plot Ellipse 2D",
-      "matches": {
-        "\\plotellipse2d": true,
-        "plotellipse2d": true
+        "\\fractionlarge": true,
+        "fractionlarge": true
       }
     },
     {
@@ -241,6 +149,52 @@
       }
     },
     {
+      "content": "\\begin{tikzpicture}\n\\begin{axis}[\nlegend pos=outer north east,\ntitle=${1:Example},\naxis lines =${2| box, left, middle, center, right, none|},\nxlabel = \\$x\\$,\nylabel = \\$y\\$,\nvariable = t,\ntrig format plots = rad,\n]\n$3\n\\end{axis}\n\\end{tikzpicture}$0",
+      "doc": "Create a 2DPlot Environment of pgfplots. The style declarations are already included in the snippet.",
+      "label": "Create 2D Plot environment",
+      "matches": {
+        "\\plotenvironment2d": true,
+        "plotenvironment2d": true
+      }
+    },
+    {
+      "content": "\\begin{tikzpicture}\n\\begin{axis}[\nlegend pos=outer north east,\ntitle=${1:Example},\naxis lines =${2| box, left, middle, center, right, none|},\ncolormap/${3|hot,hot2,jet,blackwhite,bluered,cool,greenyellow,redyellow,violet|},\nxlabel = \\$x\\$,\nylabel = \\$y\\$,\nzlabel = \\$z\\$,\nvariable = t,\ntrig format plots = rad,\n]\n$4\n\\end{axis}\n\\end{tikzpicture}$0",
+      "doc": "Create a 3DPlot Environment of pgfplots. The style declarations are already included in the snippet.",
+      "label": "Create 3D Plot Environment",
+      "matches": {
+        "\\plotenvironment3d": true,
+        "plotenvironment3d": true
+      }
+    },
+    {
+      "content": "\\begin{itemize}\n\t\\item $1\n\\end{itemize}$0",
+      "doc": "",
+      "label": "Itemize",
+      "matches": {
+        "-": true,
+        "\\itemize": true,
+        "itemize": true
+      }
+    },
+    {
+      "content": "\\addplot3[\n\t${1|surf,mesh|},\n\tsamples=50,\n]\n{${2:x^2+y^2}};\n\\addlegendentry{\\$${3:x}\\$}$0",
+      "doc": "Plot a 3D Graph in the 3D graph environment created.",
+      "label": "Plot 3D Graph",
+      "matches": {
+        "\\plotgraph3d": true,
+        "plotgraph3d": true
+      }
+    },
+    {
+      "content": "\\int_{$1}^{$2}$3",
+      "doc": "Insert inline integral notation, (only in the cases when the environment is inline math environment).",
+      "label": "Inline Integral",
+      "matches": {
+        "\\integralinline": true,
+        "integralinline": true
+      }
+    },
+    {
       "content": "^ {$1}$0",
       "doc": "Superscript notation, as well as the power notation.",
       "label": "Up",
@@ -250,12 +204,12 @@
       }
     },
     {
-      "content": "\\textit{ Sol. }",
-      "doc": "Insert italic 'Sol.'",
-      "label": "Insert Solution Notation",
+      "content": "\\noindent\\textbf{$1} $0",
+      "doc": "Insert problem solving index format.",
+      "label": "Insert Problem Solving Index",
       "matches": {
-        "\\solution": true,
-        "solution": true
+        "\\problemindex": true,
+        "problemindex": true
       }
     },
     {
@@ -268,6 +222,15 @@
       }
     },
     {
+      "content": "\\addplot [\n\tdomain=${1:-10}:${2:10},\n\tsamples=70,\n\tcolor=${3:blue},\n\t]\n\t{${4:x^2 + 2*x + 1}};\n\\addlegendentry{\\$${5:x^2 + 2x + 1}\\$}\n$0",
+      "doc": "Plot a 2D Graph in the 2D graph environment, noted that this can also be used in the 3D environment.",
+      "label": "Plot 2D Graph",
+      "matches": {
+        "\\plotgraph2d": true,
+        "plotgraph2d": true
+      }
+    },
+    {
       "content": "\\begin{theorem}[${1:name of the theorem}]\n\t$0\n\\end{theorem}",
       "doc": "Insert a theorem, whose style is already defined in the template. The serial number is automatically generated according to the section.",
       "label": "Theorem",
@@ -277,12 +240,31 @@
       }
     },
     {
-      "content": "\\addplot [\n\tdomain=${4:x1}:${5:x2},\n\tsamples=70,\n\tcolor=${6:blue},\n\t]\n\t{${1:a}*(x-${2:m})*(x-${2:m})+${3:b}};\n\\addlegendentry{\\$ y=${1:a}(x-${2:m})^2+${3:b}\\$}$0",
-      "doc": "Plot a 2D graph of a quadratic function in the 2D graph environment by the given extrema, noted that this can also be used in the 3D environment.",
-      "label": "Plot Quadratic Function 2D by Point",
+      "content": "\\textit{$1}$0",
+      "doc": "Insert italic text.",
+      "label": "Italic Text",
       "matches": {
-        "\\plotquadraticfunction2dbypoint": true,
-        "plotquadraticfunction2dbypoint": true
+        "*": true,
+        "\\italic": true,
+        "italic": true
+      }
+    },
+    {
+      "content": "\\textit{ Sol. }",
+      "doc": "Insert italic 'Sol.'",
+      "label": "Insert Solution Notation",
+      "matches": {
+        "\\solution": true,
+        "solution": true
+      }
+    },
+    {
+      "content": "\\displaystyle\\sum_{$1}^{$2}$3",
+      "doc": "Insert a large summation notation.",
+      "label": "Large Summation",
+      "matches": {
+        "\\sumlarge": true,
+        "sumlarge": true
       }
     },
     {
@@ -296,12 +278,12 @@
       }
     },
     {
-      "content": "%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Define Article %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\\documentclass{article}\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Using Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\\usepackage{geometry}\n\\usepackage{graphicx}\n\\usepackage{amssymb}\n\\usepackage{amsmath}\n\\usepackage{amsthm}\n\\usepackage{empheq}\n\\usepackage{mdframed}\n\\usepackage{booktabs}\n\\usepackage{lipsum}\n\\usepackage{graphicx}\n\\usepackage{color}\n\\usepackage{psfrag}\n\\usepackage{pgfplots}\n\\usepackage{bm}\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n${3:% Other Settings}\n\n%%%%%%%%%%%%%%%%%%%%%%%%%% Page Setting %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\\geometry{a4paper}\n\n%%%%%%%%%%%%%%%%%%%%%%%%%% Define some useful colors %%%%%%%%%%%%%%%%%%%%%%%%%%\n\\definecolor{ocre}{RGB}{243,102,25}\n\\definecolor{mygray}{RGB}{243,243,244}\n\\definecolor{deepGreen}{RGB}{26,111,0}\n\\definecolor{shallowGreen}{RGB}{235,255,255}\n\\definecolor{deepBlue}{RGB}{61,124,222}\n\\definecolor{shallowBlue}{RGB}{235,249,255}\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n%%%%%%%%%%%%%%%%%%%%%%%%%% Define an orangebox command %%%%%%%%%%%%%%%%%%%%%%%%\n\\newcommand\\orangebox[1]{\\fcolorbox{ocre}{mygray}{\\hspace{1em}#1\\hspace{1em}}}\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n%%%%%%%%%%%%%%%%%%%%%%%%%%%% English Environments %%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\\newtheoremstyle{mytheoremstyle}{3pt}{3pt}{\\normalfont}{0cm}{\\rmfamily\\bfseries}{}{1em}{{\\color{black}\\thmname{#1}~\\thmnumber{#2}}\\thmnote{\\,--\\,#3}}\n\\newtheoremstyle{myproblemstyle}{3pt}{3pt}{\\normalfont}{0cm}{\\rmfamily\\bfseries}{}{1em}{{\\color{black}\\thmname{#1}~\\thmnumber{#2}}\\thmnote{\\,--\\,#3}}\n\\theoremstyle{mytheoremstyle}\n\\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowGreen,linecolor=deepGreen,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{theorem}{Theorem}[section]\n\\theoremstyle{mytheoremstyle}\n\\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowBlue,linecolor=deepBlue,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{definition}{Definition}[section]\n\\theoremstyle{myproblemstyle}\n\\newmdtheoremenv[linecolor=black,leftmargin=0pt,innerleftmargin=10pt,innerrightmargin=10pt,]{problem}{Problem}[section]\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Plotting Settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\\usepgfplotslibrary{colorbrewer}\n\\pgfplotsset{width=8cm,compat=1.9}\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title & Author %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\\title{${1:Title}}\n\\author{${2:Haoyun Qin}}\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n\\begin{document}\n    \\maketitle\n    $0\n\\end{document}",
-      "doc": "Use the default template which includes a variety of packages and declared-commands. The template will also automatically generate the title and author, as well as date, and will formate the document.",
-      "label": "Template",
+      "content": "\\indent",
+      "doc": "The equivalent of \"\\t\", also known as \"Tab\"",
+      "label": "Indent",
       "matches": {
-        "\\template": true,
-        "template": true
+        "\\tab": true,
+        "tab": true
       }
     },
     {
@@ -311,6 +293,24 @@
       "matches": {
         "\\definition": true,
         "definition": true
+      }
+    },
+    {
+      "content": "\\begin{problem}[${1:name of the problem}]\n\t$0\n\\end{problem}",
+      "doc": "Insert a problem, whose style is already defined in the template. The serial number is automatically generated according to the section.",
+      "label": "Problem",
+      "matches": {
+        "\\problem": true,
+        "problem": true
+      }
+    },
+    {
+      "content": "\\sum_{$1}^{$2}$3",
+      "doc": "Insert an inline summation notation, (only in the cases when the environment is inline math environment).",
+      "label": "Inline Summation",
+      "matches": {
+        "\\suminline": true,
+        "suminline": true
       }
     }
   ]

@@ -6,75 +6,11 @@
   ],
   "snippets": [
     {
-      "content": "static_cast<${1:unsigned}>(${2:expr})$3",
-      "doc": "static_cast<type>(expression)",
-      "label": "sca",
-      "matches": {
-        "sca": true
-      }
-    },
-    {
-      "content": "dynamic_cast<${1:unsigned}>(${2:expr})$3",
-      "doc": "dynamic_cast<type>(expression)",
-      "label": "dca",
-      "matches": {
-        "dca": true
-      }
-    },
-    {
-      "content": "std::cin >> $1;",
-      "doc": "Code snippet for std::cin, provided the header is set",
-      "label": "cin",
-      "matches": {
-        "cin": true
-      }
-    },
-    {
-      "content": "else if ($1) {\n\t$0\n}",
-      "doc": "Code snippet for else-if statement",
-      "label": "else if",
-      "matches": {
-        "else if": true
-      }
-    },
-    {
       "content": "printf(\"$1\\n\"$0);",
       "doc": "Generic printf() snippet",
       "label": "printf",
       "matches": {
         "printf": true
-      }
-    },
-    {
-      "content": "class ${1:MyClass} : public QObject {\n\tQ_OBJECT;\npublic:\n\nexplicit $1(QObject *parent = nullptr);\n\t$2\nsignals:\n\npublic slots:\n};",
-      "doc": "Code snippet for empty Qt class",
-      "label": "qclass",
-      "matches": {
-        "qclass": true
-      }
-    },
-    {
-      "content": "switch (${1:switch_on}) {\n\tdefault:\n\t\t$0\n\t\tbreak;\n}",
-      "doc": "Code snippet for switch statement",
-      "label": "switch",
-      "matches": {
-        "switch": true
-      }
-    },
-    {
-      "content": "fprintf(${1:stderr}, \"$2\\n\"$0);",
-      "doc": "Generic fprintf() snippet",
-      "label": "fprintf",
-      "matches": {
-        "fprintf": true
-      }
-    },
-    {
-      "content": "sprintf($1, \"$2\\n\"$0);",
-      "doc": "Generic sprintf() snippet",
-      "label": "sprintf",
-      "matches": {
-        "sprintf": true
       }
     },
     {
@@ -86,211 +22,11 @@
       }
     },
     {
-      "content": "class ${1:MyClass} {\npublic:\n\t$1() = default;\n\t$1($1 &&) = default;\n\t$1(const $1 &) = default;\n\t$1 &operator=($1 &&) = default;\n\t$1 &operator=(const $1 &) = default;\n\t~$1() = default;\n\nprivate:\n\t$2\n};",
-      "doc": "Code snippet for class with inline constructor/destructor",
-      "label": "classi",
+      "content": "enum class ${1:MyClass} {$0};",
+      "doc": "Code snippet for enum class (c++11)",
+      "label": "enum class",
       "matches": {
-        "classi": true
-      }
-    },
-    {
-      "content": "auto ${1:name}( ${2:void} ) -> ${3:auto} {\n\t${5}\n}",
-      "doc": "auto function and trailing return",
-      "label": "af",
-      "matches": {
-        "af": true
-      }
-    },
-    {
-      "content": "scanf(\"$1\"$0);",
-      "doc": "Generic scanf() snippet",
-      "label": "scanf",
-      "matches": {
-        "scanf": true
-      }
-    },
-    {
-      "content": "for (${1:size_t} ${2:i} = ${3:0}; $2 < ${4:length}; $2++) {\n\t$0\n}",
-      "doc": "Code snippet for 'for' loop",
-      "label": "for",
-      "matches": {
-        "for": true
-      }
-    },
-    {
-      "content": "for (${1:size_t} ${2:i} = ${3:length} - 1; $2 >= ${4:0}; $2--) {\n\t$0\n}",
-      "doc": "Code snippet for reverse 'for' loop",
-      "label": "forr",
-      "matches": {
-        "forr": true
-      }
-    },
-    {
-      "content": "if ($1) {\n\t$0\n}",
-      "doc": "Code snippet for if statement",
-      "label": "if",
-      "matches": {
-        "if": true
-      }
-    },
-    {
-      "content": "union ${1:MyUnion} {\n\t$0\n};",
-      "doc": "Code snippet for union",
-      "label": "union",
-      "matches": {
-        "union": true
-      }
-    },
-    {
-      "content": "for(${1:auto} ${2:var} : ${3:collection_to_loop}) {\n\t$0\n}",
-      "doc": "Code snippet for range-based for loop (c++11) statement",
-      "label": "foreach",
-      "matches": {
-        "foreach": true
-      }
-    },
-    {
-      "content": "class ${1:MyClass} {\npublic:\n\t$1();\n\t$1($1 &&) = default;\n\t$1(const $1 &) = default;\n\t$1 &operator=($1 &&) = default;\n\t$1 &operator=(const $1 &) = default;\n\t~$1();\n\nprivate:\n\t$2\n};\n\n$1::$1() {\n}\n\n$1::~$1() {\n}",
-      "doc": "Code snippet for class",
-      "label": "class",
-      "matches": {
-        "class": true
-      }
-    },
-    {
-      "content": "std::cout << ${1:message};",
-      "doc": "Code snippet for printing to std::cout, provided the header is set",
-      "label": "cout",
-      "matches": {
-        "cout": true
-      }
-    },
-    {
-      "content": "while ($1) {\n\t$0\n}",
-      "doc": "'while' loop snippet",
-      "label": "while",
-      "matches": {
-        "while": true
-      }
-    },
-    {
-      "content": "#include \"$1\"$2",
-      "doc": "Code snippet for #include \" \"",
-      "label": "#inc",
-      "matches": {
-        "#inc": true
-      }
-    },
-    {
-      "content": "const_cast<${1:unsigned}>(${2:expr})$3",
-      "doc": "const_cast<type>(expression)",
-      "label": "cca",
-      "matches": {
-        "cca": true
-      }
-    },
-    {
-      "content": "#include <$1>$2",
-      "doc": "Code snippet for #include < >",
-      "label": "#inc<",
-      "matches": {
-        "#inc<": true
-      }
-    },
-    {
-      "content": "reinterpret_cast<${1:unsigned}>(${2:expr})$3",
-      "doc": "reinterpret_cast<type>(expression)",
-      "label": "rca",
-      "matches": {
-        "rca": true
-      }
-    },
-    {
-      "content": "#ifndef INCLUDE${TM_DIRECTORY/.*[\\/\\\\](.*)/_${1:/upcase}/}${TM_FILENAME_BASE/(.*)/_${1:/upcase}/}${TM_FILENAME/.*\\.(.*)/_${1:/upcase}/}_\n#define INCLUDE${TM_DIRECTORY/.*[\\/\\\\](.*)/_${1:/upcase}/}${TM_FILENAME_BASE/(.*)/_${1:/upcase}/}${TM_FILENAME/.*\\.(.*)/_${1:/upcase}/}_\n\n$0\n\n#endif  // INCLUDE${TM_DIRECTORY/.*[\\/\\\\](.*)/_${1:/upcase}/}${TM_FILENAME_BASE/(.*)/_${1:/upcase}/}${TM_FILENAME/.*\\.(.*)/_${1:/upcase}/}_",
-      "doc": "header guard. format :\n\tINCLUDE_<dirname>_<filename>_<extension>_",
-      "label": "#guard",
-      "matches": {
-        "#guard": true
-      }
-    },
-    {
-      "content": "#define $0",
-      "doc": "Code snippet for #define \" \"",
-      "label": "#def",
-      "matches": {
-        "def": true
-      }
-    },
-    {
-      "content": "fscanf($1, \"$2\"$0);",
-      "doc": "Generic fscanf() snippet",
-      "label": "fscanf",
-      "matches": {
-        "fscanf": true
-      }
-    },
-    {
-      "content": "enum ${1:MyEnum} {\n\t$0\n};",
-      "doc": "Code snippet for enum",
-      "label": "enum",
-      "matches": {
-        "enum": true
-      }
-    },
-    {
-      "content": "__interface I${1:Interface} {\n\t$0\n};",
-      "doc": "Code snippet for interface (Visual C++)",
-      "label": "interface",
-      "matches": {
-        "interface": true
-      }
-    },
-    {
-      "content": "sscanf($1, \"$2\"$0);",
-      "doc": "Generic sscanf() snippet",
-      "label": "sscanf",
-      "matches": {
-        "sscanf": true
-      }
-    },
-    {
-      "content": "#include <iostream>\n\nint main (int argc, char *argv[]) {\n\t$1\n\n\treturn 0;\n}",
-      "doc": "Standard starter template for a tiny C++ program",
-      "label": "Starter Template",
-      "matches": {
-        "st": true
-      }
-    },
-    {
-      "content": "int main (int argc, char *argv[]) {\n\t$1\n\treturn 0;\n}",
-      "doc": "A standard main function for a C++ program",
-      "label": "Main function template",
-      "matches": {
-        "main": true
-      }
-    },
-    {
-      "content": "namespace ${1:MyNamespace} {\n\t$0\n}",
-      "doc": "",
-      "label": "namespace",
-      "matches": {
-        "namespace": true
-      }
-    },
-    {
-      "content": "#if ${1:0}\n$0\n#endif // $1",
-      "doc": "Code snippet for #if",
-      "label": "#if",
-      "matches": {
-        "#if": true
-      }
-    },
-    {
-      "content": "#ifndef ${1:DEBUG}\n$0\n#endif // !$1",
-      "doc": "Code snippet for #ifndef",
-      "label": "#ifndef",
-      "matches": {
-        "#ifndef": true
+        "enum class": true
       }
     },
     {
@@ -310,19 +46,115 @@
       }
     },
     {
-      "content": "#ifdef ${1:DEBUG}\n$0\n#endif // $1",
-      "doc": "Code snippet for #ifdef",
-      "label": "#ifdef",
+      "content": "fprintf(${1:stderr}, \"$2\\n\"$0);",
+      "doc": "Generic fprintf() snippet",
+      "label": "fprintf",
       "matches": {
-        "#ifdef": true
+        "fprintf": true
       }
     },
     {
-      "content": "enum class ${1:MyClass} {$0};",
-      "doc": "Code snippet for enum class (c++11)",
-      "label": "enum class",
+      "content": "for (${1:size_t} ${2:i} = ${3:0}; $2 < ${4:length}; $2++) {\n\t$0\n}",
+      "doc": "Code snippet for 'for' loop",
+      "label": "for",
       "matches": {
-        "enum class": true
+        "for": true
+      }
+    },
+    {
+      "content": "sscanf($1, \"$2\"$0);",
+      "doc": "Generic sscanf() snippet",
+      "label": "sscanf",
+      "matches": {
+        "sscanf": true
+      }
+    },
+    {
+      "content": "fscanf($1, \"$2\"$0);",
+      "doc": "Generic fscanf() snippet",
+      "label": "fscanf",
+      "matches": {
+        "fscanf": true
+      }
+    },
+    {
+      "content": "for(${1:auto} ${2:var} : ${3:collection_to_loop}) {\n\t$0\n}",
+      "doc": "Code snippet for range-based for loop (c++11) statement",
+      "label": "foreach",
+      "matches": {
+        "foreach": true
+      }
+    },
+    {
+      "content": "switch (${1:switch_on}) {\n\tdefault:\n\t\t$0\n\t\tbreak;\n}",
+      "doc": "Code snippet for switch statement",
+      "label": "switch",
+      "matches": {
+        "switch": true
+      }
+    },
+    {
+      "content": "#include <iostream>\n\nint main (int argc, char *argv[]) {\n\t$1\n\n\treturn 0;\n}",
+      "doc": "Standard starter template for a tiny C++ program",
+      "label": "Starter Template",
+      "matches": {
+        "st": true
+      }
+    },
+    {
+      "content": "class ${1:MyClass} : public QObject {\n\tQ_OBJECT;\npublic:\n\nexplicit $1(QObject *parent = nullptr);\n\t$2\nsignals:\n\npublic slots:\n};",
+      "doc": "Code snippet for empty Qt class",
+      "label": "qclass",
+      "matches": {
+        "qclass": true
+      }
+    },
+    {
+      "content": "auto ${1:name}( ${2:void} ) -> ${3:auto} {\n\t${5}\n}",
+      "doc": "auto function and trailing return",
+      "label": "af",
+      "matches": {
+        "af": true
+      }
+    },
+    {
+      "content": "while ($1) {\n\t$0\n}",
+      "doc": "'while' loop snippet",
+      "label": "while",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "#define $0",
+      "doc": "Code snippet for #define \" \"",
+      "label": "#def",
+      "matches": {
+        "def": true
+      }
+    },
+    {
+      "content": "namespace ${1:MyNamespace} {\n\t$0\n}",
+      "doc": "",
+      "label": "namespace",
+      "matches": {
+        "namespace": true
+      }
+    },
+    {
+      "content": "enum ${1:MyEnum} {\n\t$0\n};",
+      "doc": "Code snippet for enum",
+      "label": "enum",
+      "matches": {
+        "enum": true
+      }
+    },
+    {
+      "content": "__interface I${1:Interface} {\n\t$0\n};",
+      "doc": "Code snippet for interface (Visual C++)",
+      "label": "interface",
+      "matches": {
+        "interface": true
       }
     },
     {
@@ -334,11 +166,179 @@
       }
     },
     {
+      "content": "static_cast<${1:unsigned}>(${2:expr})$3",
+      "doc": "static_cast<type>(expression)",
+      "label": "sca",
+      "matches": {
+        "sca": true
+      }
+    },
+    {
+      "content": "#ifdef ${1:DEBUG}\n$0\n#endif // $1",
+      "doc": "Code snippet for #ifdef",
+      "label": "#ifdef",
+      "matches": {
+        "#ifdef": true
+      }
+    },
+    {
+      "content": "dynamic_cast<${1:unsigned}>(${2:expr})$3",
+      "doc": "dynamic_cast<type>(expression)",
+      "label": "dca",
+      "matches": {
+        "dca": true
+      }
+    },
+    {
+      "content": "#ifndef ${1:DEBUG}\n$0\n#endif // !$1",
+      "doc": "Code snippet for #ifndef",
+      "label": "#ifndef",
+      "matches": {
+        "#ifndef": true
+      }
+    },
+    {
+      "content": "const_cast<${1:unsigned}>(${2:expr})$3",
+      "doc": "const_cast<type>(expression)",
+      "label": "cca",
+      "matches": {
+        "cca": true
+      }
+    },
+    {
+      "content": "for (${1:size_t} ${2:i} = ${3:length} - 1; $2 >= ${4:0}; $2--) {\n\t$0\n}",
+      "doc": "Code snippet for reverse 'for' loop",
+      "label": "forr",
+      "matches": {
+        "forr": true
+      }
+    },
+    {
       "content": "class ${1:MyClass} {\npublic:\n\t$2\nprivate:\n\t$3\n};",
       "doc": "Code snippet for empty class",
       "label": "eclass",
       "matches": {
         "eclass": true
+      }
+    },
+    {
+      "content": "reinterpret_cast<${1:unsigned}>(${2:expr})$3",
+      "doc": "reinterpret_cast<type>(expression)",
+      "label": "rca",
+      "matches": {
+        "rca": true
+      }
+    },
+    {
+      "content": "#ifndef INCLUDE${TM_DIRECTORY/.*[\\/\\\\](.*)/_${1:/upcase}/}${TM_FILENAME_BASE/(.*)/_${1:/upcase}/}${TM_FILENAME/.*\\.(.*)/_${1:/upcase}/}_\n#define INCLUDE${TM_DIRECTORY/.*[\\/\\\\](.*)/_${1:/upcase}/}${TM_FILENAME_BASE/(.*)/_${1:/upcase}/}${TM_FILENAME/.*\\.(.*)/_${1:/upcase}/}_\n\n$0\n\n#endif  // INCLUDE${TM_DIRECTORY/.*[\\/\\\\](.*)/_${1:/upcase}/}${TM_FILENAME_BASE/(.*)/_${1:/upcase}/}${TM_FILENAME/.*\\.(.*)/_${1:/upcase}/}_",
+      "doc": "header guard. format :\n\tINCLUDE_<dirname>_<filename>_<extension>_",
+      "label": "#guard",
+      "matches": {
+        "#guard": true
+      }
+    },
+    {
+      "content": "else if ($1) {\n\t$0\n}",
+      "doc": "Code snippet for else-if statement",
+      "label": "else if",
+      "matches": {
+        "else if": true
+      }
+    },
+    {
+      "content": "int main (int argc, char *argv[]) {\n\t$1\n\treturn 0;\n}",
+      "doc": "A standard main function for a C++ program",
+      "label": "Main function template",
+      "matches": {
+        "main": true
+      }
+    },
+    {
+      "content": "#include <$1>$2",
+      "doc": "Code snippet for #include < >",
+      "label": "#inc<",
+      "matches": {
+        "#inc<": true
+      }
+    },
+    {
+      "content": "#include \"$1\"$2",
+      "doc": "Code snippet for #include \" \"",
+      "label": "#inc",
+      "matches": {
+        "#inc": true
+      }
+    },
+    {
+      "content": "class ${1:MyClass} {\npublic:\n\t$1() = default;\n\t$1($1 &&) = default;\n\t$1(const $1 &) = default;\n\t$1 &operator=($1 &&) = default;\n\t$1 &operator=(const $1 &) = default;\n\t~$1() = default;\n\nprivate:\n\t$2\n};",
+      "doc": "Code snippet for class with inline constructor/destructor",
+      "label": "classi",
+      "matches": {
+        "classi": true
+      }
+    },
+    {
+      "content": "union ${1:MyUnion} {\n\t$0\n};",
+      "doc": "Code snippet for union",
+      "label": "union",
+      "matches": {
+        "union": true
+      }
+    },
+    {
+      "content": "class ${1:MyClass} {\npublic:\n\t$1();\n\t$1($1 &&) = default;\n\t$1(const $1 &) = default;\n\t$1 &operator=($1 &&) = default;\n\t$1 &operator=(const $1 &) = default;\n\t~$1();\n\nprivate:\n\t$2\n};\n\n$1::$1() {\n}\n\n$1::~$1() {\n}",
+      "doc": "Code snippet for class",
+      "label": "class",
+      "matches": {
+        "class": true
+      }
+    },
+    {
+      "content": "std::cin >> $1;",
+      "doc": "Code snippet for std::cin, provided the header is set",
+      "label": "cin",
+      "matches": {
+        "cin": true
+      }
+    },
+    {
+      "content": "std::cout << ${1:message};",
+      "doc": "Code snippet for printing to std::cout, provided the header is set",
+      "label": "cout",
+      "matches": {
+        "cout": true
+      }
+    },
+    {
+      "content": "#if ${1:0}\n$0\n#endif // $1",
+      "doc": "Code snippet for #if",
+      "label": "#if",
+      "matches": {
+        "#if": true
+      }
+    },
+    {
+      "content": "if ($1) {\n\t$0\n}",
+      "doc": "Code snippet for if statement",
+      "label": "if",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "sprintf($1, \"$2\\n\"$0);",
+      "doc": "Generic sprintf() snippet",
+      "label": "sprintf",
+      "matches": {
+        "sprintf": true
+      }
+    },
+    {
+      "content": "scanf(\"$1\"$0);",
+      "doc": "Generic scanf() snippet",
+      "label": "scanf",
+      "matches": {
+        "scanf": true
       }
     },
     {

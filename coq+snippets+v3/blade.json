@@ -2,19 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "Blade::render(${1:'Blade template string'}, ${2:\\$data});",
-      "doc": "Transform a raw Blade template string into valid HTML (Laravel 9.x)",
-      "label": "Blade-render",
+      "content": "Blade::include('${1:includes.input}', '${2:input}');",
+      "doc": "Aliasing Includes (AppServiceProvider boot method)",
+      "label": "Blade-include",
       "matches": {
-        "Blade::render": true
-      }
-    },
-    {
-      "content": "Blade::component('${1:package-name}', ${2:PackageNameComponent}::class);",
-      "doc": "Registering Package Components (AppServiceProvider boot method)",
-      "label": "Blade-component",
-      "matches": {
-        "Blade::component": true
+        "Blade::include": true
       }
     },
     {
@@ -26,11 +18,19 @@
       }
     },
     {
-      "content": "Blade::include('${1:includes.input}', '${2:input}');",
-      "doc": "Aliasing Includes (AppServiceProvider boot method)",
-      "label": "Blade-include",
+      "content": "Blade::component('${1:package-name}', ${2:PackageNameComponent}::class);",
+      "doc": "Registering Package Components (AppServiceProvider boot method)",
+      "label": "Blade-component",
       "matches": {
-        "Blade::include": true
+        "Blade::component": true
+      }
+    },
+    {
+      "content": "Blade::render(${1:'Blade template string'}, ${2:\\$data});",
+      "doc": "Transform a raw Blade template string into valid HTML (Laravel 9.x)",
+      "label": "Blade-render",
+      "matches": {
+        "Blade::render": true
       }
     },
     {

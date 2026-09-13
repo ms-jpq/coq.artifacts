@@ -2,27 +2,19 @@
   "extends": [],
   "snippets": [
     {
-      "content": "| join: '${seperator:, }}'",
-      "doc": "Array filter: join",
-      "label": "Filter join",
-      "matches": {
-        "join": true
-      }
-    },
-    {
-      "content": "| first",
-      "doc": "Array filter: first",
-      "label": "Filter first",
-      "matches": {
-        "first": true
-      }
-    },
-    {
       "content": "| last",
       "doc": "Array filter: last",
       "label": "Filter last",
       "matches": {
         "last": true
+      }
+    },
+    {
+      "content": "---\nlayout: ${layout:default}\ntitle: ${title}\ncategories: ${category}\npermalink: ${path}\ntags: ${tag}\nexcerpt: ${description}\n---",
+      "doc": "Add front matter",
+      "label": "Front Matter",
+      "matches": {
+        "fm": true
       }
     },
     {
@@ -82,11 +74,27 @@
       }
     },
     {
+      "content": "{%- highlight ${lang:javascript} -%}\n\t\t${code:}\n{%- endhighlight -%}",
+      "doc": "Syntax tag: highlight",
+      "label": "Tag highlight",
+      "matches": {
+        "highlight": true
+      }
+    },
+    {
       "content": "| minus: ${minus:1}",
       "doc": "Math filter: minus",
       "label": "Filter minus",
       "matches": {
         "minus": true
+      }
+    },
+    {
+      "content": "{%- include ${snippet} -%}",
+      "doc": "Tag: include",
+      "label": "Tag include",
+      "matches": {
+        "include": true
       }
     },
     {
@@ -98,11 +106,27 @@
       }
     },
     {
+      "content": "{{ site.date | date: '${format: %b %d, %Y}' }}",
+      "doc": "Tag: site.date",
+      "label": "Site Vairable Date",
+      "matches": {
+        "date": true
+      }
+    },
+    {
       "content": "| plus: ${plus:1}",
       "doc": "Math filter: plus",
       "label": "Filter plus",
       "matches": {
         "plus": true
+      }
+    },
+    {
+      "content": "{%- include_relative '${file:}' -%}",
+      "doc": "Tag: include relative",
+      "label": "Tag include relative",
+      "matches": {
+        "increl": true
       }
     },
     {
@@ -114,19 +138,19 @@
       }
     },
     {
+      "content": "{%- post_url ${url:} -%}",
+      "doc": "Tag: post_url",
+      "label": "Tag Post URL",
+      "matches": {
+        "posturl": true
+      }
+    },
+    {
       "content": "| times: ${times:1}",
       "doc": "Math filter: times",
       "label": "Filter times",
       "matches": {
         "times": true
-      }
-    },
-    {
-      "content": "{%- else -%}",
-      "doc": "Control flow tag: else",
-      "label": "Tag else",
-      "matches": {
-        "else": true
       }
     },
     {
@@ -162,11 +186,11 @@
       }
     },
     {
-      "content": "| truncate: ${length:20}, '${ellipsis:...}' }}",
-      "doc": "String filter: truncate",
-      "label": "Filter truncate",
+      "content": "| escape }}",
+      "doc": "String filter: escape",
+      "label": "Filter escape",
       "matches": {
-        "truncate": true
+        "escape": true
       }
     },
     {
@@ -178,11 +202,11 @@
       }
     },
     {
-      "content": "| truncatewords: ${length:5}, '${ellipsis:...}' }}",
-      "doc": "String filter: truncatewords",
-      "label": "Filter truncatewords",
+      "content": "| markdownify }}",
+      "doc": "String filter: markdownify",
+      "label": "Filter markdownify",
       "matches": {
-        "truncatewords": true
+        "markdown": true
       }
     },
     {
@@ -226,14 +250,6 @@
       }
     },
     {
-      "content": "{%- if ${condition} -%}\n\t${code1:}\n{%- else -%}\n\t${code2:}\n{%- endif -%}",
-      "doc": "Control flow tag: if else",
-      "label": "Tag if else",
-      "matches": {
-        "ifelse": true
-      }
-    },
-    {
       "content": "| remove_first: '${string}' }}",
       "doc": "String filter: remove first",
       "label": "Filter remove first",
@@ -250,22 +266,6 @@
       }
     },
     {
-      "content": "| uri_escape }}",
-      "doc": "String filter: uri escape",
-      "label": "Filter uri escape",
-      "matches": {
-        "uri_escape": true
-      }
-    },
-    {
-      "content": "{%- gist ${gist:user/gist-id} -%}",
-      "doc": "Add a gist code block",
-      "label": "Tag gist",
-      "matches": {
-        "gist": true
-      }
-    },
-    {
       "content": "| replace: '${target}', '${replace}' }}",
       "doc": "String filter: replace",
       "label": "Filter replace",
@@ -274,19 +274,11 @@
       }
     },
     {
-      "content": "| xml_escape }}",
-      "doc": "String filter: xml escape",
-      "label": "Filter xml escape",
+      "content": "| replace_first: '${target}', '${replace}' }}",
+      "doc": "String filter: replace first",
+      "label": "Filter replace first",
       "matches": {
-        "xml_escape": true
-      }
-    },
-    {
-      "content": "{%- highlight ${lang:javascript} -%}\n\t\t${code:}\n{%- endhighlight -%}",
-      "doc": "Syntax tag: highlight",
-      "label": "Tag highlight",
-      "matches": {
-        "highlight": true
+        "replace_first": true
       }
     },
     {
@@ -298,11 +290,11 @@
       }
     },
     {
-      "content": "---\nlayout: ${layout:default}\ntitle: ${title}\ncategories: ${category}\npermalink: ${path}\ntags: ${tag}\nexcerpt: ${description}\n---",
-      "doc": "Add front matter",
-      "label": "Front Matter",
+      "content": "| slice: ${from:0}, ${to:5} }}",
+      "doc": "String filter: slice",
+      "label": "Filter slice",
       "matches": {
-        "fm": true
+        "slice": true
       }
     },
     {
@@ -314,14 +306,6 @@
       }
     },
     {
-      "content": "{%- include ${snippet} -%}",
-      "doc": "Tag: include",
-      "label": "Tag include",
-      "matches": {
-        "include": true
-      }
-    },
-    {
       "content": "| slice: ${at} }}",
       "doc": "String filter: slice with single parameter",
       "label": "Filter slice single character",
@@ -330,11 +314,11 @@
       }
     },
     {
-      "content": "{{ site.date | date: '${format: %b %d, %Y}' }}",
-      "doc": "Tag: site.date",
-      "label": "Site Vairable Date",
+      "content": "{%- continue -%}",
+      "doc": "Iteration tag: continue",
+      "label": "Tag continue",
       "matches": {
-        "date": true
+        "continue": true
       }
     },
     {
@@ -386,14 +370,6 @@
       }
     },
     {
-      "content": "| url_encode }}",
-      "doc": "String filter: url encode",
-      "label": "Filter url encode",
-      "matches": {
-        "url_encode": true
-      }
-    },
-    {
       "content": "| rstrip }}",
       "doc": "String filter: rstrip",
       "label": "Filter rstrip",
@@ -402,11 +378,11 @@
       }
     },
     {
-      "content": "| upcase }}",
-      "doc": "String filter: upcase }}",
-      "label": "Filter upcase",
+      "content": "{%- unless ${condition} -%}\n\t${code:}\n{%- endunless -%}",
+      "doc": "Control flow tag: unless",
+      "label": "Tag unless",
       "matches": {
-        "upcase": true
+        "unless": true
       }
     },
     {
@@ -426,19 +402,11 @@
       }
     },
     {
-      "content": "| strip_newlines }}",
-      "doc": "String filter: strip newlines",
-      "label": "Filter strip newlines",
+      "content": "{%- when ${condition} -%}\n${code:}",
+      "doc": "Control flow tag: when",
+      "label": "Tag when",
       "matches": {
-        "strip_newlines": true
-      }
-    },
-    {
-      "content": "| slice: ${from:0}, ${to:5} }}",
-      "doc": "String filter: slice",
-      "label": "Filter slice",
-      "matches": {
-        "slice": true
+        "when": true
       }
     },
     {
@@ -450,35 +418,19 @@
       }
     },
     {
+      "content": "| strip_newlines }}",
+      "doc": "String filter: strip newlines",
+      "label": "Filter strip newlines",
+      "matches": {
+        "strip_newlines": true
+      }
+    },
+    {
       "content": "limit: ${limit:5}",
       "doc": "For loops option",
       "label": "Tag Option limit",
       "matches": {
         "limit": true
-      }
-    },
-    {
-      "content": "{%- unless ${condition} -%}\n\t${code:}\n{%- endunless -%}",
-      "doc": "Control flow tag: unless",
-      "label": "Tag unless",
-      "matches": {
-        "unless": true
-      }
-    },
-    {
-      "content": "| escape }}",
-      "doc": "String filter: escape",
-      "label": "Filter escape",
-      "matches": {
-        "escape": true
-      }
-    },
-    {
-      "content": "offset: ${offset:0}",
-      "doc": "For loops option",
-      "label": "Tag Option offset",
-      "matches": {
-        "offset": true
       }
     },
     {
@@ -490,11 +442,19 @@
       }
     },
     {
-      "content": "{%- if ${condition} -%}\n\t${code:}\n{%- endif -%}",
-      "doc": "Control flow tag: if",
-      "label": "Tag if",
+      "content": "offset: ${offset:0}",
+      "doc": "For loops option",
+      "label": "Tag Option offset",
       "matches": {
-        "if": true
+        "offset": true
+      }
+    },
+    {
+      "content": "| truncatewords: ${length:5}, '${ellipsis:...}' }}",
+      "doc": "String filter: truncatewords",
+      "label": "Filter truncatewords",
+      "matches": {
+        "truncatewords": true
       }
     },
     {
@@ -506,14 +466,6 @@
       }
     },
     {
-      "content": "{%- elsif ${condition} -%}",
-      "doc": "Control flow tag: elsif",
-      "label": "Tag elsif",
-      "matches": {
-        "elsif": true
-      }
-    },
-    {
       "content": "{%- raw -%}${code:}{%- endraw -%}",
       "doc": "Tag: raw",
       "label": "Tag raw",
@@ -522,27 +474,27 @@
       }
     },
     {
-      "content": "{%- post_url ${url:} -%}",
-      "doc": "Tag: post_url",
-      "label": "Tag Post URL",
+      "content": "| upcase }}",
+      "doc": "String filter: upcase }}",
+      "label": "Filter upcase",
       "matches": {
-        "posturl": true
+        "upcase": true
       }
     },
     {
-      "content": "{%- when ${condition} -%}\n${code:}",
-      "doc": "Control flow tag: when",
-      "label": "Tag when",
+      "content": "{%- else -%}",
+      "doc": "Control flow tag: else",
+      "label": "Tag else",
       "matches": {
-        "when": true
+        "else": true
       }
     },
     {
-      "content": "{%- continue -%}",
-      "doc": "Iteration tag: continue",
-      "label": "Tag continue",
+      "content": "| xml_escape }}",
+      "doc": "String filter: xml escape",
+      "label": "Filter xml escape",
       "matches": {
-        "continue": true
+        "xml_escape": true
       }
     },
     {
@@ -554,27 +506,19 @@
       }
     },
     {
-      "content": "| markdownify }}",
-      "doc": "String filter: markdownify",
-      "label": "Filter markdownify",
+      "content": "{%- elsif ${condition} -%}",
+      "doc": "Control flow tag: elsif",
+      "label": "Tag elsif",
       "matches": {
-        "markdown": true
+        "elsif": true
       }
     },
     {
-      "content": "{%- include_relative '${file:}' -%}",
-      "doc": "Tag: include relative",
-      "label": "Tag include relative",
+      "content": "| url_encode }}",
+      "doc": "String filter: url encode",
+      "label": "Filter url encode",
       "matches": {
-        "increl": true
-      }
-    },
-    {
-      "content": "| replace_first: '${target}', '${replace}' }}",
-      "doc": "String filter: replace first",
-      "label": "Filter replace first",
-      "matches": {
-        "replace_first": true
+        "url_encode": true
       }
     },
     {
@@ -583,6 +527,62 @@
       "label": "Filter jsonify",
       "matches": {
         "json": true
+      }
+    },
+    {
+      "content": "{%- if ${condition} -%}\n\t${code1:}\n{%- else -%}\n\t${code2:}\n{%- endif -%}",
+      "doc": "Control flow tag: if else",
+      "label": "Tag if else",
+      "matches": {
+        "ifelse": true
+      }
+    },
+    {
+      "content": "| uri_escape }}",
+      "doc": "String filter: uri escape",
+      "label": "Filter uri escape",
+      "matches": {
+        "uri_escape": true
+      }
+    },
+    {
+      "content": "| join: '${seperator:, }}'",
+      "doc": "Array filter: join",
+      "label": "Filter join",
+      "matches": {
+        "join": true
+      }
+    },
+    {
+      "content": "| truncate: ${length:20}, '${ellipsis:...}' }}",
+      "doc": "String filter: truncate",
+      "label": "Filter truncate",
+      "matches": {
+        "truncate": true
+      }
+    },
+    {
+      "content": "{%- gist ${gist:user/gist-id} -%}",
+      "doc": "Add a gist code block",
+      "label": "Tag gist",
+      "matches": {
+        "gist": true
+      }
+    },
+    {
+      "content": "| first",
+      "doc": "Array filter: first",
+      "label": "Filter first",
+      "matches": {
+        "first": true
+      }
+    },
+    {
+      "content": "{%- if ${condition} -%}\n\t${code:}\n{%- endif -%}",
+      "doc": "Control flow tag: if",
+      "label": "Tag if",
+      "matches": {
+        "if": true
       }
     }
   ]

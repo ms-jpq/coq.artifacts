@@ -176,7 +176,6 @@
     "gemfile": {
       "ruby": true
     },
-    "generated": {},
     "gitcommit": {},
     "gleam": {},
     "global": {},
@@ -3344,16 +3343,6 @@
         "uniV2Factory": true
       }
     },
-    "0484c644-1809-316a-a5a9-dbcad23abeb7": {
-      "content": "type Props = {}\nconst ${1:${TM_FILENAME_BASE}} = (props: Props) => {\n  return (\n    <>${1:first}</>\n  )\n}\nexport default ${1:${TM_FILENAME_BASE}}",
-      "doc": "Creates a React Arrow Function Component with ES7 module system and TypeScript interface",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "typescriptReactArrowFunctionExportComponent",
-      "matches": {
-        "tsrafce": true
-      }
-    },
     "0490a9c3-5cbc-3569-b434-96d10c8cc8f3": {
       "content": "{\n\t\"type\": \"color\",\n\t\"id\": \"${1}\",\n\t\"label\": \"${2}\",\n\t\"default\": \"${3}\",\n\t\"info\": \"${0}\"\n}",
       "doc": "",
@@ -4330,16 +4319,6 @@
       "label": "lodash-xorby",
       "matches": {
         "lodash xorby": true
-      }
-    },
-    "0668a8da-3673-361a-a2cf-f09d86d1b8ee": {
-      "content": "import { PureComponent } from 'react'\n\nexport default class ${1:${TM_FILENAME_BASE}} extends PureComponent {\n  render() {\n    return (\n      <>${1:first}</>\n    )\n  }\n}",
-      "doc": "Creates a React pure component class with ES7 module system",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reactClassPureComponent",
-      "matches": {
-        "rpc": true
       }
     },
     "066a27da-67a9-326a-93fb-587125f5887e": {
@@ -5807,16 +5786,6 @@
         "rcredux": true
       }
     },
-    "08aeae47-e9f7-3ca1-8fa8-94482cf015b0": {
-      "content": "",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "importReact",
-      "matches": {
-        "imr": true
-      }
-    },
     "08b4590a-a76d-33b6-a9ad-8a5ea7d6fab7": {
       "content": "$.inArray(${1:value}, ${0:array})",
       "doc": "",
@@ -6602,16 +6571,6 @@
       "label": "",
       "matches": {
         "ajaxprefilter": true
-      }
-    },
-    "09fa6955-0f6b-3256-9237-ea1fd2199754": {
-      "content": "constructor(props) {\n  super(props)\n\n  this.state = {\n     ${1:first}\n  }\n}",
-      "doc": "Adds a default constructor for it('', () => {})the class that contains props as arguments",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "classConstructor",
-      "matches": {
-        "rconst": true
       }
     },
     "0a0024d7-a64f-38d8-a95b-fa355651bbb4": {
@@ -7588,16 +7547,6 @@
         "routes": true
       }
     },
-    "0b73986e-9d3a-3b71-ba79-6528d473e7ac": {
-      "content": "import PropTypes from 'prop-types'\nimport { Component } from 'react'\n\nexport class ${1:${TM_FILENAME_BASE}} extends Component {\n  static propTypes = {}\n\n  render() {\n    return (\n      <>${1:first}</>\n    )\n  }\n}\n\nexport default ${1:${TM_FILENAME_BASE}}",
-      "doc": "Creates a React component class with ES7 module system",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reactClassExportComponentWithPropTypes",
-      "matches": {
-        "rcep": true
-      }
-    },
     "0b754a79-2133-3bd3-b292-57b11a5b83ba": {
       "content": "cut:\"${0}\"",
       "doc": "",
@@ -8457,16 +8406,6 @@
         "bts": true
       }
     },
-    "0ce002aa-8f55-3379-b572-a064c5fe5f19": {
-      "content": "import { createSelector } from 'reselect'\n\nexport const ${1:first} = state => state.${2:second}",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reduxSelector",
-      "matches": {
-        "rxselect": true
-      }
-    },
     "0ce003fc-d42d-3f7a-b4af-9da4689ce298": {
       "content": "{% break %}",
       "doc": "Iteration tag: break",
@@ -9209,16 +9148,6 @@
         "b:dd": true
       }
     },
-    "0e0e7562-5018-3d5a-961f-dedf2d803b76": {
-      "content": "import { Text, View } from 'react-native'\nimport { Component } from 'react'\n\nexport class ${1:${TM_FILENAME_BASE}} extends Component {\n  render() {\n    return (\n      <View>\n        <Text>${1:first}</Text>\n      </View>\n    )\n  }\n}\n\nexport default ${1:${TM_FILENAME_BASE}}",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reactNativeComponentExport",
-      "matches": {
-        "rnce": true
-      }
-    },
     "0e16c018-b4b0-3bf9-9f17-7312196d81a6": {
       "content": "{% set ${1:x} = ${0:y} %}",
       "doc": "",
@@ -9832,16 +9761,6 @@
         "while": true
       }
     },
-    "0ef921f8-b12e-3804-9845-ed1cb9cedbe2": {
-      "content": "PropTypes.number.isRequired",
-      "doc": "Number prop type required",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "propTypeNumberRequired",
-      "matches": {
-        "ptnr": true
-      }
-    },
     "0efa7380-23f3-3749-a7ed-9ad1ae4d6d07": {
       "content": "display: table-header-group;",
       "doc": "",
@@ -10072,16 +9991,6 @@
       "label": "",
       "matches": {
         "case": true
-      }
-    },
-    "0f4ffe8d-27ff-356b-958e-f3ed04a42c0a": {
-      "content": "import PropTypes from 'prop-types'\nexport default (WrappedComponent) => {\n  const hocComponent = ({ ...props }) => <WrappedComponent {...props} />\n  hocComponent.propTypes = {}\n  return hocComponent\n}",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "hocComponent",
-      "matches": {
-        "hoc": true
       }
     },
     "0f527559-e57f-3fa2-b924-6e4e0fa49897": {
@@ -10917,6 +10826,16 @@
         "forrb": true
       }
     },
+    "1092525d-084f-315e-ba99-e47ac6bee292": {
+      "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n- [${5| ,x|}] ${6:text}\n- [${7| ,x|}] ${8:text}\n- [${9| ,x|}] ${10:text}\n${0}",
+      "doc": "Create list of 5 todos",
+      "filetype": "markdown",
+      "grammar": "lsp",
+      "label": "Create list of 5 todos",
+      "matches": {
+        "todo5": true
+      }
+    },
     "109b5602-8245-36b2-9d77-a40f69edb865": {
       "content": "_.join(${array}, ${separator})",
       "doc": "_.join(['a', 'b', 'c'], '~');\n// => 'a~b~c'\n\nConverts all elements in `array` into a string separated by `separator`.",
@@ -11046,16 +10965,6 @@
       "label": "",
       "matches": {
         "<c": true
-      }
-    },
-    "10ca0581-e45c-3b76-8703-bb7fc80a2701": {
-      "content": "console.count(${1:first})",
-      "doc": "Writes the the number of times that count() has been invoked at the same line and with the same label",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "consoleCount",
-      "matches": {
-        "cco": true
       }
     },
     "10ce8773-cbaf-38d5-82a8-7480ebbac0b4": {
@@ -12489,16 +12398,6 @@
         "ovx:v": true
       }
     },
-    "12fa2ffe-5ea5-38ae-9bb0-0da9f1198d36": {
-      "content": "import { Component } from 'react'\nimport PropTypes from 'prop-types'",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "importReactWithComponentAndPropTypes",
-      "matches": {
-        "imrcp": true
-      }
-    },
     "12fa38fa-7169-3681-b742-321c9eff572e": {
       "content": "${1:$CURRENT_YEAR}-${2:$CURRENT_MONTH}-${3:$CURRENT_DATE} balance ${4|Assets:,Liabilities:,Equity:,Income:,Expenses:|} ${5:Amount}\n$0",
       "doc": "Assert balance on given day.",
@@ -12507,16 +12406,6 @@
       "label": "balance assertion",
       "matches": {
         "balance": true
-      }
-    },
-    "12fbda82-f4f7-32bf-81c8-58637317b678": {
-      "content": "import { createBrowserRouter, RouterProvider } from 'react-router-dom'\n\nconst router = createBrowserRouter([\n  {\n    path: '/',\n    element: <${1:first} />,\n    children: [\n      {\n        path: '${2:second}',\n        element: <${3:third} />,\n      },\n    ],\n  },\n])\n\nfunction App() {\n  return <RouterProvider router={router} />\n}\n\nexport default App",
-      "doc": "React Router v6 createBrowserRouter setup",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "createBrowserRouterSetup",
-      "matches": {
-        "rtrsetup": true
       }
     },
     "12fd5c09-d664-3d47-9c5b-f037f129628b": {
@@ -12597,26 +12486,6 @@
       "label": "",
       "matches": {
         "bgi:n": true
-      }
-    },
-    "13164e23-bd62-3eb1-9c57-fff3d9718763": {
-      "content": "import PropTypes from 'prop-types'\nconst ${1:${TM_FILENAME_BASE}} = props => {\n  return (\n    <>${1:first}</>\n  )\n}\n${1:${TM_FILENAME_BASE}}.propTypes = {}\nexport default ${1:${TM_FILENAME_BASE}}",
-      "doc": "Creates a React Arrow Function Component with ES7 module system with PropTypes",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reactArrowFunctionComponentWithPropTypes",
-      "matches": {
-        "rafcp": true
-      }
-    },
-    "1316670b-6bbb-307e-bdf8-c5b1c19bfe03": {
-      "content": "import { memo } from 'react'",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "importReactWithMemo",
-      "matches": {
-        "imrm": true
       }
     },
     "13171296-8a1f-334f-b51d-4ebba55cdc0c": {
@@ -12920,16 +12789,6 @@
       "label": "Unreal DataTable Struct",
       "matches": {
         "ustruct_datatable": true
-      }
-    },
-    "13793e7f-08da-34a3-8f9a-031629a82f5a": {
-      "content": "const { ${1:first} } = this.state",
-      "doc": "Creates and assigns a local variable using state destructing",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "destructState",
-      "matches": {
-        "cs": true
       }
     },
     "137d0622-2b74-343c-933e-3d45fea7ad7e": {
@@ -13735,16 +13594,6 @@
       "label": "",
       "matches": {
         "bdci:n": true
-      }
-    },
-    "148fed6a-a1fc-31cb-bf8d-60969f466f73": {
-      "content": "getSnapshotBeforeUpdate = (prevProps, prevState) => {${1:first}}",
-      "doc": "Called right before mutations are made (e.g. before the DOM is updated)",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "getSnapshotBeforeUpdate",
-      "matches": {
-        "gsbu": true
       }
     },
     "14926a3f-9e64-3229-a16e-b06b2af1a6b7": {
@@ -16955,16 +16804,6 @@
         "style_with_less": true
       }
     },
-    "1970738e-3bdb-3fa4-9a03-e9649b5f91e3": {
-      "content": "useCallback(\n  () => {\n    ${1:first}\n  },\n  [${2:second}],\n)",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "useCallback",
-      "matches": {
-        "useCallbackSnippet": true
-      }
-    },
     "19759060-032f-3825-be44-d38633c22920": {
       "content": "bezier(${1:x1}, ${2:y1}, ${3:cx1}, ${4:cy1}, ${5:cx2}, ${6:cy2}, ${7:x2}, ${0:y2});",
       "doc": "",
@@ -17176,16 +17015,6 @@
       "label": "",
       "matches": {
         "bgr:x": true
-      }
-    },
-    "19b70dc0-c648-3984-b9bc-a25c7b4291eb": {
-      "content": "const { pending, data, method, action } = useFormStatus()",
-      "doc": "useFormStatus (import from react-dom)",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "useFormStatus",
-      "matches": {
-        "useFormStatusSnippet": true
       }
     },
     "19b85c5c-219f-3918-9ba3-7d9a90d61e31": {
@@ -19087,6 +18916,16 @@
         "input:hidden": true
       }
     },
+    "1c65834f-6bb5-31ee-9cb0-a9348f715c8c": {
+      "content": "# https://kubernetes.io/docs/concepts/workloads/pods/\napiVersion: v1\nkind: Pod\nmetadata:\n  name: \"${1:myapp}\"\n  namespace: ${2:default}\n  annotations:\n    kubectl.kubernetes.io/default-container:  ${1:myapp}\n  labels:\n    app: \"${1:myapp}\"\nspec:\n  containers:\n  - name: ${1:myapp}\n    image: \"${3:debian:stable-slim}\"\n    resources:\n      limits:\n        cpu: 200m\n        memory: 500Mi\n      requests:\n        cpu: 100m\n        memory: 200Mi\n    env:\n    - name: DB_HOST\n      valueFrom:\n        configMapKeyRef:\n          name: myapp\n          key: DB_HOST\n    ports:\n    - containerPort: ${4:80}\n      name: http\n    volumeMounts:\n    - name: localtime\n      mountPath: /etc/localtime\n  volumes:\n    - name: localtime\n      hostPath:\n        path: /usr/share/zoneinfo/Asia/Taipei\n  restartPolicy: Always\n---\n$0",
+      "doc": "k8s Pod",
+      "filetype": "kubernetes",
+      "grammar": "lsp",
+      "label": "k8s Pod",
+      "matches": {
+        "k-pod": true
+      }
+    },
     "1c668314-5483-3a26-ab40-3d8abf525979": {
       "content": "console.trace()",
       "doc": "",
@@ -19975,16 +19814,6 @@
         "strikethrough": true
       }
     },
-    "1d85b0e2-4398-3427-bdb0-4863b5fe547e": {
-      "content": "export interface ${1:first} {${2:second}}",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "exportInterface",
-      "matches": {
-        "expint": true
-      }
-    },
     "1d8ba406-7aad-37bd-844e-973da720c68a": {
       "content": "unbinary(\"${0:str}\"});",
       "doc": "",
@@ -20063,16 +19892,6 @@
       "label": "Read and write variables",
       "matches": {
         "set": true
-      }
-    },
-    "1da0992e-6c54-352d-8514-188d86d7365b": {
-      "content": "console.log(${1:first})",
-      "doc": "Displays a message in the console",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "consoleLog",
-      "matches": {
-        "clg": true
       }
     },
     "1da795d4-6295-36ce-b601-0bf97f08eeda": {
@@ -20554,16 +20373,6 @@
       "label": "",
       "matches": {
         "forinlet": true
-      }
-    },
-    "1e34d415-1f48-3541-a69f-ab1f8395e4da": {
-      "content": "const ${1:first} = use(${2:second})",
-      "doc": "Read a Promise or Context in render (React 19)",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "use",
-      "matches": {
-        "useSnippet": true
       }
     },
     "1e3837a2-c0f8-3335-ac41-1862ee946a36": {
@@ -21299,16 +21108,6 @@
       "label": "",
       "matches": {
         "js": true
-      }
-    },
-    "1f712776-582e-31d4-bfce-c9bc91f9d680": {
-      "content": "const ${1:first} = React.createContext()",
-      "doc": "Create React context",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "createContext",
-      "matches": {
-        "rcontext": true
       }
     },
     "1f720d72-45bc-3404-a296-3d31b039d9b5": {
@@ -22900,16 +22699,6 @@
       "label": "",
       "matches": {
         "if": true
-      }
-    },
-    "220c0d97-df23-3568-9d39-df36793dddaf": {
-      "content": "console.time('${1:first}')",
-      "doc": "Console time wrapper",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "consoleTime",
-      "matches": {
-        "ctm": true
       }
     },
     "221062c5-e320-38e8-8c95-28f5047b8180": {
@@ -24703,16 +24492,6 @@
         "ff:c": true
       }
     },
-    "24c82813-74af-3fa8-99a3-cebda91a2c2b": {
-      "content": "PropTypes.string",
-      "doc": "String prop type",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "propTypeString",
-      "matches": {
-        "pts": true
-      }
-    },
     "24cc5fbc-c887-390f-b831-d686a3600b18": {
       "content": "{% continue %}",
       "doc": "",
@@ -24721,6 +24500,16 @@
       "label": "",
       "matches": {
         "continue": true
+      }
+    },
+    "24cd753b-8b2d-3000-a8fb-60033fcf2e24": {
+      "content": "{\n\t\"name\": \"Launch Angular\",\n\t\"type\": \"${1:chrome}\",\n\t\"request\": \"launch\",\n\t\"preLaunchTask\": \"${2:npm: start}\",\n\t\"url\": \"http://localhost:${3:4200}/\",\n\t\"webRoot\": \"${4:\\${workspaceFolder\\}}\"\n}",
+      "doc": "Launch/debug configuration for VS Code for Chrome",
+      "filetype": "jsonc",
+      "grammar": "lsp",
+      "label": "Create launch config for Chrome",
+      "matches": {
+        "a-launch-chrome": true
       }
     },
     "24ceb700-1c71-358e-accd-8ac90449f269": {
@@ -25523,6 +25312,16 @@
         "write": true
       }
     },
+    "25f1730f-a5a8-30ae-9db9-d78c7d3f0605": {
+      "content": "async def ${1:fname}($2) -> ${3:None}:\n\t${4:pass}",
+      "doc": "Async function definition with return type",
+      "filetype": "python",
+      "grammar": "lsp",
+      "label": "Async Function w/ return type",
+      "matches": {
+        "adeft": true
+      }
+    },
     "25f291c3-47e9-3537-82a2-f0c6c224b434": {
       "content": "text-indent ${0}",
       "doc": "",
@@ -25653,16 +25452,6 @@
       "matches": {
         "def": true,
         "define": true
-      }
-    },
-    "26272ee3-7565-35f0-9bee-d8ad9ff37369": {
-      "content": "it('should ${1:first}', async () => { ${2:second} })",
-      "doc": "Testing asynchronous `it` block",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "itAsyncBlock",
-      "matches": {
-        "tita": true
       }
     },
     "262e7432-209a-3e3f-831a-d00f6597ae80": {
@@ -26140,6 +25929,16 @@
         "ovs:mq": true
       }
     },
+    "26db5bb1-c3f7-35ae-ae82-b688aa93490e": {
+      "content": "import { NgModule } from '@angular/core'\nimport { BrowserModule  } from '@angular/platform-browser'\nimport { HttpClientModule } from '@angular/common/http'\n\nimport { ${1:App}Component } from './${1:app}.component'\n\n@NgModule({\n\timports: [\n\t\tBrowserModule,\n\t\tHttpClientModule,\n\t],\n\tdeclarations: [${1:App}Component],\n\tbootstrap: [${1:App}Component],\n})\nexport class ${1:App}Module { }\n$0",
+      "doc": "Angular Root Module",
+      "filetype": "typescript",
+      "grammar": "lsp",
+      "label": "Angular Root Module",
+      "matches": {
+        "a-module-root": true
+      }
+    },
     "26db895f-9480-3cae-b0c8-44fc119184c0": {
       "content": "var ${1}:${2};",
       "doc": "",
@@ -26208,16 +26007,6 @@
       "label": "reactStatelessProps",
       "matches": {
         "rscp": true
-      }
-    },
-    "26f89798-2b84-3f3c-b242-17b27abe78f5": {
-      "content": "import { Component } from 'react'\n\ntype Props = {}\n\ntype State = {}\n\nclass ${1:${TM_FILENAME_BASE}} extends Component<Props, State> {\n  state = {}\n\n  render() {\n    return (\n      <>${1:first}</>\n    )\n  }\n}\n\nexport default ${1:${TM_FILENAME_BASE}}",
-      "doc": "Creates a React component class with ES7 module system and TypeScript interfaces",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "typescriptReactClassExportComponent",
-      "matches": {
-        "tsrce": true
       }
     },
     "26f9a80f-7eb5-379e-b381-f1a72f79c062": {
@@ -27083,6 +26872,16 @@
         "pbicg": true
       }
     },
+    "285631a7-97ed-3ac2-8b52-ed8219c9a0d9": {
+      "content": "import { Component } from '@angular/core'\nimport { RouterOutlet } from '@angular/router'\n\n@Component({\n\tstandalone: true,\n\timports: [RouterOutlet],\n\tselector: '${1:prefix-app}',\n\ttemplate: `\n\t\t<router-outlet></router-outlet>\n\t\t`\n})\nexport class ${2:App}Component { }\n$0",
+      "doc": "Angular App root component",
+      "filetype": "typescript",
+      "grammar": "lsp",
+      "label": "Angular Root Component",
+      "matches": {
+        "a-component-root": true
+      }
+    },
     "286a3067-d14e-3dd1-8494-4dca9ab34c7d": {
       "content": "<menu>\n\t${0}\n</menu>",
       "doc": "",
@@ -27568,16 +27367,6 @@
         "exp": true
       }
     },
-    "291e0bac-c512-3c26-a757-4d13faacde68": {
-      "content": "type Props = {}\nconst ${1:${TM_FILENAME_BASE}} = (props: Props) => {\n  return (\n    <>${1:first}</>\n  )\n}",
-      "doc": "Creates a React Arrow Function Component with ES7 module system and TypeScript interface",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "typescriptReactArrowFunctionComponent",
-      "matches": {
-        "tsrafc": true
-      }
-    },
     "291f877a-20a8-3eb9-9eb0-c42ce8cd2987": {
       "content": "@verbatim\n\t${0:$VISUAL}\n@endverbatim",
       "doc": "",
@@ -27767,16 +27556,6 @@
       "label": "float",
       "matches": {
         "float": true
-      }
-    },
-    "29509ca3-fd4c-301f-b8e7-94c39e45574c": {
-      "content": "const [isPending, startTransition] = useTransition()",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "useTransition",
-      "matches": {
-        "useTransitionSnippet": true
       }
     },
     "2950a19b-f300-358f-a545-701ba993fb2f": {
@@ -28492,6 +28271,16 @@
         "mix": true
       }
     },
+    "2a2929d6-4808-34e4-92b7-81fcda55504f": {
+      "content": "[TestMethod]\npublic void ${1:TestName}()\n{\n\t$0\n}",
+      "doc": "create mstest test method",
+      "filetype": "csharp",
+      "grammar": "lsp",
+      "label": "MSTest Test Method",
+      "matches": {
+        "tm": true
+      }
+    },
     "2a2a8005-3c82-3575-ad5b-4874ebae1ed9": {
       "content": "@#'",
       "doc": "",
@@ -28988,16 +28777,6 @@
         "dictsortrev": true
       }
     },
-    "2ad29bdb-e49b-36a5-804a-54f1508ef21a": {
-      "content": "this.state.${1:first}",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "componentState",
-      "matches": {
-        "state": true
-      }
-    },
     "2ad523c3-70db-3c5c-b53c-0d033b065b47": {
       "content": "#if ${1:FOO}\n\t${0:${VISUAL}}\n#endif",
       "doc": "",
@@ -29389,16 +29168,6 @@
       "label": "forIn",
       "matches": {
         "fin": true
-      }
-    },
-    "2bdb7081-1cef-316c-8bf2-d4b759c5e13c": {
-      "content": "console.assert(${1:first}, ${2:second})",
-      "doc": "If the specified expression is false, the message is written to the console along with a stack trace",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "consoleAssert",
-      "matches": {
-        "cas": true
       }
     },
     "2bde8638-e1a2-3967-9f8a-d9806e6c3297": {
@@ -30073,6 +29842,16 @@
         "ps": true
       }
     },
+    "2d25c838-eb97-356b-9377-083510e34bc2": {
+      "content": "async for ${1:item} in ${2:aiterable}:\n\t${3:pass}",
+      "doc": "Async for loop",
+      "filetype": "python",
+      "grammar": "lsp",
+      "label": "async for",
+      "matches": {
+        "afor": true
+      }
+    },
     "2d263845-7d79-3bfc-8953-de78db67fc5e": {
       "content": "fontStyle: '${1:normal}',",
       "doc": "fontStyle",
@@ -30495,16 +30274,6 @@
         "@proto": true
       }
     },
-    "2dbc93dd-1e47-3772-b12f-34ae937d9721": {
-      "content": "export const ${1:first} = '${1:first}'",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reduxConst",
-      "matches": {
-        "rxconst": true
-      }
-    },
     "2dbd9d70-0893-367d-ac1b-66d1ad0fbdaf": {
       "content": "overflow-y scroll",
       "doc": "",
@@ -30744,16 +30513,6 @@
       "label": "",
       "matches": {
         "del": true
-      }
-    },
-    "2e00f156-4711-3c90-a12a-f4d60d8f4405": {
-      "content": "console.timeEnd('${1:first}')",
-      "doc": "Console time end wrapper",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "consoleTimeEnd",
-      "matches": {
-        "cte": true
       }
     },
     "2e01e0fd-4648-3ae9-a148-9561952a9f42": {
@@ -31319,16 +31078,6 @@
         "else": true
       }
     },
-    "2efe6dd8-7cf6-3f64-b197-1f8cfbb0d2b6": {
-      "content": "/**\n * ${1:first}\n */",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "commentBigBlock",
-      "matches": {
-        "cmmb": true
-      }
-    },
     "2f0018ff-a643-390c-a7c4-f00392c58a1d": {
       "content": "data \"google_iam_policy\" \"${admin}\" {\n   binding {\n       role = \"roles/compute.instanceAdmin\"\n           members = [\n               \"serviceAccount:your-custom-sa@your-project.iam.gserviceaccount.com\",\n           ]\n   }\n   binding {\n       role = \"roles/storage.objectViewer\"\n       members = [\n           \"user:evanbrown@google.com\",\n       ]\n   }\n}",
       "doc": "Defines google_iam_policy policy",
@@ -31841,16 +31590,6 @@
         "concat": true
       }
     },
-    "2fb0d944-5864-3eff-ad33-bc88417a1896": {
-      "content": "shouldComponentUpdate(nextProps, nextState) { ${1:first} }",
-      "doc": "Invoked before rendering when new props or state are being received.",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "shouldComponentUpdate",
-      "matches": {
-        "scu": true
-      }
-    },
     "2fb36bdc-f9f3-3fd5-a585-ec3977b3c53a": {
       "content": "class ${TM_FILENAME_BASE} {\n\t$0\n}",
       "doc": "Snippet for class declaration",
@@ -31959,16 +31698,6 @@
       "label": "typescriptReactClassPureComponent",
       "matches": {
         "tsrpc": true
-      }
-    },
-    "2febe314-3677-39d3-a482-8ebb90745473": {
-      "content": "function($1)\n\t${0}\nend",
-      "doc": "Create an anonymous function",
-      "filetype": "lua",
-      "grammar": "lsp",
-      "label": "anonymous-function",
-      "matches": {
-        "f)": true
       }
     },
     "2feda8c1-d29d-3083-bf3c-10ba564a048d": {
@@ -32496,16 +32225,6 @@
       "label": "",
       "matches": {
         "lw": true
-      }
-    },
-    "30d339eb-4b54-3387-a558-1039fa588c06": {
-      "content": "public class ${1:TM_FILENAME_BASE} {\n\t$0\n}",
-      "doc": "Public class",
-      "filetype": "java",
-      "grammar": "lsp",
-      "label": "class",
-      "matches": {
-        "class": true
       }
     },
     "30d681f8-8bd8-3695-b500-52074fb67bb3": {
@@ -35015,16 +34734,6 @@
         "s-if-else-if-block": true
       }
     },
-    "34914893-cf4b-37b8-86cd-83a08baab94c": {
-      "content": "import { Component } from 'react'\n\ntype Props = {}\n\ntype State = {}\n\nexport default class ${1:${TM_FILENAME_BASE}} extends Component<Props, State> {\n  state = {}\n\n  render() {\n    return (\n      <>${1:first}</>\n    )\n  }\n}",
-      "doc": "Creates a React component class with ES7 module system and TypeScript interfaces",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "typescriptReactClassComponent",
-      "matches": {
-        "tsrcc": true
-      }
-    },
     "34953303-8d28-34ef-af3c-6cdd08327e39": {
       "content": "div(ng-hide='${1}')",
       "doc": "",
@@ -36264,16 +35973,6 @@
         "tryf": true
       }
     },
-    "36784bfa-9e48-32c6-bde8-654ac7cfdc2f": {
-      "content": "import { memo } from 'react'\nimport PropTypes from 'prop-types'",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "importReactWithMemoAndPropTypes",
-      "matches": {
-        "imrmp": true
-      }
-    },
     "367c4960-1f1b-3bb1-8306-822bcf5b5542": {
       "content": "verify(${1:mockedService}, never()).${2:executeMagic()};",
       "doc": "Verify if a mocked method was never called",
@@ -36352,16 +36051,6 @@
       "label": "ReadDefaultsValue",
       "matches": {
         "rdef": true
-      }
-    },
-    "36a9d3de-c9a4-3ffc-9537-c6b044ba1843": {
-      "content": "console.log('${1:first}', JSON.stringify(${1:first}, null, 2))",
-      "doc": "Logs stringified JSON property with name.",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "consoleLogJson",
-      "matches": {
-        "clj": true
       }
     },
     "36aa81d4-8d6b-3bec-98c2-5bca7d8fb432": {
@@ -37117,16 +36806,6 @@
         "macro_use": true
       }
     },
-    "37e8f524-da38-3010-ad43-5bc022f6f07a": {
-      "content": "import PropTypes from 'prop-types'\nimport { PureComponent } from 'react'\n\nexport default class ${1:${TM_FILENAME_BASE}} extends PureComponent {\n  static propTypes = {}\n\n  render() {\n    return (\n      <>${1:first}</>\n    )\n  }\n}",
-      "doc": "Creates a React component class with ES7 module system",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reactClassPureComponentWithPropTypes",
-      "matches": {
-        "rpcp": true
-      }
-    },
     "37e9a573-ec6c-36a7-9606-799cc3c65778": {
       "content": "~w(${0})a",
       "doc": "",
@@ -37145,16 +36824,6 @@
       "label": "JUnit 5 - Imports for Tests",
       "matches": {
         "imports_junit5": true
-      }
-    },
-    "37ef0ddf-2d72-3fee-8f58-5bbc6d51bcc6": {
-      "content": "const styles = StyleSheet.create({${1:first}})",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reactNativeStyles",
-      "matches": {
-        "rnstyle": true
       }
     },
     "37fd4052-e31f-373b-8d31-857b1a12fe15": {
@@ -37859,16 +37528,6 @@
         "hm": true
       }
     },
-    "391502e7-879a-3c40-aa5e-e138ae889caf": {
-      "content": "import { Text, View } from 'react-native'\nimport { PureComponent } from 'react'\n\nexport class ${1:${TM_FILENAME_BASE}} extends PureComponent {\n  render() {\n    return (\n      <View>\n        <Text>${1:first}</Text>\n      </View>\n    )\n  }\n}\n\nexport default ${1:${TM_FILENAME_BASE}}",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reactNativePureComponentExport",
-      "matches": {
-        "rnpce": true
-      }
-    },
     "391fb115-19ab-3b76-aa82-4696fead24ba": {
       "content": "constructor() {\n\tsuper();\n\n\t${1:state}\n}",
       "doc": "",
@@ -38057,16 +37716,6 @@
       "label": "render (inline,type) (rit)",
       "matches": {
         "rit": true
-      }
-    },
-    "396bccd0-37dd-355c-9449-e53b72090faa": {
-      "content": "type Props = {}\nexport default function ${1:${TM_FILENAME_BASE}}({}: Props) {\n  return (\n    <>${1:first}</>\n  )\n}",
-      "doc": "Creates a React Functional Component with ES7 module system and TypeScript interface",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "typescriptReactFunctionalComponent",
-      "matches": {
-        "tsrfc": true
       }
     },
     "396d09d2-2b31-3525-98d8-f8565f7e9cda": {
@@ -38258,16 +37907,6 @@
       "label": "register builtin",
       "matches": {
         "register": true
-      }
-    },
-    "39b5ef94-4815-3840-b246-4240d72d328f": {
-      "content": "export default ${1:first}",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "exportDefault",
-      "matches": {
-        "exp": true
       }
     },
     "39b858b3-2fc1-31e2-946e-30deb6dcd46d": {
@@ -39136,16 +38775,6 @@
         "ptbr": true
       }
     },
-    "3afba76f-bcc1-3f58-a3e3-4e988df3b6db": {
-      "content": "local ${1:varName} = ${0:value}",
-      "doc": "Define a variable",
-      "filetype": "lua",
-      "grammar": "lsp",
-      "label": "assigment",
-      "matches": {
-        "ll": true
-      }
-    },
     "3afc4e94-a008-39b7-b490-9d4f3ee91a21": {
       "content": "@doc false",
       "doc": "",
@@ -39862,16 +39491,6 @@
         "tf-aws-region-sa-east-1": true
       }
     },
-    "3bf785fd-eb88-38e0-937b-998bed9c214d": {
-      "content": "const ${1:first} = useContext(${2:second})",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "useContext",
-      "matches": {
-        "useContextSnippet": true
-      }
-    },
     "3c0419ae-6eae-37c9-927e-39e3fdb09cb2": {
       "content": "/**\n * ${1:description}\n *\n * @${0}\n */\n${2:protected} $${3:foo};\n\npublic function get${4:$3}()\n{\n\treturn $this->$3;\n}\n\npublic function set$4(${5:$4 }$${6:$3})\n{\n\t$this->$3 = $$6;\n\treturn $this;\n}",
       "doc": "",
@@ -40401,16 +40020,6 @@
       "label": "",
       "matches": {
         "ec": true
-      }
-    },
-    "3ccd1aea-1c7f-363a-896f-97bc41abb016": {
-      "content": "console.trace(${1:first})",
-      "doc": "Prints a stack trace from the point where the method was called",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "consoleTrace",
-      "matches": {
-        "ctr": true
       }
     },
     "3ccf6be5-a7c2-3db7-813f-63d43b582a95": {
@@ -41704,6 +41313,16 @@
         "lodash flow": true
       }
     },
+    "3ecdf005-ebeb-3482-9f4d-408b45febeea": {
+      "content": "className=\"${1:classes}\"$0",
+      "doc": "JSX className attribute for React components",
+      "filetype": "react",
+      "grammar": "lsp",
+      "label": "reactJSXClassName",
+      "matches": {
+        "cla": true
+      }
+    },
     "3ed0b430-5c42-360d-9898-9971cd4bda3f": {
       "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n- [${5| ,x|}] ${6:text}\n- [${7| ,x|}] ${8:text}\n- [${9| ,x|}] ${10:text}\n${0}",
       "doc": "Insert task list with 5 tasks",
@@ -42660,6 +42279,16 @@
         "rnfes": true
       }
     },
+    "4012e388-9ff1-336c-99ce-48ffaab5e93d": {
+      "content": "[RequireComponent(typeof($0))]",
+      "doc": "Automatically adds required components as dependencies.",
+      "filetype": "unity",
+      "grammar": "lsp",
+      "label": "MonoBehaviour RequireComponent",
+      "matches": {
+        "RequireComponent": true
+      }
+    },
     "4017c086-e1f7-3fc3-a2be-d00a6c26423c": {
       "content": "useEffect(() => {\n\t${1}\n});",
       "doc": "",
@@ -43090,16 +42719,6 @@
       "label": "toUpperCase",
       "matches": {
         "toUpperCase": true
-      }
-    },
-    "40b2d6e4-c48d-3d1a-b265-e68ca6fd5729": {
-      "content": "componentDidUpdate(prevProps, prevState) { ${1:first}}",
-      "doc": "Invoked immediately after the component's updates are flushed to the DOM.",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "componentDidUpdate",
-      "matches": {
-        "cdup": true
       }
     },
     "40b746fe-60b8-3c57-8016-d0e554cdcea6": {
@@ -44311,16 +43930,6 @@
       "label": "",
       "matches": {
         "bdts": true
-      }
-    },
-    "42800698-00f8-334a-8fa0-0af122fd5c6c": {
-      "content": "${1:first}.forEach(${2:second} => {${3:third}})",
-      "doc": "Creates a forEach statement",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "forEach",
-      "matches": {
-        "fre": true
       }
     },
     "428205bb-f6cd-3180-bcc3-25b2996912cf": {
@@ -46078,6 +45687,16 @@
         "bdr": true
       }
     },
+    "44fe2a42-2285-340d-8c2a-88eeb469f167": {
+      "content": "function($1)\n\t${0}\nend",
+      "doc": "Create an anonymous function",
+      "filetype": "lua",
+      "grammar": "lsp",
+      "label": "anonymous-function",
+      "matches": {
+        "fa": true
+      }
+    },
     "44fe6490-f624-3bb4-8533-a2ea754d4c40": {
       "content": "return (${1:arguments}) => ${2:statement}",
       "doc": "",
@@ -46107,16 +45726,6 @@
       "label": "Create controller class",
       "matches": {
         "clac": true
-      }
-    },
-    "45125867-1c05-3e1c-b9b3-aac90713c423": {
-      "content": "const mapStateToProps = (state) => ({})\n\nconst mapDispatchToProps = {}",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "mappingToProps",
-      "matches": {
-        "reduxmap": true
       }
     },
     "4515032c-167d-3817-9aa2-fcab59adc3b7": {
@@ -46277,6 +45886,16 @@
       "label": "",
       "matches": {
         "nowiki": true
+      }
+    },
+    "4569b4a6-4b53-3bd0-a739-272244d0db8c": {
+      "content": "@doc \"\"\"\n${1:doc}\n\"\"\"\n@spec ${2:name}(${3:args}) :: ${4:no_return}\ndef $2({5:args}) do\n  $0\nend",
+      "doc": "",
+      "filetype": "elixir",
+      "grammar": "lsp",
+      "label": "def + doc + spec",
+      "matches": {
+        "defsd": true
       }
     },
     "4569e808-5370-3c57-97ac-ee04711081ba": {
@@ -47274,16 +46893,6 @@
         "d:f": true
       }
     },
-    "470f4a26-b04a-370b-a896-373ef9bb080f": {
-      "content": "import 'react-native'\nimport renderer from 'react-test-renderer'\nimport ${1:${TM_FILENAME_BASE}} from '../${1:${TM_FILENAME_BASE}}'\ndescribe('<${1:${TM_FILENAME_BASE}} />', () => {\n  const defaultProps = {}\n  const wrapper = renderer.create(<${1:${TM_FILENAME_BASE}} {...defaultProps} />)\n  test('render', () => {\n    expect(wrapper).toMatchSnapshot()\n  })\n})",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "setupReactNativeTest",
-      "matches": {
-        "sntest": true
-      }
-    },
     "47141fa7-c5c3-3275-bf31-f3ea7b03db41": {
       "content": "else${0:TARGET}",
       "doc": "",
@@ -47473,16 +47082,6 @@
       "label": "sapply",
       "matches": {
         "sapply": true
-      }
-    },
-    "475f7087-adf8-3f1e-bd47-a51188791bf6": {
-      "content": "import { createAsyncThunk } from '@reduxjs/toolkit'\n\nexport const ${1:first} = createAsyncThunk('${2:second}', async () => {\n  ${3:third}\n})",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reduxAsyncThunk",
-      "matches": {
-        "rxthunk": true
       }
     },
     "4767260f-ecb6-3c5e-a58d-30e62cc88201": {
@@ -47944,6 +47543,16 @@
       "label": "uvm_blocking_get_imp",
       "matches": {
         "uvm_blocking_get_imp": true
+      }
+    },
+    "48287a3f-ac9e-30d9-904e-e7e42ceea243": {
+      "content": "{% partialdef $1 %}\n$2\n{% endpartialdef %}",
+      "doc": "partialdef tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "partialdef",
+      "matches": {
+        "partialdef": true
       }
     },
     "482ac28e-5638-3df3-9fb6-80e42f8dad12": {
@@ -49207,16 +48816,6 @@
       "label": "open file to read",
       "matches": {
         "openr": true
-      }
-    },
-    "4a5f3c61-af32-3ace-a1ff-ad21a48f7c95": {
-      "content": "import { NavLink } from 'react-router-dom'",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "importRouterNavLink",
-      "matches": {
-        "imbrnl": true
       }
     },
     "4a5f8eb7-433f-3f43-884a-762de7071097": {
@@ -50769,16 +50368,6 @@
         "exec": true
       }
     },
-    "4c8ba988-aade-3668-8e05-0e90859c2988": {
-      "content": "const ${1:first} = (${2:second}) => { ${3:third} }",
-      "doc": "Creates a named function",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "namedFunction",
-      "matches": {
-        "nfn": true
-      }
-    },
     "4c8cd1fd-95f5-33f6-9a57-541f08b8d931": {
       "content": "@private$0",
       "doc": "Declares that the logical visibility of an object is private. In other words, it specifies that this method should be marked private but cannot due to Ruby’s visibility restrictions. This exists for classes, modules and constants that do not obey Ruby’s visibility rules. For instance, an inner class might be considered “private”, though Ruby would make no such distinction.",
@@ -51821,16 +51410,6 @@
         "extends": true
       }
     },
-    "4e252060-003e-3b7f-ad4e-e6bc7bbedf4f": {
-      "content": "PropTypes.oneOf(['$0']).isRequired",
-      "doc": "Prop type limited to specific values by treating it as an enum required",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "propTypeEnumRequired",
-      "matches": {
-        "pter": true
-      }
-    },
     "4e2accd4-42d8-34e6-830a-938c45c44f4b": {
       "content": "grid-row-gap: 0;",
       "doc": "",
@@ -52220,16 +51799,6 @@
       "label": "svelte-transition",
       "matches": {
         "s-transition": true
-      }
-    },
-    "4e974ee4-1432-3994-aa97-2b297cea0433": {
-      "content": "static getDerivedStateFromProps(props, state) {${1:first}}",
-      "doc": "Invoked right before calling the render method, both on the initial mount and on subsequent updates.",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "getDerivedStateFromProps",
-      "matches": {
-        "gdsfp": true
       }
     },
     "4e9de67e-baa7-38c1-a887-cc9660961738": {
@@ -52896,6 +52465,16 @@
         "->": true
       }
     },
+    "4f723697-f17d-3863-b307-380ceecc0f28": {
+      "content": "import {\n  ActivatedRouteSnapshot,\n  CanActivateChildFn,\n  RouterStateSnapshot,\n} from '@angular/router'\n\nexport const ${1:Name}Guard: CanActivateChildFn = (\n  route: ActivatedRouteSnapshot,\n  state: RouterStateSnapshot\n) => {\n\treturn true;$0\n}",
+      "doc": "Angular CanActivateChild guard",
+      "filetype": "typescript",
+      "grammar": "lsp",
+      "label": "Angular Functional CanActivateChildFn Guard",
+      "matches": {
+        "a-guard-can-activate-child": true
+      }
+    },
     "4f81632c-dbfb-3e3d-8a16-61f76c12c3fd": {
       "content": "import { PureComponent } from 'react'\n\ntype Props = {}\n\nclass ${TM_FILENAME_BASE} extends PureComponent<Props> {\n  render() {\n    return (\n      <div>${0}</div>\n    )\n  }\n}\n\nexport default ${TM_FILENAME_BASE}",
       "doc": "Creates a React pure component class with ES7 module system and TypeScript interface",
@@ -53347,16 +52926,6 @@
         "fdatetime": true
       }
     },
-    "501cd306-1b36-39ae-baa3-c79c53988232": {
-      "content": "import { Component } from 'react'\nimport { connect } from 'react-redux'\n\nexport class ${1:${TM_FILENAME_BASE}} extends Component {\n  render() {\n    return (\n      <>${1:first}</>\n    )\n  }\n}\n\nconst mapStateToProps = (state) => ({})\n\nconst mapDispatchToProps = {}\n\nexport default connect(mapStateToProps, mapDispatchToProps)(${1:${TM_FILENAME_BASE}})",
-      "doc": "Creates a React component class with connected redux and ES7 module system",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reactClassComponentRedux",
-      "matches": {
-        "rcredux": true
-      }
-    },
     "501d3566-e7f1-37b8-9d7d-6ec406d896a0": {
       "content": "for ${1} in ${2}\n\t${0}\nend",
       "doc": "",
@@ -53576,16 +53145,6 @@
       "label": "Angular Standalone Component",
       "matches": {
         "a-component-standalone": true
-      }
-    },
-    "505e1fbb-5a17-3609-9aba-83d2dcfd9a2f": {
-      "content": "import PropTypes from 'prop-types'\nimport { memo } from 'react'\n\nconst ${1:${TM_FILENAME_BASE}} = memo((props) => {\n  return (\n    <>${1:first}</>\n  )\n})\n\n${1:${TM_FILENAME_BASE}}.propTypes = {}\n\nexport default ${1:${TM_FILENAME_BASE}}",
-      "doc": "Creates a React Memo Function Component with ES7 module system with PropTypes",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reactFunctionMemoComponentWithPropTypes",
-      "matches": {
-        "rmcp": true
       }
     },
     "50684d48-a96a-3e47-a8c4-10efee318672": {
@@ -54994,16 +54553,6 @@
         "iterator": true
       }
     },
-    "52d52260-cfe9-3541-865b-b04aecadd0a9": {
-      "content": "\"\"\"$0\n\"\"\"",
-      "doc": "Snippet to avoid autopair plugin annoyances when typing multiple \"",
-      "filetype": "python",
-      "grammar": "lsp",
-      "label": "Multiline string",
-      "matches": {
-        "#": true
-      }
-    },
     "52d63865-0506-3d60-a63c-f333e9cab1e6": {
       "content": "${1:iterable}.filter((${2:item}) => {\n\t${0}\n})",
       "doc": "",
@@ -55588,16 +55137,6 @@
         "switch": true
       }
     },
-    "53b40511-5c0d-312c-a16d-f3f13bc5e6e4": {
-      "content": "const initialState = {}\n\nexport default (state = initialState, { type, payload }) => {\n  switch (type) {\n\n  case ${1:first}:\n    return { ...state, ...payload }\n\n  default:\n    return state\n  }\n}",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reduxReducer",
-      "matches": {
-        "rxreducer": true
-      }
-    },
     "53b7f22a-ec64-378d-8ee1-45b02015bf9c": {
       "content": "#ifdef ${1:FOO}\n\t${2:#define }\n#endif",
       "doc": "",
@@ -55616,6 +55155,16 @@
       "label": "Labels",
       "matches": {
         "la": true
+      }
+    },
+    "53c5495e-4954-38eb-a0ac-431168fac2ef": {
+      "content": "{\n\tpath: '${1:path}',\n\tloadComponent: () => import('${2:lazy-path}').then(c => c.${3:LazyComponent})\n},$0",
+      "doc": "Angular lazy route path for a standalone component",
+      "filetype": "typescript",
+      "grammar": "lsp",
+      "label": "Angular Lazy Route Path - Standalone Component",
+      "matches": {
+        "a-route-path-lazy-component": true
       }
     },
     "53cb0287-f2de-39be-9d84-cd8d5d7b2ffa": {
@@ -56211,16 +55760,6 @@
         "boz": true
       }
     },
-    "54bc2992-3fe6-3d88-b518-1c5f7542da1d": {
-      "content": "this.setState((state, props) => { return { ${1:first} }})",
-      "doc": "Performs a shallow merge of nextState into current state",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "componentSetStateFunc",
-      "matches": {
-        "ssf": true
-      }
-    },
     "54bdbacd-36c1-3d37-9490-a1779f9255b6": {
       "content": "TODO ${1:task description}",
       "doc": "TODO item",
@@ -56451,16 +55990,6 @@
         "fst:se": true
       }
     },
-    "5509b6bb-054b-32d8-9d19-32183bffcc63": {
-      "content": "PropTypes.object",
-      "doc": "Object prop type",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "propTypeObject",
-      "matches": {
-        "pto": true
-      }
-    },
     "550d6e1d-e7af-376f-adfa-254917570281": {
       "content": "DROP DATABASE ${1:dbName};",
       "doc": "Drop database",
@@ -56551,16 +56080,6 @@
       "label": "",
       "matches": {
         "ngmfi": true
-      }
-    },
-    "554b1090-03d0-386f-aafc-4c290fe44c47": {
-      "content": "import { StyleSheet, Text, View } from 'react-native'\nexport default function ${1:${TM_FILENAME_BASE}}() {\n  return (\n    <View>\n      <Text>${1:first}</Text>\n    </View>\n  )\n}\nconst styles = StyleSheet.create({})",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reactNativeFunctionalComponentWithStyles",
-      "matches": {
-        "rnfs": true
       }
     },
     "554c5e29-5f77-399c-800a-2b856ad66576": {
@@ -56783,6 +56302,16 @@
       "label": "",
       "matches": {
         "if": true
+      }
+    },
+    "559669de-14ea-3b12-a00a-224caf504567": {
+      "content": "# https://kubernetes.io/docs/tasks/administer-cluster/namespaces/\napiVersion: v1\nkind: Namespace\nmetadata:\n  name: ${1:default}\n---\n$0",
+      "doc": "k8s Namespace",
+      "filetype": "kubernetes",
+      "grammar": "lsp",
+      "label": "k8s Namespace",
+      "matches": {
+        "k-namespace": true
       }
     },
     "5599f977-10a6-3e7d-bb57-3aa016b3f3f2": {
@@ -58126,16 +57655,6 @@
         "as:fb": true
       }
     },
-    "57afd560-186d-380f-b957-49d46f94ccd7": {
-      "content": "import renderer from 'react-test-renderer'\nimport { ${1:${TM_FILENAME_BASE}} } from '../${1:${TM_FILENAME_BASE}}'\ndescribe('<${1:${TM_FILENAME_BASE}} />', () => {\n  const defaultProps = {}\n  const wrapper = renderer.create(<${1:${TM_FILENAME_BASE}} {...defaultProps} />)\n  test('render', () => {\n    expect(wrapper).toMatchSnapshot()\n  })\n})",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "setupReactTest",
-      "matches": {
-        "stest": true
-      }
-    },
     "57b3ba68-8014-3083-89b1-19ac30cde92b": {
       "content": "nuxtServerInit ({ commit }, { req }) {\n\t${1:data}\n}",
       "doc": "In universal mode, useful to fetch data on the server and give directly to the client-side.",
@@ -58662,6 +58181,16 @@
       "label": "lodash-isarraybuffer",
       "matches": {
         "lodash isarraybuffer": true
+      }
+    },
+    "5883e268-124b-333f-9209-094ae0d7a4e5": {
+      "content": "{\n\t\"name\": \"Launch Angular\",\n\t\"type\": \"${1:edge}\",\n\t\"version\": \"${2:dev}\",\n\t\"request\": \"launch\",\n\t\"preLaunchTask\": \"${3:npm: start}\",\n\t\"url\": \"http://localhost:${4:4200}/\",\n\t\"webRoot\": \"${5:\\${workspaceFolder\\}}\"\n}",
+      "doc": "Launch/debug configuration for VS Code for Edge",
+      "filetype": "jsonc",
+      "grammar": "lsp",
+      "label": "Create launch config for Edge",
+      "matches": {
+        "a-launch-edge": true
       }
     },
     "588f7656-aefe-3793-8c62-ad48bf58989c": {
@@ -59337,6 +58866,16 @@
         "mah": true
       }
     },
+    "59a38f07-6557-317c-920f-2675021e895c": {
+      "content": "\"\"\"$0\n\"\"\"",
+      "doc": "Snippet to avoid weird autopair plugin behaviour",
+      "filetype": "python",
+      "grammar": "lsp",
+      "label": "Multiline string",
+      "matches": {
+        "#s": true
+      }
+    },
     "59a917ef-1def-313e-b1a3-0fe941dc91bd": {
       "content": "${1:command} | flatten",
       "doc": "\"flatten\" invocation",
@@ -59637,16 +59176,6 @@
       "label": "",
       "matches": {
         "fxd:rr": true
-      }
-    },
-    "5a1d4d4f-ff62-3d7e-8322-e8f0b593df5f": {
-      "content": "def ${1:mname}(self$2):\n\t${3:pass}",
-      "doc": "Class method definition",
-      "filetype": "python",
-      "grammar": "lsp",
-      "label": "Method",
-      "matches": {
-        "defs": true
       }
     },
     "5a215ddf-5a6f-3ded-ae71-818a23343ca0": {
@@ -61064,16 +60593,6 @@
       "label": "",
       "matches": {
         "bga": true
-      }
-    },
-    "5bebfa84-f48b-38b5-9899-5b14b483b35f": {
-      "content": "PropTypes.string.isRequired",
-      "doc": "String prop type required",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "propTypeStringRequired",
-      "matches": {
-        "ptsr": true
       }
     },
     "5bf176a0-318e-3506-a587-f4c0694cebf6": {
@@ -62666,16 +62185,6 @@
         "ac:lb": true
       }
     },
-    "5e47d7bb-3a7f-3a00-a438-3758150a6f98": {
-      "content": "import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom'",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "importBrowserRouterWithRouteAndNavLink",
-      "matches": {
-        "imrr": true
-      }
-    },
     "5e4eff56-67cb-3a7b-af4e-5709f8066906": {
       "content": "typedef ${1:int} ${2:MyCustomType};",
       "doc": "",
@@ -62967,16 +62476,6 @@
         "insa": true
       }
     },
-    "5ea52a47-a4fe-38ca-925d-df0de3020422": {
-      "content": "if ( ${1:condition} ) {\n\t${2:body}\n} elsif ( ${3:condition} ) {\n\t${3:body}\n}",
-      "doc": "",
-      "filetype": "perl",
-      "grammar": "lsp",
-      "label": "if else if statement",
-      "matches": {
-        "iffe": true
-      }
-    },
     "5ea6be3e-5b3e-3c98-8be2-8d15b101dedd": {
       "content": "$('${1:selector}')",
       "doc": "",
@@ -63055,16 +62554,6 @@
       "label": "",
       "matches": {
         "ai:fe": true
-      }
-    },
-    "5ebad9d4-9386-3f00-b274-707382614c7d": {
-      "content": "const ${1:first} = useDeferredValue(${2:second})",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "useDeferredValue",
-      "matches": {
-        "useDeferredValueSnippet": true
       }
     },
     "5ec75d9d-efd6-3ad0-9585-47d61bfd702c": {
@@ -64503,6 +63992,16 @@
         "lodash reduceright": true
       }
     },
+    "610f2d7e-32ff-3641-b24f-b5a43660aa0b": {
+      "content": "@for (${1:item} of ${2:items}; track ${3:item.id}) {\n\t${0}\n}",
+      "doc": "Angular @for control-flow block",
+      "filetype": "html",
+      "grammar": "lsp",
+      "label": "@for block",
+      "matches": {
+        "a-for": true
+      }
+    },
     "6110b329-9361-3a56-8221-7d16ded44968": {
       "content": "border-width: ${1:1px};$0",
       "doc": "",
@@ -64541,16 +64040,6 @@
       "label": "def method(self, ...): \"...\"",
       "matches": {
         "defmd": true
-      }
-    },
-    "61241f11-8dae-3997-9546-10c9965203ae": {
-      "content": "PropTypes.array",
-      "doc": "Array prop type",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "propTypeArray",
-      "matches": {
-        "pta": true
       }
     },
     "61284097-0042-3d91-ae35-e6117ad15803": {
@@ -64934,16 +64423,6 @@
         "cad": true
       }
     },
-    "61d19edc-dd45-300c-8a3d-96f1ab807609": {
-      "content": "import { useState, useEffect } from 'react'",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "importReactWithUseStateAndUseEffect",
-      "matches": {
-        "imrse": true
-      }
-    },
     "61d7d041-6d81-3b47-8217-f700f604b125": {
       "content": "PERFORM ${1:paragraph-name} VARYING ${2:field-1}\n FROM ${3:value-1} BY ${4:value-2}\n UNTIL ${5:condition}\n$0",
       "doc": "INLINE PERFORM VARYING",
@@ -65043,16 +64522,6 @@
       "label": "",
       "matches": {
         "viewport": true
-      }
-    },
-    "62105c42-58b5-3205-aade-de4b84231663": {
-      "content": "componentWillUnmount() {${1:first} }",
-      "doc": "Invoked immediately before a component is unmounted from the DOM.",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "componentWillUnmount",
-      "matches": {
-        "cwun": true
       }
     },
     "62154eac-0977-3c3e-90cd-f696082bacb3": {
@@ -65786,16 +65255,6 @@
       "label": "",
       "matches": {
         "pab": true
-      }
-    },
-    "63417208-2c3d-3665-8f4e-b58f1240914e": {
-      "content": "console.info(${1:first})",
-      "doc": "Displays a message in the console but also displays a blue information icon along with the logged message",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "consoleInfo",
-      "matches": {
-        "cin": true
       }
     },
     "63457108-0f13-3707-97fd-7b5a5a41cb1c": {
@@ -69710,16 +69169,6 @@
         "let-env": true
       }
     },
-    "68ebb90d-ab4a-3d1c-a404-43da8f3d69ea": {
-      "content": "get ${1:first}() {\n  return this.${2:second}\n}",
-      "doc": "Creates a getter property inside a class",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "propertyGet",
-      "matches": {
-        "pge": true
-      }
-    },
     "68ecc50a-6484-36b6-98ad-f8f5bb9894b2": {
       "content": "<ng-template [ngTemplateOutlet]=\"${1:outlet}\" [ngOutletContext]=\"${2:context}\"></ng-template>",
       "doc": "Angular ng-template",
@@ -71631,16 +71080,6 @@
         "css": true
       }
     },
-    "6b9926e9-4a3b-33a9-abc6-c214cb14856d": {
-      "content": "const [state, submitAction, isPending] = useActionState(\n  async (previousState, formData) => {\n    ${1:first}\n  },\n  ${2:second},\n)",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "useActionState",
-      "matches": {
-        "useActionStateSnippet": true
-      }
-    },
     "6b9c04a9-02ee-3945-9dc7-809ba0748669": {
       "content": "{#each ${1:items} as ${2:item}, (${3:key})}\n\t${4: <!-- content here -->}\n{/each}",
       "doc": "",
@@ -71670,16 +71109,6 @@
       "label": "",
       "matches": {
         "ci_model_crudl": true
-      }
-    },
-    "6ba32941-bbdc-3088-bc0f-bbdbce73b036": {
-      "content": "import { Link } from 'react-router-dom'",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "importRouterLink",
-      "matches": {
-        "imbrl": true
       }
     },
     "6ba3cc1c-3b57-39a7-8839-0b3daed546c3": {
@@ -72511,16 +71940,6 @@
         "afin": true
       }
     },
-    "6d0fdf12-01a0-3f5c-9a14-616abdf01b1c": {
-      "content": "import PropTypes from 'prop-types'\nimport { Component } from 'react'\nimport { connect } from 'react-redux'\n\nexport class ${1:${TM_FILENAME_BASE}} extends Component {\n  static propTypes = {\n    ${2:second}: ${3:third}\n  }\n\n  render() {\n    return (\n      <>${1:first}</>\n    )\n  }\n}\n\nconst mapStateToProps = (state) => ({})\n\nconst mapDispatchToProps = {}\n\nexport default connect(mapStateToProps, mapDispatchToProps)(${1:${TM_FILENAME_BASE}})",
-      "doc": "Creates a React component class with PropTypes with connected redux and ES7 module system",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reactClassComponentReduxPropTypes",
-      "matches": {
-        "rcreduxp": true
-      }
-    },
     "6d1528fa-27f2-3bb4-af5b-9fa51f9a1d5d": {
       "content": "System.Runtie.CompilerServices",
       "doc": "",
@@ -73103,16 +72522,6 @@
         "filter": true
       }
     },
-    "6da0d945-1a34-366a-8d47-bff0e518a0d4": {
-      "content": "for(let ${1:first} of ${2:second}) {${3:third}}",
-      "doc": "Iterating over property names of iterable objects",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "forOf",
-      "matches": {
-        "fof": true
-      }
-    },
     "6da33bcc-5f09-333a-896c-7d66d9b772f5": {
       "content": "font-size-adjust: none;",
       "doc": "",
@@ -73514,16 +72923,6 @@
         "try": true
       }
     },
-    "6e3068bf-85c1-362d-b930-fdf5ef60774f": {
-      "content": "PropTypes.shape({\n  $0\n})",
-      "doc": "An object taking on a particular shape",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "propTypeShape",
-      "matches": {
-        "ptsh": true
-      }
-    },
     "6e35e2eb-26e9-337a-8de3-e702b9f544d3": {
       "content": "provisioner \"chef\" {\n       node_name = \"${webserver1}\"\n       run_list = [\"cookbook::recipe\"]\n       user_name = \"user_name-example\"\n       user_key = \"user_key-example\"\n       server_url = \"server_url-example\"\n   }",
       "doc": "Define a Chef provisioner",
@@ -73716,16 +73115,6 @@
         "bdf:sc": true
       }
     },
-    "6e7ea4de-af44-396d-80ef-bbdf17e6e204": {
-      "content": "import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'\n\nexport const ${1:first}Api = createApi({\n  reducerPath: '${1:first}Api',\n  baseQuery: fetchBaseQuery({ baseUrl: '${2:second}' }),\n  endpoints: (builder) => ({\n    ${3:third}: builder.query({\n      query: () => '/',\n    }),\n  }),\n})\n\nexport const { } = ${1:first}Api",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reduxApi",
-      "matches": {
-        "rxapi": true
-      }
-    },
     "6e8d70ac-90db-3321-9a53-2b46a6eb57a4": {
       "content": "console.table(${1:object});",
       "doc": "Displays tabular data as a table.",
@@ -73815,6 +73204,16 @@
       "label": "verbatim",
       "matches": {
         "verbatim": true
+      }
+    },
+    "6eb851d2-013a-3b7d-a9b1-04f920d6c8f2": {
+      "content": "\"\"\"$0\"\"\"",
+      "doc": "Snippet to avoid weird autopair plugin behaviour",
+      "filetype": "python",
+      "grammar": "lsp",
+      "label": "One-line multiline string",
+      "matches": {
+        "#ss": true
       }
     },
     "6ec12e00-0935-3e3a-a87a-50075f54fa17": {
@@ -74661,16 +74060,6 @@
       "label": "loop builtin",
       "matches": {
         "loop": true
-      }
-    },
-    "70394bcd-953a-38e0-992f-06397d340def": {
-      "content": "import { memo } from 'react'\n\nconst ${1:${TM_FILENAME_BASE}} = memo(() => {\n  return (\n    <>${1:first}</>\n  )\n})\n\nexport default ${1:${TM_FILENAME_BASE}}",
-      "doc": "Creates a React Memo Function Component with ES7 module system",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reactFunctionMemoComponent",
-      "matches": {
-        "rmc": true
       }
     },
     "70398abf-f727-34fd-90b1-9376d64c8a21": {
@@ -76422,16 +75811,6 @@
         "do": true
       }
     },
-    "728c3342-c4c6-3611-a81a-5627152bffad": {
-      "content": "def ${1:mname}(self$2) -> ${3:None}:\n\t${4:pass}",
-      "doc": "Class method definition",
-      "filetype": "python",
-      "grammar": "lsp",
-      "label": "Method w/ return type",
-      "matches": {
-        "defst": true
-      }
-    },
     "72935693-6036-3ba7-ad97-16a2867315a4": {
       "content": "componentDidMount() { ${1:first} }",
       "doc": "Invoked once, only on the client (not on the server), immediately after the initial rendering occurs.",
@@ -77156,16 +76535,6 @@
         "tf-s3_module": true
       }
     },
-    "73b93420-0533-392e-a3ac-84f26f80871d": {
-      "content": "PropTypes.node",
-      "doc": "Anything that can be rendered: numbers, strings, elements or an array",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "propTypeNode",
-      "matches": {
-        "ptnd": true
-      }
-    },
     "73bfdc31-8d5a-3fa1-8e14-0ad0732ba4fd": {
       "content": "====== ${1} ======\n\n${2}",
       "doc": "",
@@ -77304,16 +76673,6 @@
       "label": "",
       "matches": {
         "contains": true
-      }
-    },
-    "73e43938-1c16-3e57-91f6-ed21c365497a": {
-      "content": "const { ${1:first} } = this.props",
-      "doc": "Creates and assigns a local variable using props destructing",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "destructProps",
-      "matches": {
-        "cp": true
       }
     },
     "73ef91c9-63c8-3848-8435-068067c084ac": {
@@ -77607,16 +76966,6 @@
         "@includeIf": true
       }
     },
-    "744e545b-2bfb-3895-b897-f671908be3ff": {
-      "content": "import { useState } from 'react'",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "importReactWithUseState",
-      "matches": {
-        "imrs": true
-      }
-    },
     "74508329-e6d0-324b-8697-ec33648a1a39": {
       "content": "marker-offset: auto;$0",
       "doc": "",
@@ -77905,16 +77254,6 @@
       "label": "",
       "matches": {
         "select.": true
-      }
-    },
-    "74c06db1-41fe-38fc-b0a5-ad7ec1af0b8b": {
-      "content": "export const ${1:first} = (payload) => ({\n  type: ${2:second},\n  payload\n})",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reduxAction",
-      "matches": {
-        "rxaction": true
       }
     },
     "74c714fc-dfa8-392b-9217-4ce4b7d9fd6f": {
@@ -78423,16 +77762,6 @@
         "foro": true
       }
     },
-    "7598aeec-d648-3110-b21b-a5859625b693": {
-      "content": "import { PureComponent } from 'react'\nimport PropTypes from 'prop-types'",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "importReactWithPureComponentAndPropTypes",
-      "matches": {
-        "imrpcp": true
-      }
-    },
     "75991edc-eff0-3ebb-94fe-1edf53240280": {
       "content": "${1:obj}.html('${2:Some text <b>and bold!</b>}')",
       "doc": "",
@@ -78583,16 +77912,6 @@
         "service": true
       }
     },
-    "75e998cc-db03-362c-91fd-8bf1935d39eb": {
-      "content": "export default function ${1:first}(${2:second}) {${3:third}}",
-      "doc": "Export default named function",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "exportDefaultNamedFunction",
-      "matches": {
-        "ednf": true
-      }
-    },
     "75ed33e1-428a-31f8-bd87-a4845298f4c9": {
       "content": "axios.interceptors.request.use(function (config) {\n\t${1:do something}\nreturn config;\n}, function (error) {\n\t${2:do something}\n$return Promise.reject(error);\n});",
       "doc": "You can intercept requests before they are handled by then or catch.",
@@ -78631,6 +77950,16 @@
       "label": "opApply (opApply)",
       "matches": {
         "opApply": true
+      }
+    },
+    "76057aab-9f6b-3c30-ba61-80d0329f77da": {
+      "content": "@spec ${1:name}(${2:args}) :: ${3:no_return}\ndef $1(${4:args}) do\n  $0\nend",
+      "doc": "",
+      "filetype": "elixir",
+      "grammar": "lsp",
+      "label": "def + spec",
+      "matches": {
+        "defs": true
       }
     },
     "7609031c-10f6-37f1-8bf0-b629e8d8d31b": {
@@ -78827,16 +78156,6 @@
         "@constructor": true
       }
     },
-    "767f64a0-b6e8-3478-979d-c9ea2c64773d": {
-      "content": "PropTypes.number",
-      "doc": "Number prop type",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "propTypeNumber",
-      "matches": {
-        "ptn": true
-      }
-    },
     "76810e3f-3f2a-32ae-9522-c6421ff658bd": {
       "content": "<param name=\"${1}\">${2:$1}</param>",
       "doc": "",
@@ -78895,16 +78214,6 @@
       "label": "",
       "matches": {
         "empty": true
-      }
-    },
-    "769cf647-27ae-3cfc-9725-c0b68b247c04": {
-      "content": "PropTypes.exact({\n  $0\n})",
-      "doc": "An object with warnings on extra properties",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "propTypeExact",
-      "matches": {
-        "ptex": true
       }
     },
     "76a08a0c-bca8-3956-b902-a81d6a1d2b42": {
@@ -80689,16 +79998,6 @@
         "<param>": true
       }
     },
-    "79618b0b-6bbd-30da-983c-8a3f2459549c": {
-      "content": "import ReactDOM from 'react-dom'",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "importReactDom",
-      "matches": {
-        "imrd": true
-      }
-    },
     "79636f5a-20a4-3b07-94a7-ac3f5abe4797": {
       "content": "{-| ${0}\n-}",
       "doc": "",
@@ -81167,16 +80466,6 @@
       "label": "Protected field",
       "matches": {
         "protected_field": true
-      }
-    },
-    "7a01cd3d-acff-3398-9b63-97bb77a92f05": {
-      "content": "import { Text, View } from 'react-native'\nimport { Component } from 'react'\n\nexport default class ${1:${TM_FILENAME_BASE}} extends Component {\n  render() {\n    return (\n      <View>\n        <Text>${1:first}</Text>\n      </View>\n    )\n  }\n}",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reactNativeComponent",
-      "matches": {
-        "rnc": true
       }
     },
     "7a09150a-e5c1-3a44-867d-9789aebd819d": {
@@ -81688,16 +80977,6 @@
       "label": "propTypeOneOfTypeRequired",
       "matches": {
         "ptetr": true
-      }
-    },
-    "7adcc960-6445-3413-b9c7-79fc89cf5c04": {
-      "content": "import { StyleSheet, Text, View } from 'react-native'\ntype Props = {}\nconst ${1:${TM_FILENAME_BASE}} = (props: Props) => {\n  return (\n    <View>\n      <Text>${1:first}</Text>\n    </View>\n  )\n}\nexport default ${1:${TM_FILENAME_BASE}}\nconst styles = StyleSheet.create({})",
-      "doc": "Creates a React Native Arrow Function Component with ES7 module system, TypeScript interface and StyleSheet",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "typescriptReactNativeArrowFunctionComponentWithStyles",
-      "matches": {
-        "tsrnfs": true
       }
     },
     "7addf9f2-4a16-3811-b763-31c398161d8d": {
@@ -83240,6 +82519,16 @@
         "endtrans": true
       }
     },
+    "7d34e5f8-86bf-3157-ba99-fbe94a280b71": {
+      "content": "local ${1:varName} = ${2:value}",
+      "doc": "Define a variable",
+      "filetype": "lua",
+      "grammar": "lsp",
+      "label": "assigment",
+      "matches": {
+        "ll": true
+      }
+    },
     "7d34f608-a6ad-3590-90b1-d30b4ac34260": {
       "content": "align-items: center;",
       "doc": "",
@@ -83763,16 +83052,6 @@
         "tf-openstack_compute_secgroup_v2": true
       }
     },
-    "7e214e45-dfe2-3c1f-8365-688bd7318ce9": {
-      "content": "PropTypes.element.isRequired",
-      "doc": "React element prop type required",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "propTypeElementRequired",
-      "matches": {
-        "ptelr": true
-      }
-    },
     "7e2299a1-36af-3e92-ad49-33868867fefa": {
       "content": "__import__('ptpython.repl', fromlist=('repl')).embed(globals(), locals(), vi_mode=${1:False}, history_filename=${2:None})",
       "doc": "",
@@ -83952,6 +83231,16 @@
       "label": "v-slot",
       "matches": {
         "vSlot": true
+      }
+    },
+    "7e75591b-37a8-3773-b6e8-3e12690689bc": {
+      "content": "[SerializeField] private $0;",
+      "doc": "Force Unity to serialize a private field.",
+      "filetype": "unity",
+      "grammar": "lsp",
+      "label": "Attribute: SerializeField",
+      "matches": {
+        "sfield": true
       }
     },
     "7e7e9bec-5ed0-3b87-83dc-4b4e69670eac": {
@@ -84836,16 +84125,6 @@
         "asnd": true
       }
     },
-    "7fbbbff8-6c44-3822-90a6-5693665631bd": {
-      "content": "'use client'",
-      "doc": "React Client Component directive",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "useClient",
-      "matches": {
-        "usc": true
-      }
-    },
     "7fcf2c56-c2c9-3848-9470-8e68ebe6d5f1": {
       "content": "_.isNative(${value})",
       "doc": "_.isNative(Array.prototype.push);\n// => true\n\n_.isNative(_);\n// => false\n\nChecks if `value` is a pristine native function.\n\n**Note:** This method can't reliably detect native functions in the presence\nof the core-js package because core-js circumvents this kind of detection.\nDespite multiple requests, the core-js maintainer has made it clear: any\nattempt to fix the detection will be obstructed. As a result, we're left\nwith little choice but to throw an error. Unfortunately, this also affects\npackages, like [babel-polyfill](https://www.npmjs.com/package/babel-polyfill),\nwhich rely on core-js.",
@@ -84996,6 +84275,16 @@
         "v": true
       }
     },
+    "7ff061b1-eda6-3ba5-9d4c-ddb20a2a2e36": {
+      "content": "async def ${1:mname}(self$2):\n\t${3:pass}",
+      "doc": "Async class method definition",
+      "filetype": "python",
+      "grammar": "lsp",
+      "label": "Async method",
+      "matches": {
+        "adefs": true
+      }
+    },
     "7ff12c51-7f1b-3976-9670-68542b1e5e56": {
       "content": "{:catch error}\n\t<!-- promise was rejected -->",
       "doc": "",
@@ -85065,16 +84354,6 @@
       "label": "twig endwith",
       "matches": {
         "endwith": true
-      }
-    },
-    "8002d7e7-1cf7-3ecc-80ec-19957523f68d": {
-      "content": "PropTypes.bool.isRequired",
-      "doc": "Bool prop type required",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "propTypeBoolRequired",
-      "matches": {
-        "ptbr": true
       }
     },
     "8003df37-a2b4-356f-a272-80aa69278c73": {
@@ -85760,16 +85039,6 @@
         "base import": true
       }
     },
-    "8101836e-430c-352c-9d67-03a564894173": {
-      "content": "import { connect } from 'react-redux'",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "importReduxConnect",
-      "matches": {
-        "redux": true
-      }
-    },
     "81050451-6d74-3826-86d8-74f1dd4b2569": {
       "content": "PropTypes.bool.isRequired",
       "doc": "Bool prop type required",
@@ -86119,16 +85388,6 @@
       "label": "",
       "matches": {
         "match": true
-      }
-    },
-    "818fe365-70a2-3bb2-95ea-a0fb1c200e71": {
-      "content": "import { createSlice } from '@reduxjs/toolkit'\n\nconst initialState = {\n\n}\n\nconst ${1:${TM_FILENAME_BASE}} = createSlice({\n  name: ${2:second},\n  initialState,\n  reducers: {}\n});\n\nexport const {} = ${1:${TM_FILENAME_BASE}}.actions\n\nexport default ${1:${TM_FILENAME_BASE}}.reducer",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reduxSlice",
-      "matches": {
-        "rxslice": true
       }
     },
     "8190e441-a189-3f4d-be9d-4f499c2ab739": {
@@ -86539,16 +85798,6 @@
       "label": "",
       "matches": {
         "bdb:n": true
-      }
-    },
-    "821f2bd6-802c-3411-8e5b-1c738ebeda00": {
-      "content": "describe('${1:first}', () => { ${2:second} })",
-      "doc": "Testing `describe` block",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "describeBlock",
-      "matches": {
-        "desc": true
       }
     },
     "821f5682-2e27-3c28-8e4e-819100aa9e5c": {
@@ -88511,16 +87760,6 @@
         "vfif": true
       }
     },
-    "84eb0c81-a7a7-3796-8381-68701f8c52f8": {
-      "content": "PropTypes.bool",
-      "doc": "Bool prop type",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "propTypeBool",
-      "matches": {
-        "ptb": true
-      }
-    },
     "84ed6778-9678-35e4-8e83-2af1b689ae16": {
       "content": "export extern ${1:name} [${2:param}: string${3:, }]",
       "doc": "\"export extern\" invocation",
@@ -88790,16 +88029,6 @@
       "label": "vue-single-file-component-with-postcss",
       "matches": {
         "vue base postcss": true
-      }
-    },
-    "854a0ca1-e0cf-37fa-a9c0-c68f01e1eb0e": {
-      "content": "useEffect(() => {\n  ${1:first}\n\n  return () => {\n    ${2:second}\n  }\n}, [${3:third}])",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "useEffect",
-      "matches": {
-        "useEffectSnippet": true
       }
     },
     "854eb1ee-08dc-31e9-89e0-c631045dc1e6": {
@@ -89132,16 +88361,6 @@
       "label": "If-Else Statement",
       "matches": {
         "ifelse": true
-      }
-    },
-    "85c548c9-e154-398d-b619-9864fd5a9efc": {
-      "content": "import { useLoaderData } from 'react-router-dom'\n\nasync function loader({ request, params }) {\n  ${1:first}\n}\n\nasync function action({ request, params }) {\n  const formData = await request.formData()\n  ${2:second}\n}\n\nfunction ${1:${TM_FILENAME_BASE}}() {\n  const data = useLoaderData()\n\n  return (\n    <>${3:third}</>\n  )\n}\n\nexport { loader, action }\nexport default ${1:${TM_FILENAME_BASE}}",
-      "doc": "React Router v6 route with loader and action",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "routeWithLoaderAction",
-      "matches": {
-        "rtrla": true
       }
     },
     "85cc41c0-6c73-3698-9eb7-2c64920ee3d3": {
@@ -89777,6 +88996,16 @@
       "label": "faceforward",
       "matches": {
         "faceforward": true
+      }
+    },
+    "86e620e2-6378-3f20-8df8-44e9160947b5": {
+      "content": "const ${1:emit} = defineEmits<{\n\t(e: '${2:event}', ${3:id}: ${4:type}): void\n\t$0\n}>()",
+      "doc": "A list of events that componetnt can emits to the parent component.",
+      "filetype": "script",
+      "grammar": "lsp",
+      "label": "defineEmits-TS",
+      "matches": {
+        "defineEmitsTS": true
       }
     },
     "86e7e424-b179-3dfa-bf50-7698bc697043": {
@@ -90564,16 +89793,6 @@
         "lengthis": true
       }
     },
-    "88084d4b-13ae-3414-9ad5-03203136771d": {
-      "content": "PropTypes.shape({\n  $0\n}).isRequired",
-      "doc": "An object taking on a particular shape required",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "propTypeShapeRequired",
-      "matches": {
-        "ptshr": true
-      }
-    },
     "880e573f-df5e-3c98-aa8f-1e6969e29ea6": {
       "content": "else\n\t${0}",
       "doc": "",
@@ -91013,16 +90232,6 @@
       "label": "",
       "matches": {
         "saturation": true
-      }
-    },
-    "88a79226-05a8-3fc8-8a40-2a3ebe1b5e90": {
-      "content": "const ${1:emit} = defineEmits<{\n\t(e: '${2:event}', ${3:id}: ${4:type}: ${5:type}) \n\t$0\n}>()",
-      "doc": "A list of events that componetnt can emits to the parent component.",
-      "filetype": "script",
-      "grammar": "lsp",
-      "label": "defineEmits-TS",
-      "matches": {
-        "defineEmitsTS": true
       }
     },
     "88a858db-ffbd-3820-a2c7-c2dea31f1650": {
@@ -91586,16 +90795,6 @@
       "label": "",
       "matches": {
         "wbwd": true
-      }
-    },
-    "89a1d9e1-87a7-3b23-b027-d96e8dd901a5": {
-      "content": "import { ${2:second} } from '${1:first}'",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "importDestructing",
-      "matches": {
-        "imd": true
       }
     },
     "89a5c8e5-b0a9-3543-bdc1-49b23a6b9649": {
@@ -92574,16 +91773,6 @@
         "clock": true
       }
     },
-    "8b364bbc-00b0-37d8-8674-264e50781d76": {
-      "content": "console.error(${1:first})",
-      "doc": "Displays a message in the console and also includes a stack trace from where the method was called",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "consoleError",
-      "matches": {
-        "cer": true
-      }
-    },
     "8b36d6e5-81e5-37ad-9264-2ccfe78c44bb": {
       "content": "return ${0}",
       "doc": "",
@@ -93468,6 +92657,16 @@
         "ov:h": true
       }
     },
+    "8c6d1099-a4c1-33fe-a0b6-8b62a857502e": {
+      "content": "async with ${1:expression} as ${2:var}:\n\t${3:pass}",
+      "doc": "Async context manager",
+      "filetype": "python",
+      "grammar": "lsp",
+      "label": "async with",
+      "matches": {
+        "awith": true
+      }
+    },
     "8c706942-aab1-3a89-b67c-ffdf5af5f9af": {
       "content": "clock microseconds",
       "doc": "Returns the current time as an integer number of microseconds.",
@@ -93627,16 +92826,6 @@
       "matches": {
         "vmodule": true,
         "vuex module": true
-      }
-    },
-    "8cc39398-cb18-3d7a-9aef-8f2906d78fa9": {
-      "content": "const ${1:first} = useId()",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "useId",
-      "matches": {
-        "useIdSnippet": true
       }
     },
     "8cc97240-77ae-3718-ad9c-9fb005d9e6d7": {
@@ -93951,16 +93140,6 @@
         "padding": true
       }
     },
-    "8d34645b-d69b-34b5-bd63-28a102bc51ae": {
-      "content": "import { PureComponent } from 'react'\n\ntype Props = {}\n\nexport default class ${1:${TM_FILENAME_BASE}} extends PureComponent<Props> {\n  render() {\n    return (\n      <>${1:first}</>\n    )\n  }\n}",
-      "doc": "Creates a React pure component class with ES7 module system and TypeScript interface",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "typescriptReactClassPureComponent",
-      "matches": {
-        "tsrpc": true
-      }
-    },
     "8d34b07b-a549-3265-a3cf-eddddaf08458": {
       "content": "__FILE__",
       "doc": "",
@@ -94089,16 +93268,6 @@
       "label": "",
       "matches": {
         "require": true
-      }
-    },
-    "8d5c3003-5ba6-3d7e-87ba-e6771e84607d": {
-      "content": "import PropTypes from 'prop-types'",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "importPropTypes",
-      "matches": {
-        "impt": true
       }
     },
     "8d5fe08a-adde-3ef8-ad6b-7ad9066cc6bf": {
@@ -95115,16 +94284,6 @@
         "docker-angular-node-multi-stage": true
       }
     },
-    "8ebd02a3-b997-3100-bbaa-71b61a516d07": {
-      "content": "import { BrowserRouter as Router } from 'react-router-dom'",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "importBrowserRouter",
-      "matches": {
-        "imbr": true
-      }
-    },
     "8ec06ccd-aa51-3fd8-af88-033c919e3695": {
       "content": "type ${1} is ${2}\n\twith Default_Value => ${3};${0}",
       "doc": "",
@@ -95225,6 +94384,16 @@
       "label": "into builtin",
       "matches": {
         "into": true
+      }
+    },
+    "8efbc91b-f6a1-3b19-a606-d2b575e42791": {
+      "content": "'''$0'''",
+      "doc": "Snippet to avoid weird autopair plugin behaviour",
+      "filetype": "python",
+      "grammar": "lsp",
+      "label": "One-line single-quote multiline string",
+      "matches": {
+        "#qq": true
       }
     },
     "8efbcbef-bea2-35b0-92f3-88db712934f1": {
@@ -96035,16 +95204,6 @@
         "am": true
       }
     },
-    "9010a393-e1cf-3504-b88b-c73e1c82f780": {
-      "content": "this.setState({${1:first}})",
-      "doc": "Performs a shallow merge of nextState into current state",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "componentSetStateObject",
-      "matches": {
-        "sst": true
-      }
-    },
     "9010ccb5-96d8-3ab8-bd6b-09aa20506092": {
       "content": "event ${1:name}(${2:type} ${3:name} $0);",
       "doc": "",
@@ -96649,16 +95808,6 @@
         "b:extends": true
       }
     },
-    "90d4b39d-0dee-350b-94db-8f0d913c2712": {
-      "content": "import { PureComponent } from 'react'",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "importReactWithPureComponent",
-      "matches": {
-        "imrpc": true
-      }
-    },
     "90da907f-e953-34bc-8f52-7c6e0694ac38": {
       "content": "firewall { \"${1:comment}\":\n\tproto\t=> ${2:tcp},\n\taction\t=> ${3:accept},\n\tport\t=> ${4},\n}",
       "doc": "",
@@ -96667,16 +95816,6 @@
       "label": "",
       "matches": {
         "firewall": true
-      }
-    },
-    "90e2a131-7858-31e5-8ec0-6b05ccdf3678": {
-      "content": "console.table([${1:first}])",
-      "doc": "Logs table to console",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "consoleTable",
-      "matches": {
-        "ctl": true
       }
     },
     "90e5bff1-f1a5-3250-80b0-4a183f2f961e": {
@@ -97031,16 +96170,6 @@
         "note": true
       }
     },
-    "915829e3-5e84-3c7d-bec3-e1b4717760f7": {
-      "content": "'use server'",
-      "doc": "React Server Action directive",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "useServer",
-      "matches": {
-        "uss": true
-      }
-    },
     "915945b3-da12-36d1-a9b6-6b5928bf4a7e": {
       "content": "marginVertical: '${1}',",
       "doc": "marginVertical",
@@ -97330,16 +96459,6 @@
       "label": "<typeparam>",
       "matches": {
         "<typeparam>": true
-      }
-    },
-    "91bd7c65-d96b-39e1-95d7-702d22f57627": {
-      "content": "import { Routes, Route, NavLink, Link } from 'react-router-dom'",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "importRouterSetup",
-      "matches": {
-        "imbrc": true
       }
     },
     "91c19a56-0634-3c50-9798-8eba9e6164ba": {
@@ -97865,16 +96984,6 @@
         "if": true
       }
     },
-    "92919500-6318-3550-af4b-8e586dce411d": {
-      "content": "const exe = b.addExecutable(.{\n    .name = \"${1}\",\n    .root_source_file = b.path(\"${2:path}\"),\n    .target = target,\n    .optimize = optimize,\n});\nb.installArtifact(exe);",
-      "doc": "Building an exe",
-      "filetype": "zig",
-      "grammar": "lsp",
-      "label": "buildExe",
-      "matches": {
-        "bExe": true
-      }
-    },
     "92959fed-64a6-30b8-b2b9-04eade836631": {
       "content": "[TestFixture]\npublic class ${1}Test {\n    ${0:TARGET}\n}",
       "doc": "",
@@ -97955,16 +97064,6 @@
       "matches": {
         "a-ngrx-create-selector-props": true,
         "angular ng rx create selector props": true
-      }
-    },
-    "92af8ea7-5070-30f8-9fe4-c15a920a27b5": {
-      "content": "PropTypes.array.isRequired",
-      "doc": "Array prop type required",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "propTypeArrayRequired",
-      "matches": {
-        "ptar": true
       }
     },
     "92b85a53-5824-3a36-a157-706b5e11c6ee": {
@@ -98680,17 +97779,6 @@
       "label": "",
       "matches": {
         "anyr": true
-      }
-    },
-    "93b65c43-f265-3735-94f1-816a62ef3181": {
-      "content": "virtual task shutdown_phase(uvm_pase phase);\n\t$1\nendtask: shutdown_phase",
-      "doc": "UVM shutdown_phase template",
-      "filetype": "systemverilog",
-      "grammar": "lsp",
-      "label": "uvm_shutdown_phase",
-      "matches": {
-        "uvm_phase_shutdown": true,
-        "uvm_shutdown_phase": true
       }
     },
     "93b749aa-0ae4-3318-b55e-4c16f5481f60": {
@@ -99994,6 +99082,16 @@
         "ccl": true
       }
     },
+    "95a2f6ba-c2f1-3cc9-8c2d-e5aae354d859": {
+      "content": "if ( ${1:condition} ) {\n\t${2:body}\n} elsif ( ${3:condition} ) {\n\t${4:body}\n}",
+      "doc": "",
+      "filetype": "perl",
+      "grammar": "lsp",
+      "label": "if else if statement",
+      "matches": {
+        "iffe": true
+      }
+    },
     "95b14fd0-c1cd-3b91-a564-e594b4a6e46e": {
       "content": "export const $1 = createContext<$2>(\n\t(null as any) as $2\n)",
       "doc": "creates a react context",
@@ -100426,16 +99524,6 @@
       "label": "",
       "matches": {
         "beh": true
-      }
-    },
-    "965ba63b-e97b-3697-9a34-24da9be49e8f": {
-      "content": "@doc \"\"\"\n${1:doc}\n\"\"\"\n@spec ${2:name}(${3:args}) :: ${4:no_return}\ndef $2{5:args} do\n  $0\nend",
-      "doc": "",
-      "filetype": "elixir",
-      "grammar": "lsp",
-      "label": "def + doc + spec",
-      "matches": {
-        "defsd": true
       }
     },
     "965c40da-8d92-301f-9f96-06cc15b020b9": {
@@ -103284,16 +102372,6 @@
         "font": true
       }
     },
-    "9a42820b-ec61-3541-aaac-b64fed889ada": {
-      "content": "import { Text, StyleSheet, View } from 'react-native'\nimport { Component } from 'react'\n\nexport default class ${1:${TM_FILENAME_BASE}} extends Component {\n  render() {\n    return (\n      <View>\n        <Text>${1:first}</Text>\n      </View>\n    )\n  }\n}\n\nconst styles = StyleSheet.create({})",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reactNativeComponentWithStyles",
-      "matches": {
-        "rncs": true
-      }
-    },
     "9a440bb9-2284-326e-9634-cb4e972eaca1": {
       "content": "<img src=\"$1\" alt=\"$2\">$3",
       "doc": "HTML - Defines an image",
@@ -103322,16 +102400,6 @@
       "label": "Elm 0.18 program",
       "matches": {
         "program": true
-      }
-    },
-    "9a55f14f-d20d-330f-a9da-28476bc72db5": {
-      "content": "export type ${1:first} = {${2:second}}",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "exportType",
-      "matches": {
-        "exptp": true
       }
     },
     "9a5e7480-aa49-36fe-8a73-9ebfde3f6b45": {
@@ -103667,16 +102735,6 @@
         "@version": true
       }
     },
-    "9aca3c8a-1d06-3afe-9363-d94868130cd7": {
-      "content": "this.props.${1:first}",
-      "doc": "Access component's props",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "componentProps",
-      "matches": {
-        "props": true
-      }
-    },
     "9acce246-e4ec-3734-8b7c-d738a551af0f": {
       "content": "<Image alt=\"$1\" src=\"$1\" unsized=\"$1\" />",
       "doc": "Use sized Next Image component",
@@ -103755,6 +102813,16 @@
       "label": "",
       "matches": {
         "arg": true
+      }
+    },
+    "9b01ab34-6979-3eeb-93be-4b913681bb98": {
+      "content": "def ${1:mname}(self$2):\n\t${3:pass}",
+      "doc": "Class method definition",
+      "filetype": "python",
+      "grammar": "lsp",
+      "label": "Method",
+      "matches": {
+        "defm": true
       }
     },
     "9b02fa61-94d4-3de2-9b78-a7150930198b": {
@@ -103937,16 +103005,6 @@
         "footer": true
       }
     },
-    "9b3f299f-dc8d-37b0-9966-11b3408a7fcf": {
-      "content": "for(let ${1:first} in ${2:second}) {${3:third}}",
-      "doc": "Iterating over property values of iterable objects",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "forIn",
-      "matches": {
-        "fin": true
-      }
-    },
     "9b424c85-541c-3f6f-ba2e-799c90c2a358": {
       "content": "| jsonify }}'",
       "doc": "Array filter: jsonify",
@@ -104057,16 +103115,6 @@
         "to:n": true
       }
     },
-    "9b73a3f0-1e57-383f-8a1b-dd61c66f056f": {
-      "content": "@spec ${1:name}(${2:args}) :: ${3:no_return}\ndef $1{4:args} do\n  $0\nend",
-      "doc": "",
-      "filetype": "elixir",
-      "grammar": "lsp",
-      "label": "def + spec",
-      "matches": {
-        "defs": true
-      }
-    },
     "9b7d506f-2f04-304a-b53e-ce4661f72780": {
       "content": "position: ${1|relative,absolute,fixed,sticky,static|};",
       "doc": "",
@@ -104145,16 +103193,6 @@
       "label": "",
       "matches": {
         "defined": true
-      }
-    },
-    "9bb14438-f6ed-322c-940b-02d291d35a50": {
-      "content": "*ngFor=\"let ${1:item} of ${2:list}; trackBy:${1:trackByFnName}\"${0}",
-      "doc": "Angular *ngFor with trackBy",
-      "filetype": "html",
-      "grammar": "lsp",
-      "label": "ngFor with trackBy",
-      "matches": {
-        "a-ngFor-trackBy": true
       }
     },
     "9bb2e133-1f2e-3cc8-aabe-fab2919ff506": {
@@ -104768,16 +103806,6 @@
         "pb": true
       }
     },
-    "9c6ed3a0-1bc1-33f7-9e94-1544979336f1": {
-      "content": "typeof ${1:first}",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "typeofSnippet",
-      "matches": {
-        "tpf": true
-      }
-    },
     "9c72f59c-6123-3955-afaf-8fba7908271d": {
       "content": "class $1Admin(admin.ModelAdmin):\n\t'''\n\t\tAdmin View for $1\n\t'''\n\tlist_display = ('$2',)\n\tlist_filter = ('$3',)\n\tinlines = [\n\t\t$4Inline,\n\t]\n\traw_id_fields = ('$5',)\n\treadonly_fields = ('$6',)\n\tsearch_fields = ['$7']\nadmin.site.register($1, $1Admin)",
       "doc": "",
@@ -104866,16 +103894,6 @@
       "label": "removeChild",
       "matches": {
         "herc": true
-      }
-    },
-    "9c96b5d7-2c63-3abe-abd7-e1cccaaecc5e": {
-      "content": "const ${1:${TM_FILENAME_BASE}} = () => {\n  return (\n    <>${1:first}</>\n  )\n}\nexport default ${1:${TM_FILENAME_BASE}}",
-      "doc": "Creates a React Arrow Function Component with ES7 module system",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reactArrowFunctionExportComponent",
-      "matches": {
-        "rafce": true
       }
     },
     "9c98c632-930c-3f73-8d91-8f1eacbc6a64": {
@@ -105136,6 +104154,16 @@
       "label": "lang",
       "matches": {
         "lang": true
+      }
+    },
+    "9d280f0a-9a0b-3345-9b0b-63cf24d0062e": {
+      "content": "${1:name} = function($2)\n\t${0}\nend,",
+      "doc": "Assign a function to a table key",
+      "filetype": "lua",
+      "grammar": "lsp",
+      "label": "member-function",
+      "matches": {
+        "fm": true
       }
     },
     "9d28323c-9f34-33c0-a8bc-c677c13fd86c": {
@@ -106067,16 +105095,6 @@
         "re": true
       }
     },
-    "9e7767ec-f222-3475-8701-e696246228e6": {
-      "content": "PropTypes.instanceOf($0)",
-      "doc": "Is an instance of a class prop type",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "propTypeInstanceOf",
-      "matches": {
-        "pti": true
-      }
-    },
     "9e7dbd4d-74d3-3ec9-a39a-e252fbaab353": {
       "content": "font-stretch semi-condensed",
       "doc": "",
@@ -106437,16 +105455,6 @@
       "label": "MARK: - UI",
       "matches": {
         "markui": true
-      }
-    },
-    "9f29c709-568f-3ee4-9988-1cedc62959c1": {
-      "content": "import { useFetcher } from 'react-router-dom'",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "importUseFetcher",
-      "matches": {
-        "imfet": true
       }
     },
     "9f2aec9e-f676-3231-ad03-92f45e557cad": {
@@ -108393,16 +107401,6 @@
         "tf-aws_waf_xss_match_set": true
       }
     },
-    "a1c75462-3b51-33a7-bf25-03c6823fc1aa": {
-      "content": "import { Text, View } from 'react-native'\nimport { PureComponent } from 'react'\n\nexport default class ${1:${TM_FILENAME_BASE}} extends PureComponent {\n  render() {\n    return (\n      <View>\n        <Text>${1:first}</Text>\n      </View>\n    )\n  }\n}",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reactNativePureComponent",
-      "matches": {
-        "rnpc": true
-      }
-    },
     "a1ccdbfc-1d13-3f0d-b02b-21d7ba5f13f2": {
       "content": "import ${2:moduleName} from '${1:module}';$0",
       "doc": "Imports entire module statement in ES6 syntax",
@@ -108461,16 +107459,6 @@
       "label": "gl load identity",
       "matches": {
         "gl": true
-      }
-    },
-    "a1d6f0e4-eef6-32a3-af69-85500dcaeb5d": {
-      "content": "componentDidMount() { ${1:first} }",
-      "doc": "Invoked once, only on the client (not on the server), immediately after the initial rendering occurs.",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "componentDidMount",
-      "matches": {
-        "cdm": true
       }
     },
     "a1d9a4a1-d076-3dc3-ae8c-8f7800e0063d": {
@@ -108601,16 +107589,6 @@
       "label": "google_compute_route",
       "matches": {
         "tf-google_compute_route": true
-      }
-    },
-    "a20224d2-df45-3741-a2f6-32e3aba21242": {
-      "content": "useMemo(() => ${1:first}, [${2:second}])",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "useMemo",
-      "matches": {
-        "useMemoSnippet": true
       }
     },
     "a202544b-561d-38fd-a2fb-b573953d6037": {
@@ -109627,16 +108605,6 @@
       "label": "useMemo",
       "matches": {
         "useMemoSnippet": true
-      }
-    },
-    "a35b0dab-a3fa-328b-880c-dfe8f7cc66ad": {
-      "content": "import ${2:second} from '${1:first}'",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "import",
-      "matches": {
-        "imp": true
       }
     },
     "a3619bc5-b792-3a4c-b921-efaac0146a5e": {
@@ -111251,16 +110219,6 @@
         "bezierVertex": true
       }
     },
-    "a603db13-bfe9-3c8d-8717-1b71e8552c46": {
-      "content": "PropTypes.oneOf(['$0'])",
-      "doc": "Prop type limited to specific values by treating it as an enum",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "propTypeEnum",
-      "matches": {
-        "pte": true
-      }
-    },
     "a609657f-d8fb-3899-a767-7da6600a7462": {
       "content": "right: ${0}",
       "doc": "",
@@ -112289,16 +111247,6 @@
         "frac \\frac{": true
       }
     },
-    "a7739138-3724-326f-9fc9-7c8bbbb346c3": {
-      "content": "PropTypes.exact({\n  $0\n}).isRequired",
-      "doc": "An object with warnings on extra properties required",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "propTypeExactRequired",
-      "matches": {
-        "ptexr": true
-      }
-    },
     "a776c996-b20c-3217-8257-29b480131975": {
       "content": "beforeMount () {\n\t${0};\n},",
       "doc": "beforeMount lifecycle method",
@@ -112338,16 +111286,6 @@
       "label": "nuxt-validate",
       "matches": {
         "nuxt validate": true
-      }
-    },
-    "a78f44f2-6d97-325f-857e-2c21a79f752d": {
-      "content": "export const ${1:first} = (${2:second}) => {${3:third}}",
-      "doc": "Export named function",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "exportNamedFunction",
-      "matches": {
-        "enf": true
       }
     },
     "a790c1df-c042-3013-9a14-b10535b58918": {
@@ -112932,16 +111870,6 @@
       "label": "Switch Statement",
       "matches": {
         "switch": true
-      }
-    },
-    "a85540d5-102f-33a2-aacd-bb709515ca36": {
-      "content": "import { Component } from 'react'\n\nexport default class ${1:${TM_FILENAME_BASE}} extends Component {\n  render() {\n    return (\n      <>${1:first}</>\n    )\n  }\n}",
-      "doc": "Creates a React component class with ES7 module system",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reactClassComponent",
-      "matches": {
-        "rcc": true
       }
     },
     "a857c035-5fdd-399c-90b0-9f3ae53014eb": {
@@ -114468,16 +113396,6 @@
         "a-formArrayName": true
       }
     },
-    "aac94566-b7dd-3bf6-9d25-bc690cfc53f8": {
-      "content": "import * as ${2:second} from '${1:first}'",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "importEverything",
-      "matches": {
-        "ime": true
-      }
-    },
     "aad005c3-4709-310b-ac9c-5acfdeb8cb13": {
       "content": "border-right-image: none;",
       "doc": "",
@@ -114507,16 +113425,6 @@
       "matches": {
         "\\textup": true,
         "textup \\textup{": true
-      }
-    },
-    "aad42466-fbba-39b7-9682-2e304fda978e": {
-      "content": "import PropTypes from 'prop-types'\nfunction ${1:${TM_FILENAME_BASE}}(props) {\n  return (\n    <>${1:first}</>\n  )\n}\n${1:${TM_FILENAME_BASE}}.propTypes = {}\nexport default ${1:${TM_FILENAME_BASE}}",
-      "doc": "Creates a React Functional Component with ES7 module system with PropTypes",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reactFunctionalComponentWithPropTypes",
-      "matches": {
-        "rfcp": true
       }
     },
     "aad47ad5-4f50-322e-8c54-a573829be398": {
@@ -115420,16 +114328,6 @@
       "label": "",
       "matches": {
         "is": true
-      }
-    },
-    "ac5b2619-a3fc-3683-9675-11ba9a389f80": {
-      "content": "export const ${1:${TM_FILENAME_BASE}} = () => {\n  return (\n    <>${1:first}</>\n  )\n}",
-      "doc": "Creates a React Arrow Function Component with ES7 module system",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reactArrowFunctionComponent",
-      "matches": {
-        "rafc": true
       }
     },
     "ac5c0c03-1a5e-3653-b299-3d85a486daf2": {
@@ -117216,6 +116114,16 @@
         "forev": true
       }
     },
+    "af2cef24-e66a-3c6e-af82-76dd488907ef": {
+      "content": "async def ${1:mname}(self$2) -> ${3:None}:\n\t${4:pass}",
+      "doc": "Async class method definition with return type",
+      "filetype": "python",
+      "grammar": "lsp",
+      "label": "Async method w/ return type",
+      "matches": {
+        "adefst": true
+      }
+    },
     "af34273a-a41a-3254-846a-7dfbd7202d1e": {
       "content": "{{< $0 >}}",
       "doc": "Insert shortcode",
@@ -117264,6 +116172,17 @@
       "label": "",
       "matches": {
         "text": true
+      }
+    },
+    "af3d3944-6edc-3bff-b9ac-b18e4d86ec43": {
+      "content": "let\n\t$0\nend",
+      "doc": "Code snippet to create a let block.",
+      "filetype": "julia",
+      "grammar": "lsp",
+      "label": "let",
+      "matches": {
+        "le": true,
+        "let": true
       }
     },
     "af408288-613c-3426-a23f-071719466493": {
@@ -117883,16 +116802,6 @@
         "random-chars": true
       }
     },
-    "b0402454-8c9d-3341-9ab5-160da10a030a": {
-      "content": "import '${1:first}'",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "importNoModuleName",
-      "matches": {
-        "imn": true
-      }
-    },
     "b043625e-3543-375a-8295-c2e983788a62": {
       "content": "<area shape=\"$1\" coords=\"$2\" href=\"$3\" alt=\"$4\">$5",
       "doc": "HTML - Defines an area inside an image map",
@@ -118003,16 +116912,6 @@
         "ajaxsuccess": true
       }
     },
-    "b054e3c9-f064-360d-823b-ec19131efc21": {
-      "content": "const {${2:second}} = ${1:first}",
-      "doc": "Creates and assigns a local variable using object destructing",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "destructingObject",
-      "matches": {
-        "dob": true
-      }
-    },
     "b055f2e6-a328-3622-a8cd-c7a5f0d40a41": {
       "content": "${1:obj}.unbind('${2:event name}')",
       "doc": "",
@@ -118051,16 +116950,6 @@
       "label": "",
       "matches": {
         "bdbrrz": true
-      }
-    },
-    "b064f027-0000-3eab-a41c-64fe9732d742": {
-      "content": "import { PureComponent } from 'react'\n\ntype Props = {}\n\nclass ${1:${TM_FILENAME_BASE}} extends PureComponent<Props> {\n  render() {\n    return (\n      <>${1:first}</>\n    )\n  }\n}\n\nexport default ${1:${TM_FILENAME_BASE}}",
-      "doc": "Creates a React pure component class with ES7 module system and TypeScript interface",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "typescriptReactClassExportPureComponent",
-      "matches": {
-        "tsrpce": true
       }
     },
     "b0664f6b-eb7f-3e3a-bda6-e5d293fe9d05": {
@@ -118467,6 +117356,16 @@
         "livewire:scripts": true
       }
     },
+    "b102d5c9-5d77-3248-972b-e338e3b7e464": {
+      "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n- [${5| ,x|}] ${6:text}\n${0}",
+      "doc": "Create list of 3 todos",
+      "filetype": "markdown",
+      "grammar": "lsp",
+      "label": "Create list of 3 todos",
+      "matches": {
+        "todo3": true
+      }
+    },
     "b1063e2b-a052-35f0-942a-6c169407d8fb": {
       "content": "static async getInitialProps() {\n\treturn { $1 };\n}",
       "doc": "Next.js static async getInitialProps() inside Class Component",
@@ -118627,6 +117526,16 @@
       "label": "",
       "matches": {
         "rn": true
+      }
+    },
+    "b134ea14-9f2d-34a3-bfef-70db40881c5f": {
+      "content": "import { HttpInterceptor, HttpHandler, HttpRequest, HttpEvent, HttpResponse } from '@angular/common/http'\nimport { Observable } from 'rxjs'\nimport { tap } from 'rxjs'\n\n@Injectable()\nexport class LogInterceptor implements HttpInterceptor {\n\tconstructor() {}\n\n\tintercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {\n\t\tconst started = Date.now()\n\t\treturn next.handle(req).pipe(\n\t\t\ttap(event => {\n\t\t\t\tif (event instanceof HttpResponse) {\n\t\t\t\t\tconst elapsed = Date.now() - started\n\t\t\t\t\tconsole.log(`Request for \\${req.urlWithParams} took \\${elapsed} ms.`)\n\t\t\t\t}\n\t\t\t})\n\t\t)\n\t}\n}",
+      "doc": "Angular HttpInterceptor for Logging HttpClient",
+      "filetype": "typescript",
+      "grammar": "lsp",
+      "label": "Angular HttpInterceptor for Logging",
+      "matches": {
+        "a-http-interceptor-logging": true
       }
     },
     "b136d02c-27c7-3ca5-bb88-e49426c23c8f": {
@@ -118800,16 +117709,6 @@
         "textsc \\textsc{": true
       }
     },
-    "b19b2ba0-b6b4-3339-8e48-2da4e9191027": {
-      "content": "import { useParams } from 'react-router-dom'",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "importUseParams",
-      "matches": {
-        "impar": true
-      }
-    },
     "b1a4f19f-f189-3cee-8512-b6499d462455": {
       "content": "when(${1:mockedService.executeMagic()}).thenThrow(new ${2:IllegalArgumentException()};",
       "doc": "Mock a method to throw exception",
@@ -118960,6 +117859,16 @@
       "label": "iadminsite",
       "matches": {
         "iadminsite": true
+      }
+    },
+    "b215fbc0-e25b-3215-89e5-d6bba37ed420": {
+      "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n${0}",
+      "doc": "Create list of 2 todos",
+      "filetype": "markdown",
+      "grammar": "lsp",
+      "label": "Create list of 2 todos",
+      "matches": {
+        "todo2": true
       }
     },
     "b2198383-c1ac-3c61-9349-8c82745eea7e": {
@@ -119130,16 +118039,6 @@
       "label": "each_cons(..) { |group| .. }",
       "matches": {
         "eac-": true
-      }
-    },
-    "b2562f0f-c73f-3d4b-8045-2fa21b4737da": {
-      "content": "import { connect } from 'react-redux'\nimport { Component } from 'react'\n\ntype Props = {}\n\ntype State = {}\n\nexport class ${1:${TM_FILENAME_BASE}} extends Component<Props, State> {\n  state = {}\n\n  render() {\n    return (\n      <>${1:first}</>\n    )\n  }\n}\n\nconst mapStateToProps = (state) => ({})\n\nconst mapDispatchToProps = {}\n\nexport default connect(mapStateToProps, mapDispatchToProps)(${1:${TM_FILENAME_BASE}})",
-      "doc": "Creates a React component class with connected redux and ES7 module system and TypeScript interfaces",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "typescriptReactClassComponentRedux",
-      "matches": {
-        "tsrcredux": true
       }
     },
     "b257794e-920e-3a7c-9572-1791e74a58f4": {
@@ -119855,16 +118754,6 @@
         "case": true
       }
     },
-    "b35f9561-ae2d-3574-9445-3eba34c65dd1": {
-      "content": "import { View, Text } from 'react-native'\nexport default function ${1:${TM_FILENAME_BASE}}() {\n  return (\n    <View>\n      <Text>${1:first}</Text>\n    </View>\n  )\n}",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reactNativeFunctionalComponent",
-      "matches": {
-        "rnf": true
-      }
-    },
     "b36388dc-142e-36a1-9bcd-1c26bcf39159": {
       "content": "Mouse Down On Image    ${1:${locator}}",
       "doc": "",
@@ -119933,16 +118822,6 @@
       "label": "propTypeShapeRequired",
       "matches": {
         "ptshr": true
-      }
-    },
-    "b388bd0b-e656-3f61-b03f-97e3938db4b3": {
-      "content": "test('should ${1:first}', async () => { ${2:second} })",
-      "doc": "Testing `asynchronous test` block",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "testAsyncBlock",
-      "matches": {
-        "testa": true
       }
     },
     "b3908c95-79c6-35b2-ae3b-078436f4c0c4": {
@@ -120944,16 +119823,6 @@
         "obj": true
       }
     },
-    "b5519479-eefd-3c26-a1fb-b4f7fff381c6": {
-      "content": "this.${1:first} = this.${1:first}.bind(this)",
-      "doc": "Binds this to a method",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "bindThis",
-      "matches": {
-        "bnd": true
-      }
-    },
     "b55a77e9-33ea-30a6-8ff3-37c053f757d6": {
       "content": "identification division.\n$0",
       "doc": "",
@@ -120963,16 +119832,6 @@
       "matches": {
         "id": true,
         "identification division": true
-      }
-    },
-    "b55f4460-6d63-3ff7-8fa9-fdbe7158eb1c": {
-      "content": "${1:first} = (${2:second}) => {${3:third}}",
-      "doc": "Creates a method inside a class",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "method",
-      "matches": {
-        "met": true
       }
     },
     "b5613332-c084-32ca-8810-bd10b83819e2": {
@@ -121073,16 +119932,6 @@
       "label": "try { ... } catch(e) { ... }",
       "matches": {
         "try": true
-      }
-    },
-    "b584f909-f826-3f3f-a63d-965551e6e8e3": {
-      "content": "PropTypes.any",
-      "doc": "Any prop type",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "propTypeAny",
-      "matches": {
-        "ptany": true
       }
     },
     "b5941975-68a1-377f-a022-dd1bb4f99a5c": {
@@ -121345,6 +120194,16 @@
       "label": "",
       "matches": {
         "cutf8": true
+      }
+    },
+    "b607e1f7-4438-3338-9e14-d23401bb2992": {
+      "content": "@if (${1:expression}) {\n\t${0}\n}",
+      "doc": "Angular @if control-flow block",
+      "filetype": "html",
+      "grammar": "lsp",
+      "label": "@if block",
+      "matches": {
+        "a-if": true
       }
     },
     "b6102bdd-633d-3808-86a8-2c0f759c4139": {
@@ -122200,6 +121059,16 @@
         "cc": true
       }
     },
+    "b77087bf-e37e-3d67-95bd-236141448bdf": {
+      "content": "async def ${1:fname}($2):\n\t${3:pass}",
+      "doc": "Async function definition",
+      "filetype": "python",
+      "grammar": "lsp",
+      "label": "Async Function",
+      "matches": {
+        "adef": true
+      }
+    },
     "b7713120-a1e3-3886-99a8-9e3e5343362a": {
       "content": "enum ${1:MyEnum} {\n\t$0\n};",
       "doc": "Code snippet for enum",
@@ -122330,16 +121199,6 @@
       "matches": {
         "jest test async": true,
         "testa": true
-      }
-    },
-    "b7a01af1-1af5-39d4-80d3-fd324ee4b876": {
-      "content": "function ${1:${TM_FILENAME_BASE}}() {\n  return (\n    <>${1:first}</>\n  )\n}\nexport default ${1:${TM_FILENAME_BASE}}",
-      "doc": "Creates a React Functional Component with ES7 module system",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reactFunctionalExportComponent",
-      "matches": {
-        "rfce": true
       }
     },
     "b7a22bce-8074-373f-83b2-87f6711a879c": {
@@ -123429,6 +122288,16 @@
         "vactions": true
       }
     },
+    "b961d4eb-e3e9-321f-8437-61537fcd5b4c": {
+      "content": "import { ActivatedRouteSnapshot, ResolveFn, RouterStateSnapshot } from '@angular/router'\n\nexport const ${1:yourResolver}: ResolveFn<${2:ObjectToResolve}> = (\n\troute: ActivatedRouteSnapshot,\n\tstate: RouterStateSnapshot\n) => {\n\treturn ${0}\n}",
+      "doc": "Angular Resolver",
+      "filetype": "typescript",
+      "grammar": "lsp",
+      "label": "Angular Resolver",
+      "matches": {
+        "a-resolver": true
+      }
+    },
     "b962f118-4fae-347b-a01e-eedbc4493437": {
       "content": "array exists ${0:arrayName}",
       "doc": "Returns 1 if arrayName is an array variable, 0 if there is no variable by that name or if it is a scalar variable.",
@@ -124347,16 +123216,6 @@
         "lam": true
       }
     },
-    "bb0f2d89-f996-31c9-b78b-ce8d6261fe14": {
-      "content": "console.dir(${1:first})",
-      "doc": "Prints a JavaScript representation of the specified object",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "consoleDir",
-      "matches": {
-        "cdi": true
-      }
-    },
     "bb11fe20-0318-3834-80f2-da70442bc497": {
       "content": "resource \"aws_route\" \"${MyAWSResource}\" {\n}",
       "doc": "Defines aws_route",
@@ -124516,16 +123375,6 @@
       "label": "",
       "matches": {
         "tj:k": true
-      }
-    },
-    "bb3624fd-c546-3834-bbd6-44cfe0b7c3b6": {
-      "content": "PropTypes.node.isRequired",
-      "doc": "Anything that can be rendered: numbers, strings, elements or an array required",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "propTypeNodeRequired",
-      "matches": {
-        "ptndr": true
       }
     },
     "bb36fbe5-01e7-3395-a93b-d27f6aaef8a4": {
@@ -125021,16 +123870,6 @@
         "rfce": true
       }
     },
-    "bbe4e900-0ad0-3166-a1c6-548f9d344296": {
-      "content": "console.groupEnd()",
-      "doc": "Closes out the corresponding console.group().",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "consoleGroupEnd",
-      "matches": {
-        "cge": true
-      }
-    },
     "bbea007c-b944-3376-a348-89327a48baa3": {
       "content": "<h2 class=\"${1}\">${0}</h2>",
       "doc": "",
@@ -125249,16 +124088,6 @@
       "label": "",
       "matches": {
         "j.n": true
-      }
-    },
-    "bc395f47-90b5-3e54-a3b4-c38069934f82": {
-      "content": "const [state, dispatch] = useReducer(${1:first}, ${2:second}, ${3:third})",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "useReducer",
-      "matches": {
-        "useReducerSnippet": true
       }
     },
     "bc3d0845-04a8-3245-bc24-59876d1f5187": {
@@ -125571,6 +124400,16 @@
         "input": true
       }
     },
+    "bcb614ef-d91a-30f6-abd7-72f10a7d98d2": {
+      "content": "public class ${1:${TM_FILENAME_BASE}} {\n\t$0\n}",
+      "doc": "Public class",
+      "filetype": "java",
+      "grammar": "lsp",
+      "label": "class",
+      "matches": {
+        "class": true
+      }
+    },
     "bcc157b9-cf5d-3641-ac1d-0904c0b8fa03": {
       "content": "@foreach (${1} as ${2})\n    ${3}\n@endforeach",
       "doc": "",
@@ -125850,16 +124689,6 @@
       "label": "",
       "matches": {
         "Crem": true
-      }
-    },
-    "bd200bdb-4ff6-38cf-8d4d-e603dd807b36": {
-      "content": "${1:name} = function($2)\n\t${0}\nend,",
-      "doc": "Assign a function to a table key",
-      "filetype": "lua",
-      "grammar": "lsp",
-      "label": "member-function",
-      "matches": {
-        "f,": true
       }
     },
     "bd20fa88-1eb5-35ba-b436-5d9750466a7a": {
@@ -126314,16 +125143,6 @@
         "doc": true
       }
     },
-    "bdc09908-e75e-3f9d-8781-ba5b82846129": {
-      "content": "import { inject } from '@angular/core'\nimport {\n  ActivatedRouteSnapshot,\n  CanActivateChildFn,\n  RouterStateSnapshot,\n} from '@angular/router'\n\nconst ${1:Name}Guard: CanActivateChildFn = (\n  route: ActivatedRouteSnapshot,\n  state: RouterStateSnapshot\n) => {\n\treturn true;$0\n}",
-      "doc": "Angular CanActivateChild guard",
-      "filetype": "typescript",
-      "grammar": "lsp",
-      "label": "Angular Functional CanActivateChildFn Guard",
-      "matches": {
-        "a-guard-can-activate-child": true
-      }
-    },
     "bdc37268-fc0f-3e2a-9299-69a55e45ee76": {
       "content": "<a href=\"http://${1:example.com}\">${0:$1}</a>",
       "doc": "",
@@ -126413,16 +125232,6 @@
       "label": "do",
       "matches": {
         "do": true
-      }
-    },
-    "bdd54af4-6a2c-31df-8e6c-dc9d71ef5892": {
-      "content": "it('should ${1:first}', () => { ${2:second} })",
-      "doc": "Testing `it` block",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "itBlock",
-      "matches": {
-        "tit": true
       }
     },
     "bdd6e597-f014-3252-ade6-39ea3480dc22": {
@@ -126747,16 +125556,6 @@
         "rio useinview": true
       }
     },
-    "be36303d-c2d3-36eb-be63-96708fe6c2cd": {
-      "content": "const [${2:second}] = ${1:first}",
-      "doc": "Creates and assigns a local variable using array destructing",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "destructingArray",
-      "matches": {
-        "dar": true
-      }
-    },
     "be391bbb-3d7a-38bd-9065-0d8ef74a41eb": {
       "content": "bind:@\"${2:#:binding}\" toObject:${3:observableController} withKeyPath:@\"${4:keyPath}\" options:${5:nil}",
       "doc": "",
@@ -127076,16 +125875,6 @@
       "label": "",
       "matches": {
         "ma": true
-      }
-    },
-    "bec1c006-1b0c-329a-908a-21073d5a4afc": {
-      "content": "import { inject } from '@angular/core'\nimport { CanMatchFn, Route, Router, UrlSegment } from '@angular/router'\n\nexport const ${2:Name}Guard: CanMatchFn = (\n\troute: Route,\n\tsegments: UrlSegment[]\n) => {\n\treturn true;$0\n}",
-      "doc": "Angular Functional CanMatchFn guard",
-      "filetype": "typescript",
-      "grammar": "lsp",
-      "label": "Angular Functional CanMatchFn Guard",
-      "matches": {
-        "a-guard-can-match": true
       }
     },
     "bec2d1d9-b511-3797-abe6-cd135b3923cb": {
@@ -128393,16 +127182,6 @@
         "maru": true
       }
     },
-    "c1107e11-8d66-359d-a3ea-f73c6b47e144": {
-      "content": "PropTypes.arrayOf($0).isRequired",
-      "doc": "An array of a certain type required",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "propTypeArrayOfRequired",
-      "matches": {
-        "ptaor": true
-      }
-    },
     "c1139701-49a3-3948-9de4-944a00ad31db": {
       "content": "try!(${1})",
       "doc": "try!(…)",
@@ -128661,16 +127440,6 @@
       "label": "[id]: email \"title\"",
       "matches": {
         "idemail": true
-      }
-    },
-    "c181887b-698f-34c1-8de6-751df4139920": {
-      "content": "import { StyleSheet, Text, View } from 'react-native'\nconst ${1:${TM_FILENAME_BASE}} = () => {\n  return (\n    <View>\n      <Text>${1:first}</Text>\n    </View>\n  )\n}\nexport default ${1:${TM_FILENAME_BASE}}\nconst styles = StyleSheet.create({})",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reactNativeFunctionalExportComponentWithStyles",
-      "matches": {
-        "rnfes": true
       }
     },
     "c186bb62-a12f-3a22-9cb2-723cc61facfe": {
@@ -129356,6 +128125,17 @@
       "label": "",
       "matches": {
         "require": true
+      }
+    },
+    "c2b399c5-3837-3ec0-bcf3-7c6f53d83a4f": {
+      "content": "virtual task shutdown_phase(uvm_phase phase);\n\t$1\nendtask: shutdown_phase",
+      "doc": "UVM shutdown_phase template",
+      "filetype": "systemverilog",
+      "grammar": "lsp",
+      "label": "uvm_shutdown_phase",
+      "matches": {
+        "uvm_phase_shutdown": true,
+        "uvm_shutdown_phase": true
       }
     },
     "c2b45b90-c3e6-3828-9a31-b7006929683c": {
@@ -131261,16 +130041,6 @@
         "FUNCTION RANGE": true
       }
     },
-    "c57449b7-15e9-3020-b184-6e1a04b3d50f": {
-      "content": "console.log('${1:first}', ${1:first})",
-      "doc": "Logs property with name.",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "consoleLogObject",
-      "matches": {
-        "clo": true
-      }
-    },
     "c576b581-36ae-3412-bf6c-7afbf66c25ed": {
       "content": "import $0",
       "doc": "Code snippet for import a package.",
@@ -132327,16 +131097,6 @@
         "pages": true
       }
     },
-    "c708c65e-5080-35af-b1d3-5cffe3c82cb9": {
-      "content": "PropTypes.oneOfType([\n  $0\n])",
-      "doc": "An object that could be one of many types",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "propTypeOneOfType",
-      "matches": {
-        "ptet": true
-      }
-    },
     "c70bff3e-c94d-34db-83f7-86ed9d6c14a1": {
       "content": "it('${1:should }', () => {\n\t$0\n});",
       "doc": "creates an it block",
@@ -132396,16 +131156,6 @@
       "label": "",
       "matches": {
         "paginate": true
-      }
-    },
-    "c726950b-5cb2-36c8-b23d-fab55847120d": {
-      "content": "state = { ${1:first} }",
-      "doc": "Creates empty state object. To be used in a constructor.",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "emptyState",
-      "matches": {
-        "est": true
       }
     },
     "c734783f-f50f-38c6-a330-24f566d4d073": {
@@ -132617,16 +131367,6 @@
       "label": "",
       "matches": {
         "wm": true
-      }
-    },
-    "c78acd88-8dd9-3bad-9800-c15af1a55cf5": {
-      "content": "console.group('${1:first}')",
-      "doc": "Groups and indents all following output by an additional level, until console.groupEnd() is called.",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "consoleGroup",
-      "matches": {
-        "cgr": true
       }
     },
     "c78bc192-53d1-3b27-a88f-f2317b87b563": {
@@ -132929,6 +131669,16 @@
       "label": "fdatetime",
       "matches": {
         "fdatetime": true
+      }
+    },
+    "c7e80275-df0d-3662-8a60-ba0e66df33e4": {
+      "content": "def __init__(self$1):\n\t${2:pass}",
+      "doc": "Class method definition",
+      "filetype": "python",
+      "grammar": "lsp",
+      "label": "Init method",
+      "matches": {
+        "defi": true
       }
     },
     "c7ec0f34-7cc2-3210-b21b-79223a0e9c9a": {
@@ -133352,6 +132102,16 @@
         "angular root component": true
       }
     },
+    "c8b24039-ce60-3c26-b059-e8b6f53a662b": {
+      "content": "constructor(@Optional() @SkipSelf() parentModule: ${1:ModuleName}) {\n\tif (parentModule) {\n\t\tconst msg = `${1:ModuleName} has already been loaded. \n\t\t\tImport ${1:ModuleName} once, only, in the root AppModule.`\n\t\tthrow new Error(msg)\n\t}\n}",
+      "doc": "Angular Module SkipSelf constructor",
+      "filetype": "typescript",
+      "grammar": "lsp",
+      "label": "Angular Module SkipSelf Constructor",
+      "matches": {
+        "a-ctor-skip-self": true
+      }
+    },
     "c8b27fd2-6636-3abb-8f0e-3f4fd18b53ee": {
       "content": "{%- case ${variable} -%}\n\t{%- when ${condition} -%}\n\t\t${code1:}\n\t{%- else -%}\n\t\t${code2:}\n{%- endcase -%}",
       "doc": "Control flow tag: case",
@@ -133543,16 +132303,6 @@
       "label": "interface",
       "matches": {
         "int": true
-      }
-    },
-    "c8e1e642-8c47-3080-8799-5bd35fbdc182": {
-      "content": "import { useSearchParams } from 'react-router-dom'",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "importUseSearchParams",
-      "matches": {
-        "imsp": true
       }
     },
     "c8ee9ef6-63ce-365e-99ab-c824fb5fd6c8": {
@@ -135171,16 +133921,6 @@
         "yup object shape": true
       }
     },
-    "cb28d619-6c8b-36a6-97e4-8b7f0bc83814": {
-      "content": "import { Component } from 'react'\n\nexport class ${1:${TM_FILENAME_BASE}} extends Component {\n  render() {\n    return (\n      <>${1:first}</>\n    )\n  }\n}\n\nexport default ${1:${TM_FILENAME_BASE}}",
-      "doc": "Creates a React component class with ES7 module system",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reactClassExportComponent",
-      "matches": {
-        "rce": true
-      }
-    },
     "cb2ae752-96f7-3b68-9155-454ce055e0ae": {
       "content": "collect do |${1:e}|\n\t${0}\nend",
       "doc": "",
@@ -136004,16 +134744,6 @@
         "extends": true
       }
     },
-    "cc754485-a1bb-3387-a564-617b6e6baad6": {
-      "content": "import { ${1:first} } from 'react-native'",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reactNativeImport",
-      "matches": {
-        "imrn": true
-      }
-    },
     "cc7ebec9-79a9-3784-81ca-ec5d2d07f883": {
       "content": "log.Println(\"${1}\")",
       "doc": "",
@@ -136705,16 +135435,6 @@
         "uvm_blocking_peek_export": true
       }
     },
-    "cd90ce69-66d1-3f31-ba90-ce7f87d00e5c": {
-      "content": "setTimeout(() => { ${1:first} }, ${2:second})",
-      "doc": "Executes the given function after the specified delay",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "setTimeOut",
-      "matches": {
-        "sto": true
-      }
-    },
     "cd9113a1-baff-3220-bdbe-ec4327570514": {
       "content": "read(unit = ${1:fp}, file = ${2:filename}, iostat = ${3:ierr}) ${0}",
       "doc": "",
@@ -137260,16 +135980,6 @@
       "label": "",
       "matches": {
         "ed": true
-      }
-    },
-    "ce44495b-6915-3dca-b640-385297b9e444": {
-      "content": "set ${1:first}(${2:second}) {${3:third}}",
-      "doc": "Creates a setter property inside a class",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "propertySet",
-      "matches": {
-        "pse": true
       }
     },
     "ce4cb55b-e78e-3afb-996b-3e170b866909": {
@@ -138067,16 +136777,6 @@
         "ADD": true
       }
     },
-    "cfa5d43e-29d3-34da-b22c-ec3aec4f3079": {
-      "content": "\"\"\"$0\"\"\"",
-      "doc": "Snippet to avoid autopair plugin annoyances when typing multiple \"",
-      "filetype": "python",
-      "grammar": "lsp",
-      "label": "One-line multiline string",
-      "matches": {
-        "##": true
-      }
-    },
     "cfa5d5d1-4664-30da-a025-47d0a5b58eb8": {
       "content": "order('${0:field}')",
       "doc": "",
@@ -138095,16 +136795,6 @@
       "label": "",
       "matches": {
         "export": true
-      }
-    },
-    "cfabb88f-5f36-3e2b-b1d9-f1b6ad8aab18": {
-      "content": "import { useState, useEffect } from 'react'\nimport { View, SafeAreaView, Text, StyleSheet } from 'react-native'\n\nconst ${1:${TM_FILENAME_BASE}} = ({ ${2:props} }) => {\n  const [${3:state}, ${4:setState}] = useState(${5:initialState})\n\n  useEffect(() => {\n    // Effect here\n  }, [])\n\n  return (\n    <SafeAreaView style={styles.container}>\n      <View>\n        <Text>${6:Hello, World!}</Text>\n      </View>\n    </SafeAreaView>\n  )\n}\n\nconst styles = StyleSheet.create({\n  container: {\n    flex: 1,\n    justifyContent: 'center',\n    alignItems: 'center',\n  },\n})\n\nexport default ${1:${TM_FILENAME_BASE}}",
-      "doc": "React Native functional component with useState, useEffect, SafeAreaView and basic styling",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reactNativeExtendedFunctional",
-      "matches": {
-        "rnxf": true
       }
     },
     "cfaf5a0e-e107-3885-8f92-951e19b30c94": {
@@ -138177,16 +136867,6 @@
         "while": true
       }
     },
-    "cfbfa8f3-f004-387f-b4db-8b7022644c5c": {
-      "content": "import { View, Text } from 'react-native'\nconst ${1:${TM_FILENAME_BASE}} = () => {\n  return (\n    <View>\n      <Text>${1:first}</Text>\n    </View>\n  )\n}\nexport default ${1:${TM_FILENAME_BASE}}",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reactNativeFunctionalExportComponent",
-      "matches": {
-        "rnfe": true
-      }
-    },
     "cfc07e53-a110-3c2c-a670-74f900d5db81": {
       "content": "overflow-y: hidden",
       "doc": "",
@@ -138245,16 +136925,6 @@
       "label": "",
       "matches": {
         "t": true
-      }
-    },
-    "cfdf3efc-ce09-3692-9ba1-cf7f264a0658": {
-      "content": "import { PureComponent } from 'react'\n\nexport class ${1:${TM_FILENAME_BASE}} extends PureComponent {\n  render() {\n    return (\n      <>${1:first}</>\n    )\n  }\n}\n\nexport default ${1:${TM_FILENAME_BASE}}",
-      "doc": "Creates a React pure component class with ES7 module system export",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reactClassExportPureComponent",
-      "matches": {
-        "rpce": true
       }
     },
     "cfe5eb65-5af9-3bf8-9127-cec5412b44ae": {
@@ -138621,16 +137291,6 @@
       "label": "class",
       "matches": {
         "cs": true
-      }
-    },
-    "d08fc09f-deba-3a71-8a58-8c91ae7386c0": {
-      "content": "PropTypes.instanceOf($0).isRequired",
-      "doc": "Is an instance of a class prop type required",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "propTypeInstanceOfRequired",
-      "matches": {
-        "ptir": true
       }
     },
     "d091edb8-76cc-3da6-8d0c-0a5a7fb3a000": {
@@ -139042,16 +137702,6 @@
       "label": "module-exports",
       "matches": {
         "base module exports": true
-      }
-    },
-    "d14986b1-99ad-314a-aff2-064ca82aa605": {
-      "content": "console.warn(${1:first})",
-      "doc": "Displays a message in the console but also displays a yellow warning icon along with the logged message",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "consoleWarn",
-      "matches": {
-        "cwa": true
       }
     },
     "d153e8f3-255b-370b-a31f-65a859d1dbf7": {
@@ -141539,6 +140189,16 @@
         "td:u": true
       }
     },
+    "d56e5abc-b0c2-3a07-ae60-d48be7fdb38a": {
+      "content": "import { CanMatchFn, Route, UrlSegment } from '@angular/router'\n\nexport const ${1:Name}Guard: CanMatchFn = (\n\troute: Route,\n\tsegments: UrlSegment[]\n) => {\n\treturn true;$0\n}",
+      "doc": "Angular Functional CanMatchFn guard",
+      "filetype": "typescript",
+      "grammar": "lsp",
+      "label": "Angular Functional CanMatchFn Guard",
+      "matches": {
+        "a-guard-can-match": true
+      }
+    },
     "d57165ff-71e4-31b4-80bb-635d628f0000": {
       "content": "static void Main(string[] args)\n{\n    $0\n}",
       "doc": "void Main()",
@@ -141647,16 +140307,6 @@
       "label": "",
       "matches": {
         "uvm_sequence_item_do_print": true
-      }
-    },
-    "d5b0f889-7dc8-3510-b0a7-3e0d2a3a9604": {
-      "content": "setInterval(() => { ${1:first} }, ${2:second})",
-      "doc": "Executes the given function at specified intervals",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "setInterval",
-      "matches": {
-        "sti": true
       }
     },
     "d5b6bb9c-8e37-32a6-9b29-13f22f9a1dd1": {
@@ -142589,6 +141239,16 @@
       "label": "Form",
       "matches": {
         "form": true
+      }
+    },
+    "d7168def-15a6-370c-a865-966e0709f468": {
+      "content": "- [${1| ,x|}] ${2:text}\n${0}",
+      "doc": "Create list of todos",
+      "filetype": "markdown",
+      "grammar": "lsp",
+      "label": "Create list of todos",
+      "matches": {
+        "todo": true
       }
     },
     "d71ae66e-d48d-366a-a14c-bb58f2a8ffd3": {
@@ -143911,16 +142571,6 @@
         "map+": true
       }
     },
-    "d934a1ca-c037-3b3c-8df1-b6e842fe19ba": {
-      "content": "import { useNavigate } from 'react-router-dom'",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "importUseNavigate",
-      "matches": {
-        "imnav": true
-      }
-    },
     "d9358eed-d95d-357f-afd2-f8f896300b8b": {
       "content": "type ${1:Alias} = ${2:Type};",
       "doc": "type … = …;",
@@ -144191,6 +142841,16 @@
         "debug": true
       }
     },
+    "d9975a10-7245-34f4-b045-91cd58de7e41": {
+      "content": "'''$0\n'''",
+      "doc": "Snippet to avoid weird autopair plugin behaviour",
+      "filetype": "python",
+      "grammar": "lsp",
+      "label": "Single-quote multiline string",
+      "matches": {
+        "#q": true
+      }
+    },
     "d99a73ff-90f1-3d80-b91a-c04afbbcc52f": {
       "content": "widows: ${0}",
       "doc": "",
@@ -144219,6 +142879,16 @@
       "label": "class extends",
       "matches": {
         "class extends": true
+      }
+    },
+    "d9a49805-6632-3a37-9242-c437599f65e3": {
+      "content": "# https://kubectl.docs.kubernetes.io/references/kustomize/builtins/#_helmchartinflationgenerator_\napiVersion: builtin\nkind: HelmChartInflationGenerator\nmetadata:\n  name: ${1:my-chart-generator} # Name of this generator\nname: ${3:chart-name} # Name of the chart you want to use\nnamespace: ${4:default}\nrepo: ${5:https://charts.example.com/}\nversion: ${6:1.0.0}\nreleaseName: ${7:my-release}\nvaluesFile: ${8:values.yaml}\n---\n$0",
+      "doc": "k8s Helm Chart Inflation Generator",
+      "filetype": "kubernetes",
+      "grammar": "lsp",
+      "label": "k8s Helm Chart Inflation Generator",
+      "matches": {
+        "k-helm-generator-file": true
       }
     },
     "d9a57bd9-36b7-3dde-a4f3-bb1aa923963f": {
@@ -145157,16 +143827,6 @@
         "collapsible block in block+": true
       }
     },
-    "db19aadd-0bba-3819-a580-fa139f6fec4a": {
-      "content": "# https://kubernetes.io/docs/concepts/workloads/pods/\napiVersion: v1\nkind: Pod\nmetadata:\n  name: \"${1:myapp}\"\n  namespace: ${2:default}\n  labels:\n    annotations:\n      kubectl.kubernetes.io/default-container:  ${1:myapp}\n    app: \"${1:myapp}\"\nspec:\n  containers:\n  - name: ${1:myapp}\n    image: \"${3:debian-slim:latest}\"\n    resources:\n      limits:\n        cpu: 200m\n        memory: 500Mi\n      requests:\n        cpu: 100m\n        memory: 200Mi\n    env:\n    - name: DB_HOST\n      valueFrom:\n        configMapKeyRef:\n          name: myapp\n          key: DB_HOST\n    ports:\n    - containerPort: ${4:80}\n      name: http\n    volumeMounts:\n    - name: localtime\n      mountPath: /etc/localtime\n  volumes:\n    - name: localtime\n      hostPath:\n        path: /usr/share/zoneinfo/Asia/Taipei\n  restartPolicy: Always\n---\n$0",
-      "doc": "k8s Pod",
-      "filetype": "kubernetes",
-      "grammar": "lsp",
-      "label": "k8s Pod",
-      "matches": {
-        "k-pod": true
-      }
-    },
     "db26d234-6a31-3140-a43d-b3a99294f424": {
       "content": "text-outline: none;",
       "doc": "",
@@ -145396,16 +144056,6 @@
       "label": "",
       "matches": {
         "money_with_currency": true
-      }
-    },
-    "db867c88-68f7-3376-8188-9f99f9fa0114": {
-      "content": "export { ${2:second} as ${3:third} } from '${1:first}'",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "exportAs",
-      "matches": {
-        "exa": true
       }
     },
     "db8c7bc7-4e96-3bb2-9b48-a937b56bb559": {
@@ -146031,6 +144681,16 @@
       "label": "",
       "matches": {
         "fl:n": true
+      }
+    },
+    "dc88278c-c6ea-3eba-b548-db5f7ed52c08": {
+      "content": "*ngFor=\"let ${1:item} of ${2:list}; trackBy:${3:trackByFnName}\"${0}",
+      "doc": "Angular *ngFor with trackBy",
+      "filetype": "html",
+      "grammar": "lsp",
+      "label": "ngFor with trackBy",
+      "matches": {
+        "a-ngFor-trackBy": true
       }
     },
     "dc918f71-6ea7-3f1f-817c-41a9f0491479": {
@@ -146785,16 +145445,6 @@
       "label": "",
       "matches": {
         "cl:b": true
-      }
-    },
-    "dde1aa5a-a16b-329c-bda8-1192a9f60c12": {
-      "content": "export default (${1:first}) => {${2:second}}",
-      "doc": "Export default function",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "exportDefaultFunction",
-      "matches": {
-        "edf": true
       }
     },
     "dde35663-c256-308d-8b4f-bf6d84f5b4bd": {
@@ -147964,16 +146614,6 @@
         "bdr:n": true
       }
     },
-    "df8710b8-38b1-3a34-b06e-5f8efc4ac7a2": {
-      "content": "console.clear()",
-      "doc": "Clears the console",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "consoleClear",
-      "matches": {
-        "ccl": true
-      }
-    },
     "df8b0d2b-212c-3e03-b904-8461dd13d80d": {
       "content": "border-break ${0}",
       "doc": "",
@@ -148405,16 +147045,6 @@
       "label": "",
       "matches": {
         "bdti:n": true
-      }
-    },
-    "e048cd99-8102-344e-af63-5841b6bdf83a": {
-      "content": "import PropTypes from 'prop-types'\nimport { Component } from 'react'\n\nexport default class ${1:${TM_FILENAME_BASE}} extends Component {\n  static propTypes = {${2:second}: ${3:third}}\n\n  render() {\n    return (\n      <>${1:first}</>\n    )\n  }\n}",
-      "doc": "Creates a React component class with PropTypes and ES7 module system",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reactClassComponentPropTypes",
-      "matches": {
-        "rccp": true
       }
     },
     "e05338c3-efe3-35f6-8bff-c34683c4f3ce": {
@@ -149022,6 +147652,16 @@
         "ps:c": true
       }
     },
+    "e154ff6e-4e97-3782-a8d5-5dfcac896628": {
+      "content": "{% querystring $1=$2 %}",
+      "doc": "querystring tag django template",
+      "filetype": "djangohtml",
+      "grammar": "lsp",
+      "label": "querystring",
+      "matches": {
+        "querystring": true
+      }
+    },
     "e15afe19-91dd-3197-b727-3d241c5b07ee": {
       "content": "while($2){\n\t\n}",
       "doc": "while(){\n\t//code\n}\n\nThe keyword while is used to describe a loop that is controlled by a condition. The parentheses enclose the expression that defines the condition. The body defined by curly braces encloses the statements that are executed at each pass of the loop.\n\nwhile(i <= 99){\n\taFunction();\n}\n\nThe execution of a single pass or the whole loop can be aborted by using a continue or a break statement respectively.",
@@ -149182,16 +147822,6 @@
       "matches": {
         "@bs": true,
         "external": true
-      }
-    },
-    "e1be8664-dd11-33f1-a788-4974e304235c": {
-      "content": "export { ${2:second} } from '${1:first}'",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "exportDestructing",
-      "matches": {
-        "exd": true
       }
     },
     "e1c2d0d3-7c8c-3938-b960-bd8f0221df45": {
@@ -149866,16 +148496,6 @@
         "entry": true
       }
     },
-    "e2f45cd8-6fae-32ea-a454-f64839f78dc3": {
-      "content": "import { Component } from 'react'",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "importReactWithComponent",
-      "matches": {
-        "imrc": true
-      }
-    },
     "e2f5046d-f361-3624-acee-972261b84e4d": {
       "content": "/// @notice Explain to an end user what this does\r\n/// @dev Explain to a developer any extra details\r\n/// @return Documents the return variables of a contract’s function state variable\r\n/// @inheritdoc\tCopies all missing tags from the base function (must be followed by the contract name)",
       "doc": "natspec for state variable",
@@ -150034,16 +148654,6 @@
       "label": "FUNCTION-REVERSE",
       "matches": {
         "FUNCTION REVERSE": true
-      }
-    },
-    "e3391be2-37e1-3495-9fb5-de5036225747": {
-      "content": "import { View, Text } from 'react-native'\ntype Props = {}\nconst ${1:${TM_FILENAME_BASE}} = (props: Props) => {\n  return (\n    <View>\n      <Text>${1:first}</Text>\n    </View>\n  )\n}\nexport default ${1:${TM_FILENAME_BASE}}",
-      "doc": "Creates a React Native Arrow Function Component with ES7 module system in TypeScript",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "typescriptReactNativeArrowFunctionComponent",
-      "matches": {
-        "tsrnf": true
       }
     },
     "e33e3ddc-02b2-3994-99a9-e48c032b642f": {
@@ -150836,16 +149446,6 @@
         "struct-unit": true
       }
     },
-    "e48bfc8a-6031-3a07-a824-79e7c3e06669": {
-      "content": "import { ${2:second} as ${3:third} } from '${1:first}'",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "importAs",
-      "matches": {
-        "ima": true
-      }
-    },
     "e492203a-4d84-314c-8204-e60225c5f166": {
       "content": "#!/usr/bin/env python3\n${0}",
       "doc": "",
@@ -151376,16 +149976,6 @@
       "label": "Multiply numbers greater than 2^32",
       "matches": {
         "mul64": true
-      }
-    },
-    "e581662b-7bbd-39e6-9941-efcf5349bc26": {
-      "content": "PropTypes.objectOf($0)",
-      "doc": "An object with property values of a certain type",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "propTypeObjectOf",
-      "matches": {
-        "ptoo": true
       }
     },
     "e583fd89-341e-31e6-8f35-99a03bc2098c": {
@@ -152125,16 +150715,6 @@
         "@old-alias": true
       }
     },
-    "e6942e39-b37a-3427-a8c1-0a7c27b72a4e": {
-      "content": "return new Promise((resolve, reject) => { ${1:first} })",
-      "doc": "Creates and returns a new Promise in the standard ES7 syntax",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "promise",
-      "matches": {
-        "prom": true
-      }
-    },
     "e6966be2-5c8c-3fc3-940e-40b93659ec69": {
       "content": "try:\n  ${1:pass}\nfinally:\n  ${2:pass}",
       "doc": "",
@@ -152506,6 +151086,16 @@
         "wh": true
       }
     },
+    "e72385c9-b815-3a87-a1cc-28d3dd233300": {
+      "content": "# https://kubectl.docs.kubernetes.io/references/kustomize/kustomization/\napiVersion: kustomize.config.k8s.io/v1beta1\nkind: Kustomization\nmetadata:\n  namespace: ${1:default} # this will set the namespace for all KRM objects mentioned in this kustomize file\n# resources:\n# - ...\n# generators:\n# - ...\n# transformers:\n# - ...\n# validators:\n# - ...\n$0",
+      "doc": "k8s Kustomization File",
+      "filetype": "kubernetes",
+      "grammar": "lsp",
+      "label": "k8s Kustomization File",
+      "matches": {
+        "k-kustomization": true
+      }
+    },
     "e7282cdf-ce1e-35b0-b3a4-d8156b029f13": {
       "content": "if(${1:condition})\n\t${2:command1}\nelse()\n\t${3:command2}\nendif()",
       "doc": "Add the snippet 'if() ... else() ... endif()'",
@@ -152574,6 +151164,16 @@
       "label": "edge: toBytes",
       "matches": {
         "toBytes": true
+      }
+    },
+    "e73ff7df-4dcb-308b-bdde-466645399ccf": {
+      "content": "import { ${1:map} } from 'rxjs'\n$0",
+      "doc": "RxJs operator import",
+      "filetype": "typescript",
+      "grammar": "lsp",
+      "label": "RxJs Operator Import",
+      "matches": {
+        "a-rxjs-operator-import": true
       }
     },
     "e7420602-8bb8-36b6-8dee-a9a8932da8a6": {
@@ -153481,16 +152081,6 @@
         "act": true
       }
     },
-    "e89ddaf4-61e8-3124-a258-ddb8db899851": {
-      "content": "useLayoutEffect(() => {\n  ${1:first}\n\n  return () => {\n    ${2:second}\n  };\n}, [${3:third}])",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "useLayoutEffect",
-      "matches": {
-        "useLayoutEffectSnippet": true
-      }
-    },
     "e8a04e81-c1b7-306a-833a-025f6e27342c": {
       "content": "func _process(delta):\n\t${1:pass}",
       "doc": "",
@@ -153861,6 +152451,16 @@
       "matches": {
         "-interface": true,
         "funcid": true
+      }
+    },
+    "e942e458-927b-3008-a2b9-6eeb7f98c51b": {
+      "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n- [${5| ,x|}] ${6:text}\n- [${7| ,x|}] ${8:text}\n${0}",
+      "doc": "Create list of 4 todos",
+      "filetype": "markdown",
+      "grammar": "lsp",
+      "label": "Create list of 4 todos",
+      "matches": {
+        "todo4": true
       }
     },
     "e943943b-af88-30c8-a953-1d43d69d10ff": {
@@ -155152,16 +153752,6 @@
         "d:ri": true
       }
     },
-    "eb64d24c-ea46-301d-a32a-ff4da915e93c": {
-      "content": "PropTypes.arrayOf($0)",
-      "doc": "An array of a certain type",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "propTypeArrayOf",
-      "matches": {
-        "ptao": true
-      }
-    },
     "eb721f82-f905-3599-a8b0-6b3415f730dd": {
       "content": "<link rel=\"manifest\" href=\"${1:manifest.json}\">${2}",
       "doc": "",
@@ -155695,16 +154285,6 @@
         "lf": true
       }
     },
-    "ec653295-2b0f-3d18-b07d-f14cb84fd37a": {
-      "content": "PropTypes.object.isRequired",
-      "doc": "Object prop type required",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "propTypeObjectRequired",
-      "matches": {
-        "ptor": true
-      }
-    },
     "ec66d2c7-ffb6-3d5f-9cef-8e8e18420c05": {
       "content": "```{bash} \n$1\n```",
       "doc": "",
@@ -156006,16 +154586,6 @@
         "vn": true
       }
     },
-    "ecf61de2-08d6-38ee-89f5-946ce93929f8": {
-      "content": "import { createBrowserRouter, RouterProvider } from 'react-router-dom'",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "importCreateBrowserRouter",
-      "matches": {
-        "imcbr": true
-      }
-    },
     "ecf6ce96-38e4-3b71-bbd0-d90843c0de3a": {
       "content": "vertical-align: text-bottom",
       "doc": "",
@@ -156175,16 +154745,6 @@
       "matches": {
         "try_catch_n": true,
         "try_cn": true
-      }
-    },
-    "ed3e28e7-f791-3d61-a429-0007b2641ac8": {
-      "content": "import { createSlice } from '@reduxjs/toolkit'\n\nconst initialState = {\n  ${1:first}\n  status: 'idle',\n}\n\nconst ${1:${TM_FILENAME_BASE}} = createSlice({\n  name: '${2:second}',\n  initialState,\n  reducers: {},\n  extraReducers: (builder) => {\n    builder\n      .addCase(${3:third}.pending, (state) => {\n        state.status = 'loading'\n      })\n      .addCase(${3:third}.fulfilled, (state, action) => {\n        state.status = 'succeeded'\n      })\n      .addCase(${3:third}.rejected, (state) => {\n        state.status = 'failed'\n      })\n  },\n})\n\nexport const {} = ${1:${TM_FILENAME_BASE}}.actions\n\nexport default ${1:${TM_FILENAME_BASE}}.reducer",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reduxSliceWithExtraReducers",
-      "matches": {
-        "rxslicex": true
       }
     },
     "ed41f367-0ad3-30f1-898b-025806a75556": {
@@ -156527,16 +155087,6 @@
       "label": "",
       "matches": {
         "ifequal": true
-      }
-    },
-    "edd54722-1c23-37d7-be9c-0e3cd31ebb32": {
-      "content": "PropTypes.oneOfType([\n  $0\n]).isRequired",
-      "doc": "An object that could be one of many types required",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "propTypeOneOfTypeRequired",
-      "matches": {
-        "ptetr": true
       }
     },
     "eddae9ab-07b9-3575-a06d-a196014c643d": {
@@ -157919,16 +156469,6 @@
         "lodash findlastindex": true
       }
     },
-    "ef8cc5d7-98d9-39e7-aaa5-e310a9f0571e": {
-      "content": "PropTypes.objectOf($0).isRequired",
-      "doc": "An object with property values of a certain type required",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "propTypeObjectOfRequired",
-      "matches": {
-        "ptoor": true
-      }
-    },
     "ef8ed9a7-0d60-3fbd-aaf1-6170f66fc3f6": {
       "content": "_.toArray(${value})",
       "doc": "_.toArray({ 'a': 1, 'b': 2 });\n// => [1, 2]\n\n_.toArray('abc');\n// => ['a', 'b', 'c']\n\n_.toArray(1);\n// => []\n\n_.toArray(null);\n// => []\n\nConverts `value` to an array.",
@@ -157957,6 +156497,16 @@
       "label": "lodash-intersectionwith",
       "matches": {
         "lodash intersectionwith": true
+      }
+    },
+    "ef98c439-8000-3044-b212-429c46d0fed7": {
+      "content": "[TestClass]\npublic sealed class ${1:ClassName}Test\n{\n\t$0\n}",
+      "doc": "create mstest test class",
+      "filetype": "csharp",
+      "grammar": "lsp",
+      "label": "MSTest Test Class",
+      "matches": {
+        "tc": true
       }
     },
     "ef99f720-07cc-35ff-91f3-29cc34097ea4": {
@@ -158219,6 +156769,16 @@
       "label": "",
       "matches": {
         "block": true
+      }
+    },
+    "effb788e-d0cc-381b-9a38-4c20aca2c205": {
+      "content": "def ${1:mname}(self$2) -> ${3:None}:\n\t${4:pass}",
+      "doc": "Class method definition",
+      "filetype": "python",
+      "grammar": "lsp",
+      "label": "Method w/ return type",
+      "matches": {
+        "defmt": true
       }
     },
     "f01808c6-038d-3265-af4c-f17ce4e6cd4d": {
@@ -159726,16 +158286,6 @@
         "mih": true
       }
     },
-    "f2515572-bcd5-3d68-8c0c-44ac80ae5cc1": {
-      "content": "useImperativeHandle(\n  ${1:first},\n  () => {\n    ${2:second}\n  },\n  [${3:third}],\n)",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "useImperativeHandle",
-      "matches": {
-        "useImperativeHandleSnippet": true
-      }
-    },
     "f2580f5e-08ed-3b80-b321-d68c3947a323": {
       "content": "repeat\n\t$1\nuntil $0",
       "doc": "",
@@ -160239,6 +158789,16 @@
         "ordered list": true
       }
     },
+    "f2fd353c-45cc-3bdd-919b-a68289b37199": {
+      "content": "const exe = b.addExecutable(.{\n    .name = \"${1}\",\n    .root_module = b.createModule(.{\n        .root_source_file = b.path(\"${2:path}\"),\n        .target = target,\n        .optimize = optimize,\n    }),\n});\nb.installArtifact(exe);",
+      "doc": "Building an exe",
+      "filetype": "zig",
+      "grammar": "lsp",
+      "label": "buildExe",
+      "matches": {
+        "bExe": true
+      }
+    },
     "f3011807-0dc1-3987-a0a2-e8432b626a81": {
       "content": "cy.get('${1:selector}');",
       "doc": "Get one or more DOM elements by selector or alias",
@@ -160349,16 +158909,6 @@
         "frustrum": true
       }
     },
-    "f3284d9e-3ab9-33ec-b9f1-30b099babb79": {
-      "content": "const ${1:first} = useRef(${2:second})",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "useRef",
-      "matches": {
-        "useRefSnippet": true
-      }
-    },
     "f32d8de0-a0a4-33d2-9dff-92efeb342a64": {
       "content": "-webkit-box-shadow: ${1:0} ${2:0} ${3:0} #${0:000}",
       "doc": "",
@@ -160387,16 +158937,6 @@
       "label": "",
       "matches": {
         "pr": true
-      }
-    },
-    "f3440dcb-5e49-30e8-9ce7-f58a8c1a7d78": {
-      "content": "import 'react-native'\nimport renderer from 'react-test-renderer'\nimport { Provider } from 'react-redux'\nimport store from '~/store'\nimport ${1:${TM_FILENAME_BASE}} from '../${1:${TM_FILENAME_BASE}}'\ndescribe('<${1:${TM_FILENAME_BASE}} />', () => {\n  const defaultProps = {}\n  const wrapper = renderer.create(\n    <Provider store={store}>\n      <${1:${TM_FILENAME_BASE}} {...defaultProps} />\n    </Provider>,\n  )\n  test('render', () => {\n    expect(wrapper).toMatchSnapshot()\n  })\n})",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "setupReactNativeTestWithRedux",
-      "matches": {
-        "snrtest": true
       }
     },
     "f3466070-1194-3cd2-8734-3a2844db16bd": {
@@ -161689,6 +160229,16 @@
         "parg": true
       }
     },
+    "f51a807e-458d-31ff-a586-17b25af3adc3": {
+      "content": "async def ${1:gen_name}($2):\n\t${3:yield $4}",
+      "doc": "Async generator function",
+      "filetype": "python",
+      "grammar": "lsp",
+      "label": "async generator",
+      "matches": {
+        "agen": true
+      }
+    },
     "f51c74a7-36a6-3fce-b7de-9ccf31a43161": {
       "content": "o.. $1 $2",
       "doc": "An object aggregates X number of other objects",
@@ -162502,6 +161052,16 @@
         "cdirx": true
       }
     },
+    "f688b8e6-8b26-3a06-b8a2-3bd31e28c91c": {
+      "content": "{\n\t\"type\": \"npm\",\n\t\"script\": \"${1:start}\",\n\t\"isBackground\": true,\n\t\"presentation\": {\n\t\t\"focus\": true,\n\t\t\"panel\": \"dedicated\"\n\t},\n\t\"group\": {\n\t\t\"kind\": \"build\",\n\t\t\"isDefault\": true\n\t},\n\t\"problemMatcher\": {\n\t\t\"owner\": \"typescript\",\n\t\t\"source\": \"ts\",\n\t\t\"applyTo\": \"closedDocuments\",\n\t\t\"fileLocation\": [\"relative\", \"\\${cwd\\}\"],\n\t\t\"pattern\": \"\\$tsc\",\n\t\t\"background\": {\n\t\t\t\"activeOnStart\": true,\n\t\t\t\"beginsPattern\": {\n\t\t\t\t\"regexp\": \"(.*?)\"\n\t\t\t},\n\t\t\t\"endsPattern\": {\n\t\t\t\t\"regexp\": \"Compiled |Failed to compile.\"\n\t\t\t}\n\t\t}\n\t}\n}",
+      "doc": "Create a task to start Angular for VS Code",
+      "filetype": "jsonc",
+      "grammar": "lsp",
+      "label": "Create task to start Angular",
+      "matches": {
+        "a-task-start": true
+      }
+    },
     "f68a8d86-958c-3dbf-8e6b-bc1496509c45": {
       "content": "#+BEGIN_EXPORT html\n$0\n#+END_EXPORT",
       "doc": "#+BEGIN_EXPORT html block",
@@ -162703,16 +161263,6 @@
         "ct:cs": true
       }
     },
-    "f6d07bef-a940-304e-944b-28bb8bffdbf3": {
-      "content": "import { Routes, Route } from 'react-router-dom'",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "importRouterRoutes",
-      "matches": {
-        "imrrs": true
-      }
-    },
     "f6d0f085-26af-3c64-b569-18ad25157aa8": {
       "content": "- ${1:${TM_SELECTED_TEXT}}",
       "doc": "Insert unordered item",
@@ -162771,16 +161321,6 @@
       "label": "repeat-while",
       "matches": {
         "repeat": true
-      }
-    },
-    "f6d9feea-95e7-319c-93e6-7544205397c6": {
-      "content": "import { connect } from 'react-redux'\nexport const ${1:${TM_FILENAME_BASE}} = (props) => {\n  return (\n    <>${1:first}</>\n  )\n}\nconst mapStateToProps = (state) => ({})\nconst mapDispatchToProps = {}\nexport default connect(mapStateToProps, mapDispatchToProps)(${1:${TM_FILENAME_BASE}})",
-      "doc": "Creates a React functional component with connected redux and ES7 module system",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reactFunctionalComponentRedux",
-      "matches": {
-        "rfcredux": true
       }
     },
     "f6de89ec-1b24-3275-9083-d57601b12ef2": {
@@ -163362,16 +161902,6 @@
         "DS": true
       }
     },
-    "f7bbe47a-55ef-3838-a41e-d199d3b2e3f2": {
-      "content": "export default function ${1:${TM_FILENAME_BASE}}() {\n  return (\n    <>${1:first}</>\n  )\n}",
-      "doc": "Creates a React Functional Component with ES7 module system",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "reactFunctionalComponent",
-      "matches": {
-        "rfc": true
-      }
-    },
     "f7c06d17-741f-30ae-93ee-785aaa94bddc": {
       "content": "resource \"packet_volume\" \"${myResourceName}\" {\n   name = \"my-${myResourceName}\"\n   description = \"my-description-${myResourceName}\"\n\n   facility = \"ewr1\"\n   project_id = \"\\${packet_project.cool_project.id}\"\n   plan = \"storage_1\"\n   size = 100\n   billing_cycle = \"hourly\"\n   snapshot_policies = { snapshot_frequency = \"1day\", snapshot_count = 7 }\n   snapshot_policies = { snapshot_frequency = \"1month\", snapshot_count = 6 }\n}",
       "doc": "define packet_volume resource.",
@@ -163592,16 +162122,6 @@
       "label": "",
       "matches": {
         "ambientLight": true
-      }
-    },
-    "f814b462-23f5-3267-9314-be0319f63be1": {
-      "content": "PropTypes.func.isRequired",
-      "doc": "Func prop type required",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "propTypeFuncRequired",
-      "matches": {
-        "ptfr": true
       }
     },
     "f818a27b-83db-3d82-b1ee-2083cc473aa9": {
@@ -164859,16 +163379,6 @@
         "add": true
       }
     },
-    "f9f8ccc3-1407-30e4-b42b-ba173f534cdb": {
-      "content": "test('should ${1:first}', () => { ${2:second} })",
-      "doc": "Testing `test` block",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "testBlock",
-      "matches": {
-        "test": true
-      }
-    },
     "f9fba7a7-73b8-3815-a228-b775ccbd7257": {
       "content": "${1:obj}.slideDown('${2:slow/400/fast}')",
       "doc": "",
@@ -165970,16 +164480,6 @@
         "fprintf": true
       }
     },
-    "fbda478a-545b-319d-8052-a014dd6cf71f": {
-      "content": "import { connect } from 'react-redux'\nimport PropTypes from 'prop-types'\nexport const mapStateToProps = state => ({})\nexport const mapDispatchToProps = {}\nexport const ${1:first} = (WrappedComponent) => {\n  const hocComponent = ({ ...props }) => <WrappedComponent {...props} />\n  hocComponent.propTypes = {}\n  return hocComponent\n}\nexport default WrapperComponent => connect(mapStateToProps, mapDispatchToProps)(${1:first}(WrapperComponent))",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "hocComponentWithRedux",
-      "matches": {
-        "hocredux": true
-      }
-    },
     "fbdd3a9c-c9d8-31ca-affd-0e2bfdf5f0d0": {
       "content": "err(${1:1}, \"${2:%s}\"$0);",
       "doc": "",
@@ -166292,16 +164792,6 @@
         "format": true
       }
     },
-    "fc6205bc-3241-3f46-be1b-a1909a1ba59d": {
-      "content": "import renderer from 'react-test-renderer'\nimport { Provider } from 'react-redux'\nimport store from '~/store'\nimport { ${1:${TM_FILENAME_BASE}} } from '../${1:${TM_FILENAME_BASE}}'\ndescribe('<${1:${TM_FILENAME_BASE}} />', () => {\n  const defaultProps = {}\n  const wrapper = renderer.create(\n    <Provider store={store}>\n     <${1:${TM_FILENAME_BASE}} {...defaultProps} />\n    </Provider>,\n  )\n  test('render', () => {\n    expect(wrapper).toMatchSnapshot()\n  })\n})",
-      "doc": "Create test component",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "setupReactComponentTestWithRedux",
-      "matches": {
-        "srtest": true
-      }
-    },
     "fc69f2d7-0794-36d7-b8fe-20453ea71de1": {
       "content": "place-self: stretch",
       "doc": "",
@@ -166480,16 +164970,6 @@
       "label": "",
       "matches": {
         "tt": true
-      }
-    },
-    "fccd510a-b151-3a87-84c1-16ef818242b2": {
-      "content": "import { useLoaderData } from 'react-router-dom'",
-      "doc": "",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "importUseLoaderData",
-      "matches": {
-        "imld": true
       }
     },
     "fcd0c95d-3963-3ec8-a0cd-cdd1960be72c": {
@@ -166751,16 +165231,6 @@
       "label": "edge: getSupportedLocales",
       "matches": {
         "getSupportedLocales()": true
-      }
-    },
-    "fd31b790-e724-3d46-bca8-a0f00468cd7e": {
-      "content": "this.${1:first}Ref = React.createRef()",
-      "doc": "Create ref statement used inside constructor",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "createRef",
-      "matches": {
-        "cref": true
       }
     },
     "fd322ffa-abaa-36f6-960a-76afa299c049": {
@@ -167034,16 +165504,6 @@
         "-": true
       }
     },
-    "fda86124-4371-3c5a-9eb1-ef3d55d4d87d": {
-      "content": "type Props = {}\nfunction ${1:${TM_FILENAME_BASE}}({}: Props) {\n  return (\n    <>${1:first}</>\n  )\n}\nexport default ${1:${TM_FILENAME_BASE}}",
-      "doc": "Creates a React Functional Component with ES7 module system and TypeScript interface",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "typescriptReactFunctionalExportComponent",
-      "matches": {
-        "tsrfce": true
-      }
-    },
     "fda9e5b6-64f0-35f1-b9c4-ccdb4a1836a5": {
       "content": "@media screen and (${1:max-width: 300px}) {\n  $0\n}",
       "doc": "",
@@ -167232,16 +165692,6 @@
       "label": "lodash-rest",
       "matches": {
         "lodash rest": true
-      }
-    },
-    "fe0b9006-efb9-3db1-93b7-c7877a13860a": {
-      "content": "(${1:first}) => { ${2:second} }",
-      "doc": "Creates an anonymous function",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "anonymousFunction",
-      "matches": {
-        "anfn": true
       }
     },
     "fe0c1b83-8656-3fd8-84ca-e13b842baa9e": {
@@ -168331,16 +166781,6 @@
         "normal": true
       }
     },
-    "ff6df3f5-613f-3e26-9367-200a9d56fdba": {
-      "content": "PropTypes.func",
-      "doc": "Func prop type",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "propTypeFunc",
-      "matches": {
-        "ptf": true
-      }
-    },
     "ff6eab24-bfd2-35cf-b60b-27e969effa1c": {
       "content": "@while ($1)\n    $2\n@endwhile",
       "doc": "@while block",
@@ -168430,16 +166870,6 @@
       "label": "",
       "matches": {
         "fn3": true
-      }
-    },
-    "ff8849b0-0f9b-306a-a089-1968c7a7b688": {
-      "content": "PropTypes.element",
-      "doc": "React element prop type",
-      "filetype": "generated",
-      "grammar": "lsp",
-      "label": "propTypeElement",
-      "matches": {
-        "ptel": true
       }
     },
     "ff895f34-9691-3bce-a8f6-3b6595e14873": {

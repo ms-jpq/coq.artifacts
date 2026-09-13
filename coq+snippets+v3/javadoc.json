@@ -2,51 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "@version ${1:1.39}, ${2:02/28/97}$0",
-      "doc": "The Java Software convention for the argument to the @version tag is the SCCS string \"%I%, %G%\". For classes and interfaces only, required.",
-      "label": "@version",
+      "content": "@since ${1:1.0}$0",
+      "doc": "Version of Java when the the product was implemented.",
+      "label": "@since",
       "matches": {
-        "@version": true
-      }
-    },
-    {
-      "content": "@param ${1:name} ${2:Type and description of the parameter.}$0",
-      "doc": "Documents a parameter.",
-      "label": "@param",
-      "matches": {
-        "@param": true
-      }
-    },
-    {
-      "content": "@serial ${1:Field description.}$0",
-      "doc": "The @serial tag should be placed in the javadoc comment for a default serializable field. Using @serial at a class level overrides @serial at a package level.",
-      "label": "@serial",
-      "matches": {
-        "@serial": true
-      }
-    },
-    {
-      "content": "@see ${1:item.}$0",
-      "doc": "References another item or piece of documentation.",
-      "label": "@see",
-      "matches": {
-        "@see": true
-      }
-    },
-    {
-      "content": "/**\n * ${1:A one-line summary.}\n *\n * ${2:Description.}$0\n */",
-      "doc": "A simple Java comment block with short summary and description. Useful when the user prefers to manually add the other documentation tags.",
-      "label": "comment_simple",
-      "matches": {
-        "/*": true
-      }
-    },
-    {
-      "content": "@serialData ${1:Data description.}$0",
-      "doc": "The @serialData tag describes the sequences and types of data written or read. The tag describes the sequence and type of optional data written by writeObject or all data written by the Externalizable.writeExternal method.",
-      "label": "@serialData",
-      "matches": {
-        "@serialData": true
+        "@since": true
       }
     },
     {
@@ -58,35 +18,19 @@
       }
     },
     {
-      "content": "@author ${1:name}$0",
-      "doc": "You can provide one @author tag, multiple @author tags, or no @author tags. For classes and interfaces only, required.",
-      "label": "@author",
+      "content": "@serial ${1:Field description.}$0",
+      "doc": "The @serial tag should be placed in the javadoc comment for a default serializable field. Using @serial at a class level overrides @serial at a package level.",
+      "label": "@serial",
       "matches": {
-        "@author": true
+        "@serial": true
       }
     },
     {
-      "content": "@throws ${1:IOException} ${2:Description.}$0",
-      "doc": "Document an exception raised by the item. Synonym of @exception.",
-      "label": "@throws",
+      "content": "@example\n```\n${1:Write me later}$0\n```",
+      "doc": "Adds an example to the documentation.",
+      "label": "@example",
       "matches": {
-        "@throws": true
-      }
-    },
-    {
-      "content": "@exception ${1:IOException} ${2:Description.}$0",
-      "doc": "Document an exception raised by the item. Synonym of @throws.",
-      "label": "@exception",
-      "matches": {
-        "@exception": true
-      }
-    },
-    {
-      "content": "@since ${1:1.0}$0",
-      "doc": "Version of Java when the the product was implemented.",
-      "label": "@since",
-      "matches": {
-        "@since": true
+        "@example": true
       }
     },
     {
@@ -106,6 +50,62 @@
       }
     },
     {
+      "content": "@see ${1:item.}$0",
+      "doc": "References another item or piece of documentation.",
+      "label": "@see",
+      "matches": {
+        "@see": true
+      }
+    },
+    {
+      "content": "@version ${1:1.39}, ${2:02/28/97}$0",
+      "doc": "The Java Software convention for the argument to the @version tag is the SCCS string \"%I%, %G%\". For classes and interfaces only, required.",
+      "label": "@version",
+      "matches": {
+        "@version": true
+      }
+    },
+    {
+      "content": "@author ${1:name}$0",
+      "doc": "You can provide one @author tag, multiple @author tags, or no @author tags. For classes and interfaces only, required.",
+      "label": "@author",
+      "matches": {
+        "@author": true
+      }
+    },
+    {
+      "content": "@throws ${1:IOException} ${2:Description.}$0",
+      "doc": "Document an exception raised by the item. Synonym of @exception.",
+      "label": "@throws",
+      "matches": {
+        "@throws": true
+      }
+    },
+    {
+      "content": "@serialData ${1:Data description.}$0",
+      "doc": "The @serialData tag describes the sequences and types of data written or read. The tag describes the sequence and type of optional data written by writeObject or all data written by the Externalizable.writeExternal method.",
+      "label": "@serialData",
+      "matches": {
+        "@serialData": true
+      }
+    },
+    {
+      "content": "/**\n * ${1:A one-line summary.}\n *\n * ${2:Description.}$0\n */",
+      "doc": "A simple Java comment block with short summary and description. Useful when the user prefers to manually add the other documentation tags.",
+      "label": "comment_simple",
+      "matches": {
+        "/*": true
+      }
+    },
+    {
+      "content": "@exception ${1:IOException} ${2:Description.}$0",
+      "doc": "Document an exception raised by the item. Synonym of @throws.",
+      "label": "@exception",
+      "matches": {
+        "@exception": true
+      }
+    },
+    {
       "content": "@serialField ${1:Field name} ${2:Field type} ${3:Field description.}$0",
       "doc": "The @serialField tag is used to document an ObjectStreamField component of a serialPersistentFields array. One of these tags should be used for each ObjectStreamField component.",
       "label": "@serialField",
@@ -114,11 +114,11 @@
       }
     },
     {
-      "content": "@example\n```\n${1:Write me later}$0\n```",
-      "doc": "Adds an example to the documentation.",
-      "label": "@example",
+      "content": "@param ${1:name} ${2:Type and description of the parameter.}$0",
+      "doc": "Documents a parameter.",
+      "label": "@param",
       "matches": {
-        "@example": true
+        "@param": true
       }
     }
   ]

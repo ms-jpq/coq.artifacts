@@ -10,21 +10,13 @@
       }
     },
     {
-      "content": "foreign import data ${1:name} ∷ ${2:kind}",
-      "doc": "Foreign import data",
-      "label": "foreign-import-data",
+      "content": "type ${1:type} r =\n  ( ${2:field} ∷ ${3:type}\n  , ${4:field} ∷ ${5:type}\n  | r\n  )",
+      "doc": "Type alias for an open row",
+      "label": "open-row-type-alias",
       "matches": {
-        "foreign-data": true,
-        "frd": true
-      }
-    },
-    {
-      "content": "derive instance ${1:type}",
-      "doc": "Derive instance",
-      "label": "derive-instance",
-      "matches": {
-        "derive": true,
-        "drv": true
+        "open-row-type-alias": true,
+        "row": true,
+        "rta": true
       }
     },
     {
@@ -34,22 +26,6 @@
       "matches": {
         "foreign": true,
         "fri": true
-      }
-    },
-    {
-      "content": "do\n  ${1:binder} ← ${2:expression}",
-      "doc": "Do-block",
-      "label": "do",
-      "matches": {
-        "do": true
-      }
-    },
-    {
-      "content": "case ${1:expression} of\n  ${2:case1} → ${3:result}\n  ${4:case2} → ${5:result}$0",
-      "doc": "Case statement",
-      "label": "case",
-      "matches": {
-        "case": true
       }
     },
     {
@@ -63,13 +39,37 @@
       }
     },
     {
-      "content": "type ${1:type} r =\n  ( ${2:field} ∷ ${3:type}\n  , ${4:field} ∷ ${5:type}\n  | r\n  )",
-      "doc": "Type alias for an open row",
-      "label": "open-row-type-alias",
+      "content": "do\n  ${1:binder} ← ${2:expression}",
+      "doc": "Do-block",
+      "label": "do",
       "matches": {
-        "open-row-type-alias": true,
-        "row": true,
-        "rta": true
+        "do": true
+      }
+    },
+    {
+      "content": "foreign import data ${1:name} ∷ ${2:kind}",
+      "doc": "Foreign import data",
+      "label": "foreign-import-data",
+      "matches": {
+        "foreign-data": true,
+        "frd": true
+      }
+    },
+    {
+      "content": "case ${1:expression} of\n  ${2:case1} → ${3:result}\n  ${4:case2} → ${5:result}$0",
+      "doc": "Case statement",
+      "label": "case",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "derive instance ${1:type}",
+      "doc": "Derive instance",
+      "label": "derive-instance",
+      "matches": {
+        "derive": true,
+        "drv": true
       }
     },
     {

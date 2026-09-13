@@ -4,6 +4,14 @@
   ],
   "snippets": [
     {
+      "content": "[IMPORTANT]\n====\n${1:text}\n====\n$0",
+      "doc": "Insert IMPORTANT block",
+      "label": "important block",
+      "matches": {
+        "important": true
+      }
+    },
+    {
       "content": "${1:author} <${2:email}>; ${3:author} <${4:email}>\n{localdatetime}\n:doctype: ${5:article}\n:toc:\n:toclevels: ${6:3}\n:sectnums:\n:xrefstyle: ${7:full}\n:icons: font\n:source-highlighter: ${8:highlight.js}\n:experimental:\n:imagesdir: ${9:images}\n$0",
       "doc": "Insert document attributes",
       "label": "document attributes 2",
@@ -12,270 +20,11 @@
       }
     },
     {
-      "content": "[WARNING]\n====\n${1:text}\n====\n$0",
-      "doc": "Insert WARNING block",
-      "label": "warning block",
+      "content": "[IMPORTANT]\n.${1:title}\n====\n${2:text}\n====\n$0",
+      "doc": "Insert IMPORTANT block",
+      "label": "important block 2",
       "matches": {
-        "warning": true
-      }
-    },
-    {
-      "content": "[WARNING]\n.${1:title}\n====\n${2:text}\n====\n$0",
-      "doc": "Insert WARNING block",
-      "label": "warning block 2",
-      "matches": {
-        "warning+": true
-      }
-    },
-    {
-      "content": "* ${1:first}\n* ${2:second}\n* ${3:third}\n$0",
-      "doc": "Insert unordered list",
-      "label": "unordered list",
-      "matches": {
-        "unordered list": true
-      }
-    },
-    {
-      "content": "[sidebar]\n$1\n$0",
-      "doc": "Insert sidebar block as paragraph",
-      "label": "sidebar paragraph",
-      "matches": {
-        "sidebar paragraph": true
-      }
-    },
-    {
-      "content": ".${1:title}\n[sidebar]\n21\n$0",
-      "doc": "Insert sidebar block as paragraph with title",
-      "label": "sidebar paragraph 2",
-      "matches": {
-        "sidebar paragraph+": true
-      }
-    },
-    {
-      "content": ". ${1:first}\n. ${2:second}\n. ${3:third}\n$0",
-      "doc": "Insert ordered list",
-      "label": "ordered list",
-      "matches": {
-        "ordered list": true
-      }
-    },
-    {
-      "content": "== ${1:title}\n$0",
-      "doc": "Insert section level 1 (h2)",
-      "label": "section 1",
-      "matches": {
-        "h2": true,
-        "section 1": true
-      }
-    },
-    {
-      "content": "****\n$1\n****\n$0",
-      "doc": "Insert sidebar block",
-      "label": "sidebar block",
-      "matches": {
-        "sidebar": true
-      }
-    },
-    {
-      "content": "=== ${1:title}\n$0",
-      "doc": "Insert section level 2 (h3)",
-      "label": "section 2",
-      "matches": {
-        "h3": true,
-        "section 2": true
-      }
-    },
-    {
-      "content": "==== ${1:title}\n$0",
-      "doc": "Insert section level 3 (h4)",
-      "label": "section 3",
-      "matches": {
-        "h4": true,
-        "section 3": true
-      }
-    },
-    {
-      "content": "===== ${1:title}\n$0",
-      "doc": "Insert section level 4 (h5)",
-      "label": "section 4",
-      "matches": {
-        "h5": true,
-        "section 4": true
-      }
-    },
-    {
-      "content": "====== ${1:title}\n$0",
-      "doc": "Insert section level 5 (h6)",
-      "label": "section 5",
-      "matches": {
-        "h6": true,
-        "section 5": true
-      }
-    },
-    {
-      "content": "[#${1:id}]$0",
-      "doc": "Insert custom id",
-      "label": "custom id",
-      "matches": {
-        "custom id": true
-      }
-    },
-    {
-      "content": ".${1:title}\n====\n$2\n====\n$0",
-      "doc": "Insert example block with title",
-      "label": "example block 2",
-      "matches": {
-        "example block+": true
-      }
-    },
-    {
-      "content": "[#${1:id},reftext=${2:text}]$0",
-      "doc": "Insert custom id with reference text",
-      "label": "custom id 2",
-      "matches": {
-        "custom id": true
-      }
-    },
-    {
-      "content": "[quote, ${2:attribution}, \"${3:citation title and information}\"]\n$1\n$0",
-      "doc": "Insert quote block as paragraph",
-      "label": "quote paragraph",
-      "matches": {
-        "quote paragraph": true
-      }
-    },
-    {
-      "content": "'''\n$0",
-      "doc": "Insert thematic break (horizontal rule)",
-      "label": "thematic break",
-      "matches": {
-        "horizontal rule": true,
-        "thematic break": true
-      }
-    },
-    {
-      "content": ".${1:title}\n[quote, ${3:attribution}, \"${4:citation title and information}\"]\n$2\n$0",
-      "doc": "Insert quote block as paragraph with title",
-      "label": "quote paragraph 2",
-      "matches": {
-        "quote paragraph+": true
-      }
-    },
-    {
-      "content": "---\n$0",
-      "doc": "Insert thematic break (horizontal rule) in Markdown style",
-      "label": "thematic break 2",
-      "matches": {
-        "horizontal rule": true,
-        "thematic break": true
-      }
-    },
-    {
-      "content": "<<<\n$0",
-      "doc": "Insert page break",
-      "label": "page break",
-      "matches": {
-        "page break": true
-      }
-    },
-    {
-      "content": "*${1}* $0",
-      "doc": "Insert bold text",
-      "label": "bold text",
-      "matches": {
-        "b": true,
-        "bold": true
-      }
-    },
-    {
-      "content": "_${1}_ $0",
-      "doc": "Insert italic text",
-      "label": "italic text",
-      "matches": {
-        "i": true,
-        "italic": true
-      }
-    },
-    {
-      "content": ".${1:title}\n[quote, ${3:attribution}, \"${4:citation title and information}\"]\n----\n$2\n----\n$0",
-      "doc": "Insert quote block with title",
-      "label": "quote block 2",
-      "matches": {
-        "quote block+": true
-      }
-    },
-    {
-      "content": "`${1}` $0",
-      "doc": "Insert monospace text",
-      "label": "monospace text",
-      "matches": {
-        "code": true,
-        "monospace": true
-      }
-    },
-    {
-      "content": "[verse, ${2:attribution}, \"${3:citation title and information}\"]\n$1\n$0",
-      "doc": "Insert verse block as paragraph",
-      "label": "verse paragraph",
-      "matches": {
-        "verse paragraph": true
-      }
-    },
-    {
-      "content": "*_${1}_* $0",
-      "doc": "Insert bold and italic text",
-      "label": "bold and italic text",
-      "matches": {
-        "bi": true,
-        "bold and italic": true
-      }
-    },
-    {
-      "content": "#${1}# $0",
-      "doc": "Insert marked text",
-      "label": "marked text",
-      "matches": {
-        "mark": true
-      }
-    },
-    {
-      "content": "footnote:${1:id}[${2:text}] $0",
-      "doc": "Insert footnote macro with id",
-      "label": "footnote macro 2",
-      "matches": {
-        "footnote macro": true
-      }
-    },
-    {
-      "content": "[.line-through]#${1}# $0",
-      "doc": "Insert strikethrough text",
-      "label": "strikethrough text",
-      "matches": {
-        "strikethrough": true
-      }
-    },
-    {
-      "content": "image:${1:filepath}[${2:alt}]",
-      "doc": "Insert image inline",
-      "label": "image inline",
-      "matches": {
-        "image": true
-      }
-    },
-    {
-      "content": "[.underline]#${1}# $0",
-      "doc": "Insert underline text",
-      "label": "underline text",
-      "matches": {
-        "underline": true
-      }
-    },
-    {
-      "content": "image::${1:filepath}[\"${2:alt}\"]\n$0",
-      "doc": "Insert image block macro",
-      "label": "image block macro",
-      "matches": {
-        "image": true
+        "important+": true
       }
     },
     {
@@ -287,36 +36,19 @@
       }
     },
     {
-      "content": ".${1:title}\n[source,${2:language}]\n----\ninclude::${3:filepath}[]\n----\n$0",
-      "doc": "Insert source code block with title via include",
-      "label": "source code block 3",
+      "content": "[CAUTION]\n====\n${1:text}\n====\n$0",
+      "doc": "Insert CAUTION block",
+      "label": "caution block",
       "matches": {
-        "source code block+": true
+        "caution": true
       }
     },
     {
-      "content": "// $0",
-      "doc": "Insert comment",
-      "label": "comment",
+      "content": "[CAUTION]\n.${1:title}\n====\n${2:text}\n====\n$0",
+      "doc": "Insert CAUTION block",
+      "label": "caution block 2",
       "matches": {
-        "/": true,
-        "comment": true
-      }
-    },
-    {
-      "content": "[.small]#${1}# $0",
-      "doc": "Insert small text",
-      "label": "small text",
-      "matches": {
-        "small": true
-      }
-    },
-    {
-      "content": ".${1:title}\n[plantuml, \"${2:file}\", svg]\n....\ninclude::${3:filepath}[]\n....\n$0",
-      "doc": "Insert diagram with plantuml via include",
-      "label": "diagram plantuml 2",
-      "matches": {
-        "diagram plantuml": true
+        "caution+": true
       }
     },
     {
@@ -328,19 +60,11 @@
       }
     },
     {
-      "content": "btn:[${1:text}] $0",
-      "doc": "Insert button",
-      "label": "button macro",
+      "content": "WARNING: ${1:text}\n$0",
+      "doc": "Insert WARNING admonition block as paragraph",
+      "label": "warning paragraph",
       "matches": {
-        "button macro": true
-      }
-    },
-    {
-      "content": "[literal]\n$1\n$0",
-      "doc": "Insert literal block as paragraph",
-      "label": "literal paragraph",
-      "matches": {
-        "literal paragraph": true
+        "warning": true
       }
     },
     {
@@ -352,11 +76,190 @@
       }
     },
     {
-      "content": "[TIP]\n====\n${1:text}\n====\n$0",
-      "doc": "Insert TIP block",
-      "label": "tip block",
+      "content": "[WARNING]\n====\n${1:text}\n====\n$0",
+      "doc": "Insert WARNING block",
+      "label": "warning block",
       "matches": {
-        "tip": true
+        "warning": true
+      }
+    },
+    {
+      "content": "~${1}~$0",
+      "doc": "Insert subscript text",
+      "label": "subscript text",
+      "matches": {
+        "subscript": true
+      }
+    },
+    {
+      "content": ". ${1:first}\n. ${2:second}\n. ${3:third}\n$0",
+      "doc": "Insert ordered list",
+      "label": "ordered list",
+      "matches": {
+        "ordered list": true
+      }
+    },
+    {
+      "content": "[sidebar]\n$1\n$0",
+      "doc": "Insert sidebar block as paragraph",
+      "label": "sidebar paragraph",
+      "matches": {
+        "sidebar paragraph": true
+      }
+    },
+    {
+      "content": "* ${1:first}\n* ${2:second}\n* ${3:third}\n$0",
+      "doc": "Insert unordered list",
+      "label": "unordered list",
+      "matches": {
+        "unordered list": true
+      }
+    },
+    {
+      "content": "* [${1: }] ${2:first}\n* [${3: }] ${4:second}\n* [${5: }] ${6:third}\n$0",
+      "doc": "Insert check list",
+      "label": "check list",
+      "matches": {
+        "check list": true
+      }
+    },
+    {
+      "content": "****\n$1\n****\n$0",
+      "doc": "Insert sidebar block",
+      "label": "sidebar block",
+      "matches": {
+        "sidebar": true
+      }
+    },
+    {
+      "content": "${1:term}:: ${2:description}\n${3:term}:: ${4:description}\n${5:term}:: ${6:description}\n$0",
+      "doc": "Insert description list",
+      "label": "description list",
+      "matches": {
+        "description list": true
+      }
+    },
+    {
+      "content": ".${1:title}\n****\n$2\n****\n$0",
+      "doc": "Insert sidebar block with title",
+      "label": "sidebar block 2",
+      "matches": {
+        "sidebar+": true
+      }
+    },
+    {
+      "content": "${1:${TM_SELECTED_TEXT:link}}[${2:alt}]$0",
+      "doc": "Insert simple link",
+      "label": "link simple",
+      "matches": {
+        "link": true
+      }
+    },
+    {
+      "content": "[example]\n$1\n$0",
+      "doc": "Insert example block as paragraph",
+      "label": "example paragraph",
+      "matches": {
+        "example paragraph": true
+      }
+    },
+    {
+      "content": "${1:${TM_SELECTED_TEXT:link}}[${2:alt}] $0",
+      "doc": "Insert link macro with text",
+      "label": "link macro",
+      "matches": {
+        "link": true
+      }
+    },
+    {
+      "content": ".${1:title}\n[example]\n21\n$0",
+      "doc": "Insert example block as paragraph with title",
+      "label": "example paragraph 2",
+      "matches": {
+        "example paragraph+": true
+      }
+    },
+    {
+      "content": "mailto:${1:${TM_SELECTED_TEXT:link}}[${2:alt}]$0",
+      "doc": "Insert mailto link",
+      "label": "mailto link",
+      "matches": {
+        "mailto": true
+      }
+    },
+    {
+      "content": "====\n$1\n====\n$0",
+      "doc": "Insert example block",
+      "label": "example block",
+      "matches": {
+        "example block": true
+      }
+    },
+    {
+      "content": "<<${1:anchor}>> $0",
+      "doc": "cross reference",
+      "label": "cross reference",
+      "matches": {
+        "<<": true,
+        "cross reference": true
+      }
+    },
+    {
+      "content": "<<${1:anchor},${2:label}>> $0",
+      "doc": "cross reference with label",
+      "label": "cross reference 2",
+      "matches": {
+        "<<": true,
+        "cross reference": true
+      }
+    },
+    {
+      "content": ".${1:title}\n[plantuml, \"${2:file}\", svg]\n....\ninclude::${3:filepath}[]\n....\n$0",
+      "doc": "Insert diagram with plantuml via include",
+      "label": "diagram plantuml 2",
+      "matches": {
+        "diagram plantuml": true
+      }
+    },
+    {
+      "content": "xref:${1:anchor}[${2:label}] $0",
+      "doc": "cross reference macro with label",
+      "label": "cross reference macro",
+      "matches": {
+        "<<": true,
+        "cross reference": true
+      }
+    },
+    {
+      "content": "--\n$1\n--\n$0",
+      "doc": "Insert open block",
+      "label": "open block",
+      "matches": {
+        "open block": true
+      }
+    },
+    {
+      "content": ".${1:title}\n[plantuml, \"${2:file}\", svg]\n....\n$3\n....\n$0",
+      "doc": "Insert diagram with plantuml",
+      "label": "diagram plantuml",
+      "matches": {
+        "diagram plantuml": true
+      }
+    },
+    {
+      "content": "footnote:[${1:text}] $0",
+      "doc": "Insert footnote macro",
+      "label": "footnote macro",
+      "matches": {
+        "footnote macro": true
+      }
+    },
+    {
+      "content": "\"${1:quote}\"\n-- ${2:attribution}, ${3:citation title and information}\n$0",
+      "doc": "Insert quote block as paragraph",
+      "label": "quote paragraph 3",
+      "matches": {
+        "quote paragraph": true
       }
     },
     {
@@ -368,11 +271,19 @@
       }
     },
     {
-      "content": "~${1}~$0",
-      "doc": "Insert subscript text",
-      "label": "subscript text",
+      "content": "footnote:${1:id}[${2:text}] $0",
+      "doc": "Insert footnote macro with id",
+      "label": "footnote macro 2",
       "matches": {
-        "subscript": true
+        "footnote macro": true
+      }
+    },
+    {
+      "content": "[quote, ${2:attribution}, \"${3:citation title and information}\"]\n----\n$1\n----\n$0",
+      "doc": "Insert quote block",
+      "label": "quote block",
+      "matches": {
+        "quote block": true
       }
     },
     {
@@ -385,19 +296,44 @@
       }
     },
     {
-      "content": ".${1:title}\n[example]\n21\n$0",
-      "doc": "Insert example block as paragraph with title",
-      "label": "example paragraph 2",
+      "content": "image:${1:filepath}[${2:alt}]",
+      "doc": "Insert image inline",
+      "label": "image inline",
       "matches": {
-        "example paragraph+": true
+        "image": true
       }
     },
     {
-      "content": "kbd:[${1:key}] $0",
-      "doc": "Insert keyboard key",
-      "label": "keyboard macro",
+      "content": ".${1:title}\n[quote, ${3:attribution}, \"${4:citation title and information}\"]\n----\n$2\n----\n$0",
+      "doc": "Insert quote block with title",
+      "label": "quote block 2",
       "matches": {
-        "keyboard macro": true
+        "quote block+": true
+      }
+    },
+    {
+      "content": "// $0",
+      "doc": "Insert comment",
+      "label": "comment",
+      "matches": {
+        "/": true,
+        "comment": true
+      }
+    },
+    {
+      "content": "[%collapsible]\n====\n$1\n====\n$0",
+      "doc": "Insert collapsible block",
+      "label": "collapsible block",
+      "matches": {
+        "collapsible block": true
+      }
+    },
+    {
+      "content": "image::${1:filepath}[\"${2:alt}\"]\n$0",
+      "doc": "Insert image block macro",
+      "label": "image block macro",
+      "matches": {
+        "image": true
       }
     },
     {
@@ -417,244 +353,11 @@
       }
     },
     {
-      "content": "kbd:[${1:key}+${2:key}] $0",
-      "doc": "Insert keyboard key sequence",
-      "label": "keyboard macro 2",
-      "matches": {
-        "keyboard macro": true
-      }
-    },
-    {
-      "content": ".${1:title}\n[source,${2:language}]\n----\n$3\n----\n$0",
-      "doc": "Insert source code block with title",
-      "label": "source code block 2",
-      "matches": {
-        "source code block+": true
-      }
-    },
-    {
-      "content": "[example%collapsible]\n$1\n$0",
-      "doc": "Insert collapsible block as paragraph",
-      "label": "collapsible paragraph",
-      "matches": {
-        "collapsible paragraph": true
-      }
-    },
-    {
-      "content": "* [${1: }] ${2:first}\n* [${3: }] ${4:second}\n* [${5: }] ${6:third}\n$0",
-      "doc": "Insert check list",
-      "label": "check list",
-      "matches": {
-        "check list": true
-      }
-    },
-    {
-      "content": "--\n$1\n--\n$0",
-      "doc": "Insert open block",
-      "label": "open block",
-      "matches": {
-        "open block": true
-      }
-    },
-    {
-      "content": ".${1:title}\n[%autowidth%header,cols=\"1,1,1\"]\n|===\n| ${2:column1} | ${3:column2} | ${4:column3}\n\n| ${5:cell1.1}\n| ${6:cell1.2}\n| ${7:cell1.3}\n\n| ${8:cell2.1}\n| ${9:cell2.2}\n| ${10:cell2.3}\n\n| ${11:cell3.1}\n| ${12:cell3.2}\n| ${13:cell3.3}\n|===\n$0",
-      "doc": "Insert 4x3 table with autowidth and header",
-      "label": "table 2",
-      "matches": {
-        "table": true
-      }
-    },
-    {
-      "content": "menu:${1:menu}[${2:item}] $0",
-      "doc": "Insert menu with item",
-      "label": "menu macro",
-      "matches": {
-        "menu macro": true
-      }
-    },
-    {
-      "content": ".${1:title}\n[cols=\"1,1,1\"]\n|===\n| ${2:column1} | ${3:column2} | ${4:column3}\n\n| ${5:cell1.1} | ${6:cell1.2} | ${7:cell1.3}\n| ${8:cell2.1} | ${9:cell2.2} | ${10:cell2.3}\n| ${11:cell3.1} | ${12:cell3.2} | ${13:cell3.3}\n|===\n$0",
-      "doc": "Insert 4x3 table with header",
-      "label": "table",
-      "matches": {
-        "table": true
-      }
-    },
-    {
-      "content": "${1:term}:: ${2:description}\n${3:term}:: ${4:description}\n${5:term}:: ${6:description}\n$0",
-      "doc": "Insert description list",
-      "label": "description list",
-      "matches": {
-        "description list": true
-      }
-    },
-    {
-      "content": "menu:${1:menu}[${2:item} > ${3:subitem}] $0",
-      "doc": "Insert menu with subitem",
-      "label": "menu macro 2",
-      "matches": {
-        "menu macro": true
-      }
-    },
-    {
-      "content": "====\n$1\n====\n$0",
-      "doc": "Insert example block",
-      "label": "example block",
-      "matches": {
-        "example block": true
-      }
-    },
-    {
-      "content": "----\n$1\n----\n$0",
-      "doc": "Insert listing block",
-      "label": "listing block",
-      "matches": {
-        "listing block": true
-      }
-    },
-    {
       "content": ".${1:title}\nimage::${2:filepath}[\"${3:alt}\"]\n$0",
       "doc": "Insert image block macro with title",
       "label": "image block macro 2",
       "matches": {
         "image+": true
-      }
-    },
-    {
-      "content": "${1:${TM_SELECTED_TEXT:link}}[${2:alt}]$0",
-      "doc": "Insert simple link",
-      "label": "link simple",
-      "matches": {
-        "link": true
-      }
-    },
-    {
-      "content": "[listing]\n$1\n$0",
-      "doc": "Insert listing block as paragraph",
-      "label": "listing paragraph",
-      "matches": {
-        "listing paragraph": true
-      }
-    },
-    {
-      "content": "NOTE: ${1:text}\n$0",
-      "doc": "Insert NOTE admonition block as paragraph",
-      "label": "note paragraph",
-      "matches": {
-        "note": true
-      }
-    },
-    {
-      "content": "${1:${TM_SELECTED_TEXT:link}}[${2:alt}] $0",
-      "doc": "Insert link macro with text",
-      "label": "link macro",
-      "matches": {
-        "link": true
-      }
-    },
-    {
-      "content": "audio::${1:filepath}[]\n$0",
-      "doc": "Include audio block",
-      "label": "audio block",
-      "matches": {
-        "audio macro": true
-      }
-    },
-    {
-      "content": "[NOTE]\n====\n${1:text}\n====\n$0",
-      "doc": "Insert NOTE block",
-      "label": "note block",
-      "matches": {
-        "note": true
-      }
-    },
-    {
-      "content": "mailto:${1:${TM_SELECTED_TEXT:link}}[${2:alt}]$0",
-      "doc": "Insert mailto link",
-      "label": "mailto link",
-      "matches": {
-        "mailto": true
-      }
-    },
-    {
-      "content": "[%collapsible]\n====\n$1\n====\n$0",
-      "doc": "Insert collapsible block",
-      "label": "collapsible block",
-      "matches": {
-        "collapsible block": true
-      }
-    },
-    {
-      "content": "video::${1:filepath}[]\n$0",
-      "doc": "Include video block",
-      "label": "video block",
-      "matches": {
-        "video macro": true
-      }
-    },
-    {
-      "content": "[source,${1:language}]\n----\n$2\n----\n$0",
-      "doc": "Insert source code block",
-      "label": "source code block",
-      "matches": {
-        "source code block": true
-      }
-    },
-    {
-      "content": "[NOTE]\n.${1:title}\n====\n${2:text}\n====\n$0",
-      "doc": "Insert NOTE block",
-      "label": "note block 2",
-      "matches": {
-        "note+": true
-      }
-    },
-    {
-      "content": "[verse, ${2:attribution}, \"${3:citation title and information}\"]\n____\n$1\n____\n$0",
-      "doc": "Insert verse block",
-      "label": "verse block",
-      "matches": {
-        "verse block": true
-      }
-    },
-    {
-      "content": "icon:${1:icon}[] $0",
-      "doc": "Insert icon",
-      "label": "icon macro",
-      "matches": {
-        "icon macro": true
-      }
-    },
-    {
-      "content": "TIP: ${1:text}\n$0",
-      "doc": "Insert TIP admonition block as paragraph",
-      "label": "tip paragraph",
-      "matches": {
-        "tip": true
-      }
-    },
-    {
-      "content": "[quote, ${2:attribution}, \"${3:citation title and information}\"]\n----\n$1\n----\n$0",
-      "doc": "Insert quote block",
-      "label": "quote block",
-      "matches": {
-        "quote block": true
-      }
-    },
-    {
-      "content": "\"${1:quote}\"\n-- ${2:attribution}, ${3:citation title and information}\n$0",
-      "doc": "Insert quote block as paragraph",
-      "label": "quote paragraph 3",
-      "matches": {
-        "quote paragraph": true
-      }
-    },
-    {
-      "content": "xref:${1:anchor}[${2:label}] $0",
-      "doc": "cross reference macro with label",
-      "label": "cross reference macro",
-      "matches": {
-        "<<": true,
-        "cross reference": true
       }
     },
     {
@@ -666,35 +369,51 @@
       }
     },
     {
-      "content": "[example]\n$1\n$0",
-      "doc": "Insert example block as paragraph",
-      "label": "example paragraph",
+      "content": "[example%collapsible]\n$1\n$0",
+      "doc": "Insert collapsible block as paragraph",
+      "label": "collapsible paragraph",
       "matches": {
-        "example paragraph": true
+        "collapsible paragraph": true
       }
     },
     {
-      "content": "[TIP]\n.${1:title}\n====\n${2:text}\n====\n$0",
-      "doc": "Insert TIP block",
-      "label": "tip block 2",
+      "content": "[source,${1:language}]\n----\n$2\n----\n$0",
+      "doc": "Insert source code block",
+      "label": "source code block",
       "matches": {
-        "tip+": true
+        "source code block": true
       }
     },
     {
-      "content": ".${1:title}\n****\n$2\n****\n$0",
-      "doc": "Insert sidebar block with title",
-      "label": "sidebar block 2",
+      "content": ".${1:title}\n[%autowidth%header,cols=\"1,1,1\"]\n|===\n| ${2:column1} | ${3:column2} | ${4:column3}\n\n| ${5:cell1.1}\n| ${6:cell1.2}\n| ${7:cell1.3}\n\n| ${8:cell2.1}\n| ${9:cell2.2}\n| ${10:cell2.3}\n\n| ${11:cell3.1}\n| ${12:cell3.2}\n| ${13:cell3.3}\n|===\n$0",
+      "doc": "Insert 4x3 table with autowidth and header",
+      "label": "table 2",
       "matches": {
-        "sidebar+": true
+        "table": true
       }
     },
     {
-      "content": "IMPORTANT: ${1:text}\n$0",
-      "doc": "Insert IMPORTANT admonition block as paragraph",
-      "label": "important paragraph",
+      "content": "audio::${1:filepath}[]\n$0",
+      "doc": "Include audio block",
+      "label": "audio block",
       "matches": {
-        "important": true
+        "audio macro": true
+      }
+    },
+    {
+      "content": ".${1:title}\n[source,${2:language}]\n----\n$3\n----\n$0",
+      "doc": "Insert source code block with title",
+      "label": "source code block 2",
+      "matches": {
+        "source code block+": true
+      }
+    },
+    {
+      "content": ".${1:title}\n[cols=\"1,1,1\"]\n|===\n| ${2:column1} | ${3:column2} | ${4:column3}\n\n| ${5:cell1.1} | ${6:cell1.2} | ${7:cell1.3}\n| ${8:cell2.1} | ${9:cell2.2} | ${10:cell2.3}\n| ${11:cell3.1} | ${12:cell3.2} | ${13:cell3.3}\n|===\n$0",
+      "doc": "Insert 4x3 table with header",
+      "label": "table",
+      "matches": {
+        "table": true
       }
     },
     {
@@ -706,36 +425,316 @@
       }
     },
     {
-      "content": "[IMPORTANT]\n====\n${1:text}\n====\n$0",
-      "doc": "Insert IMPORTANT block",
-      "label": "important block",
+      "content": "video::${1:filepath}[]\n$0",
+      "doc": "Include video block",
+      "label": "video block",
       "matches": {
-        "important": true
+        "video macro": true
       }
     },
     {
-      "content": "<<${1:anchor},${2:label}>> $0",
-      "doc": "cross reference with label",
-      "label": "cross reference 2",
+      "content": "[literal]\n$1\n$0",
+      "doc": "Insert literal block as paragraph",
+      "label": "literal paragraph",
       "matches": {
-        "<<": true,
-        "cross reference": true
+        "literal paragraph": true
       }
     },
     {
-      "content": ".${1:title}\n[plantuml, \"${2:file}\", svg]\n....\n$3\n....\n$0",
-      "doc": "Insert diagram with plantuml",
-      "label": "diagram plantuml",
+      "content": ".${1:title}\n[source,${2:language}]\n----\ninclude::${3:filepath}[]\n----\n$0",
+      "doc": "Insert source code block with title via include",
+      "label": "source code block 3",
       "matches": {
-        "diagram plantuml": true
+        "source code block+": true
       }
     },
     {
-      "content": "[IMPORTANT]\n.${1:title}\n====\n${2:text}\n====\n$0",
-      "doc": "Insert IMPORTANT block",
-      "label": "important block 2",
+      "content": "== ${1:title}\n$0",
+      "doc": "Insert section level 1 (h2)",
+      "label": "section 1",
       "matches": {
-        "important+": true
+        "h2": true,
+        "section 1": true
+      }
+    },
+    {
+      "content": "icon:${1:icon}[] $0",
+      "doc": "Insert icon",
+      "label": "icon macro",
+      "matches": {
+        "icon macro": true
+      }
+    },
+    {
+      "content": "[listing]\n$1\n$0",
+      "doc": "Insert listing block as paragraph",
+      "label": "listing paragraph",
+      "matches": {
+        "listing paragraph": true
+      }
+    },
+    {
+      "content": "[verse, ${2:attribution}, \"${3:citation title and information}\"]\n____\n$1\n____\n$0",
+      "doc": "Insert verse block",
+      "label": "verse block",
+      "matches": {
+        "verse block": true
+      }
+    },
+    {
+      "content": "=== ${1:title}\n$0",
+      "doc": "Insert section level 2 (h3)",
+      "label": "section 2",
+      "matches": {
+        "h3": true,
+        "section 2": true
+      }
+    },
+    {
+      "content": "----\n$1\n----\n$0",
+      "doc": "Insert listing block",
+      "label": "listing block",
+      "matches": {
+        "listing block": true
+      }
+    },
+    {
+      "content": "[verse, ${2:attribution}, \"${3:citation title and information}\"]\n$1\n$0",
+      "doc": "Insert verse block as paragraph",
+      "label": "verse paragraph",
+      "matches": {
+        "verse paragraph": true
+      }
+    },
+    {
+      "content": "kbd:[${1:key}+${2:key}] $0",
+      "doc": "Insert keyboard key sequence",
+      "label": "keyboard macro 2",
+      "matches": {
+        "keyboard macro": true
+      }
+    },
+    {
+      "content": "==== ${1:title}\n$0",
+      "doc": "Insert section level 3 (h4)",
+      "label": "section 3",
+      "matches": {
+        "h4": true,
+        "section 3": true
+      }
+    },
+    {
+      "content": ".${1:title}\n[quote, ${3:attribution}, \"${4:citation title and information}\"]\n$2\n$0",
+      "doc": "Insert quote block as paragraph with title",
+      "label": "quote paragraph 2",
+      "matches": {
+        "quote paragraph+": true
+      }
+    },
+    {
+      "content": "btn:[${1:text}] $0",
+      "doc": "Insert button",
+      "label": "button macro",
+      "matches": {
+        "button macro": true
+      }
+    },
+    {
+      "content": "[quote, ${2:attribution}, \"${3:citation title and information}\"]\n$1\n$0",
+      "doc": "Insert quote block as paragraph",
+      "label": "quote paragraph",
+      "matches": {
+        "quote paragraph": true
+      }
+    },
+    {
+      "content": "===== ${1:title}\n$0",
+      "doc": "Insert section level 4 (h5)",
+      "label": "section 4",
+      "matches": {
+        "h5": true,
+        "section 4": true
+      }
+    },
+    {
+      "content": "menu:${1:menu}[${2:item}] $0",
+      "doc": "Insert menu with item",
+      "label": "menu macro",
+      "matches": {
+        "menu macro": true
+      }
+    },
+    {
+      "content": ".${1:title}\n====\n$2\n====\n$0",
+      "doc": "Insert example block with title",
+      "label": "example block 2",
+      "matches": {
+        "example block+": true
+      }
+    },
+    {
+      "content": ".${1:title}\n[sidebar]\n21\n$0",
+      "doc": "Insert sidebar block as paragraph with title",
+      "label": "sidebar paragraph 2",
+      "matches": {
+        "sidebar paragraph+": true
+      }
+    },
+    {
+      "content": "menu:${1:menu}[${2:item} > ${3:subitem}] $0",
+      "doc": "Insert menu with subitem",
+      "label": "menu macro 2",
+      "matches": {
+        "menu macro": true
+      }
+    },
+    {
+      "content": "[WARNING]\n.${1:title}\n====\n${2:text}\n====\n$0",
+      "doc": "Insert WARNING block",
+      "label": "warning block 2",
+      "matches": {
+        "warning+": true
+      }
+    },
+    {
+      "content": "[.small]#${1}# $0",
+      "doc": "Insert small text",
+      "label": "small text",
+      "matches": {
+        "small": true
+      }
+    },
+    {
+      "content": "menu:${1:menu}[${2:item} > ${3:subitem} > ${4:subsubitem}] $0",
+      "doc": "Insert menu with subsubitem",
+      "label": "menu macro 3",
+      "matches": {
+        "menu macro": true
+      }
+    },
+    {
+      "content": "[#${1:id}]$0",
+      "doc": "Insert custom id",
+      "label": "custom id",
+      "matches": {
+        "custom id": true
+      }
+    },
+    {
+      "content": "---\n$0",
+      "doc": "Insert thematic break (horizontal rule) in Markdown style",
+      "label": "thematic break 2",
+      "matches": {
+        "horizontal rule": true,
+        "thematic break": true
+      }
+    },
+    {
+      "content": "NOTE: ${1:text}\n$0",
+      "doc": "Insert NOTE admonition block as paragraph",
+      "label": "note paragraph",
+      "matches": {
+        "note": true
+      }
+    },
+    {
+      "content": "[#${1:id},reftext=${2:text}]$0",
+      "doc": "Insert custom id with reference text",
+      "label": "custom id 2",
+      "matches": {
+        "custom id": true
+      }
+    },
+    {
+      "content": "${1:author} <${2:email}>\n{localdatetime}\n:toc:\n$0",
+      "doc": "Insert document attributes",
+      "label": "document attributes",
+      "matches": {
+        "document attributes": true
+      }
+    },
+    {
+      "content": "#${1}# $0",
+      "doc": "Insert marked text",
+      "label": "marked text",
+      "matches": {
+        "mark": true
+      }
+    },
+    {
+      "content": "[NOTE]\n====\n${1:text}\n====\n$0",
+      "doc": "Insert NOTE block",
+      "label": "note block",
+      "matches": {
+        "note": true
+      }
+    },
+    {
+      "content": "_${1}_ $0",
+      "doc": "Insert italic text",
+      "label": "italic text",
+      "matches": {
+        "i": true,
+        "italic": true
+      }
+    },
+    {
+      "content": "====== ${1:title}\n$0",
+      "doc": "Insert section level 5 (h6)",
+      "label": "section 5",
+      "matches": {
+        "h6": true,
+        "section 5": true
+      }
+    },
+    {
+      "content": "<<<\n$0",
+      "doc": "Insert page break",
+      "label": "page break",
+      "matches": {
+        "page break": true
+      }
+    },
+    {
+      "content": "[NOTE]\n.${1:title}\n====\n${2:text}\n====\n$0",
+      "doc": "Insert NOTE block",
+      "label": "note block 2",
+      "matches": {
+        "note+": true
+      }
+    },
+    {
+      "content": "'''\n$0",
+      "doc": "Insert thematic break (horizontal rule)",
+      "label": "thematic break",
+      "matches": {
+        "horizontal rule": true,
+        "thematic break": true
+      }
+    },
+    {
+      "content": "`${1}` $0",
+      "doc": "Insert monospace text",
+      "label": "monospace text",
+      "matches": {
+        "code": true,
+        "monospace": true
+      }
+    },
+    {
+      "content": "TIP: ${1:text}\n$0",
+      "doc": "Insert TIP admonition block as paragraph",
+      "label": "tip paragraph",
+      "matches": {
+        "tip": true
+      }
+    },
+    {
+      "content": "[.underline]#${1}# $0",
+      "doc": "Insert underline text",
+      "label": "underline text",
+      "matches": {
+        "underline": true
       }
     },
     {
@@ -748,11 +747,20 @@
       }
     },
     {
-      "content": "CAUTION: ${1:text}\n$0",
-      "doc": "Insert CAUTION admonition block as paragraph",
-      "label": "caution paragraph",
+      "content": "*_${1}_* $0",
+      "doc": "Insert bold and italic text",
+      "label": "bold and italic text",
       "matches": {
-        "caution": true
+        "bi": true,
+        "bold and italic": true
+      }
+    },
+    {
+      "content": "[TIP]\n====\n${1:text}\n====\n$0",
+      "doc": "Insert TIP block",
+      "label": "tip block",
+      "matches": {
+        "tip": true
       }
     },
     {
@@ -765,60 +773,52 @@
       }
     },
     {
-      "content": "<<${1:anchor}>> $0",
-      "doc": "cross reference",
-      "label": "cross reference",
+      "content": "kbd:[${1:key}] $0",
+      "doc": "Insert keyboard key",
+      "label": "keyboard macro",
       "matches": {
-        "<<": true,
-        "cross reference": true
+        "keyboard macro": true
       }
     },
     {
-      "content": "[CAUTION]\n====\n${1:text}\n====\n$0",
-      "doc": "Insert CAUTION block",
-      "label": "caution block",
+      "content": "[TIP]\n.${1:title}\n====\n${2:text}\n====\n$0",
+      "doc": "Insert TIP block",
+      "label": "tip block 2",
+      "matches": {
+        "tip+": true
+      }
+    },
+    {
+      "content": "*${1}* $0",
+      "doc": "Insert bold text",
+      "label": "bold text",
+      "matches": {
+        "b": true,
+        "bold": true
+      }
+    },
+    {
+      "content": "IMPORTANT: ${1:text}\n$0",
+      "doc": "Insert IMPORTANT admonition block as paragraph",
+      "label": "important paragraph",
+      "matches": {
+        "important": true
+      }
+    },
+    {
+      "content": "[.line-through]#${1}# $0",
+      "doc": "Insert strikethrough text",
+      "label": "strikethrough text",
+      "matches": {
+        "strikethrough": true
+      }
+    },
+    {
+      "content": "CAUTION: ${1:text}\n$0",
+      "doc": "Insert CAUTION admonition block as paragraph",
+      "label": "caution paragraph",
       "matches": {
         "caution": true
-      }
-    },
-    {
-      "content": "footnote:[${1:text}] $0",
-      "doc": "Insert footnote macro",
-      "label": "footnote macro",
-      "matches": {
-        "footnote macro": true
-      }
-    },
-    {
-      "content": "${1:author} <${2:email}>\n{localdatetime}\n:toc:\n$0",
-      "doc": "Insert document attributes",
-      "label": "document attributes",
-      "matches": {
-        "document attributes": true
-      }
-    },
-    {
-      "content": "[CAUTION]\n.${1:title}\n====\n${2:text}\n====\n$0",
-      "doc": "Insert CAUTION block",
-      "label": "caution block 2",
-      "matches": {
-        "caution+": true
-      }
-    },
-    {
-      "content": "menu:${1:menu}[${2:item} > ${3:subitem} > ${4:subsubitem}] $0",
-      "doc": "Insert menu with subsubitem",
-      "label": "menu macro 3",
-      "matches": {
-        "menu macro": true
-      }
-    },
-    {
-      "content": "WARNING: ${1:text}\n$0",
-      "doc": "Insert WARNING admonition block as paragraph",
-      "label": "warning paragraph",
-      "matches": {
-        "warning": true
       }
     },
     {

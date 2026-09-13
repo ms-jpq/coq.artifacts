@@ -2,11 +2,43 @@
   "extends": [],
   "snippets": [
     {
+      "content": "scrollBehavior(to, from, savedPosition) {\n\tif(savedPosition) {\n\t\treturn savedPosition;\n\t} else {\n\t\treturn { x: 0, y: 0 };\n\t}\n},",
+      "doc": "Vue Router scrollBehavior",
+      "label": "Vue Router scrollBehavior",
+      "matches": {
+        "vscrollbehavior": true
+      }
+    },
+    {
+      "content": "beforeRouteLeave(to, from, next) {\n\t${1:next();}\n},",
+      "doc": "Vue Router component guards beforeRouteLeave",
+      "label": "Vue Router beforeRouteLeave",
+      "matches": {
+        "vbeforerouteleave": true
+      }
+    },
+    {
+      "content": "beforeEnter(to, from, next) {\n\t${1:next();}\n},",
+      "doc": "Vue Router per-route guard beforeEnter",
+      "label": "Vue Router beforeEnter",
+      "matches": {
+        "vbeforeenter": true
+      }
+    },
+    {
       "content": "{\n\tpath: '${1:pathName}',\n\tname: '${2:routeName}',\n\tcomponent: () => import('./${3:pathToComponent}'),\n},",
       "doc": "Vue Router route with per route code-splitting",
       "label": "Vue Router Route",
       "matches": {
         "vroute-named": true
+      }
+    },
+    {
+      "content": "import Vue from 'vue';\nimport VueRouter from 'vue-router';\n\nVue.use(VueRouter);\n\nexport const router = new VueRouter({\n\tbase: '/',\n\tmode: 'history',\n\troutes: [\n\t\t{ path: '/path', component: component }\n\t]\n});",
+      "doc": "Base for Vue Router",
+      "label": "Vue Router",
+      "matches": {
+        "vrouter": true
       }
     },
     {
@@ -42,43 +74,11 @@
       }
     },
     {
-      "content": "scrollBehavior(to, from, savedPosition) {\n\tif(savedPosition) {\n\t\treturn savedPosition;\n\t} else {\n\t\treturn { x: 0, y: 0 };\n\t}\n},",
-      "doc": "Vue Router scrollBehavior",
-      "label": "Vue Router scrollBehavior",
-      "matches": {
-        "vscrollbehavior": true
-      }
-    },
-    {
-      "content": "beforeRouteLeave(to, from, next) {\n\t${1:next();}\n},",
-      "doc": "Vue Router component guards beforeRouteLeave",
-      "label": "Vue Router beforeRouteLeave",
-      "matches": {
-        "vbeforerouteleave": true
-      }
-    },
-    {
-      "content": "import Vue from 'vue';\nimport VueRouter from 'vue-router';\n\nVue.use(VueRouter);\n\nexport const router = new VueRouter({\n\tbase: '/',\n\tmode: 'history',\n\troutes: [\n\t\t{ path: '/path', component: component }\n\t]\n});",
-      "doc": "Base for Vue Router",
-      "label": "Vue Router",
-      "matches": {
-        "vrouter": true
-      }
-    },
-    {
       "content": "router.afterEach((to, from) => {\n\t\n});",
       "doc": "Vue Router global guards afterEach",
       "label": "Vue Router afterEach",
       "matches": {
         "vaftereach": true
-      }
-    },
-    {
-      "content": "beforeEnter(to, from, next) {\n\t${1:next();}\n},",
-      "doc": "Vue Router per-route guard beforeEnter",
-      "label": "Vue Router beforeEnter",
-      "matches": {
-        "vbeforeenter": true
       }
     }
   ]

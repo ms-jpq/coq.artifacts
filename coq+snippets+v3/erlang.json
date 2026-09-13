@@ -2,22 +2,6 @@
   "extends": [],
   "snippets": [
     {
-      "content": "-module(${1:module}).",
-      "doc": "module",
-      "label": "module",
-      "matches": {
-        "mod": true
-      }
-    },
-    {
-      "content": "-export([\n         ${1}\n        ]).",
-      "doc": "export",
-      "label": "export",
-      "matches": {
-        "exp": true
-      }
-    },
-    {
       "content": "receive\n    ${1:pattern} ->\n        ${2:todo}\nend$3",
       "doc": "receive block",
       "label": "receive",
@@ -34,11 +18,27 @@
       }
     },
     {
-      "content": "case ${1:Expr} of\n    ${2:Cond} ->\n        ${3:todo};\n    _ ->\n        ${4:todo}\nend$5",
-      "doc": "case block",
-      "label": "case",
+      "content": "-export([\n         ${1}\n        ]).",
+      "doc": "export",
+      "label": "export",
       "matches": {
-        "case": true
+        "exp": true
+      }
+    },
+    {
+      "content": "-include(\"${1:hrl_name}.hrl\").",
+      "doc": "module",
+      "label": "include",
+      "matches": {
+        "inc": true
+      }
+    },
+    {
+      "content": "-module(${1:module}).",
+      "doc": "module",
+      "label": "module",
+      "matches": {
+        "mod": true
       }
     },
     {
@@ -50,11 +50,11 @@
       }
     },
     {
-      "content": "-include(\"${1:hrl_name}.hrl\").",
-      "doc": "module",
-      "label": "include",
+      "content": "case ${1:Expr} of\n    ${2:Cond} ->\n        ${3:todo};\n    _ ->\n        ${4:todo}\nend$5",
+      "doc": "case block",
+      "label": "case",
       "matches": {
-        "inc": true
+        "case": true
       }
     },
     {

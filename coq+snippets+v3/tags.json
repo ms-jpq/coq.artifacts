@@ -2,14 +2,6 @@
   "extends": [],
   "snippets": [
     {
-      "content": "{% load staticfiles %}",
-      "doc": "",
-      "label": "lstatic",
-      "matches": {
-        "lstatic": true
-      }
-    },
-    {
       "content": "@register.filter\ndef $1(value):\n\treturn value$2",
       "doc": "",
       "label": "register_filter",
@@ -18,11 +10,11 @@
       }
     },
     {
-      "content": "{% load $SELECTION$1_tags %}",
+      "content": "from django import template\nregister = template.Library()",
       "doc": "",
-      "label": "ltags",
+      "label": "ilib",
       "matches": {
-        "ltags": true
+        "ilib": true
       }
     },
     {
@@ -50,11 +42,19 @@
       }
     },
     {
-      "content": "from django import template\nregister = template.Library()",
+      "content": "{% load $SELECTION$1_tags %}",
       "doc": "",
-      "label": "ilib",
+      "label": "ltags",
       "matches": {
-        "ilib": true
+        "ltags": true
+      }
+    },
+    {
+      "content": "{% load staticfiles %}",
+      "doc": "",
+      "label": "lstatic",
+      "matches": {
+        "lstatic": true
       }
     }
   ]

@@ -2,39 +2,12 @@
   "extends": [],
   "snippets": [
     {
-      "content": "import { store } from './store/index';",
-      "doc": "import vuex store into main.js",
-      "label": "vuex-import-store",
-      "matches": {
-        "vstore-import": true,
-        "vuex import store": true
-      }
-    },
-    {
-      "content": "import Vue from 'vue';\nimport Vuex from 'vuex';\n\nVue.use(Vuex);\n\nexport const store = new Vuex.Store({\n\tstate: {\n\t\t${1:key}: ${2:value}\n\t}\n});",
-      "doc": "Base for Vuex store",
-      "label": "vuex-store",
-      "matches": {
-        "vstore": true,
-        "vuex store": true
-      }
-    },
-    {
       "content": "actions: {\n\t${1:updateValue}({commit}, ${2:payload}) {\n\t\tcommit('${1:updateValue}', ${2:payload});\n\t}\n}",
       "doc": "vuex action",
       "label": "vuex-action",
       "matches": {
         "vaction": true,
         "vuex action": true
-      }
-    },
-    {
-      "content": "export default {\n\tstate: {\n\t\tvalue: 'my value'\n\t},\n\tgetters: {\n\t\tvalue: state => {\n\t\t\treturn state.value;\n\t\t}\n\t},\n\tmutations: {\n\t\tupdateValue(state, payload) {\n\t\t\tstate.value = payload;\n\t\t}\n\t},\n\tactions: {\n\t\tupdateValue({commit}, payload) {\n\t\t\tcommit('updateValue', payload);\n\t\t}\n\t}\n};",
-      "doc": "vuex module",
-      "label": "vuex-module",
-      "matches": {
-        "vmodule": true,
-        "vuex module": true
       }
     },
     {
@@ -62,6 +35,33 @@
       "matches": {
         "vstore2": true,
         "vuex store 2": true
+      }
+    },
+    {
+      "content": "export default {\n\tstate: {\n\t\tvalue: 'my value'\n\t},\n\tgetters: {\n\t\tvalue: state => {\n\t\t\treturn state.value;\n\t\t}\n\t},\n\tmutations: {\n\t\tupdateValue(state, payload) {\n\t\t\tstate.value = payload;\n\t\t}\n\t},\n\tactions: {\n\t\tupdateValue({commit}, payload) {\n\t\t\tcommit('updateValue', payload);\n\t\t}\n\t}\n};",
+      "doc": "vuex module",
+      "label": "vuex-module",
+      "matches": {
+        "vmodule": true,
+        "vuex module": true
+      }
+    },
+    {
+      "content": "import { store } from './store/index';",
+      "doc": "import vuex store into main.js",
+      "label": "vuex-import-store",
+      "matches": {
+        "vstore-import": true,
+        "vuex import store": true
+      }
+    },
+    {
+      "content": "import Vue from 'vue';\nimport Vuex from 'vuex';\n\nVue.use(Vuex);\n\nexport const store = new Vuex.Store({\n\tstate: {\n\t\t${1:key}: ${2:value}\n\t}\n});",
+      "doc": "Base for Vuex store",
+      "label": "vuex-store",
+      "matches": {
+        "vstore": true,
+        "vuex store": true
       }
     }
   ]

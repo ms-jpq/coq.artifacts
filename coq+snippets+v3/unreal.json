@@ -2,19 +2,19 @@
   "extends": [],
   "snippets": [
     {
-      "content": "UAudioComponent* ${1:MySound} = UGameplayStatics::SpawnSoundAttached(${2:SoundBase}, ${3:AttachToComponent}, ${4:AttachPointName}, ${5:Location}, ${6:Rotation}, EAttachLocation::${7|KeepRelativeOffset,KeepWorldPosition,SnapToTarget,SnapToTargetIncludingScale|}, ${8:bStopWhenAttachedToDestroyed}, ${9:VolumeMultipler}, ${10:PitchMultiplier}, ${11:StartTime}, ${12:Attenuation}, ${13:Concurrency}, ${14:bAutoDestroy});",
-      "doc": "Spawn Sound Attached",
-      "label": "Unreal SpawnSoundAttached",
-      "matches": {
-        "uspawn_sound_attached": true
-      }
-    },
-    {
       "content": "${1:UMySaveGame}* ${2:Instance} = Cast<${1:UMySaveGame}>(UGameplayStatics::LoadGameFromSlot(${3:SaveSlotName}, ${4:UserIndex}));",
       "doc": "Load a SaveGame from disk.",
       "label": "Unreal Load SaveGame",
       "matches": {
         "usavegame_load": true
+      }
+    },
+    {
+      "content": "UPROPERTY(${1|AdvancedDisplay,AssetRegistrySearchable,BlueprintAssignable,BlueprintAuthorityOnly,BlueprintCallable,BlueprintGetter=GetterFunctionName,BlueprintReadOnly,BlueprintReadWrite,BlueprintSetter=SetterFunctionName,Category=\"MyCategory\",Config,DuplicateTransient,EditAnywhere,EditDefaultsOnly,EditFixedSize,EditInline,EditInstanceOnly,Export,GlobalConfig,Instanced,Interp,Localized,Native,NoClear,NoExport,NonPIEDuplicateTransient,NonTransactional,NotReplicated,Replicated,ReplicatedUsing=FunctionName,RepRetry,SaveGame,SerializeText,SkipSerialization,SimpleDisplay,TextExportTransient,Transient,VisibleAnywhere,VisibleDefaultsOnly,VisibleInstanceOnly|})",
+      "doc": "UPROPERTY macro for Unreal Engine",
+      "label": "Unreal Property",
+      "matches": {
+        "uproperty": true
       }
     },
     {
@@ -26,150 +26,11 @@
       }
     },
     {
-      "content": "#pragma once\n\n#include \"CoreMinimal.h\"\n\n#include \"${TM_FILENAME_BASE:ClassName}.generated.h\"\n\nUINTERFACE()\nclass ${1:PROJECTNAME}_API U$2${TM_FILENAME_BASE:ClassName} : public UInterface\n{\n\tGENERATED_BODY()\n};\n\nclass ${1:PROJECTNAME}_API I$2${TM_FILENAME_BASE:ClassName}\n{\n\tGENERATED_BODY()\npublic:\n$3\n};",
-      "doc": "Generate an Interface ready for Unreal Engine (include headers details)",
-      "label": "Unreal Interface with header",
-      "matches": {
-        "uhinterface": true
-      }
-    },
-    {
       "content": "${1:UMySaveGame}* ${2:Instance} = Cast<${1:UMySaveGame}>(UGameplayStatics::CreateSaveGameObject(${1:UMySaveGame}::StaticClass()));",
       "doc": "Create Instance of a SaveGame Class to save to or load from.",
       "label": "Unreal Create SaveGame",
       "matches": {
         "usavegame_create": true
-      }
-    },
-    {
-      "content": "GetWorld()->GetTimerManager().ClearTimer(${1:TimerHandle});",
-      "doc": "Clear a TimerHandle",
-      "label": "Unreal ClearTimer",
-      "matches": {
-        "utimer_clear": true
-      }
-    },
-    {
-      "content": "UGameplayStatics::GetAllActorsOfClass(GetWorld(), ${1:AClass}::StaticClass(), ${2:ActorArray});",
-      "doc": "Get all Actors of one class from the level",
-      "label": "Unreal GetAllActorsOfClass",
-      "matches": {
-        "ugetallactorsofclass": true
-      }
-    },
-    {
-      "content": "GetWorld()->LineTraceSingleByObjectType(${1:Hit}, ${2:Start}, ${3:End}, ${4:ObjectQueryParams}, ${5:TraceParams});",
-      "doc": "Single Line Trace by Object Type",
-      "label": "Unreal Linetrace Single Object",
-      "matches": {
-        "ulinetrace_single_object": true
-      }
-    },
-    {
-      "content": "void ${1:ClassName}::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const\n{\n\tSuper::GetLifetimeReplicatedProps(OutLifetimeProps);\n\t//DON'T FORGET TO #include \"Net/UnrealNetwork.h\"\n\tDOREPLIFETIME(${1:ClassName}, ${2:ClassProperty});\n}",
-      "doc": "Creates the Function in which you setup replicated properties",
-      "label": "Unreal GetLifeTimeReplicates",
-      "matches": {
-        "ugetlifetimereplicatedprops": true,
-        "usetupreplicatedproperties": true
-      }
-    },
-    {
-      "content": "GetWorld()->SweepMultiByObjectType(${1:HitsArray}, ${2:Start}, ${3:End}, ${4:FQuat::Identity}, ${5:ObjectQueryParams}, FCollisionShape::${6:MakeSphere(Radius)}, ${7:TraceParams});",
-      "doc": "Trace a Shape against the world and return all blocking hits using Object Type.",
-      "label": "Unreal Sweep Multi Object",
-      "matches": {
-        "usweep_multi_object": true
-      }
-    },
-    {
-      "content": "UGameplayStatics::PlayDialogue2D(GetWorld(), ${1:DialogWave}, ${2:DialogContext}, ${3:VolumeMultiplier}, ${4:PitchMultiplier}, ${5:StartTime});",
-      "doc": "Play Dialog 2D",
-      "label": "Unreal PlayDialog2D",
-      "matches": {
-        "uplay_dialog_2d": true,
-        "uplay_dialogue_2d": true
-      }
-    },
-    {
-      "content": "GetWorld()->LineTraceSingleByProfile(${1:Hit}, ${2:Start}, ${3:End}, \"${4:ProfileName}\", ${5:TraceParams});",
-      "doc": "Single Line Trace by Profile",
-      "label": "Unreal Linetrace Single Profile",
-      "matches": {
-        "ulinetrace_single_profile": true
-      }
-    },
-    {
-      "content": "UGameplayStatics::PlayDialogueAtLocation(GetWorld(), ${1:DialogWave}, ${2:DialogContext}, ${3:Location}, ${4:Rotation}, ${5:VolumeMultiplier}, ${6:PitchMultiplier}, ${7:StartTime}, ${8:Attenuation});",
-      "doc": "Play Dialog at Location",
-      "label": "Unreal PlayDialogLocation",
-      "matches": {
-        "uplay_dialog_location": true,
-        "uplay_dialogue_location": true
-      }
-    },
-    {
-      "content": "UGameplayStatics::PlaySound2D(GetWorld(), ${1:SoundBase}, ${2:VolumeMultiplier}, ${3:PitchMultiplier}, ${4:StartTime}, ${5:Concurrency}, ${6:Owner});",
-      "doc": "Play Sound 2D",
-      "label": "Unreal PlaySound2D",
-      "matches": {
-        "uplay_sound_2d": true
-      }
-    },
-    {
-      "content": "UENUM(BlueprintType)\nenum class ${1:EName} : ${2:uint8}\n{\n\t${3:N_Name1} UMETA(DisplayName=\"${4:DisplayName}\")\n};",
-      "doc": "Generate an Enum ready for Unreal Engine",
-      "label": "Unreal Enum",
-      "matches": {
-        "uenum": true
-      }
-    },
-    {
-      "content": "GetWorld()->LineTraceMultiByChannel(${1:HitsArray}, ${2:Start}, ${3:End}, ${4|ECC_Visibility,ECC_Camera,ECC_GameTraceChannel1|}, ${5:TraceParams});",
-      "doc": "Multi Line Trace by Channel",
-      "label": "Unreal Linetrace Multi Channel",
-      "matches": {
-        "ulinetrace_multi_channel": true
-      }
-    },
-    {
-      "content": "${1:AMyClass}* ${2:MyCastActor} = Cast<${1:AMyClass}>(${3:MyActor});",
-      "doc": "Cast from-to any UObject",
-      "label": "Unreal Cast",
-      "matches": {
-        "ucast": true
-      }
-    },
-    {
-      "content": "UGameplayStatics::PlaySoundAtLocation(GetWorld(), ${1:SoundBase}, ${2:Location}, ${3:Rotation}, ${4:VolumeMultiplier}, ${5:PitchMultiplier}, ${6:StartTime}, ${7:Attenuation}, ${8:Concurrency}, ${9:Owner});",
-      "doc": "Play Sound at Location",
-      "label": "Unreal PlaySoundLocation",
-      "matches": {
-        "uplay_sound_location": true
-      }
-    },
-    {
-      "content": "GetWorld()->OverlapMultiByProfile(${1:OverlapsArray}, ${2:Location}, ${3:FQuat::Identity}, \"${4:ProfileName}\", FCollisionShape::${5:MakeSphere(Radius)}, ${6:TraceParams});",
-      "doc": "Trace shape against world and return all overlapping actors using Collision Channel",
-      "label": "Unreal Overlap Multi Profile",
-      "matches": {
-        "uoverlap_multi_profile": true
-      }
-    },
-    {
-      "content": "GetWorld()->LineTraceMultiByObjectType(${1:HitsArray}, ${2:Start}, ${3:End}, ${4:ObjectQueryParams}, ${5:TraceParams});",
-      "doc": "Single Line Trace by Object Type",
-      "label": "Unreal Linetrace Multi Object",
-      "matches": {
-        "ulinetrace_multi_object": true
-      }
-    },
-    {
-      "content": "GetWorld()->LineTraceMultiByProfile(${1:HitsArray}, ${2:Start}, ${3:End}, \"${4:ProfileName}\", ${5:TraceParams});",
-      "doc": "Single Line Trace by Profile",
-      "label": "Unreal Linetrace Multi Profile",
-      "matches": {
-        "ulinetrace_multi_profile": true
       }
     },
     {
@@ -181,28 +42,11 @@
       }
     },
     {
-      "content": "UAudioComponent* ${1:MyDialog} = UGameplayStatics::SpawnDialogueAtLocation(GetWorld(), ${2:DialogWave}, ${3:DialogContext}, ${4:Location}, ${5:Rotation}, ${6:VolumeMultiplier}, ${7:PitchMultiplier}, ${8:StartTime}, ${9:Attenuation}, ${10:bAutoDestroy});",
-      "doc": "Spawn Dialog At Location",
-      "label": "Unreal SpawnDialogLocation",
+      "content": "GetWorld()->SweepSingleByProfile(${1:Hit}, ${2:Start}, ${3:End}, ${4:FQuat::Identity}, \"${5:ProfileName}\", FCollisionShape::${6:MakeSphere(Radius)}, ${7:TraceParams});",
+      "doc": "Trace a Shape against the world and return first blocking hit using Collision Profile.",
+      "label": "Unreal Sweep Single Profile",
       "matches": {
-        "uspawn_dialog_location": true,
-        "uspawn_dialogue_location": true
-      }
-    },
-    {
-      "content": "GetWorld()->SweepSingleByChannel(${1:Hit}, ${2:Start}, ${3:End}, ${4:FQuat::Identity}, ${5|ECC_Visibility,ECC_Camera,ECC_GameTraceChannel1|}, FCollisionShape::${6:MakeSphere(Radius)}, ${7:TraceParams});",
-      "doc": "Trace a Shape against the world and return first blocking hit using Collision Channel.",
-      "label": "Unreal Sweep Single Channel",
-      "matches": {
-        "usweep_single_channel": true
-      }
-    },
-    {
-      "content": "UFUNCTION($1)",
-      "doc": "UFUNCTION macro for Unreal Engine",
-      "label": "Unreal Function",
-      "matches": {
-        "ufunction": true
+        "usweep_single_profile": true
       }
     },
     {
@@ -214,77 +58,19 @@
       }
     },
     {
-      "content": "UParticleSystemComponent* ${1:MyParticles} = UGameplayStatics::SpawnEmitterAttached(${2:ParticleSystem}, ${3:AttachToComponent}, ${4:AttachPointName}, ${5:Location}, ${6:Rotation}, ${7:Scale}, EAttachLocation::${8|KeepRelativeOffset,KeepWorldPosition,SnapToTarget,SnapToTargetIncludingScale|}, ${9:bAutoDestroy});",
-      "doc": "Spawn Emitter Attached",
-      "label": "Unreal SpawnEmitterAttached",
+      "content": "UGameplayStatics::GetAllActorsOfClass(GetWorld(), ${1:AClass}::StaticClass(), ${2:ActorArray});",
+      "doc": "Get all Actors of one class from the level",
+      "label": "Unreal GetAllActorsOfClass",
       "matches": {
-        "uspawn_emitter_attached": true,
-        "uspawn_particles_attached": true
+        "ugetallactorsofclass": true
       }
     },
     {
-      "content": "GetWorld()->SweepSingleByObjectType(${1:Hit}, ${2:Start}, ${3:End}, ${4:FQuat::Identity}, ${5:ObjectQueryParams}, FCollisionShape::${6:MakeSphere(Radius)}, ${7:TraceParams});",
-      "doc": "Trace a Shape against the world and return first blocking hit using Object Type.",
-      "label": "Unreal Sweep Single Object",
+      "content": "UAudioComponent* ${1:MySound} = UGameplayStatics::SpawnSoundAtLocation(GetWorld(), ${2:SoundBase}, ${3:Location}, ${4:Rotation}, ${5:VolumeMultiplier}, ${6:PitchMultiplier}, ${7:StartTime}, ${8:Attenuation}, ${9:Concurrency}, ${10:bAutoDestroy});",
+      "doc": "Spawn Sound At Location",
+      "label": "Unreal SpawnSoundLocation",
       "matches": {
-        "usweep_single_object": true
-      }
-    },
-    {
-      "content": "UFUNCTION(Server, Reliable, WithValidation)\nvoid ${1:FunctionName}(${2:FunctionParameters});",
-      "doc": "Setup Function run only on Server",
-      "label": "Unreal Server Function",
-      "matches": {
-        "ufunction_server": true
-      }
-    },
-    {
-      "content": "#pragma once\n\n#include \"CoreMinimal.h\"\n\n#include \"$2${TM_FILENAME_BASE:StructName}.generated.h\"\nUSTRUCT(BlueprintType)\nstruct F$1${TM_FILENAME_BASE:StructName}\n{\n\tGENERATED_BODY()\n\npublic:\n\tUPROPERTY(EditAnywhere, BlueprintReadWrite, Category=\"${3:MyCategory}\")\n\t${4:float test};\n};",
-      "doc": "Generate a Struct ready for Unreal Engine",
-      "label": "Unreal Struct with header",
-      "matches": {
-        "uhstruct": true
-      }
-    },
-    {
-      "content": "UParticleSystemComponent* ${1:MyParticles} = UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), ${2:ParticleSystem}, ${3:Location}, ${4:Rotation}, ${5:Scale}, ${6:bAutoDestroy});",
-      "doc": "Spawn Particle System at Location",
-      "label": "Unreal SpawnEmitterLocation",
-      "matches": {
-        "uspawn_emitter_location": true,
-        "uspawn_particles_location": true
-      }
-    },
-    {
-      "content": "GetWorld()->SweepSingleByProfile(${1:Hit}, ${2:Start}, ${3:End}, ${4:FQuat::Identity}, \"${5:ProfileName}\", FCollisionShape::${6:MakeSphere(Radius)}, ${7:TraceParams});",
-      "doc": "Trace a Shape against the world and return first blocking hit using Collision Profile.",
-      "label": "Unreal Sweep Single Profile",
-      "matches": {
-        "usweep_single_profile": true
-      }
-    },
-    {
-      "content": "UDecalComponent* ${1:MyDecal} = UGameplayStatics::SpawnDecalAttached(GetWorld(), ${2:DecalMaterialInterface}, ${3:Size}, ${4:AttachToComponent}, ${5:AttachPointName}, ${6:Location}, ${7:Rotation}, EAttachLocation::${8|KeepRelativeOffset,KeepWorldPosition,SnapToTarget,SnapToTargetIncludingScale|}, ${9:lifeSpan});",
-      "doc": "Spawn Decal at Location",
-      "label": "Unreal SpawnDecalAttached",
-      "matches": {
-        "uspawn_decal_attached": true
-      }
-    },
-    {
-      "content": "GEngine->AddOnScreenDebugMessage(0, ${1:0.f}, FColor::${2|Red,Green,Blue,Cyan,Magenta,Yellow,Purple,Orange|}, FString::Printf(TEXT(\"${3:TEXT}\")));",
-      "doc": "Print a string to screen ingame (duration, color, text)",
-      "label": "Unreal Print String",
-      "matches": {
-        "uprintstring": true
-      }
-    },
-    {
-      "content": "UDecalComponent* ${1:MyDecal} = UGameplayStatics::SpawnDecalAtLocation(GetWorld(), ${2:DecalMaterialInterface}, ${3:Size}, ${4:Location}, ${5:Rotation}, ${6:lifeSpan});",
-      "doc": "Spawn Decal at Location",
-      "label": "Unreal SpawnDecalLocation",
-      "matches": {
-        "uspawn_decal_location": true
+        "uspawn_sound_location": true
       }
     },
     {
@@ -296,35 +82,43 @@
       }
     },
     {
-      "content": "InputComponent->BindAction(\"${1:Button}\", IE_${2|Pressed,Released,Repeat,DoubleClick,Axis|}, this, &${3:Class::Function});",
-      "doc": "Bind an InputAction",
-      "label": "Unreal InputAction",
+      "content": "UAudioComponent* ${1:MySound} = UGameplayStatics::SpawnSound2D(GetWorld(), ${2:SoundBase}, ${3:VolumeMultiplier}, ${4:PitchMultiplier}, ${5:StartTime}, ${6:Concurrency}, ${7:bPersistentAcrossLevelTransition}, ${8:bAutoDestroy});",
+      "doc": "Spawn Sound 2D",
+      "label": "Unreal SpawnSound2D",
       "matches": {
-        "ubindaction": true
+        "uspawn_sound_2d": true
       }
     },
     {
-      "content": "UFUNCTION(Client, Unreliable)\nvoid ${1:FunctionName}(${2:FunctionParameters});",
-      "doc": "Setup Function run only on owning Client",
-      "label": "Unreal Client Function",
+      "content": "UGameplayStatics::PlaySound2D(GetWorld(), ${1:SoundBase}, ${2:VolumeMultiplier}, ${3:PitchMultiplier}, ${4:StartTime}, ${5:Concurrency}, ${6:Owner});",
+      "doc": "Play Sound 2D",
+      "label": "Unreal PlaySound2D",
       "matches": {
-        "ufunction_client": true
+        "uplay_sound_2d": true
       }
     },
     {
-      "content": "InputComponent->BindAxis(\"${1:InputAxis}\", this, &${2:Class::Function});",
-      "doc": "Bind an InputAxis",
-      "label": "Unreal InputAxis",
+      "content": "#pragma once\n\n#include \"CoreMinimal.h\"\n\n#include \"$2${TM_FILENAME_BASE:StructName}.generated.h\"\nUSTRUCT(BlueprintType)\nstruct F$1${TM_FILENAME_BASE:StructName}\n{\n\tGENERATED_BODY()\n\npublic:\n\tUPROPERTY(EditAnywhere, BlueprintReadWrite, Category=\"${3:MyCategory}\")\n\t${4:float test};\n};",
+      "doc": "Generate a Struct ready for Unreal Engine",
+      "label": "Unreal Struct with header",
       "matches": {
-        "ubindaxis": true
+        "uhstruct": true
       }
     },
     {
-      "content": "USTRUCT(BlueprintType)\nstruct ${1:FMyStruct} : public FTableRowBase\n{\n\tGENERATED_USTRUCT_BODY()\n\n\tUPROPERTY(EditAnywhere, BlueprintReadWrite, Category=${2:MyCategory})\n\t${3:float test};\n};",
-      "doc": "Generate a Struct ready for Unreal Engine DataTables",
-      "label": "Unreal DataTable Struct",
+      "content": "GetWorld()->SweepMultiByObjectType(${1:HitsArray}, ${2:Start}, ${3:End}, ${4:FQuat::Identity}, ${5:ObjectQueryParams}, FCollisionShape::${6:MakeSphere(Radius)}, ${7:TraceParams});",
+      "doc": "Trace a Shape against the world and return all blocking hits using Object Type.",
+      "label": "Unreal Sweep Multi Object",
       "matches": {
-        "ustruct_datatable": true
+        "usweep_multi_object": true
+      }
+    },
+    {
+      "content": "UFUNCTION(NetMulticast, Reliable, WithValidation)\nvoid ${1:FunctionName}(${2:FunctionParameters});",
+      "doc": "Setup Function called on all Clients",
+      "label": "Unreal Multicast Function",
+      "matches": {
+        "ufunction_multicast": true
       }
     },
     {
@@ -337,51 +131,45 @@
       }
     },
     {
-      "content": "TSubclassOf<class ${1:ClassName}> ${2:VarName};",
-      "doc": "Reference to Class (assign using \"AMyClass::StaticClass()\")",
-      "label": "Unreal Subclass",
+      "content": "UGameplayStatics::PlayDialogue2D(GetWorld(), ${1:DialogWave}, ${2:DialogContext}, ${3:VolumeMultiplier}, ${4:PitchMultiplier}, ${5:StartTime});",
+      "doc": "Play Dialog 2D",
+      "label": "Unreal PlayDialog2D",
       "matches": {
-        "usubclassof": true
+        "uplay_dialog_2d": true,
+        "uplay_dialogue_2d": true
       }
     },
     {
-      "content": "${1:TimerHandle}.Invalidate();",
-      "doc": "Invalidate a Timer Handle",
-      "label": "Unreal InvalidateTimer",
+      "content": "GetWorld()->SweepMultiByProfile(${1:HitsArray}, ${2:Start}, ${3:End}, ${4:FQuat::Identity}, \"${5:ProfileName}\", FCollisionShape::${6:MakeSphere(Radius)}, ${7:TraceParams});",
+      "doc": "Trace a Shape against the world and return all blocking hits using Collision Profile.",
+      "label": "Unreal Sweep Multi Profile",
       "matches": {
-        "utimer_invalidate": true
+        "usweep_multi_profile": true
       }
     },
     {
-      "content": "UCLASS()\nclass ${1:PROJECTNAME}_API ${2:ClassName} : public ${3:ParentClass}\n{\n\tGENERATED_BODY()\npublic:\n\t${2:ClassName}();\nprotected:\nprivate:\n};",
-      "doc": "Generate a Class ready for Unreal Engine",
-      "label": "Unreal Class",
+      "content": "UFUNCTION(Client, Unreliable)\nvoid ${1:FunctionName}(${2:FunctionParameters});",
+      "doc": "Setup Function run only on owning Client",
+      "label": "Unreal Client Function",
       "matches": {
-        "uclass": true
+        "ufunction_client": true
       }
     },
     {
-      "content": "GetWorld()->GetTimerManager().SetTimer(${1:TimerHandle}, this, &${2:Class::Function}, ${3:DelayTime}, ${4:bLoop});",
-      "doc": "Set a Timer/Delay",
-      "label": "Unreal SetTimer",
+      "content": "UAudioComponent* ${1:MyDialog} = UGameplayStatics::SpawnDialogueAtLocation(GetWorld(), ${2:DialogWave}, ${3:DialogContext}, ${4:Location}, ${5:Rotation}, ${6:VolumeMultiplier}, ${7:PitchMultiplier}, ${8:StartTime}, ${9:Attenuation}, ${10:bAutoDestroy});",
+      "doc": "Spawn Dialog At Location",
+      "label": "Unreal SpawnDialogLocation",
       "matches": {
-        "utimer_set": true
+        "uspawn_dialog_location": true,
+        "uspawn_dialogue_location": true
       }
     },
     {
-      "content": "${1:ObjectName} = CreateDefaultSubobject<${2:ObjectClass}>(TEXT(\"${1:ObjectName}\"));",
-      "doc": "Creates Subobject (component)",
-      "label": "Unreal DefaultSubobject",
+      "content": "UAudioComponent* ${1:MySound} = UGameplayStatics::SpawnSoundAttached(${2:SoundBase}, ${3:AttachToComponent}, ${4:AttachPointName}, ${5:Location}, ${6:Rotation}, EAttachLocation::${7|KeepRelativeOffset,KeepWorldPosition,SnapToTarget,SnapToTargetIncludingScale|}, ${8:bStopWhenAttachedToDestroyed}, ${9:VolumeMultipler}, ${10:PitchMultiplier}, ${11:StartTime}, ${12:Attenuation}, ${13:Concurrency}, ${14:bAutoDestroy});",
+      "doc": "Spawn Sound Attached",
+      "label": "Unreal SpawnSoundAttached",
       "matches": {
-        "ucreatedefaultsubobject": true
-      }
-    },
-    {
-      "content": "UE_LOG(LogTemp, ${1|Display,Warning,Error,Fatal|}, TEXT(\"${2:Your message}\"));",
-      "doc": "Write a message to the log",
-      "label": "Write to Log",
-      "matches": {
-        "ulog": true
+        "uspawn_sound_attached": true
       }
     },
     {
@@ -393,19 +181,19 @@
       }
     },
     {
-      "content": "UFUNCTION(NetMulticast, Reliable, WithValidation)\nvoid ${1:FunctionName}(${2:FunctionParameters});",
-      "doc": "Setup Function called on all Clients",
-      "label": "Unreal Multicast Function",
+      "content": "USTRUCT(BlueprintType)\nstruct ${1:FMyStruct} : public FTableRowBase\n{\n\tGENERATED_USTRUCT_BODY()\n\n\tUPROPERTY(EditAnywhere, BlueprintReadWrite, Category=${2:MyCategory})\n\t${3:float test};\n};",
+      "doc": "Generate a Struct ready for Unreal Engine DataTables",
+      "label": "Unreal DataTable Struct",
       "matches": {
-        "ufunction_multicast": true
+        "ustruct_datatable": true
       }
     },
     {
-      "content": "UWorld* World = GetWorld();\nif(World)\n{\n\t$1\n}",
-      "doc": "Get World (safe with if check)",
-      "label": "Unreal GetWorldSafe",
+      "content": "UGameplayStatics::PlaySoundAtLocation(GetWorld(), ${1:SoundBase}, ${2:Location}, ${3:Rotation}, ${4:VolumeMultiplier}, ${5:PitchMultiplier}, ${6:StartTime}, ${7:Attenuation}, ${8:Concurrency}, ${9:Owner});",
+      "doc": "Play Sound at Location",
+      "label": "Unreal PlaySoundLocation",
       "matches": {
-        "ugetworldsafe": true
+        "uplay_sound_location": true
       }
     },
     {
@@ -426,43 +214,45 @@
       }
     },
     {
-      "content": "#pragma once\n\n#include \"CoreMinimal.h\"\n#include \"$4${3:ParentClass}.h\"\n\n#include \"${TM_FILENAME_BASE:ClassName}.generated.h\"\n\nUCLASS()\nclass ${1:PROJECTNAME}_API $2${TM_FILENAME_BASE:ClassName} : public ${3:ParentClass}\n{\n\tGENERATED_BODY()\npublic:\n\t$2${TM_FILENAME_BASE:ClassName}();\n$5\nprotected:\nprivate:\n};",
-      "doc": "Generate a Class ready for Unreal Engine  (include headers details)",
-      "label": "Unreal Class with header",
+      "content": "${1:ObjectName} = CreateDefaultSubobject<${2:ObjectClass}>(TEXT(\"${1:ObjectName}\"));",
+      "doc": "Creates Subobject (component)",
+      "label": "Unreal DefaultSubobject",
       "matches": {
-        "uhclass": true
+        "ucreatedefaultsubobject": true
       }
     },
     {
-      "content": "GetWorld()->SweepMultiByProfile(${1:HitsArray}, ${2:Start}, ${3:End}, ${4:FQuat::Identity}, \"${5:ProfileName}\", FCollisionShape::${6:MakeSphere(Radius)}, ${7:TraceParams});",
-      "doc": "Trace a Shape against the world and return all blocking hits using Collision Profile.",
-      "label": "Unreal Sweep Multi Profile",
+      "content": "UGameplayStatics::PlayDialogueAtLocation(GetWorld(), ${1:DialogWave}, ${2:DialogContext}, ${3:Location}, ${4:Rotation}, ${5:VolumeMultiplier}, ${6:PitchMultiplier}, ${7:StartTime}, ${8:Attenuation});",
+      "doc": "Play Dialog at Location",
+      "label": "Unreal PlayDialogLocation",
       "matches": {
-        "usweep_multi_profile": true
+        "uplay_dialog_location": true,
+        "uplay_dialogue_location": true
       }
     },
     {
-      "content": "${1:GameModeClass}* ${2:gm} = GetWorld()->GetAuthGameMode<${1:GameModeClass}>();",
-      "doc": "Get Game Mode (only on server!)",
-      "label": "Unreal GetGamemode",
+      "content": "GetWorld()->OverlapMultiByProfile(${1:OverlapsArray}, ${2:Location}, ${3:FQuat::Identity}, \"${4:ProfileName}\", FCollisionShape::${5:MakeSphere(Radius)}, ${6:TraceParams});",
+      "doc": "Trace shape against world and return all overlapping actors using Collision Channel",
+      "label": "Unreal Overlap Multi Profile",
       "matches": {
-        "ugetgamemode": true
+        "uoverlap_multi_profile": true
       }
     },
     {
-      "content": "UAudioComponent* ${1:MySound} = UGameplayStatics::SpawnSound2D(GetWorld(), ${2:SoundBase}, ${3:VolumeMultiplier}, ${4:PitchMultiplier}, ${5:StartTime}, ${6:Concurrency}, ${7:bPersistentAcrossLevelTransition}, ${8:bAutoDestroy});",
-      "doc": "Spawn Sound 2D",
-      "label": "Unreal SpawnSound2D",
+      "content": "UParticleSystemComponent* ${1:MyParticles} = UGameplayStatics::SpawnEmitterAttached(${2:ParticleSystem}, ${3:AttachToComponent}, ${4:AttachPointName}, ${5:Location}, ${6:Rotation}, ${7:Scale}, EAttachLocation::${8|KeepRelativeOffset,KeepWorldPosition,SnapToTarget,SnapToTargetIncludingScale|}, ${9:bAutoDestroy});",
+      "doc": "Spawn Emitter Attached",
+      "label": "Unreal SpawnEmitterAttached",
       "matches": {
-        "uspawn_sound_2d": true
+        "uspawn_emitter_attached": true,
+        "uspawn_particles_attached": true
       }
     },
     {
-      "content": "UPROPERTY(${1|AdvancedDisplay,AssetRegistrySearchable,BlueprintAssignable,BlueprintAuthorityOnly,BlueprintCallable,BlueprintGetter=GetterFunctionName,BlueprintReadOnly,BlueprintReadWrite,BlueprintSetter=SetterFunctionName,Category=\"MyCategory\",Config,DuplicateTransient,EditAnywhere,EditDefaultsOnly,EditFixedSize,EditInline,EditInstanceOnly,Export,GlobalConfig,Instanced,Interp,Localized,Native,NoClear,NoExport,NonPIEDuplicateTransient,NonTransactional,NotReplicated,Replicated,ReplicatedUsing=FunctionName,RepRetry,SaveGame,SerializeText,SkipSerialization,SimpleDisplay,TextExportTransient,Transient,VisibleAnywhere,VisibleDefaultsOnly,VisibleInstanceOnly|})",
-      "doc": "UPROPERTY macro for Unreal Engine",
-      "label": "Unreal Property",
+      "content": "UWorld* World = GetWorld();\nif(World)\n{\n\t$1\n}",
+      "doc": "Get World (safe with if check)",
+      "label": "Unreal GetWorldSafe",
       "matches": {
-        "uproperty": true
+        "ugetworldsafe": true
       }
     },
     {
@@ -474,6 +264,63 @@
       }
     },
     {
+      "content": "UParticleSystemComponent* ${1:MyParticles} = UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), ${2:ParticleSystem}, ${3:Location}, ${4:Rotation}, ${5:Scale}, ${6:bAutoDestroy});",
+      "doc": "Spawn Particle System at Location",
+      "label": "Unreal SpawnEmitterLocation",
+      "matches": {
+        "uspawn_emitter_location": true,
+        "uspawn_particles_location": true
+      }
+    },
+    {
+      "content": "UDecalComponent* ${1:MyDecal} = UGameplayStatics::SpawnDecalAttached(GetWorld(), ${2:DecalMaterialInterface}, ${3:Size}, ${4:AttachToComponent}, ${5:AttachPointName}, ${6:Location}, ${7:Rotation}, EAttachLocation::${8|KeepRelativeOffset,KeepWorldPosition,SnapToTarget,SnapToTargetIncludingScale|}, ${9:lifeSpan});",
+      "doc": "Spawn Decal at Location",
+      "label": "Unreal SpawnDecalAttached",
+      "matches": {
+        "uspawn_decal_attached": true
+      }
+    },
+    {
+      "content": "UDecalComponent* ${1:MyDecal} = UGameplayStatics::SpawnDecalAtLocation(GetWorld(), ${2:DecalMaterialInterface}, ${3:Size}, ${4:Location}, ${5:Rotation}, ${6:lifeSpan});",
+      "doc": "Spawn Decal at Location",
+      "label": "Unreal SpawnDecalLocation",
+      "matches": {
+        "uspawn_decal_location": true
+      }
+    },
+    {
+      "content": "#pragma once\n\n#include \"CoreMinimal.h\"\n#include \"$4${3:ParentClass}.h\"\n\n#include \"${TM_FILENAME_BASE:ClassName}.generated.h\"\n\nUCLASS()\nclass ${1:PROJECTNAME}_API $2${TM_FILENAME_BASE:ClassName} : public ${3:ParentClass}\n{\n\tGENERATED_BODY()\npublic:\n\t$2${TM_FILENAME_BASE:ClassName}();\n$5\nprotected:\nprivate:\n};",
+      "doc": "Generate a Class ready for Unreal Engine  (include headers details)",
+      "label": "Unreal Class with header",
+      "matches": {
+        "uhclass": true
+      }
+    },
+    {
+      "content": "GEngine->AddOnScreenDebugMessage(0, ${1:0.f}, FColor::${2|Red,Green,Blue,Cyan,Magenta,Yellow,Purple,Orange|}, FString::Printf(TEXT(\"${3:TEXT}\")));",
+      "doc": "Print a string to screen ingame (duration, color, text)",
+      "label": "Unreal Print String",
+      "matches": {
+        "uprintstring": true
+      }
+    },
+    {
+      "content": "InputComponent->BindAxis(\"${1:InputAxis}\", this, &${2:Class::Function});",
+      "doc": "Bind an InputAxis",
+      "label": "Unreal InputAxis",
+      "matches": {
+        "ubindaxis": true
+      }
+    },
+    {
+      "content": "TSubclassOf<class ${1:ClassName}> ${2:VarName};",
+      "doc": "Reference to Class (assign using \"AMyClass::StaticClass()\")",
+      "label": "Unreal Subclass",
+      "matches": {
+        "usubclassof": true
+      }
+    },
+    {
       "content": "GetWorld()->LineTraceSingleByChannel(${1:Hit}, ${2:Start}, ${3:End}, ${4|ECC_Visibility,ECC_Camera,ECC_GameTraceChannel1|}, ${5:TraceParams});",
       "doc": "Single Line Trace by Channel",
       "label": "Unreal Linetrace Single Channel",
@@ -482,11 +329,19 @@
       }
     },
     {
-      "content": "UAudioComponent* ${1:MySound} = UGameplayStatics::SpawnSoundAtLocation(GetWorld(), ${2:SoundBase}, ${3:Location}, ${4:Rotation}, ${5:VolumeMultiplier}, ${6:PitchMultiplier}, ${7:StartTime}, ${8:Attenuation}, ${9:Concurrency}, ${10:bAutoDestroy});",
-      "doc": "Spawn Sound At Location",
-      "label": "Unreal SpawnSoundLocation",
+      "content": "GetWorld()->SweepSingleByObjectType(${1:Hit}, ${2:Start}, ${3:End}, ${4:FQuat::Identity}, ${5:ObjectQueryParams}, FCollisionShape::${6:MakeSphere(Radius)}, ${7:TraceParams});",
+      "doc": "Trace a Shape against the world and return first blocking hit using Object Type.",
+      "label": "Unreal Sweep Single Object",
       "matches": {
-        "uspawn_sound_location": true
+        "usweep_single_object": true
+      }
+    },
+    {
+      "content": "GetWorld()->GetTimerManager().SetTimer(${1:TimerHandle}, this, &${2:Class::Function}, ${3:DelayTime}, ${4:bLoop});",
+      "doc": "Set a Timer/Delay",
+      "label": "Unreal SetTimer",
+      "matches": {
+        "utimer_set": true
       }
     },
     {
@@ -498,6 +353,14 @@
       }
     },
     {
+      "content": "GetWorld()->LineTraceSingleByObjectType(${1:Hit}, ${2:Start}, ${3:End}, ${4:ObjectQueryParams}, ${5:TraceParams});",
+      "doc": "Single Line Trace by Object Type",
+      "label": "Unreal Linetrace Single Object",
+      "matches": {
+        "ulinetrace_single_object": true
+      }
+    },
+    {
       "content": "${1:AClass}* ${2:ActorName} = GetWorld()->SpawnActorDeferred<${1:AClass}>(${3:UClass}, ${4:ActorTransform}, ${5:Owner}, ${6:Instigator}, ESpawnActorCollisionHandlingMethod::${7|AlwaysSpawn,AdjustIfPossibleButAlwaysSpawn,AdjustIfPossibleButDontSpawnIfColliding,DontSpawnIfColliding|});\n${8:/* INITIALIZATION */}\nUGameplayStatics::FinishSpawningActor(${2:ActorName}, ${4:ActorTransform});",
       "doc": "Spawn Actor Deferred",
       "label": "Unreal SpawnActorDeferred",
@@ -506,11 +369,148 @@
       }
     },
     {
+      "content": "${1:TimerHandle}.Invalidate();",
+      "doc": "Invalidate a Timer Handle",
+      "label": "Unreal InvalidateTimer",
+      "matches": {
+        "utimer_invalidate": true
+      }
+    },
+    {
+      "content": "${1:AMyClass}* ${2:MyCastActor} = Cast<${1:AMyClass}>(${3:MyActor});",
+      "doc": "Cast from-to any UObject",
+      "label": "Unreal Cast",
+      "matches": {
+        "ucast": true
+      }
+    },
+    {
+      "content": "GetWorld()->LineTraceSingleByProfile(${1:Hit}, ${2:Start}, ${3:End}, \"${4:ProfileName}\", ${5:TraceParams});",
+      "doc": "Single Line Trace by Profile",
+      "label": "Unreal Linetrace Single Profile",
+      "matches": {
+        "ulinetrace_single_profile": true
+      }
+    },
+    {
+      "content": "#pragma once\n\n#include \"CoreMinimal.h\"\n\n#include \"${TM_FILENAME_BASE:ClassName}.generated.h\"\n\nUINTERFACE()\nclass ${1:PROJECTNAME}_API U$2${TM_FILENAME_BASE:ClassName} : public UInterface\n{\n\tGENERATED_BODY()\n};\n\nclass ${1:PROJECTNAME}_API I$2${TM_FILENAME_BASE:ClassName}\n{\n\tGENERATED_BODY()\npublic:\n$3\n};",
+      "doc": "Generate an Interface ready for Unreal Engine (include headers details)",
+      "label": "Unreal Interface with header",
+      "matches": {
+        "uhinterface": true
+      }
+    },
+    {
+      "content": "GetWorld()->GetTimerManager().ClearTimer(${1:TimerHandle});",
+      "doc": "Clear a TimerHandle",
+      "label": "Unreal ClearTimer",
+      "matches": {
+        "utimer_clear": true
+      }
+    },
+    {
+      "content": "UFUNCTION(Server, Reliable, WithValidation)\nvoid ${1:FunctionName}(${2:FunctionParameters});",
+      "doc": "Setup Function run only on Server",
+      "label": "Unreal Server Function",
+      "matches": {
+        "ufunction_server": true
+      }
+    },
+    {
+      "content": "GetWorld()->LineTraceMultiByChannel(${1:HitsArray}, ${2:Start}, ${3:End}, ${4|ECC_Visibility,ECC_Camera,ECC_GameTraceChannel1|}, ${5:TraceParams});",
+      "doc": "Multi Line Trace by Channel",
+      "label": "Unreal Linetrace Multi Channel",
+      "matches": {
+        "ulinetrace_multi_channel": true
+      }
+    },
+    {
+      "content": "UCLASS()\nclass ${1:PROJECTNAME}_API ${2:ClassName} : public ${3:ParentClass}\n{\n\tGENERATED_BODY()\npublic:\n\t${2:ClassName}();\nprotected:\nprivate:\n};",
+      "doc": "Generate a Class ready for Unreal Engine",
+      "label": "Unreal Class",
+      "matches": {
+        "uclass": true
+      }
+    },
+    {
+      "content": "void ${1:ClassName}::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const\n{\n\tSuper::GetLifetimeReplicatedProps(OutLifetimeProps);\n\t//DON'T FORGET TO #include \"Net/UnrealNetwork.h\"\n\tDOREPLIFETIME(${1:ClassName}, ${2:ClassProperty});\n}",
+      "doc": "Creates the Function in which you setup replicated properties",
+      "label": "Unreal GetLifeTimeReplicates",
+      "matches": {
+        "ugetlifetimereplicatedprops": true,
+        "usetupreplicatedproperties": true
+      }
+    },
+    {
+      "content": "UE_LOG(LogTemp, ${1|Display,Warning,Error,Fatal|}, TEXT(\"${2:Your message}\"));",
+      "doc": "Write a message to the log",
+      "label": "Write to Log",
+      "matches": {
+        "ulog": true
+      }
+    },
+    {
+      "content": "GetWorld()->LineTraceMultiByObjectType(${1:HitsArray}, ${2:Start}, ${3:End}, ${4:ObjectQueryParams}, ${5:TraceParams});",
+      "doc": "Single Line Trace by Object Type",
+      "label": "Unreal Linetrace Multi Object",
+      "matches": {
+        "ulinetrace_multi_object": true
+      }
+    },
+    {
+      "content": "${1:GameModeClass}* ${2:gm} = GetWorld()->GetAuthGameMode<${1:GameModeClass}>();",
+      "doc": "Get Game Mode (only on server!)",
+      "label": "Unreal GetGamemode",
+      "matches": {
+        "ugetgamemode": true
+      }
+    },
+    {
+      "content": "InputComponent->BindAction(\"${1:Button}\", IE_${2|Pressed,Released,Repeat,DoubleClick,Axis|}, this, &${3:Class::Function});",
+      "doc": "Bind an InputAction",
+      "label": "Unreal InputAction",
+      "matches": {
+        "ubindaction": true
+      }
+    },
+    {
+      "content": "GetWorld()->LineTraceMultiByProfile(${1:HitsArray}, ${2:Start}, ${3:End}, \"${4:ProfileName}\", ${5:TraceParams});",
+      "doc": "Single Line Trace by Profile",
+      "label": "Unreal Linetrace Multi Profile",
+      "matches": {
+        "ulinetrace_multi_profile": true
+      }
+    },
+    {
       "content": "UE_LOG(LogTemp, ${1|Display,Warning,Error,Fatal|}, TEXT(\"$2%s\"), ANSI_TO_TCHAR(__FUNCTION__));",
       "doc": "Write a message to the log",
       "label": "Write to Log (with fn helper)",
       "matches": {
         "ulogfn": true
+      }
+    },
+    {
+      "content": "UFUNCTION($1)",
+      "doc": "UFUNCTION macro for Unreal Engine",
+      "label": "Unreal Function",
+      "matches": {
+        "ufunction": true
+      }
+    },
+    {
+      "content": "GetWorld()->SweepSingleByChannel(${1:Hit}, ${2:Start}, ${3:End}, ${4:FQuat::Identity}, ${5|ECC_Visibility,ECC_Camera,ECC_GameTraceChannel1|}, FCollisionShape::${6:MakeSphere(Radius)}, ${7:TraceParams});",
+      "doc": "Trace a Shape against the world and return first blocking hit using Collision Channel.",
+      "label": "Unreal Sweep Single Channel",
+      "matches": {
+        "usweep_single_channel": true
+      }
+    },
+    {
+      "content": "UENUM(BlueprintType)\nenum class ${1:EName} : ${2:uint8}\n{\n\t${3:N_Name1} UMETA(DisplayName=\"${4:DisplayName}\")\n};",
+      "doc": "Generate an Enum ready for Unreal Engine",
+      "label": "Unreal Enum",
+      "matches": {
+        "uenum": true
       }
     }
   ]

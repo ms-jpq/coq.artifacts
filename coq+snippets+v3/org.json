@@ -2,83 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "#+TITLE:     ${1:Untitled Document}\n#+AUTHOR:    ${2:Author}\n#+DATE:      ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
-      "doc": "org-file header",
-      "label": "header",
+      "content": "#+BEGIN_EXPORT latex\n$0\n#+END_EXPORT",
+      "doc": "#+BEGIN_EXPORT latex block",
+      "label": "export latex",
       "matches": {
-        "head": true
-      }
-    },
-    {
-      "content": "#+BEGIN_VERSE\n$0\n#+END_VERSE",
-      "doc": "verse",
-      "label": "verse",
-      "matches": {
-        "<v": true
-      }
-    },
-    {
-      "content": "#+BEGIN_EXPORT ascii\n$0\n#+END_EXPORT",
-      "doc": "#+BEGIN_EXPORT ascii",
-      "label": "export ascii",
-      "matches": {
-        "<a": true
-      }
-    },
-    {
-      "content": "#+BEGIN_EXPORT html\n$0\n#+END_EXPORT",
-      "doc": "#+BEGIN_EXPORT html block",
-      "label": "export html",
-      "matches": {
-        "<h": true
-      }
-    },
-    {
-      "content": "#+ATTR_HTML: :width ${1:500px}",
-      "doc": "#+attr_html: :width ...",
-      "label": "html width",
-      "matches": {
-        "#+ATTR_HTML: :width ${1:500px}": true
-      }
-    },
-    {
-      "content": "#+BEGIN_EXPORT ${1:type}\n$0\n#+END_EXPORT",
-      "doc": "export",
-      "label": "export",
-      "matches": {
-        "export": true
-      }
-    },
-    {
-      "content": "#+BEGIN_${1:LANG} ${2:options}\n$0\n#+END_$1",
-      "doc": "code",
-      "label": "code",
-      "matches": {
-        "code": true
-      }
-    },
-    {
-      "content": "TODO ${1:task description}",
-      "doc": "TODO item",
-      "label": "todo",
-      "matches": {
-        "todo": true
-      }
-    },
-    {
-      "content": "#+BEGIN_SRC dot :file ${1:file} :cmdline -T${2:pdf} :exports none :results silent\n$0\n#+END_SRC\n\n[[file:$1]]",
-      "doc": "dot",
-      "label": "dot",
-      "matches": {
-        "dot": true
-      }
-    },
-    {
-      "content": "#+STARTUP: showall indent\n#+STARTUP: hidestars\n#+BEGIN_HTML\n---\nlayout: default\ntitle: ${1:title}\nexcerpt: ${2:excerpt}\n---\n$0",
-      "doc": "blog",
-      "label": "blog",
-      "matches": {
-        "blog": true
+        "<l": true
       }
     },
     {
@@ -90,35 +18,35 @@
       }
     },
     {
-      "content": "#+BEGIN_SRC emacs-lisp :tangle yes\n$0\n#+END_SRC",
-      "doc": "elisp",
-      "label": "elisp",
+      "content": "TODO ${1:task description}",
+      "doc": "TODO item",
+      "label": "todo",
       "matches": {
-        "elisp": true
+        "todo": true
       }
     },
     {
-      "content": "#+BEGIN_EXAMPLE\n$0\n#+END_EXAMPLE",
-      "doc": "#+BEGIN_EXAMPLE block",
-      "label": "example block",
+      "content": "#+STARTUP: showall indent\n#+STARTUP: hidestars\n#+BEGIN_HTML\n---\nlayout: default\ntitle: ${1:title}\nexcerpt: ${2:excerpt}\n---\n$0",
+      "doc": "blog",
+      "label": "blog",
       "matches": {
-        "<e": true
+        "blog": true
       }
     },
     {
-      "content": "#+BEGIN_EXPORT latex\n$0\n#+END_EXPORT",
-      "doc": "#+BEGIN_EXPORT latex block",
-      "label": "export latex",
+      "content": "#+ATTR_HTML: :width ${1:500px}",
+      "doc": "#+attr_html: :width ...",
+      "label": "html width",
       "matches": {
-        "<l": true
+        "#+ATTR_HTML: :width ${1:500px}": true
       }
     },
     {
-      "content": "#+CAPTION: ${1:caption}\n#+ATTR_LATEX: ${2:scale=0.75}\n#+LABEL: fig:${3:label}",
-      "doc": "figure",
-      "label": "figure",
+      "content": "#+BEGIN_COMMENT\n$0\n#+END_COMMENT",
+      "doc": "#+BEGIN_COMMENT block",
+      "label": "comment block",
       "matches": {
-        "fig": true
+        "<c": true
       }
     },
     {
@@ -138,6 +66,78 @@
       }
     },
     {
+      "content": "#+BEGIN_${1:LANG} ${2:options}\n$0\n#+END_$1",
+      "doc": "code",
+      "label": "code",
+      "matches": {
+        "code": true
+      }
+    },
+    {
+      "content": "#+BEGIN_SRC emacs-lisp :tangle yes\n$0\n#+END_SRC",
+      "doc": "elisp",
+      "label": "elisp",
+      "matches": {
+        "elisp": true
+      }
+    },
+    {
+      "content": "#+BEGIN_VERSE\n$0\n#+END_VERSE",
+      "doc": "verse",
+      "label": "verse",
+      "matches": {
+        "<v": true
+      }
+    },
+    {
+      "content": "#+TITLE:     ${1:Untitled Document}\n#+AUTHOR:    ${2:Author}\n#+DATE:      ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
+      "doc": "org-file header",
+      "label": "header",
+      "matches": {
+        "head": true
+      }
+    },
+    {
+      "content": "#+BEGIN_SRC dot :file ${1:file} :cmdline -T${2:pdf} :exports none :results silent\n$0\n#+END_SRC\n\n[[file:$1]]",
+      "doc": "dot",
+      "label": "dot",
+      "matches": {
+        "dot": true
+      }
+    },
+    {
+      "content": "#+CAPTION: ${1:caption}\n#+ATTR_LATEX: ${2:scale=0.75}\n#+LABEL: fig:${3:label}",
+      "doc": "figure",
+      "label": "figure",
+      "matches": {
+        "fig": true
+      }
+    },
+    {
+      "content": "#+BEGIN_EXAMPLE\n$0\n#+END_EXAMPLE",
+      "doc": "#+BEGIN_EXAMPLE block",
+      "label": "example block",
+      "matches": {
+        "<e": true
+      }
+    },
+    {
+      "content": "#+BEGIN_EXPORT ${1:type}\n$0\n#+END_EXPORT",
+      "doc": "export",
+      "label": "export",
+      "matches": {
+        "export": true
+      }
+    },
+    {
+      "content": "#+BEGIN_EXPORT html\n$0\n#+END_EXPORT",
+      "doc": "#+BEGIN_EXPORT html block",
+      "label": "export html",
+      "matches": {
+        "<h": true
+      }
+    },
+    {
       "content": "#+BEGIN_QUOTE\n$0\n#+END_QUOTE",
       "doc": "#+BEGIN_QUOTE block",
       "label": "quote block",
@@ -154,11 +154,11 @@
       }
     },
     {
-      "content": "#+BEGIN_COMMENT\n$0\n#+END_COMMENT",
-      "doc": "#+BEGIN_COMMENT block",
-      "label": "comment block",
+      "content": "#+BEGIN_EXPORT ascii\n$0\n#+END_EXPORT",
+      "doc": "#+BEGIN_EXPORT ascii",
+      "label": "export ascii",
       "matches": {
-        "<c": true
+        "<a": true
       }
     },
     {

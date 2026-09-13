@@ -2,35 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "option \"${1:name}\" \"${2:value}\"\n$0",
-      "doc": "Add option.",
-      "label": "option",
+      "content": "${1:$CURRENT_YEAR}-${2:$CURRENT_MONTH}-${3:$CURRENT_DATE} pad ${4:AccountTo} ${5:AccountFrom}\n$0",
+      "doc": "Pad balance between two accounts.",
+      "label": "pad",
       "matches": {
-        "option": true
-      }
-    },
-    {
-      "content": "${1:$CURRENT_YEAR}-${2:$CURRENT_MONTH}-${3:$CURRENT_DATE} event \"${4:Key}\" \"${5:Value}\"\n$0",
-      "doc": "Add a dated event/variable to track.",
-      "label": "event",
-      "matches": {
-        "event": true
-      }
-    },
-    {
-      "content": "${1:$CURRENT_YEAR}-${2:$CURRENT_MONTH}-${3:$CURRENT_DATE} commodity ${4:ISO/Ticker}\n  name: \"${5:FullName}\"\n  asset-class: \"${6|cash,stock|}\"\n$0",
-      "doc": "Add a commodity metadata (optional).",
-      "label": "commoditiy directive",
-      "matches": {
-        "commodity": true
-      }
-    },
-    {
-      "content": "plugin \"${4:PluginName}\" \"${5:ConfigString}\"\n$0",
-      "doc": "Load a plugin.",
-      "label": "plugin",
-      "matches": {
-        "plugin": true
+        "pad": true
       }
     },
     {
@@ -90,19 +66,19 @@
       }
     },
     {
+      "content": "plugin \"${4:PluginName}\" \"${5:ConfigString}\"\n$0",
+      "doc": "Load a plugin.",
+      "label": "plugin",
+      "matches": {
+        "plugin": true
+      }
+    },
+    {
       "content": "${1:$CURRENT_YEAR}-${2:$CURRENT_MONTH}-${3:$CURRENT_DATE} query \"${4:Name}\" \"${5:SQLContents}\"\n$0",
       "doc": "Insert query into the stream of transactions.",
       "label": "query",
       "matches": {
         "query": true
-      }
-    },
-    {
-      "content": "${1:$CURRENT_YEAR}-${2:$CURRENT_MONTH}-${3:$CURRENT_DATE} pad ${4:AccountTo} ${5:AccountFrom}\n$0",
-      "doc": "Pad balance between two accounts.",
-      "label": "pad",
-      "matches": {
-        "pad": true
       }
     },
     {
@@ -122,19 +98,35 @@
       }
     },
     {
-      "content": "${1:$CURRENT_YEAR}-${2:$CURRENT_MONTH}-${3:$CURRENT_DATE} close ${4|Assets:,Liabilities:,Equity:,Income:,Expenses:|}\n$0",
-      "doc": "Close an account.",
-      "label": "close directive",
-      "matches": {
-        "close": true
-      }
-    },
-    {
       "content": "${1:$CURRENT_YEAR}-${2:$CURRENT_MONTH}-${3:$CURRENT_DATE} price ${4:Commodity} ${5:Price}\n$0",
       "doc": "Add a dated price between commodities (for unrealized gains).",
       "label": "price",
       "matches": {
         "price": true
+      }
+    },
+    {
+      "content": "include \"${4:Filename}\"\n$0",
+      "doc": "Include a beancount file.",
+      "label": "include",
+      "matches": {
+        "include": true
+      }
+    },
+    {
+      "content": "option \"${1:name}\" \"${2:value}\"\n$0",
+      "doc": "Add option.",
+      "label": "option",
+      "matches": {
+        "option": true
+      }
+    },
+    {
+      "content": "${1:$CURRENT_YEAR}-${2:$CURRENT_MONTH}-${3:$CURRENT_DATE} close ${4|Assets:,Liabilities:,Equity:,Income:,Expenses:|}\n$0",
+      "doc": "Close an account.",
+      "label": "close directive",
+      "matches": {
+        "close": true
       }
     },
     {
@@ -146,11 +138,19 @@
       }
     },
     {
-      "content": "include \"${4:Filename}\"\n$0",
-      "doc": "Include a beancount file.",
-      "label": "include",
+      "content": "${1:$CURRENT_YEAR}-${2:$CURRENT_MONTH}-${3:$CURRENT_DATE} event \"${4:Key}\" \"${5:Value}\"\n$0",
+      "doc": "Add a dated event/variable to track.",
+      "label": "event",
       "matches": {
-        "include": true
+        "event": true
+      }
+    },
+    {
+      "content": "${1:$CURRENT_YEAR}-${2:$CURRENT_MONTH}-${3:$CURRENT_DATE} commodity ${4:ISO/Ticker}\n  name: \"${5:FullName}\"\n  asset-class: \"${6|cash,stock|}\"\n$0",
+      "doc": "Add a commodity metadata (optional).",
+      "label": "commoditiy directive",
+      "matches": {
+        "commodity": true
       }
     },
     {

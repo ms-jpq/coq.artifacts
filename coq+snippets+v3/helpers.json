@@ -66,14 +66,6 @@
       }
     },
     {
-      "content": "{{ asset('$1') }}",
-      "doc": "URL-asset",
-      "label": "URL-asset",
-      "matches": {
-        "lv:asset": true
-      }
-    },
-    {
       "content": "{{ route('${1:routeName}', [${2:'id'=>1}]) }}",
       "doc": "URL-route",
       "label": "URL-route",
@@ -87,6 +79,14 @@
       "label": "String-trans",
       "matches": {
         "lv:trans": true
+      }
+    },
+    {
+      "content": "{{ asset('$1') }}",
+      "doc": "URL-asset",
+      "label": "URL-asset",
+      "matches": {
+        "lv:asset": true
       }
     }
   ]

@@ -7,6 +7,14 @@
   ],
   "snippets": [
     {
+      "content": "`${1}` $0",
+      "doc": "Insert code",
+      "label": "Insert code",
+      "matches": {
+        "code": true
+      }
+    },
+    {
       "content": "```${1:language}\n$0\n```",
       "doc": "Insert fenced code block",
       "label": "Insert code block",
@@ -15,11 +23,19 @@
       }
     },
     {
-      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} | ${4:Column4} | ${5:Column5} |\n| --------------- | --------------- | --------------- | --------------- | --------------- |\n| ${6:Item1.1} | ${7:Item2.1} | ${8:Item3.1} | ${9:Item4.1} | ${10:Item5.1} |\n| ${11:Item1.2} | ${12:Item2.2} | ${13:Item3.2} | ${14:Item4.2} | ${15:Item5.2} |\n| ${16:Item1.3} | ${17:Item2.3} | ${18:Item3.3} | ${19:Item4.3} | ${20:Item5.3} |\n| ${21:Item1.4} | ${22:Item2.4} | ${23:Item3.4} | ${24:Item4.4} | ${25:Item5.4} |\n${0}",
-      "doc": "Insert table with 5 rows and 5 columns. First row is heading.",
-      "label": "Insert 5x5 table",
+      "content": "| ${1:Column1} | ${2:Column2} |\n| -------------- | --------------- |\n| ${3:Item1.1} | ${4:Item2.1} |\n| ${5:Item1.2} | ${6:Item2.2} |\n${0}",
+      "doc": "Insert table with 3 rows and 2 columns. First row is heading.",
+      "label": "Insert 3x2 table",
       "matches": {
-        "5x5table": true
+        "3x2table": true
+      }
+    },
+    {
+      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} | ${4:Column4} | ${5:Column5} |\n| --------------- | --------------- | --------------- | --------------- | --------------- |\n| ${6:Item1.1} | ${7:Item2.1} | ${8:Item3.1} | ${9:Item4.1} | ${10:Item5.1} |\n| ${11:Item1.2} | ${12:Item2.2} | ${13:Item3.2} | ${14:Item4.2} | ${15:Item5.2} |\n${0}",
+      "doc": "Insert table with 3 rows and 5 columns. First row is heading.",
+      "label": "Insert 3x5 table",
+      "matches": {
+        "3x5table": true
       }
     },
     {
@@ -31,44 +47,19 @@
       }
     },
     {
-      "content": "${1}<sub>${0}",
-      "doc": "Create a subscript.",
-      "label": "Insert subscript",
-      "matches": {
-        "sub": true
-      }
-    },
-    {
-      "content": "| ${1:Column1}   | ${2:Column2}    |\n|--------------- | --------------- |\n| ${3:Item1.1}   | ${4:Item2.1}   |\n| ${5:Item1.2}   | ${6:Item2.2}   |\n| ${7:Item1.3}   | ${8:Item2.3}   |\n| ${9:Item1.4}   | ${10:Item2.4}   |\n${0}",
-      "doc": "Insert table with 5 rows and 2 columns. First row is heading.",
-      "label": "Insert 5x2 table",
-      "matches": {
-        "5x2table": true
-      }
-    },
-    {
-      "content": "1. ${1:first}\n2. ${2:second}\n3. ${3:third}\n$0",
-      "doc": "Insert ordered list",
-      "label": "Insert ordered list",
-      "matches": {
-        "ordered list": true
-      }
-    },
-    {
-      "content": "> [!NOTE]\n>",
-      "doc": "Insert Note",
-      "label": "Insert Note",
-      "matches": {
-        "n": true,
-        "note": true
-      }
-    },
-    {
       "content": "----------",
       "doc": "Insert horizontal rule",
       "label": "Insert horizontal rule",
       "matches": {
         "horizontal rule": true
+      }
+    },
+    {
+      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} | ${4:Column4} |\n| --------------- | --------------- | --------------- | --------------- |\n| ${5:Item1.1} | ${6:Item2.1} | ${7:Item3.1} | ${8:Item4.1} |\n| ${9:Item1.2} | ${10:Item2.2} | ${11:Item3.2} | ${12:Item4.2} |\n| ${13:Item1.3} | ${14:Item2.3} | ${15:Item3.3} | ${16:Item4.3} |\n| ${17:Item1.4} | ${18:Item2.4} | ${19:Item3.4} | ${20:Item4.4} |\n${0}",
+      "doc": "Insert table with 5 rows and 4 columns. First row is heading.",
+      "label": "Insert 5x4 table",
+      "matches": {
+        "5x4table": true
       }
     },
     {
@@ -80,11 +71,27 @@
       }
     },
     {
-      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} |\n| --------------- | --------------- | --------------- |\n| ${4:Item1.1} | ${5:Item2.1} | ${6:Item3.1} |\n${0}",
-      "doc": "Insert table with 2 rows and 3 columns. First row is heading.",
-      "label": "Insert 2x3 table",
+      "content": "| ${1:Column1}   | ${2:Column2}    |\n|--------------- | --------------- |\n| ${3:Item1.1}   | ${4:Item2.1}   |\n| ${5:Item1.2}   | ${6:Item2.2}   |\n| ${7:Item1.3}   | ${8:Item2.3}   |\n| ${9:Item1.4}   | ${10:Item2.4}   |\n${0}",
+      "doc": "Insert table with 5 rows and 2 columns. First row is heading.",
+      "label": "Insert 5x2 table",
       "matches": {
-        "2x3table": true
+        "5x2table": true
+      }
+    },
+    {
+      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} | ${4:Column4} | ${5:Column5} |\n| --------------- | --------------- | --------------- | --------------- | --------------- |\n| ${6:Item1.1} | ${7:Item2.1} | ${8:Item3.1} | ${9:Item4.1} | ${10:Item5.1} |\n| ${11:Item1.2} | ${12:Item2.2} | ${13:Item3.2} | ${14:Item4.2} | ${15:Item5.2} |\n| ${16:Item1.3} | ${17:Item2.3} | ${18:Item3.3} | ${19:Item4.3} | ${20:Item5.3} |\n| ${21:Item1.4} | ${22:Item2.4} | ${23:Item3.4} | ${24:Item4.4} | ${25:Item5.4} |\n${0}",
+      "doc": "Insert table with 5 rows and 5 columns. First row is heading.",
+      "label": "Insert 5x5 table",
+      "matches": {
+        "5x5table": true
+      }
+    },
+    {
+      "content": "- [${1| ,x|}] ${2:text}\n${0}",
+      "doc": "Create list of todos",
+      "label": "Create list of todos",
+      "matches": {
+        "todo": true
       }
     },
     {
@@ -105,11 +112,35 @@
       }
     },
     {
-      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} |\n| --------------- | --------------- | --------------- |\n| ${4:Item1.1} | ${5:Item2.1} | ${6:Item3.1} |\n| ${7:Item1.2} | ${8:Item2.2} | ${9:Item3.2} |\n${0}",
-      "doc": "Insert table with 3 rows and 3 columns. First row is heading.",
-      "label": "Insert 3x3 table",
+      "content": "${1}<sub>${0}",
+      "doc": "Create a subscript.",
+      "label": "Insert subscript",
       "matches": {
-        "3x3table": true
+        "sub": true
+      }
+    },
+    {
+      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} | ${4:Column4} | ${5:Column5} |\n| --------------- | --------------- | --------------- | --------------- | --------------- |\n| ${6:Item1.1} | ${7:Item2.1} | ${8:Item3.1} | ${9:Item4.1} | ${10:Item5.1} |\n${0}",
+      "doc": "Insert table with 2 rows and 5 columns. First row is heading.",
+      "label": "Insert 2x5 table",
+      "matches": {
+        "2x5table": true
+      }
+    },
+    {
+      "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n${0}",
+      "doc": "Create list of 2 todos",
+      "label": "Create list of 2 todos",
+      "matches": {
+        "todo2": true
+      }
+    },
+    {
+      "content": "${1}<sup>${0}",
+      "doc": "Create a superscript.",
+      "label": "Insert superscript",
+      "matches": {
+        "sup": true
       }
     },
     {
@@ -121,77 +152,36 @@
       }
     },
     {
-      "content": "# ${0}",
-      "doc": "Add header level 1",
-      "label": "header 1",
+      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} | ${4:Column4} | ${5:Column5} |\n| --------------- | --------------- | --------------- | --------------- | --------------- |\n| ${6:Item1.1} | ${7:Item2.1} | ${8:Item3.1} | ${9:Item4.1} | ${10:Item5.1} |\n| ${11:Item1.2} | ${12:Item2.2} | ${13:Item3.2} | ${14:Item4.2} | ${15:Item5.2} |\n| ${16:Item1.3} | ${17:Item2.3} | ${18:Item3.3} | ${19:Item4.3} | ${20:Item5.3} |\n${0}",
+      "doc": "Insert table with 4 rows and 5 columns. First row is heading.",
+      "label": "Insert 4x5 table",
       "matches": {
-        "h1": true
+        "4x5table": true
       }
     },
     {
-      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} |\n| --------------- | --------------- | --------------- |\n| ${4:Item1.1} | ${5:Item2.1} | ${6:Item3.1} |\n| ${7:Item1.2} | ${8:Item2.2} | ${9:Item3.2} |\n| ${10:Item1.3} | ${11:Item2.3} | ${12:Item3.3} |\n${0}",
-      "doc": "Insert table with 4 rows and 3 columns. First row is heading.",
-      "label": "Insert 4x3 table",
+      "content": "> [!NOTE]\n>",
+      "doc": "Insert Note",
+      "label": "Insert Note",
       "matches": {
-        "4x3table": true
+        "n": true,
+        "note": true
       }
     },
     {
-      "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n- [${5| ,x|}] ${6:text}\n- [${7| ,x|}] ${8:text}\n${0}",
-      "doc": "Insert task list with 4 tasks",
-      "label": "Insert task list 4",
+      "content": "1. ${1:first}\n2. ${2:second}\n3. ${3:third}\n$0",
+      "doc": "Insert ordered list",
+      "label": "Insert ordered list",
       "matches": {
-        "task4": true
+        "ordered list": true
       }
     },
     {
-      "content": "> [!CAUTION]\n>",
-      "doc": "Insert Caution",
-      "label": "Insert Caution",
+      "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n- [${5| ,x|}] ${6:text}\n${0}",
+      "doc": "Create list of 3 todos",
+      "label": "Create list of 3 todos",
       "matches": {
-        "c": true,
-        "caution": true
-      }
-    },
-    {
-      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} |\n| --------------- | --------------- | --------------- |\n| ${4:Item1.1} | ${5:Item2.1} | ${6:Item3.1} |\n| ${7:Item1.2} | ${8:Item2.2} | ${9:Item3.2} |\n| ${10:Item1.3} | ${11:Item2.3} | ${12:Item3.3} |\n| ${13:Item1.4} | ${14:Item2.4} | ${15:Item3.4} |\n${0}",
-      "doc": "Insert table with 5 rows and 3 columns. First row is heading.",
-      "label": "Insert 5x3 table",
-      "matches": {
-        "5x3table": true
-      }
-    },
-    {
-      "content": "### ${0}",
-      "doc": "Add header level 3",
-      "label": "header 3",
-      "matches": {
-        "h3": true
-      }
-    },
-    {
-      "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n- [${5| ,x|}] ${6:text}\n- [${7| ,x|}] ${8:text}\n- [${9| ,x|}] ${10:text}\n${0}",
-      "doc": "Insert task list with 5 tasks",
-      "label": "Insert task list 5",
-      "matches": {
-        "task5": true
-      }
-    },
-    {
-      "content": "> [!IMPORTANT]\n>",
-      "doc": "Insert Important",
-      "label": "Insert Important",
-      "matches": {
-        "imp": true,
-        "important": true
-      }
-    },
-    {
-      "content": "#### ${0}",
-      "doc": "Add header level 4",
-      "label": "header 4",
-      "matches": {
-        "h4": true
+        "todo3": true
       }
     },
     {
@@ -204,6 +194,104 @@
       }
     },
     {
+      "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n- [${5| ,x|}] ${6:text}\n- [${7| ,x|}] ${8:text}\n${0}",
+      "doc": "Insert task list with 4 tasks",
+      "label": "Insert task list 4",
+      "matches": {
+        "task4": true
+      }
+    },
+    {
+      "content": "> [!IMPORTANT]\n>",
+      "doc": "Insert Important",
+      "label": "Insert Important",
+      "matches": {
+        "imp": true,
+        "important": true
+      }
+    },
+    {
+      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} |\n| --------------- | --------------- | --------------- |\n| ${4:Item1.1} | ${5:Item2.1} | ${6:Item3.1} |\n${0}",
+      "doc": "Insert table with 2 rows and 3 columns. First row is heading.",
+      "label": "Insert 2x3 table",
+      "matches": {
+        "2x3table": true
+      }
+    },
+    {
+      "content": "## ${0}",
+      "doc": "Add header level 2",
+      "label": "header 2",
+      "matches": {
+        "h2": true
+      }
+    },
+    {
+      "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n- [${5| ,x|}] ${6:text}\n- [${7| ,x|}] ${8:text}\n${0}",
+      "doc": "Create list of 4 todos",
+      "label": "Create list of 4 todos",
+      "matches": {
+        "todo4": true
+      }
+    },
+    {
+      "content": "> [!CAUTION]\n>",
+      "doc": "Insert Caution",
+      "label": "Insert Caution",
+      "matches": {
+        "c": true,
+        "caution": true
+      }
+    },
+    {
+      "content": "### ${0}",
+      "doc": "Add header level 3",
+      "label": "header 3",
+      "matches": {
+        "h3": true
+      }
+    },
+    {
+      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} | ${4:Column4} |\n| --------------- | --------------- | --------------- | --------------- |\n| ${5:Item1.1} | ${6:Item2.1} | ${7:Item3.1} | ${8:Item4.1} |\n| ${9:Item1.2} | ${10:Item2.2} | ${11:Item3.2} | ${12:Item4.2} |\n| ${13:Item1.3} | ${14:Item2.3} | ${15:Item3.3} | ${16:Item4.3} |\n${0}",
+      "doc": "Insert table with 4 rows and 4 columns. First row is heading.",
+      "label": "Insert 4x4 table",
+      "matches": {
+        "4x4table": true
+      }
+    },
+    {
+      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} | ${4:Column4} |\n| --------------- | --------------- | --------------- | --------------- |\n| ${5:Item1.1} | ${6:Item2.1} | ${7:Item3.1} | ${8:Item4.1} |\n| ${9:Item1.2} | ${10:Item2.2} | ${11:Item3.2} | ${12:Item4.2} |\n${0}",
+      "doc": "Insert table with 3 rows and 4 columns. First row is heading.",
+      "label": "Insert 3x4 table",
+      "matches": {
+        "3x4table": true
+      }
+    },
+    {
+      "content": "#### ${0}",
+      "doc": "Add header level 4",
+      "label": "header 4",
+      "matches": {
+        "h4": true
+      }
+    },
+    {
+      "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n- [${5| ,x|}] ${6:text}\n- [${7| ,x|}] ${8:text}\n- [${9| ,x|}] ${10:text}\n${0}",
+      "doc": "Create list of 5 todos",
+      "label": "Create list of 5 todos",
+      "matches": {
+        "todo5": true
+      }
+    },
+    {
+      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} | ${4:Column4} |\n| --------------- | --------------- | --------------- | --------------- |\n| ${5:Item1.1} | ${6:Item2.1} | ${7:Item3.1} | ${8:Item4.1} |\n${0}",
+      "doc": "Insert table with 2 rows and 4 columns. First row is heading.",
+      "label": "Insert 2x4 table",
+      "matches": {
+        "2x4table": true
+      }
+    },
+    {
       "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} |\n| ------------- | -------------- | -------------- |\n| ${4:Item1} | ${5:Item1} | ${6:Item1} |\n${0}",
       "doc": "Insert table with 2 rows and 3 columns. First row is heading.",
       "label": "Insert table",
@@ -212,27 +300,19 @@
       }
     },
     {
-      "content": "##### ${0}",
-      "doc": "Add header level 5",
-      "label": "header 5",
+      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} |\n| --------------- | --------------- | --------------- |\n| ${4:Item1.1} | ${5:Item2.1} | ${6:Item3.1} |\n| ${7:Item1.2} | ${8:Item2.2} | ${9:Item3.2} |\n| ${10:Item1.3} | ${11:Item2.3} | ${12:Item3.3} |\n${0}",
+      "doc": "Insert table with 4 rows and 3 columns. First row is heading.",
+      "label": "Insert 4x3 table",
       "matches": {
-        "h5": true
+        "4x3table": true
       }
     },
     {
-      "content": "${1}<sup>${0}",
-      "doc": "Create a superscript.",
-      "label": "Insert superscript",
+      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} |\n| --------------- | --------------- | --------------- |\n| ${4:Item1.1} | ${5:Item2.1} | ${6:Item3.1} |\n| ${7:Item1.2} | ${8:Item2.2} | ${9:Item3.2} |\n| ${10:Item1.3} | ${11:Item2.3} | ${12:Item3.3} |\n| ${13:Item1.4} | ${14:Item2.4} | ${15:Item3.4} |\n${0}",
+      "doc": "Insert table with 5 rows and 3 columns. First row is heading.",
+      "label": "Insert 5x3 table",
       "matches": {
-        "sup": true
-      }
-    },
-    {
-      "content": "~~${1}~~ ${0}",
-      "doc": "Insert strikethrough",
-      "label": "Insert strikethrough",
-      "matches": {
-        "strikethrough": true
+        "5x3table": true
       }
     },
     {
@@ -244,6 +324,15 @@
       }
     },
     {
+      "content": "**${1}** $0",
+      "doc": "Insert bold text",
+      "label": "Insert bold text",
+      "matches": {
+        "b": true,
+        "bold": true
+      }
+    },
+    {
       "content": "| ${1:Column1} |\n| ------------- |\n| ${2:Item1} |\n${0}",
       "doc": "Insert table with 2 rows and 1 column. First row is heading.",
       "label": "Insert 2x1 table",
@@ -252,27 +341,29 @@
       }
     },
     {
-      "content": "- ${1:first}\n- ${2:second}\n- ${3:third}\n$0",
-      "doc": "Insert unordered list",
-      "label": "Insert unordered list",
+      "content": "[${1:text}](${2:url}) ${0}",
+      "doc": "Add links",
+      "label": "Links",
       "matches": {
-        "unordered list": true
+        "l": true,
+        "link": true
       }
     },
     {
-      "content": "| ${1:Column1} | ${2:Column2} |\n| -------------- | --------------- |\n| ${3:Item1.1} | ${4:Item2.1} |\n| ${5:Item1.2} | ${6:Item2.2} |\n${0}",
-      "doc": "Insert table with 3 rows and 2 columns. First row is heading.",
-      "label": "Insert 3x2 table",
+      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} |\n| --------------- | --------------- | --------------- |\n| ${4:Item1.1} | ${5:Item2.1} | ${6:Item3.1} |\n| ${7:Item1.2} | ${8:Item2.2} | ${9:Item3.2} |\n${0}",
+      "doc": "Insert table with 3 rows and 3 columns. First row is heading.",
+      "label": "Insert 3x3 table",
       "matches": {
-        "3x2table": true
+        "3x3table": true
       }
     },
     {
-      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} | ${4:Column4} |\n| --------------- | --------------- | --------------- | --------------- |\n| ${5:Item1.1} | ${6:Item2.1} | ${7:Item3.1} | ${8:Item4.1} |\n| ${9:Item1.2} | ${10:Item2.2} | ${11:Item3.2} | ${12:Item4.2} |\n| ${13:Item1.3} | ${14:Item2.3} | ${15:Item3.3} | ${16:Item4.3} |\n${0}",
-      "doc": "Insert table with 4 rows and 4 columns. First row is heading.",
-      "label": "Insert 4x4 table",
+      "content": "*${1}* $0",
+      "doc": "Insert italic text",
+      "label": "Insert italic text",
       "matches": {
-        "4x4table": true
+        "i": true,
+        "italic": true
       }
     },
     {
@@ -285,11 +376,11 @@
       }
     },
     {
-      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} | ${4:Column4} |\n| --------------- | --------------- | --------------- | --------------- |\n| ${5:Item1.1} | ${6:Item2.1} | ${7:Item3.1} | ${8:Item4.1} |\n| ${9:Item1.2} | ${10:Item2.2} | ${11:Item3.2} | ${12:Item4.2} |\n| ${13:Item1.3} | ${14:Item2.3} | ${15:Item3.3} | ${16:Item4.3} |\n| ${17:Item1.4} | ${18:Item2.4} | ${19:Item3.4} | ${20:Item4.4} |\n${0}",
-      "doc": "Insert table with 5 rows and 4 columns. First row is heading.",
-      "label": "Insert 5x4 table",
+      "content": "| ${1:Column1} | ${2:Column2} |\n| -------------- | --------------- |\n| ${3:Item1.1} | ${4:Item2.1} |\n${0}",
+      "doc": "Insert table with 2 rows and 2 columns. First row is heading.",
+      "label": "Insert 2x2 table",
       "matches": {
-        "5x4table": true
+        "2x2table": true
       }
     },
     {
@@ -309,19 +400,19 @@
       }
     },
     {
-      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} | ${4:Column4} |\n| --------------- | --------------- | --------------- | --------------- |\n| ${5:Item1.1} | ${6:Item2.1} | ${7:Item3.1} | ${8:Item4.1} |\n| ${9:Item1.2} | ${10:Item2.2} | ${11:Item3.2} | ${12:Item4.2} |\n${0}",
-      "doc": "Insert table with 3 rows and 4 columns. First row is heading.",
-      "label": "Insert 3x4 table",
+      "content": "- ${1:first}\n- ${2:second}\n- ${3:third}\n$0",
+      "doc": "Insert unordered list",
+      "label": "Insert unordered list",
       "matches": {
-        "3x4table": true
+        "unordered list": true
       }
     },
     {
-      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} | ${4:Column4} |\n| --------------- | --------------- | --------------- | --------------- |\n| ${5:Item1.1} | ${6:Item2.1} | ${7:Item3.1} | ${8:Item4.1} |\n${0}",
-      "doc": "Insert table with 2 rows and 4 columns. First row is heading.",
-      "label": "Insert 2x4 table",
+      "content": "##### ${0}",
+      "doc": "Add header level 5",
+      "label": "header 5",
       "matches": {
-        "2x4table": true
+        "h5": true
       }
     },
     {
@@ -333,45 +424,19 @@
       }
     },
     {
-      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} | ${4:Column4} | ${5:Column5} |\n| --------------- | --------------- | --------------- | --------------- | --------------- |\n| ${6:Item1.1} | ${7:Item2.1} | ${8:Item3.1} | ${9:Item4.1} | ${10:Item5.1} |\n${0}",
-      "doc": "Insert table with 2 rows and 5 columns. First row is heading.",
-      "label": "Insert 2x5 table",
+      "content": "~~${1}~~ ${0}",
+      "doc": "Insert strikethrough",
+      "label": "Insert strikethrough",
       "matches": {
-        "2x5table": true
+        "strikethrough": true
       }
     },
     {
-      "content": "**${1}** $0",
-      "doc": "Insert bold text",
-      "label": "Insert bold text",
+      "content": "# ${0}",
+      "doc": "Add header level 1",
+      "label": "header 1",
       "matches": {
-        "b": true,
-        "bold": true
-      }
-    },
-    {
-      "content": "[${1:text}](${2:url}) ${0}",
-      "doc": "Add links",
-      "label": "Links",
-      "matches": {
-        "l": true,
-        "link": true
-      }
-    },
-    {
-      "content": "| ${1:Column1} |\n| ------------- |\n| ${2:Item1} |\n| ${3:Item2} |\n| ${4:Item3} |\n| ${5:Item4} |\n${0}",
-      "doc": "Insert table with 5 rows and 1 column. First row is heading.",
-      "label": "Insert 5x1 table",
-      "matches": {
-        "5x1table": true
-      }
-    },
-    {
-      "content": "## ${0}",
-      "doc": "Add header level 2",
-      "label": "header 2",
-      "matches": {
-        "h2": true
+        "h1": true
       }
     },
     {
@@ -384,19 +449,11 @@
       }
     },
     {
-      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} | ${4:Column4} | ${5:Column5} |\n| --------------- | --------------- | --------------- | --------------- | --------------- |\n| ${6:Item1.1} | ${7:Item2.1} | ${8:Item3.1} | ${9:Item4.1} | ${10:Item5.1} |\n| ${11:Item1.2} | ${12:Item2.2} | ${13:Item3.2} | ${14:Item4.2} | ${15:Item5.2} |\n${0}",
-      "doc": "Insert table with 3 rows and 5 columns. First row is heading.",
-      "label": "Insert 3x5 table",
+      "content": "| ${1:Column1} |\n| ------------- |\n| ${2:Item1} |\n| ${3:Item2} |\n| ${4:Item3} |\n| ${5:Item4} |\n${0}",
+      "doc": "Insert table with 5 rows and 1 column. First row is heading.",
+      "label": "Insert 5x1 table",
       "matches": {
-        "3x5table": true
-      }
-    },
-    {
-      "content": "| ${1:Column1} | ${2:Column2} |\n| -------------- | --------------- |\n| ${3:Item1.1} | ${4:Item2.1} |\n${0}",
-      "doc": "Insert table with 2 rows and 2 columns. First row is heading.",
-      "label": "Insert 2x2 table",
-      "matches": {
-        "2x2table": true
+        "5x1table": true
       }
     },
     {
@@ -408,28 +465,11 @@
       }
     },
     {
-      "content": "*${1}* $0",
-      "doc": "Insert italic text",
-      "label": "Insert italic text",
+      "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n- [${5| ,x|}] ${6:text}\n- [${7| ,x|}] ${8:text}\n- [${9| ,x|}] ${10:text}\n${0}",
+      "doc": "Insert task list with 5 tasks",
+      "label": "Insert task list 5",
       "matches": {
-        "i": true,
-        "italic": true
-      }
-    },
-    {
-      "content": "| ${1:Column1} | ${2:Column2} | ${3:Column3} | ${4:Column4} | ${5:Column5} |\n| --------------- | --------------- | --------------- | --------------- | --------------- |\n| ${6:Item1.1} | ${7:Item2.1} | ${8:Item3.1} | ${9:Item4.1} | ${10:Item5.1} |\n| ${11:Item1.2} | ${12:Item2.2} | ${13:Item3.2} | ${14:Item4.2} | ${15:Item5.2} |\n| ${16:Item1.3} | ${17:Item2.3} | ${18:Item3.3} | ${19:Item4.3} | ${20:Item5.3} |\n${0}",
-      "doc": "Insert table with 4 rows and 5 columns. First row is heading.",
-      "label": "Insert 4x5 table",
-      "matches": {
-        "4x5table": true
-      }
-    },
-    {
-      "content": "`${1}` $0",
-      "doc": "Insert code",
-      "label": "Insert code",
-      "matches": {
-        "code": true
+        "task5": true
       }
     },
     {

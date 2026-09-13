@@ -2,11 +2,19 @@
   "extends": [],
   "snippets": [
     {
-      "content": "USER ${1:name}",
+      "content": "RUN ${1:command}",
       "doc": "",
-      "label": "USER",
+      "label": "RUN",
       "matches": {
-        "u": true
+        "R": true
+      }
+    },
+    {
+      "content": "ADD ${1:src} ${2:dst}",
+      "doc": "",
+      "label": "ADD",
+      "matches": {
+        "a": true
       }
     },
     {
@@ -18,35 +26,19 @@
       }
     },
     {
-      "content": "WORKDIR ${1:name}",
-      "doc": "",
-      "label": "WORKDIR",
-      "matches": {
-        "w": true
-      }
-    },
-    {
-      "content": "COPY ${1:src} ${2:dest}",
-      "doc": "",
-      "label": "COPY",
-      "matches": {
-        "cp": true
-      }
-    },
-    {
-      "content": "RUN echo \"deb http://archive.ubuntu.com/ubuntu ${1:precise} main universe\" > /etc/apt/sources.list; \\\napt-get update && apt-get -y upgrade; \\ \n${2}; \\\nrm -rf /var/lib/apt/lists/*",
-      "doc": "",
-      "label": "Update Packages",
-      "matches": {
-        "upd": true
-      }
-    },
-    {
       "content": "LABEL ${1:label}=\"${2:value}\"",
       "doc": "",
       "label": "LABEL",
       "matches": {
         "L": true
+      }
+    },
+    {
+      "content": "ONBUILD ${1}",
+      "doc": "",
+      "label": "ONBUILD",
+      "matches": {
+        "o": true
       }
     },
     {
@@ -58,11 +50,11 @@
       }
     },
     {
-      "content": "ONBUILD ${1}",
+      "content": "RUN echo \"deb http://archive.ubuntu.com/ubuntu ${1:precise} main universe\" > /etc/apt/sources.list; \\\napt-get update && apt-get -y upgrade; \\ \n${2}; \\\nrm -rf /var/lib/apt/lists/*",
       "doc": "",
-      "label": "ONBUILD",
+      "label": "Update Packages",
       "matches": {
-        "o": true
+        "upd": true
       }
     },
     {
@@ -82,11 +74,27 @@
       }
     },
     {
-      "content": "ADD ${1:src} ${2:dst}",
+      "content": "COPY ${1:src} ${2:dest}",
       "doc": "",
-      "label": "ADD",
+      "label": "COPY",
       "matches": {
-        "a": true
+        "cp": true
+      }
+    },
+    {
+      "content": "ENTRYPOINT ${1:command}",
+      "doc": "",
+      "label": "ENTRYPOINT",
+      "matches": {
+        "ent": true
+      }
+    },
+    {
+      "content": "WORKDIR ${1:name}",
+      "doc": "",
+      "label": "WORKDIR",
+      "matches": {
+        "w": true
       }
     },
     {
@@ -98,11 +106,11 @@
       }
     },
     {
-      "content": "ENTRYPOINT ${1:command}",
+      "content": "USER ${1:name}",
       "doc": "",
-      "label": "ENTRYPOINT",
+      "label": "USER",
       "matches": {
-        "ent": true
+        "u": true
       }
     },
     {
@@ -119,14 +127,6 @@
       "label": "VOLUME",
       "matches": {
         "v": true
-      }
-    },
-    {
-      "content": "RUN ${1:command}",
-      "doc": "",
-      "label": "RUN",
-      "matches": {
-        "R": true
       }
     }
   ]

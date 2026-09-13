@@ -2,6 +2,14 @@
   "extends": [],
   "snippets": [
     {
+      "content": "ilgen\"${2|sub|}\"\n$0",
+      "doc": "",
+      "label": "ilgen",
+      "matches": {
+        "ilgen": true
+      }
+    },
+    {
       "content": "copypath\"\\$COBCPY;$1\"\n$0",
       "doc": "",
       "label": "copypath",
@@ -39,14 +47,6 @@
       "label": "sourceformat",
       "matches": {
         "sourceformat": true
-      }
-    },
-    {
-      "content": "ilgen\"${2|sub|}\"\n$0",
-      "doc": "",
-      "label": "ilgen",
-      "matches": {
-        "ilgen": true
       }
     }
   ]

@@ -2,6 +2,14 @@
   "extends": [],
   "snippets": [
     {
+      "content": "watchQuery (newQuery, oldQuery) {\n\t${1:data}\n},",
+      "doc": "Use the watchQuery key to set up a watcher for query strings.",
+      "label": "nuxt-watch-query",
+      "matches": {
+        "nuxt watchquery": true
+      }
+    },
+    {
       "content": "<nuxt name=\"$1\">$2</nuxt>$0",
       "doc": "",
       "label": "nuxt-namedview",
@@ -15,6 +23,22 @@
       "label": "nuxt-child",
       "matches": {
         "nuxt child": true
+      }
+    },
+    {
+      "content": "<nuxt-link to=\"$1\">$2</nuxt-link>$0",
+      "doc": "",
+      "label": "nuxt-linkto",
+      "matches": {
+        "nuxt linkto": true
+      }
+    },
+    {
+      "content": "nuxtServerInit ({ commit }, { req }) {\n\t${1:data}\n}",
+      "doc": "In universal mode, useful to fetch data on the server and give directly to the client-side.",
+      "label": "nuxt-serverinit",
+      "matches": {
+        "nuxt serverinit": true
       }
     },
     {
@@ -34,14 +58,6 @@
       }
     },
     {
-      "content": "validate({ params, query, store }) {\n\t${1:data}\n},",
-      "doc": "Validate is called every time before navigating to a new route.",
-      "label": "nuxt-validate",
-      "matches": {
-        "nuxt validate": true
-      }
-    },
-    {
       "content": "<nuxt-link :to=\"{\t${1|name,path|}: '${2:value}', ${3|params,query|}: {\t${4:key}: '${5:value}'\t}\t}\">$6</nuxt-link>$0",
       "doc": "",
       "label": "nuxt-namedlinkto",
@@ -50,11 +66,11 @@
       }
     },
     {
-      "content": "nuxtServerInit ({ commit }, { req }) {\n\t${1:data}\n}",
-      "doc": "In universal mode, useful to fetch data on the server and give directly to the client-side.",
-      "label": "nuxt-serverinit",
+      "content": "validate({ params, query, store }) {\n\t${1:data}\n},",
+      "doc": "Validate is called every time before navigating to a new route.",
+      "label": "nuxt-validate",
       "matches": {
-        "nuxt serverinit": true
+        "nuxt validate": true
       }
     },
     {
@@ -71,22 +87,6 @@
       "label": "nuxt-view",
       "matches": {
         "nuxt view": true
-      }
-    },
-    {
-      "content": "watchQuery (newQuery, oldQuery) {\n\t${1:data}\n},",
-      "doc": "Use the watchQuery key to set up a watcher for query strings.",
-      "label": "nuxt-watch-query",
-      "matches": {
-        "nuxt watchquery": true
-      }
-    },
-    {
-      "content": "<nuxt-link to=\"$1\">$2</nuxt-link>$0",
-      "doc": "",
-      "label": "nuxt-linkto",
-      "matches": {
-        "nuxt linkto": true
       }
     }
   ]

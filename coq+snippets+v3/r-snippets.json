@@ -2,51 +2,27 @@
   "extends": [],
   "snippets": [
     {
-      "content": "factor(${1:x})",
-      "doc": "Factor",
-      "label": "fac",
+      "content": "observeEvent(${1:event}, {\n    ${0}\n})",
+      "doc": "Shiny observe event",
+      "label": "Shiny observe event",
       "matches": {
-        "factor": true
+        "shiny observe event": true
       }
     },
     {
-      "content": "glm(${1:formula}, ${2:family = {3:gaussian}}, ${4:data})",
-      "doc": "Generalized Linear Models",
-      "label": "glm",
+      "content": "data(${1:name})",
+      "doc": "Load Dataset",
+      "label": "dat",
       "matches": {
-        "glm": true
+        "data": true
       }
     },
     {
-      "content": "library(shiny)\n\nui <- fluidPage(\n    titlePanel(\"${1:title}\"),\n    sidebarLayout(\n        sidebarPanel(),\n        mainPanel()\n    )\n)\n\nserver <- function(input, output, session) {\n\n}\n\nshinyApp(ui, server)$0",
-      "doc": "Shiny sidebar page",
-      "label": "Shiny sidebar page",
+      "content": "else {\n   ${1:selected}\n}",
+      "doc": "Code snippet for 'else' conditional",
+      "label": "else",
       "matches": {
-        "shiny sidebar page": true
-      }
-    },
-    {
-      "content": "kruskal.test(${1:formula}, ${2:data}, ${3:subset}, ${4:na.action}, ${5:...})",
-      "doc": "Kruskal-Wallis Rank Sum test",
-      "label": "kr",
-      "matches": {
-        "kruskal": true
-      }
-    },
-    {
-      "content": "lapply(${1:X}, ${2:FUN}, ${3:...})",
-      "doc": "Lapply",
-      "label": "lap",
-      "matches": {
-        "lapply": true
-      }
-    },
-    {
-      "content": "for (${1:identifier} in ${2:collection}) {\n   ${3:selected}\n}",
-      "doc": "Code snippet for 'for' loop",
-      "label": "for",
-      "matches": {
-        "for": true
+        "else": true
       }
     },
     {
@@ -58,11 +34,67 @@
       }
     },
     {
+      "content": "names(${1:x})",
+      "doc": "Names",
+      "label": "nam",
+      "matches": {
+        "names": true
+      }
+    },
+    {
+      "content": "sort(${1:x})",
+      "doc": "Sort",
+      "label": "sor",
+      "matches": {
+        "sort": true
+      }
+    },
+    {
+      "content": "plot(${1:x}, ${2:y}, ${3:...})",
+      "doc": "Plot",
+      "label": "plot",
+      "matches": {
+        "plot": true
+      }
+    },
+    {
+      "content": "seq(${1:from}, ${2:to}, ${3:by})",
+      "doc": "Sequence (from,to,by)",
+      "label": "seq",
+      "matches": {
+        "seq": true
+      }
+    },
+    {
+      "content": "cum${1:max}(${2:x})",
+      "doc": "Cummulative",
+      "label": "cum",
+      "matches": {
+        "cum": true
+      }
+    },
+    {
+      "content": "cummax(${1:x}",
+      "doc": "Cummulative max",
+      "label": "cuma",
+      "matches": {
+        "cumaax": true
+      }
+    },
+    {
       "content": "${1:file = }file.choose()${0:}",
       "doc": "file.choose",
       "label": "fch",
       "matches": {
         "fch": true
+      }
+    },
+    {
+      "content": "cummin(${1:x}",
+      "doc": "Cummulative min",
+      "label": "cumi",
+      "matches": {
+        "cumin": true
       }
     },
     {
@@ -90,6 +122,14 @@
       }
     },
     {
+      "content": "detach(${0:})",
+      "doc": "Detach",
+      "label": "det",
+      "matches": {
+        "detach": true
+      }
+    },
+    {
       "content": "loess(${1:yCol} ~ {2:xCol}, data = ${3:data}, subset = ${4:subset}, weights = ${5:weights}, span = ${6:span},\ndegree = ${7:degree}, na.action = {8:na.action})",
       "doc": "Local polynomial regression",
       "label": "loess",
@@ -106,6 +146,14 @@
       }
     },
     {
+      "content": "factor(${1:x})",
+      "doc": "Factor",
+      "label": "fac",
+      "matches": {
+        "factor": true
+      }
+    },
+    {
       "content": "crossTable <- xtabs(~${1:varNames}, data= ${2:dataName}, exclude = c(${3:exclude}), subset = ${4:subset})\nftable(crossTable)  # print crosstabs\nsummary(crossTable) # chi-square tests",
       "doc": "Crosstabulations for variables in a data frame",
       "label": "Crosstabs",
@@ -114,11 +162,19 @@
       }
     },
     {
-      "content": "${1:dfname} <- data.frame(${2:a} = character(), ${3:b} = character())",
-      "doc": "Code snippet for an empty character data frame",
-      "label": "Empty data frame (character)",
+      "content": "options(${1:...})",
+      "doc": "Options",
+      "label": "opt",
       "matches": {
-        "df2c": true
+        "option": true
+      }
+    },
+    {
+      "content": "${1:outMatrix} <- matrix(data = ${2:dataVec}, nrow = ${3:nrow}, ncol = ${4:ncol}, byrow = ${5:byrow})",
+      "doc": "Create a matrix from a vector",
+      "label": "Matrix",
+      "matches": {
+        "matrix": true
       }
     },
     {
@@ -130,19 +186,27 @@
       }
     },
     {
-      "content": "length(${1:x})",
-      "doc": "Length",
-      "label": "len",
+      "content": "${1:dfname} <- data.frame(${2:varlist})",
+      "doc": "Create a data frame from vectors",
+      "label": "Data frame",
       "matches": {
-        "length": true
+        "dfv": true
       }
     },
     {
-      "content": "rep(${1:x}, ${2:...})",
-      "doc": "Rep",
-      "label": "rep",
+      "content": "${1:outFactor} <- factor(x = ${2:dataVec}, levels = ${3:levels}, exclude = ${4:exclude})",
+      "doc": "Create a factor (categorical variable) from a vector",
+      "label": "Categorical variable",
       "matches": {
-        "rep": true
+        "factor": true
+      }
+    },
+    {
+      "content": "${1:newdataframe} <- na.omit(${2:dataframe})",
+      "doc": "Remove all rows with missing values from data frame",
+      "label": "remove missings",
+      "matches": {
+        "naomit": true
       }
     },
     {
@@ -162,19 +226,19 @@
       }
     },
     {
-      "content": "observeEvent(${1:event}, {\n    ${0}\n})",
-      "doc": "Shiny observe event",
-      "label": "Shiny observe event",
+      "content": "library(shiny)\n\nui <- fluidPage(\n    titlePanel(\"${1:title}\"),\n    sidebarLayout(\n        sidebarPanel(),\n        mainPanel()\n    )\n)\n\nserver <- function(input, output, session) {\n\n}\n\nshinyApp(ui, server)$0",
+      "doc": "Shiny sidebar page",
+      "label": "Shiny sidebar page",
       "matches": {
-        "shiny observe event": true
+        "shiny sidebar page": true
       }
     },
     {
-      "content": "#endregion",
-      "doc": "Folding Region End",
-      "label": "Region End",
+      "content": "${1:dfname} <- read.csv(file = \"${2:file}\", header = ${3|TRUE,FALSE|},  sep = \"${4|\\,,;|}\", row.names = ${5:NULL},  stringsAsFactors = ${6|FALSE,TRUE|})",
+      "doc": "Read a data table from a comma-separated file (CSV) and create a data frame",
+      "label": "Read CSV",
       "matches": {
-        "#endregion": true
+        "readc": true
       }
     },
     {
@@ -202,6 +266,14 @@
       }
     },
     {
+      "content": "for (${1:identifier} in ${2:collection}) {\n   ${3:selected}\n}",
+      "doc": "Code snippet for 'for' loop",
+      "label": "for",
+      "matches": {
+        "for": true
+      }
+    },
+    {
       "content": "else if (${1:condition}) {\n   ${2:selected}\n}",
       "doc": "Code snippet for 'else' conditional",
       "label": "elseif",
@@ -210,99 +282,11 @@
       }
     },
     {
-      "content": "data(${1:name})",
-      "doc": "Load Dataset",
-      "label": "dat",
+      "content": "glm(${1:formula}, ${2:family = {3:gaussian}}, ${4:data})",
+      "doc": "Generalized Linear Models",
+      "label": "glm",
       "matches": {
-        "data": true
-      }
-    },
-    {
-      "content": "table(${1:...})",
-      "doc": "Table",
-      "label": "tab",
-      "matches": {
-        "table": true
-      }
-    },
-    {
-      "content": "cum${1:max}(${2:x})",
-      "doc": "Cummulative",
-      "label": "cum",
-      "matches": {
-        "cum": true
-      }
-    },
-    {
-      "content": "cummax(${1:x}",
-      "doc": "Cummulative max",
-      "label": "cuma",
-      "matches": {
-        "cumaax": true
-      }
-    },
-    {
-      "content": "attach(${1:frame})",
-      "doc": "Attach",
-      "label": "att",
-      "matches": {
-        "attach": true
-      }
-    },
-    {
-      "content": "sort(${1:x})",
-      "doc": "Sort",
-      "label": "sor",
-      "matches": {
-        "sort": true
-      }
-    },
-    {
-      "content": "${1:outFactor} <- factor(x = ${2:dataVec}, levels = ${3:levels}, exclude = ${4:exclude})",
-      "doc": "Create a factor (categorical variable) from a vector",
-      "label": "Categorical variable",
-      "matches": {
-        "factor": true
-      }
-    },
-    {
-      "content": "detach(${0:})",
-      "doc": "Detach",
-      "label": "det",
-      "matches": {
-        "detach": true
-      }
-    },
-    {
-      "content": "names(${1:x})",
-      "doc": "Names",
-      "label": "nam",
-      "matches": {
-        "names": true
-      }
-    },
-    {
-      "content": "${1:outMatrix} <- matrix(data = ${2:dataVec}, nrow = ${3:nrow}, ncol = ${4:ncol}, byrow = ${5:byrow})",
-      "doc": "Create a matrix from a vector",
-      "label": "Matrix",
-      "matches": {
-        "matrix": true
-      }
-    },
-    {
-      "content": "${1:newdataframe} <- na.omit(${2:dataframe})",
-      "doc": "Remove all rows with missing values from data frame",
-      "label": "remove missings",
-      "matches": {
-        "naomit": true
-      }
-    },
-    {
-      "content": "cummin(${1:x}",
-      "doc": "Cummulative min",
-      "label": "cumi",
-      "matches": {
-        "cumin": true
+        "glm": true
       }
     },
     {
@@ -314,35 +298,19 @@
       }
     },
     {
-      "content": "${1:dfname} <- read.csv(file = \"${2:file}\", header = ${3|TRUE,FALSE|},  sep = \"${4|\\,,;|}\", row.names = ${5:NULL},  stringsAsFactors = ${6|FALSE,TRUE|})",
-      "doc": "Read a data table from a comma-separated file (CSV) and create a data frame",
-      "label": "Read CSV",
+      "content": "table(${1:...})",
+      "doc": "Table",
+      "label": "tab",
       "matches": {
-        "readc": true
+        "table": true
       }
     },
     {
-      "content": "plot(${1:x}, ${2:y}, ${3:...})",
-      "doc": "Plot",
-      "label": "plot",
+      "content": "attach(${1:frame})",
+      "doc": "Attach",
+      "label": "att",
       "matches": {
-        "plot": true
-      }
-    },
-    {
-      "content": "seq(${1:from}, ${2:to}, ${3:by})",
-      "doc": "Sequence (from,to,by)",
-      "label": "seq",
-      "matches": {
-        "seq": true
-      }
-    },
-    {
-      "content": "options(${1:...})",
-      "doc": "Options",
-      "label": "opt",
-      "matches": {
-        "option": true
+        "attach": true
       }
     },
     {
@@ -354,19 +322,51 @@
       }
     },
     {
-      "content": "else {\n   ${1:selected}\n}",
-      "doc": "Code snippet for 'else' conditional",
-      "label": "else",
+      "content": "length(${1:x})",
+      "doc": "Length",
+      "label": "len",
       "matches": {
-        "else": true
+        "length": true
       }
     },
     {
-      "content": "${1:dfname} <- data.frame(${2:varlist})",
-      "doc": "Create a data frame from vectors",
-      "label": "Data frame",
+      "content": "rep(${1:x}, ${2:...})",
+      "doc": "Rep",
+      "label": "rep",
       "matches": {
-        "dfv": true
+        "rep": true
+      }
+    },
+    {
+      "content": "kruskal.test(${1:formula}, ${2:data}, ${3:subset}, ${4:na.action}, ${5:...})",
+      "doc": "Kruskal-Wallis Rank Sum test",
+      "label": "kr",
+      "matches": {
+        "kruskal": true
+      }
+    },
+    {
+      "content": "#endregion",
+      "doc": "Folding Region End",
+      "label": "Region End",
+      "matches": {
+        "#endregion": true
+      }
+    },
+    {
+      "content": "${1:dfname} <- data.frame(${2:a} = character(), ${3:b} = character())",
+      "doc": "Code snippet for an empty character data frame",
+      "label": "Empty data frame (character)",
+      "matches": {
+        "df2c": true
+      }
+    },
+    {
+      "content": "lapply(${1:X}, ${2:FUN}, ${3:...})",
+      "doc": "Lapply",
+      "label": "lap",
+      "matches": {
+        "lapply": true
       }
     }
   ]

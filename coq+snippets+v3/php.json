@@ -8,11 +8,19 @@
   ],
   "snippets": [
     {
-      "content": "* @param ${1:Type} ${2:var} ${3:Description}$0",
-      "doc": "Paramater documentation",
-      "label": "PHPDoc param …",
+      "content": "public function __construct(${1: priarg}) {\n}",
+      "doc": "Create __construct method using the last php syntax.",
+      "label": "function __construct",
       "matches": {
-        "param": true
+        "con": true
+      }
+    },
+    {
+      "content": "case '${1:value}':\n\t${0:# code...}\n\tbreak;",
+      "doc": "Case Block",
+      "label": "case …",
+      "matches": {
+        "case": true
       }
     },
     {
@@ -24,14 +32,6 @@
       }
     },
     {
-      "content": "/**\n * $1\n */\ntrait ${2:TraitName}\n{\n\t$0\n}",
-      "doc": "Trait",
-      "label": "trait …",
-      "matches": {
-        "trait": true
-      }
-    },
-    {
       "content": "var_dump($0);",
       "doc": "var_dump",
       "label": "Variable Dump",
@@ -40,19 +40,19 @@
       }
     },
     {
-      "content": "if (${1:condition}) {\n\t${0:# code...}\n}",
-      "doc": "If block",
-      "label": "if …",
-      "matches": {
-        "if": true
-      }
-    },
-    {
       "content": "enum ${1:EnumName}\n{\n\tcase $0;\n}",
       "doc": "Enum definition",
       "label": "enum …",
       "matches": {
         "enum": true
+      }
+    },
+    {
+      "content": "if (${1:condition}) {\n\t${0:# code...}\n}",
+      "doc": "If block",
+      "label": "if …",
+      "matches": {
+        "if": true
       }
     },
     {
@@ -88,19 +88,11 @@
       }
     },
     {
-      "content": "#region",
-      "doc": "Folding Region Start",
-      "label": "Region Start",
+      "content": "for (\\$${1:i}=${2:0}; \\$${1:i} < $3; \\$${1:i}++) { \n\t${0:# code...}\n}",
+      "doc": "For-loop",
+      "label": "for …",
       "matches": {
-        "#region": true
-      }
-    },
-    {
-      "content": "#endregion",
-      "doc": "Folding Region End",
-      "label": "Region End",
-      "matches": {
-        "#endregion": true
+        "for": true
       }
     },
     {
@@ -109,6 +101,14 @@
       "label": "$… = array (…)",
       "matches": {
         "array": true
+      }
+    },
+    {
+      "content": "\\$${1:arrayName} = ['$2' => $3${4:,} $0];",
+      "doc": "Array initializer",
+      "label": "$… = […]",
+      "matches": {
+        "shorray": true
       }
     },
     {
@@ -128,11 +128,11 @@
       }
     },
     {
-      "content": "public function __construct(${1: priarg}) {\n}",
-      "doc": "Create __construct method using the last php syntax.",
-      "label": "function __construct",
+      "content": "#region",
+      "doc": "Folding Region Start",
+      "label": "Region Start",
       "matches": {
-        "con": true
+        "#region": true
       }
     },
     {
@@ -144,27 +144,27 @@
       }
     },
     {
-      "content": "\\$${1:arrayName} = ['$2' => $3${4:,} $0];",
-      "doc": "Array initializer",
-      "label": "$… = […]",
+      "content": "#endregion",
+      "doc": "Folding Region End",
+      "label": "Region End",
       "matches": {
-        "shorray": true
+        "#endregion": true
       }
     },
     {
-      "content": "for (\\$${1:i}=${2:0}; \\$${1:i} < $3; \\$${1:i}++) { \n\t${0:# code...}\n}",
-      "doc": "For-loop",
-      "label": "for …",
+      "content": "/**\n * $1\n */\ntrait ${2:TraitName}\n{\n\t$0\n}",
+      "doc": "Trait",
+      "label": "trait …",
       "matches": {
-        "for": true
+        "trait": true
       }
     },
     {
-      "content": "case '${1:value}':\n\t${0:# code...}\n\tbreak;",
-      "doc": "Case Block",
-      "label": "case …",
+      "content": "* @param ${1:Type} ${2:var} ${3:Description}$0",
+      "doc": "Paramater documentation",
+      "label": "PHPDoc param …",
       "matches": {
-        "case": true
+        "param": true
       }
     },
     {

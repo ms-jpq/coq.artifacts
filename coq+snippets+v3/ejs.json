@@ -2,11 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "<%= $1 %> $2",
-      "doc": "EJS outputs no value",
-      "label": "EJS Output Value",
+      "content": "<% include $1 %> $2",
+      "doc": "EJS include statement",
+      "label": "EJS Include",
       "matches": {
-        "ejsout": true
+        "ejsinc": true
       }
     },
     {
@@ -58,6 +58,14 @@
       }
     },
     {
+      "content": "<%= $1 %> $2",
+      "doc": "EJS outputs no value",
+      "label": "EJS Output Value",
+      "matches": {
+        "ejsout": true
+      }
+    },
+    {
       "content": "<%% $1 %> $2",
       "doc": "EJS outputs a literal '<%'",
       "label": "EJS Literal",
@@ -79,14 +87,6 @@
       "label": "EJS No Output",
       "matches": {
         "ejs": true
-      }
-    },
-    {
-      "content": "<% include $1 %> $2",
-      "doc": "EJS include statement",
-      "label": "EJS Include",
-      "matches": {
-        "ejsinc": true
       }
     }
   ]

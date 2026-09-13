@@ -10,15 +10,6 @@
       }
     },
     {
-      "content": "Mapping: $1\nSource: $2\nTarget: \"$3\"\nId: $4\nTitle: \"$5\"\nDescription: \"$6\"\n* $0",
-      "doc": "Create a FSH Invariant",
-      "label": "FSH Mapping",
-      "matches": {
-        "Map": true,
-        "map": true
-      }
-    },
-    {
       "content": "Invariant: $1\nDescription: \"$2\"\nExpression: \"$3\"\nSeverity: ${4|#error,#warning|}\nXPath: \"$5\"\n\n$0",
       "doc": "Create a FSH Invariant",
       "label": "FSH Invariant",
@@ -36,6 +27,15 @@
         "Rule": true,
         "rs": true,
         "rule": true
+      }
+    },
+    {
+      "content": "Mapping: $1\nSource: $2\nTarget: \"$3\"\nId: $4\nTitle: \"$5\"\nDescription: \"$6\"\n* $0",
+      "doc": "Create a FSH Invariant",
+      "label": "FSH Mapping",
+      "matches": {
+        "Map": true,
+        "map": true
       }
     }
   ]

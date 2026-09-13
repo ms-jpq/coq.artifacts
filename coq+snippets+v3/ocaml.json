@@ -4,27 +4,11 @@
   ],
   "snippets": [
     {
-      "content": "val ${1:name} : $0",
-      "doc": "Snippet for a value definition",
-      "label": "val",
+      "content": "match ${1:scrutinee} with\n| ${2:pattern} -> ${3:${2:pattern}}",
+      "doc": "Snippet for a pattern match block definition",
+      "label": "match",
       "matches": {
-        "val": true
-      }
-    },
-    {
-      "content": "let ${1:pattern} = ${2:()} in$0",
-      "doc": "Snippet for a let .. in binding",
-      "label": "let .. in",
-      "matches": {
-        "let": true
-      }
-    },
-    {
-      "content": "struct\n  ${1}\nend$0",
-      "doc": "Snippet for a struct block",
-      "label": "struct",
-      "matches": {
-        "struct": true
+        "match": true
       }
     },
     {
@@ -44,43 +28,19 @@
       }
     },
     {
+      "content": "let ${1:pattern} = $0",
+      "doc": "Snippet for a let definition",
+      "label": "let (toplevel)",
+      "matches": {
+        "let": true
+      }
+    },
+    {
       "content": "type ${1:name} = $0",
       "doc": "Snippet for a type declaration",
       "label": "type declaration",
       "matches": {
         "type": true
-      }
-    },
-    {
-      "content": "sig\n  ${1}\nend$0",
-      "doc": "Snippet for a signature block",
-      "label": "sig",
-      "matches": {
-        "sig": true
-      }
-    },
-    {
-      "content": "fun (${1:pattern}) -> ${2:${1:pattern}}",
-      "doc": "Snippet for a lambda function definition",
-      "label": "lambda",
-      "matches": {
-        "fun": true
-      }
-    },
-    {
-      "content": "match ${1:scrutinee} with\n| ${2:pattern} -> ${3:${2:pattern}}",
-      "doc": "Snippet for a pattern match block definition",
-      "label": "match",
-      "matches": {
-        "match": true
-      }
-    },
-    {
-      "content": "function\n| $0",
-      "doc": "Snippet for a match function definition",
-      "label": "function",
-      "matches": {
-        "func": true
       }
     },
     {
@@ -100,11 +60,51 @@
       }
     },
     {
-      "content": "let ${1:pattern} = $0",
-      "doc": "Snippet for a let definition",
-      "label": "let (toplevel)",
+      "content": "function\n| $0",
+      "doc": "Snippet for a match function definition",
+      "label": "function",
+      "matches": {
+        "func": true
+      }
+    },
+    {
+      "content": "sig\n  ${1}\nend$0",
+      "doc": "Snippet for a signature block",
+      "label": "sig",
+      "matches": {
+        "sig": true
+      }
+    },
+    {
+      "content": "let ${1:pattern} = ${2:()} in$0",
+      "doc": "Snippet for a let .. in binding",
+      "label": "let .. in",
       "matches": {
         "let": true
+      }
+    },
+    {
+      "content": "struct\n  ${1}\nend$0",
+      "doc": "Snippet for a struct block",
+      "label": "struct",
+      "matches": {
+        "struct": true
+      }
+    },
+    {
+      "content": "val ${1:name} : $0",
+      "doc": "Snippet for a value definition",
+      "label": "val",
+      "matches": {
+        "val": true
+      }
+    },
+    {
+      "content": "fun (${1:pattern}) -> ${2:${1:pattern}}",
+      "doc": "Snippet for a lambda function definition",
+      "label": "lambda",
+      "matches": {
+        "fun": true
       }
     },
     {

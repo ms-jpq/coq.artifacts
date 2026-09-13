@@ -2,6 +2,30 @@
   "extends": [],
   "snippets": [
     {
+      "content": "\"\"\"\n${1:A one-line summary.}\n\n${2:Detailed description.}$0\n\"\"\"",
+      "doc": "Module-level docstrings for test files are not required. They should be included only when there is additional information that can be provided.\n\nExamples include some specifics on how the test should be run, an explanation of an unusual setup pattern, dependency on the external environment, and so on. Docstrings that do not provide any new information should not be used, such as \"\"\"Tests for foo.bar.\"\"\"",
+      "label": "test module docstring",
+      "matches": {
+        "###test": true
+      }
+    },
+    {
+      "content": "\"\"\"\n${1:A one-line summary.}\n\n${2:Detailed description.}$0\n\nAttributes:\n    ${3:attribute_name}: ${4:type and description.}\n\"\"\"",
+      "doc": "A Python docstring for classes, including a one-line summary, details, attributes, and returns.",
+      "label": "class docstring",
+      "matches": {
+        "###class": true
+      }
+    },
+    {
+      "content": "\"\"\"\n${1:A one-line summary.}\n\n${2:Detailed description.}$0\n\"\"\"",
+      "doc": "A simple Python docstring comment. Useful when you prefer to add the docstrings manually on functions.",
+      "label": "comment simple",
+      "matches": {
+        "##": true
+      }
+    },
+    {
       "content": "\"\"\"\n${1:A one-line summary.}\n\n${2:Detailed description.}$0\n\nArgs:\n    ${5:argument_name} (${6:type}): ${7:description.}\n\nReturns:\n    ${3:type}: {4:Description of the returned object.}\n\nExample:\n    # ${8:Description of my example.}\n    ${9:use_it_this_way(arg1, arg2)}\n\"\"\"",
       "doc": "Alternative Python docstring for functions and methods, with a different type syntax. Some teams prefer it.",
       "label": "function docstring typed",
@@ -26,46 +50,6 @@
       }
     },
     {
-      "content": "\"\"\"\n${1:A one-line summary.}\n\n${2:Detailed description.}$0\n\nArgs:\n    ${4:argument_name}: ${5:type and description.}\n\nYields:\n    ${3:type and description of the yielded object.}\n\nExample:\n    # ${6:Description of my example.}\n    ${7:use_it_this_way(arg1, arg2)}\n\"\"\"",
-      "doc": "A Python docstring for generator methods, including a one-line summary, details, parameters, yields, and example. It is the same, but it has yields instead of returns.",
-      "label": "generator docstring",
-      "matches": {
-        "###generator": true
-      }
-    },
-    {
-      "content": "\"\"\"\n${1:A one-line summary.}\n\n${2:Detailed description.}$0\n\"\"\"",
-      "doc": "A simple Python docstring comment. Useful when you prefer to add the docstrings manually on functions.",
-      "label": "comment simple",
-      "matches": {
-        "##": true
-      }
-    },
-    {
-      "content": "\"\"\"\n${1:A one-line summary.}\n\n${2:Detailed description.}$0\n\"\"\"",
-      "doc": "Module-level docstrings for test files are not required. They should be included only when there is additional information that can be provided.\n\nExamples include some specifics on how the test should be run, an explanation of an unusual setup pattern, dependency on the external environment, and so on. Docstrings that do not provide any new information should not be used, such as \"\"\"Tests for foo.bar.\"\"\"",
-      "label": "test module docstring",
-      "matches": {
-        "###test": true
-      }
-    },
-    {
-      "content": "\"\"\"\n${1:A one-line summary.}\n\n${2:Detailed description.}$0\n\nAttributes:\n    ${3:attribute_name}: ${4:type and description.}\n\"\"\"",
-      "doc": "A Python docstring for classes, including a one-line summary, details, attributes, and returns.",
-      "label": "class docstring",
-      "matches": {
-        "###class": true
-      }
-    },
-    {
-      "content": "\"\"\"\n${1:A one-line summary.}\n\n${2:Detailed description.}$0\n\nArgs:\n    ${4:argument_name}: ${5:type and description.}\n\nReturns:\n    ${3:type and description of the returned object.}\n\nExample:\n    # ${6:Description of my example.}\n    ${7:use_it_this_way(arg1, arg2)}\n\"\"\"",
-      "doc": "A Python docstring for functions and methods, including short summary, details, args, returns, and examples. This docstring is an synonym of \"\"\"function.",
-      "label": "comment",
-      "matches": {
-        "###": true
-      }
-    },
-    {
       "content": "Raises:\n    ${1:ErrorName}: ${2:Error description.}$0",
       "doc": "A Python docstring for methods when we want to be exclicit about the errors it Raises. Use it only when is relevant.",
       "label": "raises docstring",
@@ -74,11 +58,27 @@
       }
     },
     {
+      "content": "\"\"\"\n${1:A one-line summary.}\n\n${2:Detailed description.}$0\n\nArgs:\n    ${4:argument_name}: ${5:type and description.}\n\nYields:\n    ${3:type and description of the yielded object.}\n\nExample:\n    # ${6:Description of my example.}\n    ${7:use_it_this_way(arg1, arg2)}\n\"\"\"",
+      "doc": "A Python docstring for generator methods, including a one-line summary, details, parameters, yields, and example. It is the same, but it has yields instead of returns.",
+      "label": "generator docstring",
+      "matches": {
+        "###generator": true
+      }
+    },
+    {
       "content": "\"\"\"\n${1:A one-line summary.}\n\n${2:Detailed description.}$0\n\nArgs:\n    ${4:argument_name}: ${5:type and description.}\n\nReturns:\n    ${3:type and description of the returned object.}\n\nExample:\n    # ${6:Description of my example.}\n    ${7:use_it_this_way(arg1, arg2)}\n\"\"\"",
       "doc": "A Python docstring for functions and methods, including short summary, details, args, returns, and example.",
       "label": "function docstring",
       "matches": {
         "###function": true
+      }
+    },
+    {
+      "content": "\"\"\"\n${1:A one-line summary.}\n\n${2:Detailed description.}$0\n\nArgs:\n    ${4:argument_name}: ${5:type and description.}\n\nReturns:\n    ${3:type and description of the returned object.}\n\nExample:\n    # ${6:Description of my example.}\n    ${7:use_it_this_way(arg1, arg2)}\n\"\"\"",
+      "doc": "A Python docstring for functions and methods, including short summary, details, args, returns, and examples. This docstring is an synonym of \"\"\"function.",
+      "label": "comment",
+      "matches": {
+        "###": true
       }
     }
   ]

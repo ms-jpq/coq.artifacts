@@ -2,6 +2,38 @@
   "extends": [],
   "snippets": [
     {
+      "content": "@phdthesis{${1:name},\n    author = {${2:author}},\n    title = {${3:title}},\n    school = {${4:school}},\n    address = {${5:?_address}},\n    year = {${6:year}},\n    month = {${7:?_month}},\n    keywords = {${8:?_keywords}},\n    note = {${9:?_note}},\n}",
+      "doc": "Ph.D. thesis",
+      "label": "@phdthesis",
+      "matches": {
+        "@phdthesis": true
+      }
+    },
+    {
+      "content": "@inbook{${1:name},\n    author = {${2:author}},\n    editor = {${3:editor}},\n    title = {${4:title}},\n    chapter = {${5:chapter}},\n    pages = {${6:pages}},\n    publisher = {${7:publisher}},\n    volume = {${8:?_volume}},\n    number = {${9:?_number}},\n    series = {${10:?_series}},\n    type = {${11:?_type}},\n    address = {${12:?_address}},\n    edition = {${13:?_edition}},\n    year = {${14:year}},\n    month = {${15:?_month}},\n    note = {${16:?_note}},\n}",
+      "doc": "A section of a book without its own title.",
+      "label": "@inbook",
+      "matches": {
+        "@inbook": true
+      }
+    },
+    {
+      "content": "@incollection{${1:name},\n    author = {${2:author}},\n    title = {${3:title}},\n    booktitle = {${4:booktitle}},\n    publisher = {${5:publisher}},\n    editor = {${6:?_editor}},\n    volume = {${7:?_volume}},\n    number = {${8:?_number}},\n    series = {${9:?_series}},\n    type = {${10:?_type}},\n    chapter = {${11:?_chapter}},\n    pages = {${12:?_pages}},\n    address = {${13:?_address}},\n    edition = {${14:?_edition}},\n    year = {${15:year}},\n    month = {${16:?_month}},\n    note = {${17:?_note}},\n}",
+      "doc": "A section of a book having its own title.",
+      "label": "@incollection",
+      "matches": {
+        "@incollection": true
+      }
+    },
+    {
+      "content": "@conference{${1:name},\n    author = {${2:author}},\n    title = {${3:title}},\n    booktitle = {${4:booktitle}},\n    editor = {${5:?_editor}},\n    volume = {${6:?_volume}},\n    number = {${7:?_number}},\n    series = {${8:?_series}},\n    pages = {${9:?_pages}},\n    address = {${10:?_address}},\n    year = {${11:year}},\n    month = {${12:?_month}},\n    publisher = {${13:?_publisher}},\n    note = {${14:?_note}},\n}",
+      "doc": "Equal to inproceedings",
+      "label": "@conference",
+      "matches": {
+        "@conference": true
+      }
+    },
+    {
       "content": "@mastersthesis{${1:name},\n    author = {${2:author}},\n    title = {${3:title}},\n    school = {${4:school}},\n    type = {${5:?_type}},\n    address = {${6:?_address}},\n    year = {${7:year}},\n    month = {${8:?_month}},\n    note = {${9:?_note}},\n}",
       "doc": "Master's thesis",
       "label": "@mastersthesis",
@@ -34,14 +66,6 @@
       }
     },
     {
-      "content": "@techreport{${1:name},\n    author = {${2:author}},\n    title = {${3:title}},\n    institution = {${4:institution}},\n    type = {${5:?_type}},\n    number = {${6:?_number}},\n    address = {${7:?_address}},\n    year = {${8:year}},\n    month = {${9:?_month}},\n    note = {${10:?_note}},\n}",
-      "doc": "Technical report from educational, commercial or standardization institution.",
-      "label": "@techreport",
-      "matches": {
-        "@techreport": true
-      }
-    },
-    {
       "content": "@manual{${1:name},\n    title = {${2:title}},\n    author = {${3:?_author}},\n    organization = {${4:?_organization}},\n    address = {${5:?_address}},\n    edition = {${6:?_edition}},\n    year = {${7:year}},\n    month = {${8:?_month}},\n    note = {${9:?_note}},\n}",
       "doc": "Technical manual",
       "label": "@manual",
@@ -50,11 +74,11 @@
       }
     },
     {
-      "content": "@phdthesis{${1:name},\n    author = {${2:author}},\n    title = {${3:title}},\n    school = {${4:school}},\n    address = {${5:?_address}},\n    year = {${6:year}},\n    month = {${7:?_month}},\n    keywords = {${8:?_keywords}},\n    note = {${9:?_note}},\n}",
-      "doc": "Ph.D. thesis",
-      "label": "@phdthesis",
+      "content": "@techreport{${1:name},\n    author = {${2:author}},\n    title = {${3:title}},\n    institution = {${4:institution}},\n    type = {${5:?_type}},\n    number = {${6:?_number}},\n    address = {${7:?_address}},\n    year = {${8:year}},\n    month = {${9:?_month}},\n    note = {${10:?_note}},\n}",
+      "doc": "Technical report from educational, commercial or standardization institution.",
+      "label": "@techreport",
       "matches": {
-        "@phdthesis": true
+        "@techreport": true
       }
     },
     {
@@ -66,19 +90,11 @@
       }
     },
     {
-      "content": "@incollection{${1:name},\n    author = {${2:author}},\n    title = {${3:title}},\n    booktitle = {${4:booktitle}},\n    publisher = {${5:publisher}},\n    editor = {${6:?_editor}},\n    volume = {${7:?_volume}},\n    number = {${8:?_number}},\n    series = {${9:?_series}},\n    type = {${10:?_type}},\n    chapter = {${11:?_chapter}},\n    pages = {${12:?_pages}},\n    address = {${13:?_address}},\n    edition = {${14:?_edition}},\n    year = {${15:year}},\n    month = {${16:?_month}},\n    note = {${17:?_note}},\n}",
-      "doc": "A section of a book having its own title.",
-      "label": "@incollection",
+      "content": "@inproceedings{${1:name},\n    author = {${2:author}},\n    title = {${3:title}},\n    booktitle = {${4:booktitle}},\n    editor = {${5:?_editor}},\n    volume = {${6:?_volume}},\n    number = {${7:?_number}},\n    series = {${8:?_series}},\n    pages = {${9:?_pages}},\n    address = {${10:?_address}},\n    organization = {${11:?_organization}},\n    publisher = {${12:?_publisher}},\n    year = {${13:year}},\n    month = {${14:?_month}},\n    note = {${15:?_note}},\n}",
+      "doc": "An article in a conference proceedings.",
+      "label": "@inproceedings",
       "matches": {
-        "@incollection": true
-      }
-    },
-    {
-      "content": "@book{${1:name},\n    author = {${2:author}},\n    title = {${3:title}},\n    publisher = {${4:publisher}},\n    volume = {${5:?_volume}},\n    number = {${6:?_number}},\n    series = {${7:?_series}},\n    address = {${8:?_address}},\n    edition = {${9:?_edition}},\n    year = {${10:year}},\n    month = {${11:?_month}},\n    note = {${12:?_note}},\n}",
-      "doc": "A published book",
-      "label": "@book",
-      "matches": {
-        "@book": true
+        "@inproceedings": true
       }
     },
     {
@@ -90,27 +106,11 @@
       }
     },
     {
-      "content": "@inbook{${1:name},\n    author = {${2:author}},\n    editor = {${3:editor}},\n    title = {${4:title}},\n    chapter = {${5:chapter}},\n    pages = {${6:pages}},\n    publisher = {${7:publisher}},\n    volume = {${8:?_volume}},\n    number = {${9:?_number}},\n    series = {${10:?_series}},\n    type = {${11:?_type}},\n    address = {${12:?_address}},\n    edition = {${13:?_edition}},\n    year = {${14:year}},\n    month = {${15:?_month}},\n    note = {${16:?_note}},\n}",
-      "doc": "A section of a book without its own title.",
-      "label": "@inbook",
+      "content": "@book{${1:name},\n    author = {${2:author}},\n    title = {${3:title}},\n    publisher = {${4:publisher}},\n    volume = {${5:?_volume}},\n    number = {${6:?_number}},\n    series = {${7:?_series}},\n    address = {${8:?_address}},\n    edition = {${9:?_edition}},\n    year = {${10:year}},\n    month = {${11:?_month}},\n    note = {${12:?_note}},\n}",
+      "doc": "A published book",
+      "label": "@book",
       "matches": {
-        "@inbook": true
-      }
-    },
-    {
-      "content": "@inproceedings{${1:name},\n    author = {${2:author}},\n    title = {${3:title}},\n    booktitle = {${4:booktitle}},\n    editor = {${5:?_editor}},\n    volume = {${6:?_volume}},\n    number = {${7:?_number}},\n    series = {${8:?_series}},\n    pages = {${9:?_pages}},\n    address = {${10:?_address}},\n    organization = {${11:?_organization}},\n    publisher = {${12:?_publisher}},\n    year = {${13:year}},\n    month = {${14:?_month}},\n    note = {${15:?_note}},\n}",
-      "doc": "An article in a conference proceedings.",
-      "label": "@inproceedings",
-      "matches": {
-        "@inproceedings": true
-      }
-    },
-    {
-      "content": "@conference{${1:name},\n    author = {${2:author}},\n    title = {${3:title}},\n    booktitle = {${4:booktitle}},\n    editor = {${5:?_editor}},\n    volume = {${6:?_volume}},\n    number = {${7:?_number}},\n    series = {${8:?_series}},\n    pages = {${9:?_pages}},\n    address = {${10:?_address}},\n    year = {${11:year}},\n    month = {${12:?_month}},\n    publisher = {${13:?_publisher}},\n    note = {${14:?_note}},\n}",
-      "doc": "Equal to inproceedings",
-      "label": "@conference",
-      "matches": {
-        "@conference": true
+        "@book": true
       }
     }
   ]

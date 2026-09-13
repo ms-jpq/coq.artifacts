@@ -10,6 +10,14 @@
       }
     },
     {
+      "content": "inherit $1;",
+      "doc": "inherit expression",
+      "label": "inherit",
+      "matches": {
+        "inherit": true
+      }
+    },
+    {
       "content": "fetchFrom${1|GitHub,GitLab,Gitea,Gitiles,BitBucket,Savannah,RepoOrCz,SourceHut|} {\n  owner = \"$2\";\n  repo = \"$3\";\n  rev = \"${4:v\\${version\\}}\";\n  hash = \"${5:sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=}\";\n};",
       "doc": "fetchFromGitHub, or any other common fetcher from Nixpkgs",
       "label": "fetchFrom",
@@ -23,14 +31,6 @@
       "label": "stdenv.mkDerivation",
       "matches": {
         "mkd": true
-      }
-    },
-    {
-      "content": "fetchurl {\n  url = \"$1\";\n  hash = \"${2:sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=}\";\n};",
-      "doc": "fetchurl with default empty hash",
-      "label": "fetchurl",
-      "matches": {
-        "fetchurl": true
       }
     },
     {
@@ -50,11 +50,11 @@
       }
     },
     {
-      "content": "\"${1:sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=}\";",
-      "doc": "Empty hash",
-      "label": "hash",
+      "content": "fetchurl {\n  url = \"$1\";\n  hash = \"${2:sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=}\";\n};",
+      "doc": "fetchurl with default empty hash",
+      "label": "fetchurl",
       "matches": {
-        "hash": true
+        "fetchurl": true
       }
     },
     {
@@ -74,11 +74,11 @@
       }
     },
     {
-      "content": "inherit $1;",
-      "doc": "inherit expression",
-      "label": "inherit",
+      "content": "\"${1:sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=}\";",
+      "doc": "Empty hash",
+      "label": "hash",
       "matches": {
-        "inherit": true
+        "hash": true
       }
     }
   ]

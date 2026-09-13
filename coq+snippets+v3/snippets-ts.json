@@ -2,19 +2,19 @@
   "extends": [],
   "snippets": [
     {
-      "content": "import styled from 'styled-components/native';\n\nexport const ${1:Container} = styled.${2:View}`\n  ${3}\n`;",
-      "doc": "Create React Native Styled Components file",
-      "label": "styles",
-      "matches": {
-        "styled-react-native": true
-      }
-    },
-    {
       "content": "import React from 'react';\nimport { View } from 'react-native';\n\n// import { Container } from './styles';\n\nconst ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}}: React.FC = () => {\n  return <View />;\n}\n\nexport default ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}};",
       "doc": "Create React Native TypeScript Functional Component",
       "label": "componentFunctionalTypescript",
       "matches": {
         "rnfc": true
+      }
+    },
+    {
+      "content": "import styled from 'styled-components/native';\n\nexport const ${1:Container} = styled.${2:View}`\n  ${3}\n`;",
+      "doc": "Create React Native Styled Components file",
+      "label": "styles",
+      "matches": {
+        "styled-react-native": true
       }
     }
   ]

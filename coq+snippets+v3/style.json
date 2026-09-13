@@ -2,11 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "container",
-      "doc": "container => sm(640px), md(768px), lg(1024px), xl(1280px), 2xl(1536px) and use max-width overall",
-      "label": "container",
+      "content": "aspect-[$1] $0",
+      "doc": "aspect arbitrary values",
+      "label": "aspect-arbitrary",
       "matches": {
-        "container": true
+        "aspectArbitrary": true
       }
     },
     {
@@ -18,11 +18,11 @@
       }
     },
     {
-      "content": "aspect-[$1] $0",
-      "doc": "aspect arbitrary values",
-      "label": "aspect-arbitrary",
+      "content": "container",
+      "doc": "container => sm(640px), md(768px), lg(1024px), xl(1280px), 2xl(1536px) and use max-width overall",
+      "label": "container",
       "matches": {
-        "aspectArbitrary": true
+        "container": true
       }
     },
     {

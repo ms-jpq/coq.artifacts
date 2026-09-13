@@ -2,131 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "save_and_open_screenshot${0}",
-      "doc": "save_and_open_screenshot",
-      "label": "Save and open screenshot",
-      "matches": {
-        "saos": true
-      }
-    },
-    {
-      "content": "before_update :${0:method}",
-      "doc": "before_update",
-      "label": "Before update",
-      "matches": {
-        "bu": true
-      }
-    },
-    {
-      "content": "before_save :${0:method}",
-      "doc": "before_save",
-      "label": "Before save",
-      "matches": {
-        "bs": true
-      }
-    },
-    {
-      "content": "params[:${1:id}]",
-      "doc": "getting params using attribute",
-      "label": "Getting Params",
-      "matches": {
-        "pa": true
-      }
-    },
-    {
-      "content": "before_destroy :${0:method}",
-      "doc": "before_destroy",
-      "label": "Before destroy",
-      "matches": {
-        "bd": true
-      }
-    },
-    {
-      "content": "delegate: :${1:method}, to: :${0:object}",
-      "doc": "delegate to",
-      "label": "Delegate to",
-      "matches": {
-        "dt": true
-      }
-    },
-    {
-      "content": "after_create :${0:method}",
-      "doc": "after_create",
-      "label": "After create",
-      "matches": {
-        "ac": true
-      }
-    },
-    {
-      "content": "delegate: :${1:method}, to: :${2:object}, prefix: :${3:prefix}, allow_nil: ${0:allow_nil}",
-      "doc": "delegate to",
-      "label": "Delegate to with prefix",
-      "matches": {
-        "dtp": true
-      }
-    },
-    {
-      "content": "after_validation :${0:method}",
-      "doc": "after_validation",
-      "label": "After validation",
-      "matches": {
-        "av": true
-      }
-    },
-    {
-      "content": "validates :${1:attribute}, presence: true",
-      "doc": "validates presence",
-      "label": "Validate presence",
-      "matches": {
-        "vp": true
-      }
-    },
-    {
-      "content": "after_update :${0:method}",
-      "doc": "after_update",
-      "label": " update",
-      "matches": {
-        "au": true
-      }
-    },
-    {
-      "content": "validates :${1:attribute}, uniqueness: true",
-      "doc": "validates presence",
-      "label": "Validate uniqueness",
-      "matches": {
-        "vu": true
-      }
-    },
-    {
-      "content": "after_save :${0:method}",
-      "doc": "after_create",
-      "label": " save",
-      "matches": {
-        "as": true
-      }
-    },
-    {
-      "content": "add_column :${1:table_name}, :${2:column_name}, :${0:data_type}",
-      "doc": "Migration add column",
-      "label": "Migration add column",
-      "matches": {
-        "mac": true
-      }
-    },
-    {
       "content": "add_index :${1:table_name}, :${0:column_name}",
       "doc": "Migration add index",
       "label": "Migration add index",
       "matches": {
         "mai": true
-      }
-    },
-    {
-      "content": "belongs_to :${0:association}",
-      "doc": "belongs_to assocation",
-      "label": "Belongs to",
-      "matches": {
-        "bt": true
       }
     },
     {
@@ -178,11 +58,11 @@
       }
     },
     {
-      "content": "before_action :${0:method}",
-      "doc": "before_action",
-      "label": "Before action",
+      "content": "has_many :${0:object}",
+      "doc": "has_many association",
+      "label": "Has many",
       "matches": {
-        "ba": true
+        "hm": true
       }
     },
     {
@@ -202,19 +82,19 @@
       }
     },
     {
-      "content": "before_create :${0:method}",
-      "doc": "before_create",
-      "label": "Before create",
-      "matches": {
-        "bc": true
-      }
-    },
-    {
       "content": "def edit\n\t@${1:model_class_name} = ${2:ModelClassName}.find(params[:id])\nend",
       "doc": "def edit",
       "label": "Edit action",
       "matches": {
         "edit": true
+      }
+    },
+    {
+      "content": "before_create :${0:method}",
+      "doc": "before_create",
+      "label": "Before create",
+      "matches": {
+        "bc": true
       }
     },
     {
@@ -226,19 +106,11 @@
       }
     },
     {
-      "content": "has_many :${1:object}, through: :${0:object}",
-      "doc": "has_many through association",
-      "label": "Has many through",
+      "content": "before_update :${0:method}",
+      "doc": "before_update",
+      "label": "Before update",
       "matches": {
-        "hmt": true
-      }
-    },
-    {
-      "content": "save_and_open_page${0}",
-      "doc": "save_and_open_page",
-      "label": "Save and open page",
-      "matches": {
-        "saop": true
+        "bu": true
       }
     },
     {
@@ -250,19 +122,11 @@
       }
     },
     {
-      "content": "has_one :${1:object}, dependent: :${0:destroy}",
-      "doc": "has_one dependent",
-      "label": "Has one dependent",
+      "content": "before_save :${0:method}",
+      "doc": "before_save",
+      "label": "Before save",
       "matches": {
-        "hod": true
-      }
-    },
-    {
-      "content": "has_one :${0:object}",
-      "doc": "has_one association",
-      "label": "Has one",
-      "matches": {
-        "ho": true
+        "bs": true
       }
     },
     {
@@ -274,19 +138,27 @@
       }
     },
     {
-      "content": "has_many :${0:object}",
-      "doc": "has_many association",
-      "label": "Has many",
+      "content": "before_destroy :${0:method}",
+      "doc": "before_destroy",
+      "label": "Before destroy",
       "matches": {
-        "hm": true
+        "bd": true
       }
     },
     {
-      "content": "def update\n\t@${1:model_class_name} = ${2:ModelClassName}.find(params[:id])\n\trespond_to do |format|\n\t\tif @$1.update($1_params)\n\t\t\tformat.html { redirect_to @$1, notice: '$2 updated' }\n\t\telse\n\t\t\tformat.html { render :edit, status: :unprocessable_entity }\n\t\tend\n\tend\nend",
-      "doc": "def update",
-      "label": "Update action",
+      "content": "save_and_open_page${0}",
+      "doc": "save_and_open_page",
+      "label": "Save and open page",
       "matches": {
-        "update": true
+        "saop": true
+      }
+    },
+    {
+      "content": "after_create :${0:method}",
+      "doc": "after_create",
+      "label": "After create",
+      "matches": {
+        "ac": true
       }
     },
     {
@@ -295,6 +167,54 @@
       "label": "Model Params",
       "matches": {
         "params": true
+      }
+    },
+    {
+      "content": "after_validation :${0:method}",
+      "doc": "after_validation",
+      "label": "After validation",
+      "matches": {
+        "av": true
+      }
+    },
+    {
+      "content": "params[:${1:id}]",
+      "doc": "getting params using attribute",
+      "label": "Getting Params",
+      "matches": {
+        "pa": true
+      }
+    },
+    {
+      "content": "after_update :${0:method}",
+      "doc": "after_update",
+      "label": " update",
+      "matches": {
+        "au": true
+      }
+    },
+    {
+      "content": "delegate: :${1:method}, to: :${0:object}",
+      "doc": "delegate to",
+      "label": "Delegate to",
+      "matches": {
+        "dt": true
+      }
+    },
+    {
+      "content": "delegate: :${1:method}, to: :${2:object}, prefix: :${3:prefix}, allow_nil: ${0:allow_nil}",
+      "doc": "delegate to",
+      "label": "Delegate to with prefix",
+      "matches": {
+        "dtp": true
+      }
+    },
+    {
+      "content": "save_and_open_screenshot${0}",
+      "doc": "save_and_open_screenshot",
+      "label": "Save and open screenshot",
+      "matches": {
+        "saos": true
       }
     },
     {
@@ -311,6 +231,86 @@
       "label": "Scope",
       "matches": {
         "scope": true
+      }
+    },
+    {
+      "content": "has_one :${1:object}, dependent: :${0:destroy}",
+      "doc": "has_one dependent",
+      "label": "Has one dependent",
+      "matches": {
+        "hod": true
+      }
+    },
+    {
+      "content": "belongs_to :${0:association}",
+      "doc": "belongs_to assocation",
+      "label": "Belongs to",
+      "matches": {
+        "bt": true
+      }
+    },
+    {
+      "content": "validates :${1:attribute}, presence: true",
+      "doc": "validates presence",
+      "label": "Validate presence",
+      "matches": {
+        "vp": true
+      }
+    },
+    {
+      "content": "has_one :${0:object}",
+      "doc": "has_one association",
+      "label": "Has one",
+      "matches": {
+        "ho": true
+      }
+    },
+    {
+      "content": "has_many :${1:object}, through: :${0:object}",
+      "doc": "has_many through association",
+      "label": "Has many through",
+      "matches": {
+        "hmt": true
+      }
+    },
+    {
+      "content": "def update\n\t@${1:model_class_name} = ${2:ModelClassName}.find(params[:id])\n\trespond_to do |format|\n\t\tif @$1.update($1_params)\n\t\t\tformat.html { redirect_to @$1, notice: '$2 updated' }\n\t\telse\n\t\t\tformat.html { render :edit, status: :unprocessable_entity }\n\t\tend\n\tend\nend",
+      "doc": "def update",
+      "label": "Update action",
+      "matches": {
+        "update": true
+      }
+    },
+    {
+      "content": "validates :${1:attribute}, uniqueness: true",
+      "doc": "validates presence",
+      "label": "Validate uniqueness",
+      "matches": {
+        "vu": true
+      }
+    },
+    {
+      "content": "before_action :${0:method}",
+      "doc": "before_action",
+      "label": "Before action",
+      "matches": {
+        "ba": true
+      }
+    },
+    {
+      "content": "after_save :${0:method}",
+      "doc": "after_create",
+      "label": " save",
+      "matches": {
+        "as": true
+      }
+    },
+    {
+      "content": "add_column :${1:table_name}, :${2:column_name}, :${0:data_type}",
+      "doc": "Migration add column",
+      "label": "Migration add column",
+      "matches": {
+        "mac": true
       }
     },
     {

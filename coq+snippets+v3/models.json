@@ -2,6 +2,22 @@
   "extends": [],
   "snippets": [
     {
+      "content": "${1:FIELDNAME} = models.UUIDField($2)",
+      "doc": "UUIDField (muuid).\n\nA field for storing universally unique identifiers. Uses Python’s UUID class.",
+      "label": "muuid",
+      "matches": {
+        "muuid": true
+      }
+    },
+    {
+      "content": "class $1QuerySet(models.QuerySet):\n\tpass",
+      "doc": "",
+      "label": "queryset",
+      "matches": {
+        "qs": true
+      }
+    },
+    {
       "content": "${1:FIELDNAME} = models.XMLField($2)",
       "doc": "XMLField (mxml).\n\n*All uses of XMLField can be replaced with TextField. This field has been deprecated since version 1.3*",
       "label": "mxml",
@@ -10,19 +26,11 @@
       }
     },
     {
-      "content": "def get_absolute_url(self):\n\tfrom django.core.urlresolvers import reverse\n\treturn reverse('$1', kwargs={'pk': self.pk})",
-      "doc": "",
-      "label": "get_absolute_url",
+      "content": "class $1Manager(models.Manager):\n\tdef get_queryset(self):\n\t\treturn super ($1Manager, self).get_queryset().${2|filter,exclude,order_by,distinct,reverse|}($3)",
+      "doc": "Add extra Manager methods",
+      "label": "manager",
       "matches": {
-        "get_absolute_url": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = models.FileField($2, upload_to=${3:None}, max_length=${4:100})",
-      "doc": "FileField (mfile).\n\nA file-upload field.",
-      "label": "mfile",
-      "matches": {
-        "mfile": true
+        "mngr": true
       }
     },
     {
@@ -34,14 +42,6 @@
       }
     },
     {
-      "content": "${1:FIELDNAME} = models.FilePathField($2, path=${3:None}, match=${4:None}, recursive=${5:recursive}, max_length=${6:100})",
-      "doc": "FilePathField (mfilepath).\n\nA CharField whose choices are limited to the filenames in a certain directory on the filesystem.",
-      "label": "mfilepath",
-      "matches": {
-        "mfilepath": true
-      }
-    },
-    {
       "content": "${1:FIELDNAME} = JSONField()",
       "doc": "JSONField (mjson).\n\n*PostgreSQL specific model fields*.\n\n[New in Django 1.11.]\n\nA field for storing JSON encoded data.",
       "label": "mjson",
@@ -50,19 +50,11 @@
       }
     },
     {
-      "content": "${1:FIELDNAME} = models.TimeField($2, auto_now=${4:False}, auto_now_add=${5:False})",
-      "doc": "TimeField (mtime).\n\nA time, represented in Python by a datetime.time instance.",
-      "label": "mtime",
+      "content": "class $1Manager(models.Manager):\n\tdef get_queryset(self):\n\t\treturn $1QuerySet(self.model, using=self._db)",
+      "doc": "Modify the initial QuerySet the Manager returns.",
+      "label": "queryset_from_manager",
       "matches": {
-        "mtime": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = models.FloatField($2)",
-      "doc": "FloatField (mfloat).\n\nA floating-point number represented in Python by a float instance.",
-      "label": "mfloat",
-      "matches": {
-        "mfloat": true
+        "qs_mngr": true
       }
     },
     {
@@ -74,11 +66,11 @@
       }
     },
     {
-      "content": "${1:FIELDNAME} = models.ForeignKey(${2:OTHERMODEL}, on_delete=models.${3|CASCADE,PROTECT,SET_NULL,SET_DEFAULT,SET(),DO_NOTHING|})",
-      "doc": "ForeignKey (fk).\n\nA many-to-one relationship.\n\non_delete will become a required argument in Django 2.0. In older versions it defaults to CASCADE.",
-      "label": "fk",
+      "content": "${1:FIELDNAME} = models.AutoField($2)",
+      "doc": "AutoField (mauto).\n\nAn IntegerField that automatically increments according to available IDs.",
+      "label": "mauto",
       "matches": {
-        "fk": true
+        "mauto": true
       }
     },
     {
@@ -90,11 +82,11 @@
       }
     },
     {
-      "content": "${1:FIELDNAME} = models.IPAddressField($2)",
-      "doc": "IPAddressField (mip).\n\nThis field has been deprecated since version 1.7 in favor of GenericIPAddressField.",
-      "label": "mip",
+      "content": "${1:FIELDNAME} = models.BigAutoField($2)",
+      "doc": "BigAutoField (mbigauto).\n\n[New in Django 1.10.]\n\nA 64-bit integer, much like an AutoField.",
+      "label": "mbigauto",
       "matches": {
-        "mip": true
+        "mbigauto": true
       }
     },
     {
@@ -106,11 +98,11 @@
       }
     },
     {
-      "content": "class $1Mixin(models.Model):\n\t${2:# TODO}\r\n\n\tclass Meta:\n\t\tabstract = True",
-      "doc": "",
-      "label": "modelmixin",
+      "content": "${1:FIELDNAME} = models.BigIntegerField($2)",
+      "doc": "BigIntegerField (mbigint).\n\nA 64-bit integer, much like an IntegerField.",
+      "label": "mbigint",
       "matches": {
-        "modelmixin": true
+        "mbigint": true
       }
     },
     {
@@ -130,115 +122,11 @@
       }
     },
     {
-      "content": "class $1QuerySet(models.QuerySet):\n\tpass",
-      "doc": "",
-      "label": "queryset",
-      "matches": {
-        "qs": true
-      }
-    },
-    {
       "content": "${1:FIELDNAME} = models.GenericIPAddressField($2, protocol=${3:'both'}, unpack_ipv4=${4:False})",
       "doc": "GenericIPAddressField (mimg).\n\nAn IPv4 or IPv6 address, in string format.",
       "label": "mgenericip",
       "matches": {
         "mgenericip": true
-      }
-    },
-    {
-      "content": "class $1Manager(models.Manager):\n\tdef get_queryset(self):\n\t\treturn super ($1Manager, self).get_queryset().${2|filter,exclude,order_by,distinct,reverse|}($3)",
-      "doc": "Add extra Manager methods",
-      "label": "manager",
-      "matches": {
-        "mngr": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = models.ManyToManyField(${2:OTHERMODEL})",
-      "doc": "ManyToManyField (m2m).\n\nA many-to-many relationship.",
-      "label": "m2m",
-      "matches": {
-        "m2m": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = models.NullBooleanField($2)",
-      "doc": "NullBooleanField (mnullbool).\n\nLike a BooleanField, but allows NULL as one of the options.",
-      "label": "mnullbool",
-      "matches": {
-        "mnullbool": true
-      }
-    },
-    {
-      "content": "class $1Manager(models.Manager):\n\tdef get_queryset(self):\n\t\treturn $1QuerySet(self.model, using=self._db)",
-      "doc": "Modify the initial QuerySet the Manager returns.",
-      "label": "queryset_from_manager",
-      "matches": {
-        "qs_mngr": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = models.OneToOneField(${2:OTHERMODEL}, on_delete=models.${3|CASCADE,PROTECT,SET_NULL,SET_DEFAULT,SET(),DO_NOTHING|})",
-      "doc": "OneToOneField (o2o).\n\nA one-to-one relationship.\n\non_delete will become a required argument in Django 2.0. In older versions it defaults to CASCADE.",
-      "label": "o2o",
-      "matches": {
-        "o2o": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = models.AutoField($2)",
-      "doc": "AutoField (mauto).\n\nAn IntegerField that automatically increments according to available IDs.",
-      "label": "mauto",
-      "matches": {
-        "mauto": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = models.PhoneNumberField($2)",
-      "doc": "PhoneNumberField (mphone).\n\n*external package: django-phonenumber-field*",
-      "label": "mphone",
-      "matches": {
-        "mphone": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = models.BigAutoField($2)",
-      "doc": "BigAutoField (mbigauto).\n\n[New in Django 1.10.]\n\nA 64-bit integer, much like an AutoField.",
-      "label": "mbigauto",
-      "matches": {
-        "mbigauto": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = models.PositiveIntegerField($2)",
-      "doc": "PositiveIntegerField (mposint).\n\nLike an IntegerField, but must be either positive or zero (0).",
-      "label": "mposint",
-      "matches": {
-        "mposint": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = models.BigIntegerField($2)",
-      "doc": "BigIntegerField (mbigint).\n\nA 64-bit integer, much like an IntegerField.",
-      "label": "mbigint",
-      "matches": {
-        "mbigint": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = models.PositiveSmallIntegerField($2)",
-      "doc": "PositiveSmallIntegerField (mpossmallint).\n\nLike a PositiveIntegerField, but only allows values under a certain (database-dependent) point.",
-      "label": "mpossmallint",
-      "matches": {
-        "mpossmallint": true
-      }
-    },
-    {
-      "content": "def ${1:FUNCTIONNAME}_${2|pre_init,post_init,pre_save,post_save,pre_delete,post_delete,m2m_changed,class_prepared,Management signals,pre_migrate,post_migrate|}_receiver(sender, instance, *args, **kwargs):\n\tpass\n\n\n${2|pre_init,post_init,pre_save,post_save,pre_delete,post_delete,m2m_changed,class_prepared,Management signals,pre_migrate,post_migrate|}.connect(${1:name}_${2|pre_init,post_init,pre_save,post_save,pre_delete,post_delete,m2m_changed,class_prepared,Management signals,pre_migrate,post_migrate|}_receiver, sender=${3:MODELNAME})",
-      "doc": "",
-      "label": "receiver",
-      "matches": {
-        "receiver": true
       }
     },
     {
@@ -250,75 +138,11 @@
       }
     },
     {
-      "content": "${1:FIELDNAME} = models.SlugField($2)",
-      "doc": "SlugField (mslug).\n\nA slug is a short label for something, containing only letters, numbers, underscores or hyphens. They’re generally used in URLs.",
-      "label": "mslug",
+      "content": "${1:FIELDNAME} = models.ManyToManyField(${2:OTHERMODEL})",
+      "doc": "ManyToManyField (m2m).\n\nA many-to-many relationship.",
+      "label": "m2m",
       "matches": {
-        "mslug": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = models.ImageField($2, upload_to=${3:None}, height_field=${4:None}, width_field=${5:None}, max_length=${5:100})",
-      "doc": "ImageField (mimg).\n\nInherits all attributes and methods from FileField, but also validates that the uploaded object is a valid image.",
-      "label": "mimg",
-      "matches": {
-        "mimg": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = models.BooleanField($2)",
-      "doc": "BooleanField (mbool).\n\nA true/false field.",
-      "label": "mbool",
-      "matches": {
-        "mbool": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = models.SmallIntegerField($2)",
-      "doc": "SmallIntegerField (msmallint).\n\nLike an IntegerField, but only allows values under a certain (database-dependent) point.",
-      "label": "msmallint",
-      "matches": {
-        "msmallint": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = models.EmailField($2, max_length=${3:254})",
-      "doc": "EmailField (memail).\n\nA CharField that checks that the value is a valid email address.",
-      "label": "memail",
-      "matches": {
-        "memail": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = models.CharField($2, max_length=${3:50})",
-      "doc": "CharField (mchar)",
-      "label": "mchar",
-      "matches": {
-        "mchar": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = models.TextField($2)",
-      "doc": "TextField (mtext).\n\nA large text field.",
-      "label": "mtext",
-      "matches": {
-        "mtext": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = models.DateField($2, auto_now=${3:False}, auto_now_add=${4:False})",
-      "doc": "DateField (mdate).\n\nA date, represented in Python by a datetime.date instance.",
-      "label": "mdate",
-      "matches": {
-        "mdate": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = models.CommaSeparatedIntegerField($2)",
-      "doc": "CommaSeparatedIntegerField (mcoseint).\n\nThis field is deprecated since 1.9 in favor of CharField with validators.",
-      "label": "mcoseint",
-      "matches": {
-        "mcoseint": true
+        "m2m": true
       }
     },
     {
@@ -330,43 +154,19 @@
       }
     },
     {
-      "content": "${1:FIELDNAME} = models.DateTimeField($2, auto_now=${3:False}, auto_now_add=${4:False})",
-      "doc": "DateTimeField (mdatetime).\n\nA date, represented in Python by a datetime.datetime instance.",
-      "label": "mdatetime",
+      "content": "def __str__(self):\n\treturn self${1: # TODO}",
+      "doc": "",
+      "label": "__str__",
       "matches": {
-        "mdatetime": true
+        "str": true
       }
     },
     {
-      "content": "${1:FIELDNAME} = models.URLField($2, max_length=${3:200})",
-      "doc": "URLField (murl).\n\nA CharField for a URL.",
-      "label": "murl",
+      "content": "${1:FIELDNAME} = models.CommaSeparatedIntegerField($2)",
+      "doc": "CommaSeparatedIntegerField (mcoseint).\n\nThis field is deprecated since 1.9 in favor of CharField with validators.",
+      "label": "mcoseint",
       "matches": {
-        "murl": true
-      }
-    },
-    {
-      "content": "from django.contrib.postgres.fields import ${1|ArrayField,JSONField,HStoreField|}",
-      "doc": "PostgreSQL specific model fields",
-      "label": "ipostgresmf",
-      "matches": {
-        "ipostgresmf": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = models.DecimalField($2, max_digits=${3:5}, decimal_places=${4:2})",
-      "doc": "DecimalField (mdecimal).\n\nA fixed-precision decimal number, represented in Python by a Decimal instance.",
-      "label": "mdecimal",
-      "matches": {
-        "mdecimal": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = models.USStateField($2)",
-      "doc": "USStateField (musstate).\n\n*external package: django-localflavor*",
-      "label": "musstate",
-      "matches": {
-        "musstate": true
+        "mcoseint": true
       }
     },
     {
@@ -378,6 +178,198 @@
       }
     },
     {
+      "content": "from django.contrib.postgres.fields import ${1|ArrayField,JSONField,HStoreField|}",
+      "doc": "PostgreSQL specific model fields",
+      "label": "ipostgresmf",
+      "matches": {
+        "ipostgresmf": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.DateField($2, auto_now=${3:False}, auto_now_add=${4:False})",
+      "doc": "DateField (mdate).\n\nA date, represented in Python by a datetime.date instance.",
+      "label": "mdate",
+      "matches": {
+        "mdate": true
+      }
+    },
+    {
+      "content": "def get_absolute_url(self):\n\tfrom django.core.urlresolvers import reverse\n\treturn reverse('$1', kwargs={'pk': self.pk})",
+      "doc": "",
+      "label": "get_absolute_url",
+      "matches": {
+        "get_absolute_url": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.USStateField($2)",
+      "doc": "USStateField (musstate).\n\n*external package: django-localflavor*",
+      "label": "musstate",
+      "matches": {
+        "musstate": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.DateTimeField($2, auto_now=${3:False}, auto_now_add=${4:False})",
+      "doc": "DateTimeField (mdatetime).\n\nA date, represented in Python by a datetime.datetime instance.",
+      "label": "mdatetime",
+      "matches": {
+        "mdatetime": true
+      }
+    },
+    {
+      "content": "def ${1:FUNCTIONNAME}_${2|pre_init,post_init,pre_save,post_save,pre_delete,post_delete,m2m_changed,class_prepared,Management signals,pre_migrate,post_migrate|}_receiver(sender, instance, *args, **kwargs):\n\tpass\n\n\n${2|pre_init,post_init,pre_save,post_save,pre_delete,post_delete,m2m_changed,class_prepared,Management signals,pre_migrate,post_migrate|}.connect(${1:name}_${2|pre_init,post_init,pre_save,post_save,pre_delete,post_delete,m2m_changed,class_prepared,Management signals,pre_migrate,post_migrate|}_receiver, sender=${3:MODELNAME})",
+      "doc": "",
+      "label": "receiver",
+      "matches": {
+        "receiver": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.PositiveIntegerField($2)",
+      "doc": "PositiveIntegerField (mposint).\n\nLike an IntegerField, but must be either positive or zero (0).",
+      "label": "mposint",
+      "matches": {
+        "mposint": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.SmallIntegerField($2)",
+      "doc": "SmallIntegerField (msmallint).\n\nLike an IntegerField, but only allows values under a certain (database-dependent) point.",
+      "label": "msmallint",
+      "matches": {
+        "msmallint": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.TextField($2)",
+      "doc": "TextField (mtext).\n\nA large text field.",
+      "label": "mtext",
+      "matches": {
+        "mtext": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.PositiveSmallIntegerField($2)",
+      "doc": "PositiveSmallIntegerField (mpossmallint).\n\nLike a PositiveIntegerField, but only allows values under a certain (database-dependent) point.",
+      "label": "mpossmallint",
+      "matches": {
+        "mpossmallint": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.TimeField($2, auto_now=${4:False}, auto_now_add=${5:False})",
+      "doc": "TimeField (mtime).\n\nA time, represented in Python by a datetime.time instance.",
+      "label": "mtime",
+      "matches": {
+        "mtime": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.SlugField($2)",
+      "doc": "SlugField (mslug).\n\nA slug is a short label for something, containing only letters, numbers, underscores or hyphens. They’re generally used in URLs.",
+      "label": "mslug",
+      "matches": {
+        "mslug": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.EmailField($2, max_length=${3:254})",
+      "doc": "EmailField (memail).\n\nA CharField that checks that the value is a valid email address.",
+      "label": "memail",
+      "matches": {
+        "memail": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.OneToOneField(${2:OTHERMODEL}, on_delete=models.${3|CASCADE,PROTECT,SET_NULL,SET_DEFAULT,SET(),DO_NOTHING|})",
+      "doc": "OneToOneField (o2o).\n\nA one-to-one relationship.\n\non_delete will become a required argument in Django 2.0. In older versions it defaults to CASCADE.",
+      "label": "o2o",
+      "matches": {
+        "o2o": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.ForeignKey(${2:OTHERMODEL}, on_delete=models.${3|CASCADE,PROTECT,SET_NULL,SET_DEFAULT,SET(),DO_NOTHING|})",
+      "doc": "ForeignKey (fk).\n\nA many-to-one relationship.\n\non_delete will become a required argument in Django 2.0. In older versions it defaults to CASCADE.",
+      "label": "fk",
+      "matches": {
+        "fk": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.FileField($2, upload_to=${3:None}, max_length=${4:100})",
+      "doc": "FileField (mfile).\n\nA file-upload field.",
+      "label": "mfile",
+      "matches": {
+        "mfile": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.CharField($2, max_length=${3:50})",
+      "doc": "CharField (mchar)",
+      "label": "mchar",
+      "matches": {
+        "mchar": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.IPAddressField($2)",
+      "doc": "IPAddressField (mip).\n\nThis field has been deprecated since version 1.7 in favor of GenericIPAddressField.",
+      "label": "mip",
+      "matches": {
+        "mip": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.FilePathField($2, path=${3:None}, match=${4:None}, recursive=${5:recursive}, max_length=${6:100})",
+      "doc": "FilePathField (mfilepath).\n\nA CharField whose choices are limited to the filenames in a certain directory on the filesystem.",
+      "label": "mfilepath",
+      "matches": {
+        "mfilepath": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.NullBooleanField($2)",
+      "doc": "NullBooleanField (mnullbool).\n\nLike a BooleanField, but allows NULL as one of the options.",
+      "label": "mnullbool",
+      "matches": {
+        "mnullbool": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.BooleanField($2)",
+      "doc": "BooleanField (mbool).\n\nA true/false field.",
+      "label": "mbool",
+      "matches": {
+        "mbool": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.FloatField($2)",
+      "doc": "FloatField (mfloat).\n\nA floating-point number represented in Python by a float instance.",
+      "label": "mfloat",
+      "matches": {
+        "mfloat": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.ImageField($2, upload_to=${3:None}, height_field=${4:None}, width_field=${5:None}, max_length=${5:100})",
+      "doc": "ImageField (mimg).\n\nInherits all attributes and methods from FileField, but also validates that the uploaded object is a valid image.",
+      "label": "mimg",
+      "matches": {
+        "mimg": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.URLField($2, max_length=${3:200})",
+      "doc": "URLField (murl).\n\nA CharField for a URL.",
+      "label": "murl",
+      "matches": {
+        "murl": true
+      }
+    },
+    {
       "content": "${1:FIELDNAME} = models.DurationField($2)",
       "doc": "DurationField (mduration).\n\nA field for storing periods of time - modeled in Python by timedelta.",
       "label": "mduration",
@@ -386,19 +378,27 @@
       }
     },
     {
-      "content": "${1:FIELDNAME} = models.UUIDField($2)",
-      "doc": "UUIDField (muuid).\n\nA field for storing universally unique identifiers. Uses Python’s UUID class.",
-      "label": "muuid",
+      "content": "class $1Mixin(models.Model):\n\t${2:# TODO}\r\n\n\tclass Meta:\n\t\tabstract = True",
+      "doc": "",
+      "label": "modelmixin",
       "matches": {
-        "muuid": true
+        "modelmixin": true
       }
     },
     {
-      "content": "def __str__(self):\n\treturn self${1: # TODO}",
-      "doc": "",
-      "label": "__str__",
+      "content": "${1:FIELDNAME} = models.DecimalField($2, max_digits=${3:5}, decimal_places=${4:2})",
+      "doc": "DecimalField (mdecimal).\n\nA fixed-precision decimal number, represented in Python by a Decimal instance.",
+      "label": "mdecimal",
       "matches": {
-        "str": true
+        "mdecimal": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = models.PhoneNumberField($2)",
+      "doc": "PhoneNumberField (mphone).\n\n*external package: django-phonenumber-field*",
+      "label": "mphone",
+      "matches": {
+        "mphone": true
       }
     }
   ]

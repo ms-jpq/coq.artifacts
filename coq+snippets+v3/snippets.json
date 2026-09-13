@@ -2,75 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "@for (\\$i = ${1:0}; \\$i < ${2:\\$count}; \\$i++)\n    $3\n@endfor",
-      "doc": "@for block",
-      "label": "For-block",
-      "matches": {
-        "b:for": true
-      }
-    },
-    {
-      "content": "@includeIf('${1:view.name}'${2:, ['some' => 'data']})",
-      "doc": "include a view that may or may not be present, you should use the @includeIf directive",
-      "label": "includeIf",
-      "matches": {
-        "b:includeIf": true
-      }
-    },
-    {
-      "content": "@foreach (${1:\\$collection} as ${2:\\$item})\n    $3\n@endforeach",
-      "doc": "@foreach block",
-      "label": "Foreach-block",
-      "matches": {
-        "b:foreach": true
-      }
-    },
-    {
-      "content": "@slot('$1')\n    $2\n@endslot",
-      "doc": "slot",
-      "label": "slot",
-      "matches": {
-        "b:slot": true
-      }
-    },
-    {
-      "content": "@forelse (${1:\\$collection} as ${2:\\$item})\n    $3\n@empty\n    $4\n@endforelse",
-      "doc": "@forelse block",
-      "label": "forelse-block",
-      "matches": {
-        "b:forelse": true
-      }
-    },
-    {
-      "content": "@switch(${1:\\$type})\n    @case(${2:1})\n        $3\n        @break\n    @case(${4:2})\n        $5\n        @break\n    @default\n        $6\n@endswitch",
-      "doc": "switch",
-      "label": "switch",
-      "matches": {
-        "b:switch": true
-      }
-    },
-    {
-      "content": "@isset(${1:\\$record})\n    $2\n@endisset",
-      "doc": "isset",
-      "label": "isset",
-      "matches": {
-        "b:isset": true
-      }
-    },
-    {
       "content": "@while ($1)\n    $2\n@endwhile",
       "doc": "@while block",
       "label": "while-block",
       "matches": {
         "b:while": true
-      }
-    },
-    {
-      "content": "@lang('${1:messages.welcome}')",
-      "doc": "lang",
-      "label": "lang",
-      "matches": {
-        "b:lang": true
       }
     },
     {
@@ -82,46 +18,6 @@
       }
     },
     {
-      "content": "@includeWhen(${1:\\$boolean}, '${2:view.name}', [${3:'some' => 'data'}])",
-      "doc": "includeWhen",
-      "label": "includeWhen",
-      "matches": {
-        "b:includeWhen": true
-      }
-    },
-    {
-      "content": "@selected(${1:true})",
-      "doc": "The @selected directive may be used to indicate if a given select option should be \"selected\" (Laravel 9.x)",
-      "label": "selected",
-      "matches": {
-        "b:selected": true
-      }
-    },
-    {
-      "content": "@disabled(${1:true})",
-      "doc": "The @disabled directive may be used to indicate if a given element should be \"disabled\" (Laravel 9.x)",
-      "label": "disabled",
-      "matches": {
-        "b:disabled": true
-      }
-    },
-    {
-      "content": "{!! ${1:\\$html_data} !!}",
-      "doc": "echo unescaped data (allow html outputs)",
-      "label": "blade echo-unescaped-data",
-      "matches": {
-        "b:echo-html": true
-      }
-    },
-    {
-      "content": "@style($1)",
-      "doc": "The @style directive may be used to conditionally add inline CSS styles to an HTML element (Laravel 9.x)",
-      "label": "style",
-      "matches": {
-        "b:style": true
-      }
-    },
-    {
       "content": "@class(['${1:p-4}', ${2:'font-bold' => true}])",
       "doc": "conditionally compiles a CSS class string. (Laravel 8.51)",
       "label": "class",
@@ -130,59 +26,11 @@
       }
     },
     {
-      "content": "@{{ ${1:variable} }}",
-      "doc": "echo untouched data (allow javascript expression)",
-      "label": "blade echo-untouch",
+      "content": "{{-- ${1:comment} --}}",
+      "doc": "comment block",
+      "label": "blade comment",
       "matches": {
-        "b:echo-raw": true
-      }
-    },
-    {
-      "content": "@required(${1:true})",
-      "doc": "The @required directive may be used to indicate if a given element should be \"required\" (Laravel 9.x)",
-      "label": "required",
-      "matches": {
-        "b:required": true
-      }
-    },
-    {
-      "content": "@verbatim\n{{ ${1:variable} }}\n@endverbatim",
-      "doc": "displaying JavaScript variables in a large portion of your template",
-      "label": "blade verbatim",
-      "matches": {
-        "b:verbatim": true
-      }
-    },
-    {
-      "content": "@pushOnce('${1:scripts}')\n    $2\n@endPushOnce",
-      "doc": "Combine @once and @push for convenience (Laravel 9.x)",
-      "label": "pushOnce",
-      "matches": {
-        "b:pushOnce": true
-      }
-    },
-    {
-      "content": "@push('${1:name}')\n    $2\n@endpush",
-      "doc": "@push stack",
-      "label": "Push stack",
-      "matches": {
-        "b:push": true
-      }
-    },
-    {
-      "content": "@stack('${1:name}')",
-      "doc": "@stack",
-      "label": "Stack",
-      "matches": {
-        "b:stack": true
-      }
-    },
-    {
-      "content": "@inject('${1:name}', '${2:class}')",
-      "doc": "@inject Service",
-      "label": "inject service",
-      "matches": {
-        "b:inject": true
+        "b:comment": true
       }
     },
     {
@@ -194,163 +42,35 @@
       }
     },
     {
-      "content": "@can('${1:update}', ${2:\\$post})\n    $3\n@endcan",
-      "doc": "display a portion of the page only if the user is authorized to perform a given action.",
-      "label": "can",
+      "content": "{{ ${1:\\$data} }}",
+      "doc": "echo data",
+      "label": "blade echo-data",
       "matches": {
-        "b:can": true
+        "b:echo": true
       }
     },
     {
-      "content": "@readonly(${1:true})",
-      "doc": "The @readonly directive may be used to indicate if a given element should be \"readonly\" (Laravel 9.x)",
-      "label": "readonly",
+      "content": "{!! ${1:\\$html_data} !!}",
+      "doc": "echo unescaped data (allow html outputs)",
+      "label": "blade echo-unescaped-data",
       "matches": {
-        "b:readonly": true
+        "b:echo-html": true
       }
     },
     {
-      "content": "@can('${1:update}', ${2:\\$post})\n    $3\n@elsecan('create', App\\Models\\\\${4:Post}::class)\n    $5\n@endcan",
-      "doc": "display a portion of the page only if the user is authorized to perform a given action.",
-      "label": "can-elsecan",
+      "content": "@{{ ${1:variable} }}",
+      "doc": "echo untouched data (allow javascript expression)",
+      "label": "blade echo-untouch",
       "matches": {
-        "b:can-elsecan": true
+        "b:echo-raw": true
       }
     },
     {
-      "content": "@once\n    $1\n@endonce",
-      "doc": "define a portion of template that will only be evaluated once per rendering cycle",
-      "label": "once",
+      "content": "@verbatim\n{{ ${1:variable} }}\n@endverbatim",
+      "doc": "displaying JavaScript variables in a large portion of your template",
+      "label": "blade verbatim",
       "matches": {
-        "b:once": true
-      }
-    },
-    {
-      "content": "@production\n    $1\n@endproduction",
-      "doc": "production",
-      "label": "production",
-      "matches": {
-        "b:production": true
-      }
-    },
-    {
-      "content": "@canany(['update', 'view', 'delete'], ${1:\\$post})\n    $2\n@endcanany",
-      "doc": "display a portion of the page only if the user is authorized to perform a given action.",
-      "label": "canany",
-      "matches": {
-        "b:canany": true
-      }
-    },
-    {
-      "content": "@canany(['update', 'view', 'delete'], ${1:\\$post})\n    $2\n@elsecanany(['create'], App\\Models\\\\${3:Post}::class)\n    $4\n@endcanany",
-      "doc": "display a portion of the page only if the user is authorized to perform a given action.",
-      "label": "canany-elsecanany",
-      "matches": {
-        "b:canany-elsecanany": true
-      }
-    },
-    {
-      "content": "@cannot('${1:update}', ${2:\\$post})\n    $3\n@endcannot",
-      "doc": "display a portion of the page only if the user is authorized to perform a given action.",
-      "label": "cannot",
-      "matches": {
-        "b:cannot": true
-      }
-    },
-    {
-      "content": "@dump($1)",
-      "doc": "dump",
-      "label": "dump",
-      "matches": {
-        "b:dump": true
-      }
-    },
-    {
-      "content": "@cannot('${1:update}', ${2:\\$post})\n    $3\n@elsecannot('create', App\\Models\\\\${5:Post}::class)\n    $6\n@endcannot",
-      "doc": "display a portion of the page only if the user is authorized to perform a given action.",
-      "label": "cannot-elsecannot",
-      "matches": {
-        "b:cannot-elsecannot": true
-      }
-    },
-    {
-      "content": "@props(['${1:propName}'])",
-      "doc": "Blade component data properties",
-      "label": "props",
-      "matches": {
-        "b:props": true
-      }
-    },
-    {
-      "content": "@if (\\$loop->first)\n    ${1:{{-- This is the first iteration --\\}\\}}\n@endif",
-      "doc": "$loop->first",
-      "label": "loop first",
-      "matches": {
-        "b:loop-first": true
-      }
-    },
-    {
-      "content": "@js(${1:\\$data})",
-      "doc": "This directive is useful to properly escape JSON within HTML quotes",
-      "label": "js",
-      "matches": {
-        "b:js": true
-      }
-    },
-    {
-      "content": "@dd($1)",
-      "doc": "dump and die",
-      "label": "dd",
-      "matches": {
-        "b:dd": true
-      }
-    },
-    {
-      "content": "@yield('${1:name}')",
-      "doc": "yield content section",
-      "label": "Yield content",
-      "matches": {
-        "b:yield": true
-      }
-    },
-    {
-      "content": "@if (\\$loop->last)\n    ${1:{{-- This is the last iteration --\\}\\}}\n@endif",
-      "doc": "$loop->last",
-      "label": "loop last",
-      "matches": {
-        "b:loop-last": true
-      }
-    },
-    {
-      "content": "@section('${1:name}')\n    $2\n@endsection",
-      "doc": "content section",
-      "label": "Content Section",
-      "matches": {
-        "b:section": true
-      }
-    },
-    {
-      "content": "@prepend('${1:scripts}')\n    $2\n@prepend",
-      "doc": "prepend content to a stack",
-      "label": "prepend",
-      "matches": {
-        "b:prepend": true
-      }
-    },
-    {
-      "content": "@section('$1')\n    $2\n@show",
-      "doc": "content section show",
-      "label": "Content Section Show",
-      "matches": {
-        "b:section-show": true
-      }
-    },
-    {
-      "content": "@prependOnce('${1:scripts}')\n    $2\n@endPrependOnce",
-      "doc": "Combine @once and @prepend for convenience (Laravel 9.x)",
-      "label": "prependOnce",
-      "matches": {
-        "b:prependOnce": true
+        "b:verbatim": true
       }
     },
     {
@@ -362,6 +82,158 @@
       }
     },
     {
+      "content": "@prepend('${1:scripts}')\n    $2\n@prepend",
+      "doc": "prepend content to a stack",
+      "label": "prepend",
+      "matches": {
+        "b:prepend": true
+      }
+    },
+    {
+      "content": "@stack('${1:name}')",
+      "doc": "@stack",
+      "label": "Stack",
+      "matches": {
+        "b:stack": true
+      }
+    },
+    {
+      "content": "@csrf",
+      "doc": "form csrf field",
+      "label": "csrf",
+      "matches": {
+        "b:csrf": true
+      }
+    },
+    {
+      "content": "@inject('${1:name}', '${2:class}')",
+      "doc": "@inject Service",
+      "label": "inject service",
+      "matches": {
+        "b:inject": true
+      }
+    },
+    {
+      "content": "@readonly(${1:true})",
+      "doc": "The @readonly directive may be used to indicate if a given element should be \"readonly\" (Laravel 9.x)",
+      "label": "readonly",
+      "matches": {
+        "b:readonly": true
+      }
+    },
+    {
+      "content": "@selected(${1:true})",
+      "doc": "The @selected directive may be used to indicate if a given select option should be \"selected\" (Laravel 9.x)",
+      "label": "selected",
+      "matches": {
+        "b:selected": true
+      }
+    },
+    {
+      "content": "@can('${1:update}', ${2:\\$post})\n    $3\n@endcan",
+      "doc": "display a portion of the page only if the user is authorized to perform a given action.",
+      "label": "can",
+      "matches": {
+        "b:can": true
+      }
+    },
+    {
+      "content": "@disabled(${1:true})",
+      "doc": "The @disabled directive may be used to indicate if a given element should be \"disabled\" (Laravel 9.x)",
+      "label": "disabled",
+      "matches": {
+        "b:disabled": true
+      }
+    },
+    {
+      "content": "\\$loop->${1:first}",
+      "doc": "$loop->(index|remaining|count|first|last|depth|parent)",
+      "label": "loop",
+      "matches": {
+        "b:loop": true
+      }
+    },
+    {
+      "content": "@can('${1:update}', ${2:\\$post})\n    $3\n@elsecan('create', App\\Models\\\\${4:Post}::class)\n    $5\n@endcan",
+      "doc": "display a portion of the page only if the user is authorized to perform a given action.",
+      "label": "can-elsecan",
+      "matches": {
+        "b:can-elsecan": true
+      }
+    },
+    {
+      "content": "@props(['${1:propName}'])",
+      "doc": "Blade component data properties",
+      "label": "props",
+      "matches": {
+        "b:props": true
+      }
+    },
+    {
+      "content": "@empty(${1:\\$record})\n    $2\n@endempty",
+      "doc": "empty",
+      "label": "empty",
+      "matches": {
+        "b:empty": true
+      }
+    },
+    {
+      "content": "@required(${1:true})",
+      "doc": "The @required directive may be used to indicate if a given element should be \"required\" (Laravel 9.x)",
+      "label": "required",
+      "matches": {
+        "b:required": true
+      }
+    },
+    {
+      "content": "@canany(['update', 'view', 'delete'], ${1:\\$post})\n    $2\n@elsecanany(['create'], App\\Models\\\\${3:Post}::class)\n    $4\n@endcanany",
+      "doc": "display a portion of the page only if the user is authorized to perform a given action.",
+      "label": "canany-elsecanany",
+      "matches": {
+        "b:canany-elsecanany": true
+      }
+    },
+    {
+      "content": "@pushOnce('${1:scripts}')\n    $2\n@endPushOnce",
+      "doc": "Combine @once and @push for convenience (Laravel 9.x)",
+      "label": "pushOnce",
+      "matches": {
+        "b:pushOnce": true
+      }
+    },
+    {
+      "content": "@style($1)",
+      "doc": "The @style directive may be used to conditionally add inline CSS styles to an HTML element (Laravel 9.x)",
+      "label": "style",
+      "matches": {
+        "b:style": true
+      }
+    },
+    {
+      "content": "@cannot('${1:update}', ${2:\\$post})\n    $3\n@elsecannot('create', App\\Models\\\\${5:Post}::class)\n    $6\n@endcannot",
+      "doc": "display a portion of the page only if the user is authorized to perform a given action.",
+      "label": "cannot-elsecannot",
+      "matches": {
+        "b:cannot-elsecannot": true
+      }
+    },
+    {
+      "content": "@prependOnce('${1:scripts}')\n    $2\n@endPrependOnce",
+      "doc": "Combine @once and @prepend for convenience (Laravel 9.x)",
+      "label": "prependOnce",
+      "matches": {
+        "b:prependOnce": true
+      }
+    },
+    {
+      "content": "@if (\\$loop->first)\n    ${1:{{-- This is the first iteration --\\}\\}}\n@endif",
+      "doc": "$loop->first",
+      "label": "loop first",
+      "matches": {
+        "b:loop-first": true
+      }
+    },
+    {
       "content": "@extends('${1:name}')",
       "doc": "extends view layout",
       "label": "Extend layout",
@@ -370,19 +242,67 @@
       }
     },
     {
+      "content": "@yield('${1:name}')",
+      "doc": "yield content section",
+      "label": "Yield content",
+      "matches": {
+        "b:yield": true
+      }
+    },
+    {
+      "content": "@lang('${1:messages.welcome}')",
+      "doc": "lang",
+      "label": "lang",
+      "matches": {
+        "b:lang": true
+      }
+    },
+    {
+      "content": "@switch(${1:\\$type})\n    @case(${2:1})\n        $3\n        @break\n    @case(${4:2})\n        $5\n        @break\n    @default\n        $6\n@endswitch",
+      "doc": "switch",
+      "label": "switch",
+      "matches": {
+        "b:switch": true
+      }
+    },
+    {
+      "content": "@section('${1:name}')\n    $2\n@endsection",
+      "doc": "content section",
+      "label": "Content Section",
+      "matches": {
+        "b:section": true
+      }
+    },
+    {
+      "content": "@includeIf('${1:view.name}'${2:, ['some' => 'data']})",
+      "doc": "include a view that may or may not be present, you should use the @includeIf directive",
+      "label": "includeIf",
+      "matches": {
+        "b:includeIf": true
+      }
+    },
+    {
+      "content": "@section('$1')\n    $2\n@show",
+      "doc": "content section show",
+      "label": "Content Section Show",
+      "matches": {
+        "b:section-show": true
+      }
+    },
+    {
+      "content": "@component('$1')\n    $2\n@endcomponent",
+      "doc": "component",
+      "label": "component",
+      "matches": {
+        "b:component": true
+      }
+    },
+    {
       "content": "@include('${1:name}')",
       "doc": "include view",
       "label": "Include view",
       "matches": {
         "b:include": true
-      }
-    },
-    {
-      "content": "{{-- ${1:comment} --}}",
-      "doc": "comment block",
-      "label": "blade comment",
-      "matches": {
-        "b:comment": true
       }
     },
     {
@@ -402,38 +322,6 @@
       }
     },
     {
-      "content": "@method($1)",
-      "doc": "form method field",
-      "label": "method",
-      "matches": {
-        "b:method": true
-      }
-    },
-    {
-      "content": "@includeFirst(['${1:view.name}', '${2:variable}'], [${3:'some' => 'data'}])",
-      "doc": "includeFirst",
-      "label": "includeFirst",
-      "matches": {
-        "b:includeFirst": true
-      }
-    },
-    {
-      "content": "@component('$1')\n    $2\n@endcomponent",
-      "doc": "component",
-      "label": "component",
-      "matches": {
-        "b:component": true
-      }
-    },
-    {
-      "content": "@error('${1:record}')\n    $2\n@enderror",
-      "doc": "error",
-      "label": "error",
-      "matches": {
-        "b:error": true
-      }
-    },
-    {
       "content": "@if ($1)\n    $2\n@else\n    $3\n@endif",
       "doc": "if-else block",
       "label": "If-else-block",
@@ -442,27 +330,11 @@
       }
     },
     {
-      "content": "@guest\n    $1\n@endguest",
-      "doc": "guest",
-      "label": "guest",
+      "content": "@once\n    $1\n@endonce",
+      "doc": "define a portion of template that will only be evaluated once per rendering cycle",
+      "label": "once",
       "matches": {
-        "b:guest": true
-      }
-    },
-    {
-      "content": "@auth\n    $1\n@endauth",
-      "doc": "auth",
-      "label": "auth",
-      "matches": {
-        "b:auth": true
-      }
-    },
-    {
-      "content": "@csrf",
-      "doc": "form csrf field",
-      "label": "csrf",
-      "matches": {
-        "b:csrf": true
+        "b:once": true
       }
     },
     {
@@ -474,35 +346,11 @@
       }
     },
     {
-      "content": "{{ ${1:\\$data} }}",
-      "doc": "echo data",
-      "label": "blade echo-data",
+      "content": "@includeWhen(${1:\\$boolean}, '${2:view.name}', [${3:'some' => 'data'}])",
+      "doc": "includeWhen",
+      "label": "includeWhen",
       "matches": {
-        "b:echo": true
-      }
-    },
-    {
-      "content": "@php\n    $1\n@endphp",
-      "doc": "@php block code in view",
-      "label": "php",
-      "matches": {
-        "b:php": true
-      }
-    },
-    {
-      "content": "@empty(${1:\\$record})\n    $2\n@endempty",
-      "doc": "empty",
-      "label": "empty",
-      "matches": {
-        "b:empty": true
-      }
-    },
-    {
-      "content": "@unless ($1)\n    $2\n@endunless",
-      "doc": "@unless block",
-      "label": "Unless-block",
-      "matches": {
-        "b:unless": true
+        "b:includeWhen": true
       }
     },
     {
@@ -514,19 +362,163 @@
       }
     },
     {
-      "content": "\\$loop->${1:first}",
-      "doc": "$loop->(index|remaining|count|first|last|depth|parent)",
-      "label": "loop",
+      "content": "@cannot('${1:update}', ${2:\\$post})\n    $3\n@endcannot",
+      "doc": "display a portion of the page only if the user is authorized to perform a given action.",
+      "label": "cannot",
       "matches": {
-        "b:loop": true
+        "b:cannot": true
       }
     },
     {
-      "content": "import styled from 'styled-components/native';\n\nexport const ${1:Container} = styled.${2:View}`\n  ${3}\n`;",
-      "doc": "Create React Native Styled Components file",
-      "label": "styles",
+      "content": "@auth\n    $1\n@endauth",
+      "doc": "auth",
+      "label": "auth",
       "matches": {
-        "styled-react-native": true
+        "b:auth": true
+      }
+    },
+    {
+      "content": "@error('${1:record}')\n    $2\n@enderror",
+      "doc": "error",
+      "label": "error",
+      "matches": {
+        "b:error": true
+      }
+    },
+    {
+      "content": "@method($1)",
+      "doc": "form method field",
+      "label": "method",
+      "matches": {
+        "b:method": true
+      }
+    },
+    {
+      "content": "@php\n    $1\n@endphp",
+      "doc": "@php block code in view",
+      "label": "php",
+      "matches": {
+        "b:php": true
+      }
+    },
+    {
+      "content": "@guest\n    $1\n@endguest",
+      "doc": "guest",
+      "label": "guest",
+      "matches": {
+        "b:guest": true
+      }
+    },
+    {
+      "content": "@for (\\$i = ${1:0}; \\$i < ${2:\\$count}; \\$i++)\n    $3\n@endfor",
+      "doc": "@for block",
+      "label": "For-block",
+      "matches": {
+        "b:for": true
+      }
+    },
+    {
+      "content": "@dd($1)",
+      "doc": "dump and die",
+      "label": "dd",
+      "matches": {
+        "b:dd": true
+      }
+    },
+    {
+      "content": "@push('${1:name}')\n    $2\n@endpush",
+      "doc": "@push stack",
+      "label": "Push stack",
+      "matches": {
+        "b:push": true
+      }
+    },
+    {
+      "content": "@canany(['update', 'view', 'delete'], ${1:\\$post})\n    $2\n@endcanany",
+      "doc": "display a portion of the page only if the user is authorized to perform a given action.",
+      "label": "canany",
+      "matches": {
+        "b:canany": true
+      }
+    },
+    {
+      "content": "@isset(${1:\\$record})\n    $2\n@endisset",
+      "doc": "isset",
+      "label": "isset",
+      "matches": {
+        "b:isset": true
+      }
+    },
+    {
+      "content": "@foreach (${1:\\$collection} as ${2:\\$item})\n    $3\n@endforeach",
+      "doc": "@foreach block",
+      "label": "Foreach-block",
+      "matches": {
+        "b:foreach": true
+      }
+    },
+    {
+      "content": "@unless ($1)\n    $2\n@endunless",
+      "doc": "@unless block",
+      "label": "Unless-block",
+      "matches": {
+        "b:unless": true
+      }
+    },
+    {
+      "content": "@js(${1:\\$data})",
+      "doc": "This directive is useful to properly escape JSON within HTML quotes",
+      "label": "js",
+      "matches": {
+        "b:js": true
+      }
+    },
+    {
+      "content": "@if (\\$loop->last)\n    ${1:{{-- This is the last iteration --\\}\\}}\n@endif",
+      "doc": "$loop->last",
+      "label": "loop last",
+      "matches": {
+        "b:loop-last": true
+      }
+    },
+    {
+      "content": "@slot('$1')\n    $2\n@endslot",
+      "doc": "slot",
+      "label": "slot",
+      "matches": {
+        "b:slot": true
+      }
+    },
+    {
+      "content": "@forelse (${1:\\$collection} as ${2:\\$item})\n    $3\n@empty\n    $4\n@endforelse",
+      "doc": "@forelse block",
+      "label": "forelse-block",
+      "matches": {
+        "b:forelse": true
+      }
+    },
+    {
+      "content": "@production\n    $1\n@endproduction",
+      "doc": "production",
+      "label": "production",
+      "matches": {
+        "b:production": true
+      }
+    },
+    {
+      "content": "@dump($1)",
+      "doc": "dump",
+      "label": "dump",
+      "matches": {
+        "b:dump": true
+      }
+    },
+    {
+      "content": "@includeFirst(['${1:view.name}', '${2:variable}'], [${3:'some' => 'data'}])",
+      "doc": "includeFirst",
+      "label": "includeFirst",
+      "matches": {
+        "b:includeFirst": true
       }
     },
     {
@@ -538,251 +530,11 @@
       }
     },
     {
-      "content": "console.warn(${1:object});",
-      "doc": "Displays a message in the console but also displays a yellow warning icon along with the logged message",
-      "label": "consoleWarn",
+      "content": "import styled from 'styled-components/native';\n\nexport const ${1:Container} = styled.${2:View}`\n  ${3}\n`;",
+      "doc": "Create React Native Styled Components file",
+      "label": "styles",
       "matches": {
-        "cwa": true
-      }
-    },
-    {
-      "content": "setInterval(() => {\n\t${2}\n}, ${0:intervalInms});",
-      "doc": "Executes the given function at specified intervals in ES6 syntax",
-      "label": "setInterval",
-      "matches": {
-        "sti": true
-      }
-    },
-    {
-      "content": "console.info(${1:object});",
-      "doc": "Displays a message in the console but also displays a blue information icon along with the logged message",
-      "label": "consoleInfo",
-      "matches": {
-        "cin": true
-      }
-    },
-    {
-      "content": "setTimeout(() => {\n\t${2}\n}, ${1:delayInms});",
-      "doc": "Executes the given function after the specified delay in ES6 syntax",
-      "label": "setTimeOut",
-      "matches": {
-        "sto": true
-      }
-    },
-    {
-      "content": "console.table(${1:object});",
-      "doc": "Displays tabular data as a table.",
-      "label": "consoleTable",
-      "matches": {
-        "clt": true
-      }
-    },
-    {
-      "content": "return new Promise((resolve, reject) => {\n\t${1}\n});",
-      "doc": "Creates and returns a new Promise in the standard ES6 syntax",
-      "label": "promise",
-      "matches": {
-        "prom": true
-      }
-    },
-    {
-      "content": "const ${1:packageName} = require('${1:package}');$0",
-      "doc": "Require a package to const",
-      "label": "requireToConst",
-      "matches": {
-        "req": true
-      }
-    },
-    {
-      "content": "export const ${1:functionName} = (${2:params}) => {\n\t$0\n};",
-      "doc": "Export named function in ES6 syntax",
-      "label": "exportNamedFunction",
-      "matches": {
-        "enf": true
-      }
-    },
-    {
-      "content": "module.exports = {\n\t$0\n};",
-      "doc": "Module exports from Common JS, node syntax at ES6",
-      "label": "moduleExports",
-      "matches": {
-        "mde": true
-      }
-    },
-    {
-      "content": "set ${1:propertyName}(${2:value}) {\n\t${0};\n}",
-      "doc": "Creates a setter property inside a class in ES6 syntax",
-      "label": "propertyset",
-      "matches": {
-        "pse": true
-      }
-    },
-    {
-      "content": "export default function ${1:${TM_FILENAME_BASE}}(${2:params}) {\n\t$0\n};",
-      "doc": "Export default function in ES6 syntax",
-      "label": "exportDefaultFunction",
-      "matches": {
-        "edf": true
-      }
-    },
-    {
-      "content": "export const ${1:exportVariable} = ${2:localVariable};",
-      "doc": "Export named variable in ES6 syntax",
-      "label": "exportNamedVariable",
-      "matches": {
-        "env": true
-      }
-    },
-    {
-      "content": "export default class ${1:className} {\n\t$0\n};",
-      "doc": "Export default class in ES6 syntax",
-      "label": "exportClass",
-      "matches": {
-        "ecl": true
-      }
-    },
-    {
-      "content": "get ${1:propertyName}() {\n\treturn this.${0};\n}",
-      "doc": "Creates a getter property inside a class in ES6 syntax",
-      "label": "propertyGet",
-      "matches": {
-        "pge": true
-      }
-    },
-    {
-      "content": "console.group('${1:label}');",
-      "doc": "Groups and indents all following output by an additional level, until console.groupEnd() is called.",
-      "label": "consoleGroup",
-      "matches": {
-        "cgr": true
-      }
-    },
-    {
-      "content": "require('${1:package}');",
-      "doc": "Require a package",
-      "label": "require",
-      "matches": {
-        "rqr": true
-      }
-    },
-    {
-      "content": "console.timeEnd(${1:object});",
-      "doc": "Sets end point for execution time measurement",
-      "label": "consoleTimeEnd",
-      "matches": {
-        "cte": true
-      }
-    },
-    {
-      "content": "import { $2 } from '${1:module}';$0",
-      "doc": "Imports only a portion of the module in ES6 syntax",
-      "label": "importDestructing",
-      "matches": {
-        "imd": true
-      }
-    },
-    {
-      "content": ".then((${1:result}) => {\n\t${2}\n}).catch((${3:err}) => {\n\t${4}\n});",
-      "doc": "Add the .then and .catch methods to handle promises",
-      "label": "thenCatch",
-      "matches": {
-        "thenc": true
-      }
-    },
-    {
-      "content": "console.error(${1:object});",
-      "doc": "Displays a message in the console and also includes a stack trace from where the method was called",
-      "label": "consoleError",
-      "matches": {
-        "cer": true
-      }
-    },
-    {
-      "content": "console.groupEnd();",
-      "doc": "Closes out the corresponding console.group().",
-      "label": "consoleGroupEnd",
-      "matches": {
-        "cge": true
-      }
-    },
-    {
-      "content": "${1:array}.forEach(${2:currentItem} => {\n\t${0}\n});",
-      "doc": "Creates a forEach statement in ES6 syntax",
-      "label": "forEach",
-      "matches": {
-        "fre": true
-      }
-    },
-    {
-      "content": "console.debug(${1:object});",
-      "doc": "Displays a message in the console. Also display a blue right arrow icon along with the logged message in Safari",
-      "label": "consoleDebug",
-      "matches": {
-        "cdb": true
-      }
-    },
-    {
-      "content": "const [${2:propertyName}] = ${1:arrayToDestruct};",
-      "doc": "Creates and assigns a local variable using array destructing",
-      "label": "destructingArray",
-      "matches": {
-        "dar": true
-      }
-    },
-    {
-      "content": "console.log(${1:object});",
-      "doc": "Displays a message in the console",
-      "label": "consoleLog",
-      "matches": {
-        "clg": true
-      }
-    },
-    {
-      "content": "for (const ${1:item} of ${2:object}) {\n\t${0}\n}",
-      "doc": "Iterating over property names of iterable objects",
-      "label": "forOf",
-      "matches": {
-        "fof": true
-      }
-    },
-    {
-      "content": "var ${1:variable} = ${2:value};",
-      "doc": "Declare a variable.",
-      "label": "DeclareVariable",
-      "matches": {
-        "var": true
-      }
-    },
-    {
-      "content": "import { ${2:originalName} as ${3:alias} } from '${1:module}';$0",
-      "doc": "Imports a specific portion of the module by assigning a local alias in ES6 syntax",
-      "label": "importAs",
-      "matches": {
-        "ima": true
-      }
-    },
-    {
-      "content": "console.trace(${1:object});",
-      "doc": "Prints a stack trace from the point where the method was called",
-      "label": "consoleTrace",
-      "matches": {
-        "ctr": true
-      }
-    },
-    {
-      "content": "for (const ${1:item} in ${2:object}) {\n\t${0}\n}",
-      "doc": "Iterating over property values of iterable objects",
-      "label": "forIn",
-      "matches": {
-        "fin": true
-      }
-    },
-    {
-      "content": "${1:methodName}(${2:params}) {\n\t${0}\n}",
-      "doc": "Creates a method inside a class in ES6 syntax",
-      "label": "method",
-      "matches": {
-        "met": true
+        "styled-react-native": true
       }
     },
     {
@@ -794,91 +546,51 @@
       }
     },
     {
-      "content": "console.log('${1:object} :>> ', ${1:object});",
-      "doc": "Displays an object in the console with its name",
-      "label": "consoleLogObject",
+      "content": "export const ${1:exportVariable} = ${2:localVariable};",
+      "doc": "Export named variable in ES6 syntax",
+      "label": "exportNamedVariable",
       "matches": {
-        "clo": true
+        "env": true
       }
     },
     {
-      "content": "(${1:params}) => {\n\t${2}\n}",
-      "doc": "Creates an anonymous function in ES6 syntax",
-      "label": "anonymousFunction",
+      "content": "setInterval(() => {\n\t${2}\n}, ${0:intervalInms});",
+      "doc": "Executes the given function at specified intervals in ES6 syntax",
+      "label": "setInterval",
       "matches": {
-        "anfn": true
+        "sti": true
       }
     },
     {
-      "content": "import ${2:moduleName} from '${1:module}';$0",
-      "doc": "Imports entire module statement in ES6 syntax",
-      "label": "import",
+      "content": "console.error(${1:object});",
+      "doc": "Displays a message in the console and also includes a stack trace from where the method was called",
+      "label": "consoleError",
       "matches": {
-        "imp": true
+        "cer": true
       }
     },
     {
-      "content": "constructor(${1:params}) {\n\t${0}\n}",
-      "doc": "Add default constructor in a class in ES6 syntax",
-      "label": "constructor",
+      "content": "export default class ${1:className} {\n\t$0\n};",
+      "doc": "Export default class in ES6 syntax",
+      "label": "exportClass",
       "matches": {
-        "con": true
+        "ecl": true
       }
     },
     {
-      "content": "console.assert(${1:expression}, ${2:object});",
-      "doc": "If the specified expression is false, the message is written to the console along with a stack trace",
-      "label": "consoleAssert",
+      "content": "setTimeout(() => {\n\t${2}\n}, ${1:delayInms});",
+      "doc": "Executes the given function after the specified delay in ES6 syntax",
+      "label": "setTimeOut",
       "matches": {
-        "cas": true
+        "sto": true
       }
     },
     {
-      "content": "const ${1:name} = (${2:params}) => {\n\t${3}\n}",
-      "doc": "Creates a named function in ES6 syntax",
-      "label": "namedFunction",
+      "content": "console.group('${1:label}');",
+      "doc": "Groups and indents all following output by an additional level, until console.groupEnd() is called.",
+      "label": "consoleGroup",
       "matches": {
-        "nfn": true
-      }
-    },
-    {
-      "content": "console.time(${1:object});",
-      "doc": "Sets starting point for execution time measurement",
-      "label": "consoleTime",
-      "matches": {
-        "cti": true
-      }
-    },
-    {
-      "content": "import * as ${2:alias} from '${1:module}';$0",
-      "doc": "Imports everything as alias from the module in ES6 syntax",
-      "label": "importEverything",
-      "matches": {
-        "ime": true
-      }
-    },
-    {
-      "content": "console.clear();",
-      "doc": "Clears the console",
-      "label": "consoleClear",
-      "matches": {
-        "ccl": true
-      }
-    },
-    {
-      "content": "const {${2:propertyName}} = ${1:objectToDestruct};",
-      "doc": "Creates and assigns a local variable using object destructing",
-      "label": "destructingObject",
-      "matches": {
-        "dob": true
-      }
-    },
-    {
-      "content": "import '${1:module}';$0",
-      "doc": "Imports entire module in ES6 syntax without module name",
-      "label": "importNoModuleName",
-      "matches": {
-        "imn": true
+        "cgr": true
       }
     },
     {
@@ -890,6 +602,270 @@
       }
     },
     {
+      "content": "return new Promise((resolve, reject) => {\n\t${1}\n});",
+      "doc": "Creates and returns a new Promise in the standard ES6 syntax",
+      "label": "promise",
+      "matches": {
+        "prom": true
+      }
+    },
+    {
+      "content": "console.groupEnd();",
+      "doc": "Closes out the corresponding console.group().",
+      "label": "consoleGroupEnd",
+      "matches": {
+        "cge": true
+      }
+    },
+    {
+      "content": "require('${1:package}');",
+      "doc": "Require a package",
+      "label": "require",
+      "matches": {
+        "rqr": true
+      }
+    },
+    {
+      "content": "console.log(${1:object});",
+      "doc": "Displays a message in the console",
+      "label": "consoleLog",
+      "matches": {
+        "clg": true
+      }
+    },
+    {
+      "content": "export const ${1:functionName} = (${2:params}) => {\n\t$0\n};",
+      "doc": "Export named function in ES6 syntax",
+      "label": "exportNamedFunction",
+      "matches": {
+        "enf": true
+      }
+    },
+    {
+      "content": "constructor(${1:params}) {\n\t${0}\n}",
+      "doc": "Add default constructor in a class in ES6 syntax",
+      "label": "constructor",
+      "matches": {
+        "con": true
+      }
+    },
+    {
+      "content": "export default function ${1:${TM_FILENAME_BASE}}(${2:params}) {\n\t$0\n};",
+      "doc": "Export default function in ES6 syntax",
+      "label": "exportDefaultFunction",
+      "matches": {
+        "edf": true
+      }
+    },
+    {
+      "content": "get ${1:propertyName}() {\n\treturn this.${0};\n}",
+      "doc": "Creates a getter property inside a class in ES6 syntax",
+      "label": "propertyGet",
+      "matches": {
+        "pge": true
+      }
+    },
+    {
+      "content": "${1:methodName}(${2:params}) {\n\t${0}\n}",
+      "doc": "Creates a method inside a class in ES6 syntax",
+      "label": "method",
+      "matches": {
+        "met": true
+      }
+    },
+    {
+      "content": "console.trace(${1:object});",
+      "doc": "Prints a stack trace from the point where the method was called",
+      "label": "consoleTrace",
+      "matches": {
+        "ctr": true
+      }
+    },
+    {
+      "content": "import { ${2:originalName} as ${3:alias} } from '${1:module}';$0",
+      "doc": "Imports a specific portion of the module by assigning a local alias in ES6 syntax",
+      "label": "importAs",
+      "matches": {
+        "ima": true
+      }
+    },
+    {
+      "content": "for (const ${1:item} of ${2:object}) {\n\t${0}\n}",
+      "doc": "Iterating over property names of iterable objects",
+      "label": "forOf",
+      "matches": {
+        "fof": true
+      }
+    },
+    {
+      "content": "${1:array}.forEach(${2:currentItem} => {\n\t${0}\n});",
+      "doc": "Creates a forEach statement in ES6 syntax",
+      "label": "forEach",
+      "matches": {
+        "fre": true
+      }
+    },
+    {
+      "content": "console.timeEnd(${1:object});",
+      "doc": "Sets end point for execution time measurement",
+      "label": "consoleTimeEnd",
+      "matches": {
+        "cte": true
+      }
+    },
+    {
+      "content": "set ${1:propertyName}(${2:value}) {\n\t${0};\n}",
+      "doc": "Creates a setter property inside a class in ES6 syntax",
+      "label": "propertyset",
+      "matches": {
+        "pse": true
+      }
+    },
+    {
+      "content": "console.table(${1:object});",
+      "doc": "Displays tabular data as a table.",
+      "label": "consoleTable",
+      "matches": {
+        "clt": true
+      }
+    },
+    {
+      "content": "import ${2:moduleName} from '${1:module}';$0",
+      "doc": "Imports entire module statement in ES6 syntax",
+      "label": "import",
+      "matches": {
+        "imp": true
+      }
+    },
+    {
+      "content": "import { $2 } from '${1:module}';$0",
+      "doc": "Imports only a portion of the module in ES6 syntax",
+      "label": "importDestructing",
+      "matches": {
+        "imd": true
+      }
+    },
+    {
+      "content": "console.time(${1:object});",
+      "doc": "Sets starting point for execution time measurement",
+      "label": "consoleTime",
+      "matches": {
+        "cti": true
+      }
+    },
+    {
+      "content": ".then((${1:result}) => {\n\t${2}\n}).catch((${3:err}) => {\n\t${4}\n});",
+      "doc": "Add the .then and .catch methods to handle promises",
+      "label": "thenCatch",
+      "matches": {
+        "thenc": true
+      }
+    },
+    {
+      "content": "for (const ${1:item} in ${2:object}) {\n\t${0}\n}",
+      "doc": "Iterating over property values of iterable objects",
+      "label": "forIn",
+      "matches": {
+        "fin": true
+      }
+    },
+    {
+      "content": "console.log('${1:object} :>> ', ${1:object});",
+      "doc": "Displays an object in the console with its name",
+      "label": "consoleLogObject",
+      "matches": {
+        "clo": true
+      }
+    },
+    {
+      "content": "import * as ${2:alias} from '${1:module}';$0",
+      "doc": "Imports everything as alias from the module in ES6 syntax",
+      "label": "importEverything",
+      "matches": {
+        "ime": true
+      }
+    },
+    {
+      "content": "console.debug(${1:object});",
+      "doc": "Displays a message in the console. Also display a blue right arrow icon along with the logged message in Safari",
+      "label": "consoleDebug",
+      "matches": {
+        "cdb": true
+      }
+    },
+    {
+      "content": "(${1:params}) => {\n\t${2}\n}",
+      "doc": "Creates an anonymous function in ES6 syntax",
+      "label": "anonymousFunction",
+      "matches": {
+        "anfn": true
+      }
+    },
+    {
+      "content": "console.assert(${1:expression}, ${2:object});",
+      "doc": "If the specified expression is false, the message is written to the console along with a stack trace",
+      "label": "consoleAssert",
+      "matches": {
+        "cas": true
+      }
+    },
+    {
+      "content": "console.warn(${1:object});",
+      "doc": "Displays a message in the console but also displays a yellow warning icon along with the logged message",
+      "label": "consoleWarn",
+      "matches": {
+        "cwa": true
+      }
+    },
+    {
+      "content": "var ${1:variable} = ${2:value};",
+      "doc": "Declare a variable.",
+      "label": "DeclareVariable",
+      "matches": {
+        "var": true
+      }
+    },
+    {
+      "content": "const ${1:name} = (${2:params}) => {\n\t${3}\n}",
+      "doc": "Creates a named function in ES6 syntax",
+      "label": "namedFunction",
+      "matches": {
+        "nfn": true
+      }
+    },
+    {
+      "content": "console.clear();",
+      "doc": "Clears the console",
+      "label": "consoleClear",
+      "matches": {
+        "ccl": true
+      }
+    },
+    {
+      "content": "console.info(${1:object});",
+      "doc": "Displays a message in the console but also displays a blue information icon along with the logged message",
+      "label": "consoleInfo",
+      "matches": {
+        "cin": true
+      }
+    },
+    {
+      "content": "const ${1:packageName} = require('${1:package}');$0",
+      "doc": "Require a package to const",
+      "label": "requireToConst",
+      "matches": {
+        "req": true
+      }
+    },
+    {
+      "content": "const {${2:propertyName}} = ${1:objectToDestruct};",
+      "doc": "Creates and assigns a local variable using object destructing",
+      "label": "destructingObject",
+      "matches": {
+        "dob": true
+      }
+    },
+    {
       "content": "console.count(${1:label});",
       "doc": "Writes the the number of times that count() has been invoked at the same line and with the same label",
       "label": "consoleCount",
@@ -898,27 +874,27 @@
       }
     },
     {
-      "content": "PropTypes.oneOf(['$0']),",
-      "doc": "Prop type limited to specific values by treating it as an enum",
-      "label": "propTypeEnum",
+      "content": "module.exports = {\n\t$0\n};",
+      "doc": "Module exports from Common JS, node syntax at ES6",
+      "label": "moduleExports",
       "matches": {
-        "pte": true
+        "mde": true
       }
     },
     {
-      "content": "import React, { Component } from 'react';\nimport PropTypes from 'prop-types';\n\nclass ${1:${TM_FILENAME_BASE}} extends Component {\n\tconstructor(props) {\n\t\tsuper(props);\n\t\tthis.state = {\n\t\t\t\n\t\t}\n\t}\n\n\tstatic getDerivedStateFromProps() {\n\t\treturn null\n\t}\n\n\tcomponentDidMount() {\n\t\t\n\t}\n\n\t// shouldComponentUpdate(nextProps, nextState) {}\n\n\tgetSnapshotBeforeUpdate(prevProps, prevState) {\n\t\treturn null\n\t}\n\n\tcomponentDidUpdate(prevProps, prevState, snapshot) {\n\t\t\n\t}\n\n\tcomponentWillUnmount() {\n\t\t\n\t}\n\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t\n\t\t\t</div>\n\t\t);\n\t}\n}\n\n${1:${TM_FILENAME_BASE}}.propTypes = {\n\t\n};\n\nexport default ${1:${TM_FILENAME_BASE}};",
-      "doc": "Creates a React component class with PropTypes and all lifecycle methods and ES6 module system",
-      "label": "reactClassComponentWithMethods",
+      "content": "const [${2:propertyName}] = ${1:arrayToDestruct};",
+      "doc": "Creates and assigns a local variable using array destructing",
+      "label": "destructingArray",
       "matches": {
-        "rcfc": true
+        "dar": true
       }
     },
     {
-      "content": "PropTypes.oneOf(['$0']).isRequired,",
-      "doc": "Prop type limited to specific values by treating it as an enum required",
-      "label": "propTypeEnumRequired",
+      "content": "import '${1:module}';$0",
+      "doc": "Imports entire module in ES6 syntax without module name",
+      "label": "importNoModuleName",
       "matches": {
-        "pter": true
+        "imn": true
       }
     },
     {
@@ -930,27 +906,43 @@
       }
     },
     {
-      "content": "PropTypes.oneOfType([\n\t$0\n]),",
-      "doc": "An object that could be one of many types",
-      "label": "propTypeOneOfType",
+      "content": "PropTypes.func,",
+      "doc": "Func prop type",
+      "label": "propTypeFunc",
       "matches": {
-        "ptet": true
+        "ptf": true
       }
     },
     {
-      "content": "PropTypes.any,",
-      "doc": "Any prop type",
-      "label": "propTypeAny",
+      "content": "import React from 'react';\n\nconst ${1:${TM_FILENAME_BASE}} = () => {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t);\n};\n\nexport default ${1:${TM_FILENAME_BASE}};",
+      "doc": "Creates a stateless React component without PropTypes and ES6 module system",
+      "label": "reactStateless",
       "matches": {
-        "ptan": true
+        "rsc": true
       }
     },
     {
-      "content": "PropTypes.oneOfType([\n\t$0\n]).isRequired,",
-      "doc": "An object that could be one of many types required",
-      "label": "propTypeOneOfTypeRequired",
+      "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\n${1:${TM_FILENAME_BASE}}.propTypes = {\n\t$0\n};\n\nfunction ${1:${TM_FILENAME_BASE}}(props) {\n\treturn (\n\t\t<div>\n\t\t\t\n\t\t</div>\n\t);\n}\n\nexport default ${1:${TM_FILENAME_BASE}};",
+      "doc": "Creates a stateless React component as a named function with PropTypes",
+      "label": "reactStatelessFunctionProps",
       "matches": {
-        "ptetr": true
+        "rsfp": true
+      }
+    },
+    {
+      "content": "PropTypes.func.isRequired,",
+      "doc": "Func prop type required",
+      "label": "propTypeFuncRequired",
+      "matches": {
+        "ptfr": true
+      }
+    },
+    {
+      "content": "import React from 'react';\n\nconst ${1:${TM_FILENAME_BASE}} = (props) => (\n\t\t\t$0\n\t);\n\nexport default ${1:${TM_FILENAME_BASE}};",
+      "doc": "Creates a stateless React component without PropTypes and ES6 module system but with Implicit Return and props",
+      "label": "reactStatelessImplicitReturn",
+      "matches": {
+        "rsi": true
       }
     },
     {
@@ -962,14 +954,6 @@
       }
     },
     {
-      "content": "PropTypes.arrayOf($0),",
-      "doc": "An array of a certain type",
-      "label": "propTypeArrayOf",
-      "matches": {
-        "ptao": true
-      }
-    },
-    {
       "content": "import React, { memo } from 'react';\n\nconst ${1:${TM_FILENAME_BASE}} = memo(() => {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t);\n});\n\nexport default ${1:${TM_FILENAME_BASE}};",
       "doc": "Creates a memoized stateless React component without PropTypes and ES6 module system",
       "label": "reactMemo",
@@ -978,11 +962,299 @@
       }
     },
     {
-      "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nconst ${1:${TM_FILENAME_BASE}} = props => {\n\treturn (\n\t\t<div>\n\t\t\t\n\t\t</div>\n\t);\n};\n\n${1:${TM_FILENAME_BASE}}.propTypes = {\n\t$0\n};\n\nexport default ${1:${TM_FILENAME_BASE}};",
-      "doc": "Creates a stateless React component with PropTypes and ES6 module system",
-      "label": "reactStatelessProps",
+      "content": "PropTypes.number.isRequired,",
+      "doc": "Number prop type required",
+      "label": "propTypeNumberRequired",
       "matches": {
-        "rscp": true
+        "ptnr": true
+      }
+    },
+    {
+      "content": "useEffect(() => {\n$0\n})",
+      "doc": "Adds use effect",
+      "label": "useEffect",
+      "matches": {
+        "usf": true
+      }
+    },
+    {
+      "content": "import React, { memo } from 'react';\nimport PropTypes from 'prop-types';\n\nconst ${1:${TM_FILENAME_BASE}} = memo((props) => {\n\treturn (\n\t\t<div>\n\t\t\t\n\t\t</div>\n\t);\n});\n\n${1:${TM_FILENAME_BASE}}.propTypes = {\n\t$0\n};\n\nexport default ${1:${TM_FILENAME_BASE}};",
+      "doc": "Creates a memoized stateless React component with PropTypes and ES6 module system",
+      "label": "reactMemoProps",
+      "matches": {
+        "rscpm": true
+      }
+    },
+    {
+      "content": "PropTypes.object,",
+      "doc": "Object prop type",
+      "label": "propTypeObject",
+      "matches": {
+        "pto": true
+      }
+    },
+    {
+      "content": "// @flow \nimport * as React from 'react';\ntype Props = {\n\t$0\n};\nexport const ${1:${TM_FILENAME_BASE}} = (props: Props) => {\n\treturn (\n\t\t<div>\n\t\t\t\n\t\t</div>\n\t);\n};",
+      "doc": "Creates a stateless React component with FlowTypes and ES6 module system",
+      "label": "flowStatelessComponent",
+      "matches": {
+        "fsc": true
+      }
+    },
+    {
+      "content": "PropTypes.object.isRequired,",
+      "doc": "Object prop type required",
+      "label": "propTypeObjectRequired",
+      "matches": {
+        "ptor": true
+      }
+    },
+    {
+      "content": "// @flow\nimport * as React from 'react';\ntype Props = {\n  $0\n};\nexport function ${1:${TM_FILENAME_BASE}}(props: Props) {\n  return (\n    <div>\n      \n    </div>\n  );\n};",
+      "doc": "Creates a stateless React component as a named function with FlowTypes",
+      "label": "flowStatelessFunction",
+      "matches": {
+        "fsf": true
+      }
+    },
+    {
+      "content": "PropTypes.string,",
+      "doc": "String prop type",
+      "label": "propTypeString",
+      "matches": {
+        "pts": true
+      }
+    },
+    {
+      "content": "PropTypes.string.isRequired,",
+      "doc": "String prop type required",
+      "label": "propTypeStringRequired",
+      "matches": {
+        "ptsr": true
+      }
+    },
+    {
+      "content": "import React, { Component } from 'react';\n\nclass ${1:${TM_FILENAME_BASE}} extends Component {\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t);\n\t}\n}\n\nexport default ${1:${TM_FILENAME_BASE}};",
+      "doc": "Creates a React component class with ES6 module system",
+      "label": "reactClassComponent",
+      "matches": {
+        "rcc": true
+      }
+    },
+    {
+      "content": "${1:$TM_FILENAME_BASE}.defaultProps = {\n\t$2\n};",
+      "doc": "Creates empty defaultProps declaration",
+      "label": "defaultProps",
+      "matches": {
+        "rdp": true
+      }
+    },
+    {
+      "content": "PropTypes.node,",
+      "doc": "Anything that can be rendered: numbers, strings, elements or an array",
+      "label": "propTypeNode",
+      "matches": {
+        "ptnd": true
+      }
+    },
+    {
+      "content": "class ${1:${TM_FILENAME_BASE}} extends Component {\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t);\n\t}\n}",
+      "doc": "Creates a React component class with ES6 module system",
+      "label": "reactJustClassComponent",
+      "matches": {
+        "rcjc": true
+      }
+    },
+    {
+      "content": "PropTypes.symbol,",
+      "doc": "Symbol prop type",
+      "label": "propTypeSymbol",
+      "matches": {
+        "ptsm": true
+      }
+    },
+    {
+      "content": "PropTypes.node.isRequired,",
+      "doc": "Anything that can be rendered: numbers, strings, elements or an array required",
+      "label": "propTypeNodeRequired",
+      "matches": {
+        "ptndr": true
+      }
+    },
+    {
+      "content": "getSnapshotBeforeUpdate(prevProps, prevState) {\n\t$0\n}",
+      "doc": "Invoked right before the most recently rendered output is committed to e.g. the DOM. It enables your component to capture current values",
+      "label": "getSnapshotBeforeUpdate",
+      "matches": {
+        "gsbu": true
+      }
+    },
+    {
+      "content": "PropTypes.symbol.isRequired,",
+      "doc": "Symbol prop type required",
+      "label": "propTypeSymbolRequired",
+      "matches": {
+        "ptsmr": true
+      }
+    },
+    {
+      "content": "PropTypes.element,",
+      "doc": "React element prop type",
+      "label": "propTypeElement",
+      "matches": {
+        "ptel": true
+      }
+    },
+    {
+      "content": "PropTypes.any.isRequired,",
+      "doc": "Any prop type required",
+      "label": "propTypeAnyRequired",
+      "matches": {
+        "ptanr": true
+      }
+    },
+    {
+      "content": "PropTypes.element.isRequired,",
+      "doc": "React element prop type required",
+      "label": "propTypeElementRequired",
+      "matches": {
+        "ptelr": true
+      }
+    },
+    {
+      "content": "PropTypes.any,",
+      "doc": "Any prop type",
+      "label": "propTypeAny",
+      "matches": {
+        "ptan": true
+      }
+    },
+    {
+      "content": "PropTypes.objectOf(PropTypes.shape($0)),",
+      "doc": "An object whose keys are known ahead of time",
+      "label": "propTypeObjectOfShape",
+      "matches": {
+        "ptoos": true
+      }
+    },
+    {
+      "content": "PropTypes.instanceOf($0),",
+      "doc": "Is an instance of a class prop type",
+      "label": "propTypeInstanceOf",
+      "matches": {
+        "pti": true
+      }
+    },
+    {
+      "content": "PropTypes.objectOf(PropTypes.shape($0)).isRequired,",
+      "doc": "An object whose keys are known ahead of time required",
+      "label": "propTypeObjectOfShapeRequired",
+      "matches": {
+        "ptoosr": true
+      }
+    },
+    {
+      "content": "PropTypes.instanceOf($0).isRequired,",
+      "doc": "Is an instance of a class prop type required",
+      "label": "propTypeInstanceOfRequired",
+      "matches": {
+        "ptir": true
+      }
+    },
+    {
+      "content": "this.$1 = this.$1.bind(this);$0",
+      "doc": "Binds the this of a method. To be used inside a constructor",
+      "label": "bindThis",
+      "matches": {
+        "bnd": true
+      }
+    },
+    {
+      "content": "constructor(props, context) {\n\tsuper(props, context);\n\t$0\n}",
+      "doc": "Adds a default constructor for the class that contains props and context as arguments",
+      "label": "classConstructorContext",
+      "matches": {
+        "conc": true
+      }
+    },
+    {
+      "content": "PropTypes.oneOf(['$0']),",
+      "doc": "Prop type limited to specific values by treating it as an enum",
+      "label": "propTypeEnum",
+      "matches": {
+        "pte": true
+      }
+    },
+    {
+      "content": "componentWillMount() {\n\t$0\n}",
+      "doc": "Invoked once, both on the client and server, immediately before the initial rendering occurs",
+      "label": "componentWillMount",
+      "matches": {
+        "cwm": true
+      }
+    },
+    {
+      "content": "PropTypes.oneOf(['$0']).isRequired,",
+      "doc": "Prop type limited to specific values by treating it as an enum required",
+      "label": "propTypeEnumRequired",
+      "matches": {
+        "pter": true
+      }
+    },
+    {
+      "content": "function mapDispatchToProps(dispatch) {\n\treturn {\n\t}\n\n}",
+      "doc": "Adds the redux mapDispatchToProps function",
+      "label": "dispatchRedux",
+      "matches": {
+        "disp": true
+      }
+    },
+    {
+      "content": "componentDidMount() {\n\t$0\n}",
+      "doc": "Invoked once, only on the client (not on the server), immediately after the initial rendering occurs.",
+      "label": "componentDidMount",
+      "matches": {
+        "cdm": true
+      }
+    },
+    {
+      "content": "PropTypes.oneOfType([\n\t$0\n]),",
+      "doc": "An object that could be one of many types",
+      "label": "propTypeOneOfType",
+      "matches": {
+        "ptet": true
+      }
+    },
+    {
+      "content": "componentWillReceiveProps(nextProps) {\n\t$0\n}",
+      "doc": "Invoked when a component is receiving new props. This method is not called for the initial render. [DEPRECATION NOTE]: This method is deprecated in React 16.3",
+      "label": "componentWillReceiveProps",
+      "matches": {
+        "cwr": true
+      }
+    },
+    {
+      "content": "PropTypes.oneOfType([\n\t$0\n]).isRequired,",
+      "doc": "An object that could be one of many types required",
+      "label": "propTypeOneOfTypeRequired",
+      "matches": {
+        "ptetr": true
+      }
+    },
+    {
+      "content": "useEffect(() => {\n$0 return () => {\n$0\n\t}\n})",
+      "doc": "Adds use effect",
+      "label": "useEffectUnMount",
+      "matches": {
+        "usfu": true
+      }
+    },
+    {
+      "content": "PropTypes.arrayOf($0),",
+      "doc": "An array of a certain type",
+      "label": "propTypeArrayOf",
+      "matches": {
+        "ptao": true
       }
     },
     {
@@ -1002,22 +1274,6 @@
       }
     },
     {
-      "content": "import React, { memo } from 'react';\nimport PropTypes from 'prop-types';\n\nconst ${1:${TM_FILENAME_BASE}} = memo((props) => {\n\treturn (\n\t\t<div>\n\t\t\t\n\t\t</div>\n\t);\n});\n\n${1:${TM_FILENAME_BASE}}.propTypes = {\n\t$0\n};\n\nexport default ${1:${TM_FILENAME_BASE}};",
-      "doc": "Creates a memoized stateless React component with PropTypes and ES6 module system",
-      "label": "reactMemoProps",
-      "matches": {
-        "rscpm": true
-      }
-    },
-    {
-      "content": "constructor(props) {\n\tsuper(props);\n\t$0\n}",
-      "doc": "Adds a default constructor for the class that contains props as arguments",
-      "label": "classConstructor",
-      "matches": {
-        "con": true
-      }
-    },
-    {
       "content": "componentWillUpdate(nextProps, nextState) {\n\t$0\n}",
       "doc": "Invoked immediately before rendering when new props or state are being received. [DEPRECATION NOTE]: This method is deprecated in React 16.3",
       "label": "componentWillUpdate",
@@ -1031,14 +1287,6 @@
       "label": "propTypeObjectOf",
       "matches": {
         "ptoo": true
-      }
-    },
-    {
-      "content": "constructor(props, context) {\n\tsuper(props, context);\n\t$0\n}",
-      "doc": "Adds a default constructor for the class that contains props and context as arguments",
-      "label": "classConstructorContext",
-      "matches": {
-        "conc": true
       }
     },
     {
@@ -1058,14 +1306,6 @@
       }
     },
     {
-      "content": "// @flow\nimport * as React from 'react';\ntype Props = {\n  $0\n};\nexport function ${1:${TM_FILENAME_BASE}}(props: Props) {\n  return (\n    <div>\n      \n    </div>\n  );\n};",
-      "doc": "Creates a stateless React component as a named function with FlowTypes",
-      "label": "flowStatelessFunction",
-      "matches": {
-        "fsf": true
-      }
-    },
-    {
       "content": "componentWillUnmount() {\n\t$0\n}",
       "doc": "Invoked immediately before a component is unmounted from the DOM.",
       "label": "componentWillUnmount",
@@ -1079,14 +1319,6 @@
       "label": "propTypeShape",
       "matches": {
         "ptsh": true
-      }
-    },
-    {
-      "content": "componentDidMount() {\n\t$0\n}",
-      "doc": "Invoked once, only on the client (not on the server), immediately after the initial rendering occurs.",
-      "label": "componentDidMount",
-      "matches": {
-        "cdm": true
       }
     },
     {
@@ -1106,27 +1338,11 @@
       }
     },
     {
-      "content": "componentWillReceiveProps(nextProps) {\n\t$0\n}",
-      "doc": "Invoked when a component is receiving new props. This method is not called for the initial render. [DEPRECATION NOTE]: This method is deprecated in React 16.3",
-      "label": "componentWillReceiveProps",
-      "matches": {
-        "cwr": true
-      }
-    },
-    {
       "content": "this.setState($0);",
       "doc": "Performs a shallow merge of nextState into current state",
       "label": "componentSetStateObject",
       "matches": {
         "sst": true
-      }
-    },
-    {
-      "content": "// @flow\nimport * as React from 'react';\ntype Props = {\n  $0\n};\ntype State = {\n  $1\n};\nexport class ${2:${TM_FILENAME_BASE}} extends React.Component<Props, State>{\n  render() {\n    return (\n      <div>\n        \n      </div>\n    );\n  };\n};",
-      "doc": "Creates a React component class with FlowTypes",
-      "label": "flowClassComponent",
-      "matches": {
-        "fcc": true
       }
     },
     {
@@ -1154,235 +1370,11 @@
       }
     },
     {
-      "content": "import React from 'react';\n\nfunction ${1:${TM_FILENAME_BASE}}(props) {\n\treturn (\n\t\t<div>\n\t\t\t\n\t\t</div>\n\t);\n}\n\nexport default ${1:${TM_FILENAME_BASE}};",
-      "doc": "Creates a stateless React component as a named function without PropTypes",
-      "label": "reactStatelessFunction",
-      "matches": {
-        "rsf": true
-      }
-    },
-    {
-      "content": "${1:$TM_FILENAME_BASE}.propTypes = {\n\t$2\n};",
-      "doc": "Creates empty propTypes declaration",
-      "label": "propTypes",
-      "matches": {
-        "rpt": true
-      }
-    },
-    {
-      "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\n${1:${TM_FILENAME_BASE}}.propTypes = {\n\t$0\n};\n\nfunction ${1:${TM_FILENAME_BASE}}(props) {\n\treturn (\n\t\t<div>\n\t\t\t\n\t\t</div>\n\t);\n}\n\nexport default ${1:${TM_FILENAME_BASE}};",
-      "doc": "Creates a stateless React component as a named function with PropTypes",
-      "label": "reactStatelessFunctionProps",
-      "matches": {
-        "rsfp": true
-      }
-    },
-    {
-      "content": "PropTypes.array,",
-      "doc": "Array prop type",
-      "label": "propTypeArray",
-      "matches": {
-        "pta": true
-      }
-    },
-    {
-      "content": "import React, { Component } from 'react';\nimport { connect } from 'react-redux';\n\nfunction mapStateToProps(state) {\n\treturn {\n\n\t};\n}\n\nclass ${1:${TM_FILENAME_BASE}} extends Component {\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t);\n\t}\n}\n\nexport default connect(\n\tmapStateToProps,\n)(${1:${TM_FILENAME_BASE}});",
-      "doc": "Creates a React component class connected to redux",
-      "label": "reactReduxComponent",
-      "matches": {
-        "rrc": true
-      }
-    },
-    {
-      "content": "import React from 'react';\n\nconst ${1:${TM_FILENAME_BASE}} = (props) => (\n\t\t\t$0\n\t);\n\nexport default ${1:${TM_FILENAME_BASE}};",
-      "doc": "Creates a stateless React component without PropTypes and ES6 module system but with Implicit Return and props",
-      "label": "reactStatelessImplicitReturn",
-      "matches": {
-        "rsi": true
-      }
-    },
-    {
-      "content": "PropTypes.array.isRequired,",
-      "doc": "Array prop type required",
-      "label": "propTypeArrayRequired",
-      "matches": {
-        "ptar": true
-      }
-    },
-    {
-      "content": "import React, { Component } from 'react';\nimport { connect } from 'react-redux';\n\nfunction mapStateToProps(state) {\n\treturn {\n\n\t};\n}\n\nfunction mapDispatchToProps(dispatch) {\n\treturn {\n\n\t};\n}\n\nclass ${1:${TM_FILENAME_BASE}} extends Component {\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t);\n\t}\n}\n\nexport default connect(\n\tmapStateToProps,\n)(${1:${TM_FILENAME_BASE}});",
-      "doc": "Creates a React component class connected to redux with dispatch",
-      "label": "reactReduxDispatchComponent",
-      "matches": {
-        "rrdc": true
-      }
-    },
-    {
-      "content": "PropTypes.bool,",
-      "doc": "Bool prop type",
-      "label": "propTypeBool",
-      "matches": {
-        "ptb": true
-      }
-    },
-    {
-      "content": "static getDerivedStateFromProps(nextProps, prevState) {\n\t$0\n}",
-      "doc": "Invoked after a component is instantiated as well as when it receives new props.",
-      "label": "getDerivedStateFromProps",
-      "matches": {
-        "gdsfp": true
-      }
-    },
-    {
-      "content": "useEffect(() => {\n$0\n})",
+      "content": "useEffect(() => {\n$0\n},[])",
       "doc": "Adds use effect",
-      "label": "useEffect",
+      "label": "useEffectDidMount",
       "matches": {
-        "usf": true
-      }
-    },
-    {
-      "content": "PropTypes.bool.isRequired,",
-      "doc": "Bool prop type required",
-      "label": "propTypeBoolRequired",
-      "matches": {
-        "ptbr": true
-      }
-    },
-    {
-      "content": "getSnapshotBeforeUpdate(prevProps, prevState) {\n\t$0\n}",
-      "doc": "Invoked right before the most recently rendered output is committed to e.g. the DOM. It enables your component to capture current values",
-      "label": "getSnapshotBeforeUpdate",
-      "matches": {
-        "gsbu": true
-      }
-    },
-    {
-      "content": "class ${1:${TM_FILENAME_BASE}} extends React.Component {\n\tconstructor(props) {\n\t\tsuper(props);\n\n\t\tthis.state = {};\n\n\t}\n\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t);\n\t}\n}\n\n${1:${TM_FILENAME_BASE}}.propTypes = {\n\n};\n\nexport default ${1:${TM_FILENAME_BASE}};",
-      "doc": "Creates a React component class with constructor, empty state, proptypes and export in ES6 module system without imports. (Mostly used when React, Proptypes are provided by webpack provide plugin)",
-      "label": "reactWithWebpackDefaults",
-      "matches": {
-        "rwwd": true
-      }
-    },
-    {
-      "content": "PropTypes.func,",
-      "doc": "Func prop type",
-      "label": "propTypeFunc",
-      "matches": {
-        "ptf": true
-      }
-    },
-    {
-      "content": "PropTypes.func.isRequired,",
-      "doc": "Func prop type required",
-      "label": "propTypeFuncRequired",
-      "matches": {
-        "ptfr": true
-      }
-    },
-    {
-      "content": "useEffect(() => {\n$0 return () => {\n$0\n\t}\n})",
-      "doc": "Adds use effect",
-      "label": "useEffectUnMount",
-      "matches": {
-        "usfu": true
-      }
-    },
-    {
-      "content": "${1:$TM_FILENAME_BASE}.defaultProps = {\n\t$2\n};",
-      "doc": "Creates empty defaultProps declaration",
-      "label": "defaultProps",
-      "matches": {
-        "rdp": true
-      }
-    },
-    {
-      "content": "PropTypes.number.isRequired,",
-      "doc": "Number prop type required",
-      "label": "propTypeNumberRequired",
-      "matches": {
-        "ptnr": true
-      }
-    },
-    {
-      "content": "this.$1 = this.$1.bind(this);$0",
-      "doc": "Binds the this of a method. To be used inside a constructor",
-      "label": "bindThis",
-      "matches": {
-        "bnd": true
-      }
-    },
-    {
-      "content": "PropTypes.object,",
-      "doc": "Object prop type",
-      "label": "propTypeObject",
-      "matches": {
-        "pto": true
-      }
-    },
-    {
-      "content": "PropTypes.object.isRequired,",
-      "doc": "Object prop type required",
-      "label": "propTypeObjectRequired",
-      "matches": {
-        "ptor": true
-      }
-    },
-    {
-      "content": "PropTypes.any.isRequired,",
-      "doc": "Any prop type required",
-      "label": "propTypeAnyRequired",
-      "matches": {
-        "ptanr": true
-      }
-    },
-    {
-      "content": "PropTypes.string,",
-      "doc": "String prop type",
-      "label": "propTypeString",
-      "matches": {
-        "pts": true
-      }
-    },
-    {
-      "content": "PropTypes.objectOf(PropTypes.shape($0)),",
-      "doc": "An object whose keys are known ahead of time",
-      "label": "propTypeObjectOfShape",
-      "matches": {
-        "ptoos": true
-      }
-    },
-    {
-      "content": "PropTypes.string.isRequired,",
-      "doc": "String prop type required",
-      "label": "propTypeStringRequired",
-      "matches": {
-        "ptsr": true
-      }
-    },
-    {
-      "content": "PropTypes.objectOf(PropTypes.shape($0)).isRequired,",
-      "doc": "An object whose keys are known ahead of time required",
-      "label": "propTypeObjectOfShapeRequired",
-      "matches": {
-        "ptoosr": true
-      }
-    },
-    {
-      "content": "PropTypes.node,",
-      "doc": "Anything that can be rendered: numbers, strings, elements or an array",
-      "label": "propTypeNode",
-      "matches": {
-        "ptnd": true
-      }
-    },
-    {
-      "content": "PropTypes.node.isRequired,",
-      "doc": "Anything that can be rendered: numbers, strings, elements or an array required",
-      "label": "propTypeNodeRequired",
-      "matches": {
-        "ptndr": true
+        "usfd": true
       }
     },
     {
@@ -1394,51 +1386,27 @@
       }
     },
     {
-      "content": "useEffect(() => {\n$0\n},[])",
-      "doc": "Adds use effect",
-      "label": "useEffectDidMount",
+      "content": "${1:$TM_FILENAME_BASE}.propTypes = {\n\t$2\n};",
+      "doc": "Creates empty propTypes declaration",
+      "label": "propTypes",
       "matches": {
-        "usfd": true
+        "rpt": true
       }
     },
     {
-      "content": "PropTypes.element,",
-      "doc": "React element prop type",
-      "label": "propTypeElement",
+      "content": "static getDerivedStateFromProps(nextProps, prevState) {\n\t$0\n}",
+      "doc": "Invoked after a component is instantiated as well as when it receives new props.",
+      "label": "getDerivedStateFromProps",
       "matches": {
-        "ptel": true
+        "gdsfp": true
       }
     },
     {
-      "content": "function mapDispatchToProps(dispatch) {\n\treturn {\n\t}\n\n}",
-      "doc": "Adds the redux mapDispatchToProps function",
-      "label": "dispatchRedux",
+      "content": "import React, { Component } from 'react';\nimport { connect } from 'react-redux';\n\nfunction mapStateToProps(state) {\n\treturn {\n\n\t};\n}\n\nclass ${1:${TM_FILENAME_BASE}} extends Component {\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t);\n\t}\n}\n\nexport default connect(\n\tmapStateToProps,\n)(${1:${TM_FILENAME_BASE}});",
+      "doc": "Creates a React component class connected to redux",
+      "label": "reactReduxComponent",
       "matches": {
-        "disp": true
-      }
-    },
-    {
-      "content": "import React from 'react';\n\nconst ${1:${TM_FILENAME_BASE}} = () => {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t);\n};\n\nexport default ${1:${TM_FILENAME_BASE}};",
-      "doc": "Creates a stateless React component without PropTypes and ES6 module system",
-      "label": "reactStateless",
-      "matches": {
-        "rsc": true
-      }
-    },
-    {
-      "content": "PropTypes.number,",
-      "doc": "Number prop type",
-      "label": "propTypeNumber",
-      "matches": {
-        "ptn": true
-      }
-    },
-    {
-      "content": "PropTypes.element.isRequired,",
-      "doc": "React element prop type required",
-      "label": "propTypeElementRequired",
-      "matches": {
-        "ptelr": true
+        "rrc": true
       }
     },
     {
@@ -1450,67 +1418,51 @@
       }
     },
     {
-      "content": "// @flow \nimport * as React from 'react';\ntype Props = {\n\t$0\n};\nexport const ${1:${TM_FILENAME_BASE}} = (props: Props) => {\n\treturn (\n\t\t<div>\n\t\t\t\n\t\t</div>\n\t);\n};",
-      "doc": "Creates a stateless React component with FlowTypes and ES6 module system",
-      "label": "flowStatelessComponent",
+      "content": "PropTypes.array,",
+      "doc": "Array prop type",
+      "label": "propTypeArray",
       "matches": {
-        "fsc": true
+        "pta": true
       }
     },
     {
-      "content": "import React, { Component } from 'react';\n\nclass ${1:${TM_FILENAME_BASE}} extends Component {\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t);\n\t}\n}\n\nexport default ${1:${TM_FILENAME_BASE}};",
-      "doc": "Creates a React component class with ES6 module system",
-      "label": "reactClassComponent",
+      "content": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nconst ${1:${TM_FILENAME_BASE}} = props => {\n\treturn (\n\t\t<div>\n\t\t\t\n\t\t</div>\n\t);\n};\n\n${1:${TM_FILENAME_BASE}}.propTypes = {\n\t$0\n};\n\nexport default ${1:${TM_FILENAME_BASE}};",
+      "doc": "Creates a stateless React component with PropTypes and ES6 module system",
+      "label": "reactStatelessProps",
       "matches": {
-        "rcc": true
+        "rscp": true
       }
     },
     {
-      "content": "PropTypes.instanceOf($0),",
-      "doc": "Is an instance of a class prop type",
-      "label": "propTypeInstanceOf",
+      "content": "import React, { Component } from 'react';\nimport { connect } from 'react-redux';\n\nfunction mapStateToProps(state) {\n\treturn {\n\n\t};\n}\n\nfunction mapDispatchToProps(dispatch) {\n\treturn {\n\n\t};\n}\n\nclass ${1:${TM_FILENAME_BASE}} extends Component {\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t);\n\t}\n}\n\nexport default connect(\n\tmapStateToProps,\n)(${1:${TM_FILENAME_BASE}});",
+      "doc": "Creates a React component class connected to redux with dispatch",
+      "label": "reactReduxDispatchComponent",
       "matches": {
-        "pti": true
+        "rrdc": true
       }
     },
     {
-      "content": "PropTypes.symbol,",
-      "doc": "Symbol prop type",
-      "label": "propTypeSymbol",
+      "content": "constructor(props) {\n\tsuper(props);\n\t$0\n}",
+      "doc": "Adds a default constructor for the class that contains props as arguments",
+      "label": "classConstructor",
       "matches": {
-        "ptsm": true
+        "con": true
       }
     },
     {
-      "content": "PropTypes.symbol.isRequired,",
-      "doc": "Symbol prop type required",
-      "label": "propTypeSymbolRequired",
+      "content": "PropTypes.array.isRequired,",
+      "doc": "Array prop type required",
+      "label": "propTypeArrayRequired",
       "matches": {
-        "ptsmr": true
+        "ptar": true
       }
     },
     {
-      "content": "class ${1:${TM_FILENAME_BASE}} extends Component {\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t);\n\t}\n}",
-      "doc": "Creates a React component class with ES6 module system",
-      "label": "reactJustClassComponent",
+      "content": "PropTypes.number,",
+      "doc": "Number prop type",
+      "label": "propTypeNumber",
       "matches": {
-        "rcjc": true
-      }
-    },
-    {
-      "content": "PropTypes.instanceOf($0).isRequired,",
-      "doc": "Is an instance of a class prop type required",
-      "label": "propTypeInstanceOfRequired",
-      "matches": {
-        "ptir": true
-      }
-    },
-    {
-      "content": "componentWillMount() {\n\t$0\n}",
-      "doc": "Invoked once, both on the client and server, immediately before the initial rendering occurs",
-      "label": "componentWillMount",
-      "matches": {
-        "cwm": true
+        "ptn": true
       }
     },
     {
@@ -1519,6 +1471,54 @@
       "label": "reactClassComponentPropTypes",
       "matches": {
         "rccp": true
+      }
+    },
+    {
+      "content": "import React from 'react';\n\nfunction ${1:${TM_FILENAME_BASE}}(props) {\n\treturn (\n\t\t<div>\n\t\t\t\n\t\t</div>\n\t);\n}\n\nexport default ${1:${TM_FILENAME_BASE}};",
+      "doc": "Creates a stateless React component as a named function without PropTypes",
+      "label": "reactStatelessFunction",
+      "matches": {
+        "rsf": true
+      }
+    },
+    {
+      "content": "PropTypes.bool,",
+      "doc": "Bool prop type",
+      "label": "propTypeBool",
+      "matches": {
+        "ptb": true
+      }
+    },
+    {
+      "content": "import React, { Component } from 'react';\nimport PropTypes from 'prop-types';\n\nclass ${1:${TM_FILENAME_BASE}} extends Component {\n\tconstructor(props) {\n\t\tsuper(props);\n\t\tthis.state = {\n\t\t\t\n\t\t}\n\t}\n\n\tstatic getDerivedStateFromProps() {\n\t\treturn null\n\t}\n\n\tcomponentDidMount() {\n\t\t\n\t}\n\n\t// shouldComponentUpdate(nextProps, nextState) {}\n\n\tgetSnapshotBeforeUpdate(prevProps, prevState) {\n\t\treturn null\n\t}\n\n\tcomponentDidUpdate(prevProps, prevState, snapshot) {\n\t\t\n\t}\n\n\tcomponentWillUnmount() {\n\t\t\n\t}\n\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t\n\t\t\t</div>\n\t\t);\n\t}\n}\n\n${1:${TM_FILENAME_BASE}}.propTypes = {\n\t\n};\n\nexport default ${1:${TM_FILENAME_BASE}};",
+      "doc": "Creates a React component class with PropTypes and all lifecycle methods and ES6 module system",
+      "label": "reactClassComponentWithMethods",
+      "matches": {
+        "rcfc": true
+      }
+    },
+    {
+      "content": "// @flow\nimport * as React from 'react';\ntype Props = {\n  $0\n};\ntype State = {\n  $1\n};\nexport class ${2:${TM_FILENAME_BASE}} extends React.Component<Props, State>{\n  render() {\n    return (\n      <div>\n        \n      </div>\n    );\n  };\n};",
+      "doc": "Creates a React component class with FlowTypes",
+      "label": "flowClassComponent",
+      "matches": {
+        "fcc": true
+      }
+    },
+    {
+      "content": "class ${1:${TM_FILENAME_BASE}} extends React.Component {\n\tconstructor(props) {\n\t\tsuper(props);\n\n\t\tthis.state = {};\n\n\t}\n\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t);\n\t}\n}\n\n${1:${TM_FILENAME_BASE}}.propTypes = {\n\n};\n\nexport default ${1:${TM_FILENAME_BASE}};",
+      "doc": "Creates a React component class with constructor, empty state, proptypes and export in ES6 module system without imports. (Mostly used when React, Proptypes are provided by webpack provide plugin)",
+      "label": "reactWithWebpackDefaults",
+      "matches": {
+        "rwwd": true
+      }
+    },
+    {
+      "content": "PropTypes.bool.isRequired,",
+      "doc": "Bool prop type required",
+      "label": "propTypeBoolRequired",
+      "matches": {
+        "ptbr": true
       }
     },
     {
