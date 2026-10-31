@@ -2,51 +2,19 @@
   "extends": [],
   "snippets": [
     {
+      "content": "guard let ${1:value} = ${2:optional} else {\n\t$0\n}",
+      "doc": "guard statement with optional binding",
+      "label": "guard let",
+      "matches": {
+        "guardlet": true
+      }
+    },
+    {
       "content": "class ${1:Name} {\n\n\t$0\n}",
       "doc": "class declaration",
       "label": "class",
       "matches": {
         "class": true
-      }
-    },
-    {
-      "content": "while ${1:condition} {\n\t$0\n}",
-      "doc": "while statement",
-      "label": "while",
-      "matches": {
-        "while": true
-      }
-    },
-    {
-      "content": "repeat {\n\t$0\n} while ${1:condition}",
-      "doc": "repeat-while statement",
-      "label": "repeat-while",
-      "matches": {
-        "repeat": true
-      }
-    },
-    {
-      "content": "protocol ${1:Name} {\n\n\t$0\n}",
-      "doc": "protocol declaration",
-      "label": "protocol",
-      "matches": {
-        "protocol": true
-      }
-    },
-    {
-      "content": "func ${1:name}(${2:parameters}) -> ${3:Type} {\n\t$0\n}",
-      "doc": "function declaration",
-      "label": "func",
-      "matches": {
-        "func": true
-      }
-    },
-    {
-      "content": "switch ${1:value} {\ncase ${2:pattern}:\n\t$0\ndefault:\n\t\n}",
-      "doc": "switch statement",
-      "label": "switch",
-      "matches": {
-        "switch": true
       }
     },
     {
@@ -58,11 +26,43 @@
       }
     },
     {
+      "content": "do {\n\t$0\n} catch ${1:error} {\n\t$2\n}",
+      "doc": "do statement",
+      "label": "do",
+      "matches": {
+        "do": true
+      }
+    },
+    {
       "content": "struct ${1:Name} {\n\n\t$0\n}",
       "doc": "struct declaration",
       "label": "struct",
       "matches": {
         "struct": true
+      }
+    },
+    {
+      "content": "for ${1:item} in ${2:collection} {\n\t$0\n}",
+      "doc": "for-in statement",
+      "label": "for",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "repeat {\n\t$0\n} while ${1:condition}",
+      "doc": "repeat-while statement",
+      "label": "repeat-while",
+      "matches": {
+        "repeat": true
+      }
+    },
+    {
+      "content": "else if ${1:condition} {\n\t$0\n}",
+      "doc": "else clause with a nested if statement",
+      "label": "else if",
+      "matches": {
+        "elif": true
       }
     },
     {
@@ -74,11 +74,51 @@
       }
     },
     {
-      "content": "print(\"$1\")\n$0",
-      "doc": "print(\"...\")",
-      "label": "print",
+      "content": "func ${1:name}(${2:parameters}) -> ${3:Type} {\n\t$0\n}",
+      "doc": "function declaration",
+      "label": "func",
       "matches": {
-        "print": true
+        "func": true
+      }
+    },
+    {
+      "content": "else {\n\t$0\n}",
+      "doc": "else clause",
+      "label": "else",
+      "matches": {
+        "else": true
+      }
+    },
+    {
+      "content": "protocol ${1:Name} {\n\n\t$0\n}",
+      "doc": "protocol declaration",
+      "label": "protocol",
+      "matches": {
+        "protocol": true
+      }
+    },
+    {
+      "content": "switch ${1:value} {\ncase ${2:pattern}:\n\t$0\ndefault:\n\t\n}",
+      "doc": "switch statement",
+      "label": "switch",
+      "matches": {
+        "switch": true
+      }
+    },
+    {
+      "content": "while ${1:condition} {\n\t$0\n}",
+      "doc": "while statement",
+      "label": "while",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "if ${1:condition} {\n\t$0\n}",
+      "doc": "if statement",
+      "label": "if",
+      "matches": {
+        "if": true
       }
     },
     {
@@ -98,59 +138,19 @@
       }
     },
     {
-      "content": "for ${1:item} in ${2:collection} {\n\t$0\n}",
-      "doc": "for-in statement",
-      "label": "for",
-      "matches": {
-        "for": true
-      }
-    },
-    {
-      "content": "do {\n\t$0\n} catch ${1:error} {\n\t$2\n}",
-      "doc": "do statement",
-      "label": "do",
-      "matches": {
-        "do": true
-      }
-    },
-    {
-      "content": "guard let ${1:value} = ${2:optional} else {\n\t$0\n}",
-      "doc": "guard statement with optional binding",
-      "label": "guard let",
-      "matches": {
-        "guardlet": true
-      }
-    },
-    {
-      "content": "else {\n\t$0\n}",
-      "doc": "else clause",
-      "label": "else",
-      "matches": {
-        "else": true
-      }
-    },
-    {
-      "content": "else if ${1:condition} {\n\t$0\n}",
-      "doc": "else clause with a nested if statement",
-      "label": "else if",
-      "matches": {
-        "elif": true
-      }
-    },
-    {
-      "content": "if ${1:condition} {\n\t$0\n}",
-      "doc": "if statement",
-      "label": "if",
-      "matches": {
-        "if": true
-      }
-    },
-    {
       "content": "if let ${1:value} = ${2:optional} {\n\t$0\n}",
       "doc": "if statement with optional binding",
       "label": "if let",
       "matches": {
         "iflet": true
+      }
+    },
+    {
+      "content": "print(\"$1\")\n$0",
+      "doc": "print(\"...\")",
+      "label": "print",
+      "matches": {
+        "print": true
       }
     },
     {

@@ -2,6 +2,14 @@
   "extends": [],
   "snippets": [
     {
+      "content": "Blade::include('${1:includes.input}', '${2:input}');",
+      "doc": "Aliasing Includes (AppServiceProvider boot method)",
+      "label": "Blade-include",
+      "matches": {
+        "Blade::include": true
+      }
+    },
+    {
       "content": "Blade::render(${1:'Blade template string'}, ${2:\\$data});",
       "doc": "Transform a raw Blade template string into valid HTML (Laravel 9.x)",
       "label": "Blade-render",
@@ -23,14 +31,6 @@
       "label": "Blade-renderComponent",
       "matches": {
         "Blade::renderComponent": true
-      }
-    },
-    {
-      "content": "Blade::include('${1:includes.input}', '${2:input}');",
-      "doc": "Aliasing Includes (AppServiceProvider boot method)",
-      "label": "Blade-include",
-      "matches": {
-        "Blade::include": true
       }
     },
     {

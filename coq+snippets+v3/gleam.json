@@ -2,90 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "pub external fn ${1:function_name}(${2}) -> ${3:Nil} = \"${4}\" \"${0}\"",
-      "doc": "public external function",
-      "label": "Public External Function",
-      "matches": {
-        "pexfn": true,
-        "pub": true,
-        "pub external": true,
-        "pub external fn": true
-      }
-    },
-    {
-      "content": "pub fn ${1:name}_test() {\n\t${0}\n}",
-      "doc": "test function",
-      "label": "Test Function",
-      "matches": {
-        "test": true
-      }
-    },
-    {
-      "content": "fn(${1}) { ${0} }",
-      "doc": "anonymous function",
-      "label": "Anonymous Function",
-      "matches": {
-        "af": true,
-        "fn": true
-      }
-    },
-    {
-      "content": "import ${0:gleam/result}",
-      "doc": "import",
-      "label": "Import",
-      "matches": {
-        "im": true,
-        "import": true
-      }
-    },
-    {
-      "content": "let ${1} = ${0}",
-      "doc": "let assignment",
-      "label": "Let assignment",
-      "matches": {
-        "let": true
-      }
-    },
-    {
-      "content": "import ${1:gleam/result}.{${0}}",
-      "doc": "import unqualified",
-      "label": "Import Unqualified",
-      "matches": {
-        "im.": true,
-        "import": true
-      }
-    },
-    {
       "content": "type ${1:Name} {\n\t${0:$1}\n}",
       "doc": "type declaration",
       "label": "Type",
       "matches": {
         "type": true
-      }
-    },
-    {
-      "content": "const ${1} = ${0}",
-      "doc": "constant",
-      "label": "Constant",
-      "matches": {
-        "const": true
-      }
-    },
-    {
-      "content": "|> ${0}",
-      "doc": "Pipe |>",
-      "label": "Pipe",
-      "matches": {
-        "p": true,
-        "|>": true
-      }
-    },
-    {
-      "content": "use ${1} <- ${0}",
-      "doc": "use expression",
-      "label": "Use expression",
-      "matches": {
-        "use": true
       }
     },
     {
@@ -98,11 +19,13 @@
       }
     },
     {
-      "content": "case ${1} {\n\t${2} -> ${0}\n}",
-      "doc": "case expression",
-      "label": "Case Expression",
+      "content": "pub type ${1:Name} {\n\t${0:$1}\n}",
+      "doc": "public type declaration",
+      "label": "Public Type",
       "matches": {
-        "case": true
+        "pty": true,
+        "pub": true,
+        "pub type": true
       }
     },
     {
@@ -123,31 +46,31 @@
       }
     },
     {
-      "content": "pub type ${1:Name} {\n\t${0:$1}\n}",
-      "doc": "public type declaration",
-      "label": "Public Type",
+      "content": "@external(${1:erlang}, \"${2}\", \"${0}\")",
+      "doc": "external attribute",
+      "label": "External attribute",
       "matches": {
-        "pty": true,
-        "pub": true,
-        "pub type": true
+        "external": true
       }
     },
     {
-      "content": "pub fn ${1:function_name}(${2}) -> ${3:Nil} {\n\t${0:todo}\n}",
-      "doc": "public function",
-      "label": "Public Function",
+      "content": "pub external fn ${1:function_name}(${2}) -> ${3:Nil} = \"${4}\" \"${0}\"",
+      "doc": "public external function",
+      "label": "Public External Function",
       "matches": {
+        "pexfn": true,
         "pub": true,
-        "pub fn": true
+        "pub external": true,
+        "pub external fn": true
       }
     },
     {
-      "content": "pub const ${1} = ${0}",
-      "doc": "public constant",
-      "label": "Public Constant",
+      "content": "fn(${1}) { ${0} }",
+      "doc": "anonymous function",
+      "label": "Anonymous Function",
       "matches": {
-        "pub": true,
-        "pub const": true
+        "af": true,
+        "fn": true
       }
     },
     {
@@ -161,21 +84,28 @@
       }
     },
     {
-      "content": "should.be_true(${0})",
-      "doc": "should.be_true",
-      "label": "Should Be True",
+      "content": "let ${1} = ${0}",
+      "doc": "let assignment",
+      "label": "Let assignment",
       "matches": {
-        "should": true,
-        "should.b": true,
-        "strue": true
+        "let": true
       }
     },
     {
-      "content": "@external(${1:erlang}, \"${2}\", \"${0}\")",
-      "doc": "external attribute",
-      "label": "External attribute",
+      "content": "const ${1} = ${0}",
+      "doc": "constant",
+      "label": "Constant",
       "matches": {
-        "external": true
+        "const": true
+      }
+    },
+    {
+      "content": "import ${1:gleam/result}.{${0}}",
+      "doc": "import unqualified",
+      "label": "Import Unqualified",
+      "matches": {
+        "im.": true,
+        "import": true
       }
     },
     {
@@ -187,11 +117,81 @@
       }
     },
     {
+      "content": "pub const ${1} = ${0}",
+      "doc": "public constant",
+      "label": "Public Constant",
+      "matches": {
+        "pub": true,
+        "pub const": true
+      }
+    },
+    {
+      "content": "should.be_true(${0})",
+      "doc": "should.be_true",
+      "label": "Should Be True",
+      "matches": {
+        "should": true,
+        "should.b": true,
+        "strue": true
+      }
+    },
+    {
+      "content": "|> ${0}",
+      "doc": "Pipe |>",
+      "label": "Pipe",
+      "matches": {
+        "p": true,
+        "|>": true
+      }
+    },
+    {
+      "content": "use ${1} <- ${0}",
+      "doc": "use expression",
+      "label": "Use expression",
+      "matches": {
+        "use": true
+      }
+    },
+    {
+      "content": "pub fn ${1:name}_test() {\n\t${0}\n}",
+      "doc": "test function",
+      "label": "Test Function",
+      "matches": {
+        "test": true
+      }
+    },
+    {
       "content": "fn ${1:function_name}(${2}) -> ${3:Nil} {\n\t${0:todo}\n}",
       "doc": "private function",
       "label": "Private Function",
       "matches": {
         "fn": true
+      }
+    },
+    {
+      "content": "case ${1} {\n\t${2} -> ${0}\n}",
+      "doc": "case expression",
+      "label": "Case Expression",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "import ${0:gleam/result}",
+      "doc": "import",
+      "label": "Import",
+      "matches": {
+        "im": true,
+        "import": true
+      }
+    },
+    {
+      "content": "pub fn ${1:function_name}(${2}) -> ${3:Nil} {\n\t${0:todo}\n}",
+      "doc": "public function",
+      "label": "Public Function",
+      "matches": {
+        "pub": true,
+        "pub fn": true
       }
     },
     {

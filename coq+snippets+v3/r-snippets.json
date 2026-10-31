@@ -2,43 +2,27 @@
   "extends": [],
   "snippets": [
     {
-      "content": "factor(${1:x})",
-      "doc": "Factor",
-      "label": "fac",
+      "content": "detach(${0:})",
+      "doc": "Detach",
+      "label": "det",
       "matches": {
-        "factor": true
+        "detach": true
       }
     },
     {
-      "content": "glm(${1:formula}, ${2:family = {3:gaussian}}, ${4:data})",
-      "doc": "Generalized Linear Models",
-      "label": "glm",
+      "content": "sort(${1:x})",
+      "doc": "Sort",
+      "label": "sor",
       "matches": {
-        "glm": true
+        "sort": true
       }
     },
     {
-      "content": "library(shiny)\n\nui <- fluidPage(\n    titlePanel(\"${1:title}\"),\n    sidebarLayout(\n        sidebarPanel(),\n        mainPanel()\n    )\n)\n\nserver <- function(input, output, session) {\n\n}\n\nshinyApp(ui, server)$0",
-      "doc": "Shiny sidebar page",
-      "label": "Shiny sidebar page",
+      "content": "else if (${1:condition}) {\n   ${2:selected}\n}",
+      "doc": "Code snippet for 'else' conditional",
+      "label": "elseif",
       "matches": {
-        "shiny sidebar page": true
-      }
-    },
-    {
-      "content": "kruskal.test(${1:formula}, ${2:data}, ${3:subset}, ${4:na.action}, ${5:...})",
-      "doc": "Kruskal-Wallis Rank Sum test",
-      "label": "kr",
-      "matches": {
-        "kruskal": true
-      }
-    },
-    {
-      "content": "lapply(${1:X}, ${2:FUN}, ${3:...})",
-      "doc": "Lapply",
-      "label": "lap",
-      "matches": {
-        "lapply": true
+        "elseif": true
       }
     },
     {
@@ -50,11 +34,35 @@
       }
     },
     {
+      "content": "factor(${1:x})",
+      "doc": "Factor",
+      "label": "fac",
+      "matches": {
+        "factor": true
+      }
+    },
+    {
       "content": "if (${1:condition}) {\n   ${2:selected}\n}",
       "doc": "Code snippet for 'if' conditional",
       "label": "if",
       "matches": {
         "if": true
+      }
+    },
+    {
+      "content": "glm(${1:formula}, ${2:family = {3:gaussian}}, ${4:data})",
+      "doc": "Generalized Linear Models",
+      "label": "glm",
+      "matches": {
+        "glm": true
+      }
+    },
+    {
+      "content": "options(${1:...})",
+      "doc": "Options",
+      "label": "opt",
+      "matches": {
+        "option": true
       }
     },
     {
@@ -82,11 +90,11 @@
       }
     },
     {
-      "content": "lmObj <- lm(${1:yCol} ~ {2:xCol}, data = ${3:data}, subset = ${4:subset}, weights = ${5:weights}, na.action = ${6:na.action})\nsummary(lmObj)\nplot(lmObj, which=c(1)) # Plot residuals versus fitted",
-      "doc": "Fit a linear model and create a plot",
-      "label": "Linear model with plot",
+      "content": "lapply(${1:X}, ${2:FUN}, ${3:...})",
+      "doc": "Lapply",
+      "label": "lap",
       "matches": {
-        "lmplot": true
+        "lapply": true
       }
     },
     {
@@ -130,131 +138,19 @@
       }
     },
     {
+      "content": "${1:dfname} <- data.frame(${2:varlist})",
+      "doc": "Create a data frame from vectors",
+      "label": "Data frame",
+      "matches": {
+        "dfv": true
+      }
+    },
+    {
       "content": "length(${1:x})",
       "doc": "Length",
       "label": "len",
       "matches": {
         "length": true
-      }
-    },
-    {
-      "content": "rep(${1:x}, ${2:...})",
-      "doc": "Rep",
-      "label": "rep",
-      "matches": {
-        "rep": true
-      }
-    },
-    {
-      "content": "${1:name}ui <- function(id) {\n    ns <- NS(id)\n    tagList(\n    ${0}\n        )\n    }\n\n${1:name} <- function(input, output, session) {\n    ns <- session\\$ns\n}\n\n# Copy in UI\n#${1:name}ui(\"${1:name}ui\")\n\n# Copy in server\n#callModule(${1:name}, \"${1:name}ui\")",
-      "doc": "Shiny module",
-      "label": "Shiny module",
-      "matches": {
-        "shiny module": true
-      }
-    },
-    {
-      "content": "withProgress(message = \"${1:message}\", {\n${0}\n})",
-      "doc": "Shiny withProgress",
-      "label": "Shiny withProgress",
-      "matches": {
-        "shiny withProgress": true
-      }
-    },
-    {
-      "content": "observeEvent(${1:event}, {\n    ${0}\n})",
-      "doc": "Shiny observe event",
-      "label": "Shiny observe event",
-      "matches": {
-        "shiny observe event": true
-      }
-    },
-    {
-      "content": "#endregion",
-      "doc": "Folding Region End",
-      "label": "Region End",
-      "matches": {
-        "#endregion": true
-      }
-    },
-    {
-      "content": "#region $0",
-      "doc": "Folding Region Start",
-      "label": "Region Start",
-      "matches": {
-        "#region": true
-      }
-    },
-    {
-      "content": "if (${1:condition}) {\n   ${2:selected}\n} else {\n   \n}",
-      "doc": "Code snippet for 'if-else' conditional block",
-      "label": "if-else block",
-      "matches": {
-        "ifelse": true
-      }
-    },
-    {
-      "content": "${1:name} <- function(${2:parameters}) {\n   ${3:selected}\n}",
-      "doc": "Named function",
-      "label": "function",
-      "matches": {
-        "function": true
-      }
-    },
-    {
-      "content": "else if (${1:condition}) {\n   ${2:selected}\n}",
-      "doc": "Code snippet for 'else' conditional",
-      "label": "elseif",
-      "matches": {
-        "elseif": true
-      }
-    },
-    {
-      "content": "data(${1:name})",
-      "doc": "Load Dataset",
-      "label": "dat",
-      "matches": {
-        "data": true
-      }
-    },
-    {
-      "content": "table(${1:...})",
-      "doc": "Table",
-      "label": "tab",
-      "matches": {
-        "table": true
-      }
-    },
-    {
-      "content": "cum${1:max}(${2:x})",
-      "doc": "Cummulative",
-      "label": "cum",
-      "matches": {
-        "cum": true
-      }
-    },
-    {
-      "content": "cummax(${1:x}",
-      "doc": "Cummulative max",
-      "label": "cuma",
-      "matches": {
-        "cumaax": true
-      }
-    },
-    {
-      "content": "attach(${1:frame})",
-      "doc": "Attach",
-      "label": "att",
-      "matches": {
-        "attach": true
-      }
-    },
-    {
-      "content": "sort(${1:x})",
-      "doc": "Sort",
-      "label": "sor",
-      "matches": {
-        "sort": true
       }
     },
     {
@@ -266,11 +162,115 @@
       }
     },
     {
-      "content": "detach(${0:})",
-      "doc": "Detach",
-      "label": "det",
+      "content": "rep(${1:x}, ${2:...})",
+      "doc": "Rep",
+      "label": "rep",
       "matches": {
-        "detach": true
+        "rep": true
+      }
+    },
+    {
+      "content": "${1:newdataframe} <- na.omit(${2:dataframe})",
+      "doc": "Remove all rows with missing values from data frame",
+      "label": "remove missings",
+      "matches": {
+        "naomit": true
+      }
+    },
+    {
+      "content": "${1:dfname} <- read.csv(file = \"${2:file}\", header = ${3|TRUE,FALSE|},  sep = \"${4|\\,,;|}\", row.names = ${5:NULL},  stringsAsFactors = ${6|FALSE,TRUE|})",
+      "doc": "Read a data table from a comma-separated file (CSV) and create a data frame",
+      "label": "Read CSV",
+      "matches": {
+        "readc": true
+      }
+    },
+    {
+      "content": "if (${1:condition}) {\n   ${2:selected}\n} else {\n   \n}",
+      "doc": "Code snippet for 'if-else' conditional block",
+      "label": "if-else block",
+      "matches": {
+        "ifelse": true
+      }
+    },
+    {
+      "content": "#endregion",
+      "doc": "Folding Region End",
+      "label": "Region End",
+      "matches": {
+        "#endregion": true
+      }
+    },
+    {
+      "content": "table(${1:...})",
+      "doc": "Table",
+      "label": "tab",
+      "matches": {
+        "table": true
+      }
+    },
+    {
+      "content": "${1:name}ui <- function(id) {\n    ns <- NS(id)\n    tagList(\n    ${0}\n        )\n    }\n\n${1:name} <- function(input, output, session) {\n    ns <- session\\$ns\n}\n\n# Copy in UI\n#${1:name}ui(\"${1:name}ui\")\n\n# Copy in server\n#callModule(${1:name}, \"${1:name}ui\")",
+      "doc": "Shiny module",
+      "label": "Shiny module",
+      "matches": {
+        "shiny module": true
+      }
+    },
+    {
+      "content": "library(shiny)\n\nui <- fluidPage(\n    titlePanel(\"${1:title}\"),\n    sidebarLayout(\n        sidebarPanel(),\n        mainPanel()\n    )\n)\n\nserver <- function(input, output, session) {\n\n}\n\nshinyApp(ui, server)$0",
+      "doc": "Shiny sidebar page",
+      "label": "Shiny sidebar page",
+      "matches": {
+        "shiny sidebar page": true
+      }
+    },
+    {
+      "content": "#region $0",
+      "doc": "Folding Region Start",
+      "label": "Region Start",
+      "matches": {
+        "#region": true
+      }
+    },
+    {
+      "content": "${1:name} <- function(${2:parameters}) {\n   ${3:selected}\n}",
+      "doc": "Named function",
+      "label": "function",
+      "matches": {
+        "function": true
+      }
+    },
+    {
+      "content": "seq(${1:from}, ${2:to}, ${3:by})",
+      "doc": "Sequence (from,to,by)",
+      "label": "seq",
+      "matches": {
+        "seq": true
+      }
+    },
+    {
+      "content": "else {\n   ${1:selected}\n}",
+      "doc": "Code snippet for 'else' conditional",
+      "label": "else",
+      "matches": {
+        "else": true
+      }
+    },
+    {
+      "content": "kruskal.test(${1:formula}, ${2:data}, ${3:subset}, ${4:na.action}, ${5:...})",
+      "doc": "Kruskal-Wallis Rank Sum test",
+      "label": "kr",
+      "matches": {
+        "kruskal": true
+      }
+    },
+    {
+      "content": "observeEvent(${1:event}, {\n    ${0}\n})",
+      "doc": "Shiny observe event",
+      "label": "Shiny observe event",
+      "matches": {
+        "shiny observe event": true
       }
     },
     {
@@ -282,19 +282,51 @@
       }
     },
     {
-      "content": "${1:outMatrix} <- matrix(data = ${2:dataVec}, nrow = ${3:nrow}, ncol = ${4:ncol}, byrow = ${5:byrow})",
-      "doc": "Create a matrix from a vector",
-      "label": "Matrix",
+      "content": "withProgress(message = \"${1:message}\", {\n${0}\n})",
+      "doc": "Shiny withProgress",
+      "label": "Shiny withProgress",
       "matches": {
-        "matrix": true
+        "shiny withProgress": true
       }
     },
     {
-      "content": "${1:newdataframe} <- na.omit(${2:dataframe})",
-      "doc": "Remove all rows with missing values from data frame",
-      "label": "remove missings",
+      "content": "plot(${1:x}, ${2:y}, ${3:...})",
+      "doc": "Plot",
+      "label": "plot",
       "matches": {
-        "naomit": true
+        "plot": true
+      }
+    },
+    {
+      "content": "cummax(${1:x}",
+      "doc": "Cummulative max",
+      "label": "cuma",
+      "matches": {
+        "cumaax": true
+      }
+    },
+    {
+      "content": "print(${1:x}, ${2:...})",
+      "doc": "Print",
+      "label": "pri",
+      "matches": {
+        "print": true
+      }
+    },
+    {
+      "content": "cum${1:max}(${2:x})",
+      "doc": "Cummulative",
+      "label": "cum",
+      "matches": {
+        "cum": true
+      }
+    },
+    {
+      "content": "attach(${1:frame})",
+      "doc": "Attach",
+      "label": "att",
+      "matches": {
+        "attach": true
       }
     },
     {
@@ -314,59 +346,27 @@
       }
     },
     {
-      "content": "${1:dfname} <- read.csv(file = \"${2:file}\", header = ${3|TRUE,FALSE|},  sep = \"${4|\\,,;|}\", row.names = ${5:NULL},  stringsAsFactors = ${6|FALSE,TRUE|})",
-      "doc": "Read a data table from a comma-separated file (CSV) and create a data frame",
-      "label": "Read CSV",
+      "content": "data(${1:name})",
+      "doc": "Load Dataset",
+      "label": "dat",
       "matches": {
-        "readc": true
+        "data": true
       }
     },
     {
-      "content": "plot(${1:x}, ${2:y}, ${3:...})",
-      "doc": "Plot",
-      "label": "plot",
+      "content": "lmObj <- lm(${1:yCol} ~ {2:xCol}, data = ${3:data}, subset = ${4:subset}, weights = ${5:weights}, na.action = ${6:na.action})\nsummary(lmObj)\nplot(lmObj, which=c(1)) # Plot residuals versus fitted",
+      "doc": "Fit a linear model and create a plot",
+      "label": "Linear model with plot",
       "matches": {
-        "plot": true
+        "lmplot": true
       }
     },
     {
-      "content": "seq(${1:from}, ${2:to}, ${3:by})",
-      "doc": "Sequence (from,to,by)",
-      "label": "seq",
+      "content": "${1:outMatrix} <- matrix(data = ${2:dataVec}, nrow = ${3:nrow}, ncol = ${4:ncol}, byrow = ${5:byrow})",
+      "doc": "Create a matrix from a vector",
+      "label": "Matrix",
       "matches": {
-        "seq": true
-      }
-    },
-    {
-      "content": "options(${1:...})",
-      "doc": "Options",
-      "label": "opt",
-      "matches": {
-        "option": true
-      }
-    },
-    {
-      "content": "print(${1:x}, ${2:...})",
-      "doc": "Print",
-      "label": "pri",
-      "matches": {
-        "print": true
-      }
-    },
-    {
-      "content": "else {\n   ${1:selected}\n}",
-      "doc": "Code snippet for 'else' conditional",
-      "label": "else",
-      "matches": {
-        "else": true
-      }
-    },
-    {
-      "content": "${1:dfname} <- data.frame(${2:varlist})",
-      "doc": "Create a data frame from vectors",
-      "label": "Data frame",
-      "matches": {
-        "dfv": true
+        "matrix": true
       }
     }
   ]

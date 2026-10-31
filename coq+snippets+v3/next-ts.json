@@ -2,14 +2,6 @@
   "extends": [],
   "snippets": [
     {
-      "content": "${1:${TM_FILENAME_BASE}}.getInitialProps = async ({ req }) => {\n\treturn $2\n}",
-      "doc": "Next.js Get initial props outside Component",
-      "label": "Next.js Get initial props outside Component",
-      "matches": {
-        "gip": true
-      }
-    },
-    {
       "content": "import { InferGetServerSidePropsType } from 'next'",
       "doc": "Next.js InferGetServerSidePropsType import",
       "label": "import Next.js InferGetServerSidePropsType",
@@ -58,14 +50,6 @@
       }
     },
     {
-      "content": "function ${1:${TM_FILENAME_BASE}}({ data }: InferGetServerSidePropsType<typeof getServerSideProps>) {\n\treturn $2\n}",
-      "doc": "use InferGetServerSidePropsType snippet",
-      "label": "use Next.js InferGetServerSidePropsType",
-      "matches": {
-        "ufgss": true
-      }
-    },
-    {
       "content": "function ${1:${TM_FILENAME_BASE}}({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {\n\treturn $2\n}",
       "doc": "use InferGetStaticPropsType snippet",
       "label": "use Next.js InferGetStaticPropsType",
@@ -74,11 +58,11 @@
       }
     },
     {
-      "content": "import { GetServerSideProps } from 'next'",
-      "doc": "Next.js GetServerSideProps type import",
-      "label": "import Next.js GetServerSideProps type",
+      "content": "function ${1:${TM_FILENAME_BASE}}({ data }: InferGetServerSidePropsType<typeof getServerSideProps>) {\n\treturn $2\n}",
+      "doc": "use InferGetServerSidePropsType snippet",
+      "label": "use Next.js InferGetServerSidePropsType",
       "matches": {
-        "igss": true
+        "ufgss": true
       }
     },
     {
@@ -90,11 +74,27 @@
       }
     },
     {
+      "content": "import { GetServerSideProps } from 'next'",
+      "doc": "Next.js GetServerSideProps type import",
+      "label": "import Next.js GetServerSideProps type",
+      "matches": {
+        "igss": true
+      }
+    },
+    {
       "content": "import { GetStaticProps } from 'next';",
       "doc": "Next.js GetStaticProps type import",
       "label": "import Next.js GetStaticProps type",
       "matches": {
         "igsp": true
+      }
+    },
+    {
+      "content": "${1:${TM_FILENAME_BASE}}.getInitialProps = async ({ req }) => {\n\treturn $2\n}",
+      "doc": "Next.js Get initial props outside Component",
+      "label": "Next.js Get initial props outside Component",
+      "matches": {
+        "gip": true
       }
     }
   ]

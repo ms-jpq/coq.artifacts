@@ -2,11 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "expect(${1:subject}).to be_a_kind_of(${2:klass})$0",
-      "doc": "Type matcher\nReturns true if type is in obj's\nclass hierarchy or is a module and\nis included in a class in obj's \nclass hierarchy.",
-      "label": "rspec_expect_be_a_kind_of",
+      "content": "expect(${1:subject}).to be_an_instance_of(${2:klass})$0",
+      "doc": "Type matcher\nReturns true if and only if type if obj's class",
+      "label": "rspec_expect_be_an_instance_of",
       "matches": {
-        "expbko": true
+        "expbio": true
       }
     },
     {
@@ -26,27 +26,11 @@
       }
     },
     {
-      "content": "expect(${1:subject}).to be_an_instance_of(${2:klass})$0",
-      "doc": "Type matcher\nReturns true if and only if type if obj's class",
-      "label": "rspec_expect_be_an_instance_of",
-      "matches": {
-        "expbio": true
-      }
-    },
-    {
       "content": "expect(${1:array}).to contain_exactly(${2:elements})$0",
       "doc": "Provides a way to test arrays\nagainst each other in a way that\ndisregards differences in the\nordering between the actual and\nexpected array",
       "label": "rspec_expect_contain_exactly",
       "matches": {
         "expcte": true
-      }
-    },
-    {
-      "content": "expect(${1:subject}).to respond_to(:${2:method})$0",
-      "doc": "Use the respond_to matcher to\nspecify details of an object's\ninterface. \nScenarios:\nbasic usage\nspecify arguments\nspecify arguments range\nspecify unlimited arguments\nspecify keywords\nspecify any keywords\nspecify required keywords",
-      "label": "rspec_expect_respond_to",
-      "matches": {
-        "exprt": true
       }
     },
     {
@@ -58,11 +42,11 @@
       }
     },
     {
-      "content": "after(${1|:all,:each,:suite,:context,:example|}) do\n  ${2:}$0\nend",
-      "doc": "After hook\nRuns once after all of the examples\nin a group",
-      "label": "rspec_after",
+      "content": "before(${1|:all,:each,:suite,:context,:example|}) do\n  ${2:}$0\nend",
+      "doc": "Before hook\nRuns once before all of the examples\nin a group",
+      "label": "rspec_before",
       "matches": {
-        "aft": true
+        "bef": true
       }
     },
     {
@@ -82,11 +66,11 @@
       }
     },
     {
-      "content": "around(:${1:example}) do\n  ${2:}$0\nend",
-      "doc": "Around hook\nLets you define code that should be\nexecuted before and after the\nexample\nContext hooks are NOT wrapped by\nthe `around` hook",
-      "label": "rspec_around",
+      "content": "after(${1|:all,:each,:suite,:context,:example|}) do\n  ${2:}$0\nend",
+      "doc": "After hook\nRuns once after all of the examples\nin a group",
+      "label": "rspec_after",
       "matches": {
-        "aro": true
+        "aft": true
       }
     },
     {
@@ -98,14 +82,6 @@
       }
     },
     {
-      "content": "before(${1|:all,:each,:suite,:context,:example|}) do\n  ${2:}$0\nend",
-      "doc": "Before hook\nRuns once before all of the examples\nin a group",
-      "label": "rspec_before",
-      "matches": {
-        "bef": true
-      }
-    },
-    {
       "content": "expect(${1:subject}).to be$0",
       "doc": "Scenarios:\nbe matcher",
       "label": "rspec_expect_be",
@@ -114,11 +90,11 @@
       }
     },
     {
-      "content": "it { is_expected.to ${1:matcher} }$0",
-      "doc": "RSpec supports a one-liner syntax\nfor setting an expectation on the\nsubject",
-      "label": "rspec_is_expected",
+      "content": "around(:${1:example}) do\n  ${2:}$0\nend",
+      "doc": "Around hook\nLets you define code that should be\nexecuted before and after the\nexample\nContext hooks are NOT wrapped by\nthe `around` hook",
+      "label": "rspec_around",
       "matches": {
-        "itie": true
+        "aro": true
       }
     },
     {
@@ -130,14 +106,6 @@
       }
     },
     {
-      "content": "subject(:${1:subject}) { ${2:} }$0",
-      "doc": "Explicit subject\nDefines a memoized helper method",
-      "label": "rspec_subject",
-      "matches": {
-        "subject": true
-      }
-    },
-    {
       "content": "expect(${1:subject}).to have_attributes(${2:hash})$0",
       "doc": "Used to specify that an object's\nattributes match the expected\nattributes",
       "label": "rspec_expect_have_attributes",
@@ -146,19 +114,19 @@
       }
     },
     {
+      "content": "it { is_expected.to ${1:matcher} }$0",
+      "doc": "RSpec supports a one-liner syntax\nfor setting an expectation on the\nsubject",
+      "label": "rspec_is_expected",
+      "matches": {
+        "itie": true
+      }
+    },
+    {
       "content": "expect(${1:subject}).to eq(${2:value})$0",
       "doc": "Equality matcher\ncompare using eq (==)",
       "label": "rspec_expect_eq",
       "matches": {
         "expeq": true
-      }
-    },
-    {
-      "content": "subject(:${1:subject}) { ${2:${TM_DIRECTORY/(?:(?:\\~?\\/.*\\/)|_)([A-Za-z0-9]+)?/${1:/capitalize}/g}}::${3:${TM_FILENAME_BASE/(?:^|_)([A-Za-z0-9]+)(?:_spec)?/${1:/capitalize}/g}}.new }$0",
-      "doc": "subject(:subject) { described_class.new }",
-      "label": "rspec_described_class",
-      "matches": {
-        "subjectcls": true
       }
     },
     {
@@ -178,6 +146,14 @@
       }
     },
     {
+      "content": "context 'when ${1:some case}' do\n  ${2:}$0\nend",
+      "doc": "RSpec context case",
+      "label": "rspec_context",
+      "matches": {
+        "con": true
+      }
+    },
+    {
       "content": "expect(${1:subject}).to equal(${2:value})$0",
       "doc": "Equality matcher\ncompare using equal (equal?)",
       "label": "rspec_expect_equal",
@@ -194,19 +170,51 @@
       }
     },
     {
-      "content": "describe '${1:}' do\n  ${2:}$0\nend",
-      "doc": "RSpec describe case",
-      "label": "rspec_describe",
+      "content": "subject(:${1:subject}) { ${2:${TM_DIRECTORY/(?:(?:\\~?\\/.*\\/)|_)([A-Za-z0-9]+)?/${1:/capitalize}/g}}::${3:${TM_FILENAME_BASE/(?:^|_)([A-Za-z0-9]+)(?:_spec)?/${1:/capitalize}/g}}.new }$0",
+      "doc": "subject(:subject) { described_class.new }",
+      "label": "rspec_described_class",
       "matches": {
-        "des": true
+        "subjectcls": true
       }
     },
     {
-      "content": "context 'when ${1:some case}' do\n  ${2:}$0\nend",
-      "doc": "RSpec context case",
-      "label": "rspec_context",
+      "content": "expect(${1:enumerable}).to all( ${2:matcher} )$0",
+      "doc": "Used to specify that a collection's\nobjects all pass an expected\nmatcher. This works on any\nenumerable object.",
+      "label": "rspec_expect_all",
       "matches": {
-        "con": true
+        "expall": true
+      }
+    },
+    {
+      "content": "subject(:${1:subject}) { ${2:} }$0",
+      "doc": "Explicit subject\nDefines a memoized helper method",
+      "label": "rspec_subject",
+      "matches": {
+        "subject": true
+      }
+    },
+    {
+      "content": "expect(${1:subject}).to start_with(${2:value})$0",
+      "doc": "Used to specify that a string or\narray starts with the expected\ncharacters or elements\nScenarios: Array, String",
+      "label": "rspec_expect_start_with",
+      "matches": {
+        "expstw": true
+      }
+    },
+    {
+      "content": "expect(${1:subject}).to be_a_kind_of(${2:klass})$0",
+      "doc": "Type matcher\nReturns true if type is in obj's\nclass hierarchy or is a module and\nis included in a class in obj's \nclass hierarchy.",
+      "label": "rspec_expect_be_a_kind_of",
+      "matches": {
+        "expbko": true
+      }
+    },
+    {
+      "content": "let(:${1:object}) { $0 }",
+      "doc": "Use `let` to define memoized helper method",
+      "label": "rspec_let",
+      "matches": {
+        "let": true
       }
     },
     {
@@ -226,6 +234,14 @@
       }
     },
     {
+      "content": "describe '${1:}' do\n  ${2:}$0\nend",
+      "doc": "RSpec describe case",
+      "label": "rspec_describe",
+      "matches": {
+        "des": true
+      }
+    },
+    {
       "content": "let!(:${1:object}) { $0 }",
       "doc": "Use `let!` to define a memoized\nhelper method that is called\nin a `before` hook",
       "label": "rspec_let!",
@@ -234,27 +250,11 @@
       }
     },
     {
-      "content": "expect(${1:enumerable}).to all( ${2:matcher} )$0",
-      "doc": "Used to specify that a collection's\nobjects all pass an expected\nmatcher. This works on any\nenumerable object.",
-      "label": "rspec_expect_all",
+      "content": "expect(${1:subject}).to respond_to(:${2:method})$0",
+      "doc": "Use the respond_to matcher to\nspecify details of an object's\ninterface. \nScenarios:\nbasic usage\nspecify arguments\nspecify arguments range\nspecify unlimited arguments\nspecify keywords\nspecify any keywords\nspecify required keywords",
+      "label": "rspec_expect_respond_to",
       "matches": {
-        "expall": true
-      }
-    },
-    {
-      "content": "let(:${1:object}) { $0 }",
-      "doc": "Use `let` to define memoized helper method",
-      "label": "rspec_let",
-      "matches": {
-        "let": true
-      }
-    },
-    {
-      "content": "expect(${1:subject}).to start_with(${2:value})$0",
-      "doc": "Used to specify that a string or\narray starts with the expected\ncharacters or elements\nScenarios: Array, String",
-      "label": "rspec_expect_start_with",
-      "matches": {
-        "expstw": true
+        "exprt": true
       }
     }
   ]

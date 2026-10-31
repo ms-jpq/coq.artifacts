@@ -2,19 +2,19 @@
   "extends": [],
   "snippets": [
     {
-      "content": "for (my \\$${1:loop var} = 0; \\$$1 < ${2:count}; \\$$1++) {\n\t${3:body}\n}",
+      "content": "opendir(my \\$${1:dir}, '$2') or die \"Cannot open directory '$2': \\$!\";\nmy @files = readdir(\\$$1);\nclosedir(\\$$1);",
       "doc": "",
-      "label": "for loop",
+      "label": "read a directory",
       "matches": {
-        "for": true
+        "readdir": true
       }
     },
     {
-      "content": "elsif ( ${1:condition} ) {\n\t${2:body}\n}",
+      "content": "if ( ${1:condition} ) {\n\t${2:body}\n} else {\n\t${3:body}\n}",
       "doc": "",
-      "label": "elsif statement",
+      "label": "if else statement",
       "matches": {
-        "elsif": true
+        "ife": true
       }
     },
     {
@@ -26,14 +26,6 @@
       }
     },
     {
-      "content": "foreach my \\$${1:element} ( @${2:array} ) {\n\t${3:body}\n}",
-      "doc": "",
-      "label": "foreach loop",
-      "matches": {
-        "foreach": true
-      }
-    },
-    {
       "content": "my @${1:array var} = split(/${2:delimiter pattern}/, \"${3:string}\");",
       "doc": "",
       "label": "split a string",
@@ -42,11 +34,11 @@
       }
     },
     {
-      "content": "while ( ${1:condition} ) {\n\t${2:body}\n}",
+      "content": "print \"$1\\n\";",
       "doc": "",
-      "label": "while Loop",
+      "label": "print statement",
       "matches": {
-        "while": true
+        "print": true
       }
     },
     {
@@ -58,27 +50,11 @@
       }
     },
     {
-      "content": "if ( ${1:condition} ) {\n\t${2:body}\n}",
+      "content": "else {\n\t${1:body}\n}",
       "doc": "",
-      "label": "if statement",
+      "label": "else statement",
       "matches": {
-        "if": true
-      }
-    },
-    {
-      "content": "use POSIX qw(strftime);\nmy $formatted = strftime('%Y-%m-%d %H:%M:%S', localtime($1));",
-      "doc": "",
-      "label": "format time",
-      "matches": {
-        "strftime": true
-      }
-    },
-    {
-      "content": "sub ${1:sub_name} {\n\t${2:body}\n}",
-      "doc": "",
-      "label": "subroutine",
-      "matches": {
-        "sub": true
+        "else": true
       }
     },
     {
@@ -98,27 +74,51 @@
       }
     },
     {
-      "content": "if ( ${1:condition} ) {\n\t${2:body}\n} else {\n\t${3:body}\n}",
+      "content": "if ( ${1:condition} ) {\n\t${2:body}\n} elsif ( ${3:condition} ) {\n\t${4:body}\n}",
       "doc": "",
-      "label": "if else statement",
+      "label": "if else if statement",
       "matches": {
-        "ife": true
+        "iffe": true
       }
     },
     {
-      "content": "else {\n\t${1:body}\n}",
+      "content": "elsif ( ${1:condition} ) {\n\t${2:body}\n}",
       "doc": "",
-      "label": "else statement",
+      "label": "elsif statement",
       "matches": {
-        "else": true
+        "elsif": true
       }
     },
     {
-      "content": "unless ( ${1:condition} ) {\n\t${2:body}\n}",
+      "content": "use POSIX qw(strftime);\nmy $formatted = strftime('%Y-%m-%d %H:%M:%S', localtime($1));",
       "doc": "",
-      "label": "unless",
+      "label": "format time",
       "matches": {
-        "unless": true
+        "strftime": true
+      }
+    },
+    {
+      "content": "open(my \\$${1:fh}, '<', \"${2:file name}\") or die \"Cannot open file '$2' for reading: \\$!\";",
+      "doc": "",
+      "label": "open file to read",
+      "matches": {
+        "openr": true
+      }
+    },
+    {
+      "content": "for (my \\$${1:loop var} = 0; \\$$1 < ${2:count}; \\$$1++) {\n\t${3:body}\n}",
+      "doc": "",
+      "label": "for loop",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "foreach my \\$${1:element} ( @${2:array} ) {\n\t${3:body}\n}",
+      "doc": "",
+      "label": "foreach loop",
+      "matches": {
+        "foreach": true
       }
     },
     {
@@ -130,19 +130,19 @@
       }
     },
     {
-      "content": "print \"$1\\n\";",
+      "content": "unless ( ${1:condition} ) {\n\t${2:body}\n}",
       "doc": "",
-      "label": "print statement",
+      "label": "unless",
       "matches": {
-        "print": true
+        "unless": true
       }
     },
     {
-      "content": "package ${1:ModuleName};\nuse strict;\nuse warnings;\n\nsub new {\n\tmy (\\$class, %args) = @_;\n\tmy \\$self = bless {%args}, \\$class;\n\treturn \\$self;\n}\n\n# Add more methods here\n$2\n\n1; # Return true to indicate successful module loading",
+      "content": "while ( ${1:condition} ) {\n\t${2:body}\n}",
       "doc": "",
-      "label": "perl module",
+      "label": "while Loop",
       "matches": {
-        "module package": true
+        "while": true
       }
     },
     {
@@ -154,11 +154,19 @@
       }
     },
     {
-      "content": "opendir(my \\$${1:dir}, '$2') or die \"Cannot open directory '$2': \\$!\";\nmy @files = readdir(\\$$1);\nclosedir(\\$$1);",
+      "content": "do {\n\t${2:body}\n} while ( ${1:condition} );",
       "doc": "",
-      "label": "read a directory",
+      "label": "do while Loop",
       "matches": {
-        "readdir": true
+        "dowhile": true
+      }
+    },
+    {
+      "content": "package ${1:ModuleName};\nuse strict;\nuse warnings;\n\nsub new {\n\tmy (\\$class, %args) = @_;\n\tmy \\$self = bless {%args}, \\$class;\n\treturn \\$self;\n}\n\n# Add more methods here\n$2\n\n1; # Return true to indicate successful module loading",
+      "doc": "",
+      "label": "perl module",
+      "matches": {
+        "module package": true
       }
     },
     {
@@ -170,27 +178,19 @@
       }
     },
     {
-      "content": "if ( ${1:condition} ) {\n\t${2:body}\n} elsif ( ${3:condition} ) {\n\t${3:body}\n}",
+      "content": "if ( ${1:condition} ) {\n\t${2:body}\n}",
       "doc": "",
-      "label": "if else if statement",
+      "label": "if statement",
       "matches": {
-        "iffe": true
+        "if": true
       }
     },
     {
-      "content": "do {\n\t${2:body}\n} while ( ${1:condition} );",
+      "content": "sub ${1:sub_name} {\n\t${2:body}\n}",
       "doc": "",
-      "label": "do while Loop",
+      "label": "subroutine",
       "matches": {
-        "dowhile": true
-      }
-    },
-    {
-      "content": "open(my \\$${1:fh}, '<', \"${2:file name}\") or die \"Cannot open file '$2' for reading: \\$!\";",
-      "doc": "",
-      "label": "open file to read",
-      "matches": {
-        "openr": true
+        "sub": true
       }
     },
     {

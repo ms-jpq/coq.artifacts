@@ -2,118 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "@{\n\t# If authoring a script module, the RootModule is the name of your .psm1 file\n\tRootModule = '${module:MyModule}.psm1'\n\n\tAuthor = '${author:Cool Person <coolperson@email.local>}'\n\n\tCompanyName = '${company:Contoso Inc.}'\n\n\tModuleVersion = '${ModuleVersion:0.1}'\n\n\t# Use the New-Guid command to generate a GUID, and copy/paste into the next line\n\tGUID = '<pasteNewGUIDhere>'\n\n\tCopyright = '2017 ${company:Copyright Holder}'\n\n\tDescription = '${Description:What does this module do?}'\n\n\t# Minimum PowerShell version supported by this module (optional, recommended)\n\t# PowerShellVersion = ''\n\n\t# Which PowerShell Editions does this module work with? (Core, Desktop)\n\tCompatiblePSEditions = @('Desktop', 'Core')\n\n\t# Which PowerShell functions are exported from your module? (eg. Get-CoolObject)\n\tFunctionsToExport = @('')\n\n\t# Which PowerShell aliases are exported from your module? (eg. gco)\n\tAliasesToExport = @('')\n\n\t# Which PowerShell variables are exported from your module? (eg. Fruits, Vegetables)\n\tVariablesToExport = @('')\n\n\t# PowerShell Gallery: Define your module's metadata\n\tPrivateData = @{\n\t\tPSData = @{\n\t\t\t# What keywords represent your PowerShell module? (eg. cloud, tools, framework, vendor)\n\t\t\tTags = @('${tag1:cooltag1}', '${tag2:cooltag2}')\n\n\t\t\t# What software license is your code being released under? (see https://opensource.org/licenses)\n\t\t\tLicenseUri = ''\n\n\t\t\t# What is the URL to your project's website?\n\t\t\tProjectUri = ''\n\n\t\t\t# What is the URI to a custom icon file for your project? (optional)\n\t\t\tIconUri = ''\n\n\t\t\t# What new features, bug fixes, or deprecated features, are part of this release?\n\t\t\tReleaseNotes = @'\n'@\n\t\t}\n\t}\n\n\t# If your module supports updatable help, what is the URI to the help archive? (optional)\n\t# HelpInfoURI = ''\n}",
-      "doc": "Basic skeleton for a PowerShell module manifest, complete with PowerShell Gallery metadata. More: https://docs.microsoft.com/en-us/powershell/scripting/developer/module/how-to-write-a-powershell-module-manifest",
-      "label": "ModuleManifest",
+      "content": "function $1 {\n  [CmdletBinding()]\n  param(\n    [parameter(ValueFromPipeline)]$2\n  )\n\n  process {\n    $0\n  }\n}",
+      "doc": "Basic function that accepts pipeline input. More: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_pipelines",
+      "label": "Pipeline Function",
       "matches": {
-        "manifest": true
-      }
-    },
-    {
-      "content": "enum ${1:<#EnumName#>} {\n\t${0:${TM_SELECTED_TEXT:<# Specify a list of distinct values #>}}\n}",
-      "doc": "An enumeration is a distinct type that consists of a set of named labels called the enumerator list. More: Get-Help about_Enum",
-      "label": "Enum",
-      "matches": {
-        "enum": true
-      }
-    },
-    {
-      "content": "[PSCustomObject]@{\n\t${1:Name} = ${2:Value}\n}",
-      "doc": "Create a custom object from a hashtable of properties. More: Get-Help about_PSCustomObject",
-      "label": "PSCustomObject",
-      "matches": {
-        "[PSCustomObject]": true,
-        "pscustomobject": true
-      }
-    },
-    {
-      "content": "#region ${1}\n${0:$TM_SELECTED_TEXT}\n#endregion",
-      "doc": "Region block for organizing and folding of your code",
-      "label": "Region Block",
-      "matches": {
-        "region": true
-      }
-    },
-    {
-      "content": "do {\n\t${0:$TM_SELECTED_TEXT}\n} until (\n\t${1:<# Condition that stops the loop if it returns true #>}\n)",
-      "doc": "Runs a statement list repeatedly until a condition is met More: Get-Help about_Do",
-      "label": "do-until",
-      "matches": {
-        "do-until": true
-      }
-    },
-    {
-      "content": "[Diagnostics.CodeAnalysis.SuppressMessageAttribute(\n\t<#Category#>'${1:PSUseDeclaredVarsMoreThanAssignments}', <#CheckId#>\\$null, Scope='Function',\n\tTarget='${1:${TM_SELECTED_TEXT:RegexOrGlobPatternToMatchName}}'\n\tJustification = '${0:Reason for suppressing}}'\n)]",
-      "doc": "Suppress a PSScriptAnalyzer rule based on a function/parameter/class/variable/object's name by setting the SuppressMessageAttribute's Target property to a regular expression or a glob pattern. More: https://docs.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/overview?view=ps-modules#suppressing-rules",
-      "label": "Scope: Suppress PSScriptAnalyzer Rule",
-      "matches": {
-        "suppress-message-rule-scope": true
-      }
-    },
-    {
-      "content": "switch (${1:\\$x}) {\n\t${2:condition} { ${0:$TM_SELECTED_TEXT} }\n\tDefault {}\n}",
-      "doc": "Equivalent to a series of if statements, but it is simpler. The switch statement lists each condition and an optional action. If a condition obtains, the action is performed. More: Get-Help about_Switch",
-      "label": "switch",
-      "matches": {
-        "switch": true
-      }
-    },
-    {
-      "content": "function ${1:FunctionName} (${2:OptionalParameters}) {\n\t${0:$TM_SELECTED_TEXT}\n}",
-      "doc": "Function definition snippet that does not contain a param block, but defines parameters inline. This syntax is commonly used in other languages. More: Get-Help about_Functions",
-      "label": "Function-Inline",
-      "matches": {
-        "function-inline": true
-      }
-    },
-    {
-      "content": "do {\n\t${0:$TM_SELECTED_TEXT}\n} while (\n\t${1:<# Condition that stops the loop if it returns false #>}\n)",
-      "doc": "Runs a statement list repeatedly as long as a condition is met. More: Get-Help about_Do",
-      "label": "do-while",
-      "matches": {
-        "do-while": true
-      }
-    },
-    {
-      "content": "[Diagnostics.CodeAnalysis.SuppressMessageAttribute(\n\t<#Category#>'${1:PSProvideDefaultParameterValue}', <#CheckId>\\$null, Scope='Function',\n\tJustification = '${0:${TM_SELECTED_TEXT:Reason for suppressing}}'\n)]",
-      "doc": "Suppress a PSScriptAnalyzer rule for a function. More: https://docs.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/overview?view=ps-modules#suppressing-rules",
-      "label": "Function: Suppress PSScriptAnalyzer Rule",
-      "matches": {
-        "[SuppressMessageAttribute]": true,
-        "suppress-message-rule-function": true
-      }
-    },
-    {
-      "content": "[Diagnostics.CodeAnalysis.SuppressMessageAttribute(\n\t<#Category#>'${1:PSUseDeclaredVarsMoreThanAssignments}',<#CheckId#>\\$null,\n\tJustification = '${0:${TM_SELECTED_TEXT:Reason for suppressing}}'\n)]",
-      "doc": "Suppress a PSScriptAnalyzer rule. More: https://docs.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/overview?view=ps-modules#suppressing-rules",
-      "label": "Suppress PSScriptAnalyzer Rule",
-      "matches": {
-        "[SuppressMessageAttribute]": true,
-        "suppress-message-rule": true
-      }
-    },
-    {
-      "content": "\\$${1:Var} = @{\n\t${2:Name} = ${3:Value}\n}",
-      "doc": "A key/value store that are very efficient for finding and retrieving data. More: Get-Help about_Hash_Tables",
-      "label": "Hashtable",
-      "matches": {
-        "hashtable": true
-      }
-    },
-    {
-      "content": "if (${1:condition}) {\n\t${0:${TM_SELECTED_TEXT:<# Action to perform if the condition is true #>}}\n}",
-      "doc": "Run code blocks if a specified conditional test evaluates to true. More: Get-Help about_If",
-      "label": "if",
-      "matches": {
-        "if": true
-      }
-    },
-    {
-      "content": "[ArgumentCompleter({\n\t[OutputType([System.Management.Automation.CompletionResult])]\n\tparam(\n\t\t[string] \\$CommandName,\n\t\t[string] \\$ParameterName,\n\t\t[string] \\$WordToComplete,\n\t\t[System.Management.Automation.Language.CommandAst] \\$CommandAst,\n\t\t[System.Collections.IDictionary] \\$FakeBoundParameters\n\t)\n\t\n\t\\$CompletionResults = [System.Collections.Generic.List[System.Management.Automation.CompletionResult]]::new()\n\t\n\t${0:$TM_SELECTED_TEXT}\n\t\n\treturn \\$CompletionResults\n})]",
-      "doc": "Allows you to add tab completion values to a specific parameter by writing a script block that generates zero or more CompletionResult objects. More: Get-Help about_Functions_Argument_Completion",
-      "label": "ArgumentCompleterAttribute",
-      "matches": {
-        "argument-completer": true
+        "function-pipeline": true
       }
     },
     {
@@ -126,52 +19,28 @@
       }
     },
     {
-      "content": "try {\n\t${0:$TM_SELECTED_TEXT}\n}\ncatch {\n\t${1:<#Do this if a terminating exception happens#>}\n}",
-      "doc": "Attempt a block of code and if a terminating exception occurs, perform another block of code rather than terminate the program More: Get-Help about_Try_Catch_Finally",
-      "label": "try-catch",
+      "content": "else {\n\t${0:${TM_SELECTED_TEXT:<# Action when all if and elseif conditions are false #>}}\n}",
+      "doc": "else defines what is done when all if and elseif conditions are false. More: Get-Help about_If",
+      "label": "else",
       "matches": {
-        "try-catch": true
+        "else": true
       }
     },
     {
-      "content": "function $1 {\n  [CmdletBinding()]\n  param(\n    [parameter(ValueFromPipeline)]$2\n  )\n\n  process {\n    $0\n  }\n}",
-      "doc": "Basic function that accepts pipeline input. More: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_pipelines",
-      "label": "Pipeline Function",
+      "content": "elseif (${1:<#condition#>}) {\n\t${0:${TM_SELECTED_TEXT:<# Action when this condition is true #>}}\n}",
+      "doc": "elseif provides an alternative path when an if condition is false. More: Get-Help about_If",
+      "label": "elseif",
       "matches": {
-        "function-pipeline": true
+        "elseif": true
       }
     },
     {
-      "content": "try {\n\t${0:$TM_SELECTED_TEXT}\n}\nfinally {\n\t${2:<#Do this after the try block regardless of whether an exception occurred or not#>}\n}",
-      "doc": "Attempt a block of code and perform an action regardless of the outcome. Useful for cleanup or gracefully disconnecting active sessions even if there was a terminating error. More: Get-Help about_Try_Catch_Finally",
-      "label": "try-finally",
+      "content": "@'\n${0:TM_SELECTED_TEXT}\n'@",
+      "doc": "Escape all text literally. More: Get-Help about_Quoting_Rules",
+      "label": "Here-String (Literal)",
       "matches": {
-        "try-finally": true
-      }
-    },
-    {
-      "content": "try {\n\t${0:$TM_SELECTED_TEXT}\n}\ncatch {\n\t${1:<#Do this if a terminating exception happens#>}\n}\nfinally {\n\t${2:<#Do this after the try block regardless of whether an exception occurred or not#>}\n}",
-      "doc": "Attempt a block of code and if a terminating exception occurs, perform another block of code, finally performing a final block of code regardless of the outcome. More: Get-Help about_Try_Catch_Finally",
-      "label": "try-catch-finally",
-      "matches": {
-        "try-catch-finally": true
-      }
-    },
-    {
-      "content": "while (${1:condition}) {\n\t${0:$TM_SELECTED_TEXT}\n}",
-      "doc": "Repeatedly perform an action after verifying a condition is true first. More: Get-Help about_While",
-      "label": "while",
-      "matches": {
-        "while": true
-      }
-    },
-    {
-      "content": "[Diagnostics.CodeAnalysis.SuppressMessageAttribute(<#Category#>'${1:PSUseDeclaredVarsMoreThanAssignments}',\n\t<#ParameterName#>'${0:${TM_SELECTED_TEXT:ParamName}}\n\tJustification = '${0:${TM_SELECTED_TEXT:Reason for suppressing}}'\n)]",
-      "doc": "Suppress a PSScriptAnalyzer rule on a parameter. More: https://docs.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/overview?view=ps-modules#suppressing-rules",
-      "label": "Parameter: Suppress PSScriptAnalyzer Rule",
-      "matches": {
-        "[SuppressMessageAttribute]": true,
-        "suppress-message-rule-parameter": true
+        "hsl": true,
+        "literal-here-string": true
       }
     },
     {
@@ -180,6 +49,14 @@
       "label": "ForEach-Object -Parallel",
       "matches": {
         "foreach-parallel": true
+      }
+    },
+    {
+      "content": "if (${1:condition}) {\n\t${0:${TM_SELECTED_TEXT:<# Action to perform if the condition is true #>}}\n}",
+      "doc": "Run code blocks if a specified conditional test evaluates to true. More: Get-Help about_If",
+      "label": "if",
+      "matches": {
+        "if": true
       }
     },
     {
@@ -199,6 +76,55 @@
       }
     },
     {
+      "content": "${1:ClassName}(${2:<#OptionalParameters#>}) {\n\t${0:${TM_SELECTED_TEXT:<# Initialize the class. Use \\$this to reference the properties of the instance you are creating #>}}\n}",
+      "doc": "Set default values and validate object logic at the moment of creating the instance of the class. Constructors have the same name as the class. Constructors might have arguments, to initialize the data members of the new object. More: Get-Help about_Classes",
+      "label": "Class Constructor",
+      "matches": {
+        "class-constructor": true,
+        "ctor-class": true
+      }
+    },
+    {
+      "content": "while (${1:condition}) {\n\t${0:$TM_SELECTED_TEXT}\n}",
+      "doc": "Repeatedly perform an action after verifying a condition is true first. More: Get-Help about_While",
+      "label": "while",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "class ${1:ClassName} {\n\t${0:${TM_SELECTED_TEXT:<# Define the class. Try constructors, properties, or methods. #>}}\n}",
+      "doc": "A blueprint used to create instances of objects at run time. More: Get-Help about_Classes",
+      "label": "Class",
+      "matches": {
+        "class": true
+      }
+    },
+    {
+      "content": "try {\n\t${0:$TM_SELECTED_TEXT}\n}\nfinally {\n\t${2:<#Do this after the try block regardless of whether an exception occurred or not#>}\n}",
+      "doc": "Attempt a block of code and perform an action regardless of the outcome. Useful for cleanup or gracefully disconnecting active sessions even if there was a terminating error. More: Get-Help about_Try_Catch_Finally",
+      "label": "try-finally",
+      "matches": {
+        "try-finally": true
+      }
+    },
+    {
+      "content": "@{\n\t# If authoring a script module, the RootModule is the name of your .psm1 file\n\tRootModule = '${module:MyModule}.psm1'\n\n\tAuthor = '${author:Cool Person <coolperson@email.local>}'\n\n\tCompanyName = '${company:Contoso Inc.}'\n\n\tModuleVersion = '${ModuleVersion:0.1}'\n\n\t# Use the New-Guid command to generate a GUID, and copy/paste into the next line\n\tGUID = '<pasteNewGUIDhere>'\n\n\tCopyright = '2017 ${company:Copyright Holder}'\n\n\tDescription = '${Description:What does this module do?}'\n\n\t# Minimum PowerShell version supported by this module (optional, recommended)\n\t# PowerShellVersion = ''\n\n\t# Which PowerShell Editions does this module work with? (Core, Desktop)\n\tCompatiblePSEditions = @('Desktop', 'Core')\n\n\t# Which PowerShell functions are exported from your module? (eg. Get-CoolObject)\n\tFunctionsToExport = @('')\n\n\t# Which PowerShell aliases are exported from your module? (eg. gco)\n\tAliasesToExport = @('')\n\n\t# Which PowerShell variables are exported from your module? (eg. Fruits, Vegetables)\n\tVariablesToExport = @('')\n\n\t# PowerShell Gallery: Define your module's metadata\n\tPrivateData = @{\n\t\tPSData = @{\n\t\t\t# What keywords represent your PowerShell module? (eg. cloud, tools, framework, vendor)\n\t\t\tTags = @('${tag1:cooltag1}', '${tag2:cooltag2}')\n\n\t\t\t# What software license is your code being released under? (see https://opensource.org/licenses)\n\t\t\tLicenseUri = ''\n\n\t\t\t# What is the URL to your project's website?\n\t\t\tProjectUri = ''\n\n\t\t\t# What is the URI to a custom icon file for your project? (optional)\n\t\t\tIconUri = ''\n\n\t\t\t# What new features, bug fixes, or deprecated features, are part of this release?\n\t\t\tReleaseNotes = @'\n'@\n\t\t}\n\t}\n\n\t# If your module supports updatable help, what is the URI to the help archive? (optional)\n\t# HelpInfoURI = ''\n}",
+      "doc": "Basic skeleton for a PowerShell module manifest, complete with PowerShell Gallery metadata. More: https://docs.microsoft.com/en-us/powershell/scripting/developer/module/how-to-write-a-powershell-module-manifest",
+      "label": "ModuleManifest",
+      "matches": {
+        "manifest": true
+      }
+    },
+    {
+      "content": "try {\n\t${0:$TM_SELECTED_TEXT}\n}\ncatch {\n\t${1:<#Do this if a terminating exception happens#>}\n}\nfinally {\n\t${2:<#Do this after the try block regardless of whether an exception occurred or not#>}\n}",
+      "doc": "Attempt a block of code and if a terminating exception occurs, perform another block of code, finally performing a final block of code regardless of the outcome. More: Get-Help about_Try_Catch_Finally",
+      "label": "try-catch-finally",
+      "matches": {
+        "try-catch-finally": true
+      }
+    },
+    {
       "content": "function ${1:Verb-Noun} {\n\t[CmdletBinding()]\n\tparam (\n\t\t$0\n\t)\n\t\n\tbegin {\n\t\t\n\t}\n\t\n\tprocess {\n\t\t$TM_SELECTED_TEXT\n\t}\n\t\n\tend {\n\t\t\n\t}\n}",
       "doc": "Script advanced function definition snippet. More: Get-Help about_Functions_Advanced",
       "label": "Function-Advanced",
@@ -208,20 +134,118 @@
       }
     },
     {
-      "content": "elseif (${1:<#condition#>}) {\n\t${0:${TM_SELECTED_TEXT:<# Action when this condition is true #>}}\n}",
-      "doc": "elseif provides an alternative path when an if condition is false. More: Get-Help about_If",
-      "label": "elseif",
+      "content": "enum ${1:<#EnumName#>} {\n\t${0:${TM_SELECTED_TEXT:<# Specify a list of distinct values #>}}\n}",
+      "doc": "An enumeration is a distinct type that consists of a set of named labels called the enumerator list. More: Get-Help about_Enum",
+      "label": "Enum",
       "matches": {
-        "elseif": true
+        "enum": true
       }
     },
     {
-      "content": "${1:ClassName}(${2:<#OptionalParameters#>}) {\n\t${0:${TM_SELECTED_TEXT:<# Initialize the class. Use \\$this to reference the properties of the instance you are creating #>}}\n}",
-      "doc": "Set default values and validate object logic at the moment of creating the instance of the class. Constructors have the same name as the class. Constructors might have arguments, to initialize the data members of the new object. More: Get-Help about_Classes",
-      "label": "Class Constructor",
+      "content": "try {\n\t${0:$TM_SELECTED_TEXT}\n}\ncatch {\n\t${1:<#Do this if a terminating exception happens#>}\n}",
+      "doc": "Attempt a block of code and if a terminating exception occurs, perform another block of code rather than terminate the program More: Get-Help about_Try_Catch_Finally",
+      "label": "try-catch",
       "matches": {
-        "class-constructor": true,
-        "ctor-class": true
+        "try-catch": true
+      }
+    },
+    {
+      "content": "switch (${1:\\$x}) {\n\t${2:condition} { ${0:$TM_SELECTED_TEXT} }\n\tDefault {}\n}",
+      "doc": "Equivalent to a series of if statements, but it is simpler. The switch statement lists each condition and an optional action. If a condition obtains, the action is performed. More: Get-Help about_Switch",
+      "label": "switch",
+      "matches": {
+        "switch": true
+      }
+    },
+    {
+      "content": "do {\n\t${0:$TM_SELECTED_TEXT}\n} until (\n\t${1:<# Condition that stops the loop if it returns true #>}\n)",
+      "doc": "Runs a statement list repeatedly until a condition is met More: Get-Help about_Do",
+      "label": "do-until",
+      "matches": {
+        "do-until": true
+      }
+    },
+    {
+      "content": "[Diagnostics.CodeAnalysis.SuppressMessageAttribute(\n\t<#Category#>'${1:PSUseDeclaredVarsMoreThanAssignments}',<#CheckId#>\\$null,\n\tJustification = '${0:${TM_SELECTED_TEXT:Reason for suppressing}}'\n)]",
+      "doc": "Suppress a PSScriptAnalyzer rule. More: https://docs.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/overview?view=ps-modules#suppressing-rules",
+      "label": "Suppress PSScriptAnalyzer Rule",
+      "matches": {
+        "[SuppressMessageAttribute]": true,
+        "suppress-message-rule": true
+      }
+    },
+    {
+      "content": "[ArgumentCompleter({\n\t[OutputType([System.Management.Automation.CompletionResult])]\n\tparam(\n\t\t[string] \\$CommandName,\n\t\t[string] \\$ParameterName,\n\t\t[string] \\$WordToComplete,\n\t\t[System.Management.Automation.Language.CommandAst] \\$CommandAst,\n\t\t[System.Collections.IDictionary] \\$FakeBoundParameters\n\t)\n\t\n\t\\$CompletionResults = [System.Collections.Generic.List[System.Management.Automation.CompletionResult]]::new()\n\t\n\t${0:$TM_SELECTED_TEXT}\n\t\n\treturn \\$CompletionResults\n})]",
+      "doc": "Allows you to add tab completion values to a specific parameter by writing a script block that generates zero or more CompletionResult objects. More: Get-Help about_Functions_Argument_Completion",
+      "label": "ArgumentCompleterAttribute",
+      "matches": {
+        "argument-completer": true
+      }
+    },
+    {
+      "content": "[Diagnostics.CodeAnalysis.SuppressMessageAttribute(\n\t<#Category#>'${1:PSUseDeclaredVarsMoreThanAssignments}', <#CheckId#>\\$null, Scope='Function',\n\tTarget='${1:${TM_SELECTED_TEXT:RegexOrGlobPatternToMatchName}}'\n\tJustification = '${0:Reason for suppressing}}'\n)]",
+      "doc": "Suppress a PSScriptAnalyzer rule based on a function/parameter/class/variable/object's name by setting the SuppressMessageAttribute's Target property to a regular expression or a glob pattern. More: https://docs.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/overview?view=ps-modules#suppressing-rules",
+      "label": "Scope: Suppress PSScriptAnalyzer Rule",
+      "matches": {
+        "suppress-message-rule-scope": true
+      }
+    },
+    {
+      "content": "do {\n\t${0:$TM_SELECTED_TEXT}\n} while (\n\t${1:<# Condition that stops the loop if it returns false #>}\n)",
+      "doc": "Runs a statement list repeatedly as long as a condition is met. More: Get-Help about_Do",
+      "label": "do-while",
+      "matches": {
+        "do-while": true
+      }
+    },
+    {
+      "content": "#region ${1}\n${0:$TM_SELECTED_TEXT}\n#endregion",
+      "doc": "Region block for organizing and folding of your code",
+      "label": "Region Block",
+      "matches": {
+        "region": true
+      }
+    },
+    {
+      "content": "[PSCustomObject]@{\n\t${1:Name} = ${2:Value}\n}",
+      "doc": "Create a custom object from a hashtable of properties. More: Get-Help about_PSCustomObject",
+      "label": "PSCustomObject",
+      "matches": {
+        "[PSCustomObject]": true,
+        "pscustomobject": true
+      }
+    },
+    {
+      "content": "function ${1:FunctionName} (${2:OptionalParameters}) {\n\t${0:$TM_SELECTED_TEXT}\n}",
+      "doc": "Function definition snippet that does not contain a param block, but defines parameters inline. This syntax is commonly used in other languages. More: Get-Help about_Functions",
+      "label": "Function-Inline",
+      "matches": {
+        "function-inline": true
+      }
+    },
+    {
+      "content": "\\$${1:Var} = @{\n\t${2:Name} = ${3:Value}\n}",
+      "doc": "A key/value store that are very efficient for finding and retrieving data. More: Get-Help about_Hash_Tables",
+      "label": "Hashtable",
+      "matches": {
+        "hashtable": true
+      }
+    },
+    {
+      "content": "function ${1:FunctionName} {\n\tparam (\n\t\t${2:OptionalParameters}\n\t)\n\t${0:$TM_SELECTED_TEXT}\n}",
+      "doc": "A simple function with a parameter block to specify function arguments. More: Get-Help about_Functions",
+      "label": "function",
+      "matches": {
+        "function": true
+      }
+    },
+    {
+      "content": "[Diagnostics.CodeAnalysis.SuppressMessageAttribute(\n\t<#Category#>'${1:PSProvideDefaultParameterValue}', <#CheckId>\\$null, Scope='Function',\n\tJustification = '${0:${TM_SELECTED_TEXT:Reason for suppressing}}'\n)]",
+      "doc": "Suppress a PSScriptAnalyzer rule for a function. More: https://docs.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/overview?view=ps-modules#suppressing-rules",
+      "label": "Function: Suppress PSScriptAnalyzer Rule",
+      "matches": {
+        "[SuppressMessageAttribute]": true,
+        "suppress-message-rule-function": true
       }
     },
     {
@@ -234,22 +258,6 @@
       }
     },
     {
-      "content": "function ${1:FunctionName} {\n\tparam (\n\t\t${2:OptionalParameters}\n\t)\n\t${0:$TM_SELECTED_TEXT}\n}",
-      "doc": "A simple function with a parameter block to specify function arguments. More: Get-Help about_Functions",
-      "label": "function",
-      "matches": {
-        "function": true
-      }
-    },
-    {
-      "content": "else {\n\t${0:${TM_SELECTED_TEXT:<# Action when all if and elseif conditions are false #>}}\n}",
-      "doc": "else defines what is done when all if and elseif conditions are false. More: Get-Help about_If",
-      "label": "else",
-      "matches": {
-        "else": true
-      }
-    },
-    {
       "content": "if (\\$PSCmdlet.ShouldProcess(\"${1:Target}\", \"${2:Operation}\")) {\n\t${0:$TM_SELECTED_TEXT}\n}",
       "doc": "Defines a condition that only executes if -WhatIf is not set, and returns a message otherwise. More: https://docs.microsoft.com/en-us/powershell/scripting/learn/deep-dives/everything-about-shouldprocess",
       "label": "IfShouldProcess",
@@ -258,20 +266,12 @@
       }
     },
     {
-      "content": "class ${1:ClassName} {\n\t${0:${TM_SELECTED_TEXT:<# Define the class. Try constructors, properties, or methods. #>}}\n}",
-      "doc": "A blueprint used to create instances of objects at run time. More: Get-Help about_Classes",
-      "label": "Class",
+      "content": "[Diagnostics.CodeAnalysis.SuppressMessageAttribute(<#Category#>'${1:PSUseDeclaredVarsMoreThanAssignments}',\n\t<#ParameterName#>'${0:${TM_SELECTED_TEXT:ParamName}}\n\tJustification = '${0:${TM_SELECTED_TEXT:Reason for suppressing}}'\n)]",
+      "doc": "Suppress a PSScriptAnalyzer rule on a parameter. More: https://docs.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/overview?view=ps-modules#suppressing-rules",
+      "label": "Parameter: Suppress PSScriptAnalyzer Rule",
       "matches": {
-        "class": true
-      }
-    },
-    {
-      "content": "@'\n${0:TM_SELECTED_TEXT}\n'@",
-      "doc": "Escape all text literally. More: Get-Help about_Quoting_Rules",
-      "label": "Here-String (Literal)",
-      "matches": {
-        "hsl": true,
-        "literal-here-string": true
+        "[SuppressMessageAttribute]": true,
+        "suppress-message-rule-parameter": true
       }
     }
   ]

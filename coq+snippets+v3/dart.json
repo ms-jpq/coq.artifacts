@@ -5,19 +5,11 @@
   ],
   "snippets": [
     {
-      "content": "for (var ${1:item} in ${2:items}) {\n  $0\n}",
-      "doc": "Insert a for-in loop.",
-      "label": "for in",
+      "content": "typedef ${1:Type} ${2:Name}(${3:params});",
+      "doc": "Insert a typedef.",
+      "label": "typedef",
       "matches": {
-        "fori": true
-      }
-    },
-    {
-      "content": "if ($1) {\n  $0\n} else {\n}",
-      "doc": "Insert an if statement with an else block.",
-      "label": "if else",
-      "matches": {
-        "ife": true
+        "typedef": true
       }
     },
     {
@@ -29,75 +21,11 @@
       }
     },
     {
-      "content": "enum ${1:Name} {\n  $0\n}",
-      "doc": "Insert a enum.",
-      "label": "enum",
+      "content": "for (var ${1:item} in ${2:items}) {\n  $0\n}",
+      "doc": "Insert a for-in loop.",
+      "label": "for in",
       "matches": {
-        "enum": true
-      }
-    },
-    {
-      "content": "group('$1', () {\n  $0\n});",
-      "doc": "Insert a test group block.",
-      "label": "group",
-      "matches": {
-        "group": true
-      }
-    },
-    {
-      "content": "class ${1:Name} {\n  $0\n}",
-      "doc": "Insert a class definition.",
-      "label": "class",
-      "matches": {
-        "class": true
-      }
-    },
-    {
-      "content": "switch ($1) {\n  case $2:\n    $0\n    break;\n  default:\n}",
-      "doc": "Insert a switch statement.",
-      "label": "switch case",
-      "matches": {
-        "switch": true
-      }
-    },
-    {
-      "content": "typedef ${1:Type} ${2:Name}(${3:params});",
-      "doc": "Insert a typedef.",
-      "label": "typedef",
-      "matches": {
-        "typedef": true
-      }
-    },
-    {
-      "content": "while ($1) {\n  $0\n}",
-      "doc": "Insert a while loop.",
-      "label": "while",
-      "matches": {
-        "while": true
-      }
-    },
-    {
-      "content": "void main(List<String> args) {\n  $0\n}",
-      "doc": "Insert a main function, used as an entry point.",
-      "label": "main",
-      "matches": {
-        "main": true
-      }
-    },
-    {
-      "content": "for (var i = 0; i < ${1:count}; i++) {\n  $0\n}",
-      "doc": "Insert a for loop.",
-      "label": "for",
-      "matches": {
-        "for": true
-      }
-    },
-    {
-      "content": "${3:void} ${1:name}(${2:args}) {\n  $0\n}",
-      "doc": "Insert a function definition.",
-      "label": "fun",
-      "matches": {
-        "fun": true
+        "fori": true
       }
     },
     {
@@ -109,11 +37,51 @@
       }
     },
     {
-      "content": "if ($1) {\n  $0\n}",
-      "doc": "Insert an if statement.",
-      "label": "if",
+      "content": "group('$1', () {\n  $0\n});",
+      "doc": "Insert a test group block.",
+      "label": "group",
       "matches": {
-        "if": true
+        "group": true
+      }
+    },
+    {
+      "content": "enum ${1:Name} {\n  $0\n}",
+      "doc": "Insert a enum.",
+      "label": "enum",
+      "matches": {
+        "enum": true
+      }
+    },
+    {
+      "content": "if ($1) {\n  $0\n} else {\n}",
+      "doc": "Insert an if statement with an else block.",
+      "label": "if else",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "class ${1:Name} {\n  $0\n}",
+      "doc": "Insert a class definition.",
+      "label": "class",
+      "matches": {
+        "class": true
+      }
+    },
+    {
+      "content": "${3:void} ${1:name}(${2:args}) {\n  $0\n}",
+      "doc": "Insert a function definition.",
+      "label": "fun",
+      "matches": {
+        "fun": true
+      }
+    },
+    {
+      "content": "while ($1) {\n  $0\n}",
+      "doc": "Insert a while loop.",
+      "label": "while",
+      "matches": {
+        "while": true
       }
     },
     {
@@ -122,6 +90,38 @@
       "label": "do while",
       "matches": {
         "do": true
+      }
+    },
+    {
+      "content": "for (var i = 0; i < ${1:count}; i++) {\n  $0\n}",
+      "doc": "Insert a for loop.",
+      "label": "for",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "void main(List<String> args) {\n  $0\n}",
+      "doc": "Insert a main function, used as an entry point.",
+      "label": "main",
+      "matches": {
+        "main": true
+      }
+    },
+    {
+      "content": "switch ($1) {\n  case $2:\n    $0\n    break;\n  default:\n}",
+      "doc": "Insert a switch statement.",
+      "label": "switch case",
+      "matches": {
+        "switch": true
+      }
+    },
+    {
+      "content": "if ($1) {\n  $0\n}",
+      "doc": "Insert an if statement.",
+      "label": "if",
+      "matches": {
+        "if": true
       }
     },
     {

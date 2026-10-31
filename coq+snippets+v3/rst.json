@@ -2,11 +2,38 @@
   "extends": [],
   "snippets": [
     {
-      "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n- [${5| ,x|}] ${6:text}\n- [${7| ,x|}] ${8:text}\n- [${9| ,x|}] ${10:text}\n${0}",
-      "doc": "Insert task list with 5 tasks",
-      "label": "Insert task list 5",
+      "content": "${0}\n------------",
+      "doc": "Add section",
+      "label": "section",
       "matches": {
-        "task5": true
+        "-": true,
+        "section": true
+      }
+    },
+    {
+      "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n- [${5| ,x|}] ${6:text}\n- [${7| ,x|}] ${8:text}\n${0}",
+      "doc": "Insert task list with 4 tasks",
+      "label": "Insert task list 4",
+      "matches": {
+        "task4": true
+      }
+    },
+    {
+      "content": "**${1}** $0",
+      "doc": "Insert bold text",
+      "label": "Insert strong emphasized text",
+      "matches": {
+        "b": true,
+        "bold": true,
+        "strong emphasis": true
+      }
+    },
+    {
+      "content": "::\n\n  ${1}",
+      "doc": "Insert quoted text",
+      "label": "Insert quoted text",
+      "matches": {
+        "quote": true
       }
     },
     {
@@ -18,12 +45,12 @@
       }
     },
     {
-      "content": "${0}\n------------",
-      "doc": "Add section",
-      "label": "section",
+      "content": "`${1}` $0",
+      "doc": "Insert code",
+      "label": "Insert code",
       "matches": {
-        "-": true,
-        "section": true
+        "code": true,
+        "literal": true
       }
     },
     {
@@ -43,30 +70,30 @@
       }
     },
     {
-      "content": "*${1}* $0",
-      "doc": "Insert italic text",
-      "label": "Insert emphasized text",
+      "content": "============================\n${0}\n============================",
+      "doc": "Add main title",
+      "label": "main title",
       "matches": {
-        "emphasis": true,
-        "i": true,
-        "italic": true
+        "=": true,
+        "main title": true
       }
     },
     {
-      "content": "<${1}> ${0}",
-      "doc": "Add urls",
-      "label": "URLS",
+      "content": "----------",
+      "doc": "Insert transition rule",
+      "label": "Insert transition",
       "matches": {
-        "u": true,
-        "url": true
+        "horizontal rule": true,
+        "transition": true
       }
     },
     {
-      "content": ".. image:: ${1:path}${0}",
-      "doc": "Add images",
-      "label": "Images",
+      "content": "${0}\n============================",
+      "doc": "Add title",
+      "label": "title",
       "matches": {
-        "img": true
+        "=": true,
+        "title": true
       }
     },
     {
@@ -75,14 +102,6 @@
       "label": "Insert task list",
       "matches": {
         "task": true
-      }
-    },
-    {
-      "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n${0}",
-      "doc": "Insert task list with 2 tasks",
-      "label": "Insert task list 2",
-      "matches": {
-        "task2": true
       }
     },
     {
@@ -96,6 +115,41 @@
       }
     },
     {
+      "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n${0}",
+      "doc": "Insert task list with 2 tasks",
+      "label": "Insert task list 2",
+      "matches": {
+        "task2": true
+      }
+    },
+    {
+      "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n- [${5| ,x|}] ${6:text}\n- [${7| ,x|}] ${8:text}\n- [${9| ,x|}] ${10:text}\n${0}",
+      "doc": "Insert task list with 5 tasks",
+      "label": "Insert task list 5",
+      "matches": {
+        "task5": true
+      }
+    },
+    {
+      "content": "<${1}> ${0}",
+      "doc": "Add urls",
+      "label": "URLS",
+      "matches": {
+        "u": true,
+        "url": true
+      }
+    },
+    {
+      "content": "*${1}* $0",
+      "doc": "Insert italic text",
+      "label": "Insert emphasized text",
+      "matches": {
+        "emphasis": true,
+        "i": true,
+        "italic": true
+      }
+    },
+    {
       "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n- [${5| ,x|}] ${6:text}\n${0}",
       "doc": "Insert task list with 3 tasks",
       "label": "Insert task list 3",
@@ -104,65 +158,11 @@
       }
     },
     {
-      "content": "${0}\n============================",
-      "doc": "Add title",
-      "label": "title",
+      "content": ".. image:: ${1:path}${0}",
+      "doc": "Add images",
+      "label": "Images",
       "matches": {
-        "=": true,
-        "title": true
-      }
-    },
-    {
-      "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n- [${5| ,x|}] ${6:text}\n- [${7| ,x|}] ${8:text}\n${0}",
-      "doc": "Insert task list with 4 tasks",
-      "label": "Insert task list 4",
-      "matches": {
-        "task4": true
-      }
-    },
-    {
-      "content": "============================\n${0}\n============================",
-      "doc": "Add main title",
-      "label": "main title",
-      "matches": {
-        "=": true,
-        "main title": true
-      }
-    },
-    {
-      "content": "::\n\n  ${1}",
-      "doc": "Insert quoted text",
-      "label": "Insert quoted text",
-      "matches": {
-        "quote": true
-      }
-    },
-    {
-      "content": "----------",
-      "doc": "Insert transition rule",
-      "label": "Insert transition",
-      "matches": {
-        "horizontal rule": true,
-        "transition": true
-      }
-    },
-    {
-      "content": "**${1}** $0",
-      "doc": "Insert bold text",
-      "label": "Insert strong emphasized text",
-      "matches": {
-        "b": true,
-        "bold": true,
-        "strong emphasis": true
-      }
-    },
-    {
-      "content": "`${1}` $0",
-      "doc": "Insert code",
-      "label": "Insert code",
-      "matches": {
-        "code": true,
-        "literal": true
+        "img": true
       }
     },
     {

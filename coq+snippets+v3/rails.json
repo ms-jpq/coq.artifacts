@@ -2,11 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "save_and_open_screenshot${0}",
-      "doc": "save_and_open_screenshot",
-      "label": "Save and open screenshot",
+      "content": "before_create :${0:method}",
+      "doc": "before_create",
+      "label": "Before create",
       "matches": {
-        "saos": true
+        "bc": true
       }
     },
     {
@@ -178,11 +178,11 @@
       }
     },
     {
-      "content": "before_action :${0:method}",
-      "doc": "before_action",
-      "label": "Before action",
+      "content": "has_many :${0:object}",
+      "doc": "has_many association",
+      "label": "Has many",
       "matches": {
-        "ba": true
+        "hm": true
       }
     },
     {
@@ -194,35 +194,11 @@
       }
     },
     {
-      "content": "before_validation :${0:method}",
-      "doc": "before_validation",
-      "label": "Before validation",
+      "content": "save_and_open_page${0}",
+      "doc": "save_and_open_page",
+      "label": "Save and open page",
       "matches": {
-        "bv": true
-      }
-    },
-    {
-      "content": "before_create :${0:method}",
-      "doc": "before_create",
-      "label": "Before create",
-      "matches": {
-        "bc": true
-      }
-    },
-    {
-      "content": "def edit\n\t@${1:model_class_name} = ${2:ModelClassName}.find(params[:id])\nend",
-      "doc": "def edit",
-      "label": "Edit action",
-      "matches": {
-        "edit": true
-      }
-    },
-    {
-      "content": "def index\n\t@${1:model_class_name} = ${2:ModelClassName}.all\nend",
-      "doc": "def index",
-      "label": "Index action",
-      "matches": {
-        "index": true
+        "saop": true
       }
     },
     {
@@ -234,27 +210,27 @@
       }
     },
     {
-      "content": "save_and_open_page${0}",
-      "doc": "save_and_open_page",
-      "label": "Save and open page",
+      "content": "save_and_open_screenshot${0}",
+      "doc": "save_and_open_screenshot",
+      "label": "Save and open screenshot",
       "matches": {
-        "saop": true
+        "saos": true
       }
     },
     {
-      "content": "def new\n\t@${1:model_class_name} = ${2:ModelClassName}.new\nend",
-      "doc": "def new",
-      "label": "New action",
+      "content": "before_validation :${0:method}",
+      "doc": "before_validation",
+      "label": "Before validation",
       "matches": {
-        "new": true
+        "bv": true
       }
     },
     {
-      "content": "has_one :${1:object}, dependent: :${0:destroy}",
-      "doc": "has_one dependent",
-      "label": "Has one dependent",
+      "content": "def edit\n\t@${1:model_class_name} = ${2:ModelClassName}.find(params[:id])\nend",
+      "doc": "def edit",
+      "label": "Edit action",
       "matches": {
-        "hod": true
+        "edit": true
       }
     },
     {
@@ -266,35 +242,35 @@
       }
     },
     {
-      "content": "def show\n\t@${1:model_class_name} = ${2:ModelClassName}.find(params[:id])\nend",
-      "doc": "def show",
-      "label": "Show action",
+      "content": "def index\n\t@${1:model_class_name} = ${2:ModelClassName}.all\nend",
+      "doc": "def index",
+      "label": "Index action",
       "matches": {
-        "show": true
+        "index": true
       }
     },
     {
-      "content": "has_many :${0:object}",
-      "doc": "has_many association",
-      "label": "Has many",
+      "content": "scope :${1:name}, -> { where(${2:field}: ${0:value}) }",
+      "doc": "AR scope",
+      "label": "Scope",
       "matches": {
-        "hm": true
+        "scope": true
       }
     },
     {
-      "content": "def update\n\t@${1:model_class_name} = ${2:ModelClassName}.find(params[:id])\n\trespond_to do |format|\n\t\tif @$1.update($1_params)\n\t\t\tformat.html { redirect_to @$1, notice: '$2 updated' }\n\t\telse\n\t\t\tformat.html { render :edit, status: :unprocessable_entity }\n\t\tend\n\tend\nend",
-      "doc": "def update",
-      "label": "Update action",
+      "content": "has_one :${1:object}, dependent: :${0:destroy}",
+      "doc": "has_one dependent",
+      "label": "Has one dependent",
       "matches": {
-        "update": true
+        "hod": true
       }
     },
     {
-      "content": "def ${1:model_class_name}_params\n\tparams.require(:$1).permit(${2:attributes})\nend",
-      "doc": "def model_params",
-      "label": "Model Params",
+      "content": "def new\n\t@${1:model_class_name} = ${2:ModelClassName}.new\nend",
+      "doc": "def new",
+      "label": "New action",
       "matches": {
-        "params": true
+        "new": true
       }
     },
     {
@@ -306,11 +282,35 @@
       }
     },
     {
-      "content": "scope :${1:name}, -> { where(${2:field}: ${0:value}) }",
-      "doc": "AR scope",
-      "label": "Scope",
+      "content": "before_action :${0:method}",
+      "doc": "before_action",
+      "label": "Before action",
       "matches": {
-        "scope": true
+        "ba": true
+      }
+    },
+    {
+      "content": "def show\n\t@${1:model_class_name} = ${2:ModelClassName}.find(params[:id])\nend",
+      "doc": "def show",
+      "label": "Show action",
+      "matches": {
+        "show": true
+      }
+    },
+    {
+      "content": "def ${1:model_class_name}_params\n\tparams.require(:$1).permit(${2:attributes})\nend",
+      "doc": "def model_params",
+      "label": "Model Params",
+      "matches": {
+        "params": true
+      }
+    },
+    {
+      "content": "def update\n\t@${1:model_class_name} = ${2:ModelClassName}.find(params[:id])\n\trespond_to do |format|\n\t\tif @$1.update($1_params)\n\t\t\tformat.html { redirect_to @$1, notice: '$2 updated' }\n\t\telse\n\t\t\tformat.html { render :edit, status: :unprocessable_entity }\n\t\tend\n\tend\nend",
+      "doc": "def update",
+      "label": "Update action",
+      "matches": {
+        "update": true
       }
     },
     {

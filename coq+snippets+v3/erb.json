@@ -10,45 +10,19 @@
       }
     },
     {
-      "content": "<%= $1 %>",
-      "doc": "render block pe",
-      "label": "render",
+      "content": "<%# $1 %>",
+      "doc": "erb print comment",
+      "label": "comment",
       "matches": {
-        "=": true,
-        "pe": true
+        "pc": true
       }
     },
     {
-      "content": "<% $1 %>",
-      "doc": "erb exec block",
-      "label": "exec",
-      "matches": {
-        "%": true,
-        "er": true
-      }
-    },
-    {
-      "content": "<% unless ${1:falsevalue} %>\n  $2\n<% end %>",
+      "content": "<% unless ${1:falsevalue} %>\n  $2\n<% else %>\n  $3\n<% end %>",
       "doc": "unless .. end",
-      "label": "unless",
+      "label": "unlesse",
       "matches": {
-        "unless": true
-      }
-    },
-    {
-      "content": "<% elsif ${1:truevalue} %>",
-      "doc": "elsif",
-      "label": "elsif",
-      "matches": {
-        "elsif": true
-      }
-    },
-    {
-      "content": "<%= link_to $1, $2 %>",
-      "doc": "link_to helper",
-      "label": "link_to",
-      "matches": {
-        "lt": true
+        "unlesse": true
       }
     },
     {
@@ -68,11 +42,11 @@
       }
     },
     {
-      "content": "<%# $1 %>",
-      "doc": "erb print comment",
-      "label": "comment",
+      "content": "<% unless ${1:falsevalue} %>\n  $2\n<% end %>",
+      "doc": "unless .. end",
+      "label": "unless",
       "matches": {
-        "pc": true
+        "unless": true
       }
     },
     {
@@ -84,19 +58,45 @@
       }
     },
     {
+      "content": "<%= $1 %>",
+      "doc": "render block pe",
+      "label": "render",
+      "matches": {
+        "=": true,
+        "pe": true
+      }
+    },
+    {
+      "content": "<% $1 %>",
+      "doc": "erb exec block",
+      "label": "exec",
+      "matches": {
+        "%": true,
+        "er": true
+      }
+    },
+    {
+      "content": "<%= link_to $1, $2 %>",
+      "doc": "link_to helper",
+      "label": "link_to",
+      "matches": {
+        "lt": true
+      }
+    },
+    {
+      "content": "<% elsif ${1:truevalue} %>",
+      "doc": "elsif",
+      "label": "elsif",
+      "matches": {
+        "elsif": true
+      }
+    },
+    {
       "content": "<% if ${1:truevalue} %>\n  $2\n<% end %>",
       "doc": "if .. end",
       "label": "if",
       "matches": {
         "if": true
-      }
-    },
-    {
-      "content": "<% unless ${1:falsevalue} %>\n  $2\n<% else %>\n  $3\n<% end %>",
-      "doc": "unless .. end",
-      "label": "unlesse",
-      "matches": {
-        "unlesse": true
       }
     }
   ]

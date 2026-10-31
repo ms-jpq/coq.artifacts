@@ -2,27 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "@mastersthesis{${1:name},\n    author = {${2:author}},\n    title = {${3:title}},\n    school = {${4:school}},\n    type = {${5:?_type}},\n    address = {${6:?_address}},\n    year = {${7:year}},\n    month = {${8:?_month}},\n    note = {${9:?_note}},\n}",
-      "doc": "Master's thesis",
-      "label": "@mastersthesis",
-      "matches": {
-        "@mastersthesis": true
-      }
-    },
-    {
       "content": "@proceedings{${1:name},\n    title = {${2:title}},\n    editor = {${3:?_editor}},\n    volume = {${4:?_volume}},\n    number = {${5:?_number}},\n    series = {${6:?_series}},\n    address = {${7:?_address}},\n    organization = {${8:?_organization}},\n    publisher = {${9:?_publisher}},\n    year = {${10:year}},\n    month = {${11:?_month}},\n    note = {${12:?_note}},\n}",
       "doc": "The proceedings of a conference.",
       "label": "@proceedings",
       "matches": {
         "@proceedings": true
-      }
-    },
-    {
-      "content": "@unpublished{${1:name},\n    author = {${2:author}},\n    title = {${3:title}},\n    year = {${4:?_year}},\n    month = {${5:?_month}},\n    note = {${6:note}},\n}",
-      "doc": "An unpublished article, book, thesis, etc.",
-      "label": "@unpublished",
-      "matches": {
-        "@unpublished": true
       }
     },
     {
@@ -34,14 +18,6 @@
       }
     },
     {
-      "content": "@techreport{${1:name},\n    author = {${2:author}},\n    title = {${3:title}},\n    institution = {${4:institution}},\n    type = {${5:?_type}},\n    number = {${6:?_number}},\n    address = {${7:?_address}},\n    year = {${8:year}},\n    month = {${9:?_month}},\n    note = {${10:?_note}},\n}",
-      "doc": "Technical report from educational, commercial or standardization institution.",
-      "label": "@techreport",
-      "matches": {
-        "@techreport": true
-      }
-    },
-    {
       "content": "@manual{${1:name},\n    title = {${2:title}},\n    author = {${3:?_author}},\n    organization = {${4:?_organization}},\n    address = {${5:?_address}},\n    edition = {${6:?_edition}},\n    year = {${7:year}},\n    month = {${8:?_month}},\n    note = {${9:?_note}},\n}",
       "doc": "Technical manual",
       "label": "@manual",
@@ -50,11 +26,27 @@
       }
     },
     {
-      "content": "@phdthesis{${1:name},\n    author = {${2:author}},\n    title = {${3:title}},\n    school = {${4:school}},\n    address = {${5:?_address}},\n    year = {${6:year}},\n    month = {${7:?_month}},\n    keywords = {${8:?_keywords}},\n    note = {${9:?_note}},\n}",
-      "doc": "Ph.D. thesis",
-      "label": "@phdthesis",
+      "content": "@unpublished{${1:name},\n    author = {${2:author}},\n    title = {${3:title}},\n    year = {${4:?_year}},\n    month = {${5:?_month}},\n    note = {${6:note}},\n}",
+      "doc": "An unpublished article, book, thesis, etc.",
+      "label": "@unpublished",
       "matches": {
-        "@phdthesis": true
+        "@unpublished": true
+      }
+    },
+    {
+      "content": "@techreport{${1:name},\n    author = {${2:author}},\n    title = {${3:title}},\n    institution = {${4:institution}},\n    type = {${5:?_type}},\n    number = {${6:?_number}},\n    address = {${7:?_address}},\n    year = {${8:year}},\n    month = {${9:?_month}},\n    note = {${10:?_note}},\n}",
+      "doc": "Technical report from educational, commercial or standardization institution.",
+      "label": "@techreport",
+      "matches": {
+        "@techreport": true
+      }
+    },
+    {
+      "content": "@article{${1:name},\n    author = {${2:author}},\n    title = {${3:title}},\n    journal = {${4:journal}},\n    volume = {${5:?_volume}},\n    number = {${6:?_number}},\n    pages = {${7:?_pages}},\n    year = {${8:year}},\n    month = {${9:?_month}},\n    note = {${10:?_note}},\n}",
+      "doc": "An article from a magazine or a journal.",
+      "label": "@article",
+      "matches": {
+        "@article": true
       }
     },
     {
@@ -66,14 +58,6 @@
       }
     },
     {
-      "content": "@incollection{${1:name},\n    author = {${2:author}},\n    title = {${3:title}},\n    booktitle = {${4:booktitle}},\n    publisher = {${5:publisher}},\n    editor = {${6:?_editor}},\n    volume = {${7:?_volume}},\n    number = {${8:?_number}},\n    series = {${9:?_series}},\n    type = {${10:?_type}},\n    chapter = {${11:?_chapter}},\n    pages = {${12:?_pages}},\n    address = {${13:?_address}},\n    edition = {${14:?_edition}},\n    year = {${15:year}},\n    month = {${16:?_month}},\n    note = {${17:?_note}},\n}",
-      "doc": "A section of a book having its own title.",
-      "label": "@incollection",
-      "matches": {
-        "@incollection": true
-      }
-    },
-    {
       "content": "@book{${1:name},\n    author = {${2:author}},\n    title = {${3:title}},\n    publisher = {${4:publisher}},\n    volume = {${5:?_volume}},\n    number = {${6:?_number}},\n    series = {${7:?_series}},\n    address = {${8:?_address}},\n    edition = {${9:?_edition}},\n    year = {${10:year}},\n    month = {${11:?_month}},\n    note = {${12:?_note}},\n}",
       "doc": "A published book",
       "label": "@book",
@@ -82,11 +66,11 @@
       }
     },
     {
-      "content": "@article{${1:name},\n    author = {${2:author}},\n    title = {${3:title}},\n    journal = {${4:journal}},\n    volume = {${5:?_volume}},\n    number = {${6:?_number}},\n    pages = {${7:?_pages}},\n    year = {${8:year}},\n    month = {${9:?_month}},\n    note = {${10:?_note}},\n}",
-      "doc": "An article from a magazine or a journal.",
-      "label": "@article",
+      "content": "@phdthesis{${1:name},\n    author = {${2:author}},\n    title = {${3:title}},\n    school = {${4:school}},\n    address = {${5:?_address}},\n    year = {${6:year}},\n    month = {${7:?_month}},\n    keywords = {${8:?_keywords}},\n    note = {${9:?_note}},\n}",
+      "doc": "Ph.D. thesis",
+      "label": "@phdthesis",
       "matches": {
-        "@article": true
+        "@phdthesis": true
       }
     },
     {
@@ -111,6 +95,22 @@
       "label": "@conference",
       "matches": {
         "@conference": true
+      }
+    },
+    {
+      "content": "@mastersthesis{${1:name},\n    author = {${2:author}},\n    title = {${3:title}},\n    school = {${4:school}},\n    type = {${5:?_type}},\n    address = {${6:?_address}},\n    year = {${7:year}},\n    month = {${8:?_month}},\n    note = {${9:?_note}},\n}",
+      "doc": "Master's thesis",
+      "label": "@mastersthesis",
+      "matches": {
+        "@mastersthesis": true
+      }
+    },
+    {
+      "content": "@incollection{${1:name},\n    author = {${2:author}},\n    title = {${3:title}},\n    booktitle = {${4:booktitle}},\n    publisher = {${5:publisher}},\n    editor = {${6:?_editor}},\n    volume = {${7:?_volume}},\n    number = {${8:?_number}},\n    series = {${9:?_series}},\n    type = {${10:?_type}},\n    chapter = {${11:?_chapter}},\n    pages = {${12:?_pages}},\n    address = {${13:?_address}},\n    edition = {${14:?_edition}},\n    year = {${15:year}},\n    month = {${16:?_month}},\n    note = {${17:?_note}},\n}",
+      "doc": "A section of a book having its own title.",
+      "label": "@incollection",
+      "matches": {
+        "@incollection": true
       }
     }
   ]

@@ -8,54 +8,6 @@
   ],
   "snippets": [
     {
-      "content": "* @param ${1:Type} ${2:var} ${3:Description}$0",
-      "doc": "Paramater documentation",
-      "label": "PHPDoc param …",
-      "matches": {
-        "param": true
-      }
-    },
-    {
-      "content": "\\$this->$0;",
-      "doc": "$this->...",
-      "label": "$this->…",
-      "matches": {
-        "this": true
-      }
-    },
-    {
-      "content": "/**\n * $1\n */\ntrait ${2:TraitName}\n{\n\t$0\n}",
-      "doc": "Trait",
-      "label": "trait …",
-      "matches": {
-        "trait": true
-      }
-    },
-    {
-      "content": "var_dump($0);",
-      "doc": "var_dump",
-      "label": "Variable Dump",
-      "matches": {
-        "vd": true
-      }
-    },
-    {
-      "content": "if (${1:condition}) {\n\t${0:# code...}\n}",
-      "doc": "If block",
-      "label": "if …",
-      "matches": {
-        "if": true
-      }
-    },
-    {
-      "content": "enum ${1:EnumName}\n{\n\tcase $0;\n}",
-      "doc": "Enum definition",
-      "label": "enum …",
-      "matches": {
-        "enum": true
-      }
-    },
-    {
       "content": "if (${1:condition}) {\n\t${2:# code...}\n} else {\n\t${3:# code...}\n}\n$0",
       "doc": "If Else block",
       "label": "if … else …",
@@ -80,11 +32,11 @@
       }
     },
     {
-      "content": "elseif (${1:condition}) {\n\t${0:# code...}\n}",
-      "doc": "Elseif block",
-      "label": "elseif …",
+      "content": "for (\\$${1:i}=${2:0}; \\$${1:i} < $3; \\$${1:i}++) { \n\t${0:# code...}\n}",
+      "doc": "For-loop",
+      "label": "for …",
       "matches": {
-        "elseif": true
+        "for": true
       }
     },
     {
@@ -93,6 +45,14 @@
       "label": "Region Start",
       "matches": {
         "#region": true
+      }
+    },
+    {
+      "content": "public function __construct(${1: priarg}) {\n}",
+      "doc": "Create __construct method using the last php syntax.",
+      "label": "function __construct",
+      "matches": {
+        "con": true
       }
     },
     {
@@ -112,27 +72,19 @@
       }
     },
     {
+      "content": "\\$${1:arrayName} = ['$2' => $3${4:,} $0];",
+      "doc": "Array initializer",
+      "label": "$… = […]",
+      "matches": {
+        "shorray": true
+      }
+    },
+    {
       "content": "'$1' => $2${3:,} $0",
       "doc": "Key-Value initializer",
       "label": "… => …",
       "matches": {
         "keyval": true
-      }
-    },
-    {
-      "content": "echo \\$this->$0;",
-      "doc": "Echo this",
-      "label": "echo $this->…",
-      "matches": {
-        "ethis": true
-      }
-    },
-    {
-      "content": "public function __construct(${1: priarg}) {\n}",
-      "doc": "Create __construct method using the last php syntax.",
-      "label": "function __construct",
-      "matches": {
-        "con": true
       }
     },
     {
@@ -144,27 +96,75 @@
       }
     },
     {
-      "content": "\\$${1:arrayName} = ['$2' => $3${4:,} $0];",
-      "doc": "Array initializer",
-      "label": "$… = […]",
-      "matches": {
-        "shorray": true
-      }
-    },
-    {
-      "content": "for (\\$${1:i}=${2:0}; \\$${1:i} < $3; \\$${1:i}++) { \n\t${0:# code...}\n}",
-      "doc": "For-loop",
-      "label": "for …",
-      "matches": {
-        "for": true
-      }
-    },
-    {
       "content": "case '${1:value}':\n\t${0:# code...}\n\tbreak;",
       "doc": "Case Block",
       "label": "case …",
       "matches": {
         "case": true
+      }
+    },
+    {
+      "content": "\\$this->$0;",
+      "doc": "$this->...",
+      "label": "$this->…",
+      "matches": {
+        "this": true
+      }
+    },
+    {
+      "content": "echo \\$this->$0;",
+      "doc": "Echo this",
+      "label": "echo $this->…",
+      "matches": {
+        "ethis": true
+      }
+    },
+    {
+      "content": "/**\n * $1\n */\ntrait ${2:TraitName}\n{\n\t$0\n}",
+      "doc": "Trait",
+      "label": "trait …",
+      "matches": {
+        "trait": true
+      }
+    },
+    {
+      "content": "enum ${1:EnumName}\n{\n\tcase $0;\n}",
+      "doc": "Enum definition",
+      "label": "enum …",
+      "matches": {
+        "enum": true
+      }
+    },
+    {
+      "content": "* @param ${1:Type} ${2:var} ${3:Description}$0",
+      "doc": "Paramater documentation",
+      "label": "PHPDoc param …",
+      "matches": {
+        "param": true
+      }
+    },
+    {
+      "content": "elseif (${1:condition}) {\n\t${0:# code...}\n}",
+      "doc": "Elseif block",
+      "label": "elseif …",
+      "matches": {
+        "elseif": true
+      }
+    },
+    {
+      "content": "var_dump($0);",
+      "doc": "var_dump",
+      "label": "Variable Dump",
+      "matches": {
+        "vd": true
+      }
+    },
+    {
+      "content": "if (${1:condition}) {\n\t${0:# code...}\n}",
+      "doc": "If block",
+      "label": "if …",
+      "matches": {
+        "if": true
       }
     },
     {

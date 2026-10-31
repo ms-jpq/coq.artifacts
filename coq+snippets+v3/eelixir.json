@@ -4,6 +4,22 @@
   ],
   "snippets": [
     {
+      "content": "<%= if ${1} do %>\n  $2\n<% else %>\n  $0\n<% end %>",
+      "doc": "",
+      "label": "ife",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "<%= $0 %>",
+      "doc": "",
+      "label": "=",
+      "matches": {
+        "=": true
+      }
+    },
+    {
       "content": "<% $0 %>",
       "doc": "",
       "label": "%",
@@ -36,27 +52,11 @@
       }
     },
     {
-      "content": "<%= if ${1} do %>\n  $2\n<% else %>\n  $0\n<% end %>",
-      "doc": "",
-      "label": "ife",
-      "matches": {
-        "ife": true
-      }
-    },
-    {
       "content": "<%= if ${1} do %>\n  $0\n<% end %>",
       "doc": "",
       "label": "if",
       "matches": {
         "if": true
-      }
-    },
-    {
-      "content": "<%= $0 %>",
-      "doc": "",
-      "label": "=",
-      "matches": {
-        "=": true
       }
     },
     {

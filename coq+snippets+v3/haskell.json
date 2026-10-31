@@ -2,19 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "instance ${1:Class} ${2:Data} where\n\t${3:f} = ${4:undefined}$0",
-      "doc": "typeclass instance",
-      "label": "instance",
+      "content": "{-# OPTIONS_GHC ${1:opt} #-}$0",
+      "doc": "GHC options pragma",
+      "label": "opt pragma",
       "matches": {
-        "inst": true
-      }
-    },
-    {
-      "content": "if ${1:condition} then ${2:undefined} else ${3:undefined}$0,",
-      "doc": "If inline",
-      "label": "if_inline",
-      "matches": {
-        "if inline": true
+        "opt": true
       }
     },
     {
@@ -27,11 +19,43 @@
       }
     },
     {
-      "content": "{-# OPTIONS_GHC ${1:opt} #-}$0",
-      "doc": "GHC options pragma",
-      "label": "opt pragma",
+      "content": "{-# LANGUAGE ${1:extension} #-}$0",
+      "doc": "Language extension pragma",
+      "label": "pragma",
       "matches": {
-        "opt": true
+        "lang": true
+      }
+    },
+    {
+      "content": "let ${1:x} = ${2:undefined}$0",
+      "doc": "let statement",
+      "label": "let",
+      "matches": {
+        "let": true
+      }
+    },
+    {
+      "content": "module Main where\n\n\nmain :: IO ()\nmain = do\n\t${1:undefined}$0\nreturn ()",
+      "doc": "main module",
+      "label": "main",
+      "matches": {
+        "main": true
+      }
+    },
+    {
+      "content": "if ${1:condition} then ${2:undefined} else ${3:undefined}$0,",
+      "doc": "If inline",
+      "label": "if_inline",
+      "matches": {
+        "if inline": true
+      }
+    },
+    {
+      "content": "if ${1:condition}\n\tthen ${2:undefined}\n\telse ${3:undefined}$0",
+      "doc": "If block",
+      "label": "if",
+      "matches": {
+        "if simple": true
       }
     },
     {
@@ -40,14 +64,6 @@
       "label": "case",
       "matches": {
         "case": true
-      }
-    },
-    {
-      "content": "{-# LANGUAGE ${1:extension} #-}$0",
-      "doc": "Language extension pragma",
-      "label": "pragma",
-      "matches": {
-        "lang": true
       }
     },
     {
@@ -60,27 +76,11 @@
       }
     },
     {
-      "content": "module Main where\n\n\nmain :: IO ()\nmain = do\n\t${1:undefined}$0\nreturn ()",
-      "doc": "main module",
-      "label": "main",
+      "content": "import qualified ${1:module} as ${2:name}",
+      "doc": "Qualified import",
+      "label": "import_qualified",
       "matches": {
-        "main": true
-      }
-    },
-    {
-      "content": "${1:x} <- ${2:undefined}$0",
-      "doc": "Monadic get",
-      "label": "get",
-      "matches": {
-        "get": true
-      }
-    },
-    {
-      "content": "let ${1:x} = ${2:undefined}$0",
-      "doc": "let statement",
-      "label": "let",
-      "matches": {
-        "let": true
+        "import qual": true
       }
     },
     {
@@ -94,19 +94,19 @@
       }
     },
     {
-      "content": "import qualified ${1:module} as ${2:name}",
-      "doc": "Qualified import",
-      "label": "import_qualified",
+      "content": "${1:x} <- ${2:undefined}$0",
+      "doc": "Monadic get",
+      "label": "get",
       "matches": {
-        "import qual": true
+        "get": true
       }
     },
     {
-      "content": "if ${1:condition}\n\tthen ${2:undefined}\n\telse ${3:undefined}$0",
-      "doc": "If block",
-      "label": "if",
+      "content": "instance ${1:Class} ${2:Data} where\n\t${3:f} = ${4:undefined}$0",
+      "doc": "typeclass instance",
+      "label": "instance",
       "matches": {
-        "if simple": true
+        "inst": true
       }
     },
     {

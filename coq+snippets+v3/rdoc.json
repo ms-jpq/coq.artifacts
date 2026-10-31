@@ -2,35 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "@!visibility ${1:public | protected | private}$0",
-      "doc": "Modifies the current parsing visibility (public, protected, or private). If this directive is defined on a docstring attached to an object definition, it is applied only to that object. Otherwise, it applies the visibility to all future objects in the namespace.",
-      "label": "@!visibility",
-      "matches": {
-        "@!visibility": true
-      }
-    },
-    {
-      "content": "@param ${1:name} [${2:Type}] ${3:Description.}$0",
-      "doc": "Documents a single method parameter (either regular or keyword) with a given name, type and optional description.",
-      "label": "@param",
-      "matches": {
-        "@param": true
-      }
-    },
-    {
       "content": "@yield [${1:parameters}] ${2:Description.}$0",
       "doc": "Describes what a method might yield to a given block. The types specifier list should not list types, but names of the parameters yielded to the block. If you define parameters with @yieldparam, you do not need to define the parameters in the type specification of @yield as well.",
       "label": "@yield",
       "matches": {
         "@yield": true
-      }
-    },
-    {
-      "content": "@return [${1:Types}] ${2:Description}$0",
-      "doc": "Describes the return value (and type or types) of a method. You can list multiple return tags for a method in the case where a method has distinct return cases. In this case, each case should begin with “if …”.",
-      "label": "@return",
-      "matches": {
-        "@return": true
       }
     },
     {
@@ -42,6 +18,22 @@
       }
     },
     {
+      "content": "# ${1:A one-line summary.}\n#\n# ${2:Description.}$0",
+      "doc": "A simple Ruby comment block with short summary and description. Useful when the user prefers to manually add the other documentation tags.",
+      "label": "comment_simple",
+      "matches": {
+        "##": true
+      }
+    },
+    {
+      "content": "@overload ${1:method_signature(parameters)}$0",
+      "doc": "Describe that your method can be used in various contexts with various parameters or return types. The first line should declare the new method signature, and the following indented tag data will be a new documentation string with its own tags adding metadata for such an overload.",
+      "label": "@overload",
+      "matches": {
+        "@overload": true
+      }
+    },
+    {
       "content": "@abstract #${1:Description.}$0",
       "doc": "Marks a class/module/method as abstract with optional implementor information.",
       "label": "@abstract",
@@ -50,19 +42,35 @@
       }
     },
     {
-      "content": "@see #${1:name} ${2:description}$0",
-      "doc": "“See Also” references for an object. Accepts URLs or other code objects with an optional description at the end. Note that the URL or object will be automatically linked by YARD and does not need to be formatted with markup.",
-      "label": "@see",
+      "content": "@!endgroup ${1:callbacks}$0",
+      "doc": "Ends a group listing definition. Group definition automatically end when class or module blocks are closed, and defining a new group overrides the last group definition, but occasionally you need to end the current group to return to the default listing. Use @!group to begin a group listing.",
+      "label": "@!endgroup",
       "matches": {
-        "@see": true
+        "@!endgroup": true
       }
     },
     {
-      "content": "@since ${1:1.0}$0",
-      "doc": "Lists the version that the object was first added.",
-      "label": "@since",
+      "content": "@version ${1:1.39}$0",
+      "doc": "Lists the version of a class, module or method. This is similar to a library version, but at finer granularity. In some cases, version of specific modules, classes, methods or generalized components might change independently between releases. A version tag is used to infer the API compatibility of a specific object.",
+      "label": "@version",
       "matches": {
-        "@since": true
+        "@version": true
+      }
+    },
+    {
+      "content": "@!visibility ${1:public | protected | private}$0",
+      "doc": "Modifies the current parsing visibility (public, protected, or private). If this directive is defined on a docstring attached to an object definition, it is applied only to that object. Otherwise, it applies the visibility to all future objects in the namespace.",
+      "label": "@!visibility",
+      "matches": {
+        "@!visibility": true
+      }
+    },
+    {
+      "content": "@!group ${2:Rescription.}$0",
+      "doc": "Defines a group listing. All methods (and attributes) seen after this directive are placed into a group with the given description as the group name. The group listing is used by templates to organize methods and attributes into respective logical groups. To end a group listing use @!endgroup.",
+      "label": "@!group",
+      "matches": {
+        "@!group": true
       }
     },
     {
@@ -82,51 +90,11 @@
       }
     },
     {
-      "content": "@!endgroup ${1:callbacks}$0",
-      "doc": "Ends a group listing definition. Group definition automatically end when class or module blocks are closed, and defining a new group overrides the last group definition, but occasionally you need to end the current group to return to the default listing. Use @!group to begin a group listing.",
-      "label": "@!endgroup",
+      "content": "# @example ${1:Example description.}$0\n#   ${2:Write me later}",
+      "doc": "Show an example snippet of code for an object. The first line is an optional title.",
+      "label": "@example",
       "matches": {
-        "@!endgroup": true
-      }
-    },
-    {
-      "content": "@overload ${1:method_signature(parameters)}$0",
-      "doc": "Describe that your method can be used in various contexts with various parameters or return types. The first line should declare the new method signature, and the following indented tag data will be a new documentation string with its own tags adding metadata for such an overload.",
-      "label": "@overload",
-      "matches": {
-        "@overload": true
-      }
-    },
-    {
-      "content": "@version ${1:1.39}$0",
-      "doc": "Lists the version of a class, module or method. This is similar to a library version, but at finer granularity. In some cases, version of specific modules, classes, methods or generalized components might change independently between releases. A version tag is used to infer the API compatibility of a specific object.",
-      "label": "@version",
-      "matches": {
-        "@version": true
-      }
-    },
-    {
-      "content": "@!group ${2:Rescription.}$0",
-      "doc": "Defines a group listing. All methods (and attributes) seen after this directive are placed into a group with the given description as the group name. The group listing is used by templates to organize methods and attributes into respective logical groups. To end a group listing use @!endgroup.",
-      "label": "@!group",
-      "matches": {
-        "@!group": true
-      }
-    },
-    {
-      "content": "@!parse [${1:language}] ${2:code}$0",
-      "doc": "Parses a block of code as if it were present in the source file at that location. This directive is useful if a class has dynamic meta-programmed behaviour that cannot be recognized by YARD. You can specify the language of the code block using the types specification list. By default, the code language is “ruby”.",
-      "label": "@!parse",
-      "matches": {
-        "@!parse": true
-      }
-    },
-    {
-      "content": "# ${1:A one-line summary.}\n#\n# ${2:Description.}$0\n#\n# @param ${5:name} [${6:Type}] ${7:Description.}\n# @return [${3:Types}] ${4:Description}\n#\n# @example ${8:Example description.}\n#   ${9:Write me later}",
-      "doc": "A Ruby comment block including short summary, description, param, return, and example.",
-      "label": "comment",
-      "matches": {
-        "###": true
+        "@example": true
       }
     },
     {
@@ -138,19 +106,19 @@
       }
     },
     {
-      "content": "# ${1:A one-line summary.}\n#\n# ${2:Description.}$0",
-      "doc": "A simple Ruby comment block with short summary and description. Useful when the user prefers to manually add the other documentation tags.",
-      "label": "comment_simple",
+      "content": "# ${1:A one-line summary.}\n#\n# ${2:Description.}$0\n#\n# @param ${5:name} [${6:Type}] ${7:Description.}\n# @return [${3:Types}] ${4:Description}\n#\n# @example ${8:Example description.}\n#   ${9:Write me later}",
+      "doc": "A Ruby comment block including short summary, description, param, return, and example.",
+      "label": "comment",
       "matches": {
-        "##": true
+        "###": true
       }
     },
     {
-      "content": "@!attribute [${1:r | w | rw}] ${2:attribute_name}$0",
-      "doc": "Defines an attribute with a given name, using indented block data as the attribute’s docstring. If the type specifier is supplied with “r”, “w”, or “rw”, the attribute is made readonly, writeonly or readwrite respectively. A readwrite attribute is the default, if no type is specified. The comment containing this directive does not need to be attached to any source, but if it is, that source code will be used as the method’s source. To define a regular method, see @!method.",
-      "label": "@!attribute",
+      "content": "@see #${1:name} ${2:description}$0",
+      "doc": "“See Also” references for an object. Accepts URLs or other code objects with an optional description at the end. Note that the URL or object will be automatically linked by YARD and does not need to be formatted with markup.",
+      "label": "@see",
       "matches": {
-        "@!attribute": true
+        "@see": true
       }
     },
     {
@@ -162,14 +130,6 @@
       }
     },
     {
-      "content": "@author ${1:name}$0",
-      "doc": "List the author or authors of a class, module, or method.",
-      "label": "@author",
-      "matches": {
-        "@author": true
-      }
-    },
-    {
       "content": "@private$0",
       "doc": "Declares that the logical visibility of an object is private. In other words, it specifies that this method should be marked private but cannot due to Ruby’s visibility restrictions. This exists for classes, modules and constants that do not obey Ruby’s visibility rules. For instance, an inner class might be considered “private”, though Ruby would make no such distinction.",
       "label": "@private",
@@ -178,11 +138,19 @@
       }
     },
     {
-      "content": "@note ${1:Description.}$0",
-      "doc": "Adds an emphasized note at the top of the docstring for the object.",
-      "label": "@note",
+      "content": "@!parse [${1:language}] ${2:code}$0",
+      "doc": "Parses a block of code as if it were present in the source file at that location. This directive is useful if a class has dynamic meta-programmed behaviour that cannot be recognized by YARD. You can specify the language of the code block using the types specification list. By default, the code language is “ruby”.",
+      "label": "@!parse",
       "matches": {
-        "@note": true
+        "@!parse": true
+      }
+    },
+    {
+      "content": "@!attribute [${1:r | w | rw}] ${2:attribute_name}$0",
+      "doc": "Defines an attribute with a given name, using indented block data as the attribute’s docstring. If the type specifier is supplied with “r”, “w”, or “rw”, the attribute is made readonly, writeonly or readwrite respectively. A readwrite attribute is the default, if no type is specified. The comment containing this directive does not need to be attached to any source, but if it is, that source code will be used as the method’s source. To define a regular method, see @!method.",
+      "label": "@!attribute",
+      "matches": {
+        "@!attribute": true
       }
     },
     {
@@ -194,19 +162,35 @@
       }
     },
     {
-      "content": "# @example ${1:Example description.}$0\n#   ${2:Write me later}",
-      "doc": "Show an example snippet of code for an object. The first line is an optional title.",
-      "label": "@example",
-      "matches": {
-        "@example": true
-      }
-    },
-    {
       "content": "@option [${1:Types}] ${2:option_key} (${3:default_value} ${4: Descripiton.})$0",
       "doc": "Describe an options hash in a method. The tag takes the name of the options parameter first, followed by optional types, the option key name, a default value for the key and a description of the option. The default value should be placed within parentheses and is optional (can be omitted). Note that a @param tag need not be defined for the options hash itself, though it is useful to do so for completeness.",
       "label": "@option",
       "matches": {
         "@option": true
+      }
+    },
+    {
+      "content": "@param ${1:name} [${2:Type}] ${3:Description.}$0",
+      "doc": "Documents a single method parameter (either regular or keyword) with a given name, type and optional description.",
+      "label": "@param",
+      "matches": {
+        "@param": true
+      }
+    },
+    {
+      "content": "@return [${1:Types}] ${2:Description}$0",
+      "doc": "Describes the return value (and type or types) of a method. You can list multiple return tags for a method in the case where a method has distinct return cases. In this case, each case should begin with “if …”.",
+      "label": "@return",
+      "matches": {
+        "@return": true
+      }
+    },
+    {
+      "content": "@since ${1:1.0}$0",
+      "doc": "Lists the version that the object was first added.",
+      "label": "@since",
+      "matches": {
+        "@since": true
       }
     },
     {
@@ -223,6 +207,22 @@
       "label": "@api",
       "matches": {
         "@api": true
+      }
+    },
+    {
+      "content": "@author ${1:name}$0",
+      "doc": "List the author or authors of a class, module, or method.",
+      "label": "@author",
+      "matches": {
+        "@author": true
+      }
+    },
+    {
+      "content": "@note ${1:Description.}$0",
+      "doc": "Adds an emphasized note at the top of the docstring for the object.",
+      "label": "@note",
+      "matches": {
+        "@note": true
       }
     }
   ]

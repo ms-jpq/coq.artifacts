@@ -2,139 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "ALTER DATABASE ${1:dbName}\n\tCHARACTER SET ${2:charset}\n\tCOLLATE ${3:utf8_unicode_ci};",
-      "doc": "Alter database",
-      "label": "alterdb",
-      "matches": {
-        "alterdb": true
-      }
-    },
-    {
-      "content": "SELECT ${1:attribute(s)}\n\tFROM ${2:tableName}\n\tINNER JOIN ${3:tableName2}\n\tON ${4:match};",
-      "doc": "Inner Join",
-      "label": "ijoin",
-      "matches": {
-        "ijoin": true
-      }
-    },
-    {
-      "content": "SELECT ${1:attribute(s)} FROM ${2:tableName};",
-      "doc": "Regular select",
-      "label": "select",
-      "matches": {
-        "select": true
-      }
-    },
-    {
-      "content": "SELECT ${1:attribute(s)}\n\tFROM ${2:tableName}\n\tRIGHT JOIN ${3:tableName2}\n\tON ${4:match};",
-      "doc": "Right Join",
-      "label": "rjoin",
-      "matches": {
-        "rjoin": true
-      }
-    },
-    {
-      "content": "SELECT ${1:attribute(s)}\n\tFROM ${2:tableName}\n\tLEFT JOIN ${3:tableName2}\n\tON ${4:match};",
-      "doc": "Left Join",
-      "label": "ljoin",
-      "matches": {
-        "ljoin": true
-      }
-    },
-    {
-      "content": "SELECT ${1:attribute(s)}\n\tFROM ${2:tableName}\n\tFULL JOIN OUTER ${3:tableName2}\n\tON ${4:match}\n\tWHERE ${5:condition};",
-      "doc": "Full Join",
-      "label": "fjoin",
-      "matches": {
-        "fjoin": true
-      }
-    },
-    {
-      "content": "CHECK ( ${1:condition} )",
-      "doc": "Check",
-      "label": "check",
-      "matches": {
-        "check": true
-      }
-    },
-    {
-      "content": "CREATE TABLE ${1:tableName} (\n\t${2:attribute(s)}\n);",
-      "doc": "Create regular table",
-      "label": "createt",
-      "matches": {
-        "createt": true
-      }
-    },
-    {
-      "content": "SELECT ${1:attribute(s)} FROM ${2:tableName}\nUNION ALL\nSELECT ${3:attribute(s)} FROM ${4:tableName2};",
-      "doc": "All union",
-      "label": "uniona",
-      "matches": {
-        "uniona": true
-      }
-    },
-    {
-      "content": "SELECT ${1:attribute(s)}\n\tFROM ${2:tableName}\n\tGROUP BY ${3:attribute(s)};",
-      "doc": "Group by",
-      "label": "groupb",
-      "matches": {
-        "groupb": true
-      }
-    },
-    {
-      "content": "BACKUP DATABASE ${1:dbName}\n\tTO DISK ${2:filepath};",
-      "doc": "Backup database",
-      "label": "bakupd",
-      "matches": {
-        "bakupd": true
-      }
-    },
-    {
-      "content": "CREATE DATABASE IF NOT EXISTS ${1:name};",
-      "doc": "Create table with conditional",
-      "label": "createdi",
-      "matches": {
-        "createdi": true
-      }
-    },
-    {
-      "content": "BACKUP DATABASE ${1:dbName}\n\tTO DISK ${2:filepath}\n\tWITH ${3:DIFERENTIAL};",
-      "doc": "Differential backup database",
-      "label": "bakupdw",
-      "matches": {
-        "bakupdw": true
-      }
-    },
-    {
-      "content": "SELECT DISTINCT ${1:attribute(s)}\n\tFROM ${2:tableName};",
-      "doc": "Select Distinct",
-      "label": "selectd",
-      "matches": {
-        "selectd": true
-      }
-    },
-    {
       "content": "DROP TABLE ${1:tableName};",
       "doc": "Drop table",
       "label": "dropt",
       "matches": {
         "dropt": true
-      }
-    },
-    {
-      "content": "PRIMARY KEY(${1:attribute})",
-      "doc": "Primary Key",
-      "label": "primaryk",
-      "matches": {
-        "primaryk": true
-      }
-    },
-    {
-      "content": "SELECT ${1:attribute(s)}\n\tFROM ${2:tableName}\n\tWHERE ${3:condition};",
-      "doc": "Select with condition",
-      "label": "selectw",
-      "matches": {
-        "selectw": true
       }
     },
     {
@@ -146,14 +18,6 @@
       }
     },
     {
-      "content": "CONSTRAINT ${1:attribute} PRIMARY KEY(${2:attribute(s)})",
-      "doc": "Constraint Primary Key",
-      "label": "primarykc",
-      "matches": {
-        "primarykc": true
-      }
-    },
-    {
       "content": "DROP TABLE IF EXISTS ${1:tableName};",
       "doc": "Drop table with conditional",
       "label": "dropti",
@@ -162,11 +26,11 @@
       }
     },
     {
-      "content": "SELECT ${1:attribute(s)}\n\tFROM ${2:tableName}\n\tORDER BY ${3:attribute(s)} ${4:ASC|DESC};",
-      "doc": "Select with order",
-      "label": "selector",
+      "content": "SELECT ${1:attribute(s)} FROM ${2:tableName}\nUNION\nSELECT ${3:attribute(s)} FROM ${4:tableName2};",
+      "doc": "Regular union",
+      "label": "union",
       "matches": {
-        "selector": true
+        "union": true
       }
     },
     {
@@ -175,14 +39,6 @@
       "label": "dropdi",
       "matches": {
         "dropdi": true
-      }
-    },
-    {
-      "content": "UPDATE ${1:tableName}\n\tSET ${2:attribute(s)}\n\tWHERE ${3:condition};",
-      "doc": "Update table",
-      "label": "updatet",
-      "matches": {
-        "updatet": true
       }
     },
     {
@@ -202,46 +58,6 @@
       }
     },
     {
-      "content": "DELETE FROM mysql.user WHERE user = '${1:userName}';",
-      "doc": "Delete user",
-      "label": "deleteuser",
-      "matches": {
-        "deleteuser": true
-      }
-    },
-    {
-      "content": "CREATE USER '${1:username}'@'${2:localhost}' IDENTIFIED BY '${3:password}';",
-      "doc": "Create User",
-      "label": "creteuser",
-      "matches": {
-        "createuser": true
-      }
-    },
-    {
-      "content": "CONSTRAINT ${1:attribute} FOREIGN KEY (${2:attribute(s)})\n\tREFERENCES ${3:tableName}(${4:attribute})",
-      "doc": "Constraint foreign Key",
-      "label": "foreignkc",
-      "matches": {
-        "foreignkc": true
-      }
-    },
-    {
-      "content": "ALTER TABLE ${1:tableName}\n\t ${2:intructions};",
-      "doc": "Alter table",
-      "label": "altert",
-      "matches": {
-        "altert": true
-      }
-    },
-    {
-      "content": "FOREIGN KEY(${1:attribute}) REFERENCES ${2:tableName}(${3:attribute})",
-      "doc": "Foreign Key",
-      "label": "foreignk",
-      "matches": {
-        "foreignk": true
-      }
-    },
-    {
       "content": "SHOW DATABASES;",
       "doc": "Show databases",
       "label": "showd",
@@ -250,11 +66,91 @@
       }
     },
     {
-      "content": "SELECT ${1:attribute(s)} FROM ${2:tableName}\nUNION\nSELECT ${3:attribute(s)} FROM ${4:tableName2};",
-      "doc": "Regular union",
-      "label": "union",
+      "content": "SELECT ${1:attribute(s)}\n\tFROM ${2:tableName}\n\tINNER JOIN ${3:tableName2}\n\tON ${4:match};",
+      "doc": "Inner Join",
+      "label": "ijoin",
       "matches": {
-        "union": true
+        "ijoin": true
+      }
+    },
+    {
+      "content": "SELECT DISTINCT ${1:attribute(s)}\n\tFROM ${2:tableName};",
+      "doc": "Select Distinct",
+      "label": "selectd",
+      "matches": {
+        "selectd": true
+      }
+    },
+    {
+      "content": "SELECT ${1:attribute(s)}\n\tFROM ${2:tableName}\n\tRIGHT JOIN ${3:tableName2}\n\tON ${4:match};",
+      "doc": "Right Join",
+      "label": "rjoin",
+      "matches": {
+        "rjoin": true
+      }
+    },
+    {
+      "content": "SELECT ${1:attribute(s)}\n\tFROM ${2:tableName}\n\tWHERE ${3:condition};",
+      "doc": "Select with condition",
+      "label": "selectw",
+      "matches": {
+        "selectw": true
+      }
+    },
+    {
+      "content": "SELECT ${1:attribute(s)}\n\tFROM ${2:tableName}\n\tLEFT JOIN ${3:tableName2}\n\tON ${4:match};",
+      "doc": "Left Join",
+      "label": "ljoin",
+      "matches": {
+        "ljoin": true
+      }
+    },
+    {
+      "content": "SELECT ${1:attribute(s)}\n\tFROM ${2:tableName}\n\tFULL JOIN OUTER ${3:tableName2}\n\tON ${4:match}\n\tWHERE ${5:condition};",
+      "doc": "Full Join",
+      "label": "fjoin",
+      "matches": {
+        "fjoin": true
+      }
+    },
+    {
+      "content": "INSERT INTO ${1:tableName} (\n\t${2:attribute(s)}\n) VALUES ( ${3:values} )",
+      "doc": "Insert value(s)",
+      "label": "insert",
+      "matches": {
+        "insert": true
+      }
+    },
+    {
+      "content": "UPDATE ${1:tableName}\n\tSET ${2:attribute(s)}\n\tWHERE ${3:condition};",
+      "doc": "Update table",
+      "label": "updatet",
+      "matches": {
+        "updatet": true
+      }
+    },
+    {
+      "content": "CHECK ( ${1:condition} )",
+      "doc": "Check",
+      "label": "check",
+      "matches": {
+        "check": true
+      }
+    },
+    {
+      "content": "SELECT ${1:attribute(s)} FROM ${2:tableName}\nUNION ALL\nSELECT ${3:attribute(s)} FROM ${4:tableName2};",
+      "doc": "All union",
+      "label": "uniona",
+      "matches": {
+        "uniona": true
+      }
+    },
+    {
+      "content": "SELECT ${1:attribute(s)}\n\tFROM ${2:tableName}\n\tGROUP BY ${3:attribute(s)};",
+      "doc": "Group by",
+      "label": "groupb",
+      "matches": {
+        "groupb": true
       }
     },
     {
@@ -266,19 +162,11 @@
       }
     },
     {
-      "content": "CREATE TABLE IF NOT EXISTS ${1:tableName} (\n\t${2:attribute(s)}\n);",
-      "doc": "Create table with conditional",
-      "label": "createti",
+      "content": "BACKUP DATABASE ${1:dbName}\n\tTO DISK ${2:filepath};",
+      "doc": "Backup database",
+      "label": "bakupd",
       "matches": {
-        "createti": true
-      }
-    },
-    {
-      "content": "DELETE FROM ${1:tableName}\n\tWHERE ${3:condition};",
-      "doc": "Delete records",
-      "label": "delete",
-      "matches": {
-        "delete": true
+        "bakupd": true
       }
     },
     {
@@ -290,6 +178,86 @@
       }
     },
     {
+      "content": "DELETE FROM mysql.user WHERE user = '${1:userName}';",
+      "doc": "Delete user",
+      "label": "deleteuser",
+      "matches": {
+        "deleteuser": true
+      }
+    },
+    {
+      "content": "BACKUP DATABASE ${1:dbName}\n\tTO DISK ${2:filepath}\n\tWITH ${3:DIFERENTIAL};",
+      "doc": "Differential backup database",
+      "label": "bakupdw",
+      "matches": {
+        "bakupdw": true
+      }
+    },
+    {
+      "content": "CREATE TABLE ${1:tableName} (\n\t${2:attribute(s)}\n);",
+      "doc": "Create regular table",
+      "label": "createt",
+      "matches": {
+        "createt": true
+      }
+    },
+    {
+      "content": "CREATE USER '${1:username}'@'${2:localhost}' IDENTIFIED BY '${3:password}';",
+      "doc": "Create User",
+      "label": "creteuser",
+      "matches": {
+        "createuser": true
+      }
+    },
+    {
+      "content": "ALTER TABLE ${1:tableName}\n\t ${2:intructions};",
+      "doc": "Alter table",
+      "label": "altert",
+      "matches": {
+        "altert": true
+      }
+    },
+    {
+      "content": "PRIMARY KEY(${1:attribute})",
+      "doc": "Primary Key",
+      "label": "primaryk",
+      "matches": {
+        "primaryk": true
+      }
+    },
+    {
+      "content": "SELECT ${1:attribute(s)} FROM ${2:tableName};",
+      "doc": "Regular select",
+      "label": "select",
+      "matches": {
+        "select": true
+      }
+    },
+    {
+      "content": "DELETE FROM ${1:tableName}\n\tWHERE ${3:condition};",
+      "doc": "Delete records",
+      "label": "delete",
+      "matches": {
+        "delete": true
+      }
+    },
+    {
+      "content": "CONSTRAINT ${1:attribute} PRIMARY KEY(${2:attribute(s)})",
+      "doc": "Constraint Primary Key",
+      "label": "primarykc",
+      "matches": {
+        "primarykc": true
+      }
+    },
+    {
+      "content": "SELECT ${1:attribute(s)}\n\tFROM ${2:tableName}\n\tORDER BY ${3:attribute(s)} ${4:ASC|DESC};",
+      "doc": "Select with order",
+      "label": "selector",
+      "matches": {
+        "selector": true
+      }
+    },
+    {
       "content": "CREATE DATABASE ${1:name};",
       "doc": "Create regular table",
       "label": "created",
@@ -298,11 +266,43 @@
       }
     },
     {
-      "content": "INSERT INTO ${1:tableName} (\n\t${2:attribute(s)}\n) VALUES ( ${3:values} )",
-      "doc": "Insert value(s)",
-      "label": "insert",
+      "content": "FOREIGN KEY(${1:attribute}) REFERENCES ${2:tableName}(${3:attribute})",
+      "doc": "Foreign Key",
+      "label": "foreignk",
       "matches": {
-        "insert": true
+        "foreignk": true
+      }
+    },
+    {
+      "content": "CREATE DATABASE IF NOT EXISTS ${1:name};",
+      "doc": "Create table with conditional",
+      "label": "createdi",
+      "matches": {
+        "createdi": true
+      }
+    },
+    {
+      "content": "CREATE TABLE IF NOT EXISTS ${1:tableName} (\n\t${2:attribute(s)}\n);",
+      "doc": "Create table with conditional",
+      "label": "createti",
+      "matches": {
+        "createti": true
+      }
+    },
+    {
+      "content": "CONSTRAINT ${1:attribute} FOREIGN KEY (${2:attribute(s)})\n\tREFERENCES ${3:tableName}(${4:attribute})",
+      "doc": "Constraint foreign Key",
+      "label": "foreignkc",
+      "matches": {
+        "foreignkc": true
+      }
+    },
+    {
+      "content": "ALTER DATABASE ${1:dbName}\n\tCHARACTER SET ${2:charset}\n\tCOLLATE ${3:utf8_unicode_ci};",
+      "doc": "Alter database",
+      "label": "alterdb",
+      "matches": {
+        "alterdb": true
       }
     },
     {

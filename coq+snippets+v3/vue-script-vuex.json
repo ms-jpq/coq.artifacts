@@ -2,11 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "import Vue from 'vue';\nimport Vuex from 'vuex';\n\nVue.use(Vuex);\n\nexport const store = new Vuex.Store({\n\tstate: {\n\t\t${1:key}: ${2:value}\n\t}\n});",
-      "doc": "Base for Vuex store",
-      "label": "Vuex Store",
+      "content": "getters: {\n\t${1:value}: state => {\n\t\treturn state.${1:value};\n\t}\n}",
+      "doc": "vuex getter",
+      "label": "Vuex Getters",
       "matches": {
-        "vstore": true
+        "vgetter": true
       }
     },
     {
@@ -15,6 +15,22 @@
       "label": "Vuex Store 2",
       "matches": {
         "vstore2": true
+      }
+    },
+    {
+      "content": "import { store } from './store/index';",
+      "doc": "import vuex store into main.js",
+      "label": "Vue Import Vuex Store",
+      "matches": {
+        "vstore-import": true
+      }
+    },
+    {
+      "content": "import Vue from 'vue';\nimport Vuex from 'vuex';\n\nVue.use(Vuex);\n\nexport const store = new Vuex.Store({\n\tstate: {\n\t\t${1:key}: ${2:value}\n\t}\n});",
+      "doc": "Base for Vuex store",
+      "label": "Vuex Store",
+      "matches": {
+        "vstore": true
       }
     },
     {
@@ -31,22 +47,6 @@
       "label": "Vuex Module",
       "matches": {
         "vmodule": true
-      }
-    },
-    {
-      "content": "import { store } from './store/index';",
-      "doc": "import vuex store into main.js",
-      "label": "Vue Import Vuex Store",
-      "matches": {
-        "vstore-import": true
-      }
-    },
-    {
-      "content": "getters: {\n\t${1:value}: state => {\n\t\treturn state.${1:value};\n\t}\n}",
-      "doc": "vuex getter",
-      "label": "Vuex Getters",
-      "matches": {
-        "vgetter": true
       }
     },
     {

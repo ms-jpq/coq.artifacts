@@ -2,22 +2,6 @@
   "extends": [],
   "snippets": [
     {
-      "content": "import pudb; pudb.set_trace()$0",
-      "doc": "Code snippet for pudb debug",
-      "label": "PuDB set trace",
-      "matches": {
-        "pudb": true
-      }
-    },
-    {
-      "content": "__import__('ipdb').set_trace()$0",
-      "doc": "Code snippet for ipdb debug",
-      "label": "iPDB set trace",
-      "matches": {
-        "ipdb": true
-      }
-    },
-    {
       "content": "import debugpy, platform\ndebugpy.listen((platform.node(), ${1:5678}))\nprint(f\"debugpy listening on {platform.node()}:$1\", flush=True)\ndebugpy.wait_for_client()$0",
       "doc": "Code snippet for debugpy remote attach",
       "label": "debugpy remote attach",
@@ -26,19 +10,11 @@
       }
     },
     {
-      "content": "__import__('pprint').pprint(${1:expression})$0",
-      "doc": "",
-      "label": "Pretty print",
+      "content": "from celery.contrib import rdb; rdb.set_trace()$0",
+      "doc": "Code snippet for celery remote debugger breakpoint",
+      "label": "Celery set trace",
       "matches": {
-        "pprint": true
-      }
-    },
-    {
-      "content": "from IPython import embed; embed()$0",
-      "doc": "",
-      "label": "IPython set trace",
-      "matches": {
-        "ipydb": true
+        "rdb": true
       }
     },
     {
@@ -58,11 +34,35 @@
       }
     },
     {
-      "content": "from celery.contrib import rdb; rdb.set_trace()$0",
-      "doc": "Code snippet for celery remote debugger breakpoint",
-      "label": "Celery set trace",
+      "content": "__import__('pprint').pprint(${1:expression})$0",
+      "doc": "",
+      "label": "Pretty print",
       "matches": {
-        "rdb": true
+        "pprint": true
+      }
+    },
+    {
+      "content": "import pudb; pudb.set_trace()$0",
+      "doc": "Code snippet for pudb debug",
+      "label": "PuDB set trace",
+      "matches": {
+        "pudb": true
+      }
+    },
+    {
+      "content": "__import__('ipdb').set_trace()$0",
+      "doc": "Code snippet for ipdb debug",
+      "label": "iPDB set trace",
+      "matches": {
+        "ipdb": true
+      }
+    },
+    {
+      "content": "from IPython import embed; embed()$0",
+      "doc": "",
+      "label": "IPython set trace",
+      "matches": {
+        "ipydb": true
       }
     }
   ]

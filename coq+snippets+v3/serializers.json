@@ -26,11 +26,11 @@
       }
     },
     {
-      "content": "${1:FIELDNAME} = serializers.DecimalField(max_digits=${2}, decimal_places=${3})",
-      "doc": "Django-rest Serializers ``DecimalField``",
-      "label": "DRF DecimalField",
+      "content": "${1:FIELDNAME} = serializers.MultipleChoiceField(choices=${2})",
+      "doc": "Django-rest Serializers ``MultipleChoiceField``",
+      "label": "DRF MultipleChoiceField",
       "matches": {
-        "sdecimal": true
+        "smchoice": true
       }
     },
     {
@@ -90,11 +90,11 @@
       }
     },
     {
-      "content": "${1:FIELDNAME} = serializers.DurationField(${2})",
-      "doc": "Django-rest Serializers ``DurationField``",
-      "label": "DRF DurationField",
+      "content": "${1:FIELDNAME} = serializers.EmailField(${2})",
+      "doc": "Django-rest Serializers ``EmailField``",
+      "label": "DRF EmailField",
       "matches": {
-        "sduration": true
+        "semail": true
       }
     },
     {
@@ -138,19 +138,19 @@
       }
     },
     {
-      "content": "${1:FIELDNAME} = serializers.TimeField(${2})",
-      "doc": "Django-rest Serializers ``TimeField``",
-      "label": "DRF TimeField",
-      "matches": {
-        "stime": true
-      }
-    },
-    {
       "content": "${1:FIELDNAME} = serializers.StringRelatedField(${2})",
       "doc": "Django-rest Serializers ``StringRelatedField``",
       "label": "DRF StringRelatedField",
       "matches": {
         "ssr": true
+      }
+    },
+    {
+      "content": "def create(self, validated_data):\n\treturn ${1:super().create(validated_data)}",
+      "doc": "Django-rest Serializers ``Create`` Method",
+      "label": "DRF Create (serializers-method)",
+      "matches": {
+        "screate": true
       }
     },
     {
@@ -178,19 +178,19 @@
       }
     },
     {
-      "content": "def create(self, validated_data):\n\treturn ${1:super().create(validated_data)}",
-      "doc": "Django-rest Serializers ``Create`` Method",
-      "label": "DRF Create (serializers-method)",
+      "content": "${1:FIELDNAME} = serializers.TimeField(${2})",
+      "doc": "Django-rest Serializers ``TimeField``",
+      "label": "DRF TimeField",
       "matches": {
-        "screate": true
+        "stime": true
       }
     },
     {
-      "content": "${1:FIELDNAME} = serializers.DateTimeField(${2})",
-      "doc": "Django-rest Serializers ``DateTimeField``",
-      "label": "DRF DateTimeField",
+      "content": "def update(self, instance, validated_data):\n\treturn ${1:super().update(instance, validated_data)}",
+      "doc": "Django-rest Serializers ``Update`` Method",
+      "label": "DRF Update (serializers-method)",
       "matches": {
-        "sdatetime": true
+        "supdate": true
       }
     },
     {
@@ -218,11 +218,11 @@
       }
     },
     {
-      "content": "def update(self, instance, validated_data):\n\treturn ${1:super().update(instance, validated_data)}",
-      "doc": "Django-rest Serializers ``Update`` Method",
-      "label": "DRF Update (serializers-method)",
+      "content": "class ${1:Name}Serializer(serializers.Serializer):\n\t${2}",
+      "doc": "Django-rest Serializers ``Serializer`` Class",
+      "label": "DRF Serializer (class)",
       "matches": {
-        "supdate": true
+        "serializer": true
       }
     },
     {
@@ -234,11 +234,11 @@
       }
     },
     {
-      "content": "${1:FIELDNAME} = serializers.EmailField(${2})",
-      "doc": "Django-rest Serializers ``EmailField``",
-      "label": "DRF EmailField",
+      "content": "${1:FIELDNAME} = serializers.DateTimeField(${2})",
+      "doc": "Django-rest Serializers ``DateTimeField``",
+      "label": "DRF DateTimeField",
       "matches": {
-        "semail": true
+        "sdatetime": true
       }
     },
     {
@@ -250,11 +250,11 @@
       }
     },
     {
-      "content": "${1:FIELDNAME} = serializers.ListField(child=${2})",
-      "doc": "Django-rest Serializers ``ListField``",
-      "label": "DRF ListField",
+      "content": "${1:FIELDNAME} = serializers.DurationField(${2})",
+      "doc": "Django-rest Serializers ``DurationField``",
+      "label": "DRF DurationField",
       "matches": {
-        "slist": true
+        "sduration": true
       }
     },
     {
@@ -274,19 +274,19 @@
       }
     },
     {
-      "content": "${1:FIELDNAME} = serializers.MultipleChoiceField(choices=${2})",
-      "doc": "Django-rest Serializers ``MultipleChoiceField``",
-      "label": "DRF MultipleChoiceField",
+      "content": "${1:FIELDNAME} = serializers.ListField(child=${2})",
+      "doc": "Django-rest Serializers ``ListField``",
+      "label": "DRF ListField",
       "matches": {
-        "smchoice": true
+        "slist": true
       }
     },
     {
-      "content": "class ${1:Name}Serializer(serializers.Serializer):\n\t${2}",
-      "doc": "Django-rest Serializers ``Serializer`` Class",
-      "label": "DRF Serializer (class)",
+      "content": "${1:FIELDNAME} = serializers.DecimalField(max_digits=${2}, decimal_places=${3})",
+      "doc": "Django-rest Serializers ``DecimalField``",
+      "label": "DRF DecimalField",
       "matches": {
-        "serializer": true
+        "sdecimal": true
       }
     }
   ]

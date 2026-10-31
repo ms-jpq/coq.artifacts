@@ -2,6 +2,24 @@
   "extends": [],
   "snippets": [
     {
+      "content": "import { withTheme } from 'styled-components';",
+      "doc": "import { withTheme } from 'styled-components'",
+      "label": "styled-components-import-with-theme-from-styled-components",
+      "matches": {
+        "imsct": true,
+        "styled-components import withtheme": true
+      }
+    },
+    {
+      "content": "import styled from 'styled-components';\n\nconst ${1} = styled.${2}`\n  ${3}\n`;\n\nexport default ${1};",
+      "doc": "Styled-Components file",
+      "label": "styled-components-styled-components-file",
+      "matches": {
+        "scf": true,
+        "styled-components file": true
+      }
+    },
+    {
       "content": "const ${1} = styled.${2}`\n  ${3}\n`;",
       "doc": "Styled-Component",
       "label": "styled-components-styled-component",
@@ -38,30 +56,12 @@
       }
     },
     {
-      "content": "import styled from 'styled-components';",
-      "doc": "import styled from 'styled-components'",
-      "label": "styled-components-import-styled-from-styled-components",
-      "matches": {
-        "imsc": true,
-        "styled-components import styled": true
-      }
-    },
-    {
       "content": "const Global${1} = createGlobalStyle`\n  ${2}\n`;",
       "doc": "createGlobalStyle",
       "label": "styled-components-create-global-style",
       "matches": {
         "scg": true,
         "styled-components createglobalstyle": true
-      }
-    },
-    {
-      "content": "const ${1} = styled.${2}.attrs({\n  ${3}: ${4}\n})`\n  ${5}\n`;",
-      "doc": "Styled-Component with attributes",
-      "label": "styled-components-styled-component-with-attributes",
-      "matches": {
-        "scattrs": true,
-        "styled-components component with attributes": true
       }
     },
     {
@@ -83,12 +83,12 @@
       }
     },
     {
-      "content": "import { createGlobalStyle } from 'styled-components';",
-      "doc": "import { createGlobalStyle } from 'styled-components'",
-      "label": "styled-components-import-create-global-style-from-styled-components",
+      "content": "export const ${1} = styled.${2}.attrs({\n  ${3}: ${4}\n})`\n  ${5}\n`;",
+      "doc": "Export styled-component with attributes",
+      "label": "styled-components-export-styled-component-with-attributes",
       "matches": {
-        "imscg": true,
-        "styled-components import createglobalstyle": true
+        "exscattrs": true,
+        "styled-components export component with attributes": true
       }
     },
     {
@@ -101,6 +101,24 @@
       }
     },
     {
+      "content": "const ${1} = styled.${2}.attrs({\n  ${3}: ${4}\n})`\n  ${5}\n`;",
+      "doc": "Styled-Component with attributes",
+      "label": "styled-components-styled-component-with-attributes",
+      "matches": {
+        "scattrs": true,
+        "styled-components component with attributes": true
+      }
+    },
+    {
+      "content": "import styled from 'styled-components';",
+      "doc": "import styled from 'styled-components'",
+      "label": "styled-components-import-styled-from-styled-components",
+      "matches": {
+        "imsc": true,
+        "styled-components import styled": true
+      }
+    },
+    {
       "content": "import { css } from 'styled-components';",
       "doc": "import { css } from 'styled-components'",
       "label": "styled-components-import-css-from-styled-components",
@@ -110,39 +128,21 @@
       }
     },
     {
+      "content": "import { createGlobalStyle } from 'styled-components';",
+      "doc": "import { createGlobalStyle } from 'styled-components'",
+      "label": "styled-components-import-create-global-style-from-styled-components",
+      "matches": {
+        "imscg": true,
+        "styled-components import createglobalstyle": true
+      }
+    },
+    {
       "content": "export const ${1} = styled(${2})`\n  ${3}\n`;",
       "doc": "Export styled-component from existing component",
       "label": "styled-components-export-styled-component-from-existing-component",
       "matches": {
         "exscc": true,
         "styled-components export component from existing": true
-      }
-    },
-    {
-      "content": "import { withTheme } from 'styled-components';",
-      "doc": "import { withTheme } from 'styled-components'",
-      "label": "styled-components-import-with-theme-from-styled-components",
-      "matches": {
-        "imsct": true,
-        "styled-components import withtheme": true
-      }
-    },
-    {
-      "content": "import styled from 'styled-components';\n\nconst ${1} = styled.${2}`\n  ${3}\n`;\n\nexport default ${1};",
-      "doc": "Styled-Components file",
-      "label": "styled-components-styled-components-file",
-      "matches": {
-        "scf": true,
-        "styled-components file": true
-      }
-    },
-    {
-      "content": "export const ${1} = styled.${2}.attrs({\n  ${3}: ${4}\n})`\n  ${5}\n`;",
-      "doc": "Export styled-component with attributes",
-      "label": "styled-components-export-styled-component-with-attributes",
-      "matches": {
-        "exscattrs": true,
-        "styled-components export component with attributes": true
       }
     }
   ]

@@ -2,35 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "foreach (${1:var} ${2:item} in ${3:collection})\n{\n    $0\n}",
-      "doc": "Foreach statement",
-      "label": "Foreach statement",
+      "content": "namespace ${1:Name}\n{\n    $0\n}",
+      "doc": "Namespace",
+      "label": "Namespace",
       "matches": {
-        "foreach": true
-      }
-    },
-    {
-      "content": "enum ${1:Name}\n{\n    $0\n}",
-      "doc": "Enum",
-      "label": "Enum",
-      "matches": {
-        "enum": true
-      }
-    },
-    {
-      "content": "for (int ${1:i} = ${2:length} - 1; ${1:i} >= 0 ; ${1:i}--)\n{\n    $0\n}",
-      "doc": "Reverse for loop",
-      "label": "Reverse for loop",
-      "matches": {
-        "forr": true
-      }
-    },
-    {
-      "content": "unchecked\n{\n    $0\n}",
-      "doc": "Unchecked block",
-      "label": "Unchecked block",
-      "matches": {
-        "unchecked": true
+        "namespace": true
       }
     },
     {
@@ -42,19 +18,11 @@
       }
     },
     {
-      "content": "else if (${1:true})\n{\n    $0\n}",
-      "doc": "else-if statement",
-      "label": "else-if statement",
+      "content": "while (${1:true})\n{\n    $0\n}",
+      "doc": "While loop",
+      "label": "While loop",
       "matches": {
-        "else if": true
-      }
-    },
-    {
-      "content": "using (${1:resource})\n{\n    $0\n}",
-      "doc": "Using statement",
-      "label": "Using statement",
-      "matches": {
-        "using": true
+        "while": true
       }
     },
     {
@@ -66,27 +34,11 @@
       }
     },
     {
-      "content": "while (${1:true})\n{\n    $0\n}",
-      "doc": "While loop",
-      "label": "While loop",
+      "content": "${1:public} async ${2:Task}<${3:object}> ${4:MyMethodAsync}(${5:string} ${6:parameter})\n{\n\t$0\n}",
+      "doc": "Creates an async Method structure",
+      "label": "Creates an Async Method structure",
       "matches": {
-        "while": true
-      }
-    },
-    {
-      "content": "struct ${1:Name}\n{\n    $0\n}",
-      "doc": "Struct",
-      "label": "Struct",
-      "matches": {
-        "struct": true
-      }
-    },
-    {
-      "content": "[Fact]\npublic void ${1:TestName}()\n{\n//Given\n\n//When\n\n//Then\n}$0",
-      "doc": "create xunit test method",
-      "label": "xUnit Test",
-      "matches": {
-        "fact": true
+        "method_async": true
       }
     },
     {
@@ -98,6 +50,14 @@
       }
     },
     {
+      "content": "[TestClass]\npublic sealed class ${1:ClassName}Test\n{\n\t$0\n}",
+      "doc": "create mstest test class",
+      "label": "MSTest Test Class",
+      "matches": {
+        "tc": true
+      }
+    },
+    {
       "content": "public System.Collections.Generic.IEnumerator<${1:ElementType}> GetEnumerator()\n{\n    $0throw new System.NotImplementedException();\n    yield return default(${1:ElementType});\n}",
       "doc": "Simple iterator",
       "label": "Simple iterator",
@@ -106,19 +66,19 @@
       }
     },
     {
-      "content": "${1:public} ${2:void} ${3:MyMethod}(${4:string} ${5:parameter})\n{\n\t$0\n}",
-      "doc": "Creates a Method structure",
-      "label": "Creates a Method structure",
+      "content": "[TestMethod]\npublic void ${1:TestName}()\n{\n\t$0\n}",
+      "doc": "create mstest test method",
+      "label": "MSTest Test Method",
       "matches": {
-        "method": true
+        "tm": true
       }
     },
     {
-      "content": "namespace ${1:Name}\n{\n    $0\n}",
-      "doc": "Namespace",
-      "label": "Namespace",
+      "content": "#region ${1:Name}\n    $0\n#endregion",
+      "doc": "#region",
+      "label": "#region",
       "matches": {
-        "namespace": true
+        "region": true
       }
     },
     {
@@ -135,6 +95,22 @@
       "label": "Checked block",
       "matches": {
         "checked": true
+      }
+    },
+    {
+      "content": "for (int ${1:i} = 0; ${1:i} < ${2:length}; ${1:i}++)\n{\n    $0\n}",
+      "doc": "for loop",
+      "label": "for loop",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "private ${1:int} ${2:myVar};\npublic ${1:int} ${3:MyProperty}\n{\n    get { return ${2:myVar}; }\n    set { ${2:myVar} = value; }\n}\n$0",
+      "doc": "Property and backing field",
+      "label": "Property and backing field",
+      "matches": {
+        "propfull": true
       }
     },
     {
@@ -162,6 +138,14 @@
       }
     },
     {
+      "content": "public ${1:int} ${2:MyProperty} { get; private set; }$0",
+      "doc": "An automatically implemented property with a 'get' accessor and a private 'set' accessor. C# 3.0 or higher",
+      "label": "propg",
+      "matches": {
+        "propg": true
+      }
+    },
+    {
       "content": "else\n{\n    $0\n}",
       "doc": "Else statement",
       "label": "Else statement",
@@ -178,67 +162,43 @@
       }
     },
     {
-      "content": "if (${1:true})\n{\n    $0\n}",
-      "doc": "if statement",
-      "label": "if statement",
+      "content": "class ${1:Name}\n{\n    $0\n}",
+      "doc": "Class",
+      "label": "Class",
       "matches": {
-        "if": true
+        "class": true
       }
     },
     {
-      "content": "${1:public} class ${2:$TM_FILENAME_BASE}\n{\n\t$0\n}",
-      "doc": "Create new class",
-      "label": "cls",
+      "content": "interface I${1:Name}\n{\n    $0\n}",
+      "doc": "Interface",
+      "label": "Interface",
       "matches": {
-        "cls": true
+        "interface": true
       }
     },
     {
-      "content": "public ${1:int} ${2:MyProperty} { get; set; }$0",
-      "doc": "An automatically implemented property. C# 3.0 or higher",
-      "label": "prop",
+      "content": "static void Main(string[] args)\n{\n    $0\n}",
+      "doc": "void Main()",
+      "label": "svm",
       "matches": {
-        "prop": true
+        "svm": true
       }
     },
     {
-      "content": "${1:public} async ${2:Task}<${3:object}> ${4:MyMethodAsync}(${5:string} ${6:parameter})\n{\n\t$0\n}",
-      "doc": "Creates an async Method structure",
-      "label": "Creates an Async Method structure",
+      "content": "switch (${1:switch_on})\n{\n    $0\n    default:\n}",
+      "doc": "Switch statement",
+      "label": "Switch statement",
       "matches": {
-        "method_async": true
+        "switch": true
       }
     },
     {
-      "content": "#if ${1:true}\n    $0\n#endif",
-      "doc": "#if",
-      "label": "#if",
+      "content": "enum ${1:Name}\n{\n    $0\n}",
+      "doc": "Enum",
+      "label": "Enum",
       "matches": {
-        "ifd": true
-      }
-    },
-    {
-      "content": "unsafe\n{\n    $0\n}",
-      "doc": "Unsafe statement",
-      "label": "Unsafe statement",
-      "matches": {
-        "unsafe": true
-      }
-    },
-    {
-      "content": "lock (${1:this})\n{\n    $0\n}",
-      "doc": "Lock statement",
-      "label": "Lock statement",
-      "matches": {
-        "lock": true
-      }
-    },
-    {
-      "content": "try\n{\n    $1\n}\ncatch (${2:System.Exception})\n{\n    $0\n    throw;\n}",
-      "doc": "Try catch",
-      "label": "Try catch",
-      "matches": {
-        "try": true
+        "enum": true
       }
     },
     {
@@ -258,19 +218,67 @@
       }
     },
     {
-      "content": "for (int ${1:i} = 0; ${1:i} < ${2:length}; ${1:i}++)\n{\n    $0\n}",
-      "doc": "for loop",
-      "label": "for loop",
+      "content": "try\n{\n    $1\n}\ncatch (${2:System.Exception})\n{\n    $0\n    throw;\n}",
+      "doc": "Try catch",
+      "label": "Try catch",
       "matches": {
-        "for": true
+        "try": true
       }
     },
     {
-      "content": "class ${1:Name}\n{\n    $0\n}",
-      "doc": "Class",
-      "label": "Class",
+      "content": "${1:public} class ${2:$TM_FILENAME_BASE}\n{\n\t$0\n}",
+      "doc": "Create new class",
+      "label": "cls",
       "matches": {
-        "class": true
+        "cls": true
+      }
+    },
+    {
+      "content": "${1:public} ${2:void} ${3:MyMethod}(${4:string} ${5:parameter})\n{\n\t$0\n}",
+      "doc": "Creates a Method structure",
+      "label": "Creates a Method structure",
+      "matches": {
+        "method": true
+      }
+    },
+    {
+      "content": "unchecked\n{\n    $0\n}",
+      "doc": "Unchecked block",
+      "label": "Unchecked block",
+      "matches": {
+        "unchecked": true
+      }
+    },
+    {
+      "content": "unsafe\n{\n    $0\n}",
+      "doc": "Unsafe statement",
+      "label": "Unsafe statement",
+      "matches": {
+        "unsafe": true
+      }
+    },
+    {
+      "content": "struct ${1:Name}\n{\n    $0\n}",
+      "doc": "Struct",
+      "label": "Struct",
+      "matches": {
+        "struct": true
+      }
+    },
+    {
+      "content": "using (${1:resource})\n{\n    $0\n}",
+      "doc": "Using statement",
+      "label": "Using statement",
+      "matches": {
+        "using": true
+      }
+    },
+    {
+      "content": "lock (${1:this})\n{\n    $0\n}",
+      "doc": "Lock statement",
+      "label": "Lock statement",
+      "matches": {
+        "lock": true
       }
     },
     {
@@ -282,11 +290,51 @@
       }
     },
     {
-      "content": "static void Main(string[] args)\n{\n    $0\n}",
-      "doc": "void Main()",
-      "label": "svm",
+      "content": "#if ${1:true}\n    $0\n#endif",
+      "doc": "#if",
+      "label": "#if",
       "matches": {
-        "svm": true
+        "ifd": true
+      }
+    },
+    {
+      "content": "else if (${1:true})\n{\n    $0\n}",
+      "doc": "else-if statement",
+      "label": "else-if statement",
+      "matches": {
+        "else if": true
+      }
+    },
+    {
+      "content": "if (${1:true})\n{\n    $0\n}",
+      "doc": "if statement",
+      "label": "if statement",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "[Fact]\npublic void ${1:TestName}()\n{\n//Given\n\n//When\n\n//Then\n}$0",
+      "doc": "create xunit test method",
+      "label": "xUnit Test",
+      "matches": {
+        "fact": true
+      }
+    },
+    {
+      "content": "for (int ${1:i} = ${2:length} - 1; ${1:i} >= 0 ; ${1:i}--)\n{\n    $0\n}",
+      "doc": "Reverse for loop",
+      "label": "Reverse for loop",
+      "matches": {
+        "forr": true
+      }
+    },
+    {
+      "content": "foreach (${1:var} ${2:item} in ${3:collection})\n{\n    $0\n}",
+      "doc": "Foreach statement",
+      "label": "Foreach statement",
+      "matches": {
+        "foreach": true
       }
     },
     {
@@ -298,43 +346,11 @@
       }
     },
     {
-      "content": "public ${1:int} ${2:MyProperty} { get; private set; }$0",
-      "doc": "An automatically implemented property with a 'get' accessor and a private 'set' accessor. C# 3.0 or higher",
-      "label": "propg",
+      "content": "public ${1:int} ${2:MyProperty} { get; set; }$0",
+      "doc": "An automatically implemented property. C# 3.0 or higher",
+      "label": "prop",
       "matches": {
-        "propg": true
-      }
-    },
-    {
-      "content": "switch (${1:switch_on})\n{\n    $0\n    default:\n}",
-      "doc": "Switch statement",
-      "label": "Switch statement",
-      "matches": {
-        "switch": true
-      }
-    },
-    {
-      "content": "#region ${1:Name}\n    $0\n#endregion",
-      "doc": "#region",
-      "label": "#region",
-      "matches": {
-        "region": true
-      }
-    },
-    {
-      "content": "private ${1:int} ${2:myVar};\npublic ${1:int} ${3:MyProperty}\n{\n    get { return ${2:myVar}; }\n    set { ${2:myVar} = value; }\n}\n$0",
-      "doc": "Property and backing field",
-      "label": "Property and backing field",
-      "matches": {
-        "propfull": true
-      }
-    },
-    {
-      "content": "interface I${1:Name}\n{\n    $0\n}",
-      "doc": "Interface",
-      "label": "Interface",
-      "matches": {
-        "interface": true
+        "prop": true
       }
     },
     {

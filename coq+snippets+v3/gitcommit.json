@@ -26,14 +26,6 @@
       }
     },
     {
-      "content": "On-behalf-of: ${1:org} <${2:email}>\n$0",
-      "doc": "",
-      "label": "on behalf of",
-      "matches": {
-        "on": true
-      }
-    },
-    {
       "content": "build(${1:scope}): ${2:title}\n\n$0",
       "doc": "",
       "label": "build conventional commit",
@@ -50,22 +42,6 @@
       }
     },
     {
-      "content": "chore(${1:scope}): ${2:title}\n\n$0",
-      "doc": "",
-      "label": "chore conventional commit",
-      "matches": {
-        "chore": true
-      }
-    },
-    {
-      "content": "BREAKING CHANGE: $0",
-      "doc": "",
-      "label": "breaking change conventional commit footer",
-      "matches": {
-        "BREAK": true
-      }
-    },
-    {
       "content": "Signed-off-by: ${1:name} <${2:email}>\n$0",
       "doc": "",
       "label": "signed off by",
@@ -74,11 +50,19 @@
       }
     },
     {
-      "content": "ci(${1:scope}): ${2:title}\n\n$0",
+      "content": "chore(${1:scope}): ${2:title}\n\n$0",
       "doc": "",
-      "label": "ci conventional commit",
+      "label": "chore conventional commit",
       "matches": {
-        "ci": true
+        "chore": true
+      }
+    },
+    {
+      "content": "On-behalf-of: ${1:org} <${2:email}>\n$0",
+      "doc": "",
+      "label": "on behalf of",
+      "matches": {
+        "on": true
       }
     },
     {
@@ -90,11 +74,19 @@
       }
     },
     {
-      "content": "fix(${1:scope}): ${2:title}\n\n$0",
+      "content": "ci(${1:scope}): ${2:title}\n\n$0",
       "doc": "",
-      "label": "fix conventional commit",
+      "label": "ci conventional commit",
       "matches": {
-        "fix": true
+        "ci": true
+      }
+    },
+    {
+      "content": "BREAKING CHANGE: $0",
+      "doc": "",
+      "label": "breaking change conventional commit footer",
+      "matches": {
+        "BREAK": true
       }
     },
     {
@@ -106,11 +98,11 @@
       }
     },
     {
-      "content": "${1:type}(${2:scope}): ${3:title}\n\n$0",
+      "content": "fix(${1:scope}): ${2:title}\n\n$0",
       "doc": "",
-      "label": "conventional commit",
+      "label": "fix conventional commit",
       "matches": {
-        "cc": true
+        "fix": true
       }
     },
     {
@@ -119,6 +111,14 @@
       "label": "style conventional commit",
       "matches": {
         "style": true
+      }
+    },
+    {
+      "content": "${1:type}(${2:scope}): ${3:title}\n\n$0",
+      "doc": "",
+      "label": "conventional commit",
+      "matches": {
+        "cc": true
       }
     },
     {

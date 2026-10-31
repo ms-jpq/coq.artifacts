@@ -2,131 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "OrientationBuilder(\n  builder: (BuildContext context, Orientation orientation) {\n    return Container(\n      child: ${3:child},\n    );\n  },\n),",
-      "doc": "Creates a builder which allows for the orientation of the device to be specified and referenced",
-      "label": "Orientation Builder",
+      "content": "import 'package:flutter/cupertino.dart';\n \nvoid main() => runApp(MyApp());\n \nclass MyApp extends StatelessWidget {\n  @override\n  Widget build(BuildContext context) {\n    return CupertinoApp(\n      title: 'Cupertino App',\n      home: CupertinoPageScaffold(\n        navigationBar: CupertinoNavigationBar(\n          middle: Text('Cupertino App Bar'),\n        ),\n        child: Center(\n          child: Container(\n            child: Text('Hello World'),\n          ),\n        ),\n      ),\n    );\n  }\n}",
+      "doc": "Create a CupertinoApp",
+      "label": "Cupertino App",
       "matches": {
-        "orientationBldr": true
-      }
-    },
-    {
-      "content": "@override\nvoid initState() { \n  super.initState();\n  ${0:}\n}",
-      "doc": "Called when this object is inserted into the tree. The framework will call this method exactly once for each State object it creates.",
-      "label": "InitState ",
-      "matches": {
-        "initS": true
-      }
-    },
-    {
-      "content": "LayoutBuilder(\n  builder: (BuildContext context, BoxConstraints constraints) {\n    return ${0:};\n  },\n),",
-      "doc": "Similar to the Builder widget except that the framework calls the builder function at layout time and provides the parent widget's constraints.",
-      "label": "Layout Builder",
-      "matches": {
-        "layoutBldr": true
-      }
-    },
-    {
-      "content": "ListView.separated(\n  itemCount: ${1:1},\n  separatorBuilder: (BuildContext context, int index) {\n  return ${2:};\n },\n  itemBuilder: (BuildContext context, int index) {\n  return ${3:};\n },\n),",
-      "doc": "Creates a fixed-length scrollable linear array of list 'items' separated by list item 'separators'.",
-      "label": "ListView.Separated",
-      "matches": {
-        "listViewS": true
-      }
-    },
-    {
-      "content": "ValueListenableBuilder(\n    valueListenable: ${1: null},\n    builder: (BuildContext context, ${2:dynamic} value, Widget? child) {\n       return ${3: Container();}\n    },\n ),",
-      "doc": "Given a ValueListenable<T> and a builder which builds widgets from concrete values of T, this class will automatically register itself as a listener of the ValueListenable and call the builder with updated values when the value changes.",
-      "label": "Value Listenable Builder",
-      "matches": {
-        "valueListenableBuilder": true
-      }
-    },
-    {
-      "content": "@override\nvoid dispose() { \n  ${0:}\n  super.dispose();\n}",
-      "doc": "Called when this object is removed from the tree permanently. The framework calls this method when this State object will never build again.",
-      "label": "Dispose",
-      "matches": {
-        "dis": true
-      }
-    },
-    {
-      "content": "SingleChildScrollView(\n  controller: ${1:controller,}\n  child: Column(\n    ${0:}\n  ),\n),",
-      "doc": "Creates a scroll view with a single child",
-      "label": "Single Child ScrollView",
-      "matches": {
-        "singleChildSV": true
-      }
-    },
-    {
-      "content": "GridView.builder(\n  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(\n    crossAxisCount: ${1:2},\n  ),\n  itemCount: ${2:2},\n  itemBuilder: (BuildContext context, int index) {\n    return ${3:};\n  },\n),",
-      "doc": "Creates a scrollable, 2D array of widgets that are created on demand. Providing a non-null `itemCount` improves the ability of the [GridView] to estimate the maximum scroll extent.",
-      "label": "GridView.Builder",
-      "matches": {
-        "gridViewB": true
-      }
-    },
-    {
-      "content": "@override\nvoid reassemble(){\n  super.reassemble();\n  ${0:}\n}",
-      "doc": "Called whenever the application is reassembled during debugging, for example during hot reload.",
-      "label": "Reassemble",
-      "matches": {
-        "reassemble": true
-      }
-    },
-    {
-      "content": "test(\n   \"${1:test description}\",\n   () {},\n);",
-      "doc": "Create a test function",
-      "label": "Test",
-      "matches": {
-        "f-test": true
-      }
-    },
-    {
-      "content": "FutureBuilder(\n  future: ${1:Future},\n  initialData: ${2:InitialData},\n  builder: (BuildContext context, AsyncSnapshot snapshot) {\n    return ${3:};\n  },\n),",
-      "doc": "Creates a Future Builder. This builds itself based on the latest snapshot of interaction with a Future.",
-      "label": "Future Builder",
-      "matches": {
-        "futureBldr": true
-      }
-    },
-    {
-      "content": "@override\nvoid didChangeDependencies() {\n  super.didChangeDependencies();\n  ${0:}\n}",
-      "doc": "Called when a dependency of this State object changes",
-      "label": "didChangeDependencies",
-      "matches": {
-        "didChangeD": true
-      }
-    },
-    {
-      "content": "debugPrint(${1:statement});",
-      "doc": "Prints a message to the console, which you can access using the flutter tool's `logs` command (flutter logs).",
-      "label": "debugPrint",
-      "matches": {
-        "debugP": true
-      }
-    },
-    {
-      "content": "GridView.count(\n  crossAxisSpacing: ${1:1},\n  mainAxisSpacing: ${2:2},\n  crossAxisCount: ${3:2},\n  children: <Widget> [\n    ${4:}\n  ],\n),",
-      "doc": "Creates a scrollable, 2D array of widgets with a fixed number of tiles in the cross axis.",
-      "label": "GridView.Count",
-      "matches": {
-        "gridViewC": true
-      }
-    },
-    {
-      "content": "@override\ndynamic noSuchMethod(Invocation invocation) {\n  ${1:}\n}",
-      "doc": "This method is invoked when a non-existent method or property is accessed.",
-      "label": "No Such Method",
-      "matches": {
-        "nosm": true
-      }
-    },
-    {
-      "content": "import 'package:flutter/material.dart';",
-      "doc": "Import flutter material package",
-      "label": "Material Package",
-      "matches": {
-        "importM": true
+        "cupeapp": true
       }
     },
     {
@@ -138,11 +18,11 @@
       }
     },
     {
-      "content": "class ${1:name} extends StatelessWidget {\n  const ${1:name}({super.key});\n\n  @override\n  Widget build(BuildContext context) {\n    return Container(\n      child: ${2:null},\n    );\n  }\n}",
-      "doc": "Create a Stateless widget",
-      "label": "Stateless Widget",
+      "content": "class ${0:name}Clipper extends CustomClipper<Path> {\n\n  @override\n  Path getClip(Size size) {\n  }\n\n  @override\n  bool shouldReclip(CustomClipper<Path> oldClipper) => false;\n}",
+      "doc": "Used for creating custom shapes",
+      "label": "Custom Clipper ",
       "matches": {
-        "statelessW": true
+        "customClipper": true
       }
     },
     {
@@ -154,19 +34,19 @@
       }
     },
     {
-      "content": "import 'package:flutter/material.dart';\n \nvoid main() => runApp(MyApp());\n \nclass MyApp extends StatelessWidget {\n  @override\n  Widget build(BuildContext context) {\n    return MaterialApp(\n      title: 'Material App',\n      home: Scaffold(\n        appBar: AppBar(\n          title: Text('Material App Bar'),\n        ),\n        body: Center(\n          child: Container(\n            child: Text('Hello World'),\n          ),\n        ),\n      ),\n    );\n  }\n}",
-      "doc": "Create a MaterialApp",
-      "label": "Material App",
+      "content": "TweenAnimationBuilder(\n    duration: ${1:const Duration(),}\n    tween: ${2:Tween(),}\n    builder: (BuildContext context, ${3:dynamic} value, Widget? child) {\n       return ${4:Container();}\n     },\n ),",
+      "doc": "Widget builder that animates a property of a Widget to a target value whenever the target value changes.",
+      "label": "Tween Animation Builder",
       "matches": {
-        "mateapp": true
+        "tweenAnimationBuilder": true
       }
     },
     {
-      "content": "@override\nbool get mounted {\n  ${0:}\n}",
-      "doc": "Whether this State object is currently in a tree.",
-      "label": "Mounted",
+      "content": "@override\nvoid initState() { \n  super.initState();\n  ${0:}\n}",
+      "doc": "Called when this object is inserted into the tree. The framework will call this method exactly once for each State object it creates.",
+      "label": "InitState ",
       "matches": {
-        "mounted": true
+        "initS": true
       }
     },
     {
@@ -175,14 +55,6 @@
       "label": "Custom Scroll View",
       "matches": {
         "customScrollV": true
-      }
-    },
-    {
-      "content": "class ${1:name} extends StatefulWidget {\n  ${1:name}({super.key});\n\n  @override\n  State<${1:WidgetName}> createState() => _${1:WidgetName}State();\n}\n\nclass _${1:index}State extends State<${1:index}> {\n  @override\n  Widget build(BuildContext context) {\n    return Container(\n       child: ${2:null},\n    );\n  }\n}",
-      "doc": "Create a Stateful widget",
-      "label": "Stateful Widget",
-      "matches": {
-        "statefulW": true
       }
     },
     {
@@ -210,19 +82,11 @@
       }
     },
     {
-      "content": "testWidgets(\n   \"${1:test description}\",\n   (WidgetTester tester) async {},\n);",
-      "doc": "Create a testWidgets function",
-      "label": "Test Widgets",
+      "content": "@override\nvoid reassemble(){\n  super.reassemble();\n  ${0:}\n}",
+      "doc": "Called whenever the application is reassembled during debugging, for example during hot reload.",
+      "label": "Reassemble",
       "matches": {
-        "widgetTest": true
-      }
-    },
-    {
-      "content": "@override\nWidget build(BuildContext context) {\n  return ${0:};\n}",
-      "doc": "Describes the part of the user interface represented by this widget.",
-      "label": "Build Method",
-      "matches": {
-        "build": true
+        "reassemble": true
       }
     },
     {
@@ -242,35 +106,11 @@
       }
     },
     {
-      "content": "import 'package:flutter/cupertino.dart';\n \nvoid main() => runApp(MyApp());\n \nclass MyApp extends StatelessWidget {\n  @override\n  Widget build(BuildContext context) {\n    return CupertinoApp(\n      title: 'Cupertino App',\n      home: CupertinoPageScaffold(\n        navigationBar: CupertinoNavigationBar(\n          middle: Text('Cupertino App Bar'),\n        ),\n        child: Center(\n          child: Container(\n            child: Text('Hello World'),\n          ),\n        ),\n      ),\n    );\n  }\n}",
-      "doc": "Create a CupertinoApp",
-      "label": "Cupertino App",
+      "content": "@override\nvoid didChangeDependencies() {\n  super.didChangeDependencies();\n  ${0:}\n}",
+      "doc": "Called when a dependency of this State object changes",
+      "label": "didChangeDependencies",
       "matches": {
-        "cupeapp": true
-      }
-    },
-    {
-      "content": "TweenAnimationBuilder(\n    duration: ${1:const Duration(),}\n    tween: ${2:Tween(),}\n    builder: (BuildContext context, ${3:dynamic} value, Widget? child) {\n       return ${4:Container();}\n     },\n ),",
-      "doc": "Widget builder that animates a property of a Widget to a target value whenever the target value changes.",
-      "label": "Tween Animation Builder",
-      "matches": {
-        "tweenAnimationBuilder": true
-      }
-    },
-    {
-      "content": "class ${0:name}Painter extends CustomPainter {\n\n  @override\n  void paint(Canvas canvas, Size size) {\n  }\n\n  @override\n  bool shouldRepaint(${0:name}Painter oldDelegate) => false;\n\n  @override\n  bool shouldRebuildSemantics(${0:name}Painter oldDelegate) => false;\n}",
-      "doc": "Used for creating custom paint",
-      "label": "Custom Painter ",
-      "matches": {
-        "customPainter": true
-      }
-    },
-    {
-      "content": "import 'package:flutter_test/flutter_test.dart';",
-      "doc": "Import flutter_test package",
-      "label": "flutter_test Package",
-      "matches": {
-        "importFT": true
+        "didChangeD": true
       }
     },
     {
@@ -282,27 +122,11 @@
       }
     },
     {
-      "content": "import 'package:flutter/cupertino.dart';",
-      "doc": "Import Flutter Cupertino package",
-      "label": "Cupertino Package",
+      "content": "test(\n   \"${1:test description}\",\n   () {},\n);",
+      "doc": "Create a test function",
+      "label": "Test",
       "matches": {
-        "importC": true
-      }
-    },
-    {
-      "content": "StatefulBuilder(\n  builder: (BuildContext context, setState) {\n    return ${0:};\n  },\n),",
-      "doc": "Creates a widget that both has state and delegates its build to a callback. Useful for rebuilding specific sections of the widget tree.",
-      "label": "Stateful Builder",
-      "matches": {
-        "statefulBldr": true
-      }
-    },
-    {
-      "content": "class ${0:name}Clipper extends CustomClipper<Path> {\n\n  @override\n  Path getClip(Size size) {\n  }\n\n  @override\n  bool shouldReclip(CustomClipper<Path> oldClipper) => false;\n}",
-      "doc": "Used for creating custom shapes",
-      "label": "Custom Clipper ",
-      "matches": {
-        "customClipper": true
+        "f-test": true
       }
     },
     {
@@ -314,11 +138,187 @@
       }
     },
     {
+      "content": "StatefulBuilder(\n  builder: (BuildContext context, setState) {\n    return ${0:};\n  },\n),",
+      "doc": "Creates a widget that both has state and delegates its build to a callback. Useful for rebuilding specific sections of the widget tree.",
+      "label": "Stateful Builder",
+      "matches": {
+        "statefulBldr": true
+      }
+    },
+    {
+      "content": "debugPrint(${1:statement});",
+      "doc": "Prints a message to the console, which you can access using the flutter tool's `logs` command (flutter logs).",
+      "label": "debugPrint",
+      "matches": {
+        "debugP": true
+      }
+    },
+    {
       "content": "ListView.builder(\n  itemCount: ${1:1},\n  itemBuilder: (BuildContext context, int index) {\n  return ${2:};\n },\n),",
       "doc": "Creates a scrollable, linear array of widgets that are created on demand.Providing a non-null `itemCount` improves the ability of the [ListView] to estimate the maximum scroll extent.",
       "label": "ListView.Builder",
       "matches": {
         "listViewB": true
+      }
+    },
+    {
+      "content": "import 'package:flutter/material.dart';",
+      "doc": "Import flutter material package",
+      "label": "Material Package",
+      "matches": {
+        "importM": true
+      }
+    },
+    {
+      "content": "OrientationBuilder(\n  builder: (BuildContext context, Orientation orientation) {\n    return Container(\n      child: ${3:child},\n    );\n  },\n),",
+      "doc": "Creates a builder which allows for the orientation of the device to be specified and referenced",
+      "label": "Orientation Builder",
+      "matches": {
+        "orientationBldr": true
+      }
+    },
+    {
+      "content": "class ${1:name} extends StatelessWidget {\n  const ${1:name}({super.key});\n\n  @override\n  Widget build(BuildContext context) {\n    return Container(\n      child: ${2:null},\n    );\n  }\n}",
+      "doc": "Create a Stateless widget",
+      "label": "Stateless Widget",
+      "matches": {
+        "statelessW": true
+      }
+    },
+    {
+      "content": "import 'package:flutter/cupertino.dart';",
+      "doc": "Import Flutter Cupertino package",
+      "label": "Cupertino Package",
+      "matches": {
+        "importC": true
+      }
+    },
+    {
+      "content": "LayoutBuilder(\n  builder: (BuildContext context, BoxConstraints constraints) {\n    return ${0:};\n  },\n),",
+      "doc": "Similar to the Builder widget except that the framework calls the builder function at layout time and provides the parent widget's constraints.",
+      "label": "Layout Builder",
+      "matches": {
+        "layoutBldr": true
+      }
+    },
+    {
+      "content": "ListView.separated(\n  itemCount: ${1:1},\n  separatorBuilder: (BuildContext context, int index) {\n  return ${2:};\n },\n  itemBuilder: (BuildContext context, int index) {\n  return ${3:};\n },\n),",
+      "doc": "Creates a fixed-length scrollable linear array of list 'items' separated by list item 'separators'.",
+      "label": "ListView.Separated",
+      "matches": {
+        "listViewS": true
+      }
+    },
+    {
+      "content": "SingleChildScrollView(\n  controller: ${1:controller,}\n  child: Column(\n    ${0:}\n  ),\n),",
+      "doc": "Creates a scroll view with a single child",
+      "label": "Single Child ScrollView",
+      "matches": {
+        "singleChildSV": true
+      }
+    },
+    {
+      "content": "class ${1:name} extends StatefulWidget {\n  ${1:name}({super.key});\n\n  @override\n  State<${1:WidgetName}> createState() => _${1:WidgetName}State();\n}\n\nclass _${1:index}State extends State<${1:index}> {\n  @override\n  Widget build(BuildContext context) {\n    return Container(\n       child: ${2:null},\n    );\n  }\n}",
+      "doc": "Create a Stateful widget",
+      "label": "Stateful Widget",
+      "matches": {
+        "statefulW": true
+      }
+    },
+    {
+      "content": "GridView.builder(\n  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(\n    crossAxisCount: ${1:2},\n  ),\n  itemCount: ${2:2},\n  itemBuilder: (BuildContext context, int index) {\n    return ${3:};\n  },\n),",
+      "doc": "Creates a scrollable, 2D array of widgets that are created on demand. Providing a non-null `itemCount` improves the ability of the [GridView] to estimate the maximum scroll extent.",
+      "label": "GridView.Builder",
+      "matches": {
+        "gridViewB": true
+      }
+    },
+    {
+      "content": "testWidgets(\n   \"${1:test description}\",\n   (WidgetTester tester) async {},\n);",
+      "doc": "Create a testWidgets function",
+      "label": "Test Widgets",
+      "matches": {
+        "widgetTest": true
+      }
+    },
+    {
+      "content": "ValueListenableBuilder(\n    valueListenable: ${1: null},\n    builder: (BuildContext context, ${2:dynamic} value, Widget? child) {\n       return ${3: Container();}\n    },\n ),",
+      "doc": "Given a ValueListenable<T> and a builder which builds widgets from concrete values of T, this class will automatically register itself as a listener of the ValueListenable and call the builder with updated values when the value changes.",
+      "label": "Value Listenable Builder",
+      "matches": {
+        "valueListenableBuilder": true
+      }
+    },
+    {
+      "content": "FutureBuilder(\n  future: ${1:Future},\n  initialData: ${2:InitialData},\n  builder: (BuildContext context, AsyncSnapshot snapshot) {\n    return ${3:};\n  },\n),",
+      "doc": "Creates a Future Builder. This builds itself based on the latest snapshot of interaction with a Future.",
+      "label": "Future Builder",
+      "matches": {
+        "futureBldr": true
+      }
+    },
+    {
+      "content": "import 'package:flutter/material.dart';\n \nvoid main() => runApp(MyApp());\n \nclass MyApp extends StatelessWidget {\n  @override\n  Widget build(BuildContext context) {\n    return MaterialApp(\n      title: 'Material App',\n      home: Scaffold(\n        appBar: AppBar(\n          title: Text('Material App Bar'),\n        ),\n        body: Center(\n          child: Container(\n            child: Text('Hello World'),\n          ),\n        ),\n      ),\n    );\n  }\n}",
+      "doc": "Create a MaterialApp",
+      "label": "Material App",
+      "matches": {
+        "mateapp": true
+      }
+    },
+    {
+      "content": "import 'package:flutter_test/flutter_test.dart';",
+      "doc": "Import flutter_test package",
+      "label": "flutter_test Package",
+      "matches": {
+        "importFT": true
+      }
+    },
+    {
+      "content": "@override\nWidget build(BuildContext context) {\n  return ${0:};\n}",
+      "doc": "Describes the part of the user interface represented by this widget.",
+      "label": "Build Method",
+      "matches": {
+        "build": true
+      }
+    },
+    {
+      "content": "@override\nvoid dispose() { \n  ${0:}\n  super.dispose();\n}",
+      "doc": "Called when this object is removed from the tree permanently. The framework calls this method when this State object will never build again.",
+      "label": "Dispose",
+      "matches": {
+        "dis": true
+      }
+    },
+    {
+      "content": "GridView.count(\n  crossAxisSpacing: ${1:1},\n  mainAxisSpacing: ${2:2},\n  crossAxisCount: ${3:2},\n  children: <Widget> [\n    ${4:}\n  ],\n),",
+      "doc": "Creates a scrollable, 2D array of widgets with a fixed number of tiles in the cross axis.",
+      "label": "GridView.Count",
+      "matches": {
+        "gridViewC": true
+      }
+    },
+    {
+      "content": "@override\ndynamic noSuchMethod(Invocation invocation) {\n  ${1:}\n}",
+      "doc": "This method is invoked when a non-existent method or property is accessed.",
+      "label": "No Such Method",
+      "matches": {
+        "nosm": true
+      }
+    },
+    {
+      "content": "class ${0:name}Painter extends CustomPainter {\n\n  @override\n  void paint(Canvas canvas, Size size) {\n  }\n\n  @override\n  bool shouldRepaint(${0:name}Painter oldDelegate) => false;\n\n  @override\n  bool shouldRebuildSemantics(${0:name}Painter oldDelegate) => false;\n}",
+      "doc": "Used for creating custom paint",
+      "label": "Custom Painter ",
+      "matches": {
+        "customPainter": true
+      }
+    },
+    {
+      "content": "@override\nbool get mounted {\n  ${0:}\n}",
+      "doc": "Whether this State object is currently in a tree.",
+      "label": "Mounted",
+      "matches": {
+        "mounted": true
       }
     }
   ]

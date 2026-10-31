@@ -2,6 +2,14 @@
   "extends": [],
   "snippets": [
     {
+      "content": "fontWeight: '${1:normal}',",
+      "doc": "fontWeight",
+      "label": "fontWeight",
+      "matches": {
+        "fo": true
+      }
+    },
+    {
       "content": "marginBottom: ${1},",
       "doc": "marginBottom",
       "label": "marginBottom",
@@ -34,11 +42,19 @@
       }
     },
     {
-      "content": "import { View } from 'react-native';\n\n// import { Container } from './styles';\n\nconst ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}} = () => <View />;\n\nexport default ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}};",
-      "doc": "Create React Native Stateless Component",
-      "label": "statelessComponent",
+      "content": "import { View } from 'react-native';\n\n// import { Container } from './styles';\n\nexport default function ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}}() {\n  return (\n    <View />\n  );\n}",
+      "doc": "Create React Native Functional Component",
+      "label": "componentFunctional",
       "matches": {
-        "rnsc": true
+        "rnfc": true
+      }
+    },
+    {
+      "content": "marginTop: ${1},",
+      "doc": "marginTop",
+      "label": "marginTop",
+      "matches": {
+        "mar": true
       }
     },
     {
@@ -58,19 +74,11 @@
       }
     },
     {
-      "content": "import { View } from 'react-native';\n\n// import { Container } from './styles';\n\nexport default function ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}}() {\n  return (\n    <View />\n  );\n}",
-      "doc": "Create React Native Functional Component",
-      "label": "componentFunctional",
+      "content": "import { View } from 'react-native';\n\n// import { Container } from './styles';\n\nconst ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}}: React.FC = () => {\n  return <View />;\n}\n\nexport default ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}};",
+      "doc": "Create React Native TypeScript Functional Component",
+      "label": "componentFunctionalTypescript",
       "matches": {
-        "rnfc": true
-      }
-    },
-    {
-      "content": "maxWidth: ${1},",
-      "doc": "maxWidth",
-      "label": "maxWidth",
-      "matches": {
-        "max": true
+        "rnfcc": true
       }
     },
     {
@@ -90,27 +98,11 @@
       }
     },
     {
-      "content": "import { View } from 'react-native';\n\n// import { Container } from './styles';\n\nconst ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}}: React.FC = () => {\n  return <View />;\n}\n\nexport default ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}};",
-      "doc": "Create React Native TypeScript Functional Component",
-      "label": "componentFunctionalTypescript",
+      "content": "opacity: ${1},",
+      "doc": "opacity",
+      "label": "opacity",
       "matches": {
-        "rnfcc": true
-      }
-    },
-    {
-      "content": "padding: ${1},",
-      "doc": "padding",
-      "label": "padding",
-      "matches": {
-        "padding": true
-      }
-    },
-    {
-      "content": "import styled from 'styled-components/native';\n\nexport const ${1:Container} = styled.${2:View}`\n  ${3}\n`;",
-      "doc": "Create React Native Styled Components file",
-      "label": "styles",
-      "matches": {
-        "styled-rn": true
+        "op": true
       }
     },
     {
@@ -154,14 +146,6 @@
       }
     },
     {
-      "content": "const ${1:styles} = StyleSheet.create({\n    ${2:container}: {\n        ${3}\n    },\n});",
-      "doc": "Create React Native Styled Components StyleSheet",
-      "label": "StyleSheet",
-      "matches": {
-        "rn-stylesheet": true
-      }
-    },
-    {
       "content": "paddingVertical: ${1},",
       "doc": "paddingVertical",
       "label": "paddingVertical",
@@ -170,27 +154,19 @@
       }
     },
     {
-      "content": "width: ${1},",
-      "doc": "width",
-      "label": "width",
+      "content": "const ${1:styles} = StyleSheet.create({\n    ${2:container}: {\n        ${3}\n    },\n});",
+      "doc": "Create React Native Styled Components StyleSheet",
+      "label": "StyleSheet",
       "matches": {
-        "w": true
+        "rn-stylesheet": true
       }
     },
     {
-      "content": "right: ${1},",
-      "doc": "right",
-      "label": "right",
+      "content": "margin: '${1}',",
+      "doc": "margin",
+      "label": "margin",
       "matches": {
-        "ri": true
-      }
-    },
-    {
-      "content": "top: ${1},",
-      "doc": "top",
-      "label": "top",
-      "matches": {
-        "top": true
+        "mar": true
       }
     },
     {
@@ -218,6 +194,22 @@
       }
     },
     {
+      "content": "//#region ${1}\n${2}\n//#endregion",
+      "doc": "Create region",
+      "label": "regionStartEnd",
+      "matches": {
+        "#regionStartEnd": true
+      }
+    },
+    {
+      "content": "right: ${1},",
+      "doc": "right",
+      "label": "right",
+      "matches": {
+        "ri": true
+      }
+    },
+    {
       "content": "alignContent: '${1}',",
       "doc": "alignContent",
       "label": "alignContent",
@@ -226,11 +218,19 @@
       }
     },
     {
-      "content": "aspectRatio: '${1}',",
-      "doc": "aspectRatio",
-      "label": "aspectRatio",
+      "content": "height: ${1},",
+      "doc": "height",
+      "label": "height",
       "matches": {
-        "as": true
+        "h": true
+      }
+    },
+    {
+      "content": "display: '${1:none}',",
+      "doc": "display",
+      "label": "display",
+      "matches": {
+        "di": true
       }
     },
     {
@@ -242,11 +242,11 @@
       }
     },
     {
-      "content": "//#region ${1}\n${2}\n//#endregion",
-      "doc": "Create region",
-      "label": "regionStartEnd",
+      "content": "width: ${1},",
+      "doc": "width",
+      "label": "width",
       "matches": {
-        "#regionStartEnd": true
+        "w": true
       }
     },
     {
@@ -298,6 +298,14 @@
       }
     },
     {
+      "content": "overflow: '${1}',",
+      "doc": "overflow",
+      "label": "overflow",
+      "matches": {
+        "over": true
+      }
+    },
+    {
       "content": "borderLeftColor: ${1},",
       "doc": "borderLeftColor",
       "label": "borderLeftColor",
@@ -346,11 +354,27 @@
       }
     },
     {
+      "content": "import axios from 'axios';\n\nconst api = axios.create({\n  baseURL: ${1},\n});\n\nexport default api;",
+      "doc": "Create Axios Configuration file",
+      "label": "api",
+      "matches": {
+        "api": true
+      }
+    },
+    {
       "content": "borderTopLeftRadius: ${1},",
       "doc": "borderTopLeftRadius",
       "label": "borderTopLeftRadius",
       "matches": {
         "bor": true
+      }
+    },
+    {
+      "content": "top: ${1},",
+      "doc": "top",
+      "label": "top",
+      "matches": {
+        "top": true
       }
     },
     {
@@ -367,14 +391,6 @@
       "label": "backgroundColor",
       "matches": {
         "bac": true
-      }
-    },
-    {
-      "content": "opacity: ${1},",
-      "doc": "opacity",
-      "label": "opacity",
-      "matches": {
-        "op": true
       }
     },
     {
@@ -410,83 +426,19 @@
       }
     },
     {
+      "content": "left: ${1},",
+      "doc": "left",
+      "label": "left",
+      "matches": {
+        "l": true
+      }
+    },
+    {
       "content": "elevation: ${1},",
       "doc": "elevation",
       "label": "elevation",
       "matches": {
         "e": true
-      }
-    },
-    {
-      "content": "flex: ${1},",
-      "doc": "flex",
-      "label": "flex",
-      "matches": {
-        "flex": true
-      }
-    },
-    {
-      "content": "flexBasis: '${1}',",
-      "doc": "flexBasis",
-      "label": "flexBasis",
-      "matches": {
-        "flex": true
-      }
-    },
-    {
-      "content": "flexDirection: '${1:column}',",
-      "doc": "flexDirection",
-      "label": "flexDirection",
-      "matches": {
-        "flex": true
-      }
-    },
-    {
-      "content": "flexGrow: '${1}',",
-      "doc": "flexGrow",
-      "label": "flexGrow",
-      "matches": {
-        "flex": true
-      }
-    },
-    {
-      "content": "flexShrink: '${1}',",
-      "doc": "flexShrink",
-      "label": "flexShrink",
-      "matches": {
-        "flex": true
-      }
-    },
-    {
-      "content": "flexWrap: '${1}',",
-      "doc": "flexWrap",
-      "label": "flexWrap",
-      "matches": {
-        "flex": true
-      }
-    },
-    {
-      "content": "//#region ${1}\n${2}\n//#endregion",
-      "doc": "Create region",
-      "label": "region",
-      "matches": {
-        "region": true
-      }
-    },
-    {
-      "content": "fontSize: ${1},",
-      "doc": "fontSize",
-      "label": "fontSize",
-      "matches": {
-        "fo": true
-      }
-    },
-    {
-      "content": "import axios from 'axios';\n\nconst api = axios.create({\n  baseURL: ${1},\n});\n\nexport default api;",
-      "doc": "Create Axios Configuration file",
-      "label": "api",
-      "matches": {
-        "api": true
       }
     },
     {
@@ -498,14 +450,6 @@
       }
     },
     {
-      "content": "fontStyle: '${1:normal}',",
-      "doc": "fontStyle",
-      "label": "fontStyle",
-      "matches": {
-        "fo": true
-      }
-    },
-    {
       "content": "position: ${1},",
       "doc": "position",
       "label": "position",
@@ -514,35 +458,43 @@
       }
     },
     {
-      "content": "fontFamily: '${1}',",
-      "doc": "fontFamily",
-      "label": "fontFamily",
+      "content": "flexBasis: '${1}',",
+      "doc": "flexBasis",
+      "label": "flexBasis",
       "matches": {
-        "fo": true
+        "flex": true
       }
     },
     {
-      "content": "overflow: '${1}',",
-      "doc": "overflow",
-      "label": "overflow",
+      "content": "aspectRatio: '${1}',",
+      "doc": "aspectRatio",
+      "label": "aspectRatio",
       "matches": {
-        "over": true
+        "as": true
       }
     },
     {
-      "content": "fontWeight: '${1:normal}',",
-      "doc": "fontWeight",
-      "label": "fontWeight",
+      "content": "flexDirection: '${1:column}',",
+      "doc": "flexDirection",
+      "label": "flexDirection",
       "matches": {
-        "fo": true
+        "flex": true
       }
     },
     {
-      "content": "height: ${1},",
-      "doc": "height",
-      "label": "height",
+      "content": "import styled from 'styled-components/native';\n\nexport const ${1:Container} = styled.${2:View}`\n  ${3}\n`;",
+      "doc": "Create React Native Styled Components file",
+      "label": "styles",
       "matches": {
-        "h": true
+        "styled-rn": true
+      }
+    },
+    {
+      "content": "flexGrow: '${1}',",
+      "doc": "flexGrow",
+      "label": "flexGrow",
+      "matches": {
+        "flex": true
       }
     },
     {
@@ -554,35 +506,83 @@
       }
     },
     {
-      "content": "left: ${1},",
-      "doc": "left",
-      "label": "left",
+      "content": "flexShrink: '${1}',",
+      "doc": "flexShrink",
+      "label": "flexShrink",
       "matches": {
-        "l": true
+        "flex": true
       }
     },
     {
-      "content": "display: '${1:none}',",
-      "doc": "display",
-      "label": "display",
+      "content": "import { View } from 'react-native';\n\n// import { Container } from './styles';\n\nconst ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}} = () => <View />;\n\nexport default ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}};",
+      "doc": "Create React Native Stateless Component",
+      "label": "statelessComponent",
       "matches": {
-        "di": true
+        "rnsc": true
       }
     },
     {
-      "content": "margin: '${1}',",
-      "doc": "margin",
-      "label": "margin",
+      "content": "flexWrap: '${1}',",
+      "doc": "flexWrap",
+      "label": "flexWrap",
       "matches": {
-        "mar": true
+        "flex": true
       }
     },
     {
-      "content": "marginTop: ${1},",
-      "doc": "marginTop",
-      "label": "marginTop",
+      "content": "flex: ${1},",
+      "doc": "flex",
+      "label": "flex",
       "matches": {
-        "mar": true
+        "flex": true
+      }
+    },
+    {
+      "content": "fontSize: ${1},",
+      "doc": "fontSize",
+      "label": "fontSize",
+      "matches": {
+        "fo": true
+      }
+    },
+    {
+      "content": "maxWidth: ${1},",
+      "doc": "maxWidth",
+      "label": "maxWidth",
+      "matches": {
+        "max": true
+      }
+    },
+    {
+      "content": "//#region ${1}\n${2}\n//#endregion",
+      "doc": "Create region",
+      "label": "region",
+      "matches": {
+        "region": true
+      }
+    },
+    {
+      "content": "fontStyle: '${1:normal}',",
+      "doc": "fontStyle",
+      "label": "fontStyle",
+      "matches": {
+        "fo": true
+      }
+    },
+    {
+      "content": "padding: ${1},",
+      "doc": "padding",
+      "label": "padding",
+      "matches": {
+        "padding": true
+      }
+    },
+    {
+      "content": "fontFamily: '${1}',",
+      "doc": "fontFamily",
+      "label": "fontFamily",
+      "matches": {
+        "fo": true
       }
     }
   ]

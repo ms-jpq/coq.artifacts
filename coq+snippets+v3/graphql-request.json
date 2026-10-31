@@ -10,6 +10,14 @@
       }
     },
     {
+      "content": "const ${1:results} = await ${2:client}.request(\n  ${3:query},\n  ${4:variables}\n);",
+      "doc": "",
+      "label": "graphql-request-client-request-variables",
+      "matches": {
+        "graphql-request client request variables": true
+      }
+    },
+    {
       "content": "const ${1:results} = await request(\n  ${2:url},\n  ${3:query}\n);",
       "doc": "",
       "label": "graphql-request-request",
@@ -23,14 +31,6 @@
       "label": "graphql-request-require-request",
       "matches": {
         "graphql-request require request": true
-      }
-    },
-    {
-      "content": "const ${1:results} = await request(\n  ${2:url},\n  ${3:query},\n  ${4:variables}\n);",
-      "doc": "",
-      "label": "graphql-request-request-variables",
-      "matches": {
-        "graphql-request request variables": true
       }
     },
     {
@@ -50,11 +50,11 @@
       }
     },
     {
-      "content": "const ${1:results} = await ${2:client}.request(\n  ${3:query},\n  ${4:variables}\n);",
+      "content": "const ${1:queryName} = `query ${1:queryName} {\n  ${2:query}\n}\n`;",
       "doc": "",
-      "label": "graphql-request-client-request-variables",
+      "label": "graphql-request-query",
       "matches": {
-        "graphql-request client request variables": true
+        "graphql-request query": true
       }
     },
     {
@@ -74,11 +74,11 @@
       }
     },
     {
-      "content": "const ${1:queryName} = `query ${1:queryName} {\n  ${2:query}\n}\n`;",
+      "content": "const ${1:results} = await request(\n  ${2:url},\n  ${3:query},\n  ${4:variables}\n);",
       "doc": "",
-      "label": "graphql-request-query",
+      "label": "graphql-request-request-variables",
       "matches": {
-        "graphql-request query": true
+        "graphql-request request variables": true
       }
     }
   ]

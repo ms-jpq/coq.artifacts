@@ -10,19 +10,19 @@
       }
     },
     {
-      "content": "goback returning ${1:0}",
-      "doc": "goback returning [0]",
-      "label": "gr0",
-      "matches": {
-        "gr0": true
-      }
-    },
-    {
       "content": "stop run returning ${1:0}",
       "doc": "stop run returing [0]",
       "label": "sr0",
       "matches": {
         "sr0": true
+      }
+    },
+    {
+      "content": "goback returning ${1:0}",
+      "doc": "goback returning [0]",
+      "label": "gr0",
+      "matches": {
+        "gr0": true
       }
     }
   ]

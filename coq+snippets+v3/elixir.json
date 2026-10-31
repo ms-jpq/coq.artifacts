@@ -4,6 +4,30 @@
   ],
   "snippets": [
     {
+      "content": "@doc \"\"\"\n${1:doc}\n\"\"\"\ndef ${2:name} do\n  $0\nend",
+      "doc": "",
+      "label": "def + doc",
+      "matches": {
+        "defd": true
+      }
+    },
+    {
+      "content": "~w($0)a",
+      "doc": "",
+      "label": "atom list",
+      "matches": {
+        "al": true
+      }
+    },
+    {
+      "content": "do\n  $0\nend",
+      "doc": "",
+      "label": "do",
+      "matches": {
+        "do": true
+      }
+    },
+    {
       "content": "def ${1:name}(), do: $0",
       "doc": "Define a one-liner function",
       "label": "df",
@@ -12,19 +36,27 @@
       }
     },
     {
-      "content": "@moduledoc ~S\"\"\"\n$0\n\"\"\"",
+      "content": "cond do\n  $1 -> \n  $0\nend",
       "doc": "",
-      "label": "moduledoc s",
+      "label": "cond",
       "matches": {
-        "mdocs": true
+        "cond": true
       }
     },
     {
-      "content": "@moduledoc false",
+      "content": "@doc ~S\"\"\"\n$0\n\"\"\"",
       "doc": "",
-      "label": "moduledoc false",
+      "label": "doc s",
       "matches": {
-        "mdocf": true
+        "docs": true
+      }
+    },
+    {
+      "content": "test \"${1:name}\" do\n  $0\nend",
+      "doc": "",
+      "label": "test",
+      "matches": {
+        "test": true
       }
     },
     {
@@ -36,11 +68,27 @@
       }
     },
     {
-      "content": "describe \"${1:test group subject}\" do\n  $0\nend",
+      "content": "@moduledoc \"\"\"\n$0\n\"\"\"",
       "doc": "",
-      "label": "des",
+      "label": "moduledoc",
       "matches": {
-        "desc": true
+        "mdoc": true
+      }
+    },
+    {
+      "content": "@moduledoc ~S\"\"\"\n$0\n\"\"\"",
+      "doc": "",
+      "label": "moduledoc s",
+      "matches": {
+        "mdocs": true
+      }
+    },
+    {
+      "content": "require ${0:Logger}",
+      "doc": "",
+      "label": "require",
+      "matches": {
+        "req": true
       }
     },
     {
@@ -52,19 +100,27 @@
       }
     },
     {
-      "content": "require IEx; IEx.pry\n$0",
-      "doc": "",
-      "label": "IEx.pry",
+      "content": "defp ${1:name}(${2:args}) do\n  $0\nend",
+      "doc": "Define a private function with arguments",
+      "label": "defpa",
       "matches": {
-        "pry": true
+        "defpa": true
       }
     },
     {
-      "content": "|> $0",
-      "doc": "",
-      "label": "pipe char",
+      "content": "def ${1:name}() do\n  $0\nend",
+      "doc": "Define a function",
+      "label": "def",
       "matches": {
-        "p": true
+        "def": true
+      }
+    },
+    {
+      "content": "def ${1:name}(${2:args}), do: $0",
+      "doc": "Define a one-liner function with arguments",
+      "label": "dfa",
+      "matches": {
+        "dfa": true
       }
     },
     {
@@ -76,11 +132,19 @@
       }
     },
     {
-      "content": "|> Enum.each($0)",
+      "content": "~w($0)",
       "doc": "",
-      "label": "pipe into each",
+      "label": "word list",
       "matches": {
-        ">e": true
+        "wl": true
+      }
+    },
+    {
+      "content": "@moduledoc false",
+      "doc": "",
+      "label": "moduledoc false",
+      "matches": {
+        "mdocf": true
       }
     },
     {
@@ -92,11 +156,11 @@
       }
     },
     {
-      "content": "|> Enum.map($0)",
+      "content": "IO.inspect($1, label: \"$0\")",
       "doc": "",
-      "label": "pipe into map",
+      "label": "IO.inspect with label",
       "matches": {
-        ">m": true
+        "insl": true
       }
     },
     {
@@ -108,19 +172,43 @@
       }
     },
     {
-      "content": "IO.inspect($1, label: \"$0\")",
+      "content": "case $1 do\n  $2 -> \n    $0\nend",
       "doc": "",
-      "label": "IO.inspect with label",
+      "label": "case",
       "matches": {
-        "insl": true
+        "case": true
       }
     },
     {
-      "content": "cond do\n  $1 -> \n  $0\nend",
+      "content": "describe \"${1:test group subject}\" do\n  $0\nend",
       "doc": "",
-      "label": "cond",
+      "label": "des",
       "matches": {
-        "cond": true
+        "desc": true
+      }
+    },
+    {
+      "content": "|> Enum.map($0)",
+      "doc": "",
+      "label": "pipe into map",
+      "matches": {
+        ">m": true
+      }
+    },
+    {
+      "content": "require IEx; IEx.pry\n$0",
+      "doc": "",
+      "label": "IEx.pry",
+      "matches": {
+        "pry": true
+      }
+    },
+    {
+      "content": "if ${1:condition} do\n  $0\nend",
+      "doc": "",
+      "label": "if .. do .. end",
+      "matches": {
+        "if": true
       }
     },
     {
@@ -140,11 +228,19 @@
       }
     },
     {
-      "content": "~w($0)",
+      "content": "|> $0",
       "doc": "",
-      "label": "word list",
+      "label": "pipe char",
       "matches": {
-        "wl": true
+        "p": true
+      }
+    },
+    {
+      "content": "|> Enum.each($0)",
+      "doc": "",
+      "label": "pipe into each",
+      "matches": {
+        ">e": true
       }
     },
     {
@@ -156,6 +252,14 @@
       }
     },
     {
+      "content": "@spec ${1:name}(${2:args}) :: ${3:no_return}\ndef $1(${4:args}) do\n  $0\nend",
+      "doc": "",
+      "label": "def + spec",
+      "matches": {
+        "defs": true
+      }
+    },
+    {
       "content": "if ${1:condition}, do: $2, else: $0",
       "doc": "",
       "label": "if .. do: .. else:",
@@ -164,67 +268,19 @@
       }
     },
     {
-      "content": "require ${0:Logger}",
-      "doc": "",
-      "label": "require",
+      "content": "def ${1:name}(${2:args}) do\n  $0\nend",
+      "doc": "Define a function with arguments",
+      "label": "defa",
       "matches": {
-        "req": true
+        "defa": true
       }
     },
     {
-      "content": "test \"${1:name}\" do\n  $0\nend",
-      "doc": "",
-      "label": "test",
-      "matches": {
-        "test": true
-      }
-    },
-    {
-      "content": "@doc \"\"\"\n${1:doc}\n\"\"\"\ndef ${2:name} do\n  $0\nend",
-      "doc": "",
-      "label": "def + doc",
-      "matches": {
-        "defd": true
-      }
-    },
-    {
-      "content": "case $1 do\n  $2 -> \n    $0\nend",
-      "doc": "",
-      "label": "case",
-      "matches": {
-        "case": true
-      }
-    },
-    {
-      "content": "@spec ${1:name}(${2:args}) :: ${3:no_return}\ndef $1{4:args} do\n  $0\nend",
-      "doc": "",
-      "label": "def + spec",
-      "matches": {
-        "defs": true
-      }
-    },
-    {
-      "content": "@doc \"\"\"\n${1:doc}\n\"\"\"\n@spec ${2:name}(${3:args}) :: ${4:no_return}\ndef $2{5:args} do\n  $0\nend",
+      "content": "@doc \"\"\"\n${1:doc}\n\"\"\"\n@spec ${2:name}(${3:args}) :: ${4:no_return}\ndef $2({5:args}) do\n  $0\nend",
       "doc": "",
       "label": "def + doc + spec",
       "matches": {
         "defsd": true
-      }
-    },
-    {
-      "content": "~w($0)a",
-      "doc": "",
-      "label": "atom list",
-      "matches": {
-        "al": true
-      }
-    },
-    {
-      "content": "|> Enum.reduce(${1:acc}, fn ${2}, ${3:acc} -> $0 end)",
-      "doc": "",
-      "label": "pipe into reduce",
-      "matches": {
-        ">r": true
       }
     },
     {
@@ -236,27 +292,11 @@
       }
     },
     {
-      "content": "@doc ~S\"\"\"\n$0\n\"\"\"",
+      "content": "@doc \"\"\"\n$0\n\"\"\"",
       "doc": "",
-      "label": "doc s",
+      "label": "doc",
       "matches": {
-        "docs": true
-      }
-    },
-    {
-      "content": "do\n  $0\nend",
-      "doc": "",
-      "label": "do",
-      "matches": {
-        "do": true
-      }
-    },
-    {
-      "content": "if ${1:condition} do\n  $0\nend",
-      "doc": "",
-      "label": "if .. do .. end",
-      "matches": {
-        "if": true
+        "doc": true
       }
     },
     {
@@ -268,27 +308,11 @@
       }
     },
     {
-      "content": "def ${1:name}() do\n  $0\nend",
-      "doc": "Define a function",
-      "label": "def",
-      "matches": {
-        "def": true
-      }
-    },
-    {
-      "content": "@doc \"\"\"\n$0\n\"\"\"",
+      "content": "|> Enum.reduce(${1:acc}, fn ${2}, ${3:acc} -> $0 end)",
       "doc": "",
-      "label": "doc",
+      "label": "pipe into reduce",
       "matches": {
-        "doc": true
-      }
-    },
-    {
-      "content": "@moduledoc \"\"\"\n$0\n\"\"\"",
-      "doc": "",
-      "label": "moduledoc",
-      "matches": {
-        "mdoc": true
+        ">r": true
       }
     },
     {

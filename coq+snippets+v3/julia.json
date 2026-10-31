@@ -2,13 +2,179 @@
   "extends": [],
   "snippets": [
     {
-      "content": "import ${1:package} as ${2:name}",
-      "doc": "Code snippet for import a package and rename.",
-      "label": "import as",
+      "content": "baremodule ${1:name}\n\t$0\nend",
+      "doc": "Code snippet for module block.",
+      "label": "baremodule",
       "matches": {
-        "as": true,
+        "bare": true,
+        "baremodule": true,
+        "bmod": true
+      }
+    },
+    {
+      "content": "next = iterate(${1:iterable})\nwhile next !== nothing\n\t(item, state) = next\n\t0\n\tnext = iterate(iter, state)\nend",
+      "doc": "Code snippet to iterate each element.",
+      "label": "iterate",
+      "matches": {
+        "iter": true,
+        "iterate": true
+      }
+    },
+    {
+      "content": "else\n\t$0\nend",
+      "doc": "Code snippet for else statement.",
+      "label": "else",
+      "matches": {
+        "else": true
+      }
+    },
+    {
+      "content": "mutable struct ${1:struct} <: ${2:type}\n\t$0\nend",
+      "doc": "Code snippet for mutable struct block.",
+      "label": "mutable struct",
+      "matches": {
+        "mstruct": true,
+        "mut": true,
+        "mutable": true
+      }
+    },
+    {
+      "content": "let\n\t$0\nend",
+      "doc": "Code snippet to create a let block.",
+      "label": "let",
+      "matches": {
+        "le": true,
+        "let": true
+      }
+    },
+    {
+      "content": "for ${1:value}=${2:index}:${3:index}\n\t$0\nend",
+      "doc": "Code snippet to create a for loop.",
+      "label": "for",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "function main()\n\t$0\nend\n\nmain()",
+      "doc": "Code snippet to create a main block.",
+      "label": "main",
+      "matches": {
+        "main": true
+      }
+    },
+    {
+      "content": "begin\n\t$0\nend",
+      "doc": "Code snippet to create a begin block.",
+      "label": "begin",
+      "matches": {
+        "be": true,
+        "begin": true
+      }
+    },
+    {
+      "content": "Meta.parse(\"{$1:expression}\")",
+      "doc": "Code snippet for parse an expression.",
+      "label": "parse expression",
+      "matches": {
+        "meta": true,
+        "parse": true
+      }
+    },
+    {
+      "content": "using $0",
+      "doc": "Code snippet for using a package.",
+      "label": "using",
+      "matches": {
+        "us": true,
+        "using": true
+      }
+    },
+    {
+      "content": "~${1:value}",
+      "doc": "Code snippet for bitwise not operator.",
+      "label": "bitwise not",
+      "matches": {
+        "bnot": true
+      }
+    },
+    {
+      "content": "import $0",
+      "doc": "Code snippet for import a package.",
+      "label": "import",
+      "matches": {
         "im": true,
         "import": true
+      }
+    },
+    {
+      "content": "${1:value} & ${2:value}",
+      "doc": "Code snippet for bitwise and operator.",
+      "label": "bitwise and",
+      "matches": {
+        "band": true
+      }
+    },
+    {
+      "content": "module ${1:name}\nexport ${2:struct}\nstruct ${2:struct} end\n\t$0\nend",
+      "doc": "Code snippet for module block.",
+      "label": "module",
+      "matches": {
+        "mod": true,
+        "module": true
+      }
+    },
+    {
+      "content": "while ${1:condition}\n\t$0\nend",
+      "doc": "Code snippet to create a while loop.",
+      "label": "while",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "${1:value} | ${2:value}",
+      "doc": "Code snippet for bitwise or operator.",
+      "label": "bitwise or",
+      "matches": {
+        "bor": true
+      }
+    },
+    {
+      "content": "for ${1:value} ∈ ${2:iterable}\n\t$0\nend",
+      "doc": "Code snippet to iterate each element.",
+      "label": "foreach",
+      "matches": {
+        "foreach": true,
+        "forin": true
+      }
+    },
+    {
+      "content": "import ${1:package}: ${2:exports}",
+      "doc": "Code snippet for import something from a package.",
+      "label": "import from",
+      "matches": {
+        "from": true,
+        "im": true,
+        "import": true
+      }
+    },
+    {
+      "content": "${1:value} ⊻ ${2:value}",
+      "doc": "Code snippet for bitwise xor (exclusive or) operator.",
+      "label": "bitwise xor",
+      "matches": {
+        "xor": true
+      }
+    },
+    {
+      "content": "using ${1:package} as ${2:name}",
+      "doc": "Code snippet for using a package and rename.",
+      "label": "using as",
+      "matches": {
+        "as": true,
+        "us": true,
+        "using": true
       }
     },
     {
@@ -22,14 +188,13 @@
       }
     },
     {
-      "content": "using ${1:package}: ${2:exports} as ${3:name}",
-      "doc": "Code snippet for using something from a package and rename.",
-      "label": "using from as",
+      "content": "import ${1:package} as ${2:name}",
+      "doc": "Code snippet for import a package and rename.",
+      "label": "import as",
       "matches": {
         "as": true,
-        "from": true,
-        "us": true,
-        "using": true
+        "im": true,
+        "import": true
       }
     },
     {
@@ -39,6 +204,14 @@
       "matches": {
         "parsef": true,
         "pfloat": true
+      }
+    },
+    {
+      "content": "struct ${1:struct} <: ${2:type}\n\t$0\nend",
+      "doc": "Code snippet for struct block.",
+      "label": "struct",
+      "matches": {
+        "struct": true
       }
     },
     {
@@ -53,11 +226,12 @@
       }
     },
     {
-      "content": "elseif ${1:condition}\n\t${2:block}\nend",
-      "doc": "Code snippet for elseif statement.",
-      "label": "else if",
+      "content": "parse(Int64, \"${1:value}\")",
+      "doc": "Code snippet for parsing a String to Int64.",
+      "label": "parse Int",
       "matches": {
-        "elseif": true
+        "parsei": true,
+        "pint": true
       }
     },
     {
@@ -71,20 +245,27 @@
       }
     },
     {
-      "content": "parse(Int64, \"${1:value}\")",
-      "doc": "Code snippet for parsing a String to Int64.",
-      "label": "parse Int",
-      "matches": {
-        "parsei": true,
-        "pint": true
-      }
-    },
-    {
       "content": "if ${1:condition}\n\t${2:block}\nelseif ${3:condition}\n\t${4:block}\nelse\n\t${5:block}\nend",
       "doc": "Code snippet for if-elseif-else statement.",
       "label": "if/elseif/else",
       "matches": {
         "ifelseif": true
+      }
+    },
+    {
+      "content": "map(x -> ${1:expr}, ${2:iterable})",
+      "doc": "Code snippet for map.",
+      "label": "map",
+      "matches": {
+        "map": true
+      }
+    },
+    {
+      "content": "elseif ${1:condition}\n\t${2:block}\nend",
+      "doc": "Code snippet for elseif statement.",
+      "label": "else if",
+      "matches": {
+        "elseif": true
       }
     },
     {
@@ -106,11 +287,31 @@
       }
     },
     {
+      "content": "ccall(:clock, Int32, ())",
+      "doc": "Code snippet for calling the clock function from the standard C library.",
+      "label": "ccal/clock",
+      "matches": {
+        "cclock": true,
+        "clock": true
+      }
+    },
+    {
       "content": "${1:condition} && ${2:expression}",
       "doc": "In the expression a && b, the subexpression b is only evaluated if a evaluates to true.",
       "label": "and short-circuit evaluation",
       "matches": {
         "&&": true
+      }
+    },
+    {
+      "content": "using ${1:package}: ${2:exports} as ${3:name}",
+      "doc": "Code snippet for using something from a package and rename.",
+      "label": "using from as",
+      "matches": {
+        "as": true,
+        "from": true,
+        "us": true,
+        "using": true
       }
     },
     {
@@ -131,124 +332,6 @@
       }
     },
     {
-      "content": "function ${1:name}(${2:arguments})\n\t$0\nend",
-      "doc": "Code snippet to create a function.",
-      "label": "function",
-      "matches": {
-        "fun": true,
-        "func": true,
-        "function": true
-      }
-    },
-    {
-      "content": "if ${1:condition}\n\t$0\nend",
-      "doc": "Code snippet for if statement.",
-      "label": "if",
-      "matches": {
-        "if": true
-      }
-    },
-    {
-      "content": "module ${1:name}\nexport ${2:struct}\nstruct ${2:struct} end\n\t$0\nend",
-      "doc": "Code snippet for module block.",
-      "label": "module",
-      "matches": {
-        "mod": true,
-        "module": true
-      }
-    },
-    {
-      "content": "baremodule ${1:name}\n\t$0\nend",
-      "doc": "Code snippet for module block.",
-      "label": "baremodule",
-      "matches": {
-        "bare": true,
-        "baremodule": true,
-        "bmod": true
-      }
-    },
-    {
-      "content": "for ${1:value} ∈ ${2:iterable}\n\t$0\nend",
-      "doc": "Code snippet to iterate each element.",
-      "label": "foreach",
-      "matches": {
-        "foreach": true,
-        "forin": true
-      }
-    },
-    {
-      "content": "next = iterate(${1:iterable})\nwhile next !== nothing\n\t(item, state) = next\n\t0\n\tnext = iterate(iter, state)\nend",
-      "doc": "Code snippet to iterate each element.",
-      "label": "iterate",
-      "matches": {
-        "iter": true,
-        "iterate": true
-      }
-    },
-    {
-      "content": "map(x -> ${1:expr}, ${2:iterable})",
-      "doc": "Code snippet for map.",
-      "label": "map",
-      "matches": {
-        "map": true
-      }
-    },
-    {
-      "content": "function main()\n\t$0\nend\n\nmain()",
-      "doc": "Code snippet to create a main block.",
-      "label": "main",
-      "matches": {
-        "main": true
-      }
-    },
-    {
-      "content": "ccall(:clock, Int32, ())",
-      "doc": "Code snippet for calling the clock function from the standard C library.",
-      "label": "ccal/clock",
-      "matches": {
-        "cclock": true,
-        "clock": true
-      }
-    },
-    {
-      "content": "Meta.parse(\"{$1:expression}\")",
-      "doc": "Code snippet for parse an expression.",
-      "label": "parse expression",
-      "matches": {
-        "meta": true,
-        "parse": true
-      }
-    },
-    {
-      "content": "using ${1:package} as ${2:name}",
-      "doc": "Code snippet for using a package and rename.",
-      "label": "using as",
-      "matches": {
-        "as": true,
-        "us": true,
-        "using": true
-      }
-    },
-    {
-      "content": "import ${1:package}: ${2:exports}",
-      "doc": "Code snippet for import something from a package.",
-      "label": "import from",
-      "matches": {
-        "from": true,
-        "im": true,
-        "import": true
-      }
-    },
-    {
-      "content": "using $0",
-      "doc": "Code snippet for using a package.",
-      "label": "using",
-      "matches": {
-        "us": true,
-        "using": true
-      }
-    },
-    {
       "content": "using ${1:package}: ${2:exports}",
       "doc": "Code snippet for using something from a package.",
       "label": "using from",
@@ -259,36 +342,13 @@
       }
     },
     {
-      "content": "struct ${1:struct} <: ${2:type}\n\t$0\nend",
-      "doc": "Code snippet for struct block.",
-      "label": "struct",
+      "content": "function ${1:name}(${2:arguments})\n\t$0\nend",
+      "doc": "Code snippet to create a function.",
+      "label": "function",
       "matches": {
-        "struct": true
-      }
-    },
-    {
-      "content": "import $0",
-      "doc": "Code snippet for import a package.",
-      "label": "import",
-      "matches": {
-        "im": true,
-        "import": true
-      }
-    },
-    {
-      "content": "for ${1:value}=${2:index}:${3:index}\n\t$0\nend",
-      "doc": "Code snippet to create a for loop.",
-      "label": "for",
-      "matches": {
-        "for": true
-      }
-    },
-    {
-      "content": "else\n\t$0\nend",
-      "doc": "Code snippet for else statement.",
-      "label": "else",
-      "matches": {
-        "else": true
+        "fun": true,
+        "func": true,
+        "function": true
       }
     },
     {
@@ -301,62 +361,11 @@
       }
     },
     {
-      "content": "while ${1:condition}\n\t$0\nend",
-      "doc": "Code snippet to create a while loop.",
-      "label": "while",
+      "content": "if ${1:condition}\n\t$0\nend",
+      "doc": "Code snippet for if statement.",
+      "label": "if",
       "matches": {
-        "while": true
-      }
-    },
-    {
-      "content": "${1:value} & ${2:value}",
-      "doc": "Code snippet for bitwise and operator.",
-      "label": "bitwise and",
-      "matches": {
-        "band": true
-      }
-    },
-    {
-      "content": "${1:value} | ${2:value}",
-      "doc": "Code snippet for bitwise or operator.",
-      "label": "bitwise or",
-      "matches": {
-        "bor": true
-      }
-    },
-    {
-      "content": "~${1:value}",
-      "doc": "Code snippet for bitwise not operator.",
-      "label": "bitwise not",
-      "matches": {
-        "bnot": true
-      }
-    },
-    {
-      "content": "begin\n\t$0\nend",
-      "doc": "Code snippet to create a begin block.",
-      "label": "begin",
-      "matches": {
-        "be": true,
-        "begin": true
-      }
-    },
-    {
-      "content": "${1:value} ⊻ ${2:value}",
-      "doc": "Code snippet for bitwise xor (exclusive or) operator.",
-      "label": "bitwise xor",
-      "matches": {
-        "xor": true
-      }
-    },
-    {
-      "content": "mutable struct ${1:struct} <: ${2:type}\n\t$0\nend",
-      "doc": "Code snippet for mutable struct block.",
-      "label": "mutable struct",
-      "matches": {
-        "mstruct": true,
-        "mut": true,
-        "mutable": true
+        "if": true
       }
     },
     {

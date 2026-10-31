@@ -2,19 +2,35 @@
   "extends": [],
   "snippets": [
     {
-      "content": "allocate(${1:array}, stat=${2:err})\nif ($2 /= 0) print *, \"$1: Allocation request denied\"",
-      "doc": "Allocate Array",
-      "label": "al",
+      "content": "where ($1 ${2:==} $3)\n\t$0\nend where",
+      "doc": "where",
+      "label": "whe",
       "matches": {
-        "al": true
+        "whe": true
       }
     },
     {
-      "content": "dot_product($1,$2)",
-      "doc": "Dot Product of Vectors",
-      "label": "dot",
+      "content": ".false.",
+      "doc": ".false.",
+      "label": "fa",
       "matches": {
-        "dot": true
+        "fa": true
+      }
+    },
+    {
+      "content": ".and.",
+      "doc": "And",
+      "label": "and",
+      "matches": {
+        "and": true
+      }
+    },
+    {
+      "content": "matmul($1,$2)",
+      "doc": "Matrix Multiplication",
+      "label": "mat",
+      "matches": {
+        "mat": true
       }
     },
     {
@@ -34,19 +50,19 @@
       }
     },
     {
-      "content": "type(${1:type name}) ::",
-      "doc": "Quick Custom Type",
-      "label": "t",
+      "content": "allocate(${1:array}, stat=${2:err})\nif ($2 /= 0) print *, \"$1: Allocation request denied\"\n\nif (allocated($1)) deallocate($1, stat=$2)\nif ($2 /= 0) print *, \"$1: Deallocation request denied\"",
+      "doc": "Allocate and Deallocate array",
+      "label": "alloc",
       "matches": {
-        "t": true
+        "alloc": true
       }
     },
     {
-      "content": ".not.",
-      "doc": "Not",
-      "label": "not",
+      "content": "implicit none",
+      "doc": "implicit none",
+      "label": "imp",
       "matches": {
-        "not": true
+        "imp": true
       }
     },
     {
@@ -58,30 +74,6 @@
       }
     },
     {
-      "content": "character(len=*) ::",
-      "doc": "Quick Character",
-      "label": "c",
-      "matches": {
-        "c": true
-      }
-    },
-    {
-      "content": ".neqv.",
-      "doc": "Non-Equality",
-      "label": "neqv",
-      "matches": {
-        "neqv": true
-      }
-    },
-    {
-      "content": ".le.",
-      "doc": "Less or Equal",
-      "label": "le",
-      "matches": {
-        "le": true
-      }
-    },
-    {
       "content": "case ${1:default}\n\t$0",
       "doc": "case",
       "label": "case",
@@ -90,35 +82,19 @@
       }
     },
     {
-      "content": "write(unit=${1:iounit}, fmt=\"(${2:format string})\", iostat=${3:ios}${4:, advance='NO'}) ${5:variables}\nif ($3 /= 0) stop \"Write error in file unit $1\"",
-      "doc": "Write",
-      "label": "write",
+      "content": "allocate(${1:array}, stat=${2:err})\nif ($2 /= 0) print *, \"$1: Allocation request denied\"",
+      "doc": "Allocate Array",
+      "label": "al",
       "matches": {
-        "write": true
+        "al": true
       }
     },
     {
-      "content": "integer ::",
-      "doc": "Quick Integer",
-      "label": "i",
+      "content": "module procedure ${0:name}",
+      "doc": "module procedure",
+      "label": "mp",
       "matches": {
-        "i": true
-      }
-    },
-    {
-      "content": "read*,",
-      "doc": "Quick Read",
-      "label": "re",
-      "matches": {
-        "re": true
-      }
-    },
-    {
-      "content": "cycle",
-      "doc": "cycle",
-      "label": "cy",
-      "matches": {
-        "cy": true
+        "mp": true
       }
     },
     {
@@ -130,19 +106,35 @@
       }
     },
     {
-      "content": "do while (${1:condition})\n\t$0\nend do",
-      "doc": "do while",
-      "label": "dow",
+      "content": "close(unit=${1:iounit}, iostat=${2:ios}${3:, status=\"delete\"})\nif ($2 /= 0) stop \"Error closing file unit $1\"",
+      "doc": "Close File",
+      "label": "close",
       "matches": {
-        "dow": true
+        "close": true
       }
     },
     {
-      "content": "program ${1:name}\n\n\timplicit none\n\t$0\n\nend program $1",
-      "doc": "program",
-      "label": "prog",
+      "content": "dot_product($1,$2)",
+      "doc": "Dot Product of Vectors",
+      "label": "dot",
       "matches": {
-        "prog": true
+        "dot": true
+      }
+    },
+    {
+      "content": "write(unit=${1:iounit}, fmt=\"(${2:format string})\", iostat=${3:ios}${4:, advance='NO'}) ${5:variables}\nif ($3 /= 0) stop \"Write error in file unit $1\"",
+      "doc": "Write",
+      "label": "write",
+      "matches": {
+        "write": true
+      }
+    },
+    {
+      "content": "read*,",
+      "doc": "Quick Read",
+      "label": "re",
+      "matches": {
+        "re": true
       }
     },
     {
@@ -162,14 +154,6 @@
       }
     },
     {
-      "content": "print*,",
-      "doc": "Quick Print",
-      "label": "pr",
-      "matches": {
-        "pr": true
-      }
-    },
-    {
       "content": ".eqv.",
       "doc": "Equality",
       "label": "eqv",
@@ -178,19 +162,11 @@
       }
     },
     {
-      "content": "data ${1:variable} / ${2:data} /",
-      "doc": "data",
-      "label": "data",
+      "content": "function ${1:name}(${2:input}) result(${3:output})\n\t${4:argument type}, intent(${5:inout}) :: $2\n\t${6:function type} :: $3\n\t$0\nend function $1",
+      "doc": "function",
+      "label": "fun",
       "matches": {
-        "data": true
-      }
-    },
-    {
-      "content": "write(unit=${1:iounit}, fmt=*) ${0:variables}",
-      "doc": "Quick Write",
-      "label": "wr",
-      "matches": {
-        "wr": true
+        "fun": true
       }
     },
     {
@@ -202,14 +178,6 @@
       }
     },
     {
-      "content": "call random_number($0)",
-      "doc": "Random Number",
-      "label": "rn",
-      "matches": {
-        "rn": true
-      }
-    },
-    {
       "content": ".gt.",
       "doc": "Greater Than",
       "label": "gt",
@@ -218,27 +186,19 @@
       }
     },
     {
-      "content": ".true.",
-      "doc": ".true.",
-      "label": "tr",
+      "content": "print*,",
+      "doc": "Quick Print",
+      "label": "pr",
       "matches": {
-        "tr": true
+        "pr": true
       }
     },
     {
-      "content": "inquire(file=${1:filename}, opened=${2:ioopen}, exists=${3:ioexist}, number=${4:iounit})",
-      "doc": "Inquire (by Filename)",
-      "label": "inq",
+      "content": "type(${1:type name}) ::",
+      "doc": "Quick Custom Type",
+      "label": "t",
       "matches": {
-        "inq": true
-      }
-    },
-    {
-      "content": "where ($1 ${2:==} $3)\n\t$0\nend where",
-      "doc": "where",
-      "label": "whe",
-      "matches": {
-        "whe": true
+        "t": true
       }
     },
     {
@@ -250,22 +210,6 @@
       }
     },
     {
-      "content": "logical ::",
-      "doc": "Quick Logical",
-      "label": "l",
-      "matches": {
-        "l": true
-      }
-    },
-    {
-      "content": ".lt.",
-      "doc": "Less Than",
-      "label": "lt",
-      "matches": {
-        "lt": true
-      }
-    },
-    {
       "content": "(${1:i}, $1 = ${2:1}, ${3:100}, ${4:1})$0",
       "doc": "Implied do",
       "label": "ido",
@@ -274,83 +218,51 @@
       }
     },
     {
-      "content": "type ${1:type name}\n\t$0\nend type $1",
-      "doc": "Type Definition",
-      "label": "type",
+      "content": "module ${1:name}\n\n\timplicit none\n\t$0\n\nend module $1",
+      "doc": "module",
+      "label": "mod",
       "matches": {
-        "type": true
+        "mod": true
       }
     },
     {
-      "content": "stop \"${1:message}\"",
-      "doc": "stop",
-      "label": "stop",
+      "content": ".true.",
+      "doc": ".true.",
+      "label": "tr",
       "matches": {
-        "stop": true
+        "tr": true
       }
     },
     {
-      "content": "real ::",
-      "doc": "Quick Real",
-      "label": "r",
+      "content": "write(unit=${1:iounit}, fmt=*) ${0:variables}",
+      "doc": "Quick Write",
+      "label": "wr",
       "matches": {
-        "r": true
+        "wr": true
       }
     },
     {
-      "content": "select case ($1:variable)\n\tcase ($2:values)\n\t\t$0\nend select",
-      "doc": "select case",
-      "label": "sel",
+      "content": "inquire(file=${1:filename}, opened=${2:ioopen}, exists=${3:ioexist}, number=${4:iounit})",
+      "doc": "Inquire (by Filename)",
+      "label": "inq",
       "matches": {
-        "sel": true
+        "inq": true
       }
     },
     {
-      "content": "matmul($1,$2)",
-      "doc": "Matrix Multiplication",
-      "label": "mat",
+      "content": "character(len=*) ::",
+      "doc": "Quick Character",
+      "label": "c",
       "matches": {
-        "mat": true
+        "c": true
       }
     },
     {
-      "content": "module procedure ${0:name}",
-      "doc": "module procedure",
-      "label": "mp",
+      "content": "call random_number($0)",
+      "doc": "Random Number",
+      "label": "rn",
       "matches": {
-        "mp": true
-      }
-    },
-    {
-      "content": "spread(${1:source}, dim=${2:1}, ncopies=$3)",
-      "doc": "spread",
-      "label": "spread",
-      "matches": {
-        "spread": true
-      }
-    },
-    {
-      "content": "open(unit=${1:iounit}, iostat=${3:ios}, status=\"${4:scratch}\", action=\"${5:readwrite}\")\nif ($3 /= 0) stop \"Error opening scratch file on unit $1\"",
-      "doc": "Scratch File",
-      "label": "open3",
-      "matches": {
-        "open": true
-      }
-    },
-    {
-      "content": "read(unit=${1:iounit}, fmt=\"(${2:format string})\", iostat=${3:istat}) ${4:variables}\nif ($3 /= 0) stop \"Read error in file unit $1\"",
-      "doc": "Read",
-      "label": "read1",
-      "matches": {
-        "read": true
-      }
-    },
-    {
-      "content": "read(unit=${1:iounit}, fmt=\"(${2:format string})\", iostat=${3:istat}, advance='NO', size=${4:number of characters}) ${5:variables}\nif ($3 /= 0) stop \"Read error in file unit $1\"",
-      "doc": "Read (Non Advancing Mode)",
-      "label": "read",
-      "matches": {
-        "read": true
+        "rn": true
       }
     },
     {
@@ -362,11 +274,59 @@
       }
     },
     {
-      "content": "function ${1:name}(${2:input}) result(${3:output})\n\t${4:argument type}, intent(${5:inout}) :: $2\n\t${6:function type} :: $3\n\t$0\nend function $1",
-      "doc": "function",
-      "label": "fun",
+      "content": "interface ${1:name}\n\t$0\nend interface $1",
+      "doc": "interface",
+      "label": "interf",
       "matches": {
-        "fun": true
+        "interf": true
+      }
+    },
+    {
+      "content": "data ${1:variable} / ${2:data} /",
+      "doc": "data",
+      "label": "data",
+      "matches": {
+        "data": true
+      }
+    },
+    {
+      "content": "type ${1:type name}\n\t$0\nend type $1",
+      "doc": "Type Definition",
+      "label": "type",
+      "matches": {
+        "type": true
+      }
+    },
+    {
+      "content": "read(unit=${1:iounit}, fmt=\"(${2:format string})\", iostat=${3:istat}) ${4:variables}\nif ($3 /= 0) stop \"Read error in file unit $1\"",
+      "doc": "Read",
+      "label": "read1",
+      "matches": {
+        "read": true
+      }
+    },
+    {
+      "content": ".le.",
+      "doc": "Less or Equal",
+      "label": "le",
+      "matches": {
+        "le": true
+      }
+    },
+    {
+      "content": "program ${1:name}\n\n\timplicit none\n\t$0\n\nend program $1",
+      "doc": "program",
+      "label": "prog",
+      "matches": {
+        "prog": true
+      }
+    },
+    {
+      "content": "read(unit=${1:iounit}, fmt=\"(${2:format string})\", iostat=${3:istat}, advance='NO', size=${4:number of characters}) ${5:variables}\nif ($3 /= 0) stop \"Read error in file unit $1\"",
+      "doc": "Read (Non Advancing Mode)",
+      "label": "read",
+      "matches": {
+        "read": true
       }
     },
     {
@@ -386,11 +346,99 @@
       }
     },
     {
-      "content": "module ${1:name}\n\n\timplicit none\n\t$0\n\nend module $1",
-      "doc": "module",
-      "label": "mod",
+      "content": "select case ($1:variable)\n\tcase ($2:values)\n\t\t$0\nend select",
+      "doc": "select case",
+      "label": "sel",
       "matches": {
-        "mod": true
+        "sel": true
+      }
+    },
+    {
+      "content": "integer ::",
+      "doc": "Quick Integer",
+      "label": "i",
+      "matches": {
+        "i": true
+      }
+    },
+    {
+      "content": "open(unit=${1:iounit}, iostat=${3:ios}, status=\"${4:scratch}\", action=\"${5:readwrite}\")\nif ($3 /= 0) stop \"Error opening scratch file on unit $1\"",
+      "doc": "Scratch File",
+      "label": "open3",
+      "matches": {
+        "open": true
+      }
+    },
+    {
+      "content": "spread(${1:source}, dim=${2:1}, ncopies=$3)",
+      "doc": "spread",
+      "label": "spread",
+      "matches": {
+        "spread": true
+      }
+    },
+    {
+      "content": "real ::",
+      "doc": "Quick Real",
+      "label": "r",
+      "matches": {
+        "r": true
+      }
+    },
+    {
+      "content": "logical ::",
+      "doc": "Quick Logical",
+      "label": "l",
+      "matches": {
+        "l": true
+      }
+    },
+    {
+      "content": "cycle",
+      "doc": "cycle",
+      "label": "cy",
+      "matches": {
+        "cy": true
+      }
+    },
+    {
+      "content": "stop \"${1:message}\"",
+      "doc": "stop",
+      "label": "stop",
+      "matches": {
+        "stop": true
+      }
+    },
+    {
+      "content": "do while (${1:condition})\n\t$0\nend do",
+      "doc": "do while",
+      "label": "dow",
+      "matches": {
+        "dow": true
+      }
+    },
+    {
+      "content": ".lt.",
+      "doc": "Less Than",
+      "label": "lt",
+      "matches": {
+        "lt": true
+      }
+    },
+    {
+      "content": ".neqv.",
+      "doc": "Non-Equality",
+      "label": "neqv",
+      "matches": {
+        "neqv": true
+      }
+    },
+    {
+      "content": ".not.",
+      "doc": "Not",
+      "label": "not",
+      "matches": {
+        "not": true
       }
     },
     {
@@ -399,54 +447,6 @@
       "label": "wh",
       "matches": {
         "wh": true
-      }
-    },
-    {
-      "content": "close(unit=${1:iounit}, iostat=${2:ios}${3:, status=\"delete\"})\nif ($2 /= 0) stop \"Error closing file unit $1\"",
-      "doc": "Close File",
-      "label": "close",
-      "matches": {
-        "close": true
-      }
-    },
-    {
-      "content": "implicit none",
-      "doc": "implicit none",
-      "label": "imp",
-      "matches": {
-        "imp": true
-      }
-    },
-    {
-      "content": ".and.",
-      "doc": "And",
-      "label": "and",
-      "matches": {
-        "and": true
-      }
-    },
-    {
-      "content": "interface ${1:name}\n\t$0\nend interface $1",
-      "doc": "interface",
-      "label": "interf",
-      "matches": {
-        "interf": true
-      }
-    },
-    {
-      "content": "allocate(${1:array}, stat=${2:err})\nif ($2 /= 0) print *, \"$1: Allocation request denied\"\n\nif (allocated($1)) deallocate($1, stat=$2)\nif ($2 /= 0) print *, \"$1: Deallocation request denied\"",
-      "doc": "Allocate and Deallocate array",
-      "label": "alloc",
-      "matches": {
-        "alloc": true
-      }
-    },
-    {
-      "content": ".false.",
-      "doc": ".false.",
-      "label": "fa",
-      "matches": {
-        "fa": true
       }
     },
     {

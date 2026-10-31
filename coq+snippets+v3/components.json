@@ -10,6 +10,14 @@
       }
     },
     {
+      "content": "use relm4::{gtk, component::{AsyncComponent, AsyncComponentParts}, AsyncComponentSender};\n\npub struct AsyncComponentModel {}\n\n#[derive(Debug)]\npub enum AsyncComponentInput {}\n\n#[derive(Debug)]\npub enum AsyncComponentOutput {}\n\npub struct AsyncComponentInit {}\n\n#[relm4::component(pub async)]\nimpl AsyncComponent for AsyncComponentModel {\n    type CommandOutput = ();\n    type Input = AsyncComponentInput;\n    type Output = AsyncComponentOutput;\n    type Init = AsyncComponentInit;\n\n    view! {\n        #[root]\n        gtk::Box {\n\n        }\n    }\n\n    async fn init(\n        init: Self::Init,\n        root: Self::Root,\n        sender: AsyncComponentSender<Self>,\n    ) -> AsyncComponentParts<Self> {\n        let model = AsyncComponentModel {};\n        let widgets = view_output!();\n        AsyncComponentParts { model, widgets }\n    }\n\n    async fn update(&mut self, message: Self::Input, sender: AsyncComponentSender<Self>, _root: &Self::Root) {\n        match message {\n\n        }\n    }\n}",
+      "doc": "Relm4 Component Widget",
+      "label": "Relm4 Async Component",
+      "matches": {
+        "relm-async-component": true
+      }
+    },
+    {
       "content": "use relm4::{gtk, SimpleComponent, ComponentSender, ComponentParts};\n\npub struct ComponentModel {}\n\n#[derive(Debug)]\npub enum ComponentInput {}\n\n#[derive(Debug)]\npub enum ComponentOutput {}\n\npub struct ComponentInit {}\n\n#[relm4::component(pub)]\nimpl SimpleComponent for ComponentModel {\n    type Input = ComponentInput;\n    type Output = ComponentOutput;\n    type Init = ComponentInit;\n\n    view! {\n        #[root]\n        gtk::Box {\n\n        }\n    }\n\n    fn init(\n        init: Self::Init,\n        root: &Self::Root,\n        sender: ComponentSender<Self>,\n    ) -> ComponentParts<Self> {\n        let model = ComponentModel {};\n        let widgets = view_output!();\n        ComponentParts { model, widgets }\n    }\n\n    fn update(&mut self, message: Self::Input, sender: ComponentSender<Self>) {\n        match message {\n\n        }\n    }\n}",
       "doc": "Relm4 SimpleComponent Widget",
       "label": "Relm4 Simple Component",
@@ -23,14 +31,6 @@
       "label": "Relm4 Async Simple Component",
       "matches": {
         "relm-simple-async-component": true
-      }
-    },
-    {
-      "content": "use relm4::{gtk, component::{AsyncComponent, AsyncComponentParts}, AsyncComponentSender};\n\npub struct AsyncComponentModel {}\n\n#[derive(Debug)]\npub enum AsyncComponentInput {}\n\n#[derive(Debug)]\npub enum AsyncComponentOutput {}\n\npub struct AsyncComponentInit {}\n\n#[relm4::component(pub async)]\nimpl AsyncComponent for AsyncComponentModel {\n    type CommandOutput = ();\n    type Input = AsyncComponentInput;\n    type Output = AsyncComponentOutput;\n    type Init = AsyncComponentInit;\n\n    view! {\n        #[root]\n        gtk::Box {\n\n        }\n    }\n\n    async fn init(\n        init: Self::Init,\n        root: Self::Root,\n        sender: AsyncComponentSender<Self>,\n    ) -> AsyncComponentParts<Self> {\n        let model = AsyncComponentModel {};\n        let widgets = view_output!();\n        AsyncComponentParts { model, widgets }\n    }\n\n    async fn update(&mut self, message: Self::Input, sender: AsyncComponentSender<Self>, _root: &Self::Root) {\n        match message {\n\n        }\n    }\n}",
-      "doc": "Relm4 Component Widget",
-      "label": "Relm4 Async Component",
-      "matches": {
-        "relm-async-component": true
       }
     }
   ]

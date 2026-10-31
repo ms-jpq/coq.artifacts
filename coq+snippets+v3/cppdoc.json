@@ -2,35 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "@param ${1:name} ${2:Type and description of the parameter.}$0",
-      "doc": "Type and description of a function parameter.",
-      "label": "@param",
-      "matches": {
-        "@param": true
-      }
-    },
-    {
-      "content": "@example\n* // ${1:Description of my example.}$0\n* ${2:Write me later}",
-      "doc": "Example that demostrates how to use a function. It can be used several times.",
-      "label": "@example",
-      "matches": {
-        "@example": true
-      }
-    },
-    {
       "content": "@exception ${1:ExceptionName} ${2:Description.}$0",
       "doc": "Indicates the exceptions that can be thrown by a function. This tag is a synonym of @throws.",
       "label": "@exception",
       "matches": {
         "@exception": true
-      }
-    },
-    {
-      "content": "@throws ${1:ExceptionName} ${2:Description.}$0",
-      "doc": "Indicates the exceptions that can be thrown by a function. This tag is a synonym of @exception.",
-      "label": "@throws",
-      "matches": {
-        "@throws": true
       }
     },
     {
@@ -42,11 +18,19 @@
       }
     },
     {
-      "content": "/**\n * ${1:A one-line summary.}\n *\n * ${2:Description.}$0\n */",
-      "doc": "A simple C++ comment block for classes, including short summary, and details. Useful when you prefer to add the other documentation tags manually.",
-      "label": "comment_simple",
+      "content": "@param ${1:name} ${2:Type and description of the parameter.}$0",
+      "doc": "Type and description of a function parameter.",
+      "label": "@param",
       "matches": {
-        "/*": true
+        "@param": true
+      }
+    },
+    {
+      "content": "@throws ${1:ExceptionName} ${2:Description.}$0",
+      "doc": "Indicates the exceptions that can be thrown by a function. This tag is a synonym of @exception.",
+      "label": "@throws",
+      "matches": {
+        "@throws": true
       }
     },
     {
@@ -55,6 +39,22 @@
       "label": "@return",
       "matches": {
         "@return": true
+      }
+    },
+    {
+      "content": "/**\n * ${1:A one-line summary.}\n *\n * ${2:Description.}$0\n */",
+      "doc": "A simple C++ comment block for classes, including short summary, and details. Useful when you prefer to add the other documentation tags manually.",
+      "label": "comment_simple",
+      "matches": {
+        "/*": true
+      }
+    },
+    {
+      "content": "@example\n* // ${1:Description of my example.}$0\n* ${2:Write me later}",
+      "doc": "Example that demostrates how to use a function. It can be used several times.",
+      "label": "@example",
+      "matches": {
+        "@example": true
       }
     }
   ]

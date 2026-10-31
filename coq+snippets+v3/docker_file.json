@@ -2,27 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "USER ${1:name}",
+      "content": "LABEL ${1:label}=\"${2:value}\"",
       "doc": "",
-      "label": "USER",
+      "label": "LABEL",
       "matches": {
-        "u": true
-      }
-    },
-    {
-      "content": "CMD ${1:command}",
-      "doc": "",
-      "label": "CMD",
-      "matches": {
-        "C": true
-      }
-    },
-    {
-      "content": "WORKDIR ${1:name}",
-      "doc": "",
-      "label": "WORKDIR",
-      "matches": {
-        "w": true
+        "L": true
       }
     },
     {
@@ -34,35 +18,11 @@
       }
     },
     {
-      "content": "RUN echo \"deb http://archive.ubuntu.com/ubuntu ${1:precise} main universe\" > /etc/apt/sources.list; \\\napt-get update && apt-get -y upgrade; \\ \n${2}; \\\nrm -rf /var/lib/apt/lists/*",
+      "content": "USER ${1:name}",
       "doc": "",
-      "label": "Update Packages",
+      "label": "USER",
       "matches": {
-        "upd": true
-      }
-    },
-    {
-      "content": "LABEL ${1:label}=\"${2:value}\"",
-      "doc": "",
-      "label": "LABEL",
-      "matches": {
-        "L": true
-      }
-    },
-    {
-      "content": "EXPOSE ${1:port}",
-      "doc": "",
-      "label": "EXPOSE",
-      "matches": {
-        "exp": true
-      }
-    },
-    {
-      "content": "ONBUILD ${1}",
-      "doc": "",
-      "label": "ONBUILD",
-      "matches": {
-        "o": true
+        "u": true
       }
     },
     {
@@ -90,11 +50,11 @@
       }
     },
     {
-      "content": "FROM ${1:ubuntu}",
+      "content": "RUN echo \"deb http://archive.ubuntu.com/ubuntu ${1:precise} main universe\" > /etc/apt/sources.list; \\\napt-get update && apt-get -y upgrade; \\ \n${2}; \\\nrm -rf /var/lib/apt/lists/*",
       "doc": "",
-      "label": "FROM",
+      "label": "Update Packages",
       "matches": {
-        "F": true
+        "upd": true
       }
     },
     {
@@ -103,6 +63,30 @@
       "label": "ENTRYPOINT",
       "matches": {
         "ent": true
+      }
+    },
+    {
+      "content": "WORKDIR ${1:name}",
+      "doc": "",
+      "label": "WORKDIR",
+      "matches": {
+        "w": true
+      }
+    },
+    {
+      "content": "FROM ${1:ubuntu}",
+      "doc": "",
+      "label": "FROM",
+      "matches": {
+        "F": true
+      }
+    },
+    {
+      "content": "ONBUILD ${1}",
+      "doc": "",
+      "label": "ONBUILD",
+      "matches": {
+        "o": true
       }
     },
     {
@@ -127,6 +111,22 @@
       "label": "RUN",
       "matches": {
         "R": true
+      }
+    },
+    {
+      "content": "EXPOSE ${1:port}",
+      "doc": "",
+      "label": "EXPOSE",
+      "matches": {
+        "exp": true
+      }
+    },
+    {
+      "content": "CMD ${1:command}",
+      "doc": "",
+      "label": "CMD",
+      "matches": {
+        "C": true
       }
     }
   ]

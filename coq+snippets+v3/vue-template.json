@@ -18,14 +18,6 @@
       }
     },
     {
-      "content": "<router-link :to=\"{name: '${1:name}'}\">${2:LinkTitle}</router-link>",
-      "doc": "Named routing link",
-      "label": "Vue Named Routing Link",
-      "matches": {
-        "vroutename": true
-      }
-    },
-    {
       "content": "<${1:div} :class=\"[${2:classNameA}, ${3:classNameB}]\"></${1:div}>",
       "doc": "vue class binding",
       "label": "Vue Class Binding Object",
@@ -55,6 +47,14 @@
       "label": "Vue v-model Number Directive",
       "matches": {
         "vmodel-num": true
+      }
+    },
+    {
+      "content": "<router-link to=\"${1:path}\">${2:LinkTitle}</router-link>",
+      "doc": "Path routing link",
+      "label": "Vue Path Routing Link",
+      "matches": {
+        "vroutepath": true
       }
     },
     {
@@ -98,19 +98,19 @@
       }
     },
     {
-      "content": "<${1:div} :style=\"{ fontSize: ${2:data} + 'px' }\"></${1:div}>",
-      "doc": "vue inline style binding",
-      "label": "Vue Style Binding",
+      "content": "@change=\"$emit('change', $event.target.value)\"",
+      "doc": "Vue Emit from Child Component",
+      "label": "Vue Emit from Child",
       "matches": {
-        "vstyle": true
+        "vemit-child": true
       }
     },
     {
-      "content": "<router-link to=\"${1:path}\">${2:LinkTitle}</router-link>",
-      "doc": "Path routing link",
-      "label": "Vue Path Routing Link",
+      "content": "@change=\"${1:foo} = $event\"",
+      "doc": "Vue Emit to Parent Component",
+      "label": "Vue Emit to Parent",
       "matches": {
-        "vroutepath": true
+        "vemit-parent": true
       }
     },
     {
@@ -130,19 +130,19 @@
       }
     },
     {
-      "content": "@change=\"${1:foo} = $event\"",
-      "doc": "Vue Emit to Parent Component",
-      "label": "Vue Emit to Parent",
+      "content": "<router-link :to=\"{name: '${1:name}'}\">${2:LinkTitle}</router-link>",
+      "doc": "Named routing link",
+      "label": "Vue Named Routing Link",
       "matches": {
-        "vemit-parent": true
+        "vroutename": true
       }
     },
     {
-      "content": "@change=\"$emit('change', $event.target.value)\"",
-      "doc": "Vue Emit from Child Component",
-      "label": "Vue Emit from Child",
+      "content": "<${1:div} :style=\"{ fontSize: ${2:data} + 'px' }\"></${1:div}>",
+      "doc": "vue inline style binding",
+      "label": "Vue Style Binding",
       "matches": {
-        "vemit-child": true
+        "vstyle": true
       }
     },
     {

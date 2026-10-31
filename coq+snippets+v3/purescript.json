@@ -2,11 +2,12 @@
   "extends": [],
   "snippets": [
     {
-      "content": "ado\n  ${1:binder} ← ${2:expression}\n\n  in ${3:experssion}",
-      "doc": "Ado-block",
-      "label": "ado",
+      "content": "derive instance ${1:type}",
+      "doc": "Derive instance",
+      "label": "derive-instance",
       "matches": {
-        "ado": true
+        "derive": true,
+        "drv": true
       }
     },
     {
@@ -19,37 +20,13 @@
       }
     },
     {
-      "content": "derive instance ${1:type}",
-      "doc": "Derive instance",
-      "label": "derive-instance",
+      "content": "type ${1:type} r =\n  ( ${2:field} ∷ ${3:type}\n  , ${4:field} ∷ ${5:type}\n  | r\n  )",
+      "doc": "Type alias for an open row",
+      "label": "open-row-type-alias",
       "matches": {
-        "derive": true,
-        "drv": true
-      }
-    },
-    {
-      "content": "foreign import ${1:name} ∷ ${2:type}",
-      "doc": "Foreign import",
-      "label": "foreign-import",
-      "matches": {
-        "foreign": true,
-        "fri": true
-      }
-    },
-    {
-      "content": "do\n  ${1:binder} ← ${2:expression}",
-      "doc": "Do-block",
-      "label": "do",
-      "matches": {
-        "do": true
-      }
-    },
-    {
-      "content": "case ${1:expression} of\n  ${2:case1} → ${3:result}\n  ${4:case2} → ${5:result}$0",
-      "doc": "Case statement",
-      "label": "case",
-      "matches": {
-        "case": true
+        "open-row-type-alias": true,
+        "row": true,
+        "rta": true
       }
     },
     {
@@ -63,13 +40,36 @@
       }
     },
     {
-      "content": "type ${1:type} r =\n  ( ${2:field} ∷ ${3:type}\n  , ${4:field} ∷ ${5:type}\n  | r\n  )",
-      "doc": "Type alias for an open row",
-      "label": "open-row-type-alias",
+      "content": "foreign import ${1:name} ∷ ${2:type}",
+      "doc": "Foreign import",
+      "label": "foreign-import",
       "matches": {
-        "open-row-type-alias": true,
-        "row": true,
-        "rta": true
+        "foreign": true,
+        "fri": true
+      }
+    },
+    {
+      "content": "ado\n  ${1:binder} ← ${2:expression}\n\n  in ${3:experssion}",
+      "doc": "Ado-block",
+      "label": "ado",
+      "matches": {
+        "ado": true
+      }
+    },
+    {
+      "content": "case ${1:expression} of\n  ${2:case1} → ${3:result}\n  ${4:case2} → ${5:result}$0",
+      "doc": "Case statement",
+      "label": "case",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "do\n  ${1:binder} ← ${2:expression}",
+      "doc": "Do-block",
+      "label": "do",
+      "matches": {
+        "do": true
       }
     },
     {

@@ -10,11 +10,11 @@
       }
     },
     {
-      "content": "-export([\n         ${1}\n        ]).",
-      "doc": "export",
-      "label": "export",
+      "content": "-include(\"${1:hrl_name}.hrl\").",
+      "doc": "module",
+      "label": "include",
       "matches": {
-        "exp": true
+        "inc": true
       }
     },
     {
@@ -23,6 +23,14 @@
       "label": "receive",
       "matches": {
         "rec": true
+      }
+    },
+    {
+      "content": "-export([\n         ${1}\n        ]).",
+      "doc": "export",
+      "label": "export",
+      "matches": {
+        "exp": true
       }
     },
     {
@@ -47,14 +55,6 @@
       "label": "if",
       "matches": {
         "if": true
-      }
-    },
-    {
-      "content": "-include(\"${1:hrl_name}.hrl\").",
-      "doc": "module",
-      "label": "include",
-      "matches": {
-        "inc": true
       }
     },
     {
