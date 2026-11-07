@@ -10,11 +10,11 @@
       }
     },
     {
-      "content": "@change=\"${1:foo} = $event\"",
-      "doc": "Vue Emit to Parent Component",
-      "label": "Vue Emit to Parent",
+      "content": "${1:div}(:class=\"{ ${2:className}: ${3:data} }\")",
+      "doc": "vue class binding",
+      "label": "Vue Class Binding",
       "matches": {
-        "vemit-parent": true
+        "vclass": true
       }
     },
     {
@@ -26,14 +26,6 @@
       }
     },
     {
-      "content": "@change=\"$emit('change', $event.target.value)\"",
-      "doc": "Vue Emit from Child Component",
-      "label": "Vue Emit from Child",
-      "matches": {
-        "vemit-child": true
-      }
-    },
-    {
       "content": "img(:src=\"'/path/to/images/' + ${1:fileName}\" alt=\"${2:altText}\")",
       "doc": "image source binding",
       "label": "Vue Image Source Binding",
@@ -42,11 +34,11 @@
       }
     },
     {
-      "content": "nuxt-link(to=\"/${1:page}\") ${1:page}",
-      "doc": "nuxt routing link",
-      "label": "Vue Nuxt Routing Link",
+      "content": "${1:div}(:class=\"[${2:classNameA}, ${3:classNameB}]\")",
+      "doc": "vue class binding",
+      "label": "Vue Class Binding Object",
       "matches": {
-        "vnuxtl": true
+        "vclass-obj": true
       }
     },
     {
@@ -58,11 +50,11 @@
       }
     },
     {
-      "content": "${1:div}(:class=\"[${2:classNameA}, {${3:classNameB} : ${4:condition}}]\")",
-      "doc": "vue multiple conditional class bindings",
-      "label": "Vue Multiple Conditional Class Bindings",
+      "content": "@change=\"${1:foo} = $event\"",
+      "doc": "Vue Emit to Parent Component",
+      "label": "Vue Emit to Parent",
       "matches": {
-        "vclass-obj-mult": true
+        "vemit-parent": true
       }
     },
     {
@@ -82,19 +74,19 @@
       }
     },
     {
-      "content": "${1:div}(:class=\"[${2:classNameA}, ${3:classNameB}]\")",
-      "doc": "vue class binding",
-      "label": "Vue Class Binding Object",
+      "content": "@change=\"$emit('change', $event.target.value)\"",
+      "doc": "Vue Emit from Child Component",
+      "label": "Vue Emit from Child",
       "matches": {
-        "vclass-obj": true
+        "vemit-child": true
       }
     },
     {
-      "content": "transition(\n\tmode=\"out-in\"\n\t@before-enter=\"beforeEnter\"\n\t@enter=\"enter\"\n\n\t@before-leave=\"beforeLeave\"\n\t@leave=\"leave\"\n\t:css=\"false\"\n)",
-      "doc": "transition component js hooks",
-      "label": "Vue Transition Component with JavaScript Hooks",
+      "content": "nuxt-link(to=\"/${1:page}\") ${1:page}",
+      "doc": "nuxt routing link",
+      "label": "Vue Nuxt Routing Link",
       "matches": {
-        "vanim": true
+        "vnuxtl": true
       }
     },
     {
@@ -114,11 +106,19 @@
       }
     },
     {
-      "content": "${1:div}(:class=\"{ ${2:className}: ${3:data} }\")",
-      "doc": "vue class binding",
-      "label": "Vue Class Binding",
+      "content": "transition(\n\tmode=\"out-in\"\n\t@before-enter=\"beforeEnter\"\n\t@enter=\"enter\"\n\n\t@before-leave=\"beforeLeave\"\n\t@leave=\"leave\"\n\t:css=\"false\"\n)",
+      "doc": "transition component js hooks",
+      "label": "Vue Transition Component with JavaScript Hooks",
       "matches": {
-        "vclass": true
+        "vanim": true
+      }
+    },
+    {
+      "content": "${1:div}(:class=\"[${2:classNameA}, {${3:classNameB} : ${4:condition}}]\")",
+      "doc": "vue multiple conditional class bindings",
+      "label": "Vue Multiple Conditional Class Bindings",
+      "matches": {
+        "vclass-obj-mult": true
       }
     }
   ]

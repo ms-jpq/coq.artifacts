@@ -2,11 +2,27 @@
   "extends": [],
   "snippets": [
     {
-      "content": "<% if ${1:truevalue} %>\n  $2\n<% else %>\n  $3\n<% end %>",
-      "doc": "if .. else .. end",
-      "label": "ife",
+      "content": "<% if ${1:truevalue} %>\n  $2\n<% end %>",
+      "doc": "if .. end",
+      "label": "if",
       "matches": {
-        "ife": true
+        "if": true
+      }
+    },
+    {
+      "content": "<% ${1:items}.each do |${2:item}| %>\n  $3\n<% end %>",
+      "doc": "each do",
+      "label": "each",
+      "matches": {
+        "each": true
+      }
+    },
+    {
+      "content": "<% elsif ${1:truevalue} %>",
+      "doc": "elsif",
+      "label": "elsif",
+      "matches": {
+        "elsif": true
       }
     },
     {
@@ -28,43 +44,11 @@
       }
     },
     {
-      "content": "<% unless ${1:falsevalue} %>\n  $2\n<% end %>",
-      "doc": "unless .. end",
-      "label": "unless",
-      "matches": {
-        "unless": true
-      }
-    },
-    {
-      "content": "<% elsif ${1:truevalue} %>",
-      "doc": "elsif",
-      "label": "elsif",
-      "matches": {
-        "elsif": true
-      }
-    },
-    {
       "content": "<%= link_to $1, $2 %>",
       "doc": "link_to helper",
       "label": "link_to",
       "matches": {
         "lt": true
-      }
-    },
-    {
-      "content": "<% ${1:items}.each do |${2:item}| %>\n  $3\n<% end %>",
-      "doc": "each do",
-      "label": "each",
-      "matches": {
-        "each": true
-      }
-    },
-    {
-      "content": "<% else %>",
-      "doc": "else",
-      "label": "else",
-      "matches": {
-        "else": true
       }
     },
     {
@@ -76,6 +60,22 @@
       }
     },
     {
+      "content": "<% else %>",
+      "doc": "else",
+      "label": "else",
+      "matches": {
+        "else": true
+      }
+    },
+    {
+      "content": "<% unless ${1:falsevalue} %>\n  $2\n<% end %>",
+      "doc": "unless .. end",
+      "label": "unless",
+      "matches": {
+        "unless": true
+      }
+    },
+    {
       "content": "<% end %>",
       "doc": "end",
       "label": "end",
@@ -84,19 +84,19 @@
       }
     },
     {
-      "content": "<% if ${1:truevalue} %>\n  $2\n<% end %>",
-      "doc": "if .. end",
-      "label": "if",
-      "matches": {
-        "if": true
-      }
-    },
-    {
       "content": "<% unless ${1:falsevalue} %>\n  $2\n<% else %>\n  $3\n<% end %>",
       "doc": "unless .. end",
       "label": "unlesse",
       "matches": {
         "unlesse": true
+      }
+    },
+    {
+      "content": "<% if ${1:truevalue} %>\n  $2\n<% else %>\n  $3\n<% end %>",
+      "doc": "if .. else .. end",
+      "label": "ife",
+      "matches": {
+        "ife": true
       }
     }
   ]

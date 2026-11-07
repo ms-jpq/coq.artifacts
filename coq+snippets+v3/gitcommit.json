@@ -26,14 +26,6 @@
       }
     },
     {
-      "content": "On-behalf-of: ${1:org} <${2:email}>\n$0",
-      "doc": "",
-      "label": "on behalf of",
-      "matches": {
-        "on": true
-      }
-    },
-    {
       "content": "build(${1:scope}): ${2:title}\n\n$0",
       "doc": "",
       "label": "build conventional commit",
@@ -47,6 +39,14 @@
       "label": "test conventional commit",
       "matches": {
         "test": true
+      }
+    },
+    {
+      "content": "${1:type}(${2:scope}): ${3:title}\n\n$0",
+      "doc": "",
+      "label": "conventional commit",
+      "matches": {
+        "cc": true
       }
     },
     {
@@ -66,11 +66,11 @@
       }
     },
     {
-      "content": "Signed-off-by: ${1:name} <${2:email}>\n$0",
+      "content": "fix(${1:scope}): ${2:title}\n\n$0",
       "doc": "",
-      "label": "signed off by",
+      "label": "fix conventional commit",
       "matches": {
-        "si": true
+        "fix": true
       }
     },
     {
@@ -90,14 +90,6 @@
       }
     },
     {
-      "content": "fix(${1:scope}): ${2:title}\n\n$0",
-      "doc": "",
-      "label": "fix conventional commit",
-      "matches": {
-        "fix": true
-      }
-    },
-    {
       "content": "docs(${1:scope}): ${2:title}\n\n$0",
       "doc": "",
       "label": "docs conventional commit",
@@ -106,11 +98,11 @@
       }
     },
     {
-      "content": "${1:type}(${2:scope}): ${3:title}\n\n$0",
+      "content": "Signed-off-by: ${1:name} <${2:email}>\n$0",
       "doc": "",
-      "label": "conventional commit",
+      "label": "signed off by",
       "matches": {
-        "cc": true
+        "si": true
       }
     },
     {
@@ -119,6 +111,14 @@
       "label": "style conventional commit",
       "matches": {
         "style": true
+      }
+    },
+    {
+      "content": "On-behalf-of: ${1:org} <${2:email}>\n$0",
+      "doc": "",
+      "label": "on behalf of",
+      "matches": {
+        "on": true
       }
     },
     {

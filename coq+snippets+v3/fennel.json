@@ -2,19 +2,35 @@
   "extends": [],
   "snippets": [
     {
-      "content": "(local ${1:name} ${2:value})",
-      "doc": "Create a variable with local",
-      "label": "local",
+      "content": "(global $0)",
+      "doc": "Create a global",
+      "label": "global",
       "matches": {
-        "local": true
+        "global": true
       }
     },
     {
-      "content": "(fn ${1:name} [${2:params}]\n   )",
-      "doc": "Create a function",
-      "label": "fn",
+      "content": "(var ${1:name} ${2:value})",
+      "doc": "Create a variable with var",
+      "label": "var",
       "matches": {
-        "fn": true
+        "var": true
+      }
+    },
+    {
+      "content": "(tset ${1:tbl} ${2:value})",
+      "doc": "Set a value in a table",
+      "label": "set table value",
+      "matches": {
+        "tset": true
+      }
+    },
+    {
+      "content": "(require :${1:module})",
+      "doc": "Require a module",
+      "label": "require",
+      "matches": {
+        "require": true
       }
     },
     {
@@ -34,19 +50,11 @@
       }
     },
     {
-      "content": "(tset ${1:tbl} ${2:value})",
-      "doc": "Set a value in a table",
-      "label": "set table value",
+      "content": "(fn ${1:name} [${2:params}]\n   )",
+      "doc": "Create a function",
+      "label": "fn",
       "matches": {
-        "tset": true
-      }
-    },
-    {
-      "content": "(for [i 1 10]\n($0))",
-      "doc": "Create a for loop",
-      "label": "for",
-      "matches": {
-        "for": true
+        "fn": true
       }
     },
     {
@@ -58,27 +66,19 @@
       }
     },
     {
-      "content": "(global $0)",
-      "doc": "Create a global",
-      "label": "global",
+      "content": "(local ${1:name} ${2:value})",
+      "doc": "Create a variable with local",
+      "label": "local",
       "matches": {
-        "global": true
+        "local": true
       }
     },
     {
-      "content": "(var ${1:name} ${2:value})",
-      "doc": "Create a variable with var",
-      "label": "var",
+      "content": "(for [i 1 10]\n($0))",
+      "doc": "Create a for loop",
+      "label": "for",
       "matches": {
-        "var": true
-      }
-    },
-    {
-      "content": "(require :${1:module})",
-      "doc": "Require a module",
-      "label": "require",
-      "matches": {
-        "require": true
+        "for": true
       }
     }
   ]

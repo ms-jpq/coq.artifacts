@@ -2,6 +2,30 @@
   "extends": [],
   "snippets": [
     {
+      "content": "(executable\n (name $1)\n (public_name $2)\n (libraries $3))",
+      "doc": "Snippet for an executable stanza",
+      "label": "executable",
+      "matches": {
+        "executable": true
+      }
+    },
+    {
+      "content": "(test\n (name $1)\n (libraries $2))",
+      "doc": "Snippet for a test stanza",
+      "label": "test",
+      "matches": {
+        "test": true
+      }
+    },
+    {
+      "content": "(library\n (name $1)\n (public_name $2)\n (libraries $3))",
+      "doc": "Snippet for a library stanza",
+      "label": "library",
+      "matches": {
+        "library": true
+      }
+    },
+    {
       "content": "(rule\n (alias $1)\n (deps $2)\n (targets $3)\n (action $4))",
       "doc": "Snippet for a rule stanza",
       "label": "rule",
@@ -18,11 +42,11 @@
       }
     },
     {
-      "content": "(test\n (name $1)\n (libraries $2))",
-      "doc": "Snippet for a test stanza",
-      "label": "test",
+      "content": "(env\n ($1 $2))",
+      "doc": "Snippet for an env stanza",
+      "label": "env",
       "matches": {
-        "test": true
+        "env": true
       }
     },
     {
@@ -31,30 +55,6 @@
       "label": "install",
       "matches": {
         "install": true
-      }
-    },
-    {
-      "content": "(library\n (name $1)\n (public_name $2)\n (libraries $3))",
-      "doc": "Snippet for a library stanza",
-      "label": "library",
-      "matches": {
-        "library": true
-      }
-    },
-    {
-      "content": "(executable\n (name $1)\n (public_name $2)\n (libraries $3))",
-      "doc": "Snippet for an executable stanza",
-      "label": "executable",
-      "matches": {
-        "executable": true
-      }
-    },
-    {
-      "content": "(env\n ($1 $2))",
-      "doc": "Snippet for an env stanza",
-      "label": "env",
-      "matches": {
-        "env": true
       }
     }
   ]

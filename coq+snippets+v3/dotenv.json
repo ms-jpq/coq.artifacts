@@ -10,14 +10,6 @@
       }
     },
     {
-      "content": "require('dotenv').config({ encoding: '${1:latin1}' })",
-      "doc": "You may specify the encoding of your file containing environment variables.",
-      "label": "dotenv-encoding",
-      "matches": {
-        "dotenv encoding": true
-      }
-    },
-    {
       "content": "require('dotenv').config()",
       "doc": "As early as possible in your application, require and configure dotenv.",
       "label": "dotenv-require",
@@ -31,6 +23,14 @@
       "label": "dotenv-path",
       "matches": {
         "dotenv path": true
+      }
+    },
+    {
+      "content": "require('dotenv').config({ encoding: '${1:latin1}' })",
+      "doc": "You may specify the encoding of your file containing environment variables.",
+      "label": "dotenv-encoding",
+      "matches": {
+        "dotenv encoding": true
       }
     }
   ]

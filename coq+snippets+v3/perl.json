@@ -2,83 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "for (my \\$${1:loop var} = 0; \\$$1 < ${2:count}; \\$$1++) {\n\t${3:body}\n}",
+      "content": "open(my \\$${1:fh}, '<', \"${2:file name}\") or die \"Cannot open file '$2' for reading: \\$!\";",
       "doc": "",
-      "label": "for loop",
+      "label": "open file to read",
       "matches": {
-        "for": true
-      }
-    },
-    {
-      "content": "elsif ( ${1:condition} ) {\n\t${2:body}\n}",
-      "doc": "",
-      "label": "elsif statement",
-      "matches": {
-        "elsif": true
-      }
-    },
-    {
-      "content": "mkdir \"${1:dir}\" or die \"Cannot create directory '$1': \\$!\";",
-      "doc": "",
-      "label": "create a directory",
-      "matches": {
-        "mkdir": true
-      }
-    },
-    {
-      "content": "foreach my \\$${1:element} ( @${2:array} ) {\n\t${3:body}\n}",
-      "doc": "",
-      "label": "foreach loop",
-      "matches": {
-        "foreach": true
-      }
-    },
-    {
-      "content": "my @${1:array var} = split(/${2:delimiter pattern}/, \"${3:string}\");",
-      "doc": "",
-      "label": "split a string",
-      "matches": {
-        "split": true
-      }
-    },
-    {
-      "content": "while ( ${1:condition} ) {\n\t${2:body}\n}",
-      "doc": "",
-      "label": "while Loop",
-      "matches": {
-        "while": true
-      }
-    },
-    {
-      "content": "my \\$${1:string var} = join('${2:delimiter pattern}', @${3:array_var});",
-      "doc": "",
-      "label": "join array",
-      "matches": {
-        "join": true
-      }
-    },
-    {
-      "content": "if ( ${1:condition} ) {\n\t${2:body}\n}",
-      "doc": "",
-      "label": "if statement",
-      "matches": {
-        "if": true
-      }
-    },
-    {
-      "content": "use POSIX qw(strftime);\nmy $formatted = strftime('%Y-%m-%d %H:%M:%S', localtime($1));",
-      "doc": "",
-      "label": "format time",
-      "matches": {
-        "strftime": true
-      }
-    },
-    {
-      "content": "sub ${1:sub_name} {\n\t${2:body}\n}",
-      "doc": "",
-      "label": "subroutine",
-      "matches": {
-        "sub": true
+        "openr": true
       }
     },
     {
@@ -90,19 +18,11 @@
       }
     },
     {
-      "content": "use Try::Tiny;\n\ntry {\n\t${1:body}\n} catch {\n\tmy \\$catch_error = shift;\n\tprint \"Error: \\$catch_error\\n\";\n} finally {\n\tif (@_) {\n\t\tprint \"The try block died with error: @_\\n\"\n\t} else {\n\t\tprint \"The try ran successfully.\\n\"\n\t}\n};",
+      "content": "open(my \\$${1:fh}, '>', \"${2:file name}\") or die \"Cannot open file '$2' for writing: \\$!\";",
       "doc": "",
-      "label": "try catch block",
+      "label": "open file to write",
       "matches": {
-        "trycatch": true
-      }
-    },
-    {
-      "content": "if ( ${1:condition} ) {\n\t${2:body}\n} else {\n\t${3:body}\n}",
-      "doc": "",
-      "label": "if else statement",
-      "matches": {
-        "ife": true
+        "openw": true
       }
     },
     {
@@ -114,27 +34,11 @@
       }
     },
     {
-      "content": "unless ( ${1:condition} ) {\n\t${2:body}\n}",
+      "content": "print \\$${1:fh} \"${2:string}\\n\";",
       "doc": "",
-      "label": "unless",
+      "label": "print to file",
       "matches": {
-        "unless": true
-      }
-    },
-    {
-      "content": "open(my \\$${1:fh}, '>', \"${2:file name}\") or die \"Cannot open file '$2' for writing: \\$!\";",
-      "doc": "",
-      "label": "open file to write",
-      "matches": {
-        "openw": true
-      }
-    },
-    {
-      "content": "print \"$1\\n\";",
-      "doc": "",
-      "label": "print statement",
-      "matches": {
-        "print": true
+        "file print": true
       }
     },
     {
@@ -146,11 +50,19 @@
       }
     },
     {
-      "content": "print \\$${1:fh} \"${2:string}\\n\";",
+      "content": "use File::Slurp;\n\nmy \\$${1:contents} = read_file(\"${2:file_path}\")",
       "doc": "",
-      "label": "print to file",
+      "label": "read file into a scalar",
       "matches": {
-        "file print": true
+        "slurp": true
+      }
+    },
+    {
+      "content": "print \"$1\\n\";",
+      "doc": "",
+      "label": "print statement",
+      "matches": {
+        "print": true
       }
     },
     {
@@ -162,19 +74,115 @@
       }
     },
     {
-      "content": "use File::Slurp;\n\nmy \\$${1:contents} = read_file(\"${2:file_path}\")",
-      "doc": "",
-      "label": "read file into a scalar",
-      "matches": {
-        "slurp": true
-      }
-    },
-    {
-      "content": "if ( ${1:condition} ) {\n\t${2:body}\n} elsif ( ${3:condition} ) {\n\t${3:body}\n}",
+      "content": "if ( ${1:condition} ) {\n\t${2:body}\n} elsif ( ${3:condition} ) {\n\t${4:body}\n}",
       "doc": "",
       "label": "if else if statement",
       "matches": {
         "iffe": true
+      }
+    },
+    {
+      "content": "use Try::Tiny;\n\ntry {\n\t${1:body}\n} catch {\n\tmy \\$catch_error = shift;\n\tprint \"Error: \\$catch_error\\n\";\n} finally {\n\tif (@_) {\n\t\tprint \"The try block died with error: @_\\n\"\n\t} else {\n\t\tprint \"The try ran successfully.\\n\"\n\t}\n};",
+      "doc": "",
+      "label": "try catch block",
+      "matches": {
+        "trycatch": true
+      }
+    },
+    {
+      "content": "my @${1:array var} = split(/${2:delimiter pattern}/, \"${3:string}\");",
+      "doc": "",
+      "label": "split a string",
+      "matches": {
+        "split": true
+      }
+    },
+    {
+      "content": "mkdir \"${1:dir}\" or die \"Cannot create directory '$1': \\$!\";",
+      "doc": "",
+      "label": "create a directory",
+      "matches": {
+        "mkdir": true
+      }
+    },
+    {
+      "content": "my \\$${1:string var} = join('${2:delimiter pattern}', @${3:array_var});",
+      "doc": "",
+      "label": "join array",
+      "matches": {
+        "join": true
+      }
+    },
+    {
+      "content": "elsif ( ${1:condition} ) {\n\t${2:body}\n}",
+      "doc": "",
+      "label": "elsif statement",
+      "matches": {
+        "elsif": true
+      }
+    },
+    {
+      "content": "use POSIX qw(strftime);\nmy $formatted = strftime('%Y-%m-%d %H:%M:%S', localtime($1));",
+      "doc": "",
+      "label": "format time",
+      "matches": {
+        "strftime": true
+      }
+    },
+    {
+      "content": "unless ( ${1:condition} ) {\n\t${2:body}\n}",
+      "doc": "",
+      "label": "unless",
+      "matches": {
+        "unless": true
+      }
+    },
+    {
+      "content": "for (my \\$${1:loop var} = 0; \\$$1 < ${2:count}; \\$$1++) {\n\t${3:body}\n}",
+      "doc": "",
+      "label": "for loop",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "if ( ${1:condition} ) {\n\t${2:body}\n}",
+      "doc": "",
+      "label": "if statement",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "foreach my \\$${1:element} ( @${2:array} ) {\n\t${3:body}\n}",
+      "doc": "",
+      "label": "foreach loop",
+      "matches": {
+        "foreach": true
+      }
+    },
+    {
+      "content": "sub ${1:sub_name} {\n\t${2:body}\n}",
+      "doc": "",
+      "label": "subroutine",
+      "matches": {
+        "sub": true
+      }
+    },
+    {
+      "content": "while ( ${1:condition} ) {\n\t${2:body}\n}",
+      "doc": "",
+      "label": "while Loop",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "if ( ${1:condition} ) {\n\t${2:body}\n} else {\n\t${3:body}\n}",
+      "doc": "",
+      "label": "if else statement",
+      "matches": {
+        "ife": true
       }
     },
     {
@@ -183,14 +191,6 @@
       "label": "do while Loop",
       "matches": {
         "dowhile": true
-      }
-    },
-    {
-      "content": "open(my \\$${1:fh}, '<', \"${2:file name}\") or die \"Cannot open file '$2' for reading: \\$!\";",
-      "doc": "",
-      "label": "open file to read",
-      "matches": {
-        "openr": true
       }
     },
     {

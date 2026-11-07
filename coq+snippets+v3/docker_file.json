@@ -2,11 +2,19 @@
   "extends": [],
   "snippets": [
     {
-      "content": "USER ${1:name}",
+      "content": "RUN ${1:command}",
       "doc": "",
-      "label": "USER",
+      "label": "RUN",
       "matches": {
-        "u": true
+        "R": true
+      }
+    },
+    {
+      "content": "# ${1:description}\n#  \n# VERSION ${2:0.1.0}\n${3}",
+      "doc": "",
+      "label": "HEAD",
+      "matches": {
+        "head": true
       }
     },
     {
@@ -18,11 +26,11 @@
       }
     },
     {
-      "content": "WORKDIR ${1:name}",
+      "content": "ENTRYPOINT ${1:command}",
       "doc": "",
-      "label": "WORKDIR",
+      "label": "ENTRYPOINT",
       "matches": {
-        "w": true
+        "ent": true
       }
     },
     {
@@ -31,14 +39,6 @@
       "label": "COPY",
       "matches": {
         "cp": true
-      }
-    },
-    {
-      "content": "RUN echo \"deb http://archive.ubuntu.com/ubuntu ${1:precise} main universe\" > /etc/apt/sources.list; \\\napt-get update && apt-get -y upgrade; \\ \n${2}; \\\nrm -rf /var/lib/apt/lists/*",
-      "doc": "",
-      "label": "Update Packages",
-      "matches": {
-        "upd": true
       }
     },
     {
@@ -58,11 +58,11 @@
       }
     },
     {
-      "content": "ONBUILD ${1}",
+      "content": "RUN echo \"deb http://archive.ubuntu.com/ubuntu ${1:precise} main universe\" > /etc/apt/sources.list; \\\napt-get update && apt-get -y upgrade; \\ \n${2}; \\\nrm -rf /var/lib/apt/lists/*",
       "doc": "",
-      "label": "ONBUILD",
+      "label": "Update Packages",
       "matches": {
-        "o": true
+        "upd": true
       }
     },
     {
@@ -74,11 +74,11 @@
       }
     },
     {
-      "content": "# ${1:description}\n#  \n# VERSION ${2:0.1.0}\n${3}",
+      "content": "WORKDIR ${1:name}",
       "doc": "",
-      "label": "HEAD",
+      "label": "WORKDIR",
       "matches": {
-        "head": true
+        "w": true
       }
     },
     {
@@ -90,27 +90,19 @@
       }
     },
     {
+      "content": "USER ${1:name}",
+      "doc": "",
+      "label": "USER",
+      "matches": {
+        "u": true
+      }
+    },
+    {
       "content": "FROM ${1:ubuntu}",
       "doc": "",
       "label": "FROM",
       "matches": {
         "F": true
-      }
-    },
-    {
-      "content": "ENTRYPOINT ${1:command}",
-      "doc": "",
-      "label": "ENTRYPOINT",
-      "matches": {
-        "ent": true
-      }
-    },
-    {
-      "content": "LABEL maintainer=\"${1:name}\"",
-      "doc": "",
-      "label": "Label maintainer",
-      "matches": {
-        "m": true
       }
     },
     {
@@ -122,11 +114,19 @@
       }
     },
     {
-      "content": "RUN ${1:command}",
+      "content": "LABEL maintainer=\"${1:name}\"",
       "doc": "",
-      "label": "RUN",
+      "label": "Label maintainer",
       "matches": {
-        "R": true
+        "m": true
+      }
+    },
+    {
+      "content": "ONBUILD ${1}",
+      "doc": "",
+      "label": "ONBUILD",
+      "matches": {
+        "o": true
       }
     }
   ]

@@ -2,19 +2,19 @@
   "extends": [],
   "snippets": [
     {
-      "content": "${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
-      "doc": "I give you back the time (H:M:S)",
-      "label": "timeHMS",
+      "content": "${UUID}",
+      "doc": "A Version 4 UUID",
+      "label": "uuid",
       "matches": {
-        "timeHMS": true
+        "uuid": true
       }
     },
     {
-      "content": "${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE} ${CURRENT_HOUR}:${CURRENT_MINUTE}",
-      "doc": "I give you back the time and date (Y-m-d H:M)",
-      "label": "datetime",
+      "content": "${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR}",
+      "doc": "Put date in (DD/MM/YY) format",
+      "label": "dateDMY",
       "matches": {
-        "datetime": true
+        "dateDMY": true
       }
     },
     {
@@ -34,11 +34,19 @@
       }
     },
     {
-      "content": "${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR}",
-      "doc": "Put date in (DD/MM/YY) format",
-      "label": "dateDMY",
+      "content": "Copyright (c) ${CURRENT_YEAR} ${0:Author}. All Rights Reserved.",
+      "doc": "Snippet to put copyright",
+      "label": "copyright",
       "matches": {
-        "dateDMY": true
+        "copyright": true
+      }
+    },
+    {
+      "content": "${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+      "doc": "I give you back the time (H:M:S)",
+      "label": "timeHMS",
+      "matches": {
+        "timeHMS": true
       }
     },
     {
@@ -50,19 +58,11 @@
       }
     },
     {
-      "content": "${UUID}",
-      "doc": "A Version 4 UUID",
-      "label": "uuid",
+      "content": "${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE} ${CURRENT_HOUR}:${CURRENT_MINUTE}",
+      "doc": "I give you back the time and date (Y-m-d H:M)",
+      "label": "datetime",
       "matches": {
-        "uuid": true
-      }
-    },
-    {
-      "content": "Copyright (c) ${CURRENT_YEAR} ${0:Author}. All Rights Reserved.",
-      "doc": "Snippet to put copyright",
-      "label": "copyright",
-      "matches": {
-        "copyright": true
+        "datetime": true
       }
     },
     {

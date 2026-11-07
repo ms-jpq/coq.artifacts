@@ -2,59 +2,19 @@
   "extends": [],
   "snippets": [
     {
-      "content": "save_and_open_screenshot${0}",
-      "doc": "save_and_open_screenshot",
-      "label": "Save and open screenshot",
+      "content": "before_action :${0:method}",
+      "doc": "before_action",
+      "label": "Before action",
       "matches": {
-        "saos": true
+        "ba": true
       }
     },
     {
-      "content": "before_update :${0:method}",
-      "doc": "before_update",
-      "label": "Before update",
+      "content": "before_validation :${0:method}",
+      "doc": "before_validation",
+      "label": "Before validation",
       "matches": {
-        "bu": true
-      }
-    },
-    {
-      "content": "before_save :${0:method}",
-      "doc": "before_save",
-      "label": "Before save",
-      "matches": {
-        "bs": true
-      }
-    },
-    {
-      "content": "params[:${1:id}]",
-      "doc": "getting params using attribute",
-      "label": "Getting Params",
-      "matches": {
-        "pa": true
-      }
-    },
-    {
-      "content": "before_destroy :${0:method}",
-      "doc": "before_destroy",
-      "label": "Before destroy",
-      "matches": {
-        "bd": true
-      }
-    },
-    {
-      "content": "delegate: :${1:method}, to: :${0:object}",
-      "doc": "delegate to",
-      "label": "Delegate to",
-      "matches": {
-        "dt": true
-      }
-    },
-    {
-      "content": "after_create :${0:method}",
-      "doc": "after_create",
-      "label": "After create",
-      "matches": {
-        "ac": true
+        "bv": true
       }
     },
     {
@@ -66,11 +26,27 @@
       }
     },
     {
-      "content": "after_validation :${0:method}",
-      "doc": "after_validation",
-      "label": "After validation",
+      "content": "before_create :${0:method}",
+      "doc": "before_create",
+      "label": "Before create",
       "matches": {
-        "av": true
+        "bc": true
+      }
+    },
+    {
+      "content": "scope :${1:name}, -> { where(${2:field}: ${0:value}) }",
+      "doc": "AR scope",
+      "label": "Scope",
+      "matches": {
+        "scope": true
+      }
+    },
+    {
+      "content": "before_update :${0:method}",
+      "doc": "before_update",
+      "label": "Before update",
+      "matches": {
+        "bu": true
       }
     },
     {
@@ -82,11 +58,11 @@
       }
     },
     {
-      "content": "after_update :${0:method}",
-      "doc": "after_update",
-      "label": " update",
+      "content": "before_save :${0:method}",
+      "doc": "before_save",
+      "label": "Before save",
       "matches": {
-        "au": true
+        "bs": true
       }
     },
     {
@@ -106,11 +82,19 @@
       }
     },
     {
-      "content": "add_column :${1:table_name}, :${2:column_name}, :${0:data_type}",
-      "doc": "Migration add column",
-      "label": "Migration add column",
+      "content": "after_destroy :${0:method}",
+      "doc": "after_destroy",
+      "label": " destroy",
       "matches": {
-        "mac": true
+        "ad": true
+      }
+    },
+    {
+      "content": "save_and_open_screenshot${0}",
+      "doc": "save_and_open_screenshot",
+      "label": "Save and open screenshot",
+      "matches": {
+        "saos": true
       }
     },
     {
@@ -127,6 +111,14 @@
       "label": "Belongs to",
       "matches": {
         "bt": true
+      }
+    },
+    {
+      "content": "after_validation :${0:method}",
+      "doc": "after_validation",
+      "label": "After validation",
+      "matches": {
+        "av": true
       }
     },
     {
@@ -178,11 +170,11 @@
       }
     },
     {
-      "content": "before_action :${0:method}",
-      "doc": "before_action",
-      "label": "Before action",
+      "content": "has_many :${0:object}",
+      "doc": "has_many association",
+      "label": "Has many",
       "matches": {
-        "ba": true
+        "hm": true
       }
     },
     {
@@ -194,43 +186,11 @@
       }
     },
     {
-      "content": "before_validation :${0:method}",
-      "doc": "before_validation",
-      "label": "Before validation",
-      "matches": {
-        "bv": true
-      }
-    },
-    {
-      "content": "before_create :${0:method}",
-      "doc": "before_create",
-      "label": "Before create",
-      "matches": {
-        "bc": true
-      }
-    },
-    {
       "content": "def edit\n\t@${1:model_class_name} = ${2:ModelClassName}.find(params[:id])\nend",
       "doc": "def edit",
       "label": "Edit action",
       "matches": {
         "edit": true
-      }
-    },
-    {
-      "content": "def index\n\t@${1:model_class_name} = ${2:ModelClassName}.all\nend",
-      "doc": "def index",
-      "label": "Index action",
-      "matches": {
-        "index": true
-      }
-    },
-    {
-      "content": "has_many :${1:object}, through: :${0:object}",
-      "doc": "has_many through association",
-      "label": "Has many through",
-      "matches": {
-        "hmt": true
       }
     },
     {
@@ -242,11 +202,11 @@
       }
     },
     {
-      "content": "def new\n\t@${1:model_class_name} = ${2:ModelClassName}.new\nend",
-      "doc": "def new",
-      "label": "New action",
+      "content": "def index\n\t@${1:model_class_name} = ${2:ModelClassName}.all\nend",
+      "doc": "def index",
+      "label": "Index action",
       "matches": {
-        "new": true
+        "index": true
       }
     },
     {
@@ -266,6 +226,30 @@
       }
     },
     {
+      "content": "def new\n\t@${1:model_class_name} = ${2:ModelClassName}.new\nend",
+      "doc": "def new",
+      "label": "New action",
+      "matches": {
+        "new": true
+      }
+    },
+    {
+      "content": "has_many :${1:object}, through: :${0:object}",
+      "doc": "has_many through association",
+      "label": "Has many through",
+      "matches": {
+        "hmt": true
+      }
+    },
+    {
+      "content": "add_column :${1:table_name}, :${2:column_name}, :${0:data_type}",
+      "doc": "Migration add column",
+      "label": "Migration add column",
+      "matches": {
+        "mac": true
+      }
+    },
+    {
       "content": "def show\n\t@${1:model_class_name} = ${2:ModelClassName}.find(params[:id])\nend",
       "doc": "def show",
       "label": "Show action",
@@ -274,11 +258,11 @@
       }
     },
     {
-      "content": "has_many :${0:object}",
-      "doc": "has_many association",
-      "label": "Has many",
+      "content": "after_update :${0:method}",
+      "doc": "after_update",
+      "label": " update",
       "matches": {
-        "hm": true
+        "au": true
       }
     },
     {
@@ -290,27 +274,43 @@
       }
     },
     {
+      "content": "after_create :${0:method}",
+      "doc": "after_create",
+      "label": "After create",
+      "matches": {
+        "ac": true
+      }
+    },
+    {
+      "content": "before_destroy :${0:method}",
+      "doc": "before_destroy",
+      "label": "Before destroy",
+      "matches": {
+        "bd": true
+      }
+    },
+    {
+      "content": "delegate: :${1:method}, to: :${0:object}",
+      "doc": "delegate to",
+      "label": "Delegate to",
+      "matches": {
+        "dt": true
+      }
+    },
+    {
+      "content": "params[:${1:id}]",
+      "doc": "getting params using attribute",
+      "label": "Getting Params",
+      "matches": {
+        "pa": true
+      }
+    },
+    {
       "content": "def ${1:model_class_name}_params\n\tparams.require(:$1).permit(${2:attributes})\nend",
       "doc": "def model_params",
       "label": "Model Params",
       "matches": {
         "params": true
-      }
-    },
-    {
-      "content": "after_destroy :${0:method}",
-      "doc": "after_destroy",
-      "label": " destroy",
-      "matches": {
-        "ad": true
-      }
-    },
-    {
-      "content": "scope :${1:name}, -> { where(${2:field}: ${0:value}) }",
-      "doc": "AR scope",
-      "label": "Scope",
-      "matches": {
-        "scope": true
       }
     },
     {

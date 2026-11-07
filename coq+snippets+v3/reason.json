@@ -2,19 +2,51 @@
   "extends": [],
   "snippets": [
     {
-      "content": "module ${1:M} = ${2:{}};$0",
-      "doc": "Snippet for a module declaration",
-      "label": "module",
+      "content": "let ${1:f} = (${2:pattern}) => ${3:${2:pattern}};$0",
+      "doc": "Snippet for a short function definition",
+      "label": "function",
+      "matches": {
+        "let": true
+      }
+    },
+    {
+      "content": "switch ${1:scrutinee} {\n| ${2:pattern} => ${3:${2:pattern}}\n};",
+      "doc": "Snippet for a pattern matching declaration",
+      "label": "switch",
+      "matches": {
+        "switch": true
+      }
+    },
+    {
+      "content": "module ${1:M} = (${2:X}: $3{:{}}) => ${4:${2:X}};$0",
+      "doc": "Snippet for a functor declaration",
+      "label": "module function",
       "matches": {
         "module": true
       }
     },
     {
-      "content": "let ${1:pattern} = ${2:()};$0",
-      "doc": "Snippet for a variable declaration",
-      "label": "let",
+      "content": "fun\n\t| ${1:pattern} => ${2:${1:pattern}}\n\t;",
+      "doc": "Snippet for a lambda switch function",
+      "label": "lambda (switch)",
       "matches": {
-        "let": true
+        "fun": true
+      }
+    },
+    {
+      "content": "(${1:pattern}) => ${2:${1:pattern}}",
+      "doc": "Snippet for a lambda function",
+      "label": "lambda",
+      "matches": {
+        "fun": true
+      }
+    },
+    {
+      "content": "module ${1:M} = ${2:{}};$0",
+      "doc": "Snippet for a module declaration",
+      "label": "module",
+      "matches": {
+        "module": true
       }
     },
     {
@@ -34,51 +66,19 @@
       }
     },
     {
-      "content": "module ${1:M} = {\n\t$0\n};",
-      "doc": "Snippet for a block module declaration",
-      "label": "module (block)",
-      "matches": {
-        "module": true
-      }
-    },
-    {
-      "content": "(${1:pattern}) => ${2:${1:pattern}}",
-      "doc": "Snippet for a lambda function",
-      "label": "lambda",
-      "matches": {
-        "fun": true
-      }
-    },
-    {
-      "content": "module ${1:M} = (${2:X}: $3{:{}}) => ${4:${2:X}};$0",
-      "doc": "Snippet for a functor declaration",
-      "label": "module function",
-      "matches": {
-        "module": true
-      }
-    },
-    {
-      "content": "let ${1:f} = (${2:pattern}) => ${3:${2:pattern}};$0",
-      "doc": "Snippet for a short function definition",
-      "label": "function",
+      "content": "let ${1:pattern} = ${2:()};$0",
+      "doc": "Snippet for a variable declaration",
+      "label": "let",
       "matches": {
         "let": true
       }
     },
     {
-      "content": "fun\n\t| ${1:pattern} => ${2:${1:pattern}}\n\t;",
-      "doc": "Snippet for a lambda switch function",
-      "label": "lambda (switch)",
+      "content": "module ${1:M} = {\n\t$0\n};",
+      "doc": "Snippet for a block module declaration",
+      "label": "module (block)",
       "matches": {
-        "fun": true
-      }
-    },
-    {
-      "content": "switch ${1:scrutinee} {\n| ${2:pattern} => ${3:${2:pattern}}\n};",
-      "doc": "Snippet for a pattern matching declaration",
-      "label": "switch",
-      "matches": {
-        "switch": true
+        "module": true
       }
     },
     {

@@ -2,35 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "typedef enum ${2:logic[15:0]} \n{\n\n${3:REG = 16'h0000}\n\n} ${1:my_dest_t};",
-      "doc": "Typedef enum",
-      "label": "typedef enum",
+      "content": "repeat (${1}) begin\n\t${0}\nend",
+      "doc": "Repeat loop",
+      "label": "repeat loop",
       "matches": {
-        "tde": true
-      }
-    },
-    {
-      "content": "forever begin\n\t${0}\nend",
-      "doc": "Forever loop",
-      "label": "forever",
-      "matches": {
-        "forev": true
-      }
-    },
-    {
-      "content": "if (${1}) begin\n\n\t${2}\n\nend\n\nelse begin\n\n\t${3}\n\nend",
-      "doc": "If-else statement",
-      "label": "if-else",
-      "matches": {
-        "ife": true
-      }
-    },
-    {
-      "content": "whlie (${1}) begin\n\t${0}\nend",
-      "doc": "While loop",
-      "label": "while",
-      "matches": {
-        "wh": true
+        "repeat (${1}) begin": true
       }
     },
     {
@@ -42,11 +18,11 @@
       }
     },
     {
-      "content": "repeat (${1}) begin\n\t${0}\nend",
-      "doc": "Repeat loop",
-      "label": "repeat loop",
+      "content": "case (${1:variable})\n\t${2: value}: begin\n\t\t${3}\n\tend\ndefault: begin\n\t${4}\n\nend\nendcase",
+      "doc": "Case Statement",
+      "label": "case statement",
       "matches": {
-        "repeat (${1}) begin": true
+        "case": true
       }
     },
     {
@@ -58,14 +34,6 @@
       }
     },
     {
-      "content": "case (${1:variable})\n\t${2: value}: begin\n\t\t${3}\n\tend\ndefault: begin\n\t${4}\n\nend\nendcase",
-      "doc": "Case Statement",
-      "label": "case statement",
-      "matches": {
-        "case": true
-      }
-    },
-    {
       "content": "casez (${1:variable})\n\t${2: value}: begin\n\t\t${3}\n\tend\ndefault: begin\n\t${4}\n\nend\nendcase",
       "doc": "Casez Statement",
       "label": "casez statement",
@@ -74,27 +42,27 @@
       }
     },
     {
+      "content": "task ${1:name}(${2});\n\n\t${0}\n\nendtask: $1",
+      "doc": "Task snippet",
+      "label": "task",
+      "matches": {
+        "task": true
+      }
+    },
+    {
+      "content": "typedef enum ${2:logic[15:0]} \n{\n\n${3:REG = 16'h0000}\n\n} ${1:my_dest_t};",
+      "doc": "Typedef enum",
+      "label": "typedef enum",
+      "matches": {
+        "tde": true
+      }
+    },
+    {
       "content": "always @(${1:Sensitive list}) begin\n\n\t${0}\n\nend",
       "doc": "Always block",
       "label": "always block",
       "matches": {
         "al": true
-      }
-    },
-    {
-      "content": "module ${1:FILENAME} (\n\t${2}\n);\n\t${0}\n\nendmodule",
-      "doc": "Module Block",
-      "label": "module block",
-      "matches": {
-        "modu": true
-      }
-    },
-    {
-      "content": "else if (${1}) begin\n\n${0}\n\nend",
-      "doc": "else-if statement",
-      "label": "else-if",
-      "matches": {
-        "eif": true
       }
     },
     {
@@ -114,11 +82,11 @@
       }
     },
     {
-      "content": "else begin\n\n${0}\n\nend",
-      "doc": "else-if statement",
-      "label": "else",
+      "content": "module ${1:FILENAME} (\n\t${2}\n);\n\t${0}\n\nendmodule",
+      "doc": "Module Block",
+      "label": "module block",
       "matches": {
-        "el": true
+        "modu": true
       }
     },
     {
@@ -130,11 +98,43 @@
       }
     },
     {
-      "content": "task ${1:name}(${2});\n\n\t${0}\n\nendtask: $1",
-      "doc": "Task snippet",
-      "label": "task",
+      "content": "if (${1}) begin\n\n\t${2}\n\nend\n\nelse begin\n\n\t${3}\n\nend",
+      "doc": "If-else statement",
+      "label": "if-else",
       "matches": {
-        "task": true
+        "ife": true
+      }
+    },
+    {
+      "content": "forever begin\n\t${0}\nend",
+      "doc": "Forever loop",
+      "label": "forever",
+      "matches": {
+        "forev": true
+      }
+    },
+    {
+      "content": "else if (${1}) begin\n\n${0}\n\nend",
+      "doc": "else-if statement",
+      "label": "else-if",
+      "matches": {
+        "eif": true
+      }
+    },
+    {
+      "content": "whlie (${1}) begin\n\t${0}\nend",
+      "doc": "While loop",
+      "label": "while",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "else begin\n\n${0}\n\nend",
+      "doc": "else-if statement",
+      "label": "else",
+      "matches": {
+        "el": true
       }
     },
     {

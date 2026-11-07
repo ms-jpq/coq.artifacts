@@ -2,19 +2,19 @@
   "extends": [],
   "snippets": [
     {
-      "content": "self.assertRaises(${1:exception}, ${2:callable}, ${3:args})$0",
-      "doc": "",
-      "label": "Assert raises",
-      "matches": {
-        "asr": true
-      }
-    },
-    {
       "content": "self.fail('${1:message}')$0",
       "doc": "",
       "label": "Fail (a test)",
       "matches": {
         "fail": true
+      }
+    },
+    {
+      "content": "self.assertRaises(${1:exception}, ${2:callable}, ${3:args})$0",
+      "doc": "",
+      "label": "Assert raises",
+      "matches": {
+        "asr": true
       }
     }
   ]

@@ -2,11 +2,27 @@
   "extends": [],
   "snippets": [
     {
-      "content": "fieldsets = (\n\t(None, {\n\t\t'fields': (\n\t\t\t$1\n\t\t),\n\t}),\n)",
-      "doc": "",
-      "label": "fieldsets",
+      "content": "class ${1}Inline(admin.TabularInline):\n\t'''Tabular Inline View for ${1}'''\n\n\tmodel = ${2:${1}}\n\tmin_num = ${3:3}\n\tmax_num = ${4:20}\n\textra = ${5:1}\n\traw_id_fields = (${6},)",
+      "doc": "Tabular Inline",
+      "label": "tabularinline",
       "matches": {
-        "fieldsets": true
+        "tabularinline": true
+      }
+    },
+    {
+      "content": "class ${1:NAME}Filter(admin.SimpleListFilter):\n\n\ttitle = '$2'\n\tparameter_name = '$0'\n\n\tdef lookups(self, request, model_admin):\n\t\tpass\n\n\tdef queryset(self, request, queryset):\n\t\treturn queryset",
+      "doc": "Admin SimpleList Filter",
+      "label": "simplelistfilter",
+      "matches": {
+        "simplelistfilter": true
+      }
+    },
+    {
+      "content": "admin.site.register($1, $1Admin)",
+      "doc": "register the model class providing a ModelAdmin description",
+      "label": "registermadmin",
+      "matches": {
+        "registermadmin": true
       }
     },
     {
@@ -15,6 +31,14 @@
       "label": "stackedinline",
       "matches": {
         "stackedinline": true
+      }
+    },
+    {
+      "content": "fieldsets = (\n\t(None, {\n\t\t'fields': (\n\t\t\t$1\n\t\t),\n\t}),\n)",
+      "doc": "",
+      "label": "fieldsets",
+      "matches": {
+        "fieldsets": true
       }
     },
     {
@@ -42,35 +66,11 @@
       }
     },
     {
-      "content": "class ${1}Inline(admin.TabularInline):\n\t'''Tabular Inline View for ${1}'''\n\n\tmodel = ${2:${1}}\n\tmin_num = ${3:3}\n\tmax_num = ${4:20}\n\textra = ${5:1}\n\traw_id_fields = (${6},)",
-      "doc": "Tabular Inline",
-      "label": "tabularinline",
-      "matches": {
-        "tabularinline": true
-      }
-    },
-    {
       "content": "admin.site.register($1)",
       "doc": "register the model class without providing a ModelAdmin description.",
       "label": "register",
       "matches": {
         "register": true
-      }
-    },
-    {
-      "content": "admin.site.register($1, $1Admin)",
-      "doc": "register the model class providing a ModelAdmin description",
-      "label": "registermadmin",
-      "matches": {
-        "registermadmin": true
-      }
-    },
-    {
-      "content": "class ${1:NAME}Filter(admin.SimpleListFilter):\n\n\ttitle = '$2'\n\tparameter_name = '$0'\n\n\tdef lookups(self, request, model_admin):\n\t\tpass\n\n\tdef queryset(self, request, queryset):\n\t\treturn queryset",
-      "doc": "Admin SimpleList Filter",
-      "label": "simplelistfilter",
-      "matches": {
-        "simplelistfilter": true
       }
     }
   ]

@@ -2,11 +2,147 @@
   "extends": [],
   "snippets": [
     {
-      "content": "@finally {\n\t${0:statements}\n}",
-      "doc": "Create a finally block",
-      "label": "finally",
+      "content": "@try {\n\t${1:statements}\n}\n@catch (NSException * e) {\n\t${2:handler}\n}\n@finally {\n\t${0:statements}\n}",
+      "doc": "Create a try-catch-finally block",
+      "label": "try-catch-finally",
       "matches": {
-        "@finally": true
+        "@try": true
+      }
+    },
+    {
+      "content": "#define $0",
+      "doc": "Code snippet for #define \" \"",
+      "label": "#def",
+      "matches": {
+        "def": true
+      }
+    },
+    {
+      "content": "int main (int argc, char *argv[])\n{\n\t$0\n\treturn 0;\n}",
+      "doc": "A standard main function for a C program",
+      "label": "Main function template",
+      "matches": {
+        "main": true
+      }
+    },
+    {
+      "content": "//\n//  $TM_FILENAME\n//  $WORKSPACE_NAME\n//\n//  Created by ${VIM:\\$USER} on $CURRENT_YEAR/$CURRENT_MONTH/$CURRENT_DATE.\n//  Copyright © $CURRENT_YEAR ${VIM:\\$USER}. All rights reserved.\n//",
+      "doc": "Create a file documents header",
+      "label": "Create file documents",
+      "matches": {
+        "filedoc": true
+      }
+    },
+    {
+      "content": "// MARK: - $CLIPBOARD",
+      "doc": "Create a MARK for copied text",
+      "label": "MARK: - copied text",
+      "matches": {
+        "markselected": true
+      }
+    },
+    {
+      "content": "// MARK: - Override",
+      "doc": "Create a MARK: - Override",
+      "label": "MARK: - Override",
+      "matches": {
+        "markoverride": true
+      }
+    },
+    {
+      "content": "#include <stdio.h>\n\nint main (int argc, char *argv[])\n{\n\t$0\n\treturn 0;\n}",
+      "doc": "A standard starter template for a C program",
+      "label": "Standard Starter Template",
+      "matches": {
+        "sst": true
+      }
+    },
+    {
+      "content": "// MARK: - Public",
+      "doc": "Create a MARK: - Data",
+      "label": "MARK: - Data",
+      "matches": {
+        "markdata": true
+      }
+    },
+    {
+      "content": "// MARK: - UI",
+      "doc": "Create a MARK: - UI",
+      "label": "MARK: - UI",
+      "matches": {
+        "markui": true
+      }
+    },
+    {
+      "content": "else {\n\t$0\n}",
+      "doc": "Code snippet for else statement",
+      "label": "else",
+      "matches": {
+        "else": true
+      }
+    },
+    {
+      "content": "struct ${1:MyStruct} {\n\t$0\n};",
+      "doc": "Code snippet for struct",
+      "label": "struct",
+      "matches": {
+        "struct": true
+      }
+    },
+    {
+      "content": "// MARK: - Private",
+      "doc": "Create a MARK: - Private",
+      "label": "MARK: - Private",
+      "matches": {
+        "markprivate": true
+      }
+    },
+    {
+      "content": "typedef NS_ENUM(NSUInteger, ${1:MyEnum}) {\n\t${2:MyEnumValueA} = 1 << 0,\n\t${3:MyEnumValueB} = 1 << 1,\n\t${4:MyEnumValueC} = 1 << 2,\n};",
+      "doc": "Code snippet for NS_OPTIONS",
+      "label": "nsoptions",
+      "matches": {
+        "nsoptions": true
+      }
+    },
+    {
+      "content": "do {\n\t$1\n} while($2);",
+      "doc": "Creates a do...while loop",
+      "label": "Do...while loop",
+      "matches": {
+        "do": true
+      }
+    },
+    {
+      "content": "@synchronized (${1:token}) {\n\t${2:statements}\n}",
+      "doc": "Create a finally block",
+      "label": "@synchronized",
+      "matches": {
+        "@synchronized": true
+      }
+    },
+    {
+      "content": "// MARK: - ${1:lable}",
+      "doc": "Create a MARK",
+      "label": "MARK: -",
+      "matches": {
+        "mark": true
+      }
+    },
+    {
+      "content": "if ($1) {\n\t$0\n}",
+      "doc": "Code snippet for if statement",
+      "label": "if",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "dispatch_get_main_queue()",
+      "doc": "Create a dispatch_get_main_queue",
+      "label": "Dispatch get main queue",
+      "matches": {
+        "dispatchgetmainqueue": true
       }
     },
     {
@@ -27,36 +163,51 @@
       }
     },
     {
-      "content": "typedef NS_ENUM(NSUInteger, ${1:MyEnum}) {\n\t${2:MyEnumValueA},\n\t${3:MyEnumValueB},\n\t${4:MyEnumValueC},\n};",
-      "doc": "Code snippet for NS_ENUM",
-      "label": "nsenum",
+      "content": "@finally {\n\t${0:statements}\n}",
+      "doc": "Create a finally block",
+      "label": "finally",
       "matches": {
-        "nsenum": true
+        "@finally": true
       }
     },
     {
-      "content": "#include <$0>",
-      "doc": "Code snippet for #include < >",
-      "label": "#inc<",
+      "content": "dispatch_get_global_queue(${1:intptr_t identifier}, ${2:uintptr_t flags})",
+      "doc": "Create a dispatch_get_global_queue",
+      "label": "Dispatch get global queue",
       "matches": {
-        "#inc<": true
+        "dispatchgetglobalqueue": true
       }
     },
     {
-      "content": "typedef NS_ENUM(NSUInteger, ${1:MyEnum}) {\n\t${2:MyEnumValueA} = 1 << 0,\n\t${3:MyEnumValueB} = 1 << 1,\n\t${4:MyEnumValueC} = 1 << 2,\n};",
-      "doc": "Code snippet for NS_OPTIONS",
-      "label": "nsoptions",
+      "content": "// MARK: - Public",
+      "doc": "Create a MARK: - Public",
+      "label": "MARK: - Public",
       "matches": {
-        "nsoptions": true
+        "markpublic": true
       }
     },
     {
-      "content": "+ (${1:void}) ${2:func name} {\n$4\n}",
-      "doc": "Create an Objc class method implementation",
-      "label": "Create class method implementation",
+      "content": "#ifdef ${1:DEBUG}\n$0\n#endif /* $1 */",
+      "doc": "Code snippet for #ifdef",
+      "label": "#ifdef",
       "matches": {
-        "+impl": true,
-        "funcci": true
+        "#ifdef": true
+      }
+    },
+    {
+      "content": "NSLog(@\"${1:%@}\"$2);",
+      "doc": "Create a NSLog",
+      "label": "NSLog",
+      "matches": {
+        "NSLog": true
+      }
+    },
+    {
+      "content": "while ($1) {\n\t$0\n}",
+      "doc": "",
+      "label": "while",
+      "matches": {
+        "while": true
       }
     },
     {
@@ -69,134 +220,11 @@
       }
     },
     {
-      "content": "// MARK: - Public",
-      "doc": "Create a MARK: - Data",
-      "label": "MARK: - Data",
-      "matches": {
-        "markdata": true
-      }
-    },
-    {
-      "content": ":(${1:type}) ${2:field}",
-      "doc": "Create an Objc instance method implementation",
-      "label": "Function field",
-      "matches": {
-        "field": true
-      }
-    },
-    {
-      "content": "@implementation ${1:$TM_FILENAME_BASE}\n\n${2:methods}\n\n@end",
-      "doc": "Create an Objc Class implementation",
-      "label": "Create Class implementation",
-      "matches": {
-        "@implementation": true
-      }
-    },
-    {
       "content": "#ifndef ${1:DEBUG}\n$0\n#endif /* !$1 */",
       "doc": "Code snippet for #ifndef",
       "label": "#ifndef",
       "matches": {
         "#ifndef": true
-      }
-    },
-    {
-      "content": "switch (${1:switch_on}) {\n\tdefault:\n\t\t$0\n\t\tbreak;\n}",
-      "doc": "Code snippet for switch statement",
-      "label": "switch",
-      "matches": {
-        "switch": true
-      }
-    },
-    {
-      "content": "// MARK: - Public",
-      "doc": "Create a MARK: - Public",
-      "label": "MARK: - Public",
-      "matches": {
-        "markpublic": true
-      }
-    },
-    {
-      "content": ":(${1:void} (^${2:nullability}) (${3:parameters}))${4:name}",
-      "doc": "Create a block field",
-      "label": "Block field",
-      "matches": {
-        "fieldblock": true
-      }
-    },
-    {
-      "content": "NSLog(@\"${1:%@}\"$2);",
-      "doc": "Create a NSLog",
-      "label": "NSLog",
-      "matches": {
-        "NSLog": true
-      }
-    },
-    {
-      "content": "@property (nonatomic, ${1:memory control}) ${2:property};",
-      "doc": "Create an Objc property",
-      "label": "Create property",
-      "matches": {
-        "@property": true,
-        "prop": true
-      }
-    },
-    {
-      "content": "// MARK: - ${1:lable}",
-      "doc": "Create a MARK",
-      "label": "MARK: -",
-      "matches": {
-        "mark": true
-      }
-    },
-    {
-      "content": "@synchronized (${1:token}) {\n\t${2:statements}\n}",
-      "doc": "Create a finally block",
-      "label": "@synchronized",
-      "matches": {
-        "@synchronized": true
-      }
-    },
-    {
-      "content": "@property (nonatomic, ${1:memory control}) ${2:type} ${3:$CLIPBOARD};",
-      "doc": "Create an Objc property with copied text",
-      "label": "Create property for copied text",
-      "matches": {
-        "makeproperty": true,
-        "mp": true
-      }
-    },
-    {
-      "content": "typedef ${1:void} (^${2:type_name}) (${3:parameters})",
-      "doc": "Create a block field",
-      "label": "Block typedef",
-      "matches": {
-        "typedefblock": true
-      }
-    },
-    {
-      "content": "@catch (NSException * e) {\n\t${2:handler}\n}",
-      "doc": "Create a catch block",
-      "label": "catch",
-      "matches": {
-        "@catch": true
-      }
-    },
-    {
-      "content": "@try {\n\t${1:statements}\n}\n@catch (NSException * e) {\n\t${2:handler}\n}\n@finally {\n\t${0:statements}\n}",
-      "doc": "Create a try-catch-finally block",
-      "label": "try-catch-finally",
-      "matches": {
-        "@try": true
-      }
-    },
-    {
-      "content": "+ (${1:void}) ${2:func name};",
-      "doc": "Create an Objc class method interface",
-      "label": "Create class method interface",
-      "matches": {
-        "+interface": true,
-        "funccd": true
       }
     },
     {
@@ -208,43 +236,43 @@
       }
     },
     {
-      "content": "for (${1:size_t} ${2:i} = ${3:0}; $2 < ${4:length}; $2++) {\n\t$0\n}",
-      "doc": "Code snippet for 'for' loop",
-      "label": "for",
+      "content": "dispatch_async(${1:dispatch_queue_t  _Nonnull queue}, ${2:^(void)block})",
+      "doc": "Create a dispatch_async",
+      "label": "Dispatch async",
       "matches": {
-        "for": true
+        "dispatchasync": true
       }
     },
     {
-      "content": "@property (nonatomic, copy, ${1:nullability}) ${2:void} (^${3:name})(${4:parameters});",
-      "doc": "Create a block property",
-      "label": "Block property",
+      "content": "@implementation ${1:$TM_FILENAME_BASE}\n\n${2:methods}\n\n@end",
+      "doc": "Create an Objc Class implementation",
+      "label": "Create Class implementation",
       "matches": {
-        "@propertyblock": true
+        "@implementation": true
       }
     },
     {
-      "content": "for (${1:size_t} ${2:i} = ${3:length} - 1; $2 >= ${4:0}; $2--) {\n\t$0\n}",
-      "doc": "Code snippet for reverse 'for' loop",
-      "label": "forr",
+      "content": "switch (${1:switch_on}) {\n\tdefault:\n\t\t$0\n\t\tbreak;\n}",
+      "doc": "Code snippet for switch statement",
+      "label": "switch",
       "matches": {
-        "forr": true
+        "switch": true
       }
     },
     {
-      "content": "if ($1) {\n\t$0\n}",
-      "doc": "Code snippet for if statement",
-      "label": "if",
+      "content": "case $1:\n\t$0\n\tbreak;",
+      "doc": "Code snippet for case branch",
+      "label": "case",
       "matches": {
-        "if": true
+        "case": true
       }
     },
     {
-      "content": "dispatch_get_main_queue()",
-      "doc": "Create a dispatch_get_main_queue",
-      "label": "Dispatch get main queue",
+      "content": "else if ($1) {\n\t$0\n}",
+      "doc": "Code snippet for else-if statement",
+      "label": "else if",
       "matches": {
-        "dispatchgetmainqueue": true
+        "else if": true
       }
     },
     {
@@ -256,38 +284,6 @@
       }
     },
     {
-      "content": "union ${1:MyUnion} {\n\t$0\n};",
-      "doc": "Code snippet for union",
-      "label": "union",
-      "matches": {
-        "union": true
-      }
-    },
-    {
-      "content": "dispatch_async(${1:dispatch_queue_t  _Nonnull queue}, ${2:^(void)block})",
-      "doc": "Create a dispatch_async",
-      "label": "Dispatch async",
-      "matches": {
-        "dispatchasync": true
-      }
-    },
-    {
-      "content": "for (${1:type *object} in ${2:collection}) {\n\t${3:statements}\n}",
-      "doc": "Code snippet for reverse 'forin' loop",
-      "label": "forin",
-      "matches": {
-        "forin": true
-      }
-    },
-    {
-      "content": "#import \"$0\"",
-      "doc": "Code snippet for #import \" \"",
-      "label": "#imp",
-      "matches": {
-        "#imp": true
-      }
-    },
-    {
       "content": "static dispatch_once_t onceToken;\ndispatch_once(&onceToken, ^{\n\t${1:code to be executed once}\n});",
       "doc": "Create a dispatch_once",
       "label": "Dispatch once snip",
@@ -296,19 +292,11 @@
       }
     },
     {
-      "content": "// MARK: - Private",
-      "doc": "Create a MARK: - Private",
-      "label": "MARK: - Private",
+      "content": "typedef struct {\n\t$0\n} ${1:MyStruct};",
+      "doc": "Code snippet to define a type with struct",
+      "label": "typedef struct",
       "matches": {
-        "markprivate": true
-      }
-    },
-    {
-      "content": "#import <$0>",
-      "doc": "Code snippet for #import < >",
-      "label": "#imp<",
-      "matches": {
-        "#imp<": true
+        "structt": true
       }
     },
     {
@@ -321,51 +309,53 @@
       }
     },
     {
-      "content": "while ($1) {\n\t$0\n}",
-      "doc": "",
-      "label": "while",
+      "content": "typedef ${1:void} (^${2:type_name}) (${3:parameters})",
+      "doc": "Create a block field",
+      "label": "Block typedef",
       "matches": {
-        "while": true
+        "typedefblock": true
       }
     },
     {
-      "content": "#include \"$0\"",
-      "doc": "Code snippet for #include \" \"",
-      "label": "#inc",
+      "content": "for (${1:size_t} ${2:i} = ${3:0}; $2 < ${4:length}; $2++) {\n\t$0\n}",
+      "doc": "Code snippet for 'for' loop",
+      "label": "for",
       "matches": {
-        "#inc": true
+        "for": true
       }
     },
     {
-      "content": "@selector(${1:method}}",
-      "doc": "Create a @selector",
-      "label": "@selector",
+      "content": "for (${1:size_t} ${2:i} = ${3:length} - 1; $2 >= ${4:0}; $2--) {\n\t$0\n}",
+      "doc": "Code snippet for reverse 'for' loop",
+      "label": "forr",
       "matches": {
-        "@selector": true
+        "forr": true
       }
     },
     {
-      "content": "dispatch_get_global_queue(${1:intptr_t identifier}, ${2:uintptr_t flags})",
-      "doc": "Create a dispatch_get_global_queue",
-      "label": "Dispatch get global queue",
+      "content": "@property (nonatomic, ${1:memory control}) ${2:type} ${3:$CLIPBOARD};",
+      "doc": "Create an Objc property with copied text",
+      "label": "Create property for copied text",
       "matches": {
-        "dispatchgetglobalqueue": true
+        "makeproperty": true,
+        "mp": true
       }
     },
     {
-      "content": "case $1:\n\t$0\n\tbreak;",
-      "doc": "Code snippet for case branch",
-      "label": "case",
+      "content": ":(${1:type}) ${2:field}",
+      "doc": "Create an Objc instance method implementation",
+      "label": "Function field",
       "matches": {
-        "case": true
+        "field": true
       }
     },
     {
-      "content": "// MARK: - UI",
-      "doc": "Create a MARK: - UI",
-      "label": "MARK: - UI",
+      "content": "+ (${1:void}) ${2:func name};",
+      "doc": "Create an Objc class method interface",
+      "label": "Create class method interface",
       "matches": {
-        "markui": true
+        "+interface": true,
+        "funccd": true
       }
     },
     {
@@ -377,11 +367,11 @@
       }
     },
     {
-      "content": "#define $0",
-      "doc": "Code snippet for #define \" \"",
-      "label": "#def",
+      "content": "for (${1:type *object} in ${2:collection}) {\n\t${3:statements}\n}",
+      "doc": "Code snippet for reverse 'forin' loop",
+      "label": "forin",
       "matches": {
-        "def": true
+        "forin": true
       }
     },
     {
@@ -394,67 +384,45 @@
       }
     },
     {
-      "content": "enum ${1:MyEnum} {\n\t$0\n};",
-      "doc": "Code snippet for enum",
-      "label": "enum",
+      "content": "+ (${1:void}) ${2:func name} {\n$4\n}",
+      "doc": "Create an Objc class method implementation",
+      "label": "Create class method implementation",
       "matches": {
-        "enum": true
+        "+impl": true,
+        "funcci": true
       }
     },
     {
-      "content": "int main (int argc, char *argv[])\n{\n\t$0\n\treturn 0;\n}",
-      "doc": "A standard main function for a C program",
-      "label": "Main function template",
+      "content": "union ${1:MyUnion} {\n\t$0\n};",
+      "doc": "Code snippet for union",
+      "label": "union",
       "matches": {
-        "main": true
+        "union": true
       }
     },
     {
-      "content": "struct ${1:MyStruct} {\n\t$0\n};",
-      "doc": "Code snippet for struct",
-      "label": "struct",
+      "content": "@property (nonatomic, copy, ${1:nullability}) ${2:void} (^${3:name})(${4:parameters});",
+      "doc": "Create a block property",
+      "label": "Block property",
       "matches": {
-        "struct": true
+        "@propertyblock": true
       }
     },
     {
-      "content": "// MARK: - Override",
-      "doc": "Create a MARK: - Override",
-      "label": "MARK: - Override",
+      "content": "@property (nonatomic, ${1:memory control}) ${2:property};",
+      "doc": "Create an Objc property",
+      "label": "Create property",
       "matches": {
-        "markoverride": true
+        "@property": true,
+        "prop": true
       }
     },
     {
-      "content": "else if ($1) {\n\t$0\n}",
-      "doc": "Code snippet for else-if statement",
-      "label": "else if",
+      "content": "#import \"$0\"",
+      "doc": "Code snippet for #import \" \"",
+      "label": "#imp",
       "matches": {
-        "else if": true
-      }
-    },
-    {
-      "content": "#include <stdio.h>\n\nint main (int argc, char *argv[])\n{\n\t$0\n\treturn 0;\n}",
-      "doc": "A standard starter template for a C program",
-      "label": "Standard Starter Template",
-      "matches": {
-        "sst": true
-      }
-    },
-    {
-      "content": "#if ${1:0}\n$0\n#endif /* $1 */",
-      "doc": "Code snippet for #if",
-      "label": "#if",
-      "matches": {
-        "#if": true
-      }
-    },
-    {
-      "content": "// MARK: - $CLIPBOARD",
-      "doc": "Create a MARK for copied text",
-      "label": "MARK: - copied text",
-      "matches": {
-        "markselected": true
+        "#imp": true
       }
     },
     {
@@ -466,43 +434,75 @@
       }
     },
     {
-      "content": "else {\n\t$0\n}",
-      "doc": "Code snippet for else statement",
-      "label": "else",
+      "content": "@selector(${1:method}}",
+      "doc": "Create a @selector",
+      "label": "@selector",
       "matches": {
-        "else": true
+        "@selector": true
       }
     },
     {
-      "content": "typedef struct {\n\t$0\n} ${1:MyStruct};",
-      "doc": "Code snippet to define a type with struct",
-      "label": "typedef struct",
+      "content": "#import <$0>",
+      "doc": "Code snippet for #import < >",
+      "label": "#imp<",
       "matches": {
-        "structt": true
+        "#imp<": true
       }
     },
     {
-      "content": "//\n//  $TM_FILENAME\n//  $WORKSPACE_NAME\n//\n//  Created by ${VIM:\\$USER} on $CURRENT_YEAR/$CURRENT_MONTH/$CURRENT_DATE.\n//  Copyright © $CURRENT_YEAR ${VIM:\\$USER}. All rights reserved.\n//",
-      "doc": "Create a file documents header",
-      "label": "Create file documents",
+      "content": "#if ${1:0}\n$0\n#endif /* $1 */",
+      "doc": "Code snippet for #if",
+      "label": "#if",
       "matches": {
-        "filedoc": true
+        "#if": true
       }
     },
     {
-      "content": "do {\n\t$1\n} while($2);",
-      "doc": "Creates a do...while loop",
-      "label": "Do...while loop",
+      "content": "typedef NS_ENUM(NSUInteger, ${1:MyEnum}) {\n\t${2:MyEnumValueA},\n\t${3:MyEnumValueB},\n\t${4:MyEnumValueC},\n};",
+      "doc": "Code snippet for NS_ENUM",
+      "label": "nsenum",
       "matches": {
-        "do": true
+        "nsenum": true
       }
     },
     {
-      "content": "#ifdef ${1:DEBUG}\n$0\n#endif /* $1 */",
-      "doc": "Code snippet for #ifdef",
-      "label": "#ifdef",
+      "content": "#include \"$0\"",
+      "doc": "Code snippet for #include \" \"",
+      "label": "#inc",
       "matches": {
-        "#ifdef": true
+        "#inc": true
+      }
+    },
+    {
+      "content": "@catch (NSException * e) {\n\t${2:handler}\n}",
+      "doc": "Create a catch block",
+      "label": "catch",
+      "matches": {
+        "@catch": true
+      }
+    },
+    {
+      "content": ":(${1:void} (^${2:nullability}) (${3:parameters}))${4:name}",
+      "doc": "Create a block field",
+      "label": "Block field",
+      "matches": {
+        "fieldblock": true
+      }
+    },
+    {
+      "content": "#include <$0>",
+      "doc": "Code snippet for #include < >",
+      "label": "#inc<",
+      "matches": {
+        "#inc<": true
+      }
+    },
+    {
+      "content": "enum ${1:MyEnum} {\n\t$0\n};",
+      "doc": "Code snippet for enum",
+      "label": "enum",
+      "matches": {
+        "enum": true
       }
     },
     {

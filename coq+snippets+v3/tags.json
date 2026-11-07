@@ -2,22 +2,6 @@
   "extends": [],
   "snippets": [
     {
-      "content": "{% load staticfiles %}",
-      "doc": "",
-      "label": "lstatic",
-      "matches": {
-        "lstatic": true
-      }
-    },
-    {
-      "content": "@register.filter\ndef $1(value):\n\treturn value$2",
-      "doc": "",
-      "label": "register_filter",
-      "matches": {
-        "register_filter": true
-      }
-    },
-    {
       "content": "{% load $SELECTION$1_tags %}",
       "doc": "",
       "label": "ltags",
@@ -47,6 +31,22 @@
       "label": "li18n",
       "matches": {
         "li18n": true
+      }
+    },
+    {
+      "content": "@register.filter\ndef $1(value):\n\treturn value$2",
+      "doc": "",
+      "label": "register_filter",
+      "matches": {
+        "register_filter": true
+      }
+    },
+    {
+      "content": "{% load staticfiles %}",
+      "doc": "",
+      "label": "lstatic",
+      "matches": {
+        "lstatic": true
       }
     },
     {

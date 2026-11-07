@@ -2,35 +2,91 @@
   "extends": [],
   "snippets": [
     {
-      "content": "#+TITLE:     ${1:Untitled Document}\n#+AUTHOR:    ${2:Author}\n#+DATE:      ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
-      "doc": "org-file header",
-      "label": "header",
+      "content": "#+BEGIN_EXPORT latex\n$0\n#+END_EXPORT",
+      "doc": "#+BEGIN_EXPORT latex block",
+      "label": "export latex",
       "matches": {
-        "head": true
+        "<l": true
       }
     },
     {
-      "content": "#+BEGIN_VERSE\n$0\n#+END_VERSE",
-      "doc": "verse",
-      "label": "verse",
+      "content": "#+BEGIN_HTML\n---\nlayout: ${1:default}\ntitle: ${2:title}\n---\n#+END_HTML\n$0",
+      "doc": "entry",
+      "label": "entry",
       "matches": {
-        "<v": true
+        "entry": true
       }
     },
     {
-      "content": "#+BEGIN_EXPORT ascii\n$0\n#+END_EXPORT",
-      "doc": "#+BEGIN_EXPORT ascii",
-      "label": "export ascii",
+      "content": "#+BEGIN_QUOTE\n$0\n#+END_QUOTE",
+      "doc": "#+BEGIN_QUOTE block",
+      "label": "quote block",
       "matches": {
-        "<a": true
+        "<q": true
       }
     },
     {
-      "content": "#+BEGIN_EXPORT html\n$0\n#+END_EXPORT",
-      "doc": "#+BEGIN_EXPORT html block",
-      "label": "export html",
+      "content": "#+BEGIN_COMMENT\n$0\n#+END_COMMENT",
+      "doc": "#+BEGIN_COMMENT block",
+      "label": "comment block",
       "matches": {
-        "<h": true
+        "<c": true
+      }
+    },
+    {
+      "content": "#+BEGIN_${1:LANG} ${2:options}\n$0\n#+END_$1",
+      "doc": "code",
+      "label": "code",
+      "matches": {
+        "code": true
+      }
+    },
+    {
+      "content": "#+BEGIN_CENTER\n$0\n#+END_CENTER",
+      "doc": "#+BEGIN_CENTER block",
+      "label": "center block",
+      "matches": {
+        "<C": true
+      }
+    },
+    {
+      "content": "#+BEGIN_EXAMPLE\n$0\n#+END_EXAMPLE",
+      "doc": "#+BEGIN_EXAMPLE block",
+      "label": "example block",
+      "matches": {
+        "<e": true
+      }
+    },
+    {
+      "content": "#+BEGIN_SRC ${1:lang}\n$0\n#+END_SRC",
+      "doc": "#+BEGIN_SRC ... block",
+      "label": "src block",
+      "matches": {
+        "<s": true
+      }
+    },
+    {
+      "content": "TODO ${1:task description}",
+      "doc": "TODO item",
+      "label": "todo",
+      "matches": {
+        "todo": true
+      }
+    },
+    {
+      "content": "#+BEGIN_SRC emacs-lisp :tangle yes\n$0\n#+END_SRC",
+      "doc": "elisp",
+      "label": "elisp",
+      "matches": {
+        "elisp": true
+      }
+    },
+    {
+      "content": "#+BEGIN_LATEX\n$0\n#+END_LATEX",
+      "doc": "latex",
+      "label": "latex",
+      "matches": {
+        "latex": true
       }
     },
     {
@@ -50,19 +106,11 @@
       }
     },
     {
-      "content": "#+BEGIN_${1:LANG} ${2:options}\n$0\n#+END_$1",
-      "doc": "code",
-      "label": "code",
+      "content": "#+TITLE:     ${1:Untitled Document}\n#+AUTHOR:    ${2:Author}\n#+DATE:      ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
+      "doc": "org-file header",
+      "label": "header",
       "matches": {
-        "code": true
-      }
-    },
-    {
-      "content": "TODO ${1:task description}",
-      "doc": "TODO item",
-      "label": "todo",
-      "matches": {
-        "todo": true
+        "head": true
       }
     },
     {
@@ -82,35 +130,11 @@
       }
     },
     {
-      "content": "#+BEGIN_CENTER\n$0\n#+END_CENTER",
-      "doc": "#+BEGIN_CENTER block",
-      "label": "center block",
+      "content": "#+BEGIN_EXPORT html\n$0\n#+END_EXPORT",
+      "doc": "#+BEGIN_EXPORT html block",
+      "label": "export html",
       "matches": {
-        "<C": true
-      }
-    },
-    {
-      "content": "#+BEGIN_SRC emacs-lisp :tangle yes\n$0\n#+END_SRC",
-      "doc": "elisp",
-      "label": "elisp",
-      "matches": {
-        "elisp": true
-      }
-    },
-    {
-      "content": "#+BEGIN_EXAMPLE\n$0\n#+END_EXAMPLE",
-      "doc": "#+BEGIN_EXAMPLE block",
-      "label": "example block",
-      "matches": {
-        "<e": true
-      }
-    },
-    {
-      "content": "#+BEGIN_EXPORT latex\n$0\n#+END_EXPORT",
-      "doc": "#+BEGIN_EXPORT latex block",
-      "label": "export latex",
-      "matches": {
-        "<l": true
+        "<h": true
       }
     },
     {
@@ -122,43 +146,19 @@
       }
     },
     {
-      "content": "#+BEGIN_HTML\n---\nlayout: ${1:default}\ntitle: ${2:title}\n---\n#+END_HTML\n$0",
-      "doc": "entry",
-      "label": "entry",
+      "content": "#+BEGIN_EXPORT ascii\n$0\n#+END_EXPORT",
+      "doc": "#+BEGIN_EXPORT ascii",
+      "label": "export ascii",
       "matches": {
-        "entry": true
+        "<a": true
       }
     },
     {
-      "content": "#+BEGIN_SRC ${1:lang}\n$0\n#+END_SRC",
-      "doc": "#+BEGIN_SRC ... block",
-      "label": "src block",
+      "content": "#+BEGIN_VERSE\n$0\n#+END_VERSE",
+      "doc": "verse",
+      "label": "verse",
       "matches": {
-        "<s": true
-      }
-    },
-    {
-      "content": "#+BEGIN_QUOTE\n$0\n#+END_QUOTE",
-      "doc": "#+BEGIN_QUOTE block",
-      "label": "quote block",
-      "matches": {
-        "<q": true
-      }
-    },
-    {
-      "content": "#+BEGIN_LATEX\n$0\n#+END_LATEX",
-      "doc": "latex",
-      "label": "latex",
-      "matches": {
-        "latex": true
-      }
-    },
-    {
-      "content": "#+BEGIN_COMMENT\n$0\n#+END_COMMENT",
-      "doc": "#+BEGIN_COMMENT block",
-      "label": "comment block",
-      "matches": {
-        "<c": true
+        "<v": true
       }
     },
     {

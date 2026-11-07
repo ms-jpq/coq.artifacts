@@ -2,28 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "package main\n\nfunc main() {\n\t$0\n}",
-      "doc": "Snippet for main package & function",
-      "label": "package main and main function",
+      "content": "`json:\"$1\"`",
+      "doc": "Snippet for struct json tag",
+      "label": "json tag",
       "matches": {
-        "pkgm": true
-      }
-    },
-    {
-      "content": "func (${1:receiver} ${2:type}) ${3:method}($4) $5 {\n\t$0\n}",
-      "doc": "Snippet for method declaration",
-      "label": "method declaration",
-      "matches": {
-        "fum": true,
-        "meth": true
-      }
-    },
-    {
-      "content": "log.Printf(\"$1\", ${2:var})",
-      "doc": "Snippet for log.Printf()",
-      "label": "log.Printf",
-      "matches": {
-        "lf": true
+        "json": true
       }
     },
     {
@@ -35,11 +18,11 @@
       }
     },
     {
-      "content": "for ${1}{\n\t$0\n}",
-      "doc": "Snippet for a pure for loop",
-      "label": "for statement",
+      "content": "`xml:\"$1\"`",
+      "doc": "Snippet for struct xml tag",
+      "label": "xml tag",
       "matches": {
-        "for": true
+        "xml": true
       }
     },
     {
@@ -51,30 +34,6 @@
       }
     },
     {
-      "content": "func Benchmark$1(b *testing.B) {\n\tfor ${2:i} := 0; ${2:i} < b.N; ${2:i}++ {\n\t\t$0\n\t}\n}",
-      "doc": "Snippet for Benchmark function",
-      "label": "benchmark function",
-      "matches": {
-        "bf": true
-      }
-    },
-    {
-      "content": "t.Log(\"$1\")",
-      "doc": "Snippet for t.Log()",
-      "label": "t.Log",
-      "matches": {
-        "tl": true
-      }
-    },
-    {
-      "content": "t.Logf(\"$1\", ${2:var})",
-      "doc": "Snippet for t.Logf()",
-      "label": "t.Logf",
-      "matches": {
-        "tlf": true
-      }
-    },
-    {
       "content": "if ${1:value}, ok := ${2:map}[${3:key}]; ok {\n\t$4\n}",
       "doc": "",
       "label": "if key in a map",
@@ -83,83 +42,35 @@
       }
     },
     {
-      "content": "`xml:\"$1\"`",
-      "doc": "Snippet for struct xml tag",
-      "label": "xml tag",
+      "content": "var (\n\t${1:name} ${2:type} = ${3:value}\n)",
+      "doc": "Snippet for a variable",
+      "label": "variables declaration",
       "matches": {
-        "xml": true
+        "vars": true
       }
     },
     {
-      "content": "t.Logf(\"${1:var}: %#+v\\\\n\", ${1:var})",
-      "doc": "Snippet for t.Logf() with variable content",
-      "label": "t.Logf variable content",
+      "content": "http.ListenAndServe(\"${1::8080}\", ${2:nil})",
+      "doc": "Snippet for http.ListenAndServe",
+      "label": "http.ListenAndServe",
       "matches": {
-        "tlv": true
+        "las": true
       }
     },
     {
-      "content": "`json:\"$1\"`",
-      "doc": "Snippet for struct json tag",
-      "label": "json tag",
+      "content": "if err != nil {\n\treturn ${1:nil}, ${2:err}\n}",
+      "doc": "Snippet for if err != nil",
+      "label": "if err != nil",
       "matches": {
-        "json": true
+        "ir": true
       }
     },
     {
-      "content": "type ${1:SortBy} []${2:Type}\n\nfunc (a $1) Len() int           { return len(a) }\nfunc (a $1) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }\nfunc (a $1) Less(i, j int) bool { ${3:return a[i] < a[j]} }",
-      "doc": "Snippet for a custom sort.Sort interface implementation, for a given slice type.",
-      "label": "sort implementation",
+      "content": "http.Serve(\"${1::8080}\", ${2:nil})",
+      "doc": "Snippet for http.Serve",
+      "label": "http.Serve",
       "matches": {
-        "sort": true
-      }
-    },
-    {
-      "content": "case ${1:condition}:$0",
-      "doc": "Snippet for case clause",
-      "label": "case clause",
-      "matches": {
-        "cs": true
-      }
-    },
-    {
-      "content": "make(${1:type}, ${2:0})",
-      "doc": "Snippet for make statement",
-      "label": "make(...)",
-      "matches": {
-        "make": true
-      }
-    },
-    {
-      "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"net/http\"\n\t\"time\"\n)\n\nfunc greet(w http.ResponseWriter, r *http.Request) {\n\tfmt.Fprintf(w, \"Hello World! %s\", time.Now())\n}\n\nfunc main() {\n\thttp.HandleFunc(\"/\", greet)\n\thttp.ListenAndServe(\":8080\", nil)\n}",
-      "doc": "Snippet for sample hello world webapp",
-      "label": "hello world web app",
-      "matches": {
-        "helloweb": true
-      }
-    },
-    {
-      "content": "switch ${1:expression} {\ncase ${2:condition}:\n\t$0\n}",
-      "doc": "Snippet for switch statement",
-      "label": "switch statement",
-      "matches": {
-        "switch": true
-      }
-    },
-    {
-      "content": "new(${1:type})",
-      "doc": "Snippet for new statement",
-      "label": "new(...)",
-      "matches": {
-        "new": true
-      }
-    },
-    {
-      "content": "for ${1:i} := ${2:0}; $1 < ${3:count}; $1${4:++} {\n\t$0\n}",
-      "doc": "Snippet for a for loop",
-      "label": "for n statement",
-      "matches": {
-        "fori": true
+        "sv": true
       }
     },
     {
@@ -171,11 +82,91 @@
       }
     },
     {
-      "content": "panic(\"$0\")",
-      "doc": "Snippet for panic",
-      "label": "panic(...)",
+      "content": "fmt.Println(\"$1\")",
+      "doc": "Snippet for fmt.Println()",
+      "label": "fmt.Println",
       "matches": {
-        "pn": true
+        "fp": true
+      }
+    },
+    {
+      "content": "go func($1) {\n\t$0\n}($2)",
+      "doc": "Snippet for anonymous goroutine declaration",
+      "label": "goroutine anonymous function",
+      "matches": {
+        "go": true
+      }
+    },
+    {
+      "content": "case ${1:condition}:$0",
+      "doc": "Snippet for case clause",
+      "label": "case clause",
+      "matches": {
+        "cs": true
+      }
+    },
+    {
+      "content": "type ${1:SortBy} []${2:Type}\n\nfunc (a $1) Len() int           { return len(a) }\nfunc (a $1) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }\nfunc (a $1) Less(i, j int) bool { ${3:return a[i] < a[j]} }",
+      "doc": "Snippet for a custom sort.Sort interface implementation, for a given slice type.",
+      "label": "sort implementation",
+      "matches": {
+        "sort": true
+      }
+    },
+    {
+      "content": "fmt.Printf(\"$1\", ${2:var})",
+      "doc": "Snippet for fmt.Printf()",
+      "label": "fmt.Printf",
+      "matches": {
+        "ff": true
+      }
+    },
+    {
+      "content": "for ${1}{\n\t$0\n}",
+      "doc": "Snippet for a pure for loop",
+      "label": "for statement",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"net/http\"\n\t\"time\"\n)\n\nfunc greet(w http.ResponseWriter, r *http.Request) {\n\tfmt.Fprintf(w, \"Hello World! %s\", time.Now())\n}\n\nfunc main() {\n\thttp.HandleFunc(\"/\", greet)\n\thttp.ListenAndServe(\":8080\", nil)\n}",
+      "doc": "Snippet for sample hello world webapp",
+      "label": "hello world web app",
+      "matches": {
+        "helloweb": true
+      }
+    },
+    {
+      "content": "else {\n\t$0\n}",
+      "doc": "Snippet for else branch",
+      "label": "else branch",
+      "matches": {
+        "el": true
+      }
+    },
+    {
+      "content": "log.Println(\"$1\")",
+      "doc": "Snippet for log.Println()",
+      "label": "log.Println",
+      "matches": {
+        "lp": true
+      }
+    },
+    {
+      "content": "func $1(${2:w} http.ResponseWriter, ${3:r} *http.Request) {\n\t$0\n}",
+      "doc": "Snippet for http handler declaration",
+      "label": "http handler declaration",
+      "matches": {
+        "hand": true
+      }
+    },
+    {
+      "content": "func init() {\n\t$1\n}",
+      "doc": "Snippet for init function",
+      "label": "init function",
+      "matches": {
+        "finit": true
       }
     },
     {
@@ -184,6 +175,14 @@
       "label": "for range statement",
       "matches": {
         "forr": true
+      }
+    },
+    {
+      "content": "log.Printf(\"$1\", ${2:var})",
+      "doc": "Snippet for log.Printf()",
+      "label": "log.Printf",
+      "matches": {
+        "lf": true
       }
     },
     {
@@ -203,6 +202,207 @@
       }
     },
     {
+      "content": "log.Printf(\"${1:var}: %#+v\\\\n\", ${1:var})",
+      "doc": "Snippet for log.Printf() with variable content",
+      "label": "log variable content",
+      "matches": {
+        "lv": true
+      }
+    },
+    {
+      "content": "func Benchmark$1(b *testing.B) {\n\tfor ${2:i} := 0; ${2:i} < b.N; ${2:i}++ {\n\t\t$0\n\t}\n}",
+      "doc": "Snippet for Benchmark function",
+      "label": "benchmark function",
+      "matches": {
+        "bf": true
+      }
+    },
+    {
+      "content": "func TestMain(m *testing.M) {\n\t$1\n\n\tos.Exit(m.Run())\n}",
+      "doc": "Snippet for TestMain function",
+      "label": "test main",
+      "matches": {
+        "tm": true
+      }
+    },
+    {
+      "content": "map[${1:type}]${2:type}",
+      "doc": "Snippet for a map",
+      "label": "map declaration",
+      "matches": {
+        "map": true
+      }
+    },
+    {
+      "content": "t.Log(\"$1\")",
+      "doc": "Snippet for t.Log()",
+      "label": "t.Log",
+      "matches": {
+        "tl": true
+      }
+    },
+    {
+      "content": "import \"${1:package}\"",
+      "doc": "Snippet for import statement",
+      "label": "single import",
+      "matches": {
+        "im": true
+      }
+    },
+    {
+      "content": "interface{}",
+      "doc": "Snippet for empty interface",
+      "label": "empty interface",
+      "matches": {
+        "in": true
+      }
+    },
+    {
+      "content": "t.Logf(\"$1\", ${2:var})",
+      "doc": "Snippet for t.Logf()",
+      "label": "t.Logf",
+      "matches": {
+        "tlf": true
+      }
+    },
+    {
+      "content": "func Test$1(t *testing.T) {\n\t$0\n}",
+      "doc": "Snippet for Test function",
+      "label": "test function",
+      "matches": {
+        "tf": true
+      }
+    },
+    {
+      "content": "import (\n\t\"${1:package}\"\n)",
+      "doc": "Snippet for a import block",
+      "label": "multiple imports",
+      "matches": {
+        "ims": true
+      }
+    },
+    {
+      "content": "defer ${1:func}($0)",
+      "doc": "Snippet for defer statement",
+      "label": "defer statement",
+      "matches": {
+        "df": true
+      }
+    },
+    {
+      "content": "t.Logf(\"${1:var}: %#+v\\\\n\", ${1:var})",
+      "doc": "Snippet for t.Logf() with variable content",
+      "label": "t.Logf variable content",
+      "matches": {
+        "tlv": true
+      }
+    },
+    {
+      "content": "go ${1:func}($0)",
+      "doc": "Snippet for goroutine declaration",
+      "label": "goroutine function",
+      "matches": {
+        "gf": true
+      }
+    },
+    {
+      "content": "const ${1:name} = ${2:value}",
+      "doc": "Snippet for a constant",
+      "label": "single constant",
+      "matches": {
+        "co": true
+      }
+    },
+    {
+      "content": "http.Error(${1:w}, ${2:err}.Error(), ${3:http.StatusInternalServerError})",
+      "doc": "Snippet for http.Error()",
+      "label": "http.Error",
+      "matches": {
+        "herr": true
+      }
+    },
+    {
+      "content": "make(${1:type}, ${2:0})",
+      "doc": "Snippet for make statement",
+      "label": "make(...)",
+      "matches": {
+        "make": true
+      }
+    },
+    {
+      "content": "http.Redirect(${1:w}, ${2:r}, \"${3:/}\", ${4:http.StatusFound})",
+      "doc": "Snippet for http.Redirect()",
+      "label": "http.Redirect",
+      "matches": {
+        "rd": true
+      }
+    },
+    {
+      "content": "const (\n\t${1:name} = ${2:value}\n)",
+      "doc": "Snippet for a constant block",
+      "label": "multiple constants",
+      "matches": {
+        "cos": true
+      }
+    },
+    {
+      "content": "new(${1:type})",
+      "doc": "Snippet for new statement",
+      "label": "new(...)",
+      "matches": {
+        "new": true
+      }
+    },
+    {
+      "content": "func main() {\n\t$1\n}",
+      "doc": "Snippet for main function",
+      "label": "main function",
+      "matches": {
+        "fmain": true
+      }
+    },
+    {
+      "content": "type ${1:name} func($3) $4",
+      "doc": "Snippet for a type function declaration",
+      "label": "type function declaration",
+      "matches": {
+        "tyf": true
+      }
+    },
+    {
+      "content": "panic(\"$0\")",
+      "doc": "Snippet for panic",
+      "label": "panic(...)",
+      "matches": {
+        "pn": true
+      }
+    },
+    {
+      "content": "${1:http}.HandleFunc(\"${2:/}\", ${3:handler})",
+      "doc": "Snippet for http.HandleFunc()",
+      "label": "http.HandleFunc",
+      "matches": {
+        "hf": true
+      }
+    },
+    {
+      "content": "func (${1:receiver} ${2:type}) ${3:method}($4) $5 {\n\t$0\n}",
+      "doc": "Snippet for method declaration",
+      "label": "method declaration",
+      "matches": {
+        "fum": true,
+        "meth": true
+      }
+    },
+    {
+      "content": "type ${1:name} interface {\n\t$0\n}",
+      "doc": "Snippet for a type interface",
+      "label": "type interface declaration",
+      "matches": {
+        "tyi": true
+      }
+    },
+    {
       "content": "${1:w} http.ResponseWriter, ${2:r} *http.Request",
       "doc": "Snippet for http Response",
       "label": "http ResponseWriter *Request",
@@ -219,219 +419,11 @@
       }
     },
     {
-      "content": "func TestMain(m *testing.M) {\n\t$1\n\n\tos.Exit(m.Run())\n}",
-      "doc": "Snippet for TestMain function",
-      "label": "test main",
-      "matches": {
-        "tm": true
-      }
-    },
-    {
-      "content": "${1:http}.HandleFunc(\"${2:/}\", ${3:handler})",
-      "doc": "Snippet for http.HandleFunc()",
-      "label": "http.HandleFunc",
-      "matches": {
-        "hf": true
-      }
-    },
-    {
-      "content": "map[${1:type}]${2:type}",
-      "doc": "Snippet for a map",
-      "label": "map declaration",
-      "matches": {
-        "map": true
-      }
-    },
-    {
-      "content": "func Test$1(t *testing.T) {\n\t$0\n}",
-      "doc": "Snippet for Test function",
-      "label": "test function",
-      "matches": {
-        "tf": true
-      }
-    },
-    {
-      "content": "defer ${1:func}($0)",
-      "doc": "Snippet for defer statement",
-      "label": "defer statement",
-      "matches": {
-        "df": true
-      }
-    },
-    {
-      "content": "interface{}",
-      "doc": "Snippet for empty interface",
-      "label": "empty interface",
-      "matches": {
-        "in": true
-      }
-    },
-    {
-      "content": "go ${1:func}($0)",
-      "doc": "Snippet for goroutine declaration",
-      "label": "goroutine function",
-      "matches": {
-        "gf": true
-      }
-    },
-    {
-      "content": "go func($1) {\n\t$0\n}($2)",
-      "doc": "Snippet for anonymous goroutine declaration",
-      "label": "goroutine anonymous function",
-      "matches": {
-        "go": true
-      }
-    },
-    {
-      "content": "import (\n\t\"${1:package}\"\n)",
-      "doc": "Snippet for a import block",
-      "label": "multiple imports",
-      "matches": {
-        "ims": true
-      }
-    },
-    {
-      "content": "http.Redirect(${1:w}, ${2:r}, \"${3:/}\", ${4:http.StatusFound})",
-      "doc": "Snippet for http.Redirect()",
-      "label": "http.Redirect",
-      "matches": {
-        "rd": true
-      }
-    },
-    {
-      "content": "log.Printf(\"${1:var}: %#+v\\\\n\", ${1:var})",
-      "doc": "Snippet for log.Printf() with variable content",
-      "label": "log variable content",
-      "matches": {
-        "lv": true
-      }
-    },
-    {
-      "content": "else {\n\t$0\n}",
-      "doc": "Snippet for else branch",
-      "label": "else branch",
-      "matches": {
-        "el": true
-      }
-    },
-    {
-      "content": "const ${1:name} = ${2:value}",
-      "doc": "Snippet for a constant",
-      "label": "single constant",
-      "matches": {
-        "co": true
-      }
-    },
-    {
-      "content": "http.ListenAndServe(\"${1::8080}\", ${2:nil})",
-      "doc": "Snippet for http.ListenAndServe",
-      "label": "http.ListenAndServe",
-      "matches": {
-        "las": true
-      }
-    },
-    {
-      "content": "if ${1:condition} {\n\t$2\n} else {\n\t$0\n}",
-      "doc": "Snippet for if else",
-      "label": "if else statement",
-      "matches": {
-        "ife": true
-      }
-    },
-    {
-      "content": "http.Error(${1:w}, ${2:err}.Error(), ${3:http.StatusInternalServerError})",
-      "doc": "Snippet for http.Error()",
-      "label": "http.Error",
-      "matches": {
-        "herr": true
-      }
-    },
-    {
-      "content": "const (\n\t${1:name} = ${2:value}\n)",
-      "doc": "Snippet for a constant block",
-      "label": "multiple constants",
-      "matches": {
-        "cos": true
-      }
-    },
-    {
-      "content": "func $1(${2:w} http.ResponseWriter, ${3:r} *http.Request) {\n\t$0\n}",
-      "doc": "Snippet for http handler declaration",
-      "label": "http handler declaration",
-      "matches": {
-        "hand": true
-      }
-    },
-    {
-      "content": "if err != nil {\n\treturn ${1:nil}, ${2:err}\n}",
-      "doc": "Snippet for if err != nil",
-      "label": "if err != nil",
-      "matches": {
-        "ir": true
-      }
-    },
-    {
-      "content": "type ${1:name} func($3) $4",
-      "doc": "Snippet for a type function declaration",
-      "label": "type function declaration",
-      "matches": {
-        "tyf": true
-      }
-    },
-    {
-      "content": "http.Serve(\"${1::8080}\", ${2:nil})",
-      "doc": "Snippet for http.Serve",
-      "label": "http.Serve",
-      "matches": {
-        "sv": true
-      }
-    },
-    {
-      "content": "import \"${1:package}\"",
-      "doc": "Snippet for import statement",
-      "label": "single import",
-      "matches": {
-        "im": true
-      }
-    },
-    {
-      "content": "fmt.Println(\"$1\")",
-      "doc": "Snippet for fmt.Println()",
-      "label": "fmt.Println",
-      "matches": {
-        "fp": true
-      }
-    },
-    {
-      "content": "type ${1:name} interface {\n\t$0\n}",
-      "doc": "Snippet for a type interface",
-      "label": "type interface declaration",
-      "matches": {
-        "tyi": true
-      }
-    },
-    {
-      "content": "func init() {\n\t$1\n}",
-      "doc": "Snippet for init function",
-      "label": "init function",
-      "matches": {
-        "finit": true
-      }
-    },
-    {
       "content": "if ${1:condition} {\n\t$0\n}",
       "doc": "Snippet for if statement",
       "label": "if statement",
       "matches": {
         "if": true
-      }
-    },
-    {
-      "content": "fmt.Printf(\"$1\", ${2:var})",
-      "doc": "Snippet for fmt.Printf()",
-      "label": "fmt.Printf",
-      "matches": {
-        "ff": true
       }
     },
     {
@@ -443,27 +435,35 @@
       }
     },
     {
-      "content": "func main() {\n\t$1\n}",
-      "doc": "Snippet for main function",
-      "label": "main function",
+      "content": "switch ${1:expression} {\ncase ${2:condition}:\n\t$0\n}",
+      "doc": "Snippet for switch statement",
+      "label": "switch statement",
       "matches": {
-        "fmain": true
+        "switch": true
       }
     },
     {
-      "content": "var (\n\t${1:name} ${2:type} = ${3:value}\n)",
-      "doc": "Snippet for a variable",
-      "label": "variables declaration",
+      "content": "for ${1:i} := ${2:0}; $1 < ${3:count}; $1${4:++} {\n\t$0\n}",
+      "doc": "Snippet for a for loop",
+      "label": "for n statement",
       "matches": {
-        "vars": true
+        "fori": true
       }
     },
     {
-      "content": "log.Println(\"$1\")",
-      "doc": "Snippet for log.Println()",
-      "label": "log.Println",
+      "content": "if ${1:condition} {\n\t$2\n} else {\n\t$0\n}",
+      "doc": "Snippet for if else",
+      "label": "if else statement",
       "matches": {
-        "lp": true
+        "ife": true
+      }
+    },
+    {
+      "content": "package main\n\nfunc main() {\n\t$0\n}",
+      "doc": "Snippet for main package & function",
+      "label": "package main and main function",
+      "matches": {
+        "pkgm": true
       }
     },
     {

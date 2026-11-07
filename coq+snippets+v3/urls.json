@@ -2,27 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "from django.urls import ${1|reverse,reverse_lazy,resolve,get_script_prefix|}",
+      "content": "from django.conf.urls import ${1|static,url,include,handler400,handler403,handler404,handler500|}",
       "doc": "Utility functions for use in URLconfs.",
-      "label": "urls (≥1.10 & ≤1.11)",
+      "label": "conf.urls (≤1.11)",
       "matches": {
-        "iurls": true
-      }
-    },
-    {
-      "content": "path(\n\t'${1:ROUTE}/',\n\t${2:VIEW}${3:.as_view()},\n\tname='$4'\n),",
-      "doc": "path(route, view, kwargs=None, name=None)",
-      "label": "path_stack",
-      "matches": {
-        "path_stack": true
-      }
-    },
-    {
-      "content": "urlpatterns = [\n\t$0\n]",
-      "doc": "",
-      "label": "urlpatterns",
-      "matches": {
-        "urlpatterns": true
+        "iconf_urls": true
       }
     },
     {
@@ -31,14 +15,6 @@
       "label": "urls (≥2.0)",
       "matches": {
         "iurls": true
-      }
-    },
-    {
-      "content": "from django.core.urlresolvers import ${1|reverse,reverse_lazy,resolve,get_script_prefix|}",
-      "doc": "*Deprecated since version 1.10*\n\nUtility functions.",
-      "label": "urlresolvers",
-      "matches": {
-        "iurlresolvers": true
       }
     },
     {
@@ -58,11 +34,35 @@
       }
     },
     {
-      "content": "from django.conf.urls import ${1|static,url,include,handler400,handler403,handler404,handler500|}",
-      "doc": "Utility functions for use in URLconfs.",
-      "label": "conf.urls (≤1.11)",
+      "content": "from django.core.urlresolvers import ${1|reverse,reverse_lazy,resolve,get_script_prefix|}",
+      "doc": "*Deprecated since version 1.10*\n\nUtility functions.",
+      "label": "urlresolvers",
       "matches": {
-        "iconf_urls": true
+        "iurlresolvers": true
+      }
+    },
+    {
+      "content": "urlpatterns = [\n\t$0\n]",
+      "doc": "",
+      "label": "urlpatterns",
+      "matches": {
+        "urlpatterns": true
+      }
+    },
+    {
+      "content": "path(\n\t'${1:ROUTE}/',\n\t${2:VIEW}${3:.as_view()},\n\tname='$4'\n),",
+      "doc": "path(route, view, kwargs=None, name=None)",
+      "label": "path_stack",
+      "matches": {
+        "path_stack": true
+      }
+    },
+    {
+      "content": "from django.urls import ${1|reverse,reverse_lazy,resolve,get_script_prefix|}",
+      "doc": "Utility functions for use in URLconfs.",
+      "label": "urls (≥1.10 & ≤1.11)",
+      "matches": {
+        "iurls": true
       }
     }
   ]

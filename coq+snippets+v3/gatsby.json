@@ -2,6 +2,22 @@
   "extends": [],
   "snippets": [
     {
+      "content": "<Link to=\"${1:/blog}\" activeStyle={{ ${2:color}: \"${3:red}\" }} >Text</Link>",
+      "doc": "",
+      "label": "gatsby-link-activestyle",
+      "matches": {
+        "gatsby link activestyle": true
+      }
+    },
+    {
+      "content": "export const query = graphql`${1:query}`;",
+      "doc": "Gatsby uses the concept of a page query, which is a query for a specific page in a site.Note that you can only have one page query per file.",
+      "label": "gatsby-export-query",
+      "matches": {
+        "gatsby export query": true
+      }
+    },
+    {
       "content": "import { useStaticQuery, graphql } from \"gatsby\"",
       "doc": "",
       "label": "gatsby-usestaticquery-import",
@@ -47,22 +63,6 @@
       "label": "gatsby-graphql-import",
       "matches": {
         "gatsby import graphql": true
-      }
-    },
-    {
-      "content": "<Link to=\"${1:/blog}\" activeStyle={{ ${2:color}: \"${3:red}\" }} >Text</Link>",
-      "doc": "",
-      "label": "gatsby-link-activestyle",
-      "matches": {
-        "gatsby link activestyle": true
-      }
-    },
-    {
-      "content": "export const query = graphql`${1:query}`;",
-      "doc": "Gatsby uses the concept of a page query, which is a query for a specific page in a site.Note that you can only have one page query per file.",
-      "label": "gatsby-export-query",
-      "matches": {
-        "gatsby export query": true
       }
     }
   ]

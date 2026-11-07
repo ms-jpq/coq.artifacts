@@ -2,7 +2,7 @@
   "extends": [],
   "snippets": [
     {
-      "content": "const exe = b.addExecutable(.{\n    .name = \"${1}\",\n    .root_source_file = b.path(\"${2:path}\"),\n    .target = target,\n    .optimize = optimize,\n});\nb.installArtifact(exe);",
+      "content": "const exe = b.addExecutable(.{\n    .name = \"${1}\",\n    .root_module = b.createModule(.{\n        .root_source_file = b.path(\"${2:path}\"),\n        .target = target,\n        .optimize = optimize,\n    }),\n});\nb.installArtifact(exe);",
       "doc": "Building an exe",
       "label": "buildExe",
       "matches": {

@@ -2,43 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "<nuxt name=\"$1\">$2</nuxt>$0",
+      "content": "<nuxt-link to=\"$1\">$2</nuxt-link>$0",
       "doc": "",
-      "label": "nuxt-namedview",
+      "label": "nuxt-linkto",
       "matches": {
-        "nuxt namedview": true
-      }
-    },
-    {
-      "content": "<nuxt-child $1/>$0",
-      "doc": "",
-      "label": "nuxt-child",
-      "matches": {
-        "nuxt child": true
-      }
-    },
-    {
-      "content": "asyncData ({isDev, route, store, env, params, query, req, res, redirect, error}) {\n\treturn { ${1:data} }\n\n},",
-      "doc": "Fetch and pre-render data on the server without using a store. The result from asyncData will be merged with data",
-      "label": "nuxt-async-data",
-      "matches": {
-        "nuxt asyncdata": true
-      }
-    },
-    {
-      "content": "middleware ({ store, redirect }) {\n\t${1:data}\n},",
-      "doc": "Set the middleware for a specific page of the application.",
-      "label": "nuxt-middleware",
-      "matches": {
-        "nuxt middleware": true
-      }
-    },
-    {
-      "content": "validate({ params, query, store }) {\n\t${1:data}\n},",
-      "doc": "Validate is called every time before navigating to a new route.",
-      "label": "nuxt-validate",
-      "matches": {
-        "nuxt validate": true
+        "nuxt linkto": true
       }
     },
     {
@@ -47,14 +15,6 @@
       "label": "nuxt-namedlinkto",
       "matches": {
         "nuxt namedlinkto": true
-      }
-    },
-    {
-      "content": "nuxtServerInit ({ commit }, { req }) {\n\t${1:data}\n}",
-      "doc": "In universal mode, useful to fetch data on the server and give directly to the client-side.",
-      "label": "nuxt-serverinit",
-      "matches": {
-        "nuxt serverinit": true
       }
     },
     {
@@ -82,11 +42,51 @@
       }
     },
     {
-      "content": "<nuxt-link to=\"$1\">$2</nuxt-link>$0",
+      "content": "<nuxt name=\"$1\">$2</nuxt>$0",
       "doc": "",
-      "label": "nuxt-linkto",
+      "label": "nuxt-namedview",
       "matches": {
-        "nuxt linkto": true
+        "nuxt namedview": true
+      }
+    },
+    {
+      "content": "validate({ params, query, store }) {\n\t${1:data}\n},",
+      "doc": "Validate is called every time before navigating to a new route.",
+      "label": "nuxt-validate",
+      "matches": {
+        "nuxt validate": true
+      }
+    },
+    {
+      "content": "nuxtServerInit ({ commit }, { req }) {\n\t${1:data}\n}",
+      "doc": "In universal mode, useful to fetch data on the server and give directly to the client-side.",
+      "label": "nuxt-serverinit",
+      "matches": {
+        "nuxt serverinit": true
+      }
+    },
+    {
+      "content": "<nuxt-child $1/>$0",
+      "doc": "",
+      "label": "nuxt-child",
+      "matches": {
+        "nuxt child": true
+      }
+    },
+    {
+      "content": "asyncData ({isDev, route, store, env, params, query, req, res, redirect, error}) {\n\treturn { ${1:data} }\n\n},",
+      "doc": "Fetch and pre-render data on the server without using a store. The result from asyncData will be merged with data",
+      "label": "nuxt-async-data",
+      "matches": {
+        "nuxt asyncdata": true
+      }
+    },
+    {
+      "content": "middleware ({ store, redirect }) {\n\t${1:data}\n},",
+      "doc": "Set the middleware for a specific page of the application.",
+      "label": "nuxt-middleware",
+      "matches": {
+        "nuxt middleware": true
       }
     }
   ]

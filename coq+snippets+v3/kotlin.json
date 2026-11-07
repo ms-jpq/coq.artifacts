@@ -4,11 +4,11 @@
   ],
   "snippets": [
     {
-      "content": "finally {\n\t$1\n}",
-      "doc": "Snippet for finally block",
-      "label": "finally",
+      "content": "val ${1:name} = ${2:value}",
+      "doc": "Snippet for a variable",
+      "label": "variable declaration with val",
       "matches": {
-        "finally": true
+        "val": true
       }
     },
     {
@@ -20,11 +20,11 @@
       }
     },
     {
-      "content": "class ${TM_FILENAME_BASE} {\n\t$0\n}",
-      "doc": "Snippet for class declaration",
-      "label": "class",
+      "content": "if (${1:condition}) \n\t${2:value}\nelse\n\t${3:value}",
+      "doc": "Snippet for if...else expression",
+      "label": "if...else",
       "matches": {
-        "class": true
+        "ifelse": true
       }
     },
     {
@@ -36,27 +36,43 @@
       }
     },
     {
-      "content": "while (${1:condition}) {\n\t$0\n}",
-      "doc": "Snippet for while expression",
-      "label": "while",
+      "content": "init {\n\t$0\n}",
+      "doc": "Snippet for init block",
+      "label": "init",
       "matches": {
-        "while": true
+        "init": true
       }
     },
     {
-      "content": "when (${1:value}) {\n\t${2:branch} -> ${3:branchValue}\n\n\telse -> ${4:defaultValue}\n}",
-      "doc": "Snippet for when expression",
-      "label": "when",
+      "content": "package ${1:packageName}",
+      "doc": "Snippet for package statement",
+      "label": "package",
       "matches": {
-        "when": true
+        "package": true
       }
     },
     {
-      "content": "open",
-      "doc": "Snippet for open keyword",
-      "label": "open keyword",
+      "content": "finally {\n\t$1\n}",
+      "doc": "Snippet for finally block",
+      "label": "finally",
       "matches": {
-        "open": true
+        "finally": true
+      }
+    },
+    {
+      "content": "for (${1:i} in ${2:0}..${3:5})\n\t${4:expression}",
+      "doc": "Snippet for iterating array with for loop",
+      "label": "for",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "set(${1:arg}: ${2:type}) {\n\t$0\n}",
+      "doc": "Snippet for set block",
+      "label": "set",
+      "matches": {
+        "set": true
       }
     },
     {
@@ -76,11 +92,11 @@
       }
     },
     {
-      "content": "package ${1:packageName}",
-      "doc": "Snippet for package statement",
-      "label": "package",
+      "content": "constructor(${1:arg}: ${2:type}) {\n\t$0\n}",
+      "doc": "Snippet for constructor function",
+      "label": "constructor",
       "matches": {
-        "package": true
+        "constructor": true
       }
     },
     {
@@ -100,11 +116,27 @@
       }
     },
     {
-      "content": "constructor(${1:arg}: ${2:type}) {\n\t$0\n}",
-      "doc": "Snippet for constructor function",
-      "label": "constructor",
+      "content": "when (${1:value}) {\n\t${2:branch} -> ${3:branchValue}\n\n\telse -> ${4:defaultValue}\n}",
+      "doc": "Snippet for when expression",
+      "label": "when",
       "matches": {
-        "constructor": true
+        "when": true
+      }
+    },
+    {
+      "content": "class ${TM_FILENAME_BASE} {\n\t$0\n}",
+      "doc": "Snippet for class declaration",
+      "label": "class",
+      "matches": {
+        "class": true
+      }
+    },
+    {
+      "content": "while (${1:condition}) {\n\t$0\n}",
+      "doc": "Snippet for while expression",
+      "label": "while",
+      "matches": {
+        "while": true
       }
     },
     {
@@ -116,43 +148,11 @@
       }
     },
     {
-      "content": "get() ${1:value}",
-      "doc": "Snippet for get block",
-      "label": "get",
+      "content": "open",
+      "doc": "Snippet for open keyword",
+      "label": "open keyword",
       "matches": {
-        "get": true
-      }
-    },
-    {
-      "content": "set(${1:arg}: ${2:type}) {\n\t$0\n}",
-      "doc": "Snippet for set block",
-      "label": "set",
-      "matches": {
-        "set": true
-      }
-    },
-    {
-      "content": "for (${1:i} in ${2:0}..${3:5})\n\t${4:expression}",
-      "doc": "Snippet for iterating array with for loop",
-      "label": "for",
-      "matches": {
-        "for": true
-      }
-    },
-    {
-      "content": "init {\n\t$0\n}",
-      "doc": "Snippet for init block",
-      "label": "init",
-      "matches": {
-        "init": true
-      }
-    },
-    {
-      "content": "if (${1:condition}) \n\t${2:value}\nelse\n\t${3:value}",
-      "doc": "Snippet for if...else expression",
-      "label": "if...else",
-      "matches": {
-        "ifelse": true
+        "open": true
       }
     },
     {
@@ -164,11 +164,11 @@
       }
     },
     {
-      "content": "val ${1:name} = ${2:value}",
-      "doc": "Snippet for a variable",
-      "label": "variable declaration with val",
+      "content": "get() ${1:value}",
+      "doc": "Snippet for get block",
+      "label": "get",
       "matches": {
-        "val": true
+        "get": true
       }
     },
     {

@@ -2,19 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "require('dotenv-safe').config();",
-      "doc": "As early as possible in your application, require and configure dotenv-safe. This will load environment variables from .env as usual, but will also read any variables defined in .env.example. If any variables are already defined in the environment before reading from .env, they will not be overwritten. If any variables are missing from the environment, a MissingEnvVarsError will be thrown, which lists the missing variables.",
-      "label": "dotenv-safe-require",
+      "content": "require('dotenv-safe').config({ path: '${1:/full/custom/path/to/your/env/vars}' })",
+      "doc": "You may specify a custom path if your file containing environment variables is located elsewhere.",
+      "label": "dotenv-safe-path",
       "matches": {
-        "dotenv-safe require": true
-      }
-    },
-    {
-      "content": "require('dotenv-safe').config({ encoding: '${1:latin1}' })",
-      "doc": "You may specify the encoding of your file containing environment variables.",
-      "label": "dotenv-safe-encoding",
-      "matches": {
-        "dotenv-safe encoding": true
+        "dotenv-safe path": true
       }
     },
     {
@@ -26,11 +18,19 @@
       }
     },
     {
-      "content": "require('dotenv-safe').config({ path: '${1:/full/custom/path/to/your/env/vars}' })",
-      "doc": "You may specify a custom path if your file containing environment variables is located elsewhere.",
-      "label": "dotenv-safe-path",
+      "content": "require('dotenv-safe').config({ encoding: '${1:latin1}' })",
+      "doc": "You may specify the encoding of your file containing environment variables.",
+      "label": "dotenv-safe-encoding",
       "matches": {
-        "dotenv-safe path": true
+        "dotenv-safe encoding": true
+      }
+    },
+    {
+      "content": "require('dotenv-safe').config();",
+      "doc": "As early as possible in your application, require and configure dotenv-safe. This will load environment variables from .env as usual, but will also read any variables defined in .env.example. If any variables are already defined in the environment before reading from .env, they will not be overwritten. If any variables are missing from the environment, a MissingEnvVarsError will be thrown, which lists the missing variables.",
+      "label": "dotenv-safe-require",
+      "matches": {
+        "dotenv-safe require": true
       }
     },
     {

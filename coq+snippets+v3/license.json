@@ -2,11 +2,19 @@
   "extends": [],
   "snippets": [
     {
-      "content": "The GPLv3 License (GPLv3)\n\nCopyright (c) ${CURRENT_YEAR} ${0:Author}\n\nThis program is free software: you can redistribute it and/or modify\nit under the terms of the GNU Lesser General Public License as published\nthe Free Software Foundation, either version 3 of the License, or\n(at your option) any later version.\n\nThis library is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU Lesser General Public License for more details.\n\nYou should have received a copy of the GNU General Public License\nalong with this program.  If not, see <http://www.gnu.org/licenses/>.",
-      "doc": "LGPLv3 License",
-      "label": "LGPL3",
+      "content": "The BEERWARE License (BEERWARE)\n\nCopyright (c) ${CURRENT_YEAR} ${0:Author}. All rights reserved.\n\nLicensed under the \"THE BEER-WARE LICENSE\" (Revision 42):\n$1 wrote this file. As long as you retain this notice you\ncan do whatever you want with this stuff. If we meet some day, and you think\nthis stuff is worth it, you can buy me a beer or coffee in return",
+      "doc": "BEERWARE License",
+      "label": "BEERWARE",
       "matches": {
-        "LGPL3": true
+        "BEERWARE": true
+      }
+    },
+    {
+      "content": "The MIT License (MIT)\n\nCopyright (c) ${CURRENT_YEAR} ${0:Author}\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+      "doc": "MIT License",
+      "label": "MIT",
+      "matches": {
+        "mitl": true
       }
     },
     {
@@ -18,11 +26,11 @@
       }
     },
     {
-      "content": "This Source Code Form is subject to the terms of the Mozilla Public\nLicense, v. 2.0. If a copy of the MPL was not distributed with this\nCopyright (c) ${CURRENT_YEAR} ${0:Author}. All rights reserved.\nfile, You can obtain one at http://mozilla.org/MPL/2.0/.",
-      "doc": "MPL2 License",
-      "label": "MPL2",
+      "content": "The GPLv2 License (GPLv2)\n\nCopyright (c) ${CURRENT_YEAR} ${0:Author}\n\nThis library is free software; you can redistribute it and/or modify\nit under the terms of the GNU Lesser General Public License as published\nby the Free Software Foundation; either version 2.1 of the License, or\n(at your option) any later version.\n\nThis library is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU Lesser General Public License for more details.\n\nYou should have received a copy of the GNU Lesser General Public License\nalong with this program.  If not, see <http://www.gnu.org/licenses/>.",
+      "doc": "GPLv2 License",
+      "label": "LGPL2",
       "matches": {
-        "MPL2": true
+        "LGPL2": true
       }
     },
     {
@@ -34,11 +42,51 @@
       }
     },
     {
+      "content": "This Source Code Form is subject to the terms of the Mozilla Public\nLicense, v. 2.0. If a copy of the MPL was not distributed with this\nCopyright (c) ${CURRENT_YEAR} ${0:Author}. All rights reserved.\nfile, You can obtain one at http://mozilla.org/MPL/2.0/.",
+      "doc": "MPL2 License",
+      "label": "MPL2",
+      "matches": {
+        "MPL2": true
+      }
+    },
+    {
+      "content": "The GPLv3 License (GPLv3)\n\nCopyright (c) ${CURRENT_YEAR} ${0:Author}\n\nThis program is free software: you can redistribute it and/or modify\nit under the terms of the GNU Lesser General Public License as published\nthe Free Software Foundation, either version 3 of the License, or\n(at your option) any later version.\n\nThis library is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU Lesser General Public License for more details.\n\nYou should have received a copy of the GNU General Public License\nalong with this program.  If not, see <http://www.gnu.org/licenses/>.",
+      "doc": "LGPLv3 License",
+      "label": "LGPL3",
+      "matches": {
+        "LGPL3": true
+      }
+    },
+    {
       "content": "The AGPL License (AGPL)\n\nCopyright (c) ${CURRENT_YEAR} ${0:Author}. All rights reserved.\nThis program  is free software: you can redistribute it and/or modify\nit under the terms of the GNU Affero General Public License as\npublished by the Free Software Foundation, either version 3 of the\nLicense, or (at your option) any later version.\n\nThis program is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU Affero General Public License for more details.\n\nYou should have received a copy of the GNU Affero General Public License\nalong with this program. If not, see <http://www.gnu.org/licenses/>.",
       "doc": "AGPL License",
       "label": "AGPL",
       "matches": {
         "AGPL": true
+      }
+    },
+    {
+      "content": "The AGPLv3 License (AGPLv3)\n\nCopyright (c) ${CURRENT_YEAR} ${0:Author}\n\nThis program is free software: you can redistribute it and/or modify\nit under the terms of the GNU Affero General Public License as\npublished by the Free Software Foundation, either version 3 of the\nLicense, or (at your option) any later version.\n\nThis program is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU Affero General Public License for more details.\n\nYou should have received a copy of the GNU Affero General Public License\nalong with this program.  If not, see <http://www.gnu.org/licenses/>.",
+      "doc": "AGPLv3 License",
+      "label": "AGPL3",
+      "matches": {
+        "AGPL3": true
+      }
+    },
+    {
+      "content": "SPDX-License-Identifier: ${1:Id}\nSPDX-FileCopyrightText: ${CURRENT_YEAR} ${2:Author}",
+      "doc": "SPDX-style license header",
+      "label": "SPDX",
+      "matches": {
+        "spdx": true
+      }
+    },
+    {
+      "content": "The ISC License (ISC)\n\nCopyright (c) ${CURRENT_YEAR} ${0:Author}. All rights reserved.\n\nPermission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.",
+      "doc": "ISC License",
+      "label": "ISC",
+      "matches": {
+        "ISCL": true
       }
     },
     {
@@ -50,11 +98,27 @@
       }
     },
     {
-      "content": "The ISC License (ISC)\n\nCopyright (c) ${CURRENT_YEAR} ${0:Author}. All rights reserved.\n\nPermission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.",
-      "doc": "ISC License",
-      "label": "ISC",
+      "content": "The GPLv2 License (GPLv2)\n\nCopyright (c) ${CURRENT_YEAR} ${0:Author}\n\nThis program is free software: you can redistribute it and/or modify\nit under the terms of the GNU General Public License as published by\nthe Free Software Foundation; either version 2 of the License, or\n(at your option) any later version.\n\nThis program is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License\nalong with this program.  If not, see <http://www.gnu.org/licenses/>.",
+      "doc": "GPLv2 License",
+      "label": "GPL2",
       "matches": {
-        "ISCL": true
+        "GPL2": true
+      }
+    },
+    {
+      "content": "The GPLv3 License (GPLv3)\n\nCopyright (c) ${CURRENT_YEAR} ${0:Author}\n\nThis program is free software: you can redistribute it and/or modify\nit under the terms of the GNU General Public License as published by\nthe Free Software Foundation, either version 3 of the License, or\n(at your option) any later version.\n\nThis program is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License\nalong with this program.  If not, see <http://www.gnu.org/licenses/>.",
+      "doc": "GPLv3 License",
+      "label": "GPL3",
+      "matches": {
+        "GPL3": true
+      }
+    },
+    {
+      "content": "DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE\n\nCopyright (c) ${CURRENT_YEAR} ${0:Author}. All rights reserved.\n\nLicensed under the \"THE BEER-WARE LICENSE\" (Revision 42):\nEveryone is permitted to copy and distribute verbatim or modified\ncopies of this license document, and changing it is allowed as long\nas the name is changed.\n\n\tDO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE\nTERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION\n\t0. You just DO WHAT THE FUCK YOU WANT TO.",
+      "doc": "WTFPL License",
+      "label": "WTFPL",
+      "matches": {
+        "WTFPL": true
       }
     },
     {
@@ -71,70 +135,6 @@
       "label": "EUPL",
       "matches": {
         "EUPL": true
-      }
-    },
-    {
-      "content": "The GPLv2 License (GPLv2)\n\nCopyright (c) ${CURRENT_YEAR} ${0:Author}\n\nThis library is free software; you can redistribute it and/or modify\nit under the terms of the GNU Lesser General Public License as published\nby the Free Software Foundation; either version 2.1 of the License, or\n(at your option) any later version.\n\nThis library is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU Lesser General Public License for more details.\n\nYou should have received a copy of the GNU Lesser General Public License\nalong with this program.  If not, see <http://www.gnu.org/licenses/>.",
-      "doc": "GPLv2 License",
-      "label": "LGPL2",
-      "matches": {
-        "LGPL2": true
-      }
-    },
-    {
-      "content": "The GPLv2 License (GPLv2)\n\nCopyright (c) ${CURRENT_YEAR} ${0:Author}\n\nThis program is free software: you can redistribute it and/or modify\nit under the terms of the GNU General Public License as published by\nthe Free Software Foundation; either version 2 of the License, or\n(at your option) any later version.\n\nThis program is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License\nalong with this program.  If not, see <http://www.gnu.org/licenses/>.",
-      "doc": "GPLv2 License",
-      "label": "GPL2",
-      "matches": {
-        "GPL2": true
-      }
-    },
-    {
-      "content": "The AGPLv3 License (AGPLv3)\n\nCopyright (c) ${CURRENT_YEAR} ${0:Author}\n\nThis program is free software: you can redistribute it and/or modify\nit under the terms of the GNU Affero General Public License as\npublished by the Free Software Foundation, either version 3 of the\nLicense, or (at your option) any later version.\n\nThis program is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU Affero General Public License for more details.\n\nYou should have received a copy of the GNU Affero General Public License\nalong with this program.  If not, see <http://www.gnu.org/licenses/>.",
-      "doc": "AGPLv3 License",
-      "label": "AGPL3",
-      "matches": {
-        "AGPL3": true
-      }
-    },
-    {
-      "content": "The BEERWARE License (BEERWARE)\n\nCopyright (c) ${CURRENT_YEAR} ${0:Author}. All rights reserved.\n\nLicensed under the \"THE BEER-WARE LICENSE\" (Revision 42):\n$1 wrote this file. As long as you retain this notice you\ncan do whatever you want with this stuff. If we meet some day, and you think\nthis stuff is worth it, you can buy me a beer or coffee in return",
-      "doc": "BEERWARE License",
-      "label": "BEERWARE",
-      "matches": {
-        "BEERWARE": true
-      }
-    },
-    {
-      "content": "The GPLv3 License (GPLv3)\n\nCopyright (c) ${CURRENT_YEAR} ${0:Author}\n\nThis program is free software: you can redistribute it and/or modify\nit under the terms of the GNU General Public License as published by\nthe Free Software Foundation, either version 3 of the License, or\n(at your option) any later version.\n\nThis program is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License\nalong with this program.  If not, see <http://www.gnu.org/licenses/>.",
-      "doc": "GPLv3 License",
-      "label": "GPL3",
-      "matches": {
-        "GPL3": true
-      }
-    },
-    {
-      "content": "SPDX-License-Identifier: ${1:Id}\nSPDX-FileCopyrightText: ${CURRENT_YEAR} ${2:Author}",
-      "doc": "SPDX-style license header",
-      "label": "SPDX",
-      "matches": {
-        "spdx": true
-      }
-    },
-    {
-      "content": "DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE\n\nCopyright (c) ${CURRENT_YEAR} ${0:Author}. All rights reserved.\n\nLicensed under the \"THE BEER-WARE LICENSE\" (Revision 42):\nEveryone is permitted to copy and distribute verbatim or modified\ncopies of this license document, and changing it is allowed as long\nas the name is changed.\n\n\tDO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE\nTERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION\n\t0. You just DO WHAT THE FUCK YOU WANT TO.",
-      "doc": "WTFPL License",
-      "label": "WTFPL",
-      "matches": {
-        "WTFPL": true
-      }
-    },
-    {
-      "content": "The MIT License (MIT)\n\nCopyright (c) ${CURRENT_YEAR} ${0:Author}\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
-      "doc": "MIT License",
-      "label": "MIT",
-      "matches": {
-        "mitl": true
       }
     }
   ]

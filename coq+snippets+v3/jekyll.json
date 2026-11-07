@@ -2,75 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "| join: '${seperator:, }}'",
-      "doc": "Array filter: join",
-      "label": "Filter join",
+      "content": "{%- gist ${gist:user/gist-id} -%}",
+      "doc": "Add a gist code block",
+      "label": "Tag gist",
       "matches": {
-        "join": true
-      }
-    },
-    {
-      "content": "| first",
-      "doc": "Array filter: first",
-      "label": "Filter first",
-      "matches": {
-        "first": true
-      }
-    },
-    {
-      "content": "| last",
-      "doc": "Array filter: last",
-      "label": "Filter last",
-      "matches": {
-        "last": true
-      }
-    },
-    {
-      "content": "| map: '${key}'",
-      "doc": "Array filter: map",
-      "label": "Filter map",
-      "matches": {
-        "map": true
-      }
-    },
-    {
-      "content": "| size",
-      "doc": "Array filter: size",
-      "label": "Filter size",
-      "matches": {
-        "size": true
-      }
-    },
-    {
-      "content": "| sort",
-      "doc": "Array filter: sort",
-      "label": "Filter sort",
-      "matches": {
-        "sort": true
-      }
-    },
-    {
-      "content": "| uniq",
-      "doc": "Array filter: uniq",
-      "label": "Filter uniq",
-      "matches": {
-        "uniq": true
-      }
-    },
-    {
-      "content": "| ceil",
-      "doc": "Math filter: ceil",
-      "label": "Filter ceil",
-      "matches": {
-        "ceil": true
-      }
-    },
-    {
-      "content": "| divided_by: ${divided_by:2}",
-      "doc": "Math filter: divided by",
-      "label": "Filter divided by",
-      "matches": {
-        "divided_by": true
+        "gist": true
       }
     },
     {
@@ -82,54 +18,6 @@
       }
     },
     {
-      "content": "| minus: ${minus:1}",
-      "doc": "Math filter: minus",
-      "label": "Filter minus",
-      "matches": {
-        "minus": true
-      }
-    },
-    {
-      "content": "| modulo: ${modulo:2}",
-      "doc": "Math filter: modulo",
-      "label": "Filter modulo",
-      "matches": {
-        "modulo": true
-      }
-    },
-    {
-      "content": "| plus: ${plus:1}",
-      "doc": "Math filter: plus",
-      "label": "Filter plus",
-      "matches": {
-        "plus": true
-      }
-    },
-    {
-      "content": "| round: ${round:0}",
-      "doc": "Math filter: round",
-      "label": "Filter round",
-      "matches": {
-        "round": true
-      }
-    },
-    {
-      "content": "| times: ${times:1}",
-      "doc": "Math filter: times",
-      "label": "Filter times",
-      "matches": {
-        "times": true
-      }
-    },
-    {
-      "content": "{%- else -%}",
-      "doc": "Control flow tag: else",
-      "label": "Tag else",
-      "matches": {
-        "else": true
-      }
-    },
-    {
       "content": "| append: '${string}' }}",
       "doc": "String filter: append",
       "label": "Filter append",
@@ -138,147 +26,11 @@
       }
     },
     {
-      "content": "| capitalize }}",
-      "doc": "String filter: capitalize",
-      "label": "Filter capitalize",
+      "content": "{%- for ${item} in ${collection} -%}\n\t${code:}\n{%- endfor -%}",
+      "doc": "Iteration tag: for",
+      "label": "Tag for",
       "matches": {
-        "capitalize": true
-      }
-    },
-    {
-      "content": "| downcase }}",
-      "doc": "String filter: downcase",
-      "label": "Filter downcase",
-      "matches": {
-        "downcase": true
-      }
-    },
-    {
-      "content": "{{ $1 }}",
-      "doc": "Output markup: {{ }}",
-      "label": "Show",
-      "matches": {
-        "show": true
-      }
-    },
-    {
-      "content": "| truncate: ${length:20}, '${ellipsis:...}' }}",
-      "doc": "String filter: truncate",
-      "label": "Filter truncate",
-      "matches": {
-        "truncate": true
-      }
-    },
-    {
-      "content": "{%- $1 -%}",
-      "doc": "Tag markup: {%- -%}",
-      "label": "Execute",
-      "matches": {
-        "execute": true
-      }
-    },
-    {
-      "content": "| truncatewords: ${length:5}, '${ellipsis:...}' }}",
-      "doc": "String filter: truncatewords",
-      "label": "Filter truncatewords",
-      "matches": {
-        "truncatewords": true
-      }
-    },
-    {
-      "content": "{%- assign ${variable} = ${value} -%}",
-      "doc": "Variable tag: assign",
-      "label": "Tag assign",
-      "matches": {
-        "assign": true
-      }
-    },
-    {
-      "content": "| prepend: '${string}' }}",
-      "doc": "String filter: prepend",
-      "label": "Filter prepend",
-      "matches": {
-        "prepend": true
-      }
-    },
-    {
-      "content": "{%- break -%}",
-      "doc": "Iteration tag: break",
-      "label": "Tag break",
-      "matches": {
-        "break": true
-      }
-    },
-    {
-      "content": "| remove: '${string}' }}",
-      "doc": "String filter: remove",
-      "label": "Filter remove",
-      "matches": {
-        "remove": true
-      }
-    },
-    {
-      "content": "{%- capture ${variable} -%}${code:}{%- endcapture -%}",
-      "doc": "Variable tag: capture",
-      "label": "Tag capture",
-      "matches": {
-        "capture": true
-      }
-    },
-    {
-      "content": "{%- if ${condition} -%}\n\t${code1:}\n{%- else -%}\n\t${code2:}\n{%- endif -%}",
-      "doc": "Control flow tag: if else",
-      "label": "Tag if else",
-      "matches": {
-        "ifelse": true
-      }
-    },
-    {
-      "content": "| remove_first: '${string}' }}",
-      "doc": "String filter: remove first",
-      "label": "Filter remove first",
-      "matches": {
-        "remove_first": true
-      }
-    },
-    {
-      "content": "{%- case ${variable} -%}\n\t{%- when ${condition} -%}\n\t\t${code1:}\n\t{%- else -%}\n\t\t${code2:}\n{%- endcase -%}",
-      "doc": "Control flow tag: case",
-      "label": "Tag case",
-      "matches": {
-        "case": true
-      }
-    },
-    {
-      "content": "| uri_escape }}",
-      "doc": "String filter: uri escape",
-      "label": "Filter uri escape",
-      "matches": {
-        "uri_escape": true
-      }
-    },
-    {
-      "content": "{%- gist ${gist:user/gist-id} -%}",
-      "doc": "Add a gist code block",
-      "label": "Tag gist",
-      "matches": {
-        "gist": true
-      }
-    },
-    {
-      "content": "| replace: '${target}', '${replace}' }}",
-      "doc": "String filter: replace",
-      "label": "Filter replace",
-      "matches": {
-        "replace": true
-      }
-    },
-    {
-      "content": "| xml_escape }}",
-      "doc": "String filter: xml escape",
-      "label": "Filter xml escape",
-      "matches": {
-        "xml_escape": true
+        "for": true
       }
     },
     {
@@ -290,35 +42,195 @@
       }
     },
     {
-      "content": "{%- comment -%}${description:}{%- endcomment -%}",
-      "doc": "Control flow tag: case",
-      "label": "Tag comment",
+      "content": "limit: ${limit:5}",
+      "doc": "For loops option",
+      "label": "Tag Option limit",
       "matches": {
-        "comment": true
+        "limit": true
       }
     },
     {
-      "content": "---\nlayout: ${layout:default}\ntitle: ${title}\ncategories: ${category}\npermalink: ${path}\ntags: ${tag}\nexcerpt: ${description}\n---",
-      "doc": "Add front matter",
-      "label": "Front Matter",
+      "content": "| plus: ${plus:1}",
+      "doc": "Math filter: plus",
+      "label": "Filter plus",
       "matches": {
-        "fm": true
+        "plus": true
       }
     },
     {
-      "content": "{{ ${variable:} }}",
-      "doc": "Context Variable",
-      "label": "Tag context variable",
+      "content": "| capitalize }}",
+      "doc": "String filter: capitalize",
+      "label": "Filter capitalize",
       "matches": {
-        "convar": true
+        "capitalize": true
       }
     },
     {
-      "content": "{%- include ${snippet} -%}",
-      "doc": "Tag: include",
-      "label": "Tag include",
+      "content": "offset: ${offset:0}",
+      "doc": "For loops option",
+      "label": "Tag Option offset",
       "matches": {
-        "include": true
+        "offset": true
+      }
+    },
+    {
+      "content": "reversed",
+      "doc": "For loops option",
+      "label": "Tag Option reversed",
+      "matches": {
+        "reversed": true
+      }
+    },
+    {
+      "content": "{%- break -%}",
+      "doc": "Iteration tag: break",
+      "label": "Tag break",
+      "matches": {
+        "break": true
+      }
+    },
+    {
+      "content": "| escape }}",
+      "doc": "String filter: escape",
+      "label": "Filter escape",
+      "matches": {
+        "escape": true
+      }
+    },
+    {
+      "content": "{%- continue -%}",
+      "doc": "Iteration tag: continue",
+      "label": "Tag continue",
+      "matches": {
+        "continue": true
+      }
+    },
+    {
+      "content": "{%- assign ${variable} = ${value} -%}",
+      "doc": "Variable tag: assign",
+      "label": "Tag assign",
+      "matches": {
+        "assign": true
+      }
+    },
+    {
+      "content": "{%- increment ${variable} -%}",
+      "doc": "Variable tag: increment",
+      "label": "Tag increment",
+      "matches": {
+        "increment": true
+      }
+    },
+    {
+      "content": "{%- decrement ${variable} -%}",
+      "doc": "Variable tag: decrement",
+      "label": "Tag decrement",
+      "matches": {
+        "decrement": true
+      }
+    },
+    {
+      "content": "| prepend: '${string}' }}",
+      "doc": "String filter: prepend",
+      "label": "Filter prepend",
+      "matches": {
+        "prepend": true
+      }
+    },
+    {
+      "content": "| remove: '${string}' }}",
+      "doc": "String filter: remove",
+      "label": "Filter remove",
+      "matches": {
+        "remove": true
+      }
+    },
+    {
+      "content": "| join: '${seperator:, }}'",
+      "doc": "Array filter: join",
+      "label": "Filter join",
+      "matches": {
+        "join": true
+      }
+    },
+    {
+      "content": "| remove_first: '${string}' }}",
+      "doc": "String filter: remove first",
+      "label": "Filter remove first",
+      "matches": {
+        "remove_first": true
+      }
+    },
+    {
+      "content": "| first",
+      "doc": "Array filter: first",
+      "label": "Filter first",
+      "matches": {
+        "first": true
+      }
+    },
+    {
+      "content": "{%- if ${condition} -%}\n\t${code:}\n{%- endif -%}",
+      "doc": "Control flow tag: if",
+      "label": "Tag if",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "{%- include_relative '${file:}' -%}",
+      "doc": "Tag: include relative",
+      "label": "Tag include relative",
+      "matches": {
+        "increl": true
+      }
+    },
+    {
+      "content": "| replace: '${target}', '${replace}' }}",
+      "doc": "String filter: replace",
+      "label": "Filter replace",
+      "matches": {
+        "replace": true
+      }
+    },
+    {
+      "content": "{%- else -%}",
+      "doc": "Control flow tag: else",
+      "label": "Tag else",
+      "matches": {
+        "else": true
+      }
+    },
+    {
+      "content": "| replace_first: '${target}', '${replace}' }}",
+      "doc": "String filter: replace first",
+      "label": "Filter replace first",
+      "matches": {
+        "replace_first": true
+      }
+    },
+    {
+      "content": "| map: '${key}'",
+      "doc": "Array filter: map",
+      "label": "Filter map",
+      "matches": {
+        "map": true
+      }
+    },
+    {
+      "content": "| slice: ${from:0}, ${to:5} }}",
+      "doc": "String filter: slice",
+      "label": "Filter slice",
+      "matches": {
+        "slice": true
+      }
+    },
+    {
+      "content": "{%- if ${condition} -%}\n\t${code1:}\n{%- else -%}\n\t${code2:}\n{%- endif -%}",
+      "doc": "Control flow tag: if else",
+      "label": "Tag if else",
+      "matches": {
+        "ifelse": true
       }
     },
     {
@@ -330,11 +242,19 @@
       }
     },
     {
-      "content": "{{ site.date | date: '${format: %b %d, %Y}' }}",
-      "doc": "Tag: site.date",
-      "label": "Site Vairable Date",
+      "content": "| size",
+      "doc": "Array filter: size",
+      "label": "Filter size",
       "matches": {
-        "date": true
+        "size": true
+      }
+    },
+    {
+      "content": "{%- unless ${condition} -%}\n\t${code:}\n{%- endunless -%}",
+      "doc": "Control flow tag: unless",
+      "label": "Tag unless",
+      "matches": {
+        "unless": true
       }
     },
     {
@@ -346,27 +266,11 @@
       }
     },
     {
-      "content": "{%- cycle '${0:odd}', '${1:even}' -%}",
-      "doc": "Iteration tag: cycle",
-      "label": "Tag cycle",
-      "matches": {
-        "cycle": true
-      }
-    },
-    {
       "content": "| strip }}",
       "doc": "String filter: strip",
       "label": "Filter strip",
       "matches": {
         "strip": true
-      }
-    },
-    {
-      "content": "{{ site.${my_collection}.directory }}",
-      "doc": "The full path to the collection's source direcotry",
-      "label": "Tag collection directory",
-      "matches": {
-        "cdirp": true
       }
     },
     {
@@ -378,43 +282,11 @@
       }
     },
     {
-      "content": "{{ site.collections.${my_collection}.relative_path }}",
-      "doc": "The path to the document's source file realtive to the site source",
-      "label": "Tag collection relative path",
-      "matches": {
-        "crelp": true
-      }
-    },
-    {
-      "content": "| url_encode }}",
-      "doc": "String filter: url encode",
-      "label": "Filter url encode",
-      "matches": {
-        "url_encode": true
-      }
-    },
-    {
       "content": "| rstrip }}",
       "doc": "String filter: rstrip",
       "label": "Filter rstrip",
       "matches": {
         "rstrip": true
-      }
-    },
-    {
-      "content": "| upcase }}",
-      "doc": "String filter: upcase }}",
-      "label": "Filter upcase",
-      "matches": {
-        "upcase": true
-      }
-    },
-    {
-      "content": "{%- decrement ${variable} -%}",
-      "doc": "Variable tag: decrement",
-      "label": "Tag decrement",
-      "matches": {
-        "decrement": true
       }
     },
     {
@@ -434,91 +306,91 @@
       }
     },
     {
-      "content": "| slice: ${from:0}, ${to:5} }}",
-      "doc": "String filter: slice",
-      "label": "Filter slice",
+      "content": "| markdownify }}",
+      "doc": "String filter: markdownify",
+      "label": "Filter markdownify",
       "matches": {
-        "slice": true
+        "markdown": true
       }
     },
     {
-      "content": "{%- for ${item} in ${collection} -%}\n\t${code:}\n{%- endfor -%}",
-      "doc": "Iteration tag: for",
-      "label": "Tag for",
+      "content": "| truncate: ${length:20}, '${ellipsis:...}' }}",
+      "doc": "String filter: truncate",
+      "label": "Filter truncate",
       "matches": {
-        "for": true
+        "truncate": true
       }
     },
     {
-      "content": "limit: ${limit:5}",
-      "doc": "For loops option",
-      "label": "Tag Option limit",
+      "content": "| truncatewords: ${length:5}, '${ellipsis:...}' }}",
+      "doc": "String filter: truncatewords",
+      "label": "Filter truncatewords",
       "matches": {
-        "limit": true
+        "truncatewords": true
       }
     },
     {
-      "content": "{%- unless ${condition} -%}\n\t${code:}\n{%- endunless -%}",
-      "doc": "Control flow tag: unless",
-      "label": "Tag unless",
+      "content": "{{ $1 }}",
+      "doc": "Output markup: {{ }}",
+      "label": "Show",
       "matches": {
-        "unless": true
+        "show": true
       }
     },
     {
-      "content": "| escape }}",
-      "doc": "String filter: escape",
-      "label": "Filter escape",
+      "content": "| upcase }}",
+      "doc": "String filter: upcase }}",
+      "label": "Filter upcase",
       "matches": {
-        "escape": true
+        "upcase": true
       }
     },
     {
-      "content": "offset: ${offset:0}",
-      "doc": "For loops option",
-      "label": "Tag Option offset",
+      "content": "{%- $1 -%}",
+      "doc": "Tag markup: {%- -%}",
+      "label": "Execute",
       "matches": {
-        "offset": true
+        "execute": true
       }
     },
     {
-      "content": "{%- increment ${variable} -%}",
-      "doc": "Variable tag: increment",
-      "label": "Tag increment",
+      "content": "| url_encode }}",
+      "doc": "String filter: url encode",
+      "label": "Filter url encode",
       "matches": {
-        "increment": true
+        "url_encode": true
       }
     },
     {
-      "content": "{%- if ${condition} -%}\n\t${code:}\n{%- endif -%}",
-      "doc": "Control flow tag: if",
-      "label": "Tag if",
+      "content": "| minus: ${minus:1}",
+      "doc": "Math filter: minus",
+      "label": "Filter minus",
       "matches": {
-        "if": true
+        "minus": true
       }
     },
     {
-      "content": "reversed",
-      "doc": "For loops option",
-      "label": "Tag Option reversed",
+      "content": "| uri_escape }}",
+      "doc": "String filter: uri escape",
+      "label": "Filter uri escape",
       "matches": {
-        "reversed": true
+        "uri_escape": true
       }
     },
     {
-      "content": "{%- elsif ${condition} -%}",
-      "doc": "Control flow tag: elsif",
-      "label": "Tag elsif",
+      "content": "| xml_escape }}",
+      "doc": "String filter: xml escape",
+      "label": "Filter xml escape",
       "matches": {
-        "elsif": true
+        "xml_escape": true
       }
     },
     {
-      "content": "{%- raw -%}${code:}{%- endraw -%}",
-      "doc": "Tag: raw",
-      "label": "Tag raw",
+      "content": "| round: ${round:0}",
+      "doc": "Math filter: round",
+      "label": "Filter round",
       "matches": {
-        "raw": true
+        "round": true
       }
     },
     {
@@ -530,19 +402,27 @@
       }
     },
     {
-      "content": "{%- when ${condition} -%}\n${code:}",
-      "doc": "Control flow tag: when",
-      "label": "Tag when",
+      "content": "{{ ${variable:} }}",
+      "doc": "Context Variable",
+      "label": "Tag context variable",
       "matches": {
-        "when": true
+        "convar": true
       }
     },
     {
-      "content": "{%- continue -%}",
-      "doc": "Iteration tag: continue",
-      "label": "Tag continue",
+      "content": "| times: ${times:1}",
+      "doc": "Math filter: times",
+      "label": "Filter times",
       "matches": {
-        "continue": true
+        "times": true
+      }
+    },
+    {
+      "content": "{{ site.date | date: '${format: %b %d, %Y}' }}",
+      "doc": "Tag: site.date",
+      "label": "Site Vairable Date",
+      "matches": {
+        "date": true
       }
     },
     {
@@ -554,27 +434,35 @@
       }
     },
     {
-      "content": "| markdownify }}",
-      "doc": "String filter: markdownify",
-      "label": "Filter markdownify",
+      "content": "---\nlayout: ${layout:default}\ntitle: ${title}\ncategories: ${category}\npermalink: ${path}\ntags: ${tag}\nexcerpt: ${description}\n---",
+      "doc": "Add front matter",
+      "label": "Front Matter",
       "matches": {
-        "markdown": true
+        "fm": true
       }
     },
     {
-      "content": "{%- include_relative '${file:}' -%}",
-      "doc": "Tag: include relative",
-      "label": "Tag include relative",
+      "content": "| modulo: ${modulo:2}",
+      "doc": "Math filter: modulo",
+      "label": "Filter modulo",
       "matches": {
-        "increl": true
+        "modulo": true
       }
     },
     {
-      "content": "| replace_first: '${target}', '${replace}' }}",
-      "doc": "String filter: replace first",
-      "label": "Filter replace first",
+      "content": "{%- capture ${variable} -%}${code:}{%- endcapture -%}",
+      "doc": "Variable tag: capture",
+      "label": "Tag capture",
       "matches": {
-        "replace_first": true
+        "capture": true
+      }
+    },
+    {
+      "content": "{%- case ${variable} -%}\n\t{%- when ${condition} -%}\n\t\t${code1:}\n\t{%- else -%}\n\t\t${code2:}\n{%- endcase -%}",
+      "doc": "Control flow tag: case",
+      "label": "Tag case",
+      "matches": {
+        "case": true
       }
     },
     {
@@ -583,6 +471,118 @@
       "label": "Filter jsonify",
       "matches": {
         "json": true
+      }
+    },
+    {
+      "content": "{{ site.collections.${my_collection}.relative_path }}",
+      "doc": "The path to the document's source file realtive to the site source",
+      "label": "Tag collection relative path",
+      "matches": {
+        "crelp": true
+      }
+    },
+    {
+      "content": "{%- elsif ${condition} -%}",
+      "doc": "Control flow tag: elsif",
+      "label": "Tag elsif",
+      "matches": {
+        "elsif": true
+      }
+    },
+    {
+      "content": "| last",
+      "doc": "Array filter: last",
+      "label": "Filter last",
+      "matches": {
+        "last": true
+      }
+    },
+    {
+      "content": "{{ site.${my_collection}.directory }}",
+      "doc": "The full path to the collection's source direcotry",
+      "label": "Tag collection directory",
+      "matches": {
+        "cdirp": true
+      }
+    },
+    {
+      "content": "{%- include ${snippet} -%}",
+      "doc": "Tag: include",
+      "label": "Tag include",
+      "matches": {
+        "include": true
+      }
+    },
+    {
+      "content": "{%- comment -%}${description:}{%- endcomment -%}",
+      "doc": "Control flow tag: case",
+      "label": "Tag comment",
+      "matches": {
+        "comment": true
+      }
+    },
+    {
+      "content": "{%- when ${condition} -%}\n${code:}",
+      "doc": "Control flow tag: when",
+      "label": "Tag when",
+      "matches": {
+        "when": true
+      }
+    },
+    {
+      "content": "| sort",
+      "doc": "Array filter: sort",
+      "label": "Filter sort",
+      "matches": {
+        "sort": true
+      }
+    },
+    {
+      "content": "| ceil",
+      "doc": "Math filter: ceil",
+      "label": "Filter ceil",
+      "matches": {
+        "ceil": true
+      }
+    },
+    {
+      "content": "| downcase }}",
+      "doc": "String filter: downcase",
+      "label": "Filter downcase",
+      "matches": {
+        "downcase": true
+      }
+    },
+    {
+      "content": "{%- cycle '${0:odd}', '${1:even}' -%}",
+      "doc": "Iteration tag: cycle",
+      "label": "Tag cycle",
+      "matches": {
+        "cycle": true
+      }
+    },
+    {
+      "content": "| divided_by: ${divided_by:2}",
+      "doc": "Math filter: divided by",
+      "label": "Filter divided by",
+      "matches": {
+        "divided_by": true
+      }
+    },
+    {
+      "content": "| uniq",
+      "doc": "Array filter: uniq",
+      "label": "Filter uniq",
+      "matches": {
+        "uniq": true
+      }
+    },
+    {
+      "content": "{%- raw -%}${code:}{%- endraw -%}",
+      "doc": "Tag: raw",
+      "label": "Tag raw",
+      "matches": {
+        "raw": true
       }
     }
   ]

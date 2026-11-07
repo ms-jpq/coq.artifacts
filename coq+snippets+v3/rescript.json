@@ -2,42 +2,6 @@
   "extends": [],
   "snippets": [
     {
-      "content": "let ${1:x} = ref(${2:\"hello\"})",
-      "doc": "",
-      "label": "mutable variable",
-      "matches": {
-        "letm": true,
-        "lm": true,
-        "mvar": true
-      }
-    },
-    {
-      "content": "@deprecated(\"${1:This field deprecated}. Use ${2:something} instead\")",
-      "doc": "",
-      "label": "compiler deprecation warn",
-      "matches": {
-        "@dw": true
-      }
-    },
-    {
-      "content": "type ${1:x}<'${2:a}> = ${3:int}",
-      "doc": "",
-      "label": "type with generic",
-      "matches": {
-        "tpg": true,
-        "typeg": true
-      }
-    },
-    {
-      "content": "%%raw(`\n\t${1://js code}\n`)",
-      "doc": "",
-      "label": "Top level js embed",
-      "matches": {
-        "tle": true,
-        "tlr": true
-      }
-    },
-    {
       "content": "type ${1:x} = [ #${2:one} | #${3:two} ]",
       "doc": "",
       "label": "type polimorphic variant",
@@ -47,13 +11,21 @@
       }
     },
     {
-      "content": "%raw(\"${1://js expression}\")",
+      "content": "if ${1:a} {${2:b}} else {${3:c}}",
       "doc": "",
-      "label": "expression level js embed",
+      "label": "if inline",
       "matches": {
-        "ele": true,
-        "elr": true,
-        "exe": true
+        "ifi": true
+      }
+    },
+    {
+      "content": "let ${1:x} = ${2:\"hello\"}",
+      "doc": "",
+      "label": "variable",
+      "matches": {
+        "l": true,
+        "let": true,
+        "var": true
       }
     },
     {
@@ -62,6 +34,14 @@
       "label": "inline functin",
       "matches": {
         "fn": true
+      }
+    },
+    {
+      "content": "%%debugger",
+      "doc": "",
+      "label": "js debugger",
+      "matches": {
+        "dbg": true
       }
     },
     {
@@ -84,6 +64,15 @@
       }
     },
     {
+      "content": "Js.log(${1:something})",
+      "doc": "",
+      "label": "console.log",
+      "matches": {
+        "cl": true,
+        "col": true
+      }
+    },
+    {
       "content": "Js.info(${1:something})",
       "doc": "",
       "label": "console.info",
@@ -93,19 +82,28 @@
       }
     },
     {
-      "content": "@as(\"${1:aria-label}\")",
-      "doc": "",
-      "label": "alias",
-      "matches": {
-        "@a": true
-      }
-    },
-    {
       "content": "let ${1:doSomeStuff} = (${2}) => {\n\t${0}\n}",
       "doc": "",
       "label": "function",
       "matches": {
         "function": true
+      }
+    },
+    {
+      "content": "Js.error(${1:something})",
+      "doc": "",
+      "label": "console.error",
+      "matches": {
+        "ce": true,
+        "cer": true
+      }
+    },
+    {
+      "content": "module ${1:Name} = {\n\t${2:// Module contents}\n}",
+      "doc": "",
+      "label": "Module",
+      "matches": {
+        "module": true
       }
     },
     {
@@ -134,54 +132,12 @@
       }
     },
     {
-      "content": "Belt.Int.fromString(${1:10})",
-      "doc": "",
-      "label": "Belt. fromString",
-      "matches": {
-        "bfs": true,
-        "bfstr": true
-      }
-    },
-    {
-      "content": "%%debugger",
-      "doc": "",
-      "label": "js debugger",
-      "matches": {
-        "dbg": true
-      }
-    },
-    {
-      "content": "Js.log(${1:something})",
-      "doc": "",
-      "label": "console.log",
-      "matches": {
-        "cl": true,
-        "col": true
-      }
-    },
-    {
       "content": "Belt.Int.toString(${1:10})",
       "doc": "",
       "label": "Belt. toString",
       "matches": {
         "bts": true,
         "btstr": true
-      }
-    },
-    {
-      "content": "@@warning(\"${1:-27}\")",
-      "doc": "",
-      "label": "@@warning",
-      "matches": {
-        "@w": true
-      }
-    },
-    {
-      "content": "if ${1:a} {${2:b}} else {${3:c}}",
-      "doc": "",
-      "label": "if inline",
-      "matches": {
-        "ifi": true
       }
     },
     {
@@ -201,28 +157,11 @@
       }
     },
     {
-      "content": "@genType.import(\"${1:./MyMath}\")",
-      "doc": "",
-      "label": "@genType import",
-      "matches": {
-        "gti": true
-      }
-    },
-    {
       "content": "let {${1:a}} = ${2:data}",
       "doc": "",
       "label": "Object destructuring",
       "matches": {
         "dob": true
-      }
-    },
-    {
-      "content": "Js.error(${1:something})",
-      "doc": "",
-      "label": "console.error",
-      "matches": {
-        "ce": true,
-        "cer": true
       }
     },
     {
@@ -252,16 +191,6 @@
       }
     },
     {
-      "content": "let ${1:x} = ${2:\"hello\"}",
-      "doc": "",
-      "label": "variable",
-      "matches": {
-        "l": true,
-        "let": true,
-        "var": true
-      }
-    },
-    {
       "content": "@genType",
       "doc": "",
       "label": "@genType",
@@ -270,12 +199,11 @@
       }
     },
     {
-      "content": "@scope(\"${1:Math}\") @val external ${2:random}: ${3:unit => float} = \"${4:random}\"",
+      "content": "@genType.import(\"${1:./MyMath}\")",
       "doc": "",
-      "label": "Global External Module",
+      "label": "@genType import",
       "matches": {
-        "@bs": true,
-        "external": true
+        "gti": true
       }
     },
     {
@@ -298,6 +226,68 @@
       }
     },
     {
+      "content": "@module external ${1:leftPad}: ${2:(string, int) => string} = \"${3:leftPad}\"",
+      "doc": "",
+      "label": "JS Module Default External",
+      "matches": {
+        "@bs": true,
+        "external": true
+      }
+    },
+    {
+      "content": "@@warning(\"${1:-27}\")",
+      "doc": "",
+      "label": "@@warning",
+      "matches": {
+        "@w": true
+      }
+    },
+    {
+      "content": "let ${1:x} = ref(${2:\"hello\"})",
+      "doc": "",
+      "label": "mutable variable",
+      "matches": {
+        "letm": true,
+        "lm": true,
+        "mvar": true
+      }
+    },
+    {
+      "content": "%raw(\"${1://js expression}\")",
+      "doc": "",
+      "label": "expression level js embed",
+      "matches": {
+        "ele": true,
+        "elr": true,
+        "exe": true
+      }
+    },
+    {
+      "content": "@scope(\"${1:Math}\") @val external ${2:random}: ${3:unit => float} = \"${4:random}\"",
+      "doc": "",
+      "label": "Global External Module",
+      "matches": {
+        "@bs": true,
+        "external": true
+      }
+    },
+    {
+      "content": "@deprecated(\"${1:This field deprecated}. Use ${2:something} instead\")",
+      "doc": "",
+      "label": "compiler deprecation warn",
+      "matches": {
+        "@dw": true
+      }
+    },
+    {
+      "content": "@as(\"${1:aria-label}\")",
+      "doc": "",
+      "label": "alias",
+      "matches": {
+        "@a": true
+      }
+    },
+    {
       "content": "@genType.as(\"${1:CB}\")",
       "doc": "",
       "label": "@genType alias",
@@ -306,12 +296,21 @@
       }
     },
     {
-      "content": "@module external ${1:leftPad}: ${2:(string, int) => string} = \"${3:leftPad}\"",
+      "content": "%%raw(`\n\t${1://js code}\n`)",
       "doc": "",
-      "label": "JS Module Default External",
+      "label": "Top level js embed",
       "matches": {
-        "@bs": true,
-        "external": true
+        "tle": true,
+        "tlr": true
+      }
+    },
+    {
+      "content": "type ${1:x}<'${2:a}> = ${3:int}",
+      "doc": "",
+      "label": "type with generic",
+      "matches": {
+        "tpg": true,
+        "typeg": true
       }
     },
     {
@@ -324,11 +323,12 @@
       }
     },
     {
-      "content": "module ${1:Name} = {\n\t${2:// Module contents}\n}",
+      "content": "Belt.Int.fromString(${1:10})",
       "doc": "",
-      "label": "Module",
+      "label": "Belt. fromString",
       "matches": {
-        "module": true
+        "bfs": true,
+        "bfstr": true
       }
     }
   ]

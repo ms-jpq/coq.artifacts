@@ -18,6 +18,14 @@
       }
     },
     {
+      "content": "cy.wait(${1:time});",
+      "doc": "Wait for a number of milliseconds or wait for an aliased resource to resolve before moving on to the next command.",
+      "label": "cypress-wait",
+      "matches": {
+        "cypress wait": true
+      }
+    },
+    {
       "content": "cy.server();",
       "doc": "Start a server to begin routing responses to cy.route() and to change the behavior of network requests.",
       "label": "cypress-server",
@@ -34,19 +42,11 @@
       }
     },
     {
-      "content": "cy.wait(${1:time});",
-      "doc": "Wait for a number of milliseconds or wait for an aliased resource to resolve before moving on to the next command.",
-      "label": "cypress-wait",
+      "content": "cy.visit('${1:url}');",
+      "doc": "Visit a remote URL",
+      "label": "cypress-visit",
       "matches": {
-        "cypress wait": true
-      }
-    },
-    {
-      "content": "cy.viewport(${1:width}, ${2:height});",
-      "doc": "Control the size of the screen for your application.",
-      "label": "cypress-viewport",
-      "matches": {
-        "cypress viewport": true
+        "cypress visit": true
       }
     },
     {
@@ -58,11 +58,27 @@
       }
     },
     {
-      "content": "cy.visit('${1:url}');",
-      "doc": "Visit a remote URL",
-      "label": "cypress-visit",
+      "content": "cy.viewport(${1:width}, ${2:height});",
+      "doc": "Control the size of the screen for your application.",
+      "label": "cypress-viewport",
       "matches": {
-        "cypress visit": true
+        "cypress viewport": true
+      }
+    },
+    {
+      "content": "cy.request({\n\tmethod: '${1:METHOD}',\n\turl: '${2:url}',\n\tbody: ${3:body}\n});",
+      "doc": "Make an HTTP request.",
+      "label": "cypress-request",
+      "matches": {
+        "cypress request": true
+      }
+    },
+    {
+      "content": "cy.getCookies();",
+      "doc": "Get all of the browser cookies.",
+      "label": "cypress-cookies-get-all",
+      "matches": {
+        "cypress cookies get all": true
       }
     },
     {
@@ -87,22 +103,6 @@
       "label": "cypress-go",
       "matches": {
         "cypress go": true
-      }
-    },
-    {
-      "content": "cy.getCookies();",
-      "doc": "Get all of the browser cookies.",
-      "label": "cypress-cookies-get-all",
-      "matches": {
-        "cypress cookies get all": true
-      }
-    },
-    {
-      "content": "cy.request({\n\tmethod: '${1:METHOD}',\n\turl: '${2:url}',\n\tbody: ${3:body}\n});",
-      "doc": "Make an HTTP request.",
-      "label": "cypress-request",
-      "matches": {
-        "cypress request": true
       }
     }
   ]

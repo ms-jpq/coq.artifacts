@@ -2,19 +2,19 @@
   "extends": [],
   "snippets": [
     {
-      "content": "object ${1:ObjectName} {\n\tdef main(args: Array[String]): Unit = {\n\t\t${2:println(\"Hello, world!\")}\n\t}\n}",
-      "doc": "Object with main method",
-      "label": "main_object",
+      "content": "def ${1:methodName}(${2:argName}: ${3:ArgType}): ${4:ReturnType} = {\n\t${5:println(\"Hello, world!\")}\n}",
+      "doc": "Method",
+      "label": "def",
       "matches": {
-        "obj_main": true
+        "def": true
       }
     },
     {
-      "content": "object ${1:App} extends App {\n\t${2:println(\"Hello, world!\")}\n}",
-      "doc": "Object extending App",
-      "label": "app",
+      "content": "object ${1:ObjectName} {\n\t${2:println(\"Hello, world!\")}\n}",
+      "doc": "Object",
+      "label": "object",
       "matches": {
-        "app": true
+        "object": true
       }
     },
     {
@@ -26,11 +26,27 @@
       }
     },
     {
-      "content": "class ${1:ClassName} {\n\t${2:println(\"Hello, world!\")}\n}",
-      "doc": "Class",
-      "label": "class",
+      "content": "for (${1:element} <- elements) {\n\t${2:println(element.toString)}\n}",
+      "doc": "For loop",
+      "label": "for",
       "matches": {
-        "class": true
+        "for": true
+      }
+    },
+    {
+      "content": "object ${1:App} extends App {\n\t${2:println(\"Hello, world!\")}\n}",
+      "doc": "Object extending App",
+      "label": "app",
+      "matches": {
+        "app": true
+      }
+    },
+    {
+      "content": "trait ${1:TraitName} {\n\t${2:}\n}",
+      "doc": "Trait",
+      "label": "trait",
+      "matches": {
+        "trait": true
       }
     },
     {
@@ -50,27 +66,11 @@
       }
     },
     {
-      "content": "for (${1:element} <- elements) {\n\t${2:println(element.toString)}\n}",
-      "doc": "For loop",
-      "label": "for",
-      "matches": {
-        "for": true
-      }
-    },
-    {
       "content": "def ${1:methodName}(${2:argName}: ${3:ArgType}): ${4:ReturnType} = ${5:println(\"Hello, world!\")}",
       "doc": "Method as one-liner",
       "label": "def_short",
       "matches": {
         "def_short": true
-      }
-    },
-    {
-      "content": "def ${1:methodName}(${2:argName}: ${3:ArgType}): ${4:ReturnType} = {\n\t${5:println(\"Hello, world!\")}\n}",
-      "doc": "Method",
-      "label": "def",
-      "matches": {
-        "def": true
       }
     },
     {
@@ -82,19 +82,19 @@
       }
     },
     {
-      "content": "object ${1:ObjectName} {\n\t${2:println(\"Hello, world!\")}\n}",
-      "doc": "Object",
-      "label": "object",
+      "content": "object ${1:ObjectName} {\n\tdef main(args: Array[String]): Unit = {\n\t\t${2:println(\"Hello, world!\")}\n\t}\n}",
+      "doc": "Object with main method",
+      "label": "main_object",
       "matches": {
-        "object": true
+        "obj_main": true
       }
     },
     {
-      "content": "trait ${1:TraitName} {\n\t${2:}\n}",
-      "doc": "Trait",
-      "label": "trait",
+      "content": "class ${1:ClassName} {\n\t${2:println(\"Hello, world!\")}\n}",
+      "doc": "Class",
+      "label": "class",
       "matches": {
-        "trait": true
+        "class": true
       }
     },
     {

@@ -2,13 +2,82 @@
   "extends": [],
   "snippets": [
     {
-      "content": "import ${1:package} as ${2:name}",
-      "doc": "Code snippet for import a package and rename.",
-      "label": "import as",
+      "content": "~${1:value}",
+      "doc": "Code snippet for bitwise not operator.",
+      "label": "bitwise not",
       "matches": {
-        "as": true,
+        "bnot": true
+      }
+    },
+    {
+      "content": "import $0",
+      "doc": "Code snippet for import a package.",
+      "label": "import",
+      "matches": {
         "im": true,
         "import": true
+      }
+    },
+    {
+      "content": "${1:value} & ${2:value}",
+      "doc": "Code snippet for bitwise and operator.",
+      "label": "bitwise and",
+      "matches": {
+        "band": true
+      }
+    },
+    {
+      "content": "using ${1:package}: ${2:exports}",
+      "doc": "Code snippet for using something from a package.",
+      "label": "using from",
+      "matches": {
+        "from": true,
+        "us": true,
+        "using": true
+      }
+    },
+    {
+      "content": "${1:value} | ${2:value}",
+      "doc": "Code snippet for bitwise or operator.",
+      "label": "bitwise or",
+      "matches": {
+        "bor": true
+      }
+    },
+    {
+      "content": "import ${1:package}: ${2:exports}",
+      "doc": "Code snippet for import something from a package.",
+      "label": "import from",
+      "matches": {
+        "from": true,
+        "im": true,
+        "import": true
+      }
+    },
+    {
+      "content": "${1:value} ⊻ ${2:value}",
+      "doc": "Code snippet for bitwise xor (exclusive or) operator.",
+      "label": "bitwise xor",
+      "matches": {
+        "xor": true
+      }
+    },
+    {
+      "content": "else\n\t$0\nend",
+      "doc": "Code snippet for else statement.",
+      "label": "else",
+      "matches": {
+        "else": true
+      }
+    },
+    {
+      "content": "using ${1:package} as ${2:name}",
+      "doc": "Code snippet for using a package and rename.",
+      "label": "using as",
+      "matches": {
+        "as": true,
+        "us": true,
+        "using": true
       }
     },
     {
@@ -22,112 +91,11 @@
       }
     },
     {
-      "content": "using ${1:package}: ${2:exports} as ${3:name}",
-      "doc": "Code snippet for using something from a package and rename.",
-      "label": "using from as",
+      "content": "for ${1:value}=${2:index}:${3:index}\n\t$0\nend",
+      "doc": "Code snippet to create a for loop.",
+      "label": "for",
       "matches": {
-        "as": true,
-        "from": true,
-        "us": true,
-        "using": true
-      }
-    },
-    {
-      "content": "parse(Float64, \"${1:value}\")",
-      "doc": "Code snippet for parsing a String to Float64.",
-      "label": "parse Float",
-      "matches": {
-        "parsef": true,
-        "pfloat": true
-      }
-    },
-    {
-      "content": "import ${1:package}: ${2:exports} as ${3:name}",
-      "doc": "Code snippet for import something from a package and rename.",
-      "label": "import from as",
-      "matches": {
-        "as": true,
-        "from": true,
-        "im": true,
-        "import": true
-      }
-    },
-    {
-      "content": "elseif ${1:condition}\n\t${2:block}\nend",
-      "doc": "Code snippet for elseif statement.",
-      "label": "else if",
-      "matches": {
-        "elseif": true
-      }
-    },
-    {
-      "content": "function ${1:name}(a, b)::Cint\n\treturn a + b\nend\n\n${1:name}_c = @cfunction(${1:name}, Cint, (Cint, Cint))\nccall(${1:name}_c, Cint, (Cint, Cint), 1, 1)",
-      "doc": "An example for ccal.",
-      "label": "ccal/function",
-      "matches": {
-        "ccal": true,
-        "cfun": true,
-        "cfunction": true
-      }
-    },
-    {
-      "content": "parse(Int64, \"${1:value}\")",
-      "doc": "Code snippet for parsing a String to Int64.",
-      "label": "parse Int",
-      "matches": {
-        "parsei": true,
-        "pint": true
-      }
-    },
-    {
-      "content": "if ${1:condition}\n\t${2:block}\nelseif ${3:condition}\n\t${4:block}\nelse\n\t${5:block}\nend",
-      "doc": "Code snippet for if-elseif-else statement.",
-      "label": "if/elseif/else",
-      "matches": {
-        "ifelseif": true
-      }
-    },
-    {
-      "content": "${1:condition} ? ${2:expression} : ${3:expression}",
-      "doc": "Code snippet for ternary operator statement.",
-      "label": "ternary operator",
-      "matches": {
-        "?:": true
-      }
-    },
-    {
-      "content": "${1:value} .|> ${2:function}",
-      "doc": "Code snippet for pointwise pipe expression.",
-      "label": "pointwise pile",
-      "matches": {
-        "pipe.": true,
-        "pp.": true,
-        "ppipe": true
-      }
-    },
-    {
-      "content": "${1:condition} && ${2:expression}",
-      "doc": "In the expression a && b, the subexpression b is only evaluated if a evaluates to true.",
-      "label": "and short-circuit evaluation",
-      "matches": {
-        "&&": true
-      }
-    },
-    {
-      "content": "(${1:fonction} ∘ ${2:fonction})(${3:args})",
-      "doc": "Code snippet for function composition.",
-      "label": "function composition",
-      "matches": {
-        "composition": true,
-        "fcomp": true
-      }
-    },
-    {
-      "content": "${1:condition} || ${2:expression}",
-      "doc": "In the expression a || b, the subexpression b is only evaluated if a evaluates to false.",
-      "label": "or short-circuit evaluation",
-      "matches": {
-        "||": true
+        "for": true
       }
     },
     {
@@ -149,6 +117,26 @@
       }
     },
     {
+      "content": "import ${1:package}: ${2:exports} as ${3:name}",
+      "doc": "Code snippet for import something from a package and rename.",
+      "label": "import from as",
+      "matches": {
+        "as": true,
+        "from": true,
+        "im": true,
+        "import": true
+      }
+    },
+    {
+      "content": "parse(Int64, \"${1:value}\")",
+      "doc": "Code snippet for parsing a String to Int64.",
+      "label": "parse Int",
+      "matches": {
+        "parsei": true,
+        "pint": true
+      }
+    },
+    {
       "content": "module ${1:name}\nexport ${2:struct}\nstruct ${2:struct} end\n\t$0\nend",
       "doc": "Code snippet for module block.",
       "label": "module",
@@ -158,13 +146,11 @@
       }
     },
     {
-      "content": "baremodule ${1:name}\n\t$0\nend",
-      "doc": "Code snippet for module block.",
-      "label": "baremodule",
+      "content": "if ${1:condition}\n\t${2:block}\nelseif ${3:condition}\n\t${4:block}\nelse\n\t${5:block}\nend",
+      "doc": "Code snippet for if-elseif-else statement.",
+      "label": "if/elseif/else",
       "matches": {
-        "bare": true,
-        "baremodule": true,
-        "bmod": true
+        "ifelseif": true
       }
     },
     {
@@ -177,20 +163,20 @@
       }
     },
     {
-      "content": "next = iterate(${1:iterable})\nwhile next !== nothing\n\t(item, state) = next\n\t0\n\tnext = iterate(iter, state)\nend",
-      "doc": "Code snippet to iterate each element.",
-      "label": "iterate",
+      "content": "let\n\t$0\nend",
+      "doc": "Code snippet to create a let block.",
+      "label": "let",
       "matches": {
-        "iter": true,
-        "iterate": true
+        "le": true,
+        "let": true
       }
     },
     {
-      "content": "map(x -> ${1:expr}, ${2:iterable})",
-      "doc": "Code snippet for map.",
-      "label": "map",
+      "content": "${1:condition} ? ${2:expression} : ${3:expression}",
+      "doc": "Code snippet for ternary operator statement.",
+      "label": "ternary operator",
       "matches": {
-        "map": true
+        "?:": true
       }
     },
     {
@@ -211,84 +197,68 @@
       }
     },
     {
-      "content": "Meta.parse(\"{$1:expression}\")",
-      "doc": "Code snippet for parse an expression.",
-      "label": "parse expression",
+      "content": "elseif ${1:condition}\n\t${2:block}\nend",
+      "doc": "Code snippet for elseif statement.",
+      "label": "else if",
       "matches": {
-        "meta": true,
-        "parse": true
+        "elseif": true
       }
     },
     {
-      "content": "using ${1:package} as ${2:name}",
-      "doc": "Code snippet for using a package and rename.",
-      "label": "using as",
+      "content": "(${1:fonction} ∘ ${2:fonction})(${3:args})",
+      "doc": "Code snippet for function composition.",
+      "label": "function composition",
+      "matches": {
+        "composition": true,
+        "fcomp": true
+      }
+    },
+    {
+      "content": "${1:condition} || ${2:expression}",
+      "doc": "In the expression a || b, the subexpression b is only evaluated if a evaluates to false.",
+      "label": "or short-circuit evaluation",
+      "matches": {
+        "||": true
+      }
+    },
+    {
+      "content": "baremodule ${1:name}\n\t$0\nend",
+      "doc": "Code snippet for module block.",
+      "label": "baremodule",
+      "matches": {
+        "bare": true,
+        "baremodule": true,
+        "bmod": true
+      }
+    },
+    {
+      "content": "function ${1:name}(a, b)::Cint\n\treturn a + b\nend\n\n${1:name}_c = @cfunction(${1:name}, Cint, (Cint, Cint))\nccall(${1:name}_c, Cint, (Cint, Cint), 1, 1)",
+      "doc": "An example for ccal.",
+      "label": "ccal/function",
+      "matches": {
+        "ccal": true,
+        "cfun": true,
+        "cfunction": true
+      }
+    },
+    {
+      "content": "next = iterate(${1:iterable})\nwhile next !== nothing\n\t(item, state) = next\n\t0\n\tnext = iterate(iter, state)\nend",
+      "doc": "Code snippet to iterate each element.",
+      "label": "iterate",
+      "matches": {
+        "iter": true,
+        "iterate": true
+      }
+    },
+    {
+      "content": "using ${1:package}: ${2:exports} as ${3:name}",
+      "doc": "Code snippet for using something from a package and rename.",
+      "label": "using from as",
       "matches": {
         "as": true,
-        "us": true,
-        "using": true
-      }
-    },
-    {
-      "content": "import ${1:package}: ${2:exports}",
-      "doc": "Code snippet for import something from a package.",
-      "label": "import from",
-      "matches": {
-        "from": true,
-        "im": true,
-        "import": true
-      }
-    },
-    {
-      "content": "using $0",
-      "doc": "Code snippet for using a package.",
-      "label": "using",
-      "matches": {
-        "us": true,
-        "using": true
-      }
-    },
-    {
-      "content": "using ${1:package}: ${2:exports}",
-      "doc": "Code snippet for using something from a package.",
-      "label": "using from",
-      "matches": {
         "from": true,
         "us": true,
         "using": true
-      }
-    },
-    {
-      "content": "struct ${1:struct} <: ${2:type}\n\t$0\nend",
-      "doc": "Code snippet for struct block.",
-      "label": "struct",
-      "matches": {
-        "struct": true
-      }
-    },
-    {
-      "content": "import $0",
-      "doc": "Code snippet for import a package.",
-      "label": "import",
-      "matches": {
-        "im": true,
-        "import": true
-      }
-    },
-    {
-      "content": "for ${1:value}=${2:index}:${3:index}\n\t$0\nend",
-      "doc": "Code snippet to create a for loop.",
-      "label": "for",
-      "matches": {
-        "for": true
-      }
-    },
-    {
-      "content": "else\n\t$0\nend",
-      "doc": "Code snippet for else statement.",
-      "label": "else",
-      "matches": {
-        "else": true
       }
     },
     {
@@ -301,6 +271,26 @@
       }
     },
     {
+      "content": "mutable struct ${1:struct} <: ${2:type}\n\t$0\nend",
+      "doc": "Code snippet for mutable struct block.",
+      "label": "mutable struct",
+      "matches": {
+        "mstruct": true,
+        "mut": true,
+        "mutable": true
+      }
+    },
+    {
+      "content": "import ${1:package} as ${2:name}",
+      "doc": "Code snippet for import a package and rename.",
+      "label": "import as",
+      "matches": {
+        "as": true,
+        "im": true,
+        "import": true
+      }
+    },
+    {
       "content": "while ${1:condition}\n\t$0\nend",
       "doc": "Code snippet to create a while loop.",
       "label": "while",
@@ -309,27 +299,20 @@
       }
     },
     {
-      "content": "${1:value} & ${2:value}",
-      "doc": "Code snippet for bitwise and operator.",
-      "label": "bitwise and",
+      "content": "map(x -> ${1:expr}, ${2:iterable})",
+      "doc": "Code snippet for map.",
+      "label": "map",
       "matches": {
-        "band": true
+        "map": true
       }
     },
     {
-      "content": "${1:value} | ${2:value}",
-      "doc": "Code snippet for bitwise or operator.",
-      "label": "bitwise or",
+      "content": "parse(Float64, \"${1:value}\")",
+      "doc": "Code snippet for parsing a String to Float64.",
+      "label": "parse Float",
       "matches": {
-        "bor": true
-      }
-    },
-    {
-      "content": "~${1:value}",
-      "doc": "Code snippet for bitwise not operator.",
-      "label": "bitwise not",
-      "matches": {
-        "bnot": true
+        "parsef": true,
+        "pfloat": true
       }
     },
     {
@@ -342,21 +325,47 @@
       }
     },
     {
-      "content": "${1:value} ⊻ ${2:value}",
-      "doc": "Code snippet for bitwise xor (exclusive or) operator.",
-      "label": "bitwise xor",
+      "content": "Meta.parse(\"{$1:expression}\")",
+      "doc": "Code snippet for parse an expression.",
+      "label": "parse expression",
       "matches": {
-        "xor": true
+        "meta": true,
+        "parse": true
       }
     },
     {
-      "content": "mutable struct ${1:struct} <: ${2:type}\n\t$0\nend",
-      "doc": "Code snippet for mutable struct block.",
-      "label": "mutable struct",
+      "content": "${1:value} .|> ${2:function}",
+      "doc": "Code snippet for pointwise pipe expression.",
+      "label": "pointwise pile",
       "matches": {
-        "mstruct": true,
-        "mut": true,
-        "mutable": true
+        "pipe.": true,
+        "pp.": true,
+        "ppipe": true
+      }
+    },
+    {
+      "content": "${1:condition} && ${2:expression}",
+      "doc": "In the expression a && b, the subexpression b is only evaluated if a evaluates to true.",
+      "label": "and short-circuit evaluation",
+      "matches": {
+        "&&": true
+      }
+    },
+    {
+      "content": "struct ${1:struct} <: ${2:type}\n\t$0\nend",
+      "doc": "Code snippet for struct block.",
+      "label": "struct",
+      "matches": {
+        "struct": true
+      }
+    },
+    {
+      "content": "using $0",
+      "doc": "Code snippet for using a package.",
+      "label": "using",
+      "matches": {
+        "us": true,
+        "using": true
       }
     },
     {

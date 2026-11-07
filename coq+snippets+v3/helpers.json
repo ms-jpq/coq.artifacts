@@ -2,11 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "{{ csrf_field() }}",
-      "doc": "CSRF hidden field",
-      "label": "Form-csrf-field",
+      "content": "{{ trans('$1') }}",
+      "doc": "trans",
+      "label": "String-trans",
       "matches": {
-        "lv:csrf-field": true
+        "lv:trans": true
       }
     },
     {
@@ -15,6 +15,14 @@
       "label": "URL-action",
       "matches": {
         "lv:action": true
+      }
+    },
+    {
+      "content": "{{ csrf_token() }}",
+      "doc": "CSRF token",
+      "label": "csrf-token",
+      "matches": {
+        "lv:csrf-token": true
       }
     },
     {
@@ -58,11 +66,11 @@
       }
     },
     {
-      "content": "{{ csrf_token() }}",
-      "doc": "CSRF token",
-      "label": "csrf-token",
+      "content": "{{ csrf_field() }}",
+      "doc": "CSRF hidden field",
+      "label": "Form-csrf-field",
       "matches": {
-        "lv:csrf-token": true
+        "lv:csrf-field": true
       }
     },
     {
@@ -79,14 +87,6 @@
       "label": "URL-route",
       "matches": {
         "lv:route": true
-      }
-    },
-    {
-      "content": "{{ trans('$1') }}",
-      "doc": "trans",
-      "label": "String-trans",
-      "matches": {
-        "lv:trans": true
       }
     }
   ]

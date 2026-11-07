@@ -2,6 +2,38 @@
   "extends": [],
   "snippets": [
     {
+      "content": "${1:name} ()\n{\n\t${0}\n}",
+      "doc": "This defines a function named name.\n\nThe reserved word function is optional.\n\nIf the function reserved word is supplied, the parentheses are optional.\n\n1. Recommended way:\n\nname() {}\n\n2. C-like-way:\nfunction name [()] {}",
+      "label": "function",
+      "matches": {
+        "function": true
+      }
+    },
+    {
+      "content": "for ((${1:i} = 0; ${1:i} < ${0:10}; ${1:i}++)); do\n\techo \"\\$${1:i}\"\ndone",
+      "doc": "An index-based iteration for loop.",
+      "label": "for_i",
+      "matches": {
+        "for_i": true
+      }
+    },
+    {
+      "content": "if [[ ${1:condition} ]]; then\n\t${0}\nfi",
+      "doc": "An IF statement.",
+      "label": "if",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "echo \"${0:message}\"",
+      "doc": "Echo a message.",
+      "label": "echo",
+      "matches": {
+        "echo": true
+      }
+    },
+    {
       "content": "read -r ${0:VAR}",
       "doc": "Read input of ${VAR}.",
       "label": "read",
@@ -18,27 +50,11 @@
       }
     },
     {
-      "content": "for ${1:VAR} in ${0:LIST}\ndo\n\techo \"\\$${1:VAR}\"\ndone",
-      "doc": "for loop in list",
-      "label": "for_in",
-      "matches": {
-        "for_in": true
-      }
-    },
-    {
       "content": "break ${0}",
       "doc": "The break command tells Bash to leave the loop straight away.\n\nEnter the break or break (n) where n=number of loops.",
       "label": "break",
       "matches": {
         "break": true
-      }
-    },
-    {
-      "content": "for ((${1:i} = 0; ${1:i} < ${0:10}; ${1:i}++)); do\n\techo \"\\$${1:i}\"\ndone",
-      "doc": "An index-based iteration for loop.",
-      "label": "for_i",
-      "matches": {
-        "for_i": true
       }
     },
     {
@@ -58,22 +74,6 @@
       }
     },
     {
-      "content": "echo \"${0:message}\"",
-      "doc": "Echo a message.",
-      "label": "echo",
-      "matches": {
-        "echo": true
-      }
-    },
-    {
-      "content": "else\n\t${0:command}",
-      "doc": "else",
-      "label": "else",
-      "matches": {
-        "else": true
-      }
-    },
-    {
       "content": "elif [[ ${1:condition} ]]; then\n\t${0}",
       "doc": "Add an elseif to an if statement.",
       "label": "elseif",
@@ -90,19 +90,19 @@
       }
     },
     {
-      "content": "if [[ ${1:condition} ]]; then\n\t${0}\nfi",
-      "doc": "An IF statement.",
-      "label": "if",
+      "content": "for ${1:VAR} in ${0:LIST}\ndo\n\techo \"\\$${1:VAR}\"\ndone",
+      "doc": "for loop in list",
+      "label": "for_in",
       "matches": {
-        "if": true
+        "for_in": true
       }
     },
     {
-      "content": "${1:name} ()\n{\n\t${0}\n}",
-      "doc": "This defines a function named name.\n\nThe reserved word function is optional.\n\nIf the function reserved word is supplied, the parentheses are optional.\n\n1. Recommended way:\n\nname() {}\n\n2. C-like-way:\nfunction name [()] {}",
-      "label": "function",
+      "content": "else\n\t${0:command}",
+      "doc": "else",
+      "label": "else",
       "matches": {
-        "function": true
+        "else": true
       }
     }
   ]

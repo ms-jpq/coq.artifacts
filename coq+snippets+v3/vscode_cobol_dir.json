@@ -2,11 +2,19 @@
   "extends": [],
   "snippets": [
     {
-      "content": "copypath\"\\$COBCPY;$1\"\n$0",
+      "content": "jvmgen\"${2|sub|}\"\n$0",
       "doc": "",
-      "label": "copypath",
+      "label": "jvmgen",
       "matches": {
-        "copypath": true
+        "jvmgen": true
+      }
+    },
+    {
+      "content": "ilgen\"${2|sub|}\"\n$0",
+      "doc": "",
+      "label": "ilgen",
+      "matches": {
+        "ilgen": true
       }
     },
     {
@@ -26,14 +34,6 @@
       }
     },
     {
-      "content": "jvmgen\"${2|sub|}\"\n$0",
-      "doc": "",
-      "label": "jvmgen",
-      "matches": {
-        "jvmgen": true
-      }
-    },
-    {
       "content": "sourceformat\"${2|free,variable,fixed|}\"\n$0",
       "doc": "",
       "label": "sourceformat",
@@ -42,11 +42,11 @@
       }
     },
     {
-      "content": "ilgen\"${2|sub|}\"\n$0",
+      "content": "copypath\"\\$COBCPY;$1\"\n$0",
       "doc": "",
-      "label": "ilgen",
+      "label": "copypath",
       "matches": {
-        "ilgen": true
+        "copypath": true
       }
     }
   ]
