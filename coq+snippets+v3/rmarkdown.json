@@ -2,14 +2,6 @@
   "extends": [],
   "snippets": [
     {
-      "content": "---\ntitle: ${1:title}\ndate: ${2:\"`r Sys.Date()`\"}\noutput: ${4:pdf_document}\n---",
-      "doc": "",
-      "label": "YAML Header",
-      "matches": {
-        "---": true
-      }
-    },
-    {
       "content": "```{${1:lang}}\n${0}\n```",
       "doc": "",
       "label": "Insert Code Language",
@@ -26,6 +18,14 @@
       }
     },
     {
+      "content": "---\ntitle: ${1:title}\ndate: ${2:\"`r Sys.Date()`\"}\noutput: ${4:pdf_document}\n---",
+      "doc": "",
+      "label": "YAML Header",
+      "matches": {
+        "---": true
+      }
+    },
+    {
       "content": "`r ${0}`",
       "doc": "",
       "label": "Insert Inline Chunck",
@@ -34,107 +34,11 @@
       }
     },
     {
-      "content": "`r ${1:${TM_SELECTED_TEXT}}`$0",
-      "doc": "Insert inline R code",
-      "label": "Insert inline R code",
+      "content": "*${1:${TM_SELECTED_TEXT}}*$0",
+      "doc": "Insert italic text",
+      "label": "Insert italic text",
       "matches": {
-        "inline r code": true
-      }
-    },
-    {
-      "content": "^[${1:Inline footnotes text.}]$0",
-      "doc": "Insert inline footnotes",
-      "label": "Insert inline footnotes",
-      "matches": {
-        "inline footnotes": true
-      }
-    },
-    {
-      "content": "```${1:language}\n$0\n```",
-      "doc": "Insert fenced code block",
-      "label": "Insert fenced code block",
-      "matches": {
-        "fenced codeblock": true
-      }
-    },
-    {
-      "content": "- ${1:first}\n- ${2:second}\n- ${3:third}\n$0",
-      "doc": "Insert unordered list",
-      "label": "Insert unordered list",
-      "matches": {
-        "unordered list": true
-      }
-    },
-    {
-      "content": "~${1:${TM_SELECTED_TEXT}}~$0",
-      "doc": "Insert subscript",
-      "label": "Insert subscript",
-      "matches": {
-        "subscript": true
-      }
-    },
-    {
-      "content": "::: {.exercise #${1:label} name=\"${2:exercise name}\"}\n${TM_SELECTED_TEXT}$0\n:::",
-      "doc": "Insert bookdown exercise",
-      "label": "Insert bookdown exercise",
-      "matches": {
-        "exercise": true
-      }
-    },
-    {
-      "content": "^${1:${TM_SELECTED_TEXT}}^$0",
-      "doc": "Insert superscript",
-      "label": "Insert superscript",
-      "matches": {
-        "superscript": true
-      }
-    },
-    {
-      "content": "1. ${1:first}\n2. ${2:second}\n3. ${3:third}\n$0",
-      "doc": "Insert ordered list",
-      "label": "Insert ordered list",
-      "matches": {
-        "ordered list": true
-      }
-    },
-    {
-      "content": "Exercise \\@ref(exr:${1:label})$0",
-      "doc": "Cross-reference bookdown exercise",
-      "label": "Cross-reference bookdown exercise",
-      "matches": {
-        "cross-reference exercise": true
-      }
-    },
-    {
-      "content": "::: {.hypothesis #${1:label} name=\"${2:hypothesis name}\"}\n${TM_SELECTED_TEXT}$0\n:::",
-      "doc": "Insert bookdown hypothesis",
-      "label": "Insert bookdown hypothesis",
-      "matches": {
-        "hypothesis": true
-      }
-    },
-    {
-      "content": "----------",
-      "doc": "Insert horizontal rule",
-      "label": "Insert horizontal rule",
-      "matches": {
-        "horizontal rule": true
-      }
-    },
-    {
-      "content": "Lemma \\@ref(lem:${1:label})$0",
-      "doc": "Cross-reference bookdown lemma",
-      "label": "Cross-reference bookdown lemma",
-      "matches": {
-        "cross-reference lemma": true
-      }
-    },
-    {
-      "content": "- [${1|x, |}] ${2:first}\n- [${3|x, |}] ${4:second}\n- [${5|x, |}] ${6:third}\n$0",
-      "doc": "Insert task list",
-      "label": "Insert task list",
-      "matches": {
-        "task list": true
+        "italic": true
       }
     },
     {
@@ -146,19 +50,11 @@
       }
     },
     {
-      "content": "# (PART\\*) Part ${1:I} {-}$0",
-      "doc": "Insert bookdown unnumbered part",
-      "label": "Insert unnumbered bookdown part",
+      "content": "> ${1:${TM_SELECTED_TEXT}}",
+      "doc": "Insert quoted text",
+      "label": "Insert quoted text",
       "matches": {
-        "unnumbered part": true
-      }
-    },
-    {
-      "content": "\\begin{equation}\n${TM_SELECTED_TEXT}$0\n(\\#eq:${1:label})\n\\end{equation}",
-      "doc": "Insert bookdown equation",
-      "label": "Insert bookdown equation",
-      "matches": {
-        "equation": true
+        "quote": true
       }
     },
     {
@@ -170,19 +66,11 @@
       }
     },
     {
-      "content": "[${1:text}](${2:link})$0",
-      "doc": "Insert link",
-      "label": "Insert link",
+      "content": "~${1:${TM_SELECTED_TEXT}}~$0",
+      "doc": "Insert subscript",
+      "label": "Insert subscript",
       "matches": {
-        "link": true
-      }
-    },
-    {
-      "content": "Definition \\@ref(def:${1:label})$0",
-      "doc": "Cross-reference bookdown definition",
-      "label": "Cross-reference bookdown definition",
-      "matches": {
-        "cross-reference definition": true
+        "subscript": true
       }
     },
     {
@@ -194,19 +82,11 @@
       }
     },
     {
-      "content": "${TM_SELECTED_TEXT} {#${1:label}}$0",
-      "doc": "Insert bookdown section label",
-      "label": "Insert bookdown section label",
+      "content": "^${1:${TM_SELECTED_TEXT}}^$0",
+      "doc": "Insert superscript",
+      "label": "Insert superscript",
       "matches": {
-        "section label": true
-      }
-    },
-    {
-      "content": "Example \\@ref(exm:${1:label})$0",
-      "doc": "Cross-reference bookdown example",
-      "label": "Cross-reference bookdown example",
-      "matches": {
-        "cross-reference example": true
+        "superscript": true
       }
     },
     {
@@ -218,11 +98,11 @@
       }
     },
     {
-      "content": "```{r ${1:label}, fig.cap = \"${2:Figure caption.}\", fig.alt = \"${3:Alt text.}\"}\nknitr::include_graphics(\"${4:path/to/file.png}\")\n```",
-      "doc": "Insert external figure chunk",
-      "label": "Insert external figure chunk",
+      "content": "```${1:language}\n$0\n```",
+      "doc": "Insert fenced code block",
+      "label": "Insert fenced code block",
       "matches": {
-        "external figure chunk": true
+        "fenced codeblock": true
       }
     },
     {
@@ -242,19 +122,11 @@
       }
     },
     {
-      "content": "Table \\@ref(tab:${1:label})$0",
-      "doc": "Cross-reference bookdown table",
-      "label": "Cross-reference bookdown table",
+      "content": "`${1:${TM_SELECTED_TEXT}}`$0",
+      "doc": "Insert code",
+      "label": "Insert code",
       "matches": {
-        "cross-reference table": true
-      }
-    },
-    {
-      "content": "Equation \\@ref(eq:${1:label})$0",
-      "doc": "Cross-reference bookdown equation",
-      "label": "Cross-reference bookdown equation",
-      "matches": {
-        "cross-reference equation": true
+        "code": true
       }
     },
     {
@@ -266,11 +138,11 @@
       }
     },
     {
-      "content": "Hypothesis \\@ref(hyp:${1:label})$0",
-      "doc": "Cross-reference bookdown hypothesis",
-      "label": "Cross-reference bookdown hypothesis",
+      "content": "# (APPENDIX) Appendix {-}$0",
+      "doc": "Insert bookdown appendix",
+      "label": "Insert bookdown appendix",
       "matches": {
-        "cross-reference hypothesis": true
+        "appendix": true
       }
     },
     {
@@ -290,43 +162,43 @@
       }
     },
     {
-      "content": "~~${1:${TM_SELECTED_TEXT}}~~$0",
-      "doc": "Insert strikeout",
-      "label": "Insert strikeout",
+      "content": "# (PART\\*) Part ${1:I} {-}$0",
+      "doc": "Insert bookdown unnumbered part",
+      "label": "Insert unnumbered bookdown part",
       "matches": {
-        "strikeout": true
+        "unnumbered part": true
       }
     },
     {
-      "content": "::: {.lemma #${1:label} name=\"${2:lemma name}\"}\n${TM_SELECTED_TEXT}$0\n:::",
-      "doc": "Insert bookdown lemma",
-      "label": "Insert bookdown lemma",
+      "content": "- ${1:${TM_SELECTED_TEXT}}",
+      "doc": "Insert unordered item",
+      "label": "Insert unordered item",
       "matches": {
-        "lemma": true
+        "unordered item": true
       }
     },
     {
-      "content": "![${1:alt}](${2:link})$0",
-      "doc": "Insert image",
-      "label": "Insert image",
+      "content": "${TM_SELECTED_TEXT} {#${1:label}}$0",
+      "doc": "Insert bookdown section label",
+      "label": "Insert bookdown section label",
       "matches": {
-        "image": true
+        "section label": true
       }
     },
     {
-      "content": "::: {.example #${1:label} name=\"${2:example name}\"}\n${TM_SELECTED_TEXT}$0\n:::",
-      "doc": "Insert bookdown example",
-      "label": "Insert bookdown example",
+      "content": "Table \\@ref(tab:${1:label})$0",
+      "doc": "Cross-reference bookdown table",
+      "label": "Cross-reference bookdown table",
       "matches": {
-        "example": true
+        "cross-reference table": true
       }
     },
     {
-      "content": "# ${1:text}",
-      "doc": "Insert heading",
-      "label": "Insert heading",
+      "content": "1. ${1:${TM_SELECTED_TEXT}}",
+      "doc": "Insert ordered item",
+      "label": "Insert ordered item",
       "matches": {
-        "heading": true
+        "ordered item": true
       }
     },
     {
@@ -338,11 +210,11 @@
       }
     },
     {
-      "content": ":::::: {.columns}\n::: {.column}\n\n${1:Content of the left column.}\n\n:::\n::: {.column}\n\n${2:Content of the right column.}\n\n:::\n::::::$0",
-      "doc": "Insert (side-by-side) two columns",
-      "label": "Insert two columns",
+      "content": "```{r ${1:label}, fig.cap = \"${2:Figure caption.}\", fig.alt = \"${3:Alt text.}\"}\nknitr::include_graphics(\"${4:path/to/file.png}\")\n```",
+      "doc": "Insert external figure chunk",
+      "label": "Insert external figure chunk",
       "matches": {
-        "two columns": true
+        "external figure chunk": true
       }
     },
     {
@@ -362,11 +234,11 @@
       }
     },
     {
-      "content": "- [x] ${1:${TM_SELECTED_TEXT}}",
-      "doc": "Insert checked item",
-      "label": "Insert checked item",
+      "content": "Equation \\@ref(eq:${1:label})$0",
+      "doc": "Cross-reference bookdown equation",
+      "label": "Cross-reference bookdown equation",
       "matches": {
-        "checked item": true
+        "cross-reference equation": true
       }
     },
     {
@@ -378,11 +250,19 @@
       }
     },
     {
-      "content": "Proposition \\@ref(prp:${1:label})$0",
-      "doc": "Cross-reference bookdown proposition",
-      "label": "Cross-reference bookdown proposition",
+      "content": "- [x] ${1:${TM_SELECTED_TEXT}}",
+      "doc": "Insert checked item",
+      "label": "Insert checked item",
       "matches": {
-        "cross-reference proposition": true
+        "checked item": true
+      }
+    },
+    {
+      "content": "\\begin{equation}\n${TM_SELECTED_TEXT}$0\n(\\#eq:${1:label})\n\\end{equation}",
+      "doc": "Insert bookdown equation",
+      "label": "Insert bookdown equation",
+      "matches": {
+        "equation": true
       }
     },
     {
@@ -394,22 +274,6 @@
       }
     },
     {
-      "content": "- ${1:${TM_SELECTED_TEXT}}",
-      "doc": "Insert unordered item",
-      "label": "Insert unordered item",
-      "matches": {
-        "unordered item": true
-      }
-    },
-    {
-      "content": "# (APPENDIX) Appendix {-}$0",
-      "doc": "Insert bookdown appendix",
-      "label": "Insert bookdown appendix",
-      "matches": {
-        "appendix": true
-      }
-    },
-    {
       "content": "- [ ] ${1:${TM_SELECTED_TEXT}}",
       "doc": "Insert unchecked item",
       "label": "Insert unchecked item",
@@ -418,35 +282,43 @@
       }
     },
     {
-      "content": "1. ${1:${TM_SELECTED_TEXT}}",
-      "doc": "Insert ordered item",
-      "label": "Insert ordered item",
+      "content": "Hypothesis \\@ref(hyp:${1:label})$0",
+      "doc": "Cross-reference bookdown hypothesis",
+      "label": "Cross-reference bookdown hypothesis",
       "matches": {
-        "ordered item": true
+        "cross-reference hypothesis": true
       }
     },
     {
-      "content": "::: notes\n\n${TM_SELECTED_TEXT}$0\n\n:::",
-      "doc": "Insert speaker notes",
-      "label": "Insert speaker notes",
+      "content": "Proposition \\@ref(prp:${1:label})$0",
+      "doc": "Cross-reference bookdown proposition",
+      "label": "Cross-reference bookdown proposition",
       "matches": {
-        "speaker notes": true
+        "cross-reference proposition": true
       }
     },
     {
-      "content": "*${1:${TM_SELECTED_TEXT}}*$0",
-      "doc": "Insert italic text",
-      "label": "Insert italic text",
+      "content": "- [${1|x, |}] ${2:first}\n- [${3|x, |}] ${4:second}\n- [${5|x, |}] ${6:third}\n$0",
+      "doc": "Insert task list",
+      "label": "Insert task list",
       "matches": {
-        "italic": true
+        "task list": true
       }
     },
     {
-      "content": "::: {.conjecture #${1:label} name=\"${2:conjecture name}\"}\n${TM_SELECTED_TEXT}$0\n:::",
-      "doc": "Insert bookdown conjecture",
-      "label": "Insert bookdown conjecture",
+      "content": "1. ${1:first}\n2. ${2:second}\n3. ${3:third}\n$0",
+      "doc": "Insert ordered list",
+      "label": "Insert ordered list",
       "matches": {
-        "conjecture": true
+        "ordered list": true
+      }
+    },
+    {
+      "content": "- ${1:first}\n- ${2:second}\n- ${3:third}\n$0",
+      "doc": "Insert unordered list",
+      "label": "Insert unordered list",
+      "matches": {
+        "unordered list": true
       }
     },
     {
@@ -458,11 +330,11 @@
       }
     },
     {
-      "content": "**${1:${TM_SELECTED_TEXT}}**$0",
-      "doc": "Insert bold text",
-      "label": "Insert bold text",
+      "content": "Lemma \\@ref(lem:${1:label})$0",
+      "doc": "Cross-reference bookdown lemma",
+      "label": "Cross-reference bookdown lemma",
       "matches": {
-        "bold": true
+        "cross-reference lemma": true
       }
     },
     {
@@ -474,11 +346,11 @@
       }
     },
     {
-      "content": "> ${1:${TM_SELECTED_TEXT}}",
-      "doc": "Insert quoted text",
-      "label": "Insert quoted text",
+      "content": "Example \\@ref(exm:${1:label})$0",
+      "doc": "Cross-reference bookdown example",
+      "label": "Cross-reference bookdown example",
       "matches": {
-        "quote": true
+        "cross-reference example": true
       }
     },
     {
@@ -498,11 +370,139 @@
       }
     },
     {
-      "content": "`${1:${TM_SELECTED_TEXT}}`$0",
-      "doc": "Insert code",
-      "label": "Insert code",
+      "content": "::: {.example #${1:label} name=\"${2:example name}\"}\n${TM_SELECTED_TEXT}$0\n:::",
+      "doc": "Insert bookdown example",
+      "label": "Insert bookdown example",
       "matches": {
-        "code": true
+        "example": true
+      }
+    },
+    {
+      "content": "`r ${1:${TM_SELECTED_TEXT}}`$0",
+      "doc": "Insert inline R code",
+      "label": "Insert inline R code",
+      "matches": {
+        "inline r code": true
+      }
+    },
+    {
+      "content": "Definition \\@ref(def:${1:label})$0",
+      "doc": "Cross-reference bookdown definition",
+      "label": "Cross-reference bookdown definition",
+      "matches": {
+        "cross-reference definition": true
+      }
+    },
+    {
+      "content": "----------",
+      "doc": "Insert horizontal rule",
+      "label": "Insert horizontal rule",
+      "matches": {
+        "horizontal rule": true
+      }
+    },
+    {
+      "content": "^[${1:Inline footnotes text.}]$0",
+      "doc": "Insert inline footnotes",
+      "label": "Insert inline footnotes",
+      "matches": {
+        "inline footnotes": true
+      }
+    },
+    {
+      "content": "::: {.conjecture #${1:label} name=\"${2:conjecture name}\"}\n${TM_SELECTED_TEXT}$0\n:::",
+      "doc": "Insert bookdown conjecture",
+      "label": "Insert bookdown conjecture",
+      "matches": {
+        "conjecture": true
+      }
+    },
+    {
+      "content": "[${1:text}](${2:link})$0",
+      "doc": "Insert link",
+      "label": "Insert link",
+      "matches": {
+        "link": true
+      }
+    },
+    {
+      "content": "::: notes\n\n${TM_SELECTED_TEXT}$0\n\n:::",
+      "doc": "Insert speaker notes",
+      "label": "Insert speaker notes",
+      "matches": {
+        "speaker notes": true
+      }
+    },
+    {
+      "content": "![${1:alt}](${2:link})$0",
+      "doc": "Insert image",
+      "label": "Insert image",
+      "matches": {
+        "image": true
+      }
+    },
+    {
+      "content": "::: {.exercise #${1:label} name=\"${2:exercise name}\"}\n${TM_SELECTED_TEXT}$0\n:::",
+      "doc": "Insert bookdown exercise",
+      "label": "Insert bookdown exercise",
+      "matches": {
+        "exercise": true
+      }
+    },
+    {
+      "content": "::: {.lemma #${1:label} name=\"${2:lemma name}\"}\n${TM_SELECTED_TEXT}$0\n:::",
+      "doc": "Insert bookdown lemma",
+      "label": "Insert bookdown lemma",
+      "matches": {
+        "lemma": true
+      }
+    },
+    {
+      "content": ":::::: {.columns}\n::: {.column}\n\n${1:Content of the left column.}\n\n:::\n::: {.column}\n\n${2:Content of the right column.}\n\n:::\n::::::$0",
+      "doc": "Insert (side-by-side) two columns",
+      "label": "Insert two columns",
+      "matches": {
+        "two columns": true
+      }
+    },
+    {
+      "content": "Exercise \\@ref(exr:${1:label})$0",
+      "doc": "Cross-reference bookdown exercise",
+      "label": "Cross-reference bookdown exercise",
+      "matches": {
+        "cross-reference exercise": true
+      }
+    },
+    {
+      "content": "# ${1:text}",
+      "doc": "Insert heading",
+      "label": "Insert heading",
+      "matches": {
+        "heading": true
+      }
+    },
+    {
+      "content": "~~${1:${TM_SELECTED_TEXT}}~~$0",
+      "doc": "Insert strikeout",
+      "label": "Insert strikeout",
+      "matches": {
+        "strikeout": true
+      }
+    },
+    {
+      "content": "::: {.hypothesis #${1:label} name=\"${2:hypothesis name}\"}\n${TM_SELECTED_TEXT}$0\n:::",
+      "doc": "Insert bookdown hypothesis",
+      "label": "Insert bookdown hypothesis",
+      "matches": {
+        "hypothesis": true
+      }
+    },
+    {
+      "content": "**${1:${TM_SELECTED_TEXT}}**$0",
+      "doc": "Insert bold text",
+      "label": "Insert bold text",
+      "matches": {
+        "bold": true
       }
     }
   ]

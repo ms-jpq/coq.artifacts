@@ -12,19 +12,19 @@
       }
     },
     {
-      "content": "<%= gettext(\"$0\") %>",
+      "content": "<%= $0 %>",
       "doc": "",
-      "label": "gettext",
+      "label": "=",
       "matches": {
-        "gt": true
+        "=": true
       }
     },
     {
-      "content": "<%= for ${1:item} <- ${2:items} do %>\n  $0\n<% end %>",
+      "content": "<%= if ${1} do %>\n  $0\n<% end %>",
       "doc": "",
-      "label": "for",
+      "label": "if",
       "matches": {
-        "for": true
+        "if": true
       }
     },
     {
@@ -44,19 +44,19 @@
       }
     },
     {
-      "content": "<%= if ${1} do %>\n  $0\n<% end %>",
+      "content": "<%= gettext(\"$0\") %>",
       "doc": "",
-      "label": "if",
+      "label": "gettext",
       "matches": {
-        "if": true
+        "gt": true
       }
     },
     {
-      "content": "<%= $0 %>",
+      "content": "<%= for ${1:item} <- ${2:items} do %>\n  $0\n<% end %>",
       "doc": "",
-      "label": "=",
+      "label": "for",
       "matches": {
-        "=": true
+        "for": true
       }
     },
     {

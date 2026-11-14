@@ -2,35 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "object ${1:ObjectName} {\n\tdef main(args: Array[String]): Unit = {\n\t\t${2:println(\"Hello, world!\")}\n\t}\n}",
-      "doc": "Object with main method",
-      "label": "main_object",
+      "content": "for (${1:element} <- elements) {\n\t${2:println(element.toString)}\n}",
+      "doc": "For loop",
+      "label": "for",
       "matches": {
-        "obj_main": true
-      }
-    },
-    {
-      "content": "object ${1:App} extends App {\n\t${2:println(\"Hello, world!\")}\n}",
-      "doc": "Object extending App",
-      "label": "app",
-      "matches": {
-        "app": true
-      }
-    },
-    {
-      "content": "${1:x} match {\n\tcase ${2:0} => ${3:\"zero\"}\n\tcase ${4:1} => ${5:\"one\"}\n}",
-      "doc": "Branch based on conditions using pattern matching",
-      "label": "match",
-      "matches": {
-        "match": true
-      }
-    },
-    {
-      "content": "class ${1:ClassName} {\n\t${2:println(\"Hello, world!\")}\n}",
-      "doc": "Class",
-      "label": "class",
-      "matches": {
-        "class": true
+        "for": true
       }
     },
     {
@@ -42,22 +18,6 @@
       }
     },
     {
-      "content": "while(${1:condition}) {\n\t${2:println(\"Hello, world!\")}\n}",
-      "doc": "While loop",
-      "label": "while",
-      "matches": {
-        "while": true
-      }
-    },
-    {
-      "content": "for (${1:element} <- elements) {\n\t${2:println(element.toString)}\n}",
-      "doc": "For loop",
-      "label": "for",
-      "matches": {
-        "for": true
-      }
-    },
-    {
       "content": "def ${1:methodName}(${2:argName}: ${3:ArgType}): ${4:ReturnType} = ${5:println(\"Hello, world!\")}",
       "doc": "Method as one-liner",
       "label": "def_short",
@@ -66,19 +26,35 @@
       }
     },
     {
-      "content": "def ${1:methodName}(${2:argName}: ${3:ArgType}): ${4:ReturnType} = {\n\t${5:println(\"Hello, world!\")}\n}",
-      "doc": "Method",
-      "label": "def",
+      "content": "class ${1:ClassName} {\n\t${2:println(\"Hello, world!\")}\n}",
+      "doc": "Class",
+      "label": "class",
       "matches": {
-        "def": true
+        "class": true
       }
     },
     {
-      "content": "case class ${1:CaseClassName}(${2:argName}: ${3:ArgType})",
-      "doc": "Case class",
-      "label": "case_class",
+      "content": "${1:x} match {\n\tcase ${2:0} => ${3:\"zero\"}\n\tcase ${4:1} => ${5:\"one\"}\n}",
+      "doc": "Branch based on conditions using pattern matching",
+      "label": "match",
       "matches": {
-        "case_class": true
+        "match": true
+      }
+    },
+    {
+      "content": "trait ${1:TraitName} {\n\t${2:}\n}",
+      "doc": "Trait",
+      "label": "trait",
+      "matches": {
+        "trait": true
+      }
+    },
+    {
+      "content": "object ${1:App} extends App {\n\t${2:println(\"Hello, world!\")}\n}",
+      "doc": "Object extending App",
+      "label": "app",
+      "matches": {
+        "app": true
       }
     },
     {
@@ -90,11 +66,35 @@
       }
     },
     {
-      "content": "trait ${1:TraitName} {\n\t${2:}\n}",
-      "doc": "Trait",
-      "label": "trait",
+      "content": "case class ${1:CaseClassName}(${2:argName}: ${3:ArgType})",
+      "doc": "Case class",
+      "label": "case_class",
       "matches": {
-        "trait": true
+        "case_class": true
+      }
+    },
+    {
+      "content": "object ${1:ObjectName} {\n\tdef main(args: Array[String]): Unit = {\n\t\t${2:println(\"Hello, world!\")}\n\t}\n}",
+      "doc": "Object with main method",
+      "label": "main_object",
+      "matches": {
+        "obj_main": true
+      }
+    },
+    {
+      "content": "while(${1:condition}) {\n\t${2:println(\"Hello, world!\")}\n}",
+      "doc": "While loop",
+      "label": "while",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "def ${1:methodName}(${2:argName}: ${3:ArgType}): ${4:ReturnType} = {\n\t${5:println(\"Hello, world!\")}\n}",
+      "doc": "Method",
+      "label": "def",
+      "matches": {
+        "def": true
       }
     },
     {

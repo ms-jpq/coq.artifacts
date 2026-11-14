@@ -2,27 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "<nuxt name=\"$1\">$2</nuxt>$0",
-      "doc": "",
-      "label": "nuxt-namedview",
-      "matches": {
-        "nuxt namedview": true
-      }
-    },
-    {
       "content": "<nuxt-child $1/>$0",
       "doc": "",
       "label": "nuxt-child",
       "matches": {
         "nuxt child": true
-      }
-    },
-    {
-      "content": "asyncData ({isDev, route, store, env, params, query, req, res, redirect, error}) {\n\treturn { ${1:data} }\n\n},",
-      "doc": "Fetch and pre-render data on the server without using a store. The result from asyncData will be merged with data",
-      "label": "nuxt-async-data",
-      "matches": {
-        "nuxt asyncdata": true
       }
     },
     {
@@ -34,11 +18,19 @@
       }
     },
     {
-      "content": "validate({ params, query, store }) {\n\t${1:data}\n},",
-      "doc": "Validate is called every time before navigating to a new route.",
-      "label": "nuxt-validate",
+      "content": "asyncData ({isDev, route, store, env, params, query, req, res, redirect, error}) {\n\treturn { ${1:data} }\n\n},",
+      "doc": "Fetch and pre-render data on the server without using a store. The result from asyncData will be merged with data",
+      "label": "nuxt-async-data",
       "matches": {
-        "nuxt validate": true
+        "nuxt asyncdata": true
+      }
+    },
+    {
+      "content": "<nuxt-link to=\"$1\">$2</nuxt-link>$0",
+      "doc": "",
+      "label": "nuxt-linkto",
+      "matches": {
+        "nuxt linkto": true
       }
     },
     {
@@ -50,11 +42,11 @@
       }
     },
     {
-      "content": "nuxtServerInit ({ commit }, { req }) {\n\t${1:data}\n}",
-      "doc": "In universal mode, useful to fetch data on the server and give directly to the client-side.",
-      "label": "nuxt-serverinit",
+      "content": "watchQuery (newQuery, oldQuery) {\n\t${1:data}\n},",
+      "doc": "Use the watchQuery key to set up a watcher for query strings.",
+      "label": "nuxt-watch-query",
       "matches": {
-        "nuxt serverinit": true
+        "nuxt watchquery": true
       }
     },
     {
@@ -74,19 +66,27 @@
       }
     },
     {
-      "content": "watchQuery (newQuery, oldQuery) {\n\t${1:data}\n},",
-      "doc": "Use the watchQuery key to set up a watcher for query strings.",
-      "label": "nuxt-watch-query",
+      "content": "nuxtServerInit ({ commit }, { req }) {\n\t${1:data}\n}",
+      "doc": "In universal mode, useful to fetch data on the server and give directly to the client-side.",
+      "label": "nuxt-serverinit",
       "matches": {
-        "nuxt watchquery": true
+        "nuxt serverinit": true
       }
     },
     {
-      "content": "<nuxt-link to=\"$1\">$2</nuxt-link>$0",
+      "content": "<nuxt name=\"$1\">$2</nuxt>$0",
       "doc": "",
-      "label": "nuxt-linkto",
+      "label": "nuxt-namedview",
       "matches": {
-        "nuxt linkto": true
+        "nuxt namedview": true
+      }
+    },
+    {
+      "content": "validate({ params, query, store }) {\n\t${1:data}\n},",
+      "doc": "Validate is called every time before navigating to a new route.",
+      "label": "nuxt-validate",
+      "matches": {
+        "nuxt validate": true
       }
     }
   ]

@@ -2,35 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "-module(${1:module}).",
+      "content": "-include(\"${1:hrl_name}.hrl\").",
       "doc": "module",
-      "label": "module",
+      "label": "include",
       "matches": {
-        "mod": true
-      }
-    },
-    {
-      "content": "-export([\n         ${1}\n        ]).",
-      "doc": "export",
-      "label": "export",
-      "matches": {
-        "exp": true
-      }
-    },
-    {
-      "content": "receive\n    ${1:pattern} ->\n        ${2:todo}\nend$3",
-      "doc": "receive block",
-      "label": "receive",
-      "matches": {
-        "rec": true
-      }
-    },
-    {
-      "content": "-define(${1:def_name}, ${2:def_value}).",
-      "doc": "define",
-      "label": "define",
-      "matches": {
-        "def": true
+        "inc": true
       }
     },
     {
@@ -50,11 +26,35 @@
       }
     },
     {
-      "content": "-include(\"${1:hrl_name}.hrl\").",
-      "doc": "module",
-      "label": "include",
+      "content": "-export([\n         ${1}\n        ]).",
+      "doc": "export",
+      "label": "export",
       "matches": {
-        "inc": true
+        "exp": true
+      }
+    },
+    {
+      "content": "-module(${1:module}).",
+      "doc": "module",
+      "label": "module",
+      "matches": {
+        "mod": true
+      }
+    },
+    {
+      "content": "-define(${1:def_name}, ${2:def_value}).",
+      "doc": "define",
+      "label": "define",
+      "matches": {
+        "def": true
+      }
+    },
+    {
+      "content": "receive\n    ${1:pattern} ->\n        ${2:todo}\nend$3",
+      "doc": "receive block",
+      "label": "receive",
+      "matches": {
+        "rec": true
       }
     },
     {

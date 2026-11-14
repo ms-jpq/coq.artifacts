@@ -42,11 +42,11 @@
       }
     },
     {
-      "content": "const ${1:client} = new GraphQLClient(\n  ${2:url},\n  {\n    headers: {\n      ${3:key}: ${4:value}\n    },\n  }\n);",
+      "content": "const ${1:queryName} = `query ${1:queryName} {\n  ${2:query}\n}\n`;",
       "doc": "",
-      "label": "graphql-request-client",
+      "label": "graphql-request-query",
       "matches": {
-        "graphql-request client": true
+        "graphql-request query": true
       }
     },
     {
@@ -58,14 +58,6 @@
       }
     },
     {
-      "content": "import { request } from 'graphql-request';",
-      "doc": "",
-      "label": "graphql-request-import-request",
-      "matches": {
-        "graphql-request import request": true
-      }
-    },
-    {
       "content": "const ${1:results} = await ${2:client}.request(\n  ${3:query}\n);",
       "doc": "",
       "label": "graphql-request-client-request",
@@ -74,11 +66,19 @@
       }
     },
     {
-      "content": "const ${1:queryName} = `query ${1:queryName} {\n  ${2:query}\n}\n`;",
+      "content": "const ${1:client} = new GraphQLClient(\n  ${2:url},\n  {\n    headers: {\n      ${3:key}: ${4:value}\n    },\n  }\n);",
       "doc": "",
-      "label": "graphql-request-query",
+      "label": "graphql-request-client",
       "matches": {
-        "graphql-request query": true
+        "graphql-request client": true
+      }
+    },
+    {
+      "content": "import { request } from 'graphql-request';",
+      "doc": "",
+      "label": "graphql-request-import-request",
+      "matches": {
+        "graphql-request import request": true
       }
     }
   ]

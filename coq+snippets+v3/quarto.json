@@ -2,19 +2,75 @@
   "extends": [],
   "snippets": [
     {
-      "content": "```{python} \n#| label: fig-$1\n#| fig-cap: \"$2\"\n#| fig-subcap: \n#|    - \"$3\"\n#|    - \"$4\"\n#| layout-ncol: 2\n\nimport numpy as np\nimport matplotlib.pyplot as plt\nplt.style.use(['science', 'ieee'])\n$5\nplt.legend()\nplt.show()\n\n$6\nplt.legend()\nplt.show()\n```",
-      "doc": "",
-      "label": "pyfig2",
+      "content": "::: {.${1|callout,callout-note,callout-tip,callout-important,callout-caution,callout-warning|}}\n${TM_SELECTED_TEXT}$0\n:::",
+      "doc": "Insert callout block",
+      "label": "Insert callout block",
       "matches": {
-        "pyfig2": true
+        "callout": true
       }
     },
     {
-      "content": "::: {$1}\n$0\n:::",
+      "content": "::: {.callout-$1}\n$0\n:::",
       "doc": "",
-      "label": "div",
+      "label": "callout",
       "matches": {
-        "div": true
+        "call": true
+      }
+    },
+    {
+      "content": "---\ntitle: \"$1\"\ndate: \"$2\"\ncategories: [$3]\n---",
+      "doc": "Add minimal yaml header",
+      "label": "diary header",
+      "matches": {
+        "diary": true
+      }
+    },
+    {
+      "content": "[@${1:city-key}]",
+      "doc": "Insert a citation",
+      "label": "Insert citation",
+      "matches": {
+        "cite": true
+      }
+    },
+    {
+      "content": "[^${1:note text}]",
+      "doc": "Insert an inline footnote",
+      "label": "Insert an inline footnote",
+      "matches": {
+        "footnote-inline": true
+      }
+    },
+    {
+      "content": "{.absolute top=$1 left=$2 width=\"$3\" height=\"$4\"}",
+      "doc": "",
+      "label": "absolute",
+      "matches": {
+        "absolute": true
+      }
+    },
+    {
+      "content": "[^${1:note identifier}]\n[^$1]: ${2:note text}",
+      "doc": "Insert an inline footnote",
+      "label": "Insert a footnote",
+      "matches": {
+        "footnote": true
+      }
+    },
+    {
+      "content": "Fig. \\ref{fig-$1}",
+      "doc": "refer to a label for a wrap figure",
+      "label": "ref a wrap figure",
+      "matches": {
+        "@wrap": true
+      }
+    },
+    {
+      "content": ":::: {.panel-tabset}\n\n### $1\n\n$2\n\n### $3\n\n$4\n\n::::",
+      "doc": "",
+      "label": "tabset",
+      "matches": {
+        "tabset": true
       }
     },
     {
@@ -26,35 +82,83 @@
       }
     },
     {
-      "content": "```${1|python,c,c++,c#,ruby,go,java,php,htm,css,javascript,json,markdown,console,r|}\n${TM_SELECTED_TEXT}$0\n```",
-      "doc": "Insert fenced code block",
-      "label": "Insert fenced code block",
+      "content": ":::: {#fig-${1:label} layout=\"[1,1]\"}\n\n![${2:subcap1}](${3:figure}){#fig-$2}\n\n![${4:subcap1}](${5:figure}){#fig-$4}\n\n${6:caption}\n::::",
+      "doc": "",
+      "label": "fig2",
       "matches": {
-        "fenced codeblock": true
+        "fig2": true
       }
     },
     {
-      "content": "- ${1:first}\n- ${2:second}\n- ${3:third}\n$0",
-      "doc": "Insert unordered list",
-      "label": "Insert unordered list",
+      "content": "```{python} \n$1\n```",
+      "doc": "",
+      "label": "pycode",
       "matches": {
-        "unordered list": true
+        "pyc": true
       }
     },
     {
-      "content": "1. ${1:first}\n2. ${2:second}\n3. ${3:third}\n$0",
-      "doc": "Insert ordered list",
-      "label": "Insert ordered list",
+      "content": "::: {.aside}\n$0\n:::",
+      "doc": "",
+      "label": "aside",
       "matches": {
-        "ordered list": true
+        "aside": true
       }
     },
     {
-      "content": "----------",
-      "doc": "Insert horizontal rule",
-      "label": "Insert horizontal rule",
+      "content": "```{r} \n$1\n```",
+      "doc": "",
+      "label": "rcode",
       "matches": {
-        "horizontal rule": true
+        "rco": true
+      }
+    },
+    {
+      "content": "```{bash} \n$1\n```",
+      "doc": "",
+      "label": "bashcode",
+      "matches": {
+        "bco": true
+      }
+    },
+    {
+      "content": "```{python} \n#| label: fig-$1\n#| fig-cap: \"$2\"\n#| fig-subcap: \n#|    - \"$3\"\n#|    - \"$4\"\n#| layout-ncol: 2\n\nimport numpy as np\nimport matplotlib.pyplot as plt\nplt.style.use(['science', 'ieee'])\n$5\nplt.legend()\nplt.show()\n\n$6\nplt.legend()\nplt.show()\n```",
+      "doc": "",
+      "label": "pyfig2",
+      "matches": {
+        "pyfig2": true
+      }
+    },
+    {
+      "content": "::: {.pull-right}\n$0\n:::",
+      "doc": "",
+      "label": "pr",
+      "matches": {
+        "pr": true
+      }
+    },
+    {
+      "content": "{width=\"$3\"}",
+      "doc": "",
+      "label": "width",
+      "matches": {
+        "width": true
+      }
+    },
+    {
+      "content": "```{$1} \n$2\n```\n$0",
+      "doc": "",
+      "label": "code",
+      "matches": {
+        "code": true
+      }
+    },
+    {
+      "content": "```{python}\n#| label: fig-$1\n#| fig-cap: \"$2\"\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nplt.style.use(['science', 'ieee'])\n$3\nplt.show()\n```",
+      "doc": "",
+      "label": "pyfig1",
+      "matches": {
+        "pyfig1": true
       }
     },
     {
@@ -74,11 +178,11 @@
       }
     },
     {
-      "content": "@eq-$1",
-      "doc": "",
-      "label": "eqnref",
+      "content": "*${1:${TM_SELECTED_TEXT}}*$0",
+      "doc": "Insert italic text",
+      "label": "Insert italic text",
       "matches": {
-        "eqnref": true
+        "italic": true
       }
     },
     {
@@ -90,99 +194,19 @@
       }
     },
     {
+      "content": "> ${1:${TM_SELECTED_TEXT}}",
+      "doc": "Insert quoted text",
+      "label": "Insert quoted text",
+      "matches": {
+        "quote": true
+      }
+    },
+    {
       "content": "crossref:\n  fig-title: Figure\n  tbl-title: Table\n  title-delim: .\n  fig-prefix: Figure\n  tbl-prefix: Table\n  eq-prefix: Eq.",
       "doc": "",
       "label": "crossref",
       "matches": {
         "crossref": true
-      }
-    },
-    {
-      "content": "::: {.aside}\n$0\n:::",
-      "doc": "",
-      "label": "aside",
-      "matches": {
-        "aside": true
-      }
-    },
-    {
-      "content": "{visibility=\"hidden\"}",
-      "doc": "",
-      "label": "hidden",
-      "matches": {
-        "hidden": true
-      }
-    },
-    {
-      "content": "{data-background-image=\"$1\" background-position=center background-size=contain}",
-      "doc": "",
-      "label": "background image",
-      "matches": {
-        "bgimg": true
-      }
-    },
-    {
-      "content": "{width=\"$3\"}",
-      "doc": "",
-      "label": "width",
-      "matches": {
-        "width": true
-      }
-    },
-    {
-      "content": "{background-video=\"$1\" background-size=contain}",
-      "doc": "",
-      "label": "background video",
-      "matches": {
-        "bgvid": true
-      }
-    },
-    {
-      "content": "{background-iframe=\"$1\" background-interactive=true}",
-      "doc": "",
-      "label": "background iframe",
-      "matches": {
-        "bgiframe": true
-      }
-    },
-    {
-      "content": "{background-color=\"$1\"}",
-      "doc": "",
-      "label": "background color",
-      "matches": {
-        "bgcol": true
-      }
-    },
-    {
-      "content": "{auto-animate=true}",
-      "doc": "",
-      "label": "autoanimate",
-      "matches": {
-        "anim": true
-      }
-    },
-    {
-      "content": "::: {.incremental}\n-$1\n:::",
-      "doc": "",
-      "label": "incremental",
-      "matches": {
-        "inc": true
-      }
-    },
-    {
-      "content": "::: {.nonincremental}\n-$1\n:::",
-      "doc": "",
-      "label": "nonincremental",
-      "matches": {
-        "noninc": true
-      }
-    },
-    {
-      "content": ". . .",
-      "doc": "",
-      "label": "pause",
-      "matches": {
-        "pause": true
       }
     },
     {
@@ -194,14 +218,6 @@
       }
     },
     {
-      "content": "::: {.columns}\n::: {.column width=50%}\n$1\n:::\n::: {.column width=50%}\n$2\n:::\n:::",
-      "doc": "",
-      "label": "2col",
-      "matches": {
-        "2col": true
-      }
-    },
-    {
       "content": "{{< $0 >}}",
       "doc": "Insert shortcode",
       "label": "Insert shortcode",
@@ -210,147 +226,19 @@
       }
     },
     {
-      "content": "::: {.columns}\n::: {.column width=\"$1\"}\n$2\n:::\n::: {.column width=\"$3\"}\n$4\n:::\n:::",
+      "content": "```${1|python,c,c++,c#,ruby,go,java,php,htm,css,javascript,json,markdown,console,r|}\n${TM_SELECTED_TEXT}$0\n```",
+      "doc": "Insert fenced code block",
+      "label": "Insert fenced code block",
+      "matches": {
+        "fenced codeblock": true
+      }
+    },
+    {
+      "content": "![${1:cap1}](${2:figure}){#fig-$3}",
       "doc": "",
-      "label": "cols",
+      "label": "fig",
       "matches": {
-        "cols": true
-      }
-    },
-    {
-      "content": "::: {layout=\"[$1]\"}\n$0\n:::",
-      "doc": "",
-      "label": "lay",
-      "matches": {
-        "lay": true
-      }
-    },
-    {
-      "content": "::: {.pull-right}\n$0\n:::",
-      "doc": "",
-      "label": "pr",
-      "matches": {
-        "pr": true
-      }
-    },
-    {
-      "content": "layout-valign=\"$0\"",
-      "doc": "",
-      "label": "layout-valign",
-      "matches": {
-        "valign": true
-      }
-    },
-    {
-      "content": "```{${1|html,latex,openxml,opendocument,asciidoc,docbook,markdown,dokuwiki,fb2,gfm,haddock,icml,ipynb,jats,jira,json,man,mediawiki,ms,muse,opml,org,plain,rst,rtf,tei,texinfo,textile,xwiki,zimwiki,native,r|}}\n${TM_SELECTED_TEXT}$0\n```",
-      "doc": "Insert raw code block",
-      "label": "Insert raw code block",
-      "matches": {
-        "raw codeblock": true
-      }
-    },
-    {
-      "content": "::: {layout-ncol=2}\n$0\n:::",
-      "doc": "",
-      "label": "col2",
-      "matches": {
-        "col2": true
-      }
-    },
-    {
-      "content": "# ${1:${TM_SELECTED_TEXT}}",
-      "doc": "Insert heading level 1",
-      "label": "Insert heading level 1",
-      "matches": {
-        "heading1": true
-      }
-    },
-    {
-      "content": "::: {layout-ncol=3}\n$0\n:::",
-      "doc": "",
-      "label": "col3",
-      "matches": {
-        "col3": true
-      }
-    },
-    {
-      "content": "```{$1} \n$2\n```\n$0",
-      "doc": "",
-      "label": "code",
-      "matches": {
-        "code": true
-      }
-    },
-    {
-      "content": "{.absolute top=$1 left=$2 width=\"$3\" height=\"$4\"}",
-      "doc": "",
-      "label": "absolute",
-      "matches": {
-        "absolute": true
-      }
-    },
-    {
-      "content": "::: {#fig-${1:cap}}\n\n${2:paste embed info}\n\n${3:Caption}\n:::",
-      "doc": "",
-      "label": "iframe",
-      "matches": {
-        "iframe": true
-      }
-    },
-    {
-      "content": "### ${1:${TM_SELECTED_TEXT}}",
-      "doc": "Insert heading level 3",
-      "label": "Insert heading level 3",
-      "matches": {
-        "heading3": true
-      }
-    },
-    {
-      "content": "{visibility=\"uncounted\"}",
-      "doc": "",
-      "label": "uncount",
-      "matches": {
-        "uncount": true
-      }
-    },
-    {
-      "content": "#### ${1:${TM_SELECTED_TEXT}}",
-      "doc": "Insert heading level 4",
-      "label": "Insert heading level 4",
-      "matches": {
-        "heading4": true
-      }
-    },
-    {
-      "content": "::: {.pull-left}\n$0\n:::",
-      "doc": "",
-      "label": "pl",
-      "matches": {
-        "pl": true
-      }
-    },
-    {
-      "content": "##### ${1:${TM_SELECTED_TEXT}}",
-      "doc": "Insert heading level 5",
-      "label": "Insert heading level 5",
-      "matches": {
-        "heading5": true
-      }
-    },
-    {
-      "content": "###### ${1:${TM_SELECTED_TEXT}}",
-      "doc": "Insert heading level 6",
-      "label": "Insert heading level 6",
-      "matches": {
-        "heading6": true
-      }
-    },
-    {
-      "content": "from IPython.display import display, Markdown",
-      "doc": "",
-      "label": "importmarkdown",
-      "matches": {
-        "importmd": true
+        "fig": true
       }
     },
     {
@@ -362,6 +250,150 @@
       }
     },
     {
+      "content": "```{${1|python,r,julia,ojs,sql,bash|}}\n${TM_SELECTED_TEXT}$0\n```",
+      "doc": "Insert executable code block",
+      "label": "Insert executable code block",
+      "matches": {
+        "executable codeblock": true
+      }
+    },
+    {
+      "content": "::: {.incremental}\n-$1\n:::",
+      "doc": "",
+      "label": "incremental",
+      "matches": {
+        "inc": true
+      }
+    },
+    {
+      "content": "{background-video=\"$1\" background-size=contain}",
+      "doc": "",
+      "label": "background video",
+      "matches": {
+        "bgvid": true
+      }
+    },
+    {
+      "content": "```{${1|html,latex,openxml,opendocument,asciidoc,docbook,markdown,dokuwiki,fb2,gfm,haddock,icml,ipynb,jats,jira,json,man,mediawiki,ms,muse,opml,org,plain,rst,rtf,tei,texinfo,textile,xwiki,zimwiki,native,r|}}\n${TM_SELECTED_TEXT}$0\n```",
+      "doc": "Insert raw code block",
+      "label": "Insert raw code block",
+      "matches": {
+        "raw codeblock": true
+      }
+    },
+    {
+      "content": "::: {.nonincremental}\n-$1\n:::",
+      "doc": "",
+      "label": "nonincremental",
+      "matches": {
+        "noninc": true
+      }
+    },
+    {
+      "content": "{background-iframe=\"$1\" background-interactive=true}",
+      "doc": "",
+      "label": "background iframe",
+      "matches": {
+        "bgiframe": true
+      }
+    },
+    {
+      "content": "# ${1:${TM_SELECTED_TEXT}}",
+      "doc": "Insert heading level 1",
+      "label": "Insert heading level 1",
+      "matches": {
+        "heading1": true
+      }
+    },
+    {
+      "content": ". . .",
+      "doc": "",
+      "label": "pause",
+      "matches": {
+        "pause": true
+      }
+    },
+    {
+      "content": "{background-color=\"$1\"}",
+      "doc": "",
+      "label": "background color",
+      "matches": {
+        "bgcol": true
+      }
+    },
+    {
+      "content": "## ${1:${TM_SELECTED_TEXT}}",
+      "doc": "Insert heading level 2",
+      "label": "Insert heading level 2",
+      "matches": {
+        "heading2": true
+      }
+    },
+    {
+      "content": "{auto-animate=true}",
+      "doc": "",
+      "label": "autoanimate",
+      "matches": {
+        "anim": true
+      }
+    },
+    {
+      "content": "### ${1:${TM_SELECTED_TEXT}}",
+      "doc": "Insert heading level 3",
+      "label": "Insert heading level 3",
+      "matches": {
+        "heading3": true
+      }
+    },
+    {
+      "content": "#### ${1:${TM_SELECTED_TEXT}}",
+      "doc": "Insert heading level 4",
+      "label": "Insert heading level 4",
+      "matches": {
+        "heading4": true
+      }
+    },
+    {
+      "content": "layout-valign=\"$0\"",
+      "doc": "",
+      "label": "layout-valign",
+      "matches": {
+        "valign": true
+      }
+    },
+    {
+      "content": "##### ${1:${TM_SELECTED_TEXT}}",
+      "doc": "Insert heading level 5",
+      "label": "Insert heading level 5",
+      "matches": {
+        "heading5": true
+      }
+    },
+    {
+      "content": "---\ntitle: $1\nformat: $2\n---",
+      "doc": "Add minimal yaml header",
+      "label": "yaml header",
+      "matches": {
+        "yml": true
+      }
+    },
+    {
+      "content": "{visibility=\"hidden\"}",
+      "doc": "",
+      "label": "hidden",
+      "matches": {
+        "hidden": true
+      }
+    },
+    {
+      "content": "::: {layout-ncol=2}\n$0\n:::",
+      "doc": "",
+      "label": "col2",
+      "matches": {
+        "col2": true
+      }
+    },
+    {
       "content": "display(Markdown(\"\"\"\n{$1}\n\"\"\".format($1 = $1)))",
       "doc": "",
       "label": "pymarkdown",
@@ -370,51 +402,27 @@
       }
     },
     {
-      "content": "```{bash} \n$1\n```",
+      "content": "::: {layout-ncol=3}\n$0\n:::",
       "doc": "",
-      "label": "bashcode",
+      "label": "col3",
       "matches": {
-        "bco": true
+        "col3": true
       }
     },
     {
-      "content": "bibliography: references.bib",
-      "doc": "add bibliography yaml",
-      "label": "bibliography",
+      "content": "- ${1:first}\n- ${2:second}\n- ${3:third}\n$0",
+      "doc": "Insert unordered list",
+      "label": "Insert unordered list",
       "matches": {
-        "bib": true
+        "unordered list": true
       }
     },
     {
-      "content": "[${TM_SELECTED_TEXT:${1:text}}](https://${2:link})$0",
-      "doc": "Insert link",
-      "label": "Insert link",
-      "matches": {
-        "link": true
-      }
-    },
-    {
-      "content": "{fig-align=\"center\"}",
+      "content": "from IPython.display import display, Markdown",
       "doc": "",
-      "label": "align",
+      "label": "importmarkdown",
       "matches": {
-        "align": true
-      }
-    },
-    {
-      "content": "![${TM_SELECTED_TEXT:${1:alt}}](https://${2:link})$0",
-      "doc": "Insert image",
-      "label": "Insert image",
-      "matches": {
-        "image": true
-      }
-    },
-    {
-      "content": "---\ntitle: \"$1\"\ndate: \"$2\"\ncategories: [$3]\n---",
-      "doc": "Add minimal yaml header",
-      "label": "diary header",
-      "matches": {
-        "diary": true
+        "importmd": true
       }
     },
     {
@@ -434,107 +442,27 @@
       }
     },
     {
-      "content": "::: {.${1:class}}\n${TM_SELECTED_TEXT}$0\n:::",
-      "doc": "Insert div block",
-      "label": "Insert div block",
-      "matches": {
-        "div": true
-      }
-    },
-    {
-      "content": "::: {.fragment}\n$0\n:::",
+      "content": "{visibility=\"uncounted\"}",
       "doc": "",
-      "label": "fragment",
+      "label": "uncount",
       "matches": {
-        "frag": true
+        "uncount": true
       }
     },
     {
-      "content": "---\ntitle: $1\nformat: $2\n---",
-      "doc": "Add minimal yaml header",
-      "label": "yaml header",
+      "content": "1. ${1:first}\n2. ${2:second}\n3. ${3:third}\n$0",
+      "doc": "Insert ordered list",
+      "label": "Insert ordered list",
       "matches": {
-        "yml": true
+        "ordered list": true
       }
     },
     {
-      "content": "::: {.${1|callout,callout-note,callout-tip,callout-important,callout-caution,callout-warning|}}\n${TM_SELECTED_TEXT}$0\n:::",
-      "doc": "Insert callout block",
-      "label": "Insert callout block",
-      "matches": {
-        "callout": true
-      }
-    },
-    {
-      "content": "::: {.callout-$1}\n$0\n:::",
+      "content": "{fig-align=\"center\"}",
       "doc": "",
-      "label": "callout",
+      "label": "align",
       "matches": {
-        "call": true
-      }
-    },
-    {
-      "content": "Fig. \\ref{fig-$1}",
-      "doc": "refer to a label for a wrap figure",
-      "label": "ref a wrap figure",
-      "matches": {
-        "@wrap": true
-      }
-    },
-    {
-      "content": "[@${1:city-key}]",
-      "doc": "Insert a citation",
-      "label": "Insert citation",
-      "matches": {
-        "cite": true
-      }
-    },
-    {
-      "content": "```{python}\n#| label: fig-$1\n#| fig-cap: \"$2\"\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nplt.style.use(['science', 'ieee'])\n$3\nplt.show()\n```",
-      "doc": "",
-      "label": "pyfig1",
-      "matches": {
-        "pyfig1": true
-      }
-    },
-    {
-      "content": "~~${1:${TM_SELECTED_TEXT}}~~",
-      "doc": "Insert strikethrough",
-      "label": "Insert strikethrough",
-      "matches": {
-        "strikethrough": true
-      }
-    },
-    {
-      "content": "[^${1:note text}]",
-      "doc": "Insert an inline footnote",
-      "label": "Insert an inline footnote",
-      "matches": {
-        "footnote-inline": true
-      }
-    },
-    {
-      "content": "![${1:cap1}](${2:figure}){#fig-$3}",
-      "doc": "",
-      "label": "fig",
-      "matches": {
-        "fig": true
-      }
-    },
-    {
-      "content": "```{${1|python,r,julia,ojs,sql,bash|}}\n${TM_SELECTED_TEXT}$0\n```",
-      "doc": "Insert executable code block",
-      "label": "Insert executable code block",
-      "matches": {
-        "executable codeblock": true
-      }
-    },
-    {
-      "content": "*${1:${TM_SELECTED_TEXT}}*$0",
-      "doc": "Insert italic text",
-      "label": "Insert italic text",
-      "matches": {
-        "italic": true
+        "align": true
       }
     },
     {
@@ -546,59 +474,131 @@
       }
     },
     {
-      "content": "```{python} \n$1\n```",
+      "content": "::: {.fragment}\n$0\n:::",
       "doc": "",
-      "label": "pycode",
+      "label": "fragment",
       "matches": {
-        "pyc": true
+        "frag": true
       }
     },
     {
-      "content": "```{r} \n$1\n```",
+      "content": "::: {#fig-${1:cap}}\n\n${2:paste embed info}\n\n${3:Caption}\n:::",
       "doc": "",
-      "label": "rcode",
+      "label": "iframe",
       "matches": {
-        "rco": true
+        "iframe": true
       }
     },
     {
-      "content": ":::: {#fig-${1:label} layout=\"[1,1]\"}\n\n![${2:subcap1}](${3:figure}){#fig-$2}\n\n![${4:subcap1}](${5:figure}){#fig-$4}\n\n${6:caption}\n::::",
+      "content": "----------",
+      "doc": "Insert horizontal rule",
+      "label": "Insert horizontal rule",
+      "matches": {
+        "horizontal rule": true
+      }
+    },
+    {
+      "content": "::: {layout=\"[$1]\"}\n$0\n:::",
       "doc": "",
-      "label": "fig2",
+      "label": "lay",
       "matches": {
-        "fig2": true
+        "lay": true
       }
     },
     {
-      "content": "> ${1:${TM_SELECTED_TEXT}}",
-      "doc": "Insert quoted text",
-      "label": "Insert quoted text",
-      "matches": {
-        "quote": true
-      }
-    },
-    {
-      "content": ":::: {.panel-tabset}\n\n### $1\n\n$2\n\n### $3\n\n$4\n\n::::",
+      "content": "::: {.columns}\n::: {.column width=50%}\n$1\n:::\n::: {.column width=50%}\n$2\n:::\n:::",
       "doc": "",
-      "label": "tabset",
+      "label": "2col",
       "matches": {
-        "tabset": true
+        "2col": true
       }
     },
     {
-      "content": "[^${1:note identifier}]\n[^$1]: ${2:note text}",
-      "doc": "Insert an inline footnote",
-      "label": "Insert a footnote",
+      "content": "[${TM_SELECTED_TEXT:${1:text}}](https://${2:link})$0",
+      "doc": "Insert link",
+      "label": "Insert link",
       "matches": {
-        "footnote": true
+        "link": true
       }
     },
     {
-      "content": "## ${1:${TM_SELECTED_TEXT}}",
-      "doc": "Insert heading level 2",
-      "label": "Insert heading level 2",
+      "content": "::: {$1}\n$0\n:::",
+      "doc": "",
+      "label": "div",
       "matches": {
-        "heading2": true
+        "div": true
+      }
+    },
+    {
+      "content": "![${TM_SELECTED_TEXT:${1:alt}}](https://${2:link})$0",
+      "doc": "Insert image",
+      "label": "Insert image",
+      "matches": {
+        "image": true
+      }
+    },
+    {
+      "content": "@eq-$1",
+      "doc": "",
+      "label": "eqnref",
+      "matches": {
+        "eqnref": true
+      }
+    },
+    {
+      "content": "::: {.pull-left}\n$0\n:::",
+      "doc": "",
+      "label": "pl",
+      "matches": {
+        "pl": true
+      }
+    },
+    {
+      "content": "~~${1:${TM_SELECTED_TEXT}}~~",
+      "doc": "Insert strikethrough",
+      "label": "Insert strikethrough",
+      "matches": {
+        "strikethrough": true
+      }
+    },
+    {
+      "content": "::: {.columns}\n::: {.column width=\"$1\"}\n$2\n:::\n::: {.column width=\"$3\"}\n$4\n:::\n:::",
+      "doc": "",
+      "label": "cols",
+      "matches": {
+        "cols": true
+      }
+    },
+    {
+      "content": "###### ${1:${TM_SELECTED_TEXT}}",
+      "doc": "Insert heading level 6",
+      "label": "Insert heading level 6",
+      "matches": {
+        "heading6": true
+      }
+    },
+    {
+      "content": "::: {.${1:class}}\n${TM_SELECTED_TEXT}$0\n:::",
+      "doc": "Insert div block",
+      "label": "Insert div block",
+      "matches": {
+        "div": true
+      }
+    },
+    {
+      "content": "{data-background-image=\"$1\" background-position=center background-size=contain}",
+      "doc": "",
+      "label": "background image",
+      "matches": {
+        "bgimg": true
+      }
+    },
+    {
+      "content": "bibliography: references.bib",
+      "doc": "add bibliography yaml",
+      "label": "bibliography",
+      "matches": {
+        "bib": true
       }
     }
   ]

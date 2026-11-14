@@ -2,22 +2,6 @@
   "extends": [],
   "snippets": [
     {
-      "content": "${1:component}(:${1:propName}=\"${0}\")",
-      "doc": "component element with props",
-      "label": "Vue Component with Props Binding",
-      "matches": {
-        "vel-props": true
-      }
-    },
-    {
-      "content": "@change=\"${1:foo} = $event\"",
-      "doc": "Vue Emit to Parent Component",
-      "label": "Vue Emit to Parent",
-      "matches": {
-        "vemit-parent": true
-      }
-    },
-    {
       "content": "${1:div}(v-for=\"${2:item} in ${2:item}s\" :key=\"${2:item}.id\")\n\t| {{ ${2:item} }}",
       "doc": "vfor statement",
       "label": "Vue v-for",
@@ -34,11 +18,11 @@
       }
     },
     {
-      "content": "img(:src=\"'/path/to/images/' + ${1:fileName}\" alt=\"${2:altText}\")",
-      "doc": "image source binding",
-      "label": "Vue Image Source Binding",
+      "content": "${1:div}(:class=\"{ ${2:className}: ${3:data} }\")",
+      "doc": "vue class binding",
+      "label": "Vue Class Binding",
       "matches": {
-        "vsrc": true
+        "vclass": true
       }
     },
     {
@@ -58,19 +42,19 @@
       }
     },
     {
-      "content": "${1:div}(:class=\"[${2:classNameA}, {${3:classNameB} : ${4:condition}}]\")",
-      "doc": "vue multiple conditional class bindings",
-      "label": "Vue Multiple Conditional Class Bindings",
+      "content": "@change=\"${1:foo} = $event\"",
+      "doc": "Vue Emit to Parent Component",
+      "label": "Vue Emit to Parent",
       "matches": {
-        "vclass-obj-mult": true
+        "vemit-parent": true
       }
     },
     {
-      "content": "${1:div}(:style=\"{ fontSize: ${2:data} + 'px' }\")",
-      "doc": "vue inline style binding",
-      "label": "Vue Style Binding",
+      "content": "img(:src=\"'/path/to/images/' + ${1:fileName}\" alt=\"${2:altText}\")",
+      "doc": "image source binding",
+      "label": "Vue Image Source Binding",
       "matches": {
-        "vstyle": true
+        "vsrc": true
       }
     },
     {
@@ -82,11 +66,11 @@
       }
     },
     {
-      "content": "${1:div}(:class=\"[${2:classNameA}, ${3:classNameB}]\")",
-      "doc": "vue class binding",
-      "label": "Vue Class Binding Object",
+      "content": "${1:component}(:${1:propName}=\"${0}\")",
+      "doc": "component element with props",
+      "label": "Vue Component with Props Binding",
       "matches": {
-        "vclass-obj": true
+        "vel-props": true
       }
     },
     {
@@ -98,11 +82,11 @@
       }
     },
     {
-      "content": "${1:div}(:style=\"[${2:styleObjectA}, ${3:styleObjectB]}\")",
-      "doc": "vue inline style binding, objects",
-      "label": "Vue Style Binding Object",
+      "content": "${1:div}(:style=\"{ fontSize: ${2:data} + 'px' }\")",
+      "doc": "vue inline style binding",
+      "label": "Vue Style Binding",
       "matches": {
-        "vstyle-obj": true
+        "vstyle": true
       }
     },
     {
@@ -114,11 +98,27 @@
       }
     },
     {
-      "content": "${1:div}(:class=\"{ ${2:className}: ${3:data} }\")",
+      "content": "${1:div}(:class=\"[${2:classNameA}, ${3:classNameB}]\")",
       "doc": "vue class binding",
-      "label": "Vue Class Binding",
+      "label": "Vue Class Binding Object",
       "matches": {
-        "vclass": true
+        "vclass-obj": true
+      }
+    },
+    {
+      "content": "${1:div}(:class=\"[${2:classNameA}, {${3:classNameB} : ${4:condition}}]\")",
+      "doc": "vue multiple conditional class bindings",
+      "label": "Vue Multiple Conditional Class Bindings",
+      "matches": {
+        "vclass-obj-mult": true
+      }
+    },
+    {
+      "content": "${1:div}(:style=\"[${2:styleObjectA}, ${3:styleObjectB]}\")",
+      "doc": "vue inline style binding, objects",
+      "label": "Vue Style Binding Object",
+      "matches": {
+        "vstyle-obj": true
       }
     }
   ]

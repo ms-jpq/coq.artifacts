@@ -2,6 +2,22 @@
   "extends": [],
   "snippets": [
     {
+      "content": "<% if ${1:truevalue} %>\n  $2\n<% end %>",
+      "doc": "if .. end",
+      "label": "if",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "<%= link_to $1, $2 %>",
+      "doc": "link_to helper",
+      "label": "link_to",
+      "matches": {
+        "lt": true
+      }
+    },
+    {
       "content": "<% if ${1:truevalue} %>\n  $2\n<% else %>\n  $3\n<% end %>",
       "doc": "if .. else .. end",
       "label": "ife",
@@ -10,12 +26,11 @@
       }
     },
     {
-      "content": "<%= $1 %>",
-      "doc": "render block pe",
-      "label": "render",
+      "content": "<% ${1:items}.each do |${2:item}| %>\n  $3\n<% end %>",
+      "doc": "each do",
+      "label": "each",
       "matches": {
-        "=": true,
-        "pe": true
+        "each": true
       }
     },
     {
@@ -28,35 +43,28 @@
       }
     },
     {
+      "content": "<%# $1 %>",
+      "doc": "erb print comment",
+      "label": "comment",
+      "matches": {
+        "pc": true
+      }
+    },
+    {
+      "content": "<%= $1 %>",
+      "doc": "render block pe",
+      "label": "render",
+      "matches": {
+        "=": true,
+        "pe": true
+      }
+    },
+    {
       "content": "<% unless ${1:falsevalue} %>\n  $2\n<% end %>",
       "doc": "unless .. end",
       "label": "unless",
       "matches": {
         "unless": true
-      }
-    },
-    {
-      "content": "<% elsif ${1:truevalue} %>",
-      "doc": "elsif",
-      "label": "elsif",
-      "matches": {
-        "elsif": true
-      }
-    },
-    {
-      "content": "<%= link_to $1, $2 %>",
-      "doc": "link_to helper",
-      "label": "link_to",
-      "matches": {
-        "lt": true
-      }
-    },
-    {
-      "content": "<% ${1:items}.each do |${2:item}| %>\n  $3\n<% end %>",
-      "doc": "each do",
-      "label": "each",
-      "matches": {
-        "each": true
       }
     },
     {
@@ -68,11 +76,11 @@
       }
     },
     {
-      "content": "<%# $1 %>",
-      "doc": "erb print comment",
-      "label": "comment",
+      "content": "<% elsif ${1:truevalue} %>",
+      "doc": "elsif",
+      "label": "elsif",
       "matches": {
-        "pc": true
+        "elsif": true
       }
     },
     {
@@ -81,14 +89,6 @@
       "label": "end",
       "matches": {
         "end": true
-      }
-    },
-    {
-      "content": "<% if ${1:truevalue} %>\n  $2\n<% end %>",
-      "doc": "if .. end",
-      "label": "if",
-      "matches": {
-        "if": true
       }
     },
     {

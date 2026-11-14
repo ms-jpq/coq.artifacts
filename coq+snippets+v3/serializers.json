@@ -2,19 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "${1:FIELDNAME} = serializers.CharField(${2})",
-      "doc": "Django-rest Serializers ``CharField``",
-      "label": "DRF CharField",
+      "content": "class ${1:Name}Serializer(serializers.Serializer):\n\t${2}",
+      "doc": "Django-rest Serializers ``Serializer`` Class",
+      "label": "DRF Serializer (class)",
       "matches": {
-        "schar": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = serializers.ModelField(model_field=${2})",
-      "doc": "Django-rest Serializers `ModelField``",
-      "label": "DRF ModelField",
-      "matches": {
-        "smodel": true
+        "serializer": true
       }
     },
     {
@@ -26,11 +18,11 @@
       }
     },
     {
-      "content": "${1:FIELDNAME} = serializers.DecimalField(max_digits=${2}, decimal_places=${3})",
-      "doc": "Django-rest Serializers ``DecimalField``",
-      "label": "DRF DecimalField",
+      "content": "${1:FIELDNAME} = serializers.MultipleChoiceField(choices=${2})",
+      "doc": "Django-rest Serializers ``MultipleChoiceField``",
+      "label": "DRF MultipleChoiceField",
       "matches": {
-        "sdecimal": true
+        "smchoice": true
       }
     },
     {
@@ -42,11 +34,27 @@
       }
     },
     {
+      "content": "def create(self, validated_data):\n\treturn ${1:super().create(validated_data)}",
+      "doc": "Django-rest Serializers ``Create`` Method",
+      "label": "DRF Create (serializers-method)",
+      "matches": {
+        "screate": true
+      }
+    },
+    {
       "content": "${1:FIELDNAME} = serializers.PrimaryKeyRelatedField(${2})",
       "doc": "Django-rest Serializers ``PrimaryKeyRelatedField``",
       "label": "DRF PrimaryKeyRelatedField",
       "matches": {
         "spkr": true
+      }
+    },
+    {
+      "content": "def update(self, instance, validated_data):\n\treturn ${1:super().update(instance, validated_data)}",
+      "doc": "Django-rest Serializers ``Update`` Method",
+      "label": "DRF Update (serializers-method)",
+      "matches": {
+        "supdate": true
       }
     },
     {
@@ -74,11 +82,11 @@
       }
     },
     {
-      "content": "${1:FIELDNAME} = serializers.FloatField(${2})",
-      "doc": "Django-rest Serializers ``FloatField``",
-      "label": "DRF FloatField",
+      "content": "${1:FIELDNAME} = serializers.DateField(${2})",
+      "doc": "Django-rest Serializers ``DateField``",
+      "label": "DRF DateField",
       "matches": {
-        "sfloat": true
+        "sdate": true
       }
     },
     {
@@ -90,19 +98,59 @@
       }
     },
     {
-      "content": "${1:FIELDNAME} = serializers.DurationField(${2})",
-      "doc": "Django-rest Serializers ``DurationField``",
-      "label": "DRF DurationField",
-      "matches": {
-        "sduration": true
-      }
-    },
-    {
       "content": "${1:FIELDNAME} = serializers.HiddenField(${2})",
       "doc": "Django-rest Serializers ``HiddenField``",
       "label": "DRF HiddenField",
       "matches": {
         "shidden": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = serializers.SlugRelatedField(${2})",
+      "doc": "Django-rest Serializers ``SlugRelatedField``",
+      "label": "DRF SlugRelatedField",
+      "matches": {
+        "sslugrelated": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = serializers.DecimalField(max_digits=${2}, decimal_places=${3})",
+      "doc": "Django-rest Serializers ``DecimalField``",
+      "label": "DRF DecimalField",
+      "matches": {
+        "sdecimal": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = serializers.StringRelatedField(${2})",
+      "doc": "Django-rest Serializers ``StringRelatedField``",
+      "label": "DRF StringRelatedField",
+      "matches": {
+        "ssr": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = serializers.DictField(child=${2})",
+      "doc": "Django-rest Serializers ``DictField``",
+      "label": "DRF DictField",
+      "matches": {
+        "sdict": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = serializers.TimeField(${2})",
+      "doc": "Django-rest Serializers ``TimeField``",
+      "label": "DRF TimeField",
+      "matches": {
+        "stime": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = serializers.DurationField(${2})",
+      "doc": "Django-rest Serializers ``DurationField``",
+      "label": "DRF DurationField",
+      "matches": {
+        "sduration": true
       }
     },
     {
@@ -114,11 +162,67 @@
       }
     },
     {
-      "content": "${1:FIELDNAME} = serializers.SlugRelatedField(${2})",
-      "doc": "Django-rest Serializers ``SlugRelatedField``",
-      "label": "DRF SlugRelatedField",
+      "content": "${1:FIELDNAME} = serializers.URLField(${2})",
+      "doc": "Django-rest Serializers ``URLField``",
+      "label": "DRF URLField",
       "matches": {
-        "sslugrelated": true
+        "surl": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = serializers.DateTimeField(${2})",
+      "doc": "Django-rest Serializers ``DateTimeField``",
+      "label": "DRF DateTimeField",
+      "matches": {
+        "sdatetime": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = serializers.IPAddressField(${2})",
+      "doc": "Django-rest Serializers ``IPAddressField``",
+      "label": "DRF IPAddressField",
+      "matches": {
+        "sip": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = serializers.FloatField(${2})",
+      "doc": "Django-rest Serializers ``FloatField``",
+      "label": "DRF FloatField",
+      "matches": {
+        "sfloat": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = serializers.UUIDField(${2})",
+      "doc": "Django-rest Serializers ``UUIDField``",
+      "label": "DRF UUIDField",
+      "matches": {
+        "suuid": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = serializers.CharField(${2})",
+      "doc": "Django-rest Serializers ``CharField``",
+      "label": "DRF CharField",
+      "matches": {
+        "schar": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = serializers.JSONField(binary=${2})",
+      "doc": "Django-rest Serializers ``JSONField``",
+      "label": "DRF JSONField",
+      "matches": {
+        "sjson": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = serializers.FilePathField(path=${2})",
+      "doc": "Django-rest Serializers ``FilePathField``",
+      "label": "DRF FilePathField",
+      "matches": {
+        "sfilepath": true
       }
     },
     {
@@ -138,27 +242,11 @@
       }
     },
     {
-      "content": "${1:FIELDNAME} = serializers.TimeField(${2})",
-      "doc": "Django-rest Serializers ``TimeField``",
-      "label": "DRF TimeField",
+      "content": "${1:FIELDNAME} = serializers.ListField(child=${2})",
+      "doc": "Django-rest Serializers ``ListField``",
+      "label": "DRF ListField",
       "matches": {
-        "stime": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = serializers.StringRelatedField(${2})",
-      "doc": "Django-rest Serializers ``StringRelatedField``",
-      "label": "DRF StringRelatedField",
-      "matches": {
-        "ssr": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = serializers.DateField(${2})",
-      "doc": "Django-rest Serializers ``DateField``",
-      "label": "DRF DateField",
-      "matches": {
-        "sdate": true
+        "slist": true
       }
     },
     {
@@ -170,27 +258,11 @@
       }
     },
     {
-      "content": "${1:FIELDNAME} = serializers.FilePathField(path=${2})",
-      "doc": "Django-rest Serializers ``FilePathField``",
-      "label": "DRF FilePathField",
+      "content": "${1:FIELDNAME} = serializers.FileField(${2})",
+      "doc": "Django-rest Serializers ``FileField``",
+      "label": "DRF FileField",
       "matches": {
-        "sfilepath": true
-      }
-    },
-    {
-      "content": "def create(self, validated_data):\n\treturn ${1:super().create(validated_data)}",
-      "doc": "Django-rest Serializers ``Create`` Method",
-      "label": "DRF Create (serializers-method)",
-      "matches": {
-        "screate": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = serializers.DateTimeField(${2})",
-      "doc": "Django-rest Serializers ``DateTimeField``",
-      "label": "DRF DateTimeField",
-      "matches": {
-        "sdatetime": true
+        "sfile": true
       }
     },
     {
@@ -202,35 +274,11 @@
       }
     },
     {
-      "content": "${1:FIELDNAME} = serializers.FileField(${2})",
-      "doc": "Django-rest Serializers ``FileField``",
-      "label": "DRF FileField",
+      "content": "${1:FIELDNAME} = serializers.ModelField(model_field=${2})",
+      "doc": "Django-rest Serializers `ModelField``",
+      "label": "DRF ModelField",
       "matches": {
-        "sfile": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = serializers.URLField(${2})",
-      "doc": "Django-rest Serializers ``URLField``",
-      "label": "DRF URLField",
-      "matches": {
-        "surl": true
-      }
-    },
-    {
-      "content": "def update(self, instance, validated_data):\n\treturn ${1:super().update(instance, validated_data)}",
-      "doc": "Django-rest Serializers ``Update`` Method",
-      "label": "DRF Update (serializers-method)",
-      "matches": {
-        "supdate": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = serializers.IPAddressField(${2})",
-      "doc": "Django-rest Serializers ``IPAddressField``",
-      "label": "DRF IPAddressField",
-      "matches": {
-        "sip": true
+        "smodel": true
       }
     },
     {
@@ -239,54 +287,6 @@
       "label": "DRF EmailField",
       "matches": {
         "semail": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = serializers.UUIDField(${2})",
-      "doc": "Django-rest Serializers ``UUIDField``",
-      "label": "DRF UUIDField",
-      "matches": {
-        "suuid": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = serializers.ListField(child=${2})",
-      "doc": "Django-rest Serializers ``ListField``",
-      "label": "DRF ListField",
-      "matches": {
-        "slist": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = serializers.JSONField(binary=${2})",
-      "doc": "Django-rest Serializers ``JSONField``",
-      "label": "DRF JSONField",
-      "matches": {
-        "sjson": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = serializers.DictField(child=${2})",
-      "doc": "Django-rest Serializers ``DictField``",
-      "label": "DRF DictField",
-      "matches": {
-        "sdict": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = serializers.MultipleChoiceField(choices=${2})",
-      "doc": "Django-rest Serializers ``MultipleChoiceField``",
-      "label": "DRF MultipleChoiceField",
-      "matches": {
-        "smchoice": true
-      }
-    },
-    {
-      "content": "class ${1:Name}Serializer(serializers.Serializer):\n\t${2}",
-      "doc": "Django-rest Serializers ``Serializer`` Class",
-      "label": "DRF Serializer (class)",
-      "matches": {
-        "serializer": true
       }
     }
   ]

@@ -10,11 +10,11 @@
       }
     },
     {
-      "content": "@tailwind base;\n@tailwind components;\n@tailwind utilities;",
-      "doc": "An opinionated set of base styles for Tailwind projects.",
-      "label": "tailwind-base",
+      "content": "aspect-${1|auto, square, video|}",
+      "doc": "aspect-ratio",
+      "label": "aspect-ratio",
       "matches": {
-        "tailwindBase": true
+        "aspect-ratio": true
       }
     },
     {
@@ -26,11 +26,11 @@
       }
     },
     {
-      "content": "aspect-${1|auto, square, video|}",
-      "doc": "aspect-ratio",
-      "label": "aspect-ratio",
+      "content": "@tailwind base;\n@tailwind components;\n@tailwind utilities;",
+      "doc": "An opinionated set of base styles for Tailwind projects.",
+      "label": "tailwind-base",
       "matches": {
-        "aspect-ratio": true
+        "tailwindBase": true
       }
     }
   ]

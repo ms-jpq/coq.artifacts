@@ -2,6 +2,14 @@
   "extends": [],
   "snippets": [
     {
+      "content": "${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE} ${CURRENT_HOUR}:${CURRENT_MINUTE}",
+      "doc": "I give you back the time and date (Y-m-d H:M)",
+      "label": "datetime",
+      "matches": {
+        "datetime": true
+      }
+    },
+    {
       "content": "${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
       "doc": "I give you back the time (H:M:S)",
       "label": "timeHMS",
@@ -10,11 +18,11 @@
       }
     },
     {
-      "content": "${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE} ${CURRENT_HOUR}:${CURRENT_MINUTE}",
-      "doc": "I give you back the time and date (Y-m-d H:M)",
-      "label": "datetime",
+      "content": "${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+      "doc": "ISO date time stamp",
+      "label": "diso",
       "matches": {
-        "datetime": true
+        "diso": true
       }
     },
     {
@@ -26,27 +34,11 @@
       }
     },
     {
-      "content": "${CURRENT_HOUR}:${CURRENT_MINUTE}",
-      "doc": "I give you back the time (H:M)",
-      "label": "time",
+      "content": "Copyright (c) ${CURRENT_YEAR} ${0:Author}. All Rights Reserved.",
+      "doc": "Snippet to put copyright",
+      "label": "copyright",
       "matches": {
-        "time": true
-      }
-    },
-    {
-      "content": "${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR}",
-      "doc": "Put date in (DD/MM/YY) format",
-      "label": "dateDMY",
-      "matches": {
-        "dateDMY": true
-      }
-    },
-    {
-      "content": "${CURRENT_MONTH}/${CURRENT_DATE}/${CURRENT_YEAR}",
-      "doc": "Put the date in (m/D/Y) format",
-      "label": "dateMDY",
-      "matches": {
-        "dateMDY": true
+        "copyright": true
       }
     },
     {
@@ -58,19 +50,27 @@
       }
     },
     {
-      "content": "Copyright (c) ${CURRENT_YEAR} ${0:Author}. All Rights Reserved.",
-      "doc": "Snippet to put copyright",
-      "label": "copyright",
+      "content": "${CURRENT_MONTH}/${CURRENT_DATE}/${CURRENT_YEAR}",
+      "doc": "Put the date in (m/D/Y) format",
+      "label": "dateMDY",
       "matches": {
-        "copyright": true
+        "dateMDY": true
       }
     },
     {
-      "content": "${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
-      "doc": "ISO date time stamp",
-      "label": "diso",
+      "content": "${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR}",
+      "doc": "Put date in (DD/MM/YY) format",
+      "label": "dateDMY",
       "matches": {
-        "diso": true
+        "dateDMY": true
+      }
+    },
+    {
+      "content": "${CURRENT_HOUR}:${CURRENT_MINUTE}",
+      "doc": "I give you back the time (H:M)",
+      "label": "time",
+      "matches": {
+        "time": true
       }
     }
   ]

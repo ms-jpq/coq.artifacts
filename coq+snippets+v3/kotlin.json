@@ -4,43 +4,11 @@
   ],
   "snippets": [
     {
-      "content": "finally {\n\t$1\n}",
-      "doc": "Snippet for finally block",
-      "label": "finally",
+      "content": "do {\n\t$1\n} while (${2:condition})",
+      "doc": "Snippet for do...while expression",
+      "label": "do...while",
       "matches": {
-        "finally": true
-      }
-    },
-    {
-      "content": "fun ${1:main}(${2:args} : ${3:Array<String>}) {\n\t$0\n}",
-      "doc": "Snippet for function declaration",
-      "label": "function declaration",
-      "matches": {
-        "fun": true
-      }
-    },
-    {
-      "content": "class ${TM_FILENAME_BASE} {\n\t$0\n}",
-      "doc": "Snippet for class declaration",
-      "label": "class",
-      "matches": {
-        "class": true
-      }
-    },
-    {
-      "content": "var ${1:name} = ${2:value}",
-      "doc": "Snippet for a variable",
-      "label": "variable declaration",
-      "matches": {
-        "var": true
-      }
-    },
-    {
-      "content": "while (${1:condition}) {\n\t$0\n}",
-      "doc": "Snippet for while expression",
-      "label": "while",
-      "matches": {
-        "while": true
+        "do": true
       }
     },
     {
@@ -49,6 +17,22 @@
       "label": "when",
       "matches": {
         "when": true
+      }
+    },
+    {
+      "content": "for (${1:item} in ${2:list})\n\t${3:expression}",
+      "doc": "Snippet for iterating array with for loop",
+      "label": "foreach",
+      "matches": {
+        "foreach": true
+      }
+    },
+    {
+      "content": "get() ${1:value}",
+      "doc": "Snippet for get block",
+      "label": "get",
+      "matches": {
+        "get": true
       }
     },
     {
@@ -68,6 +52,14 @@
       }
     },
     {
+      "content": "fun ${1:main}(${2:args} : ${3:Array<String>}) {\n\t$0\n}",
+      "doc": "Snippet for function declaration",
+      "label": "function declaration",
+      "matches": {
+        "fun": true
+      }
+    },
+    {
       "content": "override",
       "doc": "Snippet for override keyword",
       "label": "override keyword",
@@ -76,67 +68,11 @@
       }
     },
     {
-      "content": "package ${1:packageName}",
-      "doc": "Snippet for package statement",
-      "label": "package",
+      "content": "var ${1:name} = ${2:value}",
+      "doc": "Snippet for a variable",
+      "label": "variable declaration",
       "matches": {
-        "package": true
-      }
-    },
-    {
-      "content": "import ${1:packageName}",
-      "doc": "Snippet for import statement",
-      "label": "import",
-      "matches": {
-        "import": true
-      }
-    },
-    {
-      "content": "for (${1:item} in ${2:list})\n\t${3:expression}",
-      "doc": "Snippet for iterating array with for loop",
-      "label": "foreach",
-      "matches": {
-        "foreach": true
-      }
-    },
-    {
-      "content": "constructor(${1:arg}: ${2:type}) {\n\t$0\n}",
-      "doc": "Snippet for constructor function",
-      "label": "constructor",
-      "matches": {
-        "constructor": true
-      }
-    },
-    {
-      "content": "do {\n\t$1\n} while (${2:condition})",
-      "doc": "Snippet for do...while expression",
-      "label": "do...while",
-      "matches": {
-        "do": true
-      }
-    },
-    {
-      "content": "get() ${1:value}",
-      "doc": "Snippet for get block",
-      "label": "get",
-      "matches": {
-        "get": true
-      }
-    },
-    {
-      "content": "set(${1:arg}: ${2:type}) {\n\t$0\n}",
-      "doc": "Snippet for set block",
-      "label": "set",
-      "matches": {
-        "set": true
-      }
-    },
-    {
-      "content": "for (${1:i} in ${2:0}..${3:5})\n\t${4:expression}",
-      "doc": "Snippet for iterating array with for loop",
-      "label": "for",
-      "matches": {
-        "for": true
+        "var": true
       }
     },
     {
@@ -148,11 +84,59 @@
       }
     },
     {
+      "content": "constructor(${1:arg}: ${2:type}) {\n\t$0\n}",
+      "doc": "Snippet for constructor function",
+      "label": "constructor",
+      "matches": {
+        "constructor": true
+      }
+    },
+    {
+      "content": "package ${1:packageName}",
+      "doc": "Snippet for package statement",
+      "label": "package",
+      "matches": {
+        "package": true
+      }
+    },
+    {
+      "content": "class ${TM_FILENAME_BASE} {\n\t$0\n}",
+      "doc": "Snippet for class declaration",
+      "label": "class",
+      "matches": {
+        "class": true
+      }
+    },
+    {
+      "content": "val ${1:name} = ${2:value}",
+      "doc": "Snippet for a variable",
+      "label": "variable declaration with val",
+      "matches": {
+        "val": true
+      }
+    },
+    {
       "content": "if (${1:condition}) \n\t${2:value}\nelse\n\t${3:value}",
       "doc": "Snippet for if...else expression",
       "label": "if...else",
       "matches": {
         "ifelse": true
+      }
+    },
+    {
+      "content": "finally {\n\t$1\n}",
+      "doc": "Snippet for finally block",
+      "label": "finally",
+      "matches": {
+        "finally": true
+      }
+    },
+    {
+      "content": "import ${1:packageName}",
+      "doc": "Snippet for import statement",
+      "label": "import",
+      "matches": {
+        "import": true
       }
     },
     {
@@ -164,11 +148,27 @@
       }
     },
     {
-      "content": "val ${1:name} = ${2:value}",
-      "doc": "Snippet for a variable",
-      "label": "variable declaration with val",
+      "content": "set(${1:arg}: ${2:type}) {\n\t$0\n}",
+      "doc": "Snippet for set block",
+      "label": "set",
       "matches": {
-        "val": true
+        "set": true
+      }
+    },
+    {
+      "content": "while (${1:condition}) {\n\t$0\n}",
+      "doc": "Snippet for while expression",
+      "label": "while",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "for (${1:i} in ${2:0}..${3:5})\n\t${4:expression}",
+      "doc": "Snippet for iterating array with for loop",
+      "label": "for",
+      "matches": {
+        "for": true
       }
     },
     {

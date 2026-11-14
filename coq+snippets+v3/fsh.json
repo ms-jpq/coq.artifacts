@@ -2,6 +2,17 @@
   "extends": [],
   "snippets": [
     {
+      "content": "RuleSet: $1\n* $0",
+      "doc": "Create a FSH RuleSet",
+      "label": "FSH RuleSet",
+      "matches": {
+        "RS": true,
+        "Rule": true,
+        "rs": true,
+        "rule": true
+      }
+    },
+    {
       "content": "^slicing.discriminator.type = ${1|#value,#exists,#pattern,#type,#profile|}\n${TM_CURRENT_LINE/\\s*([^\\^]+).*/$1/}^slicing.discriminator.path = \"$2\"\n${TM_CURRENT_LINE/\\s*([^\\^]+).*/$1/}^slicing.rules = ${3|#open,#closed,#openAtEnd|}\n${TM_CURRENT_LINE/\\s*([^\\^]+).*/$1/}^slicing.description = \"$4\"\n${TM_CURRENT_LINE/\\s*([^\\^]+).*/$1/}^slicing.ordered = ${5|false,true|}\n$0",
       "doc": "Add slicing rules",
       "label": "Slicing rules",
@@ -25,17 +36,6 @@
       "matches": {
         "Inv": true,
         "inv": true
-      }
-    },
-    {
-      "content": "RuleSet: $1\n* $0",
-      "doc": "Create a FSH RuleSet",
-      "label": "FSH RuleSet",
-      "matches": {
-        "RS": true,
-        "Rule": true,
-        "rs": true,
-        "rule": true
       }
     }
   ]

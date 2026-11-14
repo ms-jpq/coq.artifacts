@@ -10,19 +10,19 @@
       }
     },
     {
-      "content": "else\n\t$0",
-      "doc": "else",
-      "label": "else",
-      "matches": {
-        "el": true
-      }
-    },
-    {
       "content": "ifeq (${1:cond0}, ${2:cond1})\n\t$3\nelse\n\t$4\nendif",
       "doc": "if else statement",
       "label": "if else statement",
       "matches": {
         "ife": true
+      }
+    },
+    {
+      "content": "else\n\t$0",
+      "doc": "else",
+      "label": "else",
+      "matches": {
+        "el": true
       }
     },
     {

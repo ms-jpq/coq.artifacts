@@ -10,43 +10,19 @@
       }
     },
     {
-      "content": "@license ${1:identifier}$0",
-      "doc": "Identify the license that applies to this code.",
-      "label": "license",
+      "content": "@exports ${1:moduleName}$0",
+      "doc": "Use the @exports tag when documenting JavaScript modules that export anything other than the \"exports\" object or the \"module.exports\" property.",
+      "label": "exports",
       "matches": {
-        "@license": true
+        "@exports": true
       }
     },
     {
-      "content": "@description ${1:some description}$0",
-      "doc": "The @description tag allows you to provide a general description of the symbol you are documenting. The description may include HTML markup. It may also include Markdown formatting if the Markdown plugin is enabled. Synonysm of @desc.",
-      "label": "description",
+      "content": "@virlual$0",
+      "doc": "This member must be implemented (or overridden) by the inheritor. Synonysm of @abstract.",
+      "label": "virtual",
       "matches": {
-        "@description": true
-      }
-    },
-    {
-      "content": "@typedef ${1:type} ${2:namePath}$0",
-      "doc": "Documents a custom type definition.",
-      "label": "typedef",
-      "matches": {
-        "@typedef": true
-      }
-    },
-    {
-      "content": "@generator$0",
-      "doc": "Indicate that a function is a generator function.",
-      "label": "generator",
-      "matches": {
-        "@generator": true
-      }
-    },
-    {
-      "content": "@arg {${1:type}} ${2:paranName} - ${3:paramDescription}$0",
-      "doc": "Provides the name, type, and description of a function parameter. Synonysm of @param and @argument.",
-      "label": "arg",
-      "matches": {
-        "@arg": true
+        "@virtual": true
       }
     },
     {
@@ -58,27 +34,43 @@
       }
     },
     {
-      "content": "@hideconstructor$0",
-      "doc": "Indicate that the constructor should not be displayed.",
-      "label": "hideconstructor",
+      "content": "@fileoverview ${1:some description}$0",
+      "doc": "The @file tag provides a description for a file. Use the tag in a JSDoc comment at the beginning of the file. Synonysm of @file and @overview.",
+      "label": "fileoverview",
       "matches": {
-        "@hideconstructor": true
+        "@fileoverview": true
       }
     },
     {
-      "content": "@package$0",
-      "doc": "The @package tag marks a symbol as package-private. Typically, this tag indicates that a symbol is available only to code in the same directory as the source file for this symbol.",
-      "label": "package",
+      "content": "@variation ${1:variationNumber}$0",
+      "doc": "Distinguish different objects with the same name.",
+      "label": "variation",
       "matches": {
-        "@package": true
+        "@variation": true
       }
     },
     {
-      "content": "@override$0",
-      "doc": "The @override tag indicates that a symbol overrides a symbol with the same name in a parent class.",
-      "label": "override",
+      "content": "@param {${1:type}} ${2:paranName} - ${3:paramDescription}$0",
+      "doc": "Provides the name, type, and description of a function parameter. Synonysm of @arg and @argument.",
+      "label": "param",
       "matches": {
-        "@override": true
+        "@param": true
+      }
+    },
+    {
+      "content": "@overview ${1:some description}$0",
+      "doc": "The @file tag provides a description for a file. Use the tag in a JSDoc comment at the beginning of the file. Synonysm of @file and @fileoverview",
+      "label": "overview",
+      "matches": {
+        "@overview": true
+      }
+    },
+    {
+      "content": "@generator$0",
+      "doc": "Indicate that a function is a generator function.",
+      "label": "generator",
+      "matches": {
+        "@generator": true
       }
     },
     {
@@ -90,123 +82,11 @@
       }
     },
     {
-      "content": "@implements$0",
-      "doc": "This symbol implements an interface.",
-      "label": "implements",
-      "matches": {
-        "@implements": true
-      }
-    },
-    {
-      "content": "@inheritdoc$0",
-      "doc": "Indicate that a symbol should inherit its parent's documentation.",
-      "label": "inheritdoc",
-      "matches": {
-        "@inheritdoc": true
-      }
-    },
-    {
-      "content": "@alias ${1:name}$0",
-      "doc": "Treat a member as if it had a different name.",
-      "label": "alias",
-      "matches": {
-        "@alias": true
-      }
-    },
-    {
-      "content": "@private$0",
-      "doc": "Indicate this symbol is meant to be private.",
-      "label": "private",
-      "matches": {
-        "@private": true
-      }
-    },
-    {
-      "content": "@argument {${1:type}} ${2:paranName} - ${3:paramDescription}$0",
-      "doc": "Provides the name, type, and description of a function parameter. Synonysm of @param and @arg.",
-      "label": "argument",
-      "matches": {
-        "@argument": true
-      }
-    },
-    {
       "content": "@default$0",
       "doc": "The @default tag allows you to document the assigned value of a symbol. You can supply this tag with a value yourself or you can allow JSDoc to automatically document the value from the source code -- only possible when the documented symbol is being assigned a single, simple value that is either: a string, a number, a boolean or null. Synonysm of @defaultvalue.",
       "label": "default",
       "matches": {
         "@default": true
-      }
-    },
-    {
-      "content": "@module ${1:myModule}$0",
-      "doc": "Document a JavaScript module.",
-      "label": "module",
-      "matches": {
-        "@module": true
-      }
-    },
-    {
-      "content": "@copyright ${1:some copyright text}$0",
-      "doc": "Document some copyright information.",
-      "label": "copyright",
-      "matches": {
-        "@copyright": true
-      }
-    },
-    {
-      "content": "@return ${1:type} ${2:description}$0",
-      "doc": "Documents the value a function returns. Synonysm of @returns.",
-      "label": "return",
-      "matches": {
-        "@return": true
-      }
-    },
-    {
-      "content": "@class$0",
-      "doc": "This function is intended to be called with the \"new\" keyword. Synonysm of @constructor.",
-      "label": "class",
-      "matches": {
-        "@class": true
-      }
-    },
-    {
-      "content": "@protected$0",
-      "doc": "The @protected tag marks a symbol as protected. Typically, this tag indicates that a symbol is only available, or should only be used, within the current module.",
-      "label": "protected",
-      "matches": {
-        "@protected": true
-      }
-    },
-    {
-      "content": "@lends ${1:namePath}$0",
-      "doc": "The @lends tag allows you to document all the members of an object literal as if they were members of a symbol with the given name. You might want to do this if you are passing an object literal into a function that creates a named class from its members.",
-      "label": "lends",
-      "matches": {
-        "@lends": true
-      }
-    },
-    {
-      "content": "@public$0",
-      "doc": "Indicated this symbol is meant to be public.",
-      "label": "public",
-      "matches": {
-        "@publilc": true
-      }
-    },
-    {
-      "content": "@access ${1:private}$0",
-      "doc": "Specify the access level of this member (private, package-private, public, or protected).",
-      "label": "access",
-      "matches": {
-        "@access": true
-      }
-    },
-    {
-      "content": "@listens ${1:eventName}$0",
-      "doc": "List the events that a symbol listens for.",
-      "label": "listens",
-      "matches": {
-        "@listens": true
       }
     },
     {
@@ -234,35 +114,51 @@
       }
     },
     {
-      "content": "@returns ${1:type} ${2:description}$0",
-      "doc": "Documents the value a function returns. Synonysm of @return.",
-      "label": "returns",
+      "content": "@hideconstructor$0",
+      "doc": "Indicate that the constructor should not be displayed.",
+      "label": "hideconstructor",
       "matches": {
-        "@returns": true
+        "@hideconstructor": true
       }
     },
     {
-      "content": "@constructor$0",
-      "doc": "This function is intended to be called with the \"new\" keyword. Synonysm of @class.",
-      "label": "constructor",
+      "content": "@linkcode ${1:namePathOrUrl}$0",
+      "doc": "Link to another item in the documentation. Synonysm of @link and @linkplain.",
+      "label": "linkcode",
       "matches": {
-        "@constructor": true
+        "@linkcode": true
       }
     },
     {
-      "content": "@augments ${1:namepath}$0",
-      "doc": "The @augments or @extends tag indicates that a symbol inherits from, and potentially adds to, a parent symbol. You can use this tag to document both class-based and prototype-based inheritance. Synonysm of @extends.",
-      "label": "augments",
+      "content": "/**\n * ${1:Comment.}$0\n */",
+      "doc": "A simpple JSDoc comment.",
+      "label": "comment simple",
       "matches": {
-        "@augments": true
+        "/*": true
       }
     },
     {
-      "content": "@memberof ${1:parentNamePath}$0",
-      "doc": "This symbol belongs to a parent symbol.",
-      "label": "memberof",
+      "content": "@property {${1:type}} ${2:propertyName.something} - ${3:propertyDescription}$0",
+      "doc": "The @property tag is a way to easily document a list of static properties of a class, namespace or other object.",
+      "label": "property",
       "matches": {
-        "@memberof": true
+        "@property": true
+      }
+    },
+    {
+      "content": "@implements$0",
+      "doc": "This symbol implements an interface.",
+      "label": "implements",
+      "matches": {
+        "@implements": true
+      }
+    },
+    {
+      "content": "@extends ${1:namepath}$0",
+      "doc": "The @augments or @extends tag indicates that a symbol inherits from, and potentially adds to, a parent symbol. You can use this tag to document both class-based and prototype-based inheritance. Synonysm of @augments.",
+      "label": "extends",
+      "matches": {
+        "@extends": true
       }
     },
     {
@@ -274,35 +170,27 @@
       }
     },
     {
-      "content": "@mixes ${1:OtherObjectPath}$0",
-      "doc": "This object mixes in all the members from another object.",
-      "label": "mixes",
+      "content": "@private$0",
+      "doc": "Indicate this symbol is meant to be private.",
+      "label": "private",
       "matches": {
-        "@mixes": true
+        "@private": true
       }
     },
     {
-      "content": "@author ${1:author_name} <${2:author_email}$0>",
-      "doc": "Identify the author of an item.",
-      "label": "author",
+      "content": "@inner$0",
+      "doc": "Using the @inner tag will mark a symbol as an inner member of its parent symbol. This means it can be referred to by \"Parent~Child\".",
+      "label": "inner",
       "matches": {
-        "@author": true
+        "@inner": true
       }
     },
     {
-      "content": "@event ${1:class name}#[event]:${2:eventName}$0",
-      "doc": "Provide an example of how to use a documented item. The text that follows this tag will be displayed as highlighted code.",
-      "label": "event",
+      "content": "@readonly$0",
+      "doc": "Indicates this symbol is meant to be read-only.",
+      "label": "readonly",
       "matches": {
-        "@event": true
-      }
-    },
-    {
-      "content": "@borrows ${1:that namepath} as ${2:this namepath}$0",
-      "doc": "The @borrows tag allows you to add documentation for another symbol to your documentation. This tag would be useful if you had more than one way to reference a function, but you didn't want to duplicate the same documentation in two places.",
-      "label": "borrows",
-      "matches": {
-        "@borrows": true
+        "@readonly": true
       }
     },
     {
@@ -314,11 +202,11 @@
       }
     },
     {
-      "content": "@deprecated$0",
-      "doc": "Document that this is no longer the preferred way.",
-      "label": "deprecated",
+      "content": "@module ${1:myModule}$0",
+      "doc": "Document a JavaScript module.",
+      "label": "module",
       "matches": {
-        "@deprecated": true
+        "@module": true
       }
     },
     {
@@ -338,11 +226,35 @@
       }
     },
     {
-      "content": "@throws ${1:errorName} ${2:description}$0",
-      "doc": "Describe what errors can be thrown. Synonysm of @exception.",
-      "label": "throws",
+      "content": "@description ${1:some description}$0",
+      "doc": "The @description tag allows you to provide a general description of the symbol you are documenting. The description may include HTML markup. It may also include Markdown formatting if the Markdown plugin is enabled. Synonysm of @desc.",
+      "label": "description",
       "matches": {
-        "@throws": true
+        "@description": true
+      }
+    },
+    {
+      "content": "@name ${1:namePath}$0",
+      "doc": "The @name tag forces JSDoc to associate the remainder of the JSDoc comment with the given name, ignoring all surrounding code. This tag is best used in \"virtual comments\" for symbols that are not readily visible in the code, such as methods that are generated at runtime.",
+      "label": "name",
+      "matches": {
+        "@name": true
+      }
+    },
+    {
+      "content": "@listens ${1:eventName}$0",
+      "doc": "List the events that a symbol listens for.",
+      "label": "listens",
+      "matches": {
+        "@listens": true
+      }
+    },
+    {
+      "content": "@class$0",
+      "doc": "This function is intended to be called with the \"new\" keyword. Synonysm of @constructor.",
+      "label": "class",
+      "matches": {
+        "@class": true
       }
     },
     {
@@ -354,35 +266,51 @@
       }
     },
     {
-      "content": "@func$0",
-      "doc": "This marks an object as being a function, even though it may not appear to be one to the parser. Synonysm of @function and @method.",
-      "label": "func",
+      "content": "@arg {${1:type}} ${2:paranName} - ${3:paramDescription}$0",
+      "doc": "Provides the name, type, and description of a function parameter. Synonysm of @param and @argument.",
+      "label": "arg",
       "matches": {
-        "@func": true
+        "@arg": true
       }
     },
     {
-      "content": "@classdesc ${1:some description}$0",
-      "doc": "Use the following text to describe the entire class.",
-      "label": "classdesc",
+      "content": "@copyright ${1:some copyright text}$0",
+      "doc": "Document some copyright information.",
+      "label": "copyright",
       "matches": {
-        "@classdesc": true
+        "@copyright": true
       }
     },
     {
-      "content": "@virlual$0",
-      "doc": "This member must be implemented (or overridden) by the inheritor. Synonysm of @abstract.",
-      "label": "virtual",
+      "content": "@alias ${1:name}$0",
+      "doc": "Treat a member as if it had a different name.",
+      "label": "alias",
       "matches": {
-        "@virtual": true
+        "@alias": true
       }
     },
     {
-      "content": "@constant$0",
-      "doc": "Document an object as a constant. Synonysm of @const.",
-      "label": "constant",
+      "content": "@access ${1:private}$0",
+      "doc": "Specify the access level of this member (private, package-private, public, or protected).",
+      "label": "access",
       "matches": {
-        "@constant": true
+        "@access": true
+      }
+    },
+    {
+      "content": "@memberof ${1:parentNamePath}$0",
+      "doc": "This symbol belongs to a parent symbol.",
+      "label": "memberof",
+      "matches": {
+        "@memberof": true
+      }
+    },
+    {
+      "content": "@mixes ${1:OtherObjectPath}$0",
+      "doc": "This object mixes in all the members from another object.",
+      "label": "mixes",
+      "matches": {
+        "@mixes": true
       }
     },
     {
@@ -394,83 +322,19 @@
       }
     },
     {
-      "content": "@constructs$0",
-      "doc": "This function member will be the constructor for the previous class.",
-      "label": "constructs",
+      "content": "@augments ${1:namepath}$0",
+      "doc": "The @augments or @extends tag indicates that a symbol inherits from, and potentially adds to, a parent symbol. You can use this tag to document both class-based and prototype-based inheritance. Synonysm of @extends.",
+      "label": "augments",
       "matches": {
-        "@constructs": true
+        "@augments": true
       }
     },
     {
-      "content": "/**\n * ${1:Comment.}$0\n */",
-      "doc": "A simpple JSDoc comment.",
-      "label": "comment simple",
+      "content": "@author ${1:author_name} <${2:author_email}$0>",
+      "doc": "Identify the author of an item.",
+      "label": "author",
       "matches": {
-        "/*": true
-      }
-    },
-    {
-      "content": "@linkplain ${1:namePathOrUrl}$0",
-      "doc": "Link to another item in the documentation. Synonysm of @link and @linkcode.",
-      "label": "linkplain",
-      "matches": {
-        "@linkplain": true
-      }
-    },
-    {
-      "content": "@linkcode ${1:namePathOrUrl}$0",
-      "doc": "Link to another item in the documentation. Synonysm of @link and @linkplain.",
-      "label": "linkcode",
-      "matches": {
-        "@linkcode": true
-      }
-    },
-    {
-      "content": "@version ${1:versionTag}$0",
-      "doc": "Documents the version number of an item.",
-      "label": "version",
-      "matches": {
-        "@version": true
-      }
-    },
-    {
-      "content": "@variation ${1:variationNumber}$0",
-      "doc": "Distinguish different objects with the same name.",
-      "label": "variation",
-      "matches": {
-        "@variation": true
-      }
-    },
-    {
-      "content": "@defaultvalue$0",
-      "doc": "The @default tag allows you to document the assigned value of a symbol. You can supply this tag with a value yourself or you can allow JSDoc to automatically document the value from the source code -- only possible when the documented symbol is being assigned a single, simple value that is either: a string, a number, a boolean or null. Synonysm of @default.",
-      "label": "defaultvalue",
-      "matches": {
-        "@defaultvalue": true
-      }
-    },
-    {
-      "content": "@requires ${1:moduleName}$0",
-      "doc": "Indicates a required module.",
-      "label": "requires",
-      "matches": {
-        "@requires": true
-      }
-    },
-    {
-      "content": "@type ${1:typeName}$0",
-      "doc": "Documents the type of the object.",
-      "label": "type",
-      "matches": {
-        "@type": true
-      }
-    },
-    {
-      "content": "@function$0",
-      "doc": "This marks an object as being a function, even though it may not appear to be one to the parser. Synonysm of @func and @method.",
-      "label": "function",
-      "matches": {
-        "@function": true
+        "@author": true
       }
     },
     {
@@ -482,107 +346,11 @@
       }
     },
     {
-      "content": "@inner$0",
-      "doc": "Using the @inner tag will mark a symbol as an inner member of its parent symbol. This means it can be referred to by \"Parent~Child\".",
-      "label": "inner",
+      "content": "@borrows ${1:that namepath} as ${2:this namepath}$0",
+      "doc": "The @borrows tag allows you to add documentation for another symbol to your documentation. This tag would be useful if you had more than one way to reference a function, but you didn't want to duplicate the same documentation in two places.",
+      "label": "borrows",
       "matches": {
-        "@inner": true
-      }
-    },
-    {
-      "content": "@external ${1:nameOfExternal}$0",
-      "doc": "The @external tag identifies a class, namespace, or module that is defined outside of the current package. Synonysm of @host.",
-      "label": "external",
-      "matches": {
-        "@external": true
-      }
-    },
-    {
-      "content": "@summary ${1:summary goes here}$0",
-      "doc": "A shorter version of the full description.",
-      "label": "summary",
-      "matches": {
-        "@summary": true
-      }
-    },
-    {
-      "content": "@param {${1:type}} ${2:paranName} - ${3:paramDescription}$0",
-      "doc": "Provides the name, type, and description of a function parameter. Synonysm of @arg and @argument.",
-      "label": "param",
-      "matches": {
-        "@param": true
-      }
-    },
-    {
-      "content": "@see ${1:text}$0",
-      "doc": "Refer to some other documentation for more information. It accepts text or {@link foobar}.",
-      "label": "see",
-      "matches": {
-        "@see": true
-      }
-    },
-    {
-      "content": "@host ${1:nameOfExternal}$0",
-      "doc": "The @external tag identifies a class, namespace, or module that is defined outside of the current package. Synonysm of @external.",
-      "label": "host",
-      "matches": {
-        "@host": true
-      }
-    },
-    {
-      "content": "@since ${1:version}$0",
-      "doc": "Version in which this symbol was added.",
-      "label": "since",
-      "matches": {
-        "@since": true
-      }
-    },
-    {
-      "content": "@readonly$0",
-      "doc": "Indicates this symbol is meant to be read-only.",
-      "label": "readonly",
-      "matches": {
-        "@readonly": true
-      }
-    },
-    {
-      "content": "@property {${1:type}} ${2:propertyName.something} - ${3:propertyDescription}$0",
-      "doc": "The @property tag is a way to easily document a list of static properties of a class, namespace or other object.",
-      "label": "property",
-      "matches": {
-        "@property": true
-      }
-    },
-    {
-      "content": "@this ${1:namePath}$0",
-      "doc": "The @this tag indicates what the this keyword refers to when used within another symbol.",
-      "label": "this",
-      "matches": {
-        "@this": true
-      }
-    },
-    {
-      "content": "@var {type}$0",
-      "doc": "Document a member. Synonysm or @member.",
-      "label": "var",
-      "matches": {
-        "@var": true
-      }
-    },
-    {
-      "content": "@callback ${1:namepath}$0",
-      "doc": "The @callback tag provides information about a callback function that can be passed to other functions, including the callback's parameters and return value. You can include any of the tags that you can provide for a @method.",
-      "label": "callback",
-      "matches": {
-        "@callback": true
-      }
-    },
-    {
-      "content": "@fileoverview ${1:some description}$0",
-      "doc": "The @file tag provides a description for a file. Use the tag in a JSDoc comment at the beginning of the file. Synonysm of @file and @overview.",
-      "label": "fileoverview",
-      "matches": {
-        "@fileoverview": true
+        "@borrows": true
       }
     },
     {
@@ -594,91 +362,35 @@
       }
     },
     {
-      "content": "@extends ${1:namepath}$0",
-      "doc": "The @augments or @extends tag indicates that a symbol inherits from, and potentially adds to, a parent symbol. You can use this tag to document both class-based and prototype-based inheritance. Synonysm of @augments.",
-      "label": "extends",
+      "content": "@summary ${1:summary goes here}$0",
+      "doc": "A shorter version of the full description.",
+      "label": "summary",
       "matches": {
-        "@extends": true
+        "@summary": true
       }
     },
     {
-      "content": "@ignore$0",
-      "doc": "Omit a symbol from the documentation.",
-      "label": "ignore",
+      "content": "@linkplain ${1:namePathOrUrl}$0",
+      "doc": "Link to another item in the documentation. Synonysm of @link and @linkcode.",
+      "label": "linkplain",
       "matches": {
-        "@ignore": true
+        "@linkplain": true
       }
     },
     {
-      "content": "@overview ${1:some description}$0",
-      "doc": "The @file tag provides a description for a file. Use the tag in a JSDoc comment at the beginning of the file. Synonysm of @file and @fileoverview",
-      "label": "overview",
+      "content": "@external ${1:nameOfExternal}$0",
+      "doc": "The @external tag identifies a class, namespace, or module that is defined outside of the current package. Synonysm of @host.",
+      "label": "external",
       "matches": {
-        "@overview": true
+        "@external": true
       }
     },
     {
-      "content": "@file ${1:some description}$0",
-      "doc": "The @file tag provides a description for a file. Use the tag in a JSDoc comment at the beginning of the file. Synonysm of @fileoverview and @overview.",
-      "label": "file",
+      "content": "@version ${1:versionTag}$0",
+      "doc": "Documents the version number of an item.",
+      "label": "version",
       "matches": {
-        "@file": true
-      }
-    },
-    {
-      "content": "@exports ${1:moduleName}$0",
-      "doc": "Use the @exports tag when documenting JavaScript modules that export anything other than the \"exports\" object or the \"module.exports\" property.",
-      "label": "exports",
-      "matches": {
-        "@exports": true
-      }
-    },
-    {
-      "content": "@desc ${1:some description}$0",
-      "doc": "The @description tag allows you to provide a general description of the symbol you are documenting. The description may include HTML markup. It may also include Markdown formatting if the Markdown plugin is enabled. Synonysm of @description.",
-      "label": "desc",
-      "matches": {
-        "@desc": true
-      }
-    },
-    {
-      "content": "@fires ${1:className}#[event:]${2:eventName}$0",
-      "doc": "Describe the events this method may fire. Synonysm of @emits.",
-      "label": "fires",
-      "matches": {
-        "@fires": true
-      }
-    },
-    {
-      "content": "@example ${1:some example}$0",
-      "doc": "The @event tag allows you to document an event that can be fired. A typical event is represented by an object with a defined set of properties.",
-      "label": "example",
-      "matches": {
-        "@example": true
-      }
-    },
-    {
-      "content": "@kind ${1:kindName}$0",
-      "doc": "What kind of symbol is this. Possible values are: class, constant, event, external, file, function, member, mixin, module, namespace, typedef.",
-      "label": "kind",
-      "matches": {
-        "@kind": true
-      }
-    },
-    {
-      "content": "@instance$0",
-      "doc": "Using the @instance tag will mark a symbol as an instance member of its parent symbol. This means it can be referred to by \"Parent#Child\".",
-      "label": "instance",
-      "matches": {
-        "@instance": true
-      }
-    },
-    {
-      "content": "@emits ${1:className}#[event:]${2:eventName}$0",
-      "doc": "Describe the events this method may fire. Synonysm of @fires.",
-      "label": "emits",
-      "matches": {
-        "@emits": true
+        "@version": true
       }
     },
     {
@@ -690,6 +402,294 @@
       }
     },
     {
+      "content": "@protected$0",
+      "doc": "The @protected tag marks a symbol as protected. Typically, this tag indicates that a symbol is only available, or should only be used, within the current module.",
+      "label": "protected",
+      "matches": {
+        "@protected": true
+      }
+    },
+    {
+      "content": "@typedef ${1:type} ${2:namePath}$0",
+      "doc": "Documents a custom type definition.",
+      "label": "typedef",
+      "matches": {
+        "@typedef": true
+      }
+    },
+    {
+      "content": "@file ${1:some description}$0",
+      "doc": "The @file tag provides a description for a file. Use the tag in a JSDoc comment at the beginning of the file. Synonysm of @fileoverview and @overview.",
+      "label": "file",
+      "matches": {
+        "@file": true
+      }
+    },
+    {
+      "content": "@function$0",
+      "doc": "This marks an object as being a function, even though it may not appear to be one to the parser. Synonysm of @func and @method.",
+      "label": "function",
+      "matches": {
+        "@function": true
+      }
+    },
+    {
+      "content": "@func$0",
+      "doc": "This marks an object as being a function, even though it may not appear to be one to the parser. Synonysm of @function and @method.",
+      "label": "func",
+      "matches": {
+        "@func": true
+      }
+    },
+    {
+      "content": "@var {type}$0",
+      "doc": "Document a member. Synonysm or @member.",
+      "label": "var",
+      "matches": {
+        "@var": true
+      }
+    },
+    {
+      "content": "@license ${1:identifier}$0",
+      "doc": "Identify the license that applies to this code.",
+      "label": "license",
+      "matches": {
+        "@license": true
+      }
+    },
+    {
+      "content": "@inheritdoc$0",
+      "doc": "Indicate that a symbol should inherit its parent's documentation.",
+      "label": "inheritdoc",
+      "matches": {
+        "@inheritdoc": true
+      }
+    },
+    {
+      "content": "@desc ${1:some description}$0",
+      "doc": "The @description tag allows you to provide a general description of the symbol you are documenting. The description may include HTML markup. It may also include Markdown formatting if the Markdown plugin is enabled. Synonysm of @description.",
+      "label": "desc",
+      "matches": {
+        "@desc": true
+      }
+    },
+    {
+      "content": "@constructs$0",
+      "doc": "This function member will be the constructor for the previous class.",
+      "label": "constructs",
+      "matches": {
+        "@constructs": true
+      }
+    },
+    {
+      "content": "@requires ${1:moduleName}$0",
+      "doc": "Indicates a required module.",
+      "label": "requires",
+      "matches": {
+        "@requires": true
+      }
+    },
+    {
+      "content": "@see ${1:text}$0",
+      "doc": "Refer to some other documentation for more information. It accepts text or {@link foobar}.",
+      "label": "see",
+      "matches": {
+        "@see": true
+      }
+    },
+    {
+      "content": "@return ${1:type} ${2:description}$0",
+      "doc": "Documents the value a function returns. Synonysm of @returns.",
+      "label": "return",
+      "matches": {
+        "@return": true
+      }
+    },
+    {
+      "content": "@public$0",
+      "doc": "Indicated this symbol is meant to be public.",
+      "label": "public",
+      "matches": {
+        "@publilc": true
+      }
+    },
+    {
+      "content": "@instance$0",
+      "doc": "Using the @instance tag will mark a symbol as an instance member of its parent symbol. This means it can be referred to by \"Parent#Child\".",
+      "label": "instance",
+      "matches": {
+        "@instance": true
+      }
+    },
+    {
+      "content": "@returns ${1:type} ${2:description}$0",
+      "doc": "Documents the value a function returns. Synonysm of @return.",
+      "label": "returns",
+      "matches": {
+        "@returns": true
+      }
+    },
+    {
+      "content": "@emits ${1:className}#[event:]${2:eventName}$0",
+      "doc": "Describe the events this method may fire. Synonysm of @fires.",
+      "label": "emits",
+      "matches": {
+        "@emits": true
+      }
+    },
+    {
+      "content": "@this ${1:namePath}$0",
+      "doc": "The @this tag indicates what the this keyword refers to when used within another symbol.",
+      "label": "this",
+      "matches": {
+        "@this": true
+      }
+    },
+    {
+      "content": "@defaultvalue$0",
+      "doc": "The @default tag allows you to document the assigned value of a symbol. You can supply this tag with a value yourself or you can allow JSDoc to automatically document the value from the source code -- only possible when the documented symbol is being assigned a single, simple value that is either: a string, a number, a boolean or null. Synonysm of @default.",
+      "label": "defaultvalue",
+      "matches": {
+        "@defaultvalue": true
+      }
+    },
+    {
+      "content": "@classdesc ${1:some description}$0",
+      "doc": "Use the following text to describe the entire class.",
+      "label": "classdesc",
+      "matches": {
+        "@classdesc": true
+      }
+    },
+    {
+      "content": "@since ${1:version}$0",
+      "doc": "Version in which this symbol was added.",
+      "label": "since",
+      "matches": {
+        "@since": true
+      }
+    },
+    {
+      "content": "@override$0",
+      "doc": "The @override tag indicates that a symbol overrides a symbol with the same name in a parent class.",
+      "label": "override",
+      "matches": {
+        "@override": true
+      }
+    },
+    {
+      "content": "@lends ${1:namePath}$0",
+      "doc": "The @lends tag allows you to document all the members of an object literal as if they were members of a symbol with the given name. You might want to do this if you are passing an object literal into a function that creates a named class from its members.",
+      "label": "lends",
+      "matches": {
+        "@lends": true
+      }
+    },
+    {
+      "content": "@fires ${1:className}#[event:]${2:eventName}$0",
+      "doc": "Describe the events this method may fire. Synonysm of @emits.",
+      "label": "fires",
+      "matches": {
+        "@fires": true
+      }
+    },
+    {
+      "content": "@type ${1:typeName}$0",
+      "doc": "Documents the type of the object.",
+      "label": "type",
+      "matches": {
+        "@type": true
+      }
+    },
+    {
+      "content": "@constructor$0",
+      "doc": "This function is intended to be called with the \"new\" keyword. Synonysm of @class.",
+      "label": "constructor",
+      "matches": {
+        "@constructor": true
+      }
+    },
+    {
+      "content": "@example ${1:some example}$0",
+      "doc": "The @event tag allows you to document an event that can be fired. A typical event is represented by an object with a defined set of properties.",
+      "label": "example",
+      "matches": {
+        "@example": true
+      }
+    },
+    {
+      "content": "@ignore$0",
+      "doc": "Omit a symbol from the documentation.",
+      "label": "ignore",
+      "matches": {
+        "@ignore": true
+      }
+    },
+    {
+      "content": "@argument {${1:type}} ${2:paranName} - ${3:paramDescription}$0",
+      "doc": "Provides the name, type, and description of a function parameter. Synonysm of @param and @arg.",
+      "label": "argument",
+      "matches": {
+        "@argument": true
+      }
+    },
+    {
+      "content": "@deprecated$0",
+      "doc": "Document that this is no longer the preferred way.",
+      "label": "deprecated",
+      "matches": {
+        "@deprecated": true
+      }
+    },
+    {
+      "content": "@kind ${1:kindName}$0",
+      "doc": "What kind of symbol is this. Possible values are: class, constant, event, external, file, function, member, mixin, module, namespace, typedef.",
+      "label": "kind",
+      "matches": {
+        "@kind": true
+      }
+    },
+    {
+      "content": "@event ${1:class name}#[event]:${2:eventName}$0",
+      "doc": "Provide an example of how to use a documented item. The text that follows this tag will be displayed as highlighted code.",
+      "label": "event",
+      "matches": {
+        "@event": true
+      }
+    },
+    {
+      "content": "@host ${1:nameOfExternal}$0",
+      "doc": "The @external tag identifies a class, namespace, or module that is defined outside of the current package. Synonysm of @external.",
+      "label": "host",
+      "matches": {
+        "@host": true
+      }
+    },
+    {
+      "content": "@throws ${1:errorName} ${2:description}$0",
+      "doc": "Describe what errors can be thrown. Synonysm of @exception.",
+      "label": "throws",
+      "matches": {
+        "@throws": true
+      }
+    },
+    {
+      "content": "@constant$0",
+      "doc": "Document an object as a constant. Synonysm of @const.",
+      "label": "constant",
+      "matches": {
+        "@constant": true
+      }
+    },
+    {
+      "content": "@callback ${1:namepath}$0",
+      "doc": "The @callback tag provides information about a callback function that can be passed to other functions, including the callback's parameters and return value. You can include any of the tags that you can provide for a @method.",
+      "label": "callback",
+      "matches": {
+        "@callback": true
+      }
+    },
+    {
       "content": "@mixin ${1:MixinName}$0",
       "doc": "Document a mixin object.",
       "label": "mixin",
@@ -698,11 +698,11 @@
       }
     },
     {
-      "content": "@name ${1:namePath}$0",
-      "doc": "The @name tag forces JSDoc to associate the remainder of the JSDoc comment with the given name, ignoring all surrounding code. This tag is best used in \"virtual comments\" for symbols that are not readily visible in the code, such as methods that are generated at runtime.",
-      "label": "name",
+      "content": "@package$0",
+      "doc": "The @package tag marks a symbol as package-private. Typically, this tag indicates that a symbol is available only to code in the same directory as the source file for this symbol.",
+      "label": "package",
       "matches": {
-        "@name": true
+        "@package": true
       }
     }
   ]

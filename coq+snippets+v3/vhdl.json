@@ -2,131 +2,19 @@
   "extends": [],
   "snippets": [
     {
-      "content": "signal ${1:signal_name} : ${2:std_logic};",
-      "doc": "Signal declaration",
-      "label": "signal",
+      "content": "${1:generate_label}: case ${2:expression} generate\n\twhen ${3:choice} =>\n\t\t$0\n\n\twhen others =>\n\t\tnull;\n\nend generate $1;",
+      "doc": "Case Generate Statement",
+      "label": "case_generate",
       "matches": {
-        "signal": true
+        "casegen": true
       }
     },
     {
-      "content": "type ${1:type_name} is (${0});",
-      "doc": "Enumeration type declaration",
-      "label": "enumeration_type",
+      "content": "constant ${1:const_name} : ${2:integer} := ${3:0};",
+      "doc": "Constant declaration with initialisation",
+      "label": "constant",
       "matches": {
-        "typeenum": true
-      }
-    },
-    {
-      "content": "entity ${1:$TM_FILENAME_BASE} is\n\tport (\n\t\t$0\n\t);\nend entity ${1:$TM_FILENAME_BASE};",
-      "doc": "Entity Declaration",
-      "label": "entity_declaration",
-      "matches": {
-        "ent": true
-      }
-    },
-    {
-      "content": "signed(${1:7} ${2|downto,to|} ${3:0})",
-      "doc": "signed Type",
-      "label": "signed",
-      "matches": {
-        "si": true
-      }
-    },
-    {
-      "content": "type ${1:type_name} is array (${2:range}) of ${3:element_type};",
-      "doc": "Array type declaration",
-      "label": "array_type",
-      "matches": {
-        "typearray": true
-      }
-    },
-    {
-      "content": "signed(${1:7} ${2|downto,to|} ${3:0}) := (others => '0');",
-      "doc": "signed Type initialised",
-      "label": "signed initialised",
-      "matches": {
-        "sii": true
-      }
-    },
-    {
-      "content": "variable ${1:var_name} : ${2:integer} := ${3:0};",
-      "doc": "Variable declaration with initialisation",
-      "label": "variable initialised",
-      "matches": {
-        "vari, variablei": true
-      }
-    },
-    {
-      "content": "architecture ${1:rtl} of ${2:$TM_FILENAME_BASE} is\n\t\nbegin\n\t\n\t$0\n\t\nend architecture ${1:rtl};",
-      "doc": "Architecture Declaration",
-      "label": "architecture_declaration",
-      "matches": {
-        "arch": true
-      }
-    },
-    {
-      "content": "unsigned(${1:7} ${2|downto,to|} ${3:0})",
-      "doc": "unsigned Type",
-      "label": "unsigned",
-      "matches": {
-        "uns": true
-      }
-    },
-    {
-      "content": "configuration ${1:rtl} of ${2:$TM_FILENAME_BASE} is\n\t\n\t$0\n\t\nend configuration ${1:rtl};",
-      "doc": "Configuration Declaration",
-      "label": "configuration_declaration",
-      "matches": {
-        "conf": true
-      }
-    },
-    {
-      "content": "unsigned(${1:7} ${2|downto,to|} ${3:0}) := (others => '0');",
-      "doc": "unsigned Type",
-      "label": "unsigned initialised",
-      "matches": {
-        "unsi": true
-      }
-    },
-    {
-      "content": "subtype ${1:subtype_name} is ${2:base_type} range ${3:0} ${4|to,downto|} ${5:7};",
-      "doc": "Subtype declaration",
-      "label": "subtype",
-      "matches": {
-        "subt": true
-      }
-    },
-    {
-      "content": "package ${1:$TM_FILENAME_BASE} is\n\t\n\t$0\n\t\nend package ${1:$TM_FILENAME_BASE};",
-      "doc": "Package Declaration",
-      "label": "package_declaration",
-      "matches": {
-        "pack": true
-      }
-    },
-    {
-      "content": "procedure ${1:proc_name}(${2:}) is\nbegin\n\t$0\nend procedure $1;",
-      "doc": "Procedure declaration",
-      "label": "procedure",
-      "matches": {
-        "procedure": true
-      }
-    },
-    {
-      "content": "package body ${1:$TM_FILENAME_BASE} is\n\t\n\t$0\n\t\nend package body ${1:$TM_FILENAME_BASE};",
-      "doc": "Package Body Declaration",
-      "label": "package_body_declaration",
-      "matches": {
-        "pack": true
-      }
-    },
-    {
-      "content": "${1:proc_name}: process\nbegin\n\t$0\nend process $1;",
-      "doc": "Testbench Process (No Sensitivity List)",
-      "label": "testbench_process",
-      "matches": {
-        "tproc, processt": true
+        "constant": true
       }
     },
     {
@@ -138,51 +26,19 @@
       }
     },
     {
-      "content": "${1:proc_name}: process(${2:sensitivity_list})\nbegin\n\t$0\nend process $1;",
-      "doc": "Combinational Process",
-      "label": "combinational_process",
+      "content": "procedure ${1:proc_name}(${2:}) is\nbegin\n\t$0\nend procedure $1;",
+      "doc": "Procedure declaration",
+      "label": "procedure",
       "matches": {
-        "cproc, processc": true
+        "procedure": true
       }
     },
     {
-      "content": "function ${1:func_name}(${2:})\n\treturn ${3:return_type} is\nbegin\n\t$0\nend function $1;",
-      "doc": "Pure function declaration",
-      "label": "function",
+      "content": "when ${1:choice} => $0",
+      "doc": "when alternative of a case statement",
+      "label": "when_in_case",
       "matches": {
-        "function, pfunc": true
-      }
-    },
-    {
-      "content": "if ${1:condition} then\n\t$0\nend if;",
-      "doc": "If Statement",
-      "label": "if",
-      "matches": {
-        "if": true
-      }
-    },
-    {
-      "content": "${1:proc_name}: process(${3:clk}, ${4:rst})\nbegin\n\tif ${4:rst} = ${5:rst_val} then\n\t\t$0\n\telsif ${2|rising_edge,falling_edge|}(${3:clk}) then\n\t\t\n\tend if;\nend process $1;",
-      "doc": "Clocked Process (Asynchronous Reset)",
-      "label": "asynchronous_reset_clocked_process",
-      "matches": {
-        "aproc, processa": true
-      }
-    },
-    {
-      "content": "while ${1:condition} loop\n\t$0\nend loop;",
-      "doc": "While Loop",
-      "label": "while loop",
-      "matches": {
-        "while": true
-      }
-    },
-    {
-      "content": "${1:proc_name}: process(${3:clk})\nbegin\n\tif ${2|rising_edge,falling_edge|}(${3:clk}) then\n\t\tif ${4:rst} = ${5:rst_val} then\n\t\t\t$0\n\t\telse\n\t\t\t\n\t\tend if;\n\tend if;\nend process $1;",
-      "doc": "Clocked Process (Synchronous Reset)",
-      "label": "synchronous_reset_clocked_process",
-      "matches": {
-        "sproc, processs": true
+        "cwhen, whenc": true
       }
     },
     {
@@ -194,19 +50,11 @@
       }
     },
     {
-      "content": "(others => (others => '1'))",
-      "doc": "Zero Others Array",
-      "label": "ones_arr",
+      "content": "${1:proc_name}: process\nbegin\n\t$0\nend process $1;",
+      "doc": "Testbench Process (No Sensitivity List)",
+      "label": "testbench_process",
       "matches": {
-        "otharr1": true
-      }
-    },
-    {
-      "content": "(others => (others => '0'))",
-      "doc": "Zero Others Array",
-      "label": "zeroes_arr",
-      "matches": {
-        "otharr": true
+        "tproc, processt": true
       }
     },
     {
@@ -218,22 +66,6 @@
       }
     },
     {
-      "content": "(others => '0')",
-      "doc": "Zero Others",
-      "label": "zeroes",
-      "matches": {
-        "oth": true
-      }
-    },
-    {
-      "content": "std_ulogic_vector(${1:7} ${2|downto,to|} ${3:0}) := (others => '0');",
-      "doc": "std_ulogic_vector Type",
-      "label": "std_ulogic_vector initialised",
-      "matches": {
-        "stduvi": true
-      }
-    },
-    {
       "content": "${1:dst} <= ${2: true_value} when ${3: condition} else ${4:false_value};",
       "doc": "When-Else assignment",
       "label": "when_else",
@@ -242,43 +74,35 @@
       }
     },
     {
-      "content": "std_ulogic_vector(${1:7} ${2|downto,to|} ${3:0})",
-      "doc": "std_ulogic_vector Type",
-      "label": "std_ulogic_vector",
+      "content": "${1:proc_name}: process(${2:sensitivity_list})\nbegin\n\t$0\nend process $1;",
+      "doc": "Combinational Process",
+      "label": "combinational_process",
       "matches": {
-        "stduv": true
+        "cproc, processc": true
       }
     },
     {
-      "content": "type ${1:type_name} is record\n\t${0}\nend record ${1:type_name};",
-      "doc": "Record type declaration",
-      "label": "record_type",
+      "content": "for ${1:loop_var} in ${2:range} loop\n\t$0\nend loop;",
+      "doc": "For Loop",
+      "label": "for",
       "matches": {
-        "typerecord": true
+        "for": true
       }
     },
     {
-      "content": "std_logic",
-      "doc": "std_logic Type",
-      "label": "std_logic",
+      "content": "function ${1:func_name}(${2:})\n\treturn ${3:return_type} is\nbegin\n\t$0\nend function $1;",
+      "doc": "Pure function declaration",
+      "label": "function",
       "matches": {
-        "std": true
+        "function, pfunc": true
       }
     },
     {
-      "content": "${1:generate_label}: case ${2:expression} generate\n\twhen ${3:choice} =>\n\t\t$0\n\n\twhen others =>\n\t\tnull;\n\nend generate $1;",
-      "doc": "Case Generate Statement",
-      "label": "case_generate",
+      "content": "${1:proc_name}: process(${3:clk}, ${4:rst})\nbegin\n\tif ${4:rst} = ${5:rst_val} then\n\t\t$0\n\telsif ${2|rising_edge,falling_edge|}(${3:clk}) then\n\t\t\n\tend if;\nend process $1;",
+      "doc": "Clocked Process (Asynchronous Reset)",
+      "label": "asynchronous_reset_clocked_process",
       "matches": {
-        "casegen": true
-      }
-    },
-    {
-      "content": "assert ${1:neg_condition} report ${2:message} severity ${3|note,warning,error,failure|};",
-      "doc": "Assertion",
-      "label": "assert",
-      "matches": {
-        "assert": true
+        "aproc, processa": true
       }
     },
     {
@@ -287,30 +111,6 @@
       "label": "if_generate",
       "matches": {
         "ifgen": true
-      }
-    },
-    {
-      "content": "std_logic := '0';",
-      "doc": "std_logic Type",
-      "label": "std_logic initialised",
-      "matches": {
-        "stdi": true
-      }
-    },
-    {
-      "content": "std_logic_vector(${1:7} ${2|downto,to|} ${3:0})",
-      "doc": "std_logic_vector Type",
-      "label": "std_logic_vector",
-      "matches": {
-        "stdv": true
-      }
-    },
-    {
-      "content": "case ${1:expression} is\n\twhen ${2:choice} =>\n\t\t$0\n\n\twhen others =>\n\t\t\n\nend case;",
-      "doc": "Case Statement",
-      "label": "case",
-      "matches": {
-        "case": true
       }
     },
     {
@@ -330,19 +130,19 @@
       }
     },
     {
-      "content": "std_logic_vector(${1:7} ${2|downto,to|} ${3:0}) := (others => '0');",
-      "doc": "std_logic_vector Type",
-      "label": "std_logic_vector initialised",
+      "content": "${1:proc_name}: process(${3:clk})\nbegin\n\tif ${2|rising_edge,falling_edge|}(${3:clk}) then\n\t\tif ${4:rst} = ${5:rst_val} then\n\t\t\t$0\n\t\telse\n\t\t\t\n\t\tend if;\n\tend if;\nend process $1;",
+      "doc": "Clocked Process (Synchronous Reset)",
+      "label": "synchronous_reset_clocked_process",
       "matches": {
-        "stdvi": true
+        "sproc, processs": true
       }
     },
     {
-      "content": "for ${1:loop_var} in ${2:range} loop\n\t$0\nend loop;",
-      "doc": "For Loop",
-      "label": "for",
+      "content": "std_logic := '0';",
+      "doc": "std_logic Type",
+      "label": "std_logic initialised",
       "matches": {
-        "for": true
+        "stdi": true
       }
     },
     {
@@ -362,11 +162,147 @@
       }
     },
     {
-      "content": "constant ${1:const_name} : ${2:integer} := ${3:0};",
-      "doc": "Constant declaration with initialisation",
-      "label": "constant",
+      "content": "type ${1:type_name} is (${0});",
+      "doc": "Enumeration type declaration",
+      "label": "enumeration_type",
       "matches": {
-        "constant": true
+        "typeenum": true
+      }
+    },
+    {
+      "content": "signal ${1:signal_name} : ${2:std_logic};",
+      "doc": "Signal declaration",
+      "label": "signal",
+      "matches": {
+        "signal": true
+      }
+    },
+    {
+      "content": "entity ${1:$TM_FILENAME_BASE} is\n\tport (\n\t\t$0\n\t);\nend entity ${1:$TM_FILENAME_BASE};",
+      "doc": "Entity Declaration",
+      "label": "entity_declaration",
+      "matches": {
+        "ent": true
+      }
+    },
+    {
+      "content": "std_ulogic_vector(${1:7} ${2|downto,to|} ${3:0})",
+      "doc": "std_ulogic_vector Type",
+      "label": "std_ulogic_vector",
+      "matches": {
+        "stduv": true
+      }
+    },
+    {
+      "content": "type ${1:type_name} is array (${2:range}) of ${3:element_type};",
+      "doc": "Array type declaration",
+      "label": "array_type",
+      "matches": {
+        "typearray": true
+      }
+    },
+    {
+      "content": "while ${1:condition} loop\n\t$0\nend loop;",
+      "doc": "While Loop",
+      "label": "while loop",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "std_ulogic_vector(${1:7} ${2|downto,to|} ${3:0}) := (others => '0');",
+      "doc": "std_ulogic_vector Type",
+      "label": "std_ulogic_vector initialised",
+      "matches": {
+        "stduvi": true
+      }
+    },
+    {
+      "content": "architecture ${1:rtl} of ${2:$TM_FILENAME_BASE} is\n\t\nbegin\n\t\n\t$0\n\t\nend architecture ${1:rtl};",
+      "doc": "Architecture Declaration",
+      "label": "architecture_declaration",
+      "matches": {
+        "arch": true
+      }
+    },
+    {
+      "content": "(others => (others => '1'))",
+      "doc": "Zero Others Array",
+      "label": "ones_arr",
+      "matches": {
+        "otharr1": true
+      }
+    },
+    {
+      "content": "signed(${1:7} ${2|downto,to|} ${3:0})",
+      "doc": "signed Type",
+      "label": "signed",
+      "matches": {
+        "si": true
+      }
+    },
+    {
+      "content": "assert ${1:neg_condition} report ${2:message} severity ${3|note,warning,error,failure|};",
+      "doc": "Assertion",
+      "label": "assert",
+      "matches": {
+        "assert": true
+      }
+    },
+    {
+      "content": "configuration ${1:rtl} of ${2:$TM_FILENAME_BASE} is\n\t\n\t$0\n\t\nend configuration ${1:rtl};",
+      "doc": "Configuration Declaration",
+      "label": "configuration_declaration",
+      "matches": {
+        "conf": true
+      }
+    },
+    {
+      "content": "subtype ${1:subtype_name} is ${2:base_type} range ${3:0} ${4|to,downto|} ${5:7};",
+      "doc": "Subtype declaration",
+      "label": "subtype",
+      "matches": {
+        "subt": true
+      }
+    },
+    {
+      "content": "case ${1:expression} is\n\twhen ${2:choice} =>\n\t\t$0\n\n\twhen others =>\n\t\t\n\nend case;",
+      "doc": "Case Statement",
+      "label": "case",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "(others => '0')",
+      "doc": "Zero Others",
+      "label": "zeroes",
+      "matches": {
+        "oth": true
+      }
+    },
+    {
+      "content": "package ${1:$TM_FILENAME_BASE} is\n\t\n\t$0\n\t\nend package ${1:$TM_FILENAME_BASE};",
+      "doc": "Package Declaration",
+      "label": "package_declaration",
+      "matches": {
+        "pack": true
+      }
+    },
+    {
+      "content": "unsigned(${1:7} ${2|downto,to|} ${3:0})",
+      "doc": "unsigned Type",
+      "label": "unsigned",
+      "matches": {
+        "uns": true
+      }
+    },
+    {
+      "content": "signed(${1:7} ${2|downto,to|} ${3:0}) := (others => '0');",
+      "doc": "signed Type initialised",
+      "label": "signed initialised",
+      "matches": {
+        "sii": true
       }
     },
     {
@@ -378,11 +314,75 @@
       }
     },
     {
-      "content": "when ${1:choice} => $0",
-      "doc": "when alternative of a case statement",
-      "label": "when_in_case",
+      "content": "package body ${1:$TM_FILENAME_BASE} is\n\t\n\t$0\n\t\nend package body ${1:$TM_FILENAME_BASE};",
+      "doc": "Package Body Declaration",
+      "label": "package_body_declaration",
       "matches": {
-        "cwhen, whenc": true
+        "pack": true
+      }
+    },
+    {
+      "content": "unsigned(${1:7} ${2|downto,to|} ${3:0}) := (others => '0');",
+      "doc": "unsigned Type",
+      "label": "unsigned initialised",
+      "matches": {
+        "unsi": true
+      }
+    },
+    {
+      "content": "std_logic_vector(${1:7} ${2|downto,to|} ${3:0}) := (others => '0');",
+      "doc": "std_logic_vector Type",
+      "label": "std_logic_vector initialised",
+      "matches": {
+        "stdvi": true
+      }
+    },
+    {
+      "content": "std_logic_vector(${1:7} ${2|downto,to|} ${3:0})",
+      "doc": "std_logic_vector Type",
+      "label": "std_logic_vector",
+      "matches": {
+        "stdv": true
+      }
+    },
+    {
+      "content": "variable ${1:var_name} : ${2:integer} := ${3:0};",
+      "doc": "Variable declaration with initialisation",
+      "label": "variable initialised",
+      "matches": {
+        "vari, variablei": true
+      }
+    },
+    {
+      "content": "std_logic",
+      "doc": "std_logic Type",
+      "label": "std_logic",
+      "matches": {
+        "std": true
+      }
+    },
+    {
+      "content": "if ${1:condition} then\n\t$0\nend if;",
+      "doc": "If Statement",
+      "label": "if",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "type ${1:type_name} is record\n\t${0}\nend record ${1:type_name};",
+      "doc": "Record type declaration",
+      "label": "record_type",
+      "matches": {
+        "typerecord": true
+      }
+    },
+    {
+      "content": "(others => (others => '0'))",
+      "doc": "Zero Others Array",
+      "label": "zeroes_arr",
+      "matches": {
+        "otharr": true
       }
     },
     {

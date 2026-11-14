@@ -2,11 +2,59 @@
   "extends": [],
   "snippets": [
     {
-      "content": "USER ${1:name}",
+      "content": "LABEL ${1:label}=\"${2:value}\"",
       "doc": "",
-      "label": "USER",
+      "label": "LABEL",
       "matches": {
-        "u": true
+        "L": true
+      }
+    },
+    {
+      "content": "FROM ${1:ubuntu}",
+      "doc": "",
+      "label": "FROM",
+      "matches": {
+        "F": true
+      }
+    },
+    {
+      "content": "# ${1:description}\n#  \n# VERSION ${2:0.1.0}\n${3}",
+      "doc": "",
+      "label": "HEAD",
+      "matches": {
+        "head": true
+      }
+    },
+    {
+      "content": "LABEL maintainer=\"${1:name}\"",
+      "doc": "",
+      "label": "Label maintainer",
+      "matches": {
+        "m": true
+      }
+    },
+    {
+      "content": "ONBUILD ${1}",
+      "doc": "",
+      "label": "ONBUILD",
+      "matches": {
+        "o": true
+      }
+    },
+    {
+      "content": "RUN ${1:command}",
+      "doc": "",
+      "label": "RUN",
+      "matches": {
+        "R": true
+      }
+    },
+    {
+      "content": "RUN echo \"deb http://archive.ubuntu.com/ubuntu ${1:precise} main universe\" > /etc/apt/sources.list; \\\napt-get update && apt-get -y upgrade; \\ \n${2}; \\\nrm -rf /var/lib/apt/lists/*",
+      "doc": "",
+      "label": "Update Packages",
+      "matches": {
+        "upd": true
       }
     },
     {
@@ -34,19 +82,11 @@
       }
     },
     {
-      "content": "RUN echo \"deb http://archive.ubuntu.com/ubuntu ${1:precise} main universe\" > /etc/apt/sources.list; \\\napt-get update && apt-get -y upgrade; \\ \n${2}; \\\nrm -rf /var/lib/apt/lists/*",
+      "content": "USER ${1:name}",
       "doc": "",
-      "label": "Update Packages",
+      "label": "USER",
       "matches": {
-        "upd": true
-      }
-    },
-    {
-      "content": "LABEL ${1:label}=\"${2:value}\"",
-      "doc": "",
-      "label": "LABEL",
-      "matches": {
-        "L": true
+        "u": true
       }
     },
     {
@@ -58,11 +98,11 @@
       }
     },
     {
-      "content": "ONBUILD ${1}",
+      "content": "VOLUME [\"${1:path}\"]",
       "doc": "",
-      "label": "ONBUILD",
+      "label": "VOLUME",
       "matches": {
-        "o": true
+        "v": true
       }
     },
     {
@@ -74,30 +114,6 @@
       }
     },
     {
-      "content": "# ${1:description}\n#  \n# VERSION ${2:0.1.0}\n${3}",
-      "doc": "",
-      "label": "HEAD",
-      "matches": {
-        "head": true
-      }
-    },
-    {
-      "content": "ADD ${1:src} ${2:dst}",
-      "doc": "",
-      "label": "ADD",
-      "matches": {
-        "a": true
-      }
-    },
-    {
-      "content": "FROM ${1:ubuntu}",
-      "doc": "",
-      "label": "FROM",
-      "matches": {
-        "F": true
-      }
-    },
-    {
       "content": "ENTRYPOINT ${1:command}",
       "doc": "",
       "label": "ENTRYPOINT",
@@ -106,27 +122,11 @@
       }
     },
     {
-      "content": "LABEL maintainer=\"${1:name}\"",
+      "content": "ADD ${1:src} ${2:dst}",
       "doc": "",
-      "label": "Label maintainer",
+      "label": "ADD",
       "matches": {
-        "m": true
-      }
-    },
-    {
-      "content": "VOLUME [\"${1:path}\"]",
-      "doc": "",
-      "label": "VOLUME",
-      "matches": {
-        "v": true
-      }
-    },
-    {
-      "content": "RUN ${1:command}",
-      "doc": "",
-      "label": "RUN",
-      "matches": {
-        "R": true
+        "a": true
       }
     }
   ]

@@ -2,30 +2,6 @@
   "extends": [],
   "snippets": [
     {
-      "content": "for $1 in $2:\n\t${3:pass}",
-      "doc": "",
-      "label": "for loop",
-      "matches": {
-        "for": true
-      }
-    },
-    {
-      "content": "func ${1:method}(${2:args}):\n\t${3:pass}",
-      "doc": "",
-      "label": "function define",
-      "matches": {
-        "func": true
-      }
-    },
-    {
-      "content": "while ${1:condition}:\n\t${2:pass}",
-      "doc": "",
-      "label": "while",
-      "matches": {
-        "while": true
-      }
-    },
-    {
       "content": "pass",
       "doc": "",
       "label": "pass statement",
@@ -34,43 +10,11 @@
       }
     },
     {
-      "content": "func _init():\n\t${1:pass}",
+      "content": "if ${1:condition}:\n\t${3:pass}\nelif ${2:condition}:\n\t${4:pass}\nelse:\n\t${5:pass}",
       "doc": "",
-      "label": "_init method of Object",
+      "label": "if elif else",
       "matches": {
-        "init": true
-      }
-    },
-    {
-      "content": "extends ${1:BaseClass}\n\n# class member variables go here, for example:\n# var a = 2\n# var b = \"textvar\"\n\nfunc _ready():\n\t# Called every time the node is added to the scene.\n\t# Initialization here\n\tpass",
-      "doc": "",
-      "label": "GDScript template",
-      "matches": {
-        "gdscript": true
-      }
-    },
-    {
-      "content": "func _process(delta):\n\t${1:pass}",
-      "doc": "",
-      "label": "_process method of Node",
-      "matches": {
-        "process": true
-      }
-    },
-    {
-      "content": "var ${1:name}${2: = }${3:}${4: setget }",
-      "doc": "",
-      "label": "define variables",
-      "matches": {
-        "var": true
-      }
-    },
-    {
-      "content": "func _input(event):\n\t${1:pass}",
-      "doc": "",
-      "label": "_input method of Node",
-      "matches": {
-        "input": true
+        "if": true
       }
     },
     {
@@ -82,14 +26,6 @@
       }
     },
     {
-      "content": "func _input_event(event):\n\t${1:pass}",
-      "doc": "",
-      "label": "_input_event method of Node",
-      "matches": {
-        "inpute": true
-      }
-    },
-    {
       "content": "print($1)",
       "doc": "",
       "label": "Print messages to console",
@@ -98,19 +34,51 @@
       }
     },
     {
-      "content": "${1:instance} is ${2:class}",
+      "content": "func ${1:method}(${2:args}):\n\t${3:pass}",
       "doc": "",
-      "label": "Is instance of a class or script",
+      "label": "function define",
       "matches": {
-        "is": true
+        "func": true
       }
     },
     {
-      "content": "func _draw():\n\t${1:pass}",
+      "content": "func _ready():\n\t${1:pass}",
       "doc": "",
-      "label": "_draw method of Node",
+      "label": "_ready method of Node",
       "matches": {
-        "draw": true
+        "ready": true
+      }
+    },
+    {
+      "content": "signal ${1:signalname}(${2:args})",
+      "doc": "",
+      "label": "signal declaration",
+      "matches": {
+        "signal": true
+      }
+    },
+    {
+      "content": "func _init():\n\t${1:pass}",
+      "doc": "",
+      "label": "_init method of Object",
+      "matches": {
+        "init": true
+      }
+    },
+    {
+      "content": "var ${1:name}${2: = }${3:}${4: setget }",
+      "doc": "",
+      "label": "define variables",
+      "matches": {
+        "var": true
+      }
+    },
+    {
+      "content": "func _process(delta):\n\t${1:pass}",
+      "doc": "",
+      "label": "_process method of Node",
+      "matches": {
+        "process": true
       }
     },
     {
@@ -122,11 +90,67 @@
       }
     },
     {
+      "content": "func _input(event):\n\t${1:pass}",
+      "doc": "",
+      "label": "_input method of Node",
+      "matches": {
+        "input": true
+      }
+    },
+    {
+      "content": "if ${1:condition}:\n\t${2:pass}",
+      "doc": "",
+      "label": "if",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "func _input_event(event):\n\t${1:pass}",
+      "doc": "",
+      "label": "_input_event method of Node",
+      "matches": {
+        "inpute": true
+      }
+    },
+    {
+      "content": "${1:instance} is ${2:class}",
+      "doc": "",
+      "label": "Is instance of a class or script",
+      "matches": {
+        "is": true
+      }
+    },
+    {
       "content": "onready var ${1:name} = get_node($2)",
       "doc": "",
       "label": "define onready variables",
       "matches": {
         "onready": true
+      }
+    },
+    {
+      "content": "func _draw():\n\t${1:pass}",
+      "doc": "",
+      "label": "_draw method of Node",
+      "matches": {
+        "draw": true
+      }
+    },
+    {
+      "content": "match ${1:expression}:\n\t${2:pattern}:\n\t\t${3}\n\t_:\n\t\t${0:default}",
+      "doc": "",
+      "label": "match",
+      "matches": {
+        "match": true
+      }
+    },
+    {
+      "content": "extends ${1:BaseClass}\n\n# class member variables go here, for example:\n# var a = 2\n# var b = \"textvar\"\n\nfunc _ready():\n\t# Called every time the node is added to the scene.\n\t# Initialization here\n\tpass",
+      "doc": "",
+      "label": "GDScript template",
+      "matches": {
+        "gdscript": true
       }
     },
     {
@@ -146,33 +170,17 @@
       }
     },
     {
-      "content": "signal ${1:signalname}(${2:args})",
+      "content": "while ${1:condition}:\n\t${2:pass}",
       "doc": "",
-      "label": "signal declaration",
+      "label": "while",
       "matches": {
-        "signal": true
+        "while": true
       }
     },
     {
-      "content": "match ${1:expression}:\n\t${2:pattern}:\n\t\t${3}\n\t_:\n\t\t${0:default}",
+      "content": "for $1 in $2:\n\t${3:pass}",
       "doc": "",
-      "label": "match",
-      "matches": {
-        "match": true
-      }
-    },
-    {
-      "content": "func _ready():\n\t${1:pass}",
-      "doc": "",
-      "label": "_ready method of Node",
-      "matches": {
-        "ready": true
-      }
-    },
-    {
-      "content": "for $1 in range(${2:start},${3:end}):\n\t${4:pass}",
-      "doc": "",
-      "label": "for range loop",
+      "label": "for loop",
       "matches": {
         "for": true
       }
@@ -186,19 +194,11 @@
       }
     },
     {
-      "content": "if ${1:condition}:\n\t${2:pass}",
+      "content": "for $1 in range(${2:start},${3:end}):\n\t${4:pass}",
       "doc": "",
-      "label": "if",
+      "label": "for range loop",
       "matches": {
-        "if": true
-      }
-    },
-    {
-      "content": "if ${1:condition}:\n\t${3:pass}\nelif ${2:condition}:\n\t${4:pass}\nelse:\n\t${5:pass}",
-      "doc": "",
-      "label": "if elif else",
-      "matches": {
-        "if": true
+        "for": true
       }
     },
     {

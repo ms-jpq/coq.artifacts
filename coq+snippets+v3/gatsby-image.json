@@ -2,14 +2,6 @@
   "extends": [],
   "snippets": [
     {
-      "content": "import ${1:Img} from \"gatsby-image/withIEPolyfill\"",
-      "doc": "",
-      "label": "gatsby-image-import-withiepolyfill",
-      "matches": {
-        "gatsby-image import withiepolyfill": true
-      }
-    },
-    {
       "content": "const {\n  ${1:queryName}: { childImageSharp: {fluid: ${2:imageFluid}}}\n} = useStaticQuery(graphql`\n  query {\n    ${1:queryName}: file(relativePath: { eq: \"${3:imagePath.png}\" }) {\n      childImageSharp {\n        fluid(maxWidth: ${4:300}) {\n          ...${5|GatsbyImageSharpFluid,GatsbyImageSharpFluid_noBase64,GatsbyImageSharpFluid_tracedSVG,GatsbyImageSharpFluid_withWebp,GatsbyImageSharpFluid_withWebp_noBase64,GatsbyImageSharpFluid_withWebp_tracedSVG|}\n        }\n      }\n    }\n  }\n`)",
       "doc": "",
       "label": "gatsby-image-usestaticquery-fluid",
@@ -31,6 +23,14 @@
       "label": "gatsby-image-import",
       "matches": {
         "gatsby-image import": true
+      }
+    },
+    {
+      "content": "import ${1:Img} from \"gatsby-image/withIEPolyfill\"",
+      "doc": "",
+      "label": "gatsby-image-import-withiepolyfill",
+      "matches": {
+        "gatsby-image import withiepolyfill": true
       }
     }
   ]

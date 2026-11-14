@@ -2,39 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "PropTypes.string.isRequired,",
-      "doc": "String prop type required",
-      "label": "prop-type-string-required",
+      "content": "${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}}.propTypes = {\n ${2:property}: ${3:PropTypes.node.isRequired},\n}",
+      "doc": "",
+      "label": "prop-type-init",
       "matches": {
-        "prop-types string required": true,
-        "ptsr": true
-      }
-    },
-    {
-      "content": "PropTypes.oneOf(['$0']),",
-      "doc": "Prop type limited to specific values by treating it as an enum",
-      "label": "prop-type-enum",
-      "matches": {
-        "prop-types enum": true,
-        "pte": true
-      }
-    },
-    {
-      "content": "PropTypes.node,",
-      "doc": "Anything that can be rendered: numbers, strings, elements or an array",
-      "label": "prop-type-node",
-      "matches": {
-        "prop-types node": true,
-        "ptnd": true
-      }
-    },
-    {
-      "content": "PropTypes.arrayOf($0),",
-      "doc": "An array of a certain type",
-      "label": "prop-type-array-of",
-      "matches": {
-        "prop-types arrayof": true,
-        "ptao": true
+        "prop-types init": true
       }
     },
     {
@@ -47,12 +19,12 @@
       }
     },
     {
-      "content": "PropTypes.arrayOf($0).isRequired,",
-      "doc": "An array of a certain type required",
-      "label": "prop-type-array-of-required",
+      "content": "PropTypes.shape({\n\t$0\n}).isRequired,",
+      "doc": "An object taking on a particular shape required",
+      "label": "prop-type-shape-required",
       "matches": {
-        "prop-types arrayof required": true,
-        "ptaor": true
+        "prop-types shape required": true,
+        "ptshr": true
       }
     },
     {
@@ -65,12 +37,12 @@
       }
     },
     {
-      "content": "PropTypes.objectOf($0),",
-      "doc": "An object with property values of a certain type",
-      "label": "prop-type-object-of",
+      "content": "PropTypes.any,",
+      "doc": "Any prop type",
+      "label": "prop-type-any",
       "matches": {
-        "prop-types objectof": true,
-        "ptoo": true
+        "prop-types any": true,
+        "ptany": true
       }
     },
     {
@@ -83,12 +55,12 @@
       }
     },
     {
-      "content": "PropTypes.objectOf($0).isRequired,",
-      "doc": "An object with property values of a certain type required",
-      "label": "prop-type-object-of-required",
+      "content": "static propTypes = {\n$0\n}",
+      "doc": "",
+      "label": "prop-type-static",
       "matches": {
-        "prop-types objectof required": true,
-        "ptoor": true
+        "prop-types static": true,
+        "ptypes": true
       }
     },
     {
@@ -101,12 +73,12 @@
       }
     },
     {
-      "content": "PropTypes.shape({\n\t$0\n}),",
-      "doc": "An object taking on a particular shape",
-      "label": "prop-type-shape",
+      "content": "PropTypes.element.isRequired,",
+      "doc": "React element prop type required",
+      "label": "prop-type-element-required",
       "matches": {
-        "prop-types shape": true,
-        "ptsh": true
+        "prop-types element required": true,
+        "ptelr": true
       }
     },
     {
@@ -119,12 +91,12 @@
       }
     },
     {
-      "content": "PropTypes.any,",
-      "doc": "Any prop type",
-      "label": "prop-type-any",
+      "content": "PropTypes.instanceOf($0),",
+      "doc": "Is an instance of a class prop type",
+      "label": "prop-type-instance-of",
       "matches": {
-        "prop-types any": true,
-        "ptany": true
+        "prop-types instanceof": true,
+        "pti": true
       }
     },
     {
@@ -137,12 +109,12 @@
       }
     },
     {
-      "content": "PropTypes.shape({\n\t$0\n}).isRequired,",
-      "doc": "An object taking on a particular shape required",
-      "label": "prop-type-shape-required",
+      "content": "PropTypes.instanceOf($0).isRequired,",
+      "doc": "Is an instance of a class prop type required",
+      "label": "prop-type-instance-of-required",
       "matches": {
-        "prop-types shape required": true,
-        "ptshr": true
+        "prop-types instanceof required": true,
+        "ptir": true
       }
     },
     {
@@ -155,12 +127,12 @@
       }
     },
     {
-      "content": "static propTypes = {\n$0\n}",
-      "doc": "",
-      "label": "prop-type-static",
+      "content": "PropTypes.oneOf(['$0']),",
+      "doc": "Prop type limited to specific values by treating it as an enum",
+      "label": "prop-type-enum",
       "matches": {
-        "prop-types static": true,
-        "ptypes": true
+        "prop-types enum": true,
+        "pte": true
       }
     },
     {
@@ -173,12 +145,12 @@
       }
     },
     {
-      "content": "PropTypes.oneOfType([\n\t$0\n]).isRequired,",
-      "doc": "An object that could be one of many types required",
-      "label": "prop-type-one-of-type-required",
+      "content": "PropTypes.oneOf(['$0']).isRequired,",
+      "doc": "Prop type limited to specific values by treating it as an enum required",
+      "label": "prop-type-enum-required",
       "matches": {
-        "prop-types oneoftype required": true,
-        "ptetr": true
+        "prop-types enum required": true,
+        "pter": true
       }
     },
     {
@@ -191,12 +163,12 @@
       }
     },
     {
-      "content": "PropTypes.oneOfType([\n\t$0\n]),",
-      "doc": "An object that could be one of many types",
-      "label": "prop-type-one-of-type",
+      "content": "PropTypes.oneOfType([\n\t$0\n]).isRequired,",
+      "doc": "An object that could be one of many types required",
+      "label": "prop-type-one-of-type-required",
       "matches": {
-        "prop-types oneoftype": true,
-        "ptet": true
+        "prop-types oneoftype required": true,
+        "ptetr": true
       }
     },
     {
@@ -209,12 +181,12 @@
       }
     },
     {
-      "content": "PropTypes.oneOf(['$0']).isRequired,",
-      "doc": "Prop type limited to specific values by treating it as an enum required",
-      "label": "prop-type-enum-required",
+      "content": "PropTypes.oneOfType([\n\t$0\n]),",
+      "doc": "An object that could be one of many types",
+      "label": "prop-type-one-of-type",
       "matches": {
-        "prop-types enum required": true,
-        "pter": true
+        "prop-types oneoftype": true,
+        "ptet": true
       }
     },
     {
@@ -227,11 +199,12 @@
       }
     },
     {
-      "content": "${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}}.propTypes = {\n ${2:property}: ${3:PropTypes.node.isRequired},\n}",
-      "doc": "",
-      "label": "prop-type-init",
+      "content": "PropTypes.arrayOf($0),",
+      "doc": "An array of a certain type",
+      "label": "prop-type-array-of",
       "matches": {
-        "prop-types init": true
+        "prop-types arrayof": true,
+        "ptao": true
       }
     },
     {
@@ -244,12 +217,12 @@
       }
     },
     {
-      "content": "PropTypes.instanceOf($0).isRequired,",
-      "doc": "Is an instance of a class prop type required",
-      "label": "prop-type-instance-of-required",
+      "content": "PropTypes.arrayOf($0).isRequired,",
+      "doc": "An array of a certain type required",
+      "label": "prop-type-array-of-required",
       "matches": {
-        "prop-types instanceof required": true,
-        "ptir": true
+        "prop-types arrayof required": true,
+        "ptaor": true
       }
     },
     {
@@ -262,12 +235,12 @@
       }
     },
     {
-      "content": "PropTypes.instanceOf($0),",
-      "doc": "Is an instance of a class prop type",
-      "label": "prop-type-instance-of",
+      "content": "PropTypes.objectOf($0),",
+      "doc": "An object with property values of a certain type",
+      "label": "prop-type-object-of",
       "matches": {
-        "prop-types instanceof": true,
-        "pti": true
+        "prop-types objectof": true,
+        "ptoo": true
       }
     },
     {
@@ -280,12 +253,39 @@
       }
     },
     {
-      "content": "PropTypes.element.isRequired,",
-      "doc": "React element prop type required",
-      "label": "prop-type-element-required",
+      "content": "PropTypes.objectOf($0).isRequired,",
+      "doc": "An object with property values of a certain type required",
+      "label": "prop-type-object-of-required",
       "matches": {
-        "prop-types element required": true,
-        "ptelr": true
+        "prop-types objectof required": true,
+        "ptoor": true
+      }
+    },
+    {
+      "content": "PropTypes.string.isRequired,",
+      "doc": "String prop type required",
+      "label": "prop-type-string-required",
+      "matches": {
+        "prop-types string required": true,
+        "ptsr": true
+      }
+    },
+    {
+      "content": "PropTypes.shape({\n\t$0\n}),",
+      "doc": "An object taking on a particular shape",
+      "label": "prop-type-shape",
+      "matches": {
+        "prop-types shape": true,
+        "ptsh": true
+      }
+    },
+    {
+      "content": "PropTypes.node,",
+      "doc": "Anything that can be rendered: numbers, strings, elements or an array",
+      "label": "prop-type-node",
+      "matches": {
+        "prop-types node": true,
+        "ptnd": true
       }
     }
   ]

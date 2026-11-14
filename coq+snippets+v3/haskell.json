@@ -2,28 +2,28 @@
   "extends": [],
   "snippets": [
     {
-      "content": "instance ${1:Class} ${2:Data} where\n\t${3:f} = ${4:undefined}$0",
-      "doc": "typeclass instance",
-      "label": "instance",
+      "content": "let ${1:x} = ${2:undefined}$0",
+      "doc": "let statement",
+      "label": "let",
       "matches": {
-        "inst": true
+        "let": true
       }
     },
     {
-      "content": "if ${1:condition} then ${2:undefined} else ${3:undefined}$0,",
-      "doc": "If inline",
-      "label": "if_inline",
+      "content": "import qualified ${1:module} as ${2:name}",
+      "doc": "Qualified import",
+      "label": "import_qualified",
       "matches": {
-        "if inline": true
+        "import qual": true
       }
     },
     {
-      "content": "\\\\${1:x} -> ${2:undefined}$0",
-      "doc": "lambda function",
-      "label": "lambda",
+      "content": "module ${1:mod} where$0",
+      "doc": "simple module",
+      "label": "module",
       "matches": {
-        "\\": true,
-        "lambda": true
+        "mod simple": true,
+        "mods": true
       }
     },
     {
@@ -35,11 +35,11 @@
       }
     },
     {
-      "content": "case ${1:expression} of\n\t${2:case1} -> ${3:result}\n\t${4:case2} -> ${5:result}$0",
-      "doc": "Case statement",
-      "label": "case",
+      "content": "instance ${1:Class} ${2:Data} where\n\t${3:f} = ${4:undefined}$0",
+      "doc": "typeclass instance",
+      "label": "instance",
       "matches": {
-        "case": true
+        "inst": true
       }
     },
     {
@@ -51,12 +51,29 @@
       }
     },
     {
-      "content": "module ${1:mod} where$0",
-      "doc": "simple module",
-      "label": "module",
+      "content": "{- $0 -}",
+      "doc": "Block Comment",
+      "label": "block_comment",
       "matches": {
-        "mod simple": true,
-        "mods": true
+        "--": true,
+        "block_comment": true,
+        "comment": true
+      }
+    },
+    {
+      "content": "case ${1:expression} of\n\t${2:case1} -> ${3:result}\n\t${4:case2} -> ${5:result}$0",
+      "doc": "Case statement",
+      "label": "case",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "if ${1:condition} then ${2:undefined} else ${3:undefined}$0,",
+      "doc": "If inline",
+      "label": "if_inline",
+      "matches": {
+        "if inline": true
       }
     },
     {
@@ -76,37 +93,20 @@
       }
     },
     {
-      "content": "let ${1:x} = ${2:undefined}$0",
-      "doc": "let statement",
-      "label": "let",
-      "matches": {
-        "let": true
-      }
-    },
-    {
-      "content": "{- $0 -}",
-      "doc": "Block Comment",
-      "label": "block_comment",
-      "matches": {
-        "--": true,
-        "block_comment": true,
-        "comment": true
-      }
-    },
-    {
-      "content": "import qualified ${1:module} as ${2:name}",
-      "doc": "Qualified import",
-      "label": "import_qualified",
-      "matches": {
-        "import qual": true
-      }
-    },
-    {
       "content": "if ${1:condition}\n\tthen ${2:undefined}\n\telse ${3:undefined}$0",
       "doc": "If block",
       "label": "if",
       "matches": {
         "if simple": true
+      }
+    },
+    {
+      "content": "\\\\${1:x} -> ${2:undefined}$0",
+      "doc": "lambda function",
+      "label": "lambda",
+      "matches": {
+        "\\": true,
+        "lambda": true
       }
     },
     {
