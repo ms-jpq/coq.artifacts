@@ -2,28 +2,20 @@
   "extends": [],
   "snippets": [
     {
-      "content": "instance ${1:Class} ${2:Data} where\n\t${3:f} = ${4:undefined}$0",
-      "doc": "typeclass instance",
-      "label": "instance",
-      "matches": {
-        "inst": true
-      }
-    },
-    {
-      "content": "if ${1:condition} then ${2:undefined} else ${3:undefined}$0,",
-      "doc": "If inline",
-      "label": "if_inline",
-      "matches": {
-        "if inline": true
-      }
-    },
-    {
       "content": "\\\\${1:x} -> ${2:undefined}$0",
       "doc": "lambda function",
       "label": "lambda",
       "matches": {
         "\\": true,
         "lambda": true
+      }
+    },
+    {
+      "content": "import qualified ${1:module} as ${2:name}",
+      "doc": "Qualified import",
+      "label": "import_qualified",
+      "matches": {
+        "import qual": true
       }
     },
     {
@@ -35,6 +27,14 @@
       }
     },
     {
+      "content": "instance ${1:Class} ${2:Data} where\n\t${3:f} = ${4:undefined}$0",
+      "doc": "typeclass instance",
+      "label": "instance",
+      "matches": {
+        "inst": true
+      }
+    },
+    {
       "content": "case ${1:expression} of\n\t${2:case1} -> ${3:result}\n\t${4:case2} -> ${5:result}$0",
       "doc": "Case statement",
       "label": "case",
@@ -43,11 +43,27 @@
       }
     },
     {
+      "content": "let ${1:x} = ${2:undefined}$0",
+      "doc": "let statement",
+      "label": "let",
+      "matches": {
+        "let": true
+      }
+    },
+    {
       "content": "{-# LANGUAGE ${1:extension} #-}$0",
       "doc": "Language extension pragma",
       "label": "pragma",
       "matches": {
         "lang": true
+      }
+    },
+    {
+      "content": "${1:x} <- ${2:undefined}$0",
+      "doc": "Monadic get",
+      "label": "get",
+      "matches": {
+        "get": true
       }
     },
     {
@@ -68,19 +84,19 @@
       }
     },
     {
-      "content": "${1:x} <- ${2:undefined}$0",
-      "doc": "Monadic get",
-      "label": "get",
+      "content": "if ${1:condition} then ${2:undefined} else ${3:undefined}$0,",
+      "doc": "If inline",
+      "label": "if_inline",
       "matches": {
-        "get": true
+        "if inline": true
       }
     },
     {
-      "content": "let ${1:x} = ${2:undefined}$0",
-      "doc": "let statement",
-      "label": "let",
+      "content": "if ${1:condition}\n\tthen ${2:undefined}\n\telse ${3:undefined}$0",
+      "doc": "If block",
+      "label": "if",
       "matches": {
-        "let": true
+        "if simple": true
       }
     },
     {
@@ -91,22 +107,6 @@
         "--": true,
         "block_comment": true,
         "comment": true
-      }
-    },
-    {
-      "content": "import qualified ${1:module} as ${2:name}",
-      "doc": "Qualified import",
-      "label": "import_qualified",
-      "matches": {
-        "import qual": true
-      }
-    },
-    {
-      "content": "if ${1:condition}\n\tthen ${2:undefined}\n\telse ${3:undefined}$0",
-      "doc": "If block",
-      "label": "if",
-      "matches": {
-        "if simple": true
       }
     },
     {

@@ -26,19 +26,11 @@
       }
     },
     {
-      "content": "from django.contrib import admin",
-      "doc": "from ... import admin",
-      "label": "iadmin",
+      "content": "admin.site.register($1)",
+      "doc": "register the model class without providing a ModelAdmin description.",
+      "label": "register",
       "matches": {
-        "iadmin": true
-      }
-    },
-    {
-      "content": "from django.contrib.admin import AdminSite",
-      "doc": "from ... import AdminSite",
-      "label": "iadminsite",
-      "matches": {
-        "iadminsite": true
+        "register": true
       }
     },
     {
@@ -50,11 +42,19 @@
       }
     },
     {
-      "content": "admin.site.register($1)",
-      "doc": "register the model class without providing a ModelAdmin description.",
-      "label": "register",
+      "content": "from django.contrib.admin import AdminSite",
+      "doc": "from ... import AdminSite",
+      "label": "iadminsite",
       "matches": {
-        "register": true
+        "iadminsite": true
+      }
+    },
+    {
+      "content": "class ${1:NAME}Filter(admin.SimpleListFilter):\n\n\ttitle = '$2'\n\tparameter_name = '$0'\n\n\tdef lookups(self, request, model_admin):\n\t\tpass\n\n\tdef queryset(self, request, queryset):\n\t\treturn queryset",
+      "doc": "Admin SimpleList Filter",
+      "label": "simplelistfilter",
+      "matches": {
+        "simplelistfilter": true
       }
     },
     {
@@ -66,11 +66,11 @@
       }
     },
     {
-      "content": "class ${1:NAME}Filter(admin.SimpleListFilter):\n\n\ttitle = '$2'\n\tparameter_name = '$0'\n\n\tdef lookups(self, request, model_admin):\n\t\tpass\n\n\tdef queryset(self, request, queryset):\n\t\treturn queryset",
-      "doc": "Admin SimpleList Filter",
-      "label": "simplelistfilter",
+      "content": "from django.contrib import admin",
+      "doc": "from ... import admin",
+      "label": "iadmin",
       "matches": {
-        "simplelistfilter": true
+        "iadmin": true
       }
     }
   ]

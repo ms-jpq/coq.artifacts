@@ -2,27 +2,51 @@
   "extends": [],
   "snippets": [
     {
-      "content": "refactor(${1:scope}): ${2:title}\n\n$0",
+      "content": "ci(${1:scope}): ${2:title}\n\n$0",
       "doc": "",
-      "label": "refactor conventional commit",
+      "label": "ci conventional commit",
       "matches": {
-        "refactor": true
+        "ci": true
       }
     },
     {
-      "content": "feat(${1:scope}): ${2:title}\n\n$0",
+      "content": "Co-authored-by: ${1:name} <${2:email}>\n$0",
       "doc": "",
-      "label": "feat conventional commit",
+      "label": "co-authored by",
       "matches": {
-        "feat": true
+        "co": true
       }
     },
     {
-      "content": "perf(${1:scope}): ${2:title}\n\n$0",
+      "content": "docs(${1:scope}): ${2:title}\n\n$0",
       "doc": "",
-      "label": "perf conventional commit",
+      "label": "docs conventional commit",
       "matches": {
-        "perf": true
+        "docs": true
+      }
+    },
+    {
+      "content": "Signed-off-by: ${1:name} <${2:email}>\n$0",
+      "doc": "",
+      "label": "signed off by",
+      "matches": {
+        "si": true
+      }
+    },
+    {
+      "content": "fix(${1:scope}): ${2:title}\n\n$0",
+      "doc": "",
+      "label": "fix conventional commit",
+      "matches": {
+        "fix": true
+      }
+    },
+    {
+      "content": "style(${1:scope}): ${2:title}\n\n$0",
+      "doc": "",
+      "label": "style conventional commit",
+      "matches": {
+        "style": true
       }
     },
     {
@@ -34,11 +58,43 @@
       }
     },
     {
+      "content": "feat(${1:scope}): ${2:title}\n\n$0",
+      "doc": "",
+      "label": "feat conventional commit",
+      "matches": {
+        "feat": true
+      }
+    },
+    {
+      "content": "${1:type}(${2:scope}): ${3:title}\n\n$0",
+      "doc": "",
+      "label": "conventional commit",
+      "matches": {
+        "cc": true
+      }
+    },
+    {
+      "content": "perf(${1:scope}): ${2:title}\n\n$0",
+      "doc": "",
+      "label": "perf conventional commit",
+      "matches": {
+        "perf": true
+      }
+    },
+    {
       "content": "build(${1:scope}): ${2:title}\n\n$0",
       "doc": "",
       "label": "build conventional commit",
       "matches": {
         "build": true
+      }
+    },
+    {
+      "content": "refactor(${1:scope}): ${2:title}\n\n$0",
+      "doc": "",
+      "label": "refactor conventional commit",
+      "matches": {
+        "refactor": true
       }
     },
     {
@@ -63,62 +119,6 @@
       "label": "breaking change conventional commit footer",
       "matches": {
         "BREAK": true
-      }
-    },
-    {
-      "content": "Signed-off-by: ${1:name} <${2:email}>\n$0",
-      "doc": "",
-      "label": "signed off by",
-      "matches": {
-        "si": true
-      }
-    },
-    {
-      "content": "ci(${1:scope}): ${2:title}\n\n$0",
-      "doc": "",
-      "label": "ci conventional commit",
-      "matches": {
-        "ci": true
-      }
-    },
-    {
-      "content": "Co-authored-by: ${1:name} <${2:email}>\n$0",
-      "doc": "",
-      "label": "co-authored by",
-      "matches": {
-        "co": true
-      }
-    },
-    {
-      "content": "fix(${1:scope}): ${2:title}\n\n$0",
-      "doc": "",
-      "label": "fix conventional commit",
-      "matches": {
-        "fix": true
-      }
-    },
-    {
-      "content": "docs(${1:scope}): ${2:title}\n\n$0",
-      "doc": "",
-      "label": "docs conventional commit",
-      "matches": {
-        "docs": true
-      }
-    },
-    {
-      "content": "${1:type}(${2:scope}): ${3:title}\n\n$0",
-      "doc": "",
-      "label": "conventional commit",
-      "matches": {
-        "cc": true
-      }
-    },
-    {
-      "content": "style(${1:scope}): ${2:title}\n\n$0",
-      "doc": "",
-      "label": "style conventional commit",
-      "matches": {
-        "style": true
       }
     },
     {

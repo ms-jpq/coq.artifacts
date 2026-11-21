@@ -2,6 +2,38 @@
   "extends": [],
   "snippets": [
     {
+      "content": "sourceformat\"${2|free,variable,fixed|}\"\n$0",
+      "doc": "",
+      "label": "sourceformat",
+      "matches": {
+        "sourceformat": true
+      }
+    },
+    {
+      "content": "jvmgen\"${2|sub|}\"\n$0",
+      "doc": "",
+      "label": "jvmgen",
+      "matches": {
+        "jvmgen": true
+      }
+    },
+    {
+      "content": "nocheck\nfastcall\nfastinit\nnolinkcheck\nlnkalign\nnoparamcountcheck\n$0",
+      "doc": "",
+      "label": "speed - native",
+      "matches": {
+        "speed": true
+      }
+    },
+    {
+      "content": "ilgen\"${2|sub|}\"\n$0",
+      "doc": "",
+      "label": "ilgen",
+      "matches": {
+        "ilgen": true
+      }
+    },
+    {
       "content": "copypath\"\\$COBCPY;$1\"\n$0",
       "doc": "",
       "label": "copypath",
@@ -15,38 +47,6 @@
       "label": "dialect",
       "matches": {
         "dialect": true
-      }
-    },
-    {
-      "content": "nocheck\nfastcall\nfastinit\nnolinkcheck\nlnkalign\nnoparamcountcheck\n$0",
-      "doc": "",
-      "label": "speed - native",
-      "matches": {
-        "speed": true
-      }
-    },
-    {
-      "content": "jvmgen\"${2|sub|}\"\n$0",
-      "doc": "",
-      "label": "jvmgen",
-      "matches": {
-        "jvmgen": true
-      }
-    },
-    {
-      "content": "sourceformat\"${2|free,variable,fixed|}\"\n$0",
-      "doc": "",
-      "label": "sourceformat",
-      "matches": {
-        "sourceformat": true
-      }
-    },
-    {
-      "content": "ilgen\"${2|sub|}\"\n$0",
-      "doc": "",
-      "label": "ilgen",
-      "matches": {
-        "ilgen": true
       }
     }
   ]

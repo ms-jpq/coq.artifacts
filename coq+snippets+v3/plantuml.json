@@ -2,6 +2,38 @@
   "extends": [],
   "snippets": [
     {
+      "content": "*-- $1",
+      "doc": "Model an object composition",
+      "label": "Composition",
+      "matches": {
+        "com": true
+      }
+    },
+    {
+      "content": "folder $1",
+      "doc": "A folder for project organization",
+      "label": "Folder",
+      "matches": {
+        "fol": true
+      }
+    },
+    {
+      "content": "database $0",
+      "doc": "Models a Database (depicted as a cylinder)",
+      "label": "Database",
+      "matches": {
+        "db": true
+      }
+    },
+    {
+      "content": "!define $1 $2",
+      "doc": "$1 is param name, $2 is param value",
+      "label": "Constant",
+      "matches": {
+        "const": true
+      }
+    },
+    {
       "content": "o.. $1 $2",
       "doc": "An object aggregates X number of other objects",
       "label": "Dotted aggregation",
@@ -10,19 +42,19 @@
       }
     },
     {
-      "content": "o-- $1 $2",
-      "doc": "An object aggregates X number of other objects",
-      "label": "Aggregation",
+      "content": "[*] -->",
+      "doc": "Describe the initial state of objects",
+      "label": "State Initial",
       "matches": {
-        "ag": true
+        "sinit": true
       }
     },
     {
-      "content": "title $0",
-      "doc": "The document title",
-      "label": "Title",
+      "content": "*.. $1",
+      "doc": "Model an object composition",
+      "label": "Dotted composition",
       "matches": {
-        "ti": true
+        "dcom": true
       }
     },
     {
@@ -31,14 +63,6 @@
       "label": "Dotted extension",
       "matches": {
         "dext": true
-      }
-    },
-    {
-      "content": "-down->",
-      "doc": "down arrow, format: box -down-> box 2 (it will point downwards to the box 2",
-      "label": "Arrow-down",
-      "matches": {
-        "down": true
       }
     },
     {
@@ -58,22 +82,6 @@
       }
     },
     {
-      "content": "-left->",
-      "doc": "left arrow, format: box -left-> box 2 (it will point left towards the box 2",
-      "label": "Arrow-left",
-      "matches": {
-        "la": true
-      }
-    },
-    {
-      "content": "!define $1 $2",
-      "doc": "$1 is param name, $2 is param value",
-      "label": "Constant",
-      "matches": {
-        "const": true
-      }
-    },
-    {
       "content": "@startuml\nAlice -> Bob\nBob -> Alice\n@enduml",
       "doc": "Simple example to get started with PlantUML",
       "label": "Example",
@@ -82,11 +90,19 @@
       }
     },
     {
-      "content": "-right->",
-      "doc": "Right arrow, format: box -right-> box 2 (it will point right towards the box 2",
-      "label": "Arrow-right",
+      "content": "package $1 {\n$2\n}",
+      "doc": "Package UML structure",
+      "label": "Package",
       "matches": {
-        "ra": true
+        "pa": true
+      }
+    },
+    {
+      "content": "\"$1\"",
+      "doc": "Describe the activity being done",
+      "label": "Activity",
+      "matches": {
+        "act": true
       }
     },
     {
@@ -106,11 +122,11 @@
       }
     },
     {
-      "content": "-up->",
-      "doc": "Up arrow, format: box -up-> box 2 (it will point upwards to the box 2",
-      "label": "Arrow-up",
+      "content": "object $1 {\n$2\n}",
+      "doc": "A default Object",
+      "label": "Object",
       "matches": {
-        "up": true
+        "ob": true
       }
     },
     {
@@ -122,6 +138,14 @@
       }
     },
     {
+      "content": "o-- $1 $2",
+      "doc": "An object aggregates X number of other objects",
+      "label": "Aggregation",
+      "matches": {
+        "ag": true
+      }
+    },
+    {
       "content": "<|-- $1",
       "doc": "Arrow for object extends another object",
       "label": "Extension",
@@ -130,11 +154,11 @@
       }
     },
     {
-      "content": "package $1 {\n$2\n}",
-      "doc": "Package UML structure",
-      "label": "Package",
+      "content": "-down->",
+      "doc": "down arrow, format: box -down-> box 2 (it will point downwards to the box 2",
+      "label": "Arrow-down",
       "matches": {
-        "pa": true
+        "down": true
       }
     },
     {
@@ -146,11 +170,27 @@
       }
     },
     {
-      "content": "object $1 {\n$2\n}",
-      "doc": "A default Object",
-      "label": "Object",
+      "content": "-left->",
+      "doc": "left arrow, format: box -left-> box 2 (it will point left towards the box 2",
+      "label": "Arrow-left",
       "matches": {
-        "ob": true
+        "la": true
+      }
+    },
+    {
+      "content": "if $1 then\n->[ok] $2\nelse\n  -->[$3]\nendif",
+      "doc": "",
+      "label": "If-else",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "-right->",
+      "doc": "Right arrow, format: box -right-> box 2 (it will point right towards the box 2",
+      "label": "Arrow-right",
+      "matches": {
+        "ra": true
       }
     },
     {
@@ -162,6 +202,14 @@
       }
     },
     {
+      "content": "-up->",
+      "doc": "Up arrow, format: box -up-> box 2 (it will point upwards to the box 2",
+      "label": "Arrow-up",
+      "matches": {
+        "up": true
+      }
+    },
+    {
       "content": "node $1",
       "doc": "A cube modelling a node in the system",
       "label": "Node",
@@ -170,11 +218,11 @@
       }
     },
     {
-      "content": "/'\n' $1\n'/",
-      "doc": "Places a block comment in the document",
-      "label": "Block comment",
+      "content": "note left : $0",
+      "doc": "A note that appears on the left",
+      "label": "Note left",
       "matches": {
-        "block": true
+        "note-lf": true
       }
     },
     {
@@ -202,6 +250,14 @@
       }
     },
     {
+      "content": "class $1 {\n$2\n}",
+      "doc": "Class Object where fields are defined: \n  public (+)\n  private (-)\n  protected (#) \n  package (~).\n\nFunctions can also be named here ex:\n  +funcName()",
+      "label": "Class",
+      "matches": {
+        "cla": true
+      }
+    },
+    {
       "content": "cloud $1",
       "doc": "Model the cloud servers",
       "label": "Cloud",
@@ -210,27 +266,27 @@
       }
     },
     {
-      "content": "[*] -->",
-      "doc": "Describe the initial state of objects",
-      "label": "State Initial",
+      "content": "title $0",
+      "doc": "The document title",
+      "label": "Title",
       "matches": {
-        "sinit": true
+        "ti": true
       }
     },
     {
-      "content": "*.. $1",
-      "doc": "Model an object composition",
-      "label": "Dotted composition",
+      "content": "--> [*]",
+      "doc": "Describe the final state of objects",
+      "label": "State Final",
       "matches": {
-        "dcom": true
+        "sfinal": true
       }
     },
     {
-      "content": "folder $1",
-      "doc": "A folder for project organization",
-      "label": "Folder",
+      "content": "$1 <-- $2",
+      "doc": "An arrow for the message return on a Sequence diagram",
+      "label": "Sequence Return",
       "matches": {
-        "fol": true
+        "ret": true
       }
     },
     {
@@ -250,75 +306,19 @@
       }
     },
     {
-      "content": "note left : $0",
-      "doc": "A note that appears on the left",
-      "label": "Note left",
-      "matches": {
-        "note-lf": true
-      }
-    },
-    {
-      "content": "database $0",
-      "doc": "Models a Database (depicted as a cylinder)",
-      "label": "Database",
-      "matches": {
-        "db": true
-      }
-    },
-    {
-      "content": "$1 <-- $2",
-      "doc": "An arrow for the message return on a Sequence diagram",
-      "label": "Sequence Return",
-      "matches": {
-        "ret": true
-      }
-    },
-    {
-      "content": "*-- $1",
-      "doc": "Model an object composition",
-      "label": "Composition",
-      "matches": {
-        "com": true
-      }
-    },
-    {
-      "content": "\"$1\"",
-      "doc": "Describe the activity being done",
-      "label": "Activity",
-      "matches": {
-        "act": true
-      }
-    },
-    {
-      "content": "--> [*]",
-      "doc": "Describe the final state of objects",
-      "label": "State Final",
-      "matches": {
-        "sfinal": true
-      }
-    },
-    {
-      "content": "class $1 {\n$2\n}",
-      "doc": "Class Object where fields are defined: \n  public (+)\n  private (-)\n  protected (#) \n  package (~).\n\nFunctions can also be named here ex:\n  +funcName()",
-      "label": "Class",
-      "matches": {
-        "cla": true
-      }
-    },
-    {
-      "content": "if $1 then\n->[ok] $2\nelse\n  -->[$3]\nendif",
-      "doc": "",
-      "label": "If-else",
-      "matches": {
-        "if": true
-      }
-    },
-    {
       "content": "actor $0",
       "doc": "An actor in the system",
       "label": "Actor",
       "matches": {
         "act": true
+      }
+    },
+    {
+      "content": "/'\n' $1\n'/",
+      "doc": "Places a block comment in the document",
+      "label": "Block comment",
+      "matches": {
+        "block": true
       }
     }
   ]

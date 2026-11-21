@@ -2,21 +2,27 @@
   "extends": [],
   "snippets": [
     {
-      "content": "let ${1:x} = ref(${2:\"hello\"})",
+      "content": "let ${1:doSomeStuff} = (${2}) => {\n\t${0}\n}",
       "doc": "",
-      "label": "mutable variable",
+      "label": "function",
       "matches": {
-        "letm": true,
-        "lm": true,
-        "mvar": true
+        "function": true
       }
     },
     {
-      "content": "@deprecated(\"${1:This field deprecated}. Use ${2:something} instead\")",
+      "content": "@genType",
       "doc": "",
-      "label": "compiler deprecation warn",
+      "label": "@genType",
       "matches": {
-        "@dw": true
+        "gt": true
+      }
+    },
+    {
+      "content": "@genType.import(\"${1:./MyMath}\")",
+      "doc": "",
+      "label": "@genType import",
+      "matches": {
+        "gti": true
       }
     },
     {
@@ -29,12 +35,11 @@
       }
     },
     {
-      "content": "%%raw(`\n\t${1://js code}\n`)",
+      "content": "@@warning(\"${1:-27}\")",
       "doc": "",
-      "label": "Top level js embed",
+      "label": "@@warning",
       "matches": {
-        "tle": true,
-        "tlr": true
+        "@w": true
       }
     },
     {
@@ -47,21 +52,20 @@
       }
     },
     {
-      "content": "%raw(\"${1://js expression}\")",
-      "doc": "",
-      "label": "expression level js embed",
-      "matches": {
-        "ele": true,
-        "elr": true,
-        "exe": true
-      }
-    },
-    {
       "content": "let ${1:name} = (${2}) => ${0}",
       "doc": "",
       "label": "inline functin",
       "matches": {
         "fn": true
+      }
+    },
+    {
+      "content": "%%raw(`\n\t${1://js code}\n`)",
+      "doc": "",
+      "label": "Top level js embed",
+      "matches": {
+        "tle": true,
+        "tlr": true
       }
     },
     {
@@ -75,12 +79,12 @@
       }
     },
     {
-      "content": "@react.component\nlet make = (${1}) => {\n\t${2}\n}",
+      "content": "Js.log(${1:something})",
       "doc": "",
-      "label": "React Component",
+      "label": "console.log",
       "matches": {
-        "@react": true,
-        "react.component": true
+        "cl": true,
+        "col": true
       }
     },
     {
@@ -93,19 +97,58 @@
       }
     },
     {
-      "content": "@as(\"${1:aria-label}\")",
+      "content": "%%debugger",
       "doc": "",
-      "label": "alias",
+      "label": "js debugger",
       "matches": {
-        "@a": true
+        "dbg": true
       }
     },
     {
-      "content": "let ${1:doSomeStuff} = (${2}) => {\n\t${0}\n}",
+      "content": "let ${1:x} = ${2:\"hello\"}",
       "doc": "",
-      "label": "function",
+      "label": "variable",
       "matches": {
-        "function": true
+        "l": true,
+        "let": true,
+        "var": true
+      }
+    },
+    {
+      "content": "Js.warn(${1:something})",
+      "doc": "",
+      "label": "console.warn",
+      "matches": {
+        "cow": true,
+        "cw": true
+      }
+    },
+    {
+      "content": "@react.component\nlet make = (${1}) => {\n\t${2}\n}",
+      "doc": "",
+      "label": "React Component",
+      "matches": {
+        "@react": true,
+        "react.component": true
+      }
+    },
+    {
+      "content": "Js.error(${1:something})",
+      "doc": "",
+      "label": "console.error",
+      "matches": {
+        "ce": true,
+        "cer": true
+      }
+    },
+    {
+      "content": "type ${1:x} = ${2:int}",
+      "doc": "",
+      "label": "type",
+      "matches": {
+        "t": true,
+        "tp": true,
+        "type": true
       }
     },
     {
@@ -134,6 +177,16 @@
       }
     },
     {
+      "content": "%raw(\"${1://js expression}\")",
+      "doc": "",
+      "label": "expression level js embed",
+      "matches": {
+        "ele": true,
+        "elr": true,
+        "exe": true
+      }
+    },
+    {
       "content": "Belt.Int.fromString(${1:10})",
       "doc": "",
       "label": "Belt. fromString",
@@ -143,20 +196,19 @@
       }
     },
     {
-      "content": "%%debugger",
+      "content": "@deprecated(\"${1:This field deprecated}. Use ${2:something} instead\")",
       "doc": "",
-      "label": "js debugger",
+      "label": "compiler deprecation warn",
       "matches": {
-        "dbg": true
+        "@dw": true
       }
     },
     {
-      "content": "Js.log(${1:something})",
+      "content": "@as(\"${1:aria-label}\")",
       "doc": "",
-      "label": "console.log",
+      "label": "alias",
       "matches": {
-        "cl": true,
-        "col": true
+        "@a": true
       }
     },
     {
@@ -169,11 +221,20 @@
       }
     },
     {
-      "content": "@@warning(\"${1:-27}\")",
+      "content": "@genType.as(\"${1:CB}\")",
       "doc": "",
-      "label": "@@warning",
+      "label": "@genType alias",
       "matches": {
-        "@w": true
+        "gta": true
+      }
+    },
+    {
+      "content": "@val external ${1:setTimeout}: ${2:(unit => unit, int) => float} = \"${3:setTimeout}\"",
+      "doc": "",
+      "label": "Global External Object",
+      "matches": {
+        "@bs": true,
+        "external": true
       }
     },
     {
@@ -182,6 +243,16 @@
       "label": "if inline",
       "matches": {
         "ifi": true
+      }
+    },
+    {
+      "content": "let ${1:x} = ref(${2:\"hello\"})",
+      "doc": "",
+      "label": "mutable variable",
+      "matches": {
+        "letm": true,
+        "lm": true,
+        "mvar": true
       }
     },
     {
@@ -201,11 +272,11 @@
       }
     },
     {
-      "content": "@genType.import(\"${1:./MyMath}\")",
+      "content": "module ${1:Name} = {\n\t${2:// Module contents}\n}",
       "doc": "",
-      "label": "@genType import",
+      "label": "Module",
       "matches": {
-        "gti": true
+        "module": true
       }
     },
     {
@@ -214,95 +285,6 @@
       "label": "Object destructuring",
       "matches": {
         "dob": true
-      }
-    },
-    {
-      "content": "Js.error(${1:something})",
-      "doc": "",
-      "label": "console.error",
-      "matches": {
-        "ce": true,
-        "cer": true
-      }
-    },
-    {
-      "content": "let [${1:a}] = ${2:data}",
-      "doc": "",
-      "label": "Array destructuring",
-      "matches": {
-        "dar": true
-      }
-    },
-    {
-      "content": "raise(${1:SomeError}(${2:// write your text}))",
-      "doc": "",
-      "label": "Raise exception",
-      "matches": {
-        "raise": true,
-        "rs": true
-      }
-    },
-    {
-      "content": "@val external ${1:setTimeout}: ${2:(unit => unit, int) => float} = \"${3:setTimeout}\"",
-      "doc": "",
-      "label": "Global External Object",
-      "matches": {
-        "@bs": true,
-        "external": true
-      }
-    },
-    {
-      "content": "let ${1:x} = ${2:\"hello\"}",
-      "doc": "",
-      "label": "variable",
-      "matches": {
-        "l": true,
-        "let": true,
-        "var": true
-      }
-    },
-    {
-      "content": "@genType",
-      "doc": "",
-      "label": "@genType",
-      "matches": {
-        "gt": true
-      }
-    },
-    {
-      "content": "@scope(\"${1:Math}\") @val external ${2:random}: ${3:unit => float} = \"${4:random}\"",
-      "doc": "",
-      "label": "Global External Module",
-      "matches": {
-        "@bs": true,
-        "external": true
-      }
-    },
-    {
-      "content": "type ${1:x} = ${2:int}",
-      "doc": "",
-      "label": "type",
-      "matches": {
-        "t": true,
-        "tp": true,
-        "type": true
-      }
-    },
-    {
-      "content": "@module(\"${1:path}\") external ${2:dirname}: ${3:string => string} = \"${4:dirname}\"",
-      "doc": "",
-      "label": "JS Module External",
-      "matches": {
-        "@bs": true,
-        "external": true
-      }
-    },
-    {
-      "content": "@genType.as(\"${1:CB}\")",
-      "doc": "",
-      "label": "@genType alias",
-      "matches": {
-        "gta": true
       }
     },
     {
@@ -315,20 +297,38 @@
       }
     },
     {
-      "content": "Js.warn(${1:something})",
+      "content": "let [${1:a}] = ${2:data}",
       "doc": "",
-      "label": "console.warn",
+      "label": "Array destructuring",
       "matches": {
-        "cow": true,
-        "cw": true
+        "dar": true
       }
     },
     {
-      "content": "module ${1:Name} = {\n\t${2:// Module contents}\n}",
+      "content": "@module(\"${1:path}\") external ${2:dirname}: ${3:string => string} = \"${4:dirname}\"",
       "doc": "",
-      "label": "Module",
+      "label": "JS Module External",
       "matches": {
-        "module": true
+        "@bs": true,
+        "external": true
+      }
+    },
+    {
+      "content": "@scope(\"${1:Math}\") @val external ${2:random}: ${3:unit => float} = \"${4:random}\"",
+      "doc": "",
+      "label": "Global External Module",
+      "matches": {
+        "@bs": true,
+        "external": true
+      }
+    },
+    {
+      "content": "raise(${1:SomeError}(${2:// write your text}))",
+      "doc": "",
+      "label": "Raise exception",
+      "matches": {
+        "raise": true,
+        "rs": true
       }
     }
   ]

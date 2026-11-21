@@ -4,11 +4,27 @@
   ],
   "snippets": [
     {
-      "content": "finally {\n\t$1\n}",
-      "doc": "Snippet for finally block",
-      "label": "finally",
+      "content": "for (${1:i} in ${2:0}..${3:5})\n\t${4:expression}",
+      "doc": "Snippet for iterating array with for loop",
+      "label": "for",
       "matches": {
-        "finally": true
+        "for": true
+      }
+    },
+    {
+      "content": "constructor(${1:arg}: ${2:type}) {\n\t$0\n}",
+      "doc": "Snippet for constructor function",
+      "label": "constructor",
+      "matches": {
+        "constructor": true
+      }
+    },
+    {
+      "content": "init {\n\t$0\n}",
+      "doc": "Snippet for init block",
+      "label": "init",
+      "matches": {
+        "init": true
       }
     },
     {
@@ -20,19 +36,27 @@
       }
     },
     {
-      "content": "class ${TM_FILENAME_BASE} {\n\t$0\n}",
-      "doc": "Snippet for class declaration",
-      "label": "class",
+      "content": "set(${1:arg}: ${2:type}) {\n\t$0\n}",
+      "doc": "Snippet for set block",
+      "label": "set",
       "matches": {
-        "class": true
+        "set": true
       }
     },
     {
-      "content": "var ${1:name} = ${2:value}",
+      "content": "val ${1:name} = ${2:value}",
       "doc": "Snippet for a variable",
-      "label": "variable declaration",
+      "label": "variable declaration with val",
       "matches": {
-        "var": true
+        "val": true
+      }
+    },
+    {
+      "content": "if (${1:condition}) \n\t${2:value}\nelse\n\t${3:value}",
+      "doc": "Snippet for if...else expression",
+      "label": "if...else",
+      "matches": {
+        "ifelse": true
       }
     },
     {
@@ -44,11 +68,27 @@
       }
     },
     {
-      "content": "when (${1:value}) {\n\t${2:branch} -> ${3:branchValue}\n\n\telse -> ${4:defaultValue}\n}",
-      "doc": "Snippet for when expression",
-      "label": "when",
+      "content": "get() ${1:value}",
+      "doc": "Snippet for get block",
+      "label": "get",
       "matches": {
-        "when": true
+        "get": true
+      }
+    },
+    {
+      "content": "var ${1:name} = ${2:value}",
+      "doc": "Snippet for a variable",
+      "label": "variable declaration",
+      "matches": {
+        "var": true
+      }
+    },
+    {
+      "content": "class ${TM_FILENAME_BASE} {\n\t$0\n}",
+      "doc": "Snippet for class declaration",
+      "label": "class",
+      "matches": {
+        "class": true
       }
     },
     {
@@ -57,30 +97,6 @@
       "label": "open keyword",
       "matches": {
         "open": true
-      }
-    },
-    {
-      "content": "try {\n\t$1\n} catch(${2:e}: ${3:Type}){\n\t$4\n}",
-      "doc": "Snippet for try block",
-      "label": "try...catch",
-      "matches": {
-        "try": true
-      }
-    },
-    {
-      "content": "override",
-      "doc": "Snippet for override keyword",
-      "label": "override keyword",
-      "matches": {
-        "override": true
-      }
-    },
-    {
-      "content": "package ${1:packageName}",
-      "doc": "Snippet for package statement",
-      "label": "package",
-      "matches": {
-        "package": true
       }
     },
     {
@@ -100,11 +116,27 @@
       }
     },
     {
-      "content": "constructor(${1:arg}: ${2:type}) {\n\t$0\n}",
-      "doc": "Snippet for constructor function",
-      "label": "constructor",
+      "content": "override",
+      "doc": "Snippet for override keyword",
+      "label": "override keyword",
       "matches": {
-        "constructor": true
+        "override": true
+      }
+    },
+    {
+      "content": "package ${1:packageName}",
+      "doc": "Snippet for package statement",
+      "label": "package",
+      "matches": {
+        "package": true
+      }
+    },
+    {
+      "content": "finally {\n\t$1\n}",
+      "doc": "Snippet for finally block",
+      "label": "finally",
+      "matches": {
+        "finally": true
       }
     },
     {
@@ -116,43 +148,11 @@
       }
     },
     {
-      "content": "get() ${1:value}",
-      "doc": "Snippet for get block",
-      "label": "get",
+      "content": "when (${1:value}) {\n\t${2:branch} -> ${3:branchValue}\n\n\telse -> ${4:defaultValue}\n}",
+      "doc": "Snippet for when expression",
+      "label": "when",
       "matches": {
-        "get": true
-      }
-    },
-    {
-      "content": "set(${1:arg}: ${2:type}) {\n\t$0\n}",
-      "doc": "Snippet for set block",
-      "label": "set",
-      "matches": {
-        "set": true
-      }
-    },
-    {
-      "content": "for (${1:i} in ${2:0}..${3:5})\n\t${4:expression}",
-      "doc": "Snippet for iterating array with for loop",
-      "label": "for",
-      "matches": {
-        "for": true
-      }
-    },
-    {
-      "content": "init {\n\t$0\n}",
-      "doc": "Snippet for init block",
-      "label": "init",
-      "matches": {
-        "init": true
-      }
-    },
-    {
-      "content": "if (${1:condition}) \n\t${2:value}\nelse\n\t${3:value}",
-      "doc": "Snippet for if...else expression",
-      "label": "if...else",
-      "matches": {
-        "ifelse": true
+        "when": true
       }
     },
     {
@@ -164,11 +164,11 @@
       }
     },
     {
-      "content": "val ${1:name} = ${2:value}",
-      "doc": "Snippet for a variable",
-      "label": "variable declaration with val",
+      "content": "try {\n\t$1\n} catch(${2:e}: ${3:Type}){\n\t$4\n}",
+      "doc": "Snippet for try block",
+      "label": "try...catch",
       "matches": {
-        "val": true
+        "try": true
       }
     },
     {

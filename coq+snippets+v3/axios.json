@@ -2,30 +2,6 @@
   "extends": [],
   "snippets": [
     {
-      "content": "axios.post('${1:uri}', ${2:post})\n.then(function (response) {\n\t${3:success}\n})\n.catch(function (error) {\n\t${4:error}\n})",
-      "doc": "Use Axios to make a post request - promise based",
-      "label": "axios-post-promise",
-      "matches": {
-        "axios post promise": true
-      }
-    },
-    {
-      "content": "axios.defaults.${1:key} = '${2:value}';",
-      "doc": "Define global axios defaults, eg. baseURL, headers etc.",
-      "label": "axios-defaults",
-      "matches": {
-        "axios defaults": true
-      }
-    },
-    {
-      "content": "async function ${1:name}() {\n\ttry {\n\t\tconst response = await axios.post('${2:uri}', ${3:post});\n\t\t${4:success}\n\t}\tcatch (error) {\n\t\t${5:error}\n\t}\n}",
-      "doc": "Use Axios to make a post request - async-await",
-      "label": "axios-post-async-await",
-      "matches": {
-        "axios post async await": true
-      }
-    },
-    {
       "content": "const axios = require('axios').default;",
       "doc": "require axios",
       "label": "axios-require",
@@ -34,11 +10,11 @@
       }
     },
     {
-      "content": "axios.interceptors.response.use(function (response) {\n\t${1:do something}\nreturn response;\n}, function (error) {\n\t${2:do something}\n$return Promise.reject(error);\n});",
-      "doc": "You can intercept responses before they are handled by then or catch.",
-      "label": "axios-interceptors-response",
+      "content": "async function ${1:name}() {\n\ttry {\n\t\tconst response = await axios.get('${2:uri}');\n\t\t${3:success}\n\t}\tcatch (error) {\n\t\t${4:error}\n\t}\n}",
+      "doc": "Use Axios to make a get request - async-await",
+      "label": "axios-get-async-await",
       "matches": {
-        "axios interceptors response": true
+        "axios get async await": true
       }
     },
     {
@@ -58,6 +34,30 @@
       }
     },
     {
+      "content": "axios.get('${1:uri}')\n.then(function (response) {\n\t${2:success}\n})\n.catch(function (error) {\n\t${3:error}\n})",
+      "doc": "Use Axios to make a get request - promise based",
+      "label": "axios-get-promise",
+      "matches": {
+        "axios get promise": true
+      }
+    },
+    {
+      "content": "axios.post('${1:uri}', ${2:post})\n.then(function (response) {\n\t${3:success}\n})\n.catch(function (error) {\n\t${4:error}\n})",
+      "doc": "Use Axios to make a post request - promise based",
+      "label": "axios-post-promise",
+      "matches": {
+        "axios post promise": true
+      }
+    },
+    {
+      "content": "axios.interceptors.response.use(function (response) {\n\t${1:do something}\nreturn response;\n}, function (error) {\n\t${2:do something}\n$return Promise.reject(error);\n});",
+      "doc": "You can intercept responses before they are handled by then or catch.",
+      "label": "axios-interceptors-response",
+      "matches": {
+        "axios interceptors response": true
+      }
+    },
+    {
       "content": "axios.interceptors.request.use(function (config) {\n\t${1:do something}\nreturn config;\n}, function (error) {\n\t${2:do something}\n$return Promise.reject(error);\n});",
       "doc": "You can intercept requests before they are handled by then or catch.",
       "label": "axios-interceptors-request",
@@ -66,19 +66,19 @@
       }
     },
     {
-      "content": "async function ${1:name}() {\n\ttry {\n\t\tconst response = await axios.get('${2:uri}');\n\t\t${3:success}\n\t}\tcatch (error) {\n\t\t${4:error}\n\t}\n}",
-      "doc": "Use Axios to make a get request - async-await",
-      "label": "axios-get-async-await",
+      "content": "axios.defaults.${1:key} = '${2:value}';",
+      "doc": "Define global axios defaults, eg. baseURL, headers etc.",
+      "label": "axios-defaults",
       "matches": {
-        "axios get async await": true
+        "axios defaults": true
       }
     },
     {
-      "content": "axios.get('${1:uri}')\n.then(function (response) {\n\t${2:success}\n})\n.catch(function (error) {\n\t${3:error}\n})",
-      "doc": "Use Axios to make a get request - promise based",
-      "label": "axios-get-promise",
+      "content": "async function ${1:name}() {\n\ttry {\n\t\tconst response = await axios.post('${2:uri}', ${3:post});\n\t\t${4:success}\n\t}\tcatch (error) {\n\t\t${5:error}\n\t}\n}",
+      "doc": "Use Axios to make a post request - async-await",
+      "label": "axios-post-async-await",
       "matches": {
-        "axios get promise": true
+        "axios post async await": true
       }
     }
   ]

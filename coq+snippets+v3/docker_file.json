@@ -2,27 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "USER ${1:name}",
+      "content": "LABEL ${1:label}=\"${2:value}\"",
       "doc": "",
-      "label": "USER",
+      "label": "LABEL",
       "matches": {
-        "u": true
-      }
-    },
-    {
-      "content": "CMD ${1:command}",
-      "doc": "",
-      "label": "CMD",
-      "matches": {
-        "C": true
-      }
-    },
-    {
-      "content": "WORKDIR ${1:name}",
-      "doc": "",
-      "label": "WORKDIR",
-      "matches": {
-        "w": true
+        "L": true
       }
     },
     {
@@ -34,19 +18,11 @@
       }
     },
     {
-      "content": "RUN echo \"deb http://archive.ubuntu.com/ubuntu ${1:precise} main universe\" > /etc/apt/sources.list; \\\napt-get update && apt-get -y upgrade; \\ \n${2}; \\\nrm -rf /var/lib/apt/lists/*",
+      "content": "VOLUME [\"${1:path}\"]",
       "doc": "",
-      "label": "Update Packages",
+      "label": "VOLUME",
       "matches": {
-        "upd": true
-      }
-    },
-    {
-      "content": "LABEL ${1:label}=\"${2:value}\"",
-      "doc": "",
-      "label": "LABEL",
-      "matches": {
-        "L": true
+        "v": true
       }
     },
     {
@@ -58,11 +34,11 @@
       }
     },
     {
-      "content": "ONBUILD ${1}",
+      "content": "# ${1:description}\n#  \n# VERSION ${2:0.1.0}\n${3}",
       "doc": "",
-      "label": "ONBUILD",
+      "label": "HEAD",
       "matches": {
-        "o": true
+        "head": true
       }
     },
     {
@@ -74,11 +50,11 @@
       }
     },
     {
-      "content": "# ${1:description}\n#  \n# VERSION ${2:0.1.0}\n${3}",
+      "content": "RUN echo \"deb http://archive.ubuntu.com/ubuntu ${1:precise} main universe\" > /etc/apt/sources.list; \\\napt-get update && apt-get -y upgrade; \\ \n${2}; \\\nrm -rf /var/lib/apt/lists/*",
       "doc": "",
-      "label": "HEAD",
+      "label": "Update Packages",
       "matches": {
-        "head": true
+        "upd": true
       }
     },
     {
@@ -90,6 +66,14 @@
       }
     },
     {
+      "content": "WORKDIR ${1:name}",
+      "doc": "",
+      "label": "WORKDIR",
+      "matches": {
+        "w": true
+      }
+    },
+    {
       "content": "FROM ${1:ubuntu}",
       "doc": "",
       "label": "FROM",
@@ -98,11 +82,11 @@
       }
     },
     {
-      "content": "ENTRYPOINT ${1:command}",
+      "content": "USER ${1:name}",
       "doc": "",
-      "label": "ENTRYPOINT",
+      "label": "USER",
       "matches": {
-        "ent": true
+        "u": true
       }
     },
     {
@@ -114,11 +98,11 @@
       }
     },
     {
-      "content": "VOLUME [\"${1:path}\"]",
+      "content": "ONBUILD ${1}",
       "doc": "",
-      "label": "VOLUME",
+      "label": "ONBUILD",
       "matches": {
-        "v": true
+        "o": true
       }
     },
     {
@@ -127,6 +111,22 @@
       "label": "RUN",
       "matches": {
         "R": true
+      }
+    },
+    {
+      "content": "ENTRYPOINT ${1:command}",
+      "doc": "",
+      "label": "ENTRYPOINT",
+      "matches": {
+        "ent": true
+      }
+    },
+    {
+      "content": "CMD ${1:command}",
+      "doc": "",
+      "label": "CMD",
+      "matches": {
+        "C": true
       }
     }
   ]

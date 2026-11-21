@@ -4,35 +4,11 @@
   ],
   "snippets": [
     {
-      "content": "<% $0 %>",
-      "doc": "",
-      "label": "%",
-      "matches": {
-        "%": true
-      }
-    },
-    {
-      "content": "<%= gettext(\"$0\") %>",
-      "doc": "",
-      "label": "gettext",
-      "matches": {
-        "gt": true
-      }
-    },
-    {
       "content": "<%= for ${1:item} <- ${2:items} do %>\n  $0\n<% end %>",
       "doc": "",
       "label": "for",
       "matches": {
         "for": true
-      }
-    },
-    {
-      "content": "<%= link \"${1:Submit}\", to: ${2:\"/users\"}, method: ${3::delete} %>",
-      "doc": "",
-      "label": "lin",
-      "matches": {
-        "lin": true
       }
     },
     {
@@ -52,11 +28,35 @@
       }
     },
     {
+      "content": "<%= link \"${1:Submit}\", to: ${2:\"/users\"}, method: ${3::delete} %>",
+      "doc": "",
+      "label": "lin",
+      "matches": {
+        "lin": true
+      }
+    },
+    {
       "content": "<%= $0 %>",
       "doc": "",
       "label": "=",
       "matches": {
         "=": true
+      }
+    },
+    {
+      "content": "<% $0 %>",
+      "doc": "",
+      "label": "%",
+      "matches": {
+        "%": true
+      }
+    },
+    {
+      "content": "<%= gettext(\"$0\") %>",
+      "doc": "",
+      "label": "gettext",
+      "matches": {
+        "gt": true
       }
     },
     {

@@ -2,6 +2,30 @@
   "extends": [],
   "snippets": [
     {
+      "content": "import rpdb2; rpdb2.start_embedded_debugger('${1:debug_password}')$0",
+      "doc": "",
+      "label": "rPDB set trace",
+      "matches": {
+        "rpdb": true
+      }
+    },
+    {
+      "content": "__import__('pdb').set_trace()$0",
+      "doc": "Code snippet for pdb debug",
+      "label": "PDB set trace",
+      "matches": {
+        "pdb": true
+      }
+    },
+    {
+      "content": "from celery.contrib import rdb; rdb.set_trace()$0",
+      "doc": "Code snippet for celery remote debugger breakpoint",
+      "label": "Celery set trace",
+      "matches": {
+        "rdb": true
+      }
+    },
+    {
       "content": "import pudb; pudb.set_trace()$0",
       "doc": "Code snippet for pudb debug",
       "label": "PuDB set trace",
@@ -39,30 +63,6 @@
       "label": "IPython set trace",
       "matches": {
         "ipydb": true
-      }
-    },
-    {
-      "content": "import rpdb2; rpdb2.start_embedded_debugger('${1:debug_password}')$0",
-      "doc": "",
-      "label": "rPDB set trace",
-      "matches": {
-        "rpdb": true
-      }
-    },
-    {
-      "content": "__import__('pdb').set_trace()$0",
-      "doc": "Code snippet for pdb debug",
-      "label": "PDB set trace",
-      "matches": {
-        "pdb": true
-      }
-    },
-    {
-      "content": "from celery.contrib import rdb; rdb.set_trace()$0",
-      "doc": "Code snippet for celery remote debugger breakpoint",
-      "label": "Celery set trace",
-      "matches": {
-        "rdb": true
       }
     }
   ]

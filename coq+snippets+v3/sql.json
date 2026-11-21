@@ -2,11 +2,43 @@
   "extends": [],
   "snippets": [
     {
-      "content": "ALTER DATABASE ${1:dbName}\n\tCHARACTER SET ${2:charset}\n\tCOLLATE ${3:utf8_unicode_ci};",
-      "doc": "Alter database",
-      "label": "alterdb",
+      "content": "ALTER TABLE ${1:tableName}\n\t ${2:intructions};",
+      "doc": "Alter table",
+      "label": "altert",
       "matches": {
-        "alterdb": true
+        "altert": true
+      }
+    },
+    {
+      "content": "ALTER TABLE ${1:tableName}\n\tADD COLUMN ${2:col_name};",
+      "doc": "Alter table - Add column",
+      "label": "alterad",
+      "matches": {
+        "alterad": true
+      }
+    },
+    {
+      "content": "ALTER TABLE ${1:tableName}\n\tADD COLUMN ${2:col_name}\n\tAFTER ${5:col_name};",
+      "doc": "Alter table - Add column after",
+      "label": "alteraf",
+      "matches": {
+        "alteraf": true
+      }
+    },
+    {
+      "content": "CREATE TABLE ${1:tableName} (\n\t${2:attribute(s)}\n);",
+      "doc": "Create regular table",
+      "label": "createt",
+      "matches": {
+        "createt": true
+      }
+    },
+    {
+      "content": "DELETE FROM ${1:tableName}\n\tWHERE ${3:condition};",
+      "doc": "Delete records",
+      "label": "delete",
+      "matches": {
+        "delete": true
       }
     },
     {
@@ -18,11 +50,11 @@
       }
     },
     {
-      "content": "SELECT ${1:attribute(s)} FROM ${2:tableName};",
-      "doc": "Regular select",
-      "label": "select",
+      "content": "CREATE DATABASE ${1:name};",
+      "doc": "Create regular table",
+      "label": "created",
       "matches": {
-        "select": true
+        "created": true
       }
     },
     {
@@ -31,6 +63,22 @@
       "label": "rjoin",
       "matches": {
         "rjoin": true
+      }
+    },
+    {
+      "content": "CREATE DATABASE IF NOT EXISTS ${1:name};",
+      "doc": "Create table with conditional",
+      "label": "createdi",
+      "matches": {
+        "createdi": true
+      }
+    },
+    {
+      "content": "INSERT INTO ${1:tableName} (\n\t${2:attribute(s)}\n) VALUES ( ${3:values} )",
+      "doc": "Insert value(s)",
+      "label": "insert",
+      "matches": {
+        "insert": true
       }
     },
     {
@@ -50,19 +98,19 @@
       }
     },
     {
-      "content": "CHECK ( ${1:condition} )",
-      "doc": "Check",
-      "label": "check",
+      "content": "DROP DATABASE ${1:dbName};",
+      "doc": "Drop database",
+      "label": "dropd",
       "matches": {
-        "check": true
+        "dropd": true
       }
     },
     {
-      "content": "CREATE TABLE ${1:tableName} (\n\t${2:attribute(s)}\n);",
-      "doc": "Create regular table",
-      "label": "createt",
+      "content": "DROP TABLE IF EXISTS ${1:tableName};",
+      "doc": "Drop table with conditional",
+      "label": "dropti",
       "matches": {
-        "createt": true
+        "dropti": true
       }
     },
     {
@@ -74,11 +122,43 @@
       }
     },
     {
+      "content": "GRANT ALL PRIVILEGES ON ${1:db}.${2:tb} TO '${3:user_name}'@'${4:localhost}';",
+      "doc": "Grant privileges",
+      "label": "grantuser",
+      "matches": {
+        "grantuser": true
+      }
+    },
+    {
+      "content": "DELETE FROM mysql.user WHERE user = '${1:userName}';",
+      "doc": "Delete user",
+      "label": "deleteuser",
+      "matches": {
+        "deleteuser": true
+      }
+    },
+    {
       "content": "SELECT ${1:attribute(s)}\n\tFROM ${2:tableName}\n\tGROUP BY ${3:attribute(s)};",
       "doc": "Group by",
       "label": "groupb",
       "matches": {
         "groupb": true
+      }
+    },
+    {
+      "content": "SELECT ${1:attribute(s)} FROM ${2:tableName}\nUNION\nSELECT ${3:attribute(s)} FROM ${4:tableName2};",
+      "doc": "Regular union",
+      "label": "union",
+      "matches": {
+        "union": true
+      }
+    },
+    {
+      "content": "CREATE USER '${1:username}'@'${2:localhost}' IDENTIFIED BY '${3:password}';",
+      "doc": "Create User",
+      "label": "creteuser",
+      "matches": {
+        "createuser": true
       }
     },
     {
@@ -90,11 +170,27 @@
       }
     },
     {
-      "content": "CREATE DATABASE IF NOT EXISTS ${1:name};",
-      "doc": "Create table with conditional",
-      "label": "createdi",
+      "content": "CHECK ( ${1:condition} )",
+      "doc": "Check",
+      "label": "check",
       "matches": {
-        "createdi": true
+        "check": true
+      }
+    },
+    {
+      "content": "CONSTRAINT ${1:attribute} FOREIGN KEY (${2:attribute(s)})\n\tREFERENCES ${3:tableName}(${4:attribute})",
+      "doc": "Constraint foreign Key",
+      "label": "foreignkc",
+      "matches": {
+        "foreignkc": true
+      }
+    },
+    {
+      "content": "FOREIGN KEY(${1:attribute}) REFERENCES ${2:tableName}(${3:attribute})",
+      "doc": "Foreign Key",
+      "label": "foreignk",
+      "matches": {
+        "foreignk": true
       }
     },
     {
@@ -114,11 +210,19 @@
       }
     },
     {
-      "content": "DROP TABLE ${1:tableName};",
-      "doc": "Drop table",
-      "label": "dropt",
+      "content": "DROP DATABASE IF EXISTS ${1:dbName};",
+      "doc": "Drop database with conditional",
+      "label": "dropdi",
       "matches": {
-        "dropt": true
+        "dropdi": true
+      }
+    },
+    {
+      "content": "SHOW DATABASES;",
+      "doc": "Show databases",
+      "label": "showd",
+      "matches": {
+        "showd": true
       }
     },
     {
@@ -138,11 +242,11 @@
       }
     },
     {
-      "content": "DROP DATABASE ${1:dbName};",
-      "doc": "Drop database",
-      "label": "dropd",
+      "content": "DROP TABLE ${1:tableName};",
+      "doc": "Drop table",
+      "label": "dropt",
       "matches": {
-        "dropd": true
+        "dropt": true
       }
     },
     {
@@ -154,115 +258,11 @@
       }
     },
     {
-      "content": "DROP TABLE IF EXISTS ${1:tableName};",
-      "doc": "Drop table with conditional",
-      "label": "dropti",
+      "content": "ALTER DATABASE ${1:dbName}\n\tCHARACTER SET ${2:charset}\n\tCOLLATE ${3:utf8_unicode_ci};",
+      "doc": "Alter database",
+      "label": "alterdb",
       "matches": {
-        "dropti": true
-      }
-    },
-    {
-      "content": "SELECT ${1:attribute(s)}\n\tFROM ${2:tableName}\n\tORDER BY ${3:attribute(s)} ${4:ASC|DESC};",
-      "doc": "Select with order",
-      "label": "selector",
-      "matches": {
-        "selector": true
-      }
-    },
-    {
-      "content": "DROP DATABASE IF EXISTS ${1:dbName};",
-      "doc": "Drop database with conditional",
-      "label": "dropdi",
-      "matches": {
-        "dropdi": true
-      }
-    },
-    {
-      "content": "UPDATE ${1:tableName}\n\tSET ${2:attribute(s)}\n\tWHERE ${3:condition};",
-      "doc": "Update table",
-      "label": "updatet",
-      "matches": {
-        "updatet": true
-      }
-    },
-    {
-      "content": "GRANT ALL PRIVILEGES ON ${1:db}.${2:tb} TO '${3:user_name}'@'${4:localhost}';",
-      "doc": "Grant privileges",
-      "label": "grantuser",
-      "matches": {
-        "grantuser": true
-      }
-    },
-    {
-      "content": "SHOW TABLES;",
-      "doc": "Show tables",
-      "label": "showt",
-      "matches": {
-        "showt": true
-      }
-    },
-    {
-      "content": "DELETE FROM mysql.user WHERE user = '${1:userName}';",
-      "doc": "Delete user",
-      "label": "deleteuser",
-      "matches": {
-        "deleteuser": true
-      }
-    },
-    {
-      "content": "CREATE USER '${1:username}'@'${2:localhost}' IDENTIFIED BY '${3:password}';",
-      "doc": "Create User",
-      "label": "creteuser",
-      "matches": {
-        "createuser": true
-      }
-    },
-    {
-      "content": "CONSTRAINT ${1:attribute} FOREIGN KEY (${2:attribute(s)})\n\tREFERENCES ${3:tableName}(${4:attribute})",
-      "doc": "Constraint foreign Key",
-      "label": "foreignkc",
-      "matches": {
-        "foreignkc": true
-      }
-    },
-    {
-      "content": "ALTER TABLE ${1:tableName}\n\t ${2:intructions};",
-      "doc": "Alter table",
-      "label": "altert",
-      "matches": {
-        "altert": true
-      }
-    },
-    {
-      "content": "FOREIGN KEY(${1:attribute}) REFERENCES ${2:tableName}(${3:attribute})",
-      "doc": "Foreign Key",
-      "label": "foreignk",
-      "matches": {
-        "foreignk": true
-      }
-    },
-    {
-      "content": "SHOW DATABASES;",
-      "doc": "Show databases",
-      "label": "showd",
-      "matches": {
-        "showd": true
-      }
-    },
-    {
-      "content": "SELECT ${1:attribute(s)} FROM ${2:tableName}\nUNION\nSELECT ${3:attribute(s)} FROM ${4:tableName2};",
-      "doc": "Regular union",
-      "label": "union",
-      "matches": {
-        "union": true
-      }
-    },
-    {
-      "content": "ALTER TABLE ${1:tableName}\n\tADD COLUMN ${2:col_name};",
-      "doc": "Alter table - Add column",
-      "label": "alterad",
-      "matches": {
-        "alterad": true
+        "alterdb": true
       }
     },
     {
@@ -274,35 +274,35 @@
       }
     },
     {
-      "content": "DELETE FROM ${1:tableName}\n\tWHERE ${3:condition};",
-      "doc": "Delete records",
-      "label": "delete",
+      "content": "SELECT ${1:attribute(s)}\n\tFROM ${2:tableName}\n\tORDER BY ${3:attribute(s)} ${4:ASC|DESC};",
+      "doc": "Select with order",
+      "label": "selector",
       "matches": {
-        "delete": true
+        "selector": true
       }
     },
     {
-      "content": "ALTER TABLE ${1:tableName}\n\tADD COLUMN ${2:col_name}\n\tAFTER ${5:col_name};",
-      "doc": "Alter table - Add column after",
-      "label": "alteraf",
+      "content": "SELECT ${1:attribute(s)} FROM ${2:tableName};",
+      "doc": "Regular select",
+      "label": "select",
       "matches": {
-        "alteraf": true
+        "select": true
       }
     },
     {
-      "content": "CREATE DATABASE ${1:name};",
-      "doc": "Create regular table",
-      "label": "created",
+      "content": "SHOW TABLES;",
+      "doc": "Show tables",
+      "label": "showt",
       "matches": {
-        "created": true
+        "showt": true
       }
     },
     {
-      "content": "INSERT INTO ${1:tableName} (\n\t${2:attribute(s)}\n) VALUES ( ${3:values} )",
-      "doc": "Insert value(s)",
-      "label": "insert",
+      "content": "UPDATE ${1:tableName}\n\tSET ${2:attribute(s)}\n\tWHERE ${3:condition};",
+      "doc": "Update table",
+      "label": "updatet",
       "matches": {
-        "insert": true
+        "updatet": true
       }
     },
     {

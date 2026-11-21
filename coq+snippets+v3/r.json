@@ -4,166 +4,6 @@
   ],
   "snippets": [
     {
-      "content": "${1:name}UI <- function(id) {\n  ns <- NS(id)\n  tagList(\n    ${2}\n  )\n}\n\n${1:name}Server <- function(id) {\n  moduleServer(id, function(input, output, session) {\n    ${3}\n  })\n}",
-      "doc": "",
-      "label": "shinymod",
-      "matches": {
-        "shinymod": true
-      }
-    },
-    {
-      "content": "setClass(\"${1:Class}\", slots = c(${2:name = \"type\"}))",
-      "doc": "",
-      "label": "setClass",
-      "matches": {
-        "sc": true
-      }
-    },
-    {
-      "content": "return(${1:code})",
-      "doc": "",
-      "label": "return",
-      "matches": {
-        "ret": true
-      }
-    },
-    {
-      "content": "while (${1:condition}) {\n    ${0}\n}",
-      "doc": "",
-      "label": "while",
-      "matches": {
-        "while": true
-      }
-    },
-    {
-      "content": "library(shiny)\n\nui <- fluidPage(\n  ${0}\n)\n\nserver <- function(input, output, session) {\n  \n}\n\nshinyApp(ui, server)",
-      "doc": "",
-      "label": "shinyapp",
-      "matches": {
-        "shinyapp": true
-      }
-    },
-    {
-      "content": "else {\n    ${0}\n}",
-      "doc": "",
-      "label": "else",
-      "matches": {
-        "el": true
-      }
-    },
-    {
-      "content": "lapply(${1:list}, ${2:function})",
-      "doc": "",
-      "label": "lapply",
-      "matches": {
-        "lapply": true
-      }
-    },
-    {
-      "content": "switch (${1:object},\n    ${2:case} = ${3:action}\n)",
-      "doc": "",
-      "label": "switch",
-      "matches": {
-        "switch": true
-      }
-    },
-    {
-      "content": "sapply(${1:list}, ${2:function})",
-      "doc": "",
-      "label": "sapply",
-      "matches": {
-        "sapply": true
-      }
-    },
-    {
-      "content": "else if (${1:condition}) {\n    ${0}\n}",
-      "doc": "",
-      "label": "else if",
-      "matches": {
-        "ei": true
-      }
-    },
-    {
-      "content": "mapply(${1:function}, ${2:...})",
-      "doc": "",
-      "label": "mapply",
-      "matches": {
-        "mapply": true
-      }
-    },
-    {
-      "content": "library(${1:package})",
-      "doc": "",
-      "label": "library",
-      "matches": {
-        "lib": true
-      }
-    },
-    {
-      "content": "tapply(${1:vector}, ${2:index}, ${3:function})",
-      "doc": "",
-      "label": "tapply",
-      "matches": {
-        "tapply": true
-      }
-    },
-    {
-      "content": "vapply(${1:list}, ${2:function}, FUN.VALUE = ${3:type}, ${4:...})",
-      "doc": "",
-      "label": "vapply",
-      "matches": {
-        "vapply": true
-      }
-    },
-    {
-      "content": "apply(${1:array}, ${2:margin}, ${3:...})",
-      "doc": "",
-      "label": "apply",
-      "matches": {
-        "apply": true
-      }
-    },
-    {
-      "content": "require(${1:package})",
-      "doc": "",
-      "label": "require",
-      "matches": {
-        "req": true
-      }
-    },
-    {
-      "content": "rapply(${1:list}, ${2:function})",
-      "doc": "",
-      "label": "rapply",
-      "matches": {
-        "rapply": true
-      }
-    },
-    {
-      "content": "matrix(${1:data}, nrow = ${2:rows}, ncol = ${3:cols})",
-      "doc": "",
-      "label": "matrix",
-      "matches": {
-        "mat": true
-      }
-    },
-    {
-      "content": "# ${CURRENT_DAY_NAME_SHORT} ${CURRENT_MONTH_NAME_SHORT} ${CURRENT_DATE} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND} ${CURRENT_YEAR} ------------------------------",
-      "doc": "",
-      "label": "timestamp",
-      "matches": {
-        "ts": true
-      }
-    },
-    {
-      "content": "setGeneric(\"${1:generic}\", function(${2:x, ...}) {\n    standardGeneric(\"${1:generic}\")\n})",
-      "doc": "",
-      "label": "setGeneric",
-      "matches": {
-        "sg": true
-      }
-    },
-    {
       "content": "for (${1:variable} in ${2:vector}) {\n    ${0}\n}",
       "doc": "",
       "label": "for",
@@ -180,19 +20,51 @@
       }
     },
     {
-      "content": "source(\"${1:file.R}\")",
+      "content": "switch (${1:object},\n    ${2:case} = ${3:action}\n)",
       "doc": "",
-      "label": "source",
+      "label": "switch",
       "matches": {
-        "src": true
+        "switch": true
       }
     },
     {
-      "content": "if (${1:condition}) {\n    ${0}\n}",
+      "content": "library(${1:package})",
       "doc": "",
-      "label": "if",
+      "label": "library",
       "matches": {
-        "if": true
+        "lib": true
+      }
+    },
+    {
+      "content": "vapply(${1:list}, ${2:function}, FUN.VALUE = ${3:type}, ${4:...})",
+      "doc": "",
+      "label": "vapply",
+      "matches": {
+        "vapply": true
+      }
+    },
+    {
+      "content": "rapply(${1:list}, ${2:function})",
+      "doc": "",
+      "label": "rapply",
+      "matches": {
+        "rapply": true
+      }
+    },
+    {
+      "content": "# ${CURRENT_DAY_NAME_SHORT} ${CURRENT_MONTH_NAME_SHORT} ${CURRENT_DATE} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND} ${CURRENT_YEAR} ------------------------------",
+      "doc": "",
+      "label": "timestamp",
+      "matches": {
+        "ts": true
+      }
+    },
+    {
+      "content": "return(${1:code})",
+      "doc": "",
+      "label": "return",
+      "matches": {
+        "ret": true
       }
     },
     {
@@ -201,6 +73,134 @@
       "label": "setMethod",
       "matches": {
         "sm": true
+      }
+    },
+    {
+      "content": "setGeneric(\"${1:generic}\", function(${2:x, ...}) {\n    standardGeneric(\"${1:generic}\")\n})",
+      "doc": "",
+      "label": "setGeneric",
+      "matches": {
+        "sg": true
+      }
+    },
+    {
+      "content": "while (${1:condition}) {\n    ${0}\n}",
+      "doc": "",
+      "label": "while",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "${1:name}UI <- function(id) {\n  ns <- NS(id)\n  tagList(\n    ${2}\n  )\n}\n\n${1:name}Server <- function(id) {\n  moduleServer(id, function(input, output, session) {\n    ${3}\n  })\n}",
+      "doc": "",
+      "label": "shinymod",
+      "matches": {
+        "shinymod": true
+      }
+    },
+    {
+      "content": "library(shiny)\n\nui <- fluidPage(\n  ${0}\n)\n\nserver <- function(input, output, session) {\n  \n}\n\nshinyApp(ui, server)",
+      "doc": "",
+      "label": "shinyapp",
+      "matches": {
+        "shinyapp": true
+      }
+    },
+    {
+      "content": "tapply(${1:vector}, ${2:index}, ${3:function})",
+      "doc": "",
+      "label": "tapply",
+      "matches": {
+        "tapply": true
+      }
+    },
+    {
+      "content": "mapply(${1:function}, ${2:...})",
+      "doc": "",
+      "label": "mapply",
+      "matches": {
+        "mapply": true
+      }
+    },
+    {
+      "content": "require(${1:package})",
+      "doc": "",
+      "label": "require",
+      "matches": {
+        "req": true
+      }
+    },
+    {
+      "content": "sapply(${1:list}, ${2:function})",
+      "doc": "",
+      "label": "sapply",
+      "matches": {
+        "sapply": true
+      }
+    },
+    {
+      "content": "lapply(${1:list}, ${2:function})",
+      "doc": "",
+      "label": "lapply",
+      "matches": {
+        "lapply": true
+      }
+    },
+    {
+      "content": "matrix(${1:data}, nrow = ${2:rows}, ncol = ${3:cols})",
+      "doc": "",
+      "label": "matrix",
+      "matches": {
+        "mat": true
+      }
+    },
+    {
+      "content": "apply(${1:array}, ${2:margin}, ${3:...})",
+      "doc": "",
+      "label": "apply",
+      "matches": {
+        "apply": true
+      }
+    },
+    {
+      "content": "setClass(\"${1:Class}\", slots = c(${2:name = \"type\"}))",
+      "doc": "",
+      "label": "setClass",
+      "matches": {
+        "sc": true
+      }
+    },
+    {
+      "content": "else {\n    ${0}\n}",
+      "doc": "",
+      "label": "else",
+      "matches": {
+        "el": true
+      }
+    },
+    {
+      "content": "source(\"${1:file.R}\")",
+      "doc": "",
+      "label": "source",
+      "matches": {
+        "src": true
+      }
+    },
+    {
+      "content": "else if (${1:condition}) {\n    ${0}\n}",
+      "doc": "",
+      "label": "else if",
+      "matches": {
+        "ei": true
+      }
+    },
+    {
+      "content": "if (${1:condition}) {\n    ${0}\n}",
+      "doc": "",
+      "label": "if",
+      "matches": {
+        "if": true
       }
     },
     {

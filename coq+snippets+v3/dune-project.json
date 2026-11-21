@@ -2,6 +2,14 @@
   "extends": [],
   "snippets": [
     {
+      "content": "(name $1)",
+      "doc": "Snippet for a name stanza",
+      "label": "name",
+      "matches": {
+        "name": true
+      }
+    },
+    {
       "content": "(license $1)\n(authors \"$2\")\n(maintainers \"$3\")\n(source (${4|uri,github|} $5))\n(bug_reports \"$6\")\n(homepage \"$7\")\n(documentation \"$8\")",
       "doc": "Snippet to add info related stanzas",
       "label": "info",
@@ -10,11 +18,11 @@
       }
     },
     {
-      "content": "(using $1 $2)",
-      "doc": "Snippet for an using stanza",
-      "label": "using",
+      "content": "(package\n (name $1)\n (synopsis \"$2\")\n (description \"$3\")\n (depends $4))",
+      "doc": "Snippet for a package stanza",
+      "label": "package",
       "matches": {
-        "using": true
+        "package": true
       }
     },
     {
@@ -26,19 +34,11 @@
       }
     },
     {
-      "content": "(name $1)",
-      "doc": "Snippet for a name stanza",
-      "label": "name",
+      "content": "(using $1 $2)",
+      "doc": "Snippet for an using stanza",
+      "label": "using",
       "matches": {
-        "name": true
-      }
-    },
-    {
-      "content": "(package\n (name $1)\n (synopsis \"$2\")\n (description \"$3\")\n (depends $4))",
-      "doc": "Snippet for a package stanza",
-      "label": "package",
-      "matches": {
-        "package": true
+        "using": true
       }
     }
   ]

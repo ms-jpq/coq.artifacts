@@ -2,11 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "import ${1:Img} from \"gatsby-image/withIEPolyfill\"",
+      "content": "import ${1:Img} from 'gatsby-image';",
       "doc": "",
-      "label": "gatsby-image-import-withiepolyfill",
+      "label": "gatsby-image-import",
       "matches": {
-        "gatsby-image import withiepolyfill": true
+        "gatsby-image import": true
       }
     },
     {
@@ -18,19 +18,19 @@
       }
     },
     {
+      "content": "import ${1:Img} from \"gatsby-image/withIEPolyfill\"",
+      "doc": "",
+      "label": "gatsby-image-import-withiepolyfill",
+      "matches": {
+        "gatsby-image import withiepolyfill": true
+      }
+    },
+    {
       "content": "const {\n  ${1:queryName}: { childImageSharp: {fixed: ${2:imageFixed}}}\n} = useStaticQuery(graphql`\n  query {\n    ${1:queryName}: file(relativePath: { eq: \"${3:imagePath.png}\" }) {\n      childImageSharp {\n        fixed(width: ${4:300}) {\n          ...${5|GatsbyImageSharpFixed,GatsbyImageSharpFixed_noBase64,GatsbyImageSharpFixed_tracedSVG,GatsbyImageSharpFixed_withWebp,GatsbyImageSharpFixed_withWebp_noBase64,GatsbyImageSharpFixed_withWebp_tracedSVG|}\n        }\n      }\n    }\n  }\n`)",
       "doc": "",
       "label": "gatsby-image-usestaticquery-fixed",
       "matches": {
         "gatsby-image usestaticquery fixed": true
-      }
-    },
-    {
-      "content": "import ${1:Img} from 'gatsby-image';",
-      "doc": "",
-      "label": "gatsby-image-import",
-      "matches": {
-        "gatsby-image import": true
       }
     }
   ]

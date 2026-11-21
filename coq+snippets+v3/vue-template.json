@@ -2,6 +2,14 @@
   "extends": [],
   "snippets": [
     {
+      "content": "<router-link :to=\"{name: '${1:name}'}\">${2:LinkTitle}</router-link>",
+      "doc": "Named routing link",
+      "label": "Vue Named Routing Link",
+      "matches": {
+        "vroutename": true
+      }
+    },
+    {
       "content": "<${1:div} :class=\"{ ${2:className}: ${3:data} }\"></${1:div}>",
       "doc": "vue class binding",
       "label": "Vue Class Binding",
@@ -15,14 +23,6 @@
       "label": "Vue v-for",
       "matches": {
         "vfor": true
-      }
-    },
-    {
-      "content": "<router-link :to=\"{name: '${1:name}'}\">${2:LinkTitle}</router-link>",
-      "doc": "Named routing link",
-      "label": "Vue Named Routing Link",
-      "matches": {
-        "vroutename": true
       }
     },
     {
@@ -74,19 +74,19 @@
       }
     },
     {
-      "content": "<${1:component} :${1:propName}=\"${0}\"></${1:component}>",
-      "doc": "component element with props",
-      "label": "Vue Component with Props Binding",
-      "matches": {
-        "vel-props": true
-      }
-    },
-    {
       "content": "<template v-slot:${0:name}>${1:defaultcontent}</template>",
       "doc": "named slot",
       "label": "Vue Named Slot",
       "matches": {
         "vslot-named": true
+      }
+    },
+    {
+      "content": "<${1:component} :${1:propName}=\"${0}\"></${1:component}>",
+      "doc": "component element with props",
+      "label": "Vue Component with Props Binding",
+      "matches": {
+        "vel-props": true
       }
     },
     {
@@ -98,19 +98,19 @@
       }
     },
     {
-      "content": "<${1:div} :style=\"{ fontSize: ${2:data} + 'px' }\"></${1:div}>",
-      "doc": "vue inline style binding",
-      "label": "Vue Style Binding",
-      "matches": {
-        "vstyle": true
-      }
-    },
-    {
       "content": "<router-link to=\"${1:path}\">${2:LinkTitle}</router-link>",
       "doc": "Path routing link",
       "label": "Vue Path Routing Link",
       "matches": {
         "vroutepath": true
+      }
+    },
+    {
+      "content": "@change=\"$emit('change', $event.target.value)\"",
+      "doc": "Vue Emit from Child Component",
+      "label": "Vue Emit from Child",
+      "matches": {
+        "vemit-child": true
       }
     },
     {
@@ -130,19 +130,19 @@
       }
     },
     {
+      "content": "<${1:div} :style=\"{ fontSize: ${2:data} + 'px' }\"></${1:div}>",
+      "doc": "vue inline style binding",
+      "label": "Vue Style Binding",
+      "matches": {
+        "vstyle": true
+      }
+    },
+    {
       "content": "@change=\"${1:foo} = $event\"",
       "doc": "Vue Emit to Parent Component",
       "label": "Vue Emit to Parent",
       "matches": {
         "vemit-parent": true
-      }
-    },
-    {
-      "content": "@change=\"$emit('change', $event.target.value)\"",
-      "doc": "Vue Emit from Child Component",
-      "label": "Vue Emit from Child",
-      "matches": {
-        "vemit-child": true
       }
     },
     {

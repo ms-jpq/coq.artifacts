@@ -2,19 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "-module(${1:module}).",
+      "content": "-include(\"${1:hrl_name}.hrl\").",
       "doc": "module",
-      "label": "module",
+      "label": "include",
       "matches": {
-        "mod": true
-      }
-    },
-    {
-      "content": "-export([\n         ${1}\n        ]).",
-      "doc": "export",
-      "label": "export",
-      "matches": {
-        "exp": true
+        "inc": true
       }
     },
     {
@@ -26,11 +18,11 @@
       }
     },
     {
-      "content": "-define(${1:def_name}, ${2:def_value}).",
-      "doc": "define",
-      "label": "define",
+      "content": "if ${1:Cond} ->\n       ${2:todo};\n   true ->\n       ${3:todo}\nend$4",
+      "doc": "if block",
+      "label": "if",
       "matches": {
-        "def": true
+        "if": true
       }
     },
     {
@@ -42,19 +34,27 @@
       }
     },
     {
-      "content": "if ${1:Cond} ->\n       ${2:todo};\n   true ->\n       ${3:todo}\nend$4",
-      "doc": "if block",
-      "label": "if",
+      "content": "-module(${1:module}).",
+      "doc": "module",
+      "label": "module",
       "matches": {
-        "if": true
+        "mod": true
       }
     },
     {
-      "content": "-include(\"${1:hrl_name}.hrl\").",
-      "doc": "module",
-      "label": "include",
+      "content": "-define(${1:def_name}, ${2:def_value}).",
+      "doc": "define",
+      "label": "define",
       "matches": {
-        "inc": true
+        "def": true
+      }
+    },
+    {
+      "content": "-export([\n         ${1}\n        ]).",
+      "doc": "export",
+      "label": "export",
+      "matches": {
+        "exp": true
       }
     },
     {

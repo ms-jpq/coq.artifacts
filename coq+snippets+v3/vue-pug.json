@@ -2,14 +2,6 @@
   "extends": [],
   "snippets": [
     {
-      "content": "${1:component}(:${1:propName}=\"${0}\")",
-      "doc": "component element with props",
-      "label": "Vue Component with Props Binding",
-      "matches": {
-        "vel-props": true
-      }
-    },
-    {
       "content": "@change=\"${1:foo} = $event\"",
       "doc": "Vue Emit to Parent Component",
       "label": "Vue Emit to Parent",
@@ -18,11 +10,11 @@
       }
     },
     {
-      "content": "${1:div}(v-for=\"${2:item} in ${2:item}s\" :key=\"${2:item}.id\")\n\t| {{ ${2:item} }}",
-      "doc": "vfor statement",
-      "label": "Vue v-for",
+      "content": "${1:component}(:${1:propName}=\"${0}\")",
+      "doc": "component element with props",
+      "label": "Vue Component with Props Binding",
       "matches": {
-        "vfor": true
+        "vel-props": true
       }
     },
     {
@@ -34,11 +26,11 @@
       }
     },
     {
-      "content": "img(:src=\"'/path/to/images/' + ${1:fileName}\" alt=\"${2:altText}\")",
-      "doc": "image source binding",
-      "label": "Vue Image Source Binding",
+      "content": "${1:div}(v-for=\"${2:item} in ${2:item}s\" :key=\"${2:item}.id\")\n\t| {{ ${2:item} }}",
+      "doc": "vfor statement",
+      "label": "Vue v-for",
       "matches": {
-        "vsrc": true
+        "vfor": true
       }
     },
     {
@@ -47,6 +39,22 @@
       "label": "Vue Nuxt Routing Link",
       "matches": {
         "vnuxtl": true
+      }
+    },
+    {
+      "content": "img(:src=\"'/path/to/images/' + ${1:fileName}\" alt=\"${2:altText}\")",
+      "doc": "image source binding",
+      "label": "Vue Image Source Binding",
+      "matches": {
+        "vsrc": true
+      }
+    },
+    {
+      "content": "${1:div}(:class=\"{ ${2:className}: ${3:data} }\")",
+      "doc": "vue class binding",
+      "label": "Vue Class Binding",
+      "matches": {
+        "vclass": true
       }
     },
     {
@@ -111,14 +119,6 @@
       "label": "Vue v-on Shortcut Directive",
       "matches": {
         "von": true
-      }
-    },
-    {
-      "content": "${1:div}(:class=\"{ ${2:className}: ${3:data} }\")",
-      "doc": "vue class binding",
-      "label": "Vue Class Binding",
-      "matches": {
-        "vclass": true
       }
     }
   ]

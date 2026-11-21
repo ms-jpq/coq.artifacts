@@ -2,19 +2,19 @@
   "extends": [],
   "snippets": [
     {
-      "content": "@version ${1:1.39}, ${2:02/28/97}$0",
-      "doc": "The Java Software convention for the argument to the @version tag is the SCCS string \"%I%, %G%\". For classes and interfaces only, required.",
-      "label": "@version",
+      "content": "@deprecated  As of JDK ${1:1.1}, replaced by\n${2:{@link #setBounds(int,int,int,int)}}$0",
+      "doc": "The @deprecated description in the first sentence should at least tell the user when the API was deprecated and what to use as a replacement. Only the first sentence will appear in the summary section and index. Subsequent sentences can also explain why it has been deprecated.",
+      "label": "@deprecated",
       "matches": {
-        "@version": true
+        "@deprecated": true
       }
     },
     {
-      "content": "@param ${1:name} ${2:Type and description of the parameter.}$0",
-      "doc": "Documents a parameter.",
-      "label": "@param",
+      "content": "@example\n```\n${1:Write me later}$0\n```",
+      "doc": "Adds an example to the documentation.",
+      "label": "@example",
       "matches": {
-        "@param": true
+        "@example": true
       }
     },
     {
@@ -26,19 +26,43 @@
       }
     },
     {
-      "content": "@see ${1:item.}$0",
-      "doc": "References another item or piece of documentation.",
-      "label": "@see",
+      "content": "@exception ${1:IOException} ${2:Description.}$0",
+      "doc": "Document an exception raised by the item. Synonym of @throws.",
+      "label": "@exception",
       "matches": {
-        "@see": true
+        "@exception": true
       }
     },
     {
-      "content": "/**\n * ${1:A one-line summary.}\n *\n * ${2:Description.}$0\n */",
-      "doc": "A simple Java comment block with short summary and description. Useful when the user prefers to manually add the other documentation tags.",
-      "label": "comment_simple",
+      "content": "@author ${1:name}$0",
+      "doc": "You can provide one @author tag, multiple @author tags, or no @author tags. For classes and interfaces only, required.",
+      "label": "@author",
       "matches": {
-        "/*": true
+        "@author": true
+      }
+    },
+    {
+      "content": "@serialField ${1:Field name} ${2:Field type} ${3:Field description.}$0",
+      "doc": "The @serialField tag is used to document an ObjectStreamField component of a serialPersistentFields array. One of these tags should be used for each ObjectStreamField component.",
+      "label": "@serialField",
+      "matches": {
+        "@serialField": true
+      }
+    },
+    {
+      "content": "@throws ${1:IOException} ${2:Description.}$0",
+      "doc": "Document an exception raised by the item. Synonym of @exception.",
+      "label": "@throws",
+      "matches": {
+        "@throws": true
+      }
+    },
+    {
+      "content": "@param ${1:name} ${2:Type and description of the parameter.}$0",
+      "doc": "Documents a the returned object.",
+      "label": "@return",
+      "matches": {
+        "@return": true
       }
     },
     {
@@ -51,34 +75,26 @@
     },
     {
       "content": "@param ${1:name} ${2:Type and description of the parameter.}$0",
-      "doc": "Documents a the returned object.",
-      "label": "@return",
+      "doc": "Documents a parameter.",
+      "label": "@param",
       "matches": {
-        "@return": true
+        "@param": true
       }
     },
     {
-      "content": "@author ${1:name}$0",
-      "doc": "You can provide one @author tag, multiple @author tags, or no @author tags. For classes and interfaces only, required.",
-      "label": "@author",
+      "content": "@see ${1:item.}$0",
+      "doc": "References another item or piece of documentation.",
+      "label": "@see",
       "matches": {
-        "@author": true
+        "@see": true
       }
     },
     {
-      "content": "@throws ${1:IOException} ${2:Description.}$0",
-      "doc": "Document an exception raised by the item. Synonym of @exception.",
-      "label": "@throws",
+      "content": "@version ${1:1.39}, ${2:02/28/97}$0",
+      "doc": "The Java Software convention for the argument to the @version tag is the SCCS string \"%I%, %G%\". For classes and interfaces only, required.",
+      "label": "@version",
       "matches": {
-        "@throws": true
-      }
-    },
-    {
-      "content": "@exception ${1:IOException} ${2:Description.}$0",
-      "doc": "Document an exception raised by the item. Synonym of @throws.",
-      "label": "@exception",
-      "matches": {
-        "@exception": true
+        "@version": true
       }
     },
     {
@@ -87,38 +103,6 @@
       "label": "@since",
       "matches": {
         "@since": true
-      }
-    },
-    {
-      "content": "@deprecated  As of JDK ${1:1.1}, replaced by\n${2:{@link #setBounds(int,int,int,int)}}$0",
-      "doc": "The @deprecated description in the first sentence should at least tell the user when the API was deprecated and what to use as a replacement. Only the first sentence will appear in the summary section and index. Subsequent sentences can also explain why it has been deprecated.",
-      "label": "@deprecated",
-      "matches": {
-        "@deprecated": true
-      }
-    },
-    {
-      "content": "/**\n * ${1:A one-line summary.}\n *\n * ${2:Description.}$0\n *\n * @param ${4:name}  ${5:Type and description of the parameter.}\n * @return ${6:Type and description of the returned object.}\n *\n * @example\n * ```\n * ${7:Write me later}\n * ```\n */",
-      "doc": "A Java comment block including short summary, description, param, return, and examples.",
-      "label": "comment",
-      "matches": {
-        "/**": true
-      }
-    },
-    {
-      "content": "@serialField ${1:Field name} ${2:Field type} ${3:Field description.}$0",
-      "doc": "The @serialField tag is used to document an ObjectStreamField component of a serialPersistentFields array. One of these tags should be used for each ObjectStreamField component.",
-      "label": "@serialField",
-      "matches": {
-        "@serialField": true
-      }
-    },
-    {
-      "content": "@example\n```\n${1:Write me later}$0\n```",
-      "doc": "Adds an example to the documentation.",
-      "label": "@example",
-      "matches": {
-        "@example": true
       }
     }
   ]

@@ -18,6 +18,14 @@
       }
     },
     {
+      "content": "Copyright (c) ${CURRENT_YEAR} ${0:Author}. All Rights Reserved.",
+      "doc": "Snippet to put copyright",
+      "label": "copyright",
+      "matches": {
+        "copyright": true
+      }
+    },
+    {
       "content": "${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
       "doc": "Put the date in (Y-m-D) format",
       "label": "date",
@@ -42,14 +50,6 @@
       }
     },
     {
-      "content": "${CURRENT_MONTH}/${CURRENT_DATE}/${CURRENT_YEAR}",
-      "doc": "Put the date in (m/D/Y) format",
-      "label": "dateMDY",
-      "matches": {
-        "dateMDY": true
-      }
-    },
-    {
       "content": "${UUID}",
       "doc": "A Version 4 UUID",
       "label": "uuid",
@@ -58,19 +58,19 @@
       }
     },
     {
-      "content": "Copyright (c) ${CURRENT_YEAR} ${0:Author}. All Rights Reserved.",
-      "doc": "Snippet to put copyright",
-      "label": "copyright",
-      "matches": {
-        "copyright": true
-      }
-    },
-    {
       "content": "${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
       "doc": "ISO date time stamp",
       "label": "diso",
       "matches": {
         "diso": true
+      }
+    },
+    {
+      "content": "${CURRENT_MONTH}/${CURRENT_DATE}/${CURRENT_YEAR}",
+      "doc": "Put the date in (m/D/Y) format",
+      "label": "dateMDY",
+      "matches": {
+        "dateMDY": true
       }
     }
   ]

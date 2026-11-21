@@ -2,27 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "import Vue from 'vue';\nimport Vuex from 'vuex';\n\nVue.use(Vuex);\n\nexport const store = new Vuex.Store({\n\tstate: {\n\t\t${1:key}: ${2:value}\n\t}\n});",
-      "doc": "Base for Vuex store",
-      "label": "Vuex Store",
+      "content": "import { store } from './store/index';",
+      "doc": "import vuex store into main.js",
+      "label": "Vue Import Vuex Store",
       "matches": {
-        "vstore": true
-      }
-    },
-    {
-      "content": "export const state = () => ({\n\tvalue: 'myvalue'\n})\n\nexport const getters = {\n\tgetterValue: state => {\n\t\treturn state.value\n\t}\n}\n\nexport const mutations = {\n\tupdateValue: (state, payload) => {\n\t\tstate.value = payload\n\t}\n}\n\nexport const actions = {\n\tupdateActionValue({ commit }) {\n\t\tcommit('updateValue', payload)\n\t}\n}",
-      "doc": "vuex store 2",
-      "label": "Vuex Store 2",
-      "matches": {
-        "vstore2": true
-      }
-    },
-    {
-      "content": "mutations: {\n\t${1:updateValue}(state, ${3:payload}) {\n\t\tstate.${2:value} = ${3:payload};\n\t}\n}",
-      "doc": "vuex mutation",
-      "label": "Vuex Mutation",
-      "matches": {
-        "vmutation": true
+        "vstore-import": true
       }
     },
     {
@@ -34,11 +18,19 @@
       }
     },
     {
-      "content": "import { store } from './store/index';",
-      "doc": "import vuex store into main.js",
-      "label": "Vue Import Vuex Store",
+      "content": "export const state = () => ({\n\tvalue: 'myvalue'\n})\n\nexport const getters = {\n\tgetterValue: state => {\n\t\treturn state.value\n\t}\n}\n\nexport const mutations = {\n\tupdateValue: (state, payload) => {\n\t\tstate.value = payload\n\t}\n}\n\nexport const actions = {\n\tupdateActionValue({ commit }) {\n\t\tcommit('updateValue', payload)\n\t}\n}",
+      "doc": "vuex store 2",
+      "label": "Vuex Store 2",
       "matches": {
-        "vstore-import": true
+        "vstore2": true
+      }
+    },
+    {
+      "content": "import Vue from 'vue';\nimport Vuex from 'vuex';\n\nVue.use(Vuex);\n\nexport const store = new Vuex.Store({\n\tstate: {\n\t\t${1:key}: ${2:value}\n\t}\n});",
+      "doc": "Base for Vuex store",
+      "label": "Vuex Store",
+      "matches": {
+        "vstore": true
       }
     },
     {
@@ -47,6 +39,14 @@
       "label": "Vuex Getters",
       "matches": {
         "vgetter": true
+      }
+    },
+    {
+      "content": "mutations: {\n\t${1:updateValue}(state, ${3:payload}) {\n\t\tstate.${2:value} = ${3:payload};\n\t}\n}",
+      "doc": "vuex mutation",
+      "label": "Vuex Mutation",
+      "matches": {
+        "vmutation": true
       }
     },
     {

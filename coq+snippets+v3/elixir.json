@@ -4,11 +4,19 @@
   ],
   "snippets": [
     {
-      "content": "def ${1:name}(), do: $0",
-      "doc": "Define a one-liner function",
-      "label": "df",
+      "content": "for ${1:item} <- ${2:items} do\n  $0\nend",
+      "doc": "",
+      "label": "for",
       "matches": {
-        "df": true
+        "for": true
+      }
+    },
+    {
+      "content": "test \"${1:name}\" do\n  $0\nend",
+      "doc": "",
+      "label": "test",
+      "matches": {
+        "test": true
       }
     },
     {
@@ -20,27 +28,19 @@
       }
     },
     {
+      "content": "def ${1:name}(${2:args}) do\n  $0\nend",
+      "doc": "Define a function with arguments",
+      "label": "defa",
+      "matches": {
+        "defa": true
+      }
+    },
+    {
       "content": "@moduledoc false",
       "doc": "",
       "label": "moduledoc false",
       "matches": {
         "mdocf": true
-      }
-    },
-    {
-      "content": "defmodule ${1:module} do\n  $0\nend",
-      "doc": "Define a module",
-      "label": "defmodule",
-      "matches": {
-        "defmo": true
-      }
-    },
-    {
-      "content": "describe \"${1:test group subject}\" do\n  $0\nend",
-      "doc": "",
-      "label": "des",
-      "matches": {
-        "desc": true
       }
     },
     {
@@ -52,6 +52,22 @@
       }
     },
     {
+      "content": "defp ${1:name}(${2:args}) do\n  $0\nend",
+      "doc": "Define a private function with arguments",
+      "label": "defpa",
+      "matches": {
+        "defpa": true
+      }
+    },
+    {
+      "content": "describe \"${1:test group subject}\" do\n  $0\nend",
+      "doc": "",
+      "label": "des",
+      "matches": {
+        "desc": true
+      }
+    },
+    {
       "content": "require IEx; IEx.pry\n$0",
       "doc": "",
       "label": "IEx.pry",
@@ -60,19 +76,19 @@
       }
     },
     {
-      "content": "|> $0",
+      "content": "@doc \"\"\"\n$0\n\"\"\"",
       "doc": "",
-      "label": "pipe char",
+      "label": "doc",
       "matches": {
-        "p": true
+        "doc": true
       }
     },
     {
-      "content": "def ${1:name}(${2:args}) when ${3:guard}, do: $0",
-      "doc": "Define a one-liner function with when guard",
-      "label": "dfw",
+      "content": "def ${1:name}(${2:args}), do: $0",
+      "doc": "Define a one-liner function with arguments",
+      "label": "dfa",
       "matches": {
-        "dfw": true
+        "dfa": true
       }
     },
     {
@@ -84,11 +100,11 @@
       }
     },
     {
-      "content": "IO.puts($0)",
-      "doc": "",
-      "label": "IO.puts",
+      "content": "def ${1:name}(${2:args}) when ${3:guard}, do: $0",
+      "doc": "Define a one-liner function with when guard",
+      "label": "dfw",
       "matches": {
-        "put": true
+        "dfw": true
       }
     },
     {
@@ -97,6 +113,14 @@
       "label": "pipe into map",
       "matches": {
         ">m": true
+      }
+    },
+    {
+      "content": "require ${0:Logger}",
+      "doc": "",
+      "label": "require",
+      "matches": {
+        "req": true
       }
     },
     {
@@ -116,19 +140,27 @@
       }
     },
     {
-      "content": "cond do\n  $1 -> \n  $0\nend",
+      "content": "|> Enum.reduce(${1:acc}, fn ${2}, ${3:acc} -> $0 end)",
       "doc": "",
-      "label": "cond",
+      "label": "pipe into reduce",
       "matches": {
-        "cond": true
+        ">r": true
       }
     },
     {
-      "content": "for ${1:item} <- ${2:items} do\n  $0\nend",
+      "content": "if ${1:condition} do\n  $0\nend",
       "doc": "",
-      "label": "for",
+      "label": "if .. do .. end",
       "matches": {
-        "for": true
+        "if": true
+      }
+    },
+    {
+      "content": "~w($0)",
+      "doc": "",
+      "label": "word list",
+      "matches": {
+        "wl": true
       }
     },
     {
@@ -140,11 +172,11 @@
       }
     },
     {
-      "content": "~w($0)",
+      "content": "~w($0)a",
       "doc": "",
-      "label": "word list",
+      "label": "atom list",
       "matches": {
-        "wl": true
+        "al": true
       }
     },
     {
@@ -164,19 +196,11 @@
       }
     },
     {
-      "content": "require ${0:Logger}",
+      "content": "case $1 do\n  $2 -> \n    $0\nend",
       "doc": "",
-      "label": "require",
+      "label": "case",
       "matches": {
-        "req": true
-      }
-    },
-    {
-      "content": "test \"${1:name}\" do\n  $0\nend",
-      "doc": "",
-      "label": "test",
-      "matches": {
-        "test": true
+        "case": true
       }
     },
     {
@@ -188,43 +212,19 @@
       }
     },
     {
-      "content": "case $1 do\n  $2 -> \n    $0\nend",
-      "doc": "",
-      "label": "case",
+      "content": "def ${1:name}() do\n  $0\nend",
+      "doc": "Define a function",
+      "label": "def",
       "matches": {
-        "case": true
+        "def": true
       }
     },
     {
-      "content": "@spec ${1:name}(${2:args}) :: ${3:no_return}\ndef $1{4:args} do\n  $0\nend",
+      "content": "@spec ${1:name}(${2:args}) :: ${3:no_return}\ndef $1(${4:args}) do\n  $0\nend",
       "doc": "",
       "label": "def + spec",
       "matches": {
         "defs": true
-      }
-    },
-    {
-      "content": "@doc \"\"\"\n${1:doc}\n\"\"\"\n@spec ${2:name}(${3:args}) :: ${4:no_return}\ndef $2{5:args} do\n  $0\nend",
-      "doc": "",
-      "label": "def + doc + spec",
-      "matches": {
-        "defsd": true
-      }
-    },
-    {
-      "content": "~w($0)a",
-      "doc": "",
-      "label": "atom list",
-      "matches": {
-        "al": true
-      }
-    },
-    {
-      "content": "|> Enum.reduce(${1:acc}, fn ${2}, ${3:acc} -> $0 end)",
-      "doc": "",
-      "label": "pipe into reduce",
-      "matches": {
-        ">r": true
       }
     },
     {
@@ -236,11 +236,27 @@
       }
     },
     {
-      "content": "@doc ~S\"\"\"\n$0\n\"\"\"",
+      "content": "|> $0",
       "doc": "",
-      "label": "doc s",
+      "label": "pipe char",
       "matches": {
-        "docs": true
+        "p": true
+      }
+    },
+    {
+      "content": "@doc \"\"\"\n${1:doc}\n\"\"\"\n@spec ${2:name}(${3:args}) :: ${4:no_return}\ndef $2({5:args}) do\n  $0\nend",
+      "doc": "",
+      "label": "def + doc + spec",
+      "matches": {
+        "defsd": true
+      }
+    },
+    {
+      "content": "def ${1:name}(), do: $0",
+      "doc": "Define a one-liner function",
+      "label": "df",
+      "matches": {
+        "df": true
       }
     },
     {
@@ -252,11 +268,27 @@
       }
     },
     {
-      "content": "if ${1:condition} do\n  $0\nend",
+      "content": "IO.puts($0)",
       "doc": "",
-      "label": "if .. do .. end",
+      "label": "IO.puts",
       "matches": {
-        "if": true
+        "put": true
+      }
+    },
+    {
+      "content": "@doc ~S\"\"\"\n$0\n\"\"\"",
+      "doc": "",
+      "label": "doc s",
+      "matches": {
+        "docs": true
+      }
+    },
+    {
+      "content": "cond do\n  $1 -> \n  $0\nend",
+      "doc": "",
+      "label": "cond",
+      "matches": {
+        "cond": true
       }
     },
     {
@@ -268,19 +300,11 @@
       }
     },
     {
-      "content": "def ${1:name}() do\n  $0\nend",
-      "doc": "Define a function",
-      "label": "def",
+      "content": "defmodule ${1:module} do\n  $0\nend",
+      "doc": "Define a module",
+      "label": "defmodule",
       "matches": {
-        "def": true
-      }
-    },
-    {
-      "content": "@doc \"\"\"\n$0\n\"\"\"",
-      "doc": "",
-      "label": "doc",
-      "matches": {
-        "doc": true
+        "defmo": true
       }
     },
     {

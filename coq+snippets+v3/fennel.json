@@ -2,19 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "(local ${1:name} ${2:value})",
-      "doc": "Create a variable with local",
-      "label": "local",
+      "content": "(for [i 1 10]\n($0))",
+      "doc": "Create a for loop",
+      "label": "for",
       "matches": {
-        "local": true
-      }
-    },
-    {
-      "content": "(fn ${1:name} [${2:params}]\n   )",
-      "doc": "Create a function",
-      "label": "fn",
-      "matches": {
-        "fn": true
+        "for": true
       }
     },
     {
@@ -26,27 +18,35 @@
       }
     },
     {
-      "content": "(while (${1:condition})\n($0))",
-      "doc": "Create a while loop",
-      "label": "while",
+      "content": "(global $0)",
+      "doc": "Create a global",
+      "label": "global",
       "matches": {
-        "while": true
+        "global": true
       }
     },
     {
-      "content": "(tset ${1:tbl} ${2:value})",
-      "doc": "Set a value in a table",
-      "label": "set table value",
+      "content": "(local ${1:name} ${2:value})",
+      "doc": "Create a variable with local",
+      "label": "local",
       "matches": {
-        "tset": true
+        "local": true
       }
     },
     {
-      "content": "(for [i 1 10]\n($0))",
-      "doc": "Create a for loop",
-      "label": "for",
+      "content": "(require :${1:module})",
+      "doc": "Require a module",
+      "label": "require",
       "matches": {
-        "for": true
+        "require": true
+      }
+    },
+    {
+      "content": "(fn ${1:name} [${2:params}]\n   )",
+      "doc": "Create a function",
+      "label": "fn",
+      "matches": {
+        "fn": true
       }
     },
     {
@@ -58,11 +58,19 @@
       }
     },
     {
-      "content": "(global $0)",
-      "doc": "Create a global",
-      "label": "global",
+      "content": "(tset ${1:tbl} ${2:value})",
+      "doc": "Set a value in a table",
+      "label": "set table value",
       "matches": {
-        "global": true
+        "tset": true
+      }
+    },
+    {
+      "content": "(while (${1:condition})\n($0))",
+      "doc": "Create a while loop",
+      "label": "while",
+      "matches": {
+        "while": true
       }
     },
     {
@@ -71,14 +79,6 @@
       "label": "var",
       "matches": {
         "var": true
-      }
-    },
-    {
-      "content": "(require :${1:module})",
-      "doc": "Require a module",
-      "label": "require",
-      "matches": {
-        "require": true
       }
     }
   ]

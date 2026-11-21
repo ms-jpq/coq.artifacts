@@ -2,30 +2,6 @@
   "extends": [],
   "snippets": [
     {
-      "content": "import { useStaticQuery, graphql } from \"gatsby\"",
-      "doc": "",
-      "label": "gatsby-usestaticquery-import",
-      "matches": {
-        "gatsby import usestaticquery": true
-      }
-    },
-    {
-      "content": "<Link to=\"${1:/blog}\" activeClassName={\"${2:myActiveClassName}\"} >Text</Link>",
-      "doc": "",
-      "label": "gatsby-link-activeclassname",
-      "matches": {
-        "gatsby link activeclassname": true
-      }
-    },
-    {
-      "content": "<Link to=\"${1:/blog}\">${2:Text}</Link>",
-      "doc": "",
-      "label": "gatsby-link",
-      "matches": {
-        "gatsby link": true
-      }
-    },
-    {
       "content": "const {${1:site}} = useStaticQuery(\n  graphql`${2:query}`\n);",
       "doc": "",
       "label": "gatsby-usestatic-query",
@@ -63,6 +39,30 @@
       "label": "gatsby-export-query",
       "matches": {
         "gatsby export query": true
+      }
+    },
+    {
+      "content": "import { useStaticQuery, graphql } from \"gatsby\"",
+      "doc": "",
+      "label": "gatsby-usestaticquery-import",
+      "matches": {
+        "gatsby import usestaticquery": true
+      }
+    },
+    {
+      "content": "<Link to=\"${1:/blog}\" activeClassName={\"${2:myActiveClassName}\"} >Text</Link>",
+      "doc": "",
+      "label": "gatsby-link-activeclassname",
+      "matches": {
+        "gatsby link activeclassname": true
+      }
+    },
+    {
+      "content": "<Link to=\"${1:/blog}\">${2:Text}</Link>",
+      "doc": "",
+      "label": "gatsby-link",
+      "matches": {
+        "gatsby link": true
       }
     }
   ]

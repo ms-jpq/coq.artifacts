@@ -2,14 +2,6 @@
   "extends": [],
   "snippets": [
     {
-      "content": "class ${1:MODEL_NAME}DeleteView(DeleteView):\r\n    model = ${1:MODEL_NAME}\r\n    template_name = \"${2:TEMPLATE_NAME}\"",
-      "doc": "",
-      "label": "deleteview",
-      "matches": {
-        "deleteview": true
-      }
-    },
-    {
       "content": "class ${1:MODEL_NAME}DetailView(DetailView):\r\n    model = ${1:MODEL_NAME}\r\n    template_name = \"${2:TEMPLATE_NAME}\"",
       "doc": "",
       "label": "detailview",
@@ -18,19 +10,19 @@
       }
     },
     {
+      "content": "class ${1:MODEL_NAME}CreateView(CreateView):\r\n    model = ${1:MODEL_NAME}\r\n    template_name = \"${2:TEMPLATE_NAME}\"",
+      "doc": "",
+      "label": "createview",
+      "matches": {
+        "createview": true
+      }
+    },
+    {
       "content": "class ${1:MODEL_NAME}ListView(ListView):\r\n    model = ${1:MODEL_NAME}\r\n    template_name = \"${2:TEMPLATE_NAME}\"",
       "doc": "",
       "label": "listview",
       "matches": {
         "listview": true
-      }
-    },
-    {
-      "content": "def dispatch(self, request, *args, **kwargs):\r\n    return super(${1:CLASS_NAME}, self).dispatch(request, *args, **kwargs)",
-      "doc": "",
-      "label": "dispatch",
-      "matches": {
-        "dispatch": true
       }
     },
     {
@@ -50,19 +42,19 @@
       }
     },
     {
-      "content": "def get_queryset(self):\n\tqueryset = super(${1:CLASS_NAME}, self).get_queryset()\n\tqueryset = queryset${3: # TODO}\n\treturn queryset",
-      "doc": "",
-      "label": "get_queryset",
-      "matches": {
-        "get_queryset": true
-      }
-    },
-    {
       "content": "from .views import $1",
       "doc": "",
       "label": "from views import",
       "matches": {
         "fvi": true
+      }
+    },
+    {
+      "content": "def get_queryset(self):\n\tqueryset = super(${1:CLASS_NAME}, self).get_queryset()\n\tqueryset = queryset${3: # TODO}\n\treturn queryset",
+      "doc": "",
+      "label": "get_queryset",
+      "matches": {
+        "get_queryset": true
       }
     },
     {
@@ -74,6 +66,22 @@
       }
     },
     {
+      "content": "from django.views.generic import ${1|CreateView,DetailView,FormView,ListView,TemplateView,UpdateView|}",
+      "doc": "Generic class-based views",
+      "label": "igenericviews",
+      "matches": {
+        "igenericviews": true
+      }
+    },
+    {
+      "content": "def dispatch(self, request, *args, **kwargs):\r\n    return super(${1:CLASS_NAME}, self).dispatch(request, *args, **kwargs)",
+      "doc": "",
+      "label": "dispatch",
+      "matches": {
+        "dispatch": true
+      }
+    },
+    {
       "content": "def ${1:VIEWNAME}(request):",
       "doc": "View",
       "label": "view",
@@ -82,11 +90,11 @@
       }
     },
     {
-      "content": "from django.views.generic import ${1|CreateView,DetailView,FormView,ListView,TemplateView,UpdateView|}",
-      "doc": "Generic class-based views",
-      "label": "igenericviews",
+      "content": "class ${1:MODEL_NAME}DeleteView(DeleteView):\r\n    model = ${1:MODEL_NAME}\r\n    template_name = \"${2:TEMPLATE_NAME}\"",
+      "doc": "",
+      "label": "deleteview",
       "matches": {
-        "igenericviews": true
+        "deleteview": true
       }
     },
     {
@@ -98,35 +106,11 @@
       }
     },
     {
-      "content": "class ${1:MODEL_NAME}CreateView(CreateView):\r\n    model = ${1:MODEL_NAME}\r\n    template_name = \"${2:TEMPLATE_NAME}\"",
-      "doc": "",
-      "label": "createview",
-      "matches": {
-        "createview": true
-      }
-    },
-    {
       "content": "def perform_create(self, serializer):\n\treturn ${1:super().perform_create(serializer)}",
       "doc": "Django-rest Views ``perform_create`` method",
       "label": "DRF perform_update",
       "matches": {
         "perfromupdate": true
-      }
-    },
-    {
-      "content": "class ${1:Name}APIView(APIView):\n\t${2}",
-      "doc": "Django-rest Views ``APIView`` Class",
-      "label": "DRF APIView",
-      "matches": {
-        "apiview": true
-      }
-    },
-    {
-      "content": "def perform_destroy(self, instance):\n\treturn ${1:super().perform_destroy(instance)}",
-      "doc": "Django-rest Views ``perform_create`` method",
-      "label": "DRF perform_destroy",
-      "matches": {
-        "performdestroy": true
       }
     },
     {
@@ -143,6 +127,22 @@
       "label": "DRF ViewSet",
       "matches": {
         "viewset": true
+      }
+    },
+    {
+      "content": "class ${1:Name}APIView(APIView):\n\t${2}",
+      "doc": "Django-rest Views ``APIView`` Class",
+      "label": "DRF APIView",
+      "matches": {
+        "apiview": true
+      }
+    },
+    {
+      "content": "def perform_destroy(self, instance):\n\treturn ${1:super().perform_destroy(instance)}",
+      "doc": "Django-rest Views ``perform_create`` method",
+      "label": "DRF perform_destroy",
+      "matches": {
+        "performdestroy": true
       }
     }
   ]

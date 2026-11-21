@@ -7,91 +7,11 @@
   ],
   "snippets": [
     {
-      "content": "if ${1:condition}:\n\t${2:pass}\nelse:\n\t${3:pass}",
-      "doc": "if statement with else",
-      "label": "if/else",
+      "content": "for ${1:value} in ${2:iterable}:\n\t${3:pass}",
+      "doc": "for loop",
+      "label": "for",
       "matches": {
-        "ifelse": true
-      }
-    },
-    {
-      "content": "elif ${1:expression}:\n\t${2:pass}",
-      "doc": "elif statement",
-      "label": "elif",
-      "matches": {
-        "elif": true
-      }
-    },
-    {
-      "content": "match ${1:expression}:\n\tcase ${2:pattern}:\n\t\t${3:pass}",
-      "doc": "match/case statements",
-      "label": "match/case",
-      "matches": {
-        "match": true
-      }
-    },
-    {
-      "content": "# pyright: ignore[$0]",
-      "doc": "Ignore specific line diagnostic in pyright (ignore all is unsafe)",
-      "label": "pyright ignore line",
-      "matches": {
-        "#ignore": true
-      }
-    },
-    {
-      "content": "# %% [markdown]",
-      "doc": "Add a new markdown cell",
-      "label": "Jupyter markdown cell",
-      "matches": {
-        "#mark": true
-      }
-    },
-    {
-      "content": "case _:\n\t${1:pass}",
-      "doc": "case wildcard block if other cases fail",
-      "label": "case wildcard",
-      "matches": {
-        "casew": true
-      }
-    },
-    {
-      "content": "\"\"\"$0\n\"\"\"",
-      "doc": "Snippet to avoid autopair plugin annoyances when typing multiple \"",
-      "label": "Multiline string",
-      "matches": {
-        "#": true
-      }
-    },
-    {
-      "content": "\"\"\"$0\"\"\"",
-      "doc": "Snippet to avoid autopair plugin annoyances when typing multiple \"",
-      "label": "One-line multiline string",
-      "matches": {
-        "##": true
-      }
-    },
-    {
-      "content": "for ${1:value} in range($2):\n\t${3:pass}",
-      "doc": "for loop that iterates over range of integers",
-      "label": "for w/ range",
-      "matches": {
-        "forr": true
-      }
-    },
-    {
-      "content": "__${1:init}__$0",
-      "doc": "Create magic method",
-      "label": "__magic__",
-      "matches": {
-        "__": true
-      }
-    },
-    {
-      "content": "if __name__ == \"__main__\":\n\t${1:main()}",
-      "doc": "Execute code if the file is executed directly",
-      "label": "if __name__ == __main__",
-      "matches": {
-        "ifmain": true
+        "for": true
       }
     },
     {
@@ -103,27 +23,11 @@
       }
     },
     {
-      "content": "for ${1:value} in ${2:iterable}:\n\t${3:pass}",
-      "doc": "for loop",
-      "label": "for",
+      "content": "lambda ${1:parameter_list}: ${2:expression}",
+      "doc": "lambda statement",
+      "label": "lambda",
       "matches": {
-        "for": true
-      }
-    },
-    {
-      "content": "from ${1:pathlib} import ${2:Path}",
-      "doc": "Import individual objects directly into the caller’s symbol table",
-      "label": "from ... import ...",
-      "matches": {
-        "fromim": true
-      }
-    },
-    {
-      "content": "def ${1:mname}(self$2) -> ${3:None}:\n\t${4:pass}",
-      "doc": "Class method definition",
-      "label": "Method w/ return type",
-      "matches": {
-        "defst": true
+        "lambda": true
       }
     },
     {
@@ -135,19 +39,11 @@
       }
     },
     {
-      "content": "class ${1:classname}:\n\t${2:pass}",
-      "doc": "Class definition",
-      "label": "class",
+      "content": "#!/usr/bin/env python$0",
+      "doc": "Shebang line for the first python in PATH",
+      "label": "#!/usr/bin/env pythonX",
       "matches": {
-        "class": true
-      }
-    },
-    {
-      "content": "except$1:\n\t${2:pass}",
-      "doc": "except statement",
-      "label": "except",
-      "matches": {
-        "except": true
+        "#env": true
       }
     },
     {
@@ -159,19 +55,83 @@
       }
     },
     {
-      "content": "case ${2:pattern}:\n\t${3:pass}",
-      "doc": "case block",
-      "label": "case",
+      "content": "\"\"\"$0\n\"\"\"",
+      "doc": "Snippet to avoid weird autopair plugin behaviour",
+      "label": "Multiline string",
       "matches": {
-        "case": true
+        "#s": true
       }
     },
     {
-      "content": "self.$0",
-      "doc": "Snippet to reference the self property in an object",
-      "label": "self",
+      "content": "\"\"\"$0\"\"\"",
+      "doc": "Snippet to avoid weird autopair plugin behaviour",
+      "label": "One-line multiline string",
       "matches": {
-        "s": true
+        "#ss": true
+      }
+    },
+    {
+      "content": "class ${1:classname}:\n\t${2:pass}",
+      "doc": "Class definition",
+      "label": "class",
+      "matches": {
+        "class": true
+      }
+    },
+    {
+      "content": "'''$0\n'''",
+      "doc": "Snippet to avoid weird autopair plugin behaviour",
+      "label": "Single-quote multiline string",
+      "matches": {
+        "#q": true
+      }
+    },
+    {
+      "content": "def __init__(self$1):\n\t${2:pass}",
+      "doc": "Class method definition",
+      "label": "Init method",
+      "matches": {
+        "defi": true
+      }
+    },
+    {
+      "content": "'''$0'''",
+      "doc": "Snippet to avoid weird autopair plugin behaviour",
+      "label": "One-line single-quote multiline string",
+      "matches": {
+        "#qq": true
+      }
+    },
+    {
+      "content": "# %% [markdown]",
+      "doc": "Add a new markdown cell",
+      "label": "Jupyter markdown cell",
+      "matches": {
+        "#mark": true
+      }
+    },
+    {
+      "content": "__${1:init}__$0",
+      "doc": "Create magic method",
+      "label": "__magic__",
+      "matches": {
+        "__": true
+      }
+    },
+    {
+      "content": "async def ${1:fname}($2):\n\t${3:pass}",
+      "doc": "Async function definition",
+      "label": "Async Function",
+      "matches": {
+        "adef": true
+      }
+    },
+    {
+      "content": "if __name__ == \"__main__\":\n\t${1:main()}",
+      "doc": "Execute code if the file is executed directly",
+      "label": "if __name__ == __main__",
+      "matches": {
+        "ifmain": true
       }
     },
     {
@@ -183,11 +143,51 @@
       }
     },
     {
-      "content": "import ${1:datetime}",
-      "doc": "Import a package or module",
-      "label": "import",
+      "content": "async def ${1:fname}($2) -> ${3:None}:\n\t${4:pass}",
+      "doc": "Async function definition with return type",
+      "label": "Async Function w/ return type",
       "matches": {
-        "import": true
+        "adeft": true
+      }
+    },
+    {
+      "content": "elif ${1:expression}:\n\t${2:pass}",
+      "doc": "elif statement",
+      "label": "elif",
+      "matches": {
+        "elif": true
+      }
+    },
+    {
+      "content": "case ${2:pattern}:\n\t${3:pass}",
+      "doc": "case block",
+      "label": "case",
+      "matches": {
+        "case": true
+      }
+    },
+    {
+      "content": "from ${1:pathlib} import ${2:Path}",
+      "doc": "Import individual objects directly into the caller’s symbol table",
+      "label": "from ... import ...",
+      "matches": {
+        "fromim": true
+      }
+    },
+    {
+      "content": "async def ${1:mname}(self$2):\n\t${3:pass}",
+      "doc": "Async class method definition",
+      "label": "Async method",
+      "matches": {
+        "adefs": true
+      }
+    },
+    {
+      "content": "async def ${1:mname}(self$2) -> ${3:None}:\n\t${4:pass}",
+      "doc": "Async class method definition with return type",
+      "label": "Async method w/ return type",
+      "matches": {
+        "adefst": true
       }
     },
     {
@@ -199,11 +199,19 @@
       }
     },
     {
+      "content": "if ${1:condition}:\n\t${2:pass}\nelse:\n\t${3:pass}",
+      "doc": "if statement with else",
+      "label": "if/else",
+      "matches": {
+        "ifelse": true
+      }
+    },
+    {
       "content": "def ${1:mname}(self$2):\n\t${3:pass}",
       "doc": "Class method definition",
       "label": "Method",
       "matches": {
-        "defs": true
+        "defm": true
       }
     },
     {
@@ -215,6 +223,38 @@
       }
     },
     {
+      "content": "def ${1:mname}(self$2) -> ${3:None}:\n\t${4:pass}",
+      "doc": "Class method definition",
+      "label": "Method w/ return type",
+      "matches": {
+        "defmt": true
+      }
+    },
+    {
+      "content": "for ${1:value} in range($2):\n\t${3:pass}",
+      "doc": "for loop that iterates over range of integers",
+      "label": "for w/ range",
+      "matches": {
+        "forr": true
+      }
+    },
+    {
+      "content": "match ${1:expression}:\n\tcase ${2:pattern}:\n\t\t${3:pass}",
+      "doc": "match/case statements",
+      "label": "match/case",
+      "matches": {
+        "match": true
+      }
+    },
+    {
+      "content": "self.$0",
+      "doc": "Snippet to reference the self property in an object",
+      "label": "self",
+      "matches": {
+        "s": true
+      }
+    },
+    {
       "content": "else:\n\t${1:pass}",
       "doc": "else statement",
       "label": "else",
@@ -223,11 +263,43 @@
       }
     },
     {
-      "content": "#!/usr/bin/env python$0",
-      "doc": "Shebang line for the first python in PATH",
-      "label": "#!/usr/bin/env pythonX",
+      "content": "import ${1:datetime}",
+      "doc": "Import a package or module",
+      "label": "import",
       "matches": {
-        "#env": true
+        "import": true
+      }
+    },
+    {
+      "content": "async with ${1:expression} as ${2:var}:\n\t${3:pass}",
+      "doc": "Async context manager",
+      "label": "async with",
+      "matches": {
+        "awith": true
+      }
+    },
+    {
+      "content": "async for ${1:item} in ${2:aiterable}:\n\t${3:pass}",
+      "doc": "Async for loop",
+      "label": "async for",
+      "matches": {
+        "afor": true
+      }
+    },
+    {
+      "content": "case _:\n\t${1:pass}",
+      "doc": "case wildcard block if other cases fail",
+      "label": "case wildcard",
+      "matches": {
+        "casew": true
+      }
+    },
+    {
+      "content": "except$1:\n\t${2:pass}",
+      "doc": "except statement",
+      "label": "except",
+      "matches": {
+        "except": true
       }
     },
     {
@@ -239,11 +311,11 @@
       }
     },
     {
-      "content": "lambda ${1:parameter_list}: ${2:expression}",
-      "doc": "lambda statement",
-      "label": "lambda",
+      "content": "# pyright: ignore[$0]",
+      "doc": "Ignore specific line diagnostic in pyright (ignore all is unsafe)",
+      "label": "pyright ignore line",
       "matches": {
-        "lambda": true
+        "#ignore": true
       }
     },
     {
