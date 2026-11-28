@@ -2,19 +2,19 @@
   "extends": [],
   "snippets": [
     {
+      "content": "${1:FIELDNAME} = forms.ModelMultipleChoiceField($2)",
+      "doc": "ModelMultipleChoiceField (fmomuchoice)",
+      "label": "fmomuchoice",
+      "matches": {
+        "fmomuchoice": true
+      }
+    },
+    {
       "content": "${1:FIELDNAME} = forms.MultiValueField($2)",
       "doc": "MultiValueField (fmuval)",
       "label": "fmuval",
       "matches": {
         "fmuval": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = forms.MultipleChoiceField($2, choices=[${3:CHOICES}], required=${4:False})",
-      "doc": "MultipleChoiceField (fmuchoice)",
-      "label": "fmuchoice",
-      "matches": {
-        "fmuchoice": true
       }
     },
     {
@@ -26,19 +26,19 @@
       }
     },
     {
-      "content": "${1:FIELDNAME} = forms.BooleanField($2, required=${3:False})",
-      "doc": "BooleanField (fbool)",
-      "label": "fbool",
-      "matches": {
-        "fbool": true
-      }
-    },
-    {
       "content": "${1:FIELDNAME} = forms.NullBooleanField($2, required=${3:False})",
       "doc": "NullBooleanField (fnullbool)",
       "label": "fnullbool",
       "matches": {
         "fnullbool": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = forms.BooleanField($2, required=${3:False})",
+      "doc": "BooleanField (fbool)",
+      "label": "fbool",
+      "matches": {
+        "fbool": true
       }
     },
     {
@@ -50,14 +50,6 @@
       }
     },
     {
-      "content": "${1:FIELDNAME} = forms.ChoiceField($2, choices=[${3:CHOICES}], required=${4:False})",
-      "doc": "ChoiceField (fchoice)",
-      "label": "fchoice",
-      "matches": {
-        "fchoice": true
-      }
-    },
-    {
       "content": "${1:FIELDNAME} = forms.SlugField($2, allow_unicode=${3:False}, required=${4:False})",
       "doc": "SlugField (fslug)",
       "label": "fslug",
@@ -66,11 +58,11 @@
       }
     },
     {
-      "content": "${1:FIELDNAME} = forms.ComboField($2)",
-      "doc": "ComboField (fcombo)",
-      "label": "fcombo",
+      "content": "${1:FIELDNAME} = forms.ChoiceField($2, choices=[${3:CHOICES}], required=${4:False})",
+      "doc": "ChoiceField (fchoice)",
+      "label": "fchoice",
       "matches": {
-        "fcombo": true
+        "fchoice": true
       }
     },
     {
@@ -82,11 +74,11 @@
       }
     },
     {
-      "content": "${1:FIELDNAME} = forms.DateField($2, required=${3:False})",
-      "doc": "DateField (fdate)",
-      "label": "fdate",
+      "content": "${1:FIELDNAME} = forms.ComboField($2)",
+      "doc": "ComboField (fcombo)",
+      "label": "fcombo",
       "matches": {
-        "fdate": true
+        "fcombo": true
       }
     },
     {
@@ -98,11 +90,11 @@
       }
     },
     {
-      "content": "${1:FIELDNAME} = forms.DateTimeField($2, required=${3:False})",
-      "doc": "DateTimeField (fdatetime)",
-      "label": "fdatetime",
+      "content": "${1:FIELDNAME} = forms.DateField($2, required=${3:False})",
+      "doc": "DateField (fdate)",
+      "label": "fdate",
       "matches": {
-        "fdatetime": true
+        "fdate": true
       }
     },
     {
@@ -114,11 +106,11 @@
       }
     },
     {
-      "content": "${1:FIELDNAME} = forms.DecimalField($2, required=${3:False})",
-      "doc": "DecimalField (fdecimal)",
-      "label": "fdecimal",
+      "content": "${1:FIELDNAME} = forms.DateTimeField($2, required=${3:False})",
+      "doc": "DateTimeField (fdatetime)",
+      "label": "fdatetime",
       "matches": {
-        "fdecimal": true
+        "fdatetime": true
       }
     },
     {
@@ -130,11 +122,11 @@
       }
     },
     {
-      "content": "${1:FIELDNAME} = forms.DurationField($2, required=${3:False})",
-      "doc": "DurationField (fduration)",
-      "label": "fduration",
+      "content": "${1:FIELDNAME} = forms.DecimalField($2, required=${3:False})",
+      "doc": "DecimalField (fdecimal)",
+      "label": "fdecimal",
       "matches": {
-        "fduration": true
+        "fdecimal": true
       }
     },
     {
@@ -146,19 +138,11 @@
       }
     },
     {
-      "content": "${1:FIELDNAME} = forms.EmailField($2, required=${3:False})",
-      "doc": "EmailField (femail)",
-      "label": "femail",
+      "content": "${1:FIELDNAME} = forms.DurationField($2, required=${3:False})",
+      "doc": "DurationField (fduration)",
+      "label": "fduration",
       "matches": {
-        "femail": true
-      }
-    },
-    {
-      "content": "from .forms import $1",
-      "doc": "",
-      "label": "ffi",
-      "matches": {
-        "ffi": true
+        "fduration": true
       }
     },
     {
@@ -170,19 +154,19 @@
       }
     },
     {
+      "content": "${1:FIELDNAME} = forms.EmailField($2, required=${3:False})",
+      "doc": "EmailField (femail)",
+      "label": "femail",
+      "matches": {
+        "femail": true
+      }
+    },
+    {
       "content": "${1:FIELDNAME} = SimpleArrayField()",
       "doc": "SimpleArrayField (fsimplearray).\n\n*PostgreSQL specific form fields*.",
       "label": "fsimplearray",
       "matches": {
         "fsimplearray": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = forms.FilePathField($2, path=${3:/absolute_path/}, required=${4:False})",
-      "doc": "FilePathField (ffilepath)",
-      "label": "ffilepath",
-      "matches": {
-        "ffilepath": true
       }
     },
     {
@@ -194,11 +178,11 @@
       }
     },
     {
-      "content": "${1:FIELDNAME} = forms.FloatField($2, required=${3:False})",
-      "doc": "FloatField (ffloat)",
-      "label": "ffloat",
+      "content": "${1:FIELDNAME} = forms.FilePathField($2, path=${3:/absolute_path/}, required=${4:False})",
+      "doc": "FilePathField (ffilepath)",
+      "label": "ffilepath",
       "matches": {
-        "ffloat": true
+        "ffilepath": true
       }
     },
     {
@@ -210,11 +194,11 @@
       }
     },
     {
-      "content": "${1:FIELDNAME} = forms.IPAddressField($2)",
-      "doc": "IPAddressField (fip).\n\nThis field has been deprecated since version 1.7 in favor of GenericIPAddressField.",
-      "label": "fip",
+      "content": "${1:FIELDNAME} = forms.FloatField($2, required=${3:False})",
+      "doc": "FloatField (ffloat)",
+      "label": "ffloat",
       "matches": {
-        "fip": true
+        "ffloat": true
       }
     },
     {
@@ -223,6 +207,14 @@
       "label": "fjson",
       "matches": {
         "fjson": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = forms.IPAddressField($2)",
+      "doc": "IPAddressField (fip).\n\nThis field has been deprecated since version 1.7 in favor of GenericIPAddressField.",
+      "label": "fip",
+      "matches": {
+        "fip": true
       }
     },
     {
@@ -242,6 +234,22 @@
       }
     },
     {
+      "content": "def clean_${1:FIELD}(self):\n\t${1:FIELD} = self.cleaned_data.get('${1:FIELD}')\n\n\n\t # TODO Validation\n\n\treturn ${1:FIELD}",
+      "doc": "",
+      "label": "clean_data",
+      "matches": {
+        "clean_data": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = FloatRangeField()",
+      "doc": "FloatRangeField (ffloatrange).\n\n*PostgreSQL specific form fields*.",
+      "label": "ffloatrange",
+      "matches": {
+        "ffloatrange": true
+      }
+    },
+    {
       "content": "${1:FIELDNAME} = forms.ImageField($2, required=${3:False})",
       "doc": "ImageField (fimg)",
       "label": "fimg",
@@ -250,11 +258,19 @@
       }
     },
     {
-      "content": "def clean_${1:FIELD}(self):\n\t${1:FIELD} = self.cleaned_data.get('${1:FIELD}')\n\n\n\t # TODO Validation\n\n\treturn ${1:FIELD}",
-      "doc": "",
-      "label": "clean_data",
+      "content": "from django.contrib.postgres.forms import ${1|SimpleArrayField,SplitArrayField,HStoreField,JSONField,IntegerRangeField,FloatRangeField,DateTimeRangeField,DateRangeField|}",
+      "doc": "PostgreSQL specific forms fields",
+      "label": "ipostgresff",
       "matches": {
-        "clean_data": true
+        "ipostgresff": true
+      }
+    },
+    {
+      "content": "${1:FIELDNAME} = DateTimeRangeField()",
+      "doc": "DateTimeRangeField (fdatetimerange).\n\n*PostgreSQL specific form fields*.",
+      "label": "fdatetimerange",
+      "matches": {
+        "fdatetimerange": true
       }
     },
     {
@@ -266,11 +282,11 @@
       }
     },
     {
-      "content": "${1:FIELDNAME} = DateTimeRangeField()",
-      "doc": "DateTimeRangeField (fdatetimerange).\n\n*PostgreSQL specific form fields*.",
-      "label": "fdatetimerange",
+      "content": "from django import forms",
+      "doc": "from ... import forms",
+      "label": "iforms",
       "matches": {
-        "fdatetimerange": true
+        "iforms": true
       }
     },
     {
@@ -290,35 +306,19 @@
       }
     },
     {
-      "content": "from django import forms",
-      "doc": "from ... import forms",
-      "label": "iforms",
+      "content": "from .forms import $1",
+      "doc": "",
+      "label": "ffi",
       "matches": {
-        "iforms": true
+        "ffi": true
       }
     },
     {
-      "content": "${1:FIELDNAME} = FloatRangeField()",
-      "doc": "FloatRangeField (ffloatrange).\n\n*PostgreSQL specific form fields*.",
-      "label": "ffloatrange",
+      "content": "${1:FIELDNAME} = forms.MultipleChoiceField($2, choices=[${3:CHOICES}], required=${4:False})",
+      "doc": "MultipleChoiceField (fmuchoice)",
+      "label": "fmuchoice",
       "matches": {
-        "ffloatrange": true
-      }
-    },
-    {
-      "content": "${1:FIELDNAME} = forms.ModelMultipleChoiceField($2)",
-      "doc": "ModelMultipleChoiceField (fmomuchoice)",
-      "label": "fmomuchoice",
-      "matches": {
-        "fmomuchoice": true
-      }
-    },
-    {
-      "content": "from django.contrib.postgres.forms import ${1|SimpleArrayField,SplitArrayField,HStoreField,JSONField,IntegerRangeField,FloatRangeField,DateTimeRangeField,DateRangeField|}",
-      "doc": "PostgreSQL specific forms fields",
-      "label": "ipostgresff",
-      "matches": {
-        "ipostgresff": true
+        "fmuchoice": true
       }
     }
   ]

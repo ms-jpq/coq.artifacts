@@ -2,6 +2,16 @@
   "extends": [],
   "snippets": [
     {
+      "content": "derive newtype instance ${1:type}",
+      "doc": "Derive newtype instance",
+      "label": "derive-newtype-instance",
+      "matches": {
+        "derive-newtype": true,
+        "dni": true,
+        "drvnt": true
+      }
+    },
+    {
       "content": "ado\n  ${1:binder} ← ${2:expression}\n\n  in ${3:experssion}",
       "doc": "Ado-block",
       "label": "ado",
@@ -10,12 +20,11 @@
       }
     },
     {
-      "content": "foreign import data ${1:name} ∷ ${2:kind}",
-      "doc": "Foreign import data",
-      "label": "foreign-import-data",
+      "content": "do\n  ${1:binder} ← ${2:expression}",
+      "doc": "Do-block",
+      "label": "do",
       "matches": {
-        "foreign-data": true,
-        "frd": true
+        "do": true
       }
     },
     {
@@ -28,20 +37,22 @@
       }
     },
     {
-      "content": "foreign import ${1:name} ∷ ${2:type}",
-      "doc": "Foreign import",
-      "label": "foreign-import",
+      "content": "foreign import data ${1:name} ∷ ${2:kind}",
+      "doc": "Foreign import data",
+      "label": "foreign-import-data",
       "matches": {
-        "foreign": true,
-        "fri": true
+        "foreign-data": true,
+        "frd": true
       }
     },
     {
-      "content": "do\n  ${1:binder} ← ${2:expression}",
-      "doc": "Do-block",
-      "label": "do",
+      "content": "type ${1:type} r =\n  ( ${2:field} ∷ ${3:type}\n  , ${4:field} ∷ ${5:type}\n  | r\n  )",
+      "doc": "Type alias for an open row",
+      "label": "open-row-type-alias",
       "matches": {
-        "do": true
+        "open-row-type-alias": true,
+        "row": true,
+        "rta": true
       }
     },
     {
@@ -53,23 +64,12 @@
       }
     },
     {
-      "content": "derive newtype instance ${1:type}",
-      "doc": "Derive newtype instance",
-      "label": "derive-newtype-instance",
+      "content": "foreign import ${1:name} ∷ ${2:type}",
+      "doc": "Foreign import",
+      "label": "foreign-import",
       "matches": {
-        "derive-newtype": true,
-        "dni": true,
-        "drvnt": true
-      }
-    },
-    {
-      "content": "type ${1:type} r =\n  ( ${2:field} ∷ ${3:type}\n  , ${4:field} ∷ ${5:type}\n  | r\n  )",
-      "doc": "Type alias for an open row",
-      "label": "open-row-type-alias",
-      "matches": {
-        "open-row-type-alias": true,
-        "row": true,
-        "rta": true
+        "foreign": true,
+        "fri": true
       }
     },
     {

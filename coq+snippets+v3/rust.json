@@ -4,131 +4,19 @@
   ],
   "snippets": [
     {
-      "content": "extern \"C\" {\n    ${2:// add code here}\n}",
-      "doc": "extern \"C\" { … }",
-      "label": "extern-mod",
+      "content": "#[cfg(test)]\nmod test {\n    #[test]\n    fn ${1:name}() {\n        ${2:todo!();}\n    }\n}",
+      "doc": "#[cfg(test)]\nmod test {...}",
+      "label": "modtest",
       "matches": {
-        "extern-mod": true
+        "modtest": true
       }
     },
     {
-      "content": "pub fn ${1:name}(${2:arg}: ${3:Type}) -> ${4:RetType} {\n    ${5:todo!();}\n}",
-      "doc": "pub fn …(…) { … }",
-      "label": "pfn",
+      "content": "#![feature(${1})]",
+      "doc": "#![feature(…)]",
+      "label": "feature",
       "matches": {
-        "pfn": true
-      }
-    },
-    {
-      "content": "trait ${1:Name} {\n    ${2:// add code here}\n}",
-      "doc": "trait … { … }",
-      "label": "trait",
-      "matches": {
-        "trait": true
-      }
-    },
-    {
-      "content": "#![no_std]",
-      "doc": "#![no_std]",
-      "label": "no_std",
-      "matches": {
-        "no_std": true
-      }
-    },
-    {
-      "content": "#![no_core]",
-      "doc": "#![no_core]",
-      "label": "no_core",
-      "matches": {
-        "no_core": true
-      }
-    },
-    {
-      "content": "if let ${1:Some(pat)} = ${2:expr} {\n    ${0:todo!();}\n}",
-      "doc": "if let … = … { … }",
-      "label": "if-let",
-      "matches": {
-        "if-let": true
-      }
-    },
-    {
-      "content": "#[macro_use(${1})]",
-      "doc": "#[macro_use(…)]",
-      "label": "macro_use",
-      "matches": {
-        "macro_use": true
-      }
-    },
-    {
-      "content": "#[repr(${1})]",
-      "doc": "#[repr(…)]",
-      "label": "repr",
-      "matches": {
-        "repr": true
-      }
-    },
-    {
-      "content": "#![allow(${1})]",
-      "doc": "#![allow(…)]",
-      "label": "allow",
-      "matches": {
-        "allow": true
-      }
-    },
-    {
-      "content": "line!()",
-      "doc": "line!()",
-      "label": "line",
-      "matches": {
-        "line": true
-      }
-    },
-    {
-      "content": "#[cfg_attr(${1}, ${2})]",
-      "doc": "#[cfg_attr(…, …)]",
-      "label": "cfg_attr",
-      "matches": {
-        "cfg_attr": true
-      }
-    },
-    {
-      "content": "for ${1:pat} in ${2:expr} {\n    ${3:todo!();}\n}",
-      "doc": "for … in … { … }",
-      "label": "for",
-      "matches": {
-        "for": true
-      }
-    },
-    {
-      "content": "cfg!(${1})",
-      "doc": "cfg!(…)",
-      "label": "cfg!",
-      "matches": {
-        "cfg!": true
-      }
-    },
-    {
-      "content": "macro_rules! ${1:name} {\n    (${2}) => (${3})\n}",
-      "doc": "macro_rules! … { … }",
-      "label": "macro_rules",
-      "matches": {
-        "macro_rules": true
-      }
-    },
-    {
-      "content": "if ${1:condition} {\n    ${2:todo!();}\n}",
-      "doc": "if … { … }",
-      "label": "if",
-      "matches": {
-        "if": true
-      }
-    },
-    {
-      "content": "include!(\"${1}\");",
-      "doc": "include!(\"…\");",
-      "label": "include",
-      "matches": {
-        "include": true
+        "feature": true
       }
     },
     {
@@ -148,11 +36,11 @@
       }
     },
     {
-      "content": "mod ${1:name} {\n    ${2:// add code here}\n}",
-      "doc": "mod … { … }",
-      "label": "mod-block",
+      "content": "print!(\"${1}\");",
+      "doc": "print!(…);",
+      "label": "print",
       "matches": {
-        "mod-block": true
+        "print": true
       }
     },
     {
@@ -164,43 +52,19 @@
       }
     },
     {
-      "content": "while ${1:condition} {\n    ${2:todo!();}\n}",
-      "doc": "while … { … }",
-      "label": "while",
+      "content": "while let ${1:Some(pat)} = ${2:expr} {\n    ${0:todo!();}\n}",
+      "doc": "while let … = … { … }",
+      "label": "while-let",
       "matches": {
-        "while": true
+        "while-let": true
       }
     },
     {
-      "content": "concat!(${1})",
-      "doc": "concat!(…)",
-      "label": "concat",
+      "content": "#![warn(${1})]",
+      "doc": "#![warn(…)]",
+      "label": "warn",
       "matches": {
-        "concat": true
-      }
-    },
-    {
-      "content": "struct ${1:Name}(${2:Type});",
-      "doc": "struct …(…);",
-      "label": "struct-tuple",
-      "matches": {
-        "struct-tuple": true
-      }
-    },
-    {
-      "content": "#[cfg(${1})]",
-      "doc": "#[cfg(…)]",
-      "label": "cfg",
-      "matches": {
-        "cfg": true
-      }
-    },
-    {
-      "content": "struct ${1:Name};",
-      "doc": "struct …;",
-      "label": "struct-unit",
-      "matches": {
-        "struct-unit": true
+        "warn": true
       }
     },
     {
@@ -212,27 +76,19 @@
       }
     },
     {
-      "content": "write!(${1}, \"${2}\")",
-      "doc": "write!(…)",
-      "label": "write",
+      "content": "pub async fn ${1:name}(${2:arg}: ${3:Type}) -> ${4:RetType} {\n    ${5:todo!();}\n}",
+      "doc": "pub async fn …(…) { … }",
+      "label": "pafn",
       "matches": {
-        "write": true
+        "pafn": true
       }
     },
     {
-      "content": "#[derive(Debug)]\nenum ${1:Name} {\n    ${2:Variant1},\n    ${3:Variant2},\n}",
-      "doc": "enum … { … }",
-      "label": "enum",
+      "content": "async fn ${1:name}(${2:arg}: ${3:Type}) -> ${4:RetType} {\n    ${5:todo!();}\n}",
+      "doc": "async fn …(…) { … }",
+      "label": "afn",
       "matches": {
-        "enum": true
-      }
-    },
-    {
-      "content": "#[cfg(test)]\nmod test {\n    #[test]\n    fn ${1:name}() {\n        ${2:todo!();}\n    }\n}",
-      "doc": "#[cfg(test)]\nmod test {...}",
-      "label": "modtest",
-      "matches": {
-        "modtest": true
+        "afn": true
       }
     },
     {
@@ -252,19 +108,19 @@
       }
     },
     {
-      "content": "module_path!()",
-      "doc": "module_path!()",
-      "label": "module_path",
+      "content": "#[derive(Debug)]\nenum ${1:Name} {\n    ${2:Variant1},\n    ${3:Variant2},\n}",
+      "doc": "enum … { … }",
+      "label": "enum",
       "matches": {
-        "module_path": true
+        "enum": true
       }
     },
     {
-      "content": "type ${1:Alias} = ${2:Type};",
-      "doc": "type … = …;",
-      "label": "type",
+      "content": "#[derive(Debug)]\nstruct ${1:Name} {\n    ${2:field}: ${3:Type}\n}",
+      "doc": "struct … { … }",
+      "label": "struct",
       "matches": {
-        "type": true
+        "struct": true
       }
     },
     {
@@ -284,147 +140,11 @@
       }
     },
     {
-      "content": "while let ${1:Some(pat)} = ${2:expr} {\n    ${0:todo!();}\n}",
-      "doc": "while let … = … { … }",
-      "label": "while-let",
+      "content": "#[cfg(${1})]",
+      "doc": "#[cfg(…)]",
+      "label": "cfg",
       "matches": {
-        "while-let": true
-      }
-    },
-    {
-      "content": "static ${1:STATIC}: ${2:Type} = ${4:init};",
-      "doc": "static …: … = …;",
-      "label": "static",
-      "matches": {
-        "static": true
-      }
-    },
-    {
-      "content": "println!(\"${1}\");",
-      "doc": "println!(…);",
-      "label": "println",
-      "matches": {
-        "println": true
-      }
-    },
-    {
-      "content": "pub async fn ${1:name}(${2:arg}: ${3:Type}) -> ${4:RetType} {\n    ${5:todo!();}\n}",
-      "doc": "pub async fn …(…) { … }",
-      "label": "pafn",
-      "matches": {
-        "pafn": true
-      }
-    },
-    {
-      "content": "stringify!(${1})",
-      "doc": "stringify!(…)",
-      "label": "stringify",
-      "matches": {
-        "stringify": true
-      }
-    },
-    {
-      "content": "async fn ${1:name}(${2:arg}: ${3:Type}) -> ${4:RetType} {\n    ${5:todo!();}\n}",
-      "doc": "async fn …(…) { … }",
-      "label": "afn",
-      "matches": {
-        "afn": true
-      }
-    },
-    {
-      "content": "thread_local!(static ${1:STATIC}: ${2:Type} = ${4:init});",
-      "doc": "thread_local!(static …: … = …);",
-      "label": "thread_local",
-      "matches": {
-        "thread_local": true
-      }
-    },
-    {
-      "content": "unimplemented!()",
-      "doc": "unimplemented!()",
-      "label": "unimplemented",
-      "matches": {
-        "unimplemented": true
-      }
-    },
-    {
-      "content": "try!(${1})",
-      "doc": "try!(…)",
-      "label": "try",
-      "matches": {
-        "try": true
-      }
-    },
-    {
-      "content": "match ${1:expr} {}",
-      "doc": "match … { … }",
-      "label": "match",
-      "matches": {
-        "match": true
-      }
-    },
-    {
-      "content": "print!(\"${1}\");",
-      "doc": "print!(…);",
-      "label": "print",
-      "matches": {
-        "print": true
-      }
-    },
-    {
-      "content": "format!(\"${1}\")",
-      "doc": "format!(…)",
-      "label": "format",
-      "matches": {
-        "format": true
-      }
-    },
-    {
-      "content": "writeln!(${1}, \"${2}\")",
-      "doc": "writeln!(…, …)",
-      "label": "writeln",
-      "matches": {
-        "writeln": true
-      }
-    },
-    {
-      "content": "env!(\"${1}\")",
-      "doc": "env!(\"…\")",
-      "label": "env",
-      "matches": {
-        "env": true
-      }
-    },
-    {
-      "content": "#![feature(${1})]",
-      "doc": "#![feature(…)]",
-      "label": "feature",
-      "matches": {
-        "feature": true
-      }
-    },
-    {
-      "content": "const ${1:CONST}: ${2:Type} = ${4:init};",
-      "doc": "const …: … = …;",
-      "label": "const",
-      "matches": {
-        "const": true
-      }
-    },
-    {
-      "content": "#[test]\nfn ${1:name}() {\n    ${2:todo!();}\n}",
-      "doc": "#[test]",
-      "label": "test",
-      "matches": {
-        "test": true
-      }
-    },
-    {
-      "content": "assert_eq!(${1}, ${2});",
-      "doc": "assert_eq!(…, …);",
-      "label": "assert_eq",
-      "matches": {
-        "assert_eq": true
+        "cfg": true
       }
     },
     {
@@ -436,27 +156,43 @@
       }
     },
     {
-      "content": "#[derive(${1})]",
-      "doc": "#[derive(…)]",
-      "label": "derive",
+      "content": "line!()",
+      "doc": "line!()",
+      "label": "line",
       "matches": {
-        "derive": true
+        "line": true
       }
     },
     {
-      "content": "#[inline]\npub fn ${1:name}() {\n    ${2:todo!();}\n}",
-      "doc": "inlined function",
-      "label": "inline-fn",
+      "content": "stringify!(${1})",
+      "doc": "stringify!(…)",
+      "label": "stringify",
       "matches": {
-        "inline-fn": true
+        "stringify": true
       }
     },
     {
-      "content": "#![warn(${1})]",
-      "doc": "#![warn(…)]",
-      "label": "warn",
+      "content": "static ${1:STATIC}: ${2:Type} = ${4:init};",
+      "doc": "static …: … = …;",
+      "label": "static",
       "matches": {
-        "warn": true
+        "static": true
+      }
+    },
+    {
+      "content": "try!(${1})",
+      "doc": "try!(…)",
+      "label": "try",
+      "matches": {
+        "try": true
+      }
+    },
+    {
+      "content": "thread_local!(static ${1:STATIC}: ${2:Type} = ${4:init});",
+      "doc": "thread_local!(static …: … = …);",
+      "label": "thread_local",
+      "matches": {
+        "thread_local": true
       }
     },
     {
@@ -468,11 +204,19 @@
       }
     },
     {
-      "content": "column!()",
-      "doc": "column!()",
-      "label": "column",
+      "content": "include!(\"${1}\");",
+      "doc": "include!(\"…\");",
+      "label": "include",
       "matches": {
-        "column": true
+        "include": true
+      }
+    },
+    {
+      "content": "unimplemented!()",
+      "doc": "unimplemented!()",
+      "label": "unimplemented",
+      "matches": {
+        "unimplemented": true
       }
     },
     {
@@ -492,35 +236,91 @@
       }
     },
     {
-      "content": "assert!(${1});",
-      "doc": "assert!(…);",
-      "label": "assert",
+      "content": "writeln!(${1}, \"${2}\")",
+      "doc": "writeln!(…, …)",
+      "label": "writeln",
       "matches": {
-        "assert": true
+        "writeln": true
       }
     },
     {
-      "content": "extern crate ${1:name};",
-      "doc": "extern crate …;",
-      "label": "extern-crate",
+      "content": "assert_eq!(${1}, ${2});",
+      "doc": "assert_eq!(…, …);",
+      "label": "assert_eq",
       "matches": {
-        "extern-crate": true
+        "assert_eq": true
       }
     },
     {
-      "content": "fn ${1:name}(${2:arg}: ${3:Type}) -> ${4:RetType} {\n    ${5:todo!();}\n}",
-      "doc": "fn …(…) { … }",
-      "label": "fn",
+      "content": "column!()",
+      "doc": "column!()",
+      "label": "column",
       "matches": {
-        "fn": true
+        "column": true
       }
     },
     {
-      "content": "impl ${1:Trait} for ${2:Type} {\n    ${3:// add code here}\n}",
-      "doc": "impl … for … { … }",
-      "label": "impl-trait",
+      "content": "trait ${1:Name} {\n    ${2:// add code here}\n}",
+      "doc": "trait … { … }",
+      "label": "trait",
       "matches": {
-        "impl-trait": true
+        "trait": true
+      }
+    },
+    {
+      "content": "#![deny(${1})]",
+      "doc": "#![deny(…)]",
+      "label": "deny",
+      "matches": {
+        "deny": true
+      }
+    },
+    {
+      "content": "concat!(${1})",
+      "doc": "concat!(…)",
+      "label": "concat",
+      "matches": {
+        "concat": true
+      }
+    },
+    {
+      "content": "#[test]\nfn ${1:name}() {\n    ${2:todo!();}\n}",
+      "doc": "#[test]",
+      "label": "test",
+      "matches": {
+        "test": true
+      }
+    },
+    {
+      "content": "#![no_std]",
+      "doc": "#![no_std]",
+      "label": "no_std",
+      "matches": {
+        "no_std": true
+      }
+    },
+    {
+      "content": "if ${1:condition} {\n    ${2:todo!();}\n}",
+      "doc": "if … { … }",
+      "label": "if",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "#![no_core]",
+      "doc": "#![no_core]",
+      "label": "no_core",
+      "matches": {
+        "no_core": true
+      }
+    },
+    {
+      "content": "write!(${1}, \"${2}\")",
+      "doc": "write!(…)",
+      "label": "write",
+      "matches": {
+        "write": true
       }
     },
     {
@@ -532,19 +332,219 @@
       }
     },
     {
-      "content": "#[derive(Debug)]\nstruct ${1:Name} {\n    ${2:field}: ${3:Type}\n}",
-      "doc": "struct … { … }",
-      "label": "struct",
+      "content": "#[macro_use(${1})]",
+      "doc": "#[macro_use(…)]",
+      "label": "macro_use",
       "matches": {
-        "struct": true
+        "macro_use": true
       }
     },
     {
-      "content": "#![deny(${1})]",
-      "doc": "#![deny(…)]",
-      "label": "deny",
+      "content": "#[repr(${1})]",
+      "doc": "#[repr(…)]",
+      "label": "repr",
       "matches": {
-        "deny": true
+        "repr": true
+      }
+    },
+    {
+      "content": "if let ${1:Some(pat)} = ${2:expr} {\n    ${0:todo!();}\n}",
+      "doc": "if let … = … { … }",
+      "label": "if-let",
+      "matches": {
+        "if-let": true
+      }
+    },
+    {
+      "content": "pub fn ${1:name}(${2:arg}: ${3:Type}) -> ${4:RetType} {\n    ${5:todo!();}\n}",
+      "doc": "pub fn …(…) { … }",
+      "label": "pfn",
+      "matches": {
+        "pfn": true
+      }
+    },
+    {
+      "content": "impl ${1:Trait} for ${2:Type} {\n    ${3:// add code here}\n}",
+      "doc": "impl … for … { … }",
+      "label": "impl-trait",
+      "matches": {
+        "impl-trait": true
+      }
+    },
+    {
+      "content": "assert!(${1});",
+      "doc": "assert!(…);",
+      "label": "assert",
+      "matches": {
+        "assert": true
+      }
+    },
+    {
+      "content": "#[inline]\npub fn ${1:name}() {\n    ${2:todo!();}\n}",
+      "doc": "inlined function",
+      "label": "inline-fn",
+      "matches": {
+        "inline-fn": true
+      }
+    },
+    {
+      "content": "macro_rules! ${1:name} {\n    (${2}) => (${3})\n}",
+      "doc": "macro_rules! … { … }",
+      "label": "macro_rules",
+      "matches": {
+        "macro_rules": true
+      }
+    },
+    {
+      "content": "fn ${1:name}(${2:arg}: ${3:Type}) -> ${4:RetType} {\n    ${5:todo!();}\n}",
+      "doc": "fn …(…) { … }",
+      "label": "fn",
+      "matches": {
+        "fn": true
+      }
+    },
+    {
+      "content": "#![allow(${1})]",
+      "doc": "#![allow(…)]",
+      "label": "allow",
+      "matches": {
+        "allow": true
+      }
+    },
+    {
+      "content": "while ${1:condition} {\n    ${2:todo!();}\n}",
+      "doc": "while … { … }",
+      "label": "while",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "for ${1:pat} in ${2:expr} {\n    ${3:todo!();}\n}",
+      "doc": "for … in … { … }",
+      "label": "for",
+      "matches": {
+        "for": true
+      }
+    },
+    {
+      "content": "type ${1:Alias} = ${2:Type};",
+      "doc": "type … = …;",
+      "label": "type",
+      "matches": {
+        "type": true
+      }
+    },
+    {
+      "content": "#[cfg_attr(${1}, ${2})]",
+      "doc": "#[cfg_attr(…, …)]",
+      "label": "cfg_attr",
+      "matches": {
+        "cfg_attr": true
+      }
+    },
+    {
+      "content": "extern \"C\" {\n    ${2:// add code here}\n}",
+      "doc": "extern \"C\" { … }",
+      "label": "extern-mod",
+      "matches": {
+        "extern-mod": true
+      }
+    },
+    {
+      "content": "mod ${1:name} {\n    ${2:// add code here}\n}",
+      "doc": "mod … { … }",
+      "label": "mod-block",
+      "matches": {
+        "mod-block": true
+      }
+    },
+    {
+      "content": "env!(\"${1}\")",
+      "doc": "env!(\"…\")",
+      "label": "env",
+      "matches": {
+        "env": true
+      }
+    },
+    {
+      "content": "#[derive(${1})]",
+      "doc": "#[derive(…)]",
+      "label": "derive",
+      "matches": {
+        "derive": true
+      }
+    },
+    {
+      "content": "const ${1:CONST}: ${2:Type} = ${4:init};",
+      "doc": "const …: … = …;",
+      "label": "const",
+      "matches": {
+        "const": true
+      }
+    },
+    {
+      "content": "match ${1:expr} {}",
+      "doc": "match … { … }",
+      "label": "match",
+      "matches": {
+        "match": true
+      }
+    },
+    {
+      "content": "struct ${1:Name}(${2:Type});",
+      "doc": "struct …(…);",
+      "label": "struct-tuple",
+      "matches": {
+        "struct-tuple": true
+      }
+    },
+    {
+      "content": "extern crate ${1:name};",
+      "doc": "extern crate …;",
+      "label": "extern-crate",
+      "matches": {
+        "extern-crate": true
+      }
+    },
+    {
+      "content": "format!(\"${1}\")",
+      "doc": "format!(…)",
+      "label": "format",
+      "matches": {
+        "format": true
+      }
+    },
+    {
+      "content": "struct ${1:Name};",
+      "doc": "struct …;",
+      "label": "struct-unit",
+      "matches": {
+        "struct-unit": true
+      }
+    },
+    {
+      "content": "println!(\"${1}\");",
+      "doc": "println!(…);",
+      "label": "println",
+      "matches": {
+        "println": true
+      }
+    },
+    {
+      "content": "module_path!()",
+      "doc": "module_path!()",
+      "label": "module_path",
+      "matches": {
+        "module_path": true
+      }
+    },
+    {
+      "content": "cfg!(${1})",
+      "doc": "cfg!(…)",
+      "label": "cfg!",
+      "matches": {
+        "cfg!": true
       }
     },
     {

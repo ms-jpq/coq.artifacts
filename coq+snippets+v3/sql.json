@@ -2,102 +2,6 @@
   "extends": [],
   "snippets": [
     {
-      "content": "ALTER DATABASE ${1:dbName}\n\tCHARACTER SET ${2:charset}\n\tCOLLATE ${3:utf8_unicode_ci};",
-      "doc": "Alter database",
-      "label": "alterdb",
-      "matches": {
-        "alterdb": true
-      }
-    },
-    {
-      "content": "SELECT ${1:attribute(s)}\n\tFROM ${2:tableName}\n\tINNER JOIN ${3:tableName2}\n\tON ${4:match};",
-      "doc": "Inner Join",
-      "label": "ijoin",
-      "matches": {
-        "ijoin": true
-      }
-    },
-    {
-      "content": "SELECT ${1:attribute(s)} FROM ${2:tableName};",
-      "doc": "Regular select",
-      "label": "select",
-      "matches": {
-        "select": true
-      }
-    },
-    {
-      "content": "SELECT ${1:attribute(s)}\n\tFROM ${2:tableName}\n\tRIGHT JOIN ${3:tableName2}\n\tON ${4:match};",
-      "doc": "Right Join",
-      "label": "rjoin",
-      "matches": {
-        "rjoin": true
-      }
-    },
-    {
-      "content": "SELECT ${1:attribute(s)}\n\tFROM ${2:tableName}\n\tLEFT JOIN ${3:tableName2}\n\tON ${4:match};",
-      "doc": "Left Join",
-      "label": "ljoin",
-      "matches": {
-        "ljoin": true
-      }
-    },
-    {
-      "content": "SELECT ${1:attribute(s)}\n\tFROM ${2:tableName}\n\tFULL JOIN OUTER ${3:tableName2}\n\tON ${4:match}\n\tWHERE ${5:condition};",
-      "doc": "Full Join",
-      "label": "fjoin",
-      "matches": {
-        "fjoin": true
-      }
-    },
-    {
-      "content": "CHECK ( ${1:condition} )",
-      "doc": "Check",
-      "label": "check",
-      "matches": {
-        "check": true
-      }
-    },
-    {
-      "content": "CREATE TABLE ${1:tableName} (\n\t${2:attribute(s)}\n);",
-      "doc": "Create regular table",
-      "label": "createt",
-      "matches": {
-        "createt": true
-      }
-    },
-    {
-      "content": "SELECT ${1:attribute(s)} FROM ${2:tableName}\nUNION ALL\nSELECT ${3:attribute(s)} FROM ${4:tableName2};",
-      "doc": "All union",
-      "label": "uniona",
-      "matches": {
-        "uniona": true
-      }
-    },
-    {
-      "content": "SELECT ${1:attribute(s)}\n\tFROM ${2:tableName}\n\tGROUP BY ${3:attribute(s)};",
-      "doc": "Group by",
-      "label": "groupb",
-      "matches": {
-        "groupb": true
-      }
-    },
-    {
-      "content": "BACKUP DATABASE ${1:dbName}\n\tTO DISK ${2:filepath};",
-      "doc": "Backup database",
-      "label": "bakupd",
-      "matches": {
-        "bakupd": true
-      }
-    },
-    {
-      "content": "CREATE DATABASE IF NOT EXISTS ${1:name};",
-      "doc": "Create table with conditional",
-      "label": "createdi",
-      "matches": {
-        "createdi": true
-      }
-    },
-    {
       "content": "BACKUP DATABASE ${1:dbName}\n\tTO DISK ${2:filepath}\n\tWITH ${3:DIFERENTIAL};",
       "doc": "Differential backup database",
       "label": "bakupdw",
@@ -111,14 +15,6 @@
       "label": "selectd",
       "matches": {
         "selectd": true
-      }
-    },
-    {
-      "content": "DROP TABLE ${1:tableName};",
-      "doc": "Drop table",
-      "label": "dropt",
-      "matches": {
-        "dropt": true
       }
     },
     {
@@ -138,14 +34,6 @@
       }
     },
     {
-      "content": "DROP DATABASE ${1:dbName};",
-      "doc": "Drop database",
-      "label": "dropd",
-      "matches": {
-        "dropd": true
-      }
-    },
-    {
       "content": "CONSTRAINT ${1:attribute} PRIMARY KEY(${2:attribute(s)})",
       "doc": "Constraint Primary Key",
       "label": "primarykc",
@@ -154,11 +42,11 @@
       }
     },
     {
-      "content": "DROP TABLE IF EXISTS ${1:tableName};",
-      "doc": "Drop table with conditional",
-      "label": "dropti",
+      "content": "INSERT INTO ${1:tableName} (\n\t${2:attribute(s)}\n) VALUES ( ${3:values} )",
+      "doc": "Insert value(s)",
+      "label": "insert",
       "matches": {
-        "dropti": true
+        "insert": true
       }
     },
     {
@@ -170,19 +58,59 @@
       }
     },
     {
-      "content": "DROP DATABASE IF EXISTS ${1:dbName};",
-      "doc": "Drop database with conditional",
-      "label": "dropdi",
-      "matches": {
-        "dropdi": true
-      }
-    },
-    {
       "content": "UPDATE ${1:tableName}\n\tSET ${2:attribute(s)}\n\tWHERE ${3:condition};",
       "doc": "Update table",
       "label": "updatet",
       "matches": {
         "updatet": true
+      }
+    },
+    {
+      "content": "ALTER TABLE ${1:tableName}\n\t ${2:intructions};",
+      "doc": "Alter table",
+      "label": "altert",
+      "matches": {
+        "altert": true
+      }
+    },
+    {
+      "content": "CHECK ( ${1:condition} )",
+      "doc": "Check",
+      "label": "check",
+      "matches": {
+        "check": true
+      }
+    },
+    {
+      "content": "ALTER TABLE ${1:tableName}\n\tADD COLUMN ${2:col_name};",
+      "doc": "Alter table - Add column",
+      "label": "alterad",
+      "matches": {
+        "alterad": true
+      }
+    },
+    {
+      "content": "ALTER TABLE ${1:tableName}\n\tADD COLUMN ${2:col_name}\n\tAFTER ${5:col_name};",
+      "doc": "Alter table - Add column after",
+      "label": "alteraf",
+      "matches": {
+        "alteraf": true
+      }
+    },
+    {
+      "content": "CREATE TABLE ${1:tableName} (\n\t${2:attribute(s)}\n);",
+      "doc": "Create regular table",
+      "label": "createt",
+      "matches": {
+        "createt": true
+      }
+    },
+    {
+      "content": "CREATE TABLE IF NOT EXISTS ${1:tableName} (\n\t${2:attribute(s)}\n);",
+      "doc": "Create table with conditional",
+      "label": "createti",
+      "matches": {
+        "createti": true
       }
     },
     {
@@ -194,11 +122,27 @@
       }
     },
     {
-      "content": "SHOW TABLES;",
-      "doc": "Show tables",
-      "label": "showt",
+      "content": "CREATE DATABASE ${1:name};",
+      "doc": "Create regular table",
+      "label": "created",
       "matches": {
-        "showt": true
+        "created": true
+      }
+    },
+    {
+      "content": "SELECT ${1:attribute(s)}\n\tFROM ${2:tableName}\n\tRIGHT JOIN ${3:tableName2}\n\tON ${4:match};",
+      "doc": "Right Join",
+      "label": "rjoin",
+      "matches": {
+        "rjoin": true
+      }
+    },
+    {
+      "content": "CREATE DATABASE IF NOT EXISTS ${1:name};",
+      "doc": "Create table with conditional",
+      "label": "createdi",
+      "matches": {
+        "createdi": true
       }
     },
     {
@@ -207,6 +151,14 @@
       "label": "deleteuser",
       "matches": {
         "deleteuser": true
+      }
+    },
+    {
+      "content": "SELECT ${1:attribute(s)}\n\tFROM ${2:tableName}\n\tLEFT JOIN ${3:tableName2}\n\tON ${4:match};",
+      "doc": "Left Join",
+      "label": "ljoin",
+      "matches": {
+        "ljoin": true
       }
     },
     {
@@ -226,11 +178,11 @@
       }
     },
     {
-      "content": "ALTER TABLE ${1:tableName}\n\t ${2:intructions};",
-      "doc": "Alter table",
-      "label": "altert",
+      "content": "SELECT ${1:attribute(s)}\n\tFROM ${2:tableName}\n\tFULL JOIN OUTER ${3:tableName2}\n\tON ${4:match}\n\tWHERE ${5:condition};",
+      "doc": "Full Join",
+      "label": "fjoin",
       "matches": {
-        "altert": true
+        "fjoin": true
       }
     },
     {
@@ -250,27 +202,43 @@
       }
     },
     {
-      "content": "SELECT ${1:attribute(s)} FROM ${2:tableName}\nUNION\nSELECT ${3:attribute(s)} FROM ${4:tableName2};",
-      "doc": "Regular union",
-      "label": "union",
+      "content": "DROP DATABASE ${1:dbName};",
+      "doc": "Drop database",
+      "label": "dropd",
       "matches": {
-        "union": true
+        "dropd": true
       }
     },
     {
-      "content": "ALTER TABLE ${1:tableName}\n\tADD COLUMN ${2:col_name};",
-      "doc": "Alter table - Add column",
-      "label": "alterad",
+      "content": "DROP TABLE ${1:tableName};",
+      "doc": "Drop table",
+      "label": "dropt",
       "matches": {
-        "alterad": true
+        "dropt": true
       }
     },
     {
-      "content": "CREATE TABLE IF NOT EXISTS ${1:tableName} (\n\t${2:attribute(s)}\n);",
-      "doc": "Create table with conditional",
-      "label": "createti",
+      "content": "SHOW TABLES;",
+      "doc": "Show tables",
+      "label": "showt",
       "matches": {
-        "createti": true
+        "showt": true
+      }
+    },
+    {
+      "content": "DROP TABLE IF EXISTS ${1:tableName};",
+      "doc": "Drop table with conditional",
+      "label": "dropti",
+      "matches": {
+        "dropti": true
+      }
+    },
+    {
+      "content": "DROP DATABASE IF EXISTS ${1:dbName};",
+      "doc": "Drop database with conditional",
+      "label": "dropdi",
+      "matches": {
+        "dropdi": true
       }
     },
     {
@@ -282,27 +250,59 @@
       }
     },
     {
-      "content": "ALTER TABLE ${1:tableName}\n\tADD COLUMN ${2:col_name}\n\tAFTER ${5:col_name};",
-      "doc": "Alter table - Add column after",
-      "label": "alteraf",
+      "content": "SELECT ${1:attribute(s)} FROM ${2:tableName}\nUNION ALL\nSELECT ${3:attribute(s)} FROM ${4:tableName2};",
+      "doc": "All union",
+      "label": "uniona",
       "matches": {
-        "alteraf": true
+        "uniona": true
       }
     },
     {
-      "content": "CREATE DATABASE ${1:name};",
-      "doc": "Create regular table",
-      "label": "created",
+      "content": "ALTER DATABASE ${1:dbName}\n\tCHARACTER SET ${2:charset}\n\tCOLLATE ${3:utf8_unicode_ci};",
+      "doc": "Alter database",
+      "label": "alterdb",
       "matches": {
-        "created": true
+        "alterdb": true
       }
     },
     {
-      "content": "INSERT INTO ${1:tableName} (\n\t${2:attribute(s)}\n) VALUES ( ${3:values} )",
-      "doc": "Insert value(s)",
-      "label": "insert",
+      "content": "SELECT ${1:attribute(s)}\n\tFROM ${2:tableName}\n\tINNER JOIN ${3:tableName2}\n\tON ${4:match};",
+      "doc": "Inner Join",
+      "label": "ijoin",
       "matches": {
-        "insert": true
+        "ijoin": true
+      }
+    },
+    {
+      "content": "SELECT ${1:attribute(s)}\n\tFROM ${2:tableName}\n\tGROUP BY ${3:attribute(s)};",
+      "doc": "Group by",
+      "label": "groupb",
+      "matches": {
+        "groupb": true
+      }
+    },
+    {
+      "content": "SELECT ${1:attribute(s)} FROM ${2:tableName};",
+      "doc": "Regular select",
+      "label": "select",
+      "matches": {
+        "select": true
+      }
+    },
+    {
+      "content": "SELECT ${1:attribute(s)} FROM ${2:tableName}\nUNION\nSELECT ${3:attribute(s)} FROM ${4:tableName2};",
+      "doc": "Regular union",
+      "label": "union",
+      "matches": {
+        "union": true
+      }
+    },
+    {
+      "content": "BACKUP DATABASE ${1:dbName}\n\tTO DISK ${2:filepath};",
+      "doc": "Backup database",
+      "label": "bakupd",
+      "matches": {
+        "bakupd": true
       }
     },
     {

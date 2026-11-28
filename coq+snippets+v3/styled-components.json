@@ -2,15 +2,6 @@
   "extends": [],
   "snippets": [
     {
-      "content": "const ${1} = styled.${2}`\n  ${3}\n`;",
-      "doc": "Styled-Component",
-      "label": "styled-components-styled-component",
-      "matches": {
-        "sc": true,
-        "styled-components component": true
-      }
-    },
-    {
       "content": "<ThemeProvider theme={${1}}>\n  ${2}\n</ThemeProvider>",
       "doc": "ThemeProvider",
       "label": "styled-components-theme-provider",
@@ -143,6 +134,15 @@
       "matches": {
         "exscattrs": true,
         "styled-components export component with attributes": true
+      }
+    },
+    {
+      "content": "const ${1} = styled.${2}`\n  ${3}\n`;",
+      "doc": "Styled-Component",
+      "label": "styled-components-styled-component",
+      "matches": {
+        "sc": true,
+        "styled-components component": true
       }
     }
   ]

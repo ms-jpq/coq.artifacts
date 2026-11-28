@@ -2,14 +2,6 @@
   "extends": [],
   "snippets": [
     {
-      "content": "<Helmet>\n${1:example}\n</Helmet>",
-      "doc": "",
-      "label": "react-helmet-component",
-      "matches": {
-        "react-helmet component": true
-      }
-    },
-    {
       "content": "<Helmet>\n  <title>${1:title}</title>\n</Helmet>",
       "doc": "",
       "label": "react-helmet-title",
@@ -23,6 +15,14 @@
       "label": "react-helmet-import",
       "matches": {
         "react-helmet import": true
+      }
+    },
+    {
+      "content": "<Helmet>\n${1:example}\n</Helmet>",
+      "doc": "",
+      "label": "react-helmet-component",
+      "matches": {
+        "react-helmet component": true
       }
     }
   ]

@@ -5,11 +5,27 @@
   ],
   "snippets": [
     {
-      "content": "public static ${1:void} ${2:name}(${3}) {\n\t$0\n}",
-      "doc": "public static method",
-      "label": "Public static method",
+      "content": "for (${1:int} ${2:i} = ${3:0}; $2 < ${4:max}; $2++) {\n\t$0\n}",
+      "doc": "Indexed for loop",
+      "label": "fori",
       "matches": {
-        "public_static_method": true
+        "fori": true
+      }
+    },
+    {
+      "content": "private static ${1:Type} ${2:name}(${3}) {\n\t$0\n}",
+      "doc": "private static method",
+      "label": "Private static method",
+      "matches": {
+        "private_static_method": true
+      }
+    },
+    {
+      "content": "/**\n * ${1:A one-line summary.}\n *\n * ${2:Description.}$0\n *\n * @param ${4:name}  ${5:Type and description of the parameter.}\n * @return ${6:Type and description of the returned object.}\n *\n * @example\n * ```\n * ${7:Write me later}\n * ```\n */",
+      "doc": "A Java comment block including short summary, description, param, return, and examples.",
+      "label": "comment",
+      "matches": {
+        "/**": true
       }
     },
     {
@@ -21,75 +37,19 @@
       }
     },
     {
+      "content": "switch (${1:key}) {\n\tcase ${2:value}:\n\t\t$0\n\t\tbreak;\n\n\tdefault:\n\t\tbreak;\n}",
+      "doc": "Switch Statement",
+      "label": "Switch Statement",
+      "matches": {
+        "switch": true
+      }
+    },
+    {
       "content": "for (${1:type} ${2:var} : ${3:iterable}) {\n\t$0\n}",
       "doc": "Enhanced for loop",
       "label": "foreach",
       "matches": {
         "foreach": true
-      }
-    },
-    {
-      "content": "public class ${1:TM_FILENAME_BASE} {\n\t$0\n}",
-      "doc": "Public class",
-      "label": "class",
-      "matches": {
-        "class": true
-      }
-    },
-    {
-      "content": "System.out.println($0);",
-      "doc": "Print to standard out",
-      "label": "sysout",
-      "matches": {
-        "sysout": true
-      }
-    },
-    {
-      "content": "if (${1:condition} == null) {\n\t$0\n}",
-      "doc": "if statement checking for null",
-      "label": "ifnull",
-      "matches": {
-        "ifnull": true
-      }
-    },
-    {
-      "content": "System.err.println($0);",
-      "doc": "Print to standard err",
-      "label": "syserr",
-      "matches": {
-        "syserr": true
-      }
-    },
-    {
-      "content": "if (${1:condition} != null) {\n\t$0\n}",
-      "doc": "if statement checking for not null",
-      "label": "ifnotnull",
-      "matches": {
-        "ifnotnull": true
-      }
-    },
-    {
-      "content": "import ${1:PackageName}",
-      "doc": "Import statement",
-      "label": "import",
-      "matches": {
-        "import": true
-      }
-    },
-    {
-      "content": "do {\n\t$0\n} while (${1:condition});",
-      "doc": "Do-While Statement",
-      "label": "Do-While Statement",
-      "matches": {
-        "dowhile": true
-      }
-    },
-    {
-      "content": "protected ${1:String} ${2:name};",
-      "doc": "Protected field",
-      "label": "Protected field",
-      "matches": {
-        "protected_field": true
       }
     },
     {
@@ -101,19 +61,27 @@
       }
     },
     {
-      "content": "package ${1:PackageName}",
-      "doc": "Package statement",
-      "label": "package",
+      "content": "/**\n * ${1:A one-line summary.}\n *\n * ${2:Description.}$0\n */",
+      "doc": "A simple Java comment block with short summary and description. Useful when the user prefers to manually add the other documentation tags.",
+      "label": "comment_simple",
       "matches": {
-        "package": true
+        "/*": true
       }
     },
     {
-      "content": "switch (${1:key}) {\n\tcase ${2:value}:\n\t\t$0\n\t\tbreak;\n\n\tdefault:\n\t\tbreak;\n}",
-      "doc": "Switch Statement",
-      "label": "Switch Statement",
+      "content": "import ${1:PackageName}",
+      "doc": "Import statement",
+      "label": "import",
       "matches": {
-        "switch": true
+        "import": true
+      }
+    },
+    {
+      "content": "if (${1:condition} == null) {\n\t$0\n}",
+      "doc": "if statement checking for null",
+      "label": "ifnull",
+      "matches": {
+        "ifnull": true
       }
     },
     {
@@ -122,6 +90,78 @@
       "label": "newObject",
       "matches": {
         "new": true
+      }
+    },
+    {
+      "content": "do {\n\t$0\n} while (${1:condition});",
+      "doc": "Do-While Statement",
+      "label": "Do-While Statement",
+      "matches": {
+        "dowhile": true
+      }
+    },
+    {
+      "content": "if (${1:condition} != null) {\n\t$0\n}",
+      "doc": "if statement checking for not null",
+      "label": "ifnotnull",
+      "matches": {
+        "ifnotnull": true
+      }
+    },
+    {
+      "content": "protected ${1:String} ${2:name};",
+      "doc": "Protected field",
+      "label": "Protected field",
+      "matches": {
+        "protected_field": true
+      }
+    },
+    {
+      "content": "private ${1:String} ${2:name};",
+      "doc": "Private field",
+      "label": "Private field",
+      "matches": {
+        "private_field": true
+      }
+    },
+    {
+      "content": "if (${1:condition}) {\n\t$0\n}",
+      "doc": "if statement",
+      "label": "if",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "protected ${1:void} ${2:name}(${3}) {\n\t$0\n}",
+      "doc": "Protected method",
+      "label": "Protected Method",
+      "matches": {
+        "protected_method": true
+      }
+    },
+    {
+      "content": "package ${1:PackageName}",
+      "doc": "Package statement",
+      "label": "package",
+      "matches": {
+        "package": true
+      }
+    },
+    {
+      "content": "public class ${1:${TM_FILENAME_BASE}} {\n\t$0\n}",
+      "doc": "Public class",
+      "label": "class",
+      "matches": {
+        "class": true
+      }
+    },
+    {
+      "content": "while (${1:condition}) {\n\t$0\n}",
+      "doc": "While Statement",
+      "label": "While Statement",
+      "matches": {
+        "while": true
       }
     },
     {
@@ -141,27 +181,27 @@
       }
     },
     {
-      "content": "protected ${1:void} ${2:name}(${3}) {\n\t$0\n}",
-      "doc": "Protected method",
-      "label": "Protected Method",
+      "content": "public static ${1:void} ${2:name}(${3}) {\n\t$0\n}",
+      "doc": "public static method",
+      "label": "Public static method",
       "matches": {
-        "protected_method": true
+        "public_static_method": true
       }
     },
     {
-      "content": "while (${1:condition}) {\n\t$0\n}",
-      "doc": "While Statement",
-      "label": "While Statement",
+      "content": "System.err.println($0);",
+      "doc": "Print to standard err",
+      "label": "syserr",
       "matches": {
-        "while": true
+        "syserr": true
       }
     },
     {
-      "content": "private ${1:String} ${2:name};",
-      "doc": "Private field",
-      "label": "Private field",
+      "content": "System.out.println($0);",
+      "doc": "Print to standard out",
+      "label": "sysout",
       "matches": {
-        "private_field": true
+        "sysout": true
       }
     },
     {
@@ -173,22 +213,6 @@
       }
     },
     {
-      "content": "if (${1:condition}) {\n\t$0\n}",
-      "doc": "if statement",
-      "label": "if",
-      "matches": {
-        "if": true
-      }
-    },
-    {
-      "content": "public ${1:void} ${2:name}(${3}) {\n\t$0\n}",
-      "doc": "public method",
-      "label": "Public method",
-      "matches": {
-        "public_method": true
-      }
-    },
-    {
       "content": "if (${1:condition}) {\n\t$2\n} else {\n\t$0\n}",
       "doc": "if/else statement",
       "label": "ifelse",
@@ -197,19 +221,11 @@
       }
     },
     {
-      "content": "for (${1:int} ${2:i} = ${3:0}; $2 < ${4:max}; $2++) {\n\t$0\n}",
-      "doc": "Indexed for loop",
-      "label": "fori",
+      "content": "public ${1:void} ${2:name}(${3}) {\n\t$0\n}",
+      "doc": "public method",
+      "label": "Public method",
       "matches": {
-        "fori": true
-      }
-    },
-    {
-      "content": "private static ${1:Type} ${2:name}(${3}) {\n\t$0\n}",
-      "doc": "private static method",
-      "label": "Private static method",
-      "matches": {
-        "private_static_method": true
+        "public_method": true
       }
     },
     {

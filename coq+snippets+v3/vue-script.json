@@ -2,54 +2,6 @@
   "extends": [],
   "snippets": [
     {
-      "content": "beforeUpdate () {\n\t${0};\n},",
-      "doc": "beforeUpdate lifecycle method",
-      "label": "Vue Lifecycle beforeUpdate",
-      "matches": {
-        "vbeforeupdate": true
-      }
-    },
-    {
-      "content": "updated () {\n\t${0};\n},",
-      "doc": "updated lifecycle method",
-      "label": "Vue Lifecycle updated",
-      "matches": {
-        "vupdated": true
-      }
-    },
-    {
-      "content": "watchEffect(() => {\n\t${1}\n})",
-      "doc": "Vue Composition api - watchEffect",
-      "label": "Vue Composition API - watchEffect",
-      "matches": {
-        "v3watcheffect": true
-      }
-    },
-    {
-      "content": "beforeDestroy () {\n\t${0};\n},",
-      "doc": "beforeDestroy lifecycle method",
-      "label": "Vue Lifecycle beforeDestroy",
-      "matches": {
-        "vbeforedestroy": true
-      }
-    },
-    {
-      "content": "destroyed () {\n\t${0};\n},",
-      "doc": "destroyed lifecycle method",
-      "label": "Vue Lifecycle destroyed",
-      "matches": {
-        "vdestroyed": true
-      }
-    },
-    {
-      "content": "props: {\n\t${1:propName}: {\n\t\ttype: ${2:Number},\n\t\tdefault: ${0}\n\t},\n},",
-      "doc": "Vue Props with Default",
-      "label": "Vue Props with Default",
-      "matches": {
-        "vprops": true
-      }
-    },
-    {
       "content": "watch: {\n\t${1:data}(${2:newValue}, ${3:oldValue}) {\n\t\t${0}\n\t}\n},",
       "doc": "vue watcher",
       "label": "Vue Watchers",
@@ -58,51 +10,19 @@
       }
     },
     {
-      "content": "watch: {\n\t${1:data}: {\n\t\timmediate: ${2:true},\n\t\tdeep: ${3:true},\n\t\thandler(${4:newValue}, ${5:oldValue}) {\n\t\t\t${0}\n\t\t}\n\t}\n},",
-      "doc": "vue watcher with options",
-      "label": "Vue Watchers with Options",
+      "content": "onErrorCaptured(() => {${1}})",
+      "doc": "Vue onErrorCaptured Lifecycle hook",
+      "label": "Vue Lifecycle Hooks - onErrorCaptured",
       "matches": {
-        "vwatcher-options": true
+        "v3onerrorcaptured": true
       }
     },
     {
-      "content": "import { ${1:libName} } from '${1:libName}';",
-      "doc": "import a library",
-      "label": "Vue Import Library",
+      "content": "${1:mutationName}() {\n\tthis.\\$store.commit('${1:mutationName}', ${2:payload});\n}",
+      "doc": "commit to vuex store in methods for mutation",
+      "label": "Vue Commit Vuex Store in Methods",
       "matches": {
-        "vimport-lib": true
-      }
-    },
-    {
-      "content": "import gsap from 'gsap';",
-      "doc": "import gsap library",
-      "label": "Vue Import GSAP",
-      "matches": {
-        "vimport-gsap": true
-      }
-    },
-    {
-      "content": "onBeforeMount(() => {${1}})",
-      "doc": "Vue onBeforeMount Lifecycle hook",
-      "label": "Vue Lifecycle Hooks - onBeforeMount",
-      "matches": {
-        "v3onbeforemount": true
-      }
-    },
-    {
-      "content": "beforeEnter(el) {\n\tconsole.log('beforeEnter');\n},\nenter(el, done) {\n\tconsole.log('enter');\n\tdone();\n},\nbeforeLeave(el) {\n\tconsole.log('beforeLeave');\n},\nleave(el, done) {\n\tconsole.log('leave');\n\tdone();\n},",
-      "doc": "transition component js hooks",
-      "label": "Vue Transition Methods with JavaScript Hooks",
-      "matches": {
-        "vanimhook-js": true
-      }
-    },
-    {
-      "content": "onBeforeUpdate(() => {${1}})",
-      "doc": "Vue onBeforeUpdate Lifecycle hook",
-      "label": "Vue Lifecycle Hooks - onBeforeUpdate",
-      "matches": {
-        "v3onbeforeupdate": true
+        "vcommit": true
       }
     },
     {
@@ -122,38 +42,6 @@
       }
     },
     {
-      "content": "onUpdated(() => {${1}})",
-      "doc": "Vue onUpdated Lifecycle hook",
-      "label": "Vue Lifecycle Hooks - onUpdated",
-      "matches": {
-        "v3onupdated": true
-      }
-    },
-    {
-      "content": "import ${1:Name} from '@/components/${1:Name}.vue';\n\nexport default {\n\tcomponents: {\n\t\t${1:Name}\n\t},\n};",
-      "doc": "import a component and include it in export default",
-      "label": "Vue Import Export",
-      "matches": {
-        "vimport-export": true
-      }
-    },
-    {
-      "content": "${1:mutationName}() {\n\tthis.\\$store.commit('${1:mutationName}', ${2:payload});\n}",
-      "doc": "commit to vuex store in methods for mutation",
-      "label": "Vue Commit Vuex Store in Methods",
-      "matches": {
-        "vcommit": true
-      }
-    },
-    {
-      "content": "${1:New} = () => import('@/components/${1:New}.vue')",
-      "doc": "Import component that should be lazy loaded",
-      "label": "Vue Import Component Dynamically",
-      "matches": {
-        "vimport-dynamic": true
-      }
-    },
-    {
       "content": "${1:actionName}() {\n\tthis.\\$store.dispatch('${1:actionName}', ${2:payload});\n}",
       "doc": "dispatch to vuex store in methods for action",
       "label": "Vue Dispatch Vuex Store in Methods",
@@ -162,11 +50,11 @@
       }
     },
     {
-      "content": "onUnmounted(() => {${1}})",
-      "doc": "(destroyed) Vue onUnmounted Lifecycle hook",
-      "label": "Vue Lifecycle Hooks - onUnmounted",
+      "content": "import ${1:Name} from '@/components/${1:Name}.vue';\n\nexport default {\n\tcomponents: {\n\t\t${1:Name}\n\t},\n};",
+      "doc": "import a component and include it in export default",
+      "label": "Vue Import Export",
       "matches": {
-        "v3onunmounted": true
+        "vimport-export": true
       }
     },
     {
@@ -186,27 +74,11 @@
       }
     },
     {
-      "content": "import { ${0:component} } from '@/composables/${0:component}.js'\n\nexport default {\n\tsetup () {\n\t\tconst { ${1:name} } = ${0:component}()\n\t\n\t\treturn {\n\t\t\t${1:name}\n\t\t}\n\t}\n}",
-      "doc": "Use Composition API within Options API",
-      "label": "Use Composition API within Options API",
+      "content": "${1:New} = () => import('@/components/${1:New}.vue')",
+      "doc": "Import component that should be lazy loaded",
+      "label": "Vue Import Component Dynamically",
       "matches": {
-        "v3useinoptions": true
-      }
-    },
-    {
-      "content": "const ${1:name} = ref(${2:initialValue})",
-      "doc": "Vue Ref",
-      "label": "Vue Composition API - Vue ref",
-      "matches": {
-        "v3ref": true
-      }
-    },
-    {
-      "content": "import { mapGetters } from 'vuex';\n\nexport default {\n\tcomputed: {\n\t\t...mapGetters([\n\t\t\t${1:'nameOfGetter'},\n\t\t])\n\t},\n};",
-      "doc": "mapgetters inside a vue component",
-      "label": "Vue MapGetters",
-      "matches": {
-        "vmapgetters": true
+        "vimport-dynamic": true
       }
     },
     {
@@ -218,35 +90,19 @@
       }
     },
     {
+      "content": "import { mapState } from 'vuex';\n\nexport default {\n\tcomputed: {\n\t\t...mapState([\n\t\t\t${1:'nameOfState'},\n\t\t])\n\t},\n};",
+      "doc": "map getters inside a vue component",
+      "label": "Vue MapState",
+      "matches": {
+        "vmapstate": true
+      }
+    },
+    {
       "content": "module.exports = {\n\tcss: {\n\t\tloaderOptions: {\n\t\t\t${1:sass}: {\n\t\t\t\tdata: `${2:@import '@/styles/_variables.scss';}`\n\t\t\t}\n\t\t}\n\t}\n}",
       "doc": "vue.config.js",
       "label": "Vue.config.js Import",
       "matches": {
         "vconfig": true
-      }
-    },
-    {
-      "content": "onErrorCaptured(() => {${1}})",
-      "doc": "Vue onErrorCaptured Lifecycle hook",
-      "label": "Vue Lifecycle Hooks - onErrorCaptured",
-      "matches": {
-        "v3onerrorcaptured": true
-      }
-    },
-    {
-      "content": "import { mapMutations } from 'vuex';\n\nexport default {\n\tmethods: {\n\t\t...mapMutations([\n\t\t\t${1:'nameOfMutation'}, //also supports payload `this.nameOfMutation(amount)` \n\t\t])\n\t},\n};",
-      "doc": "mapmutations inside a vue component",
-      "label": "Vue MapMutations",
-      "matches": {
-        "vmapmutations": true
-      }
-    },
-    {
-      "content": "onMounted(() => {${1}})",
-      "doc": "Vue Mounted Lifecycle hook",
-      "label": "Vue Lifecycle Hooks - onMounted",
-      "matches": {
-        "v3onmounted": true
       }
     },
     {
@@ -258,11 +114,11 @@
       }
     },
     {
-      "content": "data() {\n\treturn {\n\t\t${1:key}: ${2:value}\n\t}\n},",
-      "doc": "Vue Component Data",
-      "label": "Vue Data",
+      "content": "import { mapGetters } from 'vuex';\n\nexport default {\n\tcomputed: {\n\t\t...mapGetters([\n\t\t\t${1:'nameOfGetter'},\n\t\t])\n\t},\n};",
+      "doc": "mapgetters inside a vue component",
+      "label": "Vue MapGetters",
       "matches": {
-        "vdata": true
+        "vmapgetters": true
       }
     },
     {
@@ -274,27 +130,11 @@
       }
     },
     {
-      "content": "methods: {\n\t${1:name}() {\n\t\t${0}\n\t}\n},",
-      "doc": "vue method",
-      "label": "Vue Methods",
+      "content": "import { mapMutations } from 'vuex';\n\nexport default {\n\tmethods: {\n\t\t...mapMutations([\n\t\t\t${1:'nameOfMutation'}, //also supports payload `this.nameOfMutation(amount)` \n\t\t])\n\t},\n};",
+      "doc": "mapmutations inside a vue component",
+      "label": "Vue MapMutations",
       "matches": {
-        "vmethod": true
-      }
-    },
-    {
-      "content": "watch([${1:foo}, ${2:bar}], ([new${1}, new${2}], [prev${1}, prev${2}]) => {\n\t${3}\n})",
-      "doc": "Vue Composition api - watch as array",
-      "label": "Vue Composition API - watch - array",
-      "matches": {
-        "v3watch-array": true
-      }
-    },
-    {
-      "content": "computed: {\n\t${1:name}() {\n\t\treturn this.${2:data} ${0}\n\t}\n},",
-      "doc": "computed value",
-      "label": "Vue Computed",
-      "matches": {
-        "vcomputed": true
+        "vmapmutations": true
       }
     },
     {
@@ -306,59 +146,11 @@
       }
     },
     {
-      "content": "filters: {\n\t${1:fnName}: function(${2:value}) {\n\t\treturn ${2:value}${0};\n\t}\n}",
-      "doc": "vue filter",
-      "label": "Vue Filter",
+      "content": "import { ${0:component} } from '@/composables/${0:component}.js'\n\nexport default {\n\tsetup () {\n\t\tconst { ${1:name} } = ${0:component}()\n\t\n\t\treturn {\n\t\t\t${1:name}\n\t\t}\n\t}\n}",
+      "doc": "Use Composition API within Options API",
+      "label": "Use Composition API within Options API",
       "matches": {
-        "vfilter": true
-      }
-    },
-    {
-      "content": "import { mapState } from 'vuex';\n\nexport default {\n\tcomputed: {\n\t\t...mapState([\n\t\t\t${1:'nameOfState'},\n\t\t])\n\t},\n};",
-      "doc": "map getters inside a vue component",
-      "label": "Vue MapState",
-      "matches": {
-        "vmapstate": true
-      }
-    },
-    {
-      "content": "mixins: [${1:mixinName}],",
-      "doc": "vue use mixin",
-      "label": "Vue Use Mixin",
-      "matches": {
-        "vmixin-use": true
-      }
-    },
-    {
-      "content": "beforeCreate () {\n\t${0};\n},",
-      "doc": "beforeCreate lifecycle method",
-      "label": "Vue Lifecycle beforeCreate",
-      "matches": {
-        "vbeforecreate": true
-      }
-    },
-    {
-      "content": "const ${1:mixinName} = {\n\tmounted() {\n\t\tconsole.log('hello from mixin!');\n\t},\n};",
-      "doc": "vue mixin",
-      "label": "Vue Mixin",
-      "matches": {
-        "vmixin": true
-      }
-    },
-    {
-      "content": "watch(() => ${1:foo}, (newValue, oldValue) => {\n\t${2}\n})",
-      "doc": "Vue Composition api - watcher single source",
-      "label": "Vue Composition API - watch - single source",
-      "matches": {
-        "v3watch": true
-      }
-    },
-    {
-      "content": "created () {\n\t${0};\n},",
-      "doc": "created lifecycle method",
-      "label": "Vue Lifecycle created",
-      "matches": {
-        "vcreated": true
+        "v3useinoptions": true
       }
     },
     {
@@ -370,11 +162,115 @@
       }
     },
     {
+      "content": "watch(() => ${1:foo}, (newValue, oldValue) => {\n\t${2}\n})",
+      "doc": "Vue Composition api - watcher single source",
+      "label": "Vue Composition API - watch - single source",
+      "matches": {
+        "v3watch": true
+      }
+    },
+    {
+      "content": "onUnmounted(() => {${1}})",
+      "doc": "(destroyed) Vue onUnmounted Lifecycle hook",
+      "label": "Vue Lifecycle Hooks - onUnmounted",
+      "matches": {
+        "v3onunmounted": true
+      }
+    },
+    {
+      "content": "const ${1:mixinName} = {\n\tmounted() {\n\t\tconsole.log('hello from mixin!');\n\t},\n};",
+      "doc": "vue mixin",
+      "label": "Vue Mixin",
+      "matches": {
+        "vmixin": true
+      }
+    },
+    {
+      "content": "data() {\n\treturn {\n\t\t${1:key}: ${2:value}\n\t}\n},",
+      "doc": "Vue Component Data",
+      "label": "Vue Data",
+      "matches": {
+        "vdata": true
+      }
+    },
+    {
+      "content": "watch([${1:foo}, ${2:bar}], ([new${1}, new${2}], [prev${1}, prev${2}]) => {\n\t${3}\n})",
+      "doc": "Vue Composition api - watch as array",
+      "label": "Vue Composition API - watch - array",
+      "matches": {
+        "v3watch-array": true
+      }
+    },
+    {
+      "content": "methods: {\n\t${1:name}() {\n\t\t${0}\n\t}\n},",
+      "doc": "vue method",
+      "label": "Vue Methods",
+      "matches": {
+        "vmethod": true
+      }
+    },
+    {
+      "content": "onBeforeUpdate(() => {${1}})",
+      "doc": "Vue onBeforeUpdate Lifecycle hook",
+      "label": "Vue Lifecycle Hooks - onBeforeUpdate",
+      "matches": {
+        "v3onbeforeupdate": true
+      }
+    },
+    {
+      "content": "onBeforeMount(() => {${1}})",
+      "doc": "Vue onBeforeMount Lifecycle hook",
+      "label": "Vue Lifecycle Hooks - onBeforeMount",
+      "matches": {
+        "v3onbeforemount": true
+      }
+    },
+    {
       "content": "beforeMount () {\n\t${0};\n},",
       "doc": "beforeMount lifecycle method",
       "label": "Vue Lifecycle beforeMount",
       "matches": {
         "vbeforemount": true
+      }
+    },
+    {
+      "content": "computed: {\n\t${1:name}() {\n\t\treturn this.${2:data} ${0}\n\t}\n},",
+      "doc": "computed value",
+      "label": "Vue Computed",
+      "matches": {
+        "vcomputed": true
+      }
+    },
+    {
+      "content": "const ${1:name} = ref(${2:initialValue})",
+      "doc": "Vue Ref",
+      "label": "Vue Composition API - Vue ref",
+      "matches": {
+        "v3ref": true
+      }
+    },
+    {
+      "content": "watchEffect(() => {\n\t${1}\n})",
+      "doc": "Vue Composition api - watchEffect",
+      "label": "Vue Composition API - watchEffect",
+      "matches": {
+        "v3watcheffect": true
+      }
+    },
+    {
+      "content": "beforeCreate () {\n\t${0};\n},",
+      "doc": "beforeCreate lifecycle method",
+      "label": "Vue Lifecycle beforeCreate",
+      "matches": {
+        "vbeforecreate": true
+      }
+    },
+    {
+      "content": "mixins: [${1:mixinName}],",
+      "doc": "vue use mixin",
+      "label": "Vue Use Mixin",
+      "matches": {
+        "vmixin-use": true
       }
     },
     {
@@ -386,11 +282,115 @@
       }
     },
     {
+      "content": "created () {\n\t${0};\n},",
+      "doc": "created lifecycle method",
+      "label": "Vue Lifecycle created",
+      "matches": {
+        "vcreated": true
+      }
+    },
+    {
+      "content": "onMounted(() => {${1}})",
+      "doc": "Vue Mounted Lifecycle hook",
+      "label": "Vue Lifecycle Hooks - onMounted",
+      "matches": {
+        "v3onmounted": true
+      }
+    },
+    {
+      "content": "props: {\n\t${1:propName}: {\n\t\ttype: ${2:Number},\n\t\tdefault: ${0}\n\t},\n},",
+      "doc": "Vue Props with Default",
+      "label": "Vue Props with Default",
+      "matches": {
+        "vprops": true
+      }
+    },
+    {
+      "content": "import { ${1:libName} } from '${1:libName}';",
+      "doc": "import a library",
+      "label": "Vue Import Library",
+      "matches": {
+        "vimport-lib": true
+      }
+    },
+    {
       "content": "mounted () {\n\t${0};\n},",
       "doc": "mounted lifecycle method",
       "label": "Vue Lifecycle mounted",
       "matches": {
         "vmounted": true
+      }
+    },
+    {
+      "content": "import gsap from 'gsap';",
+      "doc": "import gsap library",
+      "label": "Vue Import GSAP",
+      "matches": {
+        "vimport-gsap": true
+      }
+    },
+    {
+      "content": "beforeUpdate () {\n\t${0};\n},",
+      "doc": "beforeUpdate lifecycle method",
+      "label": "Vue Lifecycle beforeUpdate",
+      "matches": {
+        "vbeforeupdate": true
+      }
+    },
+    {
+      "content": "filters: {\n\t${1:fnName}: function(${2:value}) {\n\t\treturn ${2:value}${0};\n\t}\n}",
+      "doc": "vue filter",
+      "label": "Vue Filter",
+      "matches": {
+        "vfilter": true
+      }
+    },
+    {
+      "content": "beforeEnter(el) {\n\tconsole.log('beforeEnter');\n},\nenter(el, done) {\n\tconsole.log('enter');\n\tdone();\n},\nbeforeLeave(el) {\n\tconsole.log('beforeLeave');\n},\nleave(el, done) {\n\tconsole.log('leave');\n\tdone();\n},",
+      "doc": "transition component js hooks",
+      "label": "Vue Transition Methods with JavaScript Hooks",
+      "matches": {
+        "vanimhook-js": true
+      }
+    },
+    {
+      "content": "watch: {\n\t${1:data}: {\n\t\timmediate: ${2:true},\n\t\tdeep: ${3:true},\n\t\thandler(${4:newValue}, ${5:oldValue}) {\n\t\t\t${0}\n\t\t}\n\t}\n},",
+      "doc": "vue watcher with options",
+      "label": "Vue Watchers with Options",
+      "matches": {
+        "vwatcher-options": true
+      }
+    },
+    {
+      "content": "beforeDestroy () {\n\t${0};\n},",
+      "doc": "beforeDestroy lifecycle method",
+      "label": "Vue Lifecycle beforeDestroy",
+      "matches": {
+        "vbeforedestroy": true
+      }
+    },
+    {
+      "content": "updated () {\n\t${0};\n},",
+      "doc": "updated lifecycle method",
+      "label": "Vue Lifecycle updated",
+      "matches": {
+        "vupdated": true
+      }
+    },
+    {
+      "content": "destroyed () {\n\t${0};\n},",
+      "doc": "destroyed lifecycle method",
+      "label": "Vue Lifecycle destroyed",
+      "matches": {
+        "vdestroyed": true
+      }
+    },
+    {
+      "content": "onUpdated(() => {${1}})",
+      "doc": "Vue onUpdated Lifecycle hook",
+      "label": "Vue Lifecycle Hooks - onUpdated",
+      "matches": {
+        "v3onupdated": true
       }
     }
   ]

@@ -10,36 +10,12 @@
       }
     },
     {
-      "content": "if ${1:condition} then ${2:undefined} else ${3:undefined}$0,",
-      "doc": "If inline",
-      "label": "if_inline",
+      "content": "module ${1:mod} where$0",
+      "doc": "simple module",
+      "label": "module",
       "matches": {
-        "if inline": true
-      }
-    },
-    {
-      "content": "\\\\${1:x} -> ${2:undefined}$0",
-      "doc": "lambda function",
-      "label": "lambda",
-      "matches": {
-        "\\": true,
-        "lambda": true
-      }
-    },
-    {
-      "content": "{-# OPTIONS_GHC ${1:opt} #-}$0",
-      "doc": "GHC options pragma",
-      "label": "opt pragma",
-      "matches": {
-        "opt": true
-      }
-    },
-    {
-      "content": "case ${1:expression} of\n\t${2:case1} -> ${3:result}\n\t${4:case2} -> ${5:result}$0",
-      "doc": "Case statement",
-      "label": "case",
-      "matches": {
-        "case": true
+        "mod simple": true,
+        "mods": true
       }
     },
     {
@@ -48,15 +24,6 @@
       "label": "pragma",
       "matches": {
         "lang": true
-      }
-    },
-    {
-      "content": "module ${1:mod} where$0",
-      "doc": "simple module",
-      "label": "module",
-      "matches": {
-        "mod simple": true,
-        "mods": true
       }
     },
     {
@@ -73,6 +40,23 @@
       "label": "get",
       "matches": {
         "get": true
+      }
+    },
+    {
+      "content": "if ${1:condition} then ${2:undefined} else ${3:undefined}$0,",
+      "doc": "If inline",
+      "label": "if_inline",
+      "matches": {
+        "if inline": true
+      }
+    },
+    {
+      "content": "\\\\${1:x} -> ${2:undefined}$0",
+      "doc": "lambda function",
+      "label": "lambda",
+      "matches": {
+        "\\": true,
+        "lambda": true
       }
     },
     {
@@ -94,6 +78,14 @@
       }
     },
     {
+      "content": "case ${1:expression} of\n\t${2:case1} -> ${3:result}\n\t${4:case2} -> ${5:result}$0",
+      "doc": "Case statement",
+      "label": "case",
+      "matches": {
+        "case": true
+      }
+    },
+    {
       "content": "import qualified ${1:module} as ${2:name}",
       "doc": "Qualified import",
       "label": "import_qualified",
@@ -107,6 +99,14 @@
       "label": "if",
       "matches": {
         "if simple": true
+      }
+    },
+    {
+      "content": "{-# OPTIONS_GHC ${1:opt} #-}$0",
+      "doc": "GHC options pragma",
+      "label": "opt pragma",
+      "matches": {
+        "opt": true
       }
     },
     {

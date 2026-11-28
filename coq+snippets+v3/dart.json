@@ -5,11 +5,19 @@
   ],
   "snippets": [
     {
-      "content": "for (var ${1:item} in ${2:items}) {\n  $0\n}",
-      "doc": "Insert a for-in loop.",
-      "label": "for in",
+      "content": "enum ${1:Name} {\n  $0\n}",
+      "doc": "Insert a enum.",
+      "label": "enum",
       "matches": {
-        "fori": true
+        "enum": true
+      }
+    },
+    {
+      "content": "if ($1) {\n  $0\n}",
+      "doc": "Insert an if statement.",
+      "label": "if",
+      "matches": {
+        "if": true
       }
     },
     {
@@ -21,27 +29,11 @@
       }
     },
     {
-      "content": "try {\n  $0\n} catch (${1:e}) {\n}",
-      "doc": "Insert a try/catch block.",
-      "label": "try",
+      "content": "do {\n  $0\n} while ($1);",
+      "doc": "Insert a do-while loop.",
+      "label": "do while",
       "matches": {
-        "try": true
-      }
-    },
-    {
-      "content": "enum ${1:Name} {\n  $0\n}",
-      "doc": "Insert a enum.",
-      "label": "enum",
-      "matches": {
-        "enum": true
-      }
-    },
-    {
-      "content": "group('$1', () {\n  $0\n});",
-      "doc": "Insert a test group block.",
-      "label": "group",
-      "matches": {
-        "group": true
+        "do": true
       }
     },
     {
@@ -61,6 +53,46 @@
       }
     },
     {
+      "content": "${3:void} ${1:name}(${2:args}) {\n  $0\n}",
+      "doc": "Insert a function definition.",
+      "label": "fun",
+      "matches": {
+        "fun": true
+      }
+    },
+    {
+      "content": "group('$1', () {\n  $0\n});",
+      "doc": "Insert a test group block.",
+      "label": "group",
+      "matches": {
+        "group": true
+      }
+    },
+    {
+      "content": "void main(List<String> args) {\n  $0\n}",
+      "doc": "Insert a main function, used as an entry point.",
+      "label": "main",
+      "matches": {
+        "main": true
+      }
+    },
+    {
+      "content": "test('$1', () {\n  $0\n});",
+      "doc": "Insert a test block.",
+      "label": "test",
+      "matches": {
+        "test": true
+      }
+    },
+    {
+      "content": "for (var i = 0; i < ${1:count}; i++) {\n  $0\n}",
+      "doc": "Insert a for loop.",
+      "label": "for",
+      "matches": {
+        "for": true
+      }
+    },
+    {
       "content": "typedef ${1:Type} ${2:Name}(${3:params});",
       "doc": "Insert a typedef.",
       "label": "typedef",
@@ -77,51 +109,19 @@
       }
     },
     {
-      "content": "void main(List<String> args) {\n  $0\n}",
-      "doc": "Insert a main function, used as an entry point.",
-      "label": "main",
+      "content": "try {\n  $0\n} catch (${1:e}) {\n}",
+      "doc": "Insert a try/catch block.",
+      "label": "try",
       "matches": {
-        "main": true
+        "try": true
       }
     },
     {
-      "content": "for (var i = 0; i < ${1:count}; i++) {\n  $0\n}",
-      "doc": "Insert a for loop.",
-      "label": "for",
+      "content": "for (var ${1:item} in ${2:items}) {\n  $0\n}",
+      "doc": "Insert a for-in loop.",
+      "label": "for in",
       "matches": {
-        "for": true
-      }
-    },
-    {
-      "content": "${3:void} ${1:name}(${2:args}) {\n  $0\n}",
-      "doc": "Insert a function definition.",
-      "label": "fun",
-      "matches": {
-        "fun": true
-      }
-    },
-    {
-      "content": "test('$1', () {\n  $0\n});",
-      "doc": "Insert a test block.",
-      "label": "test",
-      "matches": {
-        "test": true
-      }
-    },
-    {
-      "content": "if ($1) {\n  $0\n}",
-      "doc": "Insert an if statement.",
-      "label": "if",
-      "matches": {
-        "if": true
-      }
-    },
-    {
-      "content": "do {\n  $0\n} while ($1);",
-      "doc": "Insert a do-while loop.",
-      "label": "do while",
-      "matches": {
-        "do": true
+        "fori": true
       }
     },
     {

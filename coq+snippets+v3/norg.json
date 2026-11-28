@@ -2,6 +2,70 @@
   "extends": [],
   "snippets": [
     {
+      "content": "^^ ${1:title}\n${2:content}\n^^",
+      "doc": "footnote (ranged version)",
+      "label": "ranged_single_footnote",
+      "matches": {
+        "footnoter": true
+      }
+    },
+    {
+      "content": "------ ${1:item}",
+      "doc": "level 6 unordered list",
+      "label": "unordered_list_6",
+      "matches": {
+        "ulist6": true
+      }
+    },
+    {
+      "content": "~ ${1:item}",
+      "doc": "level 1 ordered list",
+      "label": "ordered_list",
+      "matches": {
+        "olist1": true
+      }
+    },
+    {
+      "content": "~~ ${1:item}",
+      "doc": "level 2 ordered list",
+      "label": "ordered_list_2",
+      "matches": {
+        "olist2": true
+      }
+    },
+    {
+      "content": "~~~ ${1:item}",
+      "doc": "level 3 ordered list",
+      "label": "ordered_list_3",
+      "matches": {
+        "olist3": true
+      }
+    },
+    {
+      "content": "** $0",
+      "doc": "level 2 heading",
+      "label": "h2",
+      "matches": {
+        "h2": true
+      }
+    },
+    {
+      "content": "/$0/",
+      "doc": "italic words",
+      "label": "italic",
+      "matches": {
+        "italic": true
+      }
+    },
+    {
+      "content": "!$0!",
+      "doc": "spoiler",
+      "label": "spoiler",
+      "matches": {
+        "spoiler": true
+      }
+    },
+    {
       "content": "~~~~ ${1:item}",
       "doc": "level 4 ordered list",
       "label": "ordered_list_4",
@@ -18,6 +82,30 @@
       }
     },
     {
+      "content": "* $0",
+      "doc": "level 1 heading",
+      "label": "h1",
+      "matches": {
+        "h1": true
+      }
+    },
+    {
+      "content": "&${1:variable}&",
+      "doc": "variable",
+      "label": "var",
+      "matches": {
+        "var": true
+      }
+    },
+    {
+      "content": "~~~~~ ${1:item}",
+      "doc": "level 5 ordered list",
+      "label": "ordered_list_5",
+      "matches": {
+        "olist5": true
+      }
+    },
+    {
       "content": "`$0`",
       "doc": "inline code",
       "label": "inlinecode",
@@ -26,59 +114,11 @@
       }
     },
     {
-      "content": "~~~~~~ ${1:item}",
-      "doc": "level 6 ordered list",
-      "label": "ordered_list_6",
+      "content": "- (-) ${1:task}",
+      "doc": "task (in progress)",
+      "label": "pending_task",
       "matches": {
-        "olist6": true
-      }
-    },
-    {
-      "content": "@data\n$0\n@end",
-      "doc": "data tags",
-      "label": "data",
-      "matches": {
-        "data": true
-      }
-    },
-    {
-      "content": "@code ${1:lang}\n$0\n@end",
-      "doc": "code block",
-      "label": "code",
-      "matches": {
-        "code": true
-      }
-    },
-    {
-      "content": ",$0,",
-      "doc": "subscript",
-      "label": "subscript",
-      "matches": {
-        "subscript": true
-      }
-    },
-    {
-      "content": ">> $0",
-      "doc": "level 2 quote",
-      "label": "quote_2",
-      "matches": {
-        "quote2": true
-      }
-    },
-    {
-      "content": "^$0^",
-      "doc": "superscript",
-      "label": "superscript",
-      "matches": {
-        "superscript": true
-      }
-    },
-    {
-      "content": "{${1:object}}[${2:description}]",
-      "doc": "links",
-      "label": "link",
-      "matches": {
-        "link": true
+        "ptask": true
       }
     },
     {
@@ -90,6 +130,118 @@
       }
     },
     {
+      "content": "*** $0",
+      "doc": "level 3 heading",
+      "label": "h3",
+      "matches": {
+        "h3": true
+      }
+    },
+    {
+      "content": "- ( ) ${1:task}",
+      "doc": "task",
+      "label": "task",
+      "matches": {
+        "task": true
+      }
+    },
+    {
+      "content": "*$0*",
+      "doc": "bold words",
+      "label": "bold",
+      "matches": {
+        "bold": true
+      }
+    },
+    {
+      "content": "**** $0",
+      "doc": "level 4 heading",
+      "label": "h4",
+      "matches": {
+        "h4": true
+      }
+    },
+    {
+      "content": "> $0",
+      "doc": "level 1 quote",
+      "label": "quote_1",
+      "matches": {
+        "quote1": true
+      }
+    },
+    {
+      "content": "-$0-",
+      "doc": "strike through",
+      "label": "strikethrough",
+      "matches": {
+        "strikethrough": true
+      }
+    },
+    {
+      "content": "***** $0",
+      "doc": "level 5 heading",
+      "label": "h5",
+      "matches": {
+        "h5": true
+      }
+    },
+    {
+      "content": "- (?) ${1:task}",
+      "doc": "task (needs further input)",
+      "label": "input_task",
+      "matches": {
+        "itask": true
+      }
+    },
+    {
+      "content": ">> $0",
+      "doc": "level 2 quote",
+      "label": "quote_2",
+      "matches": {
+        "quote2": true
+      }
+    },
+    {
+      "content": "@code ${1:lang}\n$0\n@end",
+      "doc": "code block",
+      "label": "code",
+      "matches": {
+        "code": true
+      }
+    },
+    {
+      "content": "- (x) ${1:task}",
+      "doc": "task (done)",
+      "label": "done_task",
+      "matches": {
+        "dtask": true
+      }
+    },
+    {
+      "content": ">>> $0",
+      "doc": "level 3 quote",
+      "label": "quote_3",
+      "matches": {
+        "quote3": true
+      }
+    },
+    {
+      "content": "- (!) ${1:task}",
+      "doc": "task (high priority)",
+      "label": "urgent_task",
+      "matches": {
+        "utask": true
+      }
+    },
+    {
+      "content": ">>>>>> $0",
+      "doc": "level 6 quote",
+      "label": "quote_6",
+      "matches": {
+        "quote6": true
+      }
+    },
+    {
       "content": ">>>> $0",
       "doc": "level 4 quote",
       "label": "quote_4",
@@ -98,19 +250,75 @@
       }
     },
     {
-      "content": "@math\n$0\n@end",
-      "doc": "math block",
-      "label": "math",
+      "content": "- (+) ${1:task}",
+      "doc": "task (recurring, with children)",
+      "label": "recurring_task",
       "matches": {
-        "math": true
+        "rtask": true
       }
     },
     {
-      "content": "^^ ${1:title}\n${2:content}\n^^",
-      "doc": "footnote (ranged version)",
-      "label": "ranged_single_footnote",
+      "content": "~~~~~~ ${1:item}",
+      "doc": "level 6 ordered list",
+      "label": "ordered_list_6",
       "matches": {
-        "footnoter": true
+        "olist6": true
+      }
+    },
+    {
+      "content": "****** $0",
+      "doc": "level 6 heading",
+      "label": "h6",
+      "matches": {
+        "h6": true
+      }
+    },
+    {
+      "content": "- ${1:item}",
+      "doc": "level 1 unordered list",
+      "label": "unordered_list",
+      "matches": {
+        "ulist1": true
+      }
+    },
+    {
+      "content": "___\n$0",
+      "doc": "horizontal rule",
+      "label": "hr",
+      "matches": {
+        "hr": true
+      }
+    },
+    {
+      "content": "_$0_",
+      "doc": "underline words",
+      "label": "underline",
+      "matches": {
+        "underline": true
+      }
+    },
+    {
+      "content": "^$0^",
+      "doc": "superscript",
+      "label": "superscript",
+      "matches": {
+        "superscript": true
+      }
+    },
+    {
+      "content": "-- ${1:item}",
+      "doc": "level 2 unordered list",
+      "label": "unordered_list_2",
+      "matches": {
+        "ulist2": true
+      }
+    },
+    {
+      "content": "- (=) ${1:task}",
+      "doc": "task (on hold)",
+      "label": "hold_task",
+      "matches": {
+        "htask": true
       }
     },
     {
@@ -122,11 +330,11 @@
       }
     },
     {
-      "content": "- ${1:item}",
-      "doc": "level 1 unordered list",
-      "label": "unordered_list",
+      "content": ",$0,",
+      "doc": "subscript",
+      "label": "subscript",
       "matches": {
-        "ulist1": true
+        "subscript": true
       }
     },
     {
@@ -146,75 +354,19 @@
       }
     },
     {
-      "content": "- (?) ${1:task}",
-      "doc": "task (needs further input)",
-      "label": "input_task",
+      "content": "@data\n$0\n@end",
+      "doc": "data tags",
+      "label": "data",
       "matches": {
-        "itask": true
+        "data": true
       }
     },
     {
-      "content": "-- ${1:item}",
-      "doc": "level 2 unordered list",
-      "label": "unordered_list_2",
+      "content": "{${1:object}}[${2:description}]",
+      "doc": "links",
+      "label": "link",
       "matches": {
-        "ulist2": true
-      }
-    },
-    {
-      "content": ">>> $0",
-      "doc": "level 3 quote",
-      "label": "quote_3",
-      "matches": {
-        "quote3": true
-      }
-    },
-    {
-      "content": ">>>>>> $0",
-      "doc": "level 6 quote",
-      "label": "quote_6",
-      "matches": {
-        "quote6": true
-      }
-    },
-    {
-      "content": "- (!) ${1:task}",
-      "doc": "task (high priority)",
-      "label": "urgent_task",
-      "matches": {
-        "utask": true
-      }
-    },
-    {
-      "content": "* $0",
-      "doc": "level 1 heading",
-      "label": "h1",
-      "matches": {
-        "h1": true
-      }
-    },
-    {
-      "content": "- (+) ${1:task}",
-      "doc": "task (recurring, with children)",
-      "label": "recurring_task",
-      "matches": {
-        "rtask": true
-      }
-    },
-    {
-      "content": "- (x) ${1:task}",
-      "doc": "task (done)",
-      "label": "done_task",
-      "matches": {
-        "dtask": true
-      }
-    },
-    {
-      "content": "** $0",
-      "doc": "level 2 heading",
-      "label": "h2",
-      "matches": {
-        "h2": true
+        "link": true
       }
     },
     {
@@ -226,118 +378,6 @@
       }
     },
     {
-      "content": "- ( ) ${1:task}",
-      "doc": "task",
-      "label": "task",
-      "matches": {
-        "task": true
-      }
-    },
-    {
-      "content": "*** $0",
-      "doc": "level 3 heading",
-      "label": "h3",
-      "matches": {
-        "h3": true
-      }
-    },
-    {
-      "content": "- (-) ${1:task}",
-      "doc": "task (in progress)",
-      "label": "pending_task",
-      "matches": {
-        "ptask": true
-      }
-    },
-    {
-      "content": "----- ${1:item}",
-      "doc": "level 5 unordered list",
-      "label": "unordered_list_5",
-      "matches": {
-        "ulist5": true
-      }
-    },
-    {
-      "content": "**** $0",
-      "doc": "level 4 heading",
-      "label": "h4",
-      "matches": {
-        "h4": true
-      }
-    },
-    {
-      "content": "&${1:variable}&",
-      "doc": "variable",
-      "label": "var",
-      "matches": {
-        "var": true
-      }
-    },
-    {
-      "content": "- (=) ${1:task}",
-      "doc": "task (on hold)",
-      "label": "hold_task",
-      "matches": {
-        "htask": true
-      }
-    },
-    {
-      "content": "------ ${1:item}",
-      "doc": "level 6 unordered list",
-      "label": "unordered_list_6",
-      "matches": {
-        "ulist6": true
-      }
-    },
-    {
-      "content": "> $0",
-      "doc": "level 1 quote",
-      "label": "quote_1",
-      "matches": {
-        "quote1": true
-      }
-    },
-    {
-      "content": "~~~~~ ${1:item}",
-      "doc": "level 5 ordered list",
-      "label": "ordered_list_5",
-      "matches": {
-        "olist5": true
-      }
-    },
-    {
-      "content": "****** $0",
-      "doc": "level 6 heading",
-      "label": "h6",
-      "matches": {
-        "h6": true
-      }
-    },
-    {
-      "content": "~ ${1:item}",
-      "doc": "level 1 ordered list",
-      "label": "ordered_list",
-      "matches": {
-        "olist1": true
-      }
-    },
-    {
-      "content": "~~~ ${1:item}",
-      "doc": "level 3 ordered list",
-      "label": "ordered_list_3",
-      "matches": {
-        "olist3": true
-      }
-    },
-    {
-      "content": "/$0/",
-      "doc": "italic words",
-      "label": "italic",
-      "matches": {
-        "italic": true
-      }
-    },
-    {
       "content": "^ ${1:title}\n${2:content}",
       "doc": "footnote (short version)",
       "label": "single_footnote",
@@ -346,27 +386,11 @@
       }
     },
     {
-      "content": "~~ ${1:item}",
-      "doc": "level 2 ordered list",
-      "label": "ordered_list_2",
+      "content": "@math\n$0\n@end",
+      "doc": "math block",
+      "label": "math",
       "matches": {
-        "olist2": true
-      }
-    },
-    {
-      "content": "_$0_",
-      "doc": "underline words",
-      "label": "underline",
-      "matches": {
-        "underline": true
-      }
-    },
-    {
-      "content": "***** $0",
-      "doc": "level 5 heading",
-      "label": "h5",
-      "matches": {
-        "h5": true
+        "math": true
       }
     },
     {
@@ -378,35 +402,11 @@
       }
     },
     {
-      "content": "!$0!",
-      "doc": "spoiler",
-      "label": "spoiler",
+      "content": "----- ${1:item}",
+      "doc": "level 5 unordered list",
+      "label": "unordered_list_5",
       "matches": {
-        "spoiler": true
-      }
-    },
-    {
-      "content": "*$0*",
-      "doc": "bold words",
-      "label": "bold",
-      "matches": {
-        "bold": true
-      }
-    },
-    {
-      "content": "-$0-",
-      "doc": "strike through",
-      "label": "strikethrough",
-      "matches": {
-        "strikethrough": true
-      }
-    },
-    {
-      "content": "___\n$0",
-      "doc": "horizontal rule",
-      "label": "hr",
-      "matches": {
-        "hr": true
+        "ulist5": true
       }
     }
   ]

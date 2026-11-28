@@ -10,27 +10,11 @@
       }
     },
     {
-      "content": "(fn ${1:name} [${2:params}]\n   )",
-      "doc": "Create a function",
-      "label": "fn",
+      "content": "(require :${1:module})",
+      "doc": "Require a module",
+      "label": "require",
       "matches": {
-        "fn": true
-      }
-    },
-    {
-      "content": "(let [${1:tbl} {}\n\t${2:key1} ${3:key1_value}])",
-      "doc": "Declaring a table",
-      "label": "create a table",
-      "matches": {
-        "tbl": true
-      }
-    },
-    {
-      "content": "(while (${1:condition})\n($0))",
-      "doc": "Create a while loop",
-      "label": "while",
-      "matches": {
-        "while": true
+        "require": true
       }
     },
     {
@@ -42,11 +26,11 @@
       }
     },
     {
-      "content": "(for [i 1 10]\n($0))",
-      "doc": "Create a for loop",
-      "label": "for",
+      "content": "(global $0)",
+      "doc": "Create a global",
+      "label": "global",
       "matches": {
-        "for": true
+        "global": true
       }
     },
     {
@@ -58,11 +42,27 @@
       }
     },
     {
-      "content": "(global $0)",
-      "doc": "Create a global",
-      "label": "global",
+      "content": "(let [${1:tbl} {}\n\t${2:key1} ${3:key1_value}])",
+      "doc": "Declaring a table",
+      "label": "create a table",
       "matches": {
-        "global": true
+        "tbl": true
+      }
+    },
+    {
+      "content": "(fn ${1:name} [${2:params}]\n   )",
+      "doc": "Create a function",
+      "label": "fn",
+      "matches": {
+        "fn": true
+      }
+    },
+    {
+      "content": "(while (${1:condition})\n($0))",
+      "doc": "Create a while loop",
+      "label": "while",
+      "matches": {
+        "while": true
       }
     },
     {
@@ -74,11 +74,11 @@
       }
     },
     {
-      "content": "(require :${1:module})",
-      "doc": "Require a module",
-      "label": "require",
+      "content": "(for [i 1 10]\n($0))",
+      "doc": "Create a for loop",
+      "label": "for",
       "matches": {
-        "require": true
+        "for": true
       }
     }
   ]

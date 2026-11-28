@@ -8,11 +8,35 @@
   ],
   "snippets": [
     {
-      "content": "* @param ${1:Type} ${2:var} ${3:Description}$0",
-      "doc": "Paramater documentation",
-      "label": "PHPDoc param …",
+      "content": "\\$${1:arrayName} = ['$2' => $3${4:,} $0];",
+      "doc": "Array initializer",
+      "label": "$… = […]",
       "matches": {
-        "param": true
+        "shorray": true
+      }
+    },
+    {
+      "content": "'$1' => $2${3:,} $0",
+      "doc": "Key-Value initializer",
+      "label": "… => …",
+      "matches": {
+        "keyval": true
+      }
+    },
+    {
+      "content": "switch (\\$${1:variable}) {\n\tcase '${2:value}':\n\t\t${3:# code...}\n\t\tbreak;\n\t$0\n\tdefault:\n\t\t${4:# code...}\n\t\tbreak;\n}",
+      "doc": "Switch block",
+      "label": "switch …",
+      "matches": {
+        "switch": true
+      }
+    },
+    {
+      "content": "case '${1:value}':\n\t${0:# code...}\n\tbreak;",
+      "doc": "Case Block",
+      "label": "case …",
+      "matches": {
+        "case": true
       }
     },
     {
@@ -21,6 +45,22 @@
       "label": "$this->…",
       "matches": {
         "this": true
+      }
+    },
+    {
+      "content": "echo \\$this->$0;",
+      "doc": "Echo this",
+      "label": "echo $this->…",
+      "matches": {
+        "ethis": true
+      }
+    },
+    {
+      "content": "* @param ${1:Type} ${2:var} ${3:Description}$0",
+      "doc": "Paramater documentation",
+      "label": "PHPDoc param …",
+      "matches": {
+        "param": true
       }
     },
     {
@@ -80,75 +120,11 @@
       }
     },
     {
-      "content": "elseif (${1:condition}) {\n\t${0:# code...}\n}",
-      "doc": "Elseif block",
-      "label": "elseif …",
-      "matches": {
-        "elseif": true
-      }
-    },
-    {
-      "content": "#region",
-      "doc": "Folding Region Start",
-      "label": "Region Start",
-      "matches": {
-        "#region": true
-      }
-    },
-    {
-      "content": "#endregion",
-      "doc": "Folding Region End",
-      "label": "Region End",
-      "matches": {
-        "#endregion": true
-      }
-    },
-    {
-      "content": "\\$${1:arrayName} = array('$2' => $3${4:,} $0);",
-      "doc": "Array initializer",
-      "label": "$… = array (…)",
-      "matches": {
-        "array": true
-      }
-    },
-    {
-      "content": "'$1' => $2${3:,} $0",
-      "doc": "Key-Value initializer",
-      "label": "… => …",
-      "matches": {
-        "keyval": true
-      }
-    },
-    {
-      "content": "echo \\$this->$0;",
-      "doc": "Echo this",
-      "label": "echo $this->…",
-      "matches": {
-        "ethis": true
-      }
-    },
-    {
       "content": "public function __construct(${1: priarg}) {\n}",
       "doc": "Create __construct method using the last php syntax.",
       "label": "function __construct",
       "matches": {
         "con": true
-      }
-    },
-    {
-      "content": "switch (\\$${1:variable}) {\n\tcase '${2:value}':\n\t\t${3:# code...}\n\t\tbreak;\n\t$0\n\tdefault:\n\t\t${4:# code...}\n\t\tbreak;\n}",
-      "doc": "Switch block",
-      "label": "switch …",
-      "matches": {
-        "switch": true
-      }
-    },
-    {
-      "content": "\\$${1:arrayName} = ['$2' => $3${4:,} $0];",
-      "doc": "Array initializer",
-      "label": "$… = […]",
-      "matches": {
-        "shorray": true
       }
     },
     {
@@ -160,11 +136,35 @@
       }
     },
     {
-      "content": "case '${1:value}':\n\t${0:# code...}\n\tbreak;",
-      "doc": "Case Block",
-      "label": "case …",
+      "content": "elseif (${1:condition}) {\n\t${0:# code...}\n}",
+      "doc": "Elseif block",
+      "label": "elseif …",
       "matches": {
-        "case": true
+        "elseif": true
+      }
+    },
+    {
+      "content": "\\$${1:arrayName} = array('$2' => $3${4:,} $0);",
+      "doc": "Array initializer",
+      "label": "$… = array (…)",
+      "matches": {
+        "array": true
+      }
+    },
+    {
+      "content": "#endregion",
+      "doc": "Folding Region End",
+      "label": "Region End",
+      "matches": {
+        "#endregion": true
+      }
+    },
+    {
+      "content": "#region",
+      "doc": "Folding Region Start",
+      "label": "Region Start",
+      "matches": {
+        "#region": true
       }
     },
     {

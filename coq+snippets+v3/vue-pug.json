@@ -2,11 +2,27 @@
   "extends": [],
   "snippets": [
     {
-      "content": "${1:component}(:${1:propName}=\"${0}\")",
-      "doc": "component element with props",
-      "label": "Vue Component with Props Binding",
+      "content": "${1:div}(:style=\"{ fontSize: ${2:data} + 'px' }\")",
+      "doc": "vue inline style binding",
+      "label": "Vue Style Binding",
       "matches": {
-        "vel-props": true
+        "vstyle": true
+      }
+    },
+    {
+      "content": "input(v-model.number=\"${1:numData}\" type=\"number\" step=\"1\")",
+      "doc": "v-model directive number input",
+      "label": "Vue v-model Number Directive",
+      "matches": {
+        "vmodel-num": true
+      }
+    },
+    {
+      "content": "transition(\n\tmode=\"out-in\"\n\t@before-enter=\"beforeEnter\"\n\t@enter=\"enter\"\n\n\t@before-leave=\"beforeLeave\"\n\t@leave=\"leave\"\n\t:css=\"false\"\n)",
+      "doc": "transition component js hooks",
+      "label": "Vue Transition Component with JavaScript Hooks",
+      "matches": {
+        "vanim": true
       }
     },
     {
@@ -18,6 +34,46 @@
       }
     },
     {
+      "content": "${1:div}(:style=\"[${2:styleObjectA}, ${3:styleObjectB]}\")",
+      "doc": "vue inline style binding, objects",
+      "label": "Vue Style Binding Object",
+      "matches": {
+        "vstyle-obj": true
+      }
+    },
+    {
+      "content": "@click=\"${1:handler}(${2:arg}, $event)\"",
+      "doc": "v-on click handler with arguments",
+      "label": "Vue v-on Shortcut Directive",
+      "matches": {
+        "von": true
+      }
+    },
+    {
+      "content": "${1:div}(:class=\"{ ${2:className}: ${3:data} }\")",
+      "doc": "vue class binding",
+      "label": "Vue Class Binding",
+      "matches": {
+        "vclass": true
+      }
+    },
+    {
+      "content": "${1:component}(:${1:propName}=\"${0}\")",
+      "doc": "component element with props",
+      "label": "Vue Component with Props Binding",
+      "matches": {
+        "vel-props": true
+      }
+    },
+    {
+      "content": "${1:div}(:class=\"[${2:classNameA}, {${3:classNameB} : ${4:condition}}]\")",
+      "doc": "vue multiple conditional class bindings",
+      "label": "Vue Multiple Conditional Class Bindings",
+      "matches": {
+        "vclass-obj-mult": true
+      }
+    },
+    {
       "content": "${1:div}(v-for=\"${2:item} in ${2:item}s\" :key=\"${2:item}.id\")\n\t| {{ ${2:item} }}",
       "doc": "vfor statement",
       "label": "Vue v-for",
@@ -26,11 +82,11 @@
       }
     },
     {
-      "content": "@change=\"$emit('change', $event.target.value)\"",
-      "doc": "Vue Emit from Child Component",
-      "label": "Vue Emit from Child",
+      "content": "${1:div}(:class=\"[${2:classNameA}, ${3:classNameB}]\")",
+      "doc": "vue class binding",
+      "label": "Vue Class Binding Object",
       "matches": {
-        "vemit-child": true
+        "vclass-obj": true
       }
     },
     {
@@ -58,67 +114,11 @@
       }
     },
     {
-      "content": "${1:div}(:class=\"[${2:classNameA}, {${3:classNameB} : ${4:condition}}]\")",
-      "doc": "vue multiple conditional class bindings",
-      "label": "Vue Multiple Conditional Class Bindings",
+      "content": "@change=\"$emit('change', $event.target.value)\"",
+      "doc": "Vue Emit from Child Component",
+      "label": "Vue Emit from Child",
       "matches": {
-        "vclass-obj-mult": true
-      }
-    },
-    {
-      "content": "${1:div}(:style=\"{ fontSize: ${2:data} + 'px' }\")",
-      "doc": "vue inline style binding",
-      "label": "Vue Style Binding",
-      "matches": {
-        "vstyle": true
-      }
-    },
-    {
-      "content": "input(v-model.number=\"${1:numData}\" type=\"number\" step=\"1\")",
-      "doc": "v-model directive number input",
-      "label": "Vue v-model Number Directive",
-      "matches": {
-        "vmodel-num": true
-      }
-    },
-    {
-      "content": "${1:div}(:class=\"[${2:classNameA}, ${3:classNameB}]\")",
-      "doc": "vue class binding",
-      "label": "Vue Class Binding Object",
-      "matches": {
-        "vclass-obj": true
-      }
-    },
-    {
-      "content": "transition(\n\tmode=\"out-in\"\n\t@before-enter=\"beforeEnter\"\n\t@enter=\"enter\"\n\n\t@before-leave=\"beforeLeave\"\n\t@leave=\"leave\"\n\t:css=\"false\"\n)",
-      "doc": "transition component js hooks",
-      "label": "Vue Transition Component with JavaScript Hooks",
-      "matches": {
-        "vanim": true
-      }
-    },
-    {
-      "content": "${1:div}(:style=\"[${2:styleObjectA}, ${3:styleObjectB]}\")",
-      "doc": "vue inline style binding, objects",
-      "label": "Vue Style Binding Object",
-      "matches": {
-        "vstyle-obj": true
-      }
-    },
-    {
-      "content": "@click=\"${1:handler}(${2:arg}, $event)\"",
-      "doc": "v-on click handler with arguments",
-      "label": "Vue v-on Shortcut Directive",
-      "matches": {
-        "von": true
-      }
-    },
-    {
-      "content": "${1:div}(:class=\"{ ${2:className}: ${3:data} }\")",
-      "doc": "vue class binding",
-      "label": "Vue Class Binding",
-      "matches": {
-        "vclass": true
+        "vemit-child": true
       }
     }
   ]

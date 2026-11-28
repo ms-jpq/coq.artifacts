@@ -2,14 +2,6 @@
   "extends": [],
   "snippets": [
     {
-      "content": "ifeq (${1:cond0}, ${2:cond1})\n\t$0\nendif",
-      "doc": "if statement",
-      "label": "if statement",
-      "matches": {
-        "if": true
-      }
-    },
-    {
       "content": "else\n\t$0",
       "doc": "else",
       "label": "else",
@@ -23,6 +15,14 @@
       "label": "if else statement",
       "matches": {
         "ife": true
+      }
+    },
+    {
+      "content": "ifeq (${1:cond0}, ${2:cond1})\n\t$0\nendif",
+      "doc": "if statement",
+      "label": "if statement",
+      "matches": {
+        "if": true
       }
     },
     {

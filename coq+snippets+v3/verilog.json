@@ -2,38 +2,6 @@
   "extends": [],
   "snippets": [
     {
-      "content": "typedef enum ${2:logic[15:0]} \n{\n\n${3:REG = 16'h0000}\n\n} ${1:my_dest_t};",
-      "doc": "Typedef enum",
-      "label": "typedef enum",
-      "matches": {
-        "tde": true
-      }
-    },
-    {
-      "content": "forever begin\n\t${0}\nend",
-      "doc": "Forever loop",
-      "label": "forever",
-      "matches": {
-        "forev": true
-      }
-    },
-    {
-      "content": "if (${1}) begin\n\n\t${2}\n\nend\n\nelse begin\n\n\t${3}\n\nend",
-      "doc": "If-else statement",
-      "label": "if-else",
-      "matches": {
-        "ife": true
-      }
-    },
-    {
-      "content": "whlie (${1}) begin\n\t${0}\nend",
-      "doc": "While loop",
-      "label": "while",
-      "matches": {
-        "wh": true
-      }
-    },
-    {
       "content": "initial begin\n\t${0}\nend",
       "doc": "Initial Begin",
       "label": "Initial Begin",
@@ -66,11 +34,11 @@
       }
     },
     {
-      "content": "casez (${1:variable})\n\t${2: value}: begin\n\t\t${3}\n\tend\ndefault: begin\n\t${4}\n\nend\nendcase",
-      "doc": "Casez Statement",
-      "label": "casez statement",
+      "content": "else begin\n\n${0}\n\nend",
+      "doc": "else-if statement",
+      "label": "else",
       "matches": {
-        "casez": true
+        "el": true
       }
     },
     {
@@ -79,22 +47,6 @@
       "label": "always block",
       "matches": {
         "al": true
-      }
-    },
-    {
-      "content": "module ${1:FILENAME} (\n\t${2}\n);\n\t${0}\n\nendmodule",
-      "doc": "Module Block",
-      "label": "module block",
-      "matches": {
-        "modu": true
-      }
-    },
-    {
-      "content": "else if (${1}) begin\n\n${0}\n\nend",
-      "doc": "else-if statement",
-      "label": "else-if",
-      "matches": {
-        "eif": true
       }
     },
     {
@@ -114,11 +66,11 @@
       }
     },
     {
-      "content": "else begin\n\n${0}\n\nend",
-      "doc": "else-if statement",
-      "label": "else",
+      "content": "module ${1:FILENAME} (\n\t${2}\n);\n\t${0}\n\nendmodule",
+      "doc": "Module Block",
+      "label": "module block",
       "matches": {
-        "el": true
+        "modu": true
       }
     },
     {
@@ -127,6 +79,54 @@
       "label": "if",
       "matches": {
         "if": true
+      }
+    },
+    {
+      "content": "if (${1}) begin\n\n\t${2}\n\nend\n\nelse begin\n\n\t${3}\n\nend",
+      "doc": "If-else statement",
+      "label": "if-else",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "forever begin\n\t${0}\nend",
+      "doc": "Forever loop",
+      "label": "forever",
+      "matches": {
+        "forev": true
+      }
+    },
+    {
+      "content": "typedef enum ${2:logic[15:0]} \n{\n\n${3:REG = 16'h0000}\n\n} ${1:my_dest_t};",
+      "doc": "Typedef enum",
+      "label": "typedef enum",
+      "matches": {
+        "tde": true
+      }
+    },
+    {
+      "content": "else if (${1}) begin\n\n${0}\n\nend",
+      "doc": "else-if statement",
+      "label": "else-if",
+      "matches": {
+        "eif": true
+      }
+    },
+    {
+      "content": "whlie (${1}) begin\n\t${0}\nend",
+      "doc": "While loop",
+      "label": "while",
+      "matches": {
+        "wh": true
+      }
+    },
+    {
+      "content": "casez (${1:variable})\n\t${2: value}: begin\n\t\t${3}\n\tend\ndefault: begin\n\t${4}\n\nend\nendcase",
+      "doc": "Casez Statement",
+      "label": "casez statement",
+      "matches": {
+        "casez": true
       }
     },
     {

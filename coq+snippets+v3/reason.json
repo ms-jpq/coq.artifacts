@@ -2,17 +2,9 @@
   "extends": [],
   "snippets": [
     {
-      "content": "module ${1:M} = ${2:{}};$0",
-      "doc": "Snippet for a module declaration",
-      "label": "module",
-      "matches": {
-        "module": true
-      }
-    },
-    {
-      "content": "let ${1:pattern} = ${2:()};$0",
-      "doc": "Snippet for a variable declaration",
-      "label": "let",
+      "content": "let ${1:f} = (${2:pattern}) => ${3:${2:pattern}};$0",
+      "doc": "Snippet for a short function definition",
+      "label": "function",
       "matches": {
         "let": true
       }
@@ -23,6 +15,14 @@
       "label": "let (block)",
       "matches": {
         "let": true
+      }
+    },
+    {
+      "content": "(${1:pattern}) => ${2:${1:pattern}}",
+      "doc": "Snippet for a lambda function",
+      "label": "lambda",
+      "matches": {
+        "fun": true
       }
     },
     {
@@ -42,11 +42,11 @@
       }
     },
     {
-      "content": "(${1:pattern}) => ${2:${1:pattern}}",
-      "doc": "Snippet for a lambda function",
-      "label": "lambda",
+      "content": "let ${1:pattern} = ${2:()};$0",
+      "doc": "Snippet for a variable declaration",
+      "label": "let",
       "matches": {
-        "fun": true
+        "let": true
       }
     },
     {
@@ -55,14 +55,6 @@
       "label": "module function",
       "matches": {
         "module": true
-      }
-    },
-    {
-      "content": "let ${1:f} = (${2:pattern}) => ${3:${2:pattern}};$0",
-      "doc": "Snippet for a short function definition",
-      "label": "function",
-      "matches": {
-        "let": true
       }
     },
     {
@@ -79,6 +71,14 @@
       "label": "switch",
       "matches": {
         "switch": true
+      }
+    },
+    {
+      "content": "module ${1:M} = ${2:{}};$0",
+      "doc": "Snippet for a module declaration",
+      "label": "module",
+      "matches": {
+        "module": true
       }
     },
     {

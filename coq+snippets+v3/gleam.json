@@ -13,11 +13,12 @@
       }
     },
     {
-      "content": "pub fn ${1:name}_test() {\n\t${0}\n}",
-      "doc": "test function",
-      "label": "Test Function",
+      "content": "pub const ${1} = ${0}",
+      "doc": "public constant",
+      "label": "Public Constant",
       "matches": {
-        "test": true
+        "pub": true,
+        "pub const": true
       }
     },
     {
@@ -27,15 +28,6 @@
       "matches": {
         "af": true,
         "fn": true
-      }
-    },
-    {
-      "content": "import ${0:gleam/result}",
-      "doc": "import",
-      "label": "Import",
-      "matches": {
-        "im": true,
-        "import": true
       }
     },
     {
@@ -56,19 +48,11 @@
       }
     },
     {
-      "content": "type ${1:Name} {\n\t${0:$1}\n}",
-      "doc": "type declaration",
-      "label": "Type",
+      "content": "let assert ${1} = ${0}",
+      "doc": "let assert assignment",
+      "label": "Let Assert assignment",
       "matches": {
-        "type": true
-      }
-    },
-    {
-      "content": "const ${1} = ${0}",
-      "doc": "constant",
-      "label": "Constant",
-      "matches": {
-        "const": true
+        "leta": true
       }
     },
     {
@@ -114,22 +98,11 @@
       }
     },
     {
-      "content": "should.equal(${0})",
-      "doc": "should.equal",
-      "label": "Should Equal",
+      "content": "type ${1:Name} {\n\t${0:$1}\n}",
+      "doc": "type declaration",
+      "label": "Type",
       "matches": {
-        "seq": true,
-        "should": true
-      }
-    },
-    {
-      "content": "pub type ${1:Name} {\n\t${0:$1}\n}",
-      "doc": "public type declaration",
-      "label": "Public Type",
-      "matches": {
-        "pty": true,
-        "pub": true,
-        "pub type": true
+        "type": true
       }
     },
     {
@@ -142,12 +115,21 @@
       }
     },
     {
-      "content": "pub const ${1} = ${0}",
-      "doc": "public constant",
-      "label": "Public Constant",
+      "content": "const ${1} = ${0}",
+      "doc": "constant",
+      "label": "Constant",
       "matches": {
+        "const": true
+      }
+    },
+    {
+      "content": "pub type ${1:Name} {\n\t${0:$1}\n}",
+      "doc": "public type declaration",
+      "label": "Public Type",
+      "matches": {
+        "pty": true,
         "pub": true,
-        "pub const": true
+        "pub type": true
       }
     },
     {
@@ -171,6 +153,23 @@
       }
     },
     {
+      "content": "fn ${1:function_name}(${2}) -> ${3:Nil} {\n\t${0:todo}\n}",
+      "doc": "private function",
+      "label": "Private Function",
+      "matches": {
+        "fn": true
+      }
+    },
+    {
+      "content": "should.equal(${0})",
+      "doc": "should.equal",
+      "label": "Should Equal",
+      "matches": {
+        "seq": true,
+        "should": true
+      }
+    },
+    {
       "content": "@external(${1:erlang}, \"${2}\", \"${0}\")",
       "doc": "external attribute",
       "label": "External attribute",
@@ -179,19 +178,20 @@
       }
     },
     {
-      "content": "let assert ${1} = ${0}",
-      "doc": "let assert assignment",
-      "label": "Let Assert assignment",
+      "content": "pub fn ${1:name}_test() {\n\t${0}\n}",
+      "doc": "test function",
+      "label": "Test Function",
       "matches": {
-        "leta": true
+        "test": true
       }
     },
     {
-      "content": "fn ${1:function_name}(${2}) -> ${3:Nil} {\n\t${0:todo}\n}",
-      "doc": "private function",
-      "label": "Private Function",
+      "content": "import ${0:gleam/result}",
+      "doc": "import",
+      "label": "Import",
       "matches": {
-        "fn": true
+        "im": true,
+        "import": true
       }
     },
     {

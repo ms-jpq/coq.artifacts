@@ -2,19 +2,27 @@
   "extends": [],
   "snippets": [
     {
-      "content": "@param ${1:name} ${2:Type and description of the parameter.}$0",
-      "doc": "Type and description of a function parameter.",
-      "label": "@param",
-      "matches": {
-        "@param": true
-      }
-    },
-    {
       "content": "* @example\n* // ${1:Description of my example.}$0\n* ${2:Write me later}",
       "doc": "Example that demostrates how to use a function. It can be used several times.",
       "label": "@example",
       "matches": {
         "@example": true
+      }
+    },
+    {
+      "content": "/**\n * ${1:A one-line summary.}\n *\n * ${2:Description.}$0\n *\n * @param ${4:name} ${5:Type and description of the parameter.}\n * @return ${3:Type and description of the returned value.}\n *\n * @example\n * // ${6:Description of my example.}\n * ${7:Write me later}\n */",
+      "doc": "A PHP comment block for functions, including description, param, return, and example.",
+      "label": "comment",
+      "matches": {
+        "/**": true
+      }
+    },
+    {
+      "content": "@param ${1:name} ${2:Type and description of the parameter.}$0",
+      "doc": "Type and description of a function parameter.",
+      "label": "@param",
+      "matches": {
+        "@param": true
       }
     },
     {
@@ -34,11 +42,11 @@
       }
     },
     {
-      "content": "/**\n * ${1:A one-line summary.}\n *\n * ${2:Description.}$0\n *\n * @param ${4:name} ${5:Type and description of the parameter.}\n * @return ${3:Type and description of the returned value.}\n *\n * @example\n * // ${6:Description of my example.}\n * ${7:Write me later}\n */",
-      "doc": "A PHP comment block for functions, including description, param, return, and example.",
-      "label": "comment",
+      "content": "@return ${3:Type and description of the returned value.}$0",
+      "doc": "Type and description of the returned value.",
+      "label": "@return",
       "matches": {
-        "/**": true
+        "@return": true
       }
     },
     {
@@ -47,14 +55,6 @@
       "label": "comment_simple",
       "matches": {
         "/*": true
-      }
-    },
-    {
-      "content": "@return ${3:Type and description of the returned value.}$0",
-      "doc": "Type and description of the returned value.",
-      "label": "@return",
-      "matches": {
-        "@return": true
       }
     }
   ]

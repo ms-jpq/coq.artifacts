@@ -2,11 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "copypath\"\\$COBCPY;$1\"\n$0",
+      "content": "ilgen\"${2|sub|}\"\n$0",
       "doc": "",
-      "label": "copypath",
+      "label": "ilgen",
       "matches": {
-        "copypath": true
+        "ilgen": true
       }
     },
     {
@@ -15,6 +15,14 @@
       "label": "dialect",
       "matches": {
         "dialect": true
+      }
+    },
+    {
+      "content": "sourceformat\"${2|free,variable,fixed|}\"\n$0",
+      "doc": "",
+      "label": "sourceformat",
+      "matches": {
+        "sourceformat": true
       }
     },
     {
@@ -34,19 +42,11 @@
       }
     },
     {
-      "content": "sourceformat\"${2|free,variable,fixed|}\"\n$0",
+      "content": "copypath\"\\$COBCPY;$1\"\n$0",
       "doc": "",
-      "label": "sourceformat",
+      "label": "copypath",
       "matches": {
-        "sourceformat": true
-      }
-    },
-    {
-      "content": "ilgen\"${2|sub|}\"\n$0",
-      "doc": "",
-      "label": "ilgen",
-      "matches": {
-        "ilgen": true
+        "copypath": true
       }
     }
   ]

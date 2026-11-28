@@ -2,11 +2,46 @@
   "extends": [],
   "snippets": [
     {
-      "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n- [${5| ,x|}] ${6:text}\n- [${7| ,x|}] ${8:text}\n- [${9| ,x|}] ${10:text}\n${0}",
-      "doc": "Insert task list with 5 tasks",
-      "label": "Insert task list 5",
+      "content": "${0}\n------------",
+      "doc": "Add section",
+      "label": "section",
       "matches": {
-        "task5": true
+        "-": true,
+        "section": true
+      }
+    },
+    {
+      "content": "----------",
+      "doc": "Insert transition rule",
+      "label": "Insert transition",
+      "matches": {
+        "horizontal rule": true,
+        "transition": true
+      }
+    },
+    {
+      "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n- [${5| ,x|}] ${6:text}\n- [${7| ,x|}] ${8:text}\n${0}",
+      "doc": "Insert task list with 4 tasks",
+      "label": "Insert task list 4",
+      "matches": {
+        "task4": true
+      }
+    },
+    {
+      "content": "::\n\n  ${1}",
+      "doc": "Insert quoted text",
+      "label": "Insert quoted text",
+      "matches": {
+        "quote": true
+      }
+    },
+    {
+      "content": "`${1}` $0",
+      "doc": "Insert code",
+      "label": "Insert code",
+      "matches": {
+        "code": true,
+        "literal": true
       }
     },
     {
@@ -18,28 +53,36 @@
       }
     },
     {
-      "content": "${0}\n------------",
-      "doc": "Add section",
-      "label": "section",
+      "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n- [${5| ,x|}] ${6:text}\n- [${7| ,x|}] ${8:text}\n- [${9| ,x|}] ${10:text}\n${0}",
+      "doc": "Insert task list with 5 tasks",
+      "label": "Insert task list 5",
       "matches": {
-        "-": true,
-        "section": true
+        "task5": true
       }
     },
     {
-      "content": "- ${1:first}\n- ${2:second}\n- ${3:third}\n$0",
-      "doc": "Insert unordered list",
-      "label": "Insert unordered list",
+      "content": "============================\n${0}\n============================",
+      "doc": "Add main title",
+      "label": "main title",
       "matches": {
-        "unordered list": true
+        "=": true,
+        "main title": true
       }
     },
     {
-      "content": "1. ${1:first}\n2. ${2:second}\n3. ${3:third}\n$0",
-      "doc": "Insert ordered list",
-      "label": "Insert ordered list",
+      "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n- [${5| ,x|}] ${6:text}\n${0}",
+      "doc": "Insert task list with 3 tasks",
+      "label": "Insert task list 3",
       "matches": {
-        "ordered list": true
+        "task3": true
+      }
+    },
+    {
+      "content": "- [${1| ,x|}] ${2:text}\n${0}",
+      "doc": "Insert task list",
+      "label": "Insert task list",
+      "matches": {
+        "task": true
       }
     },
     {
@@ -53,36 +96,11 @@
       }
     },
     {
-      "content": "<${1}> ${0}",
-      "doc": "Add urls",
-      "label": "URLS",
+      "content": "1. ${1:first}\n2. ${2:second}\n3. ${3:third}\n$0",
+      "doc": "Insert ordered list",
+      "label": "Insert ordered list",
       "matches": {
-        "u": true,
-        "url": true
-      }
-    },
-    {
-      "content": ".. image:: ${1:path}${0}",
-      "doc": "Add images",
-      "label": "Images",
-      "matches": {
-        "img": true
-      }
-    },
-    {
-      "content": "- [${1| ,x|}] ${2:text}\n${0}",
-      "doc": "Insert task list",
-      "label": "Insert task list",
-      "matches": {
-        "task": true
-      }
-    },
-    {
-      "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n${0}",
-      "doc": "Insert task list with 2 tasks",
-      "label": "Insert task list 2",
-      "matches": {
-        "task2": true
+        "ordered list": true
       }
     },
     {
@@ -96,54 +114,11 @@
       }
     },
     {
-      "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n- [${5| ,x|}] ${6:text}\n${0}",
-      "doc": "Insert task list with 3 tasks",
-      "label": "Insert task list 3",
+      "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n${0}",
+      "doc": "Insert task list with 2 tasks",
+      "label": "Insert task list 2",
       "matches": {
-        "task3": true
-      }
-    },
-    {
-      "content": "${0}\n============================",
-      "doc": "Add title",
-      "label": "title",
-      "matches": {
-        "=": true,
-        "title": true
-      }
-    },
-    {
-      "content": "- [${1| ,x|}] ${2:text}\n- [${3| ,x|}] ${4:text}\n- [${5| ,x|}] ${6:text}\n- [${7| ,x|}] ${8:text}\n${0}",
-      "doc": "Insert task list with 4 tasks",
-      "label": "Insert task list 4",
-      "matches": {
-        "task4": true
-      }
-    },
-    {
-      "content": "============================\n${0}\n============================",
-      "doc": "Add main title",
-      "label": "main title",
-      "matches": {
-        "=": true,
-        "main title": true
-      }
-    },
-    {
-      "content": "::\n\n  ${1}",
-      "doc": "Insert quoted text",
-      "label": "Insert quoted text",
-      "matches": {
-        "quote": true
-      }
-    },
-    {
-      "content": "----------",
-      "doc": "Insert transition rule",
-      "label": "Insert transition",
-      "matches": {
-        "horizontal rule": true,
-        "transition": true
+        "task2": true
       }
     },
     {
@@ -157,12 +132,37 @@
       }
     },
     {
-      "content": "`${1}` $0",
-      "doc": "Insert code",
-      "label": "Insert code",
+      "content": "<${1}> ${0}",
+      "doc": "Add urls",
+      "label": "URLS",
       "matches": {
-        "code": true,
-        "literal": true
+        "u": true,
+        "url": true
+      }
+    },
+    {
+      "content": "- ${1:first}\n- ${2:second}\n- ${3:third}\n$0",
+      "doc": "Insert unordered list",
+      "label": "Insert unordered list",
+      "matches": {
+        "unordered list": true
+      }
+    },
+    {
+      "content": "${0}\n============================",
+      "doc": "Add title",
+      "label": "title",
+      "matches": {
+        "=": true,
+        "title": true
+      }
+    },
+    {
+      "content": ".. image:: ${1:path}${0}",
+      "doc": "Add images",
+      "label": "Images",
+      "matches": {
+        "img": true
       }
     },
     {

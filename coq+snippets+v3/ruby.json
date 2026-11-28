@@ -12,126 +12,6 @@
   ],
   "snippets": [
     {
-      "content": "context '${1:message}' do\n\t$0\nend",
-      "doc": "",
-      "label": "Insert context block",
-      "matches": {
-        "cont": true
-      }
-    },
-    {
-      "content": "before :${1:each} do\n\t$0\nend",
-      "doc": "",
-      "label": "Insert before block",
-      "matches": {
-        "bef": true
-      }
-    },
-    {
-      "content": "class ${1:ClassName}\n\t$0\nend",
-      "doc": "",
-      "label": "Class definition",
-      "matches": {
-        "class": true
-      }
-    },
-    {
-      "content": "let(:${1:object}) { $0 }",
-      "doc": "",
-      "label": "Insert let",
-      "matches": {
-        "let": true
-      }
-    },
-    {
-      "content": "let!(:${1:object}) { $0 }",
-      "doc": "",
-      "label": "Insert let!",
-      "matches": {
-        "let!": true
-      }
-    },
-    {
-      "content": "if ${1:test}\n\t$2\nelsif ${3:test}\n\t$0\nend",
-      "doc": "",
-      "label": "if elsif",
-      "matches": {
-        "ifei": true
-      }
-    },
-    {
-      "content": "subject(:${1:name}) { $0 }",
-      "doc": "",
-      "label": "Insert subject definition",
-      "matches": {
-        "subj": true
-      }
-    },
-    {
-      "content": "if ${1:test}\n\t$2\nelsif ${3:test}\n\t$4\nelse\n\t$0\nend",
-      "doc": "",
-      "label": "if elsif else",
-      "matches": {
-        "ifee": true
-      }
-    },
-    {
-      "content": "expect(${1:object}).to ${0}",
-      "doc": "",
-      "label": "Insert expect",
-      "matches": {
-        "exp": true
-      }
-    },
-    {
-      "content": "expect { ${1:object} }.to ${0}",
-      "doc": "",
-      "label": "Insert expect with block",
-      "matches": {
-        "expb": true
-      }
-    },
-    {
-      "content": "expect { ${1:object} }.to raise_error ${2:StandardError}",
-      "doc": "",
-      "label": "Insert expect with raise_error",
-      "matches": {
-        "experr": true
-      }
-    },
-    {
-      "content": "module ${1:ModuleName}\n\t$0\nend",
-      "doc": "",
-      "label": "Module definition",
-      "matches": {
-        "module": true
-      }
-    },
-    {
-      "content": "allow(${1:object}).to $0",
-      "doc": "",
-      "label": "Insert allow",
-      "matches": {
-        "allow": true
-      }
-    },
-    {
-      "content": "unless ${1:test}\n\t$0\nend",
-      "doc": "",
-      "label": "unless",
-      "matches": {
-        "unless": true
-      }
-    },
-    {
-      "content": "until ${1:test}\n\t$0\nend",
-      "doc": "",
-      "label": "until loop",
-      "matches": {
-        "until": true
-      }
-    },
-    {
       "content": "def ${1:method_name}\n\t$0\nend",
       "doc": "",
       "label": "method definition",
@@ -156,11 +36,11 @@
       }
     },
     {
-      "content": "for ${1:value} in ${2:enumerable} do\n\t$0\nend",
+      "content": "unless ${1:test}\n\t$0\nend",
       "doc": "",
-      "label": "for loop",
+      "label": "unless",
       "matches": {
-        "for": true
+        "unless": true
       }
     },
     {
@@ -169,14 +49,6 @@
       "label": "method_missing definition",
       "matches": {
         "defmm": true
-      }
-    },
-    {
-      "content": "while ${1:test}\n\t$0\nend",
-      "doc": "",
-      "label": "while loop",
-      "matches": {
-        "while": true
       }
     },
     {
@@ -201,14 +73,6 @@
       "label": "Rake Task",
       "matches": {
         "rake": true
-      }
-    },
-    {
-      "content": "case ${1:test}\nwhen $2\n\t$3\nwhen $4\n\t$5\nelse\n\t$6\nend",
-      "doc": "",
-      "label": "case",
-      "matches": {
-        "case": true
       }
     },
     {
@@ -260,6 +124,14 @@
       }
     },
     {
+      "content": "for ${1:value} in ${2:enumerable} do\n\t$0\nend",
+      "doc": "",
+      "label": "for loop",
+      "matches": {
+        "for": true
+      }
+    },
+    {
       "content": "require_relative '${1}'$0",
       "doc": "",
       "label": "Insert require_relative",
@@ -300,6 +172,14 @@
       }
     },
     {
+      "content": "if ${1:test}\n\t$2\nelse\n\t$0\nend",
+      "doc": "",
+      "label": "if else",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
       "content": "each { |${1:e}| $0 }",
       "doc": "",
       "label": "Insert each with inline block",
@@ -324,11 +204,11 @@
       }
     },
     {
-      "content": "it '${1:spec_name}' do\n\t$0\nend",
+      "content": "case ${1:test}\nwhen $2\n\t$3\nwhen $4\n\t$5\nelse\n\t$6\nend",
       "doc": "",
-      "label": "Insert it block",
+      "label": "case",
       "matches": {
-        "it": true
+        "case": true
       }
     },
     {
@@ -372,11 +252,27 @@
       }
     },
     {
+      "content": "binding.irb",
+      "doc": "",
+      "label": "Insert irb call",
+      "matches": {
+        "irb": true
+      }
+    },
+    {
       "content": "-> { $0 }",
       "doc": "",
       "label": "Insert lambda arrow",
       "matches": {
         "->": true
+      }
+    },
+    {
+      "content": "binding.break",
+      "doc": "",
+      "label": "Insert break call",
+      "matches": {
+        "break": true
       }
     },
     {
@@ -396,19 +292,19 @@
       }
     },
     {
+      "content": "if ${1:test}\n\t$0\nend",
+      "doc": "",
+      "label": "if",
+      "matches": {
+        "if": true
+      }
+    },
+    {
       "content": "require 'byebug'; byebug",
       "doc": "",
       "label": "Insert byebug call",
       "matches": {
         "bye": true
-      }
-    },
-    {
-      "content": "begin\n\t$1\nrescue ${2:StandardError} => ${3:exception}\n\t$4\nensure\n\t$0\nend",
-      "doc": "",
-      "label": "Exception block with ensure",
-      "matches": {
-        "begin ensure": true
       }
     },
     {
@@ -420,11 +316,11 @@
       }
     },
     {
-      "content": "it_behaves_like '${0:shared examples name}'",
+      "content": "context '${1:message}' do\n\t$0\nend",
       "doc": "",
-      "label": "Insert it_behaves_like",
+      "label": "Insert context block",
       "matches": {
-        "ibl": true
+        "cont": true
       }
     },
     {
@@ -436,6 +332,86 @@
       }
     },
     {
+      "content": "before :${1:each} do\n\t$0\nend",
+      "doc": "",
+      "label": "Insert before block",
+      "matches": {
+        "bef": true
+      }
+    },
+    {
+      "content": "let(:${1:object}) { $0 }",
+      "doc": "",
+      "label": "Insert let",
+      "matches": {
+        "let": true
+      }
+    },
+    {
+      "content": "let!(:${1:object}) { $0 }",
+      "doc": "",
+      "label": "Insert let!",
+      "matches": {
+        "let!": true
+      }
+    },
+    {
+      "content": "subject(:${1:name}) { $0 }",
+      "doc": "",
+      "label": "Insert subject definition",
+      "matches": {
+        "subj": true
+      }
+    },
+    {
+      "content": "expect(${1:object}).to ${0}",
+      "doc": "",
+      "label": "Insert expect",
+      "matches": {
+        "exp": true
+      }
+    },
+    {
+      "content": "class ${1:ClassName}\n\tdef initialize(${2:args})\n\t\t$0\n\tend\nend",
+      "doc": "",
+      "label": "Class definition with initialize",
+      "matches": {
+        "class init": true
+      }
+    },
+    {
+      "content": "expect { ${1:object} }.to ${0}",
+      "doc": "",
+      "label": "Insert expect with block",
+      "matches": {
+        "expb": true
+      }
+    },
+    {
+      "content": "begin\n\t$1\nrescue ${2:StandardError} => ${3:exception}\n\t$4\nensure\n\t$0\nend",
+      "doc": "",
+      "label": "Exception block with ensure",
+      "matches": {
+        "begin ensure": true
+      }
+    },
+    {
+      "content": "expect { ${1:object} }.to raise_error ${2:StandardError}",
+      "doc": "",
+      "label": "Insert expect with raise_error",
+      "matches": {
+        "experr": true
+      }
+    },
+    {
+      "content": "class ${1:ClassName}\n\t$0\nend",
+      "doc": "",
+      "label": "Class definition",
+      "matches": {
+        "class": true
+      }
+    },
+    {
       "content": "begin\n\t$1\nrescue ${2:StandardError} => ${3:exception}\n\t$4\nelse\n\t$5\nensure\n\t$0\nend",
       "doc": "",
       "label": "Exception block with else and ensure",
@@ -444,11 +420,11 @@
       }
     },
     {
-      "content": "binding.irb",
+      "content": "if ${1:test}\n\t$2\nelsif ${3:test}\n\t$0\nend",
       "doc": "",
-      "label": "Insert irb call",
+      "label": "if elsif",
       "matches": {
-        "irb": true
+        "ifei": true
       }
     },
     {
@@ -460,35 +436,11 @@
       }
     },
     {
-      "content": "require 'benchmark'\n\nputs Benchmark.measure { ${1:# benchmark code} }",
+      "content": "if ${1:test}\n\t$2\nelsif ${3:test}\n\t$4\nelse\n\t$0\nend",
       "doc": "",
-      "label": "Ruby Benchmark Measure",
+      "label": "if elsif else",
       "matches": {
-        "benchm": true
-      }
-    },
-    {
-      "content": "binding.break",
-      "doc": "",
-      "label": "Insert break call",
-      "matches": {
-        "break": true
-      }
-    },
-    {
-      "content": "loop do\n\t$0\nend",
-      "doc": "",
-      "label": "forever loop",
-      "matches": {
-        "loop": true
-      }
-    },
-    {
-      "content": "RSpec.describe ${1:described_class} do\n\t$0\nend",
-      "doc": "",
-      "label": "Insert RSpec.describe class",
-      "matches": {
-        "rdesc": true
+        "ifee": true
       }
     },
     {
@@ -500,11 +452,35 @@
       }
     },
     {
-      "content": "if ${1:test}\n\t$0\nend",
+      "content": "it_behaves_like '${0:shared examples name}'",
       "doc": "",
-      "label": "if",
+      "label": "Insert it_behaves_like",
       "matches": {
-        "if": true
+        "ibl": true
+      }
+    },
+    {
+      "content": "it '${1:spec_name}' do\n\t$0\nend",
+      "doc": "",
+      "label": "Insert it block",
+      "matches": {
+        "it": true
+      }
+    },
+    {
+      "content": "while ${1:test}\n\t$0\nend",
+      "doc": "",
+      "label": "while loop",
+      "matches": {
+        "while": true
+      }
+    },
+    {
+      "content": "allow(${1:object}).to $0",
+      "doc": "",
+      "label": "Insert allow",
+      "matches": {
+        "allow": true
       }
     },
     {
@@ -516,19 +492,27 @@
       }
     },
     {
-      "content": "if ${1:test}\n\t$2\nelse\n\t$0\nend",
+      "content": "loop do\n\t$0\nend",
       "doc": "",
-      "label": "if else",
+      "label": "forever loop",
       "matches": {
-        "ife": true
+        "loop": true
       }
     },
     {
-      "content": "describe '${1:#method}' do\n\t${0:pending 'Not implemented'}\nend",
+      "content": "require 'benchmark'\n\nputs Benchmark.measure { ${1:# benchmark code} }",
       "doc": "",
-      "label": "Insert describe block",
+      "label": "Ruby Benchmark Measure",
       "matches": {
-        "descm": true
+        "benchm": true
+      }
+    },
+    {
+      "content": "module ${1:ModuleName}\n\t$0\nend",
+      "doc": "",
+      "label": "Module definition",
+      "matches": {
+        "module": true
       }
     },
     {
@@ -540,11 +524,27 @@
       }
     },
     {
-      "content": "class ${1:ClassName}\n\tdef initialize(${2:args})\n\t\t$0\n\tend\nend",
+      "content": "RSpec.describe ${1:described_class} do\n\t$0\nend",
       "doc": "",
-      "label": "Class definition with initialize",
+      "label": "Insert RSpec.describe class",
       "matches": {
-        "class init": true
+        "rdesc": true
+      }
+    },
+    {
+      "content": "until ${1:test}\n\t$0\nend",
+      "doc": "",
+      "label": "until loop",
+      "matches": {
+        "until": true
+      }
+    },
+    {
+      "content": "describe '${1:#method}' do\n\t${0:pending 'Not implemented'}\nend",
+      "doc": "",
+      "label": "Insert describe block",
+      "matches": {
+        "descm": true
       }
     },
     {

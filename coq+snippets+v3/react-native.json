@@ -2,6 +2,150 @@
   "extends": [],
   "snippets": [
     {
+      "content": "borderTopRightRadius: ${1},",
+      "doc": "borderTopRightRadius",
+      "label": "borderTopRightRadius",
+      "matches": {
+        "bor": true
+      }
+    },
+    {
+      "content": "backgroundColor: ${1},",
+      "doc": "backgroundColor",
+      "label": "backgroundColor",
+      "matches": {
+        "bac": true
+      }
+    },
+    {
+      "content": "shadowColor: '${1:none}',",
+      "doc": "shadowColor",
+      "label": "shadowColor",
+      "matches": {
+        "sha": true
+      }
+    },
+    {
+      "content": "padding: ${1},",
+      "doc": "padding",
+      "label": "padding",
+      "matches": {
+        "padding": true
+      }
+    },
+    {
+      "content": "shadowOffset: ${1},",
+      "doc": "shadowOffset",
+      "label": "shadowOffset",
+      "matches": {
+        "sha": true
+      }
+    },
+    {
+      "content": "shadowOpacity: ${1},",
+      "doc": "shadowOpacity",
+      "label": "shadowOpacity",
+      "matches": {
+        "sha": true
+      }
+    },
+    {
+      "content": "shadowRadius: ${1},",
+      "doc": "shadowRadius",
+      "label": "shadowRadius",
+      "matches": {
+        "sha": true
+      }
+    },
+    {
+      "content": "elevation: ${1},",
+      "doc": "elevation",
+      "label": "elevation",
+      "matches": {
+        "e": true
+      }
+    },
+    {
+      "content": "flexBasis: '${1}',",
+      "doc": "flexBasis",
+      "label": "flexBasis",
+      "matches": {
+        "flex": true
+      }
+    },
+    {
+      "content": "flexDirection: '${1:column}',",
+      "doc": "flexDirection",
+      "label": "flexDirection",
+      "matches": {
+        "flex": true
+      }
+    },
+    {
+      "content": "flexGrow: '${1}',",
+      "doc": "flexGrow",
+      "label": "flexGrow",
+      "matches": {
+        "flex": true
+      }
+    },
+    {
+      "content": "flexShrink: '${1}',",
+      "doc": "flexShrink",
+      "label": "flexShrink",
+      "matches": {
+        "flex": true
+      }
+    },
+    {
+      "content": "flexWrap: '${1}',",
+      "doc": "flexWrap",
+      "label": "flexWrap",
+      "matches": {
+        "flex": true
+      }
+    },
+    {
+      "content": "fontSize: ${1},",
+      "doc": "fontSize",
+      "label": "fontSize",
+      "matches": {
+        "fo": true
+      }
+    },
+    {
+      "content": "fontStyle: '${1:normal}',",
+      "doc": "fontStyle",
+      "label": "fontStyle",
+      "matches": {
+        "fo": true
+      }
+    },
+    {
+      "content": "height: ${1},",
+      "doc": "height",
+      "label": "height",
+      "matches": {
+        "h": true
+      }
+    },
+    {
+      "content": "fontFamily: '${1}',",
+      "doc": "fontFamily",
+      "label": "fontFamily",
+      "matches": {
+        "fo": true
+      }
+    },
+    {
+      "content": "display: '${1:none}',",
+      "doc": "display",
+      "label": "display",
+      "matches": {
+        "di": true
+      }
+    },
+    {
       "content": "marginBottom: ${1},",
       "doc": "marginBottom",
       "label": "marginBottom",
@@ -34,11 +178,11 @@
       }
     },
     {
-      "content": "import { View } from 'react-native';\n\n// import { Container } from './styles';\n\nconst ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}} = () => <View />;\n\nexport default ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}};",
-      "doc": "Create React Native Stateless Component",
-      "label": "statelessComponent",
+      "content": "marginTop: ${1},",
+      "doc": "marginTop",
+      "label": "marginTop",
       "matches": {
-        "rnsc": true
+        "mar": true
       }
     },
     {
@@ -58,19 +202,19 @@
       }
     },
     {
-      "content": "import { View } from 'react-native';\n\n// import { Container } from './styles';\n\nexport default function ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}}() {\n  return (\n    <View />\n  );\n}",
-      "doc": "Create React Native Functional Component",
-      "label": "componentFunctional",
-      "matches": {
-        "rnfc": true
-      }
-    },
-    {
       "content": "maxWidth: ${1},",
       "doc": "maxWidth",
       "label": "maxWidth",
       "matches": {
         "max": true
+      }
+    },
+    {
+      "content": "import { View } from 'react-native';\n\n// import { Container } from './styles';\n\nconst ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}} = () => <View />;\n\nexport default ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}};",
+      "doc": "Create React Native Stateless Component",
+      "label": "statelessComponent",
+      "matches": {
+        "rnsc": true
       }
     },
     {
@@ -90,27 +234,11 @@
       }
     },
     {
-      "content": "import { View } from 'react-native';\n\n// import { Container } from './styles';\n\nconst ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}} = () => {\n  return <View />;\n}\n\nexport default ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}};",
+      "content": "import { View } from 'react-native';\n\n// import { Container } from './styles';\n\nexport default function ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}}() {\n  return (\n    <View />\n  );\n}",
       "doc": "Create React Native Functional Component",
-      "label": "componentFunctionalTypescript",
+      "label": "componentFunctional",
       "matches": {
-        "rnfcc": true
-      }
-    },
-    {
-      "content": "padding: ${1},",
-      "doc": "padding",
-      "label": "padding",
-      "matches": {
-        "padding": true
-      }
-    },
-    {
-      "content": "import styled from 'styled-components/native';\n\nexport const ${1:Container} = styled.${2:View}`\n  ${3}\n`;",
-      "doc": "Create React Native Styled Components file",
-      "label": "styles",
-      "matches": {
-        "styled-rn": true
+        "rnfc": true
       }
     },
     {
@@ -154,11 +282,11 @@
       }
     },
     {
-      "content": "const ${1:styles} = StyleSheet.create({\n    ${2:container}: {\n        ${3}\n    },\n});",
-      "doc": "Create React Native Styled Components StyleSheet",
-      "label": "StyleSheet",
+      "content": "import styled from 'styled-components/native';\n\nexport const ${1:Container} = styled.${2:View}`\n  ${3}\n`;",
+      "doc": "Create React Native Styled Components file",
+      "label": "styles",
       "matches": {
-        "rn-stylesheet": true
+        "styled-rn": true
       }
     },
     {
@@ -170,27 +298,27 @@
       }
     },
     {
-      "content": "width: ${1},",
-      "doc": "width",
-      "label": "width",
+      "content": "import axios from 'axios';\n\nconst api = axios.create({\n  baseURL: ${1},\n});\n\nexport default api;",
+      "doc": "Create Axios Configuration file",
+      "label": "api",
       "matches": {
-        "w": true
+        "api": true
       }
     },
     {
-      "content": "right: ${1},",
-      "doc": "right",
-      "label": "right",
+      "content": "const ${1:styles} = StyleSheet.create({\n    ${2:container}: {\n        ${3}\n    },\n});",
+      "doc": "Create React Native Styled Components StyleSheet",
+      "label": "StyleSheet",
       "matches": {
-        "ri": true
+        "rn-stylesheet": true
       }
     },
     {
-      "content": "top: ${1},",
-      "doc": "top",
-      "label": "top",
+      "content": "zIndex: ${1},",
+      "doc": "zIndex",
+      "label": "zIndex",
       "matches": {
-        "top": true
+        "z": true
       }
     },
     {
@@ -207,6 +335,14 @@
       "label": "alignItems",
       "matches": {
         "align": true
+      }
+    },
+    {
+      "content": "//#region ${1}\n${2}\n//#endregion",
+      "doc": "Create region",
+      "label": "regionStartEnd",
+      "matches": {
+        "#regionStartEnd": true
       }
     },
     {
@@ -234,6 +370,14 @@
       }
     },
     {
+      "content": "//#region ${1}\n${2}\n//#endregion",
+      "doc": "Create region",
+      "label": "region",
+      "matches": {
+        "region": true
+      }
+    },
+    {
       "content": "borderBottomWidth: ${1},",
       "doc": "borderBottomWidth",
       "label": "borderBottomWidth",
@@ -242,11 +386,11 @@
       }
     },
     {
-      "content": "//#region ${1}\n${2}\n//#endregion",
-      "doc": "Create region",
-      "label": "regionStartEnd",
+      "content": "width: ${1},",
+      "doc": "width",
+      "label": "width",
       "matches": {
-        "#regionStartEnd": true
+        "w": true
       }
     },
     {
@@ -258,11 +402,27 @@
       }
     },
     {
-      "content": "borderRightWidth: ${1},",
-      "doc": "borderRightWidth",
-      "label": "borderRightWidth",
+      "content": "top: ${1},",
+      "doc": "top",
+      "label": "top",
       "matches": {
-        "bor": true
+        "top": true
+      }
+    },
+    {
+      "content": "import { Component } from 'react';\n\nimport { View } from 'react-native';\n\nimport { bindActionCreators } from 'redux';\nimport { connect } from 'react-redux';\n\n// import { Container } from './styles';\n\nclass ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}} extends Component {\n  render() {\n    return <View />;\n  }\n}\n\nconst mapStateToProps = state => ({});\n\n// const mapDispatchToProps = dispatch =>\n//   bindActionCreators(Actions, dispatch);\n\nexport default connect(\n  mapStateToProps,\n  // mapDispatchToProps\n)(${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}});",
+      "doc": "Create React Native Stateful Redux Component",
+      "label": "statefulReduxComponent",
+      "matches": {
+        "rnrc": true
+      }
+    },
+    {
+      "content": "right: ${1},",
+      "doc": "right",
+      "label": "right",
+      "matches": {
+        "ri": true
       }
     },
     {
@@ -274,6 +434,14 @@
       }
     },
     {
+      "content": "position: ${1},",
+      "doc": "position",
+      "label": "position",
+      "matches": {
+        "pos": true
+      }
+    },
+    {
       "content": "borderWidth: ${1},",
       "doc": "borderWidth",
       "label": "borderWidth",
@@ -282,57 +450,17 @@
       }
     },
     {
+      "content": "import { View } from 'react-native';\n\n// import { Container } from './styles';\n\nconst ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}} = () => {\n  return <View />;\n}\n\nexport default ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}};",
+      "doc": "Create React Native Functional Component",
+      "label": "componentFunctionalTypescript",
+      "matches": {
+        "rnfcc": true
+      }
+    },
+    {
       "content": "borderColor: ${1},",
       "doc": "borderColor",
       "label": "borderColor",
-      "matches": {
-        "bor": true
-      }
-    },
-    {
-      "content": "borderRadius: ${1},",
-      "doc": "borderRadius",
-      "label": "borderRadius",
-      "matches": {
-        "bor": true
-      }
-    },
-    {
-      "content": "borderLeftColor: ${1},",
-      "doc": "borderLeftColor",
-      "label": "borderLeftColor",
-      "matches": {
-        "bor": true
-      }
-    },
-    {
-      "content": "borderRightColor: ${1},",
-      "doc": "borderRightColor",
-      "label": "borderRightColor",
-      "matches": {
-        "bor": true
-      }
-    },
-    {
-      "content": "borderTopColor: ${1},",
-      "doc": "borderTopColor",
-      "label": "borderTopColor",
-      "matches": {
-        "bor": true
-      }
-    },
-    {
-      "content": "borderBottomColor: ${1},",
-      "doc": "borderBottomColor",
-      "label": "borderBottomColor",
-      "matches": {
-        "bor": true
-      }
-    },
-    {
-      "content": "borderBottomLeftRadius: ${1},",
-      "doc": "borderBottomLeftRadius",
-      "label": "borderBottomLeftRadius",
       "matches": {
         "bor": true
       }
@@ -346,219 +474,27 @@
       }
     },
     {
-      "content": "borderTopLeftRadius: ${1},",
-      "doc": "borderTopLeftRadius",
-      "label": "borderTopLeftRadius",
+      "content": "borderRadius: ${1},",
+      "doc": "borderRadius",
+      "label": "borderRadius",
       "matches": {
         "bor": true
       }
     },
     {
-      "content": "borderTopRightRadius: ${1},",
-      "doc": "borderTopRightRadius",
-      "label": "borderTopRightRadius",
+      "content": "borderRightWidth: ${1},",
+      "doc": "borderRightWidth",
+      "label": "borderRightWidth",
       "matches": {
         "bor": true
       }
     },
     {
-      "content": "backgroundColor: ${1},",
-      "doc": "backgroundColor",
-      "label": "backgroundColor",
+      "content": "borderLeftColor: ${1},",
+      "doc": "borderLeftColor",
+      "label": "borderLeftColor",
       "matches": {
-        "bac": true
-      }
-    },
-    {
-      "content": "opacity: ${1},",
-      "doc": "opacity",
-      "label": "opacity",
-      "matches": {
-        "op": true
-      }
-    },
-    {
-      "content": "shadowColor: '${1:none}',",
-      "doc": "shadowColor",
-      "label": "shadowColor",
-      "matches": {
-        "sha": true
-      }
-    },
-    {
-      "content": "shadowOffset: ${1},",
-      "doc": "shadowOffset",
-      "label": "shadowOffset",
-      "matches": {
-        "sha": true
-      }
-    },
-    {
-      "content": "shadowOpacity: ${1},",
-      "doc": "shadowOpacity",
-      "label": "shadowOpacity",
-      "matches": {
-        "sha": true
-      }
-    },
-    {
-      "content": "shadowRadius: ${1},",
-      "doc": "shadowRadius",
-      "label": "shadowRadius",
-      "matches": {
-        "sha": true
-      }
-    },
-    {
-      "content": "elevation: ${1},",
-      "doc": "elevation",
-      "label": "elevation",
-      "matches": {
-        "e": true
-      }
-    },
-    {
-      "content": "flex: ${1},",
-      "doc": "flex",
-      "label": "flex",
-      "matches": {
-        "flex": true
-      }
-    },
-    {
-      "content": "flexBasis: '${1}',",
-      "doc": "flexBasis",
-      "label": "flexBasis",
-      "matches": {
-        "flex": true
-      }
-    },
-    {
-      "content": "flexDirection: '${1:column}',",
-      "doc": "flexDirection",
-      "label": "flexDirection",
-      "matches": {
-        "flex": true
-      }
-    },
-    {
-      "content": "flexGrow: '${1}',",
-      "doc": "flexGrow",
-      "label": "flexGrow",
-      "matches": {
-        "flex": true
-      }
-    },
-    {
-      "content": "flexShrink: '${1}',",
-      "doc": "flexShrink",
-      "label": "flexShrink",
-      "matches": {
-        "flex": true
-      }
-    },
-    {
-      "content": "//#region ${1}\n${2}\n//#endregion",
-      "doc": "Create region",
-      "label": "region",
-      "matches": {
-        "region": true
-      }
-    },
-    {
-      "content": "flexWrap: '${1}',",
-      "doc": "flexWrap",
-      "label": "flexWrap",
-      "matches": {
-        "flex": true
-      }
-    },
-    {
-      "content": "import axios from 'axios';\n\nconst api = axios.create({\n  baseURL: ${1},\n});\n\nexport default api;",
-      "doc": "Create Axios Configuration file",
-      "label": "api",
-      "matches": {
-        "api": true
-      }
-    },
-    {
-      "content": "fontSize: ${1},",
-      "doc": "fontSize",
-      "label": "fontSize",
-      "matches": {
-        "fo": true
-      }
-    },
-    {
-      "content": "zIndex: ${1},",
-      "doc": "zIndex",
-      "label": "zIndex",
-      "matches": {
-        "z": true
-      }
-    },
-    {
-      "content": "position: ${1},",
-      "doc": "position",
-      "label": "position",
-      "matches": {
-        "pos": true
-      }
-    },
-    {
-      "content": "fontStyle: '${1:normal}',",
-      "doc": "fontStyle",
-      "label": "fontStyle",
-      "matches": {
-        "fo": true
-      }
-    },
-    {
-      "content": "overflow: '${1}',",
-      "doc": "overflow",
-      "label": "overflow",
-      "matches": {
-        "over": true
-      }
-    },
-    {
-      "content": "fontFamily: '${1}',",
-      "doc": "fontFamily",
-      "label": "fontFamily",
-      "matches": {
-        "fo": true
-      }
-    },
-    {
-      "content": "import { Component } from 'react';\n\nimport { View } from 'react-native';\n\n// import { Container } from './styles';\n\nexport default class ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}} extends Component {\n  render() {\n    return <View />;\n  }\n}",
-      "doc": "Create React Native Stateful Component",
-      "label": "statefulComponent",
-      "matches": {
-        "rnc": true
-      }
-    },
-    {
-      "content": "fontWeight: '${1:normal}',",
-      "doc": "fontWeight",
-      "label": "fontWeight",
-      "matches": {
-        "fo": true
-      }
-    },
-    {
-      "content": "display: '${1:none}',",
-      "doc": "display",
-      "label": "display",
-      "matches": {
-        "di": true
-      }
-    },
-    {
-      "content": "import { Component } from 'react';\n\nimport { View } from 'react-native';\n\nimport { bindActionCreators } from 'redux';\nimport { connect } from 'react-redux';\n\n// import { Container } from './styles';\n\nclass ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}} extends Component {\n  render() {\n    return <View />;\n  }\n}\n\nconst mapStateToProps = state => ({});\n\n// const mapDispatchToProps = dispatch =>\n//   bindActionCreators(Actions, dispatch);\n\nexport default connect(\n  mapStateToProps,\n  // mapDispatchToProps\n)(${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}});",
-      "doc": "Create React Native Stateful Redux Component",
-      "label": "statefulReduxComponent",
-      "matches": {
-        "rnrc": true
+        "bor": true
       }
     },
     {
@@ -570,11 +506,59 @@
       }
     },
     {
-      "content": "height: ${1},",
-      "doc": "height",
-      "label": "height",
+      "content": "borderRightColor: ${1},",
+      "doc": "borderRightColor",
+      "label": "borderRightColor",
       "matches": {
-        "h": true
+        "bor": true
+      }
+    },
+    {
+      "content": "import { Component } from 'react';\n\nimport { View } from 'react-native';\n\n// import { Container } from './styles';\n\nexport default class ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}} extends Component {\n  render() {\n    return <View />;\n  }\n}",
+      "doc": "Create React Native Stateful Component",
+      "label": "statefulComponent",
+      "matches": {
+        "rnc": true
+      }
+    },
+    {
+      "content": "borderTopColor: ${1},",
+      "doc": "borderTopColor",
+      "label": "borderTopColor",
+      "matches": {
+        "bor": true
+      }
+    },
+    {
+      "content": "flex: ${1},",
+      "doc": "flex",
+      "label": "flex",
+      "matches": {
+        "flex": true
+      }
+    },
+    {
+      "content": "borderBottomColor: ${1},",
+      "doc": "borderBottomColor",
+      "label": "borderBottomColor",
+      "matches": {
+        "bor": true
+      }
+    },
+    {
+      "content": "opacity: ${1},",
+      "doc": "opacity",
+      "label": "opacity",
+      "matches": {
+        "op": true
+      }
+    },
+    {
+      "content": "borderBottomLeftRadius: ${1},",
+      "doc": "borderBottomLeftRadius",
+      "label": "borderBottomLeftRadius",
+      "matches": {
+        "bor": true
       }
     },
     {
@@ -586,11 +570,27 @@
       }
     },
     {
-      "content": "marginTop: ${1},",
-      "doc": "marginTop",
-      "label": "marginTop",
+      "content": "overflow: '${1}',",
+      "doc": "overflow",
+      "label": "overflow",
       "matches": {
-        "mar": true
+        "over": true
+      }
+    },
+    {
+      "content": "fontWeight: '${1:normal}',",
+      "doc": "fontWeight",
+      "label": "fontWeight",
+      "matches": {
+        "fo": true
+      }
+    },
+    {
+      "content": "borderTopLeftRadius: ${1},",
+      "doc": "borderTopLeftRadius",
+      "label": "borderTopLeftRadius",
+      "matches": {
+        "bor": true
       }
     }
   ]

@@ -2,46 +2,6 @@
   "extends": [],
   "snippets": [
     {
-      "content": "refactor(${1:scope}): ${2:title}\n\n$0",
-      "doc": "",
-      "label": "refactor conventional commit",
-      "matches": {
-        "refactor": true
-      }
-    },
-    {
-      "content": "feat(${1:scope}): ${2:title}\n\n$0",
-      "doc": "",
-      "label": "feat conventional commit",
-      "matches": {
-        "feat": true
-      }
-    },
-    {
-      "content": "perf(${1:scope}): ${2:title}\n\n$0",
-      "doc": "",
-      "label": "perf conventional commit",
-      "matches": {
-        "perf": true
-      }
-    },
-    {
-      "content": "On-behalf-of: ${1:org} <${2:email}>\n$0",
-      "doc": "",
-      "label": "on behalf of",
-      "matches": {
-        "on": true
-      }
-    },
-    {
-      "content": "build(${1:scope}): ${2:title}\n\n$0",
-      "doc": "",
-      "label": "build conventional commit",
-      "matches": {
-        "build": true
-      }
-    },
-    {
       "content": "test(${1:scope}): ${2:title}\n\n$0",
       "doc": "",
       "label": "test conventional commit",
@@ -66,11 +26,11 @@
       }
     },
     {
-      "content": "Signed-off-by: ${1:name} <${2:email}>\n$0",
+      "content": "${1:type}(${2:scope}): ${3:title}\n\n$0",
       "doc": "",
-      "label": "signed off by",
+      "label": "conventional commit",
       "matches": {
-        "si": true
+        "cc": true
       }
     },
     {
@@ -90,14 +50,6 @@
       }
     },
     {
-      "content": "fix(${1:scope}): ${2:title}\n\n$0",
-      "doc": "",
-      "label": "fix conventional commit",
-      "matches": {
-        "fix": true
-      }
-    },
-    {
       "content": "docs(${1:scope}): ${2:title}\n\n$0",
       "doc": "",
       "label": "docs conventional commit",
@@ -106,11 +58,19 @@
       }
     },
     {
-      "content": "${1:type}(${2:scope}): ${3:title}\n\n$0",
+      "content": "Signed-off-by: ${1:name} <${2:email}>\n$0",
       "doc": "",
-      "label": "conventional commit",
+      "label": "signed off by",
       "matches": {
-        "cc": true
+        "si": true
+      }
+    },
+    {
+      "content": "fix(${1:scope}): ${2:title}\n\n$0",
+      "doc": "",
+      "label": "fix conventional commit",
+      "matches": {
+        "fix": true
       }
     },
     {
@@ -119,6 +79,46 @@
       "label": "style conventional commit",
       "matches": {
         "style": true
+      }
+    },
+    {
+      "content": "On-behalf-of: ${1:org} <${2:email}>\n$0",
+      "doc": "",
+      "label": "on behalf of",
+      "matches": {
+        "on": true
+      }
+    },
+    {
+      "content": "feat(${1:scope}): ${2:title}\n\n$0",
+      "doc": "",
+      "label": "feat conventional commit",
+      "matches": {
+        "feat": true
+      }
+    },
+    {
+      "content": "refactor(${1:scope}): ${2:title}\n\n$0",
+      "doc": "",
+      "label": "refactor conventional commit",
+      "matches": {
+        "refactor": true
+      }
+    },
+    {
+      "content": "perf(${1:scope}): ${2:title}\n\n$0",
+      "doc": "",
+      "label": "perf conventional commit",
+      "matches": {
+        "perf": true
+      }
+    },
+    {
+      "content": "build(${1:scope}): ${2:title}\n\n$0",
+      "doc": "",
+      "label": "build conventional commit",
+      "matches": {
+        "build": true
       }
     },
     {

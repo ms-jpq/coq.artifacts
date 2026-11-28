@@ -2,75 +2,11 @@
   "extends": [],
   "snippets": [
     {
-      "content": "save_and_open_screenshot${0}",
-      "doc": "save_and_open_screenshot",
-      "label": "Save and open screenshot",
+      "content": "def edit\n\t@${1:model_class_name} = ${2:ModelClassName}.find(params[:id])\nend",
+      "doc": "def edit",
+      "label": "Edit action",
       "matches": {
-        "saos": true
-      }
-    },
-    {
-      "content": "before_update :${0:method}",
-      "doc": "before_update",
-      "label": "Before update",
-      "matches": {
-        "bu": true
-      }
-    },
-    {
-      "content": "before_save :${0:method}",
-      "doc": "before_save",
-      "label": "Before save",
-      "matches": {
-        "bs": true
-      }
-    },
-    {
-      "content": "params[:${1:id}]",
-      "doc": "getting params using attribute",
-      "label": "Getting Params",
-      "matches": {
-        "pa": true
-      }
-    },
-    {
-      "content": "before_destroy :${0:method}",
-      "doc": "before_destroy",
-      "label": "Before destroy",
-      "matches": {
-        "bd": true
-      }
-    },
-    {
-      "content": "delegate: :${1:method}, to: :${0:object}",
-      "doc": "delegate to",
-      "label": "Delegate to",
-      "matches": {
-        "dt": true
-      }
-    },
-    {
-      "content": "after_create :${0:method}",
-      "doc": "after_create",
-      "label": "After create",
-      "matches": {
-        "ac": true
-      }
-    },
-    {
-      "content": "delegate: :${1:method}, to: :${2:object}, prefix: :${3:prefix}, allow_nil: ${0:allow_nil}",
-      "doc": "delegate to",
-      "label": "Delegate to with prefix",
-      "matches": {
-        "dtp": true
-      }
-    },
-    {
-      "content": "after_validation :${0:method}",
-      "doc": "after_validation",
-      "label": "After validation",
-      "matches": {
-        "av": true
+        "edit": true
       }
     },
     {
@@ -82,11 +18,11 @@
       }
     },
     {
-      "content": "after_update :${0:method}",
-      "doc": "after_update",
-      "label": " update",
+      "content": "def index\n\t@${1:model_class_name} = ${2:ModelClassName}.all\nend",
+      "doc": "def index",
+      "label": "Index action",
       "matches": {
-        "au": true
+        "index": true
       }
     },
     {
@@ -98,19 +34,11 @@
       }
     },
     {
-      "content": "after_save :${0:method}",
-      "doc": "after_create",
-      "label": " save",
+      "content": "before_validation :${0:method}",
+      "doc": "before_validation",
+      "label": "Before validation",
       "matches": {
-        "as": true
-      }
-    },
-    {
-      "content": "add_column :${1:table_name}, :${2:column_name}, :${0:data_type}",
-      "doc": "Migration add column",
-      "label": "Migration add column",
-      "matches": {
-        "mac": true
+        "bv": true
       }
     },
     {
@@ -122,11 +50,11 @@
       }
     },
     {
-      "content": "belongs_to :${0:association}",
-      "doc": "belongs_to assocation",
-      "label": "Belongs to",
+      "content": "before_create :${0:method}",
+      "doc": "before_create",
+      "label": "Before create",
       "matches": {
-        "bt": true
+        "bc": true
       }
     },
     {
@@ -138,11 +66,11 @@
       }
     },
     {
-      "content": "belongs_to :${0:association}, polymorphic: true",
-      "doc": "belongs_to polymorphic assocation",
-      "label": "Belongs to polymorphic",
+      "content": "before_update :${0:method}",
+      "doc": "before_update",
+      "label": "Before update",
       "matches": {
-        "btp": true
+        "bu": true
       }
     },
     {
@@ -154,11 +82,11 @@
       }
     },
     {
-      "content": "def create\n\t@${1:model_class_name} = ${2:ModelClassName}.new($1_params)\n\trespond_to do |format|\n\t\tif @$1.save\n\t\t\tformat.html { redirect_to @$1, notice: '$2 created' }\n\t\telse\n\t\t\tformat.html { render :new, status: :unprocessable_entity }\n\t\tend\n\tend\nend",
-      "doc": "def create",
-      "label": "Create action",
+      "content": "before_save :${0:method}",
+      "doc": "before_save",
+      "label": "Before save",
       "matches": {
-        "create": true
+        "bs": true
       }
     },
     {
@@ -170,11 +98,171 @@
       }
     },
     {
+      "content": "before_destroy :${0:method}",
+      "doc": "before_destroy",
+      "label": "Before destroy",
+      "matches": {
+        "bd": true
+      }
+    },
+    {
       "content": "has_many :${1:object}, dependent: :${0:destroy}",
       "doc": "has_many dependent",
       "label": "Has many dependent",
       "matches": {
         "hmd": true
+      }
+    },
+    {
+      "content": "after_create :${0:method}",
+      "doc": "after_create",
+      "label": "After create",
+      "matches": {
+        "ac": true
+      }
+    },
+    {
+      "content": "has_many :${0:object}",
+      "doc": "has_many association",
+      "label": "Has many",
+      "matches": {
+        "hm": true
+      }
+    },
+    {
+      "content": "after_validation :${0:method}",
+      "doc": "after_validation",
+      "label": "After validation",
+      "matches": {
+        "av": true
+      }
+    },
+    {
+      "content": "has_many :${1:object}, through: :${0:object}",
+      "doc": "has_many through association",
+      "label": "Has many through",
+      "matches": {
+        "hmt": true
+      }
+    },
+    {
+      "content": "after_update :${0:method}",
+      "doc": "after_update",
+      "label": " update",
+      "matches": {
+        "au": true
+      }
+    },
+    {
+      "content": "has_one :${0:object}",
+      "doc": "has_one association",
+      "label": "Has one",
+      "matches": {
+        "ho": true
+      }
+    },
+    {
+      "content": "after_save :${0:method}",
+      "doc": "after_create",
+      "label": " save",
+      "matches": {
+        "as": true
+      }
+    },
+    {
+      "content": "after_destroy :${0:method}",
+      "doc": "after_destroy",
+      "label": " destroy",
+      "matches": {
+        "ad": true
+      }
+    },
+    {
+      "content": "def new\n\t@${1:model_class_name} = ${2:ModelClassName}.new\nend",
+      "doc": "def new",
+      "label": "New action",
+      "matches": {
+        "new": true
+      }
+    },
+    {
+      "content": "belongs_to :${0:association}",
+      "doc": "belongs_to assocation",
+      "label": "Belongs to",
+      "matches": {
+        "bt": true
+      }
+    },
+    {
+      "content": "def show\n\t@${1:model_class_name} = ${2:ModelClassName}.find(params[:id])\nend",
+      "doc": "def show",
+      "label": "Show action",
+      "matches": {
+        "show": true
+      }
+    },
+    {
+      "content": "belongs_to :${0:association}, polymorphic: true",
+      "doc": "belongs_to polymorphic assocation",
+      "label": "Belongs to polymorphic",
+      "matches": {
+        "btp": true
+      }
+    },
+    {
+      "content": "def create\n\t@${1:model_class_name} = ${2:ModelClassName}.new($1_params)\n\trespond_to do |format|\n\t\tif @$1.save\n\t\t\tformat.html { redirect_to @$1, notice: '$2 created' }\n\t\telse\n\t\t\tformat.html { render :new, status: :unprocessable_entity }\n\t\tend\n\tend\nend",
+      "doc": "def create",
+      "label": "Create action",
+      "matches": {
+        "create": true
+      }
+    },
+    {
+      "content": "def ${1:model_class_name}_params\n\tparams.require(:$1).permit(${2:attributes})\nend",
+      "doc": "def model_params",
+      "label": "Model Params",
+      "matches": {
+        "params": true
+      }
+    },
+    {
+      "content": "save_and_open_screenshot${0}",
+      "doc": "save_and_open_screenshot",
+      "label": "Save and open screenshot",
+      "matches": {
+        "saos": true
+      }
+    },
+    {
+      "content": "params[:${1:id}]",
+      "doc": "getting params using attribute",
+      "label": "Getting Params",
+      "matches": {
+        "pa": true
+      }
+    },
+    {
+      "content": "save_and_open_page${0}",
+      "doc": "save_and_open_page",
+      "label": "Save and open page",
+      "matches": {
+        "saop": true
+      }
+    },
+    {
+      "content": "has_one :${1:object}, dependent: :${0:destroy}",
+      "doc": "has_one dependent",
+      "label": "Has one dependent",
+      "matches": {
+        "hod": true
+      }
+    },
+    {
+      "content": "delegate: :${1:method}, to: :${0:object}",
+      "doc": "delegate to",
+      "label": "Delegate to",
+      "matches": {
+        "dt": true
       }
     },
     {
@@ -194,91 +282,11 @@
       }
     },
     {
-      "content": "before_validation :${0:method}",
-      "doc": "before_validation",
-      "label": "Before validation",
+      "content": "delegate: :${1:method}, to: :${2:object}, prefix: :${3:prefix}, allow_nil: ${0:allow_nil}",
+      "doc": "delegate to",
+      "label": "Delegate to with prefix",
       "matches": {
-        "bv": true
-      }
-    },
-    {
-      "content": "before_create :${0:method}",
-      "doc": "before_create",
-      "label": "Before create",
-      "matches": {
-        "bc": true
-      }
-    },
-    {
-      "content": "def edit\n\t@${1:model_class_name} = ${2:ModelClassName}.find(params[:id])\nend",
-      "doc": "def edit",
-      "label": "Edit action",
-      "matches": {
-        "edit": true
-      }
-    },
-    {
-      "content": "def index\n\t@${1:model_class_name} = ${2:ModelClassName}.all\nend",
-      "doc": "def index",
-      "label": "Index action",
-      "matches": {
-        "index": true
-      }
-    },
-    {
-      "content": "has_many :${1:object}, through: :${0:object}",
-      "doc": "has_many through association",
-      "label": "Has many through",
-      "matches": {
-        "hmt": true
-      }
-    },
-    {
-      "content": "save_and_open_page${0}",
-      "doc": "save_and_open_page",
-      "label": "Save and open page",
-      "matches": {
-        "saop": true
-      }
-    },
-    {
-      "content": "def new\n\t@${1:model_class_name} = ${2:ModelClassName}.new\nend",
-      "doc": "def new",
-      "label": "New action",
-      "matches": {
-        "new": true
-      }
-    },
-    {
-      "content": "has_one :${1:object}, dependent: :${0:destroy}",
-      "doc": "has_one dependent",
-      "label": "Has one dependent",
-      "matches": {
-        "hod": true
-      }
-    },
-    {
-      "content": "has_one :${0:object}",
-      "doc": "has_one association",
-      "label": "Has one",
-      "matches": {
-        "ho": true
-      }
-    },
-    {
-      "content": "def show\n\t@${1:model_class_name} = ${2:ModelClassName}.find(params[:id])\nend",
-      "doc": "def show",
-      "label": "Show action",
-      "matches": {
-        "show": true
-      }
-    },
-    {
-      "content": "has_many :${0:object}",
-      "doc": "has_many association",
-      "label": "Has many",
-      "matches": {
-        "hm": true
+        "dtp": true
       }
     },
     {
@@ -290,19 +298,11 @@
       }
     },
     {
-      "content": "def ${1:model_class_name}_params\n\tparams.require(:$1).permit(${2:attributes})\nend",
-      "doc": "def model_params",
-      "label": "Model Params",
+      "content": "add_column :${1:table_name}, :${2:column_name}, :${0:data_type}",
+      "doc": "Migration add column",
+      "label": "Migration add column",
       "matches": {
-        "params": true
-      }
-    },
-    {
-      "content": "after_destroy :${0:method}",
-      "doc": "after_destroy",
-      "label": " destroy",
-      "matches": {
-        "ad": true
+        "mac": true
       }
     },
     {

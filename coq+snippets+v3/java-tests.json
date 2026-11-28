@@ -2,22 +2,6 @@
   "extends": [],
   "snippets": [
     {
-      "content": "assertThat(${1:\"Test\"}, isOneOf(${2:\"Test\", \"TDD\"}));",
-      "doc": "assert that isOneOf",
-      "label": "Assert - isOneOf",
-      "matches": {
-        "test_isOneOf": true
-      }
-    },
-    {
-      "content": "import static org.hamcrest.Matchers.*;\nimport static org.junit.Assert.assertEquals;\nimport static org.junit.Assert.assertThat;\nimport static org.mockito.Mockito.*;\nimport org.hamcrest.CoreMatchers;\nimport org.junit.After;\nimport org.junit.Before;\nimport org.junit.Test;\nimport org.mockito.ArgumentCaptor;\nimport org.mockito.Mock;",
-      "doc": "Imports to write tests with JUnit 4, Mockito and Hamcrest",
-      "label": "JUnit 4 - Imports for Tests",
-      "matches": {
-        "imports_junit4": true
-      }
-    },
-    {
       "content": "verify(${1:mockedService}).${2:executeMagic()};",
       "doc": "Verify if a mocked method was called only once",
       "label": "Mockito - Verify call once",
@@ -42,6 +26,14 @@
       }
     },
     {
+      "content": "assertThat(${1:mockedService.executeMagic()}, is(${2:\"42\"}));",
+      "doc": "assert that is",
+      "label": "Assert - is",
+      "matches": {
+        "test_is": true
+      }
+    },
+    {
       "content": "verify(${1:mockedService}, times(${2:2})).${3:executeMagic()};",
       "doc": "Verify if a mocked method was called `n` times",
       "label": "Mockito - Verify call N times",
@@ -58,11 +50,11 @@
       }
     },
     {
-      "content": "import static org.hamcrest.Matchers.*;\nimport static org.hamcrest.MatcherAssert.assertThat;\nimport static org.junit.jupiter.api.Assertions.assertEquals;\nimport static org.mockito.Mockito.*;\nimport org.hamcrest.CoreMatchers;\nimport org.junit.jupiter.api.AfterEach;\nimport org.junit.jupiter.api.BeforeEach;\nimport org.junit.jupiter.api.DisplayName;\nimport org.junit.jupiter.api.Test;\nimport org.junit.jupiter.api.extension.ExtendWith;\nimport org.junit.jupiter.params.ParameterizedTest;\nimport org.junit.jupiter.params.provider.CsvSource;\nimport org.mockito.ArgumentCaptor;\nimport org.mockito.junit.jupiter.MockitoExtension;\nimport org.mockito.Mock;",
+      "content": "import static org.hamcrest.Matchers.*;\nimport static org.junit.Assert.assertEquals;\nimport static org.junit.Assert.assertThat;\nimport static org.mockito.Mockito.*;\nimport org.hamcrest.CoreMatchers;\nimport org.junit.After;\nimport org.junit.Before;\nimport org.junit.Test;\nimport org.mockito.ArgumentCaptor;\nimport org.mockito.Mock;",
       "doc": "Imports to write tests with JUnit 4, Mockito and Hamcrest",
-      "label": "JUnit 5 - Imports for Tests",
+      "label": "JUnit 4 - Imports for Tests",
       "matches": {
-        "imports_junit5": true
+        "imports_junit4": true
       }
     },
     {
@@ -90,27 +82,11 @@
       }
     },
     {
-      "content": "@ParameterizedTest(name = \"${1:{0\\} plus {1\\} should be {2\\}}\"\n@CsvSource({\n\t${2:\"0, 0, 0\",\n\t\"1, 0, 1\",\n\t\"1, 1, 2\"}\n})\npublic void shouldAddTwoNumbers(int x, int y, int expectedSum) {\n\t${0}\n}",
-      "doc": "Create parameterized test",
-      "label": "JUnit 5 - Parameterized Test",
+      "content": "assertThat(${1:mockedService.executeMagic()}, nullValue());",
+      "doc": "assert that is null",
+      "label": "Assert - is null",
       "matches": {
-        "test_parameterized": true
-      }
-    },
-    {
-      "content": "@AfterEach\npublic void tearDown() {\n\t${1}\n}",
-      "doc": "Create tear down method with `@AfterEach`",
-      "label": "JUnit 5 - After each",
-      "matches": {
-        "test_after": true
-      }
-    },
-    {
-      "content": "@BeforeEach\npublic void setup() {\n\t${1}\n}",
-      "doc": "Create setup method with `@BeforeEach`",
-      "label": "JUnit 5 - Before each",
-      "matches": {
-        "test_before": true
+        "test_null": true
       }
     },
     {
@@ -130,19 +106,19 @@
       }
     },
     {
-      "content": "assertEquals(${1:anObject}, ${2:anotherObject});",
-      "doc": "assert equals",
-      "label": "Assert - equals",
+      "content": "@Before\npublic void setup() {\n\t${1}\n}",
+      "doc": "Create setup method with `@Before`",
+      "label": "JUnit 4 - Before each",
       "matches": {
-        "test_equals": true
+        "test_before_junit4": true
       }
     },
     {
-      "content": "@After\npublic void tearDown() {\n\t${1}\n}",
-      "doc": "Create tear down method with `@After`",
-      "label": "JUnit 4 - After each",
+      "content": "import static org.hamcrest.Matchers.*;\nimport static org.hamcrest.MatcherAssert.assertThat;\nimport static org.junit.jupiter.api.Assertions.assertEquals;\nimport static org.mockito.Mockito.*;\nimport org.hamcrest.CoreMatchers;\nimport org.junit.jupiter.api.AfterEach;\nimport org.junit.jupiter.api.BeforeEach;\nimport org.junit.jupiter.api.DisplayName;\nimport org.junit.jupiter.api.Test;\nimport org.junit.jupiter.api.extension.ExtendWith;\nimport org.junit.jupiter.params.ParameterizedTest;\nimport org.junit.jupiter.params.provider.CsvSource;\nimport org.mockito.ArgumentCaptor;\nimport org.mockito.junit.jupiter.MockitoExtension;\nimport org.mockito.Mock;",
+      "doc": "Imports to write tests with JUnit 4, Mockito and Hamcrest",
+      "label": "JUnit 5 - Imports for Tests",
       "matches": {
-        "test_after_junit4": true
+        "imports_junit5": true
       }
     },
     {
@@ -162,19 +138,19 @@
       }
     },
     {
-      "content": "assertThat(${1:mockedService.executeMagic()}, is(${2:\"42\"}));",
-      "doc": "assert that is",
-      "label": "Assert - is",
+      "content": "@After\npublic void tearDown() {\n\t${1}\n}",
+      "doc": "Create tear down method with `@After`",
+      "label": "JUnit 4 - After each",
       "matches": {
-        "test_is": true
+        "test_after_junit4": true
       }
     },
     {
-      "content": "@Before\npublic void setup() {\n\t${1}\n}",
-      "doc": "Create setup method with `@Before`",
-      "label": "JUnit 4 - Before each",
+      "content": "@ParameterizedTest(name = \"${1:{0\\} plus {1\\} should be {2\\}}\"\n@CsvSource({\n\t${2:\"0, 0, 0\",\n\t\"1, 0, 1\",\n\t\"1, 1, 2\"}\n})\npublic void shouldAddTwoNumbers(int x, int y, int expectedSum) {\n\t${0}\n}",
+      "doc": "Create parameterized test",
+      "label": "JUnit 5 - Parameterized Test",
       "matches": {
-        "test_before_junit4": true
+        "test_parameterized": true
       }
     },
     {
@@ -194,11 +170,11 @@
       }
     },
     {
-      "content": "assertThat(${1:mockedService.executeMagic()}, nullValue());",
-      "doc": "assert that is null",
-      "label": "Assert - is null",
+      "content": "@BeforeEach\npublic void setup() {\n\t${1}\n}",
+      "doc": "Create setup method with `@BeforeEach`",
+      "label": "JUnit 5 - Before each",
       "matches": {
-        "test_null": true
+        "test_before": true
       }
     },
     {
@@ -215,6 +191,30 @@
       "label": "Mockito - Verify call only",
       "matches": {
         "mock_verify_only": true
+      }
+    },
+    {
+      "content": "assertThat(${1:\"Test\"}, isOneOf(${2:\"Test\", \"TDD\"}));",
+      "doc": "assert that isOneOf",
+      "label": "Assert - isOneOf",
+      "matches": {
+        "test_isOneOf": true
+      }
+    },
+    {
+      "content": "@AfterEach\npublic void tearDown() {\n\t${1}\n}",
+      "doc": "Create tear down method with `@AfterEach`",
+      "label": "JUnit 5 - After each",
+      "matches": {
+        "test_after": true
+      }
+    },
+    {
+      "content": "assertEquals(${1:anObject}, ${2:anotherObject});",
+      "doc": "assert equals",
+      "label": "Assert - equals",
+      "matches": {
+        "test_equals": true
       }
     }
   ]

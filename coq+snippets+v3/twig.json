@@ -2,35 +2,27 @@
   "extends": [],
   "snippets": [
     {
-      "content": "{% do view.registerCssFile(\"${1:/resources/css/global.css}\") %}\n$0",
-      "doc": "registerCssFile",
-      "label": "css1",
+      "content": "ceil($1)$0",
+      "doc": "ceil",
+      "label": "ceil",
       "matches": {
-        "css": true
+        "ceil": true
       }
     },
     {
-      "content": "{% include \"${1:template}\" %}$0",
-      "doc": "inc",
-      "label": "inc",
+      "content": "url(\"${1:path}\", ${2:{foo:\"1\", bar:\"2\"\\}}, ${3:\"http\"}, ${4:false})$0",
+      "doc": "url w/ arguments",
+      "label": "urla",
       "matches": {
-        "inc": true
+        "urla": true
       }
     },
     {
-      "content": "{% block ${1:name} %}\n\t$0\n{% endblock %}",
-      "doc": "block (block)",
-      "label": "blockb",
+      "content": "{% use \"${1:template}\" %}$0",
+      "doc": "use",
+      "label": "use",
       "matches": {
-        "blockb": true
-      }
-    },
-    {
-      "content": "{% from \"${1:template}\" import \"${2:macro}\" %}$0",
-      "doc": "from",
-      "label": "from",
-      "matches": {
-        "from": true
+        "use": true
       }
     },
     {
@@ -42,14 +34,6 @@
       }
     },
     {
-      "content": "{% set ${1:var} = ${2:value} %}$0",
-      "doc": "set",
-      "label": "set",
-      "matches": {
-        "set": true
-      }
-    },
-    {
       "content": "{% cache %}\n\t$1\n{% endcache %}\n$0",
       "doc": "cache",
       "label": "cache",
@@ -58,35 +42,11 @@
       }
     },
     {
-      "content": "{% for block in ${1:entry.matrixFieldHandle}.all() %}\n\n\t{% if block.type == \"${2:blockHandle}\" %}\n\t\t{{ block.${3:fieldHandle} }}\n\t{% endif %}\n\n\t{% if block.type == \"${4:blockHandle}\" %}\n\t\t{{ block.${5:fieldHandle} }}\n\t{% endif %}\n\n{% endfor %}\n$0",
-      "doc": "matrixif",
-      "label": "matrixif",
+      "content": "{% verbatim %}\n\t$0\n{% endverbatim %}",
+      "doc": "verbatim",
+      "label": "verbatim",
       "matches": {
-        "matrixif": true
-      }
-    },
-    {
-      "content": "{% for block in ${1:entry.matrixFieldHandle}.all() %}\n\n\t{% if block.type == \"${2:blockHandle}\" %}\n\n\t\t{{ block.${3:fieldHandle} }}\n\n\t{% elseif block.type == \"${4:blockHandle}\" %}\n\n\t\t$0\n\t\n\t{% endif %}\n\n{% endfor %}",
-      "doc": "matrixifelse",
-      "label": "matrixifelse",
-      "matches": {
-        "matrixifelse": true
-      }
-    },
-    {
-      "content": "<ul>\n\t{% for tag in craft.tags.group(\"${1:tagGroupHandle}\").all() %}\n\t\t<li>{{ tag }}</li>\n\t{% endfor %}\n</ul>\n$0",
-      "doc": "craft.tags",
-      "label": "tags",
-      "matches": {
-        "tags": true
-      }
-    },
-    {
-      "content": "{% embed \"${1:template}\" %}\n\t$0\n{% endembed %}",
-      "doc": "embed",
-      "label": "embed",
-      "matches": {
-        "embed": true
+        "verbatim": true
       }
     },
     {
@@ -114,35 +74,27 @@
       }
     },
     {
-      "content": "{% for ${1:item} in ${2:items} %}\n\t$0\n{% endfor %}",
-      "doc": "for",
-      "label": "for",
+      "content": "{% import \"${1:template}\" as ${2:name} %}$0",
+      "doc": "import",
+      "label": "import",
       "matches": {
-        "for": true
+        "import": true
       }
     },
     {
-      "content": "{% if ${1:condition} %}$2{% endif %}\n$0",
-      "doc": "if",
-      "label": "if",
+      "content": "{% children %}$0",
+      "doc": "children",
+      "label": "children",
       "matches": {
-        "if": true
+        "children": true
       }
     },
     {
-      "content": "{% include \"${1:template}\" %}$0",
-      "doc": "include",
-      "label": "include",
+      "content": "random($1)$0",
+      "doc": "random",
+      "label": "random",
       "matches": {
-        "include": true
-      }
-    },
-    {
-      "content": "{{ $1 | t }}$0",
-      "doc": "translate with | t",
-      "label": "t",
-      "matches": {
-        "t": true
+        "random": true
       }
     },
     {
@@ -154,11 +106,11 @@
       }
     },
     {
-      "content": "{% set asset = ${1:entry.assetFieldHandle}.one() %}\n\n{% if asset %}\n\t<img src=\"{{ asset.getUrl(\"${2:thumb}\") }}\" width=\"{{ asset.getWidth(\"${2:thumb}\") }}\" height=\"{{ asset.getHeight(\"${2:thumb}\") }}\" alt=\"{{ asset.title }}\">\n{% endif %}",
-      "doc": "asset",
-      "label": "asset",
+      "content": "{% ifchildren %}\n\t$1\n{% endifchildren %}\n$0",
+      "doc": "ifchildren",
+      "label": "ifchildren",
       "matches": {
-        "asset": true
+        "ifchildren": true
       }
     },
     {
@@ -170,83 +122,19 @@
       }
     },
     {
-      "content": "{% set users = craft.users({\n\tgroup: \"${1:userGroupHandle}\"\n}).all() %}\n\n{% for user in users %}\n\t{{ user.firstName }} {{ user.lastName }}\n{% endfor %}\n$0",
-      "doc": "craft.users - object syntax",
-      "label": "userso",
+      "content": "{% import _self as ${1:name} %}$0",
+      "doc": "importself",
+      "label": "importself",
       "matches": {
-        "userso": true
+        "importself": true
       }
     },
     {
-      "content": "{% case \"${1:value}\" %}\n\t$0",
-      "doc": "case",
-      "label": "case",
+      "content": "<ul>\n\t{% for tag in craft.tags.group(\"${1:tagGroupHandle}\").all() %}\n\t\t<li>{{ tag }}</li>\n\t{% endfor %}\n</ul>\n$0",
+      "doc": "craft.tags",
+      "label": "tags",
       "matches": {
-        "case": true
-      }
-    },
-    {
-      "content": "{% for user in craft.users.group(\"${1:userGroupHandle}\").all() %}\n\t{{ user.firstName }} {{ user.lastName }}\n{% endfor %}\n$0",
-      "doc": "craft.users",
-      "label": "users",
-      "matches": {
-        "users": true
-      }
-    },
-    {
-      "content": "{% autoescape \"${1:type}\" %}\n\t$0\n{% endautoescape %}",
-      "doc": "autoescape",
-      "label": "autoescape",
-      "matches": {
-        "autoescape": true
-      }
-    },
-    {
-      "content": "{% if ${1:condition} %}\n\t$2\n{% else %}\n\t$0\n{% endif %}",
-      "doc": "if ... else",
-      "label": "ife",
-      "matches": {
-        "ife": true
-      }
-    },
-    {
-      "content": "{% do view.registerJsFile \"${1:url}\" %}$0",
-      "doc": "do js",
-      "label": "dojs",
-      "matches": {
-        "dojs": true
-      }
-    },
-    {
-      "content": "{{ head() }}\n$0",
-      "doc": "head",
-      "label": "head",
-      "matches": {
-        "head": true
-      }
-    },
-    {
-      "content": "{% do view.registerCssFile \"${1:url}\" %}$0",
-      "doc": "do css",
-      "label": "docss",
-      "matches": {
-        "docss": true
-      }
-    },
-    {
-      "content": "{# PAGINATION\n\t\t\nFor this pagination to work properly, we need to be sure to set\nthe paginateBase variable in the template we are including the \npagination in.\n\n{% set paginateBase = \"/blog/p\" %}\n#}\n\n{% if pageInfo.totalPages > 1 %}\n<ul>\n\t{% if pageInfo.currentPage != \"1\" %}\n\t\t<li><a href=\"{{ paginateBase ~ \"1\" }}\">First Page</a></li>\n\t{% endif %}\n\n\t{% if pageInfo.prevUrl %}\n\t\t<li><a href=\"{{ pageInfo.prevUrl }}\">Previous Page</a></li>\n\t{% endif %}\n\n\t{% for pageNumber in 1..pageInfo.totalPages %}\n\t\t<li {% if pageInfo.currentPage == pageNumber %}class=\"active-page\"{% endif %}>\n\t\t\t<a href=\"{{ paginateBase ~ pageNumber }}\">{{ pageNumber }}</a>\n\t\t</li>\n\t{% endfor %}\n\n\t{% if pageInfo.nextUrl %}\n\t\t<li><a href=\"{{ pageInfo.nextUrl }}\">Next Page</a></li>\n\t{% endif %}\n\n\t{% if pageInfo.currentPage != pageInfo.total %}\n\t\t<li><a href=\"{{ paginateBase ~ pageInfo.total }}\">Last Page</a></li>\n\t{% endif %}\n</ul>\n{% endif %}\n$0",
-      "doc": "paginate advanced",
-      "label": "paginate1",
-      "matches": {
-        "paginate": true
-      }
-    },
-    {
-      "content": "{% redirect \"${1:template/path or http://straightupcraft.com}\" %}\n$0",
-      "doc": "redirect",
-      "label": "redirect",
-      "matches": {
-        "redirect": true
+        "tags": true
       }
     },
     {
@@ -258,19 +146,99 @@
       }
     },
     {
-      "content": "craft.app.request.getParam(${1:\"Query String or Post Variable Name\"})\n$0",
-      "doc": "request getParam",
-      "label": "getparam",
+      "content": "{% set users = craft.users({\n\tgroup: \"${1:userGroupHandle}\"\n}).all() %}\n\n{% for user in users %}\n\t{{ user.firstName }} {{ user.lastName }}\n{% endfor %}\n$0",
+      "doc": "craft.users - object syntax",
+      "label": "userso",
       "matches": {
-        "getparam": true
+        "userso": true
       }
     },
     {
-      "content": "{% use \"${1:template}\" %}$0",
-      "doc": "use",
-      "label": "use",
+      "content": "{{ head() }}\n$0",
+      "doc": "head",
+      "label": "head",
       "matches": {
-        "use": true
+        "head": true
+      }
+    },
+    {
+      "content": "{% for user in craft.users.group(\"${1:userGroupHandle}\").all() %}\n\t{{ user.firstName }} {{ user.lastName }}\n{% endfor %}\n$0",
+      "doc": "craft.users",
+      "label": "users",
+      "matches": {
+        "users": true
+      }
+    },
+    {
+      "content": "{{ ${1:$TM_SELECTED_TEXT} | replace(\"search\", \"replace\") }}$0",
+      "doc": "replace with | replace(\"search\", \"replace\")",
+      "label": "replace",
+      "matches": {
+        "replace": true
+      }
+    },
+    {
+      "content": "{{ csrfInput() }}\n$0",
+      "doc": "csrf",
+      "label": "csrf",
+      "matches": {
+        "csrf": true
+      }
+    },
+    {
+      "content": "{% do view.registerJsFile(\"${1:/resources/js/global.js}\") %}\n$0",
+      "doc": "registerJsFile",
+      "label": "js1",
+      "matches": {
+        "js": true
+      }
+    },
+    {
+      "content": "{% do view.registerJsFile \"${1:url}\" %}$0",
+      "doc": "do js",
+      "label": "dojs",
+      "matches": {
+        "dojs": true
+      }
+    },
+    {
+      "content": "{% include \"${1:template}\" %}$0",
+      "doc": "include",
+      "label": "include",
+      "matches": {
+        "include": true
+      }
+    },
+    {
+      "content": "{% do view.registerCssFile \"${1:url}\" %}$0",
+      "doc": "do css",
+      "label": "docss",
+      "matches": {
+        "docss": true
+      }
+    },
+    {
+      "content": "{% for block in ${1:entry.matrixFieldHandle}.all() %}\n\n\t{% if block.type == \"${2:blockHandle}\" %}\n\t\t{{ block.${3:fieldHandle} }}\n\t{% endif %}\n\n\t{% if block.type == \"${4:blockHandle}\" %}\n\t\t{{ block.${5:fieldHandle} }}\n\t{% endif %}\n\n{% endfor %}\n$0",
+      "doc": "matrixif",
+      "label": "matrixif",
+      "matches": {
+        "matrixif": true
+      }
+    },
+    {
+      "content": "{% for block in ${1:entry.matrixFieldHandle}.all() %}\n\n\t{% if block.type == \"${2:blockHandle}\" %}\n\n\t\t{{ block.${3:fieldHandle} }}\n\n\t{% elseif block.type == \"${4:blockHandle}\" %}\n\n\t\t$0\n\t\n\t{% endif %}\n\n{% endfor %}",
+      "doc": "matrixifelse",
+      "label": "matrixifelse",
+      "matches": {
+        "matrixifelse": true
+      }
+    },
+    {
+      "content": "{% for block in ${1:entry.matrixFieldHandle}.all() %}\n\n\t{% switch block.type %}\n\n\t\t{% case \"${2:blockHandle}\" %}\n\n\t\t\t{{ block.${3:fieldHandle} }}\n\n\t\t{% case \"${4:blockHandle}\" %}\n\n\t\t\t$0\n\n\t{% endswitch %}\n\n{% endfor %}",
+      "doc": "matrixswitch",
+      "label": "matrixswitch",
+      "matches": {
+        "matrixswitch": true
       }
     },
     {
@@ -282,11 +250,11 @@
       }
     },
     {
-      "content": "craft.app.request.getBodyParam(${1:\"postVariableName\"})\n$0",
-      "doc": "request getBodyParam",
-      "label": "getbodyparam",
+      "content": "{% case \"${1:value}\" %}\n\t$0",
+      "doc": "case",
+      "label": "case",
       "matches": {
-        "getbodyparam": true
+        "case": true
       }
     },
     {
@@ -295,14 +263,6 @@
       "label": "endblock",
       "matches": {
         "endblock": true
-      }
-    },
-    {
-      "content": "{{ ${1:$TM_SELECTED_TEXT} | split(\"\\n\") }}$0",
-      "doc": "split on | split (\"\\n\")",
-      "label": "split",
-      "matches": {
-        "split": true
       }
     },
     {
@@ -330,11 +290,11 @@
       }
     },
     {
-      "content": "{% exit ${1:404} %}",
-      "doc": "exit",
-      "label": "exit",
+      "content": "{% trans %}$0{% endtrans %}",
+      "doc": "trans",
+      "label": "trans",
       "matches": {
-        "exit": true
+        "trans": true
       }
     },
     {
@@ -346,11 +306,11 @@
       }
     },
     {
-      "content": "url(\"${1:path}\", ${2:{foo:\"1\", bar:\"2\"\\}}, ${3:\"http\"}, ${4:false})$0",
-      "doc": "url w/ arguments",
-      "label": "urla",
+      "content": "{% switch ${1:variable} %}\n\n\t{% case \"${2:value1}\" %}\n\t\n\n\t{% case \"${3:value2}\" %}\n\t\n\n\t{% default %}\n\t\n\n{% endswitch %}\n$0",
+      "doc": "switch",
+      "label": "switch",
       "matches": {
-        "urla": true
+        "switch": true
       }
     },
     {
@@ -362,11 +322,11 @@
       }
     },
     {
-      "content": "{% trans %}$0{% endtrans %}",
-      "doc": "trans",
-      "label": "trans",
+      "content": "{% spaceless %}\n\t$0\n{% endspaceless %}",
+      "doc": "spaceless",
+      "label": "spaceless",
       "matches": {
-        "trans": true
+        "spaceless": true
       }
     },
     {
@@ -378,11 +338,11 @@
       }
     },
     {
-      "content": "{% requirePermission \"${1:spendTheNight}\" %}\n$0",
-      "doc": "requirePermission",
-      "label": "requirepermission",
+      "content": "shuffle($1)$0",
+      "doc": "shuffle",
+      "label": "shuffle",
       "matches": {
-        "requirepermission": true
+        "shuffle": true
       }
     },
     {
@@ -394,11 +354,11 @@
       }
     },
     {
-      "content": "{% switch ${1:variable} %}\n\n\t{% case \"${2:value1}\" %}\n\t\n\n\t{% case \"${3:value2}\" %}\n\t\n\n\t{% default %}\n\t\n\n{% endswitch %}\n$0",
-      "doc": "switch",
-      "label": "switch",
+      "content": "{% set ${1:var} = ${2:value} %}$0",
+      "doc": "set",
+      "label": "set",
       "matches": {
-        "switch": true
+        "set": true
       }
     },
     {
@@ -410,11 +370,11 @@
       }
     },
     {
-      "content": "{% set ${1:var} %}\n\t$0\n{% endset %}",
-      "doc": "set (block)",
-      "label": "setb",
+      "content": "{% else %}\n\t$0",
+      "doc": "else",
+      "label": "else",
       "matches": {
-        "setb": true
+        "else": true
       }
     },
     {
@@ -426,11 +386,11 @@
       }
     },
     {
-      "content": "{% spaceless %}\n\t$0\n{% endspaceless %}",
-      "doc": "spaceless",
-      "label": "spaceless",
+      "content": "{% exit ${1:404} %}",
+      "doc": "exit",
+      "label": "exit",
       "matches": {
-        "spaceless": true
+        "exit": true
       }
     },
     {
@@ -442,19 +402,11 @@
       }
     },
     {
-      "content": "<pre>\n\t{{ dump($1) }}\n</pre>",
-      "doc": "dump",
-      "label": "dump",
+      "content": "{% for ${1:item} in ${2:items} %}\n\t$0\n{% endfor %}",
+      "doc": "for",
+      "label": "for",
       "matches": {
-        "dump": true
-      }
-    },
-    {
-      "content": "{% endnav %}$0",
-      "doc": "endnav",
-      "label": "endnav",
-      "matches": {
-        "endnav": true
+        "for": true
       }
     },
     {
@@ -466,30 +418,6 @@
       }
     },
     {
-      "content": "{% endset %}$0",
-      "doc": "endset",
-      "label": "endset",
-      "matches": {
-        "endset": true
-      }
-    },
-    {
-      "content": "shuffle($1)$0",
-      "doc": "shuffle",
-      "label": "shuffle",
-      "matches": {
-        "shuffle": true
-      }
-    },
-    {
-      "content": "{% endspaceless %}$0",
-      "doc": "endspaceless",
-      "label": "endspaceless",
-      "matches": {
-        "endspaceless": true
-      }
-    },
-    {
       "content": "{{ $1 | round(1, 'floor') }}$0",
       "doc": "round",
       "label": "round",
@@ -498,259 +426,27 @@
       }
     },
     {
-      "content": "{% if ${1:condition} %}$0{% endif %}",
-      "doc": "if",
-      "label": "if1",
+      "content": "{% endset %}$0",
+      "doc": "endset",
+      "label": "endset",
       "matches": {
-        "if": true
+        "endset": true
       }
     },
     {
-      "content": "{% requireLogin %}\n$0",
-      "doc": "requireLogin",
-      "label": "requirelogin",
+      "content": "<pre>\n\t{{ dump($1) }}\n</pre>",
+      "doc": "dump",
+      "label": "dump",
       "matches": {
-        "requirelogin": true
+        "dump": true
       }
     },
     {
-      "content": "{% endtrans %}$0",
-      "doc": "endtrans",
-      "label": "endtrans",
+      "content": "{% endspaceless %}$0",
+      "doc": "endspaceless",
+      "label": "endspaceless",
       "matches": {
-        "endtrans": true
-      }
-    },
-    {
-      "content": "<pre>\n\t{{ dump($1) }}\n</pre>\n{% exit %}$0",
-      "doc": "dump and die",
-      "label": "dd",
-      "matches": {
-        "dd": true
-      }
-    },
-    {
-      "content": "{% endverbatim %}$0",
-      "doc": "endverbatim",
-      "label": "endverbatim",
-      "matches": {
-        "endverbatim": true
-      }
-    },
-    {
-      "content": "{% children %}$0",
-      "doc": "children",
-      "label": "children",
-      "matches": {
-        "children": true
-      }
-    },
-    {
-      "content": "craft.app.request.getSegment(${1:2})\n$0",
-      "doc": "request getSegment",
-      "label": "getsegment",
-      "matches": {
-        "getsegment": true
-      }
-    },
-    {
-      "content": "craft.app.request.getQueryParam(${1:\"queryStringName\"})\n$0",
-      "doc": "request getQueryParam",
-      "label": "getqueryparam",
-      "matches": {
-        "getqueryparam": true
-      }
-    },
-    {
-      "content": "{% filter ${1:name} %}\n\t$0\n{% endfilter %}",
-      "doc": "filter (block)",
-      "label": "filterb",
-      "matches": {
-        "filterb": true
-      }
-    },
-    {
-      "content": "{% verbatim %}\n\t$0\n{% endverbatim %}",
-      "doc": "verbatim",
-      "label": "verbatim",
-      "matches": {
-        "verbatim": true
-      }
-    },
-    {
-      "content": "floor($1)$0",
-      "doc": "floor",
-      "label": "floor",
-      "matches": {
-        "floor": true
-      }
-    },
-    {
-      "content": "{% nav ${1:item} in ${2:items} %}\n\t$3\n{% endnav %}\n$0",
-      "doc": "nav",
-      "label": "nav",
-      "matches": {
-        "nav": true
-      }
-    },
-    {
-      "content": "{% filter ${1:name} %}$0{% endfilter %}",
-      "doc": "filter",
-      "label": "filter",
-      "matches": {
-        "filter": true
-      }
-    },
-    {
-      "content": "{{ ${1:$TM_SELECTED_TEXT} | replace(\"search\", \"replace\") }}$0",
-      "doc": "replace with | replace(\"search\", \"replace\")",
-      "label": "replace",
-      "matches": {
-        "replace": true
-      }
-    },
-    {
-      "content": "{% for block in ${1:entry.matrixFieldHandle}.all() %}\n\n\t{% switch block.type %}\n\n\t\t{% case \"${2:blockHandle}\" %}\n\n\t\t\t{{ block.${3:fieldHandle} }}\n\n\t\t{% case \"${4:blockHandle}\" %}\n\n\t\t\t$0\n\n\t{% endswitch %}\n\n{% endfor %}",
-      "doc": "matrixswitch",
-      "label": "matrixswitch",
-      "matches": {
-        "matrixswitch": true
-      }
-    },
-    {
-      "content": "{% for block in ${1:entry.matrixFieldHandle}.all() %}\n\n\t{% if block.type == \"${2:blockHandle}\" %}\n\t\t{{ block.${3:fieldHandle} }}\n\t{% endif %}\n\n\t{% if block.type == \"${4:blockHandle}\" %}\n\t\t{{ block.${5:fieldHandle} }}\n\t{% endif %}\n\n{% endfor %}\n$0",
-      "doc": "matrix",
-      "label": "matrix",
-      "matches": {
-        "matrix": true
-      }
-    },
-    {
-      "content": "{{ endBody() }}\n$0",
-      "doc": "endBody",
-      "label": "endbody",
-      "matches": {
-        "endbody": true
-      }
-    },
-    {
-      "content": "{% css %}\n\t$1\n{% endcss %}\n$0",
-      "doc": "css",
-      "label": "css",
-      "matches": {
-        "css": true
-      }
-    },
-    {
-      "content": "{% do view.registerJsFile(\"${1:/resources/js/global.js}\") %}\n$0",
-      "doc": "registerJsFile",
-      "label": "js1",
-      "matches": {
-        "js": true
-      }
-    },
-    {
-      "content": "{% js %}\n\t$1\n{% endjs %}\n$0",
-      "doc": "js",
-      "label": "js",
-      "matches": {
-        "js": true
-      }
-    },
-    {
-      "content": "{{ csrfInput() }}\n$0",
-      "doc": "csrf",
-      "label": "csrf",
-      "matches": {
-        "csrf": true
-      }
-    },
-    {
-      "content": "{% if ${1:condition} %}\n\t$0\n{% endif %}",
-      "doc": "if (block)",
-      "label": "ifb",
-      "matches": {
-        "ifb": true
-      }
-    },
-    {
-      "content": "{% for ${1:item} in ${2:items} %}\n\t$3\n{% else %}\n\t$0\n{% endfor %}",
-      "doc": "for ... else",
-      "label": "fore",
-      "matches": {
-        "fore": true
-      }
-    },
-    {
-      "content": "{% extends \"${1:template}\" %}$0",
-      "doc": "extends",
-      "label": "extends",
-      "matches": {
-        "extends": true
-      }
-    },
-    {
-      "content": "{% import \"${1:template}\" as ${2:name} %}$0",
-      "doc": "import",
-      "label": "import",
-      "matches": {
-        "import": true
-      }
-    },
-    {
-      "content": "random($1)$0",
-      "doc": "random",
-      "label": "random",
-      "matches": {
-        "random": true
-      }
-    },
-    {
-      "content": "{% ifchildren %}\n\t$1\n{% endifchildren %}\n$0",
-      "doc": "ifchildren",
-      "label": "ifchildren",
-      "matches": {
-        "ifchildren": true
-      }
-    },
-    {
-      "content": "{% import _self as ${1:name} %}$0",
-      "doc": "importself",
-      "label": "importself",
-      "matches": {
-        "importself": true
-      }
-    },
-    {
-      "content": "ceil($1)$0",
-      "doc": "ceil",
-      "label": "ceil",
-      "matches": {
-        "ceil": true
-      }
-    },
-    {
-      "content": "{% do $1 %}$0",
-      "doc": "do",
-      "label": "do",
-      "matches": {
-        "do": true
-      }
-    },
-    {
-      "content": "{% else %}\n\t$0",
-      "doc": "else",
-      "label": "else",
-      "matches": {
-        "else": true
-      }
-    },
-    {
-      "content": "{% paginate ${1:elements} as ${2:pageInfo}, ${3:pageEntries} %}\n\n{% for item in ${3:pageEntries} %}\n\t$0\n{% endfor %}\n\n{% if ${2:pageInfo}.prevUrl %}<a href=\"{{ ${2:pageInfo}.prevUrl }}\">Previous Page</a>{% endif %}\n{% if ${2:pageInfo}.nextUrl %}<a href=\"{{ ${2:pageInfo}.nextUrl }}\">Next Page</a>{% endif %}",
-      "doc": "paginate simple",
-      "label": "paginate",
-      "matches": {
-        "paginate": true
+        "endspaceless": true
       }
     },
     {
@@ -767,6 +463,310 @@
       "label": "endswitch",
       "matches": {
         "endswitch": true
+      }
+    },
+    {
+      "content": "{{ ${1:$TM_SELECTED_TEXT} | split(\"\\n\") }}$0",
+      "doc": "split on | split (\"\\n\")",
+      "label": "split",
+      "matches": {
+        "split": true
+      }
+    },
+    {
+      "content": "{% endtrans %}$0",
+      "doc": "endtrans",
+      "label": "endtrans",
+      "matches": {
+        "endtrans": true
+      }
+    },
+    {
+      "content": "craft.app.request.getSegment(${1:2})\n$0",
+      "doc": "request getSegment",
+      "label": "getsegment",
+      "matches": {
+        "getsegment": true
+      }
+    },
+    {
+      "content": "{% endverbatim %}$0",
+      "doc": "endverbatim",
+      "label": "endverbatim",
+      "matches": {
+        "endverbatim": true
+      }
+    },
+    {
+      "content": "craft.app.request.getQueryParam(${1:\"queryStringName\"})\n$0",
+      "doc": "request getQueryParam",
+      "label": "getqueryparam",
+      "matches": {
+        "getqueryparam": true
+      }
+    },
+    {
+      "content": "{% js %}\n\t$1\n{% endjs %}\n$0",
+      "doc": "js",
+      "label": "js",
+      "matches": {
+        "js": true
+      }
+    },
+    {
+      "content": "{% filter ${1:name} %}\n\t$0\n{% endfilter %}",
+      "doc": "filter (block)",
+      "label": "filterb",
+      "matches": {
+        "filterb": true
+      }
+    },
+    {
+      "content": "{# PAGINATION\n\t\t\nFor this pagination to work properly, we need to be sure to set\nthe paginateBase variable in the template we are including the \npagination in.\n\n{% set paginateBase = \"/blog/p\" %}\n#}\n\n{% if pageInfo.totalPages > 1 %}\n<ul>\n\t{% if pageInfo.currentPage != \"1\" %}\n\t\t<li><a href=\"{{ paginateBase ~ \"1\" }}\">First Page</a></li>\n\t{% endif %}\n\n\t{% if pageInfo.prevUrl %}\n\t\t<li><a href=\"{{ pageInfo.prevUrl }}\">Previous Page</a></li>\n\t{% endif %}\n\n\t{% for pageNumber in 1..pageInfo.totalPages %}\n\t\t<li {% if pageInfo.currentPage == pageNumber %}class=\"active-page\"{% endif %}>\n\t\t\t<a href=\"{{ paginateBase ~ pageNumber }}\">{{ pageNumber }}</a>\n\t\t</li>\n\t{% endfor %}\n\n\t{% if pageInfo.nextUrl %}\n\t\t<li><a href=\"{{ pageInfo.nextUrl }}\">Next Page</a></li>\n\t{% endif %}\n\n\t{% if pageInfo.currentPage != pageInfo.total %}\n\t\t<li><a href=\"{{ paginateBase ~ pageInfo.total }}\">Last Page</a></li>\n\t{% endif %}\n</ul>\n{% endif %}\n$0",
+      "doc": "paginate advanced",
+      "label": "paginate1",
+      "matches": {
+        "paginate": true
+      }
+    },
+    {
+      "content": "{% do view.registerCssFile(\"${1:/resources/css/global.css}\") %}\n$0",
+      "doc": "registerCssFile",
+      "label": "css1",
+      "matches": {
+        "css": true
+      }
+    },
+    {
+      "content": "{% paginate ${1:elements} as ${2:pageInfo}, ${3:pageEntries} %}\n\n{% for item in ${3:pageEntries} %}\n\t$0\n{% endfor %}\n\n{% if ${2:pageInfo}.prevUrl %}<a href=\"{{ ${2:pageInfo}.prevUrl }}\">Previous Page</a>{% endif %}\n{% if ${2:pageInfo}.nextUrl %}<a href=\"{{ ${2:pageInfo}.nextUrl }}\">Next Page</a>{% endif %}",
+      "doc": "paginate simple",
+      "label": "paginate",
+      "matches": {
+        "paginate": true
+      }
+    },
+    {
+      "content": "{% redirect \"${1:template/path or http://straightupcraft.com}\" %}\n$0",
+      "doc": "redirect",
+      "label": "redirect",
+      "matches": {
+        "redirect": true
+      }
+    },
+    {
+      "content": "{% for ${1:item} in ${2:items} %}\n\t$3\n{% else %}\n\t$0\n{% endfor %}",
+      "doc": "for ... else",
+      "label": "fore",
+      "matches": {
+        "fore": true
+      }
+    },
+    {
+      "content": "craft.app.request.getParam(${1:\"Query String or Post Variable Name\"})\n$0",
+      "doc": "request getParam",
+      "label": "getparam",
+      "matches": {
+        "getparam": true
+      }
+    },
+    {
+      "content": "{% for block in ${1:entry.matrixFieldHandle}.all() %}\n\n\t{% if block.type == \"${2:blockHandle}\" %}\n\t\t{{ block.${3:fieldHandle} }}\n\t{% endif %}\n\n\t{% if block.type == \"${4:blockHandle}\" %}\n\t\t{{ block.${5:fieldHandle} }}\n\t{% endif %}\n\n{% endfor %}\n$0",
+      "doc": "matrix",
+      "label": "matrix",
+      "matches": {
+        "matrix": true
+      }
+    },
+    {
+      "content": "{% css %}\n\t$1\n{% endcss %}\n$0",
+      "doc": "css",
+      "label": "css",
+      "matches": {
+        "css": true
+      }
+    },
+    {
+      "content": "craft.app.request.getBodyParam(${1:\"postVariableName\"})\n$0",
+      "doc": "request getBodyParam",
+      "label": "getbodyparam",
+      "matches": {
+        "getbodyparam": true
+      }
+    },
+    {
+      "content": "{{ endBody() }}\n$0",
+      "doc": "endBody",
+      "label": "endbody",
+      "matches": {
+        "endbody": true
+      }
+    },
+    {
+      "content": "{% nav ${1:item} in ${2:items} %}\n\t$3\n{% endnav %}\n$0",
+      "doc": "nav",
+      "label": "nav",
+      "matches": {
+        "nav": true
+      }
+    },
+    {
+      "content": "{{ $1 | t }}$0",
+      "doc": "translate with | t",
+      "label": "t",
+      "matches": {
+        "t": true
+      }
+    },
+    {
+      "content": "{% filter ${1:name} %}$0{% endfilter %}",
+      "doc": "filter",
+      "label": "filter",
+      "matches": {
+        "filter": true
+      }
+    },
+    {
+      "content": "{% if ${1:condition} %}\n\t$0\n{% endif %}",
+      "doc": "if (block)",
+      "label": "ifb",
+      "matches": {
+        "ifb": true
+      }
+    },
+    {
+      "content": "{% block ${1:name} %}\n\t$0\n{% endblock %}",
+      "doc": "block (block)",
+      "label": "blockb",
+      "matches": {
+        "blockb": true
+      }
+    },
+    {
+      "content": "{% embed \"${1:template}\" %}\n\t$0\n{% endembed %}",
+      "doc": "embed",
+      "label": "embed",
+      "matches": {
+        "embed": true
+      }
+    },
+    {
+      "content": "{% requireLogin %}\n$0",
+      "doc": "requireLogin",
+      "label": "requirelogin",
+      "matches": {
+        "requirelogin": true
+      }
+    },
+    {
+      "content": "{% include \"${1:template}\" %}$0",
+      "doc": "inc",
+      "label": "inc",
+      "matches": {
+        "inc": true
+      }
+    },
+    {
+      "content": "{% endnav %}$0",
+      "doc": "endnav",
+      "label": "endnav",
+      "matches": {
+        "endnav": true
+      }
+    },
+    {
+      "content": "{% requirePermission \"${1:spendTheNight}\" %}\n$0",
+      "doc": "requirePermission",
+      "label": "requirepermission",
+      "matches": {
+        "requirepermission": true
+      }
+    },
+    {
+      "content": "{% from \"${1:template}\" import \"${2:macro}\" %}$0",
+      "doc": "from",
+      "label": "from",
+      "matches": {
+        "from": true
+      }
+    },
+    {
+      "content": "{% do $1 %}$0",
+      "doc": "do",
+      "label": "do",
+      "matches": {
+        "do": true
+      }
+    },
+    {
+      "content": "<pre>\n\t{{ dump($1) }}\n</pre>\n{% exit %}$0",
+      "doc": "dump and die",
+      "label": "dd",
+      "matches": {
+        "dd": true
+      }
+    },
+    {
+      "content": "{% set ${1:var} %}\n\t$0\n{% endset %}",
+      "doc": "set (block)",
+      "label": "setb",
+      "matches": {
+        "setb": true
+      }
+    },
+    {
+      "content": "{% set asset = ${1:entry.assetFieldHandle}.one() %}\n\n{% if asset %}\n\t<img src=\"{{ asset.getUrl(\"${2:thumb}\") }}\" width=\"{{ asset.getWidth(\"${2:thumb}\") }}\" height=\"{{ asset.getHeight(\"${2:thumb}\") }}\" alt=\"{{ asset.title }}\">\n{% endif %}",
+      "doc": "asset",
+      "label": "asset",
+      "matches": {
+        "asset": true
+      }
+    },
+    {
+      "content": "{% if ${1:condition} %}$0{% endif %}",
+      "doc": "if",
+      "label": "if1",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "{% extends \"${1:template}\" %}$0",
+      "doc": "extends",
+      "label": "extends",
+      "matches": {
+        "extends": true
+      }
+    },
+    {
+      "content": "{% if ${1:condition} %}$2{% endif %}\n$0",
+      "doc": "if",
+      "label": "if",
+      "matches": {
+        "if": true
+      }
+    },
+    {
+      "content": "{% autoescape \"${1:type}\" %}\n\t$0\n{% endautoescape %}",
+      "doc": "autoescape",
+      "label": "autoescape",
+      "matches": {
+        "autoescape": true
+      }
+    },
+    {
+      "content": "{% if ${1:condition} %}\n\t$2\n{% else %}\n\t$0\n{% endif %}",
+      "doc": "if ... else",
+      "label": "ife",
+      "matches": {
+        "ife": true
+      }
+    },
+    {
+      "content": "floor($1)$0",
+      "doc": "floor",
+      "label": "floor",
+      "matches": {
+        "floor": true
       }
     },
     {
